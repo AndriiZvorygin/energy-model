@@ -1,0 +1,9 @@
+layer,signal,target,relationship,lead_lag,metric,value,interpretation
+Liquidity impulse,G4 GM2 YoY,Oil YoY momentum,leads,locked lag 5 months; simple correlation peak 4 months,WTI rolling RMSE / Brent rolling RMSE,31.628 / 32.358,Global M2 is the strongest leading financial signal for oil-price momentum.
+Oil momentum validation,GM2 lag correlation,WTI / Brent YoY,leads,WTI peak 4m; Brent peak 4m,Pearson correlation,0.532 / 0.523,"Correlation peaks slightly earlier than rolling forecast selection, but both point to a leading liquidity impulse."
+Physical oil-market state,Comparative inventory,Oil residual vs GM2 path,diagnoses residual/state,same-month state variable,Residual explained variance WTI / Brent,0.148 / 0.135,Inventory helps explain rich/cheap deviations but is not promoted to the primary forecast model.
+Market pricing layer,SP500,Oil YoY and equity risk,coincident risk/growth proxy,strongest SP500-oil correlation at WTI lag -13; Brent lag -13,Peak correlation WTI / Brent,-0.661 / -0.691,Stocks add context around risk appetite and growth expectations but do not improve the locked oil model by the 5% rule.
+Physical economy layer,Energy consumption,Real GDP,moves with / anchors,best lag 0 quarters,Correlation,0.680,Energy use is the physical throughput base of GDP at quarterly scale.
+Physical economy layer,Petroleum consumption,Real GDP,moves with / anchors,best lag 0 quarters,Correlation,0.738,Petroleum consumption growth has the strongest current real-economy relationship in the energy layer.
+Industrial activity,Energy consumption,Industrial production,moves with,best lag 0 months,Correlation,0.642,Industrial production is the higher-frequency activity proxy tied to physical energy throughput.
+Measured outcome,GDP per energy,Efficiency / structural change,trend over time,long-run trend,Direction,rising,"Rising GDP per unit of energy shows efficiency gains and structural change, not full physical decoupling."

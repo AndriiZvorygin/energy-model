@@ -1,0 +1,18 @@
+source_name,series_id,description,source_url_or_api,notes
+FRED,M2SL,U.S. M2 money stock,https://fred.stlouisfed.org/graph/fredgraph.csv?id=M2SL,Billions of U.S. dollars; monthly; seasonally adjusted.
+ECB Data Portal,BSI.M.U2.Y.V.M20.X.1.U2.2300.Z01.E,Euro area M2 stocks,https://data-api.ecb.europa.eu/service/data/BSI/M.U2.Y.V.M20.X.1.U2.2300.Z01.E?startPeriod=1980-01&format=csvdata,Outstanding stocks; adapter stores EUR actual by multiplying ECB EUR millions by 1e6.
+ChinaData/PBoC proxy plus IMF/FRED history,china-m2-money-supply; MYAGM2CNM189N,China M2 money supply,https://chinadata.live/api/v2/data/china-m2-money-supply,Current API documents PBoC as source and reports 100 million CNY; stale IMF/FRED history is merged for older dates.
+Bank of Japan,MD02:MAM1NAM2M2MO,Japan M2 money stock,https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=csv&lang=en&db=MD02&startDate=199801&code=MAM1NAM2M2MO,Average amounts outstanding; source unit is 100 million yen.
+FRED,DEXUSEU,U.S. dollars per euro,https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU,Daily observations averaged to month.
+FRED,DEXCHUS,Chinese yuan per U.S. dollar,https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXCHUS,Daily observations averaged to month.
+FRED,DEXJPUS,Japanese yen per U.S. dollar,https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXJPUS,Daily observations averaged to month.
+FRED,CPIAUCSL,U.S. consumer price index for all urban consumers,https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL,Monthly CPI index used to deflate nominal WTI and Brent price levels.
+FRED,GDPC1,U.S. real gross domestic product,https://fred.stlouisfed.org/graph/fredgraph.csv?id=GDPC1,Quarterly chained-dollar real GDP used for energy-GDP lead-lag analysis.
+FRED,INDPRO,U.S. industrial production index,https://fred.stlouisfed.org/graph/fredgraph.csv?id=INDPRO,Monthly real-activity proxy used for higher-frequency energy-GDP tests.
+EIA Monthly Energy Review,T01.03:TETCBUS,U.S. total primary energy consumption,https://www.eia.gov/totalenergy/data/browser/csv.php?tbl=T01.03,Monthly quadrillion Btu observations; annual rows ending in YYYY13 are excluded.
+EIA Monthly Energy Review,T01.03:PMTCBUS,U.S. petroleum consumption excluding biofuels,https://www.eia.gov/totalenergy/data/browser/csv.php?tbl=T01.03,Monthly quadrillion Btu observations; used as oil-consumption proxy.
+FRED,SP500,S&P 500 price index,https://fred.stlouisfed.org/graph/fredgraph.csv?id=SP500,Daily observations averaged to month for oil-equity lead-lag analysis.
+Yahoo Finance chart API,USO,United States Oil Fund adjusted close,https://query2.finance.yahoo.com/v8/finance/chart/USO,Daily adjusted close cached as raw JSON; pipeline derives monthly average and month-end adjusted close.
+FRED,DCOILWTICO,WTI crude oil spot price,https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO,Daily observations averaged to month.
+FRED,DCOILBRENTEU,Brent crude oil spot price,https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU,Daily observations averaged to month.
+EIA,WCESTUS1,Weekly U.S. ending stocks excluding SPR of crude oil,https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?f=W&n=PET&s=WCESTUS1,Weekly thousand barrels averaged to month.
