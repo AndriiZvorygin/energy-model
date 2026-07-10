@@ -15,4 +15,7 @@ FRED,SP500,S&P 500 price index,https://fred.stlouisfed.org/graph/fredgraph.csv?i
 Yahoo Finance chart API,USO,United States Oil Fund adjusted close,https://query2.finance.yahoo.com/v8/finance/chart/USO,Daily adjusted close cached as raw JSON; pipeline derives monthly average and month-end adjusted close.
 FRED,DCOILWTICO,WTI crude oil spot price,https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO,Daily observations averaged to month.
 FRED,DCOILBRENTEU,Brent crude oil spot price,https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU,Daily observations averaged to month.
+EIA Petroleum Marketing Monthly,R0000____3; R1200____3; R1300____3,"U.S. composite, domestic, and imported refiner acquisition costs",https://www.eia.gov/dnav/pet/PET_PRI_RAC2_DCU_NUS_M.htm,Monthly dollars per barrel; current observations may be preliminary or estimated by EIA.
+EIA Petroleum Marketing Monthly,F000000__3,U.S. domestic crude oil first purchase price,https://www.eia.gov/dnav/pet/PET_PRI_DFP1_K_M.htm,Monthly dollars per barrel at the lease or wellhead first arm's-length purchase.
+EIA Petroleum Marketing Monthly,I000000004; I000000008,Average imported crude oil FOB and landed costs,https://www.eia.gov/dnav/pet/pet_move_imc1_k_m.htm,Monthly dollars per barrel; landed cost is measured at the port of discharge.
 EIA,WCESTUS1,Weekly U.S. ending stocks excluding SPR of crude oil,https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?f=W&n=PET&s=WCESTUS1,Weekly thousand barrels averaged to month.

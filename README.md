@@ -56,6 +56,8 @@ Outputs:
 - `analysis/uso_lead_lag_summary.csv`: USO-WTI/Brent contemporaneous, lead-lag, and rolling-correlation results.
 - `analysis/uso_tracking_residual_summary.csv`: USO benchmark return spreads and tracking residuals by regime.
 - `analysis/uso_model_summary.csv`: GM2-only and combined USO YoY models plus the tracking-residual diagnostic.
+- `analysis/physical_realised_price_findings.md`: interpretation of benchmark, tradable, and physically realised crude prices.
+- `analysis/physical_realised_price_summary.csv`: price correlations, GM2 lag scans, inventory relationships, physical-basis models, and latest observations.
 - `analysis/energy_gdp_lead_lag.csv`: energy, oil, liquidity, GDP, and industrial-production lead-lag tests.
 - `analysis/energy_gdp_model_summary.csv`: energy-GDP model summaries, HAC standard errors, and rolling validation metrics where available.
 - `analysis/energy_gdp_findings.md`: readable summary of the physical-throughput GDP layer.
@@ -83,6 +85,9 @@ If `pandas` and `pyarrow` are installed, `data/processed/monthly_dataset.parquet
 - Japan M2: Bank of Japan Time-Series Data Search API, database `MD02`, series `MAM1NAM2M2MO`, average amounts outstanding, unit `100 million yen`.
 - China M2: IMF/FRED `MYAGM2CNM189N` historical data merged with the current ChinaData public API, which documents People's Bank of China as its primary source. ChinaData overlap is preferred because the FRED/IMF series currently stops in 2019.
 - U.S. commercial crude inventory excluding SPR: EIA weekly history page `WCESTUS1`, averaged to monthly.
+- Refiner acquisition costs: EIA Petroleum Marketing Monthly `R0000____3`, `R1200____3`, and `R1300____3`, monthly composite, domestic, and imported dollars per barrel.
+- U.S. domestic crude first purchase price: EIA Petroleum Marketing Monthly `F000000__3`.
+- Imported crude costs: EIA Petroleum Marketing Monthly `I000000004` FOB and `I000000008` landed cost.
 
 Optional BIS credit:
 
@@ -113,6 +118,9 @@ Growth rates:
 - `USO_YoY`, `USO_log_return_1m`, `USO_forward_3m_return`, and `USO_forward_6m_return` are computed from monthly adjusted close observations.
 - `USO_vs_WTI_return_spread = USO_log_return_1m - WTI_log_return_1m`; the Brent spread is defined analogously.
 - `USO_tracking_residual = USO_YoY - WTI_YoY`; `USO_tracking_residual_vs_Brent` uses Brent YoY.
+- Physical-price YoY fields use `100 * (price / price[t-12] - 1)` for RAC composite/domestic/imported, first purchase, imported FOB, and imported landed costs.
+- `RAC_vs_WTI_spread = RAC_composite - WTI`; `RAC_vs_Brent_spread = RAC_composite - Brent`.
+- `first_purchase_vs_WTI_spread = first_purchase_price - WTI`; `landed_import_vs_Brent_spread = imported_landed_cost - Brent`.
 
 Inventory:
 
@@ -165,6 +173,12 @@ Concise hierarchy:
 WTI and Brent are benchmark oil price series. USO is a tradable oil ETF exposure series. USO is analysed separately because its return path can diverge from spot or front-month benchmark oil through roll yield, fund expenses, tracking differences, and ETF structure. In this project, WTI and Brent remain the benchmark oil-price targets, while USO tests what the oil signal looks like for a market participant using a tradable ETF proxy.
 
 The USO layer compares YoY and monthly returns with WTI and Brent over lags from -18 to +18 months, tests GM2-only and combined tradable-exposure models, and reports USO tracking residuals across the project regimes. A public futures-curve series is not currently part of the reproducible pipeline, so the return spread and tracking residual are treated as reduced-form diagnostics for roll and fund-structure effects rather than direct measurements of roll yield.
+
+## Physical realised crude prices
+
+No single barrel price exists. WTI and Brent are benchmark oil price series, while USO is an investor-accessible oil exposure whose return path reflects futures roll, expenses, tracking differences, and fund structure. Refiner acquisition cost is the average price refiners actually paid for crude. Domestic first purchase price is the first arm's-length physical sale from the lease or wellhead. Imported landed cost is the delivered cost of imported crude at the port of discharge, while FOB cost measures the crude before transportation and insurance to the destination port.
+
+This layer compares benchmark prices, tradable exposure, and physical realization without changing the locked GM2-only lag-5 WTI/Brent model. It tests which price series tracks comparative inventory and GM2 most closely, and whether inventory state helps explain the basis between physical prices and WTI or Brent.
 
 ## Limitations
 

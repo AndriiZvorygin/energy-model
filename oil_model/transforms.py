@@ -37,6 +37,12 @@ def build_monthly_dataset(
     wti: Series,
     brent: Series,
     crude_inventory: Series,
+    rac_composite: Series | None = None,
+    rac_domestic: Series | None = None,
+    rac_imported: Series | None = None,
+    first_purchase: Series | None = None,
+    imported_fob_cost: Series | None = None,
+    imported_landed_cost: Series | None = None,
 ) -> list[Row]:
     maps = {
         "us_m2": series_map(us_m2),
@@ -53,6 +59,12 @@ def build_monthly_dataset(
         "wti": series_map(wti),
         "brent": series_map(brent),
         "crude_inventory_kb": series_map(crude_inventory),
+        "rac_composite": optional_series_map(rac_composite),
+        "rac_domestic": optional_series_map(rac_domestic),
+        "rac_imported": optional_series_map(rac_imported),
+        "first_purchase": optional_series_map(first_purchase),
+        "imported_fob_cost": optional_series_map(imported_fob_cost),
+        "imported_landed_cost": optional_series_map(imported_landed_cost),
     }
     months = sorted(set().union(*[set(m) for m in maps.values()]))
     rows: list[Row] = []
@@ -62,6 +74,10 @@ def build_monthly_dataset(
     sp500_values: list[float | None] = []
     uso_values: list[float | None] = []
     inv_values: list[float | None] = []
+    physical_values: dict[str, list[float | None]] = {
+        name: []
+        for name in ["rac_composite", "rac_domestic", "rac_imported", "first_purchase", "imported_fob_cost", "imported_landed_cost"]
+    }
 
     for month in months:
         us = maps["us_m2"].get(month)
@@ -83,6 +99,8 @@ def build_monthly_dataset(
         sp500_values.append(maps["sp500"].get(month))
         uso_values.append(maps["uso_month_end"].get(month))
         inv_values.append(maps["crude_inventory_kb"].get(month))
+        for name, values in physical_values.items():
+            values.append(maps[name].get(month))
         cpi_value = maps["cpi"].get(month)
         sp500_value = maps["sp500"].get(month)
         uso_avg_value = maps["uso_avg"].get(month)
@@ -109,6 +127,12 @@ def build_monthly_dataset(
                 "USO_month_end_adjusted_close": uso_month_end_value,
                 "WTI": wti_value,
                 "Brent": brent_value,
+                "RAC_composite": maps["rac_composite"].get(month),
+                "RAC_domestic": maps["rac_domestic"].get(month),
+                "RAC_imported": maps["rac_imported"].get(month),
+                "first_purchase_price": maps["first_purchase"].get(month),
+                "imported_crude_FOB_cost": maps["imported_fob_cost"].get(month),
+                "imported_landed_cost": maps["imported_landed_cost"].get(month),
                 "real_WTI": real_price(wti_value, cpi_value),
                 "real_Brent": real_price(brent_value, cpi_value),
                 "crude_inventory_kb": maps["crude_inventory_kb"].get(month),
@@ -120,6 +144,7 @@ def build_monthly_dataset(
     brent_yoy = yoy(brent_values)
     sp500_yoy = yoy(sp500_values)
     uso_yoy = yoy(uso_values)
+    physical_yoy = {name: yoy(values) for name, values in physical_values.items()}
     ci_metrics = comparative_inventory(months, inv_values)
     for i, row in enumerate(rows):
         row["GM2_YoY"] = gm2_yoy[i]
@@ -135,6 +160,16 @@ def build_monthly_dataset(
         row["Brent_YoY"] = brent_yoy[i]
         row["WTI_log_return_1m"] = log_return(wti_values, i)
         row["Brent_log_return_1m"] = log_return(brent_values, i)
+        row["RAC_composite_YoY"] = physical_yoy["rac_composite"][i]
+        row["RAC_domestic_YoY"] = physical_yoy["rac_domestic"][i]
+        row["RAC_imported_YoY"] = physical_yoy["rac_imported"][i]
+        row["first_purchase_YoY"] = physical_yoy["first_purchase"][i]
+        row["imported_FOB_cost_YoY"] = physical_yoy["imported_fob_cost"][i]
+        row["landed_import_cost_YoY"] = physical_yoy["imported_landed_cost"][i]
+        row["RAC_vs_WTI_spread"] = diff(row.get("RAC_composite"), row.get("WTI"))
+        row["RAC_vs_Brent_spread"] = diff(row.get("RAC_composite"), row.get("Brent"))
+        row["first_purchase_vs_WTI_spread"] = diff(row.get("first_purchase_price"), row.get("WTI"))
+        row["landed_import_vs_Brent_spread"] = diff(row.get("imported_landed_cost"), row.get("Brent"))
         row["USO_vs_WTI_return_spread"] = diff(row.get("USO_log_return_1m"), row.get("WTI_log_return_1m"))
         row["USO_vs_Brent_return_spread"] = diff(row.get("USO_log_return_1m"), row.get("Brent_log_return_1m"))
         row["USO_tracking_residual"] = diff(row.get("USO_YoY"), row.get("WTI_YoY"))
@@ -147,6 +182,10 @@ def build_monthly_dataset(
         row["Brent_forward_6m_return"] = forward_return(brent_values, i, 6)
         row.update(ci_metrics[i])
     return rows
+
+
+def optional_series_map(series: Series | None) -> dict[str, float]:
+    return series_map(series) if series is not None else {}
 
 
 def real_price(price: float | None, cpi: float | None) -> float | None:

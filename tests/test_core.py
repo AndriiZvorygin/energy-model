@@ -65,6 +65,27 @@ class CoreTests(unittest.TestCase):
         values = [100.0] * 12 + [125.0]
         self.assertEqual(yoy(values)[-1], 25.0)
 
+    def test_physical_realised_price_fields(self) -> None:
+        months = fake_months(13)
+        rows = build_monthly_dataset(
+            *[fake_series(name, []) for name in ["us", "ea", "cn", "jp", "eur", "cny", "jpy", "cpi", "sp500", "uso_avg", "uso_end"]],
+            fake_series("wti", list(zip(months, [100.0] * 12 + [110.0]))),
+            fake_series("brent", list(zip(months, [105.0] * 12 + [115.5]))),
+            fake_series("inventory", []),
+            rac_composite=fake_series("rac", list(zip(months, [90.0] * 12 + [99.0]))),
+            rac_domestic=fake_series("rac_domestic", list(zip(months, [91.0] * 12 + [100.1]))),
+            rac_imported=fake_series("rac_imported", list(zip(months, [89.0] * 12 + [97.9]))),
+            first_purchase=fake_series("first", list(zip(months, [80.0] * 12 + [88.0]))),
+            imported_fob_cost=fake_series("fob", list(zip(months, [95.0] * 12 + [104.5]))),
+            imported_landed_cost=fake_series("landed", list(zip(months, [100.0] * 12 + [110.0]))),
+        )
+        latest = rows[-1]
+        self.assertAlmostEqual(latest["RAC_composite_YoY"], 10.0)
+        self.assertAlmostEqual(latest["landed_import_cost_YoY"], 10.0)
+        self.assertAlmostEqual(latest["RAC_vs_WTI_spread"], -11.0)
+        self.assertAlmostEqual(latest["first_purchase_vs_WTI_spread"], -22.0)
+        self.assertAlmostEqual(latest["landed_import_vs_Brent_spread"], -5.5)
+
     def test_lag_generation(self) -> None:
         rows = [
             {"GM2_YoY": 1.0, "WTI_YoY": 10.0},
@@ -127,6 +148,8 @@ class CoreTests(unittest.TestCase):
             "uso_lead_lag_summary.csv",
             "uso_tracking_residual_summary.csv",
             "uso_model_summary.csv",
+            "physical_realised_price_findings.md",
+            "physical_realised_price_summary.csv",
             "energy_gdp_findings.md",
             "energy_gdp_lead_lag.csv",
             "energy_gdp_model_summary.csv",
@@ -152,6 +175,9 @@ class CoreTests(unittest.TestCase):
             "uso_wti_return_spread.png",
             "uso_tracking_residual_by_regime.png",
             "uso_gm2_model_comparison.png",
+            "physical_realised_prices_vs_benchmarks.png",
+            "rac_vs_wti_spread.png",
+            "physical_price_ci_relationship.png",
             "energy_vs_gdp_growth.png",
             "energy_intensity_trend.png",
             "gdp_per_energy_trend.png",
@@ -170,10 +196,12 @@ class CoreTests(unittest.TestCase):
                 patch("oil_model.pipeline.ChinaM2Adapter", FakeChinaM2Adapter),
                 patch("oil_model.pipeline.EiaInventoryAdapter", FakeEiaInventoryAdapter),
                 patch("oil_model.pipeline.EiaMerAdapter", FakeEiaMerAdapter),
+                patch("oil_model.pipeline.EiaPetroleumPriceAdapter", FakeEiaPetroleumPriceAdapter),
                 patch("oil_model.pipeline.YahooChartAdapter", FakeYahooChartAdapter),
                 patch("oil_model.pipeline.second_stage_suite", fake_second_stage_suite),
                 patch("oil_model.pipeline.third_stage_suite", fake_third_stage_suite),
                 patch("oil_model.pipeline.uso_suite", fake_uso_suite),
+                patch("oil_model.pipeline.physical_realised_price_suite", fake_physical_realised_price_suite),
                 patch("oil_model.pipeline.energy_gdp_suite", fake_energy_gdp_suite),
                 patch("oil_model.pipeline.integrated_synthesis_suite", fake_integrated_synthesis_suite),
                 patch("oil_model.pipeline.make_charts", fake_make_charts),
@@ -271,6 +299,14 @@ class FakeEiaMerAdapter:
         return fake_series_range(name, base, 0.01)
 
 
+class FakeEiaPetroleumPriceAdapter:
+    def __init__(self, cache):
+        self.cache = cache
+
+    def fetch_monthly_series(self, series_id, name):
+        return fake_series_range(name, 55.0, 0.1)
+
+
 class FakeYahooChartAdapter:
     def __init__(self, cache):
         self.cache = cache
@@ -299,12 +335,17 @@ def fake_uso_suite(rows):
     return [row], [row], [row], "# USO\n"
 
 
+def fake_physical_realised_price_suite(rows):
+    row = {"section": "fake", "target": "RAC_composite_YoY", "model": "fake"}
+    return [row], "# Physical realised prices\n"
+
+
 def fake_integrated_synthesis_suite(lag_rows, rolling_extended_rows, residual_diagnostic_rows, oil_equity_rows, energy_gdp_rows):
     row = {"layer": "fake", "signal": "fake", "target": "fake"}
     return [row], "# Atlas\n", "# System\n"
 
 
-def fake_make_charts(rows, lag_rows, out_dir, residual_rows=None, rolling_rows=None, target_rows=None, oil_equity_rows=None, oil_equity_return_rows=None, uso_lead_lag_rows=None, uso_tracking_rows=None, uso_model_rows=None, energy_gdp_rows=None, energy_gdp_model_rows=None, system_signal_rows=None):
+def fake_make_charts(rows, lag_rows, out_dir, residual_rows=None, rolling_rows=None, target_rows=None, oil_equity_rows=None, oil_equity_return_rows=None, uso_lead_lag_rows=None, uso_tracking_rows=None, uso_model_rows=None, physical_price_rows=None, energy_gdp_rows=None, energy_gdp_model_rows=None, system_signal_rows=None):
     out_dir.mkdir(parents=True, exist_ok=True)
     for filename in [
         "residual_vs_ci_zscore.png",
@@ -324,6 +365,9 @@ def fake_make_charts(rows, lag_rows, out_dir, residual_rows=None, rolling_rows=N
         "uso_wti_return_spread.png",
         "uso_tracking_residual_by_regime.png",
         "uso_gm2_model_comparison.png",
+        "physical_realised_prices_vs_benchmarks.png",
+        "rac_vs_wti_spread.png",
+        "physical_price_ci_relationship.png",
         "energy_vs_gdp_growth.png",
         "energy_intensity_trend.png",
         "gdp_per_energy_trend.png",

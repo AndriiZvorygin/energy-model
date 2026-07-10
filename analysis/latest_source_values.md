@@ -1,6 +1,6 @@
 # Latest Source Values
 
-Retrieved at: `2026-07-10T08:29:59+00:00`
+Retrieved at: `2026-07-10T12:38:39+00:00`
 
 Latest complete GM2 month: **2026-05**
 G4 GM2 USD: **1.02409e+14**
@@ -35,6 +35,12 @@ G4 GM2 USD: **1.02409e+14**
 | WTI | 2026-06 | 85.5195 | FRED native units | FRED:DCOILWTICO |
 | Brent | 2026-06 | 86.1105 | FRED native units | FRED:DCOILBRENTEU |
 | Crude inventory excl SPR | 2026-06 | 416300 | thousand barrels | EIA WCESTUS1 |
+| RAC composite | 2026-05 | 97.7 | dollars per barrel | EIA Petroleum Marketing Monthly:R0000____3 |
+| RAC domestic | 2026-05 | 99.48 | dollars per barrel | EIA Petroleum Marketing Monthly:R1200____3 |
+| RAC imported | 2026-05 | 94.88 | dollars per barrel | EIA Petroleum Marketing Monthly:R1300____3 |
+| Domestic first purchase price | 2026-04 | 97.75 | dollars per barrel | EIA Petroleum Marketing Monthly:F000000__3 |
+| Imported crude FOB cost | 2026-04 | 86.13 | dollars per barrel | EIA Petroleum Marketing Monthly:I000000004 |
+| Imported crude landed cost | 2026-04 | 89.7 | dollars per barrel | EIA Petroleum Marketing Monthly:I000000008 |
 | Total primary energy consumption | 2026-03 | 7.8865 | Quadrillion Btu | EIA MER T01.03:TETCBUS Total Primary Energy Consumption |
 | Petroleum consumption | 2026-03 | 3.00206 | Quadrillion Btu | EIA MER T01.03:PMTCBUS Petroleum Consumption (Excluding Biofuels) |
 

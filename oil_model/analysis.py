@@ -337,6 +337,166 @@ def best_model_row(rows: list[Row], target: str, section: str) -> Row:
     return min(subset, key=lambda r: finite_or_inf(r.get("rolling_rmse")), default={})
 
 
+def physical_realised_price_suite(rows: list[Row], max_lag: int = 18) -> tuple[list[Row], str]:
+    prices = [
+        ("WTI", "WTI_YoY", "WTI benchmark"),
+        ("Brent", "Brent_YoY", "Brent benchmark"),
+        ("USO_month_end_adjusted_close", "USO_YoY", "USO tradable exposure"),
+        ("RAC_composite", "RAC_composite_YoY", "RAC composite"),
+        ("first_purchase_price", "first_purchase_YoY", "domestic first purchase"),
+        ("imported_landed_cost", "landed_import_cost_YoY", "imported landed cost"),
+    ]
+    out: list[Row] = []
+    for i, (level, growth, label) in enumerate(prices):
+        for other_level, other_growth, other_label in prices[i + 1 :]:
+            for left, right, measure in [(level, other_level, "price_level"), (growth, other_growth, "yoy")]:
+                x, y = aligned_values(rows, left, right)
+                corr, pvalue = pearson(x, y)
+                out.append(
+                    {
+                        "section": "price_comparison",
+                        "price": label,
+                        "comparison_price": other_label,
+                        "measure": measure,
+                        "correlation": corr,
+                        "p_value": pvalue,
+                        "n_obs": len(x),
+                    }
+                )
+        x, y = aligned_values(rows, "CI_zscore", growth)
+        corr, pvalue = pearson(x, y)
+        out.append(
+            {
+                "section": "ci_tracking",
+                "price": label,
+                "target": growth,
+                "predictor": "CI_zscore",
+                "correlation": corr,
+                "p_value": pvalue,
+                "n_obs": len(x),
+            }
+        )
+        for lag in range(max_lag + 1):
+            pairs = lagged_pairs(rows, "GM2_YoY", growth, lag)
+            gx = [pair[0] for pair in pairs]
+            gy = [pair[1] for pair in pairs]
+            gm2_corr, gm2_pvalue = pearson(gx, gy)
+            out.append(
+                {
+                    "section": "gm2_tracking",
+                    "price": label,
+                    "target": growth,
+                    "predictor": "GM2_YoY",
+                    "lag_months": lag,
+                    "lag_convention": "positive = GM2 leads price YoY",
+                    "correlation": gm2_corr,
+                    "p_value": gm2_pvalue,
+                    "n_obs": len(pairs),
+                }
+            )
+
+    for spread, benchmark in [
+        ("RAC_vs_WTI_spread", "WTI"),
+        ("RAC_vs_Brent_spread", "Brent"),
+        ("first_purchase_vs_WTI_spread", "WTI"),
+        ("landed_import_vs_Brent_spread", "Brent"),
+    ]:
+        x, y = aligned_values(rows, "CI_zscore", spread)
+        corr, pvalue = pearson(x, y)
+        out.append(
+            {
+                "section": "ci_spread_correlation",
+                "target": spread,
+                "benchmark": benchmark,
+                "predictor": "CI_zscore",
+                "correlation": corr,
+                "p_value": pvalue,
+                "n_obs": len(x),
+            }
+        )
+        model = fit_summary(
+            rows,
+            spread,
+            f"{spread}_ci_state",
+            [feature("CI_zscore", 0, "CI_zscore"), feature("CI_monthly_change", 0, "CI_monthly_change")],
+            0,
+            "physical_realised_spread",
+        )
+        if model:
+            model["section"] = "ci_spread_model"
+            model["benchmark"] = benchmark
+            out.append(model)
+
+    snapshot_prices = [
+        *prices,
+        ("RAC_domestic", "RAC_domestic_YoY", "RAC domestic"),
+        ("RAC_imported", "RAC_imported_YoY", "RAC imported"),
+        ("imported_crude_FOB_cost", "imported_FOB_cost_YoY", "imported FOB cost"),
+    ]
+    for level, growth, label in snapshot_prices:
+        latest = next((row for row in reversed(rows) if is_number(row.get(level))), None)
+        if latest:
+            out.append(
+                {
+                    "section": "latest_snapshot",
+                    "price": label,
+                    "level_field": level,
+                    "yoy_field": growth,
+                    "month": latest.get("month"),
+                    "price_level": latest.get(level),
+                    "price_yoy": latest.get(growth),
+                    "unit": "dollars per share" if level == "USO_month_end_adjusted_close" else "dollars per barrel",
+                    "CI_zscore": latest.get("CI_zscore"),
+                    "GM2_YoY": latest.get("GM2_YoY"),
+                }
+            )
+    return out, physical_realised_price_findings(out)
+
+
+def physical_realised_price_findings(summary: list[Row]) -> str:
+    ci_rows = [r for r in summary if r.get("section") == "ci_tracking" and is_number(r.get("correlation"))]
+    best_ci = max(ci_rows, key=lambda r: abs(float(r["correlation"])), default={})
+    gm2_rows = [r for r in summary if r.get("section") == "gm2_tracking" and is_number(r.get("correlation"))]
+    best_gm2 = max(gm2_rows, key=lambda r: abs(float(r["correlation"])), default={})
+    lines = [
+        "# Physical Realised Crude Price Findings",
+        "",
+        "## Interpretation",
+        "",
+        "No single barrel price exists. WTI and Brent are traded benchmarks, USO is an investor-accessible futures-fund exposure, refiner acquisition cost measures what refiners paid for crude, first purchase price measures the first arm's-length physical sale from the lease, and landed import cost includes the delivered cost of imported crude at the port of discharge.",
+        "",
+        "The locked benchmark model remains unchanged: WTI and Brent Oil_YoY use G4 GM2 YoY lagged five months. This layer compares physical price realization and benchmark basis; it does not reopen model selection.",
+        "",
+        "## Tracking Results",
+        "",
+    ]
+    if best_ci:
+        lines.append(f"- Strongest absolute contemporaneous relationship with comparative inventory is {best_ci.get('price')} ({best_ci.get('target')}) at correlation {fmt(best_ci.get('correlation'))}, n={best_ci.get('n_obs')}.")
+    if best_gm2:
+        lines.append(f"- Strongest absolute GM2-price relationship in the descriptive 0-18 month scan is {best_gm2.get('price')} at lag {best_gm2.get('lag_months')}, correlation {fmt(best_gm2.get('correlation'))}, n={best_gm2.get('n_obs')}.")
+    for row in summary:
+        if row.get("section") == "ci_spread_model":
+            lines.append(f"- `{row.get('target')}` explained by CI z-score and monthly inventory change: full-sample HAC OLS R2 {fmt(row.get('full_r2'))}, test RMSE {fmt(row.get('test_rmse'))}.")
+
+    lines.extend(["", "## Latest Physical-Price Snapshot", ""])
+    for row in summary:
+        if row.get("section") == "latest_snapshot":
+            unit = "/share" if row.get("unit") == "dollars per share" else "/bbl"
+            lines.append(f"- {row.get('price')}: {row.get('month')} level ${fmt(row.get('price_level'))}{unit}, YoY {fmt(row.get('price_yoy'))}%.")
+
+    lines.extend(
+        [
+            "",
+            "## Scope Note",
+            "",
+            "The release includes aggregate imported FOB and landed costs in the processed dataset. API-gravity and sulphur cross-sections are deferred: they are optional, frequently withheld or sparse, and would add many narrow series without changing the aggregate physical-price question in this pass.",
+            "",
+            "Sources: EIA Petroleum Marketing Monthly history series R0000____3, R1200____3, R1300____3, F000000__3, I000000004, and I000000008; FRED WTI/Brent; Yahoo Finance USO adjusted close. Formulas: YoY = 100*(price/price[t-12]-1); physical spread = physical realised price minus its named monthly benchmark.",
+        ]
+    )
+    return "\n".join(lines) + "\n"
+
+
 def add_oil_equity_fields(rows: list[Row]) -> list[Row]:
     out: list[Row] = []
     for row in rows:

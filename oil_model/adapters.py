@@ -239,6 +239,35 @@ class EiaMerAdapter:
         return Series(name, unit, f"EIA MER {table_id}:{msn} {description}", observations)
 
 
+class EiaPetroleumPriceAdapter:
+    base_url = "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?f=M&n=PET&s={series_id}"
+
+    def __init__(self, cache: RawCache) -> None:
+        self.cache = cache
+
+    def fetch_monthly_series(self, series_id: str, name: str) -> Series:
+        url = self.base_url.format(series_id=series_id)
+        path = self.cache.fetch(url, f"eia_prices/{series_id}_monthly.html")
+        text = path.read_text(encoding="utf-8", errors="replace")
+        observations: list[Observation] = []
+        for row_html in re.findall(r"<tr[^>]*>(.*?)</tr>", text, flags=re.S | re.I):
+            cells = [
+                html.unescape(re.sub(r"<.*?>", "", cell)).replace("\xa0", " ").strip()
+                for cell in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", row_html, flags=re.S | re.I)
+            ]
+            if len(cells) != 13 or not re.fullmatch(r"\d{4}", cells[0]):
+                continue
+            year = int(cells[0])
+            for month, raw in enumerate(cells[1:], start=1):
+                try:
+                    value = float(raw.replace(",", ""))
+                except ValueError:
+                    continue
+                observations.append((f"{year}-{month:02d}", value))
+        require_observations(series_id, observations)
+        return Series(name, "dollars per barrel", f"EIA Petroleum Marketing Monthly:{series_id}", observations)
+
+
 class BisAdapter:
     def __init__(self, cache: RawCache) -> None:
         self.cache = cache

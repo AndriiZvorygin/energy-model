@@ -22,6 +22,7 @@ def make_charts(
     uso_lead_lag_rows: list[Row] | None = None,
     uso_tracking_rows: list[Row] | None = None,
     uso_model_rows: list[Row] | None = None,
+    physical_price_rows: list[Row] | None = None,
     energy_gdp_rows: list[Row] | None = None,
     energy_gdp_model_rows: list[Row] | None = None,
     system_signal_rows: list[Row] | None = None,
@@ -41,6 +42,7 @@ def make_charts(
     uso_lead_lag_rows = uso_lead_lag_rows or []
     uso_tracking_rows = uso_tracking_rows or []
     uso_model_rows = uso_model_rows or []
+    physical_price_rows = physical_price_rows or []
     energy_gdp_rows = energy_gdp_rows or []
     energy_gdp_model_rows = energy_gdp_model_rows or []
     system_signal_rows = system_signal_rows or []
@@ -67,6 +69,9 @@ def make_charts(
     plot_uso_wti_return_spread(rows, out_dir / "uso_wti_return_spread.png")
     plot_uso_tracking_residual_by_regime(uso_tracking_rows, out_dir / "uso_tracking_residual_by_regime.png")
     plot_uso_gm2_model_comparison(rows, uso_model_rows, out_dir / "uso_gm2_model_comparison.png")
+    plot_physical_realised_prices(rows, out_dir / "physical_realised_prices_vs_benchmarks.png")
+    plot_rac_vs_wti_spread(rows, out_dir / "rac_vs_wti_spread.png")
+    plot_physical_price_ci_relationship(rows, out_dir / "physical_price_ci_relationship.png")
     plot_energy_vs_gdp_growth(energy_gdp_rows, out_dir / "energy_vs_gdp_growth.png")
     plot_energy_intensity_trend(energy_gdp_rows, out_dir / "energy_intensity_trend.png")
     plot_gdp_per_energy_trend(energy_gdp_rows, out_dir / "gdp_per_energy_trend.png")
@@ -711,6 +716,87 @@ def plot_uso_gm2_model_comparison(rows: list[Row], model_rows: list[Row], path: 
     plt.close(fig)
 
 
+def plot_physical_realised_prices(rows: list[Row], path: Path) -> None:
+    selected = [r for r in rows if r.get("month", "") >= "2006-05"]
+    dates = [to_date(r["month"]) for r in selected]
+    fig, axes = plt.subplots(2, 1, figsize=(12, 9), sharex=True, gridspec_kw={"height_ratios": [2, 1]})
+    for col, label, color in [
+        ("WTI", "WTI", "#222222"),
+        ("Brent", "Brent", "#c05621"),
+        ("RAC_composite", "RAC composite", "#2b6cb0"),
+        ("first_purchase_price", "First purchase", "#2f855a"),
+        ("imported_landed_cost", "Imported landed", "#805ad5"),
+    ]:
+        axes[0].plot(dates, [r.get(col) for r in selected], label=label, color=color, linewidth=1.35)
+    axes[0].set_ylabel("Dollars per barrel")
+    axes[0].set_title("Physical Realised Crude Prices and Benchmarks")
+    axes[0].legend(ncol=3, fontsize=8)
+    axes[0].grid(alpha=0.25)
+
+    for col, label, color in [
+        ("USO_month_end_adjusted_close", "USO adjusted close", "#2b6cb0"),
+        ("WTI", "WTI", "#222222"),
+        ("Brent", "Brent", "#c05621"),
+    ]:
+        base = next((float(r[col]) for r in selected if is_num(r.get(col)) and float(r[col]) != 0), None)
+        values = [100 * float(r[col]) / base if base and is_num(r.get(col)) else None for r in selected]
+        axes[1].plot(dates, values, label=label, color=color, linewidth=1.4)
+    axes[1].set_ylabel("Index, first value = 100")
+    axes[1].legend(ncol=3, fontsize=8)
+    axes[1].grid(alpha=0.25)
+    style_time_axis(axes[1])
+    add_note(fig, "Top formula: monthly physical or benchmark dollars/bbl. Bottom: 100*value/first available value since 2006-05, keeping USO share price separate from barrel units. Sources: EIA/FRED/Yahoo.")
+    fig.tight_layout(rect=(0, 0.05, 1, 1))
+    fig.savefig(path, dpi=180)
+    plt.close(fig)
+
+
+def plot_rac_vs_wti_spread(rows: list[Row], path: Path) -> None:
+    dates = [to_date(r["month"]) for r in rows]
+    fig, ax = plt.subplots(figsize=(12, 6))
+    ax.plot(dates, [r.get("RAC_vs_WTI_spread") for r in rows], label="RAC composite minus WTI", color="#2b6cb0", linewidth=1.5)
+    ax.plot(dates, [r.get("first_purchase_vs_WTI_spread") for r in rows], label="First purchase minus WTI", color="#2f855a", linewidth=1.3)
+    ax.axhline(0, color="#777777", linewidth=0.8)
+    shade_regimes(ax)
+    style_time_axis(ax)
+    ax.set_title("Physical Domestic Crude Basis Versus WTI")
+    ax.set_ylabel("Dollars per barrel")
+    ax.legend()
+    add_note(fig, "Formulas: RAC_vs_WTI_spread = RAC_composite - WTI; first_purchase_vs_WTI_spread = first_purchase_price - WTI. Sources: EIA Petroleum Marketing Monthly and FRED.")
+    fig.tight_layout(rect=(0, 0.05, 1, 1))
+    fig.savefig(path, dpi=180)
+    plt.close(fig)
+
+
+def plot_physical_price_ci_relationship(rows: list[Row], path: Path) -> None:
+    series = [
+        ("WTI_YoY", "WTI YoY", "#222222"),
+        ("RAC_composite_YoY", "RAC composite YoY", "#2b6cb0"),
+        ("first_purchase_YoY", "First purchase YoY", "#2f855a"),
+        ("landed_import_cost_YoY", "Imported landed YoY", "#805ad5"),
+    ]
+    fig, axes = plt.subplots(2, 2, figsize=(12, 9), sharex=True, sharey=True)
+    for ax, (col, label, color) in zip(axes.flat, series):
+        points = [(float(r["CI_zscore"]), float(r[col])) for r in rows if is_num(r.get("CI_zscore")) and is_num(r.get(col))]
+        ax.scatter([p[0] for p in points], [p[1] for p in points], s=14, alpha=0.5, color=color)
+        if len(points) >= 2:
+            slope, intercept = linear_fit([p[0] for p in points], [p[1] for p in points])
+            xs = [min(p[0] for p in points), max(p[0] for p in points)]
+            ax.plot(xs, [intercept + slope * x for x in xs], color="#555555", linewidth=1.1)
+        ax.axhline(0, color="#888888", linewidth=0.6)
+        ax.axvline(0, color="#888888", linewidth=0.6)
+        ax.set_title(label)
+        ax.grid(alpha=0.2)
+    axes[1, 0].set_xlabel("Comparative inventory z-score")
+    axes[1, 1].set_xlabel("Comparative inventory z-score")
+    axes[0, 0].set_ylabel("Price YoY, percent")
+    axes[1, 0].set_ylabel("Price YoY, percent")
+    add_note(fig, "Formula: scatter Price_YoY[t] vs CI_zscore[t], with OLS trend line; Price_YoY = 100*(price/price[t-12]-1). Sources: EIA/FRED processed monthly dataset.")
+    fig.tight_layout(rect=(0, 0.05, 1, 1))
+    fig.savefig(path, dpi=180)
+    plt.close(fig)
+
+
 def plot_energy_vs_gdp_growth(energy_rows: list[Row], path: Path) -> None:
     q_rows = sorted([r for r in energy_rows if r.get("section") == "time_series" and r.get("frequency") == "quarterly"], key=lambda r: str(r.get("period")))
     dates = [to_date(r.get("month")) for r in q_rows if r.get("month")]
@@ -955,6 +1041,14 @@ def scale_trillion(value: object) -> float | None:
 
 def is_num(value: object) -> bool:
     return isinstance(value, (int, float))
+
+
+def linear_fit(xs: list[float], ys: list[float]) -> tuple[float, float]:
+    x_mean = sum(xs) / len(xs)
+    y_mean = sum(ys) / len(ys)
+    denominator = sum((x - x_mean) ** 2 for x in xs)
+    slope = sum((x - x_mean) * (y - y_mean) for x, y in zip(xs, ys)) / denominator if denominator else 0.0
+    return slope, y_mean - slope * x_mean
 
 
 def add_note(fig: plt.Figure, text: str) -> None:

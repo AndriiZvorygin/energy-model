@@ -123,6 +123,27 @@ SOURCE_MANIFEST: list[Row] = [
         "notes": "Daily observations averaged to month.",
     },
     {
+        "source_name": "EIA Petroleum Marketing Monthly",
+        "series_id": "R0000____3; R1200____3; R1300____3",
+        "description": "U.S. composite, domestic, and imported refiner acquisition costs",
+        "source_url_or_api": "https://www.eia.gov/dnav/pet/PET_PRI_RAC2_DCU_NUS_M.htm",
+        "notes": "Monthly dollars per barrel; current observations may be preliminary or estimated by EIA.",
+    },
+    {
+        "source_name": "EIA Petroleum Marketing Monthly",
+        "series_id": "F000000__3",
+        "description": "U.S. domestic crude oil first purchase price",
+        "source_url_or_api": "https://www.eia.gov/dnav/pet/PET_PRI_DFP1_K_M.htm",
+        "notes": "Monthly dollars per barrel at the lease or wellhead first arm's-length purchase.",
+    },
+    {
+        "source_name": "EIA Petroleum Marketing Monthly",
+        "series_id": "I000000004; I000000008",
+        "description": "Average imported crude oil FOB and landed costs",
+        "source_url_or_api": "https://www.eia.gov/dnav/pet/pet_move_imc1_k_m.htm",
+        "notes": "Monthly dollars per barrel; landed cost is measured at the port of discharge.",
+    },
+    {
         "source_name": "EIA",
         "series_id": "WCESTUS1",
         "description": "Weekly U.S. ending stocks excluding SPR of crude oil",

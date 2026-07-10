@@ -4,8 +4,8 @@ import argparse
 import os
 from pathlib import Path
 
-from .adapters import BisAdapter, BojAdapter, ChinaM2Adapter, EcbAdapter, EiaInventoryAdapter, EiaMerAdapter, FredAdapter, YahooChartAdapter
-from .analysis import energy_gdp_suite, final_reporting_suite, integrated_synthesis_suite, lag_correlations, oil_equity_robustness_suite, oil_equity_suite, regression_suite, second_stage_suite, third_stage_suite, uso_suite
+from .adapters import BisAdapter, BojAdapter, ChinaM2Adapter, EcbAdapter, EiaInventoryAdapter, EiaMerAdapter, EiaPetroleumPriceAdapter, FredAdapter, YahooChartAdapter
+from .analysis import energy_gdp_suite, final_reporting_suite, integrated_synthesis_suite, lag_correlations, oil_equity_robustness_suite, oil_equity_suite, physical_realised_price_suite, regression_suite, second_stage_suite, third_stage_suite, uso_suite
 from .audit import terminal_summary, write_audit_outputs
 from .cache import RawCache
 from .charts import make_charts
@@ -26,6 +26,7 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
     china = ChinaM2Adapter(cache, fred)
     eia = EiaInventoryAdapter(cache)
     eia_mer = EiaMerAdapter(cache)
+    eia_prices = EiaPetroleumPriceAdapter(cache)
     yahoo = YahooChartAdapter(cache)
     bis = BisAdapter(cache)
 
@@ -44,6 +45,12 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
     wti = fred.fetch("DCOILWTICO", monthly=True)
     brent = fred.fetch("DCOILBRENTEU", monthly=True)
     inventory = eia.fetch_crude_stocks_ex_spr()
+    rac_composite = eia_prices.fetch_monthly_series("R0000____3", "RAC_COMPOSITE")
+    rac_domestic = eia_prices.fetch_monthly_series("R1200____3", "RAC_DOMESTIC")
+    rac_imported = eia_prices.fetch_monthly_series("R1300____3", "RAC_IMPORTED")
+    first_purchase = eia_prices.fetch_monthly_series("F000000__3", "US_CRUDE_FIRST_PURCHASE_PRICE")
+    imported_fob_cost = eia_prices.fetch_monthly_series("I000000004", "US_IMPORTED_CRUDE_FOB_COST")
+    imported_landed_cost = eia_prices.fetch_monthly_series("I000000008", "US_IMPORTED_CRUDE_LANDED_COST")
     total_energy = eia_mer.fetch_monthly_series("T01.03", "TETCBUS", "US_TOTAL_PRIMARY_ENERGY_CONSUMPTION")
     oil_energy = eia_mer.fetch_monthly_series("T01.03", "PMTCBUS", "US_PETROLEUM_CONSUMPTION")
     source_series = {
@@ -63,11 +70,20 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
         "WTI": wti,
         "Brent": brent,
         "Crude inventory excl SPR": inventory,
+        "RAC composite": rac_composite,
+        "RAC domestic": rac_domestic,
+        "RAC imported": rac_imported,
+        "Domestic first purchase price": first_purchase,
+        "Imported crude FOB cost": imported_fob_cost,
+        "Imported crude landed cost": imported_landed_cost,
         "Total primary energy consumption": total_energy,
         "Petroleum consumption": oil_energy,
     }
 
-    rows = build_monthly_dataset(us_m2, ea_m2, cn_m2, jp_m2, eurusd, cnyusd, jpyusd, cpi, sp500, uso_avg, uso_month_end, wti, brent, inventory)
+    rows = build_monthly_dataset(
+        us_m2, ea_m2, cn_m2, jp_m2, eurusd, cnyusd, jpyusd, cpi, sp500, uso_avg, uso_month_end, wti, brent, inventory,
+        rac_composite, rac_domestic, rac_imported, first_purchase, imported_fob_cost, imported_landed_cost,
+    )
     rows = [row for row in rows if row.get("month") >= "1986-01"]
 
     lag_rows = lag_correlations(rows, "WTI_YoY") + lag_correlations(rows, "Brent_YoY")
@@ -83,6 +99,7 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
     oil_equity_rows, oil_equity_findings = oil_equity_suite(rows)
     oil_equity_return_lag_rows, oil_equity_robustness = oil_equity_robustness_suite(rows)
     uso_lead_lag_rows, uso_tracking_rows, uso_model_rows, uso_findings = uso_suite(rows)
+    physical_price_rows, physical_price_findings = physical_realised_price_suite(rows)
     energy_gdp_lead_lag_rows, energy_gdp_model_rows, energy_gdp_findings = energy_gdp_suite(
         rows,
         gdpc1,
@@ -115,6 +132,7 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
     write_csv(analysis_dir / "uso_lead_lag_summary.csv", uso_lead_lag_rows)
     write_csv(analysis_dir / "uso_tracking_residual_summary.csv", uso_tracking_rows)
     write_csv(analysis_dir / "uso_model_summary.csv", uso_model_rows)
+    write_csv(analysis_dir / "physical_realised_price_summary.csv", physical_price_rows)
     write_csv(analysis_dir / "energy_gdp_lead_lag.csv", energy_gdp_lead_lag_rows)
     write_csv(analysis_dir / "energy_gdp_model_summary.csv", energy_gdp_model_rows)
     write_csv(analysis_dir / "system_signal_hierarchy.csv", system_signal_rows)
@@ -126,6 +144,7 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
     (analysis_dir / "oil_equity_findings.md").write_text(oil_equity_findings, encoding="utf-8")
     (analysis_dir / "oil_equity_robustness.md").write_text(oil_equity_robustness, encoding="utf-8")
     (analysis_dir / "uso_findings.md").write_text(uso_findings, encoding="utf-8")
+    (analysis_dir / "physical_realised_price_findings.md").write_text(physical_price_findings, encoding="utf-8")
     (analysis_dir / "energy_gdp_findings.md").write_text(energy_gdp_findings, encoding="utf-8")
     (analysis_dir / "integrated_lead_lag_atlas.md").write_text(integrated_atlas, encoding="utf-8")
     (analysis_dir / "final_system_interpretation.md").write_text(final_system_interpretation, encoding="utf-8")
@@ -151,6 +170,7 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
         store.write_rows("uso_lead_lag_summary", uso_lead_lag_rows)
         store.write_rows("uso_tracking_residual_summary", uso_tracking_rows)
         store.write_rows("uso_model_summary", uso_model_rows)
+        store.write_rows("physical_realised_price_summary", physical_price_rows)
         store.write_rows("energy_gdp_lead_lag", energy_gdp_lead_lag_rows)
         store.write_rows("energy_gdp_model_summary", energy_gdp_model_rows)
         store.write_rows("system_signal_hierarchy", system_signal_rows)
@@ -171,6 +191,7 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
         uso_lead_lag_rows,
         uso_tracking_rows,
         uso_model_rows,
+        physical_price_rows,
         energy_gdp_lead_lag_rows,
         energy_gdp_model_rows,
         system_signal_rows,
