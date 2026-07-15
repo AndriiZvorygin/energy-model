@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
-import { BookOpen, CircleHelp, Droplets, Factory, Fuel, Home as HomeIcon, Landmark, Menu, Moon, Network, Sun, TrendingUp, X } from 'lucide-react'
+import { Activity, AlertTriangle, BarChart3, BookOpen, BriefcaseBusiness, CircleHelp, Droplets, Factory, Fuel, History, Home as HomeIcon, Landmark, ListFilter, Map, Menu, Moon, Network, Route as RouteIcon, Scale, Sun, TrendingUp, X } from 'lucide-react'
 import { NavLink, Route, Routes, useLocation } from 'react-router-dom'
 const Home = lazy(() => import('./pages/Home').then((module) => ({ default: module.Home })))
 const Overview = lazy(() => import('./pages/Overview').then((module) => ({ default: module.Overview })))
@@ -9,16 +9,36 @@ const OilPrices = lazy(() => import('./pages/OilPrices').then((module) => ({ def
 const Equities = lazy(() => import('./pages/Equities').then((module) => ({ default: module.Equities })))
 const Economy = lazy(() => import('./pages/Economy').then((module) => ({ default: module.Economy })))
 const Methodology = lazy(() => import('./pages/Methodology').then((module) => ({ default: module.Methodology })))
+const SystemResponse = lazy(() => import('./pages/SystemResponse').then((module) => ({ default: module.SystemResponse })))
+const CurrentState = lazy(() => import('./pages/CurrentState').then((module) => ({ default: module.CurrentState })))
+const Regimes = lazy(() => import('./pages/Regimes').then((module) => ({ default: module.Regimes })))
+const Symptoms = lazy(() => import('./pages/Symptoms').then((module) => ({ default: module.Symptoms })))
+const Indicators = lazy(() => import('./pages/Indicators').then((module) => ({ default: module.Indicators })))
+const Episodes = lazy(() => import('./pages/Episodes').then((module) => ({ default: module.Episodes })))
+const EnergyBurden = lazy(() => import('./pages/EnergyBurden').then((module) => ({ default: module.EnergyBurden })))
+const Labour = lazy(() => import('./pages/Labour').then((module) => ({ default: module.Labour })))
+const Roadmap = lazy(() => import('./pages/Roadmap').then((module) => ({ default: module.Roadmap })))
+const OutputQuality = lazy(() => import('./pages/OutputQuality').then((module) => ({ default: module.OutputQuality })))
 
 const navItems = [
   { to: '/', label: 'Home', icon: HomeIcon },
   { to: '/overview', label: 'System overview', icon: Network },
+  { to: '/system-response', label: 'System response', icon: RouteIcon },
+  { to: '/current-state', label: 'Current state', icon: Activity },
+  { to: '/regimes', label: 'Regimes', icon: BarChart3 },
+  { to: '/symptoms', label: 'Symptoms', icon: AlertTriangle },
+  { to: '/indicators', label: 'Indicators', icon: ListFilter },
+  { to: '/episodes', label: 'Episodes', icon: History },
+  { to: '/energy-burden', label: 'Energy burden', icon: Scale },
+  { to: '/labour', label: 'Labour', icon: BriefcaseBusiness },
   { to: '/liquidity', label: 'Liquidity', icon: TrendingUp },
   { to: '/physical-market', label: 'Physical market', icon: Droplets },
   { to: '/oil-prices', label: 'Oil prices', icon: Fuel },
   { to: '/equities', label: 'Equities', icon: Landmark },
   { to: '/economy', label: 'Economy', icon: Factory },
+  { to: '/output-quality', label: 'Output quality', icon: Scale },
   { to: '/methodology', label: 'Methodology', icon: BookOpen },
+  { to: '/roadmap', label: 'Roadmap', icon: Map },
 ]
 
 const glossary = {
@@ -51,19 +71,19 @@ export default function App() {
         <button type="button" onClick={() => setMenuOpen(!menuOpen)} className="flex h-9 w-9 items-center justify-center rounded-md border border-stone-300 dark:border-stone-700" aria-label="Toggle navigation">{menuOpen ? <X size={19} /> : <Menu size={19} />}</button>
       </header>
 
-      <aside className={`${menuOpen ? 'block' : 'hidden'} fixed inset-x-0 top-16 z-30 border-b border-stone-200 bg-paper p-4 lg:sticky lg:top-0 lg:block lg:h-screen lg:border-b-0 lg:border-r lg:p-5 dark:border-stone-800 dark:bg-[#111715]`}>
-        <NavLink to="/" className="mb-8 hidden lg:block">
+      <aside className={`${menuOpen ? 'block' : 'hidden'} fixed inset-x-0 top-16 z-30 max-h-[calc(100vh-4rem)] overflow-y-auto border-b border-stone-200 bg-paper p-4 lg:sticky lg:top-0 lg:block lg:h-screen lg:max-h-none lg:border-b-0 lg:border-r lg:p-5 dark:border-stone-800 dark:bg-[#111715]`}>
+        <NavLink to="/" className="mb-6 hidden lg:block">
           <span className="block text-xs font-semibold uppercase tracking-widest text-petroleum">Research atlas</span>
           <span className="mt-2 block max-w-40 text-xl font-semibold leading-6 text-ink dark:text-white">Oil and the macro system</span>
         </NavLink>
         <nav className="grid grid-cols-2 gap-1 sm:grid-cols-4 lg:block" aria-label="Research sections">
           {navItems.map(({ to, label, icon: Icon }) => (
-            <NavLink key={to} to={to} end={to === '/'} className={({ isActive }) => `flex items-center gap-3 rounded-md px-3 py-2.5 text-sm font-medium transition lg:mb-1 ${isActive ? 'bg-petroleum text-white' : 'text-stone-600 hover:bg-stone-200/70 hover:text-ink dark:text-stone-400 dark:hover:bg-stone-800 dark:hover:text-white'}`}>
+            <NavLink key={to} to={to} end={to === '/'} className={({ isActive }) => `flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition lg:mb-0.5 ${isActive ? 'bg-petroleum text-white' : 'text-stone-600 hover:bg-stone-200/70 hover:text-ink dark:text-stone-400 dark:hover:bg-stone-800 dark:hover:text-white'}`}>
               <Icon size={17} aria-hidden="true" /><span>{label}</span>
             </NavLink>
           ))}
         </nav>
-        <div className="mt-5 grid grid-cols-2 gap-2 border-t border-stone-200 pt-5 lg:absolute lg:bottom-5 lg:left-5 lg:right-5 dark:border-stone-800">
+        <div className="mt-5 grid grid-cols-2 gap-2 border-t border-stone-200 pt-5 dark:border-stone-800">
           <button type="button" onClick={() => setGlossaryOpen(true)} className="flex items-center justify-center gap-2 rounded-md border border-stone-300 px-3 py-2 text-xs font-semibold dark:border-stone-700"><CircleHelp size={15} />Glossary</button>
           <button type="button" onClick={() => setDark(!dark)} className="flex items-center justify-center gap-2 rounded-md border border-stone-300 px-3 py-2 text-xs font-semibold dark:border-stone-700" aria-label={`Use ${dark ? 'light' : 'dark'} theme`}>{dark ? <Sun size={15} /> : <Moon size={15} />}{dark ? 'Light' : 'Dark'}</button>
         </div>
@@ -74,12 +94,22 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/overview" element={<Overview />} />
+            <Route path="/system-response" element={<SystemResponse />} />
+            <Route path="/current-state" element={<CurrentState />} />
+            <Route path="/regimes" element={<Regimes />} />
+            <Route path="/symptoms" element={<Symptoms />} />
+            <Route path="/indicators" element={<Indicators />} />
+            <Route path="/episodes" element={<Episodes />} />
+            <Route path="/energy-burden" element={<EnergyBurden />} />
+            <Route path="/labour" element={<Labour />} />
             <Route path="/liquidity" element={<Liquidity />} />
             <Route path="/physical-market" element={<PhysicalMarket />} />
             <Route path="/oil-prices" element={<OilPrices />} />
             <Route path="/equities" element={<Equities />} />
             <Route path="/economy" element={<Economy />} />
+            <Route path="/output-quality" element={<OutputQuality />} />
             <Route path="/methodology" element={<Methodology />} />
+            <Route path="/roadmap" element={<Roadmap />} />
           </Routes>
         </Suspense>
       </main>

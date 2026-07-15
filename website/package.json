@@ -5,13 +5,15 @@
   "type": "module",
   "scripts": {
     "generate:data": "node scripts/generate-data.mjs",
-    "predev": "npm run generate:data",
+    "validate:chart-data": "node scripts/validate-chart-data.mjs",
+    "predev": "npm run generate:data && npm run validate:chart-data",
     "dev": "vite",
-    "prebuild": "npm run generate:data",
+    "prebuild": "npm run generate:data && npm run validate:chart-data",
     "build": "tsc -b && vite build",
     "postbuild": "node scripts/prepare-pages.mjs",
     "build:pages": "npm run build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest run"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
@@ -22,13 +24,17 @@
     "recharts": "latest"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
+    "jsdom": "^29.1.1",
     "postcss": "latest",
     "tailwindcss": "^3.4.17",
     "typescript": "latest",
-    "vite": "latest"
+    "vite": "latest",
+    "vitest": "^4.1.10"
   }
 }

@@ -1,0 +1,2337 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "energy-gdp",
+  "title": "Energy throughput and real activity",
+  "description": "Quarterly growth in total energy, petroleum consumption, real GDP, and industrial production.",
+  "plainLanguageSummary": "Quarterly growth in total energy, petroleum consumption, real GDP, and industrial production.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Quarterly growth observations aligned to quarter dates.",
+    "explanation": "Monthly energy and industrial series are aggregated to quarter; GDP remains at its native quarterly frequency. No monthly interpolation is used.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "Monthly energy and industrial series are aggregated to quarter; GDP remains at its native quarterly frequency. No monthly interpolation is used."
+  ],
+  "sourceNotes": [
+    "EIA MER T01.03",
+    "FRED GDPC1",
+    "FRED INDPRO"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2007-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "Energy_consumption_growth": {
+        "mean": -0.007124839337607342,
+        "standardDeviation": 3.122991870902913,
+        "n": 52
+      },
+      "Oil_consumption_growth": {
+        "mean": -0.5257375809028048,
+        "standardDeviation": 3.074099714137715,
+        "n": 52
+      },
+      "Real_GDP_growth": {
+        "mean": 1.810632385916328,
+        "standardDeviation": 1.6406401591857886,
+        "n": 52
+      },
+      "Industrial_production_YoY": {
+        "mean": 0.36832636481434045,
+        "standardDeviation": 4.533478464542323,
+        "n": 52
+      }
+    }
+  },
+  "frequency": "quarterly",
+  "dateRange": {
+    "start": "1948-03-01",
+    "end": "2026-03-01"
+  },
+  "series": [
+    {
+      "key": "Energy_consumption_growth",
+      "label": "Total energy consumption growth",
+      "unit": "percent",
+      "source": "EIA MER T01.03",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": "#0f766e",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-03-01"
+    },
+    {
+      "key": "Oil_consumption_growth",
+      "label": "Petroleum consumption growth",
+      "unit": "percent",
+      "source": "EIA MER T01.03",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": "#d97706",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-03-01"
+    },
+    {
+      "key": "Real_GDP_growth",
+      "label": "Real GDP growth",
+      "unit": "percent",
+      "source": "FRED GDPC1",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": "#2563eb",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-03-01"
+    },
+    {
+      "key": "Industrial_production_YoY",
+      "label": "Industrial production growth",
+      "unit": "percent",
+      "source": "FRED INDPRO",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": "#7c3aed",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-03-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1948-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 2.6115130887197857,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1948-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 4.584425869542463,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1948-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 5.401227748440474,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1948-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 3.893671831519563,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1949-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 0.9432142598815307,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1949-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": -1.0349235073725427,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1949-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": -0.5828532996763891,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1949-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": -1.5273316105121282,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1950-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 3.7728563296203443,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1950-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 7.3033578207718275,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1950-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 10.31016190305496,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1950-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 13.37239384907627,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1951-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 10.564876919352262,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1951-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 9.149921288242213,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1951-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 7.252998354921925,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1951-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 5.468163272004611,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1952-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 5.165331710079579,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1952-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 3.5962738991806464,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1952-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 2.2373637292217197,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1952-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 5.364084180388229,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1953-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 6.189877102033248,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1953-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 6.781988440997866,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1953-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 5.420994313817573,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1953-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 0.5240615047921171,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1954-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": -1.7819250203068182,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1954-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": -2.4287768660382403,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1954-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": -0.7683311027168682,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1954-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 2.728619424977574,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1955-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 6.170198707152275,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1955-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 7.780241231188367,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1955-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 8.015915391937867,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1955-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 6.579017260658704,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1956-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 3.2169536928957188,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1956-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 2.403458081833021,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1956-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 0.9479719442729406,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1956-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 1.9968256280694208,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1957-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 3.0497555743857596,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1957-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 1.9809816095332389,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1957-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 3.0727752848411116,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1957-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 0.3546985657322921,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1958-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": -2.8722901975747894,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1958-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": -2.019544786757199,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1958-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": -0.7259560645533125,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1958-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 2.6573288629399228,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1959-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 7.415106238167812,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1959-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 9.118833932250613,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1959-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 6.726222850606911,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1959-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 4.584935628476705,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1960-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 4.92379619042107,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1960-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 2.0590973393856515,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1960-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 2.487655452956039,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1960-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 0.8851013654155082,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1961-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": -0.6675232238545603,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1961-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 1.5657846818091237,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1961-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 3.0115335873595495,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1961-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 6.397498989994466,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1962-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 7.569160858836588,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1962-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 6.730272632782075,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1962-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 6.0068727611334305,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1962-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 4.3098468185995165,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1963-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 3.601109802250946,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1963-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 3.824586006509767,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1963-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 4.818697418135365,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1963-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 5.159809846807195,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1964-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 6.217339646105979,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1964-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 6.182313598326505,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1964-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 5.521285465939152,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1964-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 5.157812790498717,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1965-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 5.478300000024183,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1965-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 5.660274908434038,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1965-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 6.347484807761239,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1965-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 8.46227065873435,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1966-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 8.477019498128314,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1966-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 7.489340026826796,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1966-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 6.042108531485502,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1966-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 4.504402897482795,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1967-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 2.925069232407873,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1967-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 2.637737713577337,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1967-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 2.7387436004856935,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1967-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 2.6709272243796267,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1968-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 3.8448152772550426,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1968-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 5.514676233925897,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1968-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 5.335354450306062,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1968-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 4.9578561546840705,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1969-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 4.469434131486105,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1969-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 3.064780019887059,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1969-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 2.947610114439625,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1969-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 2.0442073487201062,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1970-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 0.3227914619529093,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1970-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 0.1611246078731865,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1970-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 0.42134368087578533,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1970-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": -0.16735247777361906,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1971-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 2.697158764619889,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1971-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 3.1064413232145816,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1971-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 3.005276944871249,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1971-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 4.365553188952087,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1972-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 3.4725060662768703,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1972-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 5.251377703035898,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1972-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 5.378364037294192,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1972-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 6.891806086097496,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1973-03-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 7.561184799549903,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1973-06-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 6.319553786409782,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1973-09-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 4.7713493752379765,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1973-12-01",
+      "Energy_consumption_growth": null,
+      "Oil_consumption_growth": null,
+      "Real_GDP_growth": 4.024055261813664,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1974-03-01",
+      "Energy_consumption_growth": -4.102695152296043,
+      "Oil_consumption_growth": -7.794634443174164,
+      "Real_GDP_growth": 0.6389984128199799,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1974-06-01",
+      "Energy_consumption_growth": -3.0147045647792248,
+      "Oil_consumption_growth": -2.7674591177750174,
+      "Real_GDP_growth": -0.20826169490241186,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1974-09-01",
+      "Energy_consumption_growth": -1.6367482038284864,
+      "Oil_consumption_growth": -3.5158737367711135,
+      "Real_GDP_growth": -0.6290398324048763,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1974-12-01",
+      "Energy_consumption_growth": -1.6878503411961732,
+      "Oil_consumption_growth": -1.6776455179321137,
+      "Real_GDP_growth": -1.9457634317057715,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1975-03-01",
+      "Energy_consumption_growth": 0.34203334009095254,
+      "Oil_consumption_growth": 1.4215836684090766,
+      "Real_GDP_growth": -2.2997714710448536,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1975-06-01",
+      "Energy_consumption_growth": -3.7811252050538147,
+      "Oil_consumption_growth": -2.083117482666963,
+      "Real_GDP_growth": -1.8348424207727088,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1975-09-01",
+      "Energy_consumption_growth": -4.527565899369323,
+      "Oil_consumption_growth": -3.6522445387919156,
+      "Real_GDP_growth": 0.7986153897486803,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1975-12-01",
+      "Energy_consumption_growth": -3.386798450526163,
+      "Oil_consumption_growth": -4.223932359286719,
+      "Real_GDP_growth": 2.5547951202428143,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1976-03-01",
+      "Energy_consumption_growth": 2.5544126444766446,
+      "Oil_consumption_growth": 5.179887923015136,
+      "Real_GDP_growth": 6.154303273356643,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1976-06-01",
+      "Energy_consumption_growth": 4.913854944098173,
+      "Oil_consumption_growth": 5.757919682270041,
+      "Real_GDP_growth": 6.173984642335095,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1976-09-01",
+      "Energy_consumption_growth": 4.955671890322755,
+      "Oil_consumption_growth": 6.1999760869871245,
+      "Real_GDP_growth": 4.95825690072933,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1976-12-01",
+      "Energy_consumption_growth": 11.196723662683915,
+      "Oil_consumption_growth": 12.547424897524383,
+      "Real_GDP_growth": 4.311515992322779,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1977-03-01",
+      "Energy_consumption_growth": 5.785343646036223,
+      "Oil_consumption_growth": 9.469285487934043,
+      "Real_GDP_growth": 3.2268394403294653,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1977-06-01",
+      "Energy_consumption_growth": 4.31420279552861,
+      "Oil_consumption_growth": 6.628875044977733,
+      "Real_GDP_growth": 4.465304296293993,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1977-09-01",
+      "Energy_consumption_growth": 5.688307394566361,
+      "Oil_consumption_growth": 6.833615465560738,
+      "Real_GDP_growth": 5.769993106834703,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1977-12-01",
+      "Energy_consumption_growth": -2.1444229634044576,
+      "Oil_consumption_growth": -0.2997987790177681,
+      "Real_GDP_growth": 5.013271221670101,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1978-03-01",
+      "Energy_consumption_growth": 2.6595695292692234,
+      "Oil_consumption_growth": 2.1165669834228185,
+      "Real_GDP_growth": 4.1141118093148465,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1978-06-01",
+      "Energy_consumption_growth": 2.430926574583303,
+      "Oil_consumption_growth": 3.256958924373188,
+      "Real_GDP_growth": 6.077933225596155,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1978-09-01",
+      "Energy_consumption_growth": 1.2470466872525954,
+      "Oil_consumption_growth": 1.6957419153156295,
+      "Real_GDP_growth": 5.247033083241948,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1978-12-01",
+      "Energy_consumption_growth": 1.9439400499536408,
+      "Oil_consumption_growth": 2.004310258537556,
+      "Real_GDP_growth": 6.659559719611163,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1979-03-01",
+      "Energy_consumption_growth": 4.291756759640442,
+      "Oil_consumption_growth": 0.9333498855749189,
+      "Real_GDP_growth": 6.510448393675339,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1979-06-01",
+      "Energy_consumption_growth": 0.642034769437605,
+      "Oil_consumption_growth": -2.8061267762167996,
+      "Real_GDP_growth": 2.6566953584967523,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1979-09-01",
+      "Energy_consumption_growth": -0.3728690938512025,
+      "Oil_consumption_growth": -3.3336366646587123,
+      "Real_GDP_growth": 2.389453450707335,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1979-12-01",
+      "Energy_consumption_growth": -0.26680945211049467,
+      "Oil_consumption_growth": -3.878051934744431,
+      "Real_GDP_growth": 1.284088156938723,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1980-03-01",
+      "Energy_consumption_growth": -4.2348171444754446,
+      "Oil_consumption_growth": -9.342743919255614,
+      "Real_GDP_growth": 1.420553641544986,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1980-06-01",
+      "Energy_consumption_growth": -4.198714920232782,
+      "Oil_consumption_growth": -7.408737542138166,
+      "Real_GDP_growth": -0.775068743967744,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1980-09-01",
+      "Energy_consumption_growth": -3.5945817953282444,
+      "Oil_consumption_growth": -8.323295554802101,
+      "Real_GDP_growth": -1.623745716089553,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1980-12-01",
+      "Energy_consumption_growth": -2.101208940638666,
+      "Oil_consumption_growth": -6.264032492140514,
+      "Real_GDP_growth": -0.039051531488198954,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1981-03-01",
+      "Energy_consumption_growth": -4.427678131696588,
+      "Oil_consumption_growth": -8.175650011517632,
+      "Real_GDP_growth": 1.6000011986558205,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1981-06-01",
+      "Energy_consumption_growth": -0.894741351470707,
+      "Oil_consumption_growth": -5.5216131104698585,
+      "Real_GDP_growth": 2.9686706612209957,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1981-09-01",
+      "Energy_consumption_growth": -0.23086875540608842,
+      "Oil_consumption_growth": -4.30055701332085,
+      "Real_GDP_growth": 4.325718700878034,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1981-12-01",
+      "Energy_consumption_growth": -3.7821514517780375,
+      "Oil_consumption_growth": -8.348696456968085,
+      "Real_GDP_growth": 1.2998250196119887,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1982-03-01",
+      "Energy_consumption_growth": -1.9776117193267884,
+      "Oil_consumption_growth": -7.559135783698167,
+      "Real_GDP_growth": -2.190515056799669,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1982-06-01",
+      "Energy_consumption_growth": -3.945320810381514,
+      "Oil_consumption_growth": -2.4391909083418817,
+      "Real_GDP_growth": -1.0107452377141501,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1982-09-01",
+      "Energy_consumption_growth": -5.564061275589416,
+      "Oil_consumption_growth": -4.862482382658973,
+      "Real_GDP_growth": -2.5560417516138023,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1982-12-01",
+      "Energy_consumption_growth": -6.7445083865070865,
+      "Oil_consumption_growth": -6.304164629326703,
+      "Real_GDP_growth": -1.4431837563933958,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1983-03-01",
+      "Energy_consumption_growth": -5.509539031517152,
+      "Oil_consumption_growth": -6.177697148282446,
+      "Real_GDP_growth": 1.4314731652409485,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1983-06-01",
+      "Energy_consumption_growth": -0.2306167014605509,
+      "Oil_consumption_growth": -2.9703910331886463,
+      "Real_GDP_growth": 3.268479687025838,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1983-09-01",
+      "Energy_consumption_growth": 3.1455792911286196,
+      "Oil_consumption_growth": 3.0198002637984667,
+      "Real_GDP_growth": 5.736967079109201,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1983-12-01",
+      "Energy_consumption_growth": 1.608700354418957,
+      "Oil_consumption_growth": 3.953217051929858,
+      "Real_GDP_growth": 7.899663970222681,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1984-03-01",
+      "Energy_consumption_growth": 9.221334622321065,
+      "Oil_consumption_growth": 8.60696077215868,
+      "Real_GDP_growth": 8.578045114732769,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1984-06-01",
+      "Energy_consumption_growth": 7.476769167382913,
+      "Oil_consumption_growth": 5.052880767045842,
+      "Real_GDP_growth": 7.996531921438144,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1984-09-01",
+      "Energy_consumption_growth": 2.850637147114621,
+      "Oil_consumption_growth": 1.5672996374300086,
+      "Real_GDP_growth": 6.900732226163919,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1984-12-01",
+      "Energy_consumption_growth": 1.6070389806088103,
+      "Oil_consumption_growth": -1.5224443253513131,
+      "Real_GDP_growth": 5.575643773964911,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1985-03-01",
+      "Energy_consumption_growth": -1.1453689993841665,
+      "Oil_consumption_growth": -3.0856119270763815,
+      "Real_GDP_growth": 4.5548222635726665,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1985-06-01",
+      "Energy_consumption_growth": -2.05689598544756,
+      "Oil_consumption_growth": -1.0307285341748518,
+      "Real_GDP_growth": 3.683987731337335,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1985-09-01",
+      "Energy_consumption_growth": 0.3124127499422258,
+      "Oil_consumption_growth": -0.5102628248080943,
+      "Real_GDP_growth": 4.262423409248006,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1985-12-01",
+      "Energy_consumption_growth": 3.1669364766169883,
+      "Oil_consumption_growth": 3.083498389948147,
+      "Real_GDP_growth": 4.182460058948112,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1986-03-01",
+      "Energy_consumption_growth": -0.05636073396371177,
+      "Oil_consumption_growth": 2.6326423597679227,
+      "Real_GDP_growth": 4.146107165729074,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1986-06-01",
+      "Energy_consumption_growth": 1.0650964366070381,
+      "Oil_consumption_growth": 4.191533297284944,
+      "Real_GDP_growth": 3.702004545954951,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1986-09-01",
+      "Energy_consumption_growth": 0.8233023843696063,
+      "Oil_consumption_growth": 5.531018436382551,
+      "Real_GDP_growth": 3.1191787285773875,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1986-12-01",
+      "Energy_consumption_growth": -0.6952017404697086,
+      "Oil_consumption_growth": 4.263420895459702,
+      "Real_GDP_growth": 2.9072396676214085,
+      "Industrial_production_YoY": null
+    },
+    {
+      "date": "1987-03-01",
+      "Energy_consumption_growth": 0.9967220645833219,
+      "Oil_consumption_growth": 2.2893219747854188,
+      "Real_GDP_growth": 2.7115848244058993,
+      "Industrial_production_YoY": 2.2699305287566216
+    },
+    {
+      "date": "1987-06-01",
+      "Energy_consumption_growth": 3.7824230580707052,
+      "Oil_consumption_growth": 2.318815862530288,
+      "Real_GDP_growth": 3.353600672877488,
+      "Industrial_production_YoY": 4.7071744167685114
+    },
+    {
+      "date": "1987-09-01",
+      "Energy_consumption_growth": 5.230349698785308,
+      "Oil_consumption_growth": 2.2325432776993503,
+      "Real_GDP_growth": 3.2619859723208355,
+      "Industrial_production_YoY": 6.258530604604136
+    },
+    {
+      "date": "1987-12-01",
+      "Energy_consumption_growth": 4.807035084203903,
+      "Oil_consumption_growth": 1.484761798910017,
+      "Real_GDP_growth": 4.474555651430423,
+      "Industrial_production_YoY": 7.573494363544782
+    },
+    {
+      "date": "1988-03-01",
+      "Energy_consumption_growth": 7.3721299173044486,
+      "Oil_consumption_growth": 7.351195939159116,
+      "Real_GDP_growth": 4.241257896544837,
+      "Industrial_production_YoY": 7.140676640885904
+    },
+    {
+      "date": "1988-06-01",
+      "Energy_consumption_growth": 3.3768543039317978,
+      "Oil_consumption_growth": 1.0053728869476197,
+      "Real_GDP_growth": 4.484493225777175,
+      "Industrial_production_YoY": 6.197014936437006
+    },
+    {
+      "date": "1988-09-01",
+      "Energy_consumption_growth": 4.598280370292285,
+      "Oil_consumption_growth": 2.287873009390373,
+      "Real_GDP_growth": 4.193200105129624,
+      "Industrial_production_YoY": 4.621856328076464
+    },
+    {
+      "date": "1988-12-01",
+      "Energy_consumption_growth": 4.456298861738106,
+      "Oil_consumption_growth": 5.895055303805363,
+      "Real_GDP_growth": 3.799338836732069,
+      "Industrial_production_YoY": 2.913535291509032
+    },
+    {
+      "date": "1989-03-01",
+      "Energy_consumption_growth": -0.1467456826153457,
+      "Oil_consumption_growth": -0.5473298890167233,
+      "Real_GDP_growth": 4.3151632099998505,
+      "Industrial_production_YoY": 2.4351077323150485
+    },
+    {
+      "date": "1989-06-01",
+      "Energy_consumption_growth": 2.546107568660849,
+      "Oil_consumption_growth": 1.7195903826743741,
+      "Real_GDP_growth": 3.7479108262349126,
+      "Industrial_production_YoY": 1.1616803365235813
+    },
+    {
+      "date": "1989-09-01",
+      "Energy_consumption_growth": 0.9234389046048008,
+      "Oil_consumption_growth": -1.1583595120938983,
+      "Real_GDP_growth": 3.9075419072247097,
+      "Industrial_production_YoY": 0.1662314931669092
+    },
+    {
+      "date": "1989-12-01",
+      "Energy_consumption_growth": 5.16148034350703,
+      "Oil_consumption_growth": -0.042034800479207046,
+      "Real_GDP_growth": 2.743211930028755,
+      "Industrial_production_YoY": -0.14586953945131173
+    },
+    {
+      "date": "1990-03-01",
+      "Energy_consumption_growth": -1.8005762540767245,
+      "Oil_consumption_growth": -3.1880836004873236,
+      "Real_GDP_growth": 2.821006526483294,
+      "Industrial_production_YoY": 0.1309432342919951
+    },
+    {
+      "date": "1990-06-01",
+      "Energy_consumption_growth": 1.3113803482974529,
+      "Oil_consumption_growth": 0.44060507969683194,
+      "Real_GDP_growth": 2.412704964193124,
+      "Industrial_production_YoY": 1.2014300383821341
+    },
+    {
+      "date": "1990-09-01",
+      "Energy_consumption_growth": 2.766446076817153,
+      "Oil_consumption_growth": 2.0978273228313027,
+      "Real_GDP_growth": 1.7273622503686914,
+      "Industrial_production_YoY": 2.223805838983169
+    },
+    {
+      "date": "1990-12-01",
+      "Energy_consumption_growth": -4.026758178124745,
+      "Oil_consumption_growth": -6.81973030389833,
+      "Real_GDP_growth": 0.6030627340393391,
+      "Industrial_production_YoY": 0.2550523296811269
+    },
+    {
+      "date": "1991-03-01",
+      "Energy_consumption_growth": -0.1550192785028215,
+      "Oil_consumption_growth": -4.436228715234614,
+      "Real_GDP_growth": -0.9501973946258402,
+      "Industrial_production_YoY": -2.386038297829115
+    },
+    {
+      "date": "1991-06-01",
+      "Energy_consumption_growth": -1.947323183104832,
+      "Oil_consumption_growth": -3.6577997374475313,
+      "Real_GDP_growth": -0.5389307958117096,
+      "Industrial_production_YoY": -2.5475549781697118
+    },
+    {
+      "date": "1991-09-01",
+      "Energy_consumption_growth": -0.3927376291609552,
+      "Oil_consumption_growth": -1.822312461787634,
+      "Real_GDP_growth": -0.10280887034219699,
+      "Industrial_production_YoY": -1.5631172146840437
+    },
+    {
+      "date": "1991-12-01",
+      "Energy_consumption_growth": 2.2053193858513787,
+      "Oil_consumption_growth": 1.453283355100421,
+      "Real_GDP_growth": 1.1664011655910578,
+      "Industrial_production_YoY": 0.19302382491198275
+    },
+    {
+      "date": "1992-03-01",
+      "Energy_consumption_growth": 2.739526300853279,
+      "Oil_consumption_growth": 3.7708945369420377,
+      "Real_GDP_growth": 2.858936912248855,
+      "Industrial_production_YoY": 1.9972814535644738
+    },
+    {
+      "date": "1992-06-01",
+      "Energy_consumption_growth": 2.5168247256909693,
+      "Oil_consumption_growth": 2.0350136502542027,
+      "Real_GDP_growth": 3.169835814511379,
+      "Industrial_production_YoY": 3.2927790819865748
+    },
+    {
+      "date": "1992-09-01",
+      "Energy_consumption_growth": 0.38551920440041965,
+      "Oil_consumption_growth": -0.09697963321029235,
+      "Real_GDP_growth": 3.6653854414522735,
+      "Industrial_production_YoY": 2.677661877360086
+    },
+    {
+      "date": "1992-12-01",
+      "Energy_consumption_growth": 2.2279361031674494,
+      "Oil_consumption_growth": 2.6750835728382993,
+      "Real_GDP_growth": 4.382645388993267,
+      "Industrial_production_YoY": 3.513486352077259
+    },
+    {
+      "date": "1993-03-01",
+      "Energy_consumption_growth": 2.341142150069331,
+      "Oil_consumption_growth": -1.2292004820822822,
+      "Real_GDP_growth": 3.3199058070509935,
+      "Industrial_production_YoY": 4.620802720232272
+    },
+    {
+      "date": "1993-06-01",
+      "Energy_consumption_growth": 0.075924140252015,
+      "Oil_consumption_growth": -0.36242278113871595,
+      "Real_GDP_growth": 2.806668207145946,
+      "Industrial_production_YoY": 2.9649480971508435
+    },
+    {
+      "date": "1993-09-01",
+      "Energy_consumption_growth": 2.654908085918506,
+      "Oil_consumption_growth": 2.2075088973418255,
+      "Real_GDP_growth": 2.2865117406066116,
+      "Industrial_production_YoY": 2.54662192443064
+    },
+    {
+      "date": "1993-12-01",
+      "Energy_consumption_growth": 1.3010132983490186,
+      "Oil_consumption_growth": 0.7544773893597423,
+      "Real_GDP_growth": 2.6077107599381977,
+      "Industrial_production_YoY": 3.0910229934789424
+    },
+    {
+      "date": "1994-03-01",
+      "Energy_consumption_growth": 3.9714151983007318,
+      "Oil_consumption_growth": 5.206939666916166,
+      "Real_GDP_growth": 3.430706936043171,
+      "Industrial_production_YoY": 3.398593479530909
+    },
+    {
+      "date": "1994-06-01",
+      "Energy_consumption_growth": 3.5465406669031863,
+      "Oil_consumption_growth": 4.265812786652079,
+      "Real_GDP_growth": 4.225610689832271,
+      "Industrial_production_YoY": 5.085461192245466
+    },
+    {
+      "date": "1994-09-01",
+      "Energy_consumption_growth": 1.4992950770925662,
+      "Oil_consumption_growth": 0.9405778770808615,
+      "Real_GDP_growth": 4.337048254936149,
+      "Industrial_production_YoY": 6.02993607089221
+    },
+    {
+      "date": "1994-12-01",
+      "Energy_consumption_growth": -0.23942359165342042,
+      "Oil_consumption_growth": 0.1420178430127761,
+      "Real_GDP_growth": 4.116167021429895,
+      "Industrial_production_YoY": 6.542837920732521
+    },
+    {
+      "date": "1995-03-01",
+      "Energy_consumption_growth": -2.171269974332213,
+      "Oil_consumption_growth": -1.820439798538498,
+      "Real_GDP_growth": 3.481405627292,
+      "Industrial_production_YoY": 6.378283137812886
+    },
+    {
+      "date": "1995-06-01",
+      "Energy_consumption_growth": 2.0745099704011283,
+      "Oil_consumption_growth": -0.5951006445879092,
+      "Real_GDP_growth": 2.4023751008017014,
+      "Industrial_production_YoY": 4.815785127562533
+    },
+    {
+      "date": "1995-09-01",
+      "Energy_consumption_growth": 3.9914248035046507,
+      "Oil_consumption_growth": 0.1234858663997418,
+      "Real_GDP_growth": 2.6733258155179795,
+      "Industrial_production_YoY": 4.4942569474681004
+    },
+    {
+      "date": "1995-12-01",
+      "Energy_consumption_growth": 3.9075610016668705,
+      "Oil_consumption_growth": 0.9625433214272672,
+      "Real_GDP_growth": 2.1997916299495213,
+      "Industrial_production_YoY": 3.244092252863632
+    },
+    {
+      "date": "1996-03-01",
+      "Energy_consumption_growth": 6.023141519701669,
+      "Oil_consumption_growth": 5.376858582555499,
+      "Real_GDP_growth": 2.6013098466592277,
+      "Industrial_production_YoY": 2.8512716759773333
+    },
+    {
+      "date": "1996-06-01",
+      "Energy_consumption_growth": 3.2336777206383394,
+      "Oil_consumption_growth": 2.7117048780303854,
+      "Real_GDP_growth": 4.002379484223728,
+      "Industrial_production_YoY": 4.722653924332346
+    },
+    {
+      "date": "1996-09-01",
+      "Energy_consumption_growth": 0.2349102431459249,
+      "Oil_consumption_growth": 2.5343106907851354,
+      "Real_GDP_growth": 4.0501348871777365,
+      "Industrial_production_YoY": 5.080661041973822
+    },
+    {
+      "date": "1996-12-01",
+      "Energy_consumption_growth": 2.7523562870884755,
+      "Oil_consumption_growth": 3.948071121872654,
+      "Real_GDP_growth": 4.421452442981133,
+      "Industrial_production_YoY": 5.730088095338267
+    },
+    {
+      "date": "1997-03-01",
+      "Energy_consumption_growth": -1.9932086693338902,
+      "Oil_consumption_growth": -1.766985990364911,
+      "Real_GDP_growth": 4.314068944306992,
+      "Industrial_production_YoY": 7.026043069662836
+    },
+    {
+      "date": "1997-06-01",
+      "Energy_consumption_growth": 0.8161616596181753,
+      "Oil_consumption_growth": 2.832842043613759,
+      "Real_GDP_growth": 4.31127171595187,
+      "Industrial_production_YoY": 6.2933968425692655
+    },
+    {
+      "date": "1997-09-01",
+      "Energy_consumption_growth": 2.794229572416529,
+      "Oil_consumption_growth": 2.95657535202567,
+      "Real_GDP_growth": 4.674702492340366,
+      "Industrial_production_YoY": 7.351139650066293
+    },
+    {
+      "date": "1997-12-01",
+      "Energy_consumption_growth": 1.0415316177536438,
+      "Oil_consumption_growth": 1.3371722567995015,
+      "Real_GDP_growth": 4.483552816031211,
+      "Industrial_production_YoY": 8.482472692122457
+    },
+    {
+      "date": "1998-03-01",
+      "Energy_consumption_growth": -0.481715102460023,
+      "Oil_consumption_growth": 0.7616751400135735,
+      "Real_GDP_growth": 4.855526883310857,
+      "Industrial_production_YoY": 7.631853309653747
+    },
+    {
+      "date": "1998-06-01",
+      "Energy_consumption_growth": 1.7935973609986666,
+      "Oil_consumption_growth": 2.3152877123454596,
+      "Real_GDP_growth": 4.09279008633523,
+      "Industrial_production_YoY": 6.774861081057856
+    },
+    {
+      "date": "1998-09-01",
+      "Energy_consumption_growth": 3.3036342062283452,
+      "Oil_consumption_growth": 3.138181292769837,
+      "Real_GDP_growth": 4.103452727565782,
+      "Industrial_production_YoY": 5.1567410030876575
+    },
+    {
+      "date": "1998-12-01",
+      "Energy_consumption_growth": -1.6325018695465987,
+      "Oil_consumption_growth": 1.0019410914162918,
+      "Real_GDP_growth": 4.883126568525764,
+      "Industrial_production_YoY": 4.049617889500616
+    },
+    {
+      "date": "1999-03-01",
+      "Energy_consumption_growth": 2.7841702452055195,
+      "Oil_consumption_growth": 4.421413533422536,
+      "Real_GDP_growth": 4.816336792733988,
+      "Industrial_production_YoY": 4.137869357671938
+    },
+    {
+      "date": "1999-06-01",
+      "Energy_consumption_growth": 1.4521026880053967,
+      "Oil_consumption_growth": 1.4032111694138871,
+      "Real_GDP_growth": 4.721885912228041,
+      "Industrial_production_YoY": 4.471024922840705
+    },
+    {
+      "date": "1999-09-01",
+      "Energy_consumption_growth": 0.9709121724696512,
+      "Oil_consumption_growth": 2.1516773901712805,
+      "Real_GDP_growth": 4.791118246732284,
+      "Industrial_production_YoY": 4.564659774847946
+    },
+    {
+      "date": "1999-12-01",
+      "Energy_consumption_growth": 1.8078637450184232,
+      "Oil_consumption_growth": 3.143321875760674,
+      "Real_GDP_growth": 4.8235742707329665,
+      "Industrial_production_YoY": 4.8003410213831295
+    },
+    {
+      "date": "2000-03-01",
+      "Energy_consumption_growth": 2.6858873522857873,
+      "Oil_consumption_growth": 0.6772343951539028,
+      "Real_GDP_growth": 4.224744861233032,
+      "Industrial_production_YoY": 4.460527965801245
+    },
+    {
+      "date": "2000-06-01",
+      "Energy_consumption_growth": 2.9216406969575726,
+      "Oil_consumption_growth": 1.2977199235177705,
+      "Real_GDP_growth": 5.2444568111355006,
+      "Industrial_production_YoY": 4.617927221221904
+    },
+    {
+      "date": "2000-09-01",
+      "Energy_consumption_growth": 0.8312305105510953,
+      "Oil_consumption_growth": 1.2805138991698772,
+      "Real_GDP_growth": 3.9731723525519014,
+      "Industrial_production_YoY": 3.6040260464261045
+    },
+    {
+      "date": "2000-12-01",
+      "Energy_consumption_growth": 4.0432863460044155,
+      "Oil_consumption_growth": 1.173361825912389,
+      "Real_GDP_growth": 2.9055943095086967,
+      "Industrial_production_YoY": 1.6343727262967696
+    },
+    {
+      "date": "2001-03-01",
+      "Energy_consumption_growth": 0.9930962973505375,
+      "Oil_consumption_growth": 3.2351896364460897,
+      "Real_GDP_growth": 2.1975051856706784,
+      "Industrial_production_YoY": -0.4304975160002722
+    },
+    {
+      "date": "2001-06-01",
+      "Energy_consumption_growth": -2.7394828613646616,
+      "Oil_consumption_growth": 1.0329557575267323,
+      "Real_GDP_growth": 0.9962983270431103,
+      "Industrial_production_YoY": -2.7312053497628592
+    },
+    {
+      "date": "2001-09-01",
+      "Energy_consumption_growth": -2.2937571544099145,
+      "Oil_consumption_growth": -1.6763473986215027,
+      "Real_GDP_growth": 0.48923629256110157,
+      "Industrial_production_YoY": -3.9817323120015438
+    },
+    {
+      "date": "2001-12-01",
+      "Energy_consumption_growth": -5.492490405033845,
+      "Oil_consumption_growth": -3.0865956851350296,
+      "Real_GDP_growth": 0.16731829373148877,
+      "Industrial_production_YoY": -4.753397506963752
+    },
+    {
+      "date": "2002-03-01",
+      "Energy_consumption_growth": -3.1816207983416,
+      "Oil_consumption_growth": -2.784452026203632,
+      "Real_GDP_growth": 1.3372586567694578,
+      "Industrial_production_YoY": -2.9533610752653523
+    },
+    {
+      "date": "2002-06-01",
+      "Energy_consumption_growth": 1.7178014209351389,
+      "Oil_consumption_growth": 0.17283894829596136,
+      "Real_GDP_growth": 1.3253787532159889,
+      "Industrial_production_YoY": -0.2725701665493056
+    },
+    {
+      "date": "2002-09-01",
+      "Energy_consumption_growth": 2.165531472297766,
+      "Oil_consumption_growth": 0.8195438640919317,
+      "Real_GDP_growth": 2.1465169830615416,
+      "Industrial_production_YoY": 1.7424151989580656
+    },
+    {
+      "date": "2002-12-01",
+      "Energy_consumption_growth": 4.633885053509146,
+      "Oil_consumption_growth": 2.1547886049172016,
+      "Real_GDP_growth": 1.9925248221954739,
+      "Industrial_production_YoY": 2.83514688726337
+    },
+    {
+      "date": "2003-03-01",
+      "Energy_consumption_growth": 4.204162501707875,
+      "Oil_consumption_growth": 2.6525645562196276,
+      "Real_GDP_growth": 1.6792570124718242,
+      "Industrial_production_YoY": 2.8079322163452622
+    },
+    {
+      "date": "2003-06-01",
+      "Energy_consumption_growth": -2.1630423398254273,
+      "Oil_consumption_growth": -0.10706820074437573,
+      "Real_GDP_growth": 1.9550651524723905,
+      "Industrial_production_YoY": 0.5489546244693074
+    },
+    {
+      "date": "2003-09-01",
+      "Energy_consumption_growth": -0.7346652201553616,
+      "Oil_consumption_growth": 1.6586066597298776,
+      "Real_GDP_growth": 3.2311353875128956,
+      "Industrial_production_YoY": 0.6023238505318865
+    },
+    {
+      "date": "2003-12-01",
+      "Energy_consumption_growth": -0.5371923475234297,
+      "Oil_consumption_growth": 2.0100636732698574,
+      "Real_GDP_growth": 4.300440651057458,
+      "Industrial_production_YoY": 1.5490650840453462
+    },
+    {
+      "date": "2004-03-01",
+      "Energy_consumption_growth": 1.7737162583455257,
+      "Oil_consumption_growth": 3.9998532620417304,
+      "Real_GDP_growth": 4.341952085996703,
+      "Industrial_production_YoY": 1.5563748598150646
+    },
+    {
+      "date": "2004-06-01",
+      "Energy_consumption_growth": 3.8074846031146636,
+      "Oil_consumption_growth": 4.187486793790751,
+      "Real_GDP_growth": 4.227491217016888,
+      "Industrial_production_YoY": 2.8155792104482082
+    },
+    {
+      "date": "2004-09-01",
+      "Energy_consumption_growth": 1.3878814103494008,
+      "Oil_consumption_growth": 2.9779243366125696,
+      "Real_GDP_growth": 3.494860356231766,
+      "Industrial_production_YoY": 2.704037232576099
+    },
+    {
+      "date": "2004-12-01",
+      "Energy_consumption_growth": 2.455111374520369,
+      "Oil_consumption_growth": 3.6652929327671835,
+      "Real_GDP_growth": 3.3511049439547858,
+      "Industrial_production_YoY": 3.1699686403603806
+    },
+    {
+      "date": "2005-03-01",
+      "Energy_consumption_growth": -0.8853243365177677,
+      "Oil_consumption_growth": -0.03689537202291593,
+      "Real_GDP_growth": 3.9088432572524257,
+      "Industrial_production_YoY": 3.942136118993226
+    },
+    {
+      "date": "2005-06-01",
+      "Energy_consumption_growth": 0.1400908973985704,
+      "Oil_consumption_growth": 0.6555640338401059,
+      "Real_GDP_growth": 3.6177355801611855,
+      "Industrial_production_YoY": 3.9982146321492587
+    },
+    {
+      "date": "2005-09-01",
+      "Energy_consumption_growth": 1.9350545311416667,
+      "Oil_consumption_growth": 0.5480147912409805,
+      "Real_GDP_growth": 3.448598847170792,
+      "Industrial_production_YoY": 2.994962810443809
+    },
+    {
+      "date": "2005-12-01",
+      "Energy_consumption_growth": -0.8143431066260365,
+      "Oil_consumption_growth": -0.3917110609800267,
+      "Real_GDP_growth": 2.9727366937913002,
+      "Industrial_production_YoY": 2.5196300131602234
+    },
+    {
+      "date": "2006-03-01",
+      "Energy_consumption_growth": -3.0000221740011046,
+      "Oil_consumption_growth": -1.4176600998408673,
+      "Real_GDP_growth": 3.2131067957182013,
+      "Industrial_production_YoY": 2.0784193480351876
+    },
+    {
+      "date": "2006-06-01",
+      "Energy_consumption_growth": -0.4096790513477666,
+      "Oil_consumption_growth": -1.2518968171525868,
+      "Real_GDP_growth": 2.9729038556202125,
+      "Industrial_production_YoY": 2.0925397959530225
+    },
+    {
+      "date": "2006-09-01",
+      "Energy_consumption_growth": 0.3686482454165585,
+      "Oil_consumption_growth": -0.8067781836375132,
+      "Real_GDP_growth": 2.325277937424497,
+      "Industrial_production_YoY": 2.944911499246287
+    },
+    {
+      "date": "2006-12-01",
+      "Energy_consumption_growth": -0.35723337201021277,
+      "Oil_consumption_growth": -1.3681958354238022,
+      "Real_GDP_growth": 2.6345603763438197,
+      "Industrial_production_YoY": 2.2270006967254043
+    },
+    {
+      "date": "2007-03-01",
+      "Energy_consumption_growth": 3.9154161816452593,
+      "Oil_consumption_growth": 0.10865758409674964,
+      "Real_GDP_growth": 1.5767249700146868,
+      "Industrial_production_YoY": 2.2582774731874165
+    },
+    {
+      "date": "2007-06-01",
+      "Energy_consumption_growth": 1.3174858031426595,
+      "Oil_consumption_growth": -0.38296100872191596,
+      "Real_GDP_growth": 1.9343747200181172,
+      "Industrial_production_YoY": 2.8671616406349707
+    },
+    {
+      "date": "2007-09-01",
+      "Energy_consumption_growth": 0.4651469189048463,
+      "Oil_consumption_growth": -1.688783185738274,
+      "Real_GDP_growth": 2.3680360773066234,
+      "Industrial_production_YoY": 2.6084376755456975
+    },
+    {
+      "date": "2007-12-01",
+      "Energy_consumption_growth": 1.3556597791007707,
+      "Oil_consumption_growth": -1.6432928277935188,
+      "Real_GDP_growth": 2.133364682457861,
+      "Industrial_production_YoY": 2.6765576922184615
+    },
+    {
+      "date": "2008-03-01",
+      "Energy_consumption_growth": 0.5373087488909523,
+      "Oil_consumption_growth": -3.640105790195658,
+      "Real_GDP_growth": 1.3924712055185307,
+      "Industrial_production_YoY": 1.349299411297807
+    },
+    {
+      "date": "2008-06-01",
+      "Energy_consumption_growth": -1.4665644334783345,
+      "Oil_consumption_growth": -5.430787561315076,
+      "Real_GDP_growth": 1.3760107660276244,
+      "Industrial_production_YoY": -1.3020039964602954
+    },
+    {
+      "date": "2008-09-01",
+      "Energy_consumption_growth": -5.290393020765394,
+      "Oil_consumption_growth": -10.139944824520587,
+      "Real_GDP_growth": 0.26596727212868654,
+      "Industrial_production_YoY": -4.590619572284904
+    },
+    {
+      "date": "2008-12-01",
+      "Energy_consumption_growth": -3.248545707965589,
+      "Oil_consumption_growth": -7.104857031445933,
+      "Real_GDP_growth": -2.5411536884212604,
+      "Industrial_production_YoY": -8.966779325281964
+    },
+    {
+      "date": "2009-03-01",
+      "Energy_consumption_growth": -6.313259519721881,
+      "Oil_consumption_growth": -7.51932892064594,
+      "Real_GDP_growth": -3.234227293078318,
+      "Industrial_production_YoY": -13.864444376002131
+    },
+    {
+      "date": "2009-06-01",
+      "Energy_consumption_growth": -7.200181122596816,
+      "Oil_consumption_growth": -7.31419687727003,
+      "Real_GDP_growth": -3.9788374053187248,
+      "Industrial_production_YoY": -15.085600310068132
+    },
+    {
+      "date": "2009-09-01",
+      "Energy_consumption_growth": -4.05719860171615,
+      "Oil_consumption_growth": -2.4241139471720574,
+      "Real_GDP_growth": -3.1328157006863644,
+      "Industrial_production_YoY": -10.837966316637514
+    },
+    {
+      "date": "2009-12-01",
+      "Energy_consumption_growth": -3.1482048001779783,
+      "Oil_consumption_growth": -4.250114219479428,
+      "Real_GDP_growth": 0.10557252348297741,
+      "Industrial_production_YoY": -5.33624923534806
+    },
+    {
+      "date": "2010-03-01",
+      "Energy_consumption_growth": 1.8611793376036578,
+      "Oil_consumption_growth": -1.6981658084446627,
+      "Real_GDP_growth": 1.7452658449103264,
+      "Industrial_production_YoY": 2.314598244676369
+    },
+    {
+      "date": "2010-06-01",
+      "Energy_consumption_growth": 4.187756124275044,
+      "Oil_consumption_growth": 2.6891187298833774,
+      "Real_GDP_growth": 2.91359502911801,
+      "Industrial_production_YoY": 7.307382702693673
+    },
+    {
+      "date": "2010-09-01",
+      "Energy_consumption_growth": 6.2404147881101935,
+      "Oil_consumption_growth": 3.6006505495168817,
+      "Real_GDP_growth": 3.344209253779229,
+      "Industrial_production_YoY": 7.020812922481164
+    },
+    {
+      "date": "2010-12-01",
+      "Energy_consumption_growth": 3.263345729722733,
+      "Oil_consumption_growth": 1.6242684697348908,
+      "Real_GDP_growth": 2.7759609093124693,
+      "Industrial_production_YoY": 5.717155909243569
+    },
+    {
+      "date": "2011-03-01",
+      "Energy_consumption_growth": 0.13968033462352647,
+      "Oil_consumption_growth": 0.5346894876537389,
+      "Real_GDP_growth": 2.037797199613345,
+      "Industrial_production_YoY": 4.217631424908852
+    },
+    {
+      "date": "2011-06-01",
+      "Energy_consumption_growth": -1.2628581261577176,
+      "Oil_consumption_growth": -2.9306770246208647,
+      "Real_GDP_growth": 1.7437088645501975,
+      "Industrial_production_YoY": 2.7077019223759566
+    },
+    {
+      "date": "2011-09-01",
+      "Energy_consumption_growth": -1.144863013398023,
+      "Oil_consumption_growth": -2.823521988420996,
+      "Real_GDP_growth": 0.9426534645672335,
+      "Industrial_production_YoY": 2.5652701742040263
+    },
+    {
+      "date": "2011-12-01",
+      "Energy_consumption_growth": -2.7343140239816655,
+      "Oil_consumption_growth": -2.383548832371607,
+      "Real_GDP_growth": 1.543075871606514,
+      "Industrial_production_YoY": 3.1975897063472183
+    },
+    {
+      "date": "2012-03-01",
+      "Energy_consumption_growth": -5.565918207361131,
+      "Oil_consumption_growth": -2.7167206157781787,
+      "Real_GDP_growth": 2.6380693108862374,
+      "Industrial_production_YoY": 3.65294754171955
+    },
+    {
+      "date": "2012-06-01",
+      "Energy_consumption_growth": -1.417082988543994,
+      "Oil_consumption_growth": -1.5509774922828568,
+      "Real_GDP_growth": 2.403335839137921,
+      "Industrial_production_YoY": 3.877697360358079
+    },
+    {
+      "date": "2012-09-01",
+      "Energy_consumption_growth": -1.6878201789513936,
+      "Oil_consumption_growth": -2.5793016314111017,
+      "Real_GDP_growth": 2.5737123144880414,
+      "Industrial_production_YoY": 2.666477220737177
+    },
+    {
+      "date": "2012-12-01",
+      "Energy_consumption_growth": -0.8023567186519864,
+      "Oil_consumption_growth": -2.4537019747461586,
+      "Real_GDP_growth": 1.551852007332477,
+      "Industrial_production_YoY": 2.098530578626323
+    },
+    {
+      "date": "2013-03-01",
+      "Energy_consumption_growth": 4.420109056115118,
+      "Oil_consumption_growth": -0.05167416375756462,
+      "Real_GDP_growth": 1.700868485709428,
+      "Industrial_production_YoY": 1.8586921911630065
+    },
+    {
+      "date": "2013-06-01",
+      "Energy_consumption_growth": 1.073794150018692,
+      "Oil_consumption_growth": 0.5121304327757814,
+      "Real_GDP_growth": 1.5199382041070075,
+      "Industrial_production_YoY": 1.6795402867416875
+    },
+    {
+      "date": "2013-09-01",
+      "Energy_consumption_growth": 0.6223187216147341,
+      "Oil_consumption_growth": 2.8901210762770857,
+      "Real_GDP_growth": 2.237022493295515,
+      "Industrial_production_YoY": 2.116847706102054
+    },
+    {
+      "date": "2013-12-01",
+      "Energy_consumption_growth": 5.004844229472805,
+      "Oil_consumption_growth": 3.2830229835714153,
+      "Real_GDP_growth": 3.0091449601746367,
+      "Industrial_production_YoY": 2.3150513563661304
+    },
+    {
+      "date": "2014-03-01",
+      "Energy_consumption_growth": 4.665069206495187,
+      "Oil_consumption_growth": 0.6646484646134709,
+      "Real_GDP_growth": 1.6508175559380112,
+      "Industrial_production_YoY": 2.243115287484132
+    },
+    {
+      "date": "2014-06-01",
+      "Energy_consumption_growth": 0.5408022739992635,
+      "Oil_consumption_growth": 0.3859675895082404,
+      "Real_GDP_growth": 2.6891521587272926,
+      "Industrial_production_YoY": 3.1680636456214777
+    },
+    {
+      "date": "2014-09-01",
+      "Energy_consumption_growth": 0.05013257413692962,
+      "Oil_consumption_growth": 0.10731525123444108,
+      "Real_GDP_growth": 3.059782928201682,
+      "Industrial_production_YoY": 3.313842168852665
+    },
+    {
+      "date": "2014-12-01",
+      "Energy_consumption_growth": -0.8297035060344848,
+      "Oil_consumption_growth": 1.8560622484972367,
+      "Real_GDP_growth": 2.6858351011456394,
+      "Industrial_production_YoY": 3.1828486597269774
+    },
+    {
+      "date": "2015-03-01",
+      "Energy_consumption_growth": -0.7979505495455896,
+      "Oil_consumption_growth": 3.264017251268081,
+      "Real_GDP_growth": 3.9692994988184793,
+      "Industrial_production_YoY": 1.3427436510790294
+    },
+    {
+      "date": "2015-06-01",
+      "Energy_consumption_growth": 0.6228724140778352,
+      "Oil_consumption_growth": 3.303891719169205,
+      "Real_GDP_growth": 3.2790878609270546,
+      "Industrial_production_YoY": -1.4037784318637705
+    },
+    {
+      "date": "2015-09-01",
+      "Energy_consumption_growth": 1.4671243793974442,
+      "Oil_consumption_growth": 2.757396175251303,
+      "Real_GDP_growth": 2.4473213664345517,
+      "Industrial_production_YoY": -1.8721626027617955
+    },
+    {
+      "date": "2015-12-01",
+      "Energy_consumption_growth": -4.7012254101309825,
+      "Oil_consumption_growth": -0.9993887413845881,
+      "Real_GDP_growth": 2.119861312664817,
+      "Industrial_production_YoY": -3.7514263950558235
+    },
+    {
+      "date": "2016-03-01",
+      "Energy_consumption_growth": -4.689156481047219,
+      "Oil_consumption_growth": 1.5006597048405013,
+      "Real_GDP_growth": 1.7950168913805964,
+      "Industrial_production_YoY": -3.2902990631741
+    },
+    {
+      "date": "2016-06-01",
+      "Energy_consumption_growth": -0.776786450193867,
+      "Oil_consumption_growth": 0.10431317433265974,
+      "Real_GDP_growth": 1.493250832714721,
+      "Industrial_production_YoY": -2.2613915663544684
+    },
+    {
+      "date": "2016-09-01",
+      "Energy_consumption_growth": 1.0396859263238856,
+      "Oil_consumption_growth": 0.23792076779347582,
+      "Real_GDP_growth": 1.8057615310855146,
+      "Industrial_production_YoY": -2.118317671927565
+    },
+    {
+      "date": "2016-12-01",
+      "Energy_consumption_growth": 3.1945185167845835,
+      "Oil_consumption_growth": 2.076045893977141,
+      "Real_GDP_growth": 2.1815663030564147,
+      "Industrial_production_YoY": -0.9030518087422575
+    },
+    {
+      "date": "2017-03-01",
+      "Energy_consumption_growth": -1.3218371567505827,
+      "Oil_consumption_growth": -1.3042351965080412,
+      "Real_GDP_growth": 2.0874616941966906,
+      "Industrial_production_YoY": -0.2577934999113481
+    },
+    {
+      "date": "2017-06-01",
+      "Energy_consumption_growth": 0.12045163065799169,
+      "Oil_consumption_growth": 2.6432116801568206,
+      "Real_GDP_growth": 2.3304137937582903,
+      "Industrial_production_YoY": 1.543237072632131
+    },
+    {
+      "date": "2017-09-01",
+      "Energy_consumption_growth": -2.077726975506189,
+      "Oil_consumption_growth": 0.48160949169386846,
+      "Real_GDP_growth": 2.410821412174591,
+      "Industrial_production_YoY": 1.0113773390905207
+    },
+    {
+      "date": "2017-12-01",
+      "Energy_consumption_growth": 2.53360648321308,
+      "Oil_consumption_growth": 1.879192601847568,
+      "Real_GDP_growth": 2.9941434967617697,
+      "Industrial_production_YoY": 2.575136384194613
+    },
+    {
+      "date": "2018-03-01",
+      "Energy_consumption_growth": 5.783653874932915,
+      "Oil_consumption_growth": 3.6521299290417364,
+      "Real_GDP_growth": 3.328810094759116,
+      "Industrial_production_YoY": 3.119863029211286
+    },
+    {
+      "date": "2018-06-01",
+      "Energy_consumption_growth": 3.639637901837056,
+      "Oil_consumption_growth": 1.1667131156544386,
+      "Real_GDP_growth": 3.2989628465220244,
+      "Industrial_production_YoY": 2.8030725043300806
+    },
+    {
+      "date": "2018-09-01",
+      "Energy_consumption_growth": 3.3632846879146694,
+      "Oil_consumption_growth": 2.9295737761398044,
+      "Real_GDP_growth": 3.130030640718684,
+      "Industrial_production_YoY": 3.9739125835418796
+    },
+    {
+      "date": "2018-12-01",
+      "Energy_consumption_growth": 2.167990461692204,
+      "Oil_consumption_growth": 1.7248055017123454,
+      "Real_GDP_growth": 2.125110751484538,
+      "Industrial_production_YoY": 2.7629280209498326
+    },
+    {
+      "date": "2019-03-01",
+      "Energy_consumption_growth": 1.0252300198076103,
+      "Oil_consumption_growth": -0.4918622301096631,
+      "Real_GDP_growth": 1.9335587266003706,
+      "Industrial_production_YoY": 1.2252799724457253
+    },
+    {
+      "date": "2019-06-01",
+      "Energy_consumption_growth": -2.0399338027528358,
+      "Oil_consumption_growth": 0.29588416475747614,
+      "Real_GDP_growth": 2.242125694698238,
+      "Industrial_production_YoY": -0.5906117103571621
+    },
+    {
+      "date": "2019-09-01",
+      "Energy_consumption_growth": -0.933972630723745,
+      "Oil_consumption_growth": 0.12302538156452325,
+      "Real_GDP_growth": 2.797216868642849,
+      "Industrial_production_YoY": -1.4848621355792677
+    },
+    {
+      "date": "2019-12-01",
+      "Energy_consumption_growth": -1.4811584739136796,
+      "Oil_consumption_growth": -0.21313550937540615,
+      "Real_GDP_growth": 3.3517765241980912,
+      "Industrial_production_YoY": -2.268752472633277
+    },
+    {
+      "date": "2020-03-01",
+      "Energy_consumption_growth": -5.8235288580379745,
+      "Oil_consumption_growth": -3.4358356288763936,
+      "Real_GDP_growth": 1.3585350290757248,
+      "Industrial_production_YoY": -3.009551918307725
+    },
+    {
+      "date": "2020-06-01",
+      "Energy_consumption_growth": -13.19269697484281,
+      "Oil_consumption_growth": -22.844499828033516,
+      "Real_GDP_growth": -7.39861495878491,
+      "Industrial_production_YoY": -14.650695013165723
+    },
+    {
+      "date": "2020-09-01",
+      "Energy_consumption_growth": -6.8797645640092835,
+      "Oil_consumption_growth": -12.140470948176363,
+      "Real_GDP_growth": -1.3646720997737227,
+      "Industrial_production_YoY": -6.492962916515954
+    },
+    {
+      "date": "2020-12-01",
+      "Energy_consumption_growth": -6.602725307731738,
+      "Oil_consumption_growth": -10.590825131160598,
+      "Real_GDP_growth": -0.9222152417236895,
+      "Industrial_production_YoY": -4.222504301938468
+    },
+    {
+      "date": "2021-03-01",
+      "Energy_consumption_growth": -0.4129232635893709,
+      "Oil_consumption_growth": -6.1412630597699085,
+      "Real_GDP_growth": 1.8007541764505586,
+      "Industrial_production_YoY": -2.26878019295339
+    },
+    {
+      "date": "2021-06-01",
+      "Energy_consumption_growth": 13.476802259278564,
+      "Oil_consumption_growth": 25.6194318954158,
+      "Real_GDP_growth": 12.385669309432568,
+      "Industrial_production_YoY": 13.727970527501483
+    },
+    {
+      "date": "2021-09-01",
+      "Energy_consumption_growth": 5.375803895292375,
+      "Oil_consumption_growth": 9.862783472498293,
+      "Real_GDP_growth": 5.1508109950936465,
+      "Industrial_production_YoY": 4.257850630582771
+    },
+    {
+      "date": "2021-12-01",
+      "Energy_consumption_growth": 3.3707841489625245,
+      "Oil_consumption_growth": 9.741868042754941,
+      "Real_GDP_growth": 5.756179192135091,
+      "Industrial_production_YoY": 3.2355966936401153
+    },
+    {
+      "date": "2022-03-01",
+      "Energy_consumption_growth": 4.17489266234341,
+      "Oil_consumption_growth": 7.280408453440113,
+      "Real_GDP_growth": 4.034582077886428,
+      "Industrial_production_YoY": 3.2673791969862385
+    },
+    {
+      "date": "2022-06-01",
+      "Energy_consumption_growth": 1.0645305339692435,
+      "Oil_consumption_growth": -1.0392916307982558,
+      "Real_GDP_growth": 2.4537929303342976,
+      "Industrial_production_YoY": 2.0187415610313897
+    },
+    {
+      "date": "2022-09-01",
+      "Energy_consumption_growth": 0.13360133785991213,
+      "Oil_consumption_growth": -1.1858539657228606,
+      "Real_GDP_growth": 2.3489732641040373,
+      "Industrial_production_YoY": 1.4942729586919334
+    },
+    {
+      "date": "2022-12-01",
+      "Energy_consumption_growth": 1.3423882896895112,
+      "Oil_consumption_growth": -3.4440699829131782,
+      "Real_GDP_growth": 1.3170742821654535,
+      "Industrial_production_YoY": 0.11741264337845614
+    },
+    {
+      "date": "2023-03-01",
+      "Energy_consumption_growth": -3.548214695357532,
+      "Oil_consumption_growth": -1.7450672218124352,
+      "Real_GDP_growth": 2.3111462286238282,
+      "Industrial_production_YoY": -0.06993187894395181
+    },
+    {
+      "date": "2023-06-01",
+      "Energy_consumption_growth": -1.4062735188477227,
+      "Oil_consumption_growth": 0.862797231636514,
+      "Real_GDP_growth": 2.792610476283919,
+      "Industrial_production_YoY": -0.49108786340186966
+    },
+    {
+      "date": "2023-09-01",
+      "Energy_consumption_growth": 0.4156391680872229,
+      "Oil_consumption_growth": 0.00787298429918426,
+      "Real_GDP_growth": 3.2331922827038895,
+      "Industrial_production_YoY": -0.27797971526106746
+    },
+    {
+      "date": "2023-12-01",
+      "Energy_consumption_growth": -0.46417004013799,
+      "Oil_consumption_growth": 2.324024295849325,
+      "Real_GDP_growth": 3.390893713155063,
+      "Industrial_production_YoY": -0.00869195212990966
+    },
+    {
+      "date": "2024-03-01",
+      "Energy_consumption_growth": 1.2564947106354252,
+      "Oil_consumption_growth": 0.46491347359236546,
+      "Real_GDP_growth": 2.8632943527041155,
+      "Industrial_production_YoY": -0.7292980592107293
+    },
+    {
+      "date": "2024-06-01",
+      "Energy_consumption_growth": 1.4860095376588278,
+      "Oil_consumption_growth": 0.4103604647209602,
+      "Real_GDP_growth": 3.1266315239534936,
+      "Industrial_production_YoY": -0.09620925920637013
+    },
+    {
+      "date": "2024-09-01",
+      "Energy_consumption_growth": 0.42046416167025313,
+      "Oil_consumption_growth": 0.8333142454438613,
+      "Real_GDP_growth": 2.7913896372876,
+      "Industrial_production_YoY": -0.8426925283736971
+    },
+    {
+      "date": "2024-12-01",
+      "Energy_consumption_growth": 0.44012375069915066,
+      "Oil_consumption_growth": -0.1049259077188558,
+      "Real_GDP_growth": 2.3997884845648576,
+      "Industrial_production_YoY": -0.9422744180830963
+    },
+    {
+      "date": "2025-03-01",
+      "Energy_consumption_growth": 3.6394459890075614,
+      "Oil_consumption_growth": 1.1220233408508973,
+      "Real_GDP_growth": 2.0192730138857806,
+      "Industrial_production_YoY": 0.7470779705680849
+    },
+    {
+      "date": "2025-06-01",
+      "Energy_consumption_growth": 0.36946896390475104,
+      "Oil_consumption_growth": 0.4650438472475704,
+      "Real_GDP_growth": 2.0804665087611918,
+      "Industrial_production_YoY": 0.52109873978153
+    },
+    {
+      "date": "2025-09-01",
+      "Energy_consumption_growth": 0.930857104341154,
+      "Oil_consumption_growth": 1.8004770395757541,
+      "Real_GDP_growth": 2.335167772142843,
+      "Industrial_production_YoY": 1.6568713600526512
+    },
+    {
+      "date": "2025-12-01",
+      "Energy_consumption_growth": 1.9984395208695105,
+      "Oil_consumption_growth": 0.08479247042860738,
+      "Real_GDP_growth": 1.9892996607980828,
+      "Industrial_production_YoY": 1.558879513611074
+    },
+    {
+      "date": "2026-03-01",
+      "Energy_consumption_growth": -0.9243406411262534,
+      "Oil_consumption_growth": 1.9748530551229049,
+      "Real_GDP_growth": 2.684743341425966,
+      "Industrial_production_YoY": 0.8265765725897914
+    }
+  ],
+  "annotations": [
+    "oil_embargo_1973",
+    "gulf_war_1990",
+    "gfc_2008",
+    "shale_2014",
+    "covid_2020",
+    "reopening_2021"
+  ],
+  "availableTransformations": [
+    "raw",
+    "zscore"
+  ],
+  "evidenceLabel": "Supported historical pattern",
+  "methodology": {
+    "formula": "Quarterly growth observations aligned to quarter dates.",
+    "notes": "Monthly energy and industrial series are aggregated to quarter; GDP remains at its native quarterly frequency. No monthly interpolation is used."
+  },
+  "staticFigure": "final_energy_gdp_time_series.png",
+  "generatedAt": "2026-07-15T23:37:40+00:00"
+}

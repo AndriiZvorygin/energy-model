@@ -1,0 +1,2585 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "output-quality-financial",
+  "title": "Financialization and asset valuation",
+  "description": "Finance, insurance, real estate, debt service, leverage, and equity valuation are shown separately rather than collapsed into a judgmental score.",
+  "plainLanguageSummary": "Finance, insurance, real estate, debt service, leverage, and equity valuation are shown separately rather than collapsed into a judgmental score.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Value-added and balance-sheet measures retain their official definitions; household debt/GDP = CMDEBT / nominal GDP * 100.",
+    "explanation": "A larger financial or real-estate share is not, by itself, evidence of low-quality output.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "A larger financial or real-estate share is not, by itself, evidence of low-quality output."
+  ],
+  "sourceNotes": [
+    "BEA via FRED",
+    "Federal Reserve via FRED",
+    "Federal Reserve / BEA project derivation",
+    "World Bank via FRED"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2005-01-01",
+    "referenceEnd": "2019-10-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "VAPGDPFI": {
+        "mean": 7.181666666666667,
+        "standardDeviation": 0.595116701907188,
+        "n": 60
+      },
+      "VAPGDPRL": {
+        "mean": 12.938333333333333,
+        "standardDeviation": 0.29893793484415604,
+        "n": 60
+      },
+      "TDSP": {
+        "mean": 13.183090916666666,
+        "standardDeviation": 1.6533651493238903,
+        "n": 60
+      },
+      "private_debt_gdp": {
+        "mean": 84834.0962831704,
+        "standardDeviation": 8638.036109936018,
+        "n": 60
+      },
+      "DDDM01USA156NWDB": {
+        "mean": 131.3801,
+        "standardDeviation": 23.22044138699062,
+        "n": 15
+      }
+    }
+  },
+  "frequency": "quarterly",
+  "dateRange": {
+    "start": "1947-10-01",
+    "end": "2026-01-01"
+  },
+  "series": [
+    {
+      "key": "VAPGDPFI",
+      "label": "Finance and insurance value-added",
+      "unit": "percent of GDP",
+      "source": "BEA via FRED",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "VAPGDPRL",
+      "label": "Real estate and rental value-added",
+      "unit": "percent of GDP",
+      "source": "BEA via FRED",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#2563eb",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "TDSP",
+      "label": "Household debt-service burden",
+      "unit": "percent of disposable income",
+      "source": "Federal Reserve via FRED",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#d97706",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "private_debt_gdp",
+      "label": "Household debt",
+      "unit": "percent of GDP",
+      "source": "Federal Reserve / BEA project derivation",
+      "status": "derived",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#be123c",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "DDDM01USA156NWDB",
+      "label": "Equity-market capitalization",
+      "unit": "percent of GDP",
+      "source": "World Bank via FRED",
+      "status": "measured",
+      "defaultVisible": false,
+      "frequency": "annual",
+      "color": "#7c3aed",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2020-01-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1947-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 17291.189435792796,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1948-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 19054.735595614304,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1949-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 22641.125977821874,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1950-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 23393.083186172626,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1951-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 23428.454312169757,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1952-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 23817.464287699404,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1952-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 24657.784671633937,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1952-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 24988.509685858888,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1952-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 25102.937932628174,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1953-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 25711.119129852053,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1953-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 26339.569469226466,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1953-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 26991.264689867094,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1953-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 28022.38515946835,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1954-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 28537.803786217544,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1954-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 29180.490053636036,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1954-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 29661.428761419556,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1954-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 30133.28863694357,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1955-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 30439.41385663067,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1955-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 31234.876592998873,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1955-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 31811.789754568003,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1955-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 32387.46076340908,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1956-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 33117.299532002566,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1956-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 33522.56675859286,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1956-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 33822.92643248646,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1956-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 33965.81267115924,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1957-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 34058.14223283714,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1957-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 34663.630104337695,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1957-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 34705.8332811946,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1957-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 35499.42720442064,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1958-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 36400.52188048081,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1958-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 36507.6338303904,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1958-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 36119.8416765979,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1958-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 36105.734103351984,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1959-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 36282.013599043756,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1959-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 36484.244804870534,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1959-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 37425.004856828324,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1959-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 38273.17442300416,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1960-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 37951.67401335672,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1960-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 39015.48754343165,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1960-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 39476.250174118955,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1960-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 40699.41151098581,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1961-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 40993.87543163712,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1961-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 41005.13909764286,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1961-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 40832.95752416923,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1961-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 40973.490041542376,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1962-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 40736.313851717045,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1962-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 41186.37631045063,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1962-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 41587.318788822166,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1962-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42423.07441040047,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1963-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42712.07324762897,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1963-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43357.54392205186,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1963-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43503.39207130488,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1963-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 44072.52675330077,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1964-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 44065.13969382911,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1964-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 44591.070234015155,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1964-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 44698.43113964548,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1964-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 45477.894622117,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1965-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 45122.25024032099,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1965-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 45349.0935933201,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1965-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 45092.57022672466,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1965-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 44808.68865605935,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1966-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 44296.46087762996,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1966-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 44681.675716569705,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1966-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 44337.74422366947,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1966-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 44208.34223366799,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1967-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 44040.5368586896,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1967-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 44349.533500670805,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1967-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 44185.323490897834,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1967-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 45642.750093880575,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1968-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43729.347351567594,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1968-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43655.334651905505,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1968-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43657.7708831804,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1968-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 44077.86948751588,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1969-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43245.74640831863,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1969-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43434.8179421617,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1969-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43071.548687516755,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1969-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43661.15781291089,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1970-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42927.701674277014,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1970-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42525.16688136784,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1970-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42295.03185370224,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1970-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42913.243334607134,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1971-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 41902.96311696366,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1971-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 41964.9891764128,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1971-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42118.32636338549,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1971-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42955.917724735926,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1972-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42635.0693030849,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1972-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42649.33838399393,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1972-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42860.57435264837,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1972-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42987.30382330101,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1973-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42869.05894053677,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1973-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42758.22608171657,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1973-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43293.52409407478,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1973-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43126.31198904821,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1974-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43526.628393471336,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1974-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43411.025478806005,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1974-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43515.94140097665,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1974-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43225.109537600976,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1975-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43329.562976915026,
+      "DDDM01USA156NWDB": 41.7709
+    },
+    {
+      "date": "1975-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42884.38499067411,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1975-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42349.31162344574,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1975-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42425.57884382782,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1976-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42166.62903937243,
+      "DDDM01USA156NWDB": 47.1386
+    },
+    {
+      "date": "1976-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42551.82116380864,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1976-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 42844.53486190194,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1976-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43233.34917046353,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1977-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43487.28382297923,
+      "DDDM01USA156NWDB": 40.0724
+    },
+    {
+      "date": "1977-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43675.18212138767,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1977-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 43957.08607095772,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1977-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 44657.04371450882,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1978-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 45524.796164811414,
+      "DDDM01USA156NWDB": 36.6543
+    },
+    {
+      "date": "1978-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 44902.90710416262,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1978-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 45462.7100110102,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1978-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 45540.34015234064,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1979-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 46315.69573460091,
+      "DDDM01USA156NWDB": 37.8175
+    },
+    {
+      "date": "1979-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 46748.49599439961,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1979-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 47067.981473741034,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1979-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 47612.030325825304,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1980-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 47981.49859382718,
+      "DDDM01USA156NWDB": 47.5902
+    },
+    {
+      "date": "1980-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 48332.49444474632,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1980-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 48354.98758438261,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1980-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 47568.577655693734,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1981-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 46166.545996006666,
+      "DDDM01USA156NWDB": 39.3996
+    },
+    {
+      "date": "1981-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 46635.7968867983,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1981-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 45969.26525075531,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1981-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 46529.554519635036,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1982-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 47185.75134486678,
+      "DDDM01USA156NWDB": 43.5693
+    },
+    {
+      "date": "1982-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 46953.09564426111,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1982-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 46557.90503701072,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1982-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 46961.303559289605,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1983-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 46295.56001546606,
+      "DDDM01USA156NWDB": 49.7803
+    },
+    {
+      "date": "1983-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 46170.63926716083,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1983-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 46103.59106999145,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1983-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 46369.1258295109,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1984-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 46394.93210687467,
+      "DDDM01USA156NWDB": 39.6809
+    },
+    {
+      "date": "1984-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 46643.46901350035,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1984-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 46898.15755646692,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1984-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 47670.33115899985,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1985-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 49136.630034551825,
+      "DDDM01USA156NWDB": 53.0276
+    },
+    {
+      "date": "1985-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 49891.09143034497,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1985-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 50688.14821282068,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1985-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 52423.01355461878,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1986-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 52881.05709672854,
+      "DDDM01USA156NWDB": 55.418
+    },
+    {
+      "date": "1986-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 53599.422705452176,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1986-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 54563.467992166974,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1986-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 55655.53016589778,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1987-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 55621.754130952046,
+      "DDDM01USA156NWDB": 52.1453
+    },
+    {
+      "date": "1987-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 56318.578657389684,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1987-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 56801.182502807314,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1987-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 56285.1513001014,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1988-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 57058.02767863267,
+      "DDDM01USA156NWDB": 53.0884
+    },
+    {
+      "date": "1988-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 57182.26231956772,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1988-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 57511.033375072286,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1988-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 57451.409007744965,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1989-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 57467.13134018707,
+      "DDDM01USA156NWDB": 59.9519
+    },
+    {
+      "date": "1989-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 57764.69261356378,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1989-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 58189.422451414444,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1989-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 58915.614581406684,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1990-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 59255.03443815716,
+      "DDDM01USA156NWDB": 51.8761
+    },
+    {
+      "date": "1990-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 59426.818129042345,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1990-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 59745.34821938596,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1990-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 60722.53337492275,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1991-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 61341.405340488716,
+      "DDDM01USA156NWDB": 67.5464
+    },
+    {
+      "date": "1991-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 61338.69181319899,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1991-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 61054.39033622159,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1991-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 61540.51215252836,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1992-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 61401.10593858153,
+      "DDDM01USA156NWDB": 69.718
+    },
+    {
+      "date": "1992-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 60955.130020988254,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1992-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 60864.37495212545,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1992-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 60712.43232288095,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1993-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 60899.561168290056,
+      "DDDM01USA156NWDB": 76.5624
+    },
+    {
+      "date": "1993-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 61083.83405990272,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1993-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 61468.363281080856,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1993-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 61387.22318968858,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1994-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 61525.5355377132,
+      "DDDM01USA156NWDB": 70.5033
+    },
+    {
+      "date": "1994-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 61494.790001450274,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1994-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 61769.19483159018,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1994-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 62106.936713913674,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1995-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 62532.16274992891,
+      "DDDM01USA156NWDB": 90.9981
+    },
+    {
+      "date": "1995-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 63133.18683545185,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1995-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 63513.70047994794,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1995-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 63728.89280350195,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1996-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 64504.58971174567,
+      "DDDM01USA156NWDB": 105.046
+    },
+    {
+      "date": "1996-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 64313.02005268373,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1996-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 64402.31507261719,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1996-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 64366.78450286333,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1997-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 64532.56770726521,
+      "DDDM01USA156NWDB": 125.562
+    },
+    {
+      "date": "1997-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 64315.055186601436,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1997-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 64372.503051257074,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1997-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 64526.7854199229,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1998-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 65024.99300737159,
+      "DDDM01USA156NWDB": 142.589
+    },
+    {
+      "date": "1998-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 65651.48953158851,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1998-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 65551.29278857577,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1998-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 65749.84847736564,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1999-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 66428.17936262615,
+      "DDDM01USA156NWDB": 153.433
+    },
+    {
+      "date": "1999-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 67120.46028798442,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1999-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 67426.15024054816,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "1999-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 67483.00963347191,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2000-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 68439.89694645537,
+      "DDDM01USA156NWDB": 147.379
+    },
+    {
+      "date": "2000-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 68050.60052382384,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2000-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 69202.24671731843,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2000-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 69456.22659965594,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2001-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 70393.78596327054,
+      "DDDM01USA156NWDB": 132.14700000000002
+    },
+    {
+      "date": "2001-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 71256.32606849703,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2001-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 73543.0957858166,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2001-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 74030.2041233661,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2002-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 74965.03918022905,
+      "DDDM01USA156NWDB": 101.147
+    },
+    {
+      "date": "2002-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 75626.3444366271,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2002-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 76800.66714979187,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2002-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 78365.56077318372,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2003-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 79590.95514290196,
+      "DDDM01USA156NWDB": 124.526
+    },
+    {
+      "date": "2003-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 81782.89023215012,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2003-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 82037.45607313566,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2003-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 82817.67080063139,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2004-01-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 83760.5685671266,
+      "DDDM01USA156NWDB": 133.613
+    },
+    {
+      "date": "2004-04-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 84880.67389785116,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2004-07-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 85606.11287471332,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2004-10-01",
+      "VAPGDPFI": null,
+      "VAPGDPRL": null,
+      "TDSP": null,
+      "private_debt_gdp": 86856.42314404463,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2005-01-01",
+      "VAPGDPFI": 7.4,
+      "VAPGDPRL": 12.6,
+      "TDSP": 14.799802,
+      "private_debt_gdp": 87092.42512465062,
+      "DDDM01USA156NWDB": 130.38299999999998
+    },
+    {
+      "date": "2005-04-01",
+      "VAPGDPFI": 7.5,
+      "VAPGDPRL": 12.7,
+      "TDSP": 14.828576,
+      "private_debt_gdp": 88525.43935240556,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2005-07-01",
+      "VAPGDPFI": 7.5,
+      "VAPGDPRL": 12.5,
+      "TDSP": 15.139959,
+      "private_debt_gdp": 89455.31651855084,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2005-10-01",
+      "VAPGDPFI": 7.6,
+      "VAPGDPRL": 12.3,
+      "TDSP": 15.02855,
+      "private_debt_gdp": 90464.3984736349,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2006-01-01",
+      "VAPGDPFI": 7.7,
+      "VAPGDPRL": 12.1,
+      "TDSP": 14.989443,
+      "private_debt_gdp": 91557.18441433148,
+      "DDDM01USA156NWDB": 141.644
+    },
+    {
+      "date": "2006-04-01",
+      "VAPGDPFI": 7.6,
+      "VAPGDPRL": 12.2,
+      "TDSP": 15.044255,
+      "private_debt_gdp": 93117.51022872559,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2006-07-01",
+      "VAPGDPFI": 7.5,
+      "VAPGDPRL": 12.3,
+      "TDSP": 15.367228,
+      "private_debt_gdp": 94392.23174192016,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2006-10-01",
+      "VAPGDPFI": 7.6,
+      "VAPGDPRL": 12.5,
+      "TDSP": 15.509711,
+      "private_debt_gdp": 95069.80988008171,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2007-01-01",
+      "VAPGDPFI": 7.5,
+      "VAPGDPRL": 12.5,
+      "TDSP": 15.526607,
+      "private_debt_gdp": 95317.6748641339,
+      "DDDM01USA156NWDB": 137.64
+    },
+    {
+      "date": "2007-04-01",
+      "VAPGDPFI": 7.2,
+      "VAPGDPRL": 12.5,
+      "TDSP": 15.63251,
+      "private_debt_gdp": 96219.914592904,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2007-07-01",
+      "VAPGDPFI": 7.0,
+      "VAPGDPRL": 12.7,
+      "TDSP": 15.712123,
+      "private_debt_gdp": 96539.12420505822,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2007-10-01",
+      "VAPGDPFI": 6.7,
+      "VAPGDPRL": 13.0,
+      "TDSP": 15.846367,
+      "private_debt_gdp": 96796.54677541876,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2008-01-01",
+      "VAPGDPFI": 6.8,
+      "VAPGDPRL": 13.1,
+      "TDSP": 15.775857,
+      "private_debt_gdp": 97997.57087630004,
+      "DDDM01USA156NWDB": 78.4725
+    },
+    {
+      "date": "2008-04-01",
+      "VAPGDPFI": 6.3,
+      "VAPGDPRL": 13.1,
+      "TDSP": 15.326612,
+      "private_debt_gdp": 96617.73770372484,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2008-07-01",
+      "VAPGDPFI": 5.7,
+      "VAPGDPRL": 13.1,
+      "TDSP": 15.546547,
+      "private_debt_gdp": 97130.50521045072,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2008-10-01",
+      "VAPGDPFI": 4.8,
+      "VAPGDPRL": 13.4,
+      "TDSP": 15.72136,
+      "private_debt_gdp": 96957.24506679771,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2009-01-01",
+      "VAPGDPFI": 6.1,
+      "VAPGDPRL": 13.5,
+      "TDSP": 15.5975,
+      "private_debt_gdp": 97774.80298875288,
+      "DDDM01USA156NWDB": 104.139
+    },
+    {
+      "date": "2009-04-01",
+      "VAPGDPFI": 6.8,
+      "VAPGDPRL": 13.4,
+      "TDSP": 15.251967,
+      "private_debt_gdp": 97936.31089845128,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2009-07-01",
+      "VAPGDPFI": 6.9,
+      "VAPGDPRL": 13.4,
+      "TDSP": 15.08588,
+      "private_debt_gdp": 97142.22872053353,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2009-10-01",
+      "VAPGDPFI": 6.9,
+      "VAPGDPRL": 13.2,
+      "TDSP": 14.896385,
+      "private_debt_gdp": 95577.23030985276,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2010-01-01",
+      "VAPGDPFI": 6.9,
+      "VAPGDPRL": 13.3,
+      "TDSP": 14.51494,
+      "private_debt_gdp": 94491.12438459261,
+      "DDDM01USA156NWDB": 114.848
+    },
+    {
+      "date": "2010-04-01",
+      "VAPGDPFI": 6.7,
+      "VAPGDPRL": 13.3,
+      "TDSP": 14.069775,
+      "private_debt_gdp": 92742.02942512157,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2010-07-01",
+      "VAPGDPFI": 6.4,
+      "VAPGDPRL": 13.2,
+      "TDSP": 13.917807,
+      "private_debt_gdp": 91085.93955714212,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2010-10-01",
+      "VAPGDPFI": 6.4,
+      "VAPGDPRL": 13.3,
+      "TDSP": 13.580863,
+      "private_debt_gdp": 89949.71349113627,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2011-01-01",
+      "VAPGDPFI": 6.5,
+      "VAPGDPRL": 13.1,
+      "TDSP": 13.30846,
+      "private_debt_gdp": 89839.19953349026,
+      "DDDM01USA156NWDB": 100.263
+    },
+    {
+      "date": "2011-04-01",
+      "VAPGDPFI": 6.4,
+      "VAPGDPRL": 13.2,
+      "TDSP": 13.057706,
+      "private_debt_gdp": 88324.09804661263,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2011-07-01",
+      "VAPGDPFI": 6.6,
+      "VAPGDPRL": 13.2,
+      "TDSP": 12.944597,
+      "private_debt_gdp": 87482.27213235444,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2011-10-01",
+      "VAPGDPFI": 6.7,
+      "VAPGDPRL": 13.3,
+      "TDSP": 12.749684,
+      "private_debt_gdp": 86240.68070090257,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2012-01-01",
+      "VAPGDPFI": 7.0,
+      "VAPGDPRL": 13.0,
+      "TDSP": 12.237059,
+      "private_debt_gdp": 85004.60364040761,
+      "DDDM01USA156NWDB": 114.854
+    },
+    {
+      "date": "2012-04-01",
+      "VAPGDPFI": 7.2,
+      "VAPGDPRL": 13.0,
+      "TDSP": 12.034065,
+      "private_debt_gdp": 84069.63855072294,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2012-07-01",
+      "VAPGDPFI": 7.3,
+      "VAPGDPRL": 13.1,
+      "TDSP": 12.083107,
+      "private_debt_gdp": 83267.13968242121,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2012-10-01",
+      "VAPGDPFI": 7.3,
+      "VAPGDPRL": 13.0,
+      "TDSP": 11.754033,
+      "private_debt_gdp": 82541.88276194413,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2013-01-01",
+      "VAPGDPFI": 6.7,
+      "VAPGDPRL": 13.1,
+      "TDSP": 12.006598,
+      "private_debt_gdp": 81599.56016837628,
+      "DDDM01USA156NWDB": 142.69799999999998
+    },
+    {
+      "date": "2013-04-01",
+      "VAPGDPFI": 6.8,
+      "VAPGDPRL": 13.1,
+      "TDSP": 11.794391,
+      "private_debt_gdp": 81289.46999845235,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2013-07-01",
+      "VAPGDPFI": 6.8,
+      "VAPGDPRL": 13.2,
+      "TDSP": 11.837713,
+      "private_debt_gdp": 80264.80493679366,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2013-10-01",
+      "VAPGDPFI": 7.0,
+      "VAPGDPRL": 13.1,
+      "TDSP": 11.985283,
+      "private_debt_gdp": 80074.91732064745,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2014-01-01",
+      "VAPGDPFI": 7.2,
+      "VAPGDPRL": 13.0,
+      "TDSP": 11.883758,
+      "private_debt_gdp": 80413.8253530784,
+      "DDDM01USA156NWDB": 150.026
+    },
+    {
+      "date": "2014-04-01",
+      "VAPGDPFI": 7.4,
+      "VAPGDPRL": 12.9,
+      "TDSP": 11.62114,
+      "private_debt_gdp": 79246.52030869295,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2014-07-01",
+      "VAPGDPFI": 7.4,
+      "VAPGDPRL": 12.9,
+      "TDSP": 11.646947,
+      "private_debt_gdp": 77646.06811370872,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2014-10-01",
+      "VAPGDPFI": 7.5,
+      "VAPGDPRL": 12.8,
+      "TDSP": 11.631993,
+      "private_debt_gdp": 77415.23471396034,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2015-01-01",
+      "VAPGDPFI": 7.6,
+      "VAPGDPRL": 12.8,
+      "TDSP": 11.556634,
+      "private_debt_gdp": 77047.06538794276,
+      "DDDM01USA156NWDB": 137.688
+    },
+    {
+      "date": "2015-04-01",
+      "VAPGDPFI": 7.8,
+      "VAPGDPRL": 12.7,
+      "TDSP": 11.485147,
+      "private_debt_gdp": 76732.91434953499,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2015-07-01",
+      "VAPGDPFI": 7.5,
+      "VAPGDPRL": 12.8,
+      "TDSP": 11.606488,
+      "private_debt_gdp": 76614.00682744014,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2015-10-01",
+      "VAPGDPFI": 7.5,
+      "VAPGDPRL": 12.8,
+      "TDSP": 11.738976,
+      "private_debt_gdp": 76365.99608671202,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2016-01-01",
+      "VAPGDPFI": 7.5,
+      "VAPGDPRL": 12.9,
+      "TDSP": 11.763247,
+      "private_debt_gdp": 76534.21287877916,
+      "DDDM01USA156NWDB": 146.30700000000002
+    },
+    {
+      "date": "2016-04-01",
+      "VAPGDPFI": 7.8,
+      "VAPGDPRL": 12.9,
+      "TDSP": 11.766109,
+      "private_debt_gdp": 76363.40082799522,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2016-07-01",
+      "VAPGDPFI": 8.0,
+      "VAPGDPRL": 12.8,
+      "TDSP": 11.769855,
+      "private_debt_gdp": 76279.66108916812,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2016-10-01",
+      "VAPGDPFI": 8.1,
+      "VAPGDPRL": 12.8,
+      "TDSP": 11.865818,
+      "private_debt_gdp": 75893.52697120215,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2017-01-01",
+      "VAPGDPFI": 7.8,
+      "VAPGDPRL": 12.8,
+      "TDSP": 11.723758,
+      "private_debt_gdp": 75864.46718800603,
+      "DDDM01USA156NWDB": 164.894
+    },
+    {
+      "date": "2017-04-01",
+      "VAPGDPFI": 7.6,
+      "VAPGDPRL": 12.9,
+      "TDSP": 11.756991,
+      "private_debt_gdp": 75943.66540915433,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2017-07-01",
+      "VAPGDPFI": 7.7,
+      "VAPGDPRL": 12.9,
+      "TDSP": 11.818444,
+      "private_debt_gdp": 75496.6473438366,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2017-10-01",
+      "VAPGDPFI": 7.6,
+      "VAPGDPRL": 12.9,
+      "TDSP": 11.816704,
+      "private_debt_gdp": 75027.25945007578,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2018-01-01",
+      "VAPGDPFI": 7.6,
+      "VAPGDPRL": 13.0,
+      "TDSP": 11.644589,
+      "private_debt_gdp": 74598.03459695337,
+      "DDDM01USA156NWDB": 148.273
+    },
+    {
+      "date": "2018-04-01",
+      "VAPGDPFI": 7.6,
+      "VAPGDPRL": 13.0,
+      "TDSP": 11.598389,
+      "private_debt_gdp": 74200.75456325745,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2018-07-01",
+      "VAPGDPFI": 7.7,
+      "VAPGDPRL": 13.0,
+      "TDSP": 11.619573,
+      "private_debt_gdp": 74025.48136352556,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2018-10-01",
+      "VAPGDPFI": 7.5,
+      "VAPGDPRL": 13.0,
+      "TDSP": 11.66641,
+      "private_debt_gdp": 74097.92308173678,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2019-01-01",
+      "VAPGDPFI": 7.6,
+      "VAPGDPRL": 13.0,
+      "TDSP": 11.49991,
+      "private_debt_gdp": 73901.70332897555,
+      "DDDM01USA156NWDB": 158.572
+    },
+    {
+      "date": "2019-04-01",
+      "VAPGDPFI": 7.7,
+      "VAPGDPRL": 13.0,
+      "TDSP": 11.626991,
+      "private_debt_gdp": 73720.05190406665,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2019-07-01",
+      "VAPGDPFI": 7.6,
+      "VAPGDPRL": 13.0,
+      "TDSP": 11.646611,
+      "private_debt_gdp": 73351.12846880472,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2019-10-01",
+      "VAPGDPFI": 7.8,
+      "VAPGDPRL": 13.1,
+      "TDSP": 11.727653,
+      "private_debt_gdp": 73317.94510581826,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2020-01-01",
+      "VAPGDPFI": 7.7,
+      "VAPGDPRL": 13.3,
+      "TDSP": 11.591159,
+      "private_debt_gdp": 74413.48395893603,
+      "DDDM01USA156NWDB": 194.889
+    },
+    {
+      "date": "2020-04-01",
+      "VAPGDPFI": 8.5,
+      "VAPGDPRL": 14.2,
+      "TDSP": 9.739844,
+      "private_debt_gdp": 80997.31084189523,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2020-07-01",
+      "VAPGDPFI": 7.9,
+      "VAPGDPRL": 13.6,
+      "TDSP": 10.05851,
+      "private_debt_gdp": 75497.70123039819,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2020-10-01",
+      "VAPGDPFI": 8.1,
+      "VAPGDPRL": 13.5,
+      "TDSP": 10.389381,
+      "private_debt_gdp": 75233.00415263891,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2021-01-01",
+      "VAPGDPFI": 7.9,
+      "VAPGDPRL": 13.4,
+      "TDSP": 9.051457,
+      "private_debt_gdp": 74342.31396721432,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2021-04-01",
+      "VAPGDPFI": 7.9,
+      "VAPGDPRL": 13.3,
+      "TDSP": 9.841025,
+      "private_debt_gdp": 74925.35828917638,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2021-07-01",
+      "VAPGDPFI": 7.8,
+      "VAPGDPRL": 13.3,
+      "TDSP": 10.009588,
+      "private_debt_gdp": 74491.5756689526,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2021-10-01",
+      "VAPGDPFI": 7.8,
+      "VAPGDPRL": 13.2,
+      "TDSP": 10.228796,
+      "private_debt_gdp": 73364.11887029694,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2022-01-01",
+      "VAPGDPFI": 7.7,
+      "VAPGDPRL": 13.3,
+      "TDSP": 10.472393,
+      "private_debt_gdp": 73616.90118555598,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2022-04-01",
+      "VAPGDPFI": 7.6,
+      "VAPGDPRL": 13.3,
+      "TDSP": 10.684739,
+      "private_debt_gdp": 73237.48171591735,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2022-07-01",
+      "VAPGDPFI": 7.6,
+      "VAPGDPRL": 13.3,
+      "TDSP": 10.567838,
+      "private_debt_gdp": 73072.40985675134,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2022-10-01",
+      "VAPGDPFI": 7.5,
+      "VAPGDPRL": 13.4,
+      "TDSP": 10.736945,
+      "private_debt_gdp": 72535.03238675208,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2023-01-01",
+      "VAPGDPFI": 7.5,
+      "VAPGDPRL": 13.6,
+      "TDSP": 10.564109,
+      "private_debt_gdp": 71804.62768006623,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2023-04-01",
+      "VAPGDPFI": 7.4,
+      "VAPGDPRL": 13.7,
+      "TDSP": 10.577002,
+      "private_debt_gdp": 71552.87920783304,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2023-07-01",
+      "VAPGDPFI": 7.4,
+      "VAPGDPRL": 13.7,
+      "TDSP": 10.747842,
+      "private_debt_gdp": 70735.09860036276,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2023-10-01",
+      "VAPGDPFI": 7.4,
+      "VAPGDPRL": 13.8,
+      "TDSP": 11.096141,
+      "private_debt_gdp": 70258.30191056925,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2024-01-01",
+      "VAPGDPFI": 7.5,
+      "VAPGDPRL": 13.8,
+      "TDSP": 11.058904,
+      "private_debt_gdp": 70121.78871366926,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2024-04-01",
+      "VAPGDPFI": 7.6,
+      "VAPGDPRL": 13.8,
+      "TDSP": 11.01936,
+      "private_debt_gdp": 69548.42144541313,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2024-07-01",
+      "VAPGDPFI": 7.6,
+      "VAPGDPRL": 13.8,
+      "TDSP": 11.138759,
+      "private_debt_gdp": 69195.63058186078,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2024-10-01",
+      "VAPGDPFI": 7.7,
+      "VAPGDPRL": 13.8,
+      "TDSP": 11.122486,
+      "private_debt_gdp": 68083.15872137847,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2025-01-01",
+      "VAPGDPFI": 7.8,
+      "VAPGDPRL": 13.9,
+      "TDSP": 11.105381,
+      "private_debt_gdp": 67916.0550391379,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2025-04-01",
+      "VAPGDPFI": 7.9,
+      "VAPGDPRL": 13.9,
+      "TDSP": 11.124241,
+      "private_debt_gdp": 67438.9252754953,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2025-07-01",
+      "VAPGDPFI": 8.0,
+      "VAPGDPRL": 13.7,
+      "TDSP": 11.229451,
+      "private_debt_gdp": 66801.84244485993,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2025-10-01",
+      "VAPGDPFI": 8.1,
+      "VAPGDPRL": 13.7,
+      "TDSP": 11.322759,
+      "private_debt_gdp": 66620.1883324084,
+      "DDDM01USA156NWDB": null
+    },
+    {
+      "date": "2026-01-01",
+      "VAPGDPFI": 8.0,
+      "VAPGDPRL": 13.6,
+      "TDSP": 11.164138,
+      "private_debt_gdp": 66118.95585227775,
+      "DDDM01USA156NWDB": null
+    }
+  ],
+  "annotations": [
+    "oil_embargo_1973",
+    "gulf_war_1990",
+    "gfc_2008",
+    "shale_2014",
+    "covid_2020",
+    "reopening_2021"
+  ],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Value-added and balance-sheet measures retain their official definitions; household debt/GDP = CMDEBT / nominal GDP * 100.",
+    "notes": "A larger financial or real-estate share is not, by itself, evidence of low-quality output."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-15T23:37:40+00:00"
+}

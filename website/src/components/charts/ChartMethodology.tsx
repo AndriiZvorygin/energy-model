@@ -1,0 +1,5 @@
+import type { ChartDataset } from './chartTypes'
+
+export function ChartMethodology({ dataset }: { dataset: ChartDataset }) {
+  return <details className="border-t border-stone-200 pt-4 dark:border-stone-800"><summary className="cursor-pointer text-sm font-semibold">Methods and sources</summary><div className="mt-4 grid gap-5 text-sm leading-6 text-stone-600 md:grid-cols-2 dark:text-stone-300"><div><p className="font-semibold text-ink dark:text-white">Methodology</p>{Object.entries(dataset.methodology).map(([key, value]) => <p key={key} className="mt-2"><span className="capitalize text-stone-500">{key.replaceAll('_', ' ')}:</span> {Array.isArray(value) ? value.join(', ') : String(value)}</p>)}</div><div><p className="font-semibold text-ink dark:text-white">Series provenance</p><ul className="mt-2 space-y-2">{dataset.series.map((item) => <li key={item.key}><strong>{item.label}:</strong> {item.source}; {item.status}; through {item.finalObservationDate ?? 'not available'}.</li>)}</ul></div></div></details>
+}

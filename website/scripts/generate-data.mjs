@@ -72,6 +72,17 @@ const [
   equityRobustness,
   energyFindings,
   usoFindings,
+  indicatorCatalogueCsv,
+  currentStateCsv,
+  burdenValidationCsv,
+  physicalTightnessCsv,
+  labourWarningCsv,
+  episodesCsv,
+  systemFramework,
+  burdenFindings,
+  tightnessFindings,
+  labourFindings,
+  episodeLibrary,
 ] = await Promise.all([
   readText('analysis/final_findings_table.csv'),
   readText('analysis/system_signal_hierarchy.csv'),
@@ -85,6 +96,17 @@ const [
   readText('analysis/oil_equity_robustness.md'),
   readText('analysis/energy_gdp_findings.md'),
   readText('analysis/uso_findings.md'),
+  readText('analysis/system_response_indicator_catalogue.csv'),
+  readText('analysis/system_response_current_state.csv'),
+  readText('analysis/energy_burden_validation.csv'),
+  readText('analysis/physical_tightness_summary.csv'),
+  readText('analysis/labour_early_warning_summary.csv'),
+  readText('analysis/historical_episode_library.csv'),
+  readText('analysis/system_response_framework.md'),
+  readText('analysis/energy_burden_findings.md'),
+  readText('analysis/physical_tightness_findings.md'),
+  readText('analysis/labour_early_warning_findings.md'),
+  readText('analysis/historical_episode_library.md'),
 ])
 
 const findings = parseCsv(findingsCsv)
@@ -99,6 +121,38 @@ const petroleum = hierarchy.find((row) => row.signal === 'Petroleum consumption'
 const monthlyWti = bestCorrelation(equityReturns, 'monthly_log_return', 'WTI_log_return_1m')
 const monthlyBrent = bestCorrelation(equityReturns, 'monthly_log_return', 'Brent_log_return_1m')
 const usoR2 = Number(usoFindings.match(/full-sample R2 ([0-9]+(?:\.[0-9]+)?)/)?.[1] ?? 0)
+const indicatorCatalogue = parseCsv(indicatorCatalogueCsv)
+const currentState = parseCsv(currentStateCsv).map((row) => ({
+  ...row,
+  latest_value: number(row.latest_value),
+  previous_value: number(row.previous_value),
+  change: number(row.change),
+  historical_percentile: number(row.historical_percentile),
+}))
+const burdenValidation = parseCsv(burdenValidationCsv).map((row) => ({
+  ...row,
+  n_predictions: number(row.n_predictions),
+  rmse: number(row.rmse),
+  mae: number(row.mae),
+  r2: number(row.r2),
+  directional_accuracy: number(row.directional_accuracy),
+  sign_accuracy: number(row.sign_accuracy),
+  rmse_improvement_vs_ar: number(row.rmse_improvement_vs_ar),
+}))
+const physicalTightness = parseCsv(physicalTightnessCsv).map((row) => ({
+  ...row,
+  contemporaneous_correlation_with_WTI_YoY: number(row.contemporaneous_correlation_with_WTI_YoY),
+  best_lead_months_to_WTI_YoY: number(row.best_lead_months_to_WTI_YoY),
+  best_lead_correlation: number(row.best_lead_correlation),
+}))
+const labourWarnings = parseCsv(labourWarningCsv).map((row) => ({
+  ...row,
+  best_lead_months_to_recession: number(row.best_lead_months_to_recession),
+  correlation_with_future_recession: number(row.correlation_with_future_recession),
+  best_lead_months_to_industrial_weakness: number(row.best_lead_months_to_industrial_weakness),
+  correlation_with_future_industrial_weakness: number(row.correlation_with_future_industrial_weakness),
+}))
+const episodes = parseCsv(episodesCsv)
 
 const data = {
   generatedAt: new Date().toISOString(),
@@ -140,6 +194,32 @@ const data = {
       lag: number(row.lag_periods),
       correlation: number(row.correlation),
     })),
+  systemResponse: {
+    indicatorCatalogue,
+    currentState,
+    burdenValidation,
+    physicalTightness,
+    labourWarnings,
+    episodes,
+    content: {
+      purpose: section(systemFramework, 'Purpose'),
+      layers: section(systemFramework, 'Five Layers'),
+      transmission: section(systemFramework, 'Transmission Chain'),
+      firstRelease: section(systemFramework, 'First Release'),
+      regimes: section(systemFramework, 'Regime Vocabulary'),
+      evidenceLabels: section(systemFramework, 'Evidence Labels'),
+      gaps: section(systemFramework, 'Data And Methodological Gaps'),
+      nextStep: section(systemFramework, 'Recommended Next Step'),
+      burdenResult: section(burdenFindings, 'First-Pass Result'),
+      burdenInterpretation: section(burdenFindings, 'Interpretation'),
+      tightnessReading: section(tightnessFindings, 'Reading The Signals'),
+      tightnessGaps: section(tightnessFindings, 'Missing Data'),
+      labourHypothesis: section(labourFindings, 'Hypothesis'),
+      labourMethod: section(labourFindings, 'Method'),
+      labourInterpretation: section(labourFindings, 'Interpretation'),
+      episodeUse: section(episodeLibrary, 'How To Use The Library'),
+    },
+  },
   content: {
     headline: section(executiveSummary, 'Headline'),
     integratedView: section(integratedAtlas, 'Core Interpretation'),
@@ -175,6 +255,17 @@ const chartFiles = [
   'final_energy_gdp_time_series.png',
   'gdp_per_energy_trend.png',
   'final_lead_lag_network.png',
+  'system_response_chain.png',
+  'current_state_layers.png',
+  'physical_tightness_dashboard.png',
+  'energy_burden_dashboard.png',
+  'demand_destruction_cycle.png',
+  'industrial_transmission.png',
+  'labour_early_warning_indicators.png',
+  'household_stress_indicators.png',
+  'historical_episode_comparison.png',
+  'regime_timeline.png',
+  'indicator_lag_map.png',
 ]
 
 await mkdir(resolve(websiteRoot, 'src/data'), { recursive: true })

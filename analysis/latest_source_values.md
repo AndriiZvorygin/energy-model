@@ -1,6 +1,6 @@
 # Latest Source Values
 
-Retrieved at: `2026-07-10T16:24:24+00:00`
+Retrieved at: `2026-07-15T23:37:40+00:00`
 
 Latest complete GM2 month: **2026-05**
 G4 GM2 USD: **1.02409e+14**
@@ -43,6 +43,48 @@ G4 GM2 USD: **1.02409e+14**
 | Imported crude landed cost | 2026-04 | 89.7 | dollars per barrel | EIA Petroleum Marketing Monthly:I000000008 |
 | Total primary energy consumption | 2026-03 | 7.8865 | Quadrillion Btu | EIA MER T01.03:TETCBUS Total Primary Energy Consumption |
 | Petroleum consumption | 2026-03 | 3.00206 | Quadrillion Btu | EIA MER T01.03:PMTCBUS Petroleum Consumption (Excluding Biofuels) |
+| Crude oil production | 2026-05 | 13717.3 | Thousand Barrels per Day | EIA MER T03.01:PAPRPUS Crude Oil Production, Total |
+| Refinery utilization | 2026-07 | 96 | percent | EIA weekly history:WPULEUS3; monthly average |
+| System response POPTHM | 2026-05 | 342746 | FRED native units | FRED:POPTHM |
+| System response DNRGRC1M027SBEA | 2026-05 | 908.6 | FRED native units | FRED:DNRGRC1M027SBEA |
+| System response DSPI | 2026-05 | 23651.7 | FRED native units | FRED:DSPI |
+| System response DSPIC96 | 2026-05 | 17983.8 | FRED native units | FRED:DSPIC96 |
+| System response CPIENGSL | 2026-06 | 319.29 | FRED native units | FRED:CPIENGSL |
+| System response FEDFUNDS | 2026-06 | 3.63 | FRED native units | FRED:FEDFUNDS |
+| System response DRTSCILM | 2026-04 | 8.1 | FRED native units | FRED:DRTSCILM |
+| System response GDP | 2026-01 | 31865.7 | FRED native units | FRED:GDP |
+| System response IPMAN | 2026-05 | 98.6353 | FRED native units | FRED:IPMAN |
+| System response PCEC96 | 2026-05 | 16773.4 | FRED native units | FRED:PCEC96 |
+| System response PNFIC1 | 2026-01 | 3804.38 | FRED native units | FRED:PNFIC1 |
+| System response OPHNFB | 2026-01 | 119.437 | FRED native units | FRED:OPHNFB |
+| System response AWHMAN | 2026-06 | 41.6 | FRED native units | FRED:AWHMAN |
+| System response TEMPHELPS | 2026-06 | 2499.2 | FRED native units | FRED:TEMPHELPS |
+| System response LNS12500000 | 2026-06 | 133659 | FRED native units | FRED:LNS12500000 |
+| System response CE16OV | 2026-06 | 162264 | FRED native units | FRED:CE16OV |
+| System response LNS12032194 | 2026-06 | 4681 | FRED native units | FRED:LNS12032194 |
+| System response LNS12300060 | 2026-06 | 80.2 | FRED native units | FRED:LNS12300060 |
+| System response CES0500000003 | 2026-06 | 37.64 | FRED native units | FRED:CES0500000003 |
+| System response UMCSENT | 2026-05 | 44.8 | FRED native units | FRED:UMCSENT |
+| System response DRCCLACBS | 2026-01 | 2.92 | FRED native units | FRED:DRCCLACBS |
+| System response UNRATE | 2026-06 | 4.2 | FRED native units | FRED:UNRATE |
+| System response USREC | 2026-06 | 0 | FRED native units | FRED:USREC |
+| System response A939RX0Q048SBEA | 2026-01 | 70583 | FRED native units | FRED:A939RX0Q048SBEA |
+| System response A261RX1Q020SBEA | 2026-01 | 23959.2 | FRED native units | FRED:A261RX1Q020SBEA |
+| System response LB0000031Q020SBEA | 2026-01 | 21161.6 | FRED native units | FRED:LB0000031Q020SBEA |
+| System response A362RX1A020NBEA | 2025-01 | 19793.3 | FRED native units | FRED:A362RX1A020NBEA |
+| System response W171RC1Q027SBEA | 2026-01 | 1498.46 | FRED native units | FRED:W171RC1Q027SBEA |
+| System response A262RX1Q020SBEA | 2026-01 | 4160.67 | FRED native units | FRED:A262RX1Q020SBEA |
+| System response MEHOINUSA672N | 2024-01 | 83730 | FRED native units | FRED:MEHOINUSA672N |
+| System response LES1252881600Q | 2026-01 | 376 | FRED native units | FRED:LES1252881600Q |
+| System response CXUSHELTERLB0101M | 2024-01 | 16317 | FRED native units | FRED:CXUSHELTERLB0101M |
+| System response CXUFOODTOTLLB0101M | 2024-01 | 10169 | FRED native units | FRED:CXUFOODTOTLLB0101M |
+| System response CXUUTILSLB0101M | 2024-01 | 4736 | FRED native units | FRED:CXUUTILSLB0101M |
+| System response VAPGDPFI | 2026-01 | 8 | FRED native units | FRED:VAPGDPFI |
+| System response VAPGDPRL | 2026-01 | 13.6 | FRED native units | FRED:VAPGDPRL |
+| System response TDSP | 2026-01 | 11.1641 | FRED native units | FRED:TDSP |
+| System response CMDEBT | 2026-01 | 2.10693e+07 | FRED native units | FRED:CMDEBT |
+| System response DDDM01USA156NWDB | 2020-01 | 194.889 | FRED native units | FRED:DDDM01USA156NWDB |
+| System response TSIFRGHT | 2026-04 | 139.6 | FRED native units | FRED:TSIFRGHT |
 
 ## Oil And Inventory
 

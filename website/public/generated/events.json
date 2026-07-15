@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "1.1.0",
+  "events": [
+    {
+      "id": "oil_embargo_1973",
+      "name": "Oil embargo",
+      "start": "1973-10-01",
+      "end": "1974-03-01",
+      "category": "oil supply shock",
+      "explanation": "A physical supply disruption and policy response sharply raised oil costs.",
+      "layers": [
+        "physical energy",
+        "affordability",
+        "economic activity"
+      ]
+    },
+    {
+      "id": "gulf_war_1990",
+      "name": "Gulf War oil shock",
+      "start": "1990-08-01",
+      "end": "1991-02-01",
+      "category": "oil supply shock",
+      "explanation": "Geopolitical supply risk produced a short, sharp oil-price shock.",
+      "layers": [
+        "physical energy",
+        "oil pricing",
+        "affordability"
+      ]
+    },
+    {
+      "id": "gfc_2008",
+      "name": "Financial crisis and oil collapse",
+      "start": "2008-07-01",
+      "end": "2009-06-01",
+      "category": "financial crisis",
+      "explanation": "An oil-price peak was followed by financial crisis, demand destruction, and price collapse; the overlap does not identify a single cause.",
+      "layers": [
+        "financial conditions",
+        "oil pricing",
+        "economic activity",
+        "labour"
+      ]
+    },
+    {
+      "id": "shale_2014",
+      "name": "Shale supply adjustment",
+      "start": "2014-06-01",
+      "end": "2016-02-01",
+      "category": "price collapse",
+      "explanation": "Supply growth and changing producer strategy contributed to a prolonged oil-price decline.",
+      "layers": [
+        "physical energy",
+        "oil pricing",
+        "investment"
+      ]
+    },
+    {
+      "id": "covid_2020",
+      "name": "Pandemic and futures dislocation",
+      "start": "2020-03-01",
+      "end": "2020-06-01",
+      "category": "pandemic disruption",
+      "explanation": "Mobility restrictions collapsed petroleum demand and disrupted futures-linked exposure.",
+      "layers": [
+        "energy demand",
+        "oil pricing",
+        "tradable exposure",
+        "economic activity"
+      ]
+    },
+    {
+      "id": "reopening_2021",
+      "name": "Demand recovery",
+      "start": "2021-02-01",
+      "end": "2022-06-01",
+      "category": "demand recovery",
+      "explanation": "Reopening demand, constrained supply chains, and geopolitical stress lifted energy prices and burden.",
+      "layers": [
+        "energy demand",
+        "physical energy",
+        "affordability",
+        "inflation"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4072 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "uso-tracking",
+  "title": "USO and benchmark oil",
+  "description": "Tradable ETF exposure compared with WTI and Brent benchmarks.",
+  "plainLanguageSummary": "Tradable ETF exposure compared with WTI and Brent benchmarks.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "USO tracking residual = USO_YoY - WTI_YoY.",
+    "explanation": "USO can diverge through roll yield, fees, tracking differences, and ETF structure. Raw USO and barrel prices are not placed on one axis.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "USO can diverge through roll yield, fees, tracking differences, and ETF structure. Raw USO and barrel prices are not placed on one axis."
+  ],
+  "sourceNotes": [
+    "Yahoo-compatible chart data",
+    "FRED DCOILWTICO",
+    "FRED DCOILBRENTEU",
+    "Project derived",
+    "Derived from EIA WCESTUS1"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2007-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "USO": {
+        "mean": 254.47282023307605,
+        "standardDeviation": 166.7191792208035,
+        "n": 156
+      },
+      "WTI": {
+        "mean": 73.67095102366699,
+        "standardDeviation": 22.70265940077297,
+        "n": 156
+      },
+      "Brent": {
+        "mean": 78.9551407140101,
+        "standardDeviation": 25.610960542641315,
+        "n": 156
+      },
+      "USO_tracking_residual": {
+        "mean": -10.650110972025884,
+        "standardDeviation": 13.889005013626491,
+        "n": 153
+      },
+      "CI_zscore": {
+        "mean": 1.9261287963515055,
+        "standardDeviation": 3.4956337647230744,
+        "n": 156
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "1986-01-01",
+    "end": "2026-06-01"
+  },
+  "series": [
+    {
+      "key": "USO",
+      "label": "USO adjusted close",
+      "unit": "USD per share",
+      "source": "Yahoo-compatible chart data",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#d97706",
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "zscore",
+        "pct_change"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "WTI",
+      "label": "WTI",
+      "unit": "USD per barrel",
+      "source": "FRED DCOILWTICO",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "zscore",
+        "pct_change"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "Brent",
+      "label": "Brent",
+      "unit": "USD per barrel",
+      "source": "FRED DCOILBRENTEU",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#2563eb",
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "zscore",
+        "pct_change"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "USO_tracking_residual",
+      "label": "USO minus WTI YoY",
+      "unit": "percentage points",
+      "source": "Project derived",
+      "status": "derived",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#7c3aed",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "CI_zscore",
+      "label": "Comparative inventory z-score",
+      "unit": "standard deviations",
+      "source": "Derived from EIA WCESTUS1",
+      "status": "derived",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#be123c",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1986-01-01",
+      "USO": null,
+      "WTI": 22.925454545454546,
+      "Brent": null,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    },
+    {
+      "date": "1986-02-01",
+      "USO": null,
+      "WTI": 15.454736842105262,
+      "Brent": null,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    },
+    {
+      "date": "1986-03-01",
+      "USO": null,
+      "WTI": 12.6125,
+      "Brent": null,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    },
+    {
+      "date": "1986-04-01",
+      "USO": null,
+      "WTI": 12.843636363636364,
+      "Brent": null,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    },
+    {
+      "date": "1986-05-01",
+      "USO": null,
+      "WTI": 15.377619047619048,
+      "Brent": null,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    },
+    {
+      "date": "1986-06-01",
+      "USO": null,
+      "WTI": 13.425714285714285,
+      "Brent": null,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    },
+    {
+      "date": "1986-07-01",
+      "USO": null,
+      "WTI": 11.584545454545456,
+      "Brent": null,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    },
+    {
+      "date": "1986-08-01",
+      "USO": null,
+      "WTI": 15.096666666666666,
+      "Brent": null,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    },
+    {
+      "date": "1986-09-01",
+      "USO": null,
+      "WTI": 14.866666666666665,
+      "Brent": null,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    },
+    {
+      "date": "1986-10-01",
+      "USO": null,
+      "WTI": 14.896818181818183,
+      "Brent": null,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    },
+    {
+      "date": "1986-11-01",
+      "USO": null,
+      "WTI": 15.22157894736842,
+      "Brent": null,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    },
+    {
+      "date": "1986-12-01",
+      "USO": null,
+      "WTI": 16.107619047619046,
+      "Brent": null,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    },
+    {
+      "date": "1987-01-01",
+      "USO": null,
+      "WTI": 18.65142857142857,
+      "Brent": null,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    },
+    {
+      "date": "1987-02-01",
+      "USO": null,
+      "WTI": 17.748947368421053,
+      "Brent": null,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    },
+    {
+      "date": "1987-03-01",
+      "USO": null,
+      "WTI": 18.302857142857142,
+      "Brent": null,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    },
+    {
+      "date": "1987-04-01",
+      "USO": null,
+      "WTI": 18.677142857142858,
+      "Brent": null,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    },
+    {
+      "date": "1987-05-01",
+      "USO": null,
+      "WTI": 19.4375,
+      "Brent": 18.58,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    },
+    {
+      "date": "1987-06-01",
+      "USO": null,
+      "WTI": 20.07318181818182,
+      "Brent": 18.86047619047619,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    },
+    {
+      "date": "1987-07-01",
+      "USO": null,
+      "WTI": 21.342173913043478,
+      "Brent": 19.856521739130436,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    },
+    {
+      "date": "1987-08-01",
+      "USO": null,
+      "WTI": 20.310952380952383,
+      "Brent": 18.97952380952381,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.1831901502263156
+    },
+    {
+      "date": "1987-09-01",
+      "USO": null,
+      "WTI": 19.529999999999998,
+      "Brent": 18.313181818181818,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.13286753009791988
+    },
+    {
+      "date": "1987-10-01",
+      "USO": null,
+      "WTI": 19.85909090909091,
+      "Brent": 18.757727272727273,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.18623110301835014
+    },
+    {
+      "date": "1987-11-01",
+      "USO": null,
+      "WTI": 18.854,
+      "Brent": 17.780952380952378,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.02822544484637
+    },
+    {
+      "date": "1987-12-01",
+      "USO": null,
+      "WTI": 17.274545454545457,
+      "Brent": 17.05409090909091,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.4849301473446348
+    },
+    {
+      "date": "1988-01-01",
+      "USO": null,
+      "WTI": 17.1295,
+      "Brent": 16.749444444444446,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.24035159480903043
+    },
+    {
+      "date": "1988-02-01",
+      "USO": null,
+      "WTI": 16.795714285714286,
+      "Brent": 15.729523809523808,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.19723131483403503
+    },
+    {
+      "date": "1988-03-01",
+      "USO": null,
+      "WTI": 16.19739130434783,
+      "Brent": 14.731304347826086,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.8798016743719798
+    },
+    {
+      "date": "1988-04-01",
+      "USO": null,
+      "WTI": 17.8625,
+      "Brent": 16.59526315789474,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.391311771716338
+    },
+    {
+      "date": "1988-05-01",
+      "USO": null,
+      "WTI": 17.423636363636362,
+      "Brent": 16.314090909090908,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.2051862576215149
+    },
+    {
+      "date": "1988-06-01",
+      "USO": null,
+      "WTI": 16.527727272727272,
+      "Brent": 15.543636363636363,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.4204807490903135
+    },
+    {
+      "date": "1988-07-01",
+      "USO": null,
+      "WTI": 15.497499999999999,
+      "Brent": 14.907619047619047,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.5958448089713189
+    },
+    {
+      "date": "1988-08-01",
+      "USO": null,
+      "WTI": 15.523478260869567,
+      "Brent": 14.89391304347826,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.1971461816246856
+    },
+    {
+      "date": "1988-09-01",
+      "USO": null,
+      "WTI": 14.535454545454543,
+      "Brent": 13.179545454545455,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.34764880889757194
+    },
+    {
+      "date": "1988-10-01",
+      "USO": null,
+      "WTI": 13.770476190476192,
+      "Brent": 12.405714285714286,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.3999356408620107
+    },
+    {
+      "date": "1988-11-01",
+      "USO": null,
+      "WTI": 14.141363636363637,
+      "Brent": 13.024545454545455,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.06822183772378622
+    },
+    {
+      "date": "1988-12-01",
+      "USO": null,
+      "WTI": 16.382380952380952,
+      "Brent": 15.306666666666667,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.2269997443779961
+    },
+    {
+      "date": "1989-01-01",
+      "USO": null,
+      "WTI": 18.024285714285714,
+      "Brent": 17.171904761904763,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.1900876973386456
+    },
+    {
+      "date": "1989-02-01",
+      "USO": null,
+      "WTI": 17.936500000000002,
+      "Brent": 16.8885,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.5654310441729474
+    },
+    {
+      "date": "1989-03-01",
+      "USO": null,
+      "WTI": 19.48409090909091,
+      "Brent": 18.700952380952383,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.040490854718890225
+    },
+    {
+      "date": "1989-04-01",
+      "USO": null,
+      "WTI": 21.069,
+      "Brent": 20.319499999999998,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.7892985434344372
+    },
+    {
+      "date": "1989-05-01",
+      "USO": null,
+      "WTI": 20.123478260869565,
+      "Brent": 18.633181818181818,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.06997454655736021
+    },
+    {
+      "date": "1989-06-01",
+      "USO": null,
+      "WTI": 20.050454545454546,
+      "Brent": 17.670909090909092,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.13385361173527538
+    },
+    {
+      "date": "1989-07-01",
+      "USO": null,
+      "WTI": 19.781428571428574,
+      "Brent": 17.622857142857143,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.30441342674919525
+    },
+    {
+      "date": "1989-08-01",
+      "USO": null,
+      "WTI": 18.577826086956524,
+      "Brent": 16.77,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.06668636415007492
+    },
+    {
+      "date": "1989-09-01",
+      "USO": null,
+      "WTI": 19.591428571428573,
+      "Brent": 17.766190476190474,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.9173556213349159
+    },
+    {
+      "date": "1989-10-01",
+      "USO": null,
+      "WTI": 20.097727272727273,
+      "Brent": 18.907727272727275,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.0389210333062064
+    },
+    {
+      "date": "1989-11-01",
+      "USO": null,
+      "WTI": 19.85590909090909,
+      "Brent": 18.727272727272727,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.41415276301678405
+    },
+    {
+      "date": "1989-12-01",
+      "USO": null,
+      "WTI": 21.1,
+      "Brent": 19.838947368421053,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.5683388066748218
+    },
+    {
+      "date": "1990-01-01",
+      "USO": null,
+      "WTI": 22.86318181818182,
+      "Brent": 21.251818181818184,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.594345340781004
+    },
+    {
+      "date": "1990-02-01",
+      "USO": null,
+      "WTI": 22.113,
+      "Brent": 19.813499999999998,
+      "USO_tracking_residual": null,
+      "CI_zscore": 3.606036826232335
+    },
+    {
+      "date": "1990-03-01",
+      "USO": null,
+      "WTI": 20.387727272727275,
+      "Brent": 18.387272727272727,
+      "USO_tracking_residual": null,
+      "CI_zscore": 2.8329417977754767
+    },
+    {
+      "date": "1990-04-01",
+      "USO": null,
+      "WTI": 18.4255,
+      "Brent": 16.612105263157893,
+      "USO_tracking_residual": null,
+      "CI_zscore": 3.571170051166811
+    },
+    {
+      "date": "1990-05-01",
+      "USO": null,
+      "WTI": 18.199545454545454,
+      "Brent": 16.352272727272727,
+      "USO_tracking_residual": null,
+      "CI_zscore": 2.5664555230861685
+    },
+    {
+      "date": "1990-06-01",
+      "USO": null,
+      "WTI": 16.695238095238096,
+      "Brent": 15.104761904761904,
+      "USO_tracking_residual": null,
+      "CI_zscore": 3.1349268498901983
+    },
+    {
+      "date": "1990-07-01",
+      "USO": null,
+      "WTI": 18.454090909090908,
+      "Brent": 17.16909090909091,
+      "USO_tracking_residual": null,
+      "CI_zscore": 4.637532838721302
+    },
+    {
+      "date": "1990-08-01",
+      "USO": null,
+      "WTI": 27.307391304347828,
+      "Brent": 27.167391304347827,
+      "USO_tracking_residual": null,
+      "CI_zscore": 6.012186211998478
+    },
+    {
+      "date": "1990-09-01",
+      "USO": null,
+      "WTI": 33.5075,
+      "Brent": 34.899,
+      "USO_tracking_residual": null,
+      "CI_zscore": 5.386508204595017
+    },
+    {
+      "date": "1990-10-01",
+      "USO": null,
+      "WTI": 36.039565217391306,
+      "Brent": 36.022608695652174,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.9692245980686975
+    },
+    {
+      "date": "1990-11-01",
+      "USO": null,
+      "WTI": 32.33227272727272,
+      "Brent": 33.06727272727273,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.6726169084879424
+    },
+    {
+      "date": "1990-12-01",
+      "USO": null,
+      "WTI": 27.281,
+      "Brent": 28.273500000000002,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.009291175036547465
+    },
+    {
+      "date": "1991-01-01",
+      "USO": null,
+      "WTI": 25.23409090909091,
+      "Brent": 23.566363636363636,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.5840727983411012
+    },
+    {
+      "date": "1991-02-01",
+      "USO": null,
+      "WTI": 20.4775,
+      "Brent": 19.536,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.047364142818184525
+    },
+    {
+      "date": "1991-03-01",
+      "USO": null,
+      "WTI": 19.9015,
+      "Brent": 19.0825,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.05365996959924986
+    },
+    {
+      "date": "1991-04-01",
+      "USO": null,
+      "WTI": 20.83,
+      "Brent": 19.18,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.08413463175499042
+    },
+    {
+      "date": "1991-05-01",
+      "USO": null,
+      "WTI": 21.23227272727273,
+      "Brent": 19.186818181818182,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.04903938074851714
+    },
+    {
+      "date": "1991-06-01",
+      "USO": null,
+      "WTI": 20.189,
+      "Brent": 18.1675,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.35637700201127337
+    },
+    {
+      "date": "1991-07-01",
+      "USO": null,
+      "WTI": 21.40304347826087,
+      "Brent": 19.39695652173913,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.27258444146623395
+    },
+    {
+      "date": "1991-08-01",
+      "USO": null,
+      "WTI": 21.69363636363636,
+      "Brent": 19.772727272727273,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.38708904478919004
+    },
+    {
+      "date": "1991-09-01",
+      "USO": null,
+      "WTI": 21.8865,
+      "Brent": 20.50190476190476,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.20735299470499108
+    },
+    {
+      "date": "1991-10-01",
+      "USO": null,
+      "WTI": 23.23086956521739,
+      "Brent": 22.20608695652174,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.2076196857734254
+    },
+    {
+      "date": "1991-11-01",
+      "USO": null,
+      "WTI": 22.46095238095238,
+      "Brent": 21.108571428571427,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.5568190134493729
+    },
+    {
+      "date": "1991-12-01",
+      "USO": null,
+      "WTI": 19.49809523809524,
+      "Brent": 18.41095238095238,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.471715855578083
+    },
+    {
+      "date": "1992-01-01",
+      "USO": null,
+      "WTI": 18.785454545454545,
+      "Brent": 18.163636363636364,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.5246397447724374
+    },
+    {
+      "date": "1992-02-01",
+      "USO": null,
+      "WTI": 19.0125,
+      "Brent": 18.0535,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.6403001467236956
+    },
+    {
+      "date": "1992-03-01",
+      "USO": null,
+      "WTI": 18.921818181818182,
+      "Brent": 17.63090909090909,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.9399222900073285
+    },
+    {
+      "date": "1992-04-01",
+      "USO": null,
+      "WTI": 20.23,
+      "Brent": 18.91904761904762,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.3055109853636877
+    },
+    {
+      "date": "1992-05-01",
+      "USO": null,
+      "WTI": 20.9755,
+      "Brent": 19.8885,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.09019697108716204
+    },
+    {
+      "date": "1992-06-01",
+      "USO": null,
+      "WTI": 22.384545454545453,
+      "Brent": 21.15818181818182,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.43386661913987895
+    },
+    {
+      "date": "1992-07-01",
+      "USO": null,
+      "WTI": 21.77521739130435,
+      "Brent": 20.236521739130435,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.8457978793042698
+    },
+    {
+      "date": "1992-08-01",
+      "USO": null,
+      "WTI": 21.33904761904762,
+      "Brent": 19.738095238095237,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.8185988134125366
+    },
+    {
+      "date": "1992-09-01",
+      "USO": null,
+      "WTI": 21.881363636363634,
+      "Brent": 20.27,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.7987429933052566
+    },
+    {
+      "date": "1992-10-01",
+      "USO": null,
+      "WTI": 21.68590909090909,
+      "Brent": 20.26181818181818,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.5908065062538186
+    },
+    {
+      "date": "1992-11-01",
+      "USO": null,
+      "WTI": 20.3385,
+      "Brent": 19.214285714285715,
+      "USO_tracking_residual": null,
+      "CI_zscore": -4.899432691822186
+    },
+    {
+      "date": "1992-12-01",
+      "USO": null,
+      "WTI": 19.41409090909091,
+      "Brent": 18.13952380952381,
+      "USO_tracking_residual": null,
+      "CI_zscore": -2.099638133924014
+    },
+    {
+      "date": "1993-01-01",
+      "USO": null,
+      "WTI": 19.032,
+      "Brent": 17.386000000000003,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.4086944273260509
+    },
+    {
+      "date": "1993-02-01",
+      "USO": null,
+      "WTI": 20.086111111111112,
+      "Brent": 18.466315789473686,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.6027260388331289
+    },
+    {
+      "date": "1993-03-01",
+      "USO": null,
+      "WTI": 20.32217391304348,
+      "Brent": 18.785217391304347,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.48895185624852644
+    },
+    {
+      "date": "1993-04-01",
+      "USO": null,
+      "WTI": 20.2525,
+      "Brent": 18.674500000000002,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.15880358787806859
+    },
+    {
+      "date": "1993-05-01",
+      "USO": null,
+      "WTI": 19.9495,
+      "Brent": 18.507894736842104,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.273351626897102
+    },
+    {
+      "date": "1993-06-01",
+      "USO": null,
+      "WTI": 19.09409090909091,
+      "Brent": 17.652727272727272,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.317936636905137
+    },
+    {
+      "date": "1993-07-01",
+      "USO": null,
+      "WTI": 17.89,
+      "Brent": 16.775454545454547,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.19594750404263397
+    },
+    {
+      "date": "1993-08-01",
+      "USO": null,
+      "WTI": 18.01090909090909,
+      "Brent": 16.696190476190477,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.020888651478409275
+    },
+    {
+      "date": "1993-09-01",
+      "USO": null,
+      "WTI": 17.504285714285714,
+      "Brent": 16.01181818181818,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.10746922063153658
+    },
+    {
+      "date": "1993-10-01",
+      "USO": null,
+      "WTI": 18.153333333333332,
+      "Brent": 16.606666666666666,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.8035598760080968
+    },
+    {
+      "date": "1993-11-01",
+      "USO": null,
+      "WTI": 16.60904761904762,
+      "Brent": 15.196363636363635,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.6950353410144648
+    },
+    {
+      "date": "1993-12-01",
+      "USO": null,
+      "WTI": 14.514761904761905,
+      "Brent": 13.725714285714286,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.3780347124335712
+    },
+    {
+      "date": "1994-01-01",
+      "USO": null,
+      "WTI": 15.026666666666667,
+      "Brent": 14.2915,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.2660590490699062
+    },
+    {
+      "date": "1994-02-01",
+      "USO": null,
+      "WTI": 14.78105263157895,
+      "Brent": 13.802000000000001,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.33771856761600655
+    },
+    {
+      "date": "1994-03-01",
+      "USO": null,
+      "WTI": 14.680869565217392,
+      "Brent": 13.822608695652175,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.8624094400510505
+    },
+    {
+      "date": "1994-04-01",
+      "USO": null,
+      "WTI": 16.419999999999998,
+      "Brent": 15.231578947368419,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.5956439840602925
+    },
+    {
+      "date": "1994-05-01",
+      "USO": null,
+      "WTI": 17.88904761904762,
+      "Brent": 16.188,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.6368764133102227
+    },
+    {
+      "date": "1994-06-01",
+      "USO": null,
+      "WTI": 19.06,
+      "Brent": 16.763181818181817,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.6226179421770546
+    },
+    {
+      "date": "1994-07-01",
+      "USO": null,
+      "WTI": 19.654500000000002,
+      "Brent": 17.59952380952381,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.9082147921138544
+    },
+    {
+      "date": "1994-08-01",
+      "USO": null,
+      "WTI": 18.383478260869566,
+      "Brent": 16.89272727272727,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.1336220718500762
+    },
+    {
+      "date": "1994-09-01",
+      "USO": null,
+      "WTI": 17.445714285714285,
+      "Brent": 15.895,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.8315909305700483
+    },
+    {
+      "date": "1994-10-01",
+      "USO": null,
+      "WTI": 17.716190476190476,
+      "Brent": 16.49047619047619,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.20451753159596908
+    },
+    {
+      "date": "1994-11-01",
+      "USO": null,
+      "WTI": 18.069499999999998,
+      "Brent": 17.191363636363636,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.4712247385456563
+    },
+    {
+      "date": "1994-12-01",
+      "USO": null,
+      "WTI": 17.15952380952381,
+      "Brent": 15.931999999999999,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.22107332511318709
+    },
+    {
+      "date": "1995-01-01",
+      "USO": null,
+      "WTI": 18.039523809523807,
+      "Brent": 16.551904761904762,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.4998261672704176
+    },
+    {
+      "date": "1995-02-01",
+      "USO": null,
+      "WTI": 18.57,
+      "Brent": 17.1145,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.8825209039192237
+    },
+    {
+      "date": "1995-03-01",
+      "USO": null,
+      "WTI": 18.539130434782606,
+      "Brent": 17.006521739130434,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.9867090340826377
+    },
+    {
+      "date": "1995-04-01",
+      "USO": null,
+      "WTI": 19.896315789473682,
+      "Brent": 18.648333333333333,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.0383442189221999
+    },
+    {
+      "date": "1995-05-01",
+      "USO": null,
+      "WTI": 19.741818181818182,
+      "Brent": 18.35090909090909,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.4426073131297263
+    },
+    {
+      "date": "1995-06-01",
+      "USO": null,
+      "WTI": 18.44590909090909,
+      "Brent": 17.312727272727273,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.5312476103032753
+    },
+    {
+      "date": "1995-07-01",
+      "USO": null,
+      "WTI": 17.325499999999998,
+      "Brent": 15.854285714285714,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.6116757374832003
+    },
+    {
+      "date": "1995-08-01",
+      "USO": null,
+      "WTI": 18.020869565217392,
+      "Brent": 16.096363636363638,
+      "USO_tracking_residual": null,
+      "CI_zscore": -2.127577792999884
+    },
+    {
+      "date": "1995-09-01",
+      "USO": null,
+      "WTI": 18.2255,
+      "Brent": 16.69952380952381,
+      "USO_tracking_residual": null,
+      "CI_zscore": -2.136244083915774
+    },
+    {
+      "date": "1995-10-01",
+      "USO": null,
+      "WTI": 17.43318181818182,
+      "Brent": 16.11090909090909,
+      "USO_tracking_residual": null,
+      "CI_zscore": -5.280896446936439
+    },
+    {
+      "date": "1995-11-01",
+      "USO": null,
+      "WTI": 17.9925,
+      "Brent": 16.86090909090909,
+      "USO_tracking_residual": null,
+      "CI_zscore": -3.2355730443012023
+    },
+    {
+      "date": "1995-12-01",
+      "USO": null,
+      "WTI": 19.026500000000002,
+      "Brent": 17.925263157894737,
+      "USO_tracking_residual": null,
+      "CI_zscore": -4.157988957045783
+    },
+    {
+      "date": "1996-01-01",
+      "USO": null,
+      "WTI": 18.854545454545455,
+      "Brent": 17.853181818181817,
+      "USO_tracking_residual": null,
+      "CI_zscore": -4.402725766926777
+    },
+    {
+      "date": "1996-02-01",
+      "USO": null,
+      "WTI": 19.0935,
+      "Brent": 17.99904761904762,
+      "USO_tracking_residual": null,
+      "CI_zscore": -6.946053564126944
+    },
+    {
+      "date": "1996-03-01",
+      "USO": null,
+      "WTI": 21.33238095238095,
+      "Brent": 19.851904761904763,
+      "USO_tracking_residual": null,
+      "CI_zscore": -6.690925473179622
+    },
+    {
+      "date": "1996-04-01",
+      "USO": null,
+      "WTI": 23.497142857142858,
+      "Brent": 20.9005,
+      "USO_tracking_residual": null,
+      "CI_zscore": -10.972241013985279
+    },
+    {
+      "date": "1996-05-01",
+      "USO": null,
+      "WTI": 21.165454545454544,
+      "Brent": 19.154761904761905,
+      "USO_tracking_residual": null,
+      "CI_zscore": -4.710633423605468
+    },
+    {
+      "date": "1996-06-01",
+      "USO": null,
+      "WTI": 20.4235,
+      "Brent": 18.4565,
+      "USO_tracking_residual": null,
+      "CI_zscore": -2.4060946641178353
+    },
+    {
+      "date": "1996-07-01",
+      "USO": null,
+      "WTI": 21.302272727272726,
+      "Brent": 19.57086956521739,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.7430179054682784
+    },
+    {
+      "date": "1996-08-01",
+      "USO": null,
+      "WTI": 21.903181818181817,
+      "Brent": 20.51238095238095,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.4187388007910053
+    },
+    {
+      "date": "1996-09-01",
+      "USO": null,
+      "WTI": 23.9715,
+      "Brent": 22.63047619047619,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.874352961275167
+    },
+    {
+      "date": "1996-10-01",
+      "USO": null,
+      "WTI": 24.87913043478261,
+      "Brent": 24.162608695652175,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.6483376688829623
+    },
+    {
+      "date": "1996-11-01",
+      "USO": null,
+      "WTI": 23.705000000000002,
+      "Brent": 22.75952380952381,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.9671086486863145
+    },
+    {
+      "date": "1996-12-01",
+      "USO": null,
+      "WTI": 25.228571428571428,
+      "Brent": 23.782999999999998,
+      "USO_tracking_residual": null,
+      "CI_zscore": -3.214928003023531
+    },
+    {
+      "date": "1997-01-01",
+      "USO": null,
+      "WTI": 25.13181818181818,
+      "Brent": 23.53761904761905,
+      "USO_tracking_residual": null,
+      "CI_zscore": -3.36431723037764
+    },
+    {
+      "date": "1997-02-01",
+      "USO": null,
+      "WTI": 22.176315789473687,
+      "Brent": 20.850526315789473,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.8305383517580316
+    },
+    {
+      "date": "1997-03-01",
+      "USO": null,
+      "WTI": 20.965,
+      "Brent": 19.133000000000003,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.4562248107717408
+    },
+    {
+      "date": "1997-04-01",
+      "USO": null,
+      "WTI": 19.695454545454545,
+      "Brent": 17.555909090909093,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.038842394364415
+    },
+    {
+      "date": "1997-05-01",
+      "USO": null,
+      "WTI": 20.81904761904762,
+      "Brent": 19.022857142857145,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.6681890071445171
+    },
+    {
+      "date": "1997-06-01",
+      "USO": null,
+      "WTI": 19.26,
+      "Brent": 17.580000000000002,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.44579554443116526
+    },
+    {
+      "date": "1997-07-01",
+      "USO": null,
+      "WTI": 19.663636363636364,
+      "Brent": 18.4645,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.7050023864405088
+    },
+    {
+      "date": "1997-08-01",
+      "USO": null,
+      "WTI": 19.95285714285714,
+      "Brent": 18.595499999999998,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.9759445730916559
+    },
+    {
+      "date": "1997-09-01",
+      "USO": null,
+      "WTI": 19.803333333333335,
+      "Brent": 18.46095238095238,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.6668195609991208
+    },
+    {
+      "date": "1997-10-01",
+      "USO": null,
+      "WTI": 21.32521739130435,
+      "Brent": 19.86521739130435,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.8711535626638311
+    },
+    {
+      "date": "1997-11-01",
+      "USO": null,
+      "WTI": 20.19388888888889,
+      "Brent": 19.17421052631579,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.4088085531365979
+    },
+    {
+      "date": "1997-12-01",
+      "USO": null,
+      "WTI": 18.332727272727272,
+      "Brent": 17.18190476190476,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.3113959988932479
+    },
+    {
+      "date": "1998-01-01",
+      "USO": null,
+      "WTI": 16.724,
+      "Brent": 15.186666666666667,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.04808290425573062
+    },
+    {
+      "date": "1998-02-01",
+      "USO": null,
+      "WTI": 16.06,
+      "Brent": 14.0695,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.4588844118703618
+    },
+    {
+      "date": "1998-03-01",
+      "USO": null,
+      "WTI": 15.115454545454547,
+      "Brent": 13.103181818181817,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.2886877930441622
+    },
+    {
+      "date": "1998-04-01",
+      "USO": null,
+      "WTI": 15.353809523809524,
+      "Brent": 13.526500000000002,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.6875072840272614
+    },
+    {
+      "date": "1998-05-01",
+      "USO": null,
+      "WTI": 14.914000000000001,
+      "Brent": 14.36315789473684,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.276566304565733
+    },
+    {
+      "date": "1998-06-01",
+      "USO": null,
+      "WTI": 13.72181818181818,
+      "Brent": 12.206363636363637,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.3453057533313026
+    },
+    {
+      "date": "1998-07-01",
+      "USO": null,
+      "WTI": 14.172727272727274,
+      "Brent": 12.079565217391304,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.9706650673475551
+    },
+    {
+      "date": "1998-08-01",
+      "USO": null,
+      "WTI": 13.47190476190476,
+      "Brent": 11.914,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.437375826594349
+    },
+    {
+      "date": "1998-09-01",
+      "USO": null,
+      "WTI": 15.031428571428572,
+      "Brent": 13.343636363636364,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.5279944005843894
+    },
+    {
+      "date": "1998-10-01",
+      "USO": null,
+      "WTI": 14.460909090909091,
+      "Brent": 12.702272727272726,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.0698037920533625
+    },
+    {
+      "date": "1998-11-01",
+      "USO": null,
+      "WTI": 13.002105263157894,
+      "Brent": 11.039047619047619,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.2464923859846746
+    },
+    {
+      "date": "1998-12-01",
+      "USO": null,
+      "WTI": 11.347272727272726,
+      "Brent": 9.824285714285715,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.0032790792118376
+    },
+    {
+      "date": "1999-01-01",
+      "USO": null,
+      "WTI": 12.514736842105263,
+      "Brent": 11.1145,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.9516448925709251
+    },
+    {
+      "date": "1999-02-01",
+      "USO": null,
+      "WTI": 12.013684210526316,
+      "Brent": 10.27157894736842,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.377049848329243
+    },
+    {
+      "date": "1999-03-01",
+      "USO": null,
+      "WTI": 14.676521739130434,
+      "Brent": 12.511304347826087,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.5484980662022447
+    },
+    {
+      "date": "1999-04-01",
+      "USO": null,
+      "WTI": 17.312380952380952,
+      "Brent": 15.2945,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.0443226192496557
+    },
+    {
+      "date": "1999-05-01",
+      "USO": null,
+      "WTI": 17.7185,
+      "Brent": 15.225263157894739,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.4018206025596452
+    },
+    {
+      "date": "1999-06-01",
+      "USO": null,
+      "WTI": 17.923181818181817,
+      "Brent": 15.863181818181818,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.7492083307593843
+    },
+    {
+      "date": "1999-07-01",
+      "USO": null,
+      "WTI": 20.103333333333335,
+      "Brent": 19.080000000000002,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.743629786365922
+    },
+    {
+      "date": "1999-08-01",
+      "USO": null,
+      "WTI": 21.278636363636362,
+      "Brent": 20.219047619047622,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.1243006740203363
+    },
+    {
+      "date": "1999-09-01",
+      "USO": null,
+      "WTI": 23.796666666666667,
+      "Brent": 22.543181818181818,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.38062256057296073
+    },
+    {
+      "date": "1999-10-01",
+      "USO": null,
+      "WTI": 22.69142857142857,
+      "Brent": 22.002380952380953,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.8279619109579096
+    },
+    {
+      "date": "1999-11-01",
+      "USO": null,
+      "WTI": 25.00238095238095,
+      "Brent": 24.58409090909091,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.2074121484084948
+    },
+    {
+      "date": "1999-12-01",
+      "USO": null,
+      "WTI": 26.10238095238095,
+      "Brent": 25.473157894736843,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.561216119363151
+    },
+    {
+      "date": "2000-01-01",
+      "USO": null,
+      "WTI": 27.259473684210523,
+      "Brent": 25.511,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.5941819187843915
+    },
+    {
+      "date": "2000-02-01",
+      "USO": null,
+      "WTI": 29.366000000000003,
+      "Brent": 27.775714285714283,
+      "USO_tracking_residual": null,
+      "CI_zscore": -2.4679449545028818
+    },
+    {
+      "date": "2000-03-01",
+      "USO": null,
+      "WTI": 29.84173913043478,
+      "Brent": 27.48608695652174,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.8327804172211322
+    },
+    {
+      "date": "2000-04-01",
+      "USO": null,
+      "WTI": 25.722105263157896,
+      "Brent": 22.764444444444443,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.3273100204158286
+    },
+    {
+      "date": "2000-05-01",
+      "USO": null,
+      "WTI": 28.78818181818182,
+      "Brent": 27.73761904761905,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.2119357747524104
+    },
+    {
+      "date": "2000-06-01",
+      "USO": null,
+      "WTI": 31.82227272727273,
+      "Brent": 29.795454545454547,
+      "USO_tracking_residual": null,
+      "CI_zscore": -2.3880925682117966
+    },
+    {
+      "date": "2000-07-01",
+      "USO": null,
+      "WTI": 29.69684210526316,
+      "Brent": 28.682380952380953,
+      "USO_tracking_residual": null,
+      "CI_zscore": -2.8314268066398
+    },
+    {
+      "date": "2000-08-01",
+      "USO": null,
+      "WTI": 31.26391304347826,
+      "Brent": 30.19608695652174,
+      "USO_tracking_residual": null,
+      "CI_zscore": -2.4015142272705905
+    },
+    {
+      "date": "2000-09-01",
+      "USO": null,
+      "WTI": 33.884,
+      "Brent": 33.1447619047619,
+      "USO_tracking_residual": null,
+      "CI_zscore": -3.0749288853951495
+    },
+    {
+      "date": "2000-10-01",
+      "USO": null,
+      "WTI": 33.108636363636364,
+      "Brent": 30.96090909090909,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.8628396092337334
+    },
+    {
+      "date": "2000-11-01",
+      "USO": null,
+      "WTI": 34.417142857142856,
+      "Brent": 32.55227272727273,
+      "USO_tracking_residual": null,
+      "CI_zscore": -2.166145923357194
+    },
+    {
+      "date": "2000-12-01",
+      "USO": null,
+      "WTI": 28.436500000000002,
+      "Brent": 25.66,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.2362584738506184
+    },
+    {
+      "date": "2001-01-01",
+      "USO": null,
+      "WTI": 29.585714285714282,
+      "Brent": 25.624545454545455,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.3538181697894645
+    },
+    {
+      "date": "2001-02-01",
+      "USO": null,
+      "WTI": 29.609473684210528,
+      "Brent": 27.503500000000003,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.5812836125979501
+    },
+    {
+      "date": "2001-03-01",
+      "USO": null,
+      "WTI": 27.244545454545456,
+      "Brent": 24.49727272727273,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.206049732901071
+    },
+    {
+      "date": "2001-04-01",
+      "USO": null,
+      "WTI": 27.49,
+      "Brent": 25.657142857142855,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.346306919700298
+    },
+    {
+      "date": "2001-05-01",
+      "USO": null,
+      "WTI": 28.62909090909091,
+      "Brent": 28.313636363636363,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.038632652253132845
+    },
+    {
+      "date": "2001-06-01",
+      "USO": null,
+      "WTI": 27.59904761904762,
+      "Brent": 27.84904761904762,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.27372599491816124
+    },
+    {
+      "date": "2001-07-01",
+      "USO": null,
+      "WTI": 26.4247619047619,
+      "Brent": 24.613636363636363,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.31300219521194167
+    },
+    {
+      "date": "2001-08-01",
+      "USO": null,
+      "WTI": 27.37391304347826,
+      "Brent": 25.68,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.5327099248513173
+    },
+    {
+      "date": "2001-09-01",
+      "USO": null,
+      "WTI": 26.199473684210528,
+      "Brent": 25.6195,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.09746926573608872
+    },
+    {
+      "date": "2001-10-01",
+      "USO": null,
+      "WTI": 22.169565217391302,
+      "Brent": 20.53782608695652,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.018373915721150925
+    },
+    {
+      "date": "2001-11-01",
+      "USO": null,
+      "WTI": 19.634999999999998,
+      "Brent": 18.797272727272727,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.017214826237501486
+    },
+    {
+      "date": "2001-12-01",
+      "USO": null,
+      "WTI": 19.388947368421054,
+      "Brent": 18.705263157894734,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.19984546278431706
+    },
+    {
+      "date": "2002-01-01",
+      "USO": null,
+      "WTI": 19.714761904761904,
+      "Brent": 19.416818181818183,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.7226781729477257
+    },
+    {
+      "date": "2002-02-01",
+      "USO": null,
+      "WTI": 20.723684210526315,
+      "Brent": 20.2755,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.6503945728762789
+    },
+    {
+      "date": "2002-03-01",
+      "USO": null,
+      "WTI": 24.531,
+      "Brent": 23.696666666666665,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.5455172102779111
+    },
+    {
+      "date": "2002-04-01",
+      "USO": null,
+      "WTI": 26.179090909090913,
+      "Brent": 25.72863636363636,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.06732015084946041
+    },
+    {
+      "date": "2002-05-01",
+      "USO": null,
+      "WTI": 27.041363636363634,
+      "Brent": 25.345454545454547,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.5079247421463462
+    },
+    {
+      "date": "2002-06-01",
+      "USO": null,
+      "WTI": 25.5185,
+      "Brent": 24.081666666666667,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.04554057804322308
+    },
+    {
+      "date": "2002-07-01",
+      "USO": null,
+      "WTI": 26.966190476190473,
+      "Brent": 25.73608695652174,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.3583851248596571
+    },
+    {
+      "date": "2002-08-01",
+      "USO": null,
+      "WTI": 28.385,
+      "Brent": 26.651363636363637,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.573604852953042
+    },
+    {
+      "date": "2002-09-01",
+      "USO": null,
+      "WTI": 29.6635,
+      "Brent": 28.39952380952381,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.750890529619267
+    },
+    {
+      "date": "2002-10-01",
+      "USO": null,
+      "WTI": 28.836521739130436,
+      "Brent": 27.54304347826087,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.6897524117017402
+    },
+    {
+      "date": "2002-11-01",
+      "USO": null,
+      "WTI": 26.352105263157895,
+      "Brent": 24.335238095238097,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.454694838170023
+    },
+    {
+      "date": "2002-12-01",
+      "USO": null,
+      "WTI": 29.460952380952378,
+      "Brent": 28.334500000000002,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.4433738737938568
+    },
+    {
+      "date": "2003-01-01",
+      "USO": null,
+      "WTI": 32.94714285714286,
+      "Brent": 31.183636363636364,
+      "USO_tracking_residual": null,
+      "CI_zscore": -2.0343317850963194
+    },
+    {
+      "date": "2003-02-01",
+      "USO": null,
+      "WTI": 35.828421052631576,
+      "Brent": 32.771,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.790152141337329
+    },
+    {
+      "date": "2003-03-01",
+      "USO": null,
+      "WTI": 33.513333333333335,
+      "Brent": 30.612380952380953,
+      "USO_tracking_residual": null,
+      "CI_zscore": -2.1299330069894
+    },
+    {
+      "date": "2003-04-01",
+      "USO": null,
+      "WTI": 28.170476190476194,
+      "Brent": 25.06772727272727,
+      "USO_tracking_residual": null,
+      "CI_zscore": -2.850761769247763
+    },
+    {
+      "date": "2003-05-01",
+      "USO": null,
+      "WTI": 28.108571428571427,
+      "Brent": 25.857727272727274,
+      "USO_tracking_residual": null,
+      "CI_zscore": -2.966015762801834
+    },
+    {
+      "date": "2003-06-01",
+      "USO": null,
+      "WTI": 30.66238095238095,
+      "Brent": 27.652857142857144,
+      "USO_tracking_residual": null,
+      "CI_zscore": -2.39331302392324
+    },
+    {
+      "date": "2003-07-01",
+      "USO": null,
+      "WTI": 30.754545454545454,
+      "Brent": 28.348695652173912,
+      "USO_tracking_residual": null,
+      "CI_zscore": -2.3849940882219296
+    },
+    {
+      "date": "2003-08-01",
+      "USO": null,
+      "WTI": 31.573809523809523,
+      "Brent": 29.888095238095236,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.6902850803363592
+    },
+    {
+      "date": "2003-09-01",
+      "USO": null,
+      "WTI": 28.31142857142857,
+      "Brent": 27.112272727272728,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.6347510178517948
+    },
+    {
+      "date": "2003-10-01",
+      "USO": null,
+      "WTI": 30.338260869565215,
+      "Brent": 29.60782608695652,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.6779809319730493
+    },
+    {
+      "date": "2003-11-01",
+      "USO": null,
+      "WTI": 31.108333333333334,
+      "Brent": 28.752499999999998,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.8738803102572562
+    },
+    {
+      "date": "2003-12-01",
+      "USO": null,
+      "WTI": 32.12904761904762,
+      "Brent": 29.80714285714286,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.5636402161471255
+    },
+    {
+      "date": "2004-01-01",
+      "USO": null,
+      "WTI": 34.31,
+      "Brent": 31.280952380952378,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.6532612082925138
+    },
+    {
+      "date": "2004-02-01",
+      "USO": null,
+      "WTI": 34.68473684210526,
+      "Brent": 30.8585,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.119728893207594
+    },
+    {
+      "date": "2004-03-01",
+      "USO": null,
+      "WTI": 36.74130434782609,
+      "Brent": 33.63434782608696,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.7704566621064804
+    },
+    {
+      "date": "2004-04-01",
+      "USO": null,
+      "WTI": 36.75,
+      "Brent": 33.59090909090909,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.8034793068451066
+    },
+    {
+      "date": "2004-05-01",
+      "USO": null,
+      "WTI": 40.275,
+      "Brent": 37.56761904761905,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.8926409221194496
+    },
+    {
+      "date": "2004-06-01",
+      "USO": null,
+      "WTI": 38.025238095238095,
+      "Brent": 35.18363636363636,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.375199359950489
+    },
+    {
+      "date": "2004-07-01",
+      "USO": null,
+      "WTI": 40.77809523809524,
+      "Brent": 38.221363636363634,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.22157456136166412
+    },
+    {
+      "date": "2004-08-01",
+      "USO": null,
+      "WTI": 44.90318181818182,
+      "Brent": 42.74409090909091,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.47635859082767446
+    },
+    {
+      "date": "2004-09-01",
+      "USO": null,
+      "WTI": 45.93571428571428,
+      "Brent": 43.19681818181818,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.3878841555136003
+    },
+    {
+      "date": "2004-10-01",
+      "USO": null,
+      "WTI": 53.28047619047619,
+      "Brent": 49.776666666666664,
+      "USO_tracking_residual": null,
+      "CI_zscore": -1.196821699087242
+    },
+    {
+      "date": "2004-11-01",
+      "USO": null,
+      "WTI": 48.469,
+      "Brent": 43.110454545454544,
+      "USO_tracking_residual": null,
+      "CI_zscore": -0.30992595714878024
+    },
+    {
+      "date": "2004-12-01",
+      "USO": null,
+      "WTI": 43.14952380952381,
+      "Brent": 39.60217391304348,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.26786974874651953
+    },
+    {
+      "date": "2005-01-01",
+      "USO": null,
+      "WTI": 46.837,
+      "Brent": 44.509,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.4570194255216762
+    },
+    {
+      "date": "2005-02-01",
+      "USO": null,
+      "WTI": 48.148947368421055,
+      "Brent": 45.475,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.619598161511774
+    },
+    {
+      "date": "2005-03-01",
+      "USO": null,
+      "WTI": 54.186818181818175,
+      "Brent": 53.10454545454545,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.9583287093471345
+    },
+    {
+      "date": "2005-04-01",
+      "USO": null,
+      "WTI": 52.97904761904762,
+      "Brent": 51.88380952380952,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.3572448689155854
+    },
+    {
+      "date": "2005-05-01",
+      "USO": null,
+      "WTI": 49.83380952380952,
+      "Brent": 48.64545454545455,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.9515368179802568
+    },
+    {
+      "date": "2005-06-01",
+      "USO": null,
+      "WTI": 56.35227272727273,
+      "Brent": 54.35454545454545,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.8422468847635531
+    },
+    {
+      "date": "2005-07-01",
+      "USO": null,
+      "WTI": 58.99550000000001,
+      "Brent": 57.52,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.6031173401062968
+    },
+    {
+      "date": "2005-08-01",
+      "USO": null,
+      "WTI": 64.98521739130435,
+      "Brent": 63.98347826086956,
+      "USO_tracking_residual": null,
+      "CI_zscore": 3.160131845939086
+    },
+    {
+      "date": "2005-09-01",
+      "USO": null,
+      "WTI": 65.58666666666666,
+      "Brent": 62.908181818181816,
+      "USO_tracking_residual": null,
+      "CI_zscore": 2.274825835058993
+    },
+    {
+      "date": "2005-10-01",
+      "USO": null,
+      "WTI": 62.260000000000005,
+      "Brent": 58.53857142857142,
+      "USO_tracking_residual": null,
+      "CI_zscore": 2.7645362813209546
+    },
+    {
+      "date": "2005-11-01",
+      "USO": null,
+      "WTI": 58.322500000000005,
+      "Brent": 55.24181818181818,
+      "USO_tracking_residual": null,
+      "CI_zscore": 3.1598361310362733
+    },
+    {
+      "date": "2005-12-01",
+      "USO": null,
+      "WTI": 59.411904761904765,
+      "Brent": 56.855714285714285,
+      "USO_tracking_residual": null,
+      "CI_zscore": 2.631581368724438
+    },
+    {
+      "date": "2006-01-01",
+      "USO": null,
+      "WTI": 65.485,
+      "Brent": 62.985238095238095,
+      "USO_tracking_residual": null,
+      "CI_zscore": 2.0651570133395047
+    },
+    {
+      "date": "2006-02-01",
+      "USO": null,
+      "WTI": 61.631052631578946,
+      "Brent": 60.21,
+      "USO_tracking_residual": null,
+      "CI_zscore": 2.1111434435009175
+    },
+    {
+      "date": "2006-03-01",
+      "USO": null,
+      "WTI": 62.68521739130435,
+      "Brent": 62.06478260869565,
+      "USO_tracking_residual": null,
+      "CI_zscore": 2.575242960360452
+    },
+    {
+      "date": "2006-04-01",
+      "USO": 556.9600219726562,
+      "WTI": 69.44368421052631,
+      "Brent": 70.26,
+      "USO_tracking_residual": null,
+      "CI_zscore": 2.4517248225482926
+    },
+    {
+      "date": "2006-05-01",
+      "USO": 541.8400268554688,
+      "WTI": 70.84409090909091,
+      "Brent": 69.77695652173912,
+      "USO_tracking_residual": null,
+      "CI_zscore": 2.0320293638966893
+    },
+    {
+      "date": "2006-06-01",
+      "USO": 558.1599731445312,
+      "WTI": 70.9509090909091,
+      "Brent": 68.5559090909091,
+      "USO_tracking_residual": null,
+      "CI_zscore": 2.1776041415726293
+    },
+    {
+      "date": "2006-07-01",
+      "USO": 556.1599731445312,
+      "WTI": 74.41105263157894,
+      "Brent": 73.67428571428572,
+      "USO_tracking_residual": null,
+      "CI_zscore": 2.0231062169354797
+    },
+    {
+      "date": "2006-08-01",
+      "USO": 518.4000244140625,
+      "WTI": 73.04304347826087,
+      "Brent": 73.2304347826087,
+      "USO_tracking_residual": null,
+      "CI_zscore": 2.2864420045831446
+    },
+    {
+      "date": "2006-09-01",
+      "USO": 456.0,
+      "WTI": 63.798,
+      "Brent": 61.95857142857143,
+      "USO_tracking_residual": null,
+      "CI_zscore": 2.7723267987152003
+    },
+    {
+      "date": "2006-10-01",
+      "USO": 416.79998779296875,
+      "WTI": 58.89318181818182,
+      "Brent": 57.808181818181815,
+      "USO_tracking_residual": null,
+      "CI_zscore": 2.928244588361988
+    },
+    {
+      "date": "2006-11-01",
+      "USO": 436.6400146484375,
+      "WTI": 59.0825,
+      "Brent": 58.76136363636363,
+      "USO_tracking_residual": null,
+      "CI_zscore": 2.8195025734396264
+    },
+    {
+      "date": "2006-12-01",
+      "USO": 412.79998779296875,
+      "WTI": 61.959,
+      "Brent": 62.47210526315789,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.8563581310706656
+    },
+    {
+      "date": "2007-01-01",
+      "USO": 385.9200134277344,
+      "WTI": 54.50619047619048,
+      "Brent": 53.68142857142857,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.253066011598237
+    },
+    {
+      "date": "2007-02-01",
+      "USO": 409.44000244140625,
+      "WTI": 59.27894736842105,
+      "Brent": 57.55578947368421,
+      "USO_tracking_residual": null,
+      "CI_zscore": 1.2625995738671207
+    },
+    {
+      "date": "2007-03-01",
+      "USO": 426.79998779296875,
+      "WTI": 60.441818181818185,
+      "Brent": 62.05045454545455,
+      "USO_tracking_residual": null,
+      "CI_zscore": 0.9005370496421576
+    },
+    {
+      "date": "2007-04-01",
+      "USO": 409.9200134277344,
+      "WTI": 63.977,
+      "Brent": 67.4857894736842,
+      "USO_tracking_residual": -18.52834868865456,
+      "CI_zscore": 0.8727051627658472
+    },
+    {
+      "date": "2007-05-01",
+      "USO": 391.67999267578125,
+      "WTI": 63.45454545454545,
+      "Brent": 67.21227272727273,
+      "USO_tracking_residual": -17.282267600200804,
+      "CI_zscore": 1.1485893836552137
+    },
+    {
+      "date": "2007-06-01",
+      "USO": 424.0,
+      "WTI": 67.48904761904762,
+      "Brent": 71.04571428571428,
+      "USO_tracking_residual": -19.15688018605488,
+      "CI_zscore": 1.4482243061791253
+    },
+    {
+      "date": "2007-07-01",
+      "USO": 468.239990234375,
+      "WTI": 74.11761904761904,
+      "Brent": 76.92999999999999,
+      "USO_tracking_residual": -15.41405675450076,
+      "CI_zscore": 2.0658489449857216
+    },
+    {
+      "date": "2007-08-01",
+      "USO": 446.239990234375,
+      "WTI": 72.35608695652174,
+      "Brent": 70.76086956521739,
+      "USO_tracking_residual": -12.979277235590148,
+      "CI_zscore": 1.5214187919609323
+    },
+    {
+      "date": "2007-09-01",
+      "USO": 500.3999938964844,
+      "WTI": 79.91473684210526,
+      "Brent": 77.17315789473685,
+      "USO_tracking_residual": -15.525294162386748,
+      "CI_zscore": 1.2620723903357118
+    },
+    {
+      "date": "2007-10-01",
+      "USO": 586.1599731445312,
+      "WTI": 85.7986956521739,
+      "Brent": 82.34,
+      "USO_tracking_residual": -5.051883007022639,
+      "CI_zscore": 0.8419909964639796
+    },
+    {
+      "date": "2007-11-01",
+      "USO": 559.280029296875,
+      "WTI": 94.77238095238096,
+      "Brent": 92.41428571428571,
+      "USO_tracking_residual": -32.31964258830291,
+      "CI_zscore": 0.25149111607599867
+    },
+    {
+      "date": "2007-12-01",
+      "USO": 606.0800170898438,
+      "WTI": 91.687,
+      "Brent": 90.92684210526315,
+      "USO_tracking_residual": -1.1584019750374068,
+      "CI_zscore": -0.2878861117533163
+    },
+    {
+      "date": "2008-01-01",
+      "USO": 578.7999877929688,
+      "WTI": 92.97047619047619,
+      "Brent": 92.17809523809524,
+      "USO_tracking_residual": -20.589393439751362,
+      "CI_zscore": -0.3634494817804915
+    },
+    {
+      "date": "2008-02-01",
+      "USO": 643.3599853515625,
+      "WTI": 95.386,
+      "Brent": 94.9865,
+      "USO_tracking_residual": -3.77872707938711,
+      "CI_zscore": 0.17655282151172594
+    },
+    {
+      "date": "2008-03-01",
+      "USO": 650.8800048828125,
+      "WTI": 105.454,
+      "Brent": 103.63550000000001,
+      "USO_tracking_residual": -21.969570376596835,
+      "CI_zscore": 0.23701674046647614
+    },
+    {
+      "date": "2008-04-01",
+      "USO": 740.0,
+      "WTI": 112.58045454545454,
+      "Brent": 109.07136363636364,
+      "USO_tracking_residual": 4.552823452574174,
+      "CI_zscore": -0.02500335866608842
+    },
+    {
+      "date": "2008-05-01",
+      "USO": 824.47998046875,
+      "WTI": 125.39761904761905,
+      "Brent": 122.79714285714284,
+      "USO_tracking_residual": 12.880340675674205,
+      "CI_zscore": -0.18858692518163914
+    },
+    {
+      "date": "2008-06-01",
+      "USO": 909.280029296875,
+      "WTI": 133.88,
+      "Brent": 132.32238095238094,
+      "USO_tracking_residual": 16.07990886305039,
+      "CI_zscore": -0.9171950877923424
+    },
+    {
+      "date": "2008-07-01",
+      "USO": 799.9199829101562,
+      "WTI": 133.3709090909091,
+      "Brent": 132.71818181818182,
+      "USO_tracking_residual": -9.10947644787565,
+      "CI_zscore": -0.9125993564054736
+    },
+    {
+      "date": "2008-08-01",
+      "USO": 742.9600219726562,
+      "WTI": 116.66619047619047,
+      "Brent": 113.24333333333334,
+      "USO_tracking_residual": 5.254431437852446,
+      "CI_zscore": -0.5157381150632422
+    },
+    {
+      "date": "2008-09-01",
+      "USO": 656.0800170898438,
+      "WTI": 104.11428571428571,
+      "Brent": 97.23476190476191,
+      "USO_tracking_residual": 0.8294061075378778,
+      "CI_zscore": -0.48963236546822725
+    },
+    {
+      "date": "2008-10-01",
+      "USO": 444.7200012207031,
+      "WTI": 76.6086956521739,
+      "Brent": 71.58217391304348,
+      "USO_tracking_residual": -13.418808166713479,
+      "CI_zscore": 0.06637570233794658
+    },
+    {
+      "date": "2008-11-01",
+      "USO": 336.7200012207031,
+      "WTI": 57.30947368421053,
+      "Brent": 52.45263157894737,
+      "USO_tracking_residual": -0.2646726607667489,
+      "CI_zscore": 0.28239314275254884
+    },
+    {
+      "date": "2008-12-01",
+      "USO": 264.79998779296875,
+      "WTI": 41.121818181818185,
+      "Brent": 39.94681818181818,
+      "USO_tracking_residual": -1.1596180410497965,
+      "CI_zscore": 0.7855720232797093
+    },
+    {
+      "date": "2009-01-01",
+      "USO": 233.75999450683594,
+      "WTI": 41.71,
+      "Brent": 43.439499999999995,
+      "USO_tracking_residual": -4.476697306917401,
+      "CI_zscore": 1.6868441744164555
+    },
+    {
+      "date": "2009-02-01",
+      "USO": 216.39999389648438,
+      "WTI": 39.08736842105263,
+      "Brent": 43.32473684210526,
+      "USO_tracking_residual": -7.342186574174384,
+      "CI_zscore": 2.2451689943913675
+    },
+    {
+      "date": "2009-03-01",
+      "USO": 232.39999389648438,
+      "WTI": 47.939090909090915,
+      "Brent": 46.540454545454544,
+      "USO_tracking_residual": -9.75421270933613,
+      "CI_zscore": 2.108629455077502
+    },
+    {
+      "date": "2009-04-01",
+      "USO": 229.0399932861328,
+      "WTI": 49.64666666666666,
+      "Brent": 50.18190476190476,
+      "USO_tracking_residual": -13.147482579045459,
+      "CI_zscore": 2.607028908925932
+    },
+    {
+      "date": "2009-05-01",
+      "USO": 291.20001220703125,
+      "WTI": 59.028499999999994,
+      "Brent": 57.302499999999995,
+      "USO_tracking_residual": -11.753828995837466,
+      "CI_zscore": 2.318687259142004
+    },
+    {
+      "date": "2009-06-01",
+      "USO": 303.44000244140625,
+      "WTI": 69.64090909090909,
+      "Brent": 68.60954545454545,
+      "USO_tracking_residual": -18.645952505538794,
+      "CI_zscore": 1.4482565633104332
+    },
+    {
+      "date": "2009-07-01",
+      "USO": 294.4800109863281,
+      "WTI": 64.15227272727272,
+      "Brent": 64.43545454545455,
+      "USO_tracking_residual": -11.286965379966055,
+      "CI_zscore": 1.1912050736164999
+    },
+    {
+      "date": "2009-08-01",
+      "USO": 288.3999938964844,
+      "WTI": 71.04476190476191,
+      "Brent": 72.50857142857143,
+      "USO_tracking_residual": -22.078058563409996,
+      "CI_zscore": 1.64149730122434
+    },
+    {
+      "date": "2009-09-01",
+      "USO": 289.5199890136719,
+      "WTI": 69.40809523809523,
+      "Brent": 67.64619047619047,
+      "USO_tracking_residual": -22.536532587358487,
+      "CI_zscore": 1.593906328393278
+    },
+    {
+      "date": "2009-10-01",
+      "USO": 314.55999755859375,
+      "WTI": 75.71545454545455,
+      "Brent": 72.76954545454545,
+      "USO_tracking_residual": -28.101875930526596,
+      "CI_zscore": 1.5172188589403328
+    },
+    {
+      "date": "2009-11-01",
+      "USO": 313.20001220703125,
+      "WTI": 77.99,
+      "Brent": 76.662,
+      "USO_tracking_residual": -43.07073152648583,
+      "CI_zscore": 1.394638442057935
+    },
+    {
+      "date": "2009-12-01",
+      "USO": 314.239990234375,
+      "WTI": 74.47,
+      "Brent": 74.45636363636363,
+      "USO_tracking_residual": -62.425381524555945,
+      "CI_zscore": 1.190168448636268
+    },
+    {
+      "date": "2010-01-01",
+      "USO": 285.1199951171875,
+      "WTI": 78.32578947368421,
+      "Brent": 76.16736842105263,
+      "USO_tracking_residual": -65.81534333215582,
+      "CI_zscore": 0.8092894737502443
+    },
+    {
+      "date": "2010-02-01",
+      "USO": 310.55999755859375,
+      "WTI": 76.38736842105263,
+      "Brent": 73.75210526315789,
+      "USO_tracking_residual": -51.915230293465925,
+      "CI_zscore": 0.6404139737160006
+    },
+    {
+      "date": "2010-03-01",
+      "USO": 322.32000732421875,
+      "WTI": 81.20347826086957,
+      "Brent": 78.82739130434783,
+      "USO_tracking_residual": -30.696939944162025,
+      "CI_zscore": 0.9379408134396179
+    },
+    {
+      "date": "2010-04-01",
+      "USO": 330.6400146484375,
+      "WTI": 84.29285714285714,
+      "Brent": 84.81761904761905,
+      "USO_tracking_residual": -25.426457499347272,
+      "CI_zscore": 0.9002746269702671
+    },
+    {
+      "date": "2010-05-01",
+      "USO": 272.32000732421875,
+      "WTI": 73.7435,
+      "Brent": 75.94550000000001,
+      "USO_tracking_residual": -31.412154055794186,
+      "CI_zscore": 1.1248275130128338
+    },
+    {
+      "date": "2010-06-01",
+      "USO": 271.67999267578125,
+      "WTI": 75.3359090909091,
+      "Brent": 74.7609090909091,
+      "USO_tracking_residual": -18.644316867822695,
+      "CI_zscore": 1.2466545806405152
+    },
+    {
+      "date": "2010-07-01",
+      "USO": 282.7200012207031,
+      "WTI": 76.31952380952382,
+      "Brent": 75.58,
+      "USO_tracking_residual": -22.959687458848723,
+      "CI_zscore": 1.1963670421022177
+    },
+    {
+      "date": "2010-08-01",
+      "USO": 255.36000061035156,
+      "WTI": 76.59909090909092,
+      "Brent": 77.03954545454545,
+      "USO_tracking_residual": -19.27437829468024,
+      "CI_zscore": 1.793626703165532
+    },
+    {
+      "date": "2010-09-01",
+      "USO": 278.7200012207031,
+      "WTI": 75.24190476190476,
+      "Brent": 77.8404761904762,
+      "USO_tracking_residual": -12.135393342215739,
+      "CI_zscore": 2.5328265809512813
+    },
+    {
+      "date": "2010-10-01",
+      "USO": 281.3599853515625,
+      "WTI": 81.89285714285714,
+      "Brent": 82.6647619047619,
+      "USO_tracking_residual": -18.713136861512236,
+      "CI_zscore": 3.370754559286585
+    },
+    {
+      "date": "2010-11-01",
+      "USO": 288.32000732421875,
+      "WTI": 84.25285714285714,
+      "Brent": 85.2747619047619,
+      "USO_tracking_residual": -15.974140683484261,
+      "CI_zscore": 2.8202488029859256
+    },
+    {
+      "date": "2010-12-01",
+      "USO": 312.0,
+      "WTI": 89.14590909090909,
+      "Brent": 91.44681818181817,
+      "USO_tracking_residual": -20.419970467240354,
+      "CI_zscore": 1.5837875509172834
+    },
+    {
+      "date": "2011-01-01",
+      "USO": 308.8800048828125,
+      "WTI": 89.1705,
+      "Brent": 96.5235,
+      "USO_tracking_residual": -5.512307808206373,
+      "CI_zscore": 1.0380869321224473
+    },
+    {
+      "date": "2011-02-01",
+      "USO": 313.5199890136719,
+      "WTI": 88.57842105263158,
+      "Brent": 103.71631578947368,
+      "USO_tracking_residual": -15.006399629236888,
+      "CI_zscore": 0.9375179887564083
+    },
+    {
+      "date": "2011-03-01",
+      "USO": 340.79998779296875,
+      "WTI": 102.85652173913043,
+      "Brent": 114.64347826086957,
+      "USO_tracking_residual": -20.931741056825604,
+      "CI_zscore": 0.8135995202029754
+    },
+    {
+      "date": "2011-04-01",
+      "USO": 361.20001220703125,
+      "WTI": 109.5325,
+      "Brent": 123.25888888888888,
+      "USO_tracking_residual": -20.7001217440129,
+      "CI_zscore": 0.7208756489348539
+    },
+    {
+      "date": "2011-05-01",
+      "USO": 324.0,
+      "WTI": 100.90047619047618,
+      "Brent": 114.98904761904762,
+      "USO_tracking_residual": -17.84859414248521,
+      "CI_zscore": 1.1337919221121955
+    },
+    {
+      "date": "2011-06-01",
+      "USO": 297.9200134277344,
+      "WTI": 96.26409090909091,
+      "Brent": 113.83318181818181,
+      "USO_tracking_residual": -18.121392920672072,
+      "CI_zscore": 0.8429652357395417
+    },
+    {
+      "date": "2011-07-01",
+      "USO": 299.3599853515625,
+      "WTI": 97.3035,
+      "Brent": 116.97349999999999,
+      "USO_tracking_residual": -21.609222956004825,
+      "CI_zscore": 0.6659340652217588
+    },
+    {
+      "date": "2011-08-01",
+      "USO": 276.0799865722656,
+      "WTI": 86.33304347826088,
+      "Brent": 110.21954545454545,
+      "USO_tracking_residual": -4.593631125335239,
+      "CI_zscore": 0.8311741169418034
+    },
+    {
+      "date": "2011-09-01",
+      "USO": 243.9199981689453,
+      "WTI": 85.51523809523809,
+      "Brent": 112.83380952380953,
+      "USO_tracking_residual": -26.139388771101558,
+      "CI_zscore": 0.5862208861542328
+    },
+    {
+      "date": "2011-10-01",
+      "USO": 285.9200134277344,
+      "WTI": 86.32238095238095,
+      "Brent": 109.55000000000001,
+      "USO_tracking_residual": -3.788216193065197,
+      "CI_zscore": 0.029935305534835855
+    },
+    {
+      "date": "2011-11-01",
+      "USO": 310.239990234375,
+      "WTI": 97.16047619047619,
+      "Brent": 110.76809523809524,
+      "USO_tracking_residual": -7.717438948333655,
+      "CI_zscore": -0.12182509945821322
+    },
+    {
+      "date": "2011-12-01",
+      "USO": 304.8800048828125,
+      "WTI": 98.56285714285715,
+      "Brent": 107.87049999999999,
+      "USO_tracking_residual": -12.8455720906257,
+      "CI_zscore": 0.14716569966403373
+    },
+    {
+      "date": "2012-01-01",
+      "USO": 302.55999755859375,
+      "WTI": 100.2735,
+      "Brent": 110.68599999999999,
+      "USO_tracking_residual": -14.497531706791221,
+      "CI_zscore": 0.37690307053860544
+    },
+    {
+      "date": "2012-02-01",
+      "USO": 327.3599853515625,
+      "WTI": 102.204,
+      "Brent": 119.327,
+      "USO_tracking_residual": -10.968113345181909,
+      "CI_zscore": 0.11637075778532961
+    },
+    {
+      "date": "2012-03-01",
+      "USO": 313.8399963378906,
+      "WTI": 106.15772727272729,
+      "Brent": 125.44545454545455,
+      "USO_tracking_residual": -11.120320659181836,
+      "CI_zscore": 0.3564397029576083
+    },
+    {
+      "date": "2012-04-01",
+      "USO": 317.44000244140625,
+      "WTI": 103.321,
+      "Brent": 119.42166666666668,
+      "USO_tracking_residual": -6.444254354199163,
+      "CI_zscore": 0.9434273866923117
+    },
+    {
+      "date": "2012-05-01",
+      "USO": 260.8800048828125,
+      "WTI": 94.65454545454546,
+      "Brent": 110.33952380952381,
+      "USO_tracking_residual": -13.291290421578728,
+      "CI_zscore": 1.2960907220599698
+    },
+    {
+      "date": "2012-06-01",
+      "USO": 254.63999938964844,
+      "WTI": 82.30333333333333,
+      "Brent": 95.15571428571428,
+      "USO_tracking_residual": -0.024833926087719504,
+      "CI_zscore": 1.4397895072820193
+    },
+    {
+      "date": "2012-07-01",
+      "USO": 261.44000244140625,
+      "WTI": 87.8952380952381,
+      "Brent": 102.61857142857141,
+      "USO_tracking_residual": -2.998031778035415,
+      "CI_zscore": 1.3546739498447562
+    },
+    {
+      "date": "2012-08-01",
+      "USO": 287.1199951171875,
+      "WTI": 94.13130434782609,
+      "Brent": 113.35608695652174,
+      "USO_tracking_residual": -5.033920719250817,
+      "CI_zscore": 0.9674465151531325
+    },
+    {
+      "date": "2012-09-01",
+      "USO": 272.9599914550781,
+      "WTI": 94.51368421052632,
+      "Brent": 112.8636842105263,
+      "USO_tracking_residual": 1.382917134325588,
+      "CI_zscore": 1.2601320169963
+    },
+    {
+      "date": "2012-10-01",
+      "USO": 254.24000549316406,
+      "WTI": 89.4913043478261,
+      "Brent": 111.7108695652174,
+      "USO_tracking_residual": -14.751057991144013,
+      "CI_zscore": 1.7266026414102678
+    },
+    {
+      "date": "2012-11-01",
+      "USO": 260.4800109863281,
+      "WTI": 86.53142857142858,
+      "Brent": 109.05857142857143,
+      "USO_tracking_residual": -5.099506768889594,
+      "CI_zscore": 2.138527098879461
+    },
+    {
+      "date": "2012-12-01",
+      "USO": 266.9599914550781,
+      "WTI": 87.8595,
+      "Brent": 109.494,
+      "USO_tracking_residual": -1.578262045434764,
+      "CI_zscore": 2.4997152537305087
+    },
+    {
+      "date": "2013-01-01",
+      "USO": 282.239990234375,
+      "WTI": 94.75666666666667,
+      "Brent": 112.96,
+      "USO_tracking_residual": -1.2142397942905498,
+      "CI_zscore": 1.8295534692678619
+    },
+    {
+      "date": "2013-02-01",
+      "USO": 264.4800109863281,
+      "WTI": 95.30894736842104,
+      "Brent": 116.05052631578947,
+      "USO_tracking_residual": -12.461841376886463,
+      "CI_zscore": 2.003882952215859
+    },
+    {
+      "date": "2013-03-01",
+      "USO": 278.0,
+      "WTI": 92.9385,
+      "Brent": 108.474,
+      "USO_tracking_residual": 1.032609252170836,
+      "CI_zscore": 2.3420953722443745
+    },
+    {
+      "date": "2013-04-01",
+      "USO": 265.2799987792969,
+      "WTI": 92.02136363636363,
+      "Brent": 102.24818181818182,
+      "USO_tracking_residual": -5.495015358651312,
+      "CI_zscore": 1.5330465600547993
+    },
+    {
+      "date": "2013-05-01",
+      "USO": 260.8800048828125,
+      "WTI": 94.50954545454546,
+      "Brent": 102.55863636363637,
+      "USO_tracking_residual": 0.1531886285055628,
+      "CI_zscore": 1.271642385792912
+    },
+    {
+      "date": "2013-06-01",
+      "USO": 273.44000244140625,
+      "WTI": 95.77250000000001,
+      "Brent": 102.9195,
+      "USO_tracking_residual": -8.982301541371516,
+      "CI_zscore": 1.1502102597038915
+    },
+    {
+      "date": "2013-07-01",
+      "USO": 298.8800048828125,
+      "WTI": 104.67090909090908,
+      "Brent": 107.93318181818182,
+      "USO_tracking_residual": -4.765297669874748,
+      "CI_zscore": 0.5482891242467749
+    },
+    {
+      "date": "2013-08-01",
+      "USO": 307.8399963378906,
+      "WTI": 106.57272727272726,
+      "Brent": 111.28045454545455,
+      "USO_tracking_residual": -6.0005985492050495,
+      "CI_zscore": 0.4475391253883914
+    },
+    {
+      "date": "2013-09-01",
+      "USO": 294.79998779296875,
+      "WTI": 106.2895,
+      "Brent": 111.59649999999999,
+      "USO_tracking_residual": -4.4582052895970605,
+      "CI_zscore": 0.542964795239971
+    },
+    {
+      "date": "2013-10-01",
+      "USO": 277.5199890136719,
+      "WTI": 100.53826086956522,
+      "Brent": 109.07652173913044,
+      "USO_tracking_residual": -3.1874718680803493,
+      "CI_zscore": 1.3099319142038932
+    },
+    {
+      "date": "2013-11-01",
+      "USO": 267.67999267578125,
+      "WTI": 93.864,
+      "Brent": 107.792,
+      "USO_tracking_residual": -5.709761703860504,
+      "CI_zscore": 1.986224604294825
+    },
+    {
+      "date": "2013-12-01",
+      "USO": 282.55999755859375,
+      "WTI": 97.6252380952381,
+      "Brent": 110.75666666666666,
+      "USO_tracking_residual": -5.271601498634172,
+      "CI_zscore": 1.6047534680848463
+    },
+    {
+      "date": "2014-01-01",
+      "USO": 278.3999938964844,
+      "WTI": 94.61714285714285,
+      "Brent": 108.11772727272728,
+      "USO_tracking_residual": -1.2132986472085605,
+      "CI_zscore": 0.7026860051850761
+    },
+    {
+      "date": "2014-02-01",
+      "USO": 293.9200134277344,
+      "WTI": 100.81736842105263,
+      "Brent": 108.90052631578948,
+      "USO_tracking_residual": 5.351734497858551,
+      "CI_zscore": 0.37610272583395626
+    },
+    {
+      "date": "2014-03-01",
+      "USO": 292.7200012207031,
+      "WTI": 100.80380952380953,
+      "Brent": 107.48095238095237,
+      "USO_tracking_residual": -3.167954046848153,
+      "CI_zscore": 0.9285071467785543
+    },
+    {
+      "date": "2014-04-01",
+      "USO": 290.55999755859375,
+      "WTI": 102.06904761904761,
+      "Brent": 107.7552380952381,
+      "USO_tracking_residual": -1.3893068644690754,
+      "CI_zscore": 1.7916418481656924
+    },
+    {
+      "date": "2014-05-01",
+      "USO": 301.44000244140625,
+      "WTI": 102.17714285714285,
+      "Brent": 109.53909090909092,
+      "USO_tracking_residual": 7.4343366917657185,
+      "CI_zscore": 1.1456039591346288
+    },
+    {
+      "date": "2014-06-01",
+      "USO": 311.0400085449219,
+      "WTI": 105.7942857142857,
+      "Brent": 111.79523809523809,
+      "USO_tracking_residual": 3.286575537774116,
+      "CI_zscore": 0.580454301807047
+    },
+    {
+      "date": "2014-07-01",
+      "USO": 290.55999755859375,
+      "WTI": 103.58863636363638,
+      "Brent": 106.76818181818182,
+      "USO_tracking_residual": -1.7497516957802772,
+      "CI_zscore": 0.6134462385013787
+    },
+    {
+      "date": "2014-08-01",
+      "USO": 286.0799865722656,
+      "WTI": 96.53619047619047,
+      "Brent": 101.60809523809523,
+      "USO_tracking_residual": 2.3489367842625457,
+      "CI_zscore": -0.41687777457960185
+    },
+    {
+      "date": "2014-09-01",
+      "USO": 275.2799987792969,
+      "WTI": 93.21190476190476,
+      "Brent": 97.09142857142858,
+      "USO_tracking_residual": 5.682316018960531,
+      "CI_zscore": -0.16147729392210267
+    },
+    {
+      "date": "2014-10-01",
+      "USO": 245.0399932861328,
+      "WTI": 84.39695652173914,
+      "Brent": 87.42521739130434,
+      "USO_tracking_residual": 4.351227251313695,
+      "CI_zscore": 0.6380561155306058
+    },
+    {
+      "date": "2014-11-01",
+      "USO": 204.63999938964844,
+      "WTI": 75.78947368421052,
+      "Brent": 79.4378947368421,
+      "USO_tracking_residual": -4.294426861193301,
+      "CI_zscore": 0.7471815202583668
+    },
+    {
+      "date": "2014-12-01",
+      "USO": 162.8800048828125,
+      "WTI": 59.29045454545455,
+      "Brent": 62.33500000000001,
+      "USO_tracking_residual": -3.088315513088993,
+      "CI_zscore": 1.9454283422844794
+    },
+    {
+      "date": "2015-01-01",
+      "USO": 142.55999755859375,
+      "WTI": 47.219,
+      "Brent": 47.7595,
+      "USO_tracking_residual": 1.3015640277609037,
+      "CI_zscore": 4.507990784121328
+    },
+    {
+      "date": "2015-02-01",
+      "USO": 144.8000030517578,
+      "WTI": 50.58421052631579,
+      "Brent": 58.0955,
+      "USO_tracking_residual": -0.9089983118445204,
+      "CI_zscore": 6.110459437923566
+    },
+    {
+      "date": "2015-03-01",
+      "USO": 134.72000122070312,
+      "WTI": 47.82363636363636,
+      "Brent": 55.88545454545454,
+      "USO_tracking_residual": -1.41878679794943,
+      "CI_zscore": 7.665688745614558
+    },
+    {
+      "date": "2015-04-01",
+      "USO": 164.0800018310547,
+      "WTI": 54.45285714285714,
+      "Brent": 59.52428571428571,
+      "USO_tracking_residual": 3.121225322942621,
+      "CI_zscore": 9.552415460219201
+    },
+    {
+      "date": "2015-05-01",
+      "USO": 162.47999572753906,
+      "WTI": 59.265,
+      "Brent": 64.075,
+      "USO_tracking_residual": -4.1009370172651955,
+      "CI_zscore": 10.900486962111748
+    },
+    {
+      "date": "2015-06-01",
+      "USO": 159.0399932861328,
+      "WTI": 59.819545454545455,
+      "Brent": 61.47772727272727,
+      "USO_tracking_residual": -5.4115833321147875,
+      "CI_zscore": 9.686100745917695
+    },
+    {
+      "date": "2015-07-01",
+      "USO": 124.72000122070312,
+      "WTI": 50.90090909090909,
+      "Brent": 56.56130434782609,
+      "USO_tracking_residual": -6.21353182025603,
+      "CI_zscore": 14.05422954138389
+    },
+    {
+      "date": "2015-08-01",
+      "USO": 127.12000274658203,
+      "WTI": 42.86761904761905,
+      "Brent": 46.515,
+      "USO_tracking_residual": 0.029376455722612604,
+      "CI_zscore": 32.64099042133056
+    },
+    {
+      "date": "2015-09-01",
+      "USO": 117.44000244140625,
+      "WTI": 45.47952380952381,
+      "Brent": 47.62318181818182,
+      "USO_tracking_residual": -6.12952208216646,
+      "CI_zscore": 14.930152232106392
+    },
+    {
+      "date": "2015-10-01",
+      "USO": 118.4800033569336,
+      "WTI": 46.22363636363636,
+      "Brent": 48.43,
+      "USO_tracking_residual": -6.418024373781641,
+      "CI_zscore": 8.617103113867286
+    },
+    {
+      "date": "2015-11-01",
+      "USO": 103.44000244140625,
+      "WTI": 42.4435,
+      "Brent": 44.26761904761905,
+      "USO_tracking_residual": -5.454536353851616,
+      "CI_zscore": 7.44358148544746
+    },
+    {
+      "date": "2015-12-01",
+      "USO": 88.0,
+      "WTI": 37.18863636363636,
+      "Brent": 38.00545454545455,
+      "USO_tracking_residual": -8.695302004005853,
+      "CI_zscore": 8.002821833144752
+    },
+    {
+      "date": "2016-01-01",
+      "USO": 77.19999694824219,
+      "WTI": 31.683157894736844,
+      "Brent": 30.6995,
+      "USO_tracking_residual": -12.945688331268329,
+      "CI_zscore": 6.725476208047175
+    },
+    {
+      "date": "2016-02-01",
+      "USO": 72.0,
+      "WTI": 30.323,
+      "Brent": 32.1815,
+      "USO_tracking_residual": -10.22182732781718,
+      "CI_zscore": 4.67313755134543
+    },
+    {
+      "date": "2016-03-01",
+      "USO": 77.5999984741211,
+      "WTI": 37.54636363636364,
+      "Brent": 38.210454545454546,
+      "USO_tracking_residual": -20.909107422950566,
+      "CI_zscore": 3.7772005710231626
+    },
+    {
+      "date": "2016-04-01",
+      "USO": 90.4000015258789,
+      "WTI": 40.7552380952381,
+      "Brent": 41.583333333333336,
+      "USO_tracking_residual": -19.7499189087056,
+      "CI_zscore": 3.2129314705595995
+    },
+    {
+      "date": "2016-05-01",
+      "USO": 94.95999908447266,
+      "WTI": 46.712380952380954,
+      "Brent": 46.742380952380955,
+      "USO_tracking_residual": -20.37539004512937,
+      "CI_zscore": 3.5558708335817326
+    },
+    {
+      "date": "2016-06-01",
+      "USO": 92.55999755859375,
+      "WTI": 48.75727272727273,
+      "Brent": 48.24727272727273,
+      "USO_tracking_residual": -23.30806437997214,
+      "CI_zscore": 3.950308458560456
+    },
+    {
+      "date": "2016-07-01",
+      "USO": 78.08000183105469,
+      "WTI": 44.6515,
+      "Brent": 44.951904761904764,
+      "USO_tracking_residual": -25.11816747618507,
+      "CI_zscore": 3.714450713168644
+    },
+    {
+      "date": "2016-08-01",
+      "USO": 82.87999725341797,
+      "WTI": 44.72434782608696,
+      "Brent": 45.843043478260874,
+      "USO_tracking_residual": -39.13307406933244,
+      "CI_zscore": 3.976613414503651
+    },
+    {
+      "date": "2016-09-01",
+      "USO": 87.44000244140625,
+      "WTI": 45.18238095238095,
+      "Brent": 46.567727272727275,
+      "USO_tracking_residual": -24.891603345575444,
+      "CI_zscore": 3.2990881744468035
+    },
+    {
+      "date": "2016-10-01",
+      "USO": 84.23999786376953,
+      "WTI": 49.775238095238095,
+      "Brent": 49.522380952380956,
+      "USO_tracking_residual": -36.582914793613085,
+      "CI_zscore": 2.651473207457258
+    },
+    {
+      "date": "2016-11-01",
+      "USO": 87.44000244140625,
+      "WTI": 45.66095238095238,
+      "Brent": 44.73409090909091,
+      "USO_tracking_residual": -23.04845760189007,
+      "CI_zscore": 2.566784025438089
+    },
+    {
+      "date": "2016-12-01",
+      "USO": 93.76000213623047,
+      "WTI": 51.9704761904762,
+      "Brent": 53.3085,
+      "USO_tracking_residual": -33.20281366081595,
+      "CI_zscore": 2.49306524549783
+    },
+    {
+      "date": "2017-01-01",
+      "USO": 90.55999755859375,
+      "WTI": 52.504,
+      "Brent": 54.57666666666666,
+      "USO_tracking_residual": -48.41010355519795,
+      "CI_zscore": 2.43634585168782
+    },
+    {
+      "date": "2017-02-01",
+      "USO": 91.5999984741211,
+      "WTI": 53.46842105263158,
+      "Brent": 54.8695,
+      "USO_tracking_residual": -49.10736817206501,
+      "CI_zscore": 2.451001454182792
+    },
+    {
+      "date": "2017-03-01",
+      "USO": 85.12000274658203,
+      "WTI": 49.32782608695652,
+      "Brent": 51.589130434782604,
+      "USO_tracking_residual": -21.687710696034543,
+      "CI_zscore": 2.2248780332152536
+    },
+    {
+      "date": "2017-04-01",
+      "USO": 81.91999816894531,
+      "WTI": 51.060526315789474,
+      "Brent": 52.30789473684211,
+      "USO_tracking_residual": -34.6663350837194,
+      "CI_zscore": 1.9717385598531862
+    },
+    {
+      "date": "2017-05-01",
+      "USO": 79.68000030517578,
+      "WTI": 48.47636363636364,
+      "Brent": 50.326521739130435,
+      "USO_tracking_residual": -19.867248244982104,
+      "CI_zscore": 1.822164368564116
+    },
+    {
+      "date": "2017-06-01",
+      "USO": 76.0,
+      "WTI": 45.177727272727275,
+      "Brent": 46.36818181818182,
+      "USO_tracking_residual": -10.549533402673271,
+      "CI_zscore": 1.8803037379329033
+    },
+    {
+      "date": "2017-07-01",
+      "USO": 82.23999786376953,
+      "WTI": 46.630526315789474,
+      "Brent": 48.47857142857143,
+      "USO_tracking_residual": 0.8957027654417082,
+      "CI_zscore": 1.61347165277184
+    },
+    {
+      "date": "2017-08-01",
+      "USO": 77.04000091552734,
+      "WTI": 48.03695652173913,
+      "Brent": 51.70434782608696,
+      "USO_tracking_residual": -14.453051171211083,
+      "CI_zscore": 1.274584533663235
+    },
+    {
+      "date": "2017-09-01",
+      "USO": 83.44000244140625,
+      "WTI": 49.822,
+      "Brent": 56.152857142857144,
+      "USO_tracking_residual": -14.843211937590238,
+      "CI_zscore": 1.4784099422995736
+    },
+    {
+      "date": "2017-10-01",
+      "USO": 87.44000244140625,
+      "WTI": 51.57772727272727,
+      "Brent": 57.50772727272727,
+      "USO_tracking_residual": 0.1774192293618304,
+      "CI_zscore": 1.2073515147869616
+    },
+    {
+      "date": "2017-11-01",
+      "USO": 91.76000213623047,
+      "WTI": 56.63857142857143,
+      "Brent": 62.71409090909091,
+      "USO_tracking_residual": -19.101060025920866,
+      "CI_zscore": 0.9514442197603844
+    },
+    {
+      "date": "2017-12-01",
+      "USO": 96.08000183105469,
+      "WTI": 57.8815,
+      "Brent": 64.3736842105263,
+      "USO_tracking_residual": -8.899408789679542,
+      "CI_zscore": 0.6863901072913785
+    },
+    {
+      "date": "2018-01-01",
+      "USO": 103.83999633789062,
+      "WTI": 63.698571428571434,
+      "Brent": 69.07727272727273,
+      "USO_tracking_residual": -6.6570587105946775,
+      "CI_zscore": 0.3243252862552732
+    },
+    {
+      "date": "2018-02-01",
+      "USO": 98.95999908447266,
+      "WTI": 62.22947368421052,
+      "Brent": 65.3175,
+      "USO_tracking_residual": -8.35053571294051,
+      "CI_zscore": 0.11424653499969167
+    },
+    {
+      "date": "2018-03-01",
+      "USO": 104.72000122070312,
+      "WTI": 62.724761904761905,
+      "Brent": 66.01666666666667,
+      "USO_tracking_residual": -4.132669577026427,
+      "CI_zscore": -0.048146557135263626
+    },
+    {
+      "date": "2018-04-01",
+      "USO": 110.4000015258789,
+      "WTI": 66.25380952380952,
+      "Brent": 72.10600000000001,
+      "USO_tracking_residual": 5.010191957829306,
+      "CI_zscore": -0.1743509592197715
+    },
+    {
+      "date": "2018-05-01",
+      "USO": 108.4000015258789,
+      "WTI": 69.97818181818182,
+      "Brent": 76.9752380952381,
+      "USO_tracking_residual": -8.311084070095482,
+      "CI_zscore": -0.08610391888207598
+    },
+    {
+      "date": "2018-06-01",
+      "USO": 120.4800033569336,
+      "WTI": 67.87333333333333,
+      "Brent": 74.4047619047619,
+      "USO_tracking_residual": 8.290047975270106,
+      "CI_zscore": -0.09526525796083564
+    },
+    {
+      "date": "2018-07-01",
+      "USO": 114.23999786376953,
+      "WTI": 70.98142857142857,
+      "Brent": 74.2540909090909,
+      "USO_tracking_residual": -13.31043977194173,
+      "CI_zscore": -0.15528098714612507
+    },
+    {
+      "date": "2018-08-01",
+      "USO": 117.68000030517578,
+      "WTI": 68.05565217391305,
+      "Brent": 72.52826086956522,
+      "USO_tracking_residual": 11.078285475168585,
+      "CI_zscore": -0.02289554312839694
+    },
+    {
+      "date": "2018-09-01",
+      "USO": 124.16000366210938,
+      "WTI": 70.2321052631579,
+      "Brent": 78.89099999999999,
+      "USO_tracking_residual": 7.835484408383287,
+      "CI_zscore": -0.11734783855930946
+    },
+    {
+      "date": "2018-10-01",
+      "USO": 110.31999969482422,
+      "WTI": 70.74869565217391,
+      "Brent": 81.03217391304348,
+      "USO_tracking_residual": -11.002572923074005,
+      "CI_zscore": 0.1082497838921006
+    },
+    {
+      "date": "2018-11-01",
+      "USO": 85.83999633789062,
+      "WTI": 56.963499999999996,
+      "Brent": 64.74818181818182,
+      "USO_tracking_residual": -7.025306866844782,
+      "CI_zscore": 0.376444442318009
+    },
+    {
+      "date": "2018-12-01",
+      "USO": 77.27999877929688,
+      "WTI": 49.522777777777776,
+      "Brent": 57.36235294117647,
+      "USO_tracking_residual": -5.1259355917996885,
+      "CI_zscore": 0.49292751158847387
+    },
+    {
+      "date": "2019-01-01",
+      "USO": 90.80000305175781,
+      "WTI": 51.37571428571429,
+      "Brent": 59.40954545454545,
+      "USO_tracking_residual": 6.787803326775986,
+      "CI_zscore": 0.5335271976213066
+    },
+    {
+      "date": "2019-02-01",
+      "USO": 95.5999984741211,
+      "WTI": 54.95473684210527,
+      "Brent": 63.9605,
+      "USO_tracking_residual": 8.294867079064673,
+      "CI_zscore": 0.33004402272695765
+    },
+    {
+      "date": "2019-03-01",
+      "USO": 100.0,
+      "WTI": 58.151428571428575,
+      "Brent": 66.13857142857144,
+      "USO_tracking_residual": 2.7838545402592123,
+      "CI_zscore": 0.009116854057656066
+    },
+    {
+      "date": "2019-04-01",
+      "USO": 106.31999969482422,
+      "WTI": 63.862380952380946,
+      "Brent": 71.23333333333333,
+      "USO_tracking_residual": -0.08615783147966072,
+      "CI_zscore": 0.06842287004050318
+    },
+    {
+      "date": "2019-05-01",
+      "USO": 88.80000305175781,
+      "WTI": 60.82681818181818,
+      "Brent": 71.31772727272727,
+      "USO_tracking_residual": -5.003726437119539,
+      "CI_zscore": 0.3738753084446434
+    },
+    {
+      "date": "2019-06-01",
+      "USO": 96.31999969482422,
+      "WTI": 54.657500000000006,
+      "Brent": 64.2205,
+      "USO_tracking_residual": -0.5818042069347875,
+      "CI_zscore": 0.5640763568078417
+    },
+    {
+      "date": "2019-07-01",
+      "USO": 96.31999969482422,
+      "WTI": 57.35809523809524,
+      "Brent": 63.919130434782616,
+      "USO_tracking_residual": 3.5065404799900293,
+      "CI_zscore": 0.3168785804651879
+    },
+    {
+      "date": "2019-08-01",
+      "USO": 91.68000030517578,
+      "WTI": 54.80590909090909,
+      "Brent": 59.041818181818186,
+      "USO_tracking_residual": -2.624831070527623,
+      "CI_zscore": 0.17372826123906068
+    },
+    {
+      "date": "2019-09-01",
+      "USO": 90.72000122070312,
+      "WTI": 56.947,
+      "Brent": 62.82666666666666,
+      "USO_tracking_residual": -8.016990532935917,
+      "CI_zscore": 0.005021004161130896
+    },
+    {
+      "date": "2019-10-01",
+      "USO": 90.4000015258789,
+      "WTI": 53.96304347826087,
+      "Brent": 59.71304347826087,
+      "USO_tracking_residual": 5.669179717264338,
+      "CI_zscore": 0.1359484159078671
+    },
+    {
+      "date": "2019-11-01",
+      "USO": 92.95999908447266,
+      "WTI": 57.048947368421054,
+      "Brent": 63.21190476190476,
+      "USO_tracking_residual": 8.144501232553457,
+      "CI_zscore": 0.22542609738151637
+    },
+    {
+      "date": "2019-12-01",
+      "USO": 102.4800033569336,
+      "WTI": 59.81666666666667,
+      "Brent": 67.21714285714286,
+      "USO_tracking_residual": 11.822531865998773,
+      "CI_zscore": 0.1776467563198343
+    },
+    {
+      "date": "2020-01-01",
+      "USO": 86.72000122070312,
+      "WTI": 57.519047619047626,
+      "Brent": 63.64545454545455,
+      "USO_tracking_residual": -16.45105412382877,
+      "CI_zscore": -0.0640947593371718
+    },
+    {
+      "date": "2020-02-01",
+      "USO": 75.5999984741211,
+      "WTI": 50.54263157894737,
+      "Brent": 55.657000000000004,
+      "USO_tracking_residual": -12.891885573817685,
+      "CI_zscore": -0.21280277369481496
+    },
+    {
+      "date": "2020-03-01",
+      "USO": 33.68000030517578,
+      "WTI": 29.207727272727276,
+      "Brent": 32.01136363636363,
+      "USO_tracking_residual": -16.547015591520264,
+      "CI_zscore": -0.21260565949685678
+    },
+    {
+      "date": "2020-04-01",
+      "USO": 19.1200008392334,
+      "WTI": 16.547619047619047,
+      "Brent": 18.3785,
+      "USO_tracking_residual": -7.92792488214161,
+      "CI_zscore": 0.8781575577067329
+    },
+    {
+      "date": "2020-05-01",
+      "USO": 25.8799991607666,
+      "WTI": 28.5625,
+      "Brent": 29.378947368421056,
+      "USO_tracking_residual": -17.812941624702525,
+      "CI_zscore": 1.7138571205614028
+    },
+    {
+      "date": "2020-06-01",
+      "USO": 28.059999465942383,
+      "WTI": 38.307272727272725,
+      "Brent": 40.26681818181818,
+      "USO_tracking_residual": -40.95397227156435,
+      "CI_zscore": 2.0449259390092838
+    },
+    {
+      "date": "2020-07-01",
+      "USO": 29.06999969482422,
+      "WTI": 40.710454545454546,
+      "Brent": 43.24217391304348,
+      "USO_tracking_residual": -40.79530508005861,
+      "CI_zscore": 2.3724124354416074
+    },
+    {
+      "date": "2020-08-01",
+      "USO": 30.579999923706055,
+      "WTI": 42.33904761904762,
+      "Brent": 44.736000000000004,
+      "USO_tracking_residual": -43.89755748438137,
+      "CI_zscore": 2.063031374830737
+    },
+    {
+      "date": "2020-09-01",
+      "USO": 28.290000915527344,
+      "WTI": 39.63428571428571,
+      "Brent": 40.90954545454545,
+      "USO_tracking_residual": -38.414686003349104,
+      "CI_zscore": 1.9778048644418056
+    },
+    {
+      "date": "2020-10-01",
+      "USO": 25.25,
+      "WTI": 39.39590909090909,
+      "Brent": 40.18954545454546,
+      "USO_tracking_residual": -45.07393515184479,
+      "CI_zscore": 2.3393475713257126
+    },
+    {
+      "date": "2020-11-01",
+      "USO": 30.969999313354492,
+      "WTI": 40.93736842105263,
+      "Brent": 42.69238095238095,
+      "USO_tracking_residual": -38.44291981249568,
+      "CI_zscore": 1.9338961601685392
+    },
+    {
+      "date": "2020-12-01",
+      "USO": 33.0099983215332,
+      "WTI": 47.025,
+      "Brent": 49.99363636363637,
+      "USO_tracking_residual": -46.404052690497466,
+      "CI_zscore": 2.756607549176716
+    },
+    {
+      "date": "2021-01-01",
+      "USO": 35.18000030517578,
+      "WTI": 52.008421052631576,
+      "Brent": 54.774,
+      "USO_tracking_residual": -49.852132342103914,
+      "CI_zscore": 1.3847753583508535
+    },
+    {
+      "date": "2021-02-01",
+      "USO": 41.310001373291016,
+      "WTI": 59.04631578947369,
+      "Brent": 62.2765,
+      "USO_tracking_residual": -62.18191527069703,
+      "CI_zscore": 0.24917076889953724
+    },
+    {
+      "date": "2021-03-01",
+      "USO": 40.529998779296875,
+      "WTI": 62.333043478260876,
+      "Brent": 65.41,
+      "USO_tracking_residual": -93.07437588164875,
+      "CI_zscore": 0.7676238195035228
+    },
+    {
+      "date": "2021-04-01",
+      "USO": 43.27000045776367,
+      "WTI": 61.71666666666666,
+      "Brent": 64.8065,
+      "USO_tracking_residual": -146.65650493537095,
+      "CI_zscore": 0.13818578341533136
+    },
+    {
+      "date": "2021-05-01",
+      "USO": 45.41999816894531,
+      "WTI": 65.1695,
+      "Brent": 68.53421052631579,
+      "USO_tracking_residual": -52.66223441374386,
+      "CI_zscore": -0.27518613736371883
+    },
+    {
+      "date": "2021-06-01",
+      "USO": 49.880001068115234,
+      "WTI": 71.37818181818182,
+      "Brent": 73.1640909090909,
+      "USO_tracking_residual": -8.568682044168852,
+      "CI_zscore": -0.715222003840973
+    },
+    {
+      "date": "2021-07-01",
+      "USO": 50.65999984741211,
+      "WTI": 72.4852380952381,
+      "Brent": 75.1659090909091,
+      "USO_tracking_residual": -3.781665345631751,
+      "CI_zscore": -0.8075545627020719
+    },
+    {
+      "date": "2021-08-01",
+      "USO": 48.040000915527344,
+      "WTI": 67.73045454545455,
+      "Brent": 70.74714285714286,
+      "USO_tracking_residual": -2.8754615913943837,
+      "CI_zscore": -0.7680132584239886
+    },
+    {
+      "date": "2021-09-01",
+      "USO": 52.560001373291016,
+      "WTI": 71.64619047619047,
+      "Brent": 74.48863636363636,
+      "USO_tracking_residual": 5.021816506712128,
+      "CI_zscore": -0.886304505466911
+    },
+    {
+      "date": "2021-10-01",
+      "USO": 57.150001525878906,
+      "WTI": 81.47666666666666,
+      "Brent": 83.53809523809524,
+      "USO_tracking_residual": 19.521595843259703,
+      "CI_zscore": -1.0333884078019537
+    },
+    {
+      "date": "2021-11-01",
+      "USO": 47.90999984741211,
+      "WTI": 79.14750000000001,
+      "Brent": 81.05,
+      "USO_tracking_residual": -38.63992812832404,
+      "CI_zscore": -1.6012980699341564
+    },
+    {
+      "date": "2021-12-01",
+      "USO": 54.36000061035156,
+      "WTI": 71.71181818181819,
+      "Brent": 74.1704761904762,
+      "USO_tracking_residual": 12.180159702199525,
+      "CI_zscore": -1.3994452578731553
+    },
+    {
+      "date": "2022-01-01",
+      "USO": 62.47999954223633,
+      "WTI": 83.22200000000001,
+      "Brent": 86.50523809523808,
+      "USO_tracking_residual": 17.584512659675973,
+      "CI_zscore": -1.3005225490897458
+    },
+    {
+      "date": "2022-02-01",
+      "USO": 67.4800033569336,
+      "WTI": 91.64105263157894,
+      "Brent": 97.12899999999999,
+      "USO_tracking_residual": 8.148298692107907,
+      "CI_zscore": -1.4736153334116862
+    },
+    {
+      "date": "2022-03-01",
+      "USO": 74.12000274658203,
+      "WTI": 108.50260869565217,
+      "Brent": 117.24521739130434,
+      "USO_tracking_residual": 8.807727975101898,
+      "CI_zscore": -1.5898652182524369
+    },
+    {
+      "date": "2022-04-01",
+      "USO": 77.16000366210938,
+      "WTI": 101.7775,
+      "Brent": 104.57526315789474,
+      "USO_tracking_residual": 13.411286670639242,
+      "CI_zscore": -1.9505642180034217
+    },
+    {
+      "date": "2022-05-01",
+      "USO": 85.47000122070312,
+      "WTI": 109.55238095238094,
+      "Brent": 113.33761904761906,
+      "USO_tracking_residual": 20.073263148811662,
+      "CI_zscore": -2.0162481646836548
+    },
+    {
+      "date": "2022-06-01",
+      "USO": 80.3499984741211,
+      "WTI": 114.83714285714285,
+      "Brent": 122.71095238095238,
+      "USO_tracking_residual": 0.2011039448594829,
+      "CI_zscore": -1.6956751270946262
+    },
+    {
+      "date": "2022-07-01",
+      "USO": 78.05000305175781,
+      "WTI": 101.619,
+      "Brent": 111.92571428571429,
+      "USO_tracking_residual": 13.873648093624148,
+      "CI_zscore": -0.8882276597744694
+    },
+    {
+      "date": "2022-08-01",
+      "USO": 73.11000061035156,
+      "WTI": 93.66521739130435,
+      "Brent": 100.44636363636364,
+      "USO_tracking_residual": 13.894537453859158,
+      "CI_zscore": -0.7320562211840409
+    },
+    {
+      "date": "2022-09-01",
+      "USO": 65.27999877929688,
+      "WTI": 84.25809523809524,
+      "Brent": 89.7647619047619,
+      "USO_tracking_residual": 6.5978715909861485,
+      "CI_zscore": -0.28179675847820146
+    },
+    {
+      "date": "2022-10-01",
+      "USO": 71.52999877929688,
+      "WTI": 87.5547619047619,
+      "Brent": 93.33190476190477,
+      "USO_tracking_residual": 17.701927957412433,
+      "CI_zscore": -0.27738377931835906
+    },
+    {
+      "date": "2022-11-01",
+      "USO": 70.2300033569336,
+      "WTI": 84.37047619047618,
+      "Brent": 91.41545454545455,
+      "USO_tracking_residual": 39.988317485624016,
+      "CI_zscore": -1.1974627334304433
+    },
+    {
+      "date": "2022-12-01",
+      "USO": 70.11000061035156,
+      "WTI": 76.43714285714286,
+      "Brent": 80.924,
+      "USO_tracking_residual": 22.384184731292713,
+      "CI_zscore": -1.1372708514390413
+    },
+    {
+      "date": "2023-01-01",
+      "USO": 69.31999969482422,
+      "WTI": 78.123,
+      "Brent": 82.50142857142858,
+      "USO_tracking_residual": 17.074489178282867,
+      "CI_zscore": 0.4239612590557707
+    },
+    {
+      "date": "2023-02-01",
+      "USO": 67.20999908447266,
+      "WTI": 76.83263157894737,
+      "Brent": 82.58500000000001,
+      "USO_tracking_residual": 15.75903156895413,
+      "CI_zscore": 1.582370344775884
+    },
+    {
+      "date": "2023-03-01",
+      "USO": 66.44000244140625,
+      "WTI": 73.27782608695652,
+      "Brent": 78.43434782608696,
+      "USO_tracking_residual": 22.102881024646294,
+      "CI_zscore": 0.9135859980036327
+    },
+    {
+      "date": "2023-04-01",
+      "USO": 67.5,
+      "WTI": 79.44631578947369,
+      "Brent": 84.63833333333334,
+      "USO_tracking_residual": 9.421735464283953,
+      "CI_zscore": 0.07681698515957716
+    },
+    {
+      "date": "2023-05-01",
+      "USO": 60.630001068115234,
+      "WTI": 71.57818181818182,
+      "Brent": 75.466,
+      "USO_tracking_residual": 5.6002234999958596,
+      "CI_zscore": -0.19478790141023436
+    },
+    {
+      "date": "2023-06-01",
+      "USO": 63.54999923706055,
+      "WTI": 70.24809523809525,
+      "Brent": 74.83909090909091,
+      "USO_tracking_residual": 17.91954657323426,
+      "CI_zscore": -0.11754260715052248
+    },
+    {
+      "date": "2023-07-01",
+      "USO": 73.16999816894531,
+      "WTI": 76.0695,
+      "Brent": 80.10809523809523,
+      "USO_tracking_residual": 18.890035516571977,
+      "CI_zscore": 0.06328816582616845
+    },
+    {
+      "date": "2023-08-01",
+      "USO": 75.05999755859375,
+      "WTI": 81.38608695652174,
+      "Brent": 86.14772727272727,
+      "USO_tracking_residual": 15.776804354936823,
+      "CI_zscore": -0.16882367481539245
+    },
+    {
+      "date": "2023-09-01",
+      "USO": 80.86000061035156,
+      "WTI": 89.425,
+      "Brent": 93.72238095238096,
+      "USO_tracking_residual": 17.73418939806541,
+      "CI_zscore": -0.44215453164807333
+    },
+    {
+      "date": "2023-10-01",
+      "USO": 75.0199966430664,
+      "WTI": 85.63952380952381,
+      "Brent": 90.59590909090909,
+      "USO_tracking_residual": 7.0665433206941515,
+      "CI_zscore": -0.7959517605088727
+    },
+    {
+      "date": "2023-11-01",
+      "USO": 70.13999938964844,
+      "WTI": 77.685,
+      "Brent": 82.94,
+      "USO_tracking_residual": 7.79579617772348,
+      "CI_zscore": -0.29098740870754297
+    },
+    {
+      "date": "2023-12-01",
+      "USO": 66.6500015258789,
+      "WTI": 71.9,
+      "Brent": 77.63105263157895,
+      "USO_tracking_residual": 1.00068226906056,
+      "CI_zscore": -0.20212281423378844
+    },
+    {
+      "date": "2024-01-01",
+      "USO": 70.91999816894531,
+      "WTI": 74.15238095238095,
+      "Brent": 80.12409090909091,
+      "USO_tracking_residual": 7.390656482514013,
+      "CI_zscore": -0.7679541591371947
+    },
+    {
+      "date": "2024-02-01",
+      "USO": 73.36000061035156,
+      "WTI": 77.249,
+      "Brent": 83.47809523809524,
+      "USO_tracking_residual": 8.608510312356744,
+      "CI_zscore": -0.4733767766400032
+    },
+    {
+      "date": "2024-03-01",
+      "USO": 78.7300033569336,
+      "WTI": 81.27799999999999,
+      "Brent": 85.4085,
+      "USO_tracking_residual": 7.580301759882403,
+      "CI_zscore": -0.36744148696817974
+    },
+    {
+      "date": "2024-04-01",
+      "USO": 78.37999725341797,
+      "WTI": 85.34727272727274,
+      "Brent": 89.93809523809524,
+      "USO_tracking_residual": 8.690911445945137,
+      "CI_zscore": -0.3261932596908286
+    },
+    {
+      "date": "2024-05-01",
+      "USO": 74.81999969482422,
+      "WTI": 80.02454545454545,
+      "Brent": 81.74619047619048,
+      "USO_tracking_residual": 11.60405959160904,
+      "CI_zscore": -0.47319954166480155
+    },
+    {
+      "date": "2024-06-01",
+      "USO": 79.58999633789062,
+      "WTI": 79.76736842105262,
+      "Brent": 82.24600000000001,
+      "USO_tracking_residual": 11.689030040534453,
+      "CI_zscore": -0.36627066986099127
+    },
+    {
+      "date": "2024-07-01",
+      "USO": 77.73999786376953,
+      "WTI": 81.80045454545454,
+      "Brent": 85.15304347826087,
+      "USO_tracking_residual": -1.2881113033210045,
+      "CI_zscore": -0.5644908482131825
+    },
+    {
+      "date": "2024-08-01",
+      "USO": 74.33999633789062,
+      "WTI": 76.68318181818182,
+      "Brent": 80.3552380952381,
+      "USO_tracking_residual": 4.81927814294234,
+      "CI_zscore": -0.6800575794378805
+    },
+    {
+      "date": "2024-09-01",
+      "USO": 69.91999816894531,
+      "WTI": 70.236,
+      "Brent": 74.01666666666667,
+      "USO_tracking_residual": 7.928645023251557,
+      "CI_zscore": -0.6379979339963966
+    },
+    {
+      "date": "2024-10-01",
+      "USO": 73.08000183105469,
+      "WTI": 71.985,
+      "Brent": 75.63260869565217,
+      "USO_tracking_residual": 13.358214376922783,
+      "CI_zscore": -0.7567167142553485
+    },
+    {
+      "date": "2024-11-01",
+      "USO": 71.61000061035156,
+      "WTI": 69.95,
+      "Brent": 74.3452380952381,
+      "USO_tracking_residual": 12.052687273859386,
+      "CI_zscore": -1.0339419506616374
+    },
+    {
+      "date": "2024-12-01",
+      "USO": 75.55000305175781,
+      "WTI": 70.11809523809524,
+      "Brent": 73.8595,
+      "USO_tracking_residual": 15.831650140106746,
+      "CI_zscore": -0.9095926677237439
+    },
+    {
+      "date": "2025-01-01",
+      "USO": 78.0199966430664,
+      "WTI": 75.74249999999999,
+      "Brent": 79.27045454545454,
+      "USO_tracking_residual": 7.8668846390621106,
+      "CI_zscore": -1.057500634907245
+    },
+    {
+      "date": "2025-02-01",
+      "USO": 75.22000122070312,
+      "WTI": 71.53315789473685,
+      "Brent": 75.438,
+      "USO_tracking_residual": 9.934686607902698,
+      "CI_zscore": -0.7470563441748014
+    },
+    {
+      "date": "2025-03-01",
+      "USO": 77.33000183105469,
+      "WTI": 68.23904761904762,
+      "Brent": 72.73285714285714,
+      "USO_tracking_residual": 14.26418167575294,
+      "CI_zscore": -0.7732543340948084
+    },
+    {
+      "date": "2025-04-01",
+      "USO": 63.560001373291016,
+      "WTI": 63.53666666666667,
+      "Brent": 68.1345,
+      "USO_tracking_residual": 6.647249418049142,
+      "CI_zscore": -0.8006901501250245
+    },
+    {
+      "date": "2025-05-01",
+      "USO": 67.1500015258789,
+      "WTI": 62.16761904761905,
+      "Brent": 64.453,
+      "USO_tracking_residual": 12.063044263639542,
+      "CI_zscore": -0.8387244578302231
+    },
+    {
+      "date": "2025-06-01",
+      "USO": 73.11000061035156,
+      "WTI": 68.16900000000001,
+      "Brent": 71.4447619047619,
+      "USO_tracking_residual": 6.398520665495022,
+      "CI_zscore": -1.1460734049465264
+    },
+    {
+      "date": "2025-07-01",
+      "USO": 79.58999633789062,
+      "WTI": 68.39090909090909,
+      "Brent": 71.04130434782608,
+      "USO_tracking_residual": 18.772721659011292,
+      "CI_zscore": -0.9028728421492592
+    },
+    {
+      "date": "2025-08-01",
+      "USO": 74.83999633789062,
+      "WTI": 64.86428571428571,
+      "Brent": 67.87,
+      "USO_tracking_residual": 16.08521677906325,
+      "CI_zscore": -0.7372098010742931
+    },
+    {
+      "date": "2025-09-01",
+      "USO": 73.75,
+      "WTI": 63.959047619047624,
+      "Brent": 67.98545454545454,
+      "USO_tracking_residual": 14.414636109121759,
+      "CI_zscore": -0.5799316016670121
+    },
+    {
+      "date": "2025-10-01",
+      "USO": 72.55999755859375,
+      "WTI": 60.89454545454546,
+      "Brent": 64.54347826086956,
+      "USO_tracking_residual": 14.695063987297708,
+      "CI_zscore": -0.7683448791628439
+    },
+    {
+      "date": "2025-11-01",
+      "USO": 71.06999969482422,
+      "WTI": 60.06222222222222,
+      "Brent": 63.797000000000004,
+      "USO_tracking_residual": 13.381407709428371,
+      "CI_zscore": -0.8271452613044301
+    },
+    {
+      "date": "2025-12-01",
+      "USO": 69.16000366210938,
+      "WTI": 57.972272727272724,
+      "Brent": 62.54428571428572,
+      "USO_tracking_residual": 8.863977885369167,
+      "CI_zscore": -0.5186096213307969
+    },
+    {
+      "date": "2026-01-01",
+      "USO": 79.5199966430664,
+      "WTI": 60.037,
+      "Brent": 66.60238095238095,
+      "USO_tracking_residual": 22.657970377436833,
+      "CI_zscore": -0.5849309106551833
+    },
+    {
+      "date": "2026-02-01",
+      "USO": 81.94999694824219,
+      "WTI": 64.50842105263159,
+      "Brent": 70.887,
+      "USO_tracking_residual": 18.767335376760386,
+      "CI_zscore": -0.6139916702945033
+    },
+    {
+      "date": "2026-03-01",
+      "USO": 127.25,
+      "WTI": 91.38363636363637,
+      "Brent": 103.13454545454546,
+      "USO_tracking_residual": 30.637574623057425,
+      "CI_zscore": -0.07797037710031304
+    },
+    {
+      "date": "2026-04-01",
+      "USO": 147.08999633789062,
+      "WTI": 100.31666666666668,
+      "Brent": 117.2875,
+      "USO_tracking_residual": 73.53128697075736,
+      "CI_zscore": 0.35370444235533294
+    },
+    {
+      "date": "2026-05-01",
+      "USO": 129.08999633789062,
+      "WTI": 102.134,
+      "Brent": 107.13947368421053,
+      "USO_tracking_residual": 27.95314134772994,
+      "CI_zscore": -0.29392817729373444
+    },
+    {
+      "date": "2026-06-01",
+      "USO": 106.44000244140625,
+      "WTI": 85.51950000000001,
+      "Brent": 86.11047619047619,
+      "USO_tracking_residual": 20.13665584929525,
+      "CI_zscore": -1.3818358591603184
+    },
+    {
+      "date": "2026-07-01",
+      "USO": null,
+      "WTI": null,
+      "Brent": null,
+      "USO_tracking_residual": null,
+      "CI_zscore": null
+    }
+  ],
+  "annotations": [
+    "gfc_2008",
+    "shale_2014",
+    "covid_2020",
+    "reopening_2021"
+  ],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "yoy",
+    "zscore",
+    "pct_change"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "USO tracking residual = USO_YoY - WTI_YoY.",
+    "notes": "USO can diverge through roll yield, fees, tracking differences, and ETF structure. Raw USO and barrel prices are not placed on one axis."
+  },
+  "staticFigure": "uso_vs_wti_yoy.png",
+  "generatedAt": "2026-07-15T23:37:40+00:00"
+}

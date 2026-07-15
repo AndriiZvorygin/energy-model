@@ -1,0 +1,5 @@
+indicator,stress_transform,best_lead_months_to_recession,correlation_with_future_recession,n_recession,best_lead_months_to_industrial_weakness,correlation_with_future_industrial_weakness,n_industrial,evidence_label
+average_weekly_hours_YoY,negative growth,0,0.4102701761414775,474,0,0.6573521091785084,473,Supported historical pattern
+temporary_help_YoY,negative growth,0,0.462803878719051,426,0,0.8700129080769393,425,Supported historical pattern
+real_wage_growth,negative growth,8,0.20190631790313335,223,12,0.32671416363778033,219,Supported historical pattern
+unemployment_rate,higher level,0,0.11787394654019062,485,0,0.22461635231412697,472,Contextual indicator

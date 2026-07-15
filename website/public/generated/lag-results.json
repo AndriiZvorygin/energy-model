@@ -1,0 +1,2696 @@
+{
+  "schemaVersion": "1.1.0",
+  "generatedAt": "2026-07-15T23:37:40+00:00",
+  "gm2Oil": [
+    {
+      "target": "WTI_YoY",
+      "lag": 0,
+      "correlation": 0.35768822805016626,
+      "n": 266
+    },
+    {
+      "target": "WTI_YoY",
+      "lag": 1,
+      "correlation": 0.4295050045905277,
+      "n": 266
+    },
+    {
+      "target": "WTI_YoY",
+      "lag": 2,
+      "correlation": 0.4918510191457302,
+      "n": 265
+    },
+    {
+      "target": "WTI_YoY",
+      "lag": 3,
+      "correlation": 0.5257692286698222,
+      "n": 264
+    },
+    {
+      "target": "WTI_YoY",
+      "lag": 4,
+      "correlation": 0.5321138882633321,
+      "n": 263
+    },
+    {
+      "target": "WTI_YoY",
+      "lag": 5,
+      "correlation": 0.5109012586269167,
+      "n": 262
+    },
+    {
+      "target": "WTI_YoY",
+      "lag": 6,
+      "correlation": 0.4753866544430768,
+      "n": 261
+    },
+    {
+      "target": "WTI_YoY",
+      "lag": 7,
+      "correlation": 0.4364251657315184,
+      "n": 260
+    },
+    {
+      "target": "WTI_YoY",
+      "lag": 8,
+      "correlation": 0.39520632368139563,
+      "n": 259
+    },
+    {
+      "target": "WTI_YoY",
+      "lag": 9,
+      "correlation": 0.35059692711592744,
+      "n": 258
+    },
+    {
+      "target": "WTI_YoY",
+      "lag": 10,
+      "correlation": 0.3135042340508704,
+      "n": 257
+    },
+    {
+      "target": "WTI_YoY",
+      "lag": 11,
+      "correlation": 0.27442369463336935,
+      "n": 256
+    },
+    {
+      "target": "WTI_YoY",
+      "lag": 12,
+      "correlation": 0.23292459762602985,
+      "n": 255
+    },
+    {
+      "target": "WTI_YoY",
+      "lag": 13,
+      "correlation": 0.19859115977974018,
+      "n": 254
+    },
+    {
+      "target": "WTI_YoY",
+      "lag": 14,
+      "correlation": 0.17019271905558842,
+      "n": 253
+    },
+    {
+      "target": "WTI_YoY",
+      "lag": 15,
+      "correlation": 0.15222847489251168,
+      "n": 252
+    },
+    {
+      "target": "WTI_YoY",
+      "lag": 16,
+      "correlation": 0.14747020270492414,
+      "n": 251
+    },
+    {
+      "target": "WTI_YoY",
+      "lag": 17,
+      "correlation": 0.1506111685178272,
+      "n": 250
+    },
+    {
+      "target": "WTI_YoY",
+      "lag": 18,
+      "correlation": 0.1503310603923032,
+      "n": 249
+    },
+    {
+      "target": "Brent_YoY",
+      "lag": 0,
+      "correlation": 0.35435823333409955,
+      "n": 266
+    },
+    {
+      "target": "Brent_YoY",
+      "lag": 1,
+      "correlation": 0.4257838166209544,
+      "n": 266
+    },
+    {
+      "target": "Brent_YoY",
+      "lag": 2,
+      "correlation": 0.48647592823228,
+      "n": 265
+    },
+    {
+      "target": "Brent_YoY",
+      "lag": 3,
+      "correlation": 0.5185949072362589,
+      "n": 264
+    },
+    {
+      "target": "Brent_YoY",
+      "lag": 4,
+      "correlation": 0.5226942846644282,
+      "n": 263
+    },
+    {
+      "target": "Brent_YoY",
+      "lag": 5,
+      "correlation": 0.49981635814380987,
+      "n": 262
+    },
+    {
+      "target": "Brent_YoY",
+      "lag": 6,
+      "correlation": 0.4648128182801522,
+      "n": 261
+    },
+    {
+      "target": "Brent_YoY",
+      "lag": 7,
+      "correlation": 0.4281979010082656,
+      "n": 260
+    },
+    {
+      "target": "Brent_YoY",
+      "lag": 8,
+      "correlation": 0.3898715123918392,
+      "n": 259
+    },
+    {
+      "target": "Brent_YoY",
+      "lag": 9,
+      "correlation": 0.3540303390794192,
+      "n": 258
+    },
+    {
+      "target": "Brent_YoY",
+      "lag": 10,
+      "correlation": 0.32461903831818506,
+      "n": 257
+    },
+    {
+      "target": "Brent_YoY",
+      "lag": 11,
+      "correlation": 0.29082721120793753,
+      "n": 256
+    },
+    {
+      "target": "Brent_YoY",
+      "lag": 12,
+      "correlation": 0.24980900382954158,
+      "n": 255
+    },
+    {
+      "target": "Brent_YoY",
+      "lag": 13,
+      "correlation": 0.2142445606178244,
+      "n": 254
+    },
+    {
+      "target": "Brent_YoY",
+      "lag": 14,
+      "correlation": 0.189589734457533,
+      "n": 253
+    },
+    {
+      "target": "Brent_YoY",
+      "lag": 15,
+      "correlation": 0.17820120591957356,
+      "n": 252
+    },
+    {
+      "target": "Brent_YoY",
+      "lag": 16,
+      "correlation": 0.17691064165165554,
+      "n": 251
+    },
+    {
+      "target": "Brent_YoY",
+      "lag": 17,
+      "correlation": 0.1829813133561151,
+      "n": 250
+    },
+    {
+      "target": "Brent_YoY",
+      "lag": 18,
+      "correlation": 0.18231383192212933,
+      "n": 249
+    }
+  ],
+  "oilEquityReturns": [
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -18,
+      "correlation": -0.0429081766236666,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -17,
+      "correlation": -0.04635966728986922,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -16,
+      "correlation": 0.028612084255290313,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -15,
+      "correlation": 0.0506745148004528,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -14,
+      "correlation": -0.050232293419667486,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -13,
+      "correlation": -0.07174830958914008,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -12,
+      "correlation": -0.2297972649314519,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -11,
+      "correlation": -0.060783291874573576,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -10,
+      "correlation": 0.038075600595256935,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -9,
+      "correlation": 0.04047739480240672,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -8,
+      "correlation": -0.09102449973600418,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -7,
+      "correlation": -0.03883249432062173,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -6,
+      "correlation": 0.034268730568621904,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -5,
+      "correlation": 0.04068243497057825,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -4,
+      "correlation": -0.18703430077041247,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -3,
+      "correlation": -0.14475311768241453,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -2,
+      "correlation": -0.008988099379901214,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -1,
+      "correlation": 0.08292179980571579,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 0,
+      "correlation": 0.32448472990325794,
+      "n": 119
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 1,
+      "correlation": 0.310798685524277,
+      "n": 118
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 2,
+      "correlation": -0.13903374006518307,
+      "n": 117
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 3,
+      "correlation": -0.16251018250749713,
+      "n": 116
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 4,
+      "correlation": -0.08663370939505291,
+      "n": 115
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 5,
+      "correlation": -0.0002770805621177022,
+      "n": 114
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 6,
+      "correlation": 0.15041239925774524,
+      "n": 113
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 7,
+      "correlation": 0.15901263742995742,
+      "n": 112
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 8,
+      "correlation": 0.15962572558397772,
+      "n": 111
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 9,
+      "correlation": -0.04249389917747011,
+      "n": 110
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 10,
+      "correlation": 0.045150809973319064,
+      "n": 109
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 11,
+      "correlation": -0.08192443483697553,
+      "n": 108
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 12,
+      "correlation": -0.18202829431968823,
+      "n": 107
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 13,
+      "correlation": -0.04495734744371183,
+      "n": 106
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 14,
+      "correlation": -0.008639378791076773,
+      "n": 105
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 15,
+      "correlation": 0.1288210610608596,
+      "n": 104
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 16,
+      "correlation": 0.1629662867005087,
+      "n": 103
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 17,
+      "correlation": 0.08925411243899437,
+      "n": 102
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 18,
+      "correlation": -0.013916816401690705,
+      "n": 101
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -18,
+      "correlation": -0.06266165212530644,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -17,
+      "correlation": -0.05007574754024659,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -16,
+      "correlation": 0.027962701432894945,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -15,
+      "correlation": 0.02589484660140106,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -14,
+      "correlation": -0.08325751399101257,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -13,
+      "correlation": -0.0690338954423185,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -12,
+      "correlation": -0.2135273739126622,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -11,
+      "correlation": -0.045935477339021966,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -10,
+      "correlation": 0.03420968801204506,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -9,
+      "correlation": 0.033247085390353766,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -8,
+      "correlation": -0.07319856444135589,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -7,
+      "correlation": -0.045756639309255095,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -6,
+      "correlation": 0.016864722338058958,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -5,
+      "correlation": 0.058318916593013276,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -4,
+      "correlation": -0.18309698136686267,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -3,
+      "correlation": -0.17437262265017128,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -2,
+      "correlation": -0.008753186691384413,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -1,
+      "correlation": 0.09837604590296395,
+      "n": 120
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 0,
+      "correlation": 0.2976520352410576,
+      "n": 119
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 1,
+      "correlation": 0.27118179300323364,
+      "n": 118
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 2,
+      "correlation": -0.1110476648162392,
+      "n": 117
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 3,
+      "correlation": -0.14131668382105955,
+      "n": 116
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 4,
+      "correlation": -0.09350735526752735,
+      "n": 115
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 5,
+      "correlation": -0.017499962844990172,
+      "n": 114
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 6,
+      "correlation": 0.1565375851940338,
+      "n": 113
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 7,
+      "correlation": 0.18753336138163854,
+      "n": 112
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 8,
+      "correlation": 0.15611057813421134,
+      "n": 111
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 9,
+      "correlation": -0.04873391633941331,
+      "n": 110
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 10,
+      "correlation": 0.03469877981702959,
+      "n": 109
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 11,
+      "correlation": -0.09122990919303975,
+      "n": 108
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 12,
+      "correlation": -0.199144232193906,
+      "n": 107
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 13,
+      "correlation": -0.05254795595270576,
+      "n": 106
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 14,
+      "correlation": 0.015622898514009134,
+      "n": 105
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 15,
+      "correlation": 0.14858566839923376,
+      "n": 104
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 16,
+      "correlation": 0.16807584463706032,
+      "n": 103
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 17,
+      "correlation": 0.09762172351177219,
+      "n": 102
+    },
+    {
+      "sample": "full",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 18,
+      "correlation": -0.017492127465312333,
+      "n": 101
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": -6,
+      "correlation": -0.07901330006239712,
+      "n": 41
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": -5,
+      "correlation": 0.023533583411452695,
+      "n": 41
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": -4,
+      "correlation": -0.17920486514221018,
+      "n": 41
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": -3,
+      "correlation": 0.07182659161949279,
+      "n": 41
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": -2,
+      "correlation": 0.11728966446102064,
+      "n": 41
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": -1,
+      "correlation": -0.10128080193788777,
+      "n": 41
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 0,
+      "correlation": 0.3467764383868965,
+      "n": 40
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 1,
+      "correlation": -0.45714576231964243,
+      "n": 39
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 2,
+      "correlation": 0.22749336557440908,
+      "n": 38
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 3,
+      "correlation": 0.08692737041458878,
+      "n": 37
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 4,
+      "correlation": -0.25239908772622194,
+      "n": 36
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 5,
+      "correlation": 0.20948348208018613,
+      "n": 35
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 6,
+      "correlation": -0.24004776918270637,
+      "n": 34
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": -6,
+      "correlation": -0.12199337524811125,
+      "n": 41
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": -5,
+      "correlation": -0.002971560218688795,
+      "n": 41
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": -4,
+      "correlation": -0.1617155490825904,
+      "n": 41
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": -3,
+      "correlation": 0.07077543741344111,
+      "n": 41
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": -2,
+      "correlation": 0.10838848130197,
+      "n": 41
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": -1,
+      "correlation": -0.1350679103390714,
+      "n": 41
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 0,
+      "correlation": 0.31124577765468736,
+      "n": 40
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 1,
+      "correlation": -0.4064060694356749,
+      "n": 39
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 2,
+      "correlation": 0.23671067052437808,
+      "n": 38
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 3,
+      "correlation": 0.07960247169659526,
+      "n": 37
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 4,
+      "correlation": -0.28114226742073395,
+      "n": 36
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 5,
+      "correlation": 0.23406273201604932,
+      "n": 35
+    },
+    {
+      "sample": "full",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 6,
+      "correlation": -0.22677321382728635,
+      "n": 34
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -18,
+      "correlation": 0.12898232149851074,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -17,
+      "correlation": 0.011702734170756188,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -16,
+      "correlation": -0.07874740264676386,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -15,
+      "correlation": -0.1663757163786773,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -14,
+      "correlation": -0.06605363646620876,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -13,
+      "correlation": -0.12715950447609803,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -12,
+      "correlation": -0.1237535064886725,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -11,
+      "correlation": 0.07945793502386557,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -10,
+      "correlation": 0.10266557698892989,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -9,
+      "correlation": -0.11572521522150121,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -8,
+      "correlation": -0.10021328705440602,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -7,
+      "correlation": 0.01883361387267344,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -6,
+      "correlation": 0.07257469471699242,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -5,
+      "correlation": -0.04274791421340965,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -4,
+      "correlation": 0.031452737865030174,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -3,
+      "correlation": -0.1434028212160916,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -2,
+      "correlation": 0.06560391813291026,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -1,
+      "correlation": 0.14934776047215728,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 0,
+      "correlation": 0.21998564681890398,
+      "n": 54
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 1,
+      "correlation": 0.09558714878740693,
+      "n": 53
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 2,
+      "correlation": -0.0943068221645694,
+      "n": 52
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 3,
+      "correlation": -0.15671004317007242,
+      "n": 51
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 4,
+      "correlation": -0.11738869871133631,
+      "n": 50
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 5,
+      "correlation": -0.027766238245845933,
+      "n": 49
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 6,
+      "correlation": 0.031024866868277396,
+      "n": 48
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 7,
+      "correlation": 0.16771506399935918,
+      "n": 47
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 8,
+      "correlation": 0.26867715761282324,
+      "n": 46
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 9,
+      "correlation": 0.176801958809667,
+      "n": 45
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 10,
+      "correlation": 0.13002485649545384,
+      "n": 44
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 11,
+      "correlation": -0.3562836298335386,
+      "n": 43
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 12,
+      "correlation": -0.3496302024176619,
+      "n": 42
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 13,
+      "correlation": -0.2523535983342321,
+      "n": 41
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 14,
+      "correlation": -0.06324961886397096,
+      "n": 40
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 15,
+      "correlation": 0.11159596565656472,
+      "n": 39
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 16,
+      "correlation": 0.07658423897228411,
+      "n": 38
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 17,
+      "correlation": -0.04448130236461201,
+      "n": 37
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 18,
+      "correlation": 0.1657407678785702,
+      "n": 36
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -18,
+      "correlation": 0.1540701170299829,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -17,
+      "correlation": 0.10918748971100783,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -16,
+      "correlation": -0.1316246788801647,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -15,
+      "correlation": -0.12751190437774673,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -14,
+      "correlation": -0.12697149116250422,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -13,
+      "correlation": -0.1150304577074788,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -12,
+      "correlation": -0.188124433871224,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -11,
+      "correlation": 0.08691637962409011,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -10,
+      "correlation": 0.22200075774158043,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -9,
+      "correlation": -0.05970068300705804,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -8,
+      "correlation": -0.13129227732185264,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -7,
+      "correlation": -0.035808525780750416,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -6,
+      "correlation": 0.02794608307225361,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -5,
+      "correlation": -0.023868516267870805,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -4,
+      "correlation": 0.03504529567980144,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -3,
+      "correlation": -0.16366695062543887,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -2,
+      "correlation": 0.07639530894067602,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -1,
+      "correlation": 0.15692857547526773,
+      "n": 55
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 0,
+      "correlation": 0.11714354455719328,
+      "n": 54
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 1,
+      "correlation": 0.029058054679097278,
+      "n": 53
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 2,
+      "correlation": -0.06924458735347258,
+      "n": 52
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 3,
+      "correlation": -0.07095476921214827,
+      "n": 51
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 4,
+      "correlation": -0.08342425056296822,
+      "n": 50
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 5,
+      "correlation": -0.05745996053088242,
+      "n": 49
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 6,
+      "correlation": -0.00841696848887796,
+      "n": 48
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 7,
+      "correlation": 0.17342085372627752,
+      "n": 47
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 8,
+      "correlation": 0.273393503633528,
+      "n": 46
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 9,
+      "correlation": 0.1944619453704069,
+      "n": 45
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 10,
+      "correlation": 0.09449369451261481,
+      "n": 44
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 11,
+      "correlation": -0.371998706636825,
+      "n": 43
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 12,
+      "correlation": -0.4330387729284972,
+      "n": 42
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 13,
+      "correlation": -0.23427995469614504,
+      "n": 41
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 14,
+      "correlation": 0.022827949185982244,
+      "n": 40
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 15,
+      "correlation": 0.12282356305837623,
+      "n": 39
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 16,
+      "correlation": 0.15341954291449555,
+      "n": 38
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 17,
+      "correlation": 0.036063540871629246,
+      "n": 37
+    },
+    {
+      "sample": "normal_period",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 18,
+      "correlation": 0.13869356173328196,
+      "n": 36
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": -6,
+      "correlation": 0.041905809248125696,
+      "n": 19
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": -5,
+      "correlation": -0.17105170709437353,
+      "n": 19
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": -4,
+      "correlation": -0.1173611505031818,
+      "n": 19
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": -3,
+      "correlation": -0.08673458920974102,
+      "n": 19
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": -2,
+      "correlation": -0.0650820268600989,
+      "n": 19
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": -1,
+      "correlation": 0.1339022683145756,
+      "n": 19
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 0,
+      "correlation": 0.16300009858548656,
+      "n": 18
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 1,
+      "correlation": -0.28642314002304353,
+      "n": 17
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 2,
+      "correlation": 0.07323842359437321,
+      "n": 16
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 3,
+      "correlation": 0.44180211462846747,
+      "n": 15
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 4,
+      "correlation": -0.5327838537900998,
+      "n": 14
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 5,
+      "correlation": 0.16142621301082555,
+      "n": 13
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 6,
+      "correlation": -0.025043837290582707,
+      "n": 12
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": -6,
+      "correlation": 0.13654728219764872,
+      "n": 19
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": -5,
+      "correlation": -0.19061982774802377,
+      "n": 19
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": -4,
+      "correlation": -0.21904869448467731,
+      "n": 19
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": -3,
+      "correlation": 0.01111139994579555,
+      "n": 19
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": -2,
+      "correlation": -0.04290440393308019,
+      "n": 19
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": -1,
+      "correlation": 0.08298570362482263,
+      "n": 19
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 0,
+      "correlation": 0.07843765887237703,
+      "n": 18
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 1,
+      "correlation": -0.1773083575461692,
+      "n": 17
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 2,
+      "correlation": 0.013024069281852449,
+      "n": 16
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 3,
+      "correlation": 0.4498173754942916,
+      "n": 15
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 4,
+      "correlation": -0.6124147783578278,
+      "n": 14
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 5,
+      "correlation": 0.22239516801464776,
+      "n": 13
+    },
+    {
+      "sample": "normal_period",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 6,
+      "correlation": -0.010771958612100306,
+      "n": 12
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -18,
+      "correlation": 0.05221831146650559,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -17,
+      "correlation": -0.0975816699039049,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -16,
+      "correlation": -0.06673669480351996,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -15,
+      "correlation": -0.14014418410298893,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -14,
+      "correlation": -0.02515664770503943,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -13,
+      "correlation": -0.017566386138955444,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -12,
+      "correlation": -0.12888633443098815,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -11,
+      "correlation": -0.038347193089296815,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -10,
+      "correlation": 0.05092365988642543,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -9,
+      "correlation": 0.04332704726480338,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -8,
+      "correlation": -0.07767965077442429,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -7,
+      "correlation": -0.07652082788527942,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -6,
+      "correlation": 0.04621400222481825,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -5,
+      "correlation": 0.024828839873124776,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -4,
+      "correlation": -0.2806873849061641,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -3,
+      "correlation": -0.09964675048553452,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -2,
+      "correlation": -0.03142527850292519,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": -1,
+      "correlation": 0.0665164061863202,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 0,
+      "correlation": 0.3647736882488146,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 1,
+      "correlation": 0.38704220482088536,
+      "n": 64
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 2,
+      "correlation": -0.15741310157863195,
+      "n": 63
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 3,
+      "correlation": -0.17380056812899236,
+      "n": 62
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 4,
+      "correlation": -0.051442194935466826,
+      "n": 61
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 5,
+      "correlation": 0.029848682491176365,
+      "n": 60
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 6,
+      "correlation": 0.1346234565943697,
+      "n": 59
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 7,
+      "correlation": 0.14986629345396615,
+      "n": 58
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 8,
+      "correlation": 0.10439678731685322,
+      "n": 57
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 9,
+      "correlation": -0.03497072270707933,
+      "n": 56
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 10,
+      "correlation": -0.04039123693148411,
+      "n": 55
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 11,
+      "correlation": -0.007169441950490199,
+      "n": 54
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 12,
+      "correlation": -0.0015154448378767427,
+      "n": 53
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 13,
+      "correlation": 0.013403296793608206,
+      "n": 52
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 14,
+      "correlation": -0.00809302555948346,
+      "n": 51
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 15,
+      "correlation": -0.0738098087049876,
+      "n": 50
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 16,
+      "correlation": -0.06260891623078413,
+      "n": 49
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 17,
+      "correlation": 0.1801555963837264,
+      "n": 48
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "WTI_log_return_1m",
+      "lag": 18,
+      "correlation": 0.07976260743823486,
+      "n": 47
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -18,
+      "correlation": 0.03895387133742646,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -17,
+      "correlation": -0.05356942481608884,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -16,
+      "correlation": -0.035224329927125195,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -15,
+      "correlation": -0.1724723392277994,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -14,
+      "correlation": -0.061232913609636286,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -13,
+      "correlation": -0.005661885325989514,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -12,
+      "correlation": -0.12358235630543157,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -11,
+      "correlation": -0.019931840911372428,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -10,
+      "correlation": 0.05441788415722652,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -9,
+      "correlation": 0.05640316493123163,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -8,
+      "correlation": -0.07980141821741146,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -7,
+      "correlation": -0.11212888499486995,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -6,
+      "correlation": 0.014006467042654559,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -5,
+      "correlation": 0.04896385747106664,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -4,
+      "correlation": -0.28302297415340427,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -3,
+      "correlation": -0.13078084822358904,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -2,
+      "correlation": -0.028825298247932195,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": -1,
+      "correlation": 0.08109160323862838,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 0,
+      "correlation": 0.3686794907028358,
+      "n": 65
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 1,
+      "correlation": 0.36332255338814234,
+      "n": 64
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 2,
+      "correlation": -0.12540009663576215,
+      "n": 63
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 3,
+      "correlation": -0.17231818274656058,
+      "n": 62
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 4,
+      "correlation": -0.07048781465426131,
+      "n": 61
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 5,
+      "correlation": 0.012992496000290898,
+      "n": 60
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 6,
+      "correlation": 0.16240944330701274,
+      "n": 59
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 7,
+      "correlation": 0.179446788270095,
+      "n": 58
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 8,
+      "correlation": 0.09563458731521234,
+      "n": 57
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 9,
+      "correlation": -0.056698833724041144,
+      "n": 56
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 10,
+      "correlation": -0.036106110538260086,
+      "n": 55
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 11,
+      "correlation": -0.0052259373531463454,
+      "n": 54
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 12,
+      "correlation": -0.0022672842119365495,
+      "n": 53
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 13,
+      "correlation": 0.010965110891001,
+      "n": 52
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 14,
+      "correlation": -0.00660846495338787,
+      "n": 51
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 15,
+      "correlation": -0.054943754776860504,
+      "n": 50
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 16,
+      "correlation": -0.07245912348483934,
+      "n": 49
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 17,
+      "correlation": 0.1628463728485937,
+      "n": 48
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "monthly_log_return",
+      "oilMetric": "Brent_log_return_1m",
+      "lag": 18,
+      "correlation": 0.086268271275246,
+      "n": 47
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": -6,
+      "correlation": 0.013375855047156597,
+      "n": 22
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": -5,
+      "correlation": -0.15025288155533303,
+      "n": 22
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": -4,
+      "correlation": -0.03442407524496964,
+      "n": 22
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": -3,
+      "correlation": 0.0840915677341885,
+      "n": 22
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": -2,
+      "correlation": 0.16212677985976703,
+      "n": 22
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": -1,
+      "correlation": -0.12752956935842322,
+      "n": 22
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 0,
+      "correlation": 0.4287680592385514,
+      "n": 22
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 1,
+      "correlation": -0.5041888304605154,
+      "n": 21
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 2,
+      "correlation": 0.22143244191494083,
+      "n": 20
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 3,
+      "correlation": 0.024597906134660848,
+      "n": 19
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 4,
+      "correlation": -0.009769351278911173,
+      "n": 18
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 5,
+      "correlation": -0.013761387129242773,
+      "n": 17
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "WTI_quarterly_return",
+      "lag": 6,
+      "correlation": 0.16953396698819906,
+      "n": 16
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": -6,
+      "correlation": -0.021096694557865475,
+      "n": 22
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": -5,
+      "correlation": -0.16603635282067242,
+      "n": 22
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": -4,
+      "correlation": -0.013972379871046332,
+      "n": 22
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": -3,
+      "correlation": 0.11300363058519436,
+      "n": 22
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": -2,
+      "correlation": 0.10050262692235865,
+      "n": 22
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": -1,
+      "correlation": -0.1570974665452324,
+      "n": 22
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 0,
+      "correlation": 0.41605223771698696,
+      "n": 22
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 1,
+      "correlation": -0.46799309096589586,
+      "n": 21
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 2,
+      "correlation": 0.26290999605639853,
+      "n": 20
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 3,
+      "correlation": -0.0013434872028388733,
+      "n": 19
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 4,
+      "correlation": -0.017614085249387585,
+      "n": 18
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 5,
+      "correlation": 0.0019023661850709212,
+      "n": 17
+    },
+    {
+      "sample": "shock_periods",
+      "metric": "quarterly_return",
+      "oilMetric": "Brent_quarterly_return",
+      "lag": 6,
+      "correlation": 0.1744015333468354,
+      "n": 16
+    }
+  ],
+  "conventions": {
+    "gm2Oil": "positive lag means GM2 leads oil",
+    "oilEquity": "positive lag means stocks lead oil; negative lag means oil leads stocks"
+  },
+  "details": {
+    "gm2": {
+      "plainLanguageSummary": "This chart compares simple GM2-oil correlations across candidate lead times; the locked five-month model comes from rolling validation, not from choosing the tallest correlation point.",
+      "description": "Lag correlation between GM2 YoY and later WTI or Brent YoY.",
+      "howToRead": "Positive lags mean GM2 is observed before oil. Compare the four-month descriptive peak with the five-month locked benchmark marker.",
+      "calculation": {
+        "formula": "corr(GM2_YoY[t-lag], Oil_YoY[t])",
+        "explanation": "Each point uses the common observations available at that lag.",
+        "example": "Lag 5 compares GM2 in January with oil YoY in June."
+      },
+      "patternsToWatch": [
+        "A broad correlation plateau rather than a single isolated peak",
+        "Differences between WTI and Brent"
+      ],
+      "limitations": [
+        "Overlapping YoY changes are autocorrelated; correlation is not out-of-sample performance or causation."
+      ],
+      "sourceNotes": [
+        "Project G4 GM2 aggregate; FRED WTI and Brent"
+      ],
+      "transformation": {
+        "type": "yoy",
+        "referenceStart": null,
+        "referenceEnd": null,
+        "mean": null,
+        "standardDeviation": null
+      }
+    },
+    "equity": {
+      "plainLanguageSummary": "Monthly-return lag correlations are a market-timing robustness check; the relationship is mostly contemporaneous and does not support a general oil-led equity timing rule.",
+      "description": "Lag correlation between monthly S&P 500 and oil log returns.",
+      "howToRead": "Positive lags mean stocks lead oil; negative lags mean oil leads stocks; zero is contemporaneous.",
+      "calculation": {
+        "formula": "corr(SP500_return[t-lag], Oil_return[t])",
+        "explanation": "Returns use non-overlapping one-month log changes.",
+        "example": "Lag -1 asks whether this month's oil return aligns with next month's equity return."
+      },
+      "patternsToWatch": [
+        "Whether correlations away from zero remain meaningful",
+        "Agreement between WTI and Brent"
+      ],
+      "limitations": [
+        "Return correlations can vary by shock regime and do not establish a tradable or causal rule."
+      ],
+      "sourceNotes": [
+        "FRED SP500, DCOILWTICO, and DCOILBRENTEU"
+      ],
+      "transformation": {
+        "type": "raw",
+        "referenceStart": null,
+        "referenceEnd": null,
+        "mean": null,
+        "standardDeviation": null
+      }
+    }
+  }
+}

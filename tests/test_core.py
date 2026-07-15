@@ -157,6 +157,20 @@ class CoreTests(unittest.TestCase):
             "system_signal_hierarchy.csv",
             "final_system_interpretation.md",
             "final_time_series_chart_notes.md",
+            "system_response_framework.md",
+            "system_response_indicator_catalogue.csv",
+            "system_response_current_state.csv",
+            "energy_burden_findings.md",
+            "energy_burden_validation.csv",
+            "physical_tightness_findings.md",
+            "physical_tightness_summary.csv",
+            "labour_early_warning_findings.md",
+            "labour_early_warning_summary.csv",
+            "historical_episode_library.md",
+            "historical_episode_library.csv",
+            "economic_output_quality.md",
+            "economic_output_quality.csv",
+            "energy_output_quality_correlations.csv",
         ]
         required_charts = [
             "residual_vs_ci_zscore.png",
@@ -191,6 +205,17 @@ class CoreTests(unittest.TestCase):
             "final_gm2_leads_oil_time_series.png",
             "final_oil_residual_ci_time_series.png",
             "final_energy_gdp_time_series.png",
+            "system_response_chain.png",
+            "current_state_layers.png",
+            "physical_tightness_dashboard.png",
+            "energy_burden_dashboard.png",
+            "demand_destruction_cycle.png",
+            "industrial_transmission.png",
+            "labour_early_warning_indicators.png",
+            "household_stress_indicators.png",
+            "historical_episode_comparison.png",
+            "regime_timeline.png",
+            "indicator_lag_map.png",
         ]
         with TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -210,6 +235,7 @@ class CoreTests(unittest.TestCase):
                 patch("oil_model.pipeline.energy_gdp_suite", fake_energy_gdp_suite),
                 patch("oil_model.pipeline.integrated_synthesis_suite", fake_integrated_synthesis_suite),
                 patch("oil_model.pipeline.make_charts", fake_make_charts),
+                patch("oil_model.pipeline.make_system_response_charts", fake_make_system_response_charts),
             ):
                 build(root)
             self.assertTrue((root / "data" / "raw").exists())
@@ -217,6 +243,8 @@ class CoreTests(unittest.TestCase):
                 self.assertTrue((root / "analysis" / filename).exists(), filename)
             for filename in required_charts:
                 self.assertTrue((root / "charts" / filename).exists(), filename)
+            for filename in ["manifest.json", "oil-price-layers.json", "gm2-oil-lead.json", "oil-residual-ci.json", "energy-gdp.json", "oil-equities.json", "uso-tracking.json", "lag-results.json", "regimes.json", "events.json", "cross-layer.json"]:
+                self.assertTrue((root / "website" / "public" / "generated" / filename).exists(), filename)
 
 
 def fake_series(name: str, observations: list[tuple[str, float]]):
@@ -257,6 +285,46 @@ class FakeFredAdapter:
             "INDPRO": (100.0, 0.1),
             "DCOILWTICO": (60.0, 0.1),
             "DCOILBRENTEU": (65.0, 0.1),
+            "POPTHM": (300_000.0, 100.0),
+            "DNRGRC1M027SBEA": (1_000.0, 1.0),
+            "DSPI": (18_000.0, 10.0),
+            "DSPIC96": (15_000.0, 8.0),
+            "CPIENGSL": (220.0, 0.3),
+            "FEDFUNDS": (2.0, 0.01),
+            "DRTSCILM": (0.0, 0.1),
+            "GDP": (20_000.0, 20.0),
+            "IPMAN": (100.0, 0.1),
+            "PCEC96": (14_000.0, 10.0),
+            "PNFIC1": (3_000.0, 4.0),
+            "OPHNFB": (100.0, 0.1),
+            "AWHMAN": (40.0, 0.001),
+            "TEMPHELPS": (2_500.0, 1.0),
+            "LNS12500000": (120_000.0, 20.0),
+            "CE16OV": (150_000.0, 25.0),
+            "LNS12032194": (4_000.0, 1.0),
+            "LNS12300060": (78.0, 0.01),
+            "CES0500000003": (25.0, 0.03),
+            "UMCSENT": (85.0, 0.01),
+            "DRCCLACBS": (2.5, 0.001),
+            "UNRATE": (5.0, -0.001),
+            "USREC": (0.0, 0.0),
+            "A939RX0Q048SBEA": (55_000.0, 20.0),
+            "A261RX1Q020SBEA": (18_000.0, 20.0),
+            "LB0000031Q020SBEA": (17_000.0, 18.0),
+            "A362RX1A020NBEA": (15_000.0, 15.0),
+            "W171RC1Q027SBEA": (1_000.0, 2.0),
+            "A262RX1Q020SBEA": (3_000.0, 3.0),
+            "MEHOINUSA672N": (70_000.0, 30.0),
+            "LES1252881600Q": (350.0, 0.1),
+            "CXUSHELTERLB0101M": (15_000.0, 10.0),
+            "CXUFOODTOTLLB0101M": (9_000.0, 5.0),
+            "CXUUTILSLB0101M": (4_000.0, 3.0),
+            "VAPGDPFI": (8.0, 0.001),
+            "VAPGDPRL": (13.0, 0.001),
+            "TDSP": (10.0, 0.001),
+            "CMDEBT": (18_000.0, 10.0),
+            "DDDM01USA156NWDB": (150.0, 0.05),
+            "TSIFRGHT": (100.0, 0.05),
         }
         base, step = values[series_id]
         return fake_series_range(series_id, base, step)
@@ -293,6 +361,9 @@ class FakeEiaInventoryAdapter:
 
     def fetch_crude_stocks_ex_spr(self):
         return fake_series_range("inv", 400_000.0, 100.0)
+
+    def fetch_weekly_series(self, series_id, name, unit):
+        return fake_series_range(name, 88.0, 0.01)
 
 
 class FakeEiaMerAdapter:
@@ -385,6 +456,24 @@ def fake_make_charts(rows, lag_rows, out_dir, residual_rows=None, rolling_rows=N
         "final_gm2_leads_oil_time_series.png",
         "final_oil_residual_ci_time_series.png",
         "final_energy_gdp_time_series.png",
+    ]:
+        (out_dir / filename).write_bytes(b"png")
+
+
+def fake_make_system_response_charts(core, current, energy_validation, physical, labour, episodes, out_dir):
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for filename in [
+        "system_response_chain.png",
+        "current_state_layers.png",
+        "physical_tightness_dashboard.png",
+        "energy_burden_dashboard.png",
+        "demand_destruction_cycle.png",
+        "industrial_transmission.png",
+        "labour_early_warning_indicators.png",
+        "household_stress_indicators.png",
+        "historical_episode_comparison.png",
+        "regime_timeline.png",
+        "indicator_lag_map.png",
     ]:
         (out_dir / filename).write_bytes(b"png")
 

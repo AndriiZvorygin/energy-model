@@ -1,0 +1,4594 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "oil-price-layers",
+  "title": "Oil price layers",
+  "description": "Benchmark, realised refiner cost, and investor-accessible oil exposure.",
+  "plainLanguageSummary": "Benchmark, realised refiner cost, and investor-accessible oil exposure.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Raw monthly values. Transformations are calculated in-browser within each series; indexed = 100 at first visible observation.",
+    "explanation": "USO is a share price and must not be read on a barrel-price axis in raw mode.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "USO is a share price and must not be read on a barrel-price axis in raw mode."
+  ],
+  "sourceNotes": [
+    "FRED DCOILWTICO",
+    "FRED DCOILBRENTEU",
+    "EIA R0000____3",
+    "Yahoo-compatible chart data",
+    "FRED WTI / CPIAUCSL",
+    "FRED Brent / CPIAUCSL"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2007-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "WTI": {
+        "mean": 73.67095102366699,
+        "standardDeviation": 22.70265940077297,
+        "n": 156
+      },
+      "Brent": {
+        "mean": 78.9551407140101,
+        "standardDeviation": 25.610960542641315,
+        "n": 156
+      },
+      "RAC_composite": {
+        "mean": 73.62525641025641,
+        "standardDeviation": 23.63741418373059,
+        "n": 156
+      },
+      "USO": {
+        "mean": 254.47282023307605,
+        "standardDeviation": 166.7191792208035,
+        "n": 156
+      },
+      "real_WTI": {
+        "mean": 32.16056562102283,
+        "standardDeviation": 10.661743246386171,
+        "n": 156
+      },
+      "real_Brent": {
+        "mean": 34.401909014467584,
+        "standardDeviation": 11.727196020967934,
+        "n": 156
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "1986-01-01",
+    "end": "2026-06-01"
+  },
+  "series": [
+    {
+      "key": "WTI",
+      "label": "WTI",
+      "unit": "USD per barrel",
+      "source": "FRED DCOILWTICO",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "zscore",
+        "pct_change"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "Brent",
+      "label": "Brent",
+      "unit": "USD per barrel",
+      "source": "FRED DCOILBRENTEU",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#2563eb",
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "zscore",
+        "pct_change"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "RAC_composite",
+      "label": "RAC composite",
+      "unit": "USD per barrel",
+      "source": "EIA R0000____3",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#7c3aed",
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "zscore",
+        "pct_change"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "USO",
+      "label": "USO adjusted close",
+      "unit": "USD per share",
+      "source": "Yahoo-compatible chart data",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#d97706",
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "zscore",
+        "pct_change"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "real_WTI",
+      "label": "Real WTI",
+      "unit": "CPI-base USD per barrel",
+      "source": "FRED WTI / CPIAUCSL",
+      "status": "derived",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#15803d",
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "zscore",
+        "pct_change"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "real_Brent",
+      "label": "Real Brent",
+      "unit": "CPI-base USD per barrel",
+      "source": "FRED Brent / CPIAUCSL",
+      "status": "derived",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#1d4ed8",
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "zscore",
+        "pct_change"
+      ],
+      "finalObservationDate": "2026-05-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1986-01-01",
+      "WTI": 22.925454545454546,
+      "Brent": null,
+      "RAC_composite": 25.63,
+      "USO": null,
+      "real_WTI": 20.860286210604684,
+      "real_Brent": null
+    },
+    {
+      "date": "1986-02-01",
+      "WTI": 15.454736842105262,
+      "Brent": null,
+      "RAC_composite": 19.76,
+      "USO": null,
+      "real_WTI": 14.088183083049465,
+      "real_Brent": null
+    },
+    {
+      "date": "1986-03-01",
+      "WTI": 12.6125,
+      "Brent": null,
+      "RAC_composite": 14.8,
+      "USO": null,
+      "real_WTI": 11.560494958753438,
+      "real_Brent": null
+    },
+    {
+      "date": "1986-04-01",
+      "WTI": 12.843636363636364,
+      "Brent": null,
+      "RAC_composite": 13.05,
+      "USO": null,
+      "real_WTI": 11.81567282763235,
+      "real_Brent": null
+    },
+    {
+      "date": "1986-05-01",
+      "WTI": 15.377619047619048,
+      "Brent": null,
+      "RAC_composite": 13.05,
+      "USO": null,
+      "real_WTI": 14.10790738313674,
+      "real_Brent": null
+    },
+    {
+      "date": "1986-06-01",
+      "WTI": 13.425714285714285,
+      "Brent": null,
+      "RAC_composite": 12.83,
+      "USO": null,
+      "real_WTI": 12.27213371637503,
+      "real_Brent": null
+    },
+    {
+      "date": "1986-07-01",
+      "WTI": 11.584545454545456,
+      "Brent": null,
+      "RAC_composite": 11.26,
+      "USO": null,
+      "real_WTI": 10.579493565794937,
+      "real_Brent": null
+    },
+    {
+      "date": "1986-08-01",
+      "WTI": 15.096666666666666,
+      "Brent": null,
+      "RAC_composite": 11.93,
+      "USO": null,
+      "real_WTI": 13.77433090024331,
+      "real_Brent": null
+    },
+    {
+      "date": "1986-09-01",
+      "WTI": 14.866666666666665,
+      "Brent": null,
+      "RAC_composite": 13.13,
+      "USO": null,
+      "real_WTI": 13.515151515151512,
+      "real_Brent": null
+    },
+    {
+      "date": "1986-10-01",
+      "WTI": 14.896818181818183,
+      "Brent": null,
+      "RAC_composite": 13.05,
+      "USO": null,
+      "real_WTI": 13.517983831050982,
+      "real_Brent": null
+    },
+    {
+      "date": "1986-11-01",
+      "WTI": 15.22157894736842,
+      "Brent": null,
+      "RAC_composite": 13.3,
+      "USO": null,
+      "real_WTI": 13.787662090007625,
+      "real_Brent": null
+    },
+    {
+      "date": "1986-12-01",
+      "WTI": 16.107619047619046,
+      "Brent": null,
+      "RAC_composite": 13.84,
+      "USO": null,
+      "real_WTI": 14.537562317345712,
+      "real_Brent": null
+    },
+    {
+      "date": "1987-01-01",
+      "WTI": 18.65142857142857,
+      "Brent": null,
+      "RAC_composite": 16.16,
+      "USO": null,
+      "real_WTI": 16.742754552449345,
+      "real_Brent": null
+    },
+    {
+      "date": "1987-02-01",
+      "WTI": 17.748947368421053,
+      "Brent": null,
+      "RAC_composite": 16.83,
+      "USO": null,
+      "real_WTI": 15.875623764240657,
+      "real_Brent": null
+    },
+    {
+      "date": "1987-03-01",
+      "WTI": 18.302857142857142,
+      "Brent": null,
+      "RAC_composite": 17.04,
+      "USO": null,
+      "real_WTI": 16.312706900942192,
+      "real_Brent": null
+    },
+    {
+      "date": "1987-04-01",
+      "WTI": 18.677142857142858,
+      "Brent": null,
+      "RAC_composite": 17.44,
+      "USO": null,
+      "real_WTI": 16.572442641652934,
+      "real_Brent": null
+    },
+    {
+      "date": "1987-05-01",
+      "WTI": 19.4375,
+      "Brent": 18.58,
+      "RAC_composite": 17.85,
+      "USO": null,
+      "real_WTI": 17.20132743362832,
+      "real_Brent": 16.442477876106196
+    },
+    {
+      "date": "1987-06-01",
+      "WTI": 20.07318181818182,
+      "Brent": 18.86047619047619,
+      "RAC_composite": 18.47,
+      "USO": null,
+      "real_WTI": 17.685622747296758,
+      "real_Brent": 16.61715963918607
+    },
+    {
+      "date": "1987-07-01",
+      "WTI": 21.342173913043478,
+      "Brent": 19.856521739130436,
+      "RAC_composite": 19.13,
+      "USO": null,
+      "real_WTI": 18.754107129212198,
+      "real_Brent": 17.44861312753114
+    },
+    {
+      "date": "1987-08-01",
+      "WTI": 20.310952380952383,
+      "Brent": 18.97952380952381,
+      "RAC_composite": 19.36,
+      "USO": null,
+      "real_WTI": 17.769862100570762,
+      "real_Brent": 16.60500770736991
+    },
+    {
+      "date": "1987-09-01",
+      "WTI": 19.529999999999998,
+      "Brent": 18.313181818181818,
+      "RAC_composite": 18.57,
+      "USO": null,
+      "real_WTI": 17.027027027027025,
+      "real_Brent": 15.966156772608384
+    },
+    {
+      "date": "1987-10-01",
+      "WTI": 19.85909090909091,
+      "Brent": 18.757727272727273,
+      "RAC_composite": 18.43,
+      "USO": null,
+      "real_WTI": 17.268774703557312,
+      "real_Brent": 16.31106719367589
+    },
+    {
+      "date": "1987-11-01",
+      "WTI": 18.854,
+      "Brent": 17.780952380952378,
+      "RAC_composite": 18.02,
+      "USO": null,
+      "real_WTI": 16.33795493934142,
+      "real_Brent": 15.408104316249892
+    },
+    {
+      "date": "1987-12-01",
+      "WTI": 17.274545454545457,
+      "Brent": 17.05409090909091,
+      "RAC_composite": 17.09,
+      "USO": null,
+      "real_WTI": 14.943378420887075,
+      "real_Brent": 14.752673796791445
+    },
+    {
+      "date": "1988-01-01",
+      "WTI": 17.1295,
+      "Brent": 16.749444444444446,
+      "RAC_composite": 15.68,
+      "USO": null,
+      "real_WTI": 14.766810344827588,
+      "real_Brent": 14.43917624521073
+    },
+    {
+      "date": "1988-02-01",
+      "WTI": 16.795714285714286,
+      "Brent": 15.729523809523808,
+      "RAC_composite": 15.53,
+      "USO": null,
+      "real_WTI": 14.454143103024343,
+      "real_Brent": 13.53659536103598
+    },
+    {
+      "date": "1988-03-01",
+      "WTI": 16.19739130434783,
+      "Brent": 14.731304347826086,
+      "RAC_composite": 14.84,
+      "USO": null,
+      "real_WTI": 13.90334017540586,
+      "real_Brent": 12.644896435902218
+    },
+    {
+      "date": "1988-04-01",
+      "WTI": 17.8625,
+      "Brent": 16.59526315789474,
+      "RAC_composite": 15.77,
+      "USO": null,
+      "real_WTI": 15.241040955631401,
+      "real_Brent": 14.159780851446023
+    },
+    {
+      "date": "1988-05-01",
+      "WTI": 17.423636363636362,
+      "Brent": 16.314090909090908,
+      "RAC_composite": 16.18,
+      "USO": null,
+      "real_WTI": 14.828626692456478,
+      "real_Brent": 13.884332688588007
+    },
+    {
+      "date": "1988-06-01",
+      "WTI": 16.527727272727272,
+      "Brent": 15.543636363636363,
+      "RAC_composite": 15.65,
+      "USO": null,
+      "real_WTI": 14.006548536209554,
+      "real_Brent": 13.172573189522343
+    },
+    {
+      "date": "1988-07-01",
+      "WTI": 15.497499999999999,
+      "Brent": 14.907619047619047,
+      "RAC_composite": 14.71,
+      "USO": null,
+      "real_WTI": 13.078059071729957,
+      "real_Brent": 12.580269238497085
+    },
+    {
+      "date": "1988-08-01",
+      "WTI": 15.523478260869567,
+      "Brent": 14.89391304347826,
+      "RAC_composite": 14.34,
+      "USO": null,
+      "real_WTI": 13.044939715016444,
+      "real_Brent": 12.515893313847279
+    },
+    {
+      "date": "1988-09-01",
+      "WTI": 14.535454545454543,
+      "Brent": 13.179545454545455,
+      "RAC_composite": 13.91,
+      "USO": null,
+      "real_WTI": 12.1635602890833,
+      "real_Brent": 11.02890833016356
+    },
+    {
+      "date": "1988-10-01",
+      "WTI": 13.770476190476192,
+      "Brent": 12.405714285714286,
+      "RAC_composite": 12.96,
+      "USO": null,
+      "real_WTI": 11.484967631756623,
+      "real_Brent": 10.346717502680805
+    },
+    {
+      "date": "1988-11-01",
+      "WTI": 14.141363636363637,
+      "Brent": 13.024545454545455,
+      "RAC_composite": 12.63,
+      "USO": null,
+      "real_WTI": 11.755081991989723,
+      "real_Brent": 10.826721076097634
+    },
+    {
+      "date": "1988-12-01",
+      "WTI": 16.382380952380952,
+      "Brent": 15.306666666666667,
+      "RAC_composite": 13.98,
+      "USO": null,
+      "real_WTI": 13.57280940545232,
+      "real_Brent": 12.681579674123169
+    },
+    {
+      "date": "1989-01-01",
+      "WTI": 18.024285714285714,
+      "Brent": 17.171904761904763,
+      "RAC_composite": 15.73,
+      "USO": null,
+      "real_WTI": 14.871522866572372,
+      "real_Brent": 14.16823825239667
+    },
+    {
+      "date": "1989-02-01",
+      "WTI": 17.936500000000002,
+      "Brent": 16.8885,
+      "RAC_composite": 16.32,
+      "USO": null,
+      "real_WTI": 14.75041118421053,
+      "real_Brent": 13.88856907894737
+    },
+    {
+      "date": "1989-03-01",
+      "WTI": 19.48409090909091,
+      "Brent": 18.700952380952383,
+      "RAC_composite": 17.52,
+      "USO": null,
+      "real_WTI": 15.944427912513019,
+      "real_Brent": 15.303561686540412
+    },
+    {
+      "date": "1989-04-01",
+      "WTI": 21.069,
+      "Brent": 20.319499999999998,
+      "RAC_composite": 19.22,
+      "USO": null,
+      "real_WTI": 17.115353371242893,
+      "real_Brent": 16.506498781478474
+    },
+    {
+      "date": "1989-05-01",
+      "WTI": 20.123478260869565,
+      "Brent": 18.633181818181818,
+      "RAC_composite": 19.03,
+      "USO": null,
+      "real_WTI": 16.267969491406276,
+      "real_Brent": 15.063202763283602
+    },
+    {
+      "date": "1989-06-01",
+      "WTI": 20.050454545454546,
+      "Brent": 17.670909090909092,
+      "RAC_composite": 18.43,
+      "USO": null,
+      "real_WTI": 16.15669181744927,
+      "real_Brent": 14.239249871804265
+    },
+    {
+      "date": "1989-07-01",
+      "WTI": 19.781428571428574,
+      "Brent": 17.622857142857143,
+      "RAC_composite": 18.18,
+      "USO": null,
+      "real_WTI": 15.888697647733792,
+      "real_Brent": 14.154905335628225
+    },
+    {
+      "date": "1989-08-01",
+      "WTI": 18.577826086956524,
+      "Brent": 16.77,
+      "RAC_composite": 17.23,
+      "USO": null,
+      "real_WTI": 14.921948664222105,
+      "real_Brent": 13.469879518072288
+    },
+    {
+      "date": "1989-09-01",
+      "WTI": 19.591428571428573,
+      "Brent": 17.766190476190474,
+      "RAC_composite": 17.66,
+      "USO": null,
+      "real_WTI": 15.698260073260075,
+      "real_Brent": 14.235729548229546
+    },
+    {
+      "date": "1989-10-01",
+      "WTI": 20.097727272727273,
+      "Brent": 18.907727272727275,
+      "RAC_composite": 18.24,
+      "USO": null,
+      "real_WTI": 16.026895751776134,
+      "real_Brent": 15.077932434391766
+    },
+    {
+      "date": "1989-11-01",
+      "WTI": 19.85590909090909,
+      "Brent": 18.727272727272727,
+      "RAC_composite": 18.39,
+      "USO": null,
+      "real_WTI": 15.771174814065995,
+      "real_Brent": 14.87472019640407
+    },
+    {
+      "date": "1989-12-01",
+      "WTI": 21.1,
+      "Brent": 19.838947368421053,
+      "RAC_composite": 19.54,
+      "USO": null,
+      "real_WTI": 16.706254948535236,
+      "real_Brent": 15.707796807934326
+    },
+    {
+      "date": "1990-01-01",
+      "WTI": 22.86318181818182,
+      "Brent": 21.251818181818184,
+      "RAC_composite": 20.64,
+      "USO": null,
+      "real_WTI": 17.931907308377898,
+      "real_Brent": 16.668092691622107
+    },
+    {
+      "date": "1990-02-01",
+      "WTI": 22.113,
+      "Brent": 19.813499999999998,
+      "RAC_composite": 20.31,
+      "USO": null,
+      "real_WTI": 17.275781249999998,
+      "real_Brent": 15.479296874999998
+    },
+    {
+      "date": "1990-03-01",
+      "WTI": 20.387727272727275,
+      "Brent": 18.387272727272727,
+      "RAC_composite": 19.14,
+      "USO": null,
+      "real_WTI": 15.853598190301147,
+      "real_Brent": 14.298034780149864
+    },
+    {
+      "date": "1990-04-01",
+      "WTI": 18.4255,
+      "Brent": 16.612105263157893,
+      "RAC_composite": 17.05,
+      "USO": null,
+      "real_WTI": 14.294414274631496,
+      "real_Brent": 12.88759136009146
+    },
+    {
+      "date": "1990-05-01",
+      "WTI": 18.199545454545454,
+      "Brent": 16.352272727272727,
+      "RAC_composite": 16.27,
+      "USO": null,
+      "real_WTI": 14.097246672769524,
+      "real_Brent": 12.66636152383635
+    },
+    {
+      "date": "1990-06-01",
+      "WTI": 16.695238095238096,
+      "Brent": 15.104761904761904,
+      "RAC_composite": 15.11,
+      "USO": null,
+      "real_WTI": 12.852377286557424,
+      "real_Brent": 11.62799222845412
+    },
+    {
+      "date": "1990-07-01",
+      "WTI": 18.454090909090908,
+      "Brent": 17.16909090909091,
+      "RAC_composite": 16.19,
+      "USO": null,
+      "real_WTI": 14.141065830721002,
+      "real_Brent": 13.15639150121909
+    },
+    {
+      "date": "1990-08-01",
+      "WTI": 27.307391304347828,
+      "Brent": 27.167391304347827,
+      "RAC_composite": 23.55,
+      "USO": null,
+      "real_WTI": 20.750297343729354,
+      "real_Brent": 20.64391436500595
+    },
+    {
+      "date": "1990-09-01",
+      "WTI": 33.5075,
+      "Brent": 34.899,
+      "RAC_composite": 30.03,
+      "USO": null,
+      "real_WTI": 25.28867924528302,
+      "real_Brent": 26.338867924528305
+    },
+    {
+      "date": "1990-10-01",
+      "WTI": 36.039565217391306,
+      "Brent": 36.022608695652174,
+      "RAC_composite": 33.14,
+      "USO": null,
+      "real_WTI": 27.016165830128415,
+      "real_Brent": 27.00345479434196
+    },
+    {
+      "date": "1990-11-01",
+      "WTI": 32.33227272727272,
+      "Brent": 33.06727272727273,
+      "RAC_composite": 30.52,
+      "USO": null,
+      "real_WTI": 24.182702114639284,
+      "real_Brent": 24.732440334534576
+    },
+    {
+      "date": "1990-12-01",
+      "WTI": 27.281,
+      "Brent": 28.273500000000002,
+      "RAC_composite": 26.09,
+      "USO": null,
+      "real_WTI": 20.32861400894188,
+      "real_Brent": 21.068181818181824
+    },
+    {
+      "date": "1991-01-01",
+      "WTI": 25.23409090909091,
+      "Brent": 23.566363636363636,
+      "RAC_composite": 22.85,
+      "USO": null,
+      "real_WTI": 18.733549301478032,
+      "real_Brent": 17.495444421947763
+    },
+    {
+      "date": "1991-02-01",
+      "WTI": 20.4775,
+      "Brent": 19.536,
+      "RAC_composite": 19.03,
+      "USO": null,
+      "real_WTI": 15.191023738872403,
+      "real_Brent": 14.492581602373887
+    },
+    {
+      "date": "1991-03-01",
+      "WTI": 19.9015,
+      "Brent": 19.0825,
+      "RAC_composite": 17.89,
+      "USO": null,
+      "real_WTI": 14.763724035608307,
+      "real_Brent": 14.156157270029672
+    },
+    {
+      "date": "1991-04-01",
+      "WTI": 20.83,
+      "Brent": 19.18,
+      "RAC_composite": 18.46,
+      "USO": null,
+      "real_WTI": 15.418208734270909,
+      "real_Brent": 14.196891191709845
+    },
+    {
+      "date": "1991-05-01",
+      "WTI": 21.23227272727273,
+      "Brent": 19.186818181818182,
+      "RAC_composite": 18.7,
+      "USO": null,
+      "real_WTI": 15.658018235451866,
+      "real_Brent": 14.149570930544384
+    },
+    {
+      "date": "1991-06-01",
+      "WTI": 20.189,
+      "Brent": 18.1675,
+      "RAC_composite": 17.98,
+      "USO": null,
+      "real_WTI": 14.84485294117647,
+      "real_Brent": 13.35845588235294
+    },
+    {
+      "date": "1991-07-01",
+      "WTI": 21.40304347826087,
+      "Brent": 19.39695652173913,
+      "RAC_composite": 18.57,
+      "USO": null,
+      "real_WTI": 15.71442252442061,
+      "real_Brent": 14.24152461214327
+    },
+    {
+      "date": "1991-08-01",
+      "WTI": 21.69363636363636,
+      "Brent": 19.772727272727273,
+      "RAC_composite": 18.92,
+      "USO": null,
+      "real_WTI": 15.881139358445362,
+      "real_Brent": 14.47491015573007
+    },
+    {
+      "date": "1991-09-01",
+      "WTI": 21.8865,
+      "Brent": 20.50190476190476,
+      "RAC_composite": 19.17,
+      "USO": null,
+      "real_WTI": 15.975547445255474,
+      "real_Brent": 14.964893986791795
+    },
+    {
+      "date": "1991-10-01",
+      "WTI": 23.23086956521739,
+      "Brent": 22.20608695652174,
+      "RAC_composite": 20.16,
+      "USO": null,
+      "real_WTI": 16.9321206743567,
+      "real_Brent": 16.185194574724303
+    },
+    {
+      "date": "1991-11-01",
+      "WTI": 22.46095238095238,
+      "Brent": 21.108571428571427,
+      "RAC_composite": 19.72,
+      "USO": null,
+      "real_WTI": 16.299675167599695,
+      "real_Brent": 15.318266639021353
+    },
+    {
+      "date": "1991-12-01",
+      "WTI": 19.49809523809524,
+      "Brent": 18.41095238095238,
+      "RAC_composite": 17.56,
+      "USO": null,
+      "real_WTI": 14.108607263455312,
+      "real_Brent": 13.32196264902488
+    },
+    {
+      "date": "1992-01-01",
+      "WTI": 18.785454545454545,
+      "Brent": 18.163636363636364,
+      "RAC_composite": 16.5,
+      "USO": null,
+      "real_WTI": 13.58311970025636,
+      "real_Brent": 13.133504239794913
+    },
+    {
+      "date": "1992-02-01",
+      "WTI": 19.0125,
+      "Brent": 18.0535,
+      "RAC_composite": 16.3,
+      "USO": null,
+      "real_WTI": 13.717532467532468,
+      "real_Brent": 13.025613275613276
+    },
+    {
+      "date": "1992-03-01",
+      "WTI": 18.921818181818182,
+      "Brent": 17.63090909090909,
+      "RAC_composite": 16.56,
+      "USO": null,
+      "real_WTI": 13.603032481537154,
+      "real_Brent": 12.67498856283903
+    },
+    {
+      "date": "1992-04-01",
+      "WTI": 20.23,
+      "Brent": 18.91904761904762,
+      "RAC_composite": 17.66,
+      "USO": null,
+      "real_WTI": 14.512195121951219,
+      "real_Brent": 13.571770171483228
+    },
+    {
+      "date": "1992-05-01",
+      "WTI": 20.9755,
+      "Brent": 19.8885,
+      "RAC_composite": 18.83,
+      "USO": null,
+      "real_WTI": 15.014674302075878,
+      "real_Brent": 14.236578382247677
+    },
+    {
+      "date": "1992-06-01",
+      "WTI": 22.384545454545453,
+      "Brent": 21.15818181818182,
+      "RAC_composite": 19.99,
+      "USO": null,
+      "real_WTI": 15.977548504315099,
+      "real_Brent": 15.102199727467394
+    },
+    {
+      "date": "1992-07-01",
+      "WTI": 21.77521739130435,
+      "Brent": 20.236521739130435,
+      "RAC_composite": 20.1,
+      "USO": null,
+      "real_WTI": 15.498375367476404,
+      "real_Brent": 14.40321831966579
+    },
+    {
+      "date": "1992-08-01",
+      "WTI": 21.33904761904762,
+      "Brent": 19.738095238095237,
+      "RAC_composite": 19.56,
+      "USO": null,
+      "real_WTI": 15.155573593073592,
+      "real_Brent": 14.018533549783548
+    },
+    {
+      "date": "1992-09-01",
+      "WTI": 21.881363636363634,
+      "Brent": 20.27,
+      "RAC_composite": 19.59,
+      "USO": null,
+      "real_WTI": 15.50769924618259,
+      "real_Brent": 14.3656980864635
+    },
+    {
+      "date": "1992-10-01",
+      "WTI": 21.68590909090909,
+      "Brent": 20.26181818181818,
+      "RAC_composite": 19.49,
+      "USO": null,
+      "real_WTI": 15.304099570154616,
+      "real_Brent": 14.299095400012833
+    },
+    {
+      "date": "1992-11-01",
+      "WTI": 20.3385,
+      "Brent": 19.214285714285715,
+      "RAC_composite": 18.66,
+      "USO": null,
+      "real_WTI": 14.312807881773399,
+      "real_Brent": 13.521664823564894
+    },
+    {
+      "date": "1992-12-01",
+      "WTI": 19.41409090909091,
+      "Brent": 18.13952380952381,
+      "RAC_composite": 17.43,
+      "USO": null,
+      "real_WTI": 13.643071615664729,
+      "real_Brent": 12.747381454338585
+    },
+    {
+      "date": "1993-01-01",
+      "WTI": 19.032,
+      "Brent": 17.386000000000003,
+      "RAC_composite": 17.11,
+      "USO": null,
+      "real_WTI": 13.327731092436974,
+      "real_Brent": 12.175070028011206
+    },
+    {
+      "date": "1993-02-01",
+      "WTI": 20.086111111111112,
+      "Brent": 18.466315789473686,
+      "RAC_composite": 17.64,
+      "USO": null,
+      "real_WTI": 14.036415870797422,
+      "real_Brent": 12.904483430799221
+    },
+    {
+      "date": "1993-03-01",
+      "WTI": 20.32217391304348,
+      "Brent": 18.785217391304347,
+      "RAC_composite": 18.08,
+      "USO": null,
+      "real_WTI": 14.181558906520221,
+      "real_Brent": 13.10901422980066
+    },
+    {
+      "date": "1993-04-01",
+      "WTI": 20.2525,
+      "Brent": 18.674500000000002,
+      "RAC_composite": 18.42,
+      "USO": null,
+      "real_WTI": 14.083796940194715,
+      "real_Brent": 12.98643949930459
+    },
+    {
+      "date": "1993-05-01",
+      "WTI": 19.9495,
+      "Brent": 18.507894736842104,
+      "RAC_composite": 18.16,
+      "USO": null,
+      "real_WTI": 13.834604715672677,
+      "real_Brent": 12.834878458281626
+    },
+    {
+      "date": "1993-06-01",
+      "WTI": 19.09409090909091,
+      "Brent": 17.652727272727272,
+      "RAC_composite": 17.26,
+      "USO": null,
+      "real_WTI": 13.232218232218232,
+      "real_Brent": 12.233352233352232
+    },
+    {
+      "date": "1993-07-01",
+      "WTI": 17.89,
+      "Brent": 16.775454545454547,
+      "RAC_composite": 16.1,
+      "USO": null,
+      "real_WTI": 12.380622837370241,
+      "real_Brent": 11.609311104120794
+    },
+    {
+      "date": "1993-08-01",
+      "WTI": 18.01090909090909,
+      "Brent": 16.696190476190477,
+      "RAC_composite": 15.83,
+      "USO": null,
+      "real_WTI": 12.438473129080863,
+      "real_Brent": 11.53051828466193
+    },
+    {
+      "date": "1993-09-01",
+      "WTI": 17.504285714285714,
+      "Brent": 16.01181818181818,
+      "RAC_composite": 15.59,
+      "USO": null,
+      "real_WTI": 12.07192118226601,
+      "real_Brent": 11.042633228840126
+    },
+    {
+      "date": "1993-10-01",
+      "WTI": 18.153333333333332,
+      "Brent": 16.606666666666666,
+      "RAC_composite": 15.81,
+      "USO": null,
+      "real_WTI": 12.467948717948717,
+      "real_Brent": 11.405677655677655
+    },
+    {
+      "date": "1993-11-01",
+      "WTI": 16.60904761904762,
+      "Brent": 15.196363636363635,
+      "RAC_composite": 14.51,
+      "USO": null,
+      "real_WTI": 11.376060013046315,
+      "real_Brent": 10.408468244084682
+    },
+    {
+      "date": "1993-12-01",
+      "WTI": 14.514761904761905,
+      "Brent": 13.725714285714286,
+      "RAC_composite": 12.51,
+      "USO": null,
+      "real_WTI": 9.921231650554958,
+      "real_Brent": 9.381896299189531
+    },
+    {
+      "date": "1994-01-01",
+      "WTI": 15.026666666666667,
+      "Brent": 14.2915,
+      "RAC_composite": 12.83,
+      "USO": null,
+      "real_WTI": 10.271132376395535,
+      "real_Brent": 9.768626110731374
+    },
+    {
+      "date": "1994-02-01",
+      "WTI": 14.78105263157895,
+      "Brent": 13.802000000000001,
+      "RAC_composite": 13.07,
+      "USO": null,
+      "real_WTI": 10.075700498690491,
+      "real_Brent": 9.408316291751877
+    },
+    {
+      "date": "1994-03-01",
+      "WTI": 14.680869565217392,
+      "Brent": 13.822608695652175,
+      "RAC_composite": 13.16,
+      "USO": null,
+      "real_WTI": 9.980196849230044,
+      "real_Brent": 9.396742825052465
+    },
+    {
+      "date": "1994-04-01",
+      "WTI": 16.419999999999998,
+      "Brent": 15.231578947368419,
+      "RAC_composite": 14.64,
+      "USO": null,
+      "real_WTI": 11.154891304347824,
+      "real_Brent": 10.34754004576659
+    },
+    {
+      "date": "1994-05-01",
+      "WTI": 17.88904761904762,
+      "Brent": 16.188,
+      "RAC_composite": 15.8,
+      "USO": null,
+      "real_WTI": 12.12816787732042,
+      "real_Brent": 10.974915254237287
+    },
+    {
+      "date": "1994-06-01",
+      "WTI": 19.06,
+      "Brent": 16.763181818181817,
+      "RAC_composite": 17.21,
+      "USO": null,
+      "real_WTI": 12.887085868830289,
+      "real_Brent": 11.334132399041119
+    },
+    {
+      "date": "1994-07-01",
+      "WTI": 19.654500000000002,
+      "Brent": 17.59952380952381,
+      "RAC_composite": 17.62,
+      "USO": null,
+      "real_WTI": 13.244272237196768,
+      "real_Brent": 11.859517391862406
+    },
+    {
+      "date": "1994-08-01",
+      "WTI": 18.383478260869566,
+      "Brent": 16.89272727272727,
+      "RAC_composite": 16.92,
+      "USO": null,
+      "real_WTI": 12.337904873066822,
+      "real_Brent": 11.337400854179377
+    },
+    {
+      "date": "1994-09-01",
+      "WTI": 17.445714285714285,
+      "Brent": 15.895,
+      "RAC_composite": 16.18,
+      "USO": null,
+      "real_WTI": 11.685006219500524,
+      "real_Brent": 10.646349631614198
+    },
+    {
+      "date": "1994-10-01",
+      "WTI": 17.716190476190476,
+      "Brent": 16.49047619047619,
+      "RAC_composite": 16.31,
+      "USO": null,
+      "real_WTI": 11.858226557021737,
+      "real_Brent": 11.037802001657424
+    },
+    {
+      "date": "1994-11-01",
+      "WTI": 18.069499999999998,
+      "Brent": 17.191363636363636,
+      "RAC_composite": 16.54,
+      "USO": null,
+      "real_WTI": 12.062416555407207,
+      "real_Brent": 11.476210705182666
+    },
+    {
+      "date": "1994-12-01",
+      "WTI": 17.15952380952381,
+      "Brent": 15.931999999999999,
+      "RAC_composite": 16.03,
+      "USO": null,
+      "real_WTI": 11.432061165572161,
+      "real_Brent": 10.614257161892072
+    },
+    {
+      "date": "1995-01-01",
+      "WTI": 18.039523809523807,
+      "Brent": 16.551904761904762,
+      "RAC_composite": 16.54,
+      "USO": null,
+      "real_WTI": 11.986394557823129,
+      "real_Brent": 10.997943363391869
+    },
+    {
+      "date": "1995-02-01",
+      "WTI": 18.57,
+      "Brent": 17.1145,
+      "RAC_composite": 17.18,
+      "USO": null,
+      "real_WTI": 12.306163021868786,
+      "real_Brent": 11.341616964877401
+    },
+    {
+      "date": "1995-03-01",
+      "WTI": 18.539130434782606,
+      "Brent": 17.006521739130434,
+      "RAC_composite": 17.26,
+      "USO": null,
+      "real_WTI": 12.261329652634,
+      "real_Brent": 11.247699562916955
+    },
+    {
+      "date": "1995-04-01",
+      "WTI": 19.896315789473682,
+      "Brent": 18.648333333333333,
+      "RAC_composite": 18.43,
+      "USO": null,
+      "real_WTI": 13.106927397545245,
+      "real_Brent": 12.284804567413262
+    },
+    {
+      "date": "1995-05-01",
+      "WTI": 19.741818181818182,
+      "Brent": 18.35090909090909,
+      "RAC_composite": 18.62,
+      "USO": null,
+      "real_WTI": 12.979499133345287,
+      "real_Brent": 12.065028988105912
+    },
+    {
+      "date": "1995-06-01",
+      "WTI": 18.44590909090909,
+      "Brent": 17.312727272727273,
+      "RAC_composite": 17.69,
+      "USO": null,
+      "real_WTI": 12.10361488904796,
+      "real_Brent": 11.360057265569075
+    },
+    {
+      "date": "1995-07-01",
+      "WTI": 17.325499999999998,
+      "Brent": 15.854285714285714,
+      "RAC_composite": 16.68,
+      "USO": null,
+      "real_WTI": 11.353538663171689,
+      "real_Brent": 10.389440179741621
+    },
+    {
+      "date": "1995-08-01",
+      "WTI": 18.020869565217392,
+      "Brent": 16.096363636363638,
+      "RAC_composite": 16.75,
+      "USO": null,
+      "real_WTI": 11.786049421332498,
+      "real_Brent": 10.527379749093287
+    },
+    {
+      "date": "1995-09-01",
+      "WTI": 18.2255,
+      "Brent": 16.69952380952381,
+      "RAC_composite": 16.91,
+      "USO": null,
+      "real_WTI": 11.904310907903332,
+      "real_Brent": 10.907592298839852
+    },
+    {
+      "date": "1995-10-01",
+      "WTI": 17.43318181818182,
+      "Brent": 16.11090909090909,
+      "RAC_composite": 16.55,
+      "USO": null,
+      "real_WTI": 11.357121705655908,
+      "real_Brent": 10.495706248149245
+    },
+    {
+      "date": "1995-11-01",
+      "WTI": 17.9925,
+      "Brent": 16.86090909090909,
+      "RAC_composite": 16.62,
+      "USO": null,
+      "real_WTI": 11.706245933636955,
+      "real_Brent": 10.970012420890756
+    },
+    {
+      "date": "1995-12-01",
+      "WTI": 19.026500000000002,
+      "Brent": 17.925263157894737,
+      "RAC_composite": 17.54,
+      "USO": null,
+      "real_WTI": 12.362897985705004,
+      "real_Brent": 11.647344482062856
+    },
+    {
+      "date": "1996-01-01",
+      "WTI": 18.854545454545455,
+      "Brent": 17.853181818181817,
+      "RAC_composite": 17.74,
+      "USO": null,
+      "real_WTI": 12.187812187812188,
+      "real_Brent": 11.540518305224188
+    },
+    {
+      "date": "1996-02-01",
+      "WTI": 19.0935,
+      "Brent": 17.99904761904762,
+      "RAC_composite": 17.95,
+      "USO": null,
+      "real_WTI": 12.318387096774192,
+      "real_Brent": 11.612288786482335
+    },
+    {
+      "date": "1996-03-01",
+      "WTI": 21.33238095238095,
+      "Brent": 19.851904761904763,
+      "RAC_composite": 19.76,
+      "USO": null,
+      "real_WTI": 13.718572959730515,
+      "real_Brent": 12.766498239167051
+    },
+    {
+      "date": "1996-04-01",
+      "WTI": 23.497142857142858,
+      "Brent": 20.9005,
+      "RAC_composite": 21.63,
+      "USO": null,
+      "real_WTI": 15.052621945639244,
+      "real_Brent": 13.389173606662396
+    },
+    {
+      "date": "1996-05-01",
+      "WTI": 21.165454545454544,
+      "Brent": 19.154761904761905,
+      "RAC_composite": 20.61,
+      "USO": null,
+      "real_WTI": 13.5328993257382,
+      "real_Brent": 12.247290220436
+    },
+    {
+      "date": "1996-06-01",
+      "WTI": 20.4235,
+      "Brent": 18.4565,
+      "RAC_composite": 19.31,
+      "USO": null,
+      "real_WTI": 13.033503509891514,
+      "real_Brent": 11.778238672622846
+    },
+    {
+      "date": "1996-07-01",
+      "WTI": 21.302272727272726,
+      "Brent": 19.57086956521739,
+      "RAC_composite": 19.76,
+      "USO": null,
+      "real_WTI": 13.568326577880716,
+      "real_Brent": 12.465522016062032
+    },
+    {
+      "date": "1996-08-01",
+      "WTI": 21.903181818181817,
+      "Brent": 20.51238095238095,
+      "RAC_composite": 20.54,
+      "USO": null,
+      "real_WTI": 13.933321767291234,
+      "real_Brent": 13.048588392099843
+    },
+    {
+      "date": "1996-09-01",
+      "WTI": 23.9715,
+      "Brent": 22.63047619047619,
+      "RAC_composite": 21.96,
+      "USO": null,
+      "real_WTI": 15.200697526949904,
+      "real_Brent": 14.350333665489025
+    },
+    {
+      "date": "1996-10-01",
+      "WTI": 24.87913043478261,
+      "Brent": 24.162608695652175,
+      "RAC_composite": 23.08,
+      "USO": null,
+      "real_WTI": 15.726378277359427,
+      "real_Brent": 15.27345682405321
+    },
+    {
+      "date": "1996-11-01",
+      "WTI": 23.705000000000002,
+      "Brent": 22.75952380952381,
+      "RAC_composite": 22.87,
+      "USO": null,
+      "real_WTI": 14.936988027725269,
+      "real_Brent": 14.341224832718217
+    },
+    {
+      "date": "1996-12-01",
+      "WTI": 25.228571428571428,
+      "Brent": 23.782999999999998,
+      "RAC_composite": 23.3,
+      "USO": null,
+      "real_WTI": 15.857053066355391,
+      "real_Brent": 14.94846008799497
+    },
+    {
+      "date": "1997-01-01",
+      "WTI": 25.13181818181818,
+      "Brent": 23.53761904761905,
+      "RAC_composite": 23.59,
+      "USO": null,
+      "real_WTI": 15.766510779057828,
+      "real_Brent": 14.766385851705802
+    },
+    {
+      "date": "1997-02-01",
+      "WTI": 22.176315789473687,
+      "Brent": 20.850526315789473,
+      "RAC_composite": 21.64,
+      "USO": null,
+      "real_WTI": 13.886234057278452,
+      "real_Brent": 13.056059058102363
+    },
+    {
+      "date": "1997-03-01",
+      "WTI": 20.965,
+      "Brent": 19.133000000000003,
+      "RAC_composite": 19.82,
+      "USO": null,
+      "real_WTI": 13.119524405506883,
+      "real_Brent": 11.973091364205258
+    },
+    {
+      "date": "1997-04-01",
+      "WTI": 19.695454545454545,
+      "Brent": 17.555909090909093,
+      "RAC_composite": 18.35,
+      "USO": null,
+      "real_WTI": 12.317357439308658,
+      "real_Brent": 10.979305247597932
+    },
+    {
+      "date": "1997-05-01",
+      "WTI": 20.81904761904762,
+      "Brent": 19.022857142857145,
+      "RAC_composite": 18.79,
+      "USO": null,
+      "real_WTI": 13.020042288334972,
+      "real_Brent": 11.89672116501385
+    },
+    {
+      "date": "1997-06-01",
+      "WTI": 19.26,
+      "Brent": 17.580000000000002,
+      "RAC_composite": 17.8,
+      "USO": null,
+      "real_WTI": 12.022471910112362,
+      "real_Brent": 10.973782771535582
+    },
+    {
+      "date": "1997-07-01",
+      "WTI": 19.663636363636364,
+      "Brent": 18.4645,
+      "RAC_composite": 17.84,
+      "USO": null,
+      "real_WTI": 12.259124914985264,
+      "real_Brent": 11.511533665835412
+    },
+    {
+      "date": "1997-08-01",
+      "WTI": 19.95285714285714,
+      "Brent": 18.595499999999998,
+      "RAC_composite": 18.19,
+      "USO": null,
+      "real_WTI": 12.408493248045485,
+      "real_Brent": 11.56436567164179
+    },
+    {
+      "date": "1997-09-01",
+      "WTI": 19.803333333333335,
+      "Brent": 18.46095238095238,
+      "RAC_composite": 18.14,
+      "USO": null,
+      "real_WTI": 12.284946236559142,
+      "real_Brent": 11.452203710268227
+    },
+    {
+      "date": "1997-10-01",
+      "WTI": 21.32521739130435,
+      "Brent": 19.86521739130435,
+      "RAC_composite": 19.17,
+      "USO": null,
+      "real_WTI": 13.20446897294387,
+      "real_Brent": 12.30044420514201
+    },
+    {
+      "date": "1997-11-01",
+      "WTI": 20.19388888888889,
+      "Brent": 19.17421052631579,
+      "RAC_composite": 18.52,
+      "USO": null,
+      "real_WTI": 12.488490345633203,
+      "real_Brent": 11.857891481951633
+    },
+    {
+      "date": "1997-12-01",
+      "WTI": 18.332727272727272,
+      "Brent": 17.18190476190476,
+      "RAC_composite": 16.91,
+      "USO": null,
+      "real_WTI": 11.33048657152489,
+      "real_Brent": 10.619224203896637
+    },
+    {
+      "date": "1998-01-01",
+      "WTI": 16.724,
+      "Brent": 15.186666666666667,
+      "RAC_composite": 15.04,
+      "USO": null,
+      "real_WTI": 10.323456790123457,
+      "real_Brent": 9.37448559670782
+    },
+    {
+      "date": "1998-02-01",
+      "WTI": 16.06,
+      "Brent": 14.0695,
+      "RAC_composite": 13.98,
+      "USO": null,
+      "real_WTI": 9.913580246913579,
+      "real_Brent": 8.684876543209876
+    },
+    {
+      "date": "1998-03-01",
+      "WTI": 15.115454545454547,
+      "Brent": 13.103181818181817,
+      "RAC_composite": 12.84,
+      "USO": null,
+      "real_WTI": 9.330527497194165,
+      "real_Brent": 8.088383838383837
+    },
+    {
+      "date": "1998-04-01",
+      "WTI": 15.353809523809524,
+      "Brent": 13.526500000000002,
+      "RAC_composite": 13.06,
+      "USO": null,
+      "real_WTI": 9.465973812459634,
+      "real_Brent": 8.339395807644884
+    },
+    {
+      "date": "1998-05-01",
+      "WTI": 14.914000000000001,
+      "Brent": 14.36315789473684,
+      "RAC_composite": 12.95,
+      "USO": null,
+      "real_WTI": 9.172201722017222,
+      "real_Brent": 8.833430439567554
+    },
+    {
+      "date": "1998-06-01",
+      "WTI": 13.72181818181818,
+      "Brent": 12.206363636363637,
+      "RAC_composite": 11.94,
+      "USO": null,
+      "real_WTI": 8.428635246817064,
+      "real_Brent": 7.497766361402725
+    },
+    {
+      "date": "1998-07-01",
+      "WTI": 14.172727272727274,
+      "Brent": 12.079565217391304,
+      "RAC_composite": 11.9,
+      "USO": null,
+      "real_WTI": 8.68426916221034,
+      "real_Brent": 7.401694373401535
+    },
+    {
+      "date": "1998-08-01",
+      "WTI": 13.47190476190476,
+      "Brent": 11.914,
+      "RAC_composite": 11.77,
+      "USO": null,
+      "real_WTI": 8.244739756367661,
+      "real_Brent": 7.291309669522643
+    },
+    {
+      "date": "1998-09-01",
+      "WTI": 15.031428571428572,
+      "Brent": 13.343636363636364,
+      "RAC_composite": 13.01,
+      "USO": null,
+      "real_WTI": 9.193534294451727,
+      "real_Brent": 8.1612454823464
+    },
+    {
+      "date": "1998-10-01",
+      "WTI": 14.460909090909091,
+      "Brent": 12.702272727272726,
+      "RAC_composite": 12.61,
+      "USO": null,
+      "real_WTI": 8.823007377003716,
+      "real_Brent": 7.750013866548338
+    },
+    {
+      "date": "1998-11-01",
+      "WTI": 13.002105263157894,
+      "Brent": 11.039047619047619,
+      "RAC_composite": 11.56,
+      "USO": null,
+      "real_WTI": 7.923281696013341,
+      "real_Brent": 6.727024752618902
+    },
+    {
+      "date": "1998-12-01",
+      "WTI": 11.347272727272726,
+      "Brent": 9.824285714285715,
+      "RAC_composite": 9.81,
+      "USO": null,
+      "real_WTI": 6.902234019022338,
+      "real_Brent": 5.975842891901286
+    },
+    {
+      "date": "1999-01-01",
+      "WTI": 12.514736842105263,
+      "Brent": 11.1145,
+      "RAC_composite": 10.43,
+      "USO": null,
+      "real_WTI": 7.598504457865977,
+      "real_Brent": 6.748330297510626
+    },
+    {
+      "date": "1999-02-01",
+      "WTI": 12.013684210526316,
+      "Brent": 10.27157894736842,
+      "RAC_composite": 10.55,
+      "USO": null,
+      "real_WTI": 7.294283066500497,
+      "real_Brent": 6.236538522992363
+    },
+    {
+      "date": "1999-03-01",
+      "WTI": 14.676521739130434,
+      "Brent": 12.511304347826087,
+      "RAC_composite": 12.13,
+      "USO": null,
+      "real_WTI": 8.905656395103419,
+      "real_Brent": 7.5918108906711685
+    },
+    {
+      "date": "1999-04-01",
+      "WTI": 17.312380952380952,
+      "Brent": 15.2945,
+      "RAC_composite": 14.95,
+      "USO": null,
+      "real_WTI": 10.43543155658888,
+      "real_Brent": 9.219107896323086
+    },
+    {
+      "date": "1999-05-01",
+      "WTI": 17.7185,
+      "Brent": 15.225263157894739,
+      "RAC_composite": 15.95,
+      "USO": null,
+      "real_WTI": 10.673795180722891,
+      "real_Brent": 9.171845275840205
+    },
+    {
+      "date": "1999-06-01",
+      "WTI": 17.923181818181817,
+      "Brent": 15.863181818181818,
+      "RAC_composite": 16.06,
+      "USO": null,
+      "real_WTI": 10.79709748083242,
+      "real_Brent": 9.556133625410734
+    },
+    {
+      "date": "1999-07-01",
+      "WTI": 20.103333333333335,
+      "Brent": 19.080000000000002,
+      "RAC_composite": 18.07,
+      "USO": null,
+      "real_WTI": 12.059588082383526,
+      "real_Brent": 11.445710857828436
+    },
+    {
+      "date": "1999-08-01",
+      "WTI": 21.278636363636362,
+      "Brent": 20.219047619047622,
+      "RAC_composite": 19.57,
+      "USO": null,
+      "real_WTI": 12.734073227789564,
+      "real_Brent": 12.099968652930952
+    },
+    {
+      "date": "1999-09-01",
+      "WTI": 23.796666666666667,
+      "Brent": 22.543181818181818,
+      "RAC_composite": 21.68,
+      "USO": null,
+      "real_WTI": 14.181565355582041,
+      "real_Brent": 13.43455412287355
+    },
+    {
+      "date": "1999-10-01",
+      "WTI": 22.69142857142857,
+      "Brent": 22.002380952380953,
+      "RAC_composite": 21.93,
+      "USO": null,
+      "real_WTI": 13.498767740290642,
+      "real_Brent": 13.088864338120734
+    },
+    {
+      "date": "1999-11-01",
+      "WTI": 25.00238095238095,
+      "Brent": 24.58409090909091,
+      "RAC_composite": 23.12,
+      "USO": null,
+      "real_WTI": 14.847019567922178,
+      "real_Brent": 14.598628805873462
+    },
+    {
+      "date": "1999-12-01",
+      "WTI": 26.10238095238095,
+      "Brent": 25.473157894736843,
+      "RAC_composite": 24.51,
+      "USO": null,
+      "real_WTI": 15.46349582487023,
+      "real_Brent": 15.090733349962584
+    },
+    {
+      "date": "2000-01-01",
+      "WTI": 27.259473684210523,
+      "Brent": 25.511,
+      "RAC_composite": 25.49,
+      "USO": null,
+      "real_WTI": 16.101283924518913,
+      "real_Brent": 15.0685174246899
+    },
+    {
+      "date": "2000-02-01",
+      "WTI": 29.366000000000003,
+      "Brent": 27.775714285714283,
+      "RAC_composite": 27.55,
+      "USO": null,
+      "real_WTI": 17.274117647058826,
+      "real_Brent": 16.338655462184875
+    },
+    {
+      "date": "2000-03-01",
+      "WTI": 29.84173913043478,
+      "Brent": 27.48608695652174,
+      "RAC_composite": 28.41,
+      "USO": null,
+      "real_WTI": 17.4513094330028,
+      "real_Brent": 16.073735062293416
+    },
+    {
+      "date": "2000-04-01",
+      "WTI": 25.722105263157896,
+      "Brent": 22.764444444444443,
+      "RAC_composite": 24.97,
+      "USO": null,
+      "real_WTI": 15.05096855655816,
+      "real_Brent": 13.320330277615238
+    },
+    {
+      "date": "2000-05-01",
+      "WTI": 28.78818181818182,
+      "Brent": 27.73761904761905,
+      "RAC_composite": 26.46,
+      "USO": null,
+      "real_WTI": 16.81552676295667,
+      "real_Brent": 16.20188028482421
+    },
+    {
+      "date": "2000-06-01",
+      "WTI": 31.82227272727273,
+      "Brent": 29.795454545454547,
+      "RAC_composite": 29.13,
+      "USO": null,
+      "real_WTI": 18.47983317495513,
+      "real_Brent": 17.302819132087425
+    },
+    {
+      "date": "2000-07-01",
+      "WTI": 29.69684210526316,
+      "Brent": 28.682380952380953,
+      "RAC_composite": 28.74,
+      "USO": null,
+      "real_WTI": 17.195623685734315,
+      "real_Brent": 16.60821132158712
+    },
+    {
+      "date": "2000-08-01",
+      "WTI": 31.26391304347826,
+      "Brent": 30.19608695652174,
+      "RAC_composite": 29.01,
+      "USO": null,
+      "real_WTI": 18.103018554417062,
+      "real_Brent": 17.484705823116236
+    },
+    {
+      "date": "2000-09-01",
+      "WTI": 33.884,
+      "Brent": 33.1447619047619,
+      "RAC_composite": 31.13,
+      "USO": null,
+      "real_WTI": 19.518433179723502,
+      "real_Brent": 19.09260478384902
+    },
+    {
+      "date": "2000-10-01",
+      "WTI": 33.108636363636364,
+      "Brent": 30.96090909090909,
+      "RAC_composite": 30.63,
+      "USO": null,
+      "real_WTI": 19.038893826127868,
+      "real_Brent": 17.803858016623973
+    },
+    {
+      "date": "2000-11-01",
+      "WTI": 34.417142857142856,
+      "Brent": 32.55227272727273,
+      "RAC_composite": 31.0,
+      "USO": null,
+      "real_WTI": 19.757257667705428,
+      "real_Brent": 18.686723724037158
+    },
+    {
+      "date": "2000-12-01",
+      "WTI": 28.436500000000002,
+      "Brent": 25.66,
+      "RAC_composite": 26.31,
+      "USO": null,
+      "real_WTI": 16.286655211912944,
+      "real_Brent": 14.696449026345933
+    },
+    {
+      "date": "2001-01-01",
+      "WTI": 29.585714285714282,
+      "Brent": 25.624545454545455,
+      "RAC_composite": 25.45,
+      "USO": null,
+      "real_WTI": 16.848356654734786,
+      "real_Brent": 14.592565748602196
+    },
+    {
+      "date": "2001-02-01",
+      "WTI": 29.609473684210528,
+      "Brent": 27.503500000000003,
+      "RAC_composite": 26.09,
+      "USO": null,
+      "real_WTI": 16.823564593301437,
+      "real_Brent": 15.626988636363638
+    },
+    {
+      "date": "2001-03-01",
+      "WTI": 27.244545454545456,
+      "Brent": 24.49727272727273,
+      "RAC_composite": 24.05,
+      "USO": null,
+      "real_WTI": 15.471064994063292,
+      "real_Brent": 13.91100098084766
+    },
+    {
+      "date": "2001-04-01",
+      "WTI": 27.49,
+      "Brent": 25.657142857142855,
+      "RAC_composite": 23.87,
+      "USO": null,
+      "real_WTI": 15.583900226757368,
+      "real_Brent": 14.544865565273728
+    },
+    {
+      "date": "2001-05-01",
+      "WTI": 28.62909090909091,
+      "Brent": 28.313636363636363,
+      "RAC_composite": 25.31,
+      "USO": null,
+      "real_WTI": 16.14725939599036,
+      "real_Brent": 15.969338050556322
+    },
+    {
+      "date": "2001-06-01",
+      "WTI": 27.59904761904762,
+      "Brent": 27.84904761904762,
+      "RAC_composite": 24.92,
+      "USO": null,
+      "real_WTI": 15.531259211619371,
+      "real_Brent": 15.671945761985157
+    },
+    {
+      "date": "2001-07-01",
+      "WTI": 26.4247619047619,
+      "Brent": 24.613636363636363,
+      "RAC_composite": 23.76,
+      "USO": null,
+      "real_WTI": 14.89558168250389,
+      "real_Brent": 13.87465409449626
+    },
+    {
+      "date": "2001-08-01",
+      "WTI": 27.37391304347826,
+      "Brent": 25.68,
+      "RAC_composite": 24.44,
+      "USO": null,
+      "real_WTI": 15.43061614626734,
+      "real_Brent": 14.47576099210823
+    },
+    {
+      "date": "2001-09-01",
+      "WTI": 26.199473684210528,
+      "Brent": 25.6195,
+      "RAC_composite": 23.73,
+      "USO": null,
+      "real_WTI": 14.710541091639826,
+      "real_Brent": 14.384896125772038
+    },
+    {
+      "date": "2001-10-01",
+      "WTI": 22.169565217391302,
+      "Brent": 20.53782608695652,
+      "RAC_composite": 20.04,
+      "USO": null,
+      "real_WTI": 12.482863298080687,
+      "real_Brent": 11.564091265178222
+    },
+    {
+      "date": "2001-11-01",
+      "WTI": 19.634999999999998,
+      "Brent": 18.797272727272727,
+      "RAC_composite": 17.24,
+      "USO": null,
+      "real_WTI": 11.061971830985915,
+      "real_Brent": 10.590012804097311
+    },
+    {
+      "date": "2001-12-01",
+      "WTI": 19.388947368421054,
+      "Brent": 18.705263157894734,
+      "RAC_composite": 16.52,
+      "USO": null,
+      "real_WTI": 10.929508099448169,
+      "real_Brent": 10.544116774461518
+    },
+    {
+      "date": "2002-01-01",
+      "WTI": 19.714761904761904,
+      "Brent": 19.416818181818183,
+      "RAC_composite": 17.38,
+      "USO": null,
+      "real_WTI": 11.094407374654983,
+      "real_Brent": 10.926740676318618
+    },
+    {
+      "date": "2002-02-01",
+      "WTI": 20.723684210526315,
+      "Brent": 20.2755,
+      "RAC_composite": 18.43,
+      "USO": null,
+      "real_WTI": 11.642519219396807,
+      "real_Brent": 11.390730337078653
+    },
+    {
+      "date": "2002-03-01",
+      "WTI": 24.531,
+      "Brent": 23.696666666666665,
+      "RAC_composite": 22.0,
+      "USO": null,
+      "real_WTI": 13.742857142857142,
+      "real_Brent": 13.275443510737627
+    },
+    {
+      "date": "2002-04-01",
+      "WTI": 26.179090909090913,
+      "Brent": 25.72863636363636,
+      "RAC_composite": 24.1,
+      "USO": null,
+      "real_WTI": 14.600719971606754,
+      "real_Brent": 14.34949044263043
+    },
+    {
+      "date": "2002-05-01",
+      "WTI": 27.041363636363634,
+      "Brent": 25.345454545454547,
+      "RAC_composite": 25.03,
+      "USO": null,
+      "real_WTI": 15.064826538364143,
+      "real_Brent": 14.12003038743986
+    },
+    {
+      "date": "2002-06-01",
+      "WTI": 25.5185,
+      "Brent": 24.081666666666667,
+      "RAC_composite": 24.05,
+      "USO": null,
+      "real_WTI": 14.208518930957684,
+      "real_Brent": 13.408500371195249
+    },
+    {
+      "date": "2002-07-01",
+      "WTI": 26.966190476190473,
+      "Brent": 25.73608695652174,
+      "RAC_composite": 25.16,
+      "USO": null,
+      "real_WTI": 14.98121693121693,
+      "real_Brent": 14.29782608695652
+    },
+    {
+      "date": "2002-08-01",
+      "WTI": 28.385,
+      "Brent": 26.651363636363637,
+      "RAC_composite": 26.19,
+      "USO": null,
+      "real_WTI": 15.725761772853186,
+      "real_Brent": 14.765298413497861
+    },
+    {
+      "date": "2002-09-01",
+      "WTI": 29.6635,
+      "Brent": 28.39952380952381,
+      "RAC_composite": 27.66,
+      "USO": null,
+      "real_WTI": 16.406803097345133,
+      "real_Brent": 15.707701222081752
+    },
+    {
+      "date": "2002-10-01",
+      "WTI": 28.836521739130436,
+      "Brent": 27.54304347826087,
+      "RAC_composite": 26.7,
+      "USO": null,
+      "real_WTI": 15.914195220270662,
+      "real_Brent": 15.20035512045302
+    },
+    {
+      "date": "2002-11-01",
+      "WTI": 26.352105263157895,
+      "Brent": 24.335238095238097,
+      "RAC_composite": 24.6,
+      "USO": null,
+      "real_WTI": 14.519066260693055,
+      "real_Brent": 13.407844680571955
+    },
+    {
+      "date": "2002-12-01",
+      "WTI": 29.460952380952378,
+      "Brent": 28.334500000000002,
+      "RAC_composite": 26.93,
+      "USO": null,
+      "real_WTI": 16.2051443239562,
+      "real_Brent": 15.585533553355337
+    },
+    {
+      "date": "2003-01-01",
+      "WTI": 32.94714285714286,
+      "Brent": 31.183636363636364,
+      "RAC_composite": 30.52,
+      "USO": null,
+      "real_WTI": 18.04334219996871,
+      "real_Brent": 17.077566464203926
+    },
+    {
+      "date": "2003-02-01",
+      "WTI": 35.828421052631576,
+      "Brent": 32.771,
+      "RAC_composite": 33.0,
+      "USO": null,
+      "real_WTI": 19.514390551542256,
+      "real_Brent": 17.849128540305014
+    },
+    {
+      "date": "2003-03-01",
+      "WTI": 33.513333333333335,
+      "Brent": 30.612380952380953,
+      "RAC_composite": 30.65,
+      "USO": null,
+      "real_WTI": 18.2236722856625,
+      "real_Brent": 16.64621041456278
+    },
+    {
+      "date": "2003-04-01",
+      "WTI": 28.170476190476194,
+      "Brent": 25.06772727272727,
+      "RAC_composite": 26.02,
+      "USO": null,
+      "real_WTI": 15.376897483884386,
+      "real_Brent": 13.683257244938469
+    },
+    {
+      "date": "2003-05-01",
+      "WTI": 28.108571428571427,
+      "Brent": 25.857727272727274,
+      "RAC_composite": 25.74,
+      "USO": null,
+      "real_WTI": 15.368273061001327,
+      "real_Brent": 14.137631094984842
+    },
+    {
+      "date": "2003-06-01",
+      "WTI": 30.66238095238095,
+      "Brent": 27.652857142857144,
+      "RAC_composite": 27.92,
+      "USO": null,
+      "real_WTI": 16.746248472081348,
+      "real_Brent": 15.102598111882656
+    },
+    {
+      "date": "2003-07-01",
+      "WTI": 30.754545454545454,
+      "Brent": 28.348695652173912,
+      "RAC_composite": 28.55,
+      "USO": null,
+      "real_WTI": 16.74172316523977,
+      "real_Brent": 15.432060779626518
+    },
+    {
+      "date": "2003-08-01",
+      "WTI": 31.573809523809523,
+      "Brent": 29.888095238095236,
+      "RAC_composite": 29.15,
+      "USO": null,
+      "real_WTI": 17.113175893663698,
+      "real_Brent": 16.19950961414376
+    },
+    {
+      "date": "2003-09-01",
+      "WTI": 28.31142857142857,
+      "Brent": 27.112272727272728,
+      "RAC_composite": 26.39,
+      "USO": null,
+      "real_WTI": 15.29520722389442,
+      "real_Brent": 14.647365060655174
+    },
+    {
+      "date": "2003-10-01",
+      "WTI": 30.338260869565215,
+      "Brent": 29.60782608695652,
+      "RAC_composite": 27.75,
+      "USO": null,
+      "real_WTI": 16.407929080348953,
+      "real_Brent": 16.01288593129071
+    },
+    {
+      "date": "2003-11-01",
+      "WTI": 31.108333333333334,
+      "Brent": 28.752499999999998,
+      "RAC_composite": 28.28,
+      "USO": null,
+      "real_WTI": 16.815315315315313,
+      "real_Brent": 15.54189189189189
+    },
+    {
+      "date": "2003-12-01",
+      "WTI": 32.12904761904762,
+      "Brent": 29.80714285714286,
+      "RAC_composite": 29.28,
+      "USO": null,
+      "real_WTI": 17.320241304068798,
+      "real_Brent": 16.06854062379669
+    },
+    {
+      "date": "2004-01-01",
+      "WTI": 34.31,
+      "Brent": 31.280952380952378,
+      "RAC_composite": 30.93,
+      "USO": null,
+      "real_WTI": 18.416532474503487,
+      "real_Brent": 16.790634665030797
+    },
+    {
+      "date": "2004-02-01",
+      "WTI": 34.68473684210526,
+      "Brent": 30.8585,
+      "RAC_composite": 31.72,
+      "USO": null,
+      "real_WTI": 18.577791559777857,
+      "real_Brent": 16.528387787895017
+    },
+    {
+      "date": "2004-03-01",
+      "WTI": 36.74130434782609,
+      "Brent": 33.63434782608696,
+      "RAC_composite": 33.1,
+      "USO": null,
+      "real_WTI": 19.63725512978412,
+      "real_Brent": 17.976669067924618
+    },
+    {
+      "date": "2004-04-01",
+      "WTI": 36.75,
+      "Brent": 33.59090909090909,
+      "RAC_composite": 33.47,
+      "USO": null,
+      "real_WTI": 19.61045891141942,
+      "real_Brent": 17.92471136121083
+    },
+    {
+      "date": "2004-05-01",
+      "WTI": 40.275,
+      "Brent": 37.56761904761905,
+      "RAC_composite": 36.32,
+      "USO": null,
+      "real_WTI": 21.40010626992561,
+      "real_Brent": 19.961540407874097
+    },
+    {
+      "date": "2004-06-01",
+      "WTI": 38.025238095238095,
+      "Brent": 35.18363636363636,
+      "RAC_composite": 34.59,
+      "USO": null,
+      "real_WTI": 20.12982429604981,
+      "real_Brent": 18.625535396313584
+    },
+    {
+      "date": "2004-07-01",
+      "WTI": 40.77809523809524,
+      "Brent": 38.221363636363634,
+      "RAC_composite": 36.68,
+      "USO": null,
+      "real_WTI": 21.564302082546398,
+      "real_Brent": 20.212249411086002
+    },
+    {
+      "date": "2004-08-01",
+      "WTI": 44.90318181818182,
+      "Brent": 42.74409090909091,
+      "RAC_composite": 40.3,
+      "USO": null,
+      "real_WTI": 23.73318277916587,
+      "real_Brent": 22.592014222563904
+    },
+    {
+      "date": "2004-09-01",
+      "WTI": 45.93571428571428,
+      "Brent": 43.19681818181818,
+      "RAC_composite": 41.35,
+      "USO": null,
+      "real_WTI": 24.202167695318376,
+      "real_Brent": 22.759124437206626
+    },
+    {
+      "date": "2004-10-01",
+      "WTI": 53.28047619047619,
+      "Brent": 49.776666666666664,
+      "RAC_composite": 46.13,
+      "USO": null,
+      "real_WTI": 27.924777877608065,
+      "real_Brent": 26.088399720475188
+    },
+    {
+      "date": "2004-11-01",
+      "WTI": 48.469,
+      "Brent": 43.110454545454544,
+      "RAC_composite": 41.77,
+      "USO": null,
+      "real_WTI": 25.283776734480963,
+      "real_Brent": 22.488500023711293
+    },
+    {
+      "date": "2004-12-01",
+      "WTI": 43.14952380952381,
+      "Brent": 39.60217391304348,
+      "RAC_composite": 36.6,
+      "USO": null,
+      "real_WTI": 22.508880443152744,
+      "real_Brent": 20.658411013585543
+    },
+    {
+      "date": "2005-01-01",
+      "WTI": 46.837,
+      "Brent": 44.509,
+      "RAC_composite": 39.01,
+      "USO": null,
+      "real_WTI": 24.445198329853866,
+      "real_Brent": 23.23016701461378
+    },
+    {
+      "date": "2005-02-01",
+      "WTI": 48.148947368421055,
+      "Brent": 45.475,
+      "RAC_composite": 41.05,
+      "USO": null,
+      "real_WTI": 25.02544042017726,
+      "real_Brent": 23.635654885654883
+    },
+    {
+      "date": "2005-03-01",
+      "WTI": 54.186818181818175,
+      "Brent": 53.10454545454545,
+      "RAC_composite": 46.78,
+      "USO": null,
+      "real_WTI": 28.061531942940537,
+      "real_Brent": 27.501059272162326
+    },
+    {
+      "date": "2005-04-01",
+      "WTI": 52.97904761904762,
+      "Brent": 51.88380952380952,
+      "RAC_composite": 46.71,
+      "USO": null,
+      "real_WTI": 27.351082921552724,
+      "real_Brent": 26.785652825921282
+    },
+    {
+      "date": "2005-05-01",
+      "WTI": 49.83380952380952,
+      "Brent": 48.64545454545455,
+      "RAC_composite": 44.84,
+      "USO": null,
+      "real_WTI": 25.74060409287682,
+      "real_Brent": 25.126784372652143
+    },
+    {
+      "date": "2005-06-01",
+      "WTI": 56.35227272727273,
+      "Brent": 54.35454545454545,
+      "RAC_composite": 50.3,
+      "USO": null,
+      "real_WTI": 29.092551743558456,
+      "real_Brent": 28.06120054442202
+    },
+    {
+      "date": "2005-07-01",
+      "WTI": 58.99550000000001,
+      "Brent": 57.52,
+      "RAC_composite": 53.83,
+      "USO": null,
+      "real_WTI": 30.26962544894818,
+      "real_Brent": 29.512570548999488
+    },
+    {
+      "date": "2005-08-01",
+      "WTI": 64.98521739130435,
+      "Brent": 63.98347826086956,
+      "RAC_composite": 59.3,
+      "USO": null,
+      "real_WTI": 33.13881559984924,
+      "real_Brent": 32.62798483471166
+    },
+    {
+      "date": "2005-09-01",
+      "WTI": 65.58666666666666,
+      "Brent": 62.908181818181816,
+      "RAC_composite": 60.18,
+      "USO": null,
+      "real_WTI": 32.99128101945003,
+      "real_Brent": 31.64395463691238
+    },
+    {
+      "date": "2005-10-01",
+      "WTI": 62.260000000000005,
+      "Brent": 58.53857142857142,
+      "RAC_composite": 57.18,
+      "USO": null,
+      "real_WTI": 31.270718232044203,
+      "real_Brent": 29.401592882255866
+    },
+    {
+      "date": "2005-11-01",
+      "WTI": 58.322500000000005,
+      "Brent": 55.24181818181818,
+      "RAC_composite": 52.13,
+      "USO": null,
+      "real_WTI": 29.440938919737512,
+      "real_Brent": 27.8858244229269
+    },
+    {
+      "date": "2005-12-01",
+      "WTI": 59.411904761904765,
+      "Brent": 56.855714285714285,
+      "RAC_composite": 52.51,
+      "USO": null,
+      "real_WTI": 29.99086560419221,
+      "real_Brent": 28.700512006922914
+    },
+    {
+      "date": "2006-01-01",
+      "WTI": 65.485,
+      "Brent": 62.985238095238095,
+      "RAC_composite": 57.33,
+      "USO": null,
+      "real_WTI": 32.857501254390364,
+      "real_Brent": 31.603230353857548
+    },
+    {
+      "date": "2006-02-01",
+      "WTI": 61.631052631578946,
+      "Brent": 60.21,
+      "RAC_composite": 54.82,
+      "USO": null,
+      "real_WTI": 30.908251068996464,
+      "real_Brent": 30.195586760280843
+    },
+    {
+      "date": "2006-03-01",
+      "WTI": 62.68521739130435,
+      "Brent": 62.06478260869565,
+      "RAC_composite": 56.38,
+      "USO": null,
+      "real_WTI": 31.389693235505433,
+      "real_Brent": 31.079009819076443
+    },
+    {
+      "date": "2006-04-01",
+      "WTI": 69.44368421052631,
+      "Brent": 70.26,
+      "RAC_composite": 62.98,
+      "USO": 556.9600219726562,
+      "real_WTI": 34.60073951695382,
+      "real_Brent": 35.007473841554564
+    },
+    {
+      "date": "2006-05-01",
+      "WTI": 70.84409090909091,
+      "Brent": 69.77695652173912,
+      "RAC_composite": 65.34,
+      "USO": 541.8400268554688,
+      "real_WTI": 35.193289075554354,
+      "real_Brent": 34.66316767100801
+    },
+    {
+      "date": "2006-06-01",
+      "WTI": 70.9509090909091,
+      "Brent": 68.5559090909091,
+      "RAC_composite": 65.13,
+      "USO": 558.1599731445312,
+      "real_WTI": 35.15902333543562,
+      "real_Brent": 33.97220470312641
+    },
+    {
+      "date": "2006-07-01",
+      "WTI": 74.41105263157894,
+      "Brent": 73.67428571428572,
+      "RAC_composite": 68.86,
+      "USO": 556.1599731445312,
+      "real_WTI": 36.67375684158647,
+      "real_Brent": 36.31063859747941
+    },
+    {
+      "date": "2006-08-01",
+      "WTI": 73.04304347826087,
+      "Brent": 73.2304347826087,
+      "RAC_composite": 67.77,
+      "USO": 518.4000244140625,
+      "real_WTI": 35.84055126509365,
+      "real_Brent": 35.932499893331055
+    },
+    {
+      "date": "2006-09-01",
+      "WTI": 63.798,
+      "Brent": 61.95857142857143,
+      "RAC_composite": 58.92,
+      "USO": 456.0,
+      "real_WTI": 31.458579881656807,
+      "real_Brent": 30.55156382079459
+    },
+    {
+      "date": "2006-10-01",
+      "WTI": 58.89318181818182,
+      "Brent": 57.808181818181815,
+      "RAC_composite": 54.04,
+      "USO": 416.79998779296875,
+      "real_WTI": 29.169480841100455,
+      "real_Brent": 28.632086091224274
+    },
+    {
+      "date": "2006-11-01",
+      "WTI": 59.0825,
+      "Brent": 58.76136363636363,
+      "RAC_composite": 53.61,
+      "USO": 436.6400146484375,
+      "real_WTI": 29.248762376237625,
+      "real_Brent": 29.089783978397836
+    },
+    {
+      "date": "2006-12-01",
+      "WTI": 61.959,
+      "Brent": 62.47210526315789,
+      "RAC_composite": 55.98,
+      "USO": 412.79998779296875,
+      "real_WTI": 30.506646971935005,
+      "real_Brent": 30.759283733706493
+    },
+    {
+      "date": "2007-01-01",
+      "WTI": 54.50619047619048,
+      "Brent": 53.68142857142857,
+      "RAC_composite": 50.77,
+      "USO": 385.9200134277344,
+      "real_WTI": 26.792663318958933,
+      "real_Brent": 26.387249404694607
+    },
+    {
+      "date": "2007-02-01",
+      "WTI": 59.27894736842105,
+      "Brent": 57.55578947368421,
+      "RAC_composite": 54.45,
+      "USO": 409.44000244140625,
+      "real_WTI": 29.026151111230227,
+      "real_Brent": 28.182400611912392
+    },
+    {
+      "date": "2007-03-01",
+      "WTI": 60.441818181818185,
+      "Brent": 62.05045454545455,
+      "RAC_composite": 56.84,
+      "USO": 426.79998779296875,
+      "real_WTI": 29.442450694545315,
+      "real_Brent": 30.226050497571485
+    },
+    {
+      "date": "2007-04-01",
+      "WTI": 63.977,
+      "Brent": 67.4857894736842,
+      "RAC_composite": 60.68,
+      "USO": 409.9200134277344,
+      "real_WTI": 31.071275934416036,
+      "real_Brent": 32.775365934456936
+    },
+    {
+      "date": "2007-05-01",
+      "WTI": 63.45454545454545,
+      "Brent": 67.21227272727273,
+      "RAC_composite": 61.71,
+      "USO": 391.67999267578125,
+      "real_WTI": 30.690694519864312,
+      "real_Brent": 32.5081728264239
+    },
+    {
+      "date": "2007-06-01",
+      "WTI": 67.48904761904762,
+      "Brent": 71.04571428571428,
+      "RAC_composite": 65.14,
+      "USO": 424.0,
+      "real_WTI": 32.56659024052406,
+      "real_Brent": 34.28284658198668
+    },
+    {
+      "date": "2007-07-01",
+      "WTI": 74.11761904761904,
+      "Brent": 76.92999999999999,
+      "RAC_composite": 71.24,
+      "USO": 468.239990234375,
+      "real_WTI": 35.701612716395736,
+      "real_Brent": 37.05630458134034
+    },
+    {
+      "date": "2007-08-01",
+      "WTI": 72.35608695652174,
+      "Brent": 70.76086956521739,
+      "RAC_composite": 69.46,
+      "USO": 446.239990234375,
+      "real_WTI": 34.842361548306535,
+      "real_Brent": 34.074200313587326
+    },
+    {
+      "date": "2007-09-01",
+      "WTI": 79.91473684210526,
+      "Brent": 77.17315789473685,
+      "RAC_composite": 73.54,
+      "USO": 500.3999938964844,
+      "real_WTI": 38.31977292509854,
+      "real_Brent": 37.00516329399936
+    },
+    {
+      "date": "2007-10-01",
+      "WTI": 85.7986956521739,
+      "Brent": 82.34,
+      "RAC_composite": 79.87,
+      "USO": 586.1599731445312,
+      "real_WTI": 41.01472137873412,
+      "real_Brent": 39.36134614465319
+    },
+    {
+      "date": "2007-11-01",
+      "WTI": 94.77238095238096,
+      "Brent": 92.41428571428571,
+      "RAC_composite": 86.78,
+      "USO": 559.280029296875,
+      "real_WTI": 44.951184795801886,
+      "real_Brent": 43.83272418788512
+    },
+    {
+      "date": "2007-12-01",
+      "WTI": 91.687,
+      "Brent": 90.92684210526315,
+      "RAC_composite": 85.29,
+      "USO": 606.0800170898438,
+      "real_WTI": 43.362103620326806,
+      "real_Brent": 43.002597415527994
+    },
+    {
+      "date": "2008-01-01",
+      "WTI": 92.97047619047619,
+      "Brent": 92.17809523809524,
+      "RAC_composite": 86.48,
+      "USO": 578.7999877929688,
+      "real_WTI": 43.81803434467757,
+      "real_Brent": 43.44457626198085
+    },
+    {
+      "date": "2008-02-01",
+      "WTI": 95.386,
+      "Brent": 94.9865,
+      "RAC_composite": 89.09,
+      "USO": 643.3599853515625,
+      "real_WTI": 44.84806311622242,
+      "real_Brent": 44.66022841076323
+    },
+    {
+      "date": "2008-03-01",
+      "WTI": 105.454,
+      "Brent": 103.63550000000001,
+      "RAC_composite": 97.96,
+      "USO": 650.8800048828125,
+      "real_WTI": 49.40500730857164,
+      "real_Brent": 48.55304336419175
+    },
+    {
+      "date": "2008-04-01",
+      "WTI": 112.58045454545454,
+      "Brent": 109.07136363636364,
+      "RAC_composite": 106.09,
+      "USO": 740.0,
+      "real_WTI": 52.6219510640522,
+      "real_Brent": 50.981744415011384
+    },
+    {
+      "date": "2008-05-01",
+      "WTI": 125.39761904761905,
+      "Brent": 122.79714285714284,
+      "RAC_composite": 117.64,
+      "USO": 824.47998046875,
+      "real_WTI": 58.268102973690134,
+      "real_Brent": 57.059748177178754
+    },
+    {
+      "date": "2008-06-01",
+      "WTI": 133.88,
+      "Brent": 132.32238095238094,
+      "RAC_composite": 127.32,
+      "USO": 909.280029296875,
+      "real_WTI": 61.564496029209565,
+      "real_Brent": 60.84822749266815
+    },
+    {
+      "date": "2008-07-01",
+      "WTI": 133.3709090909091,
+      "Brent": 132.71818181818182,
+      "RAC_composite": 129.03,
+      "USO": 799.9199829101562,
+      "real_WTI": 60.895509502004,
+      "real_Brent": 60.5974822927009
+    },
+    {
+      "date": "2008-08-01",
+      "WTI": 116.66619047619047,
+      "Brent": 113.24333333333334,
+      "RAC_composite": 113.74,
+      "USO": 742.9600219726562,
+      "real_WTI": 53.347748171471245,
+      "real_Brent": 51.78258417546908
+    },
+    {
+      "date": "2008-09-01",
+      "WTI": 104.11428571428571,
+      "Brent": 97.23476190476191,
+      "RAC_composite": 98.91,
+      "USO": 656.0800170898438,
+      "real_WTI": 47.567485717679666,
+      "real_Brent": 44.42438534188696
+    },
+    {
+      "date": "2008-10-01",
+      "WTI": 76.6086956521739,
+      "Brent": 71.58217391304348,
+      "RAC_composite": 74.22,
+      "USO": 444.7200012207031,
+      "real_WTI": 35.3043598480029,
+      "real_Brent": 32.98793700916771
+    },
+    {
+      "date": "2008-11-01",
+      "WTI": 57.30947368421053,
+      "Brent": 52.45263157894737,
+      "RAC_composite": 53.33,
+      "USO": 336.7200012207031,
+      "real_WTI": 26.886543320624405,
+      "real_Brent": 24.607972479368048
+    },
+    {
+      "date": "2008-12-01",
+      "WTI": 41.121818181818185,
+      "Brent": 39.94681818181818,
+      "RAC_composite": 37.67,
+      "USO": 264.79998779296875,
+      "real_WTI": 19.452321300020902,
+      "real_Brent": 18.896497687687766
+    },
+    {
+      "date": "2009-01-01",
+      "WTI": 41.71,
+      "Brent": 43.439499999999995,
+      "RAC_composite": 37.45,
+      "USO": 233.75999450683594,
+      "real_WTI": 19.680748160975405,
+      "real_Brent": 20.49680795345699
+    },
+    {
+      "date": "2009-02-01",
+      "WTI": 39.08736842105263,
+      "Brent": 43.32473684210526,
+      "RAC_composite": 38.15,
+      "USO": 216.39999389648438,
+      "real_WTI": 18.37632797585982,
+      "real_Brent": 20.368461880118126
+    },
+    {
+      "date": "2009-03-01",
+      "WTI": 47.939090909090915,
+      "Brent": 46.540454545454544,
+      "RAC_composite": 45.57,
+      "USO": 232.39999389648438,
+      "real_WTI": 22.560103018466744,
+      "real_Brent": 21.90190571328951
+    },
+    {
+      "date": "2009-04-01",
+      "WTI": 49.64666666666666,
+      "Brent": 50.18190476190476,
+      "RAC_composite": 48.78,
+      "USO": 229.0399932861328,
+      "real_WTI": 23.34018149992086,
+      "real_Brent": 23.591810765837252
+    },
+    {
+      "date": "2009-05-01",
+      "WTI": 59.028499999999994,
+      "Brent": 57.302499999999995,
+      "RAC_composite": 55.96,
+      "USO": 291.20001220703125,
+      "real_WTI": 27.71004872736149,
+      "real_Brent": 26.899803776135794
+    },
+    {
+      "date": "2009-06-01",
+      "WTI": 69.64090909090909,
+      "Brent": 68.60954545454545,
+      "RAC_composite": 65.72,
+      "USO": 303.44000244140625,
+      "real_WTI": 32.42278927832259,
+      "real_Brent": 31.94261625520064
+    },
+    {
+      "date": "2009-07-01",
+      "WTI": 64.15227272727272,
+      "Brent": 64.43545454545455,
+      "RAC_composite": 63.58,
+      "USO": 294.4800109863281,
+      "real_WTI": 29.876341350033396,
+      "real_Brent": 30.00822189462596
+    },
+    {
+      "date": "2009-08-01",
+      "WTI": 71.04476190476191,
+      "Brent": 72.50857142857143,
+      "RAC_composite": 67.99,
+      "USO": 288.3999938964844,
+      "real_WTI": 32.97582301968573,
+      "real_Brent": 33.65525838546795
+    },
+    {
+      "date": "2009-09-01",
+      "WTI": 69.40809523809523,
+      "Brent": 67.64619047619047,
+      "RAC_composite": 67.74,
+      "USO": 289.5199890136719,
+      "real_WTI": 32.154069163996844,
+      "real_Brent": 31.337847261057103
+    },
+    {
+      "date": "2009-10-01",
+      "WTI": 75.71545454545455,
+      "Brent": 72.76954545454545,
+      "RAC_composite": 72.08,
+      "USO": 314.55999755859375,
+      "real_WTI": 34.9710425642604,
+      "real_Brent": 33.61040208700121
+    },
+    {
+      "date": "2009-11-01",
+      "WTI": 77.99,
+      "Brent": 76.662,
+      "RAC_composite": 74.48,
+      "USO": 313.20001220703125,
+      "real_WTI": 35.9013782372925,
+      "real_Brent": 35.29005588443798
+    },
+    {
+      "date": "2009-12-01",
+      "WTI": 74.47,
+      "Brent": 74.45636363636363,
+      "RAC_composite": 72.95,
+      "USO": 314.239990234375,
+      "real_WTI": 34.26318283666211,
+      "real_Brent": 34.25690883074698
+    },
+    {
+      "date": "2010-01-01",
+      "WTI": 78.32578947368421,
+      "Brent": 76.16736842105263,
+      "RAC_composite": 75.48,
+      "USO": 285.1199951171875,
+      "real_WTI": 36.01384419999458,
+      "real_Brent": 35.02141194964901
+    },
+    {
+      "date": "2010-02-01",
+      "WTI": 76.38736842105263,
+      "Brent": 73.75210526315789,
+      "RAC_composite": 74.58,
+      "USO": 310.55999755859375,
+      "real_WTI": 35.15602764210981,
+      "real_Brent": 33.94319119626561
+    },
+    {
+      "date": "2010-03-01",
+      "WTI": 81.20347826086957,
+      "Brent": 78.82739130434783,
+      "RAC_composite": 77.43,
+      "USO": 322.32000732421875,
+      "real_WTI": 37.36018286422068,
+      "real_Brent": 36.26699024368094
+    },
+    {
+      "date": "2010-04-01",
+      "WTI": 84.29285714285714,
+      "Brent": 84.81761904761905,
+      "RAC_composite": 80.83,
+      "USO": 330.6400146484375,
+      "real_WTI": 38.77262831831076,
+      "real_Brent": 39.01400580839227
+    },
+    {
+      "date": "2010-05-01",
+      "WTI": 73.7435,
+      "Brent": 75.94550000000001,
+      "RAC_composite": 72.66,
+      "USO": 272.32000732421875,
+      "real_WTI": 33.937825026462335,
+      "real_Brent": 34.95121726724654
+    },
+    {
+      "date": "2010-06-01",
+      "WTI": 75.3359090909091,
+      "Brent": 74.7609090909091,
+      "RAC_composite": 72.66,
+      "USO": 271.67999267578125,
+      "real_WTI": 34.68520071036657,
+      "real_Brent": 34.42046652650753
+    },
+    {
+      "date": "2010-07-01",
+      "WTI": 76.31952380952382,
+      "Brent": 75.58,
+      "RAC_composite": 73.73,
+      "USO": 282.7200012207031,
+      "real_WTI": 35.07250468028024,
+      "real_Brent": 34.732657797385166
+    },
+    {
+      "date": "2010-08-01",
+      "WTI": 76.59909090909092,
+      "Brent": 77.03954545454545,
+      "RAC_composite": 74.58,
+      "USO": 255.36000061035156,
+      "real_WTI": 35.14961289496332,
+      "real_Brent": 35.35172765359574
+    },
+    {
+      "date": "2010-09-01",
+      "WTI": 75.24190476190476,
+      "Brent": 77.8404761904762,
+      "RAC_composite": 73.85,
+      "USO": 278.7200012207031,
+      "real_WTI": 34.471150961816406,
+      "real_Brent": 35.661654422392026
+    },
+    {
+      "date": "2010-10-01",
+      "WTI": 81.89285714285714,
+      "Brent": 82.6647619047619,
+      "RAC_composite": 77.76,
+      "USO": 281.3599853515625,
+      "real_WTI": 37.38802344048081,
+      "real_Brent": 37.74043504680161
+    },
+    {
+      "date": "2010-11-01",
+      "WTI": 84.25285714285714,
+      "Brent": 85.2747619047619,
+      "RAC_composite": 80.85,
+      "USO": 288.32000732421875,
+      "real_WTI": 38.36825772706277,
+      "real_Brent": 38.83362717098315
+    },
+    {
+      "date": "2010-12-01",
+      "WTI": 89.14590909090909,
+      "Brent": 91.44681818181817,
+      "RAC_composite": 85.95,
+      "USO": 312.0,
+      "real_WTI": 40.43411820589875,
+      "real_Brent": 41.47774691653279
+    },
+    {
+      "date": "2011-01-01",
+      "WTI": 89.1705,
+      "Brent": 96.5235,
+      "RAC_composite": 88.04,
+      "USO": 308.8800048828125,
+      "real_WTI": 40.31453023911893,
+      "real_Brent": 43.63886666033718
+    },
+    {
+      "date": "2011-02-01",
+      "WTI": 88.57842105263158,
+      "Brent": 103.71631578947368,
+      "RAC_composite": 90.66,
+      "USO": 313.5199890136719,
+      "real_WTI": 39.91853060984397,
+      "real_Brent": 46.740536548086816
+    },
+    {
+      "date": "2011-03-01",
+      "WTI": 102.85652173913043,
+      "Brent": 114.64347826086957,
+      "RAC_composite": 102.43,
+      "USO": 340.79998779296875,
+      "real_WTI": 46.114488374205514,
+      "real_Brent": 51.399029016825935
+    },
+    {
+      "date": "2011-04-01",
+      "WTI": 109.5325,
+      "Brent": 123.25888888888888,
+      "RAC_composite": 112.51,
+      "USO": 361.20001220703125,
+      "real_WTI": 48.87814434185807,
+      "real_Brent": 55.00345342732208
+    },
+    {
+      "date": "2011-05-01",
+      "WTI": 100.90047619047618,
+      "Brent": 114.98904761904762,
+      "RAC_composite": 107.84,
+      "USO": 324.0,
+      "real_WTI": 44.88335551118572,
+      "real_Brent": 51.15034635154205
+    },
+    {
+      "date": "2011-06-01",
+      "WTI": 96.26409090909091,
+      "Brent": 113.83318181818181,
+      "RAC_composite": 104.23,
+      "USO": 297.9200134277344,
+      "real_WTI": 42.8209615886991,
+      "real_Brent": 50.63618489639147
+    },
+    {
+      "date": "2011-07-01",
+      "WTI": 97.3035,
+      "Brent": 116.97349999999999,
+      "RAC_composite": 104.68,
+      "USO": 299.3599853515625,
+      "real_WTI": 43.1702122939728,
+      "real_Brent": 51.89711395550034
+    },
+    {
+      "date": "2011-08-01",
+      "WTI": 86.33304347826088,
+      "Brent": 110.21954545454545,
+      "RAC_composite": 97.7,
+      "USO": 276.0799865722656,
+      "real_WTI": 38.18255308495169,
+      "real_Brent": 48.74684681279818
+    },
+    {
+      "date": "2011-09-01",
+      "WTI": 85.51523809523809,
+      "Brent": 112.83380952380953,
+      "RAC_composite": 99.39,
+      "USO": 243.9199981689453,
+      "real_WTI": 37.73891008938251,
+      "real_Brent": 49.79492646584444
+    },
+    {
+      "date": "2011-10-01",
+      "WTI": 86.32238095238095,
+      "Brent": 109.55000000000001,
+      "RAC_composite": 100.57,
+      "USO": 285.9200134277344,
+      "real_WTI": 38.06940725573581,
+      "real_Brent": 48.31312017640574
+    },
+    {
+      "date": "2011-11-01",
+      "WTI": 97.16047619047619,
+      "Brent": 110.76809523809524,
+      "RAC_composite": 107.28,
+      "USO": 310.239990234375,
+      "real_WTI": 42.77012981105529,
+      "real_Brent": 48.760216067375055
+    },
+    {
+      "date": "2011-12-01",
+      "WTI": 98.56285714285715,
+      "Brent": 107.87049999999999,
+      "RAC_composite": 105.69,
+      "USO": 304.8800048828125,
+      "real_WTI": 43.3771480628533,
+      "real_Brent": 47.47340718149131
+    },
+    {
+      "date": "2012-01-01",
+      "WTI": 100.2735,
+      "Brent": 110.68599999999999,
+      "RAC_composite": 104.71,
+      "USO": 302.55999755859375,
+      "real_WTI": 44.0101034927713,
+      "real_Brent": 48.58015642418869
+    },
+    {
+      "date": "2012-02-01",
+      "WTI": 102.204,
+      "Brent": 119.327,
+      "RAC_composite": 107.18,
+      "USO": 327.3599853515625,
+      "real_WTI": 44.76172540500768,
+      "real_Brent": 52.260991814443194
+    },
+    {
+      "date": "2012-03-01",
+      "WTI": 106.15772727272729,
+      "Brent": 125.44545454545455,
+      "RAC_composite": 110.92,
+      "USO": 313.8399963378906,
+      "real_WTI": 46.39618860993208,
+      "real_Brent": 54.82588143957771
+    },
+    {
+      "date": "2012-04-01",
+      "WTI": 103.321,
+      "Brent": 119.42166666666668,
+      "RAC_composite": 109.68,
+      "USO": 317.44000244140625,
+      "real_WTI": 45.081527311758514,
+      "real_Brent": 52.106649446376395
+    },
+    {
+      "date": "2012-05-01",
+      "WTI": 94.65454545454546,
+      "Brent": 110.33952380952381,
+      "RAC_composite": 103.17,
+      "USO": 260.8800048828125,
+      "real_WTI": 41.38573034962834,
+      "real_Brent": 48.24366074929008
+    },
+    {
+      "date": "2012-06-01",
+      "WTI": 82.30333333333333,
+      "Brent": 95.15571428571428,
+      "RAC_composite": 91.96,
+      "USO": 254.63999938964844,
+      "real_WTI": 36.015181483491155,
+      "real_Brent": 41.63926514751811
+    },
+    {
+      "date": "2012-07-01",
+      "WTI": 87.8952380952381,
+      "Brent": 102.61857142857141,
+      "RAC_composite": 92.84,
+      "USO": 261.44000244140625,
+      "real_WTI": 38.451042519461964,
+      "real_Brent": 44.89197752682594
+    },
+    {
+      "date": "2012-08-01",
+      "WTI": 94.13130434782609,
+      "Brent": 113.35608695652174,
+      "RAC_composite": 97.7,
+      "USO": 287.1199951171875,
+      "real_WTI": 40.941250510106244,
+      "real_Brent": 49.302832730156716
+    },
+    {
+      "date": "2012-09-01",
+      "WTI": 94.51368421052632,
+      "Brent": 112.8636842105263,
+      "RAC_composite": 101.97,
+      "USO": 272.9599914550781,
+      "real_WTI": 40.91235816311769,
+      "real_Brent": 48.85556531416848
+    },
+    {
+      "date": "2012-10-01",
+      "WTI": 89.4913043478261,
+      "Brent": 111.7108695652174,
+      "RAC_composite": 100.02,
+      "USO": 254.24000549316406,
+      "real_WTI": 38.634120631254845,
+      "real_Brent": 48.226486830838375
+    },
+    {
+      "date": "2012-11-01",
+      "WTI": 86.53142857142858,
+      "Brent": 109.05857142857143,
+      "RAC_composite": 96.78,
+      "USO": 260.4800109863281,
+      "real_WTI": 37.419157951571066,
+      "real_Brent": 47.1606672584839
+    },
+    {
+      "date": "2012-12-01",
+      "WTI": 87.8595,
+      "Brent": 109.494,
+      "RAC_composite": 95.06,
+      "USO": 266.9599914550781,
+      "real_WTI": 37.99806245972468,
+      "real_Brent": 47.35469529151764
+    },
+    {
+      "date": "2013-01-01",
+      "WTI": 94.75666666666667,
+      "Brent": 112.96,
+      "RAC_composite": 100.78,
+      "USO": 282.239990234375,
+      "real_WTI": 40.899980864328086,
+      "real_Brent": 48.75711652760932
+    },
+    {
+      "date": "2013-02-01",
+      "WTI": 95.30894736842104,
+      "Brent": 116.05052631578947,
+      "RAC_composite": 101.45,
+      "USO": 264.4800109863281,
+      "real_WTI": 40.916190801985536,
+      "real_Brent": 49.820563635570764
+    },
+    {
+      "date": "2013-03-01",
+      "WTI": 92.9385,
+      "Brent": 108.474,
+      "RAC_composite": 101.23,
+      "USO": 278.0,
+      "real_WTI": 40.011064137556936,
+      "real_Brent": 46.69927071404586
+    },
+    {
+      "date": "2013-04-01",
+      "WTI": 92.02136363636363,
+      "Brent": 102.24818181818182,
+      "RAC_composite": 99.5,
+      "USO": 265.2799987792969,
+      "real_WTI": 39.69911760564789,
+      "real_Brent": 44.11108936620484
+    },
+    {
+      "date": "2013-05-01",
+      "WTI": 94.50954545454546,
+      "Brent": 102.55863636363637,
+      "RAC_composite": 100.17,
+      "USO": 260.8800048828125,
+      "real_WTI": 40.75566983675465,
+      "real_Brent": 44.226706439451114
+    },
+    {
+      "date": "2013-06-01",
+      "WTI": 95.77250000000001,
+      "Brent": 102.9195,
+      "RAC_composite": 98.67,
+      "USO": 273.44000244140625,
+      "real_WTI": 41.20221987997161,
+      "real_Brent": 44.2769257243649
+    },
+    {
+      "date": "2013-07-01",
+      "WTI": 104.67090909090908,
+      "Brent": 107.93318181818182,
+      "RAC_composite": 103.85,
+      "USO": 298.8800048828125,
+      "real_WTI": 44.942425543541894,
+      "real_Brent": 46.34314376049026
+    },
+    {
+      "date": "2013-08-01",
+      "WTI": 106.57272727272726,
+      "Brent": 111.28045454545455,
+      "RAC_composite": 106.2,
+      "USO": 307.8399963378906,
+      "real_WTI": 45.65002710263487,
+      "real_Brent": 47.666564382776436
+    },
+    {
+      "date": "2013-09-01",
+      "WTI": 106.2895,
+      "Brent": 111.59649999999999,
+      "RAC_composite": 105.7,
+      "USO": 294.79998779296875,
+      "real_WTI": 45.51155242695167,
+      "real_Brent": 47.78392936662898
+    },
+    {
+      "date": "2013-10-01",
+      "WTI": 100.53826086956522,
+      "Brent": 109.07652173913044,
+      "RAC_composite": 100.41,
+      "USO": 277.5199890136719,
+      "real_WTI": 43.0259302130643,
+      "real_Brent": 46.67992833415234
+    },
+    {
+      "date": "2013-11-01",
+      "WTI": 93.864,
+      "Brent": 107.792,
+      "RAC_composite": 93.32,
+      "USO": 267.67999267578125,
+      "real_WTI": 40.09568560444255,
+      "real_Brent": 46.04527979495943
+    },
+    {
+      "date": "2013-12-01",
+      "WTI": 97.6252380952381,
+      "Brent": 110.75666666666666,
+      "RAC_composite": 94.32,
+      "USO": 282.55999755859375,
+      "real_WTI": 41.59238838578816,
+      "real_Brent": 47.186919962451555
+    },
+    {
+      "date": "2014-01-01",
+      "WTI": 94.61714285714285,
+      "Brent": 108.11772727272728,
+      "RAC_composite": 93.58,
+      "USO": 278.3999938964844,
+      "real_WTI": 40.21333126089849,
+      "real_Brent": 45.95122882285848
+    },
+    {
+      "date": "2014-02-01",
+      "WTI": 100.81736842105263,
+      "Brent": 108.90052631578948,
+      "RAC_composite": 99.36,
+      "USO": 293.9200134277344,
+      "real_WTI": 42.80138079493801,
+      "real_Brent": 46.233034730134314
+    },
+    {
+      "date": "2014-03-01",
+      "WTI": 100.80380952380953,
+      "Brent": 107.48095238095237,
+      "RAC_composite": 100.09,
+      "USO": 292.7200012207031,
+      "real_WTI": 42.708411512112775,
+      "real_Brent": 45.537373693355185
+    },
+    {
+      "date": "2014-04-01",
+      "WTI": 102.06904761904761,
+      "Brent": 107.7552380952381,
+      "RAC_composite": 100.15,
+      "USO": 290.55999755859375,
+      "real_WTI": 43.16400004188627,
+      "real_Brent": 45.5686342740828
+    },
+    {
+      "date": "2014-05-01",
+      "WTI": 102.17714285714285,
+      "Brent": 109.53909090909092,
+      "RAC_composite": 100.61,
+      "USO": 301.44000244140625,
+      "real_WTI": 43.12764030472267,
+      "real_Brent": 46.23502262769858
+    },
+    {
+      "date": "2014-06-01",
+      "WTI": 105.7942857142857,
+      "Brent": 111.79523809523809,
+      "RAC_composite": 102.51,
+      "USO": 311.0400085449219,
+      "real_WTI": 44.59547264661267,
+      "real_Brent": 47.12505452290724
+    },
+    {
+      "date": "2014-07-01",
+      "WTI": 103.58863636363638,
+      "Brent": 106.76818181818182,
+      "RAC_composite": 101.22,
+      "USO": 290.55999755859375,
+      "real_WTI": 43.61663524056472,
+      "real_Brent": 44.95540249525546
+    },
+    {
+      "date": "2014-08-01",
+      "WTI": 96.53619047619047,
+      "Brent": 101.60809523809523,
+      "RAC_composite": 95.61,
+      "USO": 286.0799865722656,
+      "real_WTI": 40.653663975486594,
+      "real_Brent": 42.78956255289111
+    },
+    {
+      "date": "2014-09-01",
+      "WTI": 93.21190476190476,
+      "Brent": 97.09142857142858,
+      "RAC_composite": 92.26,
+      "USO": 275.2799987792969,
+      "real_WTI": 39.25091893610951,
+      "real_Brent": 40.88456085070494
+    },
+    {
+      "date": "2014-10-01",
+      "WTI": 84.39695652173914,
+      "Brent": 87.42521739130434,
+      "RAC_composite": 84.99,
+      "USO": 245.0399932861328,
+      "real_WTI": 35.546037367535334,
+      "real_Brent": 36.821470492905
+    },
+    {
+      "date": "2014-11-01",
+      "WTI": 75.78947368421052,
+      "Brent": 79.4378947368421,
+      "RAC_composite": 75.66,
+      "USO": 204.63999938964844,
+      "real_WTI": 31.980974873391983,
+      "real_Brent": 33.52050346938054
+    },
+    {
+      "date": "2014-12-01",
+      "WTI": 59.29045454545455,
+      "Brent": 62.33500000000001,
+      "RAC_composite": 60.7,
+      "USO": 162.8800048828125,
+      "real_WTI": 25.096276241240098,
+      "real_Brent": 26.384961820429037
+    },
+    {
+      "date": "2015-01-01",
+      "WTI": 47.219,
+      "Brent": 47.7595,
+      "RAC_composite": 47.0,
+      "USO": 142.55999755859375,
+      "real_WTI": 20.114847048098593,
+      "real_Brent": 20.345094931990612
+    },
+    {
+      "date": "2015-02-01",
+      "WTI": 50.58421052631579,
+      "Brent": 58.0955,
+      "RAC_composite": 48.92,
+      "USO": 144.8000030517578,
+      "real_WTI": 21.493915461887717,
+      "real_Brent": 24.685563987728496
+    },
+    {
+      "date": "2015-03-01",
+      "WTI": 47.82363636363636,
+      "Brent": 55.88545454545454,
+      "RAC_composite": 47.99,
+      "USO": 134.72000122070312,
+      "real_WTI": 20.266313677508034,
+      "real_Brent": 23.682685758490077
+    },
+    {
+      "date": "2015-04-01",
+      "WTI": 54.45285714285714,
+      "Brent": 59.52428571428571,
+      "RAC_composite": 53.51,
+      "USO": 164.0800018310547,
+      "real_WTI": 23.0515604570519,
+      "real_Brent": 25.19845133572898
+    },
+    {
+      "date": "2015-05-01",
+      "WTI": 59.265,
+      "Brent": 64.075,
+      "RAC_composite": 58.65,
+      "USO": 162.47999572753906,
+      "real_WTI": 25.006223602432055,
+      "real_Brent": 27.035750904004622
+    },
+    {
+      "date": "2015-06-01",
+      "WTI": 59.819545454545455,
+      "Brent": 61.47772727272727,
+      "RAC_composite": 60.12,
+      "USO": 159.0399932861328,
+      "real_WTI": 25.170537983120823,
+      "real_Brent": 25.868258571271735
+    },
+    {
+      "date": "2015-07-01",
+      "WTI": 50.90090909090909,
+      "Brent": 56.56130434782609,
+      "RAC_composite": 53.4,
+      "USO": 124.72000122070312,
+      "real_WTI": 21.38388175256858,
+      "real_Brent": 23.761859376318547
+    },
+    {
+      "date": "2015-08-01",
+      "WTI": 42.86761904761905,
+      "Brent": 46.515,
+      "RAC_composite": 44.97,
+      "USO": 127.12000274658203,
+      "real_WTI": 18.009107580721604,
+      "real_Brent": 19.541408124083638
+    },
+    {
+      "date": "2015-09-01",
+      "WTI": 45.47952380952381,
+      "Brent": 47.62318181818182,
+      "RAC_composite": 44.38,
+      "USO": 117.44000244140625,
+      "real_WTI": 19.149434441352692,
+      "real_Brent": 20.052034887949297
+    },
+    {
+      "date": "2015-10-01",
+      "WTI": 46.22363636363636,
+      "Brent": 48.43,
+      "RAC_composite": 44.77,
+      "USO": 118.4800033569336,
+      "real_WTI": 19.44350862675201,
+      "real_Brent": 20.371593342110685
+    },
+    {
+      "date": "2015-11-01",
+      "WTI": 42.4435,
+      "Brent": 44.26761904761905,
+      "RAC_composite": 41.43,
+      "USO": 103.44000244140625,
+      "real_WTI": 17.832129637798978,
+      "real_Brent": 18.598511470869326
+    },
+    {
+      "date": "2015-12-01",
+      "WTI": 37.18863636363636,
+      "Brent": 38.00545454545455,
+      "RAC_composite": 35.63,
+      "USO": 88.0,
+      "real_WTI": 15.641184367342149,
+      "real_Brent": 15.984730273448779
+    },
+    {
+      "date": "2016-01-01",
+      "WTI": 31.683157894736844,
+      "Brent": 30.6995,
+      "RAC_composite": 29.99,
+      "USO": 77.19999694824219,
+      "real_WTI": 13.33174469170756,
+      "real_Brent": 12.917837846935857
+    },
+    {
+      "date": "2016-02-01",
+      "WTI": 30.323,
+      "Brent": 32.1815,
+      "RAC_composite": 28.53,
+      "USO": 72.0,
+      "real_WTI": 12.776401388748441,
+      "real_Brent": 13.559468432938957
+    },
+    {
+      "date": "2016-03-01",
+      "WTI": 37.54636363636364,
+      "Brent": 38.210454545454546,
+      "RAC_composite": 33.82,
+      "USO": 77.5999984741211,
+      "real_WTI": 15.770482038123166,
+      "real_Brent": 16.049418071847505
+    },
+    {
+      "date": "2016-04-01",
+      "WTI": 40.7552380952381,
+      "Brent": 41.583333333333336,
+      "RAC_composite": 37.71,
+      "USO": 90.4000015258789,
+      "real_WTI": 17.05297168743644,
+      "real_Brent": 17.39946664881391
+    },
+    {
+      "date": "2016-05-01",
+      "WTI": 46.712380952380954,
+      "Brent": 46.742380952380955,
+      "RAC_composite": 42.88,
+      "USO": 94.95999908447266,
+      "real_WTI": 19.499484862634347,
+      "real_Brent": 19.512007978218527
+    },
+    {
+      "date": "2016-06-01",
+      "WTI": 48.75727272727273,
+      "Brent": 48.24727272727273,
+      "RAC_composite": 45.96,
+      "USO": 92.55999755859375,
+      "real_WTI": 20.296755803911683,
+      "real_Brent": 20.0844521847594
+    },
+    {
+      "date": "2016-07-01",
+      "WTI": 44.6515,
+      "Brent": 44.951904761904764,
+      "RAC_composite": 43.26,
+      "USO": 78.08000183105469,
+      "real_WTI": 18.596965443709106,
+      "real_Brent": 18.722081441520345
+    },
+    {
+      "date": "2016-08-01",
+      "WTI": 44.72434782608696,
+      "Brent": 45.843043478260874,
+      "RAC_composite": 42.7,
+      "USO": 82.87999725341797,
+      "real_WTI": 18.592923497094915,
+      "real_Brent": 19.057990595631118
+    },
+    {
+      "date": "2016-09-01",
+      "WTI": 45.18238095238095,
+      "Brent": 46.567727272727275,
+      "RAC_composite": 42.73,
+      "USO": 87.44000244140625,
+      "real_WTI": 18.73419451039115,
+      "real_Brent": 19.308607520121107
+    },
+    {
+      "date": "2016-10-01",
+      "WTI": 49.775238095238095,
+      "Brent": 49.522380952380956,
+      "RAC_composite": 46.85,
+      "USO": 84.23999786376953,
+      "real_WTI": 20.590316948816334,
+      "real_Brent": 20.485718579959936
+    },
+    {
+      "date": "2016-11-01",
+      "WTI": 45.66095238095238,
+      "Brent": 44.73409090909091,
+      "RAC_composite": 44.06,
+      "USO": 87.44000244140625,
+      "real_WTI": 18.866135200743877,
+      "real_Brent": 18.48317573694186
+    },
+    {
+      "date": "2016-12-01",
+      "WTI": 51.9704761904762,
+      "Brent": 53.3085,
+      "RAC_composite": 48.66,
+      "USO": 93.76000213623047,
+      "real_WTI": 21.419023558021323,
+      "real_Brent": 21.970474412393823
+    },
+    {
+      "date": "2017-01-01",
+      "WTI": 52.504,
+      "Brent": 54.57666666666666,
+      "RAC_composite": 49.99,
+      "USO": 90.55999755859375,
+      "real_WTI": 21.551773678463825,
+      "real_Brent": 22.402559197869888
+    },
+    {
+      "date": "2017-02-01",
+      "WTI": 53.46842105263158,
+      "Brent": 54.8695,
+      "RAC_composite": 51.24,
+      "USO": 91.5999984741211,
+      "real_WTI": 21.912748478574944,
+      "real_Brent": 22.48694704228585
+    },
+    {
+      "date": "2017-03-01",
+      "WTI": 49.32782608695652,
+      "Brent": 51.589130434782604,
+      "RAC_composite": 48.65,
+      "USO": 85.12000274658203,
+      "real_WTI": 20.225274337393813,
+      "real_Brent": 21.15244880306964
+    },
+    {
+      "date": "2017-04-01",
+      "WTI": 51.060526315789474,
+      "Brent": 52.30789473684211,
+      "RAC_composite": 49.47,
+      "USO": 81.91999816894531,
+      "real_WTI": 20.9099058186719,
+      "real_Brent": 21.420718340346408
+    },
+    {
+      "date": "2017-05-01",
+      "WTI": 48.47636363636364,
+      "Brent": 50.326521739130435,
+      "RAC_composite": 48.47,
+      "USO": 79.68000030517578,
+      "real_WTI": 19.867036456928428,
+      "real_Brent": 20.625285544142898
+    },
+    {
+      "date": "2017-06-01",
+      "WTI": 45.177727272727275,
+      "Brent": 46.36818181818182,
+      "RAC_composite": 45.25,
+      "USO": 76.0,
+      "real_WTI": 18.503101318679438,
+      "real_Brent": 18.99066681609491
+    },
+    {
+      "date": "2017-07-01",
+      "WTI": 46.630526315789474,
+      "Brent": 48.47857142857143,
+      "RAC_composite": 46.27,
+      "USO": 82.23999786376953,
+      "real_WTI": 19.09185782838791,
+      "real_Brent": 19.84849982540807
+    },
+    {
+      "date": "2017-08-01",
+      "WTI": 48.03695652173913,
+      "Brent": 51.70434782608696,
+      "RAC_composite": 48.22,
+      "USO": 77.04000091552734,
+      "real_WTI": 19.59228679057648,
+      "real_Brent": 21.088063946557046
+    },
+    {
+      "date": "2017-09-01",
+      "WTI": 49.822,
+      "Brent": 56.152857142857144,
+      "RAC_composite": 50.78,
+      "USO": 83.44000244140625,
+      "real_WTI": 20.217095785907034,
+      "real_Brent": 22.78607224739065
+    },
+    {
+      "date": "2017-10-01",
+      "WTI": 51.57772727272727,
+      "Brent": 57.50772727272727,
+      "RAC_composite": 52.67,
+      "USO": 87.44000244140625,
+      "real_WTI": 20.913337309418825,
+      "real_Brent": 23.31778777287361
+    },
+    {
+      "date": "2017-11-01",
+      "WTI": 56.63857142857143,
+      "Brent": 62.71409090909091,
+      "RAC_composite": 57.75,
+      "USO": 91.76000213623047,
+      "real_WTI": 22.90426045703379,
+      "real_Brent": 25.36116000594091
+    },
+    {
+      "date": "2017-12-01",
+      "WTI": 57.8815,
+      "Brent": 64.3736842105263,
+      "RAC_composite": 59.53,
+      "USO": 96.08000183105469,
+      "real_WTI": 23.357680434212384,
+      "real_Brent": 25.977556631434517
+    },
+    {
+      "date": "2018-01-01",
+      "WTI": 63.698571428571434,
+      "Brent": 69.07727272727273,
+      "RAC_composite": 63.25,
+      "USO": 103.83999633789062,
+      "real_WTI": 25.596249855770306,
+      "real_Brent": 27.75759475336344
+    },
+    {
+      "date": "2018-02-01",
+      "WTI": 62.22947368421052,
+      "Brent": 65.3175,
+      "RAC_composite": 61.74,
+      "USO": 98.95999908447266,
+      "real_WTI": 24.938774124134078,
+      "real_Brent": 26.176316179682523
+    },
+    {
+      "date": "2018-03-01",
+      "WTI": 62.724761904761905,
+      "Brent": 66.01666666666667,
+      "RAC_composite": 60.81,
+      "USO": 104.72000122070312,
+      "real_WTI": 25.13242883148764,
+      "real_Brent": 26.451422473491817
+    },
+    {
+      "date": "2018-04-01",
+      "WTI": 66.25380952380952,
+      "Brent": 72.10600000000001,
+      "RAC_composite": 64.41,
+      "USO": 110.4000015258789,
+      "real_WTI": 26.47748225563569,
+      "real_Brent": 28.816234858748256
+    },
+    {
+      "date": "2018-05-01",
+      "WTI": 69.97818181818182,
+      "Brent": 76.9752380952381,
+      "RAC_composite": 68.91,
+      "USO": 108.4000015258789,
+      "real_WTI": 27.902876414790672,
+      "real_Brent": 30.69286025680169
+    },
+    {
+      "date": "2018-06-01",
+      "WTI": 67.87333333333333,
+      "Brent": 74.4047619047619,
+      "RAC_composite": 68.35,
+      "USO": 120.4800033569336,
+      "real_WTI": 27.039229590441057,
+      "real_Brent": 29.641205772001168
+    },
+    {
+      "date": "2018-07-01",
+      "WTI": 70.98142857142857,
+      "Brent": 74.2540909090909,
+      "RAC_composite": 70.29,
+      "USO": 114.23999786376953,
+      "real_WTI": 28.255363383978825,
+      "real_Brent": 29.558102219259638
+    },
+    {
+      "date": "2018-08-01",
+      "WTI": 68.05565217391305,
+      "Brent": 72.52826086956522,
+      "RAC_composite": 67.68,
+      "USO": 117.68000030517578,
+      "real_WTI": 27.04237499112426,
+      "real_Brent": 28.819596392622362
+    },
+    {
+      "date": "2018-09-01",
+      "WTI": 70.2321052631579,
+      "Brent": 78.89099999999999,
+      "RAC_composite": 69.29,
+      "USO": 124.16000366210938,
+      "real_WTI": 27.849769318649987,
+      "real_Brent": 31.28335884400948
+    },
+    {
+      "date": "2018-10-01",
+      "WTI": 70.74869565217391,
+      "Brent": 81.03217391304348,
+      "RAC_composite": 70.99,
+      "USO": 110.31999969482422,
+      "real_WTI": 27.989134734928673,
+      "real_Brent": 32.057416926338156
+    },
+    {
+      "date": "2018-11-01",
+      "WTI": 56.963499999999996,
+      "Brent": 64.74818181818182,
+      "RAC_composite": 59.01,
+      "USO": 85.83999633789062,
+      "real_WTI": 22.551406605065836,
+      "real_Brent": 25.633301589975147
+    },
+    {
+      "date": "2018-12-01",
+      "WTI": 49.522777777777776,
+      "Brent": 57.36235294117647,
+      "RAC_composite": 48.83,
+      "USO": 77.27999877929688,
+      "real_WTI": 19.592263933890806,
+      "real_Brent": 22.69376656809491
+    },
+    {
+      "date": "2019-01-01",
+      "WTI": 51.37571428571429,
+      "Brent": 59.40954545454545,
+      "RAC_composite": 52.29,
+      "USO": 90.80000305175781,
+      "real_WTI": 20.341903257317753,
+      "real_Brent": 23.52285010533909
+    },
+    {
+      "date": "2019-02-01",
+      "WTI": 54.95473684210527,
+      "Brent": 63.9605,
+      "RAC_composite": 57.62,
+      "USO": 95.5999984741211,
+      "real_WTI": 21.693886697052047,
+      "real_Brent": 25.248994350996178
+    },
+    {
+      "date": "2019-03-01",
+      "WTI": 58.151428571428575,
+      "Brent": 66.13857142857144,
+      "RAC_composite": 61.64,
+      "USO": 100.0,
+      "real_WTI": 22.869323049834854,
+      "real_Brent": 26.010441930875164
+    },
+    {
+      "date": "2019-04-01",
+      "WTI": 63.862380952380946,
+      "Brent": 71.23333333333333,
+      "RAC_composite": 66.51,
+      "USO": 106.31999969482422,
+      "real_WTI": 25.021208445765613,
+      "real_Brent": 27.909139230951066
+    },
+    {
+      "date": "2019-05-01",
+      "WTI": 60.82681818181818,
+      "Brent": 71.31772727272727,
+      "RAC_composite": 65.11,
+      "USO": 88.80000305175781,
+      "real_WTI": 23.825997344971398,
+      "real_Brent": 27.935309316529544
+    },
+    {
+      "date": "2019-06-01",
+      "WTI": 54.657500000000006,
+      "Brent": 64.2205,
+      "RAC_composite": 59.16,
+      "USO": 96.31999969482422,
+      "real_WTI": 21.41642471190731,
+      "real_Brent": 25.163490888003356
+    },
+    {
+      "date": "2019-07-01",
+      "WTI": 57.35809523809524,
+      "Brent": 63.919130434782616,
+      "RAC_composite": 60.53,
+      "USO": 96.31999969482422,
+      "real_WTI": 22.42284862436386,
+      "real_Brent": 24.987736778751774
+    },
+    {
+      "date": "2019-08-01",
+      "WTI": 54.80590909090909,
+      "Brent": 59.041818181818186,
+      "RAC_composite": 56.9,
+      "USO": 91.68000030517578,
+      "real_WTI": 21.40554808343713,
+      "real_Brent": 23.05996741935438
+    },
+    {
+      "date": "2019-09-01",
+      "WTI": 56.947,
+      "Brent": 62.82666666666666,
+      "RAC_composite": 58.6,
+      "USO": 90.72000122070312,
+      "real_WTI": 22.20762001325898,
+      "real_Brent": 24.50051346046354
+    },
+    {
+      "date": "2019-10-01",
+      "WTI": 53.96304347826087,
+      "Brent": 59.71304347826087,
+      "RAC_composite": 55.85,
+      "USO": 90.4000015258789,
+      "real_WTI": 20.98463707812832,
+      "real_Brent": 23.220642600089782
+    },
+    {
+      "date": "2019-11-01",
+      "WTI": 57.048947368421054,
+      "Brent": 63.21190476190476,
+      "RAC_composite": 57.88,
+      "USO": 92.95999908447266,
+      "real_WTI": 22.122370324229987,
+      "real_Brent": 24.51223432769041
+    },
+    {
+      "date": "2019-12-01",
+      "WTI": 59.81666666666667,
+      "Brent": 67.21714285714286,
+      "RAC_composite": 60.27,
+      "USO": 102.4800033569336,
+      "real_WTI": 23.12827849308536,
+      "real_Brent": 25.989692942482645
+    },
+    {
+      "date": "2020-01-01",
+      "WTI": 57.519047619047626,
+      "Brent": 63.64545454545455,
+      "RAC_composite": 57.92,
+      "USO": 86.72000122070312,
+      "real_WTI": 22.197242131868784,
+      "real_Brent": 24.56149090810859
+    },
+    {
+      "date": "2020-02-01",
+      "WTI": 50.54263157894737,
+      "Brent": 55.657000000000004,
+      "RAC_composite": 51.37,
+      "USO": 75.5999984741211,
+      "real_WTI": 19.495711312998022,
+      "real_Brent": 21.46846673095468
+    },
+    {
+      "date": "2020-03-01",
+      "WTI": 29.207727272727276,
+      "Brent": 32.01136363636363,
+      "RAC_composite": 32.55,
+      "USO": 33.68000030517578,
+      "real_WTI": 11.317490689846121,
+      "real_Brent": 12.40385143770193
+    },
+    {
+      "date": "2020-04-01",
+      "WTI": 16.547619047619047,
+      "Brent": 18.3785,
+      "RAC_composite": 19.32,
+      "USO": 19.1200008392334,
+      "real_WTI": 6.463105802250909,
+      "real_Brent": 7.178204286964129
+    },
+    {
+      "date": "2020-05-01",
+      "WTI": 28.5625,
+      "Brent": 29.378947368421056,
+      "RAC_composite": 23.55,
+      "USO": 25.8799991607666,
+      "real_WTI": 11.16586265940063,
+      "real_Brent": 11.485034271984214
+    },
+    {
+      "date": "2020-06-01",
+      "WTI": 38.307272727272725,
+      "Brent": 40.26681818181818,
+      "RAC_composite": 36.8,
+      "USO": 28.059999465942383,
+      "real_WTI": 14.903118061356793,
+      "real_Brent": 15.665462524341619
+    },
+    {
+      "date": "2020-07-01",
+      "WTI": 40.710454545454546,
+      "Brent": 43.24217391304348,
+      "RAC_composite": 40.08,
+      "USO": 29.06999969482422,
+      "real_WTI": 15.757747006198734,
+      "real_Brent": 16.737696597294963
+    },
+    {
+      "date": "2020-08-01",
+      "WTI": 42.33904761904762,
+      "Brent": 44.736000000000004,
+      "RAC_composite": 42.42,
+      "USO": 30.579999923706055,
+      "real_WTI": 16.32720218538294,
+      "real_Brent": 17.25153866325256
+    },
+    {
+      "date": "2020-09-01",
+      "WTI": 39.63428571428571,
+      "Brent": 40.90954545454545,
+      "RAC_composite": 39.81,
+      "USO": 28.290000915527344,
+      "real_WTI": 15.244131937786092,
+      "real_Brent": 15.734622112772627
+    },
+    {
+      "date": "2020-10-01",
+      "WTI": 39.39590909090909,
+      "Brent": 40.18954545454546,
+      "RAC_composite": 39.21,
+      "USO": 25.25,
+      "real_WTI": 15.133704835570624,
+      "real_Brent": 15.438575537915195
+    },
+    {
+      "date": "2020-11-01",
+      "WTI": 40.93736842105263,
+      "Brent": 42.69238095238095,
+      "RAC_composite": 40.68,
+      "USO": 30.969999313354492,
+      "real_WTI": 15.6901657734065,
+      "real_Brent": 16.362813738163954
+    },
+    {
+      "date": "2020-12-01",
+      "WTI": 47.025,
+      "Brent": 49.99363636363637,
+      "RAC_composite": 46.2,
+      "USO": 33.0099983215332,
+      "real_WTI": 17.945391058787614,
+      "real_Brent": 19.07826379577415
+    },
+    {
+      "date": "2021-01-01",
+      "WTI": 52.008421052631576,
+      "Brent": 54.774,
+      "RAC_composite": 51.39,
+      "USO": 35.18000030517578,
+      "real_WTI": 19.798627664342572,
+      "real_Brent": 20.851431551618465
+    },
+    {
+      "date": "2021-02-01",
+      "WTI": 59.04631578947369,
+      "Brent": 62.2765,
+      "RAC_composite": 58.41,
+      "USO": 41.310001373291016,
+      "real_WTI": 22.40175271530497,
+      "real_Brent": 23.62726165589823
+    },
+    {
+      "date": "2021-03-01",
+      "WTI": 62.333043478260876,
+      "Brent": 65.41,
+      "RAC_composite": 61.97,
+      "USO": 40.529998779296875,
+      "real_WTI": 23.52536542293427,
+      "real_Brent": 24.68665199784119
+    },
+    {
+      "date": "2021-04-01",
+      "WTI": 61.71666666666666,
+      "Brent": 64.8065,
+      "RAC_composite": 62.4,
+      "USO": 43.27000045776367,
+      "real_WTI": 23.148321793554224,
+      "real_Brent": 24.30723817954046
+    },
+    {
+      "date": "2021-05-01",
+      "WTI": 65.1695,
+      "Brent": 68.53421052631579,
+      "RAC_composite": 65.15,
+      "USO": 45.41999816894531,
+      "real_WTI": 24.282275703006526,
+      "real_Brent": 25.53597304088403
+    },
+    {
+      "date": "2021-06-01",
+      "WTI": 71.37818181818182,
+      "Brent": 73.1640909090909,
+      "RAC_composite": 70.55,
+      "USO": 49.880001068115234,
+      "real_WTI": 26.37248362048291,
+      "real_Brent": 27.032333129785965
+    },
+    {
+      "date": "2021-07-01",
+      "WTI": 72.4852380952381,
+      "Brent": 75.1659090909091,
+      "RAC_composite": 71.98,
+      "USO": 50.65999984741211,
+      "real_WTI": 26.658491482344107,
+      "real_Brent": 27.644383876201843
+    },
+    {
+      "date": "2021-08-01",
+      "WTI": 67.73045454545455,
+      "Brent": 70.74714285714286,
+      "RAC_composite": 67.89,
+      "USO": 48.040000915527344,
+      "real_WTI": 24.839169763915617,
+      "real_Brent": 25.94549680101764
+    },
+    {
+      "date": "2021-09-01",
+      "WTI": 71.64619047619047,
+      "Brent": 74.48863636363636,
+      "RAC_composite": 71.1,
+      "USO": 52.560001373291016,
+      "real_WTI": 26.15683636091799,
+      "real_Brent": 27.19456623111108
+    },
+    {
+      "date": "2021-10-01",
+      "WTI": 81.47666666666666,
+      "Brent": 83.53809523809524,
+      "RAC_composite": 78.83,
+      "USO": 57.150001525878906,
+      "real_WTI": 29.46182124992466,
+      "real_Brent": 30.207230243390068
+    },
+    {
+      "date": "2021-11-01",
+      "WTI": 79.14750000000001,
+      "Brent": 81.05,
+      "RAC_composite": 78.47,
+      "USO": 47.90999984741211,
+      "real_WTI": 28.37651791380294,
+      "real_Brent": 29.058615583735783
+    },
+    {
+      "date": "2021-12-01",
+      "WTI": 71.71181818181819,
+      "Brent": 74.1704761904762,
+      "RAC_composite": 71.98,
+      "USO": 54.36000061035156,
+      "real_WTI": 25.53430475237878,
+      "real_Brent": 26.409754914802182
+    },
+    {
+      "date": "2022-01-01",
+      "WTI": 83.22200000000001,
+      "Brent": 86.50523809523808,
+      "RAC_composite": 80.26,
+      "USO": 62.47999954223633,
+      "real_WTI": 29.45463168438079,
+      "real_Brent": 30.616662984125632
+    },
+    {
+      "date": "2022-02-01",
+      "WTI": 91.64105263157894,
+      "Brent": 97.12899999999999,
+      "RAC_composite": 90.21,
+      "USO": 67.4800033569336,
+      "real_WTI": 32.2112663028397,
+      "real_Brent": 34.1402460456942
+    },
+    {
+      "date": "2022-03-01",
+      "WTI": 108.50260869565217,
+      "Brent": 117.24521739130434,
+      "RAC_composite": 106.98,
+      "USO": 74.12000274658203,
+      "real_WTI": 37.71721069531907,
+      "real_Brent": 40.75627877086714
+    },
+    {
+      "date": "2022-04-01",
+      "WTI": 101.7775,
+      "Brent": 104.57526315789474,
+      "RAC_composite": 105.22,
+      "USO": 77.16000366210938,
+      "real_WTI": 35.270705327469756,
+      "real_Brent": 36.24026225231225
+    },
+    {
+      "date": "2022-05-01",
+      "WTI": 109.55238095238094,
+      "Brent": 113.33761904761906,
+      "RAC_composite": 110.43,
+      "USO": 85.47000122070312,
+      "real_WTI": 37.608353285082956,
+      "real_Brent": 38.90779169359867
+    },
+    {
+      "date": "2022-06-01",
+      "WTI": 114.83714285714285,
+      "Brent": 122.71095238095238,
+      "RAC_composite": 114.44,
+      "USO": 80.3499984741211,
+      "real_WTI": 38.93352009179062,
+      "real_Brent": 41.60299717618242
+    },
+    {
+      "date": "2022-07-01",
+      "WTI": 101.619,
+      "Brent": 111.92571428571429,
+      "RAC_composite": 102.82,
+      "USO": 78.05000305175781,
+      "real_WTI": 34.45728062174268,
+      "real_Brent": 37.95211275383394
+    },
+    {
+      "date": "2022-08-01",
+      "WTI": 93.66521739130435,
+      "Brent": 100.44636363636364,
+      "RAC_composite": 95.8,
+      "USO": 73.11000061035156,
+      "real_WTI": 31.740484447928768,
+      "real_Brent": 34.038422497132686
+    },
+    {
+      "date": "2022-09-01",
+      "WTI": 84.25809523809524,
+      "Brent": 89.7647619047619,
+      "RAC_composite": 86.57,
+      "USO": 65.27999877929688,
+      "real_WTI": 28.43204979200039,
+      "real_Brent": 30.290219270104473
+    },
+    {
+      "date": "2022-10-01",
+      "WTI": 87.5547619047619,
+      "Brent": 93.33190476190477,
+      "RAC_composite": 88.02,
+      "USO": 71.52999877929688,
+      "real_WTI": 29.380102448855865,
+      "real_Brent": 31.31869545410167
+    },
+    {
+      "date": "2022-11-01",
+      "WTI": 84.37047619047618,
+      "Brent": 91.41545454545455,
+      "RAC_composite": 84.57,
+      "USO": 70.2300033569336,
+      "real_WTI": 28.237760869142523,
+      "real_Brent": 30.595628491781593
+    },
+    {
+      "date": "2022-12-01",
+      "WTI": 76.43714285714286,
+      "Brent": 80.924,
+      "RAC_composite": 76.56,
+      "USO": 70.11000061035156,
+      "real_WTI": 25.578633766511906,
+      "real_Brent": 27.080098516892438
+    },
+    {
+      "date": "2023-01-01",
+      "WTI": 78.123,
+      "Brent": 82.50142857142858,
+      "RAC_composite": 75.7,
+      "USO": 69.31999969482422,
+      "real_WTI": 26.004593569003397,
+      "real_Brent": 27.462029349387052
+    },
+    {
+      "date": "2023-02-01",
+      "WTI": 76.83263157894737,
+      "Brent": 82.58500000000001,
+      "RAC_composite": 74.86,
+      "USO": 67.20999908447266,
+      "real_WTI": 25.487686707230843,
+      "real_Brent": 27.395919721346825
+    },
+    {
+      "date": "2023-03-01",
+      "WTI": 73.27782608695652,
+      "Brent": 78.43434782608696,
+      "RAC_composite": 73.0,
+      "USO": 66.44000244140625,
+      "real_WTI": 24.278571102393975,
+      "real_Brent": 25.987041268197693
+    },
+    {
+      "date": "2023-04-01",
+      "WTI": 79.44631578947369,
+      "Brent": 84.63833333333334,
+      "RAC_composite": 78.53,
+      "USO": 67.5,
+      "real_WTI": 26.233325889307626,
+      "real_Brent": 27.947740043036315
+    },
+    {
+      "date": "2023-05-01",
+      "WTI": 71.57818181818182,
+      "Brent": 75.466,
+      "RAC_composite": 72.57,
+      "USO": 60.630001068115234,
+      "real_WTI": 23.59715093533261,
+      "real_Brent": 24.878846420117757
+    },
+    {
+      "date": "2023-06-01",
+      "WTI": 70.24809523809525,
+      "Brent": 74.83909090909091,
+      "RAC_composite": 71.39,
+      "USO": 63.54999923706055,
+      "real_WTI": 23.106861933363348,
+      "real_Brent": 24.61698833247512
+    },
+    {
+      "date": "2023-07-01",
+      "WTI": 76.0695,
+      "Brent": 80.10809523809523,
+      "RAC_composite": 76.41,
+      "USO": 73.16999816894531,
+      "real_WTI": 24.97283402657177,
+      "real_Brent": 26.29866328246875
+    },
+    {
+      "date": "2023-08-01",
+      "WTI": 81.38608695652174,
+      "Brent": 86.14772727272727,
+      "RAC_composite": 81.78,
+      "USO": 75.05999755859375,
+      "real_WTI": 26.58963511625046,
+      "real_Brent": 28.145309842698122
+    },
+    {
+      "date": "2023-09-01",
+      "WTI": 89.425,
+      "Brent": 93.72238095238096,
+      "RAC_composite": 89.32,
+      "USO": 80.86000061035156,
+      "real_WTI": 29.102500683424672,
+      "real_Brent": 30.501041718969574
+    },
+    {
+      "date": "2023-10-01",
+      "WTI": 85.63952380952381,
+      "Brent": 90.59590909090909,
+      "RAC_composite": 86.6,
+      "USO": 75.0199966430664,
+      "real_WTI": 27.832511247960262,
+      "real_Brent": 29.443317134739836
+    },
+    {
+      "date": "2023-11-01",
+      "WTI": 77.685,
+      "Brent": 82.94,
+      "RAC_composite": 79.7,
+      "USO": 70.13999938964844,
+      "real_WTI": 25.21028856263873,
+      "real_Brent": 26.915637940210544
+    },
+    {
+      "date": "2023-12-01",
+      "WTI": 71.9,
+      "Brent": 77.63105263157895,
+      "RAC_composite": 72.34,
+      "USO": 66.6500015258789,
+      "real_WTI": 23.288128236936465,
+      "real_Brent": 25.144393725348742
+    },
+    {
+      "date": "2024-01-01",
+      "WTI": 74.15238095238095,
+      "Brent": 80.12409090909091,
+      "RAC_composite": 73.28,
+      "USO": 70.91999816894531,
+      "real_WTI": 23.943448440862053,
+      "real_Brent": 25.871684966997176
+    },
+    {
+      "date": "2024-02-01",
+      "WTI": 77.249,
+      "Brent": 83.47809523809524,
+      "RAC_composite": 76.2,
+      "USO": 73.36000061035156,
+      "real_WTI": 24.84154267173044,
+      "real_Brent": 26.844679737108837
+    },
+    {
+      "date": "2024-03-01",
+      "WTI": 81.27799999999999,
+      "Brent": 85.4085,
+      "RAC_composite": 79.67,
+      "USO": 78.7300033569336,
+      "real_WTI": 26.02186684595559,
+      "real_Brent": 27.34428276425107
+    },
+    {
+      "date": "2024-04-01",
+      "WTI": 85.34727272727274,
+      "Brent": 89.93809523809524,
+      "RAC_composite": 84.47,
+      "USO": 78.37999725341797,
+      "real_WTI": 27.265495739058387,
+      "real_Brent": 28.73210442622275
+    },
+    {
+      "date": "2024-05-01",
+      "WTI": 80.02454545454545,
+      "Brent": 81.74619047619048,
+      "RAC_composite": 80.7,
+      "USO": 74.81999969482422,
+      "real_WTI": 25.552660798130578,
+      "real_Brent": 26.10239976888017
+    },
+    {
+      "date": "2024-06-01",
+      "WTI": 79.76736842105262,
+      "Brent": 82.24600000000001,
+      "RAC_composite": 80.28,
+      "USO": 79.58999633789062,
+      "real_WTI": 25.481200221391443,
+      "real_Brent": 26.272983989471136
+    },
+    {
+      "date": "2024-07-01",
+      "WTI": 81.80045454545454,
+      "Brent": 85.15304347826087,
+      "RAC_composite": 81.5,
+      "USO": 77.73999786376953,
+      "real_WTI": 26.086907361842062,
+      "real_Brent": 27.156078400052575
+    },
+    {
+      "date": "2024-08-01",
+      "WTI": 76.68318181818182,
+      "Brent": 80.3552380952381,
+      "RAC_composite": 77.39,
+      "USO": 74.33999633789062,
+      "real_WTI": 24.41657437645491,
+      "real_Brent": 25.58578818680327
+    },
+    {
+      "date": "2024-09-01",
+      "WTI": 70.236,
+      "Brent": 74.01666666666667,
+      "RAC_composite": 71.75,
+      "USO": 69.91999816894531,
+      "real_WTI": 22.31612927824308,
+      "real_Brent": 23.51736292041059
+    },
+    {
+      "date": "2024-10-01",
+      "WTI": 71.985,
+      "Brent": 75.63260869565217,
+      "RAC_composite": 72.95,
+      "USO": 73.08000183105469,
+      "real_WTI": 22.80669515985439,
+      "real_Brent": 23.962351193530477
+    },
+    {
+      "date": "2024-11-01",
+      "WTI": 69.95,
+      "Brent": 74.3452380952381,
+      "RAC_composite": 70.89,
+      "USO": 71.61000061035156,
+      "real_WTI": 22.09915078602841,
+      "real_Brent": 23.487728761827736
+    },
+    {
+      "date": "2024-12-01",
+      "WTI": 70.11809523809524,
+      "Brent": 73.8595,
+      "RAC_composite": 70.37,
+      "USO": 75.55000305175781,
+      "real_WTI": 22.0772078557245,
+      "real_Brent": 23.255217188700392
+    },
+    {
+      "date": "2025-01-01",
+      "WTI": 75.74249999999999,
+      "Brent": 79.27045454545454,
+      "RAC_composite": 74.93,
+      "USO": 78.0199966430664,
+      "real_WTI": 23.74663360097316,
+      "real_Brent": 24.85271069047769
+    },
+    {
+      "date": "2025-02-01",
+      "WTI": 71.53315789473685,
+      "Brent": 75.438,
+      "RAC_composite": 73.04,
+      "USO": 75.22000122070312,
+      "real_WTI": 22.376558327177218,
+      "real_Brent": 23.59804679068691
+    },
+    {
+      "date": "2025-03-01",
+      "WTI": 68.23904761904762,
+      "Brent": 72.73285714285714,
+      "RAC_composite": 69.94,
+      "USO": 77.33000183105469,
+      "real_WTI": 21.339039548148794,
+      "real_Brent": 22.74429918315654
+    },
+    {
+      "date": "2025-04-01",
+      "WTI": 63.53666666666667,
+      "Brent": 68.1345,
+      "RAC_composite": 65.38,
+      "USO": 63.560001373291016,
+      "real_WTI": 19.836487648115423,
+      "real_Brent": 21.27195584167442
+    },
+    {
+      "date": "2025-05-01",
+      "WTI": 62.16761904761905,
+      "Brent": 64.453,
+      "RAC_composite": 63.26,
+      "USO": 67.1500015258789,
+      "real_WTI": 19.38981318932663,
+      "real_Brent": 20.102613685983407
+    },
+    {
+      "date": "2025-06-01",
+      "WTI": 68.16900000000001,
+      "Brent": 71.4447619047619,
+      "RAC_composite": 68.11,
+      "USO": 73.11000061035156,
+      "real_WTI": 21.207709179149752,
+      "real_Brent": 22.2268147229648
+    },
+    {
+      "date": "2025-07-01",
+      "WTI": 68.39090909090909,
+      "Brent": 71.04130434782608,
+      "RAC_composite": 69.3,
+      "USO": 79.58999633789062,
+      "real_WTI": 21.22827121507938,
+      "real_Brent": 22.050943556899046
+    },
+    {
+      "date": "2025-08-01",
+      "WTI": 64.86428571428571,
+      "Brent": 67.87,
+      "RAC_composite": 66.73,
+      "USO": 74.83999633789062,
+      "real_WTI": 20.063746195930513,
+      "real_Brent": 20.9934702790984
+    },
+    {
+      "date": "2025-09-01",
+      "WTI": 63.959047619047624,
+      "Brent": 67.98545454545454,
+      "RAC_composite": 65.66,
+      "USO": 73.75,
+      "real_WTI": 19.72553088530205,
+      "real_Brent": 20.967310072770452
+    },
+    {
+      "date": "2025-10-01",
+      "WTI": 60.89454545454546,
+      "Brent": 64.54347826086956,
+      "RAC_composite": 62.4,
+      "USO": 72.55999755859375,
+      "real_WTI": null,
+      "real_Brent": null
+    },
+    {
+      "date": "2025-11-01",
+      "WTI": 60.06222222222222,
+      "Brent": 63.797000000000004,
+      "RAC_composite": 61.22,
+      "USO": 71.06999969482422,
+      "real_WTI": 18.477102045518013,
+      "real_Brent": 19.626041721143288
+    },
+    {
+      "date": "2025-12-01",
+      "WTI": 57.972272727272724,
+      "Brent": 62.54428571428572,
+      "RAC_composite": 59.09,
+      "USO": 69.16000366210938,
+      "real_WTI": 17.781214892839245,
+      "real_Brent": 19.183539514428297
+    },
+    {
+      "date": "2026-01-01",
+      "WTI": 60.037,
+      "Brent": 66.60238095238095,
+      "RAC_composite": 60.6,
+      "USO": 79.5199966430664,
+      "real_WTI": 18.383100420101165,
+      "real_Brent": 20.393395027490584
+    },
+    {
+      "date": "2026-02-01",
+      "WTI": 64.50842105263159,
+      "Brent": 70.887,
+      "RAC_composite": 63.69,
+      "USO": 81.94999694824219,
+      "real_WTI": 19.699633864481644,
+      "real_Brent": 21.647529469248152
+    },
+    {
+      "date": "2026-03-01",
+      "WTI": 91.38363636363637,
+      "Brent": 103.13454545454546,
+      "RAC_composite": 86.95,
+      "USO": 127.25,
+      "real_WTI": 27.667445681148667,
+      "real_Brent": 31.225168397315553
+    },
+    {
+      "date": "2026-04-01",
+      "WTI": 100.31666666666668,
+      "Brent": 117.2875,
+      "RAC_composite": 95.36,
+      "USO": 147.08999633789062,
+      "real_WTI": 30.17886707159196,
+      "real_Brent": 35.28430508382796
+    },
+    {
+      "date": "2026-05-01",
+      "WTI": 102.134,
+      "Brent": 107.13947368421053,
+      "RAC_composite": 97.7,
+      "USO": 129.08999633789062,
+      "real_WTI": 30.58096467143144,
+      "real_Brent": 32.07970371915915
+    },
+    {
+      "date": "2026-06-01",
+      "WTI": 85.51950000000001,
+      "Brent": 86.11047619047619,
+      "RAC_composite": null,
+      "USO": 106.44000244140625,
+      "real_WTI": null,
+      "real_Brent": null
+    },
+    {
+      "date": "2026-07-01",
+      "WTI": null,
+      "Brent": null,
+      "RAC_composite": null,
+      "USO": null,
+      "real_WTI": null,
+      "real_Brent": null
+    }
+  ],
+  "annotations": [
+    "oil_embargo_1973",
+    "gulf_war_1990",
+    "gfc_2008",
+    "shale_2014",
+    "covid_2020",
+    "reopening_2021"
+  ],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "yoy",
+    "zscore",
+    "pct_change"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Raw monthly values. Transformations are calculated in-browser within each series; indexed = 100 at first visible observation.",
+    "notes": "USO is a share price and must not be read on a barrel-price axis in raw mode.",
+    "sources": [
+      "FRED",
+      "EIA",
+      "Yahoo-compatible public chart data"
+    ]
+  },
+  "staticFigure": "final_oil_price_layers_time_series.png",
+  "generatedAt": "2026-07-15T23:37:40+00:00"
+}

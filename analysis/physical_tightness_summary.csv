@@ -1,0 +1,6 @@
+indicator,tightness_direction,contemporaneous_correlation_with_WTI_YoY,n_contemporaneous,best_lead_months_to_WTI_YoY,best_lead_correlation,n_best_lag
+CI_zscore,down,-0.28598841874052006,467,0,-0.28598841874052006,467
+crude_inventory_YoY,down,-0.5443710291359256,474,0,-0.5443710291359256,474
+petroleum_production_YoY,down,-0.0648282891664294,473,11,-0.368550051700487,463
+petroleum_consumption_YoY,up,0.31171054469426007,471,0,0.31171054469426007,471
+refinery_utilization_pct,up,-0.01466287063837134,428,11,-0.20737761016947331,417

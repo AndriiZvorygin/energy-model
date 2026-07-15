@@ -1,0 +1,134 @@
+{
+  "schemaVersion": "1.1.0",
+  "generatedAt": "2026-07-15T23:37:40+00:00",
+  "datasets": [
+    {
+      "id": "oil-price-layers",
+      "file": "oil-price-layers.json",
+      "title": "Oil price layers",
+      "frequency": "monthly",
+      "dateRange": {
+        "start": "1986-01-01",
+        "end": "2026-06-01"
+      },
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "gm2-oil-lead",
+      "file": "gm2-oil-lead.json",
+      "title": "GM2 leading oil momentum",
+      "frequency": "monthly",
+      "dateRange": {
+        "start": "1986-01-01",
+        "end": "2026-06-01"
+      },
+      "evidenceLabel": "Validated relationship"
+    },
+    {
+      "id": "oil-residual-ci",
+      "file": "oil-residual-ci.json",
+      "title": "Oil residual and physical state",
+      "frequency": "monthly",
+      "dateRange": {
+        "start": "1987-08-01",
+        "end": "2026-06-01"
+      },
+      "evidenceLabel": "Validated relationship"
+    },
+    {
+      "id": "energy-gdp",
+      "file": "energy-gdp.json",
+      "title": "Energy throughput and real activity",
+      "frequency": "quarterly",
+      "dateRange": {
+        "start": "1948-03-01",
+        "end": "2026-03-01"
+      },
+      "evidenceLabel": "Supported historical pattern"
+    },
+    {
+      "id": "oil-equities",
+      "file": "oil-equities.json",
+      "title": "Oil and S&P 500",
+      "frequency": "monthly",
+      "dateRange": {
+        "start": "1986-02-01",
+        "end": "2026-07-01"
+      },
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "uso-tracking",
+      "file": "uso-tracking.json",
+      "title": "USO and benchmark oil",
+      "frequency": "monthly",
+      "dateRange": {
+        "start": "1986-01-01",
+        "end": "2026-06-01"
+      },
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "output-quality-headline",
+      "file": "output-quality-headline.json",
+      "title": "Headline measured output",
+      "frequency": "quarterly",
+      "dateRange": {
+        "start": "1947-01-01",
+        "end": "2026-01-01"
+      },
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "output-quality-net-output",
+      "file": "output-quality-net-output.json",
+      "title": "Gross and net output",
+      "frequency": "annual",
+      "dateRange": {
+        "start": "1929-01-01",
+        "end": "2025-01-01"
+      },
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "output-quality-capacity",
+      "file": "output-quality-capacity.json",
+      "title": "Productive capacity and net investment",
+      "frequency": "quarterly",
+      "dateRange": {
+        "start": "1919-01-01",
+        "end": "2026-01-01"
+      },
+      "evidenceLabel": "Supported historical pattern"
+    },
+    {
+      "id": "output-quality-household",
+      "file": "output-quality-household.json",
+      "title": "Household prosperity and essential costs",
+      "frequency": "annual",
+      "dateRange": {
+        "start": "1984-01-01",
+        "end": "2024-01-01"
+      },
+      "evidenceLabel": "Experimental proxy"
+    },
+    {
+      "id": "output-quality-financial",
+      "file": "output-quality-financial.json",
+      "title": "Financialization and asset valuation",
+      "frequency": "quarterly",
+      "dateRange": {
+        "start": "1947-10-01",
+        "end": "2026-01-01"
+      },
+      "evidenceLabel": "Contextual indicator"
+    }
+  ],
+  "shared": [
+    "lag-results.json",
+    "regimes.json",
+    "events.json",
+    "cross-layer.json",
+    "output-quality-correlations.json"
+  ]
+}

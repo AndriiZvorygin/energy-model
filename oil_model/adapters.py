@@ -185,6 +185,7 @@ class ChinaM2Adapter:
 
 class EiaInventoryAdapter:
     url = "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?f=W&n=PET&s=WCESTUS1"
+    history_url = "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?f=W&n=PET&s={series_id}"
 
     def __init__(self, cache: RawCache) -> None:
         self.cache = cache
@@ -210,6 +211,33 @@ class EiaInventoryAdapter:
         monthly = monthly_average(observations)
         require_observations("US_CRUDE_STOCKS_EX_SPR", monthly)
         return Series("US_CRUDE_STOCKS_EX_SPR", "thousand barrels", "EIA WCESTUS1", monthly)
+
+    def fetch_weekly_series(self, series_id: str, name: str, unit: str) -> Series:
+        url = self.history_url.format(series_id=series_id)
+        path = self.cache.fetch(url, f"eia/{series_id}_weekly.html")
+        text = path.read_text(encoding="utf-8", errors="replace")
+        observations: list[Observation] = []
+        for row_html in re.findall(r"<tr[^>]*>(.*?)</tr>", text, flags=re.S | re.I):
+            cells = [
+                html.unescape(re.sub(r"<.*?>", "", cell)).replace("\xa0", " ").strip()
+                for cell in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", row_html, flags=re.S | re.I)
+            ]
+            if len(cells) < 3 or not re.match(r"^\d{4}-[A-Za-z]{3}$", cells[0]):
+                continue
+            year = int(cells[0][:4])
+            for i in range(1, len(cells) - 1, 2):
+                mmdd = cells[i]
+                raw = cells[i + 1].replace(",", "")
+                try:
+                    value = float(raw)
+                except ValueError:
+                    continue
+                if re.match(r"^\d{2}/\d{2}$", mmdd):
+                    month, day = map(int, mmdd.split("/"))
+                    observations.append((date(year, month, day).isoformat(), value))
+        monthly = monthly_average(observations)
+        require_observations(series_id, monthly)
+        return Series(name, unit, f"EIA weekly history:{series_id}; monthly average", monthly)
 
 
 class EiaMerAdapter:

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.1.0",
+  "regimes": [
+    {
+      "id": "financial_crisis_2008_2009",
+      "label": "Financial crisis",
+      "start": "2008-01-01",
+      "end": "2009-12-01",
+      "color": "#64748b"
+    },
+    {
+      "id": "shale_regime_2014_2017",
+      "label": "Shale adjustment",
+      "start": "2014-01-01",
+      "end": "2017-12-01",
+      "color": "#0f766e"
+    },
+    {
+      "id": "covid_2020_2021",
+      "label": "Pandemic disruption",
+      "start": "2020-01-01",
+      "end": "2021-12-01",
+      "color": "#7c3aed"
+    },
+    {
+      "id": "war_spr_2022_2023",
+      "label": "War / SPR regime",
+      "start": "2022-01-01",
+      "end": "2023-12-01",
+      "color": "#be123c"
+    }
+  ],
+  "recessions": [
+    {
+      "id": "recession_1990-08",
+      "label": "NBER recession",
+      "start": "1990-08-01",
+      "end": "1991-03-01",
+      "color": "#78716c"
+    },
+    {
+      "id": "recession_2001-04",
+      "label": "NBER recession",
+      "start": "2001-04-01",
+      "end": "2001-11-01",
+      "color": "#78716c"
+    },
+    {
+      "id": "recession_2008-01",
+      "label": "NBER recession",
+      "start": "2008-01-01",
+      "end": "2009-06-01",
+      "color": "#78716c"
+    },
+    {
+      "id": "recession_2020-03",
+      "label": "NBER recession",
+      "start": "2020-03-01",
+      "end": "2020-04-01",
+      "color": "#78716c"
+    }
+  ]
+}

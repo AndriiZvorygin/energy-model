@@ -1,0 +1,4571 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "oil-equities",
+  "title": "Oil and S&P 500",
+  "description": "Monthly return and year-over-year macro-cycle comparisons.",
+  "plainLanguageSummary": "Monthly return and year-over-year macro-cycle comparisons.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Monthly log return = 100*ln(P[t]/P[t-1]); YoY = 100*(P[t]/P[t-12]-1).",
+    "explanation": "YoY lag patterns describe macro stress; monthly returns are more relevant to timing and remain mostly contemporaneous.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "YoY lag patterns describe macro stress; monthly returns are more relevant to timing and remain mostly contemporaneous."
+  ],
+  "sourceNotes": [
+    "FRED SP500",
+    "FRED DCOILWTICO",
+    "FRED DCOILBRENTEU"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2007-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "SP500_return": {
+        "mean": 0.9364162201476132,
+        "standardDeviation": 2.360339406068317,
+        "n": 41
+      },
+      "WTI_return": {
+        "mean": -0.022556760928279525,
+        "standardDeviation": 9.08696579778094,
+        "n": 156
+      },
+      "Brent_return": {
+        "mean": 0.04692831776447589,
+        "standardDeviation": 9.036525960084193,
+        "n": 156
+      },
+      "SP500_YoY": {
+        "mean": 10.760174156566608,
+        "standardDeviation": 7.321211320396313,
+        "n": 30
+      },
+      "WTI_YoY": {
+        "mean": 5.068730085491271,
+        "standardDeviation": 35.34453463139718,
+        "n": 156
+      },
+      "Brent_YoY": {
+        "mean": 6.33465292828639,
+        "standardDeviation": 35.76000033135023,
+        "n": 156
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "1986-02-01",
+    "end": "2026-07-01"
+  },
+  "series": [
+    {
+      "key": "SP500_return",
+      "label": "S&P 500 monthly return",
+      "unit": "log percent",
+      "source": "FRED SP500",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#475569",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-07-01"
+    },
+    {
+      "key": "WTI_return",
+      "label": "WTI monthly return",
+      "unit": "log percent",
+      "source": "FRED DCOILWTICO",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "Brent_return",
+      "label": "Brent monthly return",
+      "unit": "log percent",
+      "source": "FRED DCOILBRENTEU",
+      "status": "derived",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#2563eb",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "SP500_YoY",
+      "label": "S&P 500 YoY",
+      "unit": "percent",
+      "source": "FRED SP500",
+      "status": "derived",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#475569",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-07-01"
+    },
+    {
+      "key": "WTI_YoY",
+      "label": "WTI YoY",
+      "unit": "percent",
+      "source": "FRED DCOILWTICO",
+      "status": "derived",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "Brent_YoY",
+      "label": "Brent YoY",
+      "unit": "percent",
+      "source": "FRED DCOILBRENTEU",
+      "status": "derived",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#2563eb",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1986-01-01",
+      "SP500_return": null,
+      "WTI_return": null,
+      "Brent_return": null,
+      "SP500_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1986-02-01",
+      "SP500_return": null,
+      "WTI_return": -39.43322973705697,
+      "Brent_return": null,
+      "SP500_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1986-03-01",
+      "SP500_return": null,
+      "WTI_return": -20.322716239641274,
+      "Brent_return": null,
+      "SP500_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1986-04-01",
+      "SP500_return": null,
+      "WTI_return": 1.816007837755205,
+      "Brent_return": null,
+      "SP500_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1986-05-01",
+      "SP500_return": null,
+      "WTI_return": 18.006467968890338,
+      "Brent_return": null,
+      "SP500_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1986-06-01",
+      "SP500_return": null,
+      "WTI_return": -13.57412991268265,
+      "Brent_return": null,
+      "SP500_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1986-07-01",
+      "SP500_return": null,
+      "WTI_return": -14.749992319353897,
+      "Brent_return": null,
+      "SP500_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1986-08-01",
+      "SP500_return": null,
+      "WTI_return": 26.480204747419535,
+      "Brent_return": null,
+      "SP500_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1986-09-01",
+      "SP500_return": null,
+      "WTI_return": -1.5352398542104175,
+      "Brent_return": null,
+      "SP500_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1986-10-01",
+      "SP500_return": null,
+      "WTI_return": 0.20260749451407348,
+      "Brent_return": null,
+      "SP500_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1986-11-01",
+      "SP500_return": null,
+      "WTI_return": 2.156644336392061,
+      "Brent_return": null,
+      "SP500_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1986-12-01",
+      "SP500_return": null,
+      "WTI_return": 5.657830415550282,
+      "Brent_return": null,
+      "SP500_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1987-01-01",
+      "SP500_return": null,
+      "WTI_return": 14.663034933801065,
+      "Brent_return": null,
+      "SP500_YoY": null,
+      "WTI_YoY": -18.643146052139624,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1987-02-01",
+      "SP500_return": null,
+      "WTI_return": -4.95965311851086,
+      "Brent_return": null,
+      "SP500_YoY": null,
+      "WTI_YoY": 14.844707805476109,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1987-03-01",
+      "SP500_return": null,
+      "WTI_return": 3.073096471026922,
+      "Brent_return": null,
+      "SP500_YoY": null,
+      "WTI_YoY": 45.1168058898485,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1987-04-01",
+      "SP500_return": null,
+      "WTI_return": 2.0243293443626253,
+      "Brent_return": null,
+      "SP500_YoY": null,
+      "WTI_YoY": 45.41943051286199,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1987-05-01",
+      "SP500_return": null,
+      "WTI_return": 3.990372081018265,
+      "Brent_return": null,
+      "SP500_YoY": null,
+      "WTI_YoY": 26.401232465240156,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1987-06-01",
+      "SP500_return": null,
+      "WTI_return": 3.218049633626057,
+      "Brent_return": 1.4982792200568062,
+      "SP500_YoY": null,
+      "WTI_YoY": 49.512952465708395,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1987-07-01",
+      "SP500_return": null,
+      "WTI_return": 6.130042474889507,
+      "Brent_return": 5.146397867554315,
+      "SP500_YoY": null,
+      "WTI_YoY": 84.22970497016263,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1987-08-01",
+      "SP500_return": null,
+      "WTI_return": -4.952484431348457,
+      "Brent_return": -4.517180046094276,
+      "SP500_YoY": null,
+      "WTI_YoY": 34.539318045610855,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1987-09-01",
+      "SP500_return": null,
+      "WTI_return": -3.9208521822536673,
+      "Brent_return": -3.5739585324501983,
+      "SP500_YoY": null,
+      "WTI_YoY": 31.367713004484308,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1987-10-01",
+      "SP500_return": null,
+      "WTI_return": 1.6710137710486936,
+      "Brent_return": 2.3984670253560294,
+      "SP500_YoY": null,
+      "WTI_YoY": 33.31095719037012,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1987-11-01",
+      "SP500_return": null,
+      "WTI_return": -5.193678962511582,
+      "Brent_return": -5.347799534572006,
+      "SP500_YoY": null,
+      "WTI_YoY": 23.86362850523842,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1987-12-01",
+      "SP500_return": null,
+      "WTI_return": -8.749103599372557,
+      "Brent_return": -4.173768241765377,
+      "SP500_YoY": null,
+      "WTI_YoY": 7.244561741102884,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1988-01-01",
+      "SP500_return": null,
+      "WTI_return": -0.843193362828399,
+      "Brent_return": -1.8025020741377324,
+      "SP500_YoY": null,
+      "WTI_YoY": -8.159849877450975,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1988-02-01",
+      "SP500_return": null,
+      "WTI_return": -1.9678371527612541,
+      "Brent_return": -6.282564637075621,
+      "SP500_YoY": null,
+      "WTI_YoY": -5.370645722927547,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1988-03-01",
+      "SP500_return": null,
+      "WTI_return": -3.627355314862965,
+      "Brent_return": -6.556466687076116,
+      "SP500_YoY": null,
+      "WTI_YoY": -11.503481790169523,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1988-04-01",
+      "SP500_return": null,
+      "WTI_return": 9.785334458027897,
+      "Brent_return": 11.914252572418526,
+      "SP500_YoY": null,
+      "WTI_YoY": -4.361710264647389,
+      "Brent_YoY": null
+    },
+    {
+      "date": "1988-05-01",
+      "SP500_return": null,
+      "WTI_return": -2.4875847138740363,
+      "Brent_return": -1.7088095386293096,
+      "SP500_YoY": null,
+      "WTI_YoY": -10.360713241742193,
+      "Brent_YoY": -12.195420295527937
+    },
+    {
+      "date": "1988-06-01",
+      "SP500_return": null,
+      "WTI_return": -5.278828480015623,
+      "Brent_return": -4.837788952182569,
+      "SP500_YoY": null,
+      "WTI_YoY": -17.662643508978515,
+      "Brent_YoY": -17.586193441471554
+    },
+    {
+      "date": "1988-07-01",
+      "SP500_return": null,
+      "WTI_return": -6.43606907231519,
+      "Brent_return": -4.177889006306328,
+      "SP500_YoY": null,
+      "WTI_YoY": -27.385560331656045,
+      "Brent_YoY": -24.92331112431836
+    },
+    {
+      "date": "1988-08-01",
+      "SP500_return": null,
+      "WTI_return": 0.16748837979275077,
+      "Brent_return": -0.09198188244308725,
+      "SP500_YoY": null,
+      "WTI_YoY": -23.57089923844492,
+      "Brent_YoY": -21.526413449822247
+    },
+    {
+      "date": "1988-09-01",
+      "SP500_return": null,
+      "WTI_return": -6.576279839290662,
+      "Brent_return": -12.228656794808925,
+      "SP500_YoY": null,
+      "WTI_YoY": -25.573709444677185,
+      "Brent_YoY": -28.032465437216114
+    },
+    {
+      "date": "1988-10-01",
+      "SP500_return": null,
+      "WTI_return": -5.406391212240102,
+      "Brent_return": -6.050884500935595,
+      "SP500_YoY": null,
+      "WTI_YoY": -30.659080752923728,
+      "Brent_YoY": -33.86344675268028
+    },
+    {
+      "date": "1988-11-01",
+      "SP500_return": null,
+      "WTI_return": 2.6577200157253724,
+      "Brent_return": 4.867849315213272,
+      "SP500_YoY": null,
+      "WTI_YoY": -24.995419346750623,
+      "Brent_YoY": -26.750012173150882
+    },
+    {
+      "date": "1988-12-01",
+      "SP500_return": null,
+      "WTI_return": 14.710233111597972,
+      "Brent_return": 16.14527742362909,
+      "SP500_YoY": null,
+      "WTI_YoY": -5.164619263135228,
+      "Brent_YoY": -10.246364064429581
+    },
+    {
+      "date": "1989-01-01",
+      "SP500_return": null,
+      "WTI_return": 9.55136297345457,
+      "Brent_return": 11.498614087659371,
+      "SP500_YoY": null,
+      "WTI_YoY": 5.223653429964181,
+      "Brent_YoY": 2.522234805229262
+    },
+    {
+      "date": "1989-02-01",
+      "SP500_return": null,
+      "WTI_return": -0.488231204745689,
+      "Brent_return": -1.664168729063708,
+      "SP500_YoY": null,
+      "WTI_YoY": 6.792123841115938,
+      "Brent_YoY": 7.368158149673065
+    },
+    {
+      "date": "1989-03-01",
+      "SP500_return": null,
+      "WTI_return": 8.27605389295695,
+      "Brent_return": 10.194153509721628,
+      "SP500_YoY": null,
+      "WTI_YoY": 20.291536723329262,
+      "Brent_YoY": 26.947023423028416
+    },
+    {
+      "date": "1989-04-01",
+      "SP500_return": null,
+      "WTI_return": 7.820448407854384,
+      "Brent_return": 8.300656408195428,
+      "SP500_YoY": null,
+      "WTI_YoY": 17.951014695591304,
+      "Brent_YoY": 22.44156544353173
+    },
+    {
+      "date": "1989-05-01",
+      "SP500_return": null,
+      "WTI_return": -4.591555976600605,
+      "Brent_return": -8.663705605192504,
+      "SP500_YoY": null,
+      "WTI_YoY": 15.495283767904212,
+      "Brent_YoY": 14.215262879273372
+    },
+    {
+      "date": "1989-06-01",
+      "SP500_return": null,
+      "WTI_return": -0.36353819871461734,
+      "Brent_return": -5.302422677944948,
+      "SP500_YoY": null,
+      "WTI_YoY": 21.314045268281955,
+      "Brent_YoY": 13.685811205989019
+    },
+    {
+      "date": "1989-07-01",
+      "SP500_return": null,
+      "WTI_return": -1.3508277480531388,
+      "Brent_return": -0.2722972517248047,
+      "SP500_YoY": null,
+      "WTI_YoY": 27.642707349111628,
+      "Brent_YoY": 18.21376094039482
+    },
+    {
+      "date": "1989-08-01",
+      "SP500_return": null,
+      "WTI_return": -6.277482292585441,
+      "Brent_return": -4.960518492458863,
+      "SP500_YoY": null,
+      "WTI_YoY": 19.67566659197848,
+      "Brent_YoY": 12.596333489023825
+    },
+    {
+      "date": "1989-09-01",
+      "SP500_return": null,
+      "WTI_return": 5.312342911545011,
+      "Brent_return": 5.770566384355229,
+      "SP500_YoY": null,
+      "WTI_YoY": 34.78373524655347,
+      "Brent_YoY": 34.80123830873958
+    },
+    {
+      "date": "1989-10-01",
+      "SP500_return": null,
+      "WTI_return": 2.5514584862523106,
+      "Brent_return": 6.227344923922316,
+      "SP500_YoY": null,
+      "WTI_YoY": 45.947946859144025,
+      "Brent_YoY": 52.41143586951973
+    },
+    {
+      "date": "1989-11-01",
+      "SP500_return": null,
+      "WTI_return": -1.2105087630821283,
+      "Brent_return": -0.9589792926682306,
+      "SP500_YoY": null,
+      "WTI_YoY": 40.41014432194399,
+      "Brent_YoY": 43.78446290221258
+    },
+    {
+      "date": "1989-12-01",
+      "SP500_return": null,
+      "WTI_return": 6.077139044941391,
+      "Brent_return": 5.766614843083074,
+      "SP500_YoY": null,
+      "WTI_YoY": 28.796907246461068,
+      "Brent_YoY": 29.609847790207233
+    },
+    {
+      "date": "1990-01-01",
+      "SP500_return": null,
+      "WTI_return": 8.025479534607271,
+      "Brent_return": 6.879540878553472,
+      "SP500_YoY": null,
+      "WTI_YoY": 26.846534617795626,
+      "Brent_YoY": 23.759236243637673
+    },
+    {
+      "date": "1990-02-01",
+      "SP500_return": null,
+      "WTI_return": -3.336216495283211,
+      "Brent_return": -7.007892965768528,
+      "SP500_YoY": null,
+      "WTI_YoY": 23.284921807487514,
+      "Brent_YoY": 17.319477751132407
+    },
+    {
+      "date": "1990-03-01",
+      "SP500_return": null,
+      "WTI_return": -8.123255533963105,
+      "Brent_return": -7.47047978742369,
+      "SP500_YoY": null,
+      "WTI_YoY": 4.637816400326611,
+      "Brent_YoY": -1.6773458767755156
+    },
+    {
+      "date": "1990-04-01",
+      "SP500_return": null,
+      "WTI_return": -10.11975407863706,
+      "Brent_return": -10.152706335378824,
+      "SP500_YoY": null,
+      "WTI_YoY": -12.546869808723715,
+      "Brent_YoY": -18.24550179306629
+    },
+    {
+      "date": "1990-05-01",
+      "SP500_return": null,
+      "WTI_return": -1.2338956003366284,
+      "Brent_return": -1.5764769912704268,
+      "SP500_YoY": null,
+      "WTI_YoY": -9.560637487134759,
+      "Brent_YoY": -12.24111433659405
+    },
+    {
+      "date": "1990-06-01",
+      "SP500_return": null,
+      "WTI_return": -8.627308398218226,
+      "Brent_return": -7.935684037189137,
+      "SP500_YoY": null,
+      "WTI_YoY": -16.733867267747705,
+      "Brent_YoY": -14.521874188506567
+    },
+    {
+      "date": "1990-07-01",
+      "SP500_return": null,
+      "WTI_return": 10.016254063449695,
+      "Brent_return": 12.810067499928286,
+      "SP500_YoY": null,
+      "WTI_YoY": -6.710019236198206,
+      "Brent_YoY": -2.5748732460794566
+    },
+    {
+      "date": "1990-08-01",
+      "SP500_return": null,
+      "WTI_return": 39.18713338972359,
+      "Brent_return": 45.89066779660902,
+      "SP500_YoY": null,
+      "WTI_YoY": 46.98916426782746,
+      "Brent_YoY": 61.99994814757201
+    },
+    {
+      "date": "1990-09-01",
+      "SP500_return": null,
+      "WTI_return": 20.461188507507075,
+      "Brent_return": 25.044077050009612,
+      "SP500_YoY": null,
+      "WTI_YoY": 71.03142773807787,
+      "Brent_YoY": 96.43490846712592
+    },
+    {
+      "date": "1990-10-01",
+      "SP500_return": null,
+      "WTI_return": 7.284807440648991,
+      "Brent_return": 3.1688585155433526,
+      "SP500_YoY": null,
+      "WTI_YoY": 79.3215955631819,
+      "Brent_YoY": 90.51791987507458
+    },
+    {
+      "date": "1990-11-01",
+      "SP500_return": null,
+      "WTI_return": -10.855148172903412,
+      "Brent_return": -8.560270675767114,
+      "SP500_YoY": null,
+      "WTI_YoY": 62.83451228166561,
+      "Brent_YoY": 76.57281553398062
+    },
+    {
+      "date": "1990-12-01",
+      "SP500_return": null,
+      "WTI_return": -16.987539785306087,
+      "Brent_return": -15.661908370341735,
+      "SP500_YoY": null,
+      "WTI_YoY": 29.29383886255923,
+      "Brent_YoY": 42.515121770042995
+    },
+    {
+      "date": "1991-01-01",
+      "SP500_return": null,
+      "WTI_return": -7.799459505295064,
+      "Brent_return": -18.21045444740371,
+      "SP500_YoY": null,
+      "WTI_YoY": 10.3699874749001,
+      "Brent_YoY": 10.891046755357813
+    },
+    {
+      "date": "1991-02-01",
+      "SP500_return": null,
+      "WTI_return": -20.886917173433883,
+      "Brent_return": -18.75615083546981,
+      "SP500_YoY": null,
+      "WTI_YoY": -7.3961018405462875,
+      "Brent_YoY": -1.4005602240896198
+    },
+    {
+      "date": "1991-03-01",
+      "SP500_return": null,
+      "WTI_return": -2.853161663344583,
+      "Brent_return": -2.348723267786057,
+      "SP500_YoY": null,
+      "WTI_YoY": -2.3849017902927483,
+      "Brent_YoY": 3.7810244240086943
+    },
+    {
+      "date": "1991-04-01",
+      "SP500_return": null,
+      "WTI_return": 4.559914949870635,
+      "Brent_return": 0.5096384764803711,
+      "SP500_YoY": null,
+      "WTI_YoY": 13.049849393503553,
+      "Brent_YoY": 15.457972943002884
+    },
+    {
+      "date": "1991-05-01",
+      "SP500_return": null,
+      "WTI_return": 1.9128067339632138,
+      "Brent_return": 0.03554207626832928,
+      "SP500_YoY": null,
+      "WTI_YoY": 16.663752840980052,
+      "Brent_YoY": 17.334259902710226
+    },
+    {
+      "date": "1991-06-01",
+      "SP500_return": null,
+      "WTI_return": -5.038442098442595,
+      "Brent_return": -5.458920670932152,
+      "SP500_YoY": null,
+      "WTI_YoY": 20.92669709070165,
+      "Brent_YoY": 20.276639344262293
+    },
+    {
+      "date": "1991-07-01",
+      "SP500_return": null,
+      "WTI_return": 5.839522889793226,
+      "Brent_return": 6.5481889930898385,
+      "SP500_YoY": null,
+      "WTI_YoY": 15.979939535884903,
+      "Brent_YoY": 12.976025489320353
+    },
+    {
+      "date": "1991-08-01",
+      "SP500_return": null,
+      "WTI_return": 1.3485831880735468,
+      "Brent_return": 1.9187404290816088,
+      "SP500_YoY": null,
+      "WTI_YoY": -20.557639058761556,
+      "Brent_YoY": -27.218896171444783
+    },
+    {
+      "date": "1991-09-01",
+      "SP500_return": null,
+      "WTI_return": 0.8851045983295441,
+      "Brent_return": 3.6214219312509495,
+      "SP500_YoY": null,
+      "WTI_YoY": -34.68178765947921,
+      "Brent_YoY": -41.25360393734846
+    },
+    {
+      "date": "1991-10-01",
+      "SP500_return": null,
+      "WTI_return": 5.961197054649279,
+      "Brent_return": 7.984864148361597,
+      "SP500_YoY": null,
+      "WTI_YoY": -35.54064976897372,
+      "Brent_YoY": -38.35513928450731
+    },
+    {
+      "date": "1991-11-01",
+      "SP500_return": null,
+      "WTI_return": -3.370362709904842,
+      "Brent_return": -5.0687251690822475,
+      "SP500_YoY": null,
+      "WTI_YoY": -30.530858222019585,
+      "Brent_YoY": -36.164764470697286
+    },
+    {
+      "date": "1991-12-01",
+      "SP500_return": null,
+      "WTI_return": -14.146157113648444,
+      "Brent_return": -13.673346120942023,
+      "SP500_YoY": null,
+      "WTI_YoY": -28.52866376564188,
+      "Brent_YoY": -34.88265555749243
+    },
+    {
+      "date": "1992-01-01",
+      "SP500_return": null,
+      "WTI_return": -3.7233904711795147,
+      "Brent_return": -1.3524132210168303,
+      "SP500_YoY": null,
+      "WTI_YoY": -25.555255336395565,
+      "Brent_YoY": -22.925587316282837
+    },
+    {
+      "date": "1992-02-01",
+      "SP500_return": null,
+      "WTI_return": 1.201378159619678,
+      "Brent_return": -0.6082021617321298,
+      "SP500_YoY": null,
+      "WTI_YoY": -7.15419362715175,
+      "Brent_YoY": -7.588554463554475
+    },
+    {
+      "date": "1992-03-01",
+      "SP500_return": null,
+      "WTI_return": -0.4781000174068403,
+      "Brent_return": -2.368601172073179,
+      "SP500_YoY": null,
+      "WTI_YoY": -4.92265315771081,
+      "Brent_YoY": -7.606922096637813
+    },
+    {
+      "date": "1992-04-01",
+      "SP500_return": null,
+      "WTI_return": 6.685099376831135,
+      "Brent_return": 7.051566501910086,
+      "SP500_YoY": null,
+      "WTI_YoY": -2.8804608737397874,
+      "Brent_YoY": -1.3605442176870652
+    },
+    {
+      "date": "1992-05-01",
+      "SP500_return": null,
+      "WTI_return": 3.6188438791762167,
+      "Brent_return": 4.99724501436158,
+      "SP500_YoY": null,
+      "WTI_YoY": -1.2093511164393944,
+      "Brent_YoY": 3.6571035985880407
+    },
+    {
+      "date": "1992-06-01",
+      "SP500_return": null,
+      "WTI_return": 6.501569570991718,
+      "Brent_return": 6.188500264081415,
+      "SP500_YoY": null,
+      "WTI_YoY": 10.874958911018151,
+      "Brent_YoY": 16.461713599459582
+    },
+    {
+      "date": "1992-07-01",
+      "SP500_return": null,
+      "WTI_return": -2.759827946542173,
+      "Brent_return": -4.4537699063818526,
+      "SP500_YoY": null,
+      "WTI_YoY": 1.738883133239888,
+      "Brent_YoY": 4.328334790307764
+    },
+    {
+      "date": "1992-08-01",
+      "SP500_return": null,
+      "WTI_return": -2.023389024881205,
+      "Brent_return": -2.4938441965815215,
+      "SP500_YoY": null,
+      "WTI_YoY": -1.6345288482069176,
+      "Brent_YoY": -0.1751505199781178
+    },
+    {
+      "date": "1992-09-01",
+      "SP500_return": null,
+      "WTI_return": 2.509668306164257,
+      "Brent_return": 2.65914236119821,
+      "SP500_YoY": null,
+      "WTI_YoY": -0.023468181922037257,
+      "Brent_YoY": -1.1311376411018759
+    },
+    {
+      "date": "1992-10-01",
+      "SP500_return": null,
+      "WTI_return": -0.8972600051124001,
+      "Brent_return": -0.04037232307836553,
+      "SP500_YoY": null,
+      "WTI_YoY": -6.650463384381899,
+      "Brent_YoY": -8.755566789008473
+    },
+    {
+      "date": "1992-11-01",
+      "SP500_return": null,
+      "WTI_return": -6.414705738928163,
+      "Brent_return": -5.308418724654449,
+      "SP500_YoY": null,
+      "WTI_YoY": -9.44952086160109,
+      "Brent_YoY": -8.974011911207347
+    },
+    {
+      "date": "1992-12-01",
+      "SP500_return": null,
+      "WTI_return": -4.651650365288824,
+      "Brent_return": -5.756085649730245,
+      "SP500_YoY": null,
+      "WTI_YoY": -0.4308335146512299,
+      "Brent_YoY": -1.4742777332333312
+    },
+    {
+      "date": "1993-01-01",
+      "SP500_return": null,
+      "WTI_return": -1.9877364934791693,
+      "Brent_return": -4.242790883240535,
+      "SP500_YoY": null,
+      "WTI_YoY": 1.3124274099883815,
+      "Brent_YoY": -4.281281281281268
+    },
+    {
+      "date": "1993-02-01",
+      "SP500_return": null,
+      "WTI_return": 5.390681372413968,
+      "Brent_return": 6.028301967772556,
+      "SP500_YoY": null,
+      "WTI_YoY": 5.646869749433869,
+      "Brent_YoY": 2.2866246958965553
+    },
+    {
+      "date": "1993-03-01",
+      "SP500_return": null,
+      "WTI_return": 1.1684014172734587,
+      "Brent_return": 1.7121947225082386,
+      "SP500_YoY": null,
+      "WTI_YoY": 7.40074615329982,
+      "Brent_YoY": 6.547071931704562
+    },
+    {
+      "date": "1993-04-01",
+      "SP500_return": null,
+      "WTI_return": -0.3434358175021544,
+      "Brent_return": -0.5911294660936699,
+      "SP500_YoY": null,
+      "WTI_YoY": 0.11122095897182493,
+      "Brent_YoY": -1.2926000503397983
+    },
+    {
+      "date": "1993-05-01",
+      "SP500_return": null,
+      "WTI_return": -1.507416235735204,
+      "Brent_return": -0.8961573311157325,
+      "SP500_YoY": null,
+      "WTI_YoY": -4.891420943481684,
+      "Brent_YoY": -6.94172644069636
+    },
+    {
+      "date": "1993-06-01",
+      "SP500_return": null,
+      "WTI_return": -4.3825169666738395,
+      "Brent_return": -4.7307092443958485,
+      "SP500_YoY": null,
+      "WTI_YoY": -14.699671039272221,
+      "Brent_YoY": -16.56784394603421
+    },
+    {
+      "date": "1993-07-01",
+      "SP500_return": null,
+      "WTI_return": -6.513701317779111,
+      "Brent_return": -5.097351205361215,
+      "SP500_YoY": null,
+      "WTI_YoY": -17.842381646466865,
+      "Brent_YoY": -17.10307353354792
+    },
+    {
+      "date": "1993-08-01",
+      "SP500_return": null,
+      "WTI_return": 0.6735737401038653,
+      "Brent_return": -0.47362008877110917,
+      "SP500_YoY": null,
+      "WTI_YoY": -15.596471724294625,
+      "Brent_YoY": -15.411338962605537
+    },
+    {
+      "date": "1993-09-01",
+      "SP500_return": null,
+      "WTI_return": -2.8531886015624526,
+      "Brent_return": -4.185349225647145,
+      "SP500_YoY": null,
+      "WTI_YoY": -20.003679820044916,
+      "Brent_YoY": -21.00731040050231
+    },
+    {
+      "date": "1993-10-01",
+      "SP500_return": null,
+      "WTI_return": 3.6408449671461978,
+      "Brent_return": 3.647713522009087,
+      "SP500_YoY": null,
+      "WTI_YoY": -16.28972870248101,
+      "Brent_YoY": -18.03960277578368
+    },
+    {
+      "date": "1993-11-01",
+      "SP500_return": null,
+      "WTI_return": -8.890661440185733,
+      "Brent_return": -8.874805638458053,
+      "SP500_YoY": null,
+      "WTI_YoY": -18.336909707954774,
+      "Brent_YoY": -20.9111186211558
+    },
+    {
+      "date": "1993-12-01",
+      "SP500_return": null,
+      "WTI_return": -13.478139022581187,
+      "Brent_return": -10.178513606492919,
+      "SP500_YoY": null,
+      "WTI_YoY": -25.235943456074107,
+      "Brent_YoY": -24.332554537579078
+    },
+    {
+      "date": "1994-01-01",
+      "SP500_return": null,
+      "WTI_return": 3.4660206553631348,
+      "Brent_return": 4.039392622599982,
+      "SP500_YoY": null,
+      "WTI_YoY": -21.045257110830875,
+      "Brent_YoY": -17.79880363510873
+    },
+    {
+      "date": "1994-02-01",
+      "SP500_return": null,
+      "WTI_return": -1.6480267520858052,
+      "Brent_return": -3.4851445744004526,
+      "SP500_YoY": null,
+      "WTI_YoY": -26.41157589035511,
+      "Brent_YoY": -25.258507666875673
+    },
+    {
+      "date": "1994-03-01",
+      "SP500_return": null,
+      "WTI_return": -0.6800876862709881,
+      "Brent_return": 0.14920536759468347,
+      "SP500_YoY": null,
+      "WTI_YoY": -27.759354742089382,
+      "Brent_YoY": -26.417627181409976
+    },
+    {
+      "date": "1994-04-01",
+      "SP500_return": null,
+      "WTI_return": 11.195484790438417,
+      "Brent_return": 9.706527215658586,
+      "SP500_YoY": null,
+      "WTI_YoY": -18.9235896802864,
+      "Brent_YoY": -18.436483186332076
+    },
+    {
+      "date": "1994-05-01",
+      "SP500_return": null,
+      "WTI_return": 8.568855669905899,
+      "Brent_return": 6.089939198267627,
+      "SP500_YoY": null,
+      "WTI_YoY": -10.3283409657003,
+      "Brent_YoY": -12.534622493957059
+    },
+    {
+      "date": "1994-06-01",
+      "SP500_return": null,
+      "WTI_return": 6.3403237502715,
+      "Brent_return": 3.4914695975424395,
+      "SP500_YoY": null,
+      "WTI_YoY": -0.17854167162616452,
+      "Brent_YoY": -5.039138943248533
+    },
+    {
+      "date": "1994-07-01",
+      "SP500_return": null,
+      "WTI_return": 3.0714421504556677,
+      "Brent_return": 4.86869224119787,
+      "SP500_YoY": null,
+      "WTI_YoY": 9.863051984348804,
+      "Brent_YoY": 4.912351327568354
+    },
+    {
+      "date": "1994-08-01",
+      "SP500_return": null,
+      "WTI_return": -6.685397909277628,
+      "Brent_return": -4.098865498622638,
+      "SP500_YoY": null,
+      "WTI_YoY": 2.0685750401601144,
+      "Brent_YoY": 1.1771355676437834
+    },
+    {
+      "date": "1994-09-01",
+      "SP500_return": null,
+      "WTI_return": -5.235832182647273,
+      "Brent_return": -6.087859605202976,
+      "SP500_YoY": null,
+      "WTI_YoY": -0.33461193177182214,
+      "Brent_YoY": -0.7295747459263091
+    },
+    {
+      "date": "1994-10-01",
+      "SP500_return": null,
+      "WTI_return": 1.5384918839479456,
+      "Brent_return": 3.6778419322187257,
+      "SP500_YoY": null,
+      "WTI_YoY": -2.4080583390168386,
+      "Brent_YoY": -0.699661639043403
+    },
+    {
+      "date": "1994-11-01",
+      "SP500_return": null,
+      "WTI_return": 1.9746496398912545,
+      "Brent_return": 4.162412986801853,
+      "SP500_YoY": null,
+      "WTI_YoY": 8.793113334671276,
+      "Brent_YoY": 13.128140703517598
+    },
+    {
+      "date": "1994-12-01",
+      "SP500_return": null,
+      "WTI_return": -5.167209040272847,
+      "Brent_return": -7.607747823357418,
+      "SP500_YoY": null,
+      "WTI_YoY": 18.22118696893149,
+      "Brent_YoY": 16.07410491257284
+    },
+    {
+      "date": "1995-01-01",
+      "SP500_return": null,
+      "WTI_return": 5.001177427120021,
+      "Brent_return": 3.8171521234934453,
+      "SP500_YoY": null,
+      "WTI_YoY": 20.0500697173279,
+      "Brent_YoY": 15.81642768012288
+    },
+    {
+      "date": "1995-02-01",
+      "SP500_return": null,
+      "WTI_return": 2.8982257446386916,
+      "Brent_return": 3.3424870861431595,
+      "SP500_YoY": null,
+      "WTI_YoY": 25.63381284717274,
+      "Brent_YoY": 24.000144906535258
+    },
+    {
+      "date": "1995-03-01",
+      "SP500_return": null,
+      "WTI_return": -0.16637184421294626,
+      "Brent_return": -0.6329155213823779,
+      "SP500_YoY": null,
+      "WTI_YoY": 26.28087425220633,
+      "Brent_YoY": 23.034096628082533
+    },
+    {
+      "date": "1995-04-01",
+      "SP500_return": null,
+      "WTI_return": 7.065092146078595,
+      "Brent_return": 9.21598743896349,
+      "SP500_YoY": null,
+      "WTI_YoY": 21.171228924931086,
+      "Brent_YoY": 22.432043307993577
+    },
+    {
+      "date": "1995-05-01",
+      "SP500_return": null,
+      "WTI_return": -0.7795442144391141,
+      "Brent_return": -1.6077661579231843,
+      "SP500_YoY": null,
+      "WTI_YoY": 10.357010625863605,
+      "Brent_YoY": 13.361187860817235
+    },
+    {
+      "date": "1995-06-01",
+      "SP500_return": null,
+      "WTI_return": -6.789651982798353,
+      "Brent_return": -5.823720348439548,
+      "SP500_YoY": null,
+      "WTI_YoY": -3.2218830487455885,
+      "Brent_YoY": 3.2782884568453685
+    },
+    {
+      "date": "1995-07-01",
+      "SP500_return": null,
+      "WTI_return": -6.266321172251205,
+      "Brent_return": -8.800205568550554,
+      "SP500_YoY": null,
+      "WTI_YoY": -11.849703630211927,
+      "Brent_YoY": -9.916393841824721
+    },
+    {
+      "date": "1995-08-01",
+      "SP500_return": null,
+      "WTI_return": 3.9351101888999,
+      "Brent_return": 1.5153529542090607,
+      "SP500_YoY": null,
+      "WTI_YoY": -1.9724705548460286,
+      "Brent_YoY": -4.714239586696789
+    },
+    {
+      "date": "1995-09-01",
+      "SP500_return": null,
+      "WTI_return": 1.12912057832599,
+      "Brent_return": 3.6786819231861836,
+      "SP500_YoY": null,
+      "WTI_YoY": 4.469783819194251,
+      "Brent_YoY": 5.061489836576349
+    },
+    {
+      "date": "1995-10-01",
+      "SP500_return": null,
+      "WTI_return": -4.444632111332133,
+      "Brent_return": -3.5883578795608653,
+      "SP500_YoY": null,
+      "WTI_YoY": -1.5974577513659383,
+      "Brent_YoY": -2.30173522694459
+    },
+    {
+      "date": "1995-11-01",
+      "SP500_return": null,
+      "WTI_return": 3.1579613152500414,
+      "Brent_return": 4.550124528203917,
+      "SP500_YoY": null,
+      "WTI_YoY": -0.4261324331054972,
+      "Brent_YoY": -1.9222125274318547
+    },
+    {
+      "date": "1995-12-01",
+      "SP500_return": null,
+      "WTI_return": 5.587773986673879,
+      "Brent_return": 6.121319632919324,
+      "SP500_YoY": null,
+      "WTI_YoY": 10.880116553350906,
+      "Brent_YoY": 12.51106677061724
+    },
+    {
+      "date": "1996-01-01",
+      "SP500_return": null,
+      "WTI_return": -0.9078721269504643,
+      "Brent_return": -0.40293219721401025,
+      "SP500_YoY": null,
+      "WTI_YoY": 4.51797760089081,
+      "Brent_YoY": 7.861796421593881
+    },
+    {
+      "date": "1996-02-01",
+      "SP500_return": null,
+      "WTI_return": 1.2593939999405261,
+      "Brent_return": 0.8137100983590462,
+      "SP500_YoY": null,
+      "WTI_YoY": 2.8190630048465115,
+      "Brent_YoY": 5.168410523518774
+    },
+    {
+      "date": "1996-03-01",
+      "SP500_return": null,
+      "WTI_return": 11.087818784143545,
+      "Brent_return": 9.798111386465537,
+      "SP500_YoY": null,
+      "WTI_YoY": 15.066782810685254,
+      "Brent_YoY": 16.731128601255165
+    },
+    {
+      "date": "1996-04-01",
+      "SP500_return": null,
+      "WTI_return": 9.66526823735897,
+      "Brent_return": 5.147312182145675,
+      "SP500_YoY": null,
+      "WTI_YoY": 18.09795896773123,
+      "Brent_YoY": 12.07703994995084
+    },
+    {
+      "date": "1996-05-01",
+      "SP500_return": null,
+      "WTI_return": -10.450848318976275,
+      "Brent_return": -8.722173398051083,
+      "SP500_YoY": null,
+      "WTI_YoY": 7.211272794253087,
+      "Brent_YoY": 4.38045227007875
+    },
+    {
+      "date": "1996-06-01",
+      "SP500_return": null,
+      "WTI_return": -3.568415138494806,
+      "Brent_return": -3.7134736183812564,
+      "SP500_YoY": null,
+      "WTI_YoY": 10.7210270816392,
+      "Brent_YoY": 6.60654274312118
+    },
+    {
+      "date": "1996-07-01",
+      "SP500_return": null,
+      "WTI_return": 4.2127569197402615,
+      "Brent_return": 5.862560203848724,
+      "SP500_YoY": null,
+      "WTI_YoY": 22.953292703083484,
+      "Brent_YoY": 23.44213998605309
+    },
+    {
+      "date": "1996-08-01",
+      "SP500_return": null,
+      "WTI_return": 2.7818146936376866,
+      "Brent_return": 4.6986438733512825,
+      "SP500_YoY": null,
+      "WTI_YoY": 21.543423523012393,
+      "Brent_YoY": 27.434875452496588
+    },
+    {
+      "date": "1996-09-01",
+      "SP500_return": null,
+      "WTI_return": 9.023370994058034,
+      "Brent_return": 9.826884912940649,
+      "SP500_YoY": null,
+      "WTI_YoY": 31.527255768017337,
+      "Brent_YoY": 35.515697624682765
+    },
+    {
+      "date": "1996-10-01",
+      "SP500_return": null,
+      "WTI_return": 3.7163692178590226,
+      "Brent_return": 6.550884118439974,
+      "SP500_YoY": null,
+      "WTI_YoY": 42.71135753792856,
+      "Brent_YoY": 49.976693179197575
+    },
+    {
+      "date": "1996-11-01",
+      "SP500_return": null,
+      "WTI_return": -4.834332053564467,
+      "Brent_return": -5.9822656264714835,
+      "SP500_YoY": null,
+      "WTI_YoY": 31.749340002778958,
+      "Brent_YoY": 34.98396608872698
+    },
+    {
+      "date": "1996-12-01",
+      "SP500_return": null,
+      "WTI_return": 6.229114276046458,
+      "Brent_return": 4.398735295321161,
+      "SP500_YoY": null,
+      "WTI_YoY": 32.59701694253501,
+      "Brent_YoY": 32.678665805390786
+    },
+    {
+      "date": "1997-01-01",
+      "SP500_return": null,
+      "WTI_return": -0.3842439128974918,
+      "Brent_return": -1.0371087983883889,
+      "SP500_YoY": null,
+      "WTI_YoY": 33.29315332690452,
+      "Brent_YoY": 31.839911156050405
+    },
+    {
+      "date": "1997-02-01",
+      "SP500_return": null,
+      "WTI_return": -12.510983693364928,
+      "Brent_return": -12.122076086594006,
+      "SP500_YoY": null,
+      "WTI_YoY": 16.145891478637697,
+      "Brent_YoY": 15.842386536742392
+    },
+    {
+      "date": "1997-03-01",
+      "SP500_return": null,
+      "WTI_return": -5.617048242919602,
+      "Brent_return": -8.596459798687022,
+      "SP500_YoY": null,
+      "WTI_YoY": -1.7221750971025407,
+      "Brent_YoY": -3.6213389623161896
+    },
+    {
+      "date": "1997-04-01",
+      "SP500_return": null,
+      "WTI_return": -6.246650523517806,
+      "Brent_return": -8.60239993251286,
+      "SP500_YoY": null,
+      "WTI_YoY": -16.179364166961452,
+      "Brent_YoY": -16.002444482624377
+    },
+    {
+      "date": "1997-05-01",
+      "SP500_return": null,
+      "WTI_return": 5.548044319141275,
+      "Brent_return": 8.02506700737737,
+      "SP500_YoY": null,
+      "WTI_YoY": -1.636661880627166,
+      "Brent_YoY": -0.688626476072085
+    },
+    {
+      "date": "1997-06-01",
+      "SP500_return": null,
+      "WTI_return": -7.783791220898098,
+      "Brent_return": -7.88793713944799,
+      "SP500_YoY": null,
+      "WTI_YoY": -5.696868803094468,
+      "Brent_YoY": -4.749004415788461
+    },
+    {
+      "date": "1997-07-01",
+      "SP500_return": null,
+      "WTI_return": 2.0740653790662904,
+      "Brent_return": 4.9088077424712555,
+      "SP500_YoY": null,
+      "WTI_YoY": -7.692307692307687,
+      "Brent_YoY": -5.6531446471019375
+    },
+    {
+      "date": "1997-08-01",
+      "SP500_return": null,
+      "WTI_return": 1.4601288101723948,
+      "Brent_return": 0.7069646282430442,
+      "SP500_YoY": null,
+      "WTI_YoY": -8.904298432594448,
+      "Brent_YoY": -9.344994892747705
+    },
+    {
+      "date": "1997-09-01",
+      "SP500_return": null,
+      "WTI_return": -0.7522074562826166,
+      "Brent_return": -0.7261796619381404,
+      "SP500_YoY": null,
+      "WTI_YoY": -17.388009372240642,
+      "Brent_YoY": -18.424375052605
+    },
+    {
+      "date": "1997-10-01",
+      "SP500_return": null,
+      "WTI_return": 7.404001382574246,
+      "Brent_return": 7.331251329528358,
+      "SP500_YoY": null,
+      "WTI_YoY": -14.28471566879871,
+      "Brent_YoY": -17.785295281966384
+    },
+    {
+      "date": "1997-11-01",
+      "SP500_return": null,
+      "WTI_return": -5.451025914265782,
+      "Brent_return": -3.540415826481491,
+      "SP500_YoY": null,
+      "WTI_YoY": -14.811689985703913,
+      "Brent_YoY": -15.753024154695773
+    },
+    {
+      "date": "1997-12-01",
+      "SP500_return": null,
+      "WTI_return": -9.669219021592628,
+      "Brent_return": -10.970939307402743,
+      "SP500_YoY": null,
+      "WTI_YoY": -27.333470606403786,
+      "Brent_YoY": -27.75551964888886
+    },
+    {
+      "date": "1998-01-01",
+      "SP500_return": null,
+      "WTI_return": -9.184302467238018,
+      "Brent_return": -12.343893139036211,
+      "SP500_YoY": null,
+      "WTI_YoY": -33.45487429914993,
+      "Brent_YoY": -35.47917214590625
+    },
+    {
+      "date": "1998-02-01",
+      "SP500_return": null,
+      "WTI_return": -4.051310497570306,
+      "Brent_return": -7.64085160187149,
+      "SP500_YoY": null,
+      "WTI_YoY": -27.580396345081304,
+      "Brent_YoY": -32.52208703554119
+    },
+    {
+      "date": "1998-03-01",
+      "SP500_return": null,
+      "WTI_return": -6.061400826469789,
+      "Brent_return": -7.11542462931866,
+      "SP500_YoY": null,
+      "WTI_YoY": -27.901480823016712,
+      "Brent_YoY": -31.51527821992466
+    },
+    {
+      "date": "1998-04-01",
+      "SP500_return": null,
+      "WTI_return": 1.5645920435234713,
+      "Brent_return": 3.179563671411868,
+      "SP500_YoY": null,
+      "WTI_YoY": -22.04389348631214,
+      "Brent_YoY": -22.951868057892966
+    },
+    {
+      "date": "1998-05-01",
+      "SP500_return": null,
+      "WTI_return": -2.9063251567549226,
+      "Brent_return": 6.001572423476333,
+      "SP500_YoY": null,
+      "WTI_YoY": -28.363677950594692,
+      "Brent_YoY": -24.495264896997693
+    },
+    {
+      "date": "1998-06-01",
+      "SP500_return": null,
+      "WTI_return": -8.331323506325147,
+      "Brent_return": -16.270902326160595,
+      "SP500_YoY": null,
+      "WTI_YoY": -28.754838100632508,
+      "Brent_YoY": -30.566759747647122
+    },
+    {
+      "date": "1998-07-01",
+      "SP500_return": null,
+      "WTI_return": 3.233236920700854,
+      "Brent_return": -1.0442225365108677,
+      "SP500_YoY": null,
+      "WTI_YoY": -27.924179380490056,
+      "Brent_YoY": -34.579516275061316
+    },
+    {
+      "date": "1998-08-01",
+      "SP500_return": null,
+      "WTI_return": -5.071311512642548,
+      "Brent_return": -1.3801020714641847,
+      "SP500_YoY": null,
+      "WTI_YoY": -32.4813250280423,
+      "Brent_YoY": -35.93073593073592
+    },
+    {
+      "date": "1998-09-01",
+      "SP500_return": null,
+      "WTI_return": 10.953685910841301,
+      "Brent_return": 11.332541511205058,
+      "SP500_YoY": null,
+      "WTI_YoY": -24.096472455334606,
+      "Brent_YoY": -27.71967508348029
+    },
+    {
+      "date": "1998-10-01",
+      "SP500_return": null,
+      "WTI_return": -3.869416313544928,
+      "Brent_return": -4.925866196115498,
+      "SP500_YoY": null,
+      "WTI_YoY": -32.188690855710924,
+      "Brent_YoY": -36.05772100519311
+    },
+    {
+      "date": "1998-11-01",
+      "SP500_return": null,
+      "WTI_return": -10.633779644192774,
+      "Brent_return": -14.034216162021535,
+      "SP500_YoY": null,
+      "WTI_YoY": -35.61366344690581,
+      "Brent_YoY": -42.427629007739355
+    },
+    {
+      "date": "1998-12-01",
+      "SP500_return": null,
+      "WTI_return": -13.613386096244454,
+      "Brent_return": -11.65813164607444,
+      "SP500_YoY": null,
+      "WTI_YoY": -38.10373896657742,
+      "Brent_YoY": -42.82190565933151
+    },
+    {
+      "date": "1999-01-01",
+      "SP500_return": null,
+      "WTI_return": 9.792947055643195,
+      "Brent_return": 12.339310787239576,
+      "SP500_YoY": null,
+      "WTI_YoY": -25.168997595639418,
+      "Brent_YoY": -26.814091308165068
+    },
+    {
+      "date": "1999-02-01",
+      "SP500_return": null,
+      "WTI_return": -4.086054630494471,
+      "Brent_return": -7.886980636763141,
+      "SP500_YoY": null,
+      "WTI_YoY": -25.19499246247623,
+      "Brent_YoY": -26.99400158237023
+    },
+    {
+      "date": "1999-03-01",
+      "SP500_return": null,
+      "WTI_return": 20.020270540160247,
+      "Brent_return": 19.725182767702286,
+      "SP500_YoY": null,
+      "WTI_YoY": -2.9038677269292323,
+      "Brent_YoY": -4.5170514961064505
+    },
+    {
+      "date": "1999-04-01",
+      "SP500_return": null,
+      "WTI_return": 16.517285116653053,
+      "Brent_return": 20.086070318859797,
+      "SP500_YoY": null,
+      "WTI_YoY": 12.75625717209936,
+      "Brent_YoY": 13.07063911580968
+    },
+    {
+      "date": "1999-05-01",
+      "SP500_return": null,
+      "WTI_return": 2.318738395389832,
+      "Brent_return": -0.4537188609445467,
+      "SP500_YoY": null,
+      "WTI_YoY": 18.804479013007903,
+      "Brent_YoY": 6.002198607548581
+    },
+    {
+      "date": "1999-06-01",
+      "SP500_return": null,
+      "WTI_return": 1.1485657122575017,
+      "Brent_return": 4.104471710109749,
+      "SP500_YoY": null,
+      "WTI_YoY": 30.61812640784418,
+      "Brent_YoY": 29.95829299173307
+    },
+    {
+      "date": "1999-07-01",
+      "SP500_return": null,
+      "WTI_return": 11.479069019116576,
+      "Brent_return": 18.463985088167174,
+      "SP500_YoY": null,
+      "WTI_YoY": 41.84519991447508,
+      "Brent_YoY": 57.95270489148044
+    },
+    {
+      "date": "1999-08-01",
+      "SP500_return": null,
+      "WTI_return": 5.681794296921878,
+      "Brent_return": 5.798444552559233,
+      "SP500_YoY": null,
+      "WTI_YoY": 57.94823924087649,
+      "Brent_YoY": 69.70830635426913
+    },
+    {
+      "date": "1999-09-01",
+      "SP500_return": null,
+      "WTI_return": 11.18419330822548,
+      "Brent_return": 10.880755028795404,
+      "SP500_YoY": null,
+      "WTI_YoY": 58.31274155737185,
+      "Brent_YoY": 68.94331652813734
+    },
+    {
+      "date": "1999-10-01",
+      "SP500_return": null,
+      "WTI_return": -4.755825763852211,
+      "Brent_return": -2.4281989223060467,
+      "SP500_YoY": null,
+      "WTI_YoY": 56.91564360703734,
+      "Brent_YoY": 73.21609624347147
+    },
+    {
+      "date": "1999-11-01",
+      "SP500_return": null,
+      "WTI_return": 9.698380122084194,
+      "Brent_return": 11.09488501073564,
+      "SP500_YoY": null,
+      "WTI_YoY": 92.29486645694547,
+      "Brent_YoY": 122.7011945004353
+    },
+    {
+      "date": "1999-12-01",
+      "SP500_return": null,
+      "WTI_return": 4.305547596854672,
+      "Brent_return": 3.552574346173915,
+      "SP500_YoY": null,
+      "WTI_YoY": 130.0321987471483,
+      "Brent_YoY": 159.2876330713362
+    },
+    {
+      "date": "2000-01-01",
+      "SP500_return": null,
+      "WTI_return": 4.337458442920625,
+      "Brent_return": 0.14844655192884068,
+      "SP500_YoY": null,
+      "WTI_YoY": 117.81899234586591,
+      "Brent_YoY": 129.52899365693463
+    },
+    {
+      "date": "2000-02-01",
+      "SP500_return": null,
+      "WTI_return": 7.443642371441372,
+      "Brent_return": 8.50523203534107,
+      "SP500_YoY": null,
+      "WTI_YoY": 144.43792166827305,
+      "Brent_YoY": 170.41328726612596
+    },
+    {
+      "date": "2000-03-01",
+      "SP500_return": null,
+      "WTI_return": 1.6070512947524718,
+      "Brent_return": -1.0482104258835736,
+      "SP500_YoY": null,
+      "WTI_YoY": 103.3297784097642,
+      "Brent_YoY": 119.69001946066165
+    },
+    {
+      "date": "2000-04-01",
+      "SP500_return": null,
+      "WTI_return": -14.855730631319949,
+      "Brent_return": -18.84800832385349,
+      "SP500_YoY": null,
+      "WTI_YoY": 48.576358930112185,
+      "Brent_YoY": 48.84072342635879
+    },
+    {
+      "date": "2000-05-01",
+      "SP500_return": null,
+      "WTI_return": 11.261420021342333,
+      "Brent_return": 19.758971563204693,
+      "SP500_YoY": null,
+      "WTI_YoY": 62.47527622644029,
+      "Brent_YoY": 82.1815410345554
+    },
+    {
+      "date": "2000-06-01",
+      "SP500_return": null,
+      "WTI_return": 10.020149546056809,
+      "Brent_return": 7.156626965834138,
+      "SP500_YoY": null,
+      "WTI_YoY": 77.54812203596157,
+      "Brent_YoY": 87.82773145362333
+    },
+    {
+      "date": "2000-07-01",
+      "SP500_return": null,
+      "WTI_return": -6.912573111557929,
+      "Brent_return": -3.807281969436676,
+      "SP500_YoY": null,
+      "WTI_YoY": 47.720985434902104,
+      "Brent_YoY": 50.326944194868716
+    },
+    {
+      "date": "2000-08-01",
+      "SP500_return": null,
+      "WTI_return": 5.142378076037572,
+      "Brent_return": 5.142931485860661,
+      "SP500_YoY": null,
+      "WTI_YoY": 46.92629973650948,
+      "Brent_YoY": 49.34475414200576
+    },
+    {
+      "date": "2000-09-01",
+      "SP500_return": null,
+      "WTI_return": 8.047843207544545,
+      "Brent_return": 9.31723472142759,
+      "SP500_YoY": null,
+      "WTI_YoY": 42.38969043283374,
+      "Brent_YoY": 47.02787819432641
+    },
+    {
+      "date": "2000-10-01",
+      "SP500_return": null,
+      "WTI_return": -2.3148760888890427,
+      "Brent_return": -6.81592805320679,
+      "SP500_YoY": null,
+      "WTI_YoY": 45.908117946017725,
+      "Brent_YoY": 40.71617593530805
+    },
+    {
+      "date": "2000-11-01",
+      "SP500_return": null,
+      "WTI_return": 3.876061343979304,
+      "Brent_return": 5.012177717567172,
+      "SP500_YoY": null,
+      "WTI_YoY": 37.65546138463005,
+      "Brent_YoY": 32.41194416196726
+    },
+    {
+      "date": "2000-12-01",
+      "SP500_return": null,
+      "WTI_return": -19.088124786249985,
+      "Brent_return": -23.79138296800679,
+      "SP500_YoY": null,
+      "WTI_YoY": 8.942169114293552,
+      "Brent_YoY": 0.7334862290543143
+    },
+    {
+      "date": "2001-01-01",
+      "SP500_return": null,
+      "WTI_return": 3.961808808851782,
+      "Brent_return": -0.13826602454463882,
+      "SP500_YoY": null,
+      "WTI_YoY": 8.533695948983722,
+      "Brent_YoY": 0.4450842951881695
+    },
+    {
+      "date": "2001-02-01",
+      "SP500_return": null,
+      "WTI_return": 0.08027476755105667,
+      "Brent_return": 7.076257035926807,
+      "SP500_YoY": null,
+      "WTI_YoY": 0.8291006068600559,
+      "Brent_YoY": -0.9800442318572022
+    },
+    {
+      "date": "2001-03-01",
+      "SP500_return": null,
+      "WTI_return": -8.324103275420267,
+      "Brent_return": -11.575147520103043,
+      "SP500_YoY": null,
+      "WTI_YoY": -8.703224917747898,
+      "Brent_YoY": -10.873916807353478
+    },
+    {
+      "date": "2001-04-01",
+      "SP500_return": null,
+      "WTI_return": 0.8968967909621243,
+      "Brent_return": 4.626021271250412,
+      "SP500_YoY": null,
+      "WTI_YoY": 6.873056146668843,
+      "Brent_YoY": 12.70708986445026
+    },
+    {
+      "date": "2001-05-01",
+      "SP500_return": null,
+      "WTI_return": 4.060106334074161,
+      "Brent_return": 9.852153208899804,
+      "SP500_YoY": null,
+      "WTI_YoY": -0.5526257618340913,
+      "Brent_YoY": 2.0766646013431256
+    },
+    {
+      "date": "2001-06-01",
+      "SP500_return": null,
+      "WTI_return": -3.6642099946402094,
+      "Brent_return": -1.654476991581376,
+      "SP500_YoY": null,
+      "WTI_YoY": -13.271286888964617,
+      "Brent_YoY": -6.532563292288696
+    },
+    {
+      "date": "2001-07-01",
+      "SP500_return": null,
+      "WTI_return": -4.347974408239211,
+      "Brent_return": -12.349815590324077,
+      "SP500_YoY": null,
+      "WTI_YoY": -11.018276586120068,
+      "Brent_YoY": -14.185518961970411
+    },
+    {
+      "date": "2001-08-01",
+      "SP500_return": null,
+      "WTI_return": 3.5288959684942207,
+      "Brent_return": 4.241186573903106,
+      "SP500_YoY": null,
+      "WTI_YoY": -12.442460400239197,
+      "Brent_YoY": -14.955868166045128
+    },
+    {
+      "date": "2001-09-01",
+      "SP500_return": null,
+      "WTI_return": -4.385115899767813,
+      "Brent_return": -0.23586985467344704,
+      "SP500_YoY": null,
+      "WTI_YoY": -22.678923137142814,
+      "Brent_YoY": -22.704226768576508
+    },
+    {
+      "date": "2001-10-01",
+      "SP500_return": null,
+      "WTI_return": -16.701891004440537,
+      "Brent_return": -22.108541940133865,
+      "SP500_YoY": null,
+      "WTI_YoY": -33.039932620902455,
+      "Brent_YoY": -33.66530024473039
+    },
+    {
+      "date": "2001-11-01",
+      "SP500_return": null,
+      "WTI_return": -12.140672410198741,
+      "Brent_return": -8.855656925937922,
+      "SP500_YoY": null,
+      "WTI_YoY": -42.94994188942388,
+      "Brent_YoY": -42.25511415206312
+    },
+    {
+      "date": "2001-12-01",
+      "SP500_return": null,
+      "WTI_return": -1.2610507591929472,
+      "Brent_return": -0.49068550601976807,
+      "SP500_YoY": null,
+      "WTI_YoY": -31.8166885220718,
+      "Brent_YoY": -27.10341715551545
+    },
+    {
+      "date": "2002-01-01",
+      "SP500_return": null,
+      "WTI_return": 1.6664509961502587,
+      "Brent_return": 3.7334670548586675,
+      "SP500_YoY": null,
+      "WTI_YoY": -33.363914373088676,
+      "Brent_YoY": -24.225706886153187
+    },
+    {
+      "date": "2002-02-01",
+      "SP500_return": null,
+      "WTI_return": 4.99095205738565,
+      "Brent_return": 4.327365350715797,
+      "SP500_YoY": null,
+      "WTI_YoY": -30.009954139855665,
+      "Brent_YoY": -26.280291599251004
+    },
+    {
+      "date": "2002-03-01",
+      "SP500_return": null,
+      "WTI_return": 16.866041287454753,
+      "Brent_return": 15.592113066342684,
+      "SP500_YoY": null,
+      "WTI_YoY": -9.95995862391138,
+      "Brent_YoY": -3.2681436399846775
+    },
+    {
+      "date": "2002-04-01",
+      "SP500_return": null,
+      "WTI_return": 6.502341139723495,
+      "Brent_return": 8.22702357005162,
+      "SP500_YoY": null,
+      "WTI_YoY": -4.768676212837708,
+      "Brent_YoY": 0.27864952419518474
+    },
+    {
+      "date": "2002-05-01",
+      "SP500_return": null,
+      "WTI_return": 3.240664499690344,
+      "Brent_return": -1.5005220885799877,
+      "SP500_YoY": null,
+      "WTI_YoY": -5.5458529150260505,
+      "Brent_YoY": -10.483223631401495
+    },
+    {
+      "date": "2002-06-01",
+      "SP500_return": null,
+      "WTI_return": -5.796400092242707,
+      "Brent_return": -5.114857431053345,
+      "SP500_YoY": null,
+      "WTI_YoY": -7.538476137892969,
+      "Brent_YoY": -13.527862797736102
+    },
+    {
+      "date": "2002-07-01",
+      "SP500_return": null,
+      "WTI_return": 5.518019743586006,
+      "Brent_return": 6.644333694286433,
+      "SP500_YoY": null,
+      "WTI_YoY": 2.048943991926766,
+      "Brent_YoY": 4.560279417078172
+    },
+    {
+      "date": "2002-08-01",
+      "SP500_return": null,
+      "WTI_return": 5.127695986716822,
+      "Brent_return": 3.4946148926320393,
+      "SP500_YoY": null,
+      "WTI_YoY": 3.6936149936467544,
+      "Brent_YoY": 3.7825686774284994
+    },
+    {
+      "date": "2002-09-01",
+      "SP500_return": null,
+      "WTI_return": 4.405649717101965,
+      "Brent_return": 6.353206010964985,
+      "SP500_YoY": null,
+      "WTI_YoY": 13.221740091203117,
+      "Brent_YoY": 10.851202441592589
+    },
+    {
+      "date": "2002-10-01",
+      "SP500_return": null,
+      "WTI_return": -2.8274634089687,
+      "Brent_return": -3.0622379368497894,
+      "SP500_YoY": null,
+      "WTI_YoY": 30.072563247695648,
+      "Brent_YoY": 34.10885534644452
+    },
+    {
+      "date": "2002-11-01",
+      "SP500_return": null,
+      "WTI_return": -9.009453177315262,
+      "Brent_return": -12.382457108457718,
+      "SP500_YoY": null,
+      "WTI_YoY": 34.209856191280366,
+      "Brent_YoY": 29.461536512849573
+    },
+    {
+      "date": "2002-12-01",
+      "SP500_return": null,
+      "WTI_return": 11.151757051564635,
+      "Brent_return": 15.215471614184276,
+      "SP500_YoY": null,
+      "WTI_YoY": 51.94714710988224,
+      "Brent_YoY": 51.478756330894804
+    },
+    {
+      "date": "2003-01-01",
+      "SP500_return": null,
+      "WTI_return": 11.183880727475197,
+      "Brent_return": 9.581333826049699,
+      "SP500_YoY": null,
+      "WTI_YoY": 67.11915171131133,
+      "Brent_YoY": 60.60116581220591
+    },
+    {
+      "date": "2003-02-01",
+      "SP500_return": null,
+      "WTI_return": 8.383691687776668,
+      "Brent_return": 4.965049625515751,
+      "SP500_YoY": null,
+      "WTI_YoY": 72.8863492063492,
+      "Brent_YoY": 61.62856649651056
+    },
+    {
+      "date": "2003-03-01",
+      "SP500_return": null,
+      "WTI_return": -6.679809300271498,
+      "Brent_return": -6.813944454647903,
+      "SP500_YoY": null,
+      "WTI_YoY": 36.616254263313095,
+      "Brent_YoY": 29.184333741936786
+    },
+    {
+      "date": "2003-04-01",
+      "SP500_return": null,
+      "WTI_return": -17.366888368065332,
+      "Brent_return": -19.982328060966857,
+      "SP500_YoY": null,
+      "WTI_YoY": 7.606777822425292,
+      "Brent_YoY": -2.568768439835345
+    },
+    {
+      "date": "2003-05-01",
+      "SP500_return": null,
+      "WTI_return": -0.21999230438405315,
+      "Brent_return": 3.1028230858208197,
+      "SP500_YoY": null,
+      "WTI_YoY": 3.946575352334203,
+      "Brent_YoY": 2.0211621233859445
+    },
+    {
+      "date": "2003-06-01",
+      "SP500_return": null,
+      "WTI_return": 8.696196419015175,
+      "Brent_return": 6.711957143935867,
+      "SP500_YoY": null,
+      "WTI_YoY": 20.15745812795011,
+      "Brent_YoY": 14.829498828391486
+    },
+    {
+      "date": "2003-07-01",
+      "SP500_return": null,
+      "WTI_return": 0.30012759263149247,
+      "Brent_return": 2.4851965271524454,
+      "SP500_YoY": null,
+      "WTI_YoY": 14.04853600548388,
+      "Brent_YoY": 10.151538188637165
+    },
+    {
+      "date": "2003-08-01",
+      "SP500_return": null,
+      "WTI_return": 2.629016141189262,
+      "Brent_return": 5.2879228167128725,
+      "SP500_YoY": null,
+      "WTI_YoY": 11.234136071197899,
+      "Brent_YoY": 12.144712915609833
+    },
+    {
+      "date": "2003-09-01",
+      "SP500_return": null,
+      "WTI_return": -10.906240482474496,
+      "Brent_return": -9.747375500393225,
+      "SP500_YoY": null,
+      "WTI_YoY": -4.558030672615931,
+      "Brent_YoY": -4.532650233450042
+    },
+    {
+      "date": "2003-10-01",
+      "SP500_return": null,
+      "WTI_return": 6.914409132973985,
+      "Brent_return": 8.80522276766115,
+      "SP500_YoY": null,
+      "WTI_YoY": 5.2077679271455235,
+      "Brent_YoY": 7.496566638778823
+    },
+    {
+      "date": "2003-11-01",
+      "SP500_return": null,
+      "WTI_return": 2.506608522735801,
+      "Brent_return": -2.9314001228874247,
+      "SP500_YoY": null,
+      "WTI_YoY": 18.048759378724032,
+      "Brent_YoY": 18.151710237946126
+    },
+    {
+      "date": "2003-12-01",
+      "SP500_return": null,
+      "WTI_return": 3.2284795069687573,
+      "Brent_return": 3.602333799764912,
+      "SP500_YoY": null,
+      "WTI_YoY": 9.056378095299689,
+      "Brent_YoY": 5.1973490167211756
+    },
+    {
+      "date": "2004-01-01",
+      "SP500_return": null,
+      "WTI_return": 6.567632566813307,
+      "Brent_return": 4.826130419275568,
+      "SP500_YoY": null,
+      "WTI_YoY": 4.136495685730401,
+      "Brent_YoY": 0.312073987078354
+    },
+    {
+      "date": "2004-02-01",
+      "SP500_return": null,
+      "WTI_return": 1.0862872857405166,
+      "Brent_return": -1.3597123031828044,
+      "SP500_YoY": null,
+      "WTI_YoY": -3.1921144636718912,
+      "Brent_YoY": -5.835952518995457
+    },
+    {
+      "date": "2004-03-01",
+      "SP500_return": null,
+      "WTI_return": 5.760185154732392,
+      "Brent_return": 8.61355624061674,
+      "SP500_YoY": null,
+      "WTI_YoY": 9.631900779270186,
+      "Brent_YoY": 9.871714579819258
+    },
+    {
+      "date": "2004-04-01",
+      "SP500_return": null,
+      "WTI_return": 0.023664438375823212,
+      "Brent_return": -0.1292333959457654,
+      "SP500_YoY": null,
+      "WTI_YoY": 30.455728726461317,
+      "Brent_YoY": 34.00061651163213
+    },
+    {
+      "date": "2004-05-01",
+      "SP500_return": null,
+      "WTI_return": 9.159270340419242,
+      "Brent_return": 11.188701622199364,
+      "SP500_YoY": null,
+      "WTI_YoY": 43.28369587314496,
+      "Brent_YoY": 45.285850729976794
+    },
+    {
+      "date": "2004-06-01",
+      "SP500_return": null,
+      "WTI_return": -5.748082939256175,
+      "Brent_return": -6.556138532924899,
+      "SP500_YoY": null,
+      "WTI_YoY": 24.01267257846593,
+      "Brent_YoY": 27.23327713253836
+    },
+    {
+      "date": "2004-07-01",
+      "SP500_return": null,
+      "WTI_return": 6.989495614797174,
+      "Brent_return": 8.281351830013705,
+      "SP500_YoY": null,
+      "WTI_YoY": 32.5920921132272,
+      "Brent_YoY": 34.82582798631386
+    },
+    {
+      "date": "2004-08-01",
+      "SP500_return": null,
+      "WTI_return": 9.636360096646653,
+      "Brent_return": 11.183634469738513,
+      "SP500_YoY": null,
+      "WTI_YoY": 42.216547497446385,
+      "Brent_YoY": 43.01376708211728
+    },
+    {
+      "date": "2004-09-01",
+      "SP500_return": null,
+      "WTI_return": 2.2734246740644273,
+      "Brent_return": 1.0535877858728533,
+      "SP500_YoY": null,
+      "WTI_YoY": 62.25148854576648,
+      "Brent_YoY": 59.325699532248045
+    },
+    {
+      "date": "2004-10-01",
+      "SP500_return": null,
+      "WTI_return": 14.832706017557316,
+      "Brent_return": 14.177949406218607,
+      "SP500_YoY": null,
+      "WTI_YoY": 75.62139247054265,
+      "Brent_YoY": 68.1199643650817
+    },
+    {
+      "date": "2004-11-01",
+      "SP500_return": null,
+      "WTI_return": -9.464554537501716,
+      "Brent_return": -14.378080084573034,
+      "SP500_YoY": null,
+      "WTI_YoY": 55.80712563621753,
+      "Brent_YoY": 49.93636916947934
+    },
+    {
+      "date": "2004-12-01",
+      "SP500_return": null,
+      "WTI_return": -11.625303655806288,
+      "Brent_return": -8.488151900764894,
+      "SP500_YoY": null,
+      "WTI_YoY": 34.30066250685479,
+      "Brent_YoY": 32.86135508809218
+    },
+    {
+      "date": "2005-01-01",
+      "SP500_return": null,
+      "WTI_return": 8.200210708794119,
+      "Brent_return": 11.680740236631157,
+      "SP500_YoY": null,
+      "WTI_YoY": 36.5112212183037,
+      "Brent_YoY": 42.28786725529001
+    },
+    {
+      "date": "2005-02-01",
+      "SP500_return": null,
+      "WTI_return": 2.7625787641824076,
+      "Brent_return": 2.1471308490186183,
+      "SP500_YoY": null,
+      "WTI_YoY": 38.8188343120742,
+      "Brent_YoY": 47.366203801221715
+    },
+    {
+      "date": "2005-03-01",
+      "SP500_return": null,
+      "WTI_return": 11.813839539064551,
+      "Brent_return": 15.509980196060075,
+      "SP500_YoY": null,
+      "WTI_YoY": 47.48202096702183,
+      "Brent_YoY": 57.88784051688172
+    },
+    {
+      "date": "2005-04-01",
+      "SP500_return": null,
+      "WTI_return": -2.2541164441530603,
+      "Brent_return": -2.325574008634704,
+      "SP500_YoY": null,
+      "WTI_YoY": 44.160673793326865,
+      "Brent_YoY": 54.45789032798503
+    },
+    {
+      "date": "2005-05-01",
+      "SP500_return": null,
+      "WTI_return": -6.120284766822651,
+      "Brent_return": -6.444841375955137,
+      "SP500_YoY": null,
+      "WTI_YoY": 23.733853566255792,
+      "Brent_YoY": 29.487723147409817
+    },
+    {
+      "date": "2005-06-01",
+      "SP500_return": null,
+      "WTI_return": 12.292891223222146,
+      "Brent_return": 11.096987056959968,
+      "SP500_YoY": null,
+      "WTI_YoY": 48.19702794794527,
+      "Brent_YoY": 54.488140147795995
+    },
+    {
+      "date": "2005-07-01",
+      "SP500_return": null,
+      "WTI_return": 4.583859779955675,
+      "Brent_return": 5.660447032430321,
+      "SP500_YoY": null,
+      "WTI_YoY": 44.674486769273905,
+      "Brent_YoY": 50.49175258957985
+    },
+    {
+      "date": "2005-08-01",
+      "SP500_return": null,
+      "WTI_return": 9.669864947105932,
+      "Brent_return": 10.649218444595927,
+      "SP500_YoY": null,
+      "WTI_YoY": 44.72296786102377,
+      "Brent_YoY": 49.68964574998462
+    },
+    {
+      "date": "2005-09-01",
+      "SP500_return": null,
+      "WTI_return": 0.9212603977485949,
+      "Brent_return": -1.694866601091836,
+      "SP500_YoY": null,
+      "WTI_YoY": 42.77924635878296,
+      "Brent_YoY": 45.63151747287784
+    },
+    {
+      "date": "2005-10-01",
+      "SP500_return": null,
+      "WTI_return": -5.20532582455671,
+      "Brent_return": -7.1990354220235515,
+      "SP500_YoY": null,
+      "WTI_YoY": 16.85330997685206,
+      "Brent_YoY": 17.602433727793667
+    },
+    {
+      "date": "2005-11-01",
+      "SP500_return": null,
+      "WTI_return": -6.533121129080532,
+      "Brent_return": -5.796563540263828,
+      "SP500_YoY": null,
+      "WTI_YoY": 20.3294889517011,
+      "Brent_YoY": 28.140189576457942
+    },
+    {
+      "date": "2005-12-01",
+      "SP500_return": null,
+      "WTI_return": 1.8506669432248612,
+      "Brent_return": 2.8796488060371326,
+      "SP500_YoY": null,
+      "WTI_YoY": 37.68843666541595,
+      "Brent_YoY": 43.56715469851551
+    },
+    {
+      "date": "2006-01-01",
+      "SP500_return": null,
+      "WTI_return": 9.732648562646066,
+      "Brent_return": 10.238365270133023,
+      "SP500_YoY": null,
+      "WTI_YoY": 39.81467643102674,
+      "Brent_YoY": 41.51124063726008
+    },
+    {
+      "date": "2006-02-01",
+      "SP500_return": null,
+      "WTI_return": -6.065526409620273,
+      "Brent_return": -4.506193151030366,
+      "SP500_YoY": null,
+      "WTI_YoY": 28.000830755440887,
+      "Brent_YoY": 32.402418911489825
+    },
+    {
+      "date": "2006-03-01",
+      "SP500_return": null,
+      "WTI_return": 1.6959807872414034,
+      "Brent_return": 3.034026884618166,
+      "SP500_YoY": null,
+      "WTI_YoY": 15.68351767946714,
+      "Brent_YoY": 16.87282524961948
+    },
+    {
+      "date": "2006-04-01",
+      "SP500_return": null,
+      "WTI_return": 10.239047241426071,
+      "Brent_return": 12.402392651514283,
+      "SP500_YoY": null,
+      "WTI_YoY": 31.077637918049604,
+      "Brent_YoY": 35.417966885715366
+    },
+    {
+      "date": "2006-05-01",
+      "SP500_return": null,
+      "WTI_return": 1.9965434850944936,
+      "Brent_return": -0.6898827367874567,
+      "SP500_YoY": null,
+      "WTI_YoY": 42.1606968964376,
+      "Brent_YoY": 43.439828394530046
+    },
+    {
+      "date": "2006-06-01",
+      "SP500_return": null,
+      "WTI_return": 0.15066568218167536,
+      "Brent_return": -1.7654215996298122,
+      "SP500_YoY": null,
+      "WTI_YoY": 25.90602944141964,
+      "Brent_YoY": 26.127278809165432
+    },
+    {
+      "date": "2006-07-01",
+      "SP500_return": null,
+      "WTI_return": 4.7616271037027245,
+      "Brent_return": 7.200423001381526,
+      "SP500_YoY": null,
+      "WTI_YoY": 26.13004827754477,
+      "Brent_YoY": 28.084641366977948
+    },
+    {
+      "date": "2006-08-01",
+      "SP500_return": null,
+      "WTI_return": -1.8555583612140134,
+      "Brent_return": -0.6042723212132988,
+      "SP500_YoY": null,
+      "WTI_YoY": 12.399475465992271,
+      "Brent_YoY": 14.452100406354917
+    },
+    {
+      "date": "2006-09-01",
+      "SP500_return": null,
+      "WTI_return": -13.532706217248286,
+      "Brent_return": -16.714515134204312,
+      "SP500_YoY": null,
+      "WTI_YoY": -2.7271803212034817,
+      "Brent_YoY": -1.5095180979080913
+    },
+    {
+      "date": "2006-10-01",
+      "SP500_return": null,
+      "WTI_return": -7.999651654473039,
+      "Brent_return": -6.933563932484812,
+      "SP500_YoY": null,
+      "WTI_YoY": -5.407674561224196,
+      "Brent_YoY": -1.2477065848469304
+    },
+    {
+      "date": "2006-11-01",
+      "SP500_return": null,
+      "WTI_return": 0.32094469200304593,
+      "Brent_return": 1.6354238309715508,
+      "SP500_YoY": null,
+      "WTI_YoY": 1.3030991469844322,
+      "Brent_YoY": 6.371161504788847
+    },
+    {
+      "date": "2006-12-01",
+      "SP500_return": null,
+      "WTI_return": 4.7538103701318395,
+      "Brent_return": 6.12355834063303,
+      "SP500_YoY": null,
+      "WTI_YoY": 4.287179898208637,
+      "Brent_YoY": 9.87832278250842
+    },
+    {
+      "date": "2007-01-01",
+      "SP500_return": null,
+      "WTI_return": -12.815859403581575,
+      "Brent_return": -15.16530362835006,
+      "SP500_YoY": null,
+      "WTI_YoY": -16.765380657875106,
+      "Brent_YoY": -14.771412802697537
+    },
+    {
+      "date": "2007-02-01",
+      "SP500_return": null,
+      "WTI_return": 8.393994194940344,
+      "Brent_return": 6.9687624088750635,
+      "SP500_YoY": null,
+      "WTI_YoY": -3.8164288337218966,
+      "Brent_YoY": -4.408255316917109
+    },
+    {
+      "date": "2007-03-01",
+      "SP500_return": null,
+      "WTI_return": 1.9426995490708212,
+      "Brent_return": 7.51931079648514,
+      "SP500_YoY": null,
+      "WTI_YoY": -3.578832941556276,
+      "Brent_YoY": -0.023085657661026104
+    },
+    {
+      "date": "2007-04-01",
+      "SP500_return": null,
+      "WTI_return": 5.684242439108252,
+      "Brent_return": 8.39692123044725,
+      "SP500_YoY": null,
+      "WTI_YoY": -7.872111442062102,
+      "Brent_YoY": -3.948492067059206
+    },
+    {
+      "date": "2007-05-01",
+      "SP500_return": null,
+      "WTI_return": -0.8199813804999264,
+      "Brent_return": -0.4061188674489809,
+      "SP500_YoY": null,
+      "WTI_YoY": -10.430715335211127,
+      "Brent_YoY": -3.6755455128905767
+    },
+    {
+      "date": "2007-06-01",
+      "SP500_return": null,
+      "WTI_return": 6.1641497253719955,
+      "Brent_return": 5.5467672304994275,
+      "SP500_YoY": null,
+      "WTI_YoY": -4.87923483464574,
+      "Brent_YoY": 3.6317878762333278
+    },
+    {
+      "date": "2007-07-01",
+      "SP500_return": null,
+      "WTI_return": 9.368795074256502,
+      "Brent_return": 7.957238444141984,
+      "SP500_YoY": null,
+      "WTI_YoY": -0.39434139631477905,
+      "Brent_YoY": 4.419064608702383
+    },
+    {
+      "date": "2007-08-01",
+      "SP500_return": null,
+      "WTI_return": -2.405369633432231,
+      "Brent_return": -8.35897593172686,
+      "SP500_YoY": null,
+      "WTI_YoY": -0.9404817885820815,
+      "Brent_YoY": -3.37232084545509
+    },
+    {
+      "date": "2007-09-01",
+      "SP500_return": null,
+      "WTI_return": 9.936069521676306,
+      "Brent_return": 8.674554275297307,
+      "SP500_YoY": null,
+      "WTI_YoY": 25.26213492915963,
+      "Brent_YoY": 24.556064020464795
+    },
+    {
+      "date": "2007-10-01",
+      "SP500_return": null,
+      "WTI_return": 7.104352734651938,
+      "Brent_return": 6.480531543521106,
+      "SP500_YoY": null,
+      "WTI_YoY": 45.68527799543285,
+      "Brent_YoY": 42.43658494393685
+    },
+    {
+      "date": "2007-11-01",
+      "SP500_return": null,
+      "WTI_return": 9.947422245918101,
+      "Brent_return": 11.542455765286782,
+      "SP500_YoY": null,
+      "WTI_YoY": 60.40685643359871,
+      "Brent_YoY": 57.27049202972623
+    },
+    {
+      "date": "2007-12-01",
+      "SP500_return": null,
+      "WTI_return": -3.309742406616344,
+      "Brent_return": -1.6226323714334363,
+      "SP500_YoY": null,
+      "WTI_YoY": 47.980115883083975,
+      "Brent_YoY": 45.54790769775141
+    },
+    {
+      "date": "2008-01-01",
+      "SP500_return": null,
+      "WTI_return": 1.3901379852337525,
+      "Brent_return": 1.3667273293426692,
+      "SP500_YoY": null,
+      "WTI_YoY": 70.56865537335206,
+      "Brent_YoY": 71.71319335409072
+    },
+    {
+      "date": "2008-02-01",
+      "SP500_return": null,
+      "WTI_return": 2.5649834726618277,
+      "Brent_return": 3.0012252665754664,
+      "SP500_YoY": null,
+      "WTI_YoY": 60.910414631980814,
+      "Brent_YoY": 65.03378872672741
+    },
+    {
+      "date": "2008-03-01",
+      "SP500_return": null,
+      "WTI_return": 10.034302171364955,
+      "Brent_return": 8.714515898264146,
+      "SP500_YoY": null,
+      "WTI_YoY": 74.47191890021958,
+      "Brent_YoY": 67.01811575623941
+    },
+    {
+      "date": "2008-04-01",
+      "SP500_return": null,
+      "WTI_return": 6.539327868576586,
+      "Brent_return": 5.112244503667504,
+      "SP500_YoY": null,
+      "WTI_YoY": 75.97019951772441,
+      "Brent_YoY": 61.62123090950213
+    },
+    {
+      "date": "2008-05-01",
+      "SP500_return": null,
+      "WTI_return": 10.78215235968399,
+      "Brent_return": 11.853136854793513,
+      "SP500_YoY": null,
+      "WTI_YoY": 97.61802428707873,
+      "Brent_YoY": 82.70047697303269
+    },
+    {
+      "date": "2008-06-01",
+      "SP500_return": null,
+      "WTI_return": 6.545423518565029,
+      "Brent_return": 7.470747620323816,
+      "SP500_YoY": null,
+      "WTI_YoY": 98.3729282352692,
+      "Brent_YoY": 86.24963135740904
+    },
+    {
+      "date": "2008-07-01",
+      "SP500_return": null,
+      "WTI_return": -0.38098394247198714,
+      "Brent_return": 0.2986721397600459,
+      "SP500_YoY": null,
+      "WTI_YoY": 79.94494535128149,
+      "Brent_YoY": 72.51810973376034
+    },
+    {
+      "date": "2008-08-01",
+      "SP500_return": null,
+      "WTI_return": -13.381725274403925,
+      "Brent_return": -15.86890505909728,
+      "SP500_YoY": null,
+      "WTI_YoY": 61.23894392781959,
+      "Brent_YoY": 60.036661546338976
+    },
+    {
+      "date": "2008-09-01",
+      "SP500_return": null,
+      "WTI_return": -11.382758728393137,
+      "Brent_return": -15.24106155205115,
+      "SP500_YoY": null,
+      "WTI_YoY": 30.281710018007924,
+      "Brent_YoY": 25.99557223949398
+    },
+    {
+      "date": "2008-10-01",
+      "SP500_return": null,
+      "WTI_return": -30.677860632346025,
+      "Brent_return": -30.62822050220046,
+      "SP500_YoY": null,
+      "WTI_YoY": -10.71111854340544,
+      "Brent_YoY": -13.065127625645523
+    },
+    {
+      "date": "2008-11-01",
+      "SP500_return": null,
+      "WTI_return": -29.02446457095973,
+      "Brent_return": -31.093556859321115,
+      "SP500_YoY": null,
+      "WTI_YoY": -39.52935115874521,
+      "Brent_YoY": -43.241857929721505
+    },
+    {
+      "date": "2008-12-01",
+      "SP500_return": null,
+      "WTI_return": -33.19271082040827,
+      "Brent_return": -27.23614826512214,
+      "SP500_YoY": null,
+      "WTI_YoY": -55.1497833042654,
+      "Brent_YoY": -56.06707848099134
+    },
+    {
+      "date": "2009-01-01",
+      "SP500_return": null,
+      "WTI_return": 1.420207155555889,
+      "Brent_return": 8.382014140088197,
+      "SP500_YoY": null,
+      "WTI_YoY": -55.13629518843668,
+      "Brent_YoY": -52.87437879054006
+    },
+    {
+      "date": "2009-02-01",
+      "SP500_return": null,
+      "WTI_return": -6.494155169720213,
+      "Brent_return": -0.2645403889880866,
+      "SP500_YoY": null,
+      "WTI_YoY": -59.02190214386531,
+      "Brent_YoY": -54.38853222078374
+    },
+    {
+      "date": "2009-03-01",
+      "SP500_return": null,
+      "WTI_return": 20.413190921697318,
+      "Brent_return": 7.159816305535078,
+      "SP500_YoY": null,
+      "WTI_YoY": -54.54028210490743,
+      "Brent_YoY": -55.09216962772936
+    },
+    {
+      "date": "2009-04-01",
+      "SP500_return": null,
+      "WTI_return": 3.4999985885764797,
+      "Brent_return": 7.533257420905438,
+      "SP500_YoY": null,
+      "WTI_YoY": -55.901166976882536,
+      "Brent_YoY": -53.99167747713529
+    },
+    {
+      "date": "2009-05-01",
+      "SP500_return": null,
+      "WTI_return": 17.308912650728445,
+      "Brent_return": 13.268975398133556,
+      "SP500_YoY": null,
+      "WTI_YoY": -52.926937171283726,
+      "Brent_YoY": -53.33564066171852
+    },
+    {
+      "date": "2009-06-01",
+      "SP500_return": null,
+      "WTI_return": 16.53317908417179,
+      "Brent_return": 18.008741883318756,
+      "SP500_YoY": null,
+      "WTI_YoY": -47.98258956460331,
+      "Brent_YoY": -48.149704561894126
+    },
+    {
+      "date": "2009-07-01",
+      "SP500_return": null,
+      "WTI_return": -8.209265020082372,
+      "Brent_return": -6.276765357873941,
+      "SP500_YoY": null,
+      "WTI_YoY": -51.899351091964995,
+      "Brent_YoY": -51.44941434344818
+    },
+    {
+      "date": "2009-08-01",
+      "SP500_return": null,
+      "WTI_return": 10.205060899187947,
+      "Brent_return": 11.804076343256797,
+      "SP500_YoY": null,
+      "WTI_YoY": -39.10424124180098,
+      "Brent_YoY": -35.97100218240536
+    },
+    {
+      "date": "2009-09-01",
+      "SP500_return": null,
+      "WTI_return": -2.3306620962250357,
+      "Brent_return": -6.941374069363213,
+      "SP500_YoY": null,
+      "WTI_YoY": -33.33470545188438,
+      "Brent_YoY": -30.430034330265986
+    },
+    {
+      "date": "2009-10-01",
+      "SP500_return": null,
+      "WTI_return": 8.697878797229745,
+      "Brent_return": 7.300649522943734,
+      "SP500_YoY": null,
+      "WTI_YoY": -1.1659787431637536,
+      "Brent_YoY": 1.6587531177026937
+    },
+    {
+      "date": "2009-11-01",
+      "SP500_return": null,
+      "WTI_return": 2.9598318577911864,
+      "Brent_return": 5.210861282803544,
+      "SP500_YoY": null,
+      "WTI_YoY": 36.08570274043053,
+      "Brent_YoY": 46.15472606863336
+    },
+    {
+      "date": "2009-12-01",
+      "SP500_return": null,
+      "WTI_return": -4.618425361985244,
+      "Brent_return": -2.919291805628632,
+      "SP500_YoY": null,
+      "WTI_YoY": 81.09607817128708,
+      "Brent_YoY": 86.3887213681827
+    },
+    {
+      "date": "2010-01-01",
+      "SP500_return": null,
+      "WTI_return": 5.0480556524644715,
+      "Brent_return": 2.2719904248256495,
+      "SP500_YoY": null,
+      "WTI_YoY": 87.78659667629876,
+      "Brent_YoY": 75.34126410537101
+    },
+    {
+      "date": "2010-02-01",
+      "SP500_return": null,
+      "WTI_return": -2.5059568547005426,
+      "Brent_return": -3.2223594275586014,
+      "SP500_YoY": null,
+      "WTI_YoY": 95.42724800043088,
+      "Brent_YoY": 70.23093650157317
+    },
+    {
+      "date": "2010-03-01",
+      "SP500_return": null,
+      "WTI_return": 6.114073427501003,
+      "Brent_return": 6.655100109457749,
+      "SP500_YoY": null,
+      "WTI_YoY": 69.38885723732106,
+      "Brent_YoY": 69.37391796927915
+    },
+    {
+      "date": "2010-04-01",
+      "SP500_return": null,
+      "WTI_return": 3.733904804124096,
+      "Brent_return": 7.32427511560463,
+      "SP500_YoY": null,
+      "WTI_YoY": 69.78553204550253,
+      "Brent_YoY": 69.02032605188741
+    },
+    {
+      "date": "2010-05-01",
+      "SP500_return": null,
+      "WTI_return": -13.370427427390519,
+      "Brent_return": -11.04873152240427,
+      "SP500_YoY": null,
+      "WTI_YoY": 24.928636167275144,
+      "Brent_YoY": 32.53435713974089
+    },
+    {
+      "date": "2010-06-01",
+      "SP500_return": null,
+      "WTI_return": 2.136404574936661,
+      "Brent_return": -1.5720835142258454,
+      "SP500_YoY": null,
+      "WTI_YoY": 8.177664643300053,
+      "Brent_YoY": 8.965754831357952
+    },
+    {
+      "date": "2010-07-01",
+      "SP500_return": null,
+      "WTI_return": 1.2971886235628447,
+      "Brent_return": 1.0896555283394889,
+      "SP500_YoY": null,
+      "WTI_YoY": 18.966204259009057,
+      "Brent_YoY": 17.295672907349147
+    },
+    {
+      "date": "2010-08-01",
+      "SP500_return": null,
+      "WTI_return": 0.3656420921052015,
+      "Brent_return": 1.9127169428398734,
+      "SP500_YoY": null,
+      "WTI_YoY": 7.818069700585095,
+      "Brent_YoY": 6.248880562262227
+    },
+    {
+      "date": "2010-09-01",
+      "SP500_return": null,
+      "WTI_return": -1.787688872140697,
+      "Brent_return": 1.034268806423157,
+      "SP500_YoY": null,
+      "WTI_YoY": 8.40508517601215,
+      "Brent_YoY": 15.070007109822136
+    },
+    {
+      "date": "2010-10-01",
+      "SP500_return": null,
+      "WTI_return": 8.470345275552118,
+      "Brent_return": 6.01318603427861,
+      "SP500_YoY": null,
+      "WTI_YoY": 8.15870767003597,
+      "Brent_YoY": 13.5980187706372
+    },
+    {
+      "date": "2010-11-01",
+      "SP500_return": null,
+      "WTI_return": 2.841070864961097,
+      "Brent_return": 3.108512045682747,
+      "SP500_YoY": null,
+      "WTI_YoY": 8.030333559247516,
+      "Brent_YoY": 11.234721119670631
+    },
+    {
+      "date": "2010-12-01",
+      "SP500_return": null,
+      "WTI_return": 5.645197399248038,
+      "Brent_return": 6.987904503623948,
+      "SP500_YoY": null,
+      "WTI_YoY": 19.70714259555404,
+      "Brent_YoY": 22.819345070938436
+    },
+    {
+      "date": "2011-01-01",
+      "SP500_return": null,
+      "WTI_return": 0.027581207329344073,
+      "Brent_return": 5.402892076418656,
+      "SP500_YoY": null,
+      "WTI_YoY": 13.845644709344906,
+      "Brent_YoY": 26.725528268770994
+    },
+    {
+      "date": "2011-02-01",
+      "SP500_return": null,
+      "WTI_return": -0.6661994162019953,
+      "Brent_return": 7.18729372916149,
+      "SP500_YoY": null,
+      "WTI_YoY": 15.959513835299322,
+      "Brent_YoY": 40.628278229345824
+    },
+    {
+      "date": "2011-03-01",
+      "SP500_return": null,
+      "WTI_return": 14.944675105314637,
+      "Brent_return": 10.016768448037542,
+      "SP500_YoY": null,
+      "WTI_YoY": 26.665167480510554,
+      "Brent_YoY": 45.43609316999719
+    },
+    {
+      "date": "2011-04-01",
+      "SP500_return": null,
+      "WTI_return": 6.288628458282081,
+      "Brent_return": 7.245980733856036,
+      "SP500_YoY": null,
+      "WTI_YoY": 29.942801457503588,
+      "Brent_YoY": 45.32226944461597
+    },
+    {
+      "date": "2011-05-01",
+      "SP500_return": null,
+      "WTI_return": -8.208666209371314,
+      "Brent_return": -6.945004539198665,
+      "SP500_YoY": null,
+      "WTI_YoY": 36.826264268004884,
+      "Brent_YoY": 51.40995532197117
+    },
+    {
+      "date": "2011-06-01",
+      "SP500_return": null,
+      "WTI_return": -4.703928527023191,
+      "Brent_return": -1.0102826416948631,
+      "SP500_YoY": null,
+      "WTI_YoY": 27.7798224919904,
+      "Brent_YoY": 52.26297165509442
+    },
+    {
+      "date": "2011-07-01",
+      "SP500_return": null,
+      "WTI_return": 1.073959825994446,
+      "Brent_return": 2.7213354101601444,
+      "SP500_YoY": null,
+      "WTI_YoY": 27.494899264370964,
+      "Brent_YoY": 54.76779571315162
+    },
+    {
+      "date": "2011-08-01",
+      "SP500_return": null,
+      "WTI_return": -11.962254413690173,
+      "Brent_return": -5.94731689540819,
+      "SP500_YoY": null,
+      "WTI_YoY": 12.707660696289945,
+      "Brent_YoY": 43.06878993669132
+    },
+    {
+      "date": "2011-09-01",
+      "SP500_return": null,
+      "WTI_return": -0.9517832232189845,
+      "Brent_return": 2.344177951180838,
+      "SP500_YoY": null,
+      "WTI_YoY": 13.653739051187275,
+      "Brent_YoY": 44.95518918422905
+    },
+    {
+      "date": "2011-10-01",
+      "SP500_return": null,
+      "WTI_return": 0.9394320029446778,
+      "Brent_return": -2.9534957933480337,
+      "SP500_YoY": null,
+      "WTI_YoY": 5.408925715947088,
+      "Brent_YoY": 32.523214820617994
+    },
+    {
+      "date": "2011-11-01",
+      "SP500_return": null,
+      "WTI_return": 11.827510178945909,
+      "Brent_return": 1.1057717691737377,
+      "SP500_YoY": null,
+      "WTI_YoY": 15.320096534807348,
+      "Brent_YoY": 29.895519804329986
+    },
+    {
+      "date": "2011-12-01",
+      "SP500_return": null,
+      "WTI_return": 1.433048301546883,
+      "Brent_return": -2.6507350147570103,
+      "SP500_YoY": null,
+      "WTI_YoY": 10.563522373578426,
+      "Brent_YoY": 17.959817678432067
+    },
+    {
+      "date": "2012-01-01",
+      "SP500_return": null,
+      "WTI_return": 1.720696444779011,
+      "Brent_return": 2.576593019985901,
+      "SP500_YoY": null,
+      "WTI_YoY": 12.451427321816055,
+      "Brent_YoY": 14.672592684682995
+    },
+    {
+      "date": "2012-02-01",
+      "SP500_return": null,
+      "WTI_return": 1.906936326583883,
+      "Brent_return": 7.517025991298874,
+      "SP500_YoY": null,
+      "WTI_YoY": 15.382503758192257,
+      "Brent_YoY": 15.05132928382582
+    },
+    {
+      "date": "2012-03-01",
+      "SP500_return": null,
+      "WTI_return": 3.7955165339245136,
+      "Brent_return": 5.000341526064758,
+      "SP500_YoY": null,
+      "WTI_YoY": 3.209524761074012,
+      "Brent_YoY": 9.422233561341574
+    },
+    {
+      "date": "2012-04-01",
+      "SP500_return": null,
+      "WTI_return": -2.7085334437172146,
+      "Brent_return": -4.921039159312646,
+      "SP500_YoY": null,
+      "WTI_YoY": -5.670919590076007,
+      "Brent_YoY": -3.113140364003475
+    },
+    {
+      "date": "2012-05-01",
+      "SP500_return": null,
+      "WTI_return": -8.760674652697718,
+      "Brent_return": -7.909845519604039,
+      "SP500_YoY": null,
+      "WTI_YoY": -6.190189552861858,
+      "Brent_YoY": -4.04344927260154
+    },
+    {
+      "date": "2012-06-01",
+      "SP500_return": null,
+      "WTI_return": -13.982229123158636,
+      "Brent_return": -14.804754467969033,
+      "SP500_YoY": null,
+      "WTI_YoY": -14.502560034501055,
+      "Brent_YoY": -16.407753200028974
+    },
+    {
+      "date": "2012-07-01",
+      "SP500_return": null,
+      "WTI_return": 6.573402001759986,
+      "Brent_return": 7.550427694214766,
+      "SP500_YoY": null,
+      "WTI_YoY": -9.668986115362655,
+      "Brent_YoY": -12.271949263233617
+    },
+    {
+      "date": "2012-08-01",
+      "SP500_return": null,
+      "WTI_return": 6.854503323200698,
+      "Brent_return": 9.95151516220458,
+      "SP500_YoY": null,
+      "WTI_YoY": 9.03276492450873,
+      "Brent_YoY": 2.84572168125099
+    },
+    {
+      "date": "2012-09-01",
+      "SP500_return": null,
+      "WTI_return": 0.40539681367893643,
+      "Brent_return": -0.4353319969321471,
+      "SP500_YoY": null,
+      "WTI_YoY": 10.522623003477683,
+      "Brent_YoY": 0.026476715483458868
+    },
+    {
+      "date": "2012-10-01",
+      "SP500_return": null,
+      "WTI_return": -5.460316804104429,
+      "Brent_return": -1.0266744402199004,
+      "SP500_YoY": null,
+      "WTI_YoY": 3.671033352512909,
+      "Brent_YoY": 1.9724961800249963
+    },
+    {
+      "date": "2012-11-01",
+      "SP500_return": null,
+      "WTI_return": -3.3633778402663856,
+      "Brent_return": -2.4028921220294794,
+      "SP500_YoY": null,
+      "WTI_YoY": -10.93968250856462,
+      "Brent_YoY": -1.543335927054812
+    },
+    {
+      "date": "2012-12-01",
+      "SP500_return": null,
+      "WTI_return": 1.5231263626457332,
+      "Brent_return": 0.3984662772073658,
+      "SP500_YoY": null,
+      "WTI_YoY": -10.859422558483356,
+      "Brent_YoY": 1.5050454016621861
+    },
+    {
+      "date": "2013-01-01",
+      "SP500_return": null,
+      "WTI_return": 7.557325442581135,
+      "Brent_return": 3.1164020510198984,
+      "SP500_YoY": null,
+      "WTI_YoY": -5.501785948763461,
+      "Brent_YoY": 2.0544603653578575
+    },
+    {
+      "date": "2013-02-01",
+      "SP500_return": null,
+      "WTI_return": 0.5811490509998087,
+      "Brent_return": 2.6991894215462433,
+      "SP500_YoY": null,
+      "WTI_YoY": -6.746362795564709,
+      "Brent_YoY": -2.7457940652245716
+    },
+    {
+      "date": "2013-03-01",
+      "SP500_return": null,
+      "WTI_return": -2.5185708513621123,
+      "Brent_return": -6.751515503246185,
+      "SP500_YoY": null,
+      "WTI_YoY": -12.452439979961216,
+      "Brent_YoY": -13.528951373287923
+    },
+    {
+      "date": "2013-04-01",
+      "SP500_return": null,
+      "WTI_return": -0.9917220551379005,
+      "Brent_return": -5.910749989239126,
+      "SP500_YoY": null,
+      "WTI_YoY": -10.936437281517186,
+      "Brent_YoY": -14.380543604721252
+    },
+    {
+      "date": "2013-05-01",
+      "SP500_return": null,
+      "WTI_return": 2.6680075969122483,
+      "Brent_return": 0.30316840620413704,
+      "SP500_YoY": null,
+      "WTI_YoY": -0.1531886285055628,
+      "Brent_YoY": -7.051768194431752
+    },
+    {
+      "date": "2013-06-01",
+      "SP500_return": null,
+      "WTI_return": 1.3274747901286952,
+      "Brent_return": 0.35124321619135607,
+      "SP500_YoY": null,
+      "WTI_YoY": 16.365274796484574,
+      "Brent_YoY": 8.159032563167145
+    },
+    {
+      "date": "2013-07-01",
+      "SP500_return": null,
+      "WTI_return": 8.884564173358973,
+      "Brent_return": 4.756521953034035,
+      "SP500_YoY": null,
+      "WTI_YoY": 19.085983904490767,
+      "Brent_YoY": 5.178994713748963
+    },
+    {
+      "date": "2013-08-01",
+      "SP500_return": null,
+      "WTI_return": 1.8006408145004693,
+      "Brent_return": 3.054128351735491,
+      "SP500_YoY": null,
+      "WTI_YoY": 13.21709394244519,
+      "Brent_YoY": -1.8310727432425455
+    },
+    {
+      "date": "2013-09-01",
+      "SP500_return": null,
+      "WTI_return": -0.2661133856379351,
+      "Brent_return": 0.28360551410525464,
+      "SP500_YoY": null,
+      "WTI_YoY": 12.459376531385047,
+      "Brent_YoY": -1.1227563758796077
+    },
+    {
+      "date": "2013-10-01",
+      "SP500_return": null,
+      "WTI_return": -5.562814320392472,
+      "Brent_return": -2.284001722596086,
+      "SP500_YoY": null,
+      "WTI_YoY": 12.344167516882854,
+      "Brent_YoY": -2.358183976492101
+    },
+    {
+      "date": "2013-11-01",
+      "SP500_return": null,
+      "WTI_return": -6.869143409778522,
+      "Brent_return": -1.1846226003979046,
+      "SP500_YoY": null,
+      "WTI_YoY": 8.473882321864878,
+      "Brent_YoY": -1.1613680722023512
+    },
+    {
+      "date": "2013-12-01",
+      "SP500_return": null,
+      "WTI_return": 3.9289120911231636,
+      "Brent_return": 2.713215853107281,
+      "SP500_YoY": null,
+      "WTI_YoY": 11.11517604270238,
+      "Brent_YoY": 1.1531834316644396
+    },
+    {
+      "date": "2014-01-01",
+      "SP500_return": null,
+      "WTI_return": -3.129737325731726,
+      "Brent_return": -2.411490197708899,
+      "SP500_YoY": null,
+      "WTI_YoY": -0.1472443200378093,
+      "Brent_YoY": -4.286714524851909
+    },
+    {
+      "date": "2014-02-01",
+      "SP500_return": null,
+      "WTI_return": 6.347197278350903,
+      "Brent_return": 0.7214162174135177,
+      "SP500_YoY": null,
+      "WTI_YoY": 5.77954242988179,
+      "Brent_YoY": -6.161109498585004
+    },
+    {
+      "date": "2014-03-01",
+      "SP500_return": null,
+      "WTI_return": -0.01344987406754075,
+      "Brent_return": -1.3121218232135143,
+      "SP500_YoY": null,
+      "WTI_YoY": 8.46291851472698,
+      "Brent_YoY": -0.9154706372472954
+    },
+    {
+      "date": "2014-04-01",
+      "SP500_return": null,
+      "WTI_return": 1.2473373889042174,
+      "Brent_return": 0.25486965008583856,
+      "SP500_YoY": null,
+      "WTI_YoY": 10.918860127294927,
+      "Brent_YoY": 5.385969881448793
+    },
+    {
+      "date": "2014-05-01",
+      "SP500_return": null,
+      "WTI_return": 0.10584799445760827,
+      "Brent_return": 1.6419138937567703,
+      "SP500_YoY": null,
+      "WTI_YoY": 8.113040186279541,
+      "Brent_YoY": 6.806305926986345
+    },
+    {
+      "date": "2014-06-01",
+      "SP500_return": null,
+      "WTI_return": 3.478850605195352,
+      "Brent_return": 2.0387486595325717,
+      "SP500_YoY": null,
+      "WTI_YoY": 10.464157993459189,
+      "Brent_YoY": 8.623961538132319
+    },
+    {
+      "date": "2014-07-01",
+      "SP500_return": null,
+      "WTI_return": -2.1068871504073026,
+      "Brent_return": -4.600900766056547,
+      "SP500_YoY": null,
+      "WTI_YoY": -1.0339766193610878,
+      "Brent_YoY": -1.079371496675141
+    },
+    {
+      "date": "2014-08-01",
+      "SP500_return": null,
+      "WTI_return": -7.0509667319765725,
+      "Brent_return": -4.953674957687172,
+      "SP500_YoY": null,
+      "WTI_YoY": -9.417547109264246,
+      "Brent_YoY": -8.691876167174051
+    },
+    {
+      "date": "2014-09-01",
+      "SP500_return": null,
+      "WTI_return": -3.504252184865459,
+      "Brent_return": -4.5470112348357645,
+      "SP500_YoY": null,
+      "WTI_YoY": -12.303750829663551,
+      "Brent_YoY": -12.997783468631551
+    },
+    {
+      "date": "2014-10-01",
+      "SP500_return": null,
+      "WTI_return": -9.93441062483888,
+      "Brent_return": -10.486932761247282,
+      "SP500_YoY": null,
+      "WTI_YoY": -16.054887172523536,
+      "Brent_YoY": -19.849646837481473
+    },
+    {
+      "date": "2014-11-01",
+      "SP500_return": null,
+      "WTI_return": -10.757192737915469,
+      "Brent_return": -9.58082514625842,
+      "SP500_YoY": null,
+      "WTI_YoY": -19.256079344359378,
+      "Brent_YoY": -26.30446161418093
+    },
+    {
+      "date": "2014-12-01",
+      "SP500_return": null,
+      "WTI_return": -24.55110892361564,
+      "Brent_return": -24.245245229024945,
+      "SP500_YoY": null,
+      "WTI_YoY": -39.26728814979804,
+      "Brent_YoY": -43.71896349354439
+    },
+    {
+      "date": "2015-01-01",
+      "SP500_return": null,
+      "WTI_return": -22.765197020150318,
+      "Brent_return": -26.634506577911754,
+      "SP500_YoY": null,
+      "WTI_YoY": -50.09466723034183,
+      "Brent_YoY": -55.82639294708209
+    },
+    {
+      "date": "2015-02-01",
+      "SP500_return": null,
+      "WTI_return": 6.884312869685205,
+      "Brent_return": 19.59102081726177,
+      "SP500_YoY": null,
+      "WTI_YoY": -49.82589674920257,
+      "Brent_YoY": -46.652691253727454
+    },
+    {
+      "date": "2015-03-01",
+      "SP500_return": null,
+      "WTI_return": -5.611948078770434,
+      "Brent_return": -3.878406679992456,
+      "SP500_YoY": null,
+      "WTI_YoY": -52.55770928742473,
+      "Brent_YoY": -48.004317688425616
+    },
+    {
+      "date": "2015-04-01",
+      "SP500_return": null,
+      "WTI_return": 12.981531890697287,
+      "Brent_return": 6.308025115040976,
+      "SP500_YoY": null,
+      "WTI_YoY": -46.650959901094026,
+      "Brent_YoY": -44.75972883872622
+    },
+    {
+      "date": "2015-05-01",
+      "SP500_return": null,
+      "WTI_return": 8.468359174939694,
+      "Brent_return": 7.366987970921102,
+      "SP500_YoY": null,
+      "WTI_YoY": -41.99779095128907,
+      "Brent_YoY": -41.5049006996257
+    },
+    {
+      "date": "2015-06-01",
+      "SP500_return": null,
+      "WTI_return": 0.9313542088233514,
+      "Brent_return": -4.137932119980558,
+      "SP500_YoY": null,
+      "WTI_YoY": -43.456732988303685,
+      "Brent_YoY": -45.00863514387389
+    },
+    {
+      "date": "2015-07-01",
+      "SP500_return": null,
+      "WTI_return": -16.145167089051196,
+      "Brent_return": -8.33498684155775,
+      "SP500_YoY": null,
+      "WTI_YoY": -50.86245858838501,
+      "Brent_YoY": -47.02419448881715
+    },
+    {
+      "date": "2015-08-01",
+      "SP500_return": null,
+      "WTI_return": -17.176404355552844,
+      "Brent_return": -19.55502414142298,
+      "SP500_YoY": null,
+      "WTI_YoY": -55.594250367491085,
+      "Brent_YoY": -54.22116722983263
+    },
+    {
+      "date": "2015-09-01",
+      "SP500_return": null,
+      "WTI_return": 5.914545832677103,
+      "Brent_return": 2.3544814451530027,
+      "SP500_YoY": null,
+      "WTI_YoY": -51.208459986206535,
+      "Brent_YoY": -50.950168805945395
+    },
+    {
+      "date": "2015-10-01",
+      "SP500_return": null,
+      "WTI_return": 1.6229078362210894,
+      "Brent_return": 1.6799800743085809,
+      "SP500_YoY": null,
+      "WTI_YoY": -45.230683346110965,
+      "Brent_YoY": -44.60408398730841
+    },
+    {
+      "date": "2015-11-01",
+      "SP500_return": null,
+      "WTI_return": -8.531749714874765,
+      "Brent_return": -8.986599364240186,
+      "SP500_YoY": null,
+      "WTI_YoY": -43.99815972222222,
+      "Brent_YoY": -44.27392720531351
+    },
+    {
+      "date": "2015-12-01",
+      "SP500_return": null,
+      "WTI_return": -13.217053919730262,
+      "Brent_return": -15.252377267746981,
+      "SP500_YoY": null,
+      "WTI_YoY": -37.27719470403791,
+      "Brent_YoY": -39.030312752940496
+    },
+    {
+      "date": "2016-01-01",
+      "SP500_return": null,
+      "WTI_return": -16.021799751745267,
+      "Brent_return": -21.34833222796946,
+      "SP500_YoY": null,
+      "WTI_YoY": -32.901675396054884,
+      "Brent_YoY": -35.72064196651975
+    },
+    {
+      "date": "2016-02-01",
+      "SP500_return": null,
+      "WTI_return": -4.387874252862921,
+      "Brent_return": 4.714538546530582,
+      "SP500_YoY": null,
+      "WTI_YoY": -40.05441681406722,
+      "Brent_YoY": -44.60586448175848
+    },
+    {
+      "date": "2016-03-01",
+      "SP500_return": null,
+      "WTI_return": 21.367003247408423,
+      "Brent_return": 17.1717404088712,
+      "SP500_YoY": null,
+      "WTI_YoY": -21.48994411283883,
+      "Brent_YoY": -31.62719198360282
+    },
+    {
+      "date": "2016-04-01",
+      "SP500_return": null,
+      "WTI_return": 8.200784069586996,
+      "Brent_return": 8.459028859392898,
+      "SP500_YoY": null,
+      "WTI_YoY": -25.155005203277614,
+      "Brent_YoY": -30.14055887552899
+    },
+    {
+      "date": "2016-05-01",
+      "SP500_return": null,
+      "WTI_return": 13.642487265049386,
+      "Brent_return": 11.69518222088051,
+      "SP500_YoY": null,
+      "WTI_YoY": -21.18049278261882,
+      "Brent_YoY": -27.05051743678353
+    },
+    {
+      "date": "2016-06-01",
+      "SP500_return": null,
+      "WTI_return": 4.284512417523699,
+      "Brent_return": 3.168803422804823,
+      "SP500_YoY": null,
+      "WTI_YoY": -18.49273952721443,
+      "Brent_YoY": -21.520728127703304
+    },
+    {
+      "date": "2016-07-01",
+      "SP500_return": null,
+      "WTI_return": -8.796646908311049,
+      "Brent_return": -7.074616725474161,
+      "SP500_YoY": null,
+      "WTI_YoY": -12.277598185422656,
+      "Brent_YoY": -20.525339222251382
+    },
+    {
+      "date": "2016-08-01",
+      "SP500_return": 0.6241381775380348,
+      "WTI_return": 0.16301460403647666,
+      "Brent_return": 1.9630328561721144,
+      "SP500_YoY": null,
+      "WTI_YoY": 4.331308385486454,
+      "Brent_YoY": -1.4446017881094786
+    },
+    {
+      "date": "2016-09-01",
+      "SP500_return": -0.9130596841791978,
+      "WTI_return": 1.0189161483740783,
+      "Brent_return": 1.5684289706694337,
+      "SP500_YoY": null,
+      "WTI_YoY": -0.6533552514475405,
+      "Brent_YoY": -2.216262133605673
+    },
+    {
+      "date": "2016-10-01",
+      "SP500_return": -0.682215280731791,
+      "WTI_return": 9.68104244618304,
+      "Brent_return": 6.1516954428045505,
+      "SP500_YoY": null,
+      "WTI_YoY": 7.683518673567069,
+      "Brent_YoY": 2.255587347472554
+    },
+    {
+      "date": "2016-11-01",
+      "SP500_return": 1.0197269380720224,
+      "WTI_return": -8.627413438256509,
+      "Brent_return": -10.168883674141064,
+      "SP500_YoY": null,
+      "WTI_YoY": 7.580553867971251,
+      "Brent_YoY": 1.053754124363615
+    },
+    {
+      "date": "2016-12-01",
+      "SP500_return": 3.7017128782369983,
+      "WTI_return": 12.943229278730604,
+      "Brent_return": 17.535992202805456,
+      "SP500_YoY": null,
+      "WTI_YoY": 39.748270633805106,
+      "Brent_YoY": 40.265392527388414
+    },
+    {
+      "date": "2017-01-01",
+      "SP500_return": 1.2600148381303484,
+      "WTI_return": 1.0213565397663544,
+      "Brent_return": 2.3510647854556224,
+      "SP500_YoY": null,
+      "WTI_YoY": 65.71580451177779,
+      "Brent_YoY": 77.77705391510175
+    },
+    {
+      "date": "2017-02-01",
+      "SP500_return": 2.3798826003438096,
+      "WTI_return": 1.820186175963709,
+      "Brent_return": 0.5351197598470867,
+      "SP500_YoY": null,
+      "WTI_YoY": 76.32958827501098,
+      "Brent_YoY": 70.5001320634526
+    },
+    {
+      "date": "2017-03-01",
+      "SP500_return": 1.5718334390286686,
+      "WTI_return": -8.060287343902504,
+      "Brent_return": -6.1646638772884685,
+      "SP500_YoY": null,
+      "WTI_YoY": 31.37843804182023,
+      "Brent_YoY": 35.01312938691426
+    },
+    {
+      "date": "2017-04-01",
+      "SP500_return": -0.31792201812655874,
+      "WTI_return": 3.4523374058807397,
+      "Brent_return": 1.3836310861290202,
+      "SP500_YoY": null,
+      "WTI_YoY": 25.285800555181794,
+      "Brent_YoY": 25.790528425271585
+    },
+    {
+      "date": "2017-05-01",
+      "SP500_return": 1.5158669790501278,
+      "WTI_return": -5.193538810373539,
+      "Brent_return": -3.8615101367391533,
+      "SP500_YoY": null,
+      "WTI_YoY": 3.7762636971575114,
+      "Brent_YoY": 7.667860972680973
+    },
+    {
+      "date": "2017-06-01",
+      "SP500_return": 1.6002368483697398,
+      "WTI_return": -7.04721255076932,
+      "Brent_return": -8.191872197261878,
+      "SP500_YoY": null,
+      "WTI_YoY": -7.341562097962074,
+      "Brent_YoY": -3.894709074464886
+    },
+    {
+      "date": "2017-07-01",
+      "SP500_return": 0.8231095356930361,
+      "WTI_return": 3.165119188101457,
+      "Brent_return": 4.450838676429676,
+      "SP500_YoY": 13.409304535166067,
+      "WTI_YoY": 4.432160881021852,
+      "Brent_YoY": 7.8454220913356965
+    },
+    {
+      "date": "2017-08-01",
+      "SP500_return": 0.08637079522775296,
+      "WTI_return": 2.971524438153695,
+      "Brent_return": 6.442000110033885,
+      "SP500_YoY": 12.801063214414587,
+      "WTI_YoY": 7.406723309937191,
+      "Brent_YoY": 12.785591669116725
+    },
+    {
+      "date": "2017-09-01",
+      "SP500_return": 1.4798202017583342,
+      "WTI_return": 3.648601134657359,
+      "Brent_return": 8.253568880654294,
+      "SP500_YoY": 15.532810537543318,
+      "WTI_YoY": 10.26864664903091,
+      "Brent_YoY": 20.583203071075083
+    },
+    {
+      "date": "2017-10-01",
+      "SP500_return": 2.5410605790204115,
+      "WTI_return": 3.4633283753345503,
+      "Brent_return": 2.384176212457629,
+      "SP500_YoY": 19.317418240189465,
+      "WTI_YoY": 3.6212567663470807,
+      "Brent_YoY": 16.124722129222246
+    },
+    {
+      "date": "2017-11-01",
+      "SP500_return": 1.421544550470909,
+      "WTI_return": 9.360028981231432,
+      "Brent_return": 8.666683165594705,
+      "SP500_YoY": 19.797821166751373,
+      "WTI_YoY": 24.041590188553318,
+      "Brent_YoY": 40.19306000101612
+    },
+    {
+      "date": "2017-12-01",
+      "SP500_return": 2.690748460340688,
+      "WTI_return": 2.1707590000909547,
+      "Brent_return": 2.6118761545017586,
+      "SP500_YoY": 18.592809205580174,
+      "WTI_YoY": 11.373811138192004,
+      "Brent_YoY": 20.75688531946369
+    },
+    {
+      "date": "2018-01-01",
+      "SP500_return": 4.601471436789574,
+      "WTI_return": 9.576431865849294,
+      "Brent_return": 7.052085325436684,
+      "SP500_YoY": 22.622486480856765,
+      "WTI_YoY": 21.321368712043732,
+      "Brent_YoY": 26.569240934354244
+    },
+    {
+      "date": "2018-02-01",
+      "SP500_return": -3.08119649628345,
+      "WTI_return": -2.3333394817657087,
+      "Brent_return": -5.596577832837637,
+      "SP500_YoY": 16.10554279247227,
+      "WTI_YoY": 16.385471010926267,
+      "Brent_YoY": 19.041544027191783
+    },
+    {
+      "date": "2018-03-01",
+      "SP500_return": -0.08807267092507196,
+      "WTI_return": 0.7927555430620628,
+      "Brent_return": 1.0647241146948818,
+      "SP500_YoY": 14.194206870021887,
+      "WTI_YoY": 27.158982830885115,
+      "Brent_YoY": 27.96623263523099
+    },
+    {
+      "date": "2018-04-01",
+      "SP500_return": -1.8351863027038968,
+      "WTI_return": 5.473666907275863,
+      "Brent_return": 8.823002318180311,
+      "SP500_YoY": 12.474657000017665,
+      "WTI_YoY": 29.75543791706241,
+      "Brent_YoY": 37.849172410323504
+    },
+    {
+      "date": "2018-05-01",
+      "SP500_return": 1.7878099210967275,
+      "WTI_return": 5.46905396934509,
+      "Brent_return": 6.534652837438011,
+      "SP500_YoY": 12.780940160284327,
+      "WTI_YoY": 44.355262170879904,
+      "Brent_YoY": 52.951635509885556
+    },
+    {
+      "date": "2018-06-01",
+      "SP500_return": 1.9377698717803296,
+      "WTI_return": -3.0540282141833104,
+      "Brent_return": -3.396384306886572,
+      "SP500_YoY": 13.162256249277027,
+      "WTI_YoY": 50.23627223122147,
+      "Brent_YoY": 60.46512713506145
+    },
+    {
+      "date": "2018-07-01",
+      "SP500_return": 1.416408076518947,
+      "WTI_return": 4.477505039862991,
+      "Brent_return": -0.20270713033436394,
+      "SP500_YoY": 13.835641882657047,
+      "WTI_YoY": 52.22094661924002,
+      "Brent_YoY": 53.16889240124838
+    },
+    {
+      "date": "2018-08-01",
+      "SP500_return": 2.271265036795098,
+      "WTI_return": -4.209248862960089,
+      "Brent_return": -2.3516581579978877,
+      "SP500_YoY": 16.350200458002597,
+      "WTI_YoY": 41.67353034348555,
+      "Brent_YoY": 40.274974772956604
+    },
+    {
+      "date": "2018-09-01",
+      "SP500_return": 1.5168777486429106,
+      "WTI_return": 3.147976163478915,
+      "Brent_return": 8.409086190065338,
+      "SP500_YoY": 16.39332497803869,
+      "WTI_YoY": 40.9660496631165,
+      "Brent_YoY": 40.49329635942704
+    },
+    {
+      "date": "2018-10-01",
+      "SP500_return": -4.0813278757095155,
+      "WTI_return": 0.7328553926967157,
+      "Brent_return": 2.6779131704447368,
+      "SP500_YoY": 8.934992317678203,
+      "WTI_YoY": 37.169083232528656,
+      "Brent_YoY": 40.90658378612808
+    },
+    {
+      "date": "2018-11-01",
+      "SP500_return": -2.2596246360715986,
+      "WTI_return": -21.672338849655844,
+      "Brent_return": -22.4340664451596,
+      "SP500_YoY": 4.997822483573144,
+      "WTI_YoY": 0.5736877947889907,
+      "Brent_YoY": 3.2434352146465617
+    },
+    {
+      "date": "2018-12-01",
+      "SP500_return": -5.896086782429988,
+      "WTI_return": -13.997799098352187,
+      "Brent_return": -12.111740411493507,
+      "SP500_YoY": -3.6419193259625504,
+      "WTI_YoY": -14.441094688669487,
+      "Brent_YoY": -10.891610998090673
+    },
+    {
+      "date": "2019-01-01",
+      "SP500_return": 1.5492087900241682,
+      "WTI_return": 3.6732855229670376,
+      "Brent_return": 3.506669530366656,
+      "SP500_YoY": -6.538589161757047,
+      "WTI_YoY": -19.345578505909533,
+      "Brent_YoY": -13.99552543265119
+    },
+    {
+      "date": "2019-02-01",
+      "SP500_return": 5.501843201394422,
+      "WTI_return": 6.7344303811136665,
+      "Brent_return": 7.381079397501675,
+      "SP500_YoY": 1.8375635604143792,
+      "WTI_YoY": -11.69017896410567,
+      "Brent_YoY": -2.0775443028284823
+    },
+    {
+      "date": "2019-03-01",
+      "SP500_return": 1.7673042076448837,
+      "WTI_return": 5.654056576696766,
+      "Brent_return": 3.3486402794167396,
+      "SP500_YoY": 3.7446714794765468,
+      "WTI_YoY": -7.291113101835678,
+      "Brent_YoY": 0.18465755400873807
+    },
+    {
+      "date": "2019-04-01",
+      "SP500_return": 3.4979028976038635,
+      "WTI_return": 9.36800248617575,
+      "Brent_return": 7.420876554176081,
+      "SP500_YoY": 9.427659878767836,
+      "WTI_YoY": -3.6094959499184287,
+      "Brent_YoY": -1.2102552723305626
+    },
+    {
+      "date": "2019-05-01",
+      "SP500_return": -1.7051395340263977,
+      "WTI_return": -4.869969029325282,
+      "Brent_return": 0.11840522111166704,
+      "SP500_YoY": 5.671391213547516,
+      "WTI_YoY": -13.077452712533777,
+      "Brent_YoY": -7.349780218297008
+    },
+    {
+      "date": "2019-06-01",
+      "SP500_return": 1.2345111193939315,
+      "WTI_return": -10.69443380690186,
+      "Brent_return": -10.482245150051904,
+      "SP500_YoY": 4.930854901358739,
+      "WTI_YoY": -19.471319123858155,
+      "Brent_YoY": -13.687647999999985
+    },
+    {
+      "date": "2019-07-01",
+      "SP500_return": 3.6002054374906627,
+      "WTI_return": 4.822754642491183,
+      "Brent_return": -0.47037769635788285,
+      "SP500_YoY": 7.247535883140754,
+      "WTI_YoY": -19.192813680305377,
+      "Brent_YoY": -13.918371833494469
+    },
+    {
+      "date": "2019-08-01",
+      "SP500_return": -3.346832556465557,
+      "WTI_return": -4.551597032701965,
+      "Brent_return": -7.93727218234706,
+      "SP500_YoY": 1.3883918860910338,
+      "WTI_YoY": -19.468982604332197,
+      "Brent_YoY": -18.594741589076623
+    },
+    {
+      "date": "2019-09-01",
+      "SP500_return": 2.8798860126146164,
+      "WTI_return": 3.8322992451336884,
+      "Brent_return": 6.213363621457175,
+      "SP500_YoY": 2.779784906212779,
+      "WTI_YoY": -18.916000329733752,
+      "Brent_YoY": -20.362694519442435
+    },
+    {
+      "date": "2019-10-01",
+      "SP500_return": -0.1503661190898592,
+      "WTI_return": -5.382157848098478,
+      "Brent_return": -5.082913153768569,
+      "SP500_YoY": 6.900479804400761,
+      "WTI_YoY": -23.725740834060538,
+      "Brent_YoY": -26.309463766405184
+    },
+    {
+      "date": "2019-11-01",
+      "SP500_return": 4.184009040201596,
+      "WTI_return": 5.561019286514765,
+      "Brent_return": 5.694216964248133,
+      "SP500_YoY": 14.015527257377514,
+      "WTI_YoY": 0.15000371890958597,
+      "Brent_YoY": -2.372695283693138
+    },
+    {
+      "date": "2019-12-01",
+      "SP500_return": 2.287555363522414,
+      "WTI_return": 4.737470382320883,
+      "Brent_return": 6.1435667137019765,
+      "SP500_YoY": 23.73857384140532,
+      "WTI_YoY": 20.786170224700196,
+      "Brent_YoY": 17.179891358487698
+    },
+    {
+      "date": "2020-01-01",
+      "SP500_return": 3.143685112731187,
+      "WTI_return": -3.916817303769682,
+      "Brent_return": -5.460040785214589,
+      "SP500_YoY": 25.727369405530286,
+      "WTI_YoY": 11.957660187785613,
+      "Brent_YoY": 7.130014307465138
+    },
+    {
+      "date": "2020-02-01",
+      "SP500_return": -0.02711141204609867,
+      "WTI_return": -12.929898605206713,
+      "Brent_return": -13.412005321012163,
+      "SP500_YoY": 18.964637095495405,
+      "WTI_YoY": -8.028616852146264,
+      "Brent_YoY": -12.982231220831608
+    },
+    {
+      "date": "2020-03-01",
+      "SP500_return": -21.15617574003708,
+      "WTI_return": -54.838386294289776,
+      "Brent_return": -55.31169025764938,
+      "SP500_YoY": -5.406242812290596,
+      "WTI_YoY": -49.772984103303955,
+      "Brent_YoY": -51.59955386859939
+    },
+    {
+      "date": "2020-04-01",
+      "SP500_return": 4.048359842847173,
+      "WTI_return": -56.8191079611421,
+      "Brent_return": -55.49094502470759,
+      "SP500_YoY": -4.884109164018247,
+      "WTI_YoY": -74.0886280767424,
+      "Brent_YoY": -74.19957884885353
+    },
+    {
+      "date": "2020-05-01",
+      "SP500_return": 5.550566853342056,
+      "WTI_return": 54.58524413729997,
+      "Brent_return": 46.909683878469124,
+      "SP500_YoY": 2.2737575419725653,
+      "WTI_YoY": -53.042916177822285,
+      "Brent_YoY": -58.80554738365043
+    },
+    {
+      "date": "2020-06-01",
+      "SP500_return": 6.14527431273233,
+      "WTI_return": 29.354509794618995,
+      "Brent_return": 31.524941768324204,
+      "SP500_YoY": 7.4215428833813935,
+      "WTI_YoY": -29.913968389932354,
+      "Brent_YoY": -37.29912071407389
+    },
+    {
+      "date": "2020-07-01",
+      "SP500_return": 3.262444430709309,
+      "WTI_return": 6.084516130157355,
+      "Brent_return": 7.128850739800672,
+      "SP500_YoY": 7.059326855244286,
+      "WTI_YoY": -29.0240473006222,
+      "Brent_YoY": -32.34861985933313
+    },
+    {
+      "date": "2020-08-01",
+      "SP500_return": 5.580527328505448,
+      "WTI_return": 3.9224843906001188,
+      "Brent_return": 3.3962279594314957,
+      "SP500_YoY": 17.056501408111323,
+      "WTI_YoY": -22.747294367806425,
+      "Brent_YoY": -24.229975672096813
+    },
+    {
+      "date": "2020-09-01",
+      "SP500_return": -0.7752726324176844,
+      "WTI_return": -6.601522727132453,
+      "Brent_return": -8.941512559596717,
+      "SP500_YoY": 12.855151328993752,
+      "WTI_YoY": -30.401450973210686,
+      "Brent_YoY": -34.8850613520605
+    },
+    {
+      "date": "2020-10-01",
+      "SP500_return": 1.5679268060777038,
+      "WTI_return": -0.6032563803673971,
+      "Brent_return": -1.7756522532496495,
+      "SP500_YoY": 14.811089660457831,
+      "WTI_YoY": -26.994649390411386,
+      "Brent_YoY": -32.69553331479936
+    },
+    {
+      "date": "2020-11-01",
+      "SP500_return": 3.740299966247441,
+      "WTI_return": 3.8381318514890004,
+      "Brent_return": 6.041357380226,
+      "SP500_YoY": 14.30279095540623,
+      "WTI_YoY": -28.24167612299687,
+      "Brent_YoY": -32.46148630833553
+    },
+    {
+      "date": "2020-12-01",
+      "SP500_return": 4.040068764853497,
+      "WTI_return": 13.86360759390145,
+      "Brent_return": 15.787525231587113,
+      "SP500_YoY": 16.323618601463565,
+      "WTI_YoY": -21.384786848704383,
+      "Brent_YoY": -25.623681342885618
+    },
+    {
+      "date": "2021-01-01",
+      "SP500_return": 2.62901115892673,
+      "WTI_return": 10.072627360276742,
+      "Brent_return": 9.131990420998617,
+      "SP500_YoY": 15.72646923867007,
+      "WTI_YoY": -9.580524703596083,
+      "Brent_YoY": -13.938865876303385
+    },
+    {
+      "date": "2021-02-01",
+      "SP500_return": 2.3364766223269755,
+      "WTI_return": 12.691650053492271,
+      "Brent_return": 12.836851875932902,
+      "SP500_YoY": 18.494347987448645,
+      "WTI_YoY": 16.8247753329654,
+      "Brent_YoY": 11.893382683220421
+    },
+    {
+      "date": "2021-03-01",
+      "SP500_return": 0.6948029689668992,
+      "WTI_return": 5.416952876950472,
+      "Brent_return": 4.90910044027936,
+      "SP500_YoY": 47.43317912007854,
+      "WTI_YoY": 113.41285097681796,
+      "Brent_YoY": 104.33368832090876
+    },
+    {
+      "date": "2021-04-01",
+      "SP500_return": 5.731249592556203,
+      "WTI_return": -0.993765940277704,
+      "Brent_return": -0.9269245003492392,
+      "SP500_YoY": 49.93531199548702,
+      "WTI_YoY": 272.9640287769784,
+      "Brent_YoY": 252.62126941807006
+    },
+    {
+      "date": "2021-05-01",
+      "SP500_return": 0.6420343886757094,
+      "WTI_return": 5.443754938151624,
+      "Brent_return": 5.592713736985727,
+      "SP500_YoY": 42.75339385501171,
+      "WTI_YoY": 128.16455142231948,
+      "Brent_YoY": 133.27660336796842
+    },
+    {
+      "date": "2021-06-01",
+      "SP500_return": 1.6806771142149572,
+      "WTI_return": 9.100067779824903,
+      "Brent_return": 6.53716949119771,
+      "SP500_YoY": 36.52020847248143,
+      "WTI_YoY": 86.33062793677915,
+      "Brent_YoY": 81.69821757142695
+    },
+    {
+      "date": "2021-07-01",
+      "SP500_return": 2.9116301221788476,
+      "WTI_return": 1.5390682778042342,
+      "Brent_return": 2.699305235918785,
+      "SP500_YoY": 36.04211514734785,
+      "WTI_YoY": 78.0506724981564,
+      "Brent_YoY": 73.82546317412641
+    },
+    {
+      "date": "2021-08-01",
+      "SP500_return": 2.0525632248035137,
+      "WTI_return": -6.784700430587799,
+      "Brent_return": -6.058563954736916,
+      "SP500_YoY": 31.326273874722887,
+      "WTI_YoY": 59.97160624601241,
+      "Brent_YoY": 58.14364909053751
+    },
+    {
+      "date": "2021-09-01",
+      "SP500_return": -0.19468037493428134,
+      "WTI_return": 5.620406000629439,
+      "Brent_return": 5.1534429656311955,
+      "SP500_YoY": 32.09096176416695,
+      "WTI_YoY": 80.76821414840447,
+      "Brent_YoY": 82.08131020766436
+    },
+    {
+      "date": "2021-10-01",
+      "SP500_return": 0.3405209457548298,
+      "WTI_return": 12.857669633731469,
+      "Brent_return": 11.46561764921223,
+      "SP500_YoY": 30.47957889227364,
+      "WTI_YoY": 106.8150438631914,
+      "Brent_YoY": 107.86026389021286
+    },
+    {
+      "date": "2021-11-01",
+      "SP500_return": 4.529200908659643,
+      "WTI_return": -2.900348045583265,
+      "Brent_return": -3.0236510030031014,
+      "SP500_YoY": 31.513004512313447,
+      "WTI_YoY": 93.33802599606588,
+      "Brent_YoY": 89.84652106989091
+    },
+    {
+      "date": "2021-12-01",
+      "SP500_return": 0.15812323111927373,
+      "WTI_return": -9.865763801001725,
+      "Brent_return": -8.870007219663261,
+      "SP500_YoY": 26.505563194230696,
+      "WTI_YoY": 52.497221013967454,
+      "Brent_YoY": 48.35983454171222
+    },
+    {
+      "date": "2022-01-01",
+      "SP500_return": -2.183278897038167,
+      "WTI_return": 14.885617372926502,
+      "Brent_return": 15.383879213365281,
+      "SP500_YoY": 20.561908497109215,
+      "WTI_YoY": 60.01639410621764,
+      "Brent_YoY": 57.93120475999211
+    },
+    {
+      "date": "2022-02-01",
+      "SP500_return": -3.0599078542739035,
+      "WTI_return": 9.636760816400185,
+      "Brent_return": 11.583502376225079,
+      "SP500_YoY": 14.228352809458688,
+      "WTI_YoY": 55.20198238670802,
+      "Brent_YoY": 55.964127720729316
+    },
+    {
+      "date": "2022-03-01",
+      "SP500_return": -1.0131289577371356,
+      "WTI_return": 16.889487185491173,
+      "Brent_return": 18.82276247738827,
+      "SP500_YoY": 12.293976241718397,
+      "WTI_YoY": 74.06916563201872,
+      "Brent_YoY": 79.2466249675957
+    },
+    {
+      "date": "2022-04-01",
+      "SP500_return": 0.0007009938885361237,
+      "WTI_return": -6.398515789283484,
+      "Brent_return": -11.436058287844252,
+      "SP500_YoY": 6.039825354425421,
+      "WTI_YoY": 64.9108830677829,
+      "Brent_YoY": 61.36539260397451
+    },
+    {
+      "date": "2022-05-01",
+      "SP500_return": -8.329060300621741,
+      "WTI_return": 7.361374166194231,
+      "Brent_return": 8.046410957677773,
+      "SP500_YoY": -3.0588796452463263,
+      "WTI_YoY": 68.10376165596014,
+      "Brent_YoY": 65.37378657641301
+    },
+    {
+      "date": "2022-06-01",
+      "SP500_return": -3.562736572812037,
+      "WTI_return": 4.711217586965631,
+      "Brent_return": 7.946046583857931,
+      "SP500_YoY": -8.01094057556454,
+      "WTI_YoY": 60.88549740544238,
+      "Brent_YoY": 67.72019013183024
+    },
+    {
+      "date": "2022-07-01",
+      "SP500_return": 0.32731723792259404,
+      "WTI_return": -12.22844500735387,
+      "Brent_return": -9.199622326052419,
+      "SP500_YoY": -10.357770365275453,
+      "WTI_YoY": 40.192682910806134,
+      "Brent_YoY": 48.904890048421024
+    },
+    {
+      "date": "2022-08-01",
+      "SP500_return": 6.118998879527304,
+      "WTI_return": -8.150361767937264,
+      "Brent_return": -10.821149605861292,
+      "SP500_YoY": -6.637396115539273,
+      "WTI_YoY": 38.291139517519014,
+      "Brent_YoY": 41.97939249531439
+    },
+    {
+      "date": "2022-09-01",
+      "SP500_return": -7.696126457692765,
+      "WTI_return": -10.58422573266067,
+      "Brent_return": -11.243139798177273,
+      "SP500_YoY": -13.384704917423452,
+      "WTI_YoY": 17.60303608339926,
+      "Brent_YoY": 20.507994624241753
+    },
+    {
+      "date": "2022-10-01",
+      "SP500_return": -3.2859380877102233,
+      "WTI_return": 3.8379797412429943,
+      "Brent_return": 3.8969516370707646,
+      "SP500_YoY": -16.469500618362343,
+      "WTI_YoY": 7.4599213330138525,
+      "Brent_YoY": 11.723764464458775
+    },
+    {
+      "date": "2022-11-01",
+      "SP500_return": 5.010183102502206,
+      "WTI_return": -3.7046915706006893,
+      "Brent_return": -2.07474571644556,
+      "SP500_YoY": -16.06676602548668,
+      "WTI_YoY": 6.599041271646189,
+      "Brent_YoY": 12.788963041893343
+    },
+    {
+      "date": "2022-12-01",
+      "SP500_return": -0.13046500344776996,
+      "WTI_return": -9.874879114993332,
+      "Brent_return": -12.1904108481928,
+      "SP500_YoY": -16.308638288316445,
+      "WTI_YoY": 6.589324877168901,
+      "Brent_YoY": 9.105407105895047
+    },
+    {
+      "date": "2023-01-01",
+      "SP500_return": 1.2263666457337856,
+      "WTI_return": 2.1815766643765238,
+      "Brent_return": 1.9305166592863556,
+      "SP500_YoY": -13.405853384335241,
+      "WTI_YoY": -6.126985652832184,
+      "Brent_YoY": -4.628401252883096
+    },
+    {
+      "date": "2023-02-01",
+      "SP500_return": 2.9609920694506053,
+      "WTI_return": -1.6655067464720845,
+      "Brent_return": 0.10124567650228894,
+      "SP500_YoY": -8.031951162995721,
+      "WTI_YoY": -16.159156434142353,
+      "Brent_YoY": -14.97390068877471
+    },
+    {
+      "date": "2023-03-01",
+      "SP500_return": -2.7616625665164904,
+      "WTI_return": -4.737138618225813,
+      "Brent_return": -5.156612453224877,
+      "SP500_YoY": -9.626065974845332,
+      "WTI_YoY": -32.46445687541073,
+      "Brent_YoY": -33.10230509077962
+    },
+    {
+      "date": "2023-04-01",
+      "SP500_return": 3.780616795264141,
+      "WTI_return": 8.082346639043982,
+      "Brent_return": 7.61253352339734,
+      "SP500_YoY": -6.144624083162409,
+      "WTI_YoY": -21.941179740636507,
+      "Brent_YoY": -19.06467095804415
+    },
+    {
+      "date": "2023-05-01",
+      "SP500_return": 0.5976526624640289,
+      "WTI_return": -10.42912161530433,
+      "Brent_return": -11.470505297514109,
+      "SP500_YoY": 2.6189047960622824,
+      "WTI_YoY": -34.663052326270616,
+      "Brent_YoY": -33.414870866227766
+    },
+    {
+      "date": "2023-06-01",
+      "SP500_return": 4.6925783996052965,
+      "WTI_return": -1.875711052150109,
+      "Brent_return": -0.8341869493515246,
+      "SP500_YoY": 11.449917853271252,
+      "WTI_YoY": -38.828071223015606,
+      "Brent_YoY": -39.01188976452953
+    },
+    {
+      "date": "2023-07-01",
+      "SP500_return": 3.6758776083939515,
+      "WTI_return": 7.961420229642427,
+      "Brent_return": 6.803655890756273,
+      "SP500_YoY": 15.245072543998761,
+      "WTI_YoY": -25.142443834322314,
+      "Brent_YoY": -28.427443372304772
+    },
+    {
+      "date": "2023-08-01",
+      "SP500_return": -1.1313974146599313,
+      "WTI_return": 6.7556940395407254,
+      "Brent_return": 7.268666846441263,
+      "SP500_YoY": 7.185069675509781,
+      "WTI_YoY": -13.109594763960452,
+      "Brent_YoY": -14.235096071173226
+    },
+    {
+      "date": "2023-09-01",
+      "SP500_return": -1.0886916914545635,
+      "WTI_return": 9.419594865545342,
+      "Brent_return": 8.42734366937796,
+      "SP500_YoY": 14.50646808044378,
+      "WTI_YoY": 6.132235421776633,
+      "Brent_YoY": 4.40887823199263
+    },
+    {
+      "date": "2023-10-01",
+      "SP500_return": -3.21959379030764,
+      "WTI_return": -4.325338181360513,
+      "Brent_return": -3.3927959764368993,
+      "SP500_YoY": 14.582461798133872,
+      "WTI_YoY": -2.1874745057515077,
+      "Brent_YoY": -2.9314688026300995
+    },
+    {
+      "date": "2023-11-01",
+      "SP500_return": 4.368945115349148,
+      "WTI_return": -9.748471478751172,
+      "Brent_return": -8.829160368927269,
+      "SP500_YoY": 13.850066235340774,
+      "WTI_YoY": -7.923952183679683,
+      "Brent_YoY": -9.271358532971362
+    },
+    {
+      "date": "2023-12-01",
+      "SP500_return": 4.921394192921396,
+      "WTI_return": -7.738592381696346,
+      "Brent_return": -6.614994489475438,
+      "SP500_YoY": 19.749368914313536,
+      "WTI_YoY": -5.935782902852016,
+      "Brent_YoY": -4.069185122363028
+    },
+    {
+      "date": "2024-01-01",
+      "SP500_return": 2.517428653253039,
+      "WTI_return": 3.084591328587663,
+      "Brent_return": 3.1609059344606156,
+      "SP500_YoY": 21.30543076814231,
+      "WTI_YoY": -5.082522493528218,
+      "Brent_YoY": -2.8815715115519502
+    },
+    {
+      "date": "2024-02-01",
+      "SP500_return": 4.227616074822511,
+      "WTI_return": 4.091179269737136,
+      "Brent_return": 4.1007695695638,
+      "SP500_YoY": 22.851686424170282,
+      "WTI_YoY": 0.5419161266457362,
+      "Brent_YoY": 1.081425486583787
+    },
+    {
+      "date": "2024-03-01",
+      "SP500_return": 3.1156061959267776,
+      "WTI_return": 5.084140651797014,
+      "Brent_return": 2.2861362493781634,
+      "SP500_YoY": 30.288407708152974,
+      "WTI_YoY": 10.917591774010749,
+      "Brent_YoY": 8.891706716777815
+    },
+    {
+      "date": "2024-04-01",
+      "SP500_return": -1.1296318569773867,
+      "WTI_return": 4.885311751543147,
+      "Brent_return": 5.167597552087073,
+      "SP500_YoY": 24.045449599940394,
+      "WTI_YoY": 7.427603003562955,
+      "Brent_YoY": 6.261656741147914
+    },
+    {
+      "date": "2024-05-01",
+      "SP500_return": 2.372281133644753,
+      "WTI_return": -6.43950889470237,
+      "Brent_return": -9.550239396644063,
+      "SP500_YoY": 26.26644438063974,
+      "WTI_YoY": 11.800193050193041,
+      "Brent_YoY": 8.321880682943949
+    },
+    {
+      "date": "2024-06-01",
+      "SP500_return": 3.3788921255065447,
+      "WTI_return": -0.3218901999647028,
+      "Brent_return": 0.6095547232114891,
+      "SP500_YoY": 24.61854723040542,
+      "WTI_YoY": 13.55093422916771,
+      "Brent_YoY": 9.897112593078482
+    },
+    {
+      "date": "2024-07-01",
+      "SP500_return": 2.2435414102822477,
+      "WTI_return": 2.516829658668057,
+      "Brent_return": 3.4735392777403424,
+      "SP500_YoY": 22.846313143037335,
+      "WTI_YoY": 7.533840166498451,
+      "Brent_YoY": 6.297675940454184
+    },
+    {
+      "date": "2024-08-01",
+      "SP500_return": -1.085501052578187,
+      "WTI_return": -6.460038830729559,
+      "Brent_return": -5.799286798283411,
+      "SP500_YoY": 22.902708072342072,
+      "WTI_YoY": -5.778512414354453,
+      "Brent_YoY": -6.723902488049694
+    },
+    {
+      "date": "2024-09-01",
+      "SP500_return": 2.5776692014856635,
+      "WTI_return": -8.782141197928045,
+      "Brent_return": -8.216698796861936,
+      "SP500_YoY": 27.49238789366075,
+      "WTI_YoY": -21.45820519988817,
+      "Brent_YoY": -21.025622786649535
+    },
+    {
+      "date": "2024-10-01",
+      "SP500_return": 2.9976900101160235,
+      "WTI_return": 2.4596763881234245,
+      "Brent_return": 2.159722907167054,
+      "SP500_YoY": 35.670546958560536,
+      "WTI_YoY": -15.94418464994467,
+      "Brent_YoY": -16.516529880219977
+    },
+    {
+      "date": "2024-11-01",
+      "SP500_return": 2.3477220533785856,
+      "WTI_return": -2.86770628668283,
+      "Brent_return": -1.7167898425307595,
+      "SP500_YoY": 32.955869834434345,
+      "WTI_YoY": -9.956877132007468,
+      "Brent_YoY": -10.362625879867249
+    },
+    {
+      "date": "2024-12-01",
+      "SP500_return": 1.356586608357202,
+      "WTI_return": 0.24001942556335518,
+      "Brent_return": -0.6554983878901088,
+      "SP500_YoY": 28.299733128410054,
+      "WTI_YoY": -2.478309821842517,
+      "Brent_YoY": -4.858304124095769
+    },
+    {
+      "date": "2025-01-01",
+      "SP500_return": -0.5236369118147454,
+      "WTI_return": 7.715853421956076,
+      "Brent_return": 7.070084113739044,
+      "SP500_YoY": 24.45678359297132,
+      "WTI_YoY": 2.14439378371436,
+      "Brent_YoY": -1.0653928849001293
+    },
+    {
+      "date": "2025-02-01",
+      "SP500_return": 0.9847556392679986,
+      "WTI_return": -5.717834060449101,
+      "Brent_return": -4.955435413575476,
+      "SP500_YoY": 20.48556238909658,
+      "WTI_YoY": -7.399244139423356,
+      "Brent_YoY": -9.631383197188882
+    },
+    {
+      "date": "2025-03-01",
+      "SP500_return": -6.053482298283824,
+      "WTI_return": -4.71441422407147,
+      "Brent_return": -3.6517889203128764,
+      "SP500_YoY": 9.929477506278705,
+      "WTI_YoY": -16.04241292963947,
+      "Brent_YoY": -14.841195966610886
+    },
+    {
+      "date": "2025-04-01",
+      "SP500_return": -5.691828186628726,
+      "WTI_return": -7.139977966860698,
+      "Brent_return": -6.530954483346123,
+      "SP500_YoY": 5.026960442251549,
+      "WTI_YoY": -25.555129488790897,
+      "Brent_YoY": -24.24289193625245
+    },
+    {
+      "date": "2025-05-01",
+      "SP500_return": 7.9004827900145385,
+      "WTI_return": -2.1782896973615733,
+      "Brent_return": -5.554741678921963,
+      "SP500_YoY": 10.996547794598332,
+      "WTI_YoY": -22.31431157215291,
+      "Brent_YoY": -21.15473562187258
+    },
+    {
+      "date": "2025-06-01",
+      "SP500_return": 3.7000143531955936,
+      "WTI_return": 9.215564595851443,
+      "Brent_return": 10.298831433524787,
+      "SP500_YoY": 11.35355528995845,
+      "WTI_YoY": -14.540242019556848,
+      "Brent_YoY": -13.13284305040744
+    },
+    {
+      "date": "2025-07-01",
+      "SP500_return": 4.325466711400756,
+      "WTI_return": 0.3249991710034897,
+      "Brent_return": -0.5663131081123014,
+      "SP500_YoY": 13.69615409554308,
+      "WTI_YoY": -16.39299626030084,
+      "Brent_YoY": -16.572207585319532
+    },
+    {
+      "date": "2025-08-01",
+      "SP500_return": 1.770174195868739,
+      "WTI_return": -5.294273268728129,
+      "Brent_return": -4.566734855174741,
+      "SP500_YoY": 16.989750412882977,
+      "WTI_YoY": -15.41263132758246,
+      "Brent_YoY": -15.53755348274921
+    },
+    {
+      "date": "2025-09-01",
+      "SP500_return": 2.6949835074739203,
+      "WTI_return": -1.4054177484424166,
+      "Brent_return": 0.1699667836455559,
+      "SP500_YoY": 17.127076662575845,
+      "WTI_YoY": -8.93694455970212,
+      "Brent_YoY": -8.148451413481816
+    },
+    {
+      "date": "2025-10-01",
+      "SP500_return": 2.277530096319583,
+      "WTI_return": -4.90993924982939,
+      "Brent_return": -5.195470027745781,
+      "SP500_YoY": 16.28660441281502,
+      "WTI_YoY": -15.406618803159745,
+      "Brent_YoY": -14.661837831623114
+    },
+    {
+      "date": "2025-11-01",
+      "SP500_return": 0.07708263599425876,
+      "WTI_return": -1.376254319010628,
+      "Brent_return": -1.1632910973060433,
+      "SP500_YoY": 13.675906867376941,
+      "WTI_YoY": -14.135493606544369,
+      "Brent_YoY": -14.188182546036831
+    },
+    {
+      "date": "2025-12-01",
+      "SP500_return": 1.649888790252016,
+      "WTI_return": -3.541622209301714,
+      "Brent_return": -1.983129004888966,
+      "SP500_YoY": 14.009810216040997,
+      "WTI_YoY": -17.321951586933114,
+      "Brent_YoY": -15.319917256025661
+    },
+    {
+      "date": "2026-01-01",
+      "SP500_return": 1.1042882686464042,
+      "WTI_return": 3.499619901332792,
+      "Brent_return": 6.286544969036168,
+      "SP500_YoY": 15.880994037058693,
+      "WTI_YoY": -20.735386341882023,
+      "Brent_YoY": -15.980826230546686
+    },
+    {
+      "date": "2026-02-01",
+      "SP500_return": -0.5109736554077745,
+      "WTI_return": 7.183473540716609,
+      "Brent_return": 6.234673294246433,
+      "SP500_YoY": 14.160626158810508,
+      "WTI_YoY": -9.820252661629114,
+      "Brent_YoY": -6.0327686311938304
+    },
+    {
+      "date": "2026-03-01",
+      "SP500_return": -3.5342214176920015,
+      "WTI_return": 34.827065497595896,
+      "Brent_return": 37.49473424691794,
+      "SP500_YoY": 17.07316331989759,
+      "WTI_YoY": 33.91692814031651,
+      "Brent_YoY": 41.79911185391123
+    },
+    {
+      "date": "2026-04-01",
+      "SP500_return": 4.446828318614503,
+      "WTI_return": 9.326542011453475,
+      "Brent_return": 12.859378326144789,
+      "SP500_YoY": 29.565381727343198,
+      "WTI_YoY": 57.88783379675779,
+      "Brent_YoY": 72.14113261269985
+    },
+    {
+      "date": "2026-05-01",
+      "SP500_return": 6.342526991944123,
+      "WTI_return": 1.7953827266496427,
+      "Brent_return": -9.049670758711907,
+      "SP500_YoY": 27.562453233571517,
+      "WTI_YoY": 64.28809976101478,
+      "Brent_YoY": 66.22883912961464
+    },
+    {
+      "date": "2026-06-01",
+      "SP500_return": 0.5043730713339806,
+      "WTI_return": -17.75412564780622,
+      "Brent_return": -21.850039931099342,
+      "SP500_YoY": 23.550460681862152,
+      "WTI_YoY": 25.452185010782014,
+      "Brent_YoY": 20.527347134649474
+    },
+    {
+      "date": "2026-07-01",
+      "SP500_return": 0.6430145440607039,
+      "WTI_return": null,
+      "Brent_return": null,
+      "SP500_YoY": 19.083525214881348,
+      "WTI_YoY": null,
+      "Brent_YoY": null
+    }
+  ],
+  "annotations": [
+    "oil_embargo_1973",
+    "gulf_war_1990",
+    "gfc_2008",
+    "shale_2014",
+    "covid_2020",
+    "reopening_2021"
+  ],
+  "availableTransformations": [
+    "raw",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Monthly log return = 100*ln(P[t]/P[t-1]); YoY = 100*(P[t]/P[t-12]-1).",
+    "notes": "YoY lag patterns describe macro stress; monthly returns are more relevant to timing and remain mostly contemporaneous."
+  },
+  "staticFigure": "sp500_vs_wti_yoy.png",
+  "generatedAt": "2026-07-15T23:37:40+00:00"
+}

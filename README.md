@@ -36,6 +36,20 @@ The locked oil model uses year-over-year growth in G4 global M2, lagged five mon
 
 The project prioritizes interpretable specifications, chronological validation, explicit lag conventions, HAC/Newey-West standard errors, shock-period checks, and reproducible source caching.
 
+## System-Response Diagnostic Framework
+
+The first diagnostic release extends the project from oil-price interpretation into a five-layer system-response framework:
+
+1. **Physical energy conditions:** production, consumption, inventories, comparative inventory, and refinery constraints.
+2. **Energy affordability and financial conditions:** real oil, household and GDP energy burden, energy inflation, income, rates, credit, and GM2.
+3. **Production, consumption, and investment response:** industry, manufacturing, spending, investment, GDP, and productivity.
+4. **Labour and household consequences:** hours, temporary work, employment structure, real wages, sentiment, and delinquency.
+5. **Social and institutional symptoms:** documented as proposed research only; no social-instability model or unified stress score is implemented.
+
+The compact dataset, indicator metadata, benchmark tests, and historical schema are generated in [system_response_core.csv](data/processed/system_response_core.csv), [system_response_indicator_catalogue.csv](analysis/system_response_indicator_catalogue.csv), [system_response_framework.md](analysis/system_response_framework.md), and [historical_episode_library.md](analysis/historical_episode_library.md).
+
+The first-pass energy-burden test does not show stable material out-of-sample improvement over the autoregressive benchmark. Physical tightness and labour measures therefore retain evidence labels such as **contextual indicator**, **supported historical pattern**, or **experimental proxy** unless a relationship has passed the project’s validation rules. The locked GM2-only lag-5 oil model remains unchanged.
+
 ## Current Validated Findings
 
 - The strongest simple G4 GM2 correlation with WTI and Brent YoY occurs at a four-month lead: `0.532` for WTI and `0.523` for Brent.
@@ -76,6 +90,16 @@ The Python pipeline owns data acquisition, transformations, models, validation, 
 
 The educational website uses Node.js, TypeScript, Vite, React, Tailwind CSS, Recharts, and React Router. It presents the model as an explanatory research atlas rather than a trading dashboard.
 
+Its system-response sections provide current readings by layer, a symptom guide, a searchable indicator catalogue, historical episode comparison, energy-burden and labour diagnostics, regime concepts, and an explicit implemented/experimental/proposed roadmap. Each current reading retains its own source date, frequency, percentile, interpretation, confirming evidence, conflicts, and confidence instead of being collapsed into one red/green score.
+
+The oil, liquidity, inventory, USO, equities, energy/GDP, and economic-output-quality pages use lazy-loaded interactive research charts backed by Python-generated JSON. Readers can inspect exact observations, select valid transformations and time ranges, compare historical events, explore lag conventions, download displayed or full data, and open unchanged publication PNGs. Every chart includes a permanent plain-language summary and an expandable calculation, interpretation, limitation, source, and observation-date disclosure. Raw incompatible units are kept in synchronized panels rather than forced onto a misleading shared axis. The chart schema and extension workflow are documented in [docs/website_chart_data.md](docs/website_chart_data.md).
+
+## Economic Output Quality
+
+The `/output-quality` research module compares four separate lenses: headline measured output, net productive capacity, realized household prosperity, and financialization or asset valuation. It uses official real net domestic product rather than manually subtracting non-additive chained-dollar components. Finance, insurance, and real estate remain separate series and are not treated as intrinsically valueless.
+
+An experimental household-command measure subtracts inflation-adjusted BLS Consumer Expenditure Survey shelter, food, and utilities/fuels/public-services costs from Census real median household income. All components are published beside the result, and no composite prosperity or financialization score is introduced. See [analysis/economic_output_quality.md](analysis/economic_output_quality.md).
+
 ```bash
 cd website
 npm install
@@ -89,6 +113,7 @@ Create a production build with `npm run build`. See [website/README.md](website/
 Primary public sources include:
 
 - **Federal Reserve Economic Data (FRED):** U.S. M2, WTI, Brent, exchange rates, CPI, S&P 500, U.S. real GDP, and industrial production.
+- **Bureau of Economic Analysis and Bureau of Labor Statistics via FRED:** energy expenditures, disposable income, spending, investment, productivity, hours, wages, employment structure, and energy CPI.
 - **European Central Bank:** euro-area M2.
 - **Bank of Japan:** Japan M2.
 - **People's Bank of China-sourced public data and IMF/FRED history:** China M2.
@@ -135,6 +160,10 @@ The pipeline can use the committed raw-data cache. Use `--refresh` only when int
 - YoY variables overlap and are autocorrelated; their lead-lag relationships are more useful for macro-cycle interpretation than precise market timing.
 - Historical correlations and rolling forecasts are descriptive and do not establish causality.
 - Shock regimes such as 2008-2009, 2014-2017, 2020-2021, and 2022-2023 can behave differently from normal periods.
+- Household energy burden is an aggregate proxy and does not reveal distributional exposure.
+- Quarterly macro and credit observations are latest-vintage and are not suitable for strict real-time claims without vintage data.
+- The household-command experiment combines median income with average consumer-unit expenditures and is not an official disposable-income measure.
+- A consistent global spare-capacity history and redistributable continuous futures curve are not yet implemented.
 
 ## Future Research Directions
 
@@ -143,8 +172,8 @@ This repository is intended to grow from an oil-market model into a broader ener
 - energy supply adequacy
 - energy surplus and EROI
 - inflation transmission
-- employment quality
-- economic stress indicators
+- richer employment-quality validation
+- real-time economic stress diagnostics
 - social-system responses
 
 These modules are research directions only and are **not currently implemented**.

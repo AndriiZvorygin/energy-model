@@ -1,0 +1,4885 @@
+{
+  "schemaVersion": "1.1.0",
+  "frequency": "monthly",
+  "fields": {
+    "GM2_YoY": "GM2_YoY",
+    "WTI_YoY": "WTI_YoY",
+    "CI_zscore": "CI_zscore",
+    "household_energy_burden": "household_energy_expenditure_share",
+    "industrial_production": "Industrial_production_YoY",
+    "weekly_hours": "average_weekly_hours_YoY",
+    "temporary_help": "temporary_help_YoY"
+  },
+  "observations": [
+    {
+      "date": "1986-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "CI_zscore": null,
+      "household_energy_burden": 6.160004965243297,
+      "industrial_production": null,
+      "weekly_hours": null,
+      "temporary_help": null
+    },
+    {
+      "date": "1986-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "CI_zscore": null,
+      "household_energy_burden": 6.047416188182996,
+      "industrial_production": null,
+      "weekly_hours": null,
+      "temporary_help": null
+    },
+    {
+      "date": "1986-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "CI_zscore": null,
+      "household_energy_burden": 5.696086237520671,
+      "industrial_production": null,
+      "weekly_hours": null,
+      "temporary_help": null
+    },
+    {
+      "date": "1986-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "CI_zscore": null,
+      "household_energy_burden": 5.316579534684643,
+      "industrial_production": null,
+      "weekly_hours": null,
+      "temporary_help": null
+    },
+    {
+      "date": "1986-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "CI_zscore": null,
+      "household_energy_burden": 5.363458958409562,
+      "industrial_production": null,
+      "weekly_hours": null,
+      "temporary_help": null
+    },
+    {
+      "date": "1986-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "CI_zscore": null,
+      "household_energy_burden": 5.515857329643932,
+      "industrial_production": null,
+      "weekly_hours": null,
+      "temporary_help": null
+    },
+    {
+      "date": "1986-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "CI_zscore": null,
+      "household_energy_burden": 5.375238210472186,
+      "industrial_production": null,
+      "weekly_hours": null,
+      "temporary_help": null
+    },
+    {
+      "date": "1986-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "CI_zscore": null,
+      "household_energy_burden": 5.066537916050574,
+      "industrial_production": null,
+      "weekly_hours": null,
+      "temporary_help": null
+    },
+    {
+      "date": "1986-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "CI_zscore": null,
+      "household_energy_burden": 5.191642867879152,
+      "industrial_production": null,
+      "weekly_hours": null,
+      "temporary_help": null
+    },
+    {
+      "date": "1986-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "CI_zscore": null,
+      "household_energy_burden": 5.109642535295885,
+      "industrial_production": null,
+      "weekly_hours": null,
+      "temporary_help": null
+    },
+    {
+      "date": "1986-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "CI_zscore": null,
+      "household_energy_burden": 5.177945012442659,
+      "industrial_production": null,
+      "weekly_hours": null,
+      "temporary_help": null
+    },
+    {
+      "date": "1986-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "CI_zscore": null,
+      "household_energy_burden": 5.09346493195753,
+      "industrial_production": null,
+      "weekly_hours": null,
+      "temporary_help": null
+    },
+    {
+      "date": "1987-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -18.643146052139624,
+      "CI_zscore": null,
+      "household_energy_burden": 5.1249332304587805,
+      "industrial_production": 0.6100656345238598,
+      "weekly_hours": 0.24570024570023108,
+      "temporary_help": null
+    },
+    {
+      "date": "1987-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 14.844707805476109,
+      "CI_zscore": null,
+      "household_energy_burden": 5.262538262302802,
+      "industrial_production": 2.6567648418983847,
+      "weekly_hours": 1.228501228501222,
+      "temporary_help": null
+    },
+    {
+      "date": "1987-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 45.1168058898485,
+      "CI_zscore": null,
+      "household_energy_burden": 5.335093122158674,
+      "industrial_production": 3.54296110984762,
+      "weekly_hours": 0.7371007371007376,
+      "temporary_help": null
+    },
+    {
+      "date": "1987-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 45.41943051286199,
+      "CI_zscore": null,
+      "household_energy_burden": 5.552518073021081,
+      "industrial_production": 4.0493229629387395,
+      "weekly_hours": 0.7407407407407307,
+      "temporary_help": null
+    },
+    {
+      "date": "1987-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 26.401232465240156,
+      "CI_zscore": null,
+      "household_energy_burden": 5.471275077890691,
+      "industrial_production": 4.552760573702974,
+      "weekly_hours": 0.7371007371007376,
+      "temporary_help": null
+    },
+    {
+      "date": "1987-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 49.512952465708395,
+      "CI_zscore": null,
+      "household_energy_burden": 5.461306065535672,
+      "industrial_production": 5.519439713663821,
+      "weekly_hours": 0.49140049140048436,
+      "temporary_help": null
+    },
+    {
+      "date": "1987-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 84.22970497016263,
+      "CI_zscore": null,
+      "household_energy_burden": 5.471256394693488,
+      "industrial_production": 5.549483162984625,
+      "weekly_hours": 0.9852216748768461,
+      "temporary_help": null
+    },
+    {
+      "date": "1987-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 34.539318045610855,
+      "CI_zscore": -1.1831901502263156,
+      "household_energy_burden": 5.429267593521571,
+      "industrial_production": 6.539368743960372,
+      "weekly_hours": 0.49140049140048436,
+      "temporary_help": null
+    },
+    {
+      "date": "1987-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 31.367713004484308,
+      "CI_zscore": -0.13286753009791988,
+      "household_energy_burden": 5.32133676092545,
+      "industrial_production": 6.686739906867412,
+      "weekly_hours": 0.24570024570023108,
+      "temporary_help": null
+    },
+    {
+      "date": "1987-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 33.31095719037012,
+      "CI_zscore": -0.18623110301835014,
+      "household_energy_burden": 5.441638148032921,
+      "industrial_production": 7.649118005085254,
+      "weekly_hours": 1.2315270935960632,
+      "temporary_help": null
+    },
+    {
+      "date": "1987-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 23.86362850523842,
+      "CI_zscore": 1.02822544484637,
+      "household_energy_burden": 5.247772437248784,
+      "industrial_production": 7.742526773047431,
+      "weekly_hours": 0.7371007371007376,
+      "temporary_help": null
+    },
+    {
+      "date": "1987-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 7.244561741102884,
+      "CI_zscore": 1.4849301473446348,
+      "household_energy_burden": 5.222055472180535,
+      "industrial_production": 7.328838312501662,
+      "weekly_hours": 0.4901960784313708,
+      "temporary_help": null
+    },
+    {
+      "date": "1988-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -8.159849877450975,
+      "CI_zscore": 0.24035159480903043,
+      "household_energy_burden": 5.377798636225602,
+      "industrial_production": 7.683256014634088,
+      "weekly_hours": 0.7352941176470784,
+      "temporary_help": null
+    },
+    {
+      "date": "1988-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -5.370645722927547,
+      "CI_zscore": 0.19723131483403503,
+      "household_energy_burden": 5.165849516557561,
+      "industrial_production": 6.815010338304517,
+      "weekly_hours": -0.24271844660194164,
+      "temporary_help": null
+    },
+    {
+      "date": "1988-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -11.503481790169523,
+      "CI_zscore": 0.8798016743719798,
+      "household_energy_burden": 5.176489769299748,
+      "industrial_production": 6.92376356971911,
+      "weekly_hours": -0.24390243902439046,
+      "temporary_help": null
+    },
+    {
+      "date": "1988-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -4.361710264647389,
+      "CI_zscore": 1.391311771716338,
+      "household_energy_burden": 5.110314916085235,
+      "industrial_production": 6.867457888147577,
+      "weekly_hours": 0.4901960784313708,
+      "temporary_help": null
+    },
+    {
+      "date": "1988-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -10.360713241742193,
+      "CI_zscore": 1.2051862576215149,
+      "household_energy_burden": 5.108471212893192,
+      "industrial_production": 5.981899007846314,
+      "weekly_hours": 0.0,
+      "temporary_help": null
+    },
+    {
+      "date": "1988-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -17.662643508978515,
+      "CI_zscore": 1.4204807490903135,
+      "household_energy_burden": 5.21850147618161,
+      "industrial_production": 5.741687913317128,
+      "weekly_hours": 0.4889975550122383,
+      "temporary_help": null
+    },
+    {
+      "date": "1988-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -27.385560331656045,
+      "CI_zscore": 1.5958448089713189,
+      "household_energy_burden": 5.199768079274721,
+      "industrial_production": 5.040822414780433,
+      "weekly_hours": 0.24390243902439046,
+      "temporary_help": null
+    },
+    {
+      "date": "1988-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -23.57089923844492,
+      "CI_zscore": 1.1971461816246856,
+      "household_energy_burden": 5.232131628589394,
+      "industrial_production": 4.781020904097089,
+      "weekly_hours": 0.0,
+      "temporary_help": null
+    },
+    {
+      "date": "1988-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -25.573709444677185,
+      "CI_zscore": -0.34764880889757194,
+      "household_energy_burden": 4.988160599516016,
+      "industrial_production": 4.043725665351872,
+      "weekly_hours": 0.4901960784313708,
+      "temporary_help": null
+    },
+    {
+      "date": "1988-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -30.659080752923728,
+      "CI_zscore": -0.3999356408620107,
+      "household_energy_burden": 5.17219140977686,
+      "industrial_production": 3.118549371874013,
+      "weekly_hours": 0.0,
+      "temporary_help": null
+    },
+    {
+      "date": "1988-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -24.995419346750623,
+      "CI_zscore": 0.06822183772378622,
+      "household_energy_burden": 5.02495754644162,
+      "industrial_production": 2.8661985664013345,
+      "weekly_hours": 0.24390243902439046,
+      "temporary_help": null
+    },
+    {
+      "date": "1988-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -5.164619263135228,
+      "CI_zscore": -0.2269997443779961,
+      "household_energy_burden": 4.954816970439577,
+      "industrial_production": 2.755857936251749,
+      "weekly_hours": -0.24390243902439046,
+      "temporary_help": null
+    },
+    {
+      "date": "1989-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 5.223653429964181,
+      "CI_zscore": -1.1900876973386456,
+      "household_energy_burden": 4.755400414832802,
+      "industrial_production": 3.0792614276063945,
+      "weekly_hours": 0.0,
+      "temporary_help": null
+    },
+    {
+      "date": "1989-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 6.792123841115938,
+      "CI_zscore": -0.5654310441729474,
+      "household_energy_burden": 5.317410433689504,
+      "industrial_production": 2.111356945517584,
+      "weekly_hours": 0.24330900243310083,
+      "temporary_help": null
+    },
+    {
+      "date": "1989-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 20.291536723329262,
+      "CI_zscore": 0.040490854718890225,
+      "household_energy_burden": 5.070043372052445,
+      "industrial_production": 2.1147048238211674,
+      "weekly_hours": 0.4889975550122383,
+      "temporary_help": null
+    },
+    {
+      "date": "1989-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 17.951014695591304,
+      "CI_zscore": -0.7892985434344372,
+      "household_energy_burden": 5.264598994374471,
+      "industrial_production": 1.510544400528735,
+      "weekly_hours": 0.24390243902439046,
+      "temporary_help": null
+    },
+    {
+      "date": "1989-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 15.495283767904212,
+      "CI_zscore": 0.06997454655736021,
+      "household_energy_burden": 5.334761916627214,
+      "industrial_production": 1.1373664245240223,
+      "weekly_hours": 0.0,
+      "temporary_help": null
+    },
+    {
+      "date": "1989-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 21.314045268281955,
+      "CI_zscore": -0.13385361173527538,
+      "household_energy_burden": 5.216572037785436,
+      "industrial_production": 0.8371301845179868,
+      "weekly_hours": -0.48661800486619056,
+      "temporary_help": null
+    },
+    {
+      "date": "1989-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 27.642707349111628,
+      "CI_zscore": -0.30441342674919525,
+      "household_energy_burden": 5.1342091641813115,
+      "industrial_production": -0.150328322933313,
+      "weekly_hours": -0.48661800486619056,
+      "temporary_help": null
+    },
+    {
+      "date": "1989-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 19.67566659197848,
+      "CI_zscore": 0.06668636415007492,
+      "household_energy_burden": 5.1420705928620585,
+      "industrial_production": 0.32497957712054326,
+      "weekly_hours": 0.0,
+      "temporary_help": null
+    },
+    {
+      "date": "1989-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 34.78373524655347,
+      "CI_zscore": 0.9173556213349159,
+      "household_energy_burden": 5.063941120375578,
+      "industrial_production": 0.3240432253134973,
+      "weekly_hours": -0.487804878048792,
+      "temporary_help": null
+    },
+    {
+      "date": "1989-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 45.947946859144025,
+      "CI_zscore": 1.0389210333062064,
+      "household_energy_burden": 5.08215791769667,
+      "industrial_production": -0.24121871415987428,
+      "weekly_hours": -0.7299270072992803,
+      "temporary_help": null
+    },
+    {
+      "date": "1989-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 40.41014432194399,
+      "CI_zscore": 0.41415276301678405,
+      "household_energy_burden": 5.065951587186549,
+      "industrial_production": -0.14564426549978915,
+      "weekly_hours": -0.9732360097323589,
+      "temporary_help": null
+    },
+    {
+      "date": "1989-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 28.796907246461068,
+      "CI_zscore": 0.5683388066748218,
+      "household_energy_burden": 5.517955634769624,
+      "industrial_production": -0.05074563869427173,
+      "weekly_hours": -0.9779951100244433,
+      "temporary_help": null
+    },
+    {
+      "date": "1990-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 26.846534617795626,
+      "CI_zscore": 1.594345340781004,
+      "household_energy_burden": 4.823685961410512,
+      "industrial_production": -0.848734447631927,
+      "weekly_hours": -1.4598540145985384,
+      "temporary_help": null
+    },
+    {
+      "date": "1990-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 23.284921807487514,
+      "CI_zscore": 3.606036826232335,
+      "household_energy_burden": 5.06574133087836,
+      "industrial_production": 0.49643524964546604,
+      "weekly_hours": -1.4563106796116498,
+      "temporary_help": null
+    },
+    {
+      "date": "1990-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 4.637816400326611,
+      "CI_zscore": 2.8329417977754767,
+      "household_energy_burden": 4.99059708509638,
+      "industrial_production": 0.7451289008624462,
+      "weekly_hours": -1.2165450121654486,
+      "temporary_help": null
+    },
+    {
+      "date": "1990-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -12.546869808723715,
+      "CI_zscore": 3.571170051166811,
+      "household_energy_burden": 4.98741493427799,
+      "industrial_production": 0.4962367772133325,
+      "weekly_hours": -1.7031630170316392,
+      "temporary_help": null
+    },
+    {
+      "date": "1990-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -9.560637487134759,
+      "CI_zscore": 2.5664555230861685,
+      "household_energy_burden": 4.946461824953445,
+      "industrial_production": 1.3782408246781896,
+      "weekly_hours": -0.9756097560975618,
+      "temporary_help": null
+    },
+    {
+      "date": "1990-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -16.733867267747705,
+      "CI_zscore": 3.1349268498901983,
+      "household_energy_burden": 4.9376431662000515,
+      "industrial_production": 1.7298125132548803,
+      "weekly_hours": -0.4889975550122161,
+      "temporary_help": null
+    },
+    {
+      "date": "1990-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -6.710019236198206,
+      "CI_zscore": 4.637532838721302,
+      "household_energy_burden": 4.914564312489938,
+      "industrial_production": 2.5412840137444492,
+      "weekly_hours": -0.7334963325183352,
+      "temporary_help": null
+    },
+    {
+      "date": "1990-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 46.98916426782746,
+      "CI_zscore": 6.012186211998478,
+      "household_energy_burden": 5.275376976829717,
+      "industrial_production": 1.9009861881851498,
+      "weekly_hours": -0.9779951100244433,
+      "temporary_help": null
+    },
+    {
+      "date": "1990-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 71.03142773807787,
+      "CI_zscore": 5.386508204595017,
+      "household_energy_burden": 5.402440696558344,
+      "industrial_production": 2.229147315019908,
+      "weekly_hours": -0.7352941176470562,
+      "temporary_help": null
+    },
+    {
+      "date": "1990-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 79.3215955631819,
+      "CI_zscore": 1.9692245980686975,
+      "household_energy_burden": 5.577826136754094,
+      "industrial_production": 1.7690408900654653,
+      "weekly_hours": -0.9803921568627416,
+      "temporary_help": null
+    },
+    {
+      "date": "1990-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 62.83451228166561,
+      "CI_zscore": 0.6726169084879424,
+      "household_energy_burden": 5.485936428081408,
+      "industrial_production": 0.1366191065791167,
+      "weekly_hours": -1.2285012285012331,
+      "temporary_help": null
+    },
+    {
+      "date": "1990-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 29.29383886255923,
+      "CI_zscore": 0.009291175036547465,
+      "household_energy_burden": 5.512025618314369,
+      "industrial_production": -1.1405030076012013,
+      "weekly_hours": -0.4938271604938316,
+      "temporary_help": null
+    },
+    {
+      "date": "1991-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 10.3699874749001,
+      "CI_zscore": -0.5840727983411012,
+      "household_energy_burden": 5.376344086021506,
+      "industrial_production": -0.961460577686335,
+      "weekly_hours": -0.7407407407407307,
+      "temporary_help": -1.344595759351852
+    },
+    {
+      "date": "1991-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -7.3961018405462875,
+      "CI_zscore": -0.047364142818184525,
+      "household_energy_burden": 5.007697183736304,
+      "industrial_production": -2.577958439290029,
+      "weekly_hours": -1.2315270935960632,
+      "temporary_help": -3.269824922760056
+    },
+    {
+      "date": "1991-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -2.3849017902927483,
+      "CI_zscore": -0.05365996959924986,
+      "household_energy_burden": 4.989154013015184,
+      "industrial_production": -3.61869587651098,
+      "weekly_hours": -1.4778325123152691,
+      "temporary_help": -4.566053869174869
+    },
+    {
+      "date": "1991-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 13.049849393503553,
+      "CI_zscore": 0.08413463175499042,
+      "household_energy_burden": 4.982702071258481,
+      "industrial_production": -3.1105501802648705,
+      "weekly_hours": -0.7425742574257321,
+      "temporary_help": -4.357541899441342
+    },
+    {
+      "date": "1991-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 16.663752840980052,
+      "CI_zscore": 0.04903938074851714,
+      "household_energy_burden": 5.238553246695148,
+      "industrial_production": -2.494978108064083,
+      "weekly_hours": -0.9852216748768461,
+      "temporary_help": -4.245973645680811
+    },
+    {
+      "date": "1991-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 20.92669709070165,
+      "CI_zscore": 0.35637700201127337,
+      "household_energy_burden": 5.043099617879677,
+      "industrial_production": -2.037136646180182,
+      "weekly_hours": -0.7371007371007487,
+      "temporary_help": -4.222566219470236
+    },
+    {
+      "date": "1991-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 15.979939535884903,
+      "CI_zscore": 0.27258444146623395,
+      "household_energy_burden": 5.060899715504979,
+      "industrial_production": -1.5908264836979713,
+      "weekly_hours": -0.24630541871921707,
+      "temporary_help": -4.730482474933584
+    },
+    {
+      "date": "1991-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -20.557639058761556,
+      "CI_zscore": 0.38708904478919004,
+      "household_energy_burden": 4.9428059384472425,
+      "industrial_production": -1.934469200524247,
+      "weekly_hours": 0.24691358024691024,
+      "temporary_help": -3.294807659134036
+    },
+    {
+      "date": "1991-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -34.68178765947921,
+      "CI_zscore": 0.20735299470499108,
+      "household_energy_burden": 4.980977723044444,
+      "industrial_production": -1.1640559598299127,
+      "weekly_hours": 0.24691358024691024,
+      "temporary_help": -2.8863499699338435
+    },
+    {
+      "date": "1991-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -35.54064976897372,
+      "CI_zscore": 1.2076196857734254,
+      "household_energy_burden": 4.857305685853317,
+      "industrial_production": -0.6375380485583504,
+      "weekly_hours": 0.4950495049504955,
+      "temporary_help": -0.7452871547566908
+    },
+    {
+      "date": "1991-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -30.530858222019585,
+      "CI_zscore": 0.5568190134493729,
+      "household_energy_burden": 4.994976630411042,
+      "industrial_production": 0.4829362003084814,
+      "weekly_hours": 1.243781094527363,
+      "temporary_help": -0.1849894291754861
+    },
+    {
+      "date": "1991-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -28.52866376564188,
+      "CI_zscore": -0.471715855578083,
+      "household_energy_burden": 4.813319225204604,
+      "industrial_production": 0.7336733229858172,
+      "weekly_hours": 0.7444168734491496,
+      "temporary_help": 1.1724995558713758
+    },
+    {
+      "date": "1992-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -25.555255336395565,
+      "CI_zscore": 0.5246397447724374,
+      "household_energy_burden": 4.718270750566021,
+      "industrial_production": 0.5334053046102349,
+      "weekly_hours": 0.995024875621886,
+      "temporary_help": 0.4106237987069772
+    },
+    {
+      "date": "1992-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -7.15419362715175,
+      "CI_zscore": 0.6403001467236956,
+      "household_energy_burden": 4.550372303188443,
+      "industrial_production": 1.996743776757559,
+      "weekly_hours": 1.4962593516209433,
+      "temporary_help": 2.626208854582579
+    },
+    {
+      "date": "1992-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -4.92265315771081,
+      "CI_zscore": 0.9399222900073285,
+      "household_energy_burden": 4.880008457553653,
+      "industrial_production": 3.4616952793256273,
+      "weekly_hours": 1.750000000000007,
+      "temporary_help": 4.87411522265031
+    },
+    {
+      "date": "1992-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -2.8804608737397874,
+      "CI_zscore": 0.3055109853636877,
+      "household_energy_burden": 4.876356295735554,
+      "industrial_production": 3.972638518327498,
+      "weekly_hours": 1.74563591022443,
+      "temporary_help": 6.2994248741912395
+    },
+    {
+      "date": "1992-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -1.2093511164393944,
+      "CI_zscore": 0.09019697108716204,
+      "household_energy_burden": 4.799230785309671,
+      "industrial_production": 3.341941886534139,
+      "weekly_hours": 1.741293532338295,
+      "temporary_help": 7.7441985968699445
+    },
+    {
+      "date": "1992-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 10.874958911018151,
+      "CI_zscore": -0.43386661913987895,
+      "household_energy_burden": 4.7541869259859535,
+      "industrial_production": 2.563756841098086,
+      "weekly_hours": 0.990099009900991,
+      "temporary_help": 8.503187572955028
+    },
+    {
+      "date": "1992-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 1.738883133239888,
+      "CI_zscore": -0.8457978793042698,
+      "household_energy_burden": 4.816779970154203,
+      "industrial_production": 3.218992232364881,
+      "weekly_hours": 0.7407407407407307,
+      "temporary_help": 8.986237294234044
+    },
+    {
+      "date": "1992-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -1.6345288482069176,
+      "CI_zscore": -0.8185988134125366,
+      "household_energy_burden": 4.702776288106927,
+      "industrial_production": 2.6429698460063156,
+      "weekly_hours": 0.49261083743841194,
+      "temporary_help": 9.088476632179798
+    },
+    {
+      "date": "1992-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -0.023468181922037257,
+      "CI_zscore": -0.7987429933052566,
+      "household_energy_burden": 4.953035130549924,
+      "industrial_production": 2.1710235537090616,
+      "weekly_hours": 0.24630541871921707,
+      "temporary_help": 8.916408668730647
+    },
+    {
+      "date": "1992-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -6.650463384381899,
+      "CI_zscore": -1.5908065062538186,
+      "household_energy_burden": 4.874252988047809,
+      "industrial_production": 2.917078740220802,
+      "weekly_hours": 0.49261083743841194,
+      "temporary_help": 10.6183745583039
+    },
+    {
+      "date": "1992-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -9.44952086160109,
+      "CI_zscore": -4.899432691822186,
+      "household_energy_burden": 5.066170388751034,
+      "industrial_production": 3.4710914183461616,
+      "weekly_hours": 0.49140049140048436,
+      "temporary_help": 11.631806548407031
+    },
+    {
+      "date": "1992-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -0.4308335146512299,
+      "CI_zscore": -2.099638133924014,
+      "household_energy_burden": 4.791517180897712,
+      "industrial_production": 4.152288897664813,
+      "weekly_hours": 0.738916256157629,
+      "temporary_help": 12.625109745390684
+    },
+    {
+      "date": "1993-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 1.3124274099883815,
+      "CI_zscore": -1.4086944273260509,
+      "household_energy_burden": 4.624171714297329,
+      "industrial_production": 5.1026982701394274,
+      "weekly_hours": 1.2315270935960632,
+      "temporary_help": 12.57287044287827
+    },
+    {
+      "date": "1993-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 5.646869749433869,
+      "CI_zscore": -0.6027260388331289,
+      "household_energy_burden": 5.015452360272285,
+      "industrial_production": 4.8685284067500945,
+      "weekly_hours": 0.9828009828009687,
+      "temporary_help": 12.725858044436755
+    },
+    {
+      "date": "1993-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 7.40074615329982,
+      "CI_zscore": -0.48895185624852644,
+      "household_energy_burden": 4.958042665049034,
+      "industrial_production": 3.8911814838072933,
+      "weekly_hours": 0.24570024570023108,
+      "temporary_help": 12.669799231097812
+    },
+    {
+      "date": "1993-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 0.11122095897182493,
+      "CI_zscore": -0.15880358787806859,
+      "household_energy_burden": 4.778910199823449,
+      "industrial_production": 3.3914177146763924,
+      "weekly_hours": 1.225490196078427,
+      "temporary_help": 13.399272973201448
+    },
+    {
+      "date": "1993-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -4.891420943481684,
+      "CI_zscore": -0.273351626897102,
+      "household_energy_burden": 4.712975203300885,
+      "industrial_production": 2.6622718052738525,
+      "weekly_hours": 0.4889975550122383,
+      "temporary_help": 13.790800567660067
+    },
+    {
+      "date": "1993-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -14.699671039272221,
+      "CI_zscore": -0.317936636905137,
+      "household_energy_burden": 4.83851554663992,
+      "industrial_production": 2.8411547715022856,
+      "weekly_hours": 0.4901960784313708,
+      "temporary_help": 14.159218801721284
+    },
+    {
+      "date": "1993-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -17.842381646466865,
+      "CI_zscore": 0.19594750404263397,
+      "household_energy_burden": 4.7827389871141746,
+      "industrial_production": 2.1777342523886745,
+      "weekly_hours": 0.7352941176470784,
+      "temporary_help": 15.392868933641468
+    },
+    {
+      "date": "1993-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -15.596471724294625,
+      "CI_zscore": 0.020888651478409275,
+      "household_energy_burden": 4.881206062175134,
+      "industrial_production": 2.628418293185275,
+      "weekly_hours": 0.7352941176470784,
+      "temporary_help": 15.419834845883429
+    },
+    {
+      "date": "1993-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -20.003679820044916,
+      "CI_zscore": -0.10746922063153658,
+      "household_energy_burden": 4.9074369613788695,
+      "industrial_production": 2.833713227717971,
+      "weekly_hours": 1.474201474201453,
+      "temporary_help": 15.666368878421189
+    },
+    {
+      "date": "1993-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -16.28972870248101,
+      "CI_zscore": -0.8035598760080968,
+      "household_energy_burden": 4.9479426869966625,
+      "industrial_production": 2.892835100274227,
+      "weekly_hours": 1.225490196078427,
+      "temporary_help": 16.746526114039284
+    },
+    {
+      "date": "1993-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -18.336909707954774,
+      "CI_zscore": -0.6950353410144648,
+      "household_energy_burden": 4.805664956040896,
+      "industrial_production": 2.972500941748568,
+      "weekly_hours": 0.9779951100244544,
+      "temporary_help": 16.064511028539783
+    },
+    {
+      "date": "1993-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -25.235943456074107,
+      "CI_zscore": 1.3780347124335712,
+      "household_energy_burden": 4.769322486970903,
+      "industrial_production": 3.407732938414032,
+      "weekly_hours": 1.2224938875305513,
+      "temporary_help": 15.770190208917988
+    },
+    {
+      "date": "1994-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -21.045257110830875,
+      "CI_zscore": 0.2660590490699062,
+      "household_energy_burden": 4.8864593742040405,
+      "industrial_production": 3.3086266095749384,
+      "weekly_hours": 0.7299270072992581,
+      "temporary_help": 16.21579842324934
+    },
+    {
+      "date": "1994-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -26.41157589035511,
+      "CI_zscore": -0.33771856761600655,
+      "household_energy_burden": 4.854349989268921,
+      "industrial_production": 2.8734118125557373,
+      "weekly_hours": -0.48661800486619056,
+      "temporary_help": 17.071861339059737
+    },
+    {
+      "date": "1994-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -27.759354742089382,
+      "CI_zscore": -0.8624094400510505,
+      "household_energy_burden": 4.654590589969358,
+      "industrial_production": 4.013742016462052,
+      "weekly_hours": 2.205882352941191,
+      "temporary_help": 18.835304822565966
+    },
+    {
+      "date": "1994-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -18.9235896802864,
+      "CI_zscore": -0.5956439840602925,
+      "household_energy_burden": 4.64521627956531,
+      "industrial_production": 4.342604424720231,
+      "weekly_hours": 0.9685230024213176,
+      "temporary_help": 18.801252422841785
+    },
+    {
+      "date": "1994-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -10.3283409657003,
+      "CI_zscore": -1.6368764133102227,
+      "household_energy_burden": 4.642980074195893,
+      "industrial_production": 5.220887873549018,
+      "weekly_hours": 1.703163017031617,
+      "temporary_help": 17.37950260435772
+    },
+    {
+      "date": "1994-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -0.17854167162616452,
+      "CI_zscore": -1.6226179421770546,
+      "household_energy_burden": 4.851067081908329,
+      "industrial_production": 5.692891278467149,
+      "weekly_hours": 1.9512195121951237,
+      "temporary_help": 17.984777093149695
+    },
+    {
+      "date": "1994-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 9.863051984348804,
+      "CI_zscore": -0.9082147921138544,
+      "household_energy_burden": 4.681345030352624,
+      "industrial_production": 5.548865528406344,
+      "weekly_hours": 1.703163017031617,
+      "temporary_help": 18.510836134754328
+    },
+    {
+      "date": "1994-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 2.0685750401601144,
+      "CI_zscore": -1.1336220718500762,
+      "household_energy_burden": 4.784480306449471,
+      "industrial_production": 6.384761951629092,
+      "weekly_hours": 1.4598540145985384,
+      "temporary_help": 17.893320110505062
+    },
+    {
+      "date": "1994-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -0.33461193177182214,
+      "CI_zscore": -0.8315909305700483,
+      "household_energy_burden": 4.654671645731961,
+      "industrial_production": 6.156180732641192,
+      "weekly_hours": 0.7263922518159882,
+      "temporary_help": 18.038196882460312
+    },
+    {
+      "date": "1994-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -2.4080583390168386,
+      "CI_zscore": 0.20451753159596908,
+      "household_energy_burden": 4.621754700089525,
+      "industrial_production": 6.231501771426062,
+      "weekly_hours": 1.2106537530266248,
+      "temporary_help": 15.903960599220191
+    },
+    {
+      "date": "1994-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 8.793113334671276,
+      "CI_zscore": 0.4712247385456563,
+      "household_energy_burden": 4.507037009457145,
+      "industrial_production": 6.4711768991924545,
+      "weekly_hours": 1.2106537530266248,
+      "temporary_help": 16.96750902527078
+    },
+    {
+      "date": "1994-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 18.22118696893149,
+      "CI_zscore": -0.22107332511318709,
+      "household_energy_burden": 4.572730303367041,
+      "industrial_production": 6.925835091579047,
+      "weekly_hours": 0.9661835748792313,
+      "temporary_help": 15.985455524880487
+    },
+    {
+      "date": "1995-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 20.0500697173279,
+      "CI_zscore": -0.4998261672704176,
+      "household_energy_burden": 4.528788576692769,
+      "industrial_production": 6.800469318244806,
+      "weekly_hours": 0.9661835748792313,
+      "temporary_help": 15.68236233040703
+    },
+    {
+      "date": "1995-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 25.63381284717274,
+      "CI_zscore": -1.8825209039192237,
+      "household_energy_burden": 4.649497971695516,
+      "industrial_production": 6.617845269116707,
+      "weekly_hours": 1.9559902200489088,
+      "temporary_help": 14.41860465116278
+    },
+    {
+      "date": "1995-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 26.28087425220633,
+      "CI_zscore": -1.9867090340826377,
+      "household_energy_burden": 4.4217065594737806,
+      "industrial_production": 5.7165348260771465,
+      "weekly_hours": -0.47961630695444457,
+      "temporary_help": 10.84099030117407
+    },
+    {
+      "date": "1995-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 21.171228924931086,
+      "CI_zscore": -1.0383442189221999,
+      "household_energy_burden": 4.599115060495346,
+      "industrial_production": 4.913630863868201,
+      "weekly_hours": -1.918465227817756,
+      "temporary_help": 8.540411646586342
+    },
+    {
+      "date": "1995-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 10.357010625863605,
+      "CI_zscore": -1.4426073131297263,
+      "household_energy_burden": 4.61680852222202,
+      "industrial_production": 4.945992374531105,
+      "weekly_hours": -1.4354066985645786,
+      "temporary_help": 7.3875000000000135
+    },
+    {
+      "date": "1995-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -3.2218830487455885,
+      "CI_zscore": -1.5312476103032753,
+      "household_energy_burden": 4.616691672240198,
+      "industrial_production": 4.587732144288292,
+      "weekly_hours": -1.4354066985645786,
+      "temporary_help": 5.462029982796768
+    },
+    {
+      "date": "1995-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -11.849703630211927,
+      "CI_zscore": -1.6116757374832003,
+      "household_energy_burden": 4.6440409280876205,
+      "industrial_production": 4.012060921624383,
+      "weekly_hours": -1.674641148325351,
+      "temporary_help": 3.790210634317104
+    },
+    {
+      "date": "1995-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -1.9724705548460286,
+      "CI_zscore": -2.127577792999884,
+      "household_energy_burden": 4.688594679073778,
+      "industrial_production": 4.689029105863818,
+      "weekly_hours": -1.1990407673860948,
+      "temporary_help": 4.512407618818726
+    },
+    {
+      "date": "1995-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 4.469783819194251,
+      "CI_zscore": -2.136244083915774,
+      "household_energy_burden": 4.423369419343294,
+      "industrial_production": 4.7816808149161005,
+      "weekly_hours": -0.7211538461538547,
+      "temporary_help": 5.33579204092558
+    },
+    {
+      "date": "1995-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -1.5974577513659383,
+      "CI_zscore": -5.280896446936439,
+      "household_energy_burden": 4.364336524576135,
+      "industrial_production": 3.7627368685886786,
+      "weekly_hours": -1.4354066985645786,
+      "temporary_help": 4.508970727101036
+    },
+    {
+      "date": "1995-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -0.4261324331054972,
+      "CI_zscore": -3.2355730443012023,
+      "household_energy_burden": 4.505689900426742,
+      "industrial_production": 3.3298500978240275,
+      "weekly_hours": -1.1961722488038284,
+      "temporary_help": 3.191241556021418
+    },
+    {
+      "date": "1995-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 10.880116553350906,
+      "CI_zscore": -4.157988957045783,
+      "household_energy_burden": 4.512424231682677,
+      "industrial_production": 2.6396897921781903,
+      "weekly_hours": -2.1531100478468845,
+      "temporary_help": 3.158200290275759
+    },
+    {
+      "date": "1996-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 4.51797760089081,
+      "CI_zscore": -4.402725766926777,
+      "household_energy_burden": 4.620193920983381,
+      "industrial_production": 1.8788215519394358,
+      "weekly_hours": -5.023923444976064,
+      "temporary_help": 0.5979073243647104
+    },
+    {
+      "date": "1996-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 2.8190630048465115,
+      "CI_zscore": -6.946053564126944,
+      "household_energy_burden": 4.6442445665488385,
+      "industrial_production": 3.4865787366735512,
+      "weekly_hours": -0.9592326139088891,
+      "temporary_help": 2.639413718080852
+    },
+    {
+      "date": "1996-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 15.066782810685254,
+      "CI_zscore": -6.690925473179622,
+      "household_energy_burden": 4.725053041633335,
+      "industrial_production": 3.188414739319012,
+      "weekly_hours": -0.9638554216867434,
+      "temporary_help": 3.350411605549475
+    },
+    {
+      "date": "1996-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 18.09795896773123,
+      "CI_zscore": -10.972241013985279,
+      "household_energy_burden": 4.784914349509821,
+      "industrial_production": 4.395391371041835,
+      "weekly_hours": 0.4889975550122383,
+      "temporary_help": 4.7985199745620655
+    },
+    {
+      "date": "1996-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 7.211272794253087,
+      "CI_zscore": -4.710633423605468,
+      "household_energy_burden": 4.765262252794497,
+      "industrial_production": 4.661591494286932,
+      "weekly_hours": 0.4854368932038833,
+      "temporary_help": 6.646490513327907
+    },
+    {
+      "date": "1996-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 10.7210270816392,
+      "CI_zscore": -2.4060946641178353,
+      "household_energy_burden": 4.620828774617068,
+      "industrial_production": 5.110978907668273,
+      "weekly_hours": 0.7281553398058138,
+      "temporary_help": 7.8823186717156934
+    },
+    {
+      "date": "1996-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 22.953292703083484,
+      "CI_zscore": -1.7430179054682784,
+      "household_energy_burden": 4.507355456722546,
+      "industrial_production": 5.568536043472649,
+      "weekly_hours": 0.7299270072992581,
+      "temporary_help": 8.728266558120602
+    },
+    {
+      "date": "1996-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 21.543423523012393,
+      "CI_zscore": -1.4187388007910053,
+      "household_energy_burden": 4.584121788642833,
+      "industrial_production": 4.720645436557502,
+      "weekly_hours": 0.7281553398058138,
+      "temporary_help": 8.307462343336791
+    },
+    {
+      "date": "1996-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 31.527255768017337,
+      "CI_zscore": -1.874352961275167,
+      "household_energy_burden": 4.42680506792856,
+      "industrial_production": 4.952801645891314,
+      "weekly_hours": 0.7263922518159882,
+      "temporary_help": 6.793539643099167
+    },
+    {
+      "date": "1996-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 42.71135753792856,
+      "CI_zscore": -1.6483376688829623,
+      "household_energy_burden": 4.5798944662427274,
+      "industrial_production": 5.168722601692299,
+      "weekly_hours": 0.4854368932038833,
+      "temporary_help": 5.9464648746329285
+    },
+    {
+      "date": "1996-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 31.749340002778958,
+      "CI_zscore": -1.9671086486863145,
+      "household_energy_burden": 4.642195655834316,
+      "industrial_production": 5.855898562613082,
+      "weekly_hours": 0.4842615012106588,
+      "temporary_help": 7.725733634311527
+    },
+    {
+      "date": "1996-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 32.59701694253501,
+      "CI_zscore": -3.214928003023531,
+      "household_energy_burden": 4.624926661637749,
+      "industrial_production": 6.165643121709419,
+      "weekly_hours": 1.9559902200489088,
+      "temporary_help": 8.402273622601154
+    },
+    {
+      "date": "1997-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 33.29315332690452,
+      "CI_zscore": -3.36431723037764,
+      "household_energy_burden": 4.686456524642714,
+      "industrial_production": 6.946049233947327,
+      "weekly_hours": 4.282115869017611,
+      "temporary_help": 11.246999657103673
+    },
+    {
+      "date": "1997-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 16.145891478637697,
+      "CI_zscore": -1.8305383517580316,
+      "household_energy_burden": 4.654292883135874,
+      "industrial_production": 6.661807501031536,
+      "weekly_hours": 0.7263922518159882,
+      "temporary_help": 10.035142522452167
+    },
+    {
+      "date": "1997-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -1.7221750971025407,
+      "CI_zscore": -1.4562248107717408,
+      "household_energy_burden": 4.474258145529046,
+      "industrial_production": 7.470272474009643,
+      "weekly_hours": 1.703163017031617,
+      "temporary_help": 11.658218682114407
+    },
+    {
+      "date": "1997-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -16.179364166961452,
+      "CI_zscore": -1.038842394364415,
+      "household_energy_burden": 4.577470596968147,
+      "industrial_production": 6.536171976339267,
+      "weekly_hours": 1.703163017031617,
+      "temporary_help": 11.855243559331385
+    },
+    {
+      "date": "1997-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -1.636661880627166,
+      "CI_zscore": -0.6681890071445171,
+      "household_energy_burden": 4.387262151237306,
+      "industrial_production": 6.331688761977006,
+      "weekly_hours": 0.7246376811594235,
+      "temporary_help": 11.831477843265636
+    },
+    {
+      "date": "1997-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -5.696868803094468,
+      "CI_zscore": -0.44579554443116526,
+      "household_energy_burden": 4.315322831296723,
+      "industrial_production": 6.012329789391524,
+      "weekly_hours": 0.24096385542169418,
+      "temporary_help": 11.243114807214605
+    },
+    {
+      "date": "1997-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -7.692307692307687,
+      "CI_zscore": -0.7050023864405088,
+      "household_energy_burden": 4.382593400866422,
+      "industrial_production": 6.901473595485519,
+      "weekly_hours": 0.48309178743961567,
+      "temporary_help": 11.69643812172425
+    },
+    {
+      "date": "1997-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -8.904298432594448,
+      "CI_zscore": -0.9759445730916559,
+      "household_energy_burden": 4.344940346105903,
+      "industrial_production": 7.421174007233544,
+      "weekly_hours": 0.48192771084338837,
+      "temporary_help": 9.666118159137959
+    },
+    {
+      "date": "1997-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -17.388009372240642,
+      "CI_zscore": -1.6668195609991208,
+      "household_energy_burden": 4.429482636428065,
+      "industrial_production": 7.7307713474798145,
+      "weekly_hours": 0.24038461538462563,
+      "temporary_help": 10.142245254084937
+    },
+    {
+      "date": "1997-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -14.28471566879871,
+      "CI_zscore": -0.8711535626638311,
+      "household_energy_burden": 4.571721278673305,
+      "industrial_production": 8.653836077256006,
+      "weekly_hours": 0.9661835748792313,
+      "temporary_help": 12.494003517936147
+    },
+    {
+      "date": "1997-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -14.811689985703913,
+      "CI_zscore": -0.4088085531365979,
+      "household_energy_burden": 4.375000000000001,
+      "industrial_production": 8.512624010737335,
+      "weekly_hours": 0.7228915662650603,
+      "temporary_help": 12.08025564461208
+    },
+    {
+      "date": "1997-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -27.333470606403786,
+      "CI_zscore": -0.3113959988932479,
+      "household_energy_burden": 4.393206186545213,
+      "industrial_production": 8.280957988374027,
+      "weekly_hours": 0.7194244604316502,
+      "temporary_help": 12.31959298099885
+    },
+    {
+      "date": "1998-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -33.45487429914993,
+      "CI_zscore": -0.04808290425573062,
+      "household_energy_burden": 4.039359468521827,
+      "industrial_production": 8.58347433946034,
+      "weekly_hours": 1.2077294685990392,
+      "temporary_help": 11.738415699167781
+    },
+    {
+      "date": "1998-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -27.580396345081304,
+      "CI_zscore": 0.4588844118703618,
+      "household_energy_burden": 4.052896372330649,
+      "industrial_production": 7.476143150007708,
+      "weekly_hours": 0.24038461538462563,
+      "temporary_help": 11.015918077664
+    },
+    {
+      "date": "1998-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -27.901480823016712,
+      "CI_zscore": 0.2886877930441622,
+      "household_energy_burden": 4.0379642962206015,
+      "industrial_production": 6.835942439493192,
+      "weekly_hours": -0.7177033492822948,
+      "temporary_help": 9.428314875785704
+    },
+    {
+      "date": "1998-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -22.04389348631214,
+      "CI_zscore": 0.6875072840272614,
+      "household_energy_burden": 3.8935215870030984,
+      "industrial_production": 7.077008185695677,
+      "weekly_hours": -1.4354066985645786,
+      "temporary_help": 8.586506214243439
+    },
+    {
+      "date": "1998-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -28.363677950594692,
+      "CI_zscore": 1.276566304565733,
+      "household_energy_burden": 4.011650187782632,
+      "industrial_production": 7.188999827918208,
+      "weekly_hours": -0.47961630695444457,
+      "temporary_help": 8.383759515908661
+    },
+    {
+      "date": "1998-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -28.754838100632508,
+      "CI_zscore": 1.3453057533313026,
+      "household_energy_burden": 4.096172329097317,
+      "industrial_production": 6.058575229559682,
+      "weekly_hours": -0.48076923076924016,
+      "temporary_help": 9.300970873786408
+    },
+    {
+      "date": "1998-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -27.924179380490056,
+      "CI_zscore": 0.9706650673475551,
+      "household_energy_burden": 3.9894869574464855,
+      "industrial_production": 4.755871384932742,
+      "weekly_hours": -0.48076923076924016,
+      "temporary_help": 7.517356954752219
+    },
+    {
+      "date": "1998-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -32.4813250280423,
+      "CI_zscore": 1.437375826594349,
+      "household_energy_burden": 3.9381748888418375,
+      "industrial_production": 5.865515150473688,
+      "weekly_hours": -0.7194244604316613,
+      "temporary_help": 9.675701839302997
+    },
+    {
+      "date": "1998-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -24.096472455334606,
+      "CI_zscore": 0.5279944005843894,
+      "household_energy_burden": 3.909763090387808,
+      "industrial_production": 4.848836473856544,
+      "weekly_hours": -0.9592326139088891,
+      "temporary_help": 7.662393777905807
+    },
+    {
+      "date": "1998-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -32.188690855710924,
+      "CI_zscore": 1.0698037920533625,
+      "household_energy_burden": 3.7774436090225563,
+      "industrial_production": 4.637794383238925,
+      "weekly_hours": -0.9569377990430561,
+      "temporary_help": 8.263444681355136
+    },
+    {
+      "date": "1998-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -35.61366344690581,
+      "CI_zscore": 1.2464923859846746,
+      "household_energy_burden": 3.6873951593577763,
+      "industrial_production": 3.741486019967022,
+      "weekly_hours": -0.9569377990430561,
+      "temporary_help": 7.847627950455727
+    },
+    {
+      "date": "1998-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -38.10373896657742,
+      "CI_zscore": 1.0032790792118376,
+      "household_energy_burden": 3.7069120019117032,
+      "industrial_production": 3.7695732652959,
+      "weekly_hours": -1.1904761904761862,
+      "temporary_help": 7.825283106078129
+    },
+    {
+      "date": "1999-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -25.168997595639418,
+      "CI_zscore": 0.9516448925709251,
+      "household_energy_burden": 3.718260560037969,
+      "industrial_production": 3.763083805136991,
+      "weekly_hours": -1.4319809069212486,
+      "temporary_help": 8.284676566594662
+    },
+    {
+      "date": "1999-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -25.19499246247623,
+      "CI_zscore": 1.377049848329243,
+      "household_energy_burden": 3.592398136508171,
+      "industrial_production": 4.225398806274816,
+      "weekly_hours": -0.7194244604316613,
+      "temporary_help": 9.018676651901902
+    },
+    {
+      "date": "1999-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -2.9038677269292323,
+      "CI_zscore": 1.5484980662022447,
+      "household_energy_burden": 3.7461976905584597,
+      "industrial_production": 4.425125461604007,
+      "weekly_hours": -0.48192771084337727,
+      "temporary_help": 9.577862873814723
+    },
+    {
+      "date": "1999-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 12.75625717209936,
+      "CI_zscore": 1.0443226192496557,
+      "household_energy_burden": 3.973402530003243,
+      "industrial_production": 4.307254602909483,
+      "weekly_hours": 0.24271844660193054,
+      "temporary_help": 9.76063950583641
+    },
+    {
+      "date": "1999-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 18.804479013007903,
+      "CI_zscore": 0.4018206025596452,
+      "household_energy_burden": 3.936046597143572,
+      "industrial_production": 4.27940147673862,
+      "weekly_hours": -0.24096385542169418,
+      "temporary_help": 9.630796938316077
+    },
+    {
+      "date": "1999-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 30.61812640784418,
+      "CI_zscore": 0.7492083307593843,
+      "household_energy_burden": 3.983176282661899,
+      "industrial_production": 4.826418688874012,
+      "weekly_hours": -0.24154589371980784,
+      "temporary_help": 8.998045834073555
+    },
+    {
+      "date": "1999-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 41.84519991447508,
+      "CI_zscore": 0.743629786365922,
+      "household_energy_burden": 4.100895748840196,
+      "industrial_production": 5.839978413843561,
+      "weekly_hours": 0.0,
+      "temporary_help": 10.220440881763526
+    },
+    {
+      "date": "1999-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 57.94823924087649,
+      "CI_zscore": 0.1243006740203363,
+      "household_energy_burden": 4.106788091474645,
+      "industrial_production": 4.109544569149426,
+      "weekly_hours": 0.24154589371980784,
+      "temporary_help": 9.56352884063727
+    },
+    {
+      "date": "1999-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 58.31274155737185,
+      "CI_zscore": -0.38062256057296073,
+      "household_energy_burden": 4.161120435210371,
+      "industrial_production": 3.7444563415508503,
+      "weekly_hours": 0.2421307506053294,
+      "temporary_help": 10.390189520624293
+    },
+    {
+      "date": "1999-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 56.91564360703734,
+      "CI_zscore": -0.8279619109579096,
+      "household_energy_burden": 4.18037379149847,
+      "industrial_production": 4.29950432876991,
+      "weekly_hours": 0.0,
+      "temporary_help": 11.624141100266971
+    },
+    {
+      "date": "1999-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 92.29486645694547,
+      "CI_zscore": -1.2074121484084948,
+      "household_energy_burden": 3.920142602495543,
+      "industrial_production": 4.884601547870515,
+      "weekly_hours": 0.0,
+      "temporary_help": 11.51079136690647
+    },
+    {
+      "date": "1999-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 130.0321987471483,
+      "CI_zscore": -1.561216119363151,
+      "household_energy_burden": 4.153372674139538,
+      "industrial_production": 5.216917187508963,
+      "weekly_hours": -0.24096385542169418,
+      "temporary_help": 11.604080932784623
+    },
+    {
+      "date": "2000-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 117.81899234586591,
+      "CI_zscore": -1.5941819187843915,
+      "household_energy_burden": 4.068929825297581,
+      "industrial_production": 4.620955049951481,
+      "weekly_hours": 0.4842615012106588,
+      "temporary_help": 11.23848342037106
+    },
+    {
+      "date": "2000-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 144.43792166827305,
+      "CI_zscore": -2.4679449545028818,
+      "household_energy_burden": 4.150172923871828,
+      "industrial_production": 4.313335681097841,
+      "weekly_hours": 0.24154589371980784,
+      "temporary_help": 9.85591019519141
+    },
+    {
+      "date": "2000-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 103.3297784097642,
+      "CI_zscore": -1.8327804172211322,
+      "household_energy_burden": 4.222185439598334,
+      "industrial_production": 4.447293166354416,
+      "weekly_hours": 0.2421307506053294,
+      "temporary_help": 10.055331364146959
+    },
+    {
+      "date": "2000-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 48.576358930112185,
+      "CI_zscore": -1.3273100204158286,
+      "household_energy_burden": 4.2251006139856875,
+      "industrial_production": 4.828026846244748,
+      "weekly_hours": 0.7263922518159882,
+      "temporary_help": 10.961681701564174
+    },
+    {
+      "date": "2000-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 62.47527622644029,
+      "CI_zscore": -1.2119357747524104,
+      "household_energy_burden": 4.268434360691588,
+      "industrial_production": 4.451469064576807,
+      "weekly_hours": -0.48309178743960457,
+      "temporary_help": 8.797075855271252
+    },
+    {
+      "date": "2000-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 77.54812203596157,
+      "CI_zscore": -2.3880925682117966,
+      "household_energy_burden": 4.49204689006914,
+      "industrial_production": 4.574285752844154,
+      "weekly_hours": 0.0,
+      "temporary_help": 7.953712003911684
+    },
+    {
+      "date": "2000-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 47.720985434902104,
+      "CI_zscore": -2.8314268066398,
+      "household_energy_burden": 4.396285664227281,
+      "industrial_production": 3.7698485910728996,
+      "weekly_hours": 0.24154589371980784,
+      "temporary_help": 6.848484848484859
+    },
+    {
+      "date": "2000-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 46.92629973650948,
+      "CI_zscore": -2.4015142272705905,
+      "household_energy_burden": 4.330529361337334,
+      "industrial_production": 3.0734226950164922,
+      "weekly_hours": -0.9638554216867434,
+      "temporary_help": 6.158865705308947
+    },
+    {
+      "date": "2000-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 42.38969043283374,
+      "CI_zscore": -3.0749288853951495,
+      "household_energy_burden": 4.494711320704447,
+      "industrial_production": 3.968806853188922,
+      "weekly_hours": -0.7246376811594124,
+      "temporary_help": 6.645122197535858
+    },
+    {
+      "date": "2000-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 45.908117946017725,
+      "CI_zscore": -1.8628396092337334,
+      "household_energy_burden": 4.414729916162581,
+      "industrial_production": 2.3142184859096693,
+      "weekly_hours": -0.7246376811594124,
+      "temporary_help": 3.1209566751617235
+    },
+    {
+      "date": "2000-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 37.65546138463005,
+      "CI_zscore": -2.166145923357194,
+      "household_energy_burden": 4.459627658165832,
+      "industrial_production": 1.8491278756576968,
+      "weekly_hours": -0.7246376811594124,
+      "temporary_help": 2.3863194714341285
+    },
+    {
+      "date": "2000-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 8.942169114293552,
+      "CI_zscore": -1.2362584738506184,
+      "household_energy_burden": 4.785339208908357,
+      "industrial_production": 0.7397718173229428,
+      "weekly_hours": -2.657004830917875,
+      "temporary_help": -0.6260802765508
+    },
+    {
+      "date": "2001-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 8.533695948983722,
+      "CI_zscore": -1.3538181697894645,
+      "household_energy_burden": 4.581988316321863,
+      "industrial_production": 0.3976490637767949,
+      "weekly_hours": -1.9277108433734869,
+      "temporary_help": -2.04580152671755
+    },
+    {
+      "date": "2001-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 0.8291006068600559,
+      "CI_zscore": -1.5812836125979501,
+      "household_energy_burden": 4.518794640529691,
+      "industrial_production": -0.5668458865284554,
+      "weekly_hours": -2.409638554216864,
+      "temporary_help": -3.393449498608303
+    },
+    {
+      "date": "2001-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -8.703224917747898,
+      "CI_zscore": -1.206049732901071,
+      "household_energy_burden": 4.480074841157439,
+      "industrial_production": -1.122295725249156,
+      "weekly_hours": -2.1739130434782594,
+      "temporary_help": -6.0520148181749445
+    },
+    {
+      "date": "2001-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 6.873056146668843,
+      "CI_zscore": -0.346306919700298,
+      "household_energy_burden": 4.342457563232733,
+      "industrial_production": -2.0602186217959284,
+      "weekly_hours": -2.8846153846153966,
+      "temporary_help": -10.41954130151035
+    },
+    {
+      "date": "2001-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -0.5526257618340913,
+      "CI_zscore": -0.038632652253132845,
+      "household_energy_burden": 4.537544479364173,
+      "industrial_production": -2.791181055600911,
+      "weekly_hours": -1.9417475728155442,
+      "temporary_help": -10.1392925899362
+    },
+    {
+      "date": "2001-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -13.271286888964617,
+      "CI_zscore": -0.27372599491816124,
+      "household_energy_burden": 4.380224194907018,
+      "industrial_production": -3.3422163718917375,
+      "weekly_hours": -2.421307506053272,
+      "temporary_help": -11.568657054427423
+    },
+    {
+      "date": "2001-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -11.018276586120068,
+      "CI_zscore": -0.31300219521194167,
+      "household_energy_burden": 4.229148039340912,
+      "industrial_production": -3.773511714911293,
+      "weekly_hours": -2.168674698795181,
+      "temporary_help": -12.490073737946695
+    },
+    {
+      "date": "2001-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -12.442460400239197,
+      "CI_zscore": -0.5327099248513173,
+      "household_energy_burden": 4.000904727199617,
+      "industrial_production": -3.6215277665228585,
+      "weekly_hours": -1.946472019464729,
+      "temporary_help": -12.915955226712207
+    },
+    {
+      "date": "2001-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -22.678923137142814,
+      "CI_zscore": -0.09746926573608872,
+      "household_energy_burden": 4.217058995587094,
+      "industrial_production": -4.55015745457048,
+      "weekly_hours": -2.1897810218978075,
+      "temporary_help": -14.43181818181818
+    },
+    {
+      "date": "2001-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -33.039932620902455,
+      "CI_zscore": 0.018373915721150925,
+      "household_energy_burden": 4.069047373309939,
+      "industrial_production": -4.440502321905382,
+      "weekly_hours": -2.4330900243308973,
+      "temporary_help": -15.64579293562982
+    },
+    {
+      "date": "2001-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -42.94994188942388,
+      "CI_zscore": 0.017214826237501486,
+      "household_energy_burden": 3.7047066408768536,
+      "industrial_production": -5.044913960783126,
+      "weekly_hours": -2.676399026763998,
+      "temporary_help": -18.08381415122988
+    },
+    {
+      "date": "2001-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -31.8166885220718,
+      "CI_zscore": 0.19984546278431706,
+      "household_energy_burden": 3.653932873800168,
+      "industrial_production": -4.774776238202749,
+      "weekly_hours": -0.2481389578163684,
+      "temporary_help": -17.35466914038343
+    },
+    {
+      "date": "2002-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -33.363914373088676,
+      "CI_zscore": 0.7226781729477257,
+      "household_energy_burden": 3.461014726649183,
+      "industrial_production": -3.682618441383212,
+      "weekly_hours": -1.2285012285012331,
+      "temporary_help": -16.33026807980049
+    },
+    {
+      "date": "2002-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -30.009954139855665,
+      "CI_zscore": 0.6503945728762789,
+      "household_energy_burden": 3.497505372560355,
+      "industrial_production": -3.0399744149724905,
+      "weekly_hours": -0.7407407407407307,
+      "temporary_help": -14.883372143505547
+    },
+    {
+      "date": "2002-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -9.95995862391138,
+      "CI_zscore": 0.5455172102779111,
+      "household_energy_burden": 3.726015730674816,
+      "industrial_production": -2.1374903694403535,
+      "weekly_hours": 0.0,
+      "temporary_help": -11.861747072787999
+    },
+    {
+      "date": "2002-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -4.768676212837708,
+      "CI_zscore": 0.06732015084946041,
+      "household_energy_burden": 3.8187106879148742,
+      "industrial_production": -1.3053329089064758,
+      "weekly_hours": 0.4950495049504955,
+      "temporary_help": -7.714083510261838
+    },
+    {
+      "date": "2002-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -5.5458529150260505,
+      "CI_zscore": -0.5079247421463462,
+      "household_energy_burden": 3.9359069537243263,
+      "industrial_production": -0.43328851038398897,
+      "weekly_hours": 0.4950495049504955,
+      "temporary_help": -6.486032346145776
+    },
+    {
+      "date": "2002-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -7.538476137892969,
+      "CI_zscore": -0.04554057804322308,
+      "household_energy_burden": 3.8885192577807355,
+      "industrial_production": 0.920910919642548,
+      "weekly_hours": 0.992555831265518,
+      "temporary_help": -4.81454607537668
+    },
+    {
+      "date": "2002-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 2.048943991926766,
+      "CI_zscore": -0.3583851248596571,
+      "household_energy_burden": 3.966326895344681,
+      "industrial_production": 1.5386975548359105,
+      "weekly_hours": -0.49261083743843415,
+      "temporary_help": -5.431682654913139
+    },
+    {
+      "date": "2002-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 3.6936149936467544,
+      "CI_zscore": -0.573604852953042,
+      "household_energy_burden": 3.949180892409111,
+      "industrial_production": 1.5424836015125454,
+      "weekly_hours": 0.496277915632759,
+      "temporary_help": -2.784192409916786
+    },
+    {
+      "date": "2002-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 13.221740091203117,
+      "CI_zscore": -1.750890529619267,
+      "household_energy_burden": 3.954130128165818,
+      "industrial_production": 2.146064440525741,
+      "weekly_hours": 0.746268656716409,
+      "temporary_help": -2.275343072155822
+    },
+    {
+      "date": "2002-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 30.072563247695648,
+      "CI_zscore": -1.6897524117017402,
+      "household_energy_burden": 4.135531135531136,
+      "industrial_production": 2.2135422551443185,
+      "weekly_hours": 0.4987531172069737,
+      "temporary_help": -0.7211755160912325
+    },
+    {
+      "date": "2002-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 34.209856191280366,
+      "CI_zscore": -1.454694838170023,
+      "household_energy_burden": 4.069046055032479,
+      "industrial_production": 3.4115039217915255,
+      "weekly_hours": 1.0000000000000009,
+      "temporary_help": 0.8480074142724892
+    },
+    {
+      "date": "2002-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 51.94714710988224,
+      "CI_zscore": -1.4433738737938568,
+      "household_energy_burden": 4.0335482619867165,
+      "industrial_production": 2.880394484854265,
+      "weekly_hours": 0.746268656716409,
+      "temporary_help": 0.9868113366383158
+    },
+    {
+      "date": "2003-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 67.11915171131133,
+      "CI_zscore": -2.0343317850963194,
+      "household_energy_burden": 4.2912433478471215,
+      "industrial_production": 3.071140654513904,
+      "weekly_hours": 0.24875621890545485,
+      "temporary_help": 2.305220509477013
+    },
+    {
+      "date": "2003-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 72.8863492063492,
+      "CI_zscore": -1.790152141337329,
+      "household_energy_burden": 4.478712219174109,
+      "industrial_production": 3.1817124112425654,
+      "weekly_hours": 0.24875621890545485,
+      "temporary_help": 1.126773625150701
+    },
+    {
+      "date": "2003-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 36.616254263313095,
+      "CI_zscore": -2.1299330069894,
+      "household_energy_burden": 4.424182644886569,
+      "industrial_production": 2.1709435832793167,
+      "weekly_hours": -0.24691358024692134,
+      "temporary_help": -1.0910750970098193
+    },
+    {
+      "date": "2003-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 7.606777822425292,
+      "CI_zscore": -2.850761769247763,
+      "household_energy_burden": 4.3534022941662975,
+      "industrial_production": 1.0688138922369639,
+      "weekly_hours": -1.2315270935960632,
+      "temporary_help": -3.3291230602670585
+    },
+    {
+      "date": "2003-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 3.946575352334203,
+      "CI_zscore": -2.966015762801834,
+      "household_energy_burden": 4.012007433172917,
+      "industrial_production": 0.636921435240767,
+      "weekly_hours": -0.9852216748768461,
+      "temporary_help": -1.6216701855262472
+    },
+    {
+      "date": "2003-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 20.15745812795011,
+      "CI_zscore": -2.39331302392324,
+      "household_energy_burden": 3.901020650367909,
+      "industrial_production": -0.05887145406980876,
+      "weekly_hours": -0.982800982801002,
+      "temporary_help": -0.36769651585130125
+    },
+    {
+      "date": "2003-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 14.04853600548388,
+      "CI_zscore": -2.3849940882219296,
+      "household_energy_burden": 3.977877296165944,
+      "industrial_production": 0.48700385655000566,
+      "weekly_hours": -0.7425742574257321,
+      "temporary_help": 2.6867717614804665
+    },
+    {
+      "date": "2003-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 11.234136071197899,
+      "CI_zscore": -1.6902850803363592,
+      "household_energy_burden": 4.19671068621891,
+      "industrial_production": 0.37923869625795525,
+      "weekly_hours": -0.7407407407407307,
+      "temporary_help": 0.6857296522051026
+    },
+    {
+      "date": "2003-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -4.558030672615931,
+      "CI_zscore": -1.6347510178517948,
+      "household_energy_burden": 4.287748290269122,
+      "industrial_production": 0.9407289987876988,
+      "weekly_hours": 0.0,
+      "temporary_help": 2.4143866642507783
+    },
+    {
+      "date": "2003-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 5.2077679271455235,
+      "CI_zscore": -0.6779809319730493,
+      "household_energy_burden": 4.186187093849176,
+      "industrial_production": 1.2759729528664998,
+      "weekly_hours": 0.7444168734491496,
+      "temporary_help": 2.674112412603291
+    },
+    {
+      "date": "2003-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 18.048759378724032,
+      "CI_zscore": -0.8738803102572562,
+      "household_energy_burden": 4.165079804729426,
+      "industrial_production": 1.387033904173962,
+      "weekly_hours": 1.2376237623762387,
+      "temporary_help": 4.5719799659973415
+    },
+    {
+      "date": "2003-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 9.056378095299689,
+      "CI_zscore": -1.5636402161471255,
+      "household_energy_burden": 4.236664058544668,
+      "industrial_production": 1.9841883950955763,
+      "weekly_hours": 0.4938271604938427,
+      "temporary_help": 6.270550641411554
+    },
+    {
+      "date": "2004-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 4.136495685730401,
+      "CI_zscore": -1.6532612082925138,
+      "household_energy_burden": 4.423317315962705,
+      "industrial_production": 1.2763588097255418,
+      "weekly_hours": 1.488833746898277,
+      "temporary_help": 4.606700655498908
+    },
+    {
+      "date": "2004-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -3.1921144636718912,
+      "CI_zscore": -1.119728893207594,
+      "household_energy_burden": 4.439164258216338,
+      "industrial_production": 1.7663898756903773,
+      "weekly_hours": 1.7369727047146455,
+      "temporary_help": 5.928745013526515
+    },
+    {
+      "date": "2004-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 9.631900779270186,
+      "CI_zscore": -0.7704566621064804,
+      "household_energy_burden": 4.275912209751443,
+      "industrial_production": 1.626375894029275,
+      "weekly_hours": 1.2376237623762387,
+      "temporary_help": 6.789439675066911
+    },
+    {
+      "date": "2004-04-01",
+      "GM2_YoY": 12.494522878342806,
+      "WTI_YoY": 30.455728726461317,
+      "CI_zscore": -0.8034793068451066,
+      "household_energy_burden": 4.306701322183297,
+      "industrial_production": 2.615123170170186,
+      "weekly_hours": 1.4962593516209433,
+      "temporary_help": 9.785347643490416
+    },
+    {
+      "date": "2004-05-01",
+      "GM2_YoY": 8.329745338916172,
+      "WTI_YoY": 43.28369587314496,
+      "CI_zscore": -0.8926409221194496,
+      "household_energy_burden": 4.408204438466711,
+      "industrial_production": 3.38458309862264,
+      "weekly_hours": 2.238805970149249,
+      "temporary_help": 8.735159817351601
+    },
+    {
+      "date": "2004-06-01",
+      "GM2_YoY": 9.150879371268395,
+      "WTI_YoY": 24.01267257846593,
+      "CI_zscore": -0.375199359950489,
+      "household_energy_burden": 4.464475197980542,
+      "industrial_production": 2.447031362551799,
+      "weekly_hours": 1.2406947890818865,
+      "temporary_help": 7.277555245510592
+    },
+    {
+      "date": "2004-07-01",
+      "GM2_YoY": 10.20367223196208,
+      "WTI_YoY": 32.5920921132272,
+      "CI_zscore": -0.22157456136166412,
+      "household_energy_burden": 4.410422002004231,
+      "industrial_production": 2.6848554355043186,
+      "weekly_hours": 1.74563591022443,
+      "temporary_help": 6.652427357273161
+    },
+    {
+      "date": "2004-08-01",
+      "GM2_YoY": 9.872316412743999,
+      "WTI_YoY": 42.216547497446385,
+      "CI_zscore": -0.47635859082767446,
+      "household_energy_burden": 4.384826193566998,
+      "industrial_production": 2.9784524146032165,
+      "weekly_hours": 1.492537313432818,
+      "temporary_help": 6.979746271978637
+    },
+    {
+      "date": "2004-09-01",
+      "GM2_YoY": 9.30988468844438,
+      "WTI_YoY": 62.25148854576648,
+      "CI_zscore": -1.3878841555136003,
+      "household_energy_burden": 4.46948398379563,
+      "industrial_production": 2.448803847620762,
+      "weekly_hours": 0.4938271604938427,
+      "temporary_help": 7.006059533813969
+    },
+    {
+      "date": "2004-10-01",
+      "GM2_YoY": 7.828093556966853,
+      "WTI_YoY": 75.62139247054265,
+      "CI_zscore": -1.196821699087242,
+      "household_energy_burden": 4.6574406663875365,
+      "industrial_production": 3.1957484615569243,
+      "weekly_hours": 0.0,
+      "temporary_help": 9.533495467609999
+    },
+    {
+      "date": "2004-11-01",
+      "GM2_YoY": 10.449878835039051,
+      "WTI_YoY": 55.80712563621753,
+      "CI_zscore": -0.30992595714878024,
+      "household_energy_burden": 4.7999735720656735,
+      "industrial_production": 2.763005391785356,
+      "weekly_hours": -0.9779951100244433,
+      "temporary_help": 8.067492749802252
+    },
+    {
+      "date": "2004-12-01",
+      "GM2_YoY": 9.927306176010674,
+      "WTI_YoY": 34.30066250685479,
+      "CI_zscore": 0.26786974874651953,
+      "household_energy_burden": 4.581838255589291,
+      "industrial_production": 3.551152067738861,
+      "weekly_hours": -0.24570024570025328,
+      "temporary_help": 5.904911317383532
+    },
+    {
+      "date": "2005-01-01",
+      "GM2_YoY": 8.15772372747421,
+      "WTI_YoY": 36.5112212183037,
+      "CI_zscore": 0.4570194255216762,
+      "household_energy_burden": 4.651956574398273,
+      "industrial_production": 3.7656681883018184,
+      "weekly_hours": -0.4889975550122161,
+      "temporary_help": 7.023498694516972
+    },
+    {
+      "date": "2005-02-01",
+      "GM2_YoY": 7.357829716373665,
+      "WTI_YoY": 38.8188343120742,
+      "CI_zscore": 0.619598161511774,
+      "household_energy_burden": 4.657774850430869,
+      "industrial_production": 3.8921878697906642,
+      "weekly_hours": -0.7317073170731603,
+      "temporary_help": 7.847805384815176
+    },
+    {
+      "date": "2005-03-01",
+      "GM2_YoY": 9.1221242123257,
+      "WTI_YoY": 47.48202096702183,
+      "CI_zscore": 0.9583287093471345,
+      "household_energy_burden": 4.829210836277974,
+      "industrial_production": 4.168552298887196,
+      "weekly_hours": -1.2224938875305624,
+      "temporary_help": 7.701949258763041
+    },
+    {
+      "date": "2005-04-01",
+      "GM2_YoY": 8.295095166639687,
+      "WTI_YoY": 44.160673793326865,
+      "CI_zscore": 1.3572448689155854,
+      "household_energy_burden": 4.8234439541615615,
+      "industrial_production": 4.006456472613795,
+      "weekly_hours": -0.7371007371007487,
+      "temporary_help": 6.6094274663152985
+    },
+    {
+      "date": "2005-05-01",
+      "GM2_YoY": 8.874003857840274,
+      "WTI_YoY": 23.733853566255792,
+      "CI_zscore": 1.9515368179802568,
+      "household_energy_burden": 4.749368836717519,
+      "industrial_production": 3.3534790649275337,
+      "weekly_hours": -1.7031630170316392,
+      "temporary_help": 5.232436064334611
+    },
+    {
+      "date": "2005-06-01",
+      "GM2_YoY": 6.21540862042349,
+      "WTI_YoY": 48.19702794794527,
+      "CI_zscore": 1.8422468847635531,
+      "household_energy_burden": 4.736847768774682,
+      "industrial_production": 4.6347083589064475,
+      "weekly_hours": -0.9803921568627416,
+      "temporary_help": 6.112602785702315
+    },
+    {
+      "date": "2005-07-01",
+      "GM2_YoY": 5.145212008682432,
+      "WTI_YoY": 44.674486769273905,
+      "CI_zscore": 1.6031173401062968,
+      "household_energy_burden": 5.047045096926815,
+      "industrial_production": 3.5298493345260917,
+      "weekly_hours": -0.7352941176470562,
+      "temporary_help": 5.924566088117489
+    },
+    {
+      "date": "2005-08-01",
+      "GM2_YoY": 7.02318100086432,
+      "WTI_YoY": 44.72296786102377,
+      "CI_zscore": 3.160131845939086,
+      "household_energy_burden": 5.331672840294631,
+      "industrial_production": 3.797594088074363,
+      "weekly_hours": -0.7352941176470562,
+      "temporary_help": 6.45778720925394
+    },
+    {
+      "date": "2005-09-01",
+      "GM2_YoY": 6.90533221325782,
+      "WTI_YoY": 42.77924635878296,
+      "CI_zscore": 2.274825835058993,
+      "household_energy_burden": 5.817693235437252,
+      "industrial_production": 1.6574450087309733,
+      "weekly_hours": 0.0,
+      "temporary_help": 7.473236060017352
+    },
+    {
+      "date": "2005-10-01",
+      "GM2_YoY": 4.28539398181893,
+      "WTI_YoY": 16.85330997685206,
+      "CI_zscore": 2.7645362813209546,
+      "household_energy_burden": 5.718487394957983,
+      "industrial_production": 2.0209103457029087,
+      "weekly_hours": 0.9852216748768461,
+      "temporary_help": 5.155221831980961
+    },
+    {
+      "date": "2005-11-01",
+      "GM2_YoY": 0.6060648189382567,
+      "WTI_YoY": 20.3294889517011,
+      "CI_zscore": 3.1598361310362733,
+      "household_energy_burden": 5.233482572492573,
+      "industrial_production": 2.9120723180627417,
+      "weekly_hours": 0.9876543209876409,
+      "temporary_help": 6.9732455070342425
+    },
+    {
+      "date": "2005-12-01",
+      "GM2_YoY": -0.2611269229947144,
+      "WTI_YoY": 37.68843666541595,
+      "CI_zscore": 2.631581368724438,
+      "household_energy_burden": 5.234231603537461,
+      "industrial_production": 2.6259073757150198,
+      "weekly_hours": 0.49261083743841194,
+      "temporary_help": 8.365566620031274
+    },
+    {
+      "date": "2006-01-01",
+      "GM2_YoY": 1.6628618256134375,
+      "WTI_YoY": 39.81467643102674,
+      "CI_zscore": 2.0651570133395047,
+      "household_energy_burden": 5.005805172254359,
+      "industrial_production": 2.4194801632455576,
+      "weekly_hours": 0.7371007371007376,
+      "temporary_help": 6.7008213385378435
+    },
+    {
+      "date": "2006-02-01",
+      "GM2_YoY": 1.5227872483109195,
+      "WTI_YoY": 28.000830755440887,
+      "CI_zscore": 2.1111434435009175,
+      "household_energy_burden": 5.2038604670183615,
+      "industrial_production": 1.7242361205308532,
+      "weekly_hours": 0.7371007371007376,
+      "temporary_help": 5.635159542444312
+    },
+    {
+      "date": "2006-03-01",
+      "GM2_YoY": 1.6332139959750247,
+      "WTI_YoY": 15.68351767946714,
+      "CI_zscore": 2.575242960360452,
+      "household_energy_burden": 5.140481418232089,
+      "industrial_production": 2.091541760329152,
+      "weekly_hours": 1.7326732673267342,
+      "temporary_help": 5.955295156306439
+    },
+    {
+      "date": "2006-04-01",
+      "GM2_YoY": 3.806709947763265,
+      "WTI_YoY": 31.077637918049604,
+      "CI_zscore": 2.4517248225482926,
+      "household_energy_burden": 5.2749299138725,
+      "industrial_production": 2.1816142662632876,
+      "weekly_hours": 1.980198019801982,
+      "temporary_help": 5.095287457140585
+    },
+    {
+      "date": "2006-05-01",
+      "GM2_YoY": 6.614252519796948,
+      "WTI_YoY": 42.1606968964376,
+      "CI_zscore": 2.0320293638966893,
+      "household_energy_burden": 5.414659273399388,
+      "industrial_production": 2.1156664964513183,
+      "weekly_hours": 1.980198019801982,
+      "temporary_help": 5.922024023304995
+    },
+    {
+      "date": "2006-06-01",
+      "GM2_YoY": 7.510946255059769,
+      "WTI_YoY": 25.90602944141964,
+      "CI_zscore": 2.1776041415726293,
+      "household_energy_burden": 5.3390487115243355,
+      "industrial_production": 1.9803386251444621,
+      "weekly_hours": 1.980198019801982,
+      "temporary_help": 4.720673704186917
+    },
+    {
+      "date": "2006-07-01",
+      "GM2_YoY": 7.948354705598071,
+      "WTI_YoY": 26.13004827754477,
+      "CI_zscore": 2.0231062169354797,
+      "household_energy_burden": 5.799616769831158,
+      "industrial_production": 2.251836527383766,
+      "weekly_hours": 2.2222222222222143,
+      "temporary_help": 4.084606900898047
+    },
+    {
+      "date": "2006-08-01",
+      "GM2_YoY": 6.999941386742026,
+      "WTI_YoY": 12.399475465992271,
+      "CI_zscore": 2.2864420045831446,
+      "household_energy_burden": 5.671160756288223,
+      "industrial_production": 2.3669704568583194,
+      "weekly_hours": 1.4814814814814836,
+      "temporary_help": 3.631033808872397
+    },
+    {
+      "date": "2006-09-01",
+      "GM2_YoY": 6.785230878399484,
+      "WTI_YoY": -2.7271803212034817,
+      "CI_zscore": 2.7723267987152003,
+      "household_energy_burden": 5.2813878740691935,
+      "industrial_production": 4.2159275134967755,
+      "weekly_hours": 0.9828009828009687,
+      "temporary_help": 1.6383985231337217
+    },
+    {
+      "date": "2006-10-01",
+      "GM2_YoY": 7.815559552420259,
+      "WTI_YoY": -5.407674561224196,
+      "CI_zscore": 2.928244588361988,
+      "household_energy_burden": 4.986105439297204,
+      "industrial_production": 2.8481025781383007,
+      "weekly_hours": 0.24390243902439046,
+      "temporary_help": 0.9789619164619179
+    },
+    {
+      "date": "2006-11-01",
+      "GM2_YoY": 10.678336435009882,
+      "WTI_YoY": 1.3030991469844322,
+      "CI_zscore": 2.8195025734396264,
+      "household_energy_burden": 4.798595823168918,
+      "industrial_production": 1.6621660136106442,
+      "weekly_hours": 0.24449877750611915,
+      "temporary_help": -0.15584020677333887
+    },
+    {
+      "date": "2006-12-01",
+      "GM2_YoY": 11.787035580872217,
+      "WTI_YoY": 4.287179898208637,
+      "CI_zscore": 1.8563581310706656,
+      "household_energy_burden": 4.878936291575696,
+      "industrial_production": 2.1707334984272686,
+      "weekly_hours": 0.7352941176470784,
+      "temporary_help": 0.15188912094170615
+    },
+    {
+      "date": "2007-01-01",
+      "GM2_YoY": 9.243258425375412,
+      "WTI_YoY": -16.765380657875106,
+      "CI_zscore": 1.253066011598237,
+      "household_energy_burden": 4.9949021606995805,
+      "industrial_production": 1.6646656462990128,
+      "weekly_hours": 0.0,
+      "temporary_help": 1.0860452709397173
+    },
+    {
+      "date": "2007-02-01",
+      "GM2_YoY": 10.863978819390718,
+      "WTI_YoY": -3.8164288337218966,
+      "CI_zscore": 1.2625995738671207,
+      "household_energy_burden": 5.172514562917649,
+      "industrial_production": 2.5793632616832207,
+      "weekly_hours": -0.24390243902439046,
+      "temporary_help": 0.4179490102207639
+    },
+    {
+      "date": "2007-03-01",
+      "GM2_YoY": 11.865756590026354,
+      "WTI_YoY": -3.578832941556276,
+      "CI_zscore": 0.9005370496421576,
+      "household_energy_burden": 5.084647383186611,
+      "industrial_production": 2.5308035115800154,
+      "weekly_hours": 0.48661800486617945,
+      "temporary_help": 0.24239669734498204
+    },
+    {
+      "date": "2007-04-01",
+      "GM2_YoY": 11.325264440413264,
+      "WTI_YoY": -7.872111442062102,
+      "CI_zscore": 0.8727051627658472,
+      "household_energy_burden": 5.413193273261697,
+      "industrial_production": 2.9076019270608766,
+      "weekly_hours": 0.24271844660193054,
+      "temporary_help": -0.24279210925645112
+    },
+    {
+      "date": "2007-05-01",
+      "GM2_YoY": 8.732754662101328,
+      "WTI_YoY": -10.430715335211127,
+      "CI_zscore": 1.1485893836552137,
+      "household_energy_burden": 5.254160784426709,
+      "industrial_production": 2.9798485426711263,
+      "weekly_hours": -0.24271844660194164,
+      "temporary_help": -1.616245337753841
+    },
+    {
+      "date": "2007-06-01",
+      "GM2_YoY": 9.450690348863855,
+      "WTI_YoY": -4.87923483464574,
+      "CI_zscore": 1.4482243061791253,
+      "household_energy_burden": 5.3120595257500645,
+      "industrial_production": 2.7140344521729087,
+      "weekly_hours": 0.4854368932038833,
+      "temporary_help": -1.6762940310340757
+    },
+    {
+      "date": "2007-07-01",
+      "GM2_YoY": 11.459615472809492,
+      "WTI_YoY": -0.39434139631477905,
+      "CI_zscore": 2.0658489449857216,
+      "household_energy_burden": 5.344146591050372,
+      "industrial_production": 2.6434417747193573,
+      "weekly_hours": -0.24154589371980784,
+      "temporary_help": -1.8694418164616922
+    },
+    {
+      "date": "2007-08-01",
+      "GM2_YoY": 11.84221774208767,
+      "WTI_YoY": -0.9404817885820815,
+      "CI_zscore": 1.5214187919609323,
+      "household_energy_burden": 5.327066196631415,
+      "industrial_production": 2.3917510021752353,
+      "weekly_hours": 0.48661800486617945,
+      "temporary_help": -2.440220260994197
+    },
+    {
+      "date": "2007-09-01",
+      "GM2_YoY": 13.498859525406859,
+      "WTI_YoY": 25.26213492915963,
+      "CI_zscore": 1.2620723903357118,
+      "household_energy_burden": 5.402837297251071,
+      "industrial_production": 2.7901202497425004,
+      "weekly_hours": 0.48661800486617945,
+      "temporary_help": -3.2428955235176082
+    },
+    {
+      "date": "2007-10-01",
+      "GM2_YoY": 15.252726049373821,
+      "WTI_YoY": 45.68527799543285,
+      "CI_zscore": 0.8419909964639796,
+      "household_energy_burden": 5.255074469799675,
+      "industrial_production": 2.6179282370540014,
+      "weekly_hours": 0.24330900243310083,
+      "temporary_help": -2.36855111584231
+    },
+    {
+      "date": "2007-11-01",
+      "GM2_YoY": 16.585029480468894,
+      "WTI_YoY": 60.40685643359871,
+      "CI_zscore": 0.25149111607599867,
+      "household_energy_burden": 5.650885339978103,
+      "industrial_production": 3.2087670061424323,
+      "weekly_hours": 0.7317073170731714,
+      "temporary_help": -2.790467488959958
+    },
+    {
+      "date": "2007-12-01",
+      "GM2_YoY": 14.276870238254702,
+      "WTI_YoY": 47.980115883083975,
+      "CI_zscore": -0.2878861117533163,
+      "household_energy_burden": 5.642453909488176,
+      "industrial_production": 2.2029778334589523,
+      "weekly_hours": 0.0,
+      "temporary_help": -3.624644549763034
+    },
+    {
+      "date": "2008-01-01",
+      "GM2_YoY": 18.03778957408437,
+      "WTI_YoY": 70.56865537335206,
+      "CI_zscore": -0.3634494817804915,
+      "household_energy_burden": 5.594320676287889,
+      "industrial_production": 2.4141930753466267,
+      "weekly_hours": 0.24390243902439046,
+      "temporary_help": -3.916764051720878
+    },
+    {
+      "date": "2008-02-01",
+      "GM2_YoY": 18.433148449325753,
+      "WTI_YoY": 60.910414631980814,
+      "CI_zscore": 0.17655282151172594,
+      "household_energy_burden": 5.646205887560455,
+      "industrial_production": 1.0602796518591306,
+      "weekly_hours": 0.4889975550122383,
+      "temporary_help": -5.18369972378826
+    },
+    {
+      "date": "2008-03-01",
+      "GM2_YoY": 20.704010405539798,
+      "WTI_YoY": 74.47191890021958,
+      "CI_zscore": 0.23701674046647614,
+      "household_energy_burden": 5.8409348468240845,
+      "industrial_production": 0.5734255066876637,
+      "weekly_hours": 0.0,
+      "temporary_help": -6.07926852306645
+    },
+    {
+      "date": "2008-04-01",
+      "GM2_YoY": 20.80012348754494,
+      "WTI_YoY": 75.97019951772441,
+      "CI_zscore": -0.02500335866608842,
+      "household_energy_burden": 5.760604537755691,
+      "industrial_production": -0.7427676334748168,
+      "weekly_hours": -0.2421307506053183,
+      "temporary_help": -6.327958624885921
+    },
+    {
+      "date": "2008-05-01",
+      "GM2_YoY": 20.36423902737241,
+      "WTI_YoY": 97.61802428707873,
+      "CI_zscore": -0.18858692518163914,
+      "household_energy_burden": 5.633031574298961,
+      "industrial_production": -1.4383086308347726,
+      "weekly_hours": -0.24330900243308973,
+      "temporary_help": -7.0230527686298565
+    },
+    {
+      "date": "2008-06-01",
+      "GM2_YoY": 20.199749751210415,
+      "WTI_YoY": 98.3729282352692,
+      "CI_zscore": -0.9171950877923424,
+      "household_energy_burden": 6.144311721954378,
+      "industrial_production": -1.724935725071297,
+      "weekly_hours": -0.9661835748792202,
+      "temporary_help": -7.725684444956427
+    },
+    {
+      "date": "2008-07-01",
+      "GM2_YoY": 19.324559972231214,
+      "WTI_YoY": 79.94494535128149,
+      "CI_zscore": -0.9125993564054736,
+      "household_energy_burden": 6.291080665836341,
+      "industrial_production": -1.9585471027037116,
+      "weekly_hours": -0.7263922518159771,
+      "temporary_help": -8.622883807026337
+    },
+    {
+      "date": "2008-08-01",
+      "GM2_YoY": 15.525589476108648,
+      "WTI_YoY": 61.23894392781959,
+      "CI_zscore": -0.5157381150632422,
+      "household_energy_burden": 6.067981151928268,
+      "industrial_production": -3.6832804845724265,
+      "weekly_hours": -0.9685230024213065,
+      "temporary_help": -9.58363938609037
+    },
+    {
+      "date": "2008-09-01",
+      "GM2_YoY": 13.25468028416108,
+      "WTI_YoY": 30.281710018007924,
+      "CI_zscore": -0.48963236546822725,
+      "household_energy_burden": 5.966746016544906,
+      "industrial_production": -8.130031129578574,
+      "weekly_hours": -1.937046004842613,
+      "temporary_help": -9.820101681658189
+    },
+    {
+      "date": "2008-10-01",
+      "GM2_YoY": 11.368100404978243,
+      "WTI_YoY": -10.71111854340544,
+      "CI_zscore": 0.06637570233794658,
+      "household_energy_burden": 5.679943865788202,
+      "industrial_production": -6.954317961916079,
+      "weekly_hours": -1.6990291262136026,
+      "temporary_help": -13.115264797507798
+    },
+    {
+      "date": "2008-11-01",
+      "GM2_YoY": 8.210077697901008,
+      "WTI_YoY": -39.52935115874521,
+      "CI_zscore": 0.28239314275254884,
+      "household_energy_burden": 4.699428571428571,
+      "industrial_production": -8.669827230747885,
+      "weekly_hours": -2.9055690072639084,
+      "temporary_help": -16.69864891325632
+    },
+    {
+      "date": "2008-12-01",
+      "GM2_YoY": 13.208578938109628,
+      "WTI_YoY": -55.1497833042654,
+      "CI_zscore": 0.7855720232797093,
+      "household_energy_burden": 4.2111194243541075,
+      "industrial_production": -11.276192783181926,
+      "weekly_hours": -3.1630170316301776,
+      "temporary_help": -19.33199575120973
+    },
+    {
+      "date": "2009-01-01",
+      "GM2_YoY": 11.289588383363537,
+      "WTI_YoY": -55.13629518843668,
+      "CI_zscore": 1.6868441744164555,
+      "household_energy_burden": 4.274893265390442,
+      "industrial_production": -13.374567704176643,
+      "weekly_hours": -3.406326034063256,
+      "temporary_help": -22.8264281230383
+    },
+    {
+      "date": "2009-02-01",
+      "GM2_YoY": 8.784145035078271,
+      "WTI_YoY": -59.02190214386531,
+      "CI_zscore": 2.2451689943913675,
+      "household_energy_burden": 4.353378866122495,
+      "industrial_production": -13.562730377303279,
+      "weekly_hours": -3.649635036496346,
+      "temporary_help": -24.246777604852554
+    },
+    {
+      "date": "2009-03-01",
+      "GM2_YoY": 5.349932608808272,
+      "WTI_YoY": -54.54028210490743,
+      "CI_zscore": 2.108629455077502,
+      "household_energy_burden": 4.356929119998518,
+      "industrial_production": -14.656035046526473,
+      "weekly_hours": -4.842615012106533,
+      "temporary_help": -26.148523614128262
+    },
+    {
+      "date": "2009-04-01",
+      "GM2_YoY": 5.095743408671671,
+      "WTI_YoY": -55.901166976882536,
+      "CI_zscore": 2.607028908925932,
+      "household_energy_burden": 4.225041367898511,
+      "industrial_production": -14.81395936696125,
+      "weekly_hours": -4.368932038834961,
+      "temporary_help": -27.813413445923995
+    },
+    {
+      "date": "2009-05-01",
+      "GM2_YoY": 7.400658436729768,
+      "WTI_YoY": -52.926937171283726,
+      "CI_zscore": 2.318687259142004,
+      "household_energy_burden": 4.180695847362514,
+      "industrial_production": -15.160361194166793,
+      "weekly_hours": -4.146341463414638,
+      "temporary_help": -26.94810543657331
+    },
+    {
+      "date": "2009-06-01",
+      "GM2_YoY": 9.055414675713758,
+      "WTI_YoY": -47.98258956460331,
+      "CI_zscore": 1.4482565633104332,
+      "household_energy_burden": 4.661712013049495,
+      "industrial_production": -15.282480369076357,
+      "weekly_hours": -3.4146341463414553,
+      "temporary_help": -27.019266780408635
+    },
+    {
+      "date": "2009-07-01",
+      "GM2_YoY": 8.898604291720847,
+      "WTI_YoY": -51.899351091964995,
+      "CI_zscore": 1.1912050736164999,
+      "household_energy_burden": 4.590930427339414,
+      "industrial_production": -14.018720654921957,
+      "weekly_hours": -2.682926829268295,
+      "temporary_help": -25.62565942181895
+    },
+    {
+      "date": "2009-08-01",
+      "GM2_YoY": 11.622535144665669,
+      "WTI_YoY": -39.10424124180098,
+      "CI_zscore": 1.64149730122434,
+      "household_energy_burden": 4.833934088568486,
+      "industrial_production": -11.689299172061052,
+      "weekly_hours": -2.2004889975550057,
+      "temporary_help": -24.803317940824353
+    },
+    {
+      "date": "2009-09-01",
+      "GM2_YoY": 14.031724266024659,
+      "WTI_YoY": -33.33470545188438,
+      "CI_zscore": 1.593906328393278,
+      "household_energy_burden": 4.804708596117056,
+      "industrial_production": -6.805879122929537,
+      "weekly_hours": -0.987654320987652,
+      "temporary_help": -22.880437139511688
+    },
+    {
+      "date": "2009-10-01",
+      "GM2_YoY": 15.515190930463518,
+      "WTI_YoY": -1.1659787431637536,
+      "CI_zscore": 1.5172188589403328,
+      "household_energy_burden": 4.961353761719644,
+      "industrial_production": -7.474512230012276,
+      "weekly_hours": -0.7407407407407307,
+      "temporary_help": -18.8239512370025
+    },
+    {
+      "date": "2009-11-01",
+      "GM2_YoY": 16.471995800245853,
+      "WTI_YoY": 36.08570274043053,
+      "CI_zscore": 1.394638442057935,
+      "household_energy_burden": 4.85989133501397,
+      "industrial_production": -5.83001235670767,
+      "weekly_hours": 0.9975062344139696,
+      "temporary_help": -12.17150110479055
+    },
+    {
+      "date": "2009-12-01",
+      "GM2_YoY": 10.917787724241212,
+      "WTI_YoY": 81.09607817128708,
+      "CI_zscore": 1.190168448636268,
+      "household_energy_burden": 5.110235864004708,
+      "industrial_production": -2.704223119324234,
+      "weekly_hours": 2.01005025125629,
+      "temporary_help": -7.07144598878322
+    },
+    {
+      "date": "2010-01-01",
+      "GM2_YoY": 9.449346319619579,
+      "WTI_YoY": 87.78659667629876,
+      "CI_zscore": 0.8092894737502443,
+      "household_energy_burden": 5.081409104454699,
+      "industrial_production": 0.87230439200634,
+      "weekly_hours": 3.0226700251889005,
+      "temporary_help": -0.6304016268429136
+    },
+    {
+      "date": "2010-02-01",
+      "GM2_YoY": 10.14009343955049,
+      "WTI_YoY": 95.42724800043088,
+      "CI_zscore": 0.6404139737160006,
+      "household_energy_burden": 4.974275656647712,
+      "industrial_production": 1.8708182344855606,
+      "weekly_hours": 2.2727272727272707,
+      "temporary_help": 3.5400094821682604
+    },
+    {
+      "date": "2010-03-01",
+      "GM2_YoY": 9.676386093180067,
+      "WTI_YoY": 69.38885723732106,
+      "CI_zscore": 0.9379408134396179,
+      "household_energy_burden": 4.797004902048804,
+      "industrial_production": 4.200672107537207,
+      "weekly_hours": 4.325699745547085,
+      "temporary_help": 8.563024294585464
+    },
+    {
+      "date": "2010-04-01",
+      "GM2_YoY": 8.321945162214606,
+      "WTI_YoY": 69.78553204550253,
+      "CI_zscore": 0.9002746269702671,
+      "household_energy_burden": 4.746145702669763,
+      "industrial_production": 5.4282103558062955,
+      "weekly_hours": 4.314720812182737,
+      "temporary_help": 13.700016871941978
+    },
+    {
+      "date": "2010-05-01",
+      "GM2_YoY": 5.056419738245732,
+      "WTI_YoY": 24.928636167275144,
+      "CI_zscore": 1.1248275130128338,
+      "household_energy_burden": 4.797676635712016,
+      "industrial_production": 7.942609605426321,
+      "weekly_hours": 5.343511450381677,
+      "temporary_help": 16.485313187122962
+    },
+    {
+      "date": "2010-06-01",
+      "GM2_YoY": 3.3385169589531527,
+      "WTI_YoY": 8.177664643300053,
+      "CI_zscore": 1.2466545806405152,
+      "household_energy_burden": 4.781368905211304,
+      "industrial_production": 8.551328146848402,
+      "weekly_hours": 3.535353535353525,
+      "temporary_help": 19.386475082677634
+    },
+    {
+      "date": "2010-07-01",
+      "GM2_YoY": 4.778726819582757,
+      "WTI_YoY": 18.966204259009057,
+      "CI_zscore": 1.1963670421022177,
+      "household_energy_burden": 4.853735710697257,
+      "industrial_production": 7.747013804699288,
+      "weekly_hours": 3.007518796992481,
+      "temporary_help": 19.01492367928277
+    },
+    {
+      "date": "2010-08-01",
+      "GM2_YoY": 5.970657563022175,
+      "WTI_YoY": 7.818069700585095,
+      "CI_zscore": 1.793626703165532,
+      "household_energy_burden": 4.865249098296636,
+      "industrial_production": 6.968742858593813,
+      "weekly_hours": 3.0000000000000027,
+      "temporary_help": 20.42986296696423
+    },
+    {
+      "date": "2010-09-01",
+      "GM2_YoY": 5.301395184375601,
+      "WTI_YoY": 8.40508517601215,
+      "CI_zscore": 2.5328265809512813,
+      "household_energy_burden": 4.857518632178869,
+      "industrial_production": 6.346682104150392,
+      "weekly_hours": 3.2418952618453734,
+      "temporary_help": 20.733284597649448
+    },
+    {
+      "date": "2010-10-01",
+      "GM2_YoY": 7.544198153430415,
+      "WTI_YoY": 8.15870767003597,
+      "CI_zscore": 3.370754559286585,
+      "household_energy_burden": 4.965133958999634,
+      "industrial_production": 5.760258506490601,
+      "weekly_hours": 2.736318407960181,
+      "temporary_help": 20.389796819787986
+    },
+    {
+      "date": "2010-11-01",
+      "GM2_YoY": 6.461614271062555,
+      "WTI_YoY": 8.030333559247516,
+      "CI_zscore": 2.8202488029859256,
+      "household_energy_burden": 5.070525609639226,
+      "industrial_production": 5.39500875348351,
+      "weekly_hours": 1.975308641975304,
+      "temporary_help": 18.092281340327567
+    },
+    {
+      "date": "2010-12-01",
+      "GM2_YoY": 6.357978854206325,
+      "WTI_YoY": 19.70714259555404,
+      "CI_zscore": 1.5837875509172834,
+      "household_energy_burden": 5.371122440162447,
+      "industrial_production": 5.996200467756596,
+      "weekly_hours": 1.724137931034475,
+      "temporary_help": 18.56205720283388
+    },
+    {
+      "date": "2011-01-01",
+      "GM2_YoY": 7.835608035022434,
+      "WTI_YoY": 13.845644709344906,
+      "CI_zscore": 1.0380869321224473,
+      "household_energy_burden": 5.207377618480059,
+      "industrial_production": 4.632504538708293,
+      "weekly_hours": 0.24449877750611915,
+      "temporary_help": 14.176813670316179
+    },
+    {
+      "date": "2011-02-01",
+      "GM2_YoY": 9.426098610701006,
+      "WTI_YoY": 15.959513835299322,
+      "CI_zscore": 0.9375179887564083,
+      "household_energy_burden": 5.087737248682663,
+      "industrial_production": 3.827364378514675,
+      "weekly_hours": 2.2222222222222143,
+      "temporary_help": 15.288730602900035
+    },
+    {
+      "date": "2011-03-01",
+      "GM2_YoY": 11.54138942189389,
+      "WTI_YoY": 26.665167480510554,
+      "CI_zscore": 0.8135995202029754,
+      "household_energy_burden": 5.354086663317524,
+      "industrial_production": 4.193025357503588,
+      "weekly_hours": 0.9756097560975618,
+      "temporary_help": 15.263421976919211
+    },
+    {
+      "date": "2011-04-01",
+      "GM2_YoY": 13.000942078172905,
+      "WTI_YoY": 29.942801457503588,
+      "CI_zscore": 0.7208756489348539,
+      "household_energy_burden": 5.416079224066179,
+      "industrial_production": 3.505332834432129,
+      "weekly_hours": 0.7299270072992581,
+      "temporary_help": 13.379828856902588
+    },
+    {
+      "date": "2011-05-01",
+      "GM2_YoY": 15.258234617778932,
+      "WTI_YoY": 36.826264268004884,
+      "CI_zscore": 1.1337919221121955,
+      "household_energy_burden": 5.47680412371134,
+      "industrial_production": 2.248891889831528,
+      "weekly_hours": 0.24154589371980784,
+      "temporary_help": 11.035283868157396
+    },
+    {
+      "date": "2011-06-01",
+      "GM2_YoY": 16.604349275013995,
+      "WTI_YoY": 27.7798224919904,
+      "CI_zscore": 0.8429652357395417,
+      "household_energy_burden": 5.388194954690179,
+      "industrial_production": 2.3688810428642126,
+      "weekly_hours": 0.9756097560975618,
+      "temporary_help": 8.997994077753347
+    },
+    {
+      "date": "2011-07-01",
+      "GM2_YoY": 14.198680072140867,
+      "WTI_YoY": 27.494899264370964,
+      "CI_zscore": 0.6659340652217588,
+      "household_energy_burden": 5.471984948891745,
+      "industrial_production": 2.484132372991299,
+      "weekly_hours": 0.7299270072992581,
+      "temporary_help": 8.391341661104224
+    },
+    {
+      "date": "2011-08-01",
+      "GM2_YoY": 14.568904999737686,
+      "WTI_YoY": 12.707660696289945,
+      "CI_zscore": 0.8311741169418034,
+      "household_energy_burden": 5.377831430343879,
+      "industrial_production": 2.7992943499441703,
+      "weekly_hours": 0.4854368932038833,
+      "temporary_help": 9.277620396600561
+    },
+    {
+      "date": "2011-09-01",
+      "GM2_YoY": 12.377002587906617,
+      "WTI_YoY": 13.653739051187275,
+      "CI_zscore": 0.5862208861542328,
+      "household_energy_burden": 5.405496034740036,
+      "industrial_production": 2.4123837996766095,
+      "weekly_hours": 0.0,
+      "temporary_help": 9.217512808570106
+    },
+    {
+      "date": "2011-10-01",
+      "GM2_YoY": 10.312410274593486,
+      "WTI_YoY": 5.408925715947088,
+      "CI_zscore": 0.029935305534835855,
+      "household_energy_burden": 5.387656637405348,
+      "industrial_production": 3.4162150732061747,
+      "weekly_hours": 0.4842615012106588,
+      "temporary_help": 8.374226094932347
+    },
+    {
+      "date": "2011-11-01",
+      "GM2_YoY": 10.485106080951834,
+      "WTI_YoY": 15.320096534807348,
+      "CI_zscore": -0.12182509945821322,
+      "household_energy_burden": 5.308505654821656,
+      "industrial_production": 3.3174195787687877,
+      "weekly_hours": 0.4842615012106588,
+      "temporary_help": 7.701024385821786
+    },
+    {
+      "date": "2011-12-01",
+      "GM2_YoY": 11.253250233018154,
+      "WTI_YoY": 10.563522373578426,
+      "CI_zscore": 0.14716569966403373,
+      "household_energy_burden": 5.153486059903061,
+      "industrial_production": 2.859134467066693,
+      "weekly_hours": 0.7263922518159882,
+      "temporary_help": 6.422627478753551
+    },
+    {
+      "date": "2012-01-01",
+      "GM2_YoY": 10.356735754522983,
+      "WTI_YoY": 12.451427321816055,
+      "CI_zscore": 0.37690307053860544,
+      "household_energy_burden": 5.005092151516147,
+      "industrial_production": 3.6910016324102957,
+      "weekly_hours": 1.9512195121951237,
+      "temporary_help": 8.836313124523908
+    },
+    {
+      "date": "2012-02-01",
+      "GM2_YoY": 10.240205895950849,
+      "WTI_YoY": 15.382503758192257,
+      "CI_zscore": 0.11637075778532961,
+      "household_energy_burden": 5.181385182526995,
+      "industrial_production": 4.439148449901298,
+      "weekly_hours": 0.9661835748792313,
+      "temporary_help": 9.042365401588714
+    },
+    {
+      "date": "2012-03-01",
+      "GM2_YoY": 8.020989040386484,
+      "WTI_YoY": 3.209524761074012,
+      "CI_zscore": 0.3564397029576083,
+      "household_energy_burden": 5.015666347387048,
+      "industrial_production": 2.8286925428470555,
+      "weekly_hours": 0.48309178743961567,
+      "temporary_help": 7.365488420686073
+    },
+    {
+      "date": "2012-04-01",
+      "GM2_YoY": 7.278359990794092,
+      "WTI_YoY": -5.670919590076007,
+      "CI_zscore": 0.9434273866923117,
+      "household_energy_burden": 5.17810852062118,
+      "industrial_production": 3.9040297563633697,
+      "weekly_hours": 0.7246376811594235,
+      "temporary_help": 7.865805776110291
+    },
+    {
+      "date": "2012-05-01",
+      "GM2_YoY": 6.455479104150896,
+      "WTI_YoY": -6.190189552861858,
+      "CI_zscore": 1.2960907220599698,
+      "household_energy_burden": 5.104689812456026,
+      "industrial_production": 4.0185114178595605,
+      "weekly_hours": 0.24096385542169418,
+      "temporary_help": 8.208011856501463
+    },
+    {
+      "date": "2012-06-01",
+      "GM2_YoY": 5.6553905615514655,
+      "WTI_YoY": -14.502560034501055,
+      "CI_zscore": 1.4397895072820193,
+      "household_energy_burden": 4.940621810346224,
+      "industrial_production": 3.7105509068513065,
+      "weekly_hours": 0.7246376811594235,
+      "temporary_help": 9.801945491192733
+    },
+    {
+      "date": "2012-07-01",
+      "GM2_YoY": 4.930981045978466,
+      "WTI_YoY": -9.668986115362655,
+      "CI_zscore": 1.3546739498447562,
+      "household_energy_burden": 5.008525670835679,
+      "industrial_production": 3.418677881567289,
+      "weekly_hours": 0.7246376811594235,
+      "temporary_help": 10.688836104513054
+    },
+    {
+      "date": "2012-08-01",
+      "GM2_YoY": 3.812171268330289,
+      "WTI_YoY": 9.03276492450873,
+      "CI_zscore": 0.9674465151531325,
+      "household_energy_burden": 5.235644791675162,
+      "industrial_production": 2.285596731143258,
+      "weekly_hours": 0.24154589371980784,
+      "temporary_help": 8.874486930222524
+    },
+    {
+      "date": "2012-09-01",
+      "GM2_YoY": 6.736887545863968,
+      "WTI_YoY": 10.522623003477683,
+      "CI_zscore": 1.2601320169963,
+      "household_energy_burden": 5.216246982553305,
+      "industrial_production": 2.2951570495009843,
+      "weekly_hours": 0.24154589371980784,
+      "temporary_help": 6.166574267559377
+    },
+    {
+      "date": "2012-10-01",
+      "GM2_YoY": 5.809393343504521,
+      "WTI_YoY": 3.671033352512909,
+      "CI_zscore": 1.7266026414102678,
+      "household_energy_burden": 5.288784419073203,
+      "industrial_production": 1.9430024786973865,
+      "weekly_hours": 0.0,
+      "temporary_help": 6.483009606025991
+    },
+    {
+      "date": "2012-11-01",
+      "GM2_YoY": 5.692640486731482,
+      "WTI_YoY": -10.93968250856462,
+      "CI_zscore": 2.138527098879461,
+      "household_energy_burden": 5.032216291336344,
+      "industrial_production": 2.3257536633332743,
+      "weekly_hours": 0.0,
+      "temporary_help": 6.721097596902492
+    },
+    {
+      "date": "2012-12-01",
+      "GM2_YoY": 6.705836098903095,
+      "WTI_YoY": -10.859422558483356,
+      "CI_zscore": 2.4997152537305087,
+      "household_energy_burden": 4.694292849875127,
+      "industrial_production": 2.0268355938483085,
+      "weekly_hours": 0.24038461538462563,
+      "temporary_help": 5.619099114087267
+    },
+    {
+      "date": "2013-01-01",
+      "GM2_YoY": 6.224331364294722,
+      "WTI_YoY": -5.501785948763461,
+      "CI_zscore": 1.8295534692678619,
+      "household_energy_burden": 5.20492874885606,
+      "industrial_production": 1.4467904237824847,
+      "weekly_hours": -0.4784688995215225,
+      "temporary_help": 5.0516694800115225
+    },
+    {
+      "date": "2013-02-01",
+      "GM2_YoY": 4.882599508825769,
+      "WTI_YoY": -6.746362795564709,
+      "CI_zscore": 2.003882952215859,
+      "household_energy_burden": 5.438428952716765,
+      "industrial_production": 1.5945538776370727,
+      "weekly_hours": 0.23923444976077235,
+      "temporary_help": 3.9378364158808354
+    },
+    {
+      "date": "2013-03-01",
+      "GM2_YoY": 5.363768749725972,
+      "WTI_YoY": -12.452439979961216,
+      "CI_zscore": 2.3420953722443745,
+      "household_energy_burden": 5.453019450623772,
+      "industrial_production": 2.534732272069462,
+      "weekly_hours": 0.7211538461538325,
+      "temporary_help": 4.922153746350966
+    },
+    {
+      "date": "2013-04-01",
+      "GM2_YoY": 4.95861315918007,
+      "WTI_YoY": -10.936437281517186,
+      "CI_zscore": 1.5330465600547993,
+      "household_energy_burden": 5.178511899438162,
+      "industrial_production": 1.7145631127746475,
+      "weekly_hours": 0.23980815347719453,
+      "temporary_help": 5.1931243680485295
+    },
+    {
+      "date": "2013-05-01",
+      "GM2_YoY": 4.838932135780527,
+      "WTI_YoY": -0.1531886285055628,
+      "CI_zscore": 1.271642385792912,
+      "household_energy_burden": 5.091420761934028,
+      "industrial_production": 1.5594777439077445,
+      "weekly_hours": 0.24038461538462563,
+      "temporary_help": 5.148243635191729
+    },
+    {
+      "date": "2013-06-01",
+      "GM2_YoY": 6.072541263737263,
+      "WTI_YoY": 16.365274796484574,
+      "CI_zscore": 1.1502102597038915,
+      "household_energy_burden": 5.080356278439346,
+      "industrial_production": 1.7645800035426706,
+      "weekly_hours": 0.23980815347719453,
+      "temporary_help": 4.6649906221317705
+    },
+    {
+      "date": "2013-07-01",
+      "GM2_YoY": 5.8486149747075,
+      "WTI_YoY": 19.085983904490767,
+      "CI_zscore": 0.5482891242467749,
+      "household_energy_burden": 5.02702266677422,
+      "industrial_production": 1.2364196654177428,
+      "weekly_hours": 0.0,
+      "temporary_help": 4.29184549356223
+    },
+    {
+      "date": "2013-08-01",
+      "GM2_YoY": 6.467768454163059,
+      "WTI_YoY": 13.21709394244519,
+      "CI_zscore": 0.4475391253883914,
+      "household_energy_burden": 5.060320369075463,
+      "industrial_production": 2.2593571227008002,
+      "weekly_hours": 0.9638554216867545,
+      "temporary_help": 4.527957458629306
+    },
+    {
+      "date": "2013-09-01",
+      "GM2_YoY": 4.792976829100315,
+      "WTI_YoY": 12.459376531385047,
+      "CI_zscore": 0.542964795239971,
+      "household_energy_burden": 5.065984163800688,
+      "industrial_production": 2.854766330187619,
+      "weekly_hours": 0.7228915662650603,
+      "temporary_help": 6.0212894155452945
+    },
+    {
+      "date": "2013-10-01",
+      "GM2_YoY": 5.5227414596158875,
+      "WTI_YoY": 12.344167516882854,
+      "CI_zscore": 1.3099319142038932,
+      "household_energy_burden": 5.0831689203278625,
+      "industrial_production": 2.4178437626957816,
+      "weekly_hours": 0.9638554216867545,
+      "temporary_help": 4.9397925525573205
+    },
+    {
+      "date": "2013-11-01",
+      "GM2_YoY": 5.427215219376991,
+      "WTI_YoY": 8.473882321864878,
+      "CI_zscore": 1.986224604294825,
+      "household_energy_burden": 5.204386680095279,
+      "industrial_production": 2.281966236973343,
+      "weekly_hours": 1.2048192771084265,
+      "temporary_help": 4.897862607461145
+    },
+    {
+      "date": "2013-12-01",
+      "GM2_YoY": 5.121677581004946,
+      "WTI_YoY": 11.11517604270238,
+      "CI_zscore": 1.6047534680848463,
+      "household_energy_burden": 5.237495817332973,
+      "industrial_production": 2.245344069429267,
+      "weekly_hours": 0.47961630695443347,
+      "temporary_help": 5.741513743403948
+    },
+    {
+      "date": "2014-01-01",
+      "GM2_YoY": 5.98514686284819,
+      "WTI_YoY": -0.1472443200378093,
+      "CI_zscore": 0.7026860051850761,
+      "household_energy_burden": 5.416976622718855,
+      "industrial_production": 1.8566277042981971,
+      "weekly_hours": 0.0,
+      "temporary_help": 4.859695877096715
+    },
+    {
+      "date": "2014-02-01",
+      "GM2_YoY": 7.085633932900559,
+      "WTI_YoY": 5.77954242988179,
+      "CI_zscore": 0.37610272583395626,
+      "household_energy_burden": 5.280717629932722,
+      "industrial_production": 2.148610089064018,
+      "weekly_hours": -0.7159904534606132,
+      "temporary_help": 5.237131064558831
+    },
+    {
+      "date": "2014-03-01",
+      "GM2_YoY": 7.325104781365233,
+      "WTI_YoY": 8.46291851472698,
+      "CI_zscore": 0.9285071467785543,
+      "household_energy_burden": 5.216236277688791,
+      "industrial_production": 2.724108069090181,
+      "weekly_hours": 0.23866348448686736,
+      "temporary_help": 4.919236417033757
+    },
+    {
+      "date": "2014-04-01",
+      "GM2_YoY": 7.538630662390555,
+      "WTI_YoY": 10.918860127294927,
+      "CI_zscore": 1.7916418481656924,
+      "household_energy_burden": 5.177933177933178,
+      "industrial_production": 2.9123215934373725,
+      "weekly_hours": 0.23923444976077235,
+      "temporary_help": 4.8444769118382025
+    },
+    {
+      "date": "2014-05-01",
+      "GM2_YoY": 8.064999557142883,
+      "WTI_YoY": 8.113040186279541,
+      "CI_zscore": 1.1456039591346288,
+      "household_energy_burden": 5.057761007067411,
+      "industrial_production": 3.226027611336124,
+      "weekly_hours": 0.9592326139088669,
+      "temporary_help": 4.869358669833734
+    },
+    {
+      "date": "2014-06-01",
+      "GM2_YoY": 7.071511722148061,
+      "WTI_YoY": 10.464157993459189,
+      "CI_zscore": 0.580454301807047,
+      "household_energy_burden": 4.93727391672439,
+      "industrial_production": 3.365841732090935,
+      "weekly_hours": 0.717703349282317,
+      "temporary_help": 4.895531493060834
+    },
+    {
+      "date": "2014-07-01",
+      "GM2_YoY": 7.50933224267778,
+      "WTI_YoY": -1.0339766193610878,
+      "CI_zscore": 0.6134462385013787,
+      "household_energy_burden": 4.879882183290891,
+      "industrial_production": 3.9177888079901857,
+      "weekly_hours": 0.7194244604316502,
+      "temporary_help": 5.4869684499314175
+    },
+    {
+      "date": "2014-08-01",
+      "GM2_YoY": 5.999821309588271,
+      "WTI_YoY": -9.417547109264246,
+      "CI_zscore": -0.41687777457960185,
+      "household_energy_burden": 4.892616014419699,
+      "industrial_production": 3.1253041765382905,
+      "weekly_hours": 0.23866348448686736,
+      "temporary_help": 5.820045558086573
+    },
+    {
+      "date": "2014-09-01",
+      "GM2_YoY": 4.3574264125726625,
+      "WTI_YoY": -12.303750829663551,
+      "CI_zscore": -0.16147729392210267,
+      "household_energy_burden": 4.770495546928523,
+      "industrial_production": 2.89843352202952,
+      "weekly_hours": 0.717703349282317,
+      "temporary_help": 6.387815412593767
+    },
+    {
+      "date": "2014-10-01",
+      "GM2_YoY": 3.0766103082533025,
+      "WTI_YoY": -16.054887172523536,
+      "CI_zscore": 0.6380561155306058,
+      "household_energy_burden": 4.767389871096325,
+      "industrial_production": 2.9919466037849007,
+      "weekly_hours": 0.4773269689737569,
+      "temporary_help": 6.36976444747408
+    },
+    {
+      "date": "2014-11-01",
+      "GM2_YoY": 2.3961605561900745,
+      "WTI_YoY": -19.256079344359378,
+      "CI_zscore": 0.7471815202583668,
+      "household_energy_burden": 4.688042248208223,
+      "industrial_production": 3.3861066751199598,
+      "weekly_hours": 0.4761904761904745,
+      "temporary_help": 5.845864661654132
+    },
+    {
+      "date": "2014-12-01",
+      "GM2_YoY": 1.4651694868088816,
+      "WTI_YoY": -39.26728814979804,
+      "CI_zscore": 1.9454283422844794,
+      "household_energy_burden": 4.332880506165704,
+      "industrial_production": 3.170492700276073,
+      "weekly_hours": 0.4773269689737569,
+      "temporary_help": 5.515417845970516
+    },
+    {
+      "date": "2015-01-01",
+      "GM2_YoY": 0.09996184807821162,
+      "WTI_YoY": -50.09466723034183,
+      "CI_zscore": 4.507990784121328,
+      "household_energy_burden": 4.041032716692786,
+      "industrial_production": 2.7262407410550527,
+      "weekly_hours": 0.9615384615384581,
+      "temporary_help": 6.080879055165211
+    },
+    {
+      "date": "2015-02-01",
+      "GM2_YoY": -0.5623346292394915,
+      "WTI_YoY": -49.82589674920257,
+      "CI_zscore": 6.110459437923566,
+      "household_energy_burden": 4.282485959979416,
+      "industrial_production": 1.30473816054415,
+      "weekly_hours": 0.7211538461538325,
+      "temporary_help": 5.0468050468050585
+    },
+    {
+      "date": "2015-03-01",
+      "GM2_YoY": -1.7546434661114163,
+      "WTI_YoY": -52.55770928742473,
+      "CI_zscore": 7.665688745614558,
+      "household_energy_burden": 4.20591440385735,
+      "industrial_production": -0.0027479483621140055,
+      "weekly_hours": -0.4761904761904856,
+      "temporary_help": 4.692276527568051
+    },
+    {
+      "date": "2015-04-01",
+      "GM2_YoY": -1.0703015406594019,
+      "WTI_YoY": -46.650959901094026,
+      "CI_zscore": 9.552415460219201,
+      "household_energy_burden": 4.042561107184047,
+      "industrial_production": -0.6444572558062966,
+      "weekly_hours": -0.23866348448687846,
+      "temporary_help": 4.52528512230006
+    },
+    {
+      "date": "2015-05-01",
+      "GM2_YoY": -0.1096585949781903,
+      "WTI_YoY": -41.99779095128907,
+      "CI_zscore": 10.900486962111748,
+      "household_energy_burden": 4.146041438183597,
+      "industrial_production": -1.460487812501221,
+      "weekly_hours": -0.7125890736342178,
+      "temporary_help": 4.939173638256666
+    },
+    {
+      "date": "2015-06-01",
+      "GM2_YoY": -0.17509032216859177,
+      "WTI_YoY": -43.456732988303685,
+      "CI_zscore": 9.686100745917695,
+      "household_energy_burden": 4.209382599247559,
+      "industrial_production": -2.106390227283794,
+      "weekly_hours": -0.7125890736342178,
+      "temporary_help": 4.866967141610945
+    },
+    {
+      "date": "2015-07-01",
+      "GM2_YoY": 0.4221518882945752,
+      "WTI_YoY": -50.86245858838501,
+      "CI_zscore": 14.05422954138389,
+      "household_energy_burden": 4.175354577270216,
+      "industrial_production": -1.6903126553953207,
+      "weekly_hours": -0.4761904761904856,
+      "temporary_help": 4.200982516977314
+    },
+    {
+      "date": "2015-08-01",
+      "GM2_YoY": 0.1950536948213566,
+      "WTI_YoY": -55.594250367491085,
+      "CI_zscore": 32.64099042133056,
+      "household_energy_burden": 4.146940335813215,
+      "industrial_production": -1.6854337113987983,
+      "weekly_hours": -0.4761904761904856,
+      "temporary_help": 3.587701359738804
+    },
+    {
+      "date": "2015-09-01",
+      "GM2_YoY": 1.7701660473281589,
+      "WTI_YoY": -51.208459986206535,
+      "CI_zscore": 14.930152232106392,
+      "household_energy_burden": 3.8995557839861963,
+      "industrial_production": -2.2407414414912674,
+      "weekly_hours": -0.7125890736342178,
+      "temporary_help": 2.663817663817669
+    },
+    {
+      "date": "2015-10-01",
+      "GM2_YoY": 2.451183496481546,
+      "WTI_YoY": -45.230683346110965,
+      "CI_zscore": 8.617103113867286,
+      "household_energy_burden": 3.836230906798792,
+      "industrial_production": -2.72506606749946,
+      "weekly_hours": -0.7125890736342178,
+      "temporary_help": 3.0689262318427835
+    },
+    {
+      "date": "2015-11-01",
+      "GM2_YoY": 2.7174572559112153,
+      "WTI_YoY": -43.99815972222222,
+      "CI_zscore": 7.44358148544746,
+      "household_energy_burden": 3.727122195683074,
+      "industrial_production": -4.033068306068888,
+      "weekly_hours": -0.9478672985782088,
+      "temporary_help": 2.79168886521044
+    },
+    {
+      "date": "2015-12-01",
+      "GM2_YoY": 3.3141903374982906,
+      "WTI_YoY": -37.27719470403791,
+      "CI_zscore": 8.002821833144752,
+      "household_energy_burden": 3.574608457036096,
+      "industrial_production": -4.496144811599123,
+      "weekly_hours": -0.7125890736342178,
+      "temporary_help": 3.483570394945823
+    },
+    {
+      "date": "2016-01-01",
+      "GM2_YoY": 4.622096953443222,
+      "WTI_YoY": -32.901675396054884,
+      "CI_zscore": 6.725476208047175,
+      "household_energy_burden": 3.5671741530594456,
+      "industrial_production": -3.236256019749162,
+      "weekly_hours": -0.23809523809523725,
+      "temporary_help": 1.772187577070783
+    },
+    {
+      "date": "2016-02-01",
+      "GM2_YoY": 6.316480450567785,
+      "WTI_YoY": -40.05441681406722,
+      "CI_zscore": 4.67313755134543,
+      "household_energy_burden": 3.3883169495709247,
+      "industrial_production": -3.1193297695960798,
+      "weekly_hours": -0.23866348448687846,
+      "temporary_help": 1.634320735444339
+    },
+    {
+      "date": "2016-03-01",
+      "GM2_YoY": 8.26134959534226,
+      "WTI_YoY": -21.48994411283883,
+      "CI_zscore": 3.7772005710231626,
+      "household_energy_burden": 3.4383601332753875,
+      "industrial_production": -3.515311400177057,
+      "weekly_hours": 0.0,
+      "temporary_help": 1.516270888302551
+    },
+    {
+      "date": "2016-04-01",
+      "GM2_YoY": 8.880338506463792,
+      "WTI_YoY": -25.155005203277614,
+      "CI_zscore": 3.2129314705595995,
+      "household_energy_burden": 3.5991781575101642,
+      "industrial_production": -2.6579036961380753,
+      "weekly_hours": 0.0,
+      "temporary_help": 0.9998947479212816
+    },
+    {
+      "date": "2016-05-01",
+      "GM2_YoY": 7.682311860362989,
+      "WTI_YoY": -21.18049278261882,
+      "CI_zscore": 3.5558708335817326,
+      "household_energy_burden": 3.675540488770989,
+      "industrial_production": -2.448153056399993,
+      "weekly_hours": 0.23923444976077235,
+      "temporary_help": -0.3690165361183606
+    },
+    {
+      "date": "2016-06-01",
+      "GM2_YoY": 7.888699821325851,
+      "WTI_YoY": -18.49273952721443,
+      "CI_zscore": 3.950308458560456,
+      "household_energy_burden": 3.7899928613148157,
+      "industrial_production": -1.678117946525337,
+      "weekly_hours": 0.0,
+      "temporary_help": -0.24955807424351661
+    },
+    {
+      "date": "2016-07-01",
+      "GM2_YoY": 6.950101189992952,
+      "WTI_YoY": -12.277598185422656,
+      "CI_zscore": 3.714450713168644,
+      "household_energy_burden": 3.698437320464208,
+      "industrial_production": -2.196738284260069,
+      "weekly_hours": 0.4784688995215447,
+      "temporary_help": -0.09359725448052636
+    },
+    {
+      "date": "2016-08-01",
+      "GM2_YoY": 9.036571834551467,
+      "WTI_YoY": 4.331308385486454,
+      "CI_zscore": 3.976613414503651,
+      "household_energy_burden": 3.700440528634361,
+      "industrial_production": -2.164263084601936,
+      "weekly_hours": 0.0,
+      "temporary_help": -0.29785612856303434
+    },
+    {
+      "date": "2016-09-01",
+      "GM2_YoY": 8.569323182417211,
+      "WTI_YoY": -0.6533552514475405,
+      "CI_zscore": 3.2990881744468035,
+      "household_energy_burden": 3.7035451886725164,
+      "industrial_production": -1.9939516469206886,
+      "weekly_hours": 0.23923444976077235,
+      "temporary_help": 0.6417371999444921
+    },
+    {
+      "date": "2016-10-01",
+      "GM2_YoY": 7.2811024660814905,
+      "WTI_YoY": 7.683518673567069,
+      "CI_zscore": 2.651473207457258,
+      "household_energy_burden": 3.6571761512608627,
+      "industrial_production": -1.5023811304759715,
+      "weekly_hours": 0.4784688995215447,
+      "temporary_help": -0.0138169257340226
+    },
+    {
+      "date": "2016-11-01",
+      "GM2_YoY": 6.806627844410129,
+      "WTI_YoY": 7.580553867971251,
+      "CI_zscore": 2.566784025438089,
+      "household_energy_burden": 3.635565064004931,
+      "industrial_production": -1.1862778785850958,
+      "weekly_hours": 0.23923444976077235,
+      "temporary_help": 0.32134342282574835
+    },
+    {
+      "date": "2016-12-01",
+      "GM2_YoY": 4.752048087815974,
+      "WTI_YoY": 39.748270633805106,
+      "CI_zscore": 2.49306524549783,
+      "household_energy_burden": 3.8871376083384463,
+      "industrial_production": -0.02049641716570516,
+      "weekly_hours": 0.23923444976077235,
+      "temporary_help": -0.8594815825375135
+    },
+    {
+      "date": "2017-01-01",
+      "GM2_YoY": 5.807007570189615,
+      "WTI_YoY": 65.71580451177779,
+      "CI_zscore": 2.43634585168782,
+      "household_energy_burden": 3.673517930349372,
+      "industrial_production": -0.8031281419274894,
+      "weekly_hours": 0.0,
+      "temporary_help": 0.6993006993007089
+    },
+    {
+      "date": "2017-02-01",
+      "GM2_YoY": 5.036792603581897,
+      "WTI_YoY": 76.32958827501098,
+      "CI_zscore": 2.451001454182792,
+      "household_energy_burden": 3.65411941712407,
+      "industrial_production": -0.6864591168616152,
+      "weekly_hours": 0.23923444976077235,
+      "temporary_help": 0.6307399064286789
+    },
+    {
+      "date": "2017-03-01",
+      "GM2_YoY": 4.29608839289306,
+      "WTI_YoY": 31.37843804182023,
+      "CI_zscore": 2.2248780332152536,
+      "household_energy_burden": 3.7706909116146714,
+      "industrial_production": 0.7162067590550603,
+      "weekly_hours": 0.0,
+      "temporary_help": 0.8767673967285949
+    },
+    {
+      "date": "2017-04-01",
+      "GM2_YoY": 3.5173268535205304,
+      "WTI_YoY": 25.285800555181794,
+      "CI_zscore": 1.9717385598531862,
+      "household_energy_burden": 3.7743282096649344,
+      "industrial_production": 1.3993011097695573,
+      "weekly_hours": 0.4784688995215447,
+      "temporary_help": 1.0073641795192545
+    },
+    {
+      "date": "2017-05-01",
+      "GM2_YoY": 3.762042374074559,
+      "WTI_YoY": 3.7762636971575114,
+      "CI_zscore": 1.822164368564116,
+      "household_energy_burden": 3.6948282018182317,
+      "industrial_production": 1.7500792534729248,
+      "weekly_hours": 0.0,
+      "temporary_help": 2.508822810021294
+    },
+    {
+      "date": "2017-06-01",
+      "GM2_YoY": 4.780879932169335,
+      "WTI_YoY": -7.341562097962074,
+      "CI_zscore": 1.8803037379329033,
+      "household_energy_burden": 3.654029443427341,
+      "industrial_production": 1.4803308546539107,
+      "weekly_hours": 0.4784688995215447,
+      "temporary_help": 2.3836825463011246
+    },
+    {
+      "date": "2017-07-01",
+      "GM2_YoY": 5.944483275199985,
+      "WTI_YoY": 4.432160881021852,
+      "CI_zscore": 1.61347165277184,
+      "household_energy_burden": 3.5821936065943527,
+      "industrial_production": 1.1187969195710634,
+      "weekly_hours": -0.23809523809523725,
+      "temporary_help": 2.5329632199861285
+    },
+    {
+      "date": "2017-08-01",
+      "GM2_YoY": 6.440280949479837,
+      "WTI_YoY": 7.406723309937191,
+      "CI_zscore": 1.274584533663235,
+      "household_energy_burden": 3.637230528215782,
+      "industrial_production": 0.8523014668689877,
+      "weekly_hours": 0.4784688995215447,
+      "temporary_help": 2.6539757529440378
+    },
+    {
+      "date": "2017-09-01",
+      "GM2_YoY": 7.450575031804174,
+      "WTI_YoY": 10.26864664903091,
+      "CI_zscore": 1.4784099422995736,
+      "household_energy_burden": 3.9040645891046526,
+      "industrial_production": 1.0630336308315114,
+      "weekly_hours": 0.0,
+      "temporary_help": 1.5579223106882978
+    },
+    {
+      "date": "2017-10-01",
+      "GM2_YoY": 7.5080133779187985,
+      "WTI_YoY": 3.6212567663470807,
+      "CI_zscore": 1.2073515147869616,
+      "household_energy_burden": 3.8188894059880085,
+      "industrial_production": 2.2919955326540453,
+      "weekly_hours": 0.0,
+      "temporary_help": 2.3284737096662678
+    },
+    {
+      "date": "2017-11-01",
+      "GM2_YoY": 9.384934626725272,
+      "WTI_YoY": 24.041590188553318,
+      "CI_zscore": 0.9514442197603844,
+      "household_energy_burden": 3.8842786243628193,
+      "industrial_production": 2.9662701539719283,
+      "weekly_hours": 0.4773269689737569,
+      "temporary_help": 2.125094716539233
+    },
+    {
+      "date": "2017-12-01",
+      "GM2_YoY": 11.565200616600535,
+      "WTI_YoY": 11.373811138192004,
+      "CI_zscore": 0.6863901072913785,
+      "household_energy_burden": 4.0908115934257445,
+      "industrial_production": 2.467143465957866,
+      "weekly_hours": -0.23866348448687846,
+      "temporary_help": 2.119168845465791
+    },
+    {
+      "date": "2018-01-01",
+      "GM2_YoY": 12.982414751961713,
+      "WTI_YoY": 21.321368712043732,
+      "CI_zscore": 0.3243252862552732,
+      "household_energy_burden": 4.063167956666622,
+      "industrial_production": 2.7352874765469437,
+      "weekly_hours": 0.0,
+      "temporary_help": 2.169279427942783
+    },
+    {
+      "date": "2018-02-01",
+      "GM2_YoY": 13.882967618097908,
+      "WTI_YoY": 16.385471010926267,
+      "CI_zscore": 0.11424653499969167,
+      "household_energy_burden": 3.8349193761564893,
+      "industrial_production": 3.3994953469032696,
+      "weekly_hours": 0.9546539379474916,
+      "temporary_help": 2.7275544994317613
+    },
+    {
+      "date": "2018-03-01",
+      "GM2_YoY": 13.854839115071416,
+      "WTI_YoY": 27.158982830885115,
+      "CI_zscore": -0.048146557135263626,
+      "household_energy_burden": 4.0078670753686865,
+      "industrial_production": 3.224806264183644,
+      "weekly_hours": 0.9569377990430672,
+      "temporary_help": 2.6005702703631117
+    },
+    {
+      "date": "2018-04-01",
+      "GM2_YoY": 13.137844744949279,
+      "WTI_YoY": 29.75543791706241,
+      "CI_zscore": -0.1743509592197715,
+      "household_energy_burden": 4.07420261005651,
+      "industrial_production": 3.309758614070435,
+      "weekly_hours": 0.952380952380949,
+      "temporary_help": 2.9713185225943795
+    },
+    {
+      "date": "2018-05-01",
+      "GM2_YoY": 11.118238630119336,
+      "WTI_YoY": 44.355262170879904,
+      "CI_zscore": -0.08610391888207598,
+      "household_energy_burden": 3.9414451096764105,
+      "industrial_production": 2.2584201444366236,
+      "weekly_hours": 0.4773269689737569,
+      "temporary_help": 2.0895115383304352
+    },
+    {
+      "date": "2018-06-01",
+      "GM2_YoY": 8.966482761639494,
+      "WTI_YoY": 50.23627223122147,
+      "CI_zscore": -0.09526525796083564,
+      "household_energy_burden": 3.9965771407456385,
+      "industrial_production": 2.8410387544831828,
+      "weekly_hours": 0.4761904761904745,
+      "temporary_help": 1.6901408450704203
+    },
+    {
+      "date": "2018-07-01",
+      "GM2_YoY": 6.536307078146697,
+      "WTI_YoY": 52.22094661924002,
+      "CI_zscore": -0.15528098714612507,
+      "household_energy_burden": 3.9242236665634995,
+      "industrial_production": 3.2543243815604805,
+      "weekly_hours": 0.7159904534606243,
+      "temporary_help": 1.3840947546531313
+    },
+    {
+      "date": "2018-08-01",
+      "GM2_YoY": 3.7084607832107874,
+      "WTI_YoY": 41.67353034348555,
+      "CI_zscore": -0.02289554312839694,
+      "household_energy_burden": 3.9801474176233405,
+      "industrial_production": 4.353587280888749,
+      "weekly_hours": 0.23809523809523725,
+      "temporary_help": 1.4923352847619364
+    },
+    {
+      "date": "2018-09-01",
+      "GM2_YoY": 3.0586724067399818,
+      "WTI_YoY": 40.9660496631165,
+      "CI_zscore": -0.11734783855930946,
+      "household_energy_burden": 3.969728815297073,
+      "industrial_production": 4.313826088176409,
+      "weekly_hours": 0.23866348448686736,
+      "temporary_help": 1.8225012726964085
+    },
+    {
+      "date": "2018-10-01",
+      "GM2_YoY": 2.9969300777132,
+      "WTI_YoY": 37.169083232528656,
+      "CI_zscore": 0.1082497838921006,
+      "household_energy_burden": 4.042705262217457,
+      "industrial_production": 2.930867401734427,
+      "weekly_hours": 0.23809523809523725,
+      "temporary_help": 1.3166779203241052
+    },
+    {
+      "date": "2018-11-01",
+      "GM2_YoY": 2.4719165221627426,
+      "WTI_YoY": 0.5736877947889907,
+      "CI_zscore": 0.376444442318009,
+      "household_energy_burden": 3.956685774636238,
+      "industrial_production": 2.7666629800210174,
+      "weekly_hours": -0.47505938242280443,
+      "temporary_help": 0.9679268827358367
+    },
+    {
+      "date": "2018-12-01",
+      "GM2_YoY": 2.8210124700815964,
+      "WTI_YoY": -14.441094688669487,
+      "CI_zscore": 0.49292751158847387,
+      "household_energy_burden": 3.740659340659341,
+      "industrial_production": 2.5912536810940523,
+      "weekly_hours": 0.717703349282317,
+      "temporary_help": 0.3672011858240065
+    },
+    {
+      "date": "2019-01-01",
+      "GM2_YoY": 2.057237342950158,
+      "WTI_YoY": -19.345578505909533,
+      "CI_zscore": 0.5335271976213066,
+      "household_energy_burden": 3.566792708392121,
+      "industrial_production": 1.9116422323518512,
+      "weekly_hours": 0.23866348448686736,
+      "temporary_help": -0.6224973922406507
+    },
+    {
+      "date": "2019-02-01",
+      "GM2_YoY": 0.6247934037221459,
+      "WTI_YoY": -11.69017896410567,
+      "CI_zscore": 0.33004402272695765,
+      "household_energy_burden": 3.6547258955578323,
+      "industrial_production": 1.1096417703535089,
+      "weekly_hours": -1.4184397163120477,
+      "temporary_help": -1.4214355157732395
+    },
+    {
+      "date": "2019-03-01",
+      "GM2_YoY": 0.6841963119362804,
+      "WTI_YoY": -7.291113101835678,
+      "CI_zscore": 0.009116854057656066,
+      "household_energy_burden": 3.7672342865690993,
+      "industrial_production": 0.6545559146318158,
+      "weekly_hours": -1.1848341232227444,
+      "temporary_help": -1.7076274023973714
+    },
+    {
+      "date": "2019-04-01",
+      "GM2_YoY": 0.6790482369754436,
+      "WTI_YoY": -3.6094959499184287,
+      "CI_zscore": 0.06842287004050318,
+      "household_energy_burden": 3.8285707167592617,
+      "industrial_production": -1.0247462328067725,
+      "weekly_hours": -1.8867924528301772,
+      "temporary_help": -1.3492752655133167
+    },
+    {
+      "date": "2019-05-01",
+      "GM2_YoY": 1.5824911320990287,
+      "WTI_YoY": -13.077452712533777,
+      "CI_zscore": 0.3738753084446434,
+      "household_energy_burden": 3.7546294855435565,
+      "industrial_production": -0.010156011968476264,
+      "weekly_hours": -1.187648456057011,
+      "temporary_help": -1.1585976627712768
+    },
+    {
+      "date": "2019-06-01",
+      "GM2_YoY": 2.6944954908469487,
+      "WTI_YoY": -19.471319123858155,
+      "CI_zscore": 0.5640763568078417,
+      "household_energy_burden": 3.6264957742630575,
+      "industrial_production": -0.7369328862962377,
+      "weekly_hours": -1.1848341232227444,
+      "temporary_help": -1.0579714981810984
+    },
+    {
+      "date": "2019-07-01",
+      "GM2_YoY": 4.480705901377413,
+      "WTI_YoY": -19.192813680305377,
+      "CI_zscore": 0.3168785804651879,
+      "household_energy_burden": 3.68720966243419,
+      "industrial_production": -1.3774541767684445,
+      "weekly_hours": -1.65876777251186,
+      "temporary_help": -1.1448980273039866
+    },
+    {
+      "date": "2019-08-01",
+      "GM2_YoY": 4.7458680955934085,
+      "WTI_YoY": -19.468982604332197,
+      "CI_zscore": 0.17372826123906068,
+      "household_energy_burden": 3.6499901468124945,
+      "industrial_production": -1.3396749291328724,
+      "weekly_hours": -1.4251781472684133,
+      "temporary_help": -0.8402240597492616
+    },
+    {
+      "date": "2019-09-01",
+      "GM2_YoY": 4.112141651552048,
+      "WTI_YoY": -18.916000329733752,
+      "CI_zscore": 0.005021004161130896,
+      "household_energy_burden": 3.6228635300042376,
+      "industrial_production": -1.7374573008364869,
+      "weekly_hours": -1.1904761904761862,
+      "temporary_help": -0.6099593360442523
+    },
+    {
+      "date": "2019-10-01",
+      "GM2_YoY": 5.244688051256863,
+      "WTI_YoY": -23.725740834060538,
+      "CI_zscore": 0.1359484159078671,
+      "household_energy_burden": 3.632567594043887,
+      "industrial_production": -2.4594751580988228,
+      "weekly_hours": -1.6627078384798155,
+      "temporary_help": -1.2529156947684084
+    },
+    {
+      "date": "2019-11-01",
+      "GM2_YoY": 6.134300386464808,
+      "WTI_YoY": 0.15000371890958597,
+      "CI_zscore": 0.22542609738151637,
+      "household_energy_burden": 3.693857391983024,
+      "industrial_production": -2.047601522464615,
+      "weekly_hours": -1.1933174224343701,
+      "temporary_help": -1.4262809806934396
+    },
+    {
+      "date": "2019-12-01",
+      "GM2_YoY": 5.801153369835843,
+      "WTI_YoY": 20.786170224700196,
+      "CI_zscore": 0.1776467563198343,
+      "household_energy_burden": 3.606164530110465,
+      "industrial_production": -2.2991807373363926,
+      "weekly_hours": -1.6627078384798155,
+      "temporary_help": -1.4332225690598555
+    },
+    {
+      "date": "2020-01-01",
+      "GM2_YoY": 5.098271405811072,
+      "WTI_YoY": 11.957660187785613,
+      "CI_zscore": -0.0640947593371718,
+      "household_energy_burden": 3.4634832987971746,
+      "industrial_production": -2.290379015513233,
+      "weekly_hours": -1.6666666666666718,
+      "temporary_help": -1.2223200379223864
+    },
+    {
+      "date": "2020-02-01",
+      "GM2_YoY": 4.335161934044107,
+      "WTI_YoY": -8.028616852146264,
+      "CI_zscore": -0.21280277369481496,
+      "household_energy_burden": 3.4290698024119575,
+      "industrial_production": -1.4232217750208775,
+      "weekly_hours": -0.47961630695444457,
+      "temporary_help": -1.78200986226833
+    },
+    {
+      "date": "2020-03-01",
+      "GM2_YoY": 6.519327467756542,
+      "WTI_YoY": -49.772984103303955,
+      "CI_zscore": -0.21260565949685678,
+      "household_energy_burden": 3.0097004349313394,
+      "industrial_production": -5.315054964389065,
+      "weekly_hours": -1.1990407673860948,
+      "temporary_help": -2.3061725030658065
+    },
+    {
+      "date": "2020-04-01",
+      "GM2_YoY": 8.212633942835645,
+      "WTI_YoY": -74.0886280767424,
+      "CI_zscore": 0.8781575577067329,
+      "household_energy_burden": 2.2231370934540964,
+      "industrial_production": -17.318282261376304,
+      "weekly_hours": -7.692307692307699,
+      "temporary_help": -33.96980161148352
+    },
+    {
+      "date": "2020-05-01",
+      "GM2_YoY": 10.434868258470509,
+      "WTI_YoY": -53.042916177822285,
+      "CI_zscore": 1.7138571205614028,
+      "household_energy_burden": 2.4689691631937998,
+      "industrial_production": -16.047738104539413,
+      "weekly_hours": -5.288461538461542,
+      "temporary_help": -31.412356855724088
+    },
+    {
+      "date": "2020-06-01",
+      "GM2_YoY": 11.64358348758341,
+      "WTI_YoY": -29.913968389932354,
+      "CI_zscore": 2.0449259390092838,
+      "household_energy_burden": 2.708952200918174,
+      "industrial_production": -10.586064673581452,
+      "weekly_hours": -4.316546762589935,
+      "temporary_help": -24.978074613775892
+    },
+    {
+      "date": "2020-07-01",
+      "GM2_YoY": 12.821048988160765,
+      "WTI_YoY": -29.0240473006222,
+      "CI_zscore": 2.3724124354416074,
+      "household_energy_burden": 2.774210406346771,
+      "industrial_production": -6.783544959427434,
+      "weekly_hours": -1.9277108433734869,
+      "temporary_help": -20.279578606158832
+    },
+    {
+      "date": "2020-08-01",
+      "GM2_YoY": 15.074768401942773,
+      "WTI_YoY": -22.747294367806425,
+      "CI_zscore": 2.063031374830737,
+      "household_energy_burden": 2.870634087842902,
+      "industrial_production": -6.512241935326724,
+      "weekly_hours": -1.2048192771084376,
+      "temporary_help": -16.674512441156697
+    },
+    {
+      "date": "2020-09-01",
+      "GM2_YoY": 17.178676890384036,
+      "WTI_YoY": -30.401450973210686,
+      "CI_zscore": 1.9778048644418056,
+      "household_energy_burden": 2.9367323343902747,
+      "industrial_production": -6.183101854793705,
+      "weekly_hours": -0.7228915662650492,
+      "temporary_help": -16.20443341493679
+    },
+    {
+      "date": "2020-10-01",
+      "GM2_YoY": 17.575057163263665,
+      "WTI_YoY": -26.994649390411386,
+      "CI_zscore": 2.3393475713257126,
+      "household_energy_burden": 2.886248852157943,
+      "industrial_production": -4.622683457542831,
+      "weekly_hours": 0.0,
+      "temporary_help": -12.424917324694619
+    },
+    {
+      "date": "2020-11-01",
+      "GM2_YoY": 18.683397772490018,
+      "WTI_YoY": -28.24167612299687,
+      "CI_zscore": 1.9338961601685392,
+      "household_energy_burden": 2.831901527324195,
+      "industrial_production": -4.763324870606622,
+      "weekly_hours": -0.24154589371980784,
+      "temporary_help": -9.33550201619735
+    },
+    {
+      "date": "2020-12-01",
+      "GM2_YoY": 19.802577774864094,
+      "WTI_YoY": -21.384786848704383,
+      "CI_zscore": 2.756607549176716,
+      "household_energy_burden": 3.0777665560525174,
+      "industrial_production": -3.28150457766595,
+      "weekly_hours": 0.24154589371980784,
+      "temporary_help": -6.361097868283039
+    },
+    {
+      "date": "2021-01-01",
+      "GM2_YoY": 19.769434951042932,
+      "WTI_YoY": -9.580524703596083,
+      "CI_zscore": 1.3847753583508535,
+      "household_energy_burden": 2.829675594760205,
+      "industrial_production": -2.1295843569181794,
+      "weekly_hours": 0.7263922518159882,
+      "temporary_help": -3.852877660850784
+    },
+    {
+      "date": "2021-02-01",
+      "GM2_YoY": 21.168485055863286,
+      "WTI_YoY": 16.8247753329654,
+      "CI_zscore": 0.24917076889953724,
+      "household_energy_burden": 3.2791035204374386,
+      "industrial_production": -5.680577271180343,
+      "weekly_hours": -0.24096385542169418,
+      "temporary_help": -2.0151656798587214
+    },
+    {
+      "date": "2021-03-01",
+      "GM2_YoY": 18.042713063301807,
+      "WTI_YoY": 113.41285097681796,
+      "CI_zscore": 0.7676238195035228,
+      "household_energy_burden": 2.7532628396039964,
+      "industrial_production": 1.0038210492383515,
+      "weekly_hours": 0.9708737864077666,
+      "temporary_help": 0.03486871927194102
+    },
+    {
+      "date": "2021-04-01",
+      "GM2_YoY": 16.58618085839725,
+      "WTI_YoY": 272.9640287769784,
+      "CI_zscore": 0.13818578341533136,
+      "household_energy_burden": 3.202569739397691,
+      "industrial_production": 16.55213518144698,
+      "weekly_hours": 8.333333333333348,
+      "temporary_help": 44.421657095980315
+    },
+    {
+      "date": "2021-05-01",
+      "GM2_YoY": 16.431610123009442,
+      "WTI_YoY": 128.16455142231948,
+      "CI_zscore": -0.27518613736371883,
+      "household_energy_burden": 3.398453509658734,
+      "industrial_production": 15.673379835366053,
+      "weekly_hours": 5.3299492385786795,
+      "temporary_help": 38.22892040977146
+    },
+    {
+      "date": "2021-06-01",
+      "GM2_YoY": 14.75260635443869,
+      "WTI_YoY": 86.33062793677915,
+      "CI_zscore": -0.715222003840973,
+      "household_energy_burden": 3.5675073333005587,
+      "industrial_production": 8.958396565691418,
+      "weekly_hours": 3.759398496240607,
+      "temporary_help": 28.451958095409392
+    },
+    {
+      "date": "2021-07-01",
+      "GM2_YoY": 12.605432981901465,
+      "WTI_YoY": 78.0506724981564,
+      "CI_zscore": -0.8075545627020719,
+      "household_energy_burden": 3.501010166488402,
+      "industrial_production": 5.4998863464161385,
+      "weekly_hours": 1.7199017199017064,
+      "temporary_help": 22.3761118170267
+    },
+    {
+      "date": "2021-08-01",
+      "GM2_YoY": 11.334282089379277,
+      "WTI_YoY": 59.97160624601241,
+      "CI_zscore": -0.7680132584239886,
+      "household_energy_burden": 3.612885833670306,
+      "industrial_production": 4.261168528131454,
+      "weekly_hours": 0.9756097560975618,
+      "temporary_help": 16.87583229086802
+    },
+    {
+      "date": "2021-09-01",
+      "GM2_YoY": 10.513245517665549,
+      "WTI_YoY": 80.76821414840447,
+      "CI_zscore": -0.886304505466911,
+      "household_energy_burden": 3.6856091689174137,
+      "industrial_production": 3.0124970172007215,
+      "weekly_hours": 0.24271844660193054,
+      "temporary_help": 16.308480409813097
+    },
+    {
+      "date": "2021-10-01",
+      "GM2_YoY": 9.667103695806478,
+      "WTI_YoY": 106.8150438631914,
+      "CI_zscore": -1.0333884078019537,
+      "household_energy_burden": 3.743301077764166,
+      "industrial_production": 3.5628709708763973,
+      "weekly_hours": -0.24154589371980784,
+      "temporary_help": 16.499691738594336
+    },
+    {
+      "date": "2021-11-01",
+      "GM2_YoY": 8.069263850776508,
+      "WTI_YoY": 93.33802599606588,
+      "CI_zscore": -1.6012980699341564,
+      "household_energy_burden": 3.9230128222359615,
+      "industrial_production": 3.897545981936834,
+      "weekly_hours": 0.4842615012106588,
+      "temporary_help": 14.01554791448647
+    },
+    {
+      "date": "2021-12-01",
+      "GM2_YoY": 7.060323357174125,
+      "WTI_YoY": 52.497221013967454,
+      "CI_zscore": -1.3994452578731553,
+      "household_energy_burden": 3.878398832079178,
+      "industrial_production": 2.2463731281071153,
+      "weekly_hours": 0.0,
+      "temporary_help": 12.004509418866816
+    },
+    {
+      "date": "2022-01-01",
+      "GM2_YoY": 6.816444686485745,
+      "WTI_YoY": 60.01639410621764,
+      "CI_zscore": -1.3005225490897458,
+      "household_energy_burden": 4.125290657912735,
+      "industrial_production": 1.3181341030033655,
+      "weekly_hours": -0.9615384615384581,
+      "temporary_help": 9.71514135976328
+    },
+    {
+      "date": "2022-02-01",
+      "GM2_YoY": 6.687330375357603,
+      "WTI_YoY": 55.20198238670802,
+      "CI_zscore": -1.4736153334116862,
+      "household_energy_burden": 4.239269942787531,
+      "industrial_production": 5.429593086433182,
+      "weekly_hours": 0.24154589371980784,
+      "temporary_help": 11.20534294498039
+    },
+    {
+      "date": "2022-03-01",
+      "GM2_YoY": 6.81365880379925,
+      "WTI_YoY": 74.06916563201872,
+      "CI_zscore": -1.5898652182524369,
+      "household_energy_burden": 4.608324890697208,
+      "industrial_production": 3.0544104015221674,
+      "weekly_hours": -0.24038461538461453,
+      "temporary_help": 10.195545330963096
+    },
+    {
+      "date": "2022-04-01",
+      "GM2_YoY": 4.879555719602013,
+      "WTI_YoY": 64.9108830677829,
+      "CI_zscore": -1.9505642180034217,
+      "household_energy_burden": 4.526277691646994,
+      "industrial_production": 2.923435475508507,
+      "weekly_hours": -0.7211538461538547,
+      "temporary_help": 11.211303606929835
+    },
+    {
+      "date": "2022-05-01",
+      "GM2_YoY": 1.1777523790875932,
+      "WTI_YoY": 68.10376165596014,
+      "CI_zscore": -2.0162481646836548,
+      "household_energy_burden": 4.694295559987743,
+      "industrial_production": 1.9110298059100916,
+      "weekly_hours": -0.9638554216867434,
+      "temporary_help": 10.917123922183425
+    },
+    {
+      "date": "2022-06-01",
+      "GM2_YoY": 1.0758134760444849,
+      "WTI_YoY": 60.88549740544238,
+      "CI_zscore": -1.6956751270946262,
+      "household_energy_burden": 4.883607966222024,
+      "industrial_production": 1.2217594016755706,
+      "weekly_hours": -1.2077294685990392,
+      "temporary_help": 8.750743813224116
+    },
+    {
+      "date": "2022-07-01",
+      "GM2_YoY": 0.64279940765124,
+      "WTI_YoY": 40.192682910806134,
+      "CI_zscore": -0.8882276597744694,
+      "household_energy_burden": 4.502719338926599,
+      "industrial_production": 0.968659945597028,
+      "weekly_hours": -0.9661835748792202,
+      "temporary_help": 7.122832519987532
+    },
+    {
+      "date": "2022-08-01",
+      "GM2_YoY": 0.18608658584344795,
+      "WTI_YoY": 38.291139517519014,
+      "CI_zscore": -0.7320562211840409,
+      "household_energy_burden": 4.262988793981663,
+      "industrial_production": 1.0521402147261716,
+      "weekly_hours": -1.2077294685990392,
+      "temporary_help": 6.370196457549282
+    },
+    {
+      "date": "2022-09-01",
+      "GM2_YoY": -2.688058715283359,
+      "WTI_YoY": 17.60303608339926,
+      "CI_zscore": -0.28179675847820146,
+      "household_energy_burden": 4.136750363145881,
+      "industrial_production": 2.462018715752601,
+      "weekly_hours": -0.7263922518159771,
+      "temporary_help": 6.0353726515725015
+    },
+    {
+      "date": "2022-10-01",
+      "GM2_YoY": -4.312102910726989,
+      "WTI_YoY": 7.4599213330138525,
+      "CI_zscore": -0.27738377931835906,
+      "household_energy_burden": 4.243852975844267,
+      "industrial_production": 1.0648183730078253,
+      "weekly_hours": -0.7263922518159771,
+      "temporary_help": 1.5578487795197438
+    },
+    {
+      "date": "2022-11-01",
+      "GM2_YoY": -3.3164704079628238,
+      "WTI_YoY": 6.599041271646189,
+      "CI_zscore": -1.1974627334304433,
+      "household_energy_burden": 4.220464691922479,
+      "industrial_production": 0.08902953837490735,
+      "weekly_hours": -1.4457831325301207,
+      "temporary_help": -0.45564806923228396
+    },
+    {
+      "date": "2022-12-01",
+      "GM2_YoY": -1.4583998505128037,
+      "WTI_YoY": 6.589324877168901,
+      "CI_zscore": -1.1372708514390413,
+      "household_energy_burden": 4.023357485707297,
+      "industrial_production": -0.8016099812473643,
+      "weekly_hours": -2.168674698795181,
+      "temporary_help": -3.6137536933017356
+    },
+    {
+      "date": "2023-01-01",
+      "GM2_YoY": 0.44477713607522507,
+      "WTI_YoY": -6.126985652832184,
+      "CI_zscore": 0.4239612590557707,
+      "household_energy_burden": 3.786975190839695,
+      "industrial_production": 0.3188082918103907,
+      "weekly_hours": -0.24271844660194164,
+      "temporary_help": -3.577695457204133
+    },
+    {
+      "date": "2023-02-01",
+      "GM2_YoY": -0.5134578333687023,
+      "WTI_YoY": -16.159156434142353,
+      "CI_zscore": 1.582370344775884,
+      "household_energy_burden": 3.842817573361985,
+      "industrial_production": -0.1634816837026265,
+      "weekly_hours": -1.9277108433734869,
+      "temporary_help": -6.2821734985700655
+    },
+    {
+      "date": "2023-03-01",
+      "GM2_YoY": -0.5786094898009075,
+      "WTI_YoY": -32.46445687541073,
+      "CI_zscore": 0.9135859980036327,
+      "household_energy_burden": 3.8549229896080006,
+      "industrial_production": -0.36512224493961964,
+      "weekly_hours": -2.168674698795181,
+      "temporary_help": -7.60422597583349
+    },
+    {
+      "date": "2023-04-01",
+      "GM2_YoY": 1.1183981684335542,
+      "WTI_YoY": -21.941179740636507,
+      "CI_zscore": 0.07681698515957716,
+      "household_energy_burden": 3.7449520751228533,
+      "industrial_production": -0.1843454258675048,
+      "weekly_hours": -1.4527845036319431,
+      "temporary_help": -7.208069973823649
+    },
+    {
+      "date": "2023-05-01",
+      "GM2_YoY": 2.270944060392588,
+      "WTI_YoY": -34.663052326270616,
+      "CI_zscore": -0.19478790141023436,
+      "household_energy_burden": 3.559881514752575,
+      "industrial_production": -0.39957171123073953,
+      "weekly_hours": -0.9732360097323589,
+      "temporary_help": -6.880822357854155
+    },
+    {
+      "date": "2023-06-01",
+      "GM2_YoY": 0.9563722318637335,
+      "WTI_YoY": -38.828071223015606,
+      "CI_zscore": -0.11754260715052248,
+      "household_energy_burden": 3.565711309983027,
+      "industrial_production": -0.8893464531073647,
+      "weekly_hours": -0.4889975550122161,
+      "temporary_help": -7.695773922559457
+    },
+    {
+      "date": "2023-07-01",
+      "GM2_YoY": 2.01740388326348,
+      "WTI_YoY": -25.142443834322314,
+      "CI_zscore": 0.06328816582616845,
+      "household_energy_burden": 3.6146199842341042,
+      "industrial_production": -0.31247838929887584,
+      "weekly_hours": -0.7317073170731603,
+      "temporary_help": -8.439145746502529
+    },
+    {
+      "date": "2023-08-01",
+      "GM2_YoY": 1.2032676426503963,
+      "WTI_YoY": -13.109594763960452,
+      "CI_zscore": -0.16882367481539245,
+      "household_energy_burden": 3.759905822901114,
+      "industrial_production": -0.25421306219911566,
+      "weekly_hours": -0.24449877750611915,
+      "temporary_help": -8.796416515190863
+    },
+    {
+      "date": "2023-09-01",
+      "GM2_YoY": 2.694801512816669,
+      "WTI_YoY": 6.132235421776633,
+      "CI_zscore": -0.44215453164807333,
+      "household_energy_burden": 3.815029452694588,
+      "industrial_production": -0.2672476942852109,
+      "weekly_hours": -0.7317073170731603,
+      "temporary_help": -9.540498442367607
+    },
+    {
+      "date": "2023-10-01",
+      "GM2_YoY": 3.907865079503514,
+      "WTI_YoY": -2.1874745057515077,
+      "CI_zscore": -0.7959517605088727,
+      "household_energy_burden": 3.753969723294265,
+      "industrial_production": -0.7742988102069082,
+      "weekly_hours": -0.487804878048792,
+      "temporary_help": -9.68897573685068
+    },
+    {
+      "date": "2023-11-01",
+      "GM2_YoY": 3.9230951261744362,
+      "WTI_YoY": -7.923952183679683,
+      "CI_zscore": -0.29098740870754297,
+      "household_energy_burden": 3.6204331294428833,
+      "industrial_production": -0.09043615385835313,
+      "weekly_hours": -0.9779951100244433,
+      "temporary_help": -9.945006092139497
+    },
+    {
+      "date": "2023-12-01",
+      "GM2_YoY": 2.577692561263656,
+      "WTI_YoY": -5.935782902852016,
+      "CI_zscore": -0.20212281423378844,
+      "household_energy_burden": 3.521418159589975,
+      "industrial_production": 0.8386591076755323,
+      "weekly_hours": -0.7389162561576512,
+      "temporary_help": -9.52637606952772
+    },
+    {
+      "date": "2024-01-01",
+      "GM2_YoY": -0.08274848574769678,
+      "WTI_YoY": -5.082522493528218,
+      "CI_zscore": -0.7679541591371947,
+      "household_energy_burden": 3.485421932973013,
+      "industrial_production": -1.2762549126908995,
+      "weekly_hours": -1.946472019464729,
+      "temporary_help": -9.196913018569076
+    },
+    {
+      "date": "2024-02-01",
+      "GM2_YoY": 0.2710213328588562,
+      "WTI_YoY": 0.5419161266457362,
+      "CI_zscore": -0.4733767766400032,
+      "household_energy_burden": 3.441194195911177,
+      "industrial_production": -0.3543266402759926,
+      "weekly_hours": -0.24570024570025328,
+      "temporary_help": -9.256433730037639
+    },
+    {
+      "date": "2024-03-01",
+      "GM2_YoY": 1.043792095701268,
+      "WTI_YoY": 10.917591774010749,
+      "CI_zscore": -0.36744148696817974,
+      "household_energy_burden": 3.5369240848566497,
+      "industrial_production": -0.557312624665296,
+      "weekly_hours": 0.0,
+      "temporary_help": -8.582677165354324
+    },
+    {
+      "date": "2024-04-01",
+      "GM2_YoY": -0.3951368622470808,
+      "WTI_YoY": 7.427603003562955,
+      "CI_zscore": -0.3261932596908286,
+      "household_energy_burden": 3.5951843560524224,
+      "industrial_production": -0.9971062585799939,
+      "weekly_hours": -0.24570024570025328,
+      "temporary_help": -8.659006467593233
+    },
+    {
+      "date": "2024-05-01",
+      "GM2_YoY": 0.6915340437312123,
+      "WTI_YoY": 11.800193050193041,
+      "CI_zscore": -0.47319954166480155,
+      "household_energy_burden": 3.5775260327268565,
+      "industrial_production": -0.06499644303002983,
+      "weekly_hours": 0.24570024570023108,
+      "temporary_help": -8.876086656547544
+    },
+    {
+      "date": "2024-06-01",
+      "GM2_YoY": 1.7305830141402412,
+      "WTI_YoY": 13.55093422916771,
+      "CI_zscore": -0.36627066986099127,
+      "household_energy_burden": 3.4936907438400957,
+      "industrial_production": 0.7734749239909133,
+      "weekly_hours": 0.24570024570023108,
+      "temporary_help": -8.79419764279239
+    },
+    {
+      "date": "2024-07-01",
+      "GM2_YoY": 1.662793292475584,
+      "WTI_YoY": 7.533840166498451,
+      "CI_zscore": -0.5644908482131825,
+      "household_energy_burden": 3.4769418581345772,
+      "industrial_production": -0.9226344732312097,
+      "weekly_hours": 0.0,
+      "temporary_help": -8.31363139136878
+    },
+    {
+      "date": "2024-08-01",
+      "GM2_YoY": 4.703363506893177,
+      "WTI_YoY": -5.778512414354453,
+      "CI_zscore": -0.6800575794378805,
+      "household_energy_burden": 3.4039341220978345,
+      "industrial_production": -0.4050008280501727,
+      "weekly_hours": -0.2450980392156743,
+      "temporary_help": -8.082425795430293
+    },
+    {
+      "date": "2024-09-01",
+      "GM2_YoY": 7.054169421383172,
+      "WTI_YoY": -21.45820519988817,
+      "CI_zscore": -0.6379979339963966,
+      "household_energy_burden": 3.401730553931367,
+      "industrial_production": -1.2004422838397089,
+      "weekly_hours": 0.24570024570023108,
+      "temporary_help": -8.021236906299322
+    },
+    {
+      "date": "2024-10-01",
+      "GM2_YoY": 6.939958607020991,
+      "WTI_YoY": -15.94418464994467,
+      "CI_zscore": -0.7567167142553485,
+      "household_energy_burden": 3.33491193649505,
+      "industrial_production": -0.9947356843759692,
+      "weekly_hours": -0.4901960784313597,
+      "temporary_help": -8.121168409664614
+    },
+    {
+      "date": "2024-11-01",
+      "GM2_YoY": 4.4212068057584375,
+      "WTI_YoY": -9.956877132007468,
+      "CI_zscore": -1.0339419506616374,
+      "household_energy_burden": 3.258314342606202,
+      "industrial_production": -1.5579409481489392,
+      "weekly_hours": 0.7407407407407307,
+      "temporary_help": -6.75394010311916
+    },
+    {
+      "date": "2024-12-01",
+      "GM2_YoY": 2.591571068890941,
+      "WTI_YoY": -2.478309821842517,
+      "CI_zscore": -0.9095926677237439,
+      "household_energy_burden": 3.478837222841737,
+      "industrial_production": -0.2741466217243804,
+      "weekly_hours": 1.488833746898277,
+      "temporary_help": -5.3578077295405535
+    },
+    {
+      "date": "2025-01-01",
+      "GM2_YoY": 2.4135522523450748,
+      "WTI_YoY": 2.14439378371436,
+      "CI_zscore": -1.057500634907245,
+      "household_energy_burden": 3.606370318203902,
+      "industrial_production": 0.849002693950851,
+      "weekly_hours": 0.992555831265518,
+      "temporary_help": -5.756383610451299
+    },
+    {
+      "date": "2025-02-01",
+      "GM2_YoY": 3.5182114841114664,
+      "WTI_YoY": -7.399244139423356,
+      "CI_zscore": -0.7470563441748014,
+      "household_energy_burden": 3.4942398254653813,
+      "industrial_production": 0.8119858403550007,
+      "weekly_hours": 0.9852216748768461,
+      "temporary_help": -5.354407203975642
+    },
+    {
+      "date": "2025-03-01",
+      "GM2_YoY": 4.5236616975870225,
+      "WTI_YoY": -16.04241292963947,
+      "CI_zscore": -0.7732543340948084,
+      "household_energy_burden": 3.2962773735487394,
+      "industrial_production": 0.5802453773984029,
+      "weekly_hours": 1.2315270935960632,
+      "temporary_help": -5.317754559412801
+    },
+    {
+      "date": "2025-04-01",
+      "GM2_YoY": 6.601799700648536,
+      "WTI_YoY": -25.555129488790897,
+      "CI_zscore": -0.8006901501250245,
+      "household_energy_burden": 3.3235547433448027,
+      "industrial_production": 0.8823523543694645,
+      "weekly_hours": 0.738916256157629,
+      "temporary_help": -4.805845354223948
+    },
+    {
+      "date": "2025-05-01",
+      "GM2_YoY": 7.11754900539836,
+      "WTI_YoY": -22.31431157215291,
+      "CI_zscore": -0.8387244578302231,
+      "household_energy_burden": 3.2698722857419487,
+      "industrial_production": 0.10162299356553106,
+      "weekly_hours": 0.4901960784313708,
+      "temporary_help": -4.860874503123225
+    },
+    {
+      "date": "2025-06-01",
+      "GM2_YoY": 8.36435213757234,
+      "WTI_YoY": -14.540242019556848,
+      "CI_zscore": -1.1460734049465264,
+      "household_energy_burden": 3.343422318475143,
+      "industrial_production": 0.5793208714095943,
+      "weekly_hours": 0.4901960784313708,
+      "temporary_help": -4.243768160269157
+    },
+    {
+      "date": "2025-07-01",
+      "GM2_YoY": 8.70208101800607,
+      "WTI_YoY": -16.39299626030084,
+      "CI_zscore": -0.9028728421492592,
+      "household_energy_burden": 3.248468547925827,
+      "industrial_production": 1.9187662602012212,
+      "weekly_hours": 0.9828009828009687,
+      "temporary_help": -4.006465766077838
+    },
+    {
+      "date": "2025-08-01",
+      "GM2_YoY": 6.72190252171041,
+      "WTI_YoY": -15.41263132758246,
+      "CI_zscore": -0.7372098010742931,
+      "household_energy_burden": 3.2317788691381635,
+      "industrial_production": 1.1886779865559305,
+      "weekly_hours": 0.7371007371007376,
+      "temporary_help": -3.8486854841832008
+    },
+    {
+      "date": "2025-09-01",
+      "GM2_YoY": 6.070816745404373,
+      "WTI_YoY": -8.93694455970212,
+      "CI_zscore": -0.5799316016670121,
+      "household_energy_burden": 3.323286389856052,
+      "industrial_production": 1.8631698334008018,
+      "weekly_hours": 0.4901960784313708,
+      "temporary_help": -3.603744149765997
+    },
+    {
+      "date": "2025-10-01",
+      "GM2_YoY": 6.698046886450237,
+      "WTI_YoY": -15.406618803159745,
+      "CI_zscore": -0.7683448791628439,
+      "household_energy_burden": 3.291014100629585,
+      "industrial_production": 1.7593332629600056,
+      "weekly_hours": 1.2315270935960632,
+      "temporary_help": -3.767956668498307
+    },
+    {
+      "date": "2025-11-01",
+      "GM2_YoY": 7.87813351818607,
+      "WTI_YoY": -14.135493606544369,
+      "CI_zscore": -0.8271452613044301,
+      "household_energy_burden": 3.346920054693044,
+      "industrial_production": 1.7543117556713783,
+      "weekly_hours": 1.225490196078427,
+      "temporary_help": -3.3137254901960733
+    },
+    {
+      "date": "2025-12-01",
+      "GM2_YoY": 9.691848808362646,
+      "WTI_YoY": -17.321951586933114,
+      "CI_zscore": -0.5186096213307969,
+      "household_energy_burden": 3.4201131836017593,
+      "industrial_production": 1.1629935222018384,
+      "weekly_hours": 0.4889975550122383,
+      "temporary_help": -3.560328887839803
+    },
+    {
+      "date": "2026-01-01",
+      "GM2_YoY": 11.241496346602563,
+      "WTI_YoY": -20.735386341882023,
+      "CI_zscore": -0.5849309106551833,
+      "household_energy_burden": 3.326223825542082,
+      "industrial_production": 1.0581153993366232,
+      "weekly_hours": 1.7199017199017064,
+      "temporary_help": -2.7212223841216243
+    },
+    {
+      "date": "2026-02-01",
+      "GM2_YoY": 11.530469067933936,
+      "WTI_YoY": -9.820252661629114,
+      "CI_zscore": -0.6139916702945033,
+      "household_energy_burden": 3.3264335568632815,
+      "industrial_production": 0.8407575522283439,
+      "weekly_hours": 1.4634146341463428,
+      "temporary_help": -2.4121594946703517
+    },
+    {
+      "date": "2026-03-01",
+      "GM2_YoY": 9.660789452922081,
+      "WTI_YoY": 33.91692814031651,
+      "CI_zscore": -0.07797037710031304,
+      "household_energy_burden": 3.623928133932217,
+      "industrial_production": 0.5808567662044073,
+      "weekly_hours": 0.9732360097323589,
+      "temporary_help": -1.9143297868132736
+    },
+    {
+      "date": "2026-04-01",
+      "GM2_YoY": 9.58551223440458,
+      "WTI_YoY": 57.88783379675779,
+      "CI_zscore": 0.35370444235533294,
+      "household_energy_burden": 3.7437890909400555,
+      "industrial_production": 1.365696311304787,
+      "weekly_hours": 1.7114914425427896,
+      "temporary_help": -1.46785361028684
+    },
+    {
+      "date": "2026-05-01",
+      "GM2_YoY": 9.587530614971683,
+      "WTI_YoY": 64.28809976101478,
+      "CI_zscore": -0.29392817729373444,
+      "household_energy_burden": 3.8415843258624114,
+      "industrial_production": 1.6659155850265561,
+      "weekly_hours": 1.4634146341463428,
+      "temporary_help": -0.9231626278301652
+    },
+    {
+      "date": "2026-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 25.452185010782014,
+      "CI_zscore": -1.3818358591603184,
+      "household_energy_burden": null,
+      "industrial_production": null,
+      "weekly_hours": 1.4634146341463428,
+      "temporary_help": -0.2156032899464977
+    },
+    {
+      "date": "2026-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "CI_zscore": null,
+      "household_energy_burden": null,
+      "industrial_production": null,
+      "weekly_hours": null,
+      "temporary_help": null
+    }
+  ]
+}

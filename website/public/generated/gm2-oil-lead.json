@@ -1,0 +1,3569 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "gm2-oil-lead",
+  "title": "GM2 leading oil momentum",
+  "description": "Global liquidity growth aligned with later oil-price momentum.",
+  "plainLanguageSummary": "Global liquidity growth aligned with later oil-price momentum.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Oil_YoY[t] compared with GM2_YoY[t-lag]. Positive lag means GM2 leads oil.",
+    "explanation": "The simple-correlation peak is descriptive; lag 5 remains locked from rolling validation.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "The simple-correlation peak is descriptive; lag 5 remains locked from rolling validation."
+  ],
+  "sourceNotes": [
+    "Project G4 GM2 aggregate",
+    "FRED DCOILWTICO",
+    "FRED DCOILBRENTEU",
+    "EIA R0000____3"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2007-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "GM2_YoY": {
+        "mean": 7.80018373866028,
+        "standardDeviation": 4.781341604479347,
+        "n": 156
+      },
+      "WTI_YoY": {
+        "mean": 5.068730085491271,
+        "standardDeviation": 35.34453463139718,
+        "n": 156
+      },
+      "Brent_YoY": {
+        "mean": 6.33465292828639,
+        "standardDeviation": 35.76000033135023,
+        "n": 156
+      },
+      "RAC_composite_YoY": {
+        "mean": 6.3810041918470475,
+        "standardDeviation": 36.31853551168212,
+        "n": 156
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "1986-01-01",
+    "end": "2026-06-01"
+  },
+  "series": [
+    {
+      "key": "GM2_YoY",
+      "label": "G4 GM2 YoY",
+      "unit": "percent",
+      "source": "Project G4 GM2 aggregate",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#d97706",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "WTI_YoY",
+      "label": "WTI YoY",
+      "unit": "percent",
+      "source": "FRED DCOILWTICO",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "Brent_YoY",
+      "label": "Brent YoY",
+      "unit": "percent",
+      "source": "FRED DCOILBRENTEU",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#2563eb",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "RAC_composite_YoY",
+      "label": "RAC composite YoY",
+      "unit": "percent",
+      "source": "EIA R0000____3",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#7c3aed",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1986-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": -5.144337527757214
+    },
+    {
+      "date": "1986-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": -25.405813514533783
+    },
+    {
+      "date": "1986-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": -44.69357249626308
+    },
+    {
+      "date": "1986-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": -51.72031076581576
+    },
+    {
+      "date": "1986-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": -51.880530973451336
+    },
+    {
+      "date": "1986-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": -52.05530642750374
+    },
+    {
+      "date": "1986-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": -57.65325310267018
+    },
+    {
+      "date": "1986-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": -54.981132075471706
+    },
+    {
+      "date": "1986-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": -50.35916824196597
+    },
+    {
+      "date": "1986-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": -51.050262565641404
+    },
+    {
+      "date": "1986-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": -50.48399106478034
+    },
+    {
+      "date": "1986-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": -48.203592814371255
+    },
+    {
+      "date": "1987-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -18.643146052139624,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": -36.94888802184939
+    },
+    {
+      "date": "1987-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 14.844707805476109,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": -14.827935222672084
+    },
+    {
+      "date": "1987-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 45.1168058898485,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": 15.135135135135114
+    },
+    {
+      "date": "1987-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 45.41943051286199,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": 33.63984674329503
+    },
+    {
+      "date": "1987-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 26.401232465240156,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": 36.7816091954023
+    },
+    {
+      "date": "1987-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 49.512952465708395,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": 43.95946999220577
+    },
+    {
+      "date": "1987-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 84.22970497016263,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": 69.89342806394316
+    },
+    {
+      "date": "1987-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 34.539318045610855,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": 62.279966471081316
+    },
+    {
+      "date": "1987-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 31.367713004484308,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": 41.43183549124143
+    },
+    {
+      "date": "1987-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 33.31095719037012,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": 41.226053639846725
+    },
+    {
+      "date": "1987-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 23.86362850523842,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": 35.48872180451126
+    },
+    {
+      "date": "1987-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 7.244561741102884,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": 23.482658959537584
+    },
+    {
+      "date": "1988-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -8.159849877450975,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": -2.970297029702973
+    },
+    {
+      "date": "1988-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -5.370645722927547,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": -7.7243018419489
+    },
+    {
+      "date": "1988-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -11.503481790169523,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": -12.910798122065724
+    },
+    {
+      "date": "1988-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -4.361710264647389,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": -9.575688073394506
+    },
+    {
+      "date": "1988-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -10.360713241742193,
+      "Brent_YoY": -12.195420295527937,
+      "RAC_composite_YoY": -9.355742296918779
+    },
+    {
+      "date": "1988-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -17.662643508978515,
+      "Brent_YoY": -17.586193441471554,
+      "RAC_composite_YoY": -15.268002165674055
+    },
+    {
+      "date": "1988-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -27.385560331656045,
+      "Brent_YoY": -24.92331112431836,
+      "RAC_composite_YoY": -23.105070569785667
+    },
+    {
+      "date": "1988-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -23.57089923844492,
+      "Brent_YoY": -21.526413449822247,
+      "RAC_composite_YoY": -25.929752066115697
+    },
+    {
+      "date": "1988-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -25.573709444677185,
+      "Brent_YoY": -28.032465437216114,
+      "RAC_composite_YoY": -25.0942380183091
+    },
+    {
+      "date": "1988-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -30.659080752923728,
+      "Brent_YoY": -33.86344675268028,
+      "RAC_composite_YoY": -29.679869777536616
+    },
+    {
+      "date": "1988-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -24.995419346750623,
+      "Brent_YoY": -26.750012173150882,
+      "RAC_composite_YoY": -29.91120976692563
+    },
+    {
+      "date": "1988-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -5.164619263135228,
+      "Brent_YoY": -10.246364064429581,
+      "RAC_composite_YoY": -18.197776477472203
+    },
+    {
+      "date": "1989-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 5.223653429964181,
+      "Brent_YoY": 2.522234805229262,
+      "RAC_composite_YoY": 0.3188775510204023
+    },
+    {
+      "date": "1989-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 6.792123841115938,
+      "Brent_YoY": 7.368158149673065,
+      "RAC_composite_YoY": 5.086928525434642
+    },
+    {
+      "date": "1989-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 20.291536723329262,
+      "Brent_YoY": 26.947023423028416,
+      "RAC_composite_YoY": 18.059299191374656
+    },
+    {
+      "date": "1989-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 17.951014695591304,
+      "Brent_YoY": 22.44156544353173,
+      "RAC_composite_YoY": 21.876981610653147
+    },
+    {
+      "date": "1989-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 15.495283767904212,
+      "Brent_YoY": 14.215262879273372,
+      "RAC_composite_YoY": 17.61433868974043
+    },
+    {
+      "date": "1989-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 21.314045268281955,
+      "Brent_YoY": 13.685811205989019,
+      "RAC_composite_YoY": 17.763578274760384
+    },
+    {
+      "date": "1989-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 27.642707349111628,
+      "Brent_YoY": 18.21376094039482,
+      "RAC_composite_YoY": 23.589394969408552
+    },
+    {
+      "date": "1989-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 19.67566659197848,
+      "Brent_YoY": 12.596333489023825,
+      "RAC_composite_YoY": 20.153417015341702
+    },
+    {
+      "date": "1989-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 34.78373524655347,
+      "Brent_YoY": 34.80123830873958,
+      "RAC_composite_YoY": 26.9590222861251
+    },
+    {
+      "date": "1989-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 45.947946859144025,
+      "Brent_YoY": 52.41143586951973,
+      "RAC_composite_YoY": 40.74074074074072
+    },
+    {
+      "date": "1989-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 40.41014432194399,
+      "Brent_YoY": 43.78446290221258,
+      "RAC_composite_YoY": 45.60570071258907
+    },
+    {
+      "date": "1989-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 28.796907246461068,
+      "Brent_YoY": 29.609847790207233,
+      "RAC_composite_YoY": 39.771101573676674
+    },
+    {
+      "date": "1990-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 26.846534617795626,
+      "Brent_YoY": 23.759236243637673,
+      "RAC_composite_YoY": 31.21424030514939
+    },
+    {
+      "date": "1990-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 23.284921807487514,
+      "Brent_YoY": 17.319477751132407,
+      "RAC_composite_YoY": 24.448529411764696
+    },
+    {
+      "date": "1990-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 4.637816400326611,
+      "Brent_YoY": -1.6773458767755156,
+      "RAC_composite_YoY": 9.246575342465757
+    },
+    {
+      "date": "1990-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -12.546869808723715,
+      "Brent_YoY": -18.24550179306629,
+      "RAC_composite_YoY": -11.290322580645151
+    },
+    {
+      "date": "1990-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -9.560637487134759,
+      "Brent_YoY": -12.24111433659405,
+      "RAC_composite_YoY": -14.50341565948503
+    },
+    {
+      "date": "1990-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -16.733867267747705,
+      "Brent_YoY": -14.521874188506567,
+      "RAC_composite_YoY": -18.01410743353229
+    },
+    {
+      "date": "1990-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -6.710019236198206,
+      "Brent_YoY": -2.5748732460794566,
+      "RAC_composite_YoY": -10.946094609460932
+    },
+    {
+      "date": "1990-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 46.98916426782746,
+      "Brent_YoY": 61.99994814757201,
+      "RAC_composite_YoY": 36.680208937899
+    },
+    {
+      "date": "1990-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 71.03142773807787,
+      "Brent_YoY": 96.43490846712592,
+      "RAC_composite_YoY": 70.04530011325029
+    },
+    {
+      "date": "1990-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 79.3215955631819,
+      "Brent_YoY": 90.51791987507458,
+      "RAC_composite_YoY": 81.68859649122808
+    },
+    {
+      "date": "1990-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 62.83451228166561,
+      "Brent_YoY": 76.57281553398062,
+      "RAC_composite_YoY": 65.95976073953236
+    },
+    {
+      "date": "1990-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 29.29383886255923,
+      "Brent_YoY": 42.515121770042995,
+      "RAC_composite_YoY": 33.5209825997953
+    },
+    {
+      "date": "1991-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 10.3699874749001,
+      "Brent_YoY": 10.891046755357813,
+      "RAC_composite_YoY": 10.70736434108528
+    },
+    {
+      "date": "1991-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -7.3961018405462875,
+      "Brent_YoY": -1.4005602240896198,
+      "RAC_composite_YoY": -6.302314130969955
+    },
+    {
+      "date": "1991-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -2.3849017902927483,
+      "Brent_YoY": 3.7810244240086943,
+      "RAC_composite_YoY": -6.53082549634274
+    },
+    {
+      "date": "1991-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 13.049849393503553,
+      "Brent_YoY": 15.457972943002884,
+      "RAC_composite_YoY": 8.269794721407631
+    },
+    {
+      "date": "1991-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 16.663752840980052,
+      "Brent_YoY": 17.334259902710226,
+      "RAC_composite_YoY": 14.935464044253234
+    },
+    {
+      "date": "1991-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 20.92669709070165,
+      "Brent_YoY": 20.276639344262293,
+      "RAC_composite_YoY": 18.99404367968234
+    },
+    {
+      "date": "1991-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 15.979939535884903,
+      "Brent_YoY": 12.976025489320353,
+      "RAC_composite_YoY": 14.70043236565781
+    },
+    {
+      "date": "1991-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -20.557639058761556,
+      "Brent_YoY": -27.218896171444783,
+      "RAC_composite_YoY": -19.66029723991507
+    },
+    {
+      "date": "1991-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -34.68178765947921,
+      "Brent_YoY": -41.25360393734846,
+      "RAC_composite_YoY": -36.16383616383616
+    },
+    {
+      "date": "1991-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -35.54064976897372,
+      "Brent_YoY": -38.35513928450731,
+      "RAC_composite_YoY": -39.167169583584794
+    },
+    {
+      "date": "1991-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -30.530858222019585,
+      "Brent_YoY": -36.164764470697286,
+      "RAC_composite_YoY": -35.38663171690695
+    },
+    {
+      "date": "1991-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -28.52866376564188,
+      "Brent_YoY": -34.88265555749243,
+      "RAC_composite_YoY": -32.69451897278651
+    },
+    {
+      "date": "1992-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -25.555255336395565,
+      "Brent_YoY": -22.925587316282837,
+      "RAC_composite_YoY": -27.78993435448578
+    },
+    {
+      "date": "1992-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -7.15419362715175,
+      "Brent_YoY": -7.588554463554475,
+      "RAC_composite_YoY": -14.34576983709932
+    },
+    {
+      "date": "1992-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -4.92265315771081,
+      "Brent_YoY": -7.606922096637813,
+      "RAC_composite_YoY": -7.434320849636677
+    },
+    {
+      "date": "1992-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -2.8804608737397874,
+      "Brent_YoY": -1.3605442176870652,
+      "RAC_composite_YoY": -4.333694474539551
+    },
+    {
+      "date": "1992-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -1.2093511164393944,
+      "Brent_YoY": 3.6571035985880407,
+      "RAC_composite_YoY": 0.6951871657753905
+    },
+    {
+      "date": "1992-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 10.874958911018151,
+      "Brent_YoY": 16.461713599459582,
+      "RAC_composite_YoY": 11.179087875417126
+    },
+    {
+      "date": "1992-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 1.738883133239888,
+      "Brent_YoY": 4.328334790307764,
+      "RAC_composite_YoY": 8.239095315024247
+    },
+    {
+      "date": "1992-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -1.6345288482069176,
+      "Brent_YoY": -0.1751505199781178,
+      "RAC_composite_YoY": 3.3826638477801207
+    },
+    {
+      "date": "1992-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -0.023468181922037257,
+      "Brent_YoY": -1.1311376411018759,
+      "RAC_composite_YoY": 2.1909233176838683
+    },
+    {
+      "date": "1992-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -6.650463384381899,
+      "Brent_YoY": -8.755566789008473,
+      "RAC_composite_YoY": -3.323412698412709
+    },
+    {
+      "date": "1992-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -9.44952086160109,
+      "Brent_YoY": -8.974011911207347,
+      "RAC_composite_YoY": -5.375253549695735
+    },
+    {
+      "date": "1992-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -0.4308335146512299,
+      "Brent_YoY": -1.4742777332333312,
+      "RAC_composite_YoY": -0.740318906605919
+    },
+    {
+      "date": "1993-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 1.3124274099883815,
+      "Brent_YoY": -4.281281281281268,
+      "RAC_composite_YoY": 3.6969696969696875
+    },
+    {
+      "date": "1993-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 5.646869749433869,
+      "Brent_YoY": 2.2866246958965553,
+      "RAC_composite_YoY": 8.220858895705518
+    },
+    {
+      "date": "1993-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 7.40074615329982,
+      "Brent_YoY": 6.547071931704562,
+      "RAC_composite_YoY": 9.178743961352653
+    },
+    {
+      "date": "1993-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 0.11122095897182493,
+      "Brent_YoY": -1.2926000503397983,
+      "RAC_composite_YoY": 4.303510758776907
+    },
+    {
+      "date": "1993-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -4.891420943481684,
+      "Brent_YoY": -6.94172644069636,
+      "RAC_composite_YoY": -3.558151885289418
+    },
+    {
+      "date": "1993-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -14.699671039272221,
+      "Brent_YoY": -16.56784394603421,
+      "RAC_composite_YoY": -13.656828414207089
+    },
+    {
+      "date": "1993-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -17.842381646466865,
+      "Brent_YoY": -17.10307353354792,
+      "RAC_composite_YoY": -19.90049751243781
+    },
+    {
+      "date": "1993-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -15.596471724294625,
+      "Brent_YoY": -15.411338962605537,
+      "RAC_composite_YoY": -19.069529652351736
+    },
+    {
+      "date": "1993-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -20.003679820044916,
+      "Brent_YoY": -21.00731040050231,
+      "RAC_composite_YoY": -20.41858090862685
+    },
+    {
+      "date": "1993-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -16.28972870248101,
+      "Brent_YoY": -18.03960277578368,
+      "RAC_composite_YoY": -18.88147768086197
+    },
+    {
+      "date": "1993-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -18.336909707954774,
+      "Brent_YoY": -20.9111186211558,
+      "RAC_composite_YoY": -22.2400857449089
+    },
+    {
+      "date": "1993-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -25.235943456074107,
+      "Brent_YoY": -24.332554537579078,
+      "RAC_composite_YoY": -28.227194492254736
+    },
+    {
+      "date": "1994-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -21.045257110830875,
+      "Brent_YoY": -17.79880363510873,
+      "RAC_composite_YoY": -25.014611338398595
+    },
+    {
+      "date": "1994-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -26.41157589035511,
+      "Brent_YoY": -25.258507666875673,
+      "RAC_composite_YoY": -25.907029478458053
+    },
+    {
+      "date": "1994-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -27.759354742089382,
+      "Brent_YoY": -26.417627181409976,
+      "RAC_composite_YoY": -27.212389380530965
+    },
+    {
+      "date": "1994-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -18.9235896802864,
+      "Brent_YoY": -18.436483186332076,
+      "RAC_composite_YoY": -20.52117263843649
+    },
+    {
+      "date": "1994-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -10.3283409657003,
+      "Brent_YoY": -12.534622493957059,
+      "RAC_composite_YoY": -12.995594713656388
+    },
+    {
+      "date": "1994-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -0.17854167162616452,
+      "Brent_YoY": -5.039138943248533,
+      "RAC_composite_YoY": -0.28968713789108147
+    },
+    {
+      "date": "1994-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 9.863051984348804,
+      "Brent_YoY": 4.912351327568354,
+      "RAC_composite_YoY": 9.440993788819863
+    },
+    {
+      "date": "1994-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 2.0685750401601144,
+      "Brent_YoY": 1.1771355676437834,
+      "RAC_composite_YoY": 6.885660138976646
+    },
+    {
+      "date": "1994-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -0.33461193177182214,
+      "Brent_YoY": -0.7295747459263091,
+      "RAC_composite_YoY": 3.784477228992933
+    },
+    {
+      "date": "1994-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -2.4080583390168386,
+      "Brent_YoY": -0.699661639043403,
+      "RAC_composite_YoY": 3.1625553447185206
+    },
+    {
+      "date": "1994-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 8.793113334671276,
+      "Brent_YoY": 13.128140703517598,
+      "RAC_composite_YoY": 13.99035148173673
+    },
+    {
+      "date": "1994-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 18.22118696893149,
+      "Brent_YoY": 16.07410491257284,
+      "RAC_composite_YoY": 28.137490007993616
+    },
+    {
+      "date": "1995-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 20.0500697173279,
+      "Brent_YoY": 15.81642768012288,
+      "RAC_composite_YoY": 28.916601714731094
+    },
+    {
+      "date": "1995-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 25.63381284717274,
+      "Brent_YoY": 24.000144906535258,
+      "RAC_composite_YoY": 31.44605967865339
+    },
+    {
+      "date": "1995-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 26.28087425220633,
+      "Brent_YoY": 23.034096628082533,
+      "RAC_composite_YoY": 31.155015197568403
+    },
+    {
+      "date": "1995-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 21.171228924931086,
+      "Brent_YoY": 22.432043307993577,
+      "RAC_composite_YoY": 25.887978142076506
+    },
+    {
+      "date": "1995-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 10.357010625863605,
+      "Brent_YoY": 13.361187860817235,
+      "RAC_composite_YoY": 17.84810126582279
+    },
+    {
+      "date": "1995-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -3.2218830487455885,
+      "Brent_YoY": 3.2782884568453685,
+      "RAC_composite_YoY": 2.7890761185357382
+    },
+    {
+      "date": "1995-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -11.849703630211927,
+      "Brent_YoY": -9.916393841824721,
+      "RAC_composite_YoY": -5.334846765039735
+    },
+    {
+      "date": "1995-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -1.9724705548460286,
+      "Brent_YoY": -4.714239586696789,
+      "RAC_composite_YoY": -1.0047281323877222
+    },
+    {
+      "date": "1995-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 4.469783819194251,
+      "Brent_YoY": 5.061489836576349,
+      "RAC_composite_YoY": 4.511742892459836
+    },
+    {
+      "date": "1995-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -1.5974577513659383,
+      "Brent_YoY": -2.30173522694459,
+      "RAC_composite_YoY": 1.471489883507071
+    },
+    {
+      "date": "1995-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -0.4261324331054972,
+      "Brent_YoY": -1.9222125274318547,
+      "RAC_composite_YoY": 0.48367593712213
+    },
+    {
+      "date": "1995-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 10.880116553350906,
+      "Brent_YoY": 12.51106677061724,
+      "RAC_composite_YoY": 9.41983780411726
+    },
+    {
+      "date": "1996-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 4.51797760089081,
+      "Brent_YoY": 7.861796421593881,
+      "RAC_composite_YoY": 7.255139056831927
+    },
+    {
+      "date": "1996-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 2.8190630048465115,
+      "Brent_YoY": 5.168410523518774,
+      "RAC_composite_YoY": 4.481955762514556
+    },
+    {
+      "date": "1996-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 15.066782810685254,
+      "Brent_YoY": 16.731128601255165,
+      "RAC_composite_YoY": 14.484356894553873
+    },
+    {
+      "date": "1996-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 18.09795896773123,
+      "Brent_YoY": 12.07703994995084,
+      "RAC_composite_YoY": 17.362995116657622
+    },
+    {
+      "date": "1996-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 7.211272794253087,
+      "Brent_YoY": 4.38045227007875,
+      "RAC_composite_YoY": 10.687432867883984
+    },
+    {
+      "date": "1996-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 10.7210270816392,
+      "Brent_YoY": 6.60654274312118,
+      "RAC_composite_YoY": 9.15771622385526
+    },
+    {
+      "date": "1996-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 22.953292703083484,
+      "Brent_YoY": 23.44213998605309,
+      "RAC_composite_YoY": 18.46522781774582
+    },
+    {
+      "date": "1996-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 21.543423523012393,
+      "Brent_YoY": 27.434875452496588,
+      "RAC_composite_YoY": 22.62686567164178
+    },
+    {
+      "date": "1996-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 31.527255768017337,
+      "Brent_YoY": 35.515697624682765,
+      "RAC_composite_YoY": 29.863985807214675
+    },
+    {
+      "date": "1996-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 42.71135753792856,
+      "Brent_YoY": 49.976693179197575,
+      "RAC_composite_YoY": 39.4561933534743
+    },
+    {
+      "date": "1996-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 31.749340002778958,
+      "Brent_YoY": 34.98396608872698,
+      "RAC_composite_YoY": 37.60529482551143
+    },
+    {
+      "date": "1996-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 32.59701694253501,
+      "Brent_YoY": 32.678665805390786,
+      "RAC_composite_YoY": 32.83922462941848
+    },
+    {
+      "date": "1997-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 33.29315332690452,
+      "Brent_YoY": 31.839911156050405,
+      "RAC_composite_YoY": 32.976324689966184
+    },
+    {
+      "date": "1997-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 16.145891478637697,
+      "Brent_YoY": 15.842386536742392,
+      "RAC_composite_YoY": 20.55710306406686
+    },
+    {
+      "date": "1997-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -1.7221750971025407,
+      "Brent_YoY": -3.6213389623161896,
+      "RAC_composite_YoY": 0.30364372469635637
+    },
+    {
+      "date": "1997-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -16.179364166961452,
+      "Brent_YoY": -16.002444482624377,
+      "RAC_composite_YoY": -15.164123901987969
+    },
+    {
+      "date": "1997-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -1.636661880627166,
+      "Brent_YoY": -0.688626476072085,
+      "RAC_composite_YoY": -8.830664725861237
+    },
+    {
+      "date": "1997-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -5.696868803094468,
+      "Brent_YoY": -4.749004415788461,
+      "RAC_composite_YoY": -7.81978249611599
+    },
+    {
+      "date": "1997-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -7.692307692307687,
+      "Brent_YoY": -5.6531446471019375,
+      "RAC_composite_YoY": -9.716599190283404
+    },
+    {
+      "date": "1997-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -8.904298432594448,
+      "Brent_YoY": -9.344994892747705,
+      "RAC_composite_YoY": -11.441090555014599
+    },
+    {
+      "date": "1997-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -17.388009372240642,
+      "Brent_YoY": -18.424375052605,
+      "RAC_composite_YoY": -17.395264116575593
+    },
+    {
+      "date": "1997-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -14.28471566879871,
+      "Brent_YoY": -17.785295281966384,
+      "RAC_composite_YoY": -16.94107452339687
+    },
+    {
+      "date": "1997-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -14.811689985703913,
+      "Brent_YoY": -15.753024154695773,
+      "RAC_composite_YoY": -19.020550940096204
+    },
+    {
+      "date": "1997-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -27.333470606403786,
+      "Brent_YoY": -27.75551964888886,
+      "RAC_composite_YoY": -27.424892703862657
+    },
+    {
+      "date": "1998-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -33.45487429914993,
+      "Brent_YoY": -35.47917214590625,
+      "RAC_composite_YoY": -36.24417125900806
+    },
+    {
+      "date": "1998-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -27.580396345081304,
+      "Brent_YoY": -32.52208703554119,
+      "RAC_composite_YoY": -35.39741219963032
+    },
+    {
+      "date": "1998-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -27.901480823016712,
+      "Brent_YoY": -31.51527821992466,
+      "RAC_composite_YoY": -35.21695257315842
+    },
+    {
+      "date": "1998-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -22.04389348631214,
+      "Brent_YoY": -22.951868057892966,
+      "RAC_composite_YoY": -28.828337874659404
+    },
+    {
+      "date": "1998-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -28.363677950594692,
+      "Brent_YoY": -24.495264896997693,
+      "RAC_composite_YoY": -31.080361894624797
+    },
+    {
+      "date": "1998-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -28.754838100632508,
+      "Brent_YoY": -30.566759747647122,
+      "RAC_composite_YoY": -32.921348314606746
+    },
+    {
+      "date": "1998-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -27.924179380490056,
+      "Brent_YoY": -34.579516275061316,
+      "RAC_composite_YoY": -33.29596412556054
+    },
+    {
+      "date": "1998-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -32.4813250280423,
+      "Brent_YoY": -35.93073593073592,
+      "RAC_composite_YoY": -35.29411764705883
+    },
+    {
+      "date": "1998-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -24.096472455334606,
+      "Brent_YoY": -27.71967508348029,
+      "RAC_composite_YoY": -28.280044101433297
+    },
+    {
+      "date": "1998-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -32.188690855710924,
+      "Brent_YoY": -36.05772100519311,
+      "RAC_composite_YoY": -34.22013562858635
+    },
+    {
+      "date": "1998-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -35.61366344690581,
+      "Brent_YoY": -42.427629007739355,
+      "RAC_composite_YoY": -37.580993520518355
+    },
+    {
+      "date": "1998-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -38.10373896657742,
+      "Brent_YoY": -42.82190565933151,
+      "RAC_composite_YoY": -41.98698994677705
+    },
+    {
+      "date": "1999-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -25.168997595639418,
+      "Brent_YoY": -26.814091308165068,
+      "RAC_composite_YoY": -30.651595744680847
+    },
+    {
+      "date": "1999-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -25.19499246247623,
+      "Brent_YoY": -26.99400158237023,
+      "RAC_composite_YoY": -24.53505007153075
+    },
+    {
+      "date": "1999-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -2.9038677269292323,
+      "Brent_YoY": -4.5170514961064505,
+      "RAC_composite_YoY": -5.529595015576316
+    },
+    {
+      "date": "1999-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 12.75625717209936,
+      "Brent_YoY": 13.07063911580968,
+      "RAC_composite_YoY": 14.47166921898928
+    },
+    {
+      "date": "1999-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 18.804479013007903,
+      "Brent_YoY": 6.002198607548581,
+      "RAC_composite_YoY": 23.166023166023166
+    },
+    {
+      "date": "1999-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 30.61812640784418,
+      "Brent_YoY": 29.95829299173307,
+      "RAC_composite_YoY": 34.505862646566165
+    },
+    {
+      "date": "1999-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 41.84519991447508,
+      "Brent_YoY": 57.95270489148044,
+      "RAC_composite_YoY": 51.84873949579831
+    },
+    {
+      "date": "1999-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 57.94823924087649,
+      "Brent_YoY": 69.70830635426913,
+      "RAC_composite_YoY": 66.27017841971114
+    },
+    {
+      "date": "1999-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 58.31274155737185,
+      "Brent_YoY": 68.94331652813734,
+      "RAC_composite_YoY": 66.64104534973099
+    },
+    {
+      "date": "1999-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 56.91564360703734,
+      "Brent_YoY": 73.21609624347147,
+      "RAC_composite_YoY": 73.9095955590801
+    },
+    {
+      "date": "1999-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 92.29486645694547,
+      "Brent_YoY": 122.7011945004353,
+      "RAC_composite_YoY": 100.0
+    },
+    {
+      "date": "1999-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 130.0321987471483,
+      "Brent_YoY": 159.2876330713362,
+      "RAC_composite_YoY": 149.84709480122325
+    },
+    {
+      "date": "2000-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 117.81899234586591,
+      "Brent_YoY": 129.52899365693463,
+      "RAC_composite_YoY": 144.39117929050815
+    },
+    {
+      "date": "2000-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 144.43792166827305,
+      "Brent_YoY": 170.41328726612596,
+      "RAC_composite_YoY": 161.13744075829382
+    },
+    {
+      "date": "2000-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 103.3297784097642,
+      "Brent_YoY": 119.69001946066165,
+      "RAC_composite_YoY": 134.2126957955482
+    },
+    {
+      "date": "2000-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 48.576358930112185,
+      "Brent_YoY": 48.84072342635879,
+      "RAC_composite_YoY": 67.02341137123746
+    },
+    {
+      "date": "2000-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 62.47527622644029,
+      "Brent_YoY": 82.1815410345554,
+      "RAC_composite_YoY": 65.8934169278997
+    },
+    {
+      "date": "2000-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 77.54812203596157,
+      "Brent_YoY": 87.82773145362333,
+      "RAC_composite_YoY": 81.38231631382318
+    },
+    {
+      "date": "2000-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 47.720985434902104,
+      "Brent_YoY": 50.326944194868716,
+      "RAC_composite_YoY": 59.048146098505796
+    },
+    {
+      "date": "2000-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 46.92629973650948,
+      "Brent_YoY": 49.34475414200576,
+      "RAC_composite_YoY": 48.237097598364855
+    },
+    {
+      "date": "2000-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 42.38969043283374,
+      "Brent_YoY": 47.02787819432641,
+      "RAC_composite_YoY": 43.58856088560885
+    },
+    {
+      "date": "2000-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 45.908117946017725,
+      "Brent_YoY": 40.71617593530805,
+      "RAC_composite_YoY": 39.671682626538995
+    },
+    {
+      "date": "2000-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 37.65546138463005,
+      "Brent_YoY": 32.41194416196726,
+      "RAC_composite_YoY": 34.083044982698965
+    },
+    {
+      "date": "2000-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 8.942169114293552,
+      "Brent_YoY": 0.7334862290543143,
+      "RAC_composite_YoY": 7.343941248469998
+    },
+    {
+      "date": "2001-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 8.533695948983722,
+      "Brent_YoY": 0.4450842951881695,
+      "RAC_composite_YoY": -0.15692428403295544
+    },
+    {
+      "date": "2001-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 0.8291006068600559,
+      "Brent_YoY": -0.9800442318572022,
+      "RAC_composite_YoY": -5.299455535390207
+    },
+    {
+      "date": "2001-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -8.703224917747898,
+      "Brent_YoY": -10.873916807353478,
+      "RAC_composite_YoY": -15.346708905315031
+    },
+    {
+      "date": "2001-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 6.873056146668843,
+      "Brent_YoY": 12.70708986445026,
+      "RAC_composite_YoY": -4.405286343612325
+    },
+    {
+      "date": "2001-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -0.5526257618340913,
+      "Brent_YoY": 2.0766646013431256,
+      "RAC_composite_YoY": -4.346182917611497
+    },
+    {
+      "date": "2001-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -13.271286888964617,
+      "Brent_YoY": -6.532563292288696,
+      "RAC_composite_YoY": -14.45245451424647
+    },
+    {
+      "date": "2001-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -11.018276586120068,
+      "Brent_YoY": -14.185518961970411,
+      "RAC_composite_YoY": -17.327766179540703
+    },
+    {
+      "date": "2001-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -12.442460400239197,
+      "Brent_YoY": -14.955868166045128,
+      "RAC_composite_YoY": -15.75318855567046
+    },
+    {
+      "date": "2001-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -22.678923137142814,
+      "Brent_YoY": -22.704226768576508,
+      "RAC_composite_YoY": -23.771281721811754
+    },
+    {
+      "date": "2001-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -33.039932620902455,
+      "Brent_YoY": -33.66530024473039,
+      "RAC_composite_YoY": -34.5739471106758
+    },
+    {
+      "date": "2001-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -42.94994188942388,
+      "Brent_YoY": -42.25511415206312,
+      "RAC_composite_YoY": -44.38709677419356
+    },
+    {
+      "date": "2001-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -31.8166885220718,
+      "Brent_YoY": -27.10341715551545,
+      "RAC_composite_YoY": -37.21018624097301
+    },
+    {
+      "date": "2002-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -33.363914373088676,
+      "Brent_YoY": -24.225706886153187,
+      "RAC_composite_YoY": -31.709233791748524
+    },
+    {
+      "date": "2002-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -30.009954139855665,
+      "Brent_YoY": -26.280291599251004,
+      "RAC_composite_YoY": -29.359908010732084
+    },
+    {
+      "date": "2002-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -9.95995862391138,
+      "Brent_YoY": -3.2681436399846775,
+      "RAC_composite_YoY": -8.52390852390853
+    },
+    {
+      "date": "2002-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -4.768676212837708,
+      "Brent_YoY": 0.27864952419518474,
+      "RAC_composite_YoY": 0.9635525764557951
+    },
+    {
+      "date": "2002-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -5.5458529150260505,
+      "Brent_YoY": -10.483223631401495,
+      "RAC_composite_YoY": -1.1062821019359848
+    },
+    {
+      "date": "2002-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -7.538476137892969,
+      "Brent_YoY": -13.527862797736102,
+      "RAC_composite_YoY": -3.4911717495987205
+    },
+    {
+      "date": "2002-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 2.048943991926766,
+      "Brent_YoY": 4.560279417078172,
+      "RAC_composite_YoY": 5.892255892255882
+    },
+    {
+      "date": "2002-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 3.6936149936467544,
+      "Brent_YoY": 3.7825686774284994,
+      "RAC_composite_YoY": 7.1603927986906735
+    },
+    {
+      "date": "2002-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 13.221740091203117,
+      "Brent_YoY": 10.851202441592589,
+      "RAC_composite_YoY": 16.56131479140328
+    },
+    {
+      "date": "2002-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 30.072563247695648,
+      "Brent_YoY": 34.10885534644452,
+      "RAC_composite_YoY": 33.23353293413174
+    },
+    {
+      "date": "2002-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 34.209856191280366,
+      "Brent_YoY": 29.461536512849573,
+      "RAC_composite_YoY": 42.69141531322509
+    },
+    {
+      "date": "2002-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 51.94714710988224,
+      "Brent_YoY": 51.478756330894804,
+      "RAC_composite_YoY": 63.01452784503632
+    },
+    {
+      "date": "2003-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 67.11915171131133,
+      "Brent_YoY": 60.60116581220591,
+      "RAC_composite_YoY": 75.60414269275029
+    },
+    {
+      "date": "2003-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 72.8863492063492,
+      "Brent_YoY": 61.62856649651056,
+      "RAC_composite_YoY": 79.05588714053175
+    },
+    {
+      "date": "2003-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 36.616254263313095,
+      "Brent_YoY": 29.184333741936786,
+      "RAC_composite_YoY": 39.318181818181806
+    },
+    {
+      "date": "2003-04-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 7.606777822425292,
+      "Brent_YoY": -2.568768439835345,
+      "RAC_composite_YoY": 7.966804979253106
+    },
+    {
+      "date": "2003-05-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 3.946575352334203,
+      "Brent_YoY": 2.0211621233859445,
+      "RAC_composite_YoY": 2.8365960846983507
+    },
+    {
+      "date": "2003-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 20.15745812795011,
+      "Brent_YoY": 14.829498828391486,
+      "RAC_composite_YoY": 16.091476091476096
+    },
+    {
+      "date": "2003-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 14.04853600548388,
+      "Brent_YoY": 10.151538188637165,
+      "RAC_composite_YoY": 13.473767885532585
+    },
+    {
+      "date": "2003-08-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 11.234136071197899,
+      "Brent_YoY": 12.144712915609833,
+      "RAC_composite_YoY": 11.302023673157692
+    },
+    {
+      "date": "2003-09-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -4.558030672615931,
+      "Brent_YoY": -4.532650233450042,
+      "RAC_composite_YoY": -4.591467823571948
+    },
+    {
+      "date": "2003-10-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 5.2077679271455235,
+      "Brent_YoY": 7.496566638778823,
+      "RAC_composite_YoY": 3.93258426966292
+    },
+    {
+      "date": "2003-11-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 18.048759378724032,
+      "Brent_YoY": 18.151710237946126,
+      "RAC_composite_YoY": 14.95934959349594
+    },
+    {
+      "date": "2003-12-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 9.056378095299689,
+      "Brent_YoY": 5.1973490167211756,
+      "RAC_composite_YoY": 8.726327515781662
+    },
+    {
+      "date": "2004-01-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 4.136495685730401,
+      "Brent_YoY": 0.312073987078354,
+      "RAC_composite_YoY": 1.34338138925294
+    },
+    {
+      "date": "2004-02-01",
+      "GM2_YoY": null,
+      "WTI_YoY": -3.1921144636718912,
+      "Brent_YoY": -5.835952518995457,
+      "RAC_composite_YoY": -3.8787878787878816
+    },
+    {
+      "date": "2004-03-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 9.631900779270186,
+      "Brent_YoY": 9.871714579819258,
+      "RAC_composite_YoY": 7.993474714518767
+    },
+    {
+      "date": "2004-04-01",
+      "GM2_YoY": 12.494522878342806,
+      "WTI_YoY": 30.455728726461317,
+      "Brent_YoY": 34.00061651163213,
+      "RAC_composite_YoY": 28.631821675634118
+    },
+    {
+      "date": "2004-05-01",
+      "GM2_YoY": 8.329745338916172,
+      "WTI_YoY": 43.28369587314496,
+      "Brent_YoY": 45.285850729976794,
+      "RAC_composite_YoY": 41.10334110334111
+    },
+    {
+      "date": "2004-06-01",
+      "GM2_YoY": 9.150879371268395,
+      "WTI_YoY": 24.01267257846593,
+      "Brent_YoY": 27.23327713253836,
+      "RAC_composite_YoY": 23.889684813753576
+    },
+    {
+      "date": "2004-07-01",
+      "GM2_YoY": 10.20367223196208,
+      "WTI_YoY": 32.5920921132272,
+      "Brent_YoY": 34.82582798631386,
+      "RAC_composite_YoY": 28.47635726795097
+    },
+    {
+      "date": "2004-08-01",
+      "GM2_YoY": 9.872316412743999,
+      "WTI_YoY": 42.216547497446385,
+      "Brent_YoY": 43.01376708211728,
+      "RAC_composite_YoY": 38.25042881646654
+    },
+    {
+      "date": "2004-09-01",
+      "GM2_YoY": 9.30988468844438,
+      "WTI_YoY": 62.25148854576648,
+      "Brent_YoY": 59.325699532248045,
+      "RAC_composite_YoY": 56.68813944676015
+    },
+    {
+      "date": "2004-10-01",
+      "GM2_YoY": 7.828093556966853,
+      "WTI_YoY": 75.62139247054265,
+      "Brent_YoY": 68.1199643650817,
+      "RAC_composite_YoY": 66.23423423423425
+    },
+    {
+      "date": "2004-11-01",
+      "GM2_YoY": 10.449878835039051,
+      "WTI_YoY": 55.80712563621753,
+      "Brent_YoY": 49.93636916947934,
+      "RAC_composite_YoY": 47.701555869872706
+    },
+    {
+      "date": "2004-12-01",
+      "GM2_YoY": 9.927306176010674,
+      "WTI_YoY": 34.30066250685479,
+      "Brent_YoY": 32.86135508809218,
+      "RAC_composite_YoY": 25.0
+    },
+    {
+      "date": "2005-01-01",
+      "GM2_YoY": 8.15772372747421,
+      "WTI_YoY": 36.5112212183037,
+      "Brent_YoY": 42.28786725529001,
+      "RAC_composite_YoY": 26.123504688005173
+    },
+    {
+      "date": "2005-02-01",
+      "GM2_YoY": 7.357829716373665,
+      "WTI_YoY": 38.8188343120742,
+      "Brent_YoY": 47.366203801221715,
+      "RAC_composite_YoY": 29.41361916771752
+    },
+    {
+      "date": "2005-03-01",
+      "GM2_YoY": 9.1221242123257,
+      "WTI_YoY": 47.48202096702183,
+      "Brent_YoY": 57.88784051688172,
+      "RAC_composite_YoY": 41.32930513595166
+    },
+    {
+      "date": "2005-04-01",
+      "GM2_YoY": 8.295095166639687,
+      "WTI_YoY": 44.160673793326865,
+      "Brent_YoY": 54.45789032798503,
+      "RAC_composite_YoY": 39.55781296683598
+    },
+    {
+      "date": "2005-05-01",
+      "GM2_YoY": 8.874003857840274,
+      "WTI_YoY": 23.733853566255792,
+      "Brent_YoY": 29.487723147409817,
+      "RAC_composite_YoY": 23.45814977973568
+    },
+    {
+      "date": "2005-06-01",
+      "GM2_YoY": 6.21540862042349,
+      "WTI_YoY": 48.19702794794527,
+      "Brent_YoY": 54.488140147795995,
+      "RAC_composite_YoY": 45.41775079502743
+    },
+    {
+      "date": "2005-07-01",
+      "GM2_YoY": 5.145212008682432,
+      "WTI_YoY": 44.674486769273905,
+      "Brent_YoY": 50.49175258957985,
+      "RAC_composite_YoY": 46.755725190839684
+    },
+    {
+      "date": "2005-08-01",
+      "GM2_YoY": 7.02318100086432,
+      "WTI_YoY": 44.72296786102377,
+      "Brent_YoY": 49.68964574998462,
+      "RAC_composite_YoY": 47.146401985111666
+    },
+    {
+      "date": "2005-09-01",
+      "GM2_YoY": 6.90533221325782,
+      "WTI_YoY": 42.77924635878296,
+      "Brent_YoY": 45.63151747287784,
+      "RAC_composite_YoY": 45.53808948004836
+    },
+    {
+      "date": "2005-10-01",
+      "GM2_YoY": 4.28539398181893,
+      "WTI_YoY": 16.85330997685206,
+      "Brent_YoY": 17.602433727793667,
+      "RAC_composite_YoY": 23.954042922176445
+    },
+    {
+      "date": "2005-11-01",
+      "GM2_YoY": 0.6060648189382567,
+      "WTI_YoY": 20.3294889517011,
+      "Brent_YoY": 28.140189576457942,
+      "RAC_composite_YoY": 24.80248982523341
+    },
+    {
+      "date": "2005-12-01",
+      "GM2_YoY": -0.2611269229947144,
+      "WTI_YoY": 37.68843666541595,
+      "Brent_YoY": 43.56715469851551,
+      "RAC_composite_YoY": 43.46994535519124
+    },
+    {
+      "date": "2006-01-01",
+      "GM2_YoY": 1.6628618256134375,
+      "WTI_YoY": 39.81467643102674,
+      "Brent_YoY": 41.51124063726008,
+      "RAC_composite_YoY": 46.96231735452447
+    },
+    {
+      "date": "2006-02-01",
+      "GM2_YoY": 1.5227872483109195,
+      "WTI_YoY": 28.000830755440887,
+      "Brent_YoY": 32.402418911489825,
+      "RAC_composite_YoY": 33.54445797807553
+    },
+    {
+      "date": "2006-03-01",
+      "GM2_YoY": 1.6332139959750247,
+      "WTI_YoY": 15.68351767946714,
+      "Brent_YoY": 16.87282524961948,
+      "RAC_composite_YoY": 20.521590423257805
+    },
+    {
+      "date": "2006-04-01",
+      "GM2_YoY": 3.806709947763265,
+      "WTI_YoY": 31.077637918049604,
+      "Brent_YoY": 35.417966885715366,
+      "RAC_composite_YoY": 34.83194176835796
+    },
+    {
+      "date": "2006-05-01",
+      "GM2_YoY": 6.614252519796948,
+      "WTI_YoY": 42.1606968964376,
+      "Brent_YoY": 43.439828394530046,
+      "RAC_composite_YoY": 45.71810883140053
+    },
+    {
+      "date": "2006-06-01",
+      "GM2_YoY": 7.510946255059769,
+      "WTI_YoY": 25.90602944141964,
+      "Brent_YoY": 26.127278809165432,
+      "RAC_composite_YoY": 29.48310139165009
+    },
+    {
+      "date": "2006-07-01",
+      "GM2_YoY": 7.948354705598071,
+      "WTI_YoY": 26.13004827754477,
+      "Brent_YoY": 28.084641366977948,
+      "RAC_composite_YoY": 27.921233512911027
+    },
+    {
+      "date": "2006-08-01",
+      "GM2_YoY": 6.999941386742026,
+      "WTI_YoY": 12.399475465992271,
+      "Brent_YoY": 14.452100406354917,
+      "RAC_composite_YoY": 14.283305227655996
+    },
+    {
+      "date": "2006-09-01",
+      "GM2_YoY": 6.785230878399484,
+      "WTI_YoY": -2.7271803212034817,
+      "Brent_YoY": -1.5095180979080913,
+      "RAC_composite_YoY": -2.093718843469583
+    },
+    {
+      "date": "2006-10-01",
+      "GM2_YoY": 7.815559552420259,
+      "WTI_YoY": -5.407674561224196,
+      "Brent_YoY": -1.2477065848469304,
+      "RAC_composite_YoY": -5.491430570129419
+    },
+    {
+      "date": "2006-11-01",
+      "GM2_YoY": 10.678336435009882,
+      "WTI_YoY": 1.3030991469844322,
+      "Brent_YoY": 6.371161504788847,
+      "RAC_composite_YoY": 2.839056205639734
+    },
+    {
+      "date": "2006-12-01",
+      "GM2_YoY": 11.787035580872217,
+      "WTI_YoY": 4.287179898208637,
+      "Brent_YoY": 9.87832278250842,
+      "RAC_composite_YoY": 6.6082650923633635
+    },
+    {
+      "date": "2007-01-01",
+      "GM2_YoY": 9.243258425375412,
+      "WTI_YoY": -16.765380657875106,
+      "Brent_YoY": -14.771412802697537,
+      "RAC_composite_YoY": -11.442525728240005
+    },
+    {
+      "date": "2007-02-01",
+      "GM2_YoY": 10.863978819390718,
+      "WTI_YoY": -3.8164288337218966,
+      "Brent_YoY": -4.408255316917109,
+      "RAC_composite_YoY": -0.6749361546880661
+    },
+    {
+      "date": "2007-03-01",
+      "GM2_YoY": 11.865756590026354,
+      "WTI_YoY": -3.578832941556276,
+      "Brent_YoY": -0.023085657661026104,
+      "RAC_composite_YoY": 0.8158921603405478
+    },
+    {
+      "date": "2007-04-01",
+      "GM2_YoY": 11.325264440413264,
+      "WTI_YoY": -7.872111442062102,
+      "Brent_YoY": -3.948492067059206,
+      "RAC_composite_YoY": -3.651953000952679
+    },
+    {
+      "date": "2007-05-01",
+      "GM2_YoY": 8.732754662101328,
+      "WTI_YoY": -10.430715335211127,
+      "Brent_YoY": -3.6755455128905767,
+      "RAC_composite_YoY": -5.555555555555558
+    },
+    {
+      "date": "2007-06-01",
+      "GM2_YoY": 9.450690348863855,
+      "WTI_YoY": -4.87923483464574,
+      "Brent_YoY": 3.6317878762333278,
+      "RAC_composite_YoY": 0.015353907569481962
+    },
+    {
+      "date": "2007-07-01",
+      "GM2_YoY": 11.459615472809492,
+      "WTI_YoY": -0.39434139631477905,
+      "Brent_YoY": 4.419064608702383,
+      "RAC_composite_YoY": 3.4562881208248575
+    },
+    {
+      "date": "2007-08-01",
+      "GM2_YoY": 11.84221774208767,
+      "WTI_YoY": -0.9404817885820815,
+      "Brent_YoY": -3.37232084545509,
+      "RAC_composite_YoY": 2.4937287885494985
+    },
+    {
+      "date": "2007-09-01",
+      "GM2_YoY": 13.498859525406859,
+      "WTI_YoY": 25.26213492915963,
+      "Brent_YoY": 24.556064020464795,
+      "RAC_composite_YoY": 24.8133061778683
+    },
+    {
+      "date": "2007-10-01",
+      "GM2_YoY": 15.252726049373821,
+      "WTI_YoY": 45.68527799543285,
+      "Brent_YoY": 42.43658494393685,
+      "RAC_composite_YoY": 47.79792746113991
+    },
+    {
+      "date": "2007-11-01",
+      "GM2_YoY": 16.585029480468894,
+      "WTI_YoY": 60.40685643359871,
+      "Brent_YoY": 57.27049202972623,
+      "RAC_composite_YoY": 61.87278492818504
+    },
+    {
+      "date": "2007-12-01",
+      "GM2_YoY": 14.276870238254702,
+      "WTI_YoY": 47.980115883083975,
+      "Brent_YoY": 45.54790769775141,
+      "RAC_composite_YoY": 52.35798499464097
+    },
+    {
+      "date": "2008-01-01",
+      "GM2_YoY": 18.03778957408437,
+      "WTI_YoY": 70.56865537335206,
+      "Brent_YoY": 71.71319335409072,
+      "RAC_composite_YoY": 70.33681307858973
+    },
+    {
+      "date": "2008-02-01",
+      "GM2_YoY": 18.433148449325753,
+      "WTI_YoY": 60.910414631980814,
+      "Brent_YoY": 65.03378872672741,
+      "RAC_composite_YoY": 63.617998163452704
+    },
+    {
+      "date": "2008-03-01",
+      "GM2_YoY": 20.704010405539798,
+      "WTI_YoY": 74.47191890021958,
+      "Brent_YoY": 67.01811575623941,
+      "RAC_composite_YoY": 72.34342012667135
+    },
+    {
+      "date": "2008-04-01",
+      "GM2_YoY": 20.80012348754494,
+      "WTI_YoY": 75.97019951772441,
+      "Brent_YoY": 61.62123090950213,
+      "RAC_composite_YoY": 74.83520105471327
+    },
+    {
+      "date": "2008-05-01",
+      "GM2_YoY": 20.36423902737241,
+      "WTI_YoY": 97.61802428707873,
+      "Brent_YoY": 82.70047697303269,
+      "RAC_composite_YoY": 90.633608815427
+    },
+    {
+      "date": "2008-06-01",
+      "GM2_YoY": 20.199749751210415,
+      "WTI_YoY": 98.3729282352692,
+      "Brent_YoY": 86.24963135740904,
+      "RAC_composite_YoY": 95.45594105004605
+    },
+    {
+      "date": "2008-07-01",
+      "GM2_YoY": 19.324559972231214,
+      "WTI_YoY": 79.94494535128149,
+      "Brent_YoY": 72.51810973376034,
+      "RAC_composite_YoY": 81.12015721504775
+    },
+    {
+      "date": "2008-08-01",
+      "GM2_YoY": 15.525589476108648,
+      "WTI_YoY": 61.23894392781959,
+      "Brent_YoY": 60.036661546338976,
+      "RAC_composite_YoY": 63.748920241865825
+    },
+    {
+      "date": "2008-09-01",
+      "GM2_YoY": 13.25468028416108,
+      "WTI_YoY": 30.281710018007924,
+      "Brent_YoY": 25.99557223949398,
+      "RAC_composite_YoY": 34.498232254555326
+    },
+    {
+      "date": "2008-10-01",
+      "GM2_YoY": 11.368100404978243,
+      "WTI_YoY": -10.71111854340544,
+      "Brent_YoY": -13.065127625645523,
+      "RAC_composite_YoY": -7.073995242268694
+    },
+    {
+      "date": "2008-11-01",
+      "GM2_YoY": 8.210077697901008,
+      "WTI_YoY": -39.52935115874521,
+      "Brent_YoY": -43.241857929721505,
+      "RAC_composite_YoY": -38.5457478681724
+    },
+    {
+      "date": "2008-12-01",
+      "GM2_YoY": 13.208578938109628,
+      "WTI_YoY": -55.1497833042654,
+      "Brent_YoY": -56.06707848099134,
+      "RAC_composite_YoY": -55.833040215734556
+    },
+    {
+      "date": "2009-01-01",
+      "GM2_YoY": 11.289588383363537,
+      "WTI_YoY": -55.13629518843668,
+      "Brent_YoY": -52.87437879054006,
+      "RAC_composite_YoY": -56.695189639222946
+    },
+    {
+      "date": "2009-02-01",
+      "GM2_YoY": 8.784145035078271,
+      "WTI_YoY": -59.02190214386531,
+      "Brent_YoY": -54.38853222078374,
+      "RAC_composite_YoY": -57.178134470759915
+    },
+    {
+      "date": "2009-03-01",
+      "GM2_YoY": 5.349932608808272,
+      "WTI_YoY": -54.54028210490743,
+      "Brent_YoY": -55.09216962772936,
+      "RAC_composite_YoY": -53.48101265822785
+    },
+    {
+      "date": "2009-04-01",
+      "GM2_YoY": 5.095743408671671,
+      "WTI_YoY": -55.901166976882536,
+      "Brent_YoY": -53.99167747713529,
+      "RAC_composite_YoY": -54.020171552455466
+    },
+    {
+      "date": "2009-05-01",
+      "GM2_YoY": 7.400658436729768,
+      "WTI_YoY": -52.926937171283726,
+      "Brent_YoY": -53.33564066171852,
+      "RAC_composite_YoY": -52.431145868752125
+    },
+    {
+      "date": "2009-06-01",
+      "GM2_YoY": 9.055414675713758,
+      "WTI_YoY": -47.98258956460331,
+      "Brent_YoY": -48.149704561894126,
+      "RAC_composite_YoY": -48.38202953188815
+    },
+    {
+      "date": "2009-07-01",
+      "GM2_YoY": 8.898604291720847,
+      "WTI_YoY": -51.899351091964995,
+      "Brent_YoY": -51.44941434344818,
+      "RAC_composite_YoY": -50.72463768115942
+    },
+    {
+      "date": "2009-08-01",
+      "GM2_YoY": 11.622535144665669,
+      "WTI_YoY": -39.10424124180098,
+      "Brent_YoY": -35.97100218240536,
+      "RAC_composite_YoY": -40.22331633550203
+    },
+    {
+      "date": "2009-09-01",
+      "GM2_YoY": 14.031724266024659,
+      "WTI_YoY": -33.33470545188438,
+      "Brent_YoY": -30.430034330265986,
+      "RAC_composite_YoY": -31.51349711859266
+    },
+    {
+      "date": "2009-10-01",
+      "GM2_YoY": 15.515190930463518,
+      "WTI_YoY": -1.1659787431637536,
+      "Brent_YoY": 1.6587531177026937,
+      "RAC_composite_YoY": -2.8833198598760434
+    },
+    {
+      "date": "2009-11-01",
+      "GM2_YoY": 16.471995800245853,
+      "WTI_YoY": 36.08570274043053,
+      "Brent_YoY": 46.15472606863336,
+      "RAC_composite_YoY": 39.65872867054192
+    },
+    {
+      "date": "2009-12-01",
+      "GM2_YoY": 10.917787724241212,
+      "WTI_YoY": 81.09607817128708,
+      "Brent_YoY": 86.3887213681827,
+      "RAC_composite_YoY": 93.65542872312184
+    },
+    {
+      "date": "2010-01-01",
+      "GM2_YoY": 9.449346319619579,
+      "WTI_YoY": 87.78659667629876,
+      "Brent_YoY": 75.34126410537101,
+      "RAC_composite_YoY": 101.54873164218957
+    },
+    {
+      "date": "2010-02-01",
+      "GM2_YoY": 10.14009343955049,
+      "WTI_YoY": 95.42724800043088,
+      "Brent_YoY": 70.23093650157317,
+      "RAC_composite_YoY": 95.49148099606815
+    },
+    {
+      "date": "2010-03-01",
+      "GM2_YoY": 9.676386093180067,
+      "WTI_YoY": 69.38885723732106,
+      "Brent_YoY": 69.37391796927915,
+      "RAC_composite_YoY": 69.91441737985518
+    },
+    {
+      "date": "2010-04-01",
+      "GM2_YoY": 8.321945162214606,
+      "WTI_YoY": 69.78553204550253,
+      "Brent_YoY": 69.02032605188741,
+      "RAC_composite_YoY": 65.7031570315703
+    },
+    {
+      "date": "2010-05-01",
+      "GM2_YoY": 5.056419738245732,
+      "WTI_YoY": 24.928636167275144,
+      "Brent_YoY": 32.53435713974089,
+      "RAC_composite_YoY": 29.84274481772693
+    },
+    {
+      "date": "2010-06-01",
+      "GM2_YoY": 3.3385169589531527,
+      "WTI_YoY": 8.177664643300053,
+      "Brent_YoY": 8.965754831357952,
+      "RAC_composite_YoY": 10.55995130858185
+    },
+    {
+      "date": "2010-07-01",
+      "GM2_YoY": 4.778726819582757,
+      "WTI_YoY": 18.966204259009057,
+      "Brent_YoY": 17.295672907349147,
+      "RAC_composite_YoY": 15.964139666561827
+    },
+    {
+      "date": "2010-08-01",
+      "GM2_YoY": 5.970657563022175,
+      "WTI_YoY": 7.818069700585095,
+      "Brent_YoY": 6.248880562262227,
+      "RAC_composite_YoY": 9.692601853213723
+    },
+    {
+      "date": "2010-09-01",
+      "GM2_YoY": 5.301395184375601,
+      "WTI_YoY": 8.40508517601215,
+      "Brent_YoY": 15.070007109822136,
+      "RAC_composite_YoY": 9.019781517567171
+    },
+    {
+      "date": "2010-10-01",
+      "GM2_YoY": 7.544198153430415,
+      "WTI_YoY": 8.15870767003597,
+      "Brent_YoY": 13.5980187706372,
+      "RAC_composite_YoY": 7.880133185349614
+    },
+    {
+      "date": "2010-11-01",
+      "GM2_YoY": 6.461614271062555,
+      "WTI_YoY": 8.030333559247516,
+      "Brent_YoY": 11.234721119670631,
+      "RAC_composite_YoY": 8.552631578947345
+    },
+    {
+      "date": "2010-12-01",
+      "GM2_YoY": 6.357978854206325,
+      "WTI_YoY": 19.70714259555404,
+      "Brent_YoY": 22.819345070938436,
+      "RAC_composite_YoY": 17.820424948594926
+    },
+    {
+      "date": "2011-01-01",
+      "GM2_YoY": 7.835608035022434,
+      "WTI_YoY": 13.845644709344906,
+      "Brent_YoY": 26.725528268770994,
+      "RAC_composite_YoY": 16.640169581346065
+    },
+    {
+      "date": "2011-02-01",
+      "GM2_YoY": 9.426098610701006,
+      "WTI_YoY": 15.959513835299322,
+      "Brent_YoY": 40.628278229345824,
+      "RAC_composite_YoY": 21.56074014481093
+    },
+    {
+      "date": "2011-03-01",
+      "GM2_YoY": 11.54138942189389,
+      "WTI_YoY": 26.665167480510554,
+      "Brent_YoY": 45.43609316999719,
+      "RAC_composite_YoY": 32.28722717293038
+    },
+    {
+      "date": "2011-04-01",
+      "GM2_YoY": 13.000942078172905,
+      "WTI_YoY": 29.942801457503588,
+      "Brent_YoY": 45.32226944461597,
+      "RAC_composite_YoY": 39.19336879871336
+    },
+    {
+      "date": "2011-05-01",
+      "GM2_YoY": 15.258234617778932,
+      "WTI_YoY": 36.826264268004884,
+      "Brent_YoY": 51.40995532197117,
+      "RAC_composite_YoY": 48.41728598954034
+    },
+    {
+      "date": "2011-06-01",
+      "GM2_YoY": 16.604349275013995,
+      "WTI_YoY": 27.7798224919904,
+      "Brent_YoY": 52.26297165509442,
+      "RAC_composite_YoY": 43.44894026974953
+    },
+    {
+      "date": "2011-07-01",
+      "GM2_YoY": 14.198680072140867,
+      "WTI_YoY": 27.494899264370964,
+      "Brent_YoY": 54.76779571315162,
+      "RAC_composite_YoY": 41.977485419774865
+    },
+    {
+      "date": "2011-08-01",
+      "GM2_YoY": 14.568904999737686,
+      "WTI_YoY": 12.707660696289945,
+      "Brent_YoY": 43.06878993669132,
+      "RAC_composite_YoY": 31.00026816840977
+    },
+    {
+      "date": "2011-09-01",
+      "GM2_YoY": 12.377002587906617,
+      "WTI_YoY": 13.653739051187275,
+      "Brent_YoY": 44.95518918422905,
+      "RAC_composite_YoY": 34.583615436696014
+    },
+    {
+      "date": "2011-10-01",
+      "GM2_YoY": 10.312410274593486,
+      "WTI_YoY": 5.408925715947088,
+      "Brent_YoY": 32.523214820617994,
+      "RAC_composite_YoY": 29.333847736625508
+    },
+    {
+      "date": "2011-11-01",
+      "GM2_YoY": 10.485106080951834,
+      "WTI_YoY": 15.320096534807348,
+      "Brent_YoY": 29.895519804329986,
+      "RAC_composite_YoY": 32.690166975881276
+    },
+    {
+      "date": "2011-12-01",
+      "GM2_YoY": 11.253250233018154,
+      "WTI_YoY": 10.563522373578426,
+      "Brent_YoY": 17.959817678432067,
+      "RAC_composite_YoY": 22.966841186736463
+    },
+    {
+      "date": "2012-01-01",
+      "GM2_YoY": 10.356735754522983,
+      "WTI_YoY": 12.451427321816055,
+      "Brent_YoY": 14.672592684682995,
+      "RAC_composite_YoY": 18.934575193094027
+    },
+    {
+      "date": "2012-02-01",
+      "GM2_YoY": 10.240205895950849,
+      "WTI_YoY": 15.382503758192257,
+      "Brent_YoY": 15.05132928382582,
+      "RAC_composite_YoY": 18.221928082947294
+    },
+    {
+      "date": "2012-03-01",
+      "GM2_YoY": 8.020989040386484,
+      "WTI_YoY": 3.209524761074012,
+      "Brent_YoY": 9.422233561341574,
+      "RAC_composite_YoY": 8.288587327931275
+    },
+    {
+      "date": "2012-04-01",
+      "GM2_YoY": 7.278359990794092,
+      "WTI_YoY": -5.670919590076007,
+      "Brent_YoY": -3.113140364003475,
+      "RAC_composite_YoY": -2.515331970491508
+    },
+    {
+      "date": "2012-05-01",
+      "GM2_YoY": 6.455479104150896,
+      "WTI_YoY": -6.190189552861858,
+      "Brent_YoY": -4.04344927260154,
+      "RAC_composite_YoY": -4.3304896142433265
+    },
+    {
+      "date": "2012-06-01",
+      "GM2_YoY": 5.6553905615514655,
+      "WTI_YoY": -14.502560034501055,
+      "Brent_YoY": -16.407753200028974,
+      "RAC_composite_YoY": -11.772042598100363
+    },
+    {
+      "date": "2012-07-01",
+      "GM2_YoY": 4.930981045978466,
+      "WTI_YoY": -9.668986115362655,
+      "Brent_YoY": -12.271949263233617,
+      "RAC_composite_YoY": -11.310661062285066
+    },
+    {
+      "date": "2012-08-01",
+      "GM2_YoY": 3.812171268330289,
+      "WTI_YoY": 9.03276492450873,
+      "Brent_YoY": 2.84572168125099,
+      "RAC_composite_YoY": 0.0
+    },
+    {
+      "date": "2012-09-01",
+      "GM2_YoY": 6.736887545863968,
+      "WTI_YoY": 10.522623003477683,
+      "Brent_YoY": 0.026476715483458868,
+      "RAC_composite_YoY": 2.5958345910051195
+    },
+    {
+      "date": "2012-10-01",
+      "GM2_YoY": 5.809393343504521,
+      "WTI_YoY": 3.671033352512909,
+      "Brent_YoY": 1.9724961800249963,
+      "RAC_composite_YoY": -0.5468827682211352
+    },
+    {
+      "date": "2012-11-01",
+      "GM2_YoY": 5.692640486731482,
+      "WTI_YoY": -10.93968250856462,
+      "Brent_YoY": -1.543335927054812,
+      "RAC_composite_YoY": -9.787472035794186
+    },
+    {
+      "date": "2012-12-01",
+      "GM2_YoY": 6.705836098903095,
+      "WTI_YoY": -10.859422558483356,
+      "Brent_YoY": 1.5050454016621861,
+      "RAC_composite_YoY": -10.057715961774994
+    },
+    {
+      "date": "2013-01-01",
+      "GM2_YoY": 6.224331364294722,
+      "WTI_YoY": -5.501785948763461,
+      "Brent_YoY": 2.0544603653578575,
+      "RAC_composite_YoY": -3.7532231878521616
+    },
+    {
+      "date": "2013-02-01",
+      "GM2_YoY": 4.882599508825769,
+      "WTI_YoY": -6.746362795564709,
+      "Brent_YoY": -2.7457940652245716,
+      "RAC_composite_YoY": -5.346146669154694
+    },
+    {
+      "date": "2013-03-01",
+      "GM2_YoY": 5.363768749725972,
+      "WTI_YoY": -12.452439979961216,
+      "Brent_YoY": -13.528951373287923,
+      "RAC_composite_YoY": -8.73602596465921
+    },
+    {
+      "date": "2013-04-01",
+      "GM2_YoY": 4.95861315918007,
+      "WTI_YoY": -10.936437281517186,
+      "Brent_YoY": -14.380543604721252,
+      "RAC_composite_YoY": -9.281546316557264
+    },
+    {
+      "date": "2013-05-01",
+      "GM2_YoY": 4.838932135780527,
+      "WTI_YoY": -0.1531886285055628,
+      "Brent_YoY": -7.051768194431752,
+      "RAC_composite_YoY": -2.907822041291075
+    },
+    {
+      "date": "2013-06-01",
+      "GM2_YoY": 6.072541263737263,
+      "WTI_YoY": 16.365274796484574,
+      "Brent_YoY": 8.159032563167145,
+      "RAC_composite_YoY": 7.296650717703357
+    },
+    {
+      "date": "2013-07-01",
+      "GM2_YoY": 5.8486149747075,
+      "WTI_YoY": 19.085983904490767,
+      "Brent_YoY": 5.178994713748963,
+      "RAC_composite_YoY": 11.859112451529509
+    },
+    {
+      "date": "2013-08-01",
+      "GM2_YoY": 6.467768454163059,
+      "WTI_YoY": 13.21709394244519,
+      "Brent_YoY": -1.8310727432425455,
+      "RAC_composite_YoY": 8.700102354145333
+    },
+    {
+      "date": "2013-09-01",
+      "GM2_YoY": 4.792976829100315,
+      "WTI_YoY": 12.459376531385047,
+      "Brent_YoY": -1.1227563758796077,
+      "RAC_composite_YoY": 3.6579386093949173
+    },
+    {
+      "date": "2013-10-01",
+      "GM2_YoY": 5.5227414596158875,
+      "WTI_YoY": 12.344167516882854,
+      "Brent_YoY": -2.358183976492101,
+      "RAC_composite_YoY": 0.38992201559688855
+    },
+    {
+      "date": "2013-11-01",
+      "GM2_YoY": 5.427215219376991,
+      "WTI_YoY": 8.473882321864878,
+      "Brent_YoY": -1.1613680722023512,
+      "RAC_composite_YoY": -3.5751188262037714
+    },
+    {
+      "date": "2013-12-01",
+      "GM2_YoY": 5.121677581004946,
+      "WTI_YoY": 11.11517604270238,
+      "Brent_YoY": 1.1531834316644396,
+      "RAC_composite_YoY": -0.7784557121817914
+    },
+    {
+      "date": "2014-01-01",
+      "GM2_YoY": 5.98514686284819,
+      "WTI_YoY": -0.1472443200378093,
+      "Brent_YoY": -4.286714524851909,
+      "RAC_composite_YoY": -7.14427465767018
+    },
+    {
+      "date": "2014-02-01",
+      "GM2_YoY": 7.085633932900559,
+      "WTI_YoY": 5.77954242988179,
+      "Brent_YoY": -6.161109498585004,
+      "RAC_composite_YoY": -2.0601281419418416
+    },
+    {
+      "date": "2014-03-01",
+      "GM2_YoY": 7.325104781365233,
+      "WTI_YoY": 8.46291851472698,
+      "Brent_YoY": -0.9154706372472954,
+      "RAC_composite_YoY": -1.1261483749876566
+    },
+    {
+      "date": "2014-04-01",
+      "GM2_YoY": 7.538630662390555,
+      "WTI_YoY": 10.918860127294927,
+      "Brent_YoY": 5.385969881448793,
+      "RAC_composite_YoY": 0.6532663316582976
+    },
+    {
+      "date": "2014-05-01",
+      "GM2_YoY": 8.064999557142883,
+      "WTI_YoY": 8.113040186279541,
+      "Brent_YoY": 6.806305926986345,
+      "RAC_composite_YoY": 0.43925326944194154
+    },
+    {
+      "date": "2014-06-01",
+      "GM2_YoY": 7.071511722148061,
+      "WTI_YoY": 10.464157993459189,
+      "Brent_YoY": 8.623961538132319,
+      "RAC_composite_YoY": 3.8917604134995454
+    },
+    {
+      "date": "2014-07-01",
+      "GM2_YoY": 7.50933224267778,
+      "WTI_YoY": -1.0339766193610878,
+      "Brent_YoY": -1.079371496675141,
+      "RAC_composite_YoY": -2.5324987963408763
+    },
+    {
+      "date": "2014-08-01",
+      "GM2_YoY": 5.999821309588271,
+      "WTI_YoY": -9.417547109264246,
+      "Brent_YoY": -8.691876167174051,
+      "RAC_composite_YoY": -9.971751412429386
+    },
+    {
+      "date": "2014-09-01",
+      "GM2_YoY": 4.3574264125726625,
+      "WTI_YoY": -12.303750829663551,
+      "Brent_YoY": -12.997783468631551,
+      "RAC_composite_YoY": -12.715231788079473
+    },
+    {
+      "date": "2014-10-01",
+      "GM2_YoY": 3.0766103082533025,
+      "WTI_YoY": -16.054887172523536,
+      "Brent_YoY": -19.849646837481473,
+      "RAC_composite_YoY": -15.357036151777715
+    },
+    {
+      "date": "2014-11-01",
+      "GM2_YoY": 2.3961605561900745,
+      "WTI_YoY": -19.256079344359378,
+      "Brent_YoY": -26.30446161418093,
+      "RAC_composite_YoY": -18.92413201885983
+    },
+    {
+      "date": "2014-12-01",
+      "GM2_YoY": 1.4651694868088816,
+      "WTI_YoY": -39.26728814979804,
+      "Brent_YoY": -43.71896349354439,
+      "RAC_composite_YoY": -35.644614079728576
+    },
+    {
+      "date": "2015-01-01",
+      "GM2_YoY": 0.09996184807821162,
+      "WTI_YoY": -50.09466723034183,
+      "Brent_YoY": -55.82639294708209,
+      "RAC_composite_YoY": -49.77559307544347
+    },
+    {
+      "date": "2015-02-01",
+      "GM2_YoY": -0.5623346292394915,
+      "WTI_YoY": -49.82589674920257,
+      "Brent_YoY": -46.652691253727454,
+      "RAC_composite_YoY": -50.76489533011272
+    },
+    {
+      "date": "2015-03-01",
+      "GM2_YoY": -1.7546434661114163,
+      "WTI_YoY": -52.55770928742473,
+      "Brent_YoY": -48.004317688425616,
+      "RAC_composite_YoY": -52.05315216305325
+    },
+    {
+      "date": "2015-04-01",
+      "GM2_YoY": -1.0703015406594019,
+      "WTI_YoY": -46.650959901094026,
+      "Brent_YoY": -44.75972883872622,
+      "RAC_composite_YoY": -46.570144782825764
+    },
+    {
+      "date": "2015-05-01",
+      "GM2_YoY": -0.1096585949781903,
+      "WTI_YoY": -41.99779095128907,
+      "Brent_YoY": -41.5049006996257,
+      "RAC_composite_YoY": -41.70559586522214
+    },
+    {
+      "date": "2015-06-01",
+      "GM2_YoY": -0.17509032216859177,
+      "WTI_YoY": -43.456732988303685,
+      "Brent_YoY": -45.00863514387389,
+      "RAC_composite_YoY": -41.35206321334505
+    },
+    {
+      "date": "2015-07-01",
+      "GM2_YoY": 0.4221518882945752,
+      "WTI_YoY": -50.86245858838501,
+      "Brent_YoY": -47.02419448881715,
+      "RAC_composite_YoY": -47.24362774155305
+    },
+    {
+      "date": "2015-08-01",
+      "GM2_YoY": 0.1950536948213566,
+      "WTI_YoY": -55.594250367491085,
+      "Brent_YoY": -54.22116722983263,
+      "RAC_composite_YoY": -52.965171007216824
+    },
+    {
+      "date": "2015-09-01",
+      "GM2_YoY": 1.7701660473281589,
+      "WTI_YoY": -51.208459986206535,
+      "Brent_YoY": -50.950168805945395,
+      "RAC_composite_YoY": -51.89681335356601
+    },
+    {
+      "date": "2015-10-01",
+      "GM2_YoY": 2.451183496481546,
+      "WTI_YoY": -45.230683346110965,
+      "Brent_YoY": -44.60408398730841,
+      "RAC_composite_YoY": -47.32321449582303
+    },
+    {
+      "date": "2015-11-01",
+      "GM2_YoY": 2.7174572559112153,
+      "WTI_YoY": -43.99815972222222,
+      "Brent_YoY": -44.27392720531351,
+      "RAC_composite_YoY": -45.24187153053132
+    },
+    {
+      "date": "2015-12-01",
+      "GM2_YoY": 3.3141903374982906,
+      "WTI_YoY": -37.27719470403791,
+      "Brent_YoY": -39.030312752940496,
+      "RAC_composite_YoY": -41.30148270181218
+    },
+    {
+      "date": "2016-01-01",
+      "GM2_YoY": 4.622096953443222,
+      "WTI_YoY": -32.901675396054884,
+      "Brent_YoY": -35.72064196651975,
+      "RAC_composite_YoY": -36.19148936170213
+    },
+    {
+      "date": "2016-02-01",
+      "GM2_YoY": 6.316480450567785,
+      "WTI_YoY": -40.05441681406722,
+      "Brent_YoY": -44.60586448175848,
+      "RAC_composite_YoY": -41.680294358135725
+    },
+    {
+      "date": "2016-03-01",
+      "GM2_YoY": 8.26134959534226,
+      "WTI_YoY": -21.48994411283883,
+      "Brent_YoY": -31.62719198360282,
+      "RAC_composite_YoY": -29.5269847884976
+    },
+    {
+      "date": "2016-04-01",
+      "GM2_YoY": 8.880338506463792,
+      "WTI_YoY": -25.155005203277614,
+      "Brent_YoY": -30.14055887552899,
+      "RAC_composite_YoY": -29.527191179218836
+    },
+    {
+      "date": "2016-05-01",
+      "GM2_YoY": 7.682311860362989,
+      "WTI_YoY": -21.18049278261882,
+      "Brent_YoY": -27.05051743678353,
+      "RAC_composite_YoY": -26.888320545609545
+    },
+    {
+      "date": "2016-06-01",
+      "GM2_YoY": 7.888699821325851,
+      "WTI_YoY": -18.49273952721443,
+      "Brent_YoY": -21.520728127703304,
+      "RAC_composite_YoY": -23.55289421157685
+    },
+    {
+      "date": "2016-07-01",
+      "GM2_YoY": 6.950101189992952,
+      "WTI_YoY": -12.277598185422656,
+      "Brent_YoY": -20.525339222251382,
+      "RAC_composite_YoY": -18.988764044943817
+    },
+    {
+      "date": "2016-08-01",
+      "GM2_YoY": 9.036571834551467,
+      "WTI_YoY": 4.331308385486454,
+      "Brent_YoY": -1.4446017881094786,
+      "RAC_composite_YoY": -5.047809650878355
+    },
+    {
+      "date": "2016-09-01",
+      "GM2_YoY": 8.569323182417211,
+      "WTI_YoY": -0.6533552514475405,
+      "Brent_YoY": -2.216262133605673,
+      "RAC_composite_YoY": -3.7178909418657202
+    },
+    {
+      "date": "2016-10-01",
+      "GM2_YoY": 7.2811024660814905,
+      "WTI_YoY": 7.683518673567069,
+      "Brent_YoY": 2.255587347472554,
+      "RAC_composite_YoY": 4.645968282331925
+    },
+    {
+      "date": "2016-11-01",
+      "GM2_YoY": 6.806627844410129,
+      "WTI_YoY": 7.580553867971251,
+      "Brent_YoY": 1.053754124363615,
+      "RAC_composite_YoY": 6.348056963552984
+    },
+    {
+      "date": "2016-12-01",
+      "GM2_YoY": 4.752048087815974,
+      "WTI_YoY": 39.748270633805106,
+      "Brent_YoY": 40.265392527388414,
+      "RAC_composite_YoY": 36.57030592197585
+    },
+    {
+      "date": "2017-01-01",
+      "GM2_YoY": 5.807007570189615,
+      "WTI_YoY": 65.71580451177779,
+      "Brent_YoY": 77.77705391510175,
+      "RAC_composite_YoY": 66.68889629876627
+    },
+    {
+      "date": "2017-02-01",
+      "GM2_YoY": 5.036792603581897,
+      "WTI_YoY": 76.32958827501098,
+      "Brent_YoY": 70.5001320634526,
+      "RAC_composite_YoY": 79.60042060988432
+    },
+    {
+      "date": "2017-03-01",
+      "GM2_YoY": 4.29608839289306,
+      "WTI_YoY": 31.37843804182023,
+      "Brent_YoY": 35.01312938691426,
+      "RAC_composite_YoY": 43.849793021880544
+    },
+    {
+      "date": "2017-04-01",
+      "GM2_YoY": 3.5173268535205304,
+      "WTI_YoY": 25.285800555181794,
+      "Brent_YoY": 25.790528425271585,
+      "RAC_composite_YoY": 31.185361972951476
+    },
+    {
+      "date": "2017-05-01",
+      "GM2_YoY": 3.762042374074559,
+      "WTI_YoY": 3.7762636971575114,
+      "Brent_YoY": 7.667860972680973,
+      "RAC_composite_YoY": 13.036380597014908
+    },
+    {
+      "date": "2017-06-01",
+      "GM2_YoY": 4.780879932169335,
+      "WTI_YoY": -7.341562097962074,
+      "Brent_YoY": -3.894709074464886,
+      "RAC_composite_YoY": -1.544821583986078
+    },
+    {
+      "date": "2017-07-01",
+      "GM2_YoY": 5.944483275199985,
+      "WTI_YoY": 4.432160881021852,
+      "Brent_YoY": 7.8454220913356965,
+      "RAC_composite_YoY": 6.9579288025890085
+    },
+    {
+      "date": "2017-08-01",
+      "GM2_YoY": 6.440280949479837,
+      "WTI_YoY": 7.406723309937191,
+      "Brent_YoY": 12.785591669116725,
+      "RAC_composite_YoY": 12.927400468384054
+    },
+    {
+      "date": "2017-09-01",
+      "GM2_YoY": 7.450575031804174,
+      "WTI_YoY": 10.26864664903091,
+      "Brent_YoY": 20.583203071075083,
+      "RAC_composite_YoY": 18.839223028317353
+    },
+    {
+      "date": "2017-10-01",
+      "GM2_YoY": 7.5080133779187985,
+      "WTI_YoY": 3.6212567663470807,
+      "Brent_YoY": 16.124722129222246,
+      "RAC_composite_YoY": 12.422625400213438
+    },
+    {
+      "date": "2017-11-01",
+      "GM2_YoY": 9.384934626725272,
+      "WTI_YoY": 24.041590188553318,
+      "Brent_YoY": 40.19306000101612,
+      "RAC_composite_YoY": 31.071266454834312
+    },
+    {
+      "date": "2017-12-01",
+      "GM2_YoY": 11.565200616600535,
+      "WTI_YoY": 11.373811138192004,
+      "Brent_YoY": 20.75688531946369,
+      "RAC_composite_YoY": 22.338676531031652
+    },
+    {
+      "date": "2018-01-01",
+      "GM2_YoY": 12.982414751961713,
+      "WTI_YoY": 21.321368712043732,
+      "Brent_YoY": 26.569240934354244,
+      "RAC_composite_YoY": 26.525305061012205
+    },
+    {
+      "date": "2018-02-01",
+      "GM2_YoY": 13.882967618097908,
+      "WTI_YoY": 16.385471010926267,
+      "Brent_YoY": 19.041544027191783,
+      "RAC_composite_YoY": 20.491803278688515
+    },
+    {
+      "date": "2018-03-01",
+      "GM2_YoY": 13.854839115071416,
+      "WTI_YoY": 27.158982830885115,
+      "Brent_YoY": 27.96623263523099,
+      "RAC_composite_YoY": 24.99486125385406
+    },
+    {
+      "date": "2018-04-01",
+      "GM2_YoY": 13.137844744949279,
+      "WTI_YoY": 29.75543791706241,
+      "Brent_YoY": 37.849172410323504,
+      "RAC_composite_YoY": 30.200121285627656
+    },
+    {
+      "date": "2018-05-01",
+      "GM2_YoY": 11.118238630119336,
+      "WTI_YoY": 44.355262170879904,
+      "Brent_YoY": 52.951635509885556,
+      "RAC_composite_YoY": 42.17041468949865
+    },
+    {
+      "date": "2018-06-01",
+      "GM2_YoY": 8.966482761639494,
+      "WTI_YoY": 50.23627223122147,
+      "Brent_YoY": 60.46512713506145,
+      "RAC_composite_YoY": 51.04972375690606
+    },
+    {
+      "date": "2018-07-01",
+      "GM2_YoY": 6.536307078146697,
+      "WTI_YoY": 52.22094661924002,
+      "Brent_YoY": 53.16889240124838,
+      "RAC_composite_YoY": 51.91268640587854
+    },
+    {
+      "date": "2018-08-01",
+      "GM2_YoY": 3.7084607832107874,
+      "WTI_YoY": 41.67353034348555,
+      "Brent_YoY": 40.274974772956604,
+      "RAC_composite_YoY": 40.35669846536709
+    },
+    {
+      "date": "2018-09-01",
+      "GM2_YoY": 3.0586724067399818,
+      "WTI_YoY": 40.9660496631165,
+      "Brent_YoY": 40.49329635942704,
+      "RAC_composite_YoY": 36.45135880267822
+    },
+    {
+      "date": "2018-10-01",
+      "GM2_YoY": 2.9969300777132,
+      "WTI_YoY": 37.169083232528656,
+      "Brent_YoY": 40.90658378612808,
+      "RAC_composite_YoY": 34.78260869565215
+    },
+    {
+      "date": "2018-11-01",
+      "GM2_YoY": 2.4719165221627426,
+      "WTI_YoY": 0.5736877947889907,
+      "Brent_YoY": 3.2434352146465617,
+      "RAC_composite_YoY": 2.1818181818181737
+    },
+    {
+      "date": "2018-12-01",
+      "GM2_YoY": 2.8210124700815964,
+      "WTI_YoY": -14.441094688669487,
+      "Brent_YoY": -10.891610998090673,
+      "RAC_composite_YoY": -17.974130690408195
+    },
+    {
+      "date": "2019-01-01",
+      "GM2_YoY": 2.057237342950158,
+      "WTI_YoY": -19.345578505909533,
+      "Brent_YoY": -13.99552543265119,
+      "RAC_composite_YoY": -17.32806324110672
+    },
+    {
+      "date": "2019-02-01",
+      "GM2_YoY": 0.6247934037221459,
+      "WTI_YoY": -11.69017896410567,
+      "Brent_YoY": -2.0775443028284823,
+      "RAC_composite_YoY": -6.67314544865566
+    },
+    {
+      "date": "2019-03-01",
+      "GM2_YoY": 0.6841963119362804,
+      "WTI_YoY": -7.291113101835678,
+      "Brent_YoY": 0.18465755400873807,
+      "RAC_composite_YoY": 1.3649070876500469
+    },
+    {
+      "date": "2019-04-01",
+      "GM2_YoY": 0.6790482369754436,
+      "WTI_YoY": -3.6094959499184287,
+      "Brent_YoY": -1.2102552723305626,
+      "RAC_composite_YoY": 3.260363297624602
+    },
+    {
+      "date": "2019-05-01",
+      "GM2_YoY": 1.5824911320990287,
+      "WTI_YoY": -13.077452712533777,
+      "Brent_YoY": -7.349780218297008,
+      "RAC_composite_YoY": -5.514439123494408
+    },
+    {
+      "date": "2019-06-01",
+      "GM2_YoY": 2.6944954908469487,
+      "WTI_YoY": -19.471319123858155,
+      "Brent_YoY": -13.687647999999985,
+      "RAC_composite_YoY": -13.445501097293345
+    },
+    {
+      "date": "2019-07-01",
+      "GM2_YoY": 4.480705901377413,
+      "WTI_YoY": -19.192813680305377,
+      "Brent_YoY": -13.918371833494469,
+      "RAC_composite_YoY": -13.885332195191358
+    },
+    {
+      "date": "2019-08-01",
+      "GM2_YoY": 4.7458680955934085,
+      "WTI_YoY": -19.468982604332197,
+      "Brent_YoY": -18.594741589076623,
+      "RAC_composite_YoY": -15.927895981087481
+    },
+    {
+      "date": "2019-09-01",
+      "GM2_YoY": 4.112141651552048,
+      "WTI_YoY": -18.916000329733752,
+      "Brent_YoY": -20.362694519442435,
+      "RAC_composite_YoY": -15.427911675566463
+    },
+    {
+      "date": "2019-10-01",
+      "GM2_YoY": 5.244688051256863,
+      "WTI_YoY": -23.725740834060538,
+      "Brent_YoY": -26.309463766405184,
+      "RAC_composite_YoY": -21.326947457388357
+    },
+    {
+      "date": "2019-11-01",
+      "GM2_YoY": 6.134300386464808,
+      "WTI_YoY": 0.15000371890958597,
+      "Brent_YoY": -2.372695283693138,
+      "RAC_composite_YoY": -1.9149296729367826
+    },
+    {
+      "date": "2019-12-01",
+      "GM2_YoY": 5.801153369835843,
+      "WTI_YoY": 20.786170224700196,
+      "Brent_YoY": 17.179891358487698,
+      "RAC_composite_YoY": 23.428220356338336
+    },
+    {
+      "date": "2020-01-01",
+      "GM2_YoY": 5.098271405811072,
+      "WTI_YoY": 11.957660187785613,
+      "Brent_YoY": 7.130014307465138,
+      "RAC_composite_YoY": 10.766877031937284
+    },
+    {
+      "date": "2020-02-01",
+      "GM2_YoY": 4.335161934044107,
+      "WTI_YoY": -8.028616852146264,
+      "Brent_YoY": -12.982231220831608,
+      "RAC_composite_YoY": -10.846928149947932
+    },
+    {
+      "date": "2020-03-01",
+      "GM2_YoY": 6.519327467756542,
+      "WTI_YoY": -49.772984103303955,
+      "Brent_YoY": -51.59955386859939,
+      "RAC_composite_YoY": -47.193380921479566
+    },
+    {
+      "date": "2020-04-01",
+      "GM2_YoY": 8.212633942835645,
+      "WTI_YoY": -74.0886280767424,
+      "Brent_YoY": -74.19957884885353,
+      "RAC_composite_YoY": -70.95173658096527
+    },
+    {
+      "date": "2020-05-01",
+      "GM2_YoY": 10.434868258470509,
+      "WTI_YoY": -53.042916177822285,
+      "Brent_YoY": -58.80554738365043,
+      "RAC_composite_YoY": -63.830440792504994
+    },
+    {
+      "date": "2020-06-01",
+      "GM2_YoY": 11.64358348758341,
+      "WTI_YoY": -29.913968389932354,
+      "Brent_YoY": -37.29912071407389,
+      "RAC_composite_YoY": -37.79580797836376
+    },
+    {
+      "date": "2020-07-01",
+      "GM2_YoY": 12.821048988160765,
+      "WTI_YoY": -29.0240473006222,
+      "Brent_YoY": -32.34861985933313,
+      "RAC_composite_YoY": -33.784900049562204
+    },
+    {
+      "date": "2020-08-01",
+      "GM2_YoY": 15.074768401942773,
+      "WTI_YoY": -22.747294367806425,
+      "Brent_YoY": -24.229975672096813,
+      "RAC_composite_YoY": -25.448154657293497
+    },
+    {
+      "date": "2020-09-01",
+      "GM2_YoY": 17.178676890384036,
+      "WTI_YoY": -30.401450973210686,
+      "Brent_YoY": -34.8850613520605,
+      "RAC_composite_YoY": -32.06484641638225
+    },
+    {
+      "date": "2020-10-01",
+      "GM2_YoY": 17.575057163263665,
+      "WTI_YoY": -26.994649390411386,
+      "Brent_YoY": -32.69553331479936,
+      "RAC_composite_YoY": -29.79409131602506
+    },
+    {
+      "date": "2020-11-01",
+      "GM2_YoY": 18.683397772490018,
+      "WTI_YoY": -28.24167612299687,
+      "Brent_YoY": -32.46148630833553,
+      "RAC_composite_YoY": -29.716655148583282
+    },
+    {
+      "date": "2020-12-01",
+      "GM2_YoY": 19.802577774864094,
+      "WTI_YoY": -21.384786848704383,
+      "Brent_YoY": -25.623681342885618,
+      "RAC_composite_YoY": -23.344947735191635
+    },
+    {
+      "date": "2021-01-01",
+      "GM2_YoY": 19.769434951042932,
+      "WTI_YoY": -9.580524703596083,
+      "Brent_YoY": -13.938865876303385,
+      "RAC_composite_YoY": -11.274171270718236
+    },
+    {
+      "date": "2021-02-01",
+      "GM2_YoY": 21.168485055863286,
+      "WTI_YoY": 16.8247753329654,
+      "Brent_YoY": 11.893382683220421,
+      "RAC_composite_YoY": 13.704496788008559
+    },
+    {
+      "date": "2021-03-01",
+      "GM2_YoY": 18.042713063301807,
+      "WTI_YoY": 113.41285097681796,
+      "Brent_YoY": 104.33368832090876,
+      "RAC_composite_YoY": 90.38402457757297
+    },
+    {
+      "date": "2021-04-01",
+      "GM2_YoY": 16.58618085839725,
+      "WTI_YoY": 272.9640287769784,
+      "Brent_YoY": 252.62126941807006,
+      "RAC_composite_YoY": 222.9813664596273
+    },
+    {
+      "date": "2021-05-01",
+      "GM2_YoY": 16.431610123009442,
+      "WTI_YoY": 128.16455142231948,
+      "Brent_YoY": 133.27660336796842,
+      "RAC_composite_YoY": 176.64543524416138
+    },
+    {
+      "date": "2021-06-01",
+      "GM2_YoY": 14.75260635443869,
+      "WTI_YoY": 86.33062793677915,
+      "Brent_YoY": 81.69821757142695,
+      "RAC_composite_YoY": 91.71195652173914
+    },
+    {
+      "date": "2021-07-01",
+      "GM2_YoY": 12.605432981901465,
+      "WTI_YoY": 78.0506724981564,
+      "Brent_YoY": 73.82546317412641,
+      "RAC_composite_YoY": 79.59081836327346
+    },
+    {
+      "date": "2021-08-01",
+      "GM2_YoY": 11.334282089379277,
+      "WTI_YoY": 59.97160624601241,
+      "Brent_YoY": 58.14364909053751,
+      "RAC_composite_YoY": 60.04243281471005
+    },
+    {
+      "date": "2021-09-01",
+      "GM2_YoY": 10.513245517665549,
+      "WTI_YoY": 80.76821414840447,
+      "Brent_YoY": 82.08131020766436,
+      "RAC_composite_YoY": 78.59834212509418
+    },
+    {
+      "date": "2021-10-01",
+      "GM2_YoY": 9.667103695806478,
+      "WTI_YoY": 106.8150438631914,
+      "Brent_YoY": 107.86026389021286,
+      "RAC_composite_YoY": 101.04565161948483
+    },
+    {
+      "date": "2021-11-01",
+      "GM2_YoY": 8.069263850776508,
+      "WTI_YoY": 93.33802599606588,
+      "Brent_YoY": 89.84652106989091,
+      "RAC_composite_YoY": 92.89577187807276
+    },
+    {
+      "date": "2021-12-01",
+      "GM2_YoY": 7.060323357174125,
+      "WTI_YoY": 52.497221013967454,
+      "Brent_YoY": 48.35983454171222,
+      "RAC_composite_YoY": 55.80086580086581
+    },
+    {
+      "date": "2022-01-01",
+      "GM2_YoY": 6.816444686485745,
+      "WTI_YoY": 60.01639410621764,
+      "Brent_YoY": 57.93120475999211,
+      "RAC_composite_YoY": 56.17824479470714
+    },
+    {
+      "date": "2022-02-01",
+      "GM2_YoY": 6.687330375357603,
+      "WTI_YoY": 55.20198238670802,
+      "Brent_YoY": 55.964127720729316,
+      "RAC_composite_YoY": 54.442732408834104
+    },
+    {
+      "date": "2022-03-01",
+      "GM2_YoY": 6.81365880379925,
+      "WTI_YoY": 74.06916563201872,
+      "Brent_YoY": 79.2466249675957,
+      "RAC_composite_YoY": 72.63191867032437
+    },
+    {
+      "date": "2022-04-01",
+      "GM2_YoY": 4.879555719602013,
+      "WTI_YoY": 64.9108830677829,
+      "Brent_YoY": 61.36539260397451,
+      "RAC_composite_YoY": 68.62179487179488
+    },
+    {
+      "date": "2022-05-01",
+      "GM2_YoY": 1.1777523790875932,
+      "WTI_YoY": 68.10376165596014,
+      "Brent_YoY": 65.37378657641301,
+      "RAC_composite_YoY": 69.50115118956255
+    },
+    {
+      "date": "2022-06-01",
+      "GM2_YoY": 1.0758134760444849,
+      "WTI_YoY": 60.88549740544238,
+      "Brent_YoY": 67.72019013183024,
+      "RAC_composite_YoY": 62.211197732104885
+    },
+    {
+      "date": "2022-07-01",
+      "GM2_YoY": 0.64279940765124,
+      "WTI_YoY": 40.192682910806134,
+      "Brent_YoY": 48.904890048421024,
+      "RAC_composite_YoY": 42.84523478744093
+    },
+    {
+      "date": "2022-08-01",
+      "GM2_YoY": 0.18608658584344795,
+      "WTI_YoY": 38.291139517519014,
+      "Brent_YoY": 41.97939249531439,
+      "RAC_composite_YoY": 41.110620120783615
+    },
+    {
+      "date": "2022-09-01",
+      "GM2_YoY": -2.688058715283359,
+      "WTI_YoY": 17.60303608339926,
+      "Brent_YoY": 20.507994624241753,
+      "RAC_composite_YoY": 21.758087201125175
+    },
+    {
+      "date": "2022-10-01",
+      "GM2_YoY": -4.312102910726989,
+      "WTI_YoY": 7.4599213330138525,
+      "Brent_YoY": 11.723764464458775,
+      "RAC_composite_YoY": 11.657998224026379
+    },
+    {
+      "date": "2022-11-01",
+      "GM2_YoY": -3.3164704079628238,
+      "WTI_YoY": 6.599041271646189,
+      "Brent_YoY": 12.788963041893343,
+      "RAC_composite_YoY": 7.77367146680259
+    },
+    {
+      "date": "2022-12-01",
+      "GM2_YoY": -1.4583998505128037,
+      "WTI_YoY": 6.589324877168901,
+      "Brent_YoY": 9.105407105895047,
+      "RAC_composite_YoY": 6.362878577382602
+    },
+    {
+      "date": "2023-01-01",
+      "GM2_YoY": 0.44477713607522507,
+      "WTI_YoY": -6.126985652832184,
+      "Brent_YoY": -4.628401252883096,
+      "RAC_composite_YoY": -5.6815350112135565
+    },
+    {
+      "date": "2023-02-01",
+      "GM2_YoY": -0.5134578333687023,
+      "WTI_YoY": -16.159156434142353,
+      "Brent_YoY": -14.97390068877471,
+      "RAC_composite_YoY": -17.015851901119603
+    },
+    {
+      "date": "2023-03-01",
+      "GM2_YoY": -0.5786094898009075,
+      "WTI_YoY": -32.46445687541073,
+      "Brent_YoY": -33.10230509077962,
+      "RAC_composite_YoY": -31.762946345111242
+    },
+    {
+      "date": "2023-04-01",
+      "GM2_YoY": 1.1183981684335542,
+      "WTI_YoY": -21.941179740636507,
+      "Brent_YoY": -19.06467095804415,
+      "RAC_composite_YoY": -25.365900019007793
+    },
+    {
+      "date": "2023-05-01",
+      "GM2_YoY": 2.270944060392588,
+      "WTI_YoY": -34.663052326270616,
+      "Brent_YoY": -33.414870866227766,
+      "RAC_composite_YoY": -34.28416191252378
+    },
+    {
+      "date": "2023-06-01",
+      "GM2_YoY": 0.9563722318637335,
+      "WTI_YoY": -38.828071223015606,
+      "Brent_YoY": -39.01188976452953,
+      "RAC_composite_YoY": -37.61796574624257
+    },
+    {
+      "date": "2023-07-01",
+      "GM2_YoY": 2.01740388326348,
+      "WTI_YoY": -25.142443834322314,
+      "Brent_YoY": -28.427443372304772,
+      "RAC_composite_YoY": -25.685664267652207
+    },
+    {
+      "date": "2023-08-01",
+      "GM2_YoY": 1.2032676426503963,
+      "WTI_YoY": -13.109594763960452,
+      "Brent_YoY": -14.235096071173226,
+      "RAC_composite_YoY": -14.634655532359076
+    },
+    {
+      "date": "2023-09-01",
+      "GM2_YoY": 2.694801512816669,
+      "WTI_YoY": 6.132235421776633,
+      "Brent_YoY": 4.40887823199263,
+      "RAC_composite_YoY": 3.1766200762388896
+    },
+    {
+      "date": "2023-10-01",
+      "GM2_YoY": 3.907865079503514,
+      "WTI_YoY": -2.1874745057515077,
+      "Brent_YoY": -2.9314688026300995,
+      "RAC_composite_YoY": -1.6132697114292216
+    },
+    {
+      "date": "2023-11-01",
+      "GM2_YoY": 3.9230951261744362,
+      "WTI_YoY": -7.923952183679683,
+      "Brent_YoY": -9.271358532971362,
+      "RAC_composite_YoY": -5.758543218635436
+    },
+    {
+      "date": "2023-12-01",
+      "GM2_YoY": 2.577692561263656,
+      "WTI_YoY": -5.935782902852016,
+      "Brent_YoY": -4.069185122363028,
+      "RAC_composite_YoY": -5.512016718913271
+    },
+    {
+      "date": "2024-01-01",
+      "GM2_YoY": -0.08274848574769678,
+      "WTI_YoY": -5.082522493528218,
+      "Brent_YoY": -2.8815715115519502,
+      "RAC_composite_YoY": -3.19682959048877
+    },
+    {
+      "date": "2024-02-01",
+      "GM2_YoY": 0.2710213328588562,
+      "WTI_YoY": 0.5419161266457362,
+      "Brent_YoY": 1.081425486583787,
+      "RAC_composite_YoY": 1.7900080149612752
+    },
+    {
+      "date": "2024-03-01",
+      "GM2_YoY": 1.043792095701268,
+      "WTI_YoY": 10.917591774010749,
+      "Brent_YoY": 8.891706716777815,
+      "RAC_composite_YoY": 9.136986301369877
+    },
+    {
+      "date": "2024-04-01",
+      "GM2_YoY": -0.3951368622470808,
+      "WTI_YoY": 7.427603003562955,
+      "Brent_YoY": 6.261656741147914,
+      "RAC_composite_YoY": 7.563988284731948
+    },
+    {
+      "date": "2024-05-01",
+      "GM2_YoY": 0.6915340437312123,
+      "WTI_YoY": 11.800193050193041,
+      "Brent_YoY": 8.321880682943949,
+      "RAC_composite_YoY": 11.202976436544043
+    },
+    {
+      "date": "2024-06-01",
+      "GM2_YoY": 1.7305830141402412,
+      "WTI_YoY": 13.55093422916771,
+      "Brent_YoY": 9.897112593078482,
+      "RAC_composite_YoY": 12.45272447121446
+    },
+    {
+      "date": "2024-07-01",
+      "GM2_YoY": 1.662793292475584,
+      "WTI_YoY": 7.533840166498451,
+      "Brent_YoY": 6.297675940454184,
+      "RAC_composite_YoY": 6.661431749770985
+    },
+    {
+      "date": "2024-08-01",
+      "GM2_YoY": 4.703363506893177,
+      "WTI_YoY": -5.778512414354453,
+      "Brent_YoY": -6.723902488049694,
+      "RAC_composite_YoY": -5.368060650525797
+    },
+    {
+      "date": "2024-09-01",
+      "GM2_YoY": 7.054169421383172,
+      "WTI_YoY": -21.45820519988817,
+      "Brent_YoY": -21.025622786649535,
+      "RAC_composite_YoY": -19.67084639498432
+    },
+    {
+      "date": "2024-10-01",
+      "GM2_YoY": 6.939958607020991,
+      "WTI_YoY": -15.94418464994467,
+      "Brent_YoY": -16.516529880219977,
+      "RAC_composite_YoY": -15.762124711316384
+    },
+    {
+      "date": "2024-11-01",
+      "GM2_YoY": 4.4212068057584375,
+      "WTI_YoY": -9.956877132007468,
+      "Brent_YoY": -10.362625879867249,
+      "RAC_composite_YoY": -11.05395232120452
+    },
+    {
+      "date": "2024-12-01",
+      "GM2_YoY": 2.591571068890941,
+      "WTI_YoY": -2.478309821842517,
+      "Brent_YoY": -4.858304124095769,
+      "RAC_composite_YoY": -2.7232513132430136
+    },
+    {
+      "date": "2025-01-01",
+      "GM2_YoY": 2.4135522523450748,
+      "WTI_YoY": 2.14439378371436,
+      "Brent_YoY": -1.0653928849001293,
+      "RAC_composite_YoY": 2.251637554585151
+    },
+    {
+      "date": "2025-02-01",
+      "GM2_YoY": 3.5182114841114664,
+      "WTI_YoY": -7.399244139423356,
+      "Brent_YoY": -9.631383197188882,
+      "RAC_composite_YoY": -4.1469816272965865
+    },
+    {
+      "date": "2025-03-01",
+      "GM2_YoY": 4.5236616975870225,
+      "WTI_YoY": -16.04241292963947,
+      "Brent_YoY": -14.841195966610886,
+      "RAC_composite_YoY": -12.2128781222543
+    },
+    {
+      "date": "2025-04-01",
+      "GM2_YoY": 6.601799700648536,
+      "WTI_YoY": -25.555129488790897,
+      "Brent_YoY": -24.24289193625245,
+      "RAC_composite_YoY": -22.59973955250385
+    },
+    {
+      "date": "2025-05-01",
+      "GM2_YoY": 7.11754900539836,
+      "WTI_YoY": -22.31431157215291,
+      "Brent_YoY": -21.15473562187258,
+      "RAC_composite_YoY": -21.610904584882284
+    },
+    {
+      "date": "2025-06-01",
+      "GM2_YoY": 8.36435213757234,
+      "WTI_YoY": -14.540242019556848,
+      "Brent_YoY": -13.13284305040744,
+      "RAC_composite_YoY": -15.159441953163933
+    },
+    {
+      "date": "2025-07-01",
+      "GM2_YoY": 8.70208101800607,
+      "WTI_YoY": -16.39299626030084,
+      "Brent_YoY": -16.572207585319532,
+      "RAC_composite_YoY": -14.969325153374236
+    },
+    {
+      "date": "2025-08-01",
+      "GM2_YoY": 6.72190252171041,
+      "WTI_YoY": -15.41263132758246,
+      "Brent_YoY": -15.53755348274921,
+      "RAC_composite_YoY": -13.774389456002067
+    },
+    {
+      "date": "2025-09-01",
+      "GM2_YoY": 6.070816745404373,
+      "WTI_YoY": -8.93694455970212,
+      "Brent_YoY": -8.148451413481816,
+      "RAC_composite_YoY": -8.487804878048788
+    },
+    {
+      "date": "2025-10-01",
+      "GM2_YoY": 6.698046886450237,
+      "WTI_YoY": -15.406618803159745,
+      "Brent_YoY": -14.661837831623114,
+      "RAC_composite_YoY": -14.461960246744354
+    },
+    {
+      "date": "2025-11-01",
+      "GM2_YoY": 7.87813351818607,
+      "WTI_YoY": -14.135493606544369,
+      "Brent_YoY": -14.188182546036831,
+      "RAC_composite_YoY": -13.640852024262939
+    },
+    {
+      "date": "2025-12-01",
+      "GM2_YoY": 9.691848808362646,
+      "WTI_YoY": -17.321951586933114,
+      "Brent_YoY": -15.319917256025661,
+      "RAC_composite_YoY": -16.029558050305525
+    },
+    {
+      "date": "2026-01-01",
+      "GM2_YoY": 11.241496346602563,
+      "WTI_YoY": -20.735386341882023,
+      "Brent_YoY": -15.980826230546686,
+      "RAC_composite_YoY": -19.124516215134136
+    },
+    {
+      "date": "2026-02-01",
+      "GM2_YoY": 11.530469067933936,
+      "WTI_YoY": -9.820252661629114,
+      "Brent_YoY": -6.0327686311938304,
+      "RAC_composite_YoY": -12.801204819277123
+    },
+    {
+      "date": "2026-03-01",
+      "GM2_YoY": 9.660789452922081,
+      "WTI_YoY": 33.91692814031651,
+      "Brent_YoY": 41.79911185391123,
+      "RAC_composite_YoY": 24.320846439805564
+    },
+    {
+      "date": "2026-04-01",
+      "GM2_YoY": 9.58551223440458,
+      "WTI_YoY": 57.88783379675779,
+      "Brent_YoY": 72.14113261269985,
+      "RAC_composite_YoY": 45.85500152951973
+    },
+    {
+      "date": "2026-05-01",
+      "GM2_YoY": 9.587530614971683,
+      "WTI_YoY": 64.28809976101478,
+      "Brent_YoY": 66.22883912961464,
+      "RAC_composite_YoY": 54.441985456844776
+    },
+    {
+      "date": "2026-06-01",
+      "GM2_YoY": null,
+      "WTI_YoY": 25.452185010782014,
+      "Brent_YoY": 20.527347134649474,
+      "RAC_composite_YoY": null
+    },
+    {
+      "date": "2026-07-01",
+      "GM2_YoY": null,
+      "WTI_YoY": null,
+      "Brent_YoY": null,
+      "RAC_composite_YoY": null
+    }
+  ],
+  "annotations": [
+    "oil_embargo_1973",
+    "gulf_war_1990",
+    "gfc_2008",
+    "shale_2014",
+    "covid_2020",
+    "reopening_2021"
+  ],
+  "availableTransformations": [
+    "raw",
+    "zscore"
+  ],
+  "evidenceLabel": "Validated relationship",
+  "methodology": {
+    "formula": "Oil_YoY[t] compared with GM2_YoY[t-lag]. Positive lag means GM2 leads oil.",
+    "lockedLag": 5,
+    "peakSimpleCorrelationLag": 4,
+    "testedLags": [
+      0,
+      18
+    ],
+    "lockedPerformance": {
+      "windowMonths": 60,
+      "rmse": 31.627711770995013,
+      "mae": 22.295410982989154,
+      "r2": 0.3607896178754386,
+      "n": 202
+    },
+    "notes": "The simple-correlation peak is descriptive; lag 5 remains locked from rolling validation."
+  },
+  "staticFigure": "final_gm2_leads_oil_time_series.png",
+  "generatedAt": "2026-07-15T23:37:40+00:00"
+}

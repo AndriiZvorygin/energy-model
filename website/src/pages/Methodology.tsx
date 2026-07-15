@@ -12,6 +12,9 @@ const sections = [
   { title: 'Validation method', icon: FlaskConical, text: researchData.content.validation },
   { title: 'Known caveats', icon: ShieldAlert, text: researchData.content.caveats },
   { title: 'Shock periods', icon: ShieldAlert, text: researchData.content.shockPeriods },
+  { title: 'System-response scope', icon: FlaskConical, text: researchData.systemResponse.content.firstRelease },
+  { title: 'Evidence labels', icon: CheckCircle2, text: researchData.systemResponse.content.evidenceLabels },
+  { title: 'Diagnostic limitations', icon: ShieldAlert, text: researchData.systemResponse.content.gaps },
 ]
 
 export function Methodology() {
