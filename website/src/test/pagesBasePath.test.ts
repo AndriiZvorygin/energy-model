@@ -6,6 +6,9 @@ describe('GitHub Pages configuration', () => {
   it('keeps the energy-model base path and direct-route fallback', () => {
     const root = resolve(import.meta.dirname, '../..')
     expect(readFileSync(resolve(root, 'vite.config.ts'), 'utf8')).toContain("base: '/energy-model/'")
-    expect(readFileSync(resolve(root, 'scripts/prepare-pages.mjs'), 'utf8')).toContain('dist/404.html')
+    const pagesScript = readFileSync(resolve(root, 'scripts/prepare-pages.mjs'), 'utf8')
+    expect(pagesScript).toContain("resolve(distRoot, '404.html')")
+    expect(pagesScript).toContain("'output-quality'")
+    expect(pagesScript).toContain("resolve(routeDirectory, 'index.html')")
   })
 })
