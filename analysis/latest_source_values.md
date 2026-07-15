@@ -1,6 +1,6 @@
 # Latest Source Values
 
-Retrieved at: `2026-07-10T12:38:39+00:00`
+Retrieved at: `2026-07-10T16:24:24+00:00`
 
 Latest complete GM2 month: **2026-05**
 G4 GM2 USD: **1.02409e+14**

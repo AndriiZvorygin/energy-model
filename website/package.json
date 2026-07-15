@@ -1,0 +1,33 @@
+{
+  "name": "oil-liquidity-inventory-research-site",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "generate:data": "node scripts/generate-data.mjs",
+    "predev": "npm run generate:data",
+    "dev": "vite",
+    "prebuild": "npm run generate:data",
+    "build": "tsc -b && vite build",
+    "build:pages": "npm run build -- --base /energy-model/ && node scripts/prepare-pages.mjs",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "latest",
+    "recharts": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "^3.4.17",
+    "typescript": "latest",
+    "vite": "latest"
+  }
+}

@@ -26,7 +26,7 @@
 
 ## Regime And Shock Checks
 
-- Main shock periods flagged: covid_2020_2021, financial_crisis_2008_2009, shale_regime_2014_2017, war_spr_2022_2023. Shock-excluded rolling reruns are included in `analysis/rolling_validation_extended.csv` with `sample=excluding_shocks`.
+- Main shock periods flagged: war_spr_2022_2023, shale_regime_2014_2017, financial_crisis_2008_2009, covid_2020_2021. Shock-excluded rolling reruns are included in `analysis/rolling_validation_extended.csv` with `sample=excluding_shocks`.
 - Non-shock sample months with usable rows: 367.
 - Excluding shock target months, WTI_YoY best 60m rolling model is `gm2_only` lag 4, RMSE 18.628, MAE 16.199.
 - Excluding shock target months, Brent_YoY best 60m rolling model is `gm2_only` lag 3, RMSE 18.528, MAE 15.244.

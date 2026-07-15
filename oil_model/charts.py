@@ -80,6 +80,10 @@ def make_charts(
     plot_final_lead_lag_network(system_signal_rows, out_dir / "final_lead_lag_network.png")
     plot_final_signal_timeline_framework(out_dir / "final_signal_timeline_framework.png")
     plot_final_energy_finance_oil_gdp_map(out_dir / "final_energy_finance_oil_gdp_map.png")
+    plot_final_oil_price_layers_time_series(rows, out_dir / "final_oil_price_layers_time_series.png")
+    plot_final_gm2_leads_oil_time_series(rows, out_dir / "final_gm2_leads_oil_time_series.png")
+    plot_final_oil_residual_ci_time_series(rows, out_dir / "final_oil_residual_ci_time_series.png")
+    plot_final_energy_gdp_time_series(energy_gdp_rows, out_dir / "final_energy_gdp_time_series.png")
 
 
 def plot_series(rows: list[Row], path: Path) -> None:
@@ -1002,6 +1006,118 @@ def plot_final_energy_finance_oil_gdp_map(path: Path) -> None:
     plt.close(fig)
 
 
+def plot_final_oil_price_layers_time_series(rows: list[Row], path: Path) -> None:
+    dates = [to_date(r["month"]) for r in rows]
+    series = [
+        ("WTI_YoY", "WTI benchmark", "#222222"),
+        ("Brent_YoY", "Brent benchmark", "#c05621"),
+        ("RAC_composite_YoY", "RAC composite realised cost", "#2b6cb0"),
+        ("USO_YoY", "USO tradable exposure", "#805ad5"),
+    ]
+    fig, ax = plt.subplots(figsize=(12, 6))
+    for col, label, color in series:
+        ax.plot(dates, zscore_series([r.get(col) for r in rows]), label=label, color=color, linewidth=1.5)
+    ax.axhline(0, color="#777", linewidth=0.8)
+    shade_regimes(ax)
+    style_time_axis(ax)
+    ax.set_title("Final Oil Price Layers Through Time")
+    ax.set_ylabel("z-score of monthly YoY series")
+    ax.legend(ncol=2, fontsize=8)
+    add_note(fig, "Formula: each line is zscore(Price_YoY), where Price_YoY = 100*(price/price[t-12]-1). Sources: FRED WTI/Brent, EIA RAC composite, Yahoo Finance USO adjusted close.")
+    fig.tight_layout(rect=(0, 0.06, 1, 1))
+    fig.savefig(path, dpi=180)
+    plt.close(fig)
+
+
+def plot_final_gm2_leads_oil_time_series(rows: list[Row], path: Path) -> None:
+    lag = 5
+    dates = [to_date(r["month"]) for r in rows]
+    gm2_shifted = [rows[i - lag].get("GM2_YoY") if i >= lag else None for i in range(len(rows))]
+    fig, ax = plt.subplots(figsize=(12, 6))
+    ax.plot(dates, zscore_series(gm2_shifted), label="G4 GM2 YoY shifted forward 5m", color="#2b6cb0", linewidth=2.0)
+    ax.plot(dates, zscore_series([r.get("WTI_YoY") for r in rows]), label="WTI YoY", color="#222222", linewidth=1.35, alpha=0.86)
+    ax.plot(dates, zscore_series([r.get("Brent_YoY") for r in rows]), label="Brent YoY", color="#c05621", linewidth=1.35, alpha=0.86)
+    ax.plot(dates, zscore_series([r.get("RAC_composite_YoY") for r in rows]), label="RAC composite YoY", color="#805ad5", linewidth=1.25, alpha=0.82)
+    ax.axhline(0, color="#777", linewidth=0.8)
+    shade_regimes(ax)
+    style_time_axis(ax)
+    ax.set_title("Liquidity Impulse Leading Benchmark and Realised Oil Momentum")
+    ax.set_ylabel("z-score of monthly YoY series")
+    ax.legend(ncol=2, fontsize=8)
+    add_note(fig, "Formula: zscore(oil-price YoY[t]) compared with zscore(GM2_YoY[t-5]); this visual uses the locked 5-month lead and does not use future GM2 data. Sources: processed monthly dataset.")
+    fig.tight_layout(rect=(0, 0.06, 1, 1))
+    fig.savefig(path, dpi=180)
+    plt.close(fig)
+
+
+def plot_final_oil_residual_ci_time_series(rows: list[Row], path: Path) -> None:
+    pred = rolling_predictions(rows, "WTI_YoY", [feature("GM2_YoY", 5, "GM2_YoY_lag")], 60)
+    actual = dict(zip(pred.get("months", []), pred.get("actuals", [])))
+    forecast = dict(zip(pred.get("months", []), pred.get("preds", [])))
+    dates = []
+    residuals = []
+    ci = []
+    uso_residual = []
+    for row in rows:
+        month = row.get("month")
+        if month in actual:
+            dates.append(to_date(month))
+            residuals.append(actual[month] - forecast[month])
+            ci.append(row.get("CI_zscore"))
+            uso_residual.append(row.get("USO_tracking_residual"))
+
+    fig, axes = plt.subplots(3, 1, figsize=(12, 9), sharex=True)
+    panels = [
+        (residuals, "WTI actual minus GM2-implied WTI YoY", "#222222", "YoY pct residual"),
+        (ci, "Comparative inventory z-score", "#2b6cb0", "z-score"),
+        (uso_residual, "USO tracking residual vs WTI", "#805ad5", "YoY pct spread"),
+    ]
+    for ax, (values, title, color, ylabel) in zip(axes, panels):
+        ax.plot(dates, values, color=color, linewidth=1.5)
+        ax.axhline(0, color="#777", linewidth=0.8)
+        shade_regimes(ax)
+        style_time_axis(ax)
+        ax.set_title(title)
+        ax.set_ylabel(ylabel)
+    add_note(fig, "Formulas: WTI residual = WTI_YoY[t] - rolling fitted(alpha + beta*GM2_YoY[t-5]); USO tracking residual = USO_YoY - WTI_YoY; CI uses prior 5-year same-month inventory history. Sources: processed monthly dataset.")
+    fig.tight_layout(rect=(0, 0.05, 1, 1))
+    fig.savefig(path, dpi=180)
+    plt.close(fig)
+
+
+def plot_final_energy_gdp_time_series(energy_rows: list[Row], path: Path) -> None:
+    q_rows = sorted([r for r in energy_rows if r.get("section") == "time_series" and r.get("frequency") == "quarterly"], key=lambda r: str(r.get("period")))
+    dates = [to_date(r.get("month")) for r in q_rows if r.get("month")]
+    fig, axes = plt.subplots(2, 1, figsize=(12, 8), sharex=True)
+    series = [
+        ("Energy_consumption_growth", "Energy consumption growth", "#2b6cb0"),
+        ("Oil_consumption_growth", "Petroleum consumption growth", "#c05621"),
+        ("Real_GDP_growth", "Real GDP growth", "#222222"),
+        ("Industrial_production_YoY", "Industrial production YoY", "#805ad5"),
+    ]
+    for col, label, color in series:
+        axes[0].plot(dates, [r.get(col) for r in q_rows if r.get("month")], label=label, color=color, linewidth=1.4)
+    axes[0].axhline(0, color="#777", linewidth=0.8)
+    shade_regimes(axes[0])
+    style_time_axis(axes[0])
+    axes[0].xaxis.set_major_locator(mdates.YearLocator(base=5))
+    axes[0].set_title("Physical Economy Growth Signals")
+    axes[0].set_ylabel("YoY percent")
+    axes[0].legend(ncol=2, fontsize=8)
+
+    axes[1].plot(dates, indexed_series([r.get("GDP_per_energy") for r in q_rows if r.get("month")]), color="#2b6cb0", linewidth=1.8, label="GDP per energy, first valid = 100")
+    shade_regimes(axes[1])
+    style_time_axis(axes[1])
+    axes[1].xaxis.set_major_locator(mdates.YearLocator(base=5))
+    axes[1].set_title("GDP Per Unit Of Energy")
+    axes[1].set_ylabel("Index")
+    axes[1].legend(fontsize=8)
+    add_note(fig, "Formulas: growth = 100*(value/value[t-4]-1) for quarterly series; GDP_per_energy = real GDP / total energy consumption, indexed to first valid observation. Sources: EIA MER and FRED GDPC1/INDPRO.")
+    fig.tight_layout(rect=(0, 0.05, 1, 1))
+    fig.savefig(path, dpi=180)
+    plt.close(fig)
+
+
 def scatter_by_regime(rows: list[Row], path: Path) -> None:
     fig, axes = plt.subplots(1, 2, figsize=(12, 5), sharey=True)
     for ax, target in zip(axes, ["WTI_YoY", "Brent_YoY"]):
@@ -1037,6 +1153,23 @@ def to_date(month: object):
 
 def scale_trillion(value: object) -> float | None:
     return float(value) / 1_000_000_000_000 if is_num(value) else None
+
+
+def zscore_series(values: list[object]) -> list[float | None]:
+    nums = [float(v) for v in values if is_num(v)]
+    if not nums:
+        return [None for _ in values]
+    mean = sum(nums) / len(nums)
+    variance = sum((v - mean) ** 2 for v in nums) / len(nums)
+    std = variance ** 0.5
+    return [(float(v) - mean) / std if is_num(v) and std else None for v in values]
+
+
+def indexed_series(values: list[object]) -> list[float | None]:
+    base = next((float(v) for v in values if is_num(v) and float(v) != 0.0), None)
+    if base is None:
+        return [None for _ in values]
+    return [100.0 * float(v) / base if is_num(v) else None for v in values]
 
 
 def is_num(value: object) -> bool:

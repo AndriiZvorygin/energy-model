@@ -1,8 +1,19 @@
 [project]
-name = "oil-model"
+name = "energy-model"
 version = "0.1.0"
-description = "Monthly global M2, oil price, and crude inventory model pipeline"
+description = "Research pipeline for oil, liquidity, inventory, energy throughput, and the real economy"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Andrii Zvorygin" },
+]
 requires-python = ">=3.10"
+keywords = [
+  "energy economics",
+  "oil markets",
+  "global liquidity",
+  "comparative inventory",
+]
 dependencies = [
   "requests>=2.0",
   "numpy>=1.20",
@@ -16,6 +27,11 @@ dev = ["pytest>=8.0"]
 
 [project.scripts]
 oil-model-build = "oil_model.pipeline:main"
+
+[project.urls]
+Homepage = "https://github.com/AndriiZvorygin/energy-model"
+Repository = "https://github.com/AndriiZvorygin/energy-model"
+Documentation = "https://github.com/AndriiZvorygin/energy-model#readme"
 
 [tool.setuptools.packages.find]
 include = ["oil_model*"]

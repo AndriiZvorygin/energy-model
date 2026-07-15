@@ -4,3 +4,15 @@ node_modules/
 *.egg-info/
 __pycache__/
 *.py[cod]
+.env
+.env.*
+!.env.example
+dist/
+build/
+.cache/
+.vite/
+*.tsbuildinfo
+*.log
+.DS_Store
+coverage/
+htmlcov/

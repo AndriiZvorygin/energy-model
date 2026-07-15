@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software or research framework, please cite it using the metadata below."
+title: "Energy Model: Oil, Liquidity, Inventory, and the Real Economy"
+type: software
+authors:
+  - family-names: Zvorygin
+    given-names: Andrii
+version: 0.1.0
+date-released: 2026-07-15
+license: MIT
+repository-code: "https://github.com/AndriiZvorygin/energy-model"
+keywords:
+  - energy economics
+  - oil markets
+  - global liquidity
+  - comparative inventory
+  - real economy

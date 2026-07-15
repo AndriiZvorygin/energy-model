@@ -156,6 +156,7 @@ class CoreTests(unittest.TestCase):
             "integrated_lead_lag_atlas.md",
             "system_signal_hierarchy.csv",
             "final_system_interpretation.md",
+            "final_time_series_chart_notes.md",
         ]
         required_charts = [
             "residual_vs_ci_zscore.png",
@@ -186,6 +187,10 @@ class CoreTests(unittest.TestCase):
             "final_lead_lag_network.png",
             "final_signal_timeline_framework.png",
             "final_energy_finance_oil_gdp_map.png",
+            "final_oil_price_layers_time_series.png",
+            "final_gm2_leads_oil_time_series.png",
+            "final_oil_residual_ci_time_series.png",
+            "final_energy_gdp_time_series.png",
         ]
         with TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -376,6 +381,10 @@ def fake_make_charts(rows, lag_rows, out_dir, residual_rows=None, rolling_rows=N
         "final_lead_lag_network.png",
         "final_signal_timeline_framework.png",
         "final_energy_finance_oil_gdp_map.png",
+        "final_oil_price_layers_time_series.png",
+        "final_gm2_leads_oil_time_series.png",
+        "final_oil_residual_ci_time_series.png",
+        "final_energy_gdp_time_series.png",
     ]:
         (out_dir / filename).write_bytes(b"png")
 

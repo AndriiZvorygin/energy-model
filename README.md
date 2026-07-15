@@ -1,193 +1,154 @@
-# Oil, Liquidity, and Inventory Model
+# Energy Model: Oil, Liquidity, Inventory, and the Real Economy
 
-This project builds monthly datasets for global M2, oil prices, and U.S. crude inventories, then runs lag-correlation and regression checks.
+This project explores how financial conditions, energy markets, physical resource constraints, and economic activity interact over time.
 
-## Quick Start
+It began as an oil-market model linking global liquidity to oil-price momentum and is expanding toward broader energy-system modelling. The repository combines a reproducible Python research pipeline with a Node.js educational website that explains the evidence for non-technical readers.
 
-```bash
-python3 -m oil_model.pipeline --refresh
+> This is an interpretive research project, not a trading system or investment recommendation.
+
+## Overview
+
+The current model separates the energy-macro system into distinct analytical layers:
+
+```text
+Global liquidity
+        ↓
+Oil price momentum
+        ↓
+Physical market state
+        ↓
+Tradable exposure
+        ↓
+Energy throughput
+        ↓
+Economic activity
 ```
 
-Single-command regeneration:
+The locked oil model uses year-over-year growth in G4 global M2, lagged five months, to describe WTI and Brent price momentum. Comparative inventory, equities, tradable oil exposure, realised crude prices, energy consumption, industrial production, and GDP are analysed as related but conceptually separate layers.
 
-```bash
-python -m oil_model.pipeline --root .
+## Research Framework
+
+1. **Liquidity impulse:** G4 GM2 is tested as a leading financial signal for oil-price momentum.
+2. **Physical oil-market state:** Comparative inventory helps diagnose whether oil is rich or cheap relative to the liquidity-implied path.
+3. **Market pricing:** WTI and Brent are benchmarks, USO represents investor-accessible exposure, and the S&P 500 provides risk and growth context.
+4. **Physical economy:** Energy and petroleum consumption anchor real activity, while industrial production and real GDP record economic outcomes at different frequencies.
+5. **Efficiency and structural change:** GDP per unit of energy tracks how much measured output is produced from physical energy throughput.
+
+The project prioritizes interpretable specifications, chronological validation, explicit lag conventions, HAC/Newey-West standard errors, shock-period checks, and reproducible source caching.
+
+## Current Validated Findings
+
+- The strongest simple G4 GM2 correlation with WTI and Brent YoY occurs at a four-month lead: `0.532` for WTI and `0.523` for Brent.
+- Rolling validation supports a nearby five-to-six-month lead range. The final benchmark oil model is locked at **GM2-only lag 5**.
+- The locked 60-month rolling validation RMSE is `31.628` for WTI YoY and `32.358` for Brent YoY.
+- Comparative inventory does not improve the primary rolling RMSE or MAE by the project's five-percent decision rule. Its validated role is a residual, state, and regime diagnostic.
+- Inventory and regime variables explain approximately `14.8%` of WTI and `13.5%` of Brent residual variance around the GM2-implied path.
+- S&P 500 monthly returns are primarily contemporaneous with oil returns. Stocks add growth and risk context but do not improve the locked oil model by the five-percent rule.
+- U.S. energy consumption growth and real GDP growth have a contemporaneous quarterly correlation of `0.680`; petroleum consumption growth and real GDP growth correlate at `0.738`.
+- GDP per unit of energy rises over time, consistent with efficiency gains and structural change while economic activity remains physically grounded in energy throughput.
+
+See [the executive summary](analysis/executive_summary.md), [model card](analysis/model_card.md), and [integrated lead-lag atlas](analysis/integrated_lead_lag_atlas.md) for the complete interpretation.
+
+![Integrated lead-lag network](charts/final_lead_lag_network.png)
+
+## System Architecture
+
+```text
+energy-model/
+├── oil_model/              # Python research pipeline
+├── website/                # Vite/React educational website
+├── analysis/               # generated research findings and tables
+├── charts/                 # generated research charts
+├── data/                   # cached sources, seeds, and processed datasets
+├── docs/                   # research and deployment documentation
+├── scripts/                # release verification entry points
+├── tests/                  # pipeline and reproducibility tests
+├── README.md
+├── LICENSE
+├── CITATION.cff
+├── CONTRIBUTING.md
+└── pyproject.toml
 ```
 
-Full v0.1 research release check:
+The Python pipeline owns data acquisition, transformations, models, validation, written findings, and chart generation. The website is a static presentation layer: its build reads existing files from `analysis/` and `charts/`; it does not run or alter the research model.
+
+## Website
+
+The educational website uses Node.js, TypeScript, Vite, React, Tailwind CSS, Recharts, and React Router. It presents the model as an explanatory research atlas rather than a trading dashboard.
 
 ```bash
-make release
+cd website
+npm install
+npm run dev
 ```
 
-Use `make PYTHON=.venv/bin/python release` when working inside the project virtual environment.
+Create a production build with `npm run build`. See [website/README.md](website/README.md) for local development and [docs/deployment.md](docs/deployment.md) for GitHub Pages and custom-domain deployment.
 
-To regenerate every cached source, processed dataset, SQLite table, analysis CSV/Markdown file, and chart from the project root:
+## Data Sources
+
+Primary public sources include:
+
+- **Federal Reserve Economic Data (FRED):** U.S. M2, WTI, Brent, exchange rates, CPI, S&P 500, U.S. real GDP, and industrial production.
+- **European Central Bank:** euro-area M2.
+- **Bank of Japan:** Japan M2.
+- **People's Bank of China-sourced public data and IMF/FRED history:** China M2.
+- **U.S. Energy Information Administration:** crude inventories, total and petroleum energy consumption, refiner acquisition costs, first purchase prices, and imported crude costs.
+- **Yahoo Finance-compatible public chart data:** USO adjusted close.
+
+Raw source responses are cached under `data/raw/` for auditability. Detailed series identifiers, units, transformations, and formulas are documented in [analysis/model_card.md](analysis/model_card.md) and [analysis/latest_source_values.md](analysis/latest_source_values.md).
+
+## Reproducibility
+
+Python 3.10 or newer is required. From the repository root:
 
 ```bash
-python3 -m oil_model.pipeline --refresh --root .
+python -m venv .venv
+.venv/bin/python -m pip install -e '.[dev,parquet]'
+.venv/bin/python -m pytest -q
+.venv/bin/python -m oil_model.pipeline --root .
+.venv/bin/python -m oil_model.verify_release --root .
 ```
 
-Outputs:
-
-- `data/raw/`: cached source responses.
-- `data/processed/monthly_dataset.csv`: joined monthly dataset.
-- `data/oil_model.sqlite`: SQLite copy of datasets and analysis tables.
-- `analysis/lag_correlations.csv`: GM2 YoY leading oil YoY from 0 to 18 months.
-- `analysis/regression_summary.csv`: train/test OLS summaries.
-- `analysis/rolling_validation.csv`: rolling-window validation.
-- `analysis/second_stage_findings.md`: second-stage interaction, residual, and regime findings.
-- `analysis/interaction_model_summary.csv`: GM2/inventory interaction model summaries with HAC standard errors.
-- `analysis/residual_model_summary.csv`: comparative-inventory tests on deviations from the GM2-implied oil path.
-- `analysis/regime_model_summary.csv`: historical-regime model summaries.
-- `analysis/rolling_validation_extended.csv`: 60-, 84-, and 120-month rolling validation with RMSE, MAE, R2, directional accuracy, sign accuracy, and paired error comparisons.
-- `analysis/final_model_interpretation.md`: third-stage interpretation of forecast target design and residual diagnostics.
-- `analysis/target_comparison_summary.csv`: alternative target tests across nominal price levels, CPI-deflated price levels, GM2 residuals, trailing-average deviations, and forward returns.
-- `analysis/residual_diagnostic_summary.csv`: two-step GM2 residual diagnostics using inventory state and regime variables.
-- `analysis/executive_summary.md`: final research summary for human readers.
-- `analysis/model_card.md`: model documentation, validation method, caveats, and suitable uses.
-- `analysis/final_findings_table.csv`: compact table of final locked-model findings.
-- `analysis/current_signal_snapshot.md`: latest complete-month signal and residual interpretation.
-- `analysis/oil_equity_lead_lag_summary.csv`: oil-equity correlations, lead-lag tests, forecast checks, reverse equity tests, and regime splits.
-- `analysis/oil_equity_findings.md`: readable summary of oil-equity lead-lag results.
-- `analysis/oil_equity_return_lag_summary.csv`: SP500-oil lead-lag robustness checks using monthly and quarterly returns.
-- `analysis/oil_equity_robustness.md`: cautionary note on YoY lead-lag versus return-based timing evidence.
-- `analysis/uso_findings.md`: readable findings for USO as a tradable oil-exposure proxy.
-- `analysis/uso_lead_lag_summary.csv`: USO-WTI/Brent contemporaneous, lead-lag, and rolling-correlation results.
-- `analysis/uso_tracking_residual_summary.csv`: USO benchmark return spreads and tracking residuals by regime.
-- `analysis/uso_model_summary.csv`: GM2-only and combined USO YoY models plus the tracking-residual diagnostic.
-- `analysis/physical_realised_price_findings.md`: interpretation of benchmark, tradable, and physically realised crude prices.
-- `analysis/physical_realised_price_summary.csv`: price correlations, GM2 lag scans, inventory relationships, physical-basis models, and latest observations.
-- `analysis/energy_gdp_lead_lag.csv`: energy, oil, liquidity, GDP, and industrial-production lead-lag tests.
-- `analysis/energy_gdp_model_summary.csv`: energy-GDP model summaries, HAC standard errors, and rolling validation metrics where available.
-- `analysis/energy_gdp_findings.md`: readable summary of the physical-throughput GDP layer.
-- `analysis/integrated_lead_lag_atlas.md`: integrated lead-lag synthesis across liquidity, oil, stocks, inventory, energy, and GDP.
-- `analysis/system_signal_hierarchy.csv`: concise hierarchy of signals, targets, relationships, and interpretations.
-- `analysis/final_system_interpretation.md`: final integrated macro-system interpretation.
-- `charts/*.png`: generated time-series, lag-correlation, and scatter charts.
-
-If `pandas` and `pyarrow` are installed, `data/processed/monthly_dataset.parquet` is also written.
-
-## Sources
-
-- U.S. M2: FRED `M2SL`, Board of Governors H.6 source, billions of USD.
-- WTI: FRED `DCOILWTICO`, daily Cushing WTI spot price, averaged to monthly.
-- Brent: FRED `DCOILBRENTEU`, daily Brent spot price, averaged to monthly.
-- FX: FRED `DEXUSEU`, `DEXCHUS`, and `DEXJPUS`, daily exchange rates averaged to monthly.
-- U.S. CPI: FRED `CPIAUCSL`, used to deflate nominal WTI and Brent price levels.
-- S&P 500: FRED `SP500`, daily price index averaged to month for oil-equity lead-lag analysis.
-- USO: Yahoo Finance chart API adjusted close, aggregated over completed months to monthly average and month-end observations for tradable-oil exposure analysis.
-- U.S. real GDP: FRED `GDPC1`, quarterly chained-dollar real GDP.
-- U.S. industrial production: FRED `INDPRO`, monthly real-activity proxy.
-- U.S. total primary energy consumption: EIA Monthly Energy Review table `T01.03`, series `TETCBUS`.
-- U.S. petroleum consumption excluding biofuels: EIA Monthly Energy Review table `T01.03`, series `PMTCBUS`.
-- Euro area M2: ECB Data Portal SDMX CSV, `BSI.M.U2.Y.V.M20.X.1.U2.2300.Z01.E`, outstanding stocks, treated as EUR millions.
-- Japan M2: Bank of Japan Time-Series Data Search API, database `MD02`, series `MAM1NAM2M2MO`, average amounts outstanding, unit `100 million yen`.
-- China M2: IMF/FRED `MYAGM2CNM189N` historical data merged with the current ChinaData public API, which documents People's Bank of China as its primary source. ChinaData overlap is preferred because the FRED/IMF series currently stops in 2019.
-- U.S. commercial crude inventory excluding SPR: EIA weekly history page `WCESTUS1`, averaged to monthly.
-- Refiner acquisition costs: EIA Petroleum Marketing Monthly `R0000____3`, `R1200____3`, and `R1300____3`, monthly composite, domestic, and imported dollars per barrel.
-- U.S. domestic crude first purchase price: EIA Petroleum Marketing Monthly `F000000__3`.
-- Imported crude costs: EIA Petroleum Marketing Monthly `I000000004` FOB and `I000000008` landed cost.
-
-Optional BIS credit:
+The complete release workflow is also available through:
 
 ```bash
-python3 -m oil_model.pipeline --bis-url "https://..."
+make PYTHON=.venv/bin/python release
 ```
 
-or set `BIS_TOTAL_CREDIT_URL`. The pipeline caches the raw BIS response under `data/raw/bis/` and writes `data/processed/bis_total_credit_quarterly.csv`.
+Build the website after the research artifacts exist:
 
-## Formulas
+```bash
+cd website
+npm install
+npm run build
+```
 
-Currency conversion uses same-month average FX:
-
-- U.S. M2 USD = `M2SL * 1e9`
-- Euro area M2 USD = `EA_M2_EUR * EURUSD`
-- China M2 USD = `CN_M2_CNY / CNY_per_USD`
-- Japan M2 USD = `JP_M2_JPY / JPY_per_USD`
-- `GM2_USD = US_M2_USD + EA_M2_USD + CN_M2_USD + JP_M2_USD`
-
-Growth rates:
-
-- `GM2_YoY = 100 * (GM2_USD / GM2_USD[t-12] - 1)`
-- `Oil_YoY = 100 * (monthly oil price / monthly oil price[t-12] - 1)`
-- `Real_Oil = nominal oil price / (CPIAUCSL / 100)`
-- `Oil_deviation_12m_avg = 100 * (oil price / trailing prior 12-month average - 1)`
-- `Oil_forward_3m_return` and `Oil_forward_6m_return` use future oil prices as targets only; contemporaneous predictors are not shifted forward.
-- `SP500_YoY`, `SP500_log_return_1m`, `SP500_forward_3m_return`, and `SP500_forward_6m_return` are computed from monthly average FRED `SP500`.
-- `USO_YoY`, `USO_log_return_1m`, `USO_forward_3m_return`, and `USO_forward_6m_return` are computed from monthly adjusted close observations.
-- `USO_vs_WTI_return_spread = USO_log_return_1m - WTI_log_return_1m`; the Brent spread is defined analogously.
-- `USO_tracking_residual = USO_YoY - WTI_YoY`; `USO_tracking_residual_vs_Brent` uses Brent YoY.
-- Physical-price YoY fields use `100 * (price / price[t-12] - 1)` for RAC composite/domestic/imported, first purchase, imported FOB, and imported landed costs.
-- `RAC_vs_WTI_spread = RAC_composite - WTI`; `RAC_vs_Brent_spread = RAC_composite - Brent`.
-- `first_purchase_vs_WTI_spread = first_purchase_price - WTI`; `landed_import_vs_Brent_spread = imported_landed_cost - Brent`.
-
-Inventory:
-
-- Monthly crude inventory is the average of weekly EIA `WCESTUS1` observations inside each month.
-- Comparative inventory = monthly inventory minus the prior five-year same-month average.
-- `CI_zscore = comparative_inventory / prior five-year same-month standard deviation`
-- `CI_monthly_change = inventory[t] - inventory[t-1]`
-
-Models:
-
-- `Oil_YoY ~ GM2_YoY_lag`
-- `Oil_YoY ~ CI_zscore + CI_monthly_change`
-- `Oil_YoY ~ GM2_YoY_lag + CI_zscore + CI_monthly_change`
-- Interaction pass: `Oil_YoY ~ GM2_YoY_lag + CI_zscore + CI_monthly_change + GM2_YoY_lag*CI_zscore + GM2_YoY_lag*CI_monthly_change`
-- Residual pass: first fit `Oil_YoY ~ GM2_YoY_lag`, then test whether `CI_zscore`, `CI_monthly_change`, inventory surplus, and inventory deficit explain the residual.
-- Regime pass: test GM2, inventory, additive, and interaction terms across 2008-2009 financial crisis, 2014-2017 shale, 2020-2021 covid, 2022-2023 war/SPR, and normal periods.
-
-Lag tests evaluate GM2 YoY leading oil YoY from 0 to 18 months. Regressions use a chronological train/test split and rolling 60-month one-step validation where enough observations exist.
-
-## Working Hypothesis
-
-GM2 appears to be a leading oil-momentum indicator: broad liquidity growth tends to line up best with later oil YoY momentum rather than same-month price moves. Comparative inventory may be a physical-market state variable rather than a simple direct predictor.
-
-The core hypothesis is that liquidity drives broad oil-price momentum, while inventory determines whether the physical market amplifies or dampens that impulse. The second-stage tests therefore emphasize interactions, residual deviations from the liquidity-implied path, and explicit historical regimes. A combined model is considered useful only when it improves rolling RMSE or MAE versus GM2-only by at least 5 percent, or materially improves directional accuracy.
-
-## Current Interpretation
-
-The current best primary model is GM2-only for `Oil_YoY`, with the strongest lead-time range clustering around 5 to 6 months in rolling validation and a simple lag-correlation peak at 4 months. A single chronological train/test split previously selected WTI YoY GM2-only lag 9 as the best split-specific model, so the project treats rolling validation as the more stable selection guide.
-
-Comparative inventory does not improve primary rolling RMSE or MAE versus GM2-only by the 5 percent rule. Its stronger role is diagnostic: inventory-state variables explain roughly 10 percent of the GM2-only residual variance for both WTI and Brent, which supports using comparative inventory to interpret deviations, regimes, and physical-market risk rather than as a direct `Oil_YoY` forecasting feature.
-
-Regime caveat: the 2008-2009 financial crisis, 2014-2017 shale adjustment, 2020-2021 covid shock, and 2022-2023 war/SPR period behave differently from normal periods. Any operational reading should compare full-sample and shock-excluded validation.
-
-## Final Interpretation
-
-Global M2 provides the strongest leading signal for oil-price momentum. Comparative inventory adds less value as a direct `Oil_YoY` forecast variable, but it helps explain deviations from the liquidity-implied path. In practical terms, liquidity describes the impulse, while inventory describes the physical-market state through which that impulse is amplified, dampened, or contradicted.
-
-## Integrated Lead-Lag Interpretation
-
-Global M2 is the strongest leading financial signal for oil-price momentum. Stocks mostly reflect risk appetite and growth expectations, adding context rather than improving the locked oil model. Comparative inventory describes the physical oil-market state and helps explain deviations from the GM2-implied price path. Energy consumption anchors real activity, while GDP records the measured economic outcome. Rising GDP per unit of energy shows efficiency and structural change, while the continuing high correlation between energy use and GDP shows the economy remains physically grounded in energy throughput.
-
-Concise hierarchy:
-
-1. Liquidity impulse: GM2 leads oil momentum.
-2. Market pricing layer: stocks and oil respond to growth/risk conditions.
-3. Physical economy layer: energy use anchors industrial activity and GDP.
-
-## Tradable oil exposure: USO
-
-WTI and Brent are benchmark oil price series. USO is a tradable oil ETF exposure series. USO is analysed separately because its return path can diverge from spot or front-month benchmark oil through roll yield, fund expenses, tracking differences, and ETF structure. In this project, WTI and Brent remain the benchmark oil-price targets, while USO tests what the oil signal looks like for a market participant using a tradable ETF proxy.
-
-The USO layer compares YoY and monthly returns with WTI and Brent over lags from -18 to +18 months, tests GM2-only and combined tradable-exposure models, and reports USO tracking residuals across the project regimes. A public futures-curve series is not currently part of the reproducible pipeline, so the return spread and tracking residual are treated as reduced-form diagnostics for roll and fund-structure effects rather than direct measurements of roll yield.
-
-## Physical realised crude prices
-
-No single barrel price exists. WTI and Brent are benchmark oil price series, while USO is an investor-accessible oil exposure whose return path reflects futures roll, expenses, tracking differences, and fund structure. Refiner acquisition cost is the average price refiners actually paid for crude. Domestic first purchase price is the first arm's-length physical sale from the lease or wellhead. Imported landed cost is the delivered cost of imported crude at the port of discharge, while FOB cost measures the crude before transportation and insurance to the destination port.
-
-This layer compares benchmark prices, tradable exposure, and physical realization without changing the locked GM2-only lag-5 WTI/Brent model. It tests which price series tracks comparative inventory and GM2 most closely, and whether inventory state helps explain the basis between physical prices and WTI or Brent.
+The pipeline can use the committed raw-data cache. Use `--refresh` only when intentionally retrieving current source data and regenerating the research release.
 
 ## Limitations
 
-- M2 definitions vary across jurisdictions; this is a liquidity proxy, not a harmonized monetary aggregate.
-- Same-month FX conversion makes USD GM2 sensitive to exchange-rate moves as well as domestic money growth.
-- Euro area M2 is an ECB changing-composition aggregate.
-- China M2 uses a public PBoC-sourced API for current values because the IMF/FRED no-key feed is stale; keep the cached raw file for auditability.
-- EIA inventory is weekly; the monthly value here is a within-month average, not end-of-month stock.
-- U.S. comparative inventory is only one physical-market proxy and may miss global inventory, spare capacity, refining margins, OPEC policy, sanctions, shipping disruptions, and curve structure.
-- Forward oil returns are target variables that necessarily use future prices; they are included for target-design analysis, not for contemporaneous explanatory features.
-- CPI-deflated price levels are descriptive real-price targets, not a complete cost-curve or purchasing-power model.
-- Correlations and regressions are descriptive. The validation tables are included to make overfitting visible, not to establish causality.
+- The G4 M2 aggregate is a USD-converted liquidity proxy, not a harmonized global monetary statistic.
+- Same-month foreign-exchange conversion mixes domestic money growth with currency movements.
+- U.S. comparative inventory does not represent the full global physical oil balance.
+- Monthly averages can conceal intra-month market disruptions.
+- Linear models can miss nonlinear policy, geopolitical, production, refining, shipping, and futures-curve effects.
+- YoY variables overlap and are autocorrelated; their lead-lag relationships are more useful for macro-cycle interpretation than precise market timing.
+- Historical correlations and rolling forecasts are descriptive and do not establish causality.
+- Shock regimes such as 2008-2009, 2014-2017, 2020-2021, and 2022-2023 can behave differently from normal periods.
+
+## Future Research Directions
+
+This repository is intended to grow from an oil-market model into a broader energy-system research framework. Future modules may explore:
+
+- energy supply adequacy
+- energy surplus and EROI
+- inflation transmission
+- employment quality
+- economic stress indicators
+- social-system responses
+
+These modules are research directions only and are **not currently implemented**.
+
+## License and Citation
+
+The code is released under the [MIT License](LICENSE). Please use [CITATION.cff](CITATION.cff) when citing the software or research framework. Contributions are welcome under the standards in [CONTRIBUTING.md](CONTRIBUTING.md).
