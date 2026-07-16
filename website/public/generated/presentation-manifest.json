@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "refineryVersion": "2.0.0",
-  "generatedAt": "2026-07-16T19:10:14+00:00",
+  "generatedAt": "2026-07-16T20:24:53+00:00",
   "regenerationCommand": "python -m oil_model.pipeline --root . --refresh",
   "policy": {
     "includeStatusesInDiagnosticSummary": [
@@ -299,15 +299,15 @@
       "geographyLabel": "Canada",
       "topic": "affordability",
       "evidenceKey": "canada:affordability",
-      "interpretation": "Unresolved \u00b7 easing",
-      "confidence": "low",
+      "interpretation": "Pressured \u00b7 stable",
+      "confidence": "moderate",
       "coverage": 0.9285714285714286,
       "scope": "Canadian household affordability with global commodity context",
       "oldestObservationDate": "2021-01-01",
       "newestObservationDate": "2026-06-22",
       "evidenceCounts": {
-        "supporting": 5,
-        "mixed": 8,
+        "supporting": 6,
+        "mixed": 7,
         "contradicting": 0,
         "insufficient": 1
       },
@@ -333,7 +333,7 @@
       "geographyLabel": "Canada",
       "topic": "food",
       "evidenceKey": "canada:food",
-      "interpretation": "Pressured \u00b7 worsening",
+      "interpretation": "Pressured \u00b7 stable",
       "confidence": "moderate",
       "coverage": 1.0,
       "scope": "Canadian household affordability with global commodity context",
@@ -367,7 +367,7 @@
       "geographyLabel": "Canada",
       "topic": "food",
       "evidenceKey": "canada:food",
-      "interpretation": "Pressured \u00b7 worsening",
+      "interpretation": "Pressured \u00b7 stable",
       "confidence": "moderate",
       "coverage": 1.0,
       "scope": "Canadian household affordability with global commodity context",
@@ -401,7 +401,7 @@
       "geographyLabel": "Canada",
       "topic": "food",
       "evidenceKey": "canada:food",
-      "interpretation": "Pressured \u00b7 worsening",
+      "interpretation": "Pressured \u00b7 stable",
       "confidence": "moderate",
       "coverage": 1.0,
       "scope": "Canadian household affordability with global commodity context",
@@ -435,7 +435,7 @@
       "geographyLabel": "Canada",
       "topic": "housing",
       "evidenceKey": "canada:housing",
-      "interpretation": "Pressured \u00b7 easing",
+      "interpretation": "Pressured \u00b7 stable",
       "confidence": "moderate",
       "coverage": 0.9090909090909091,
       "scope": "Canadian household affordability with global commodity context",
@@ -469,7 +469,7 @@
       "geographyLabel": "Canada",
       "topic": "housing",
       "evidenceKey": "canada:housing",
-      "interpretation": "Pressured \u00b7 easing",
+      "interpretation": "Pressured \u00b7 stable",
       "confidence": "moderate",
       "coverage": 0.9090909090909091,
       "scope": "Canadian household affordability with global commodity context",
@@ -503,7 +503,7 @@
       "geographyLabel": "Canada",
       "topic": "housing",
       "evidenceKey": "canada:housing",
-      "interpretation": "Pressured \u00b7 easing",
+      "interpretation": "Pressured \u00b7 stable",
       "confidence": "moderate",
       "coverage": 0.9090909090909091,
       "scope": "Canadian household affordability with global commodity context",
@@ -645,11 +645,11 @@
     },
     {
       "file": "config/absolute_affordability.json",
-      "sha256": "573bc0495edded15f95599903fb723c33af960d9c13359e5f5aa9b4cfdf1e08e"
+      "sha256": "838edc764d343cdfdd8ec5467f1e85e4d5d03b585093ee5fdbfbd0be14437086"
     },
     {
       "file": "website/public/generated/evidence-summary.json",
-      "sha256": "e998f6156c735e8bd0a44dfa7ddbe46d6c67c45c98ee39c4f7d71afdb9708f96"
+      "sha256": "9768363e2e1e9a6244ba6c9dad343a9f86abb96abdcb353d02b2fcd9906b0e9f"
     }
   ]
 }

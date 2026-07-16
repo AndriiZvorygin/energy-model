@@ -100,6 +100,24 @@
         {"householdType": "Unattached individuals", "income": 41000, "unit": "2024 CAD per year", "status": "not-evaluated", "missing": "Matching single-person and geography-specific MBM basket"},
         {"householdType": "Unattached seniors", "income": 38600, "unit": "2024 CAD per year", "status": "not-evaluated", "missing": "Matching senior household and geography-specific basic-needs basket"}
       ],
+      "historicalAffordability": {
+        "dataset": "analysis/canada_absolute_affordability_history.csv",
+        "validationDataset": "analysis/absolute_affordability_validation_history.csv",
+        "scope": "Canada national distribution",
+        "geographyLevel": "national income deciles matched to each family unit's applicable MBM basket",
+        "headline": true,
+        "statusRules": [
+          {"status": "severe-shortfall", "all": [{"metric": "populationBelow75Percent", "operator": "gte", "value": 0.20}]},
+          {"status": "unaffordable", "all": [{"metric": "populationBelowBasicNeeds", "operator": "gte", "value": 0.20}]},
+          {"status": "pressured", "any": [{"metric": "populationBelowBasicNeeds", "operator": "gte", "value": 0.10}, {"metric": "populationBelowAffordableBuffer", "operator": "gte", "value": 0.20}]},
+          {"status": "affordable", "otherwise": true}
+        ],
+        "limitations": [
+          "Each published decile average represents ten percent of family units, so threshold shares move in ten-percentage-point increments and do not reveal within-decile hardship.",
+          "The continuous display uses the 2018-base MBM through 2019 and the 2023-base MBM from 2020; five-year comparisons cross that documented methodology break.",
+          "Regional median-family histories are context only and do not determine the national headline."
+        ]
+      },
       "topics": {
         "affordability": {
           "directionIndicators": ["food-to-income", "rent-to-income", "shelter-to-income", "mortgage-interest-to-income"],
@@ -367,6 +385,18 @@
           "limitations": "Average family size was 2.6 and is matched to the three-person MBM threshold. Family composition and actual tenure vary."
         }
       ],
+      "historicalAffordability": {
+        "dataset": "analysis/owen_sound_absolute_affordability_history.csv",
+        "validationDataset": "analysis/absolute_affordability_validation_history.csv",
+        "scope": "Owen Sound census-agglomeration household types",
+        "geographyLevel": "annual census-agglomeration context; city-CSD hardship evidence remains authoritative",
+        "headline": false,
+        "limitations": [
+          "Annual tax-file income describes the wider Owen Sound census agglomeration, not the city census subdivision.",
+          "City-CSD household distributions are available only for Census years, so annual regional median-family trends cannot determine local direction.",
+          "Improving regional medians cannot override city-CSD shelter burden, renter burden, core housing need, food insecurity, or matched city household cases."
+        ]
+      },
       "topics": {
         "affordability": {
           "headlineMethod": "matched-household-cases",

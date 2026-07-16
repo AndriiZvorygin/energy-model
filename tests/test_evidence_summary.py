@@ -73,7 +73,7 @@ def test_absolute_affordability_is_separate_from_direction() -> None:
             assert result["headlineInputs"]
             assert result["absoluteEvaluation"]["representativeBudgets"]
 
-    assert refinery.generate("canada", "affordability")["absoluteStatus"] == "unresolved"
+    assert refinery.generate("canada", "affordability")["absoluteStatus"] == "pressured"
     assert refinery.generate("us", "affordability")["absoluteStatus"] == "unresolved"
 
 
@@ -98,7 +98,7 @@ def test_absolute_distribution_configuration_has_published_provenance() -> None:
 
 def test_canadian_reference_family_cannot_determine_national_verdict() -> None:
     result = generate_evidence_summary("canada", "affordability", ROOT)
-    assert result["absoluteStatus"] == "unresolved"
+    assert result["absoluteStatus"] == "pressured"
     assert result["income"]["value"] == 75_500
     assert result["income"]["definition"] == "Median after-tax income of economic families and unattached individuals"
     assert all(item.get("value") != 133_900 for item in result["headlineInputs"])
@@ -139,7 +139,7 @@ def test_migrated_narratives_remain_unchanged() -> None:
     payload = json.loads((GENERATED / "evidence-summary.json").read_text(encoding="utf-8"))["evidence"]
     assert payload["us:current-state"]["interpretation"] == "Mixed transition: Physical tightening/Energy affordability stress"
     assert payload["canada:current-state"]["interpretation"] == "Consumer affordability stress"
-    assert payload["canada:food"]["interpretation"] == "Pressured · worsening"
+    assert payload["canada:food"]["interpretation"] == "Pressured · stable"
 
 
 def test_owen_sound_uses_city_csd_and_local_household_incomes() -> None:
@@ -181,6 +181,43 @@ def test_owen_sound_newer_context_does_not_set_structural_status() -> None:
     assert all(case["basicNeedsCost"] and case["observationDate"] == "2020-01-01" for case in cases)
     assert all(case["newerFoodCost"] and case["newerRenterHousingCost"] for case in cases)
     assert result["direction"] == "unclear"
+
+
+def test_temporary_2020_improvement_does_not_create_an_easing_headline() -> None:
+    result = generate_evidence_summary("canada", "affordability", ROOT)
+    history = result["historicalAffordability"]
+    by_year = {row["year"]: row for row in history["historicalSeries"]}
+    assert by_year[2020]["lowerDecileAffordabilityRatios"]["lowest"] > by_year[2024]["lowerDecileAffordabilityRatios"]["lowest"]
+    assert history["direction"] == "stable"
+    assert history["direction"] != "easing"
+
+
+def test_national_median_cannot_override_lower_decile_hardship() -> None:
+    result = generate_evidence_summary("canada", "affordability", ROOT)
+    history = result["historicalAffordability"]
+    assert history["medianAffordabilityRatio"] > 1.25
+    assert history["populationBelowBasicNeeds"] == 0.10
+    assert result["absoluteStatus"] == "pressured"
+
+
+def test_owen_sound_regional_medians_cannot_override_city_hardship() -> None:
+    result = generate_evidence_summary("owen-sound", "affordability", ROOT)
+    history = result["historicalAffordability"]
+    latest = history["historicalSeries"][-1]["medianHouseholdTypeRatios"]
+    assert all(ratio and ratio > 1.25 for ratio in latest.values())
+    assert history["contextOnly"] is True
+    assert result["absoluteStatus"] == "pressured"
+    assert result["direction"] == "unclear"
+
+
+def test_live_affordability_summaries_publish_historical_provenance() -> None:
+    for geography in ("canada", "owen-sound"):
+        for topic in ("affordability", "food", "housing"):
+            result = generate_evidence_summary(geography, topic, ROOT)
+            provenance = {item["file"] for item in result["historicalAffordability"]["provenance"]}
+            expected = "analysis/canada_absolute_affordability_history.csv" if geography == "canada" else "analysis/owen_sound_absolute_affordability_history.csv"
+            assert expected in provenance
+            assert "analysis/absolute_affordability_validation_history.csv" in provenance
 
 
 def test_generation_does_not_modify_classifiers_or_locked_outputs() -> None:

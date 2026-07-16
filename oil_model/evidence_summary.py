@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import csv
 import json
 from datetime import UTC, datetime
 from pathlib import Path
@@ -23,6 +24,86 @@ def evidence_key(geography: str, topic: str) -> str:
 
 def _read(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _csv(path: Path) -> list[dict[str, str]]:
+    with path.open(encoding="utf-8") as handle:
+        return list(csv.DictReader(handle))
+
+
+def _float(value: Any) -> float | None:
+    if value in (None, ""):
+        return None
+    return float(value)
+
+
+def _preferred_mbm_base(year: int) -> str:
+    if year >= 2020:
+        return "2023 base"
+    if year >= 2015:
+        return "2018 base"
+    if year >= 2006:
+        return "2008 base"
+    return "2000 base"
+
+
+def _national_distribution_history(rows: list[dict[str, str]]) -> list[dict[str, Any]]:
+    grouped: dict[tuple[int, str], list[dict[str, str]]] = {}
+    for row in rows:
+        if row.get("scope") != "Canada national distribution" or row.get("income_group") == "Total deciles":
+            continue
+        grouped.setdefault((int(row["year"]), row["threshold_base"]), []).append(row)
+    output = []
+    for year in sorted({key[0] for key in grouped}):
+        base = _preferred_mbm_base(year)
+        current = grouped.get((year, base), [])
+        if len(current) != 10:
+            continue
+        ratios = {row["income_group"]: float(row["income_relative_to_basic_needs"]) for row in current}
+        values = list(ratios.values())
+        output.append({
+            "year": year,
+            "thresholdBase": base,
+            "populationBelow75Percent": sum(value < 0.75 for value in values) / 10,
+            "populationBelowBasicNeeds": sum(value < 1.0 for value in values) / 10,
+            "populationFromBasicNeedsToAffordableBuffer": sum(1.0 <= value < 1.25 for value in values) / 10,
+            "populationAtOrAboveAffordableBuffer": sum(value >= 1.25 for value in values) / 10,
+            "populationBelowAffordableBuffer": sum(value < 1.25 for value in values) / 10,
+            "medianAffordabilityRatio": ratios.get("Fifth decile"),
+            "lowerDecileAffordabilityRatios": {
+                "lowest": ratios.get("Lowest decile"),
+                "second": ratios.get("Second decile"),
+                "third": ratios.get("Third decile"),
+            },
+        })
+    return output
+
+
+def _change(history: list[dict[str, Any]], years: int, field: str) -> float | None:
+    latest = history[-1]
+    prior = next((row for row in history if row["year"] == latest["year"] - years), None)
+    if not prior:
+        return None
+    return float(latest[field]) - float(prior[field])
+
+
+def _distribution_direction(history: list[dict[str, Any]]) -> str:
+    changes = [
+        _change(history, years, field)
+        for years in (1, 3, 5)
+        for field in ("populationBelowBasicNeeds", "populationBelowAffordableBuffer")
+    ]
+    available = [value for value in changes if value is not None]
+    if not available:
+        return "unclear"
+    tolerance = 1e-9
+    if all(abs(value) <= tolerance for value in available):
+        return "stable"
+    if any(value > tolerance for value in available) and not any(value < -tolerance for value in available):
+        return "worsening"
+    if any(value < -tolerance for value in available) and not any(value > tolerance for value in available):
+        return "easing"
+    return "unclear"
 
 
 def _value(payload: dict[str, Any], path: str) -> Any:
@@ -258,6 +339,126 @@ class EvidenceRefinery:
             return "stable", details
         return "unclear", details
 
+    def _historical_status(self, metrics: dict[str, float], rules: list[dict[str, Any]]) -> tuple[str, dict[str, Any] | None]:
+        for rule in rules:
+            matched = bool(rule.get("otherwise"))
+            if "any" in rule:
+                matched = any(self._predicate(metrics.get(item["metric"]), item["operator"], float(item["value"])) for item in rule["any"])
+            if "all" in rule:
+                matched = all(self._predicate(metrics.get(item["metric"]), item["operator"], float(item["value"])) for item in rule["all"])
+            if matched:
+                return str(rule["status"]), rule
+        return "insufficient", None
+
+    def _historical_affordability(
+        self,
+        geography: str,
+        geography_rule: dict[str, Any],
+        current_status: str,
+        current_direction: str,
+    ) -> dict[str, Any] | None:
+        settings = geography_rule.get("historicalAffordability")
+        if not settings:
+            return None
+        dataset_path = self.root / settings["dataset"]
+        validation_path = self.root / settings["validationDataset"]
+        rows = _csv(dataset_path)
+        validation = _csv(validation_path)
+        provenance = [
+            {"file": settings["dataset"], "role": "historical affordability input"},
+            {"file": settings["validationDataset"], "role": "hardship and observed-cost validation"},
+        ]
+        limitations = list(settings.get("limitations", []))
+
+        if geography == "canada":
+            history = _national_distribution_history(rows)
+            if not history:
+                return {
+                    "latestYear": None, "absoluteStatus": "insufficient", "direction": "unclear",
+                    "populationBelowBasicNeeds": None, "populationBelowAffordableBuffer": None,
+                    "oneYearChange": None, "threeYearChange": None, "fiveYearChange": None,
+                    "historicalSeries": [], "geographyLevel": settings["geographyLevel"],
+                    "limitations": [*limitations, "No complete national decile distribution was available."], "provenance": provenance,
+                }
+            latest = history[-1]
+            metrics = {
+                "populationBelow75Percent": latest["populationBelow75Percent"],
+                "populationBelowBasicNeeds": latest["populationBelowBasicNeeds"],
+                "populationBelowAffordableBuffer": latest["populationBelowAffordableBuffer"],
+            }
+            status, selected_rule = self._historical_status(metrics, settings["statusRules"])
+            return {
+                "latestYear": latest["year"],
+                "absoluteStatus": status,
+                "direction": _distribution_direction(history),
+                "populationBelow75Percent": latest["populationBelow75Percent"],
+                "populationBelowBasicNeeds": latest["populationBelowBasicNeeds"],
+                "populationBelowAffordableBuffer": latest["populationBelowAffordableBuffer"],
+                "populationFromBasicNeedsToAffordableBuffer": latest["populationFromBasicNeedsToAffordableBuffer"],
+                "populationAtOrAboveAffordableBuffer": latest["populationAtOrAboveAffordableBuffer"],
+                "medianAffordabilityRatio": latest["medianAffordabilityRatio"],
+                "lowerDecileAffordabilityRatios": latest["lowerDecileAffordabilityRatios"],
+                "oneYearChange": _change(history, 1, "populationBelowBasicNeeds"),
+                "threeYearChange": _change(history, 3, "populationBelowBasicNeeds"),
+                "fiveYearChange": _change(history, 5, "populationBelowBasicNeeds"),
+                "changeDetails": {
+                    f"{years}Year": {
+                        "populationBelowBasicNeeds": _change(history, years, "populationBelowBasicNeeds"),
+                        "populationBelowAffordableBuffer": _change(history, years, "populationBelowAffordableBuffer"),
+                    }
+                    for years in (1, 3, 5)
+                },
+                "historicalSeries": history,
+                "geographyLevel": settings["geographyLevel"],
+                "classificationRule": selected_rule,
+                "limitations": limitations,
+                "provenance": provenance,
+            }
+
+        regional = [row for row in rows if row.get("scope") == settings["scope"]]
+        selected: dict[int, list[dict[str, str]]] = {}
+        for year in sorted({int(row["year"]) for row in regional}):
+            base = _preferred_mbm_base(year)
+            current = [row for row in regional if int(row["year"]) == year and row["threshold_base"] == base]
+            if current:
+                selected[year] = current
+        history = [
+            {
+                "year": year,
+                "thresholdBase": _preferred_mbm_base(year),
+                "medianHouseholdTypeRatios": {
+                    row["household_type"]: _float(row["income_relative_to_basic_needs"])
+                    for row in current
+                },
+                "contextOnly": True,
+            }
+            for year, current in sorted(selected.items())
+        ]
+        validation_rows = [
+            {
+                "geography": row["geography"], "year": int(row["year"]), "measure": row["measure"],
+                "value": _float(row["value"]), "unit": row["unit"], "source": row["source"],
+            }
+            for row in validation
+            if row.get("geography") in {"Owen Sound rental market", "Grey Bruce"}
+        ]
+        return {
+            "latestYear": history[-1]["year"] if history else None,
+            "absoluteStatus": current_status,
+            "direction": current_direction,
+            "populationBelowBasicNeeds": None,
+            "populationBelowAffordableBuffer": None,
+            "oneYearChange": None,
+            "threeYearChange": None,
+            "fiveYearChange": None,
+            "historicalSeries": history,
+            "validationSeries": validation_rows,
+            "geographyLevel": settings["geographyLevel"],
+            "limitations": limitations,
+            "provenance": provenance,
+            "contextOnly": True,
+        }
+
     def _matched_case_evaluations(self, cases: list[dict[str, Any]], topic_rule: dict[str, Any]) -> tuple[list[dict[str, Any]], dict[str, float]]:
         if not topic_rule.get("caseStatusRules"):
             return cases, {}
@@ -385,6 +586,27 @@ class EvidenceRefinery:
             direction, direction_evidence = self._direction(topic_rule.get("directionIndicators", []) if topic_rule else [])
         if direction not in DIRECTIONS:
             raise ValueError(f"Invalid affordability direction: {direction}")
+        historical = self._historical_affordability(geography, geography_rule, status, direction)
+        historical_settings = geography_rule.get("historicalAffordability", {})
+        if historical and historical_settings.get("headline") and historical["absoluteStatus"] != "insufficient":
+            status = historical["absoluteStatus"]
+            direction = historical["direction"]
+            missing = [item for item in missing if item != topic_rule.get("unresolvedReason")]
+            selected_threshold = {
+                "status": status,
+                "definition": "National distribution of family units across matched MBM affordability bands",
+                "formula": "ten equal-weight income deciles classified by average after-tax income / applicable MBM basket",
+                "source": "Historical affordability refinery input",
+                "observationDate": f"{historical['latestYear']}-01-01",
+                "limitations": "Decile-average approximation; see historicalAffordability.limitations and provenance.",
+                "rule": historical.get("classificationRule"),
+            }
+            direction_evidence = [{
+                "label": "Historical national affordability distribution",
+                "available": True,
+                "direction": direction,
+                "sourceDate": f"{historical['latestYear']}-01-01",
+            }]
         limitations = [item.get("limitations", "") for item in headline_inputs]
         if selected_threshold and selected_threshold.get("limitations"):
             limitations.append(selected_threshold["limitations"])
@@ -409,6 +631,7 @@ class EvidenceRefinery:
             "representativeBudgets": geography_rule.get("representativeBudgets", []),
             "matchedHouseholdCases": case_evaluations,
             "matchedHouseholdSummary": case_metrics,
+            "historicalAffordability": historical,
             "directionEvidence": direction_evidence,
             "limitations": [item for item in limitations if item],
             "missingEvidence": missing,
@@ -540,6 +763,7 @@ class EvidenceRefinery:
             essentialCost=assessment.get("essentialCost"), costShare=assessment.get("costShare"),
             residualIncome=assessment.get("residualIncome"), thresholdUsed=assessment.get("thresholdUsed"),
             referencePopulation=assessment.get("referencePopulation"), headlineInputs=assessment.get("headlineInputs"),
+            historicalAffordability=assessment.get("historicalAffordability"),
             absoluteEvaluation=assessment,
         )
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-16T18:11:47+00:00",
+  "generatedAt": "2026-07-16T20:24:53+00:00",
   "statusDefinitions": {
     "supporting": "The indicator is consistent with this interpretation.",
     "mixed": "The indicator provides partial or ambiguous evidence.",
@@ -525,7 +525,7 @@
           "indicator": "us_house_price_to_income_index",
           "label": "U.S. house-price-to-income index",
           "status": "mixed",
-          "reason": "The indicator provides partial or ambiguous evidence. Property purchase-price changes are not equivalent to current shelter-service costs and are not universally supportive.",
+          "reason": "The indicator provides partial or ambiguous evidence. A rising affordability ratio or growth gap means the documented cost is increasing relative to income or wages.",
           "chart": "us/indicators/us-house-price-to-income-index.json",
           "indicatorFile": "us/indicators/us-house-price-to-income-index.json",
           "group": "Housing",
@@ -701,6 +701,7 @@
           "limitations": "All-household national estimate; renter and owner burdens differ substantially."
         }
       ],
+      "historicalAffordability": null,
       "absoluteEvaluation": {
         "absoluteStatus": "unresolved",
         "direction": "easing",
@@ -884,6 +885,7 @@
         ],
         "matchedHouseholdCases": [],
         "matchedHouseholdSummary": {},
+        "historicalAffordability": null,
         "directionEvidence": [
           {
             "indicator": "us-food-affordability-pressure",
@@ -1192,6 +1194,7 @@
           "limitations": "Official thresholds vary by family size and composition but not geography."
         }
       ],
+      "historicalAffordability": null,
       "absoluteEvaluation": {
         "absoluteStatus": "pressured",
         "direction": "easing",
@@ -1350,6 +1353,7 @@
         ],
         "matchedHouseholdCases": [],
         "matchedHouseholdSummary": {},
+        "historicalAffordability": null,
         "directionEvidence": [
           {
             "indicator": "us-food-affordability-pressure",
@@ -1514,7 +1518,7 @@
           "indicator": "us_house_price_to_income_index",
           "label": "U.S. house-price-to-income index",
           "status": "mixed",
-          "reason": "The indicator provides partial or ambiguous evidence. Property purchase-price changes are not equivalent to current shelter-service costs and are not universally supportive.",
+          "reason": "The indicator provides partial or ambiguous evidence. A rising affordability ratio or growth gap means the documented cost is increasing relative to income or wages.",
           "chart": "us/indicators/us-house-price-to-income-index.json",
           "indicatorFile": "us/indicators/us-house-price-to-income-index.json",
           "group": "Asset affordability",
@@ -1618,6 +1622,7 @@
           "limitations": "All-household national estimate; renter and owner burdens differ substantially."
         }
       ],
+      "historicalAffordability": null,
       "absoluteEvaluation": {
         "absoluteStatus": "pressured",
         "direction": "easing",
@@ -1770,6 +1775,7 @@
         ],
         "matchedHouseholdCases": [],
         "matchedHouseholdSummary": {},
+        "historicalAffordability": null,
         "directionEvidence": [
           {
             "indicator": "us-rent-pressure",
@@ -2772,11 +2778,37 @@
       "geography": "canada",
       "topic": "affordability",
       "evidenceKey": "canada:affordability",
-      "interpretation": "Unresolved \u00b7 easing",
-      "confidence": "low",
+      "interpretation": "Pressured \u00b7 stable",
+      "confidence": "moderate",
       "coverage": 0.9285714285714286,
       "scope": "Canadian household affordability with global commodity context",
       "supporting": [
+        {
+          "indicator": "absolute-affordability",
+          "label": "National affordability assessment",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. The configured population-distribution evidence is pressured and stable.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Absolute affordability",
+          "value": null,
+          "unit": null,
+          "historicalPercentile": null,
+          "direction": "stable",
+          "absoluteStatus": "pressured",
+          "sourceDate": "2024-01-01",
+          "source": null,
+          "calculation": "ten equal-weight income deciles classified by average after-tax income / applicable MBM basket",
+          "limitations": [
+            "Latest-vintage revised survey estimate; sampling and non-sampling error apply.",
+            "This is an income-threshold measure, not a direct household budget.",
+            "The measure captures household food-access experience and is not a food-price index.",
+            "Older than the income and food-security evidence; provincial household coverage and tenure differences apply.",
+            "The official category is defined, but a verified current national estimate has not yet been integrated.",
+            "Census-period measure; substantially older than current price and income observations.",
+            "Decile-average approximation; see historicalAffordability.limitations and provenance."
+          ]
+        },
         {
           "indicator": "mbm-poverty-rate",
           "label": "Share below the Market Basket Measure",
@@ -2879,32 +2911,6 @@
         }
       ],
       "mixed": [
-        {
-          "indicator": "absolute-affordability",
-          "label": "National affordability assessment",
-          "status": "mixed",
-          "reason": "The indicator provides partial or ambiguous evidence. Population hardship measures show pressure, but incomplete matched household-type budgets prevent a defensible national absolute verdict.",
-          "chart": null,
-          "indicatorFile": null,
-          "group": "Absolute affordability",
-          "value": null,
-          "unit": null,
-          "historicalPercentile": null,
-          "direction": "easing",
-          "absoluteStatus": "unresolved",
-          "sourceDate": "2024-01-01",
-          "source": null,
-          "calculation": "population hardship measures available AND matched household-type cases incomplete",
-          "limitations": [
-            "Latest-vintage revised survey estimate; sampling and non-sampling error apply.",
-            "This is an income-threshold measure, not a direct household budget.",
-            "The measure captures household food-access experience and is not a food-price index.",
-            "Older than the income and food-security evidence; provincial household coverage and tenure differences apply.",
-            "The official category is defined, but a verified current national estimate has not yet been integrated.",
-            "Census-period measure; substantially older than current price and income observations.",
-            "Population hardship is measured, but a single absolute national budget verdict is not supportable yet."
-          ]
-        },
         {
           "indicator": "food_to_income",
           "label": "Canada food-price-to-income index",
@@ -3069,8 +3075,8 @@
           "absoluteStatus": null
         }
       ],
-      "absoluteStatus": "unresolved",
-      "direction": "easing",
+      "absoluteStatus": "pressured",
+      "direction": "stable",
       "householdType": "People and households in Canada",
       "income": {
         "value": 75500,
@@ -3087,12 +3093,27 @@
       "residualIncome": null,
       "thresholdUsed": {
         "classification": {
-          "status": "unresolved",
-          "definition": "Matched household-type income and geography-specific basic-needs baskets are incomplete, so the national absolute verdict is unresolved.",
-          "formula": "population hardship measures available AND matched household-type cases incomplete",
-          "source": "Configured official distribution measures",
+          "status": "pressured",
+          "definition": "National distribution of family units across matched MBM affordability bands",
+          "formula": "ten equal-weight income deciles classified by average after-tax income / applicable MBM basket",
+          "source": "Historical affordability refinery input",
           "observationDate": "2024-01-01",
-          "limitations": "Population hardship is measured, but a single absolute national budget verdict is not supportable yet."
+          "limitations": "Decile-average approximation; see historicalAffordability.limitations and provenance.",
+          "rule": {
+            "status": "pressured",
+            "any": [
+              {
+                "metric": "populationBelowBasicNeeds",
+                "operator": "gte",
+                "value": 0.1
+              },
+              {
+                "metric": "populationBelowAffordableBuffer",
+                "operator": "gte",
+                "value": 0.2
+              }
+            ]
+          }
         },
         "basicNeeds": null
       },
@@ -3165,9 +3186,225 @@
           "limitations": "Census-period measure; substantially older than current price and income observations."
         }
       ],
+      "historicalAffordability": {
+        "latestYear": 2024,
+        "absoluteStatus": "pressured",
+        "direction": "stable",
+        "populationBelow75Percent": 0.1,
+        "populationBelowBasicNeeds": 0.1,
+        "populationBelowAffordableBuffer": 0.2,
+        "populationFromBasicNeedsToAffordableBuffer": 0.1,
+        "populationAtOrAboveAffordableBuffer": 0.8,
+        "medianAffordabilityRatio": 1.854054054054054,
+        "lowerDecileAffordabilityRatios": {
+          "lowest": 0.4794520547945205,
+          "second": 1.0134228187919463,
+          "third": 1.329192546583851
+        },
+        "oneYearChange": 0.0,
+        "threeYearChange": 0.0,
+        "fiveYearChange": 0.0,
+        "changeDetails": {
+          "1Year": {
+            "populationBelowBasicNeeds": 0.0,
+            "populationBelowAffordableBuffer": 0.0
+          },
+          "3Year": {
+            "populationBelowBasicNeeds": 0.0,
+            "populationBelowAffordableBuffer": 0.0
+          },
+          "5Year": {
+            "populationBelowBasicNeeds": 0.0,
+            "populationBelowAffordableBuffer": 0.0
+          }
+        },
+        "historicalSeries": [
+          {
+            "year": 2015,
+            "thresholdBase": "2018 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.2,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.7,
+            "populationBelowAffordableBuffer": 0.3,
+            "medianAffordabilityRatio": 1.7161803713527852,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.4456140350877193,
+              "second": 0.9261744966442953,
+              "third": 1.2123076923076923
+            }
+          },
+          {
+            "year": 2016,
+            "thresholdBase": "2018 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.2,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.7,
+            "populationBelowAffordableBuffer": 0.3,
+            "medianAffordabilityRatio": 1.746630727762803,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.4631578947368421,
+              "second": 0.962457337883959,
+              "third": 1.240740740740741
+            }
+          },
+          {
+            "year": 2017,
+            "thresholdBase": "2018 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.2,
+            "populationFromBasicNeedsToAffordableBuffer": 0.0,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.8005464480874316,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.47349823321554774,
+              "second": 0.9726027397260274,
+              "third": 1.265625
+            }
+          },
+          {
+            "year": 2018,
+            "thresholdBase": "2018 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.2,
+            "populationFromBasicNeedsToAffordableBuffer": 0.0,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.8236914600550964,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.45390070921985815,
+              "second": 0.9825783972125436,
+              "third": 1.2767295597484274
+            }
+          },
+          {
+            "year": 2019,
+            "thresholdBase": "2018 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.1,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.8232044198895028,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.48936170212765956,
+              "second": 1.0103806228373702,
+              "third": 1.2861635220125787
+            }
+          },
+          {
+            "year": 2020,
+            "thresholdBase": "2023 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.1,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.8700265251989392,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.5979020979020979,
+              "second": 1.10580204778157,
+              "third": 1.396875
+            }
+          },
+          {
+            "year": 2021,
+            "thresholdBase": "2023 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.1,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.8763440860215055,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.5605536332179931,
+              "second": 1.071186440677966,
+              "third": 1.3769470404984423
+            }
+          },
+          {
+            "year": 2022,
+            "thresholdBase": "2023 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.1,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.803763440860215,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.49488054607508536,
+              "second": 1.0033444816053512,
+              "third": 1.2923076923076924
+            }
+          },
+          {
+            "year": 2023,
+            "thresholdBase": "2023 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.1,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.824,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.4829931972789116,
+              "second": 1.0166666666666666,
+              "third": 1.3159509202453987
+            }
+          },
+          {
+            "year": 2024,
+            "thresholdBase": "2023 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.1,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.854054054054054,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.4794520547945205,
+              "second": 1.0134228187919463,
+              "third": 1.329192546583851
+            }
+          }
+        ],
+        "geographyLevel": "national income deciles matched to each family unit's applicable MBM basket",
+        "classificationRule": {
+          "status": "pressured",
+          "any": [
+            {
+              "metric": "populationBelowBasicNeeds",
+              "operator": "gte",
+              "value": 0.1
+            },
+            {
+              "metric": "populationBelowAffordableBuffer",
+              "operator": "gte",
+              "value": 0.2
+            }
+          ]
+        },
+        "limitations": [
+          "Each published decile average represents ten percent of family units, so threshold shares move in ten-percentage-point increments and do not reveal within-decile hardship.",
+          "The continuous display uses the 2018-base MBM through 2019 and the 2023-base MBM from 2020; five-year comparisons cross that documented methodology break.",
+          "Regional median-family histories are context only and do not determine the national headline."
+        ],
+        "provenance": [
+          {
+            "file": "analysis/canada_absolute_affordability_history.csv",
+            "role": "historical affordability input"
+          },
+          {
+            "file": "analysis/absolute_affordability_validation_history.csv",
+            "role": "hardship and observed-cost validation"
+          }
+        ]
+      },
       "absoluteEvaluation": {
-        "absoluteStatus": "unresolved",
-        "direction": "easing",
+        "absoluteStatus": "pressured",
+        "direction": "stable",
         "householdType": "People and households in Canada",
         "referencePopulation": "People and households in Canada",
         "assessmentLabel": "National",
@@ -3189,12 +3426,27 @@
         "incomeRemainingAfterMeasuredEssentials": null,
         "thresholdUsed": {
           "classification": {
-            "status": "unresolved",
-            "definition": "Matched household-type income and geography-specific basic-needs baskets are incomplete, so the national absolute verdict is unresolved.",
-            "formula": "population hardship measures available AND matched household-type cases incomplete",
-            "source": "Configured official distribution measures",
+            "status": "pressured",
+            "definition": "National distribution of family units across matched MBM affordability bands",
+            "formula": "ten equal-weight income deciles classified by average after-tax income / applicable MBM basket",
+            "source": "Historical affordability refinery input",
             "observationDate": "2024-01-01",
-            "limitations": "Population hardship is measured, but a single absolute national budget verdict is not supportable yet."
+            "limitations": "Decile-average approximation; see historicalAffordability.limitations and provenance.",
+            "rule": {
+              "status": "pressured",
+              "any": [
+                {
+                  "metric": "populationBelowBasicNeeds",
+                  "operator": "gte",
+                  "value": 0.1
+                },
+                {
+                  "metric": "populationBelowAffordableBuffer",
+                  "operator": "gte",
+                  "value": 0.2
+                }
+              ]
+            }
           },
           "basicNeeds": null
         },
@@ -3377,38 +3629,228 @@
           }
         ],
         "matchedHouseholdSummary": {},
+        "historicalAffordability": {
+          "latestYear": 2024,
+          "absoluteStatus": "pressured",
+          "direction": "stable",
+          "populationBelow75Percent": 0.1,
+          "populationBelowBasicNeeds": 0.1,
+          "populationBelowAffordableBuffer": 0.2,
+          "populationFromBasicNeedsToAffordableBuffer": 0.1,
+          "populationAtOrAboveAffordableBuffer": 0.8,
+          "medianAffordabilityRatio": 1.854054054054054,
+          "lowerDecileAffordabilityRatios": {
+            "lowest": 0.4794520547945205,
+            "second": 1.0134228187919463,
+            "third": 1.329192546583851
+          },
+          "oneYearChange": 0.0,
+          "threeYearChange": 0.0,
+          "fiveYearChange": 0.0,
+          "changeDetails": {
+            "1Year": {
+              "populationBelowBasicNeeds": 0.0,
+              "populationBelowAffordableBuffer": 0.0
+            },
+            "3Year": {
+              "populationBelowBasicNeeds": 0.0,
+              "populationBelowAffordableBuffer": 0.0
+            },
+            "5Year": {
+              "populationBelowBasicNeeds": 0.0,
+              "populationBelowAffordableBuffer": 0.0
+            }
+          },
+          "historicalSeries": [
+            {
+              "year": 2015,
+              "thresholdBase": "2018 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.2,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.7,
+              "populationBelowAffordableBuffer": 0.3,
+              "medianAffordabilityRatio": 1.7161803713527852,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.4456140350877193,
+                "second": 0.9261744966442953,
+                "third": 1.2123076923076923
+              }
+            },
+            {
+              "year": 2016,
+              "thresholdBase": "2018 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.2,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.7,
+              "populationBelowAffordableBuffer": 0.3,
+              "medianAffordabilityRatio": 1.746630727762803,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.4631578947368421,
+                "second": 0.962457337883959,
+                "third": 1.240740740740741
+              }
+            },
+            {
+              "year": 2017,
+              "thresholdBase": "2018 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.2,
+              "populationFromBasicNeedsToAffordableBuffer": 0.0,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.8005464480874316,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.47349823321554774,
+                "second": 0.9726027397260274,
+                "third": 1.265625
+              }
+            },
+            {
+              "year": 2018,
+              "thresholdBase": "2018 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.2,
+              "populationFromBasicNeedsToAffordableBuffer": 0.0,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.8236914600550964,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.45390070921985815,
+                "second": 0.9825783972125436,
+                "third": 1.2767295597484274
+              }
+            },
+            {
+              "year": 2019,
+              "thresholdBase": "2018 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.1,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.8232044198895028,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.48936170212765956,
+                "second": 1.0103806228373702,
+                "third": 1.2861635220125787
+              }
+            },
+            {
+              "year": 2020,
+              "thresholdBase": "2023 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.1,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.8700265251989392,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.5979020979020979,
+                "second": 1.10580204778157,
+                "third": 1.396875
+              }
+            },
+            {
+              "year": 2021,
+              "thresholdBase": "2023 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.1,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.8763440860215055,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.5605536332179931,
+                "second": 1.071186440677966,
+                "third": 1.3769470404984423
+              }
+            },
+            {
+              "year": 2022,
+              "thresholdBase": "2023 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.1,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.803763440860215,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.49488054607508536,
+                "second": 1.0033444816053512,
+                "third": 1.2923076923076924
+              }
+            },
+            {
+              "year": 2023,
+              "thresholdBase": "2023 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.1,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.824,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.4829931972789116,
+                "second": 1.0166666666666666,
+                "third": 1.3159509202453987
+              }
+            },
+            {
+              "year": 2024,
+              "thresholdBase": "2023 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.1,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.854054054054054,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.4794520547945205,
+                "second": 1.0134228187919463,
+                "third": 1.329192546583851
+              }
+            }
+          ],
+          "geographyLevel": "national income deciles matched to each family unit's applicable MBM basket",
+          "classificationRule": {
+            "status": "pressured",
+            "any": [
+              {
+                "metric": "populationBelowBasicNeeds",
+                "operator": "gte",
+                "value": 0.1
+              },
+              {
+                "metric": "populationBelowAffordableBuffer",
+                "operator": "gte",
+                "value": 0.2
+              }
+            ]
+          },
+          "limitations": [
+            "Each published decile average represents ten percent of family units, so threshold shares move in ten-percentage-point increments and do not reveal within-decile hardship.",
+            "The continuous display uses the 2018-base MBM through 2019 and the 2023-base MBM from 2020; five-year comparisons cross that documented methodology break.",
+            "Regional median-family histories are context only and do not determine the national headline."
+          ],
+          "provenance": [
+            {
+              "file": "analysis/canada_absolute_affordability_history.csv",
+              "role": "historical affordability input"
+            },
+            {
+              "file": "analysis/absolute_affordability_validation_history.csv",
+              "role": "hardship and observed-cost validation"
+            }
+          ]
+        },
         "directionEvidence": [
           {
-            "indicator": "food-to-income",
-            "label": "Canada food-price-to-income index",
+            "label": "Historical national affordability distribution",
             "available": true,
-            "direction": "worsening",
-            "momentum": "rising",
-            "sourceDate": "2026-06-17"
-          },
-          {
-            "indicator": "rent-to-income",
-            "label": "Canada rent-to-income index",
-            "available": true,
-            "direction": "easing",
-            "momentum": "falling",
-            "sourceDate": "2026-06-17"
-          },
-          {
-            "indicator": "shelter-to-income",
-            "label": "Canada shelter-to-income index",
-            "available": true,
-            "direction": "easing",
-            "momentum": "falling",
-            "sourceDate": "2026-06-17"
-          },
-          {
-            "indicator": "mortgage-interest-to-income",
-            "label": "Canada mortgage-interest-to-income index",
-            "available": true,
-            "direction": "easing",
-            "momentum": "falling",
-            "sourceDate": "2026-06-17"
+            "direction": "stable",
+            "sourceDate": "2024-01-01"
           }
         ],
         "limitations": [
@@ -3418,11 +3860,10 @@
           "Older than the income and food-security evidence; provincial household coverage and tenure differences apply.",
           "The official category is defined, but a verified current national estimate has not yet been integrated.",
           "Census-period measure; substantially older than current price and income observations.",
-          "Population hardship is measured, but a single absolute national budget verdict is not supportable yet."
+          "Decile-average approximation; see historicalAffordability.limitations and provenance."
         ],
         "missingEvidence": [
-          "Households spending at least 50% of income on shelter is not yet integrated.",
-          "Matched household-type income and geography-specific basic-needs baskets are incomplete, so the national absolute verdict is unresolved."
+          "Households spending at least 50% of income on shelter is not yet integrated."
         ]
       }
     },
@@ -3430,7 +3871,7 @@
       "geography": "canada",
       "topic": "food",
       "evidenceKey": "canada:food",
-      "interpretation": "Pressured \u00b7 worsening",
+      "interpretation": "Pressured \u00b7 stable",
       "confidence": "moderate",
       "coverage": 1.0,
       "scope": "Canadian household affordability with global commodity context",
@@ -3439,22 +3880,22 @@
           "indicator": "absolute-food",
           "label": "National food assessment",
           "status": "supporting",
-          "reason": "The indicator is consistent with this interpretation. The configured population-distribution evidence is pressured and worsening.",
+          "reason": "The indicator is consistent with this interpretation. The configured population-distribution evidence is pressured and stable.",
           "chart": null,
           "indicatorFile": null,
           "group": "Absolute affordability",
           "value": null,
           "unit": null,
           "historicalPercentile": null,
-          "direction": "worsening",
+          "direction": "stable",
           "absoluteStatus": "pressured",
           "sourceDate": "2024-01-01",
           "source": null,
-          "calculation": "{\"all\": [{\"measure\": \"food-insecurity-rate\", \"operator\": \"gte\", \"value\": 0.1}]}",
+          "calculation": "ten equal-weight income deciles classified by average after-tax income / applicable MBM basket",
           "limitations": [
             "The measure captures household food-access experience and is not a food-price index.",
             "Latest-vintage revised survey estimate; sampling and non-sampling error apply.",
-            "Transparent project classification threshold; not an official national affordability verdict."
+            "Decile-average approximation; see historicalAffordability.limitations and provenance."
           ]
         },
         {
@@ -3644,7 +4085,7 @@
       ],
       "insufficient": [],
       "absoluteStatus": "pressured",
-      "direction": "worsening",
+      "direction": "stable",
       "householdType": "People and households in Canada",
       "income": {
         "value": 75500,
@@ -3662,19 +4103,26 @@
       "thresholdUsed": {
         "classification": {
           "status": "pressured",
-          "all": [
-            {
-              "measure": "food-insecurity-rate",
-              "operator": "gte",
-              "value": 0.1
-            }
-          ],
-          "geography": "canada",
-          "definition": "Population-distribution rule for national food",
-          "formula": "{\"all\": [{\"measure\": \"food-insecurity-rate\", \"operator\": \"gte\", \"value\": 0.1}]}",
-          "source": "Project rule applied to configured official population hardship measures",
+          "definition": "National distribution of family units across matched MBM affordability bands",
+          "formula": "ten equal-weight income deciles classified by average after-tax income / applicable MBM basket",
+          "source": "Historical affordability refinery input",
           "observationDate": "2024-01-01",
-          "limitations": "Transparent project classification threshold; not an official national affordability verdict."
+          "limitations": "Decile-average approximation; see historicalAffordability.limitations and provenance.",
+          "rule": {
+            "status": "pressured",
+            "any": [
+              {
+                "metric": "populationBelowBasicNeeds",
+                "operator": "gte",
+                "value": 0.1
+              },
+              {
+                "metric": "populationBelowAffordableBuffer",
+                "operator": "gte",
+                "value": 0.2
+              }
+            ]
+          }
         },
         "basicNeeds": null
       },
@@ -3703,9 +4151,225 @@
           "limitations": "Latest-vintage revised survey estimate; sampling and non-sampling error apply."
         }
       ],
+      "historicalAffordability": {
+        "latestYear": 2024,
+        "absoluteStatus": "pressured",
+        "direction": "stable",
+        "populationBelow75Percent": 0.1,
+        "populationBelowBasicNeeds": 0.1,
+        "populationBelowAffordableBuffer": 0.2,
+        "populationFromBasicNeedsToAffordableBuffer": 0.1,
+        "populationAtOrAboveAffordableBuffer": 0.8,
+        "medianAffordabilityRatio": 1.854054054054054,
+        "lowerDecileAffordabilityRatios": {
+          "lowest": 0.4794520547945205,
+          "second": 1.0134228187919463,
+          "third": 1.329192546583851
+        },
+        "oneYearChange": 0.0,
+        "threeYearChange": 0.0,
+        "fiveYearChange": 0.0,
+        "changeDetails": {
+          "1Year": {
+            "populationBelowBasicNeeds": 0.0,
+            "populationBelowAffordableBuffer": 0.0
+          },
+          "3Year": {
+            "populationBelowBasicNeeds": 0.0,
+            "populationBelowAffordableBuffer": 0.0
+          },
+          "5Year": {
+            "populationBelowBasicNeeds": 0.0,
+            "populationBelowAffordableBuffer": 0.0
+          }
+        },
+        "historicalSeries": [
+          {
+            "year": 2015,
+            "thresholdBase": "2018 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.2,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.7,
+            "populationBelowAffordableBuffer": 0.3,
+            "medianAffordabilityRatio": 1.7161803713527852,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.4456140350877193,
+              "second": 0.9261744966442953,
+              "third": 1.2123076923076923
+            }
+          },
+          {
+            "year": 2016,
+            "thresholdBase": "2018 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.2,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.7,
+            "populationBelowAffordableBuffer": 0.3,
+            "medianAffordabilityRatio": 1.746630727762803,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.4631578947368421,
+              "second": 0.962457337883959,
+              "third": 1.240740740740741
+            }
+          },
+          {
+            "year": 2017,
+            "thresholdBase": "2018 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.2,
+            "populationFromBasicNeedsToAffordableBuffer": 0.0,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.8005464480874316,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.47349823321554774,
+              "second": 0.9726027397260274,
+              "third": 1.265625
+            }
+          },
+          {
+            "year": 2018,
+            "thresholdBase": "2018 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.2,
+            "populationFromBasicNeedsToAffordableBuffer": 0.0,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.8236914600550964,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.45390070921985815,
+              "second": 0.9825783972125436,
+              "third": 1.2767295597484274
+            }
+          },
+          {
+            "year": 2019,
+            "thresholdBase": "2018 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.1,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.8232044198895028,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.48936170212765956,
+              "second": 1.0103806228373702,
+              "third": 1.2861635220125787
+            }
+          },
+          {
+            "year": 2020,
+            "thresholdBase": "2023 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.1,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.8700265251989392,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.5979020979020979,
+              "second": 1.10580204778157,
+              "third": 1.396875
+            }
+          },
+          {
+            "year": 2021,
+            "thresholdBase": "2023 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.1,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.8763440860215055,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.5605536332179931,
+              "second": 1.071186440677966,
+              "third": 1.3769470404984423
+            }
+          },
+          {
+            "year": 2022,
+            "thresholdBase": "2023 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.1,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.803763440860215,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.49488054607508536,
+              "second": 1.0033444816053512,
+              "third": 1.2923076923076924
+            }
+          },
+          {
+            "year": 2023,
+            "thresholdBase": "2023 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.1,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.824,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.4829931972789116,
+              "second": 1.0166666666666666,
+              "third": 1.3159509202453987
+            }
+          },
+          {
+            "year": 2024,
+            "thresholdBase": "2023 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.1,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.854054054054054,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.4794520547945205,
+              "second": 1.0134228187919463,
+              "third": 1.329192546583851
+            }
+          }
+        ],
+        "geographyLevel": "national income deciles matched to each family unit's applicable MBM basket",
+        "classificationRule": {
+          "status": "pressured",
+          "any": [
+            {
+              "metric": "populationBelowBasicNeeds",
+              "operator": "gte",
+              "value": 0.1
+            },
+            {
+              "metric": "populationBelowAffordableBuffer",
+              "operator": "gte",
+              "value": 0.2
+            }
+          ]
+        },
+        "limitations": [
+          "Each published decile average represents ten percent of family units, so threshold shares move in ten-percentage-point increments and do not reveal within-decile hardship.",
+          "The continuous display uses the 2018-base MBM through 2019 and the 2023-base MBM from 2020; five-year comparisons cross that documented methodology break.",
+          "Regional median-family histories are context only and do not determine the national headline."
+        ],
+        "provenance": [
+          {
+            "file": "analysis/canada_absolute_affordability_history.csv",
+            "role": "historical affordability input"
+          },
+          {
+            "file": "analysis/absolute_affordability_validation_history.csv",
+            "role": "hardship and observed-cost validation"
+          }
+        ]
+      },
       "absoluteEvaluation": {
         "absoluteStatus": "pressured",
-        "direction": "worsening",
+        "direction": "stable",
         "householdType": "People and households in Canada",
         "referencePopulation": "People and households in Canada",
         "assessmentLabel": "National",
@@ -3728,19 +4392,26 @@
         "thresholdUsed": {
           "classification": {
             "status": "pressured",
-            "all": [
-              {
-                "measure": "food-insecurity-rate",
-                "operator": "gte",
-                "value": 0.1
-              }
-            ],
-            "geography": "canada",
-            "definition": "Population-distribution rule for national food",
-            "formula": "{\"all\": [{\"measure\": \"food-insecurity-rate\", \"operator\": \"gte\", \"value\": 0.1}]}",
-            "source": "Project rule applied to configured official population hardship measures",
+            "definition": "National distribution of family units across matched MBM affordability bands",
+            "formula": "ten equal-weight income deciles classified by average after-tax income / applicable MBM basket",
+            "source": "Historical affordability refinery input",
             "observationDate": "2024-01-01",
-            "limitations": "Transparent project classification threshold; not an official national affordability verdict."
+            "limitations": "Decile-average approximation; see historicalAffordability.limitations and provenance.",
+            "rule": {
+              "status": "pressured",
+              "any": [
+                {
+                  "metric": "populationBelowBasicNeeds",
+                  "operator": "gte",
+                  "value": 0.1
+                },
+                {
+                  "metric": "populationBelowAffordableBuffer",
+                  "operator": "gte",
+                  "value": 0.2
+                }
+              ]
+            }
           },
           "basicNeeds": null
         },
@@ -3879,44 +4550,234 @@
           }
         ],
         "matchedHouseholdSummary": {},
+        "historicalAffordability": {
+          "latestYear": 2024,
+          "absoluteStatus": "pressured",
+          "direction": "stable",
+          "populationBelow75Percent": 0.1,
+          "populationBelowBasicNeeds": 0.1,
+          "populationBelowAffordableBuffer": 0.2,
+          "populationFromBasicNeedsToAffordableBuffer": 0.1,
+          "populationAtOrAboveAffordableBuffer": 0.8,
+          "medianAffordabilityRatio": 1.854054054054054,
+          "lowerDecileAffordabilityRatios": {
+            "lowest": 0.4794520547945205,
+            "second": 1.0134228187919463,
+            "third": 1.329192546583851
+          },
+          "oneYearChange": 0.0,
+          "threeYearChange": 0.0,
+          "fiveYearChange": 0.0,
+          "changeDetails": {
+            "1Year": {
+              "populationBelowBasicNeeds": 0.0,
+              "populationBelowAffordableBuffer": 0.0
+            },
+            "3Year": {
+              "populationBelowBasicNeeds": 0.0,
+              "populationBelowAffordableBuffer": 0.0
+            },
+            "5Year": {
+              "populationBelowBasicNeeds": 0.0,
+              "populationBelowAffordableBuffer": 0.0
+            }
+          },
+          "historicalSeries": [
+            {
+              "year": 2015,
+              "thresholdBase": "2018 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.2,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.7,
+              "populationBelowAffordableBuffer": 0.3,
+              "medianAffordabilityRatio": 1.7161803713527852,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.4456140350877193,
+                "second": 0.9261744966442953,
+                "third": 1.2123076923076923
+              }
+            },
+            {
+              "year": 2016,
+              "thresholdBase": "2018 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.2,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.7,
+              "populationBelowAffordableBuffer": 0.3,
+              "medianAffordabilityRatio": 1.746630727762803,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.4631578947368421,
+                "second": 0.962457337883959,
+                "third": 1.240740740740741
+              }
+            },
+            {
+              "year": 2017,
+              "thresholdBase": "2018 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.2,
+              "populationFromBasicNeedsToAffordableBuffer": 0.0,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.8005464480874316,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.47349823321554774,
+                "second": 0.9726027397260274,
+                "third": 1.265625
+              }
+            },
+            {
+              "year": 2018,
+              "thresholdBase": "2018 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.2,
+              "populationFromBasicNeedsToAffordableBuffer": 0.0,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.8236914600550964,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.45390070921985815,
+                "second": 0.9825783972125436,
+                "third": 1.2767295597484274
+              }
+            },
+            {
+              "year": 2019,
+              "thresholdBase": "2018 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.1,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.8232044198895028,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.48936170212765956,
+                "second": 1.0103806228373702,
+                "third": 1.2861635220125787
+              }
+            },
+            {
+              "year": 2020,
+              "thresholdBase": "2023 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.1,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.8700265251989392,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.5979020979020979,
+                "second": 1.10580204778157,
+                "third": 1.396875
+              }
+            },
+            {
+              "year": 2021,
+              "thresholdBase": "2023 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.1,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.8763440860215055,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.5605536332179931,
+                "second": 1.071186440677966,
+                "third": 1.3769470404984423
+              }
+            },
+            {
+              "year": 2022,
+              "thresholdBase": "2023 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.1,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.803763440860215,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.49488054607508536,
+                "second": 1.0033444816053512,
+                "third": 1.2923076923076924
+              }
+            },
+            {
+              "year": 2023,
+              "thresholdBase": "2023 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.1,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.824,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.4829931972789116,
+                "second": 1.0166666666666666,
+                "third": 1.3159509202453987
+              }
+            },
+            {
+              "year": 2024,
+              "thresholdBase": "2023 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.1,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.854054054054054,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.4794520547945205,
+                "second": 1.0134228187919463,
+                "third": 1.329192546583851
+              }
+            }
+          ],
+          "geographyLevel": "national income deciles matched to each family unit's applicable MBM basket",
+          "classificationRule": {
+            "status": "pressured",
+            "any": [
+              {
+                "metric": "populationBelowBasicNeeds",
+                "operator": "gte",
+                "value": 0.1
+              },
+              {
+                "metric": "populationBelowAffordableBuffer",
+                "operator": "gte",
+                "value": 0.2
+              }
+            ]
+          },
+          "limitations": [
+            "Each published decile average represents ten percent of family units, so threshold shares move in ten-percentage-point increments and do not reveal within-decile hardship.",
+            "The continuous display uses the 2018-base MBM through 2019 and the 2023-base MBM from 2020; five-year comparisons cross that documented methodology break.",
+            "Regional median-family histories are context only and do not determine the national headline."
+          ],
+          "provenance": [
+            {
+              "file": "analysis/canada_absolute_affordability_history.csv",
+              "role": "historical affordability input"
+            },
+            {
+              "file": "analysis/absolute_affordability_validation_history.csv",
+              "role": "hardship and observed-cost validation"
+            }
+          ]
+        },
         "directionEvidence": [
           {
-            "indicator": "food-to-income",
-            "label": "Canada food-price-to-income index",
+            "label": "Historical national affordability distribution",
             "available": true,
-            "direction": "worsening",
-            "momentum": "rising",
-            "sourceDate": "2026-06-17"
-          },
-          {
-            "indicator": "grocery-to-income",
-            "label": "Canada grocery-price-to-income index",
-            "available": true,
-            "direction": "worsening",
-            "momentum": "rising",
-            "sourceDate": "2026-06-17"
-          },
-          {
-            "indicator": "food-to-wage",
-            "label": "Canada food wage-pressure gap",
-            "available": true,
-            "direction": "worsening",
-            "momentum": "rising",
-            "sourceDate": "2026-06-22"
-          },
-          {
-            "indicator": "grocery-to-wage",
-            "label": "Canada grocery wage-pressure gap",
-            "available": true,
-            "direction": "worsening",
-            "momentum": "rising",
-            "sourceDate": "2026-06-22"
+            "direction": "stable",
+            "sourceDate": "2024-01-01"
           }
         ],
         "limitations": [
           "The measure captures household food-access experience and is not a food-price index.",
           "Latest-vintage revised survey estimate; sampling and non-sampling error apply.",
-          "Transparent project classification threshold; not an official national affordability verdict."
+          "Decile-average approximation; see historicalAffordability.limitations and provenance."
         ],
         "missingEvidence": []
       }
@@ -3925,7 +4786,7 @@
       "geography": "canada",
       "topic": "housing",
       "evidenceKey": "canada:housing",
-      "interpretation": "Pressured \u00b7 easing",
+      "interpretation": "Pressured \u00b7 stable",
       "confidence": "moderate",
       "coverage": 0.9090909090909091,
       "scope": "Canadian household affordability with global commodity context",
@@ -3934,23 +4795,23 @@
           "indicator": "absolute-housing",
           "label": "National housing assessment",
           "status": "supporting",
-          "reason": "The indicator is consistent with this interpretation. The configured population-distribution evidence is pressured and easing.",
+          "reason": "The indicator is consistent with this interpretation. The configured population-distribution evidence is pressured and stable.",
           "chart": null,
           "indicatorFile": null,
           "group": "Absolute affordability",
           "value": null,
           "unit": null,
           "historicalPercentile": null,
-          "direction": "easing",
+          "direction": "stable",
           "absoluteStatus": "pressured",
           "sourceDate": "2024-01-01",
           "source": null,
-          "calculation": "{\"any\": [{\"measure\": \"shelter-burden-30-rate\", \"operator\": \"gte\", \"value\": 0.2}, {\"measure\": \"core-housing-need-rate\", \"operator\": \"gte\", \"value\": 0.1}]}",
+          "calculation": "ten equal-weight income deciles classified by average after-tax income / applicable MBM basket",
           "limitations": [
             "Older than the income and food-security evidence; provincial household coverage and tenure differences apply.",
             "The official category is defined, but a verified current national estimate has not yet been integrated.",
             "Census-period measure; substantially older than current price and income observations.",
-            "Transparent project classification threshold; not an official national affordability verdict."
+            "Decile-average approximation; see historicalAffordability.limitations and provenance."
           ]
         },
         {
@@ -4161,7 +5022,7 @@
         }
       ],
       "absoluteStatus": "pressured",
-      "direction": "easing",
+      "direction": "stable",
       "householdType": "People and households in Canada",
       "income": {
         "value": 75500,
@@ -4179,24 +5040,26 @@
       "thresholdUsed": {
         "classification": {
           "status": "pressured",
-          "any": [
-            {
-              "measure": "shelter-burden-30-rate",
-              "operator": "gte",
-              "value": 0.2
-            },
-            {
-              "measure": "core-housing-need-rate",
-              "operator": "gte",
-              "value": 0.1
-            }
-          ],
-          "geography": "canada",
-          "definition": "Population-distribution rule for national housing",
-          "formula": "{\"any\": [{\"measure\": \"shelter-burden-30-rate\", \"operator\": \"gte\", \"value\": 0.2}, {\"measure\": \"core-housing-need-rate\", \"operator\": \"gte\", \"value\": 0.1}]}",
-          "source": "Project rule applied to configured official population hardship measures",
+          "definition": "National distribution of family units across matched MBM affordability bands",
+          "formula": "ten equal-weight income deciles classified by average after-tax income / applicable MBM basket",
+          "source": "Historical affordability refinery input",
           "observationDate": "2024-01-01",
-          "limitations": "Transparent project classification threshold; not an official national affordability verdict."
+          "limitations": "Decile-average approximation; see historicalAffordability.limitations and provenance.",
+          "rule": {
+            "status": "pressured",
+            "any": [
+              {
+                "metric": "populationBelowBasicNeeds",
+                "operator": "gte",
+                "value": 0.1
+              },
+              {
+                "metric": "populationBelowAffordableBuffer",
+                "operator": "gte",
+                "value": 0.2
+              }
+            ]
+          }
         },
         "basicNeeds": null
       },
@@ -4236,9 +5099,225 @@
           "limitations": "Census-period measure; substantially older than current price and income observations."
         }
       ],
+      "historicalAffordability": {
+        "latestYear": 2024,
+        "absoluteStatus": "pressured",
+        "direction": "stable",
+        "populationBelow75Percent": 0.1,
+        "populationBelowBasicNeeds": 0.1,
+        "populationBelowAffordableBuffer": 0.2,
+        "populationFromBasicNeedsToAffordableBuffer": 0.1,
+        "populationAtOrAboveAffordableBuffer": 0.8,
+        "medianAffordabilityRatio": 1.854054054054054,
+        "lowerDecileAffordabilityRatios": {
+          "lowest": 0.4794520547945205,
+          "second": 1.0134228187919463,
+          "third": 1.329192546583851
+        },
+        "oneYearChange": 0.0,
+        "threeYearChange": 0.0,
+        "fiveYearChange": 0.0,
+        "changeDetails": {
+          "1Year": {
+            "populationBelowBasicNeeds": 0.0,
+            "populationBelowAffordableBuffer": 0.0
+          },
+          "3Year": {
+            "populationBelowBasicNeeds": 0.0,
+            "populationBelowAffordableBuffer": 0.0
+          },
+          "5Year": {
+            "populationBelowBasicNeeds": 0.0,
+            "populationBelowAffordableBuffer": 0.0
+          }
+        },
+        "historicalSeries": [
+          {
+            "year": 2015,
+            "thresholdBase": "2018 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.2,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.7,
+            "populationBelowAffordableBuffer": 0.3,
+            "medianAffordabilityRatio": 1.7161803713527852,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.4456140350877193,
+              "second": 0.9261744966442953,
+              "third": 1.2123076923076923
+            }
+          },
+          {
+            "year": 2016,
+            "thresholdBase": "2018 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.2,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.7,
+            "populationBelowAffordableBuffer": 0.3,
+            "medianAffordabilityRatio": 1.746630727762803,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.4631578947368421,
+              "second": 0.962457337883959,
+              "third": 1.240740740740741
+            }
+          },
+          {
+            "year": 2017,
+            "thresholdBase": "2018 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.2,
+            "populationFromBasicNeedsToAffordableBuffer": 0.0,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.8005464480874316,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.47349823321554774,
+              "second": 0.9726027397260274,
+              "third": 1.265625
+            }
+          },
+          {
+            "year": 2018,
+            "thresholdBase": "2018 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.2,
+            "populationFromBasicNeedsToAffordableBuffer": 0.0,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.8236914600550964,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.45390070921985815,
+              "second": 0.9825783972125436,
+              "third": 1.2767295597484274
+            }
+          },
+          {
+            "year": 2019,
+            "thresholdBase": "2018 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.1,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.8232044198895028,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.48936170212765956,
+              "second": 1.0103806228373702,
+              "third": 1.2861635220125787
+            }
+          },
+          {
+            "year": 2020,
+            "thresholdBase": "2023 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.1,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.8700265251989392,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.5979020979020979,
+              "second": 1.10580204778157,
+              "third": 1.396875
+            }
+          },
+          {
+            "year": 2021,
+            "thresholdBase": "2023 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.1,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.8763440860215055,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.5605536332179931,
+              "second": 1.071186440677966,
+              "third": 1.3769470404984423
+            }
+          },
+          {
+            "year": 2022,
+            "thresholdBase": "2023 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.1,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.803763440860215,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.49488054607508536,
+              "second": 1.0033444816053512,
+              "third": 1.2923076923076924
+            }
+          },
+          {
+            "year": 2023,
+            "thresholdBase": "2023 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.1,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.824,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.4829931972789116,
+              "second": 1.0166666666666666,
+              "third": 1.3159509202453987
+            }
+          },
+          {
+            "year": 2024,
+            "thresholdBase": "2023 base",
+            "populationBelow75Percent": 0.1,
+            "populationBelowBasicNeeds": 0.1,
+            "populationFromBasicNeedsToAffordableBuffer": 0.1,
+            "populationAtOrAboveAffordableBuffer": 0.8,
+            "populationBelowAffordableBuffer": 0.2,
+            "medianAffordabilityRatio": 1.854054054054054,
+            "lowerDecileAffordabilityRatios": {
+              "lowest": 0.4794520547945205,
+              "second": 1.0134228187919463,
+              "third": 1.329192546583851
+            }
+          }
+        ],
+        "geographyLevel": "national income deciles matched to each family unit's applicable MBM basket",
+        "classificationRule": {
+          "status": "pressured",
+          "any": [
+            {
+              "metric": "populationBelowBasicNeeds",
+              "operator": "gte",
+              "value": 0.1
+            },
+            {
+              "metric": "populationBelowAffordableBuffer",
+              "operator": "gte",
+              "value": 0.2
+            }
+          ]
+        },
+        "limitations": [
+          "Each published decile average represents ten percent of family units, so threshold shares move in ten-percentage-point increments and do not reveal within-decile hardship.",
+          "The continuous display uses the 2018-base MBM through 2019 and the 2023-base MBM from 2020; five-year comparisons cross that documented methodology break.",
+          "Regional median-family histories are context only and do not determine the national headline."
+        ],
+        "provenance": [
+          {
+            "file": "analysis/canada_absolute_affordability_history.csv",
+            "role": "historical affordability input"
+          },
+          {
+            "file": "analysis/absolute_affordability_validation_history.csv",
+            "role": "hardship and observed-cost validation"
+          }
+        ]
+      },
       "absoluteEvaluation": {
         "absoluteStatus": "pressured",
-        "direction": "easing",
+        "direction": "stable",
         "householdType": "People and households in Canada",
         "referencePopulation": "People and households in Canada",
         "assessmentLabel": "National",
@@ -4261,24 +5340,26 @@
         "thresholdUsed": {
           "classification": {
             "status": "pressured",
-            "any": [
-              {
-                "measure": "shelter-burden-30-rate",
-                "operator": "gte",
-                "value": 0.2
-              },
-              {
-                "measure": "core-housing-need-rate",
-                "operator": "gte",
-                "value": 0.1
-              }
-            ],
-            "geography": "canada",
-            "definition": "Population-distribution rule for national housing",
-            "formula": "{\"any\": [{\"measure\": \"shelter-burden-30-rate\", \"operator\": \"gte\", \"value\": 0.2}, {\"measure\": \"core-housing-need-rate\", \"operator\": \"gte\", \"value\": 0.1}]}",
-            "source": "Project rule applied to configured official population hardship measures",
+            "definition": "National distribution of family units across matched MBM affordability bands",
+            "formula": "ten equal-weight income deciles classified by average after-tax income / applicable MBM basket",
+            "source": "Historical affordability refinery input",
             "observationDate": "2024-01-01",
-            "limitations": "Transparent project classification threshold; not an official national affordability verdict."
+            "limitations": "Decile-average approximation; see historicalAffordability.limitations and provenance.",
+            "rule": {
+              "status": "pressured",
+              "any": [
+                {
+                  "metric": "populationBelowBasicNeeds",
+                  "operator": "gte",
+                  "value": 0.1
+                },
+                {
+                  "metric": "populationBelowAffordableBuffer",
+                  "operator": "gte",
+                  "value": 0.2
+                }
+              ]
+            }
           },
           "basicNeeds": null
         },
@@ -4428,45 +5509,235 @@
           }
         ],
         "matchedHouseholdSummary": {},
+        "historicalAffordability": {
+          "latestYear": 2024,
+          "absoluteStatus": "pressured",
+          "direction": "stable",
+          "populationBelow75Percent": 0.1,
+          "populationBelowBasicNeeds": 0.1,
+          "populationBelowAffordableBuffer": 0.2,
+          "populationFromBasicNeedsToAffordableBuffer": 0.1,
+          "populationAtOrAboveAffordableBuffer": 0.8,
+          "medianAffordabilityRatio": 1.854054054054054,
+          "lowerDecileAffordabilityRatios": {
+            "lowest": 0.4794520547945205,
+            "second": 1.0134228187919463,
+            "third": 1.329192546583851
+          },
+          "oneYearChange": 0.0,
+          "threeYearChange": 0.0,
+          "fiveYearChange": 0.0,
+          "changeDetails": {
+            "1Year": {
+              "populationBelowBasicNeeds": 0.0,
+              "populationBelowAffordableBuffer": 0.0
+            },
+            "3Year": {
+              "populationBelowBasicNeeds": 0.0,
+              "populationBelowAffordableBuffer": 0.0
+            },
+            "5Year": {
+              "populationBelowBasicNeeds": 0.0,
+              "populationBelowAffordableBuffer": 0.0
+            }
+          },
+          "historicalSeries": [
+            {
+              "year": 2015,
+              "thresholdBase": "2018 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.2,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.7,
+              "populationBelowAffordableBuffer": 0.3,
+              "medianAffordabilityRatio": 1.7161803713527852,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.4456140350877193,
+                "second": 0.9261744966442953,
+                "third": 1.2123076923076923
+              }
+            },
+            {
+              "year": 2016,
+              "thresholdBase": "2018 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.2,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.7,
+              "populationBelowAffordableBuffer": 0.3,
+              "medianAffordabilityRatio": 1.746630727762803,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.4631578947368421,
+                "second": 0.962457337883959,
+                "third": 1.240740740740741
+              }
+            },
+            {
+              "year": 2017,
+              "thresholdBase": "2018 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.2,
+              "populationFromBasicNeedsToAffordableBuffer": 0.0,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.8005464480874316,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.47349823321554774,
+                "second": 0.9726027397260274,
+                "third": 1.265625
+              }
+            },
+            {
+              "year": 2018,
+              "thresholdBase": "2018 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.2,
+              "populationFromBasicNeedsToAffordableBuffer": 0.0,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.8236914600550964,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.45390070921985815,
+                "second": 0.9825783972125436,
+                "third": 1.2767295597484274
+              }
+            },
+            {
+              "year": 2019,
+              "thresholdBase": "2018 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.1,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.8232044198895028,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.48936170212765956,
+                "second": 1.0103806228373702,
+                "third": 1.2861635220125787
+              }
+            },
+            {
+              "year": 2020,
+              "thresholdBase": "2023 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.1,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.8700265251989392,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.5979020979020979,
+                "second": 1.10580204778157,
+                "third": 1.396875
+              }
+            },
+            {
+              "year": 2021,
+              "thresholdBase": "2023 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.1,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.8763440860215055,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.5605536332179931,
+                "second": 1.071186440677966,
+                "third": 1.3769470404984423
+              }
+            },
+            {
+              "year": 2022,
+              "thresholdBase": "2023 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.1,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.803763440860215,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.49488054607508536,
+                "second": 1.0033444816053512,
+                "third": 1.2923076923076924
+              }
+            },
+            {
+              "year": 2023,
+              "thresholdBase": "2023 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.1,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.824,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.4829931972789116,
+                "second": 1.0166666666666666,
+                "third": 1.3159509202453987
+              }
+            },
+            {
+              "year": 2024,
+              "thresholdBase": "2023 base",
+              "populationBelow75Percent": 0.1,
+              "populationBelowBasicNeeds": 0.1,
+              "populationFromBasicNeedsToAffordableBuffer": 0.1,
+              "populationAtOrAboveAffordableBuffer": 0.8,
+              "populationBelowAffordableBuffer": 0.2,
+              "medianAffordabilityRatio": 1.854054054054054,
+              "lowerDecileAffordabilityRatios": {
+                "lowest": 0.4794520547945205,
+                "second": 1.0134228187919463,
+                "third": 1.329192546583851
+              }
+            }
+          ],
+          "geographyLevel": "national income deciles matched to each family unit's applicable MBM basket",
+          "classificationRule": {
+            "status": "pressured",
+            "any": [
+              {
+                "metric": "populationBelowBasicNeeds",
+                "operator": "gte",
+                "value": 0.1
+              },
+              {
+                "metric": "populationBelowAffordableBuffer",
+                "operator": "gte",
+                "value": 0.2
+              }
+            ]
+          },
+          "limitations": [
+            "Each published decile average represents ten percent of family units, so threshold shares move in ten-percentage-point increments and do not reveal within-decile hardship.",
+            "The continuous display uses the 2018-base MBM through 2019 and the 2023-base MBM from 2020; five-year comparisons cross that documented methodology break.",
+            "Regional median-family histories are context only and do not determine the national headline."
+          ],
+          "provenance": [
+            {
+              "file": "analysis/canada_absolute_affordability_history.csv",
+              "role": "historical affordability input"
+            },
+            {
+              "file": "analysis/absolute_affordability_validation_history.csv",
+              "role": "hardship and observed-cost validation"
+            }
+          ]
+        },
         "directionEvidence": [
           {
-            "indicator": "rent-to-income",
-            "label": "Canada rent-to-income index",
+            "label": "Historical national affordability distribution",
             "available": true,
-            "direction": "easing",
-            "momentum": "falling",
-            "sourceDate": "2026-06-17"
-          },
-          {
-            "indicator": "shelter-to-income",
-            "label": "Canada shelter-to-income index",
-            "available": true,
-            "direction": "easing",
-            "momentum": "falling",
-            "sourceDate": "2026-06-17"
-          },
-          {
-            "indicator": "mortgage-interest-to-income",
-            "label": "Canada mortgage-interest-to-income index",
-            "available": true,
-            "direction": "easing",
-            "momentum": "falling",
-            "sourceDate": "2026-06-17"
-          },
-          {
-            "indicator": "nhpi-to-income",
-            "label": "Canada new-house-price-to-income index",
-            "available": true,
-            "direction": "easing",
-            "momentum": "falling",
-            "sourceDate": "2026-06-17"
+            "direction": "stable",
+            "sourceDate": "2024-01-01"
           }
         ],
         "limitations": [
           "Older than the income and food-security evidence; provincial household coverage and tenure differences apply.",
           "The official category is defined, but a verified current national estimate has not yet been integrated.",
           "Census-period measure; substantially older than current price and income observations.",
-          "Transparent project classification threshold; not an official national affordability verdict."
+          "Decile-average approximation; see historicalAffordability.limitations and provenance."
         ],
         "missingEvidence": [
           "Households spending at least 50% of income on shelter is not yet integrated."
@@ -6211,6 +7482,371 @@
           "limitations": "Excludes households not assessable under the official core-housing-need definition."
         }
       ],
+      "historicalAffordability": {
+        "latestYear": 2023,
+        "absoluteStatus": "pressured",
+        "direction": "unclear",
+        "populationBelowBasicNeeds": null,
+        "populationBelowAffordableBuffer": null,
+        "oneYearChange": null,
+        "threeYearChange": null,
+        "fiveYearChange": null,
+        "historicalSeries": [
+          {
+            "year": 2002,
+            "thresholdBase": "2000 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.658944596517127,
+              "Couple with two children": 2.5314572864321607,
+              "Couple without children": 2.4060107722464075,
+              "One parent with one child": 1.4224572193195915,
+              "One parent with two children": 1.2046021696860936,
+              "One person": 1.4520603015075377
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2003,
+            "thresholdBase": "2000 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.703108724084171,
+              "Couple with two children": 2.6452617706960586,
+              "Couple without children": 2.434676996681607,
+              "One parent with one child": 1.5304974857358282,
+              "One parent with two children": 1.1809384923881887,
+              "One person": 1.4695898726089214
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2004,
+            "thresholdBase": "2000 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.782647791760555,
+              "Couple with two children": 2.636975700355982,
+              "Couple without children": 2.4411107807407433,
+              "One parent with one child": 1.4687158340076563,
+              "One parent with two children": 1.2179669043576227,
+              "One person": 1.4765516173966877
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2005,
+            "thresholdBase": "2000 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.736672321302167,
+              "Couple with two children": 2.6035152636447734,
+              "Couple without children": 2.41920788116589,
+              "One parent with one child": 1.3637152797573673,
+              "One parent with two children": 1.1416687654206699,
+              "One person": 1.4512488436632747
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2006,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.502612825832667,
+              "Couple with two children": 2.357749951339778,
+              "Couple without children": 2.23009541513515,
+              "One parent with one child": 1.3396170771846614,
+              "One parent with two children": 1.118140889853392,
+              "One person": 1.3235580354246415
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2007,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.6621857559590727,
+              "Couple with two children": 2.572244735268717,
+              "Couple without children": 2.4398542625941193,
+              "One parent with one child": 1.3876260091842565,
+              "One parent with two children": 1.183619830412001,
+              "One person": 1.440908788945725
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2008,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.7153775932571182,
+              "Couple with two children": 2.6808013355592655,
+              "Couple without children": 2.5068647087274663,
+              "One parent with one child": 1.4326290311318766,
+              "One parent with two children": 1.2499295978048526,
+              "One person": 1.467779632721202
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2009,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.63776692514564,
+              "Couple with two children": 2.657604798226742,
+              "Couple without children": 2.4856377626689246,
+              "One parent with one child": 1.405547021212454,
+              "One parent with two children": 1.2639299849656194,
+              "One person": 1.4466392854814525
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2010,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.773969821382673,
+              "Couple with two children": 2.7650618258353066,
+              "Couple without children": 2.5546813661258256,
+              "One parent with one child": 1.5584812047856622,
+              "One parent with two children": 1.2531280507272855,
+              "One person": 1.4575111812680874
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2011,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.733913231855694,
+              "Couple with two children": 2.6509909515012993,
+              "Couple without children": 2.438421393277383,
+              "One parent with one child": 1.4549941344306303,
+              "One parent with two children": 1.1887208022139013,
+              "One person": 1.4803218635523967
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2012,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.816131326160497,
+              "Couple with two children": 2.7216417443533754,
+              "Couple without children": 2.4898936147893944,
+              "One parent with one child": 1.5130483586673293,
+              "One parent with two children": 1.2083067324277659,
+              "One person": 1.4978414565475817
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2013,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.809404602827575,
+              "Couple with two children": 2.7552184503437855,
+              "Couple without children": 2.5107272506842664,
+              "One parent with one child": 1.5073956418227699,
+              "One parent with two children": 1.3087531770363916,
+              "One person": 1.4960071532081523
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2014,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.8052971297474945,
+              "Couple with two children": 2.827384541179308,
+              "Couple without children": 2.5396328804583765,
+              "One parent with one child": 1.5253997727513968,
+              "One parent with two children": 1.3171912568512867,
+              "One person": 1.4886048474617146
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2015,
+            "thresholdBase": "2018 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.486312332600028,
+              "Couple with two children": 2.4353703037467236,
+              "Couple without children": 2.2259490336473267,
+              "One parent with one child": 1.35737463521188,
+              "One parent with two children": 1.2091804219292412,
+              "One person": 1.3064706789330318
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2016,
+            "thresholdBase": "2018 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.5309145802215136,
+              "Couple with two children": 2.4232756001215434,
+              "Couple without children": 2.232761460902524,
+              "One parent with one child": 1.3743927003919627,
+              "One parent with two children": 1.2277391777206719,
+              "One person": 1.3187481008811912
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2017,
+            "thresholdBase": "2018 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.559340019477664,
+              "Couple with two children": 2.3564083270629546,
+              "Couple without children": 2.2516748668032123,
+              "One parent with one child": 1.4010894335023139,
+              "One parent with two children": 1.2467985497172505,
+              "One person": 1.3368447454226235
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2018,
+            "thresholdBase": "2018 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.6011846610108287,
+              "Couple with two children": 2.4849763300546983,
+              "Couple without children": 2.313372966583966,
+              "One parent with one child": 1.3681126076184078,
+              "One parent with two children": 1.3388283855180951,
+              "One person": 1.3838946258186366
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2019,
+            "thresholdBase": "2018 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.6527577042242507,
+              "Couple with two children": 2.49305355945195,
+              "Couple without children": 2.302145101534817,
+              "One parent with one child": 1.4068288120473948,
+              "One parent with two children": 1.3262405579976315,
+              "One person": 1.3825812014946823
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2020,
+            "thresholdBase": "2023 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.6849379000687836,
+              "Couple with two children": 2.61360993534583,
+              "Couple without children": 2.3756603937440963,
+              "One parent with one child": 1.5057141468310222,
+              "One parent with two children": 1.3956413549367344,
+              "One person": 1.4623935997023116
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2021,
+            "thresholdBase": "2023 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.702735323895659,
+              "Couple with two children": 2.628802969938428,
+              "Couple without children": 2.355208524623972,
+              "One parent with one child": 1.5010972912820177,
+              "One parent with two children": 1.362345890536187,
+              "One person": 1.3966859833393699
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2022,
+            "thresholdBase": "2023 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.6137090539674954,
+              "Couple with two children": 2.5852146967684817,
+              "Couple without children": 2.2695267291355994,
+              "One parent with one child": 1.4008283331417553,
+              "One parent with two children": 1.3199985285589242,
+              "One person": 1.3727102173317314
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2023,
+            "thresholdBase": "2023 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.6212142053653325,
+              "Couple with two children": 2.5682794391765946,
+              "Couple without children": 2.30086208482372,
+              "One parent with one child": 1.4785116261133744,
+              "One parent with two children": 1.3323647714705076,
+              "One person": 1.4186725018234865
+            },
+            "contextOnly": true
+          }
+        ],
+        "validationSeries": [
+          {
+            "geography": "Owen Sound rental market",
+            "year": 2002,
+            "measure": "Average rent, one bedroom",
+            "value": 540.0,
+            "unit": "CAD per month",
+            "source": "CMHC Owen Sound Rental Market Report 2003"
+          },
+          {
+            "geography": "Owen Sound rental market",
+            "year": 2003,
+            "measure": "Average rent, one bedroom",
+            "value": 568.0,
+            "unit": "CAD per month",
+            "source": "CMHC Owen Sound Rental Market Report 2003"
+          },
+          {
+            "geography": "Grey Bruce",
+            "year": 2023,
+            "measure": "Nutritious food basket, family of four",
+            "value": 15660.0,
+            "unit": "CAD per year",
+            "source": "Grey Bruce Public Health"
+          },
+          {
+            "geography": "Grey Bruce",
+            "year": 2024,
+            "measure": "Nutritious food basket, family of four",
+            "value": 15000.0,
+            "unit": "CAD per year",
+            "source": "Grey Bruce Public Health"
+          },
+          {
+            "geography": "Grey Bruce",
+            "year": 2023,
+            "measure": "Nutritious food basket, one adult",
+            "value": 5616.0,
+            "unit": "CAD per year",
+            "source": "Grey Bruce Public Health"
+          },
+          {
+            "geography": "Grey Bruce",
+            "year": 2024,
+            "measure": "Nutritious food basket, one adult",
+            "value": 5208.0,
+            "unit": "CAD per year",
+            "source": "Grey Bruce Public Health"
+          }
+        ],
+        "geographyLevel": "annual census-agglomeration context; city-CSD hardship evidence remains authoritative",
+        "limitations": [
+          "Annual tax-file income describes the wider Owen Sound census agglomeration, not the city census subdivision.",
+          "City-CSD household distributions are available only for Census years, so annual regional median-family trends cannot determine local direction.",
+          "Improving regional medians cannot override city-CSD shelter burden, renter burden, core housing need, food insecurity, or matched city household cases."
+        ],
+        "provenance": [
+          {
+            "file": "analysis/owen_sound_absolute_affordability_history.csv",
+            "role": "historical affordability input"
+          },
+          {
+            "file": "analysis/absolute_affordability_validation_history.csv",
+            "role": "hardship and observed-cost validation"
+          }
+        ],
+        "contextOnly": true
+      },
       "absoluteEvaluation": {
         "absoluteStatus": "pressured",
         "direction": "unclear",
@@ -6559,6 +8195,371 @@
           "nonAffordableShare": 0.398840885142255,
           "evaluatedHouseholdCount": 9490.0
         },
+        "historicalAffordability": {
+          "latestYear": 2023,
+          "absoluteStatus": "pressured",
+          "direction": "unclear",
+          "populationBelowBasicNeeds": null,
+          "populationBelowAffordableBuffer": null,
+          "oneYearChange": null,
+          "threeYearChange": null,
+          "fiveYearChange": null,
+          "historicalSeries": [
+            {
+              "year": 2002,
+              "thresholdBase": "2000 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.658944596517127,
+                "Couple with two children": 2.5314572864321607,
+                "Couple without children": 2.4060107722464075,
+                "One parent with one child": 1.4224572193195915,
+                "One parent with two children": 1.2046021696860936,
+                "One person": 1.4520603015075377
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2003,
+              "thresholdBase": "2000 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.703108724084171,
+                "Couple with two children": 2.6452617706960586,
+                "Couple without children": 2.434676996681607,
+                "One parent with one child": 1.5304974857358282,
+                "One parent with two children": 1.1809384923881887,
+                "One person": 1.4695898726089214
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2004,
+              "thresholdBase": "2000 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.782647791760555,
+                "Couple with two children": 2.636975700355982,
+                "Couple without children": 2.4411107807407433,
+                "One parent with one child": 1.4687158340076563,
+                "One parent with two children": 1.2179669043576227,
+                "One person": 1.4765516173966877
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2005,
+              "thresholdBase": "2000 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.736672321302167,
+                "Couple with two children": 2.6035152636447734,
+                "Couple without children": 2.41920788116589,
+                "One parent with one child": 1.3637152797573673,
+                "One parent with two children": 1.1416687654206699,
+                "One person": 1.4512488436632747
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2006,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.502612825832667,
+                "Couple with two children": 2.357749951339778,
+                "Couple without children": 2.23009541513515,
+                "One parent with one child": 1.3396170771846614,
+                "One parent with two children": 1.118140889853392,
+                "One person": 1.3235580354246415
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2007,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.6621857559590727,
+                "Couple with two children": 2.572244735268717,
+                "Couple without children": 2.4398542625941193,
+                "One parent with one child": 1.3876260091842565,
+                "One parent with two children": 1.183619830412001,
+                "One person": 1.440908788945725
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2008,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.7153775932571182,
+                "Couple with two children": 2.6808013355592655,
+                "Couple without children": 2.5068647087274663,
+                "One parent with one child": 1.4326290311318766,
+                "One parent with two children": 1.2499295978048526,
+                "One person": 1.467779632721202
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2009,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.63776692514564,
+                "Couple with two children": 2.657604798226742,
+                "Couple without children": 2.4856377626689246,
+                "One parent with one child": 1.405547021212454,
+                "One parent with two children": 1.2639299849656194,
+                "One person": 1.4466392854814525
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2010,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.773969821382673,
+                "Couple with two children": 2.7650618258353066,
+                "Couple without children": 2.5546813661258256,
+                "One parent with one child": 1.5584812047856622,
+                "One parent with two children": 1.2531280507272855,
+                "One person": 1.4575111812680874
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2011,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.733913231855694,
+                "Couple with two children": 2.6509909515012993,
+                "Couple without children": 2.438421393277383,
+                "One parent with one child": 1.4549941344306303,
+                "One parent with two children": 1.1887208022139013,
+                "One person": 1.4803218635523967
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2012,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.816131326160497,
+                "Couple with two children": 2.7216417443533754,
+                "Couple without children": 2.4898936147893944,
+                "One parent with one child": 1.5130483586673293,
+                "One parent with two children": 1.2083067324277659,
+                "One person": 1.4978414565475817
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2013,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.809404602827575,
+                "Couple with two children": 2.7552184503437855,
+                "Couple without children": 2.5107272506842664,
+                "One parent with one child": 1.5073956418227699,
+                "One parent with two children": 1.3087531770363916,
+                "One person": 1.4960071532081523
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2014,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.8052971297474945,
+                "Couple with two children": 2.827384541179308,
+                "Couple without children": 2.5396328804583765,
+                "One parent with one child": 1.5253997727513968,
+                "One parent with two children": 1.3171912568512867,
+                "One person": 1.4886048474617146
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2015,
+              "thresholdBase": "2018 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.486312332600028,
+                "Couple with two children": 2.4353703037467236,
+                "Couple without children": 2.2259490336473267,
+                "One parent with one child": 1.35737463521188,
+                "One parent with two children": 1.2091804219292412,
+                "One person": 1.3064706789330318
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2016,
+              "thresholdBase": "2018 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.5309145802215136,
+                "Couple with two children": 2.4232756001215434,
+                "Couple without children": 2.232761460902524,
+                "One parent with one child": 1.3743927003919627,
+                "One parent with two children": 1.2277391777206719,
+                "One person": 1.3187481008811912
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2017,
+              "thresholdBase": "2018 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.559340019477664,
+                "Couple with two children": 2.3564083270629546,
+                "Couple without children": 2.2516748668032123,
+                "One parent with one child": 1.4010894335023139,
+                "One parent with two children": 1.2467985497172505,
+                "One person": 1.3368447454226235
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2018,
+              "thresholdBase": "2018 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.6011846610108287,
+                "Couple with two children": 2.4849763300546983,
+                "Couple without children": 2.313372966583966,
+                "One parent with one child": 1.3681126076184078,
+                "One parent with two children": 1.3388283855180951,
+                "One person": 1.3838946258186366
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2019,
+              "thresholdBase": "2018 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.6527577042242507,
+                "Couple with two children": 2.49305355945195,
+                "Couple without children": 2.302145101534817,
+                "One parent with one child": 1.4068288120473948,
+                "One parent with two children": 1.3262405579976315,
+                "One person": 1.3825812014946823
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2020,
+              "thresholdBase": "2023 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.6849379000687836,
+                "Couple with two children": 2.61360993534583,
+                "Couple without children": 2.3756603937440963,
+                "One parent with one child": 1.5057141468310222,
+                "One parent with two children": 1.3956413549367344,
+                "One person": 1.4623935997023116
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2021,
+              "thresholdBase": "2023 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.702735323895659,
+                "Couple with two children": 2.628802969938428,
+                "Couple without children": 2.355208524623972,
+                "One parent with one child": 1.5010972912820177,
+                "One parent with two children": 1.362345890536187,
+                "One person": 1.3966859833393699
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2022,
+              "thresholdBase": "2023 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.6137090539674954,
+                "Couple with two children": 2.5852146967684817,
+                "Couple without children": 2.2695267291355994,
+                "One parent with one child": 1.4008283331417553,
+                "One parent with two children": 1.3199985285589242,
+                "One person": 1.3727102173317314
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2023,
+              "thresholdBase": "2023 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.6212142053653325,
+                "Couple with two children": 2.5682794391765946,
+                "Couple without children": 2.30086208482372,
+                "One parent with one child": 1.4785116261133744,
+                "One parent with two children": 1.3323647714705076,
+                "One person": 1.4186725018234865
+              },
+              "contextOnly": true
+            }
+          ],
+          "validationSeries": [
+            {
+              "geography": "Owen Sound rental market",
+              "year": 2002,
+              "measure": "Average rent, one bedroom",
+              "value": 540.0,
+              "unit": "CAD per month",
+              "source": "CMHC Owen Sound Rental Market Report 2003"
+            },
+            {
+              "geography": "Owen Sound rental market",
+              "year": 2003,
+              "measure": "Average rent, one bedroom",
+              "value": 568.0,
+              "unit": "CAD per month",
+              "source": "CMHC Owen Sound Rental Market Report 2003"
+            },
+            {
+              "geography": "Grey Bruce",
+              "year": 2023,
+              "measure": "Nutritious food basket, family of four",
+              "value": 15660.0,
+              "unit": "CAD per year",
+              "source": "Grey Bruce Public Health"
+            },
+            {
+              "geography": "Grey Bruce",
+              "year": 2024,
+              "measure": "Nutritious food basket, family of four",
+              "value": 15000.0,
+              "unit": "CAD per year",
+              "source": "Grey Bruce Public Health"
+            },
+            {
+              "geography": "Grey Bruce",
+              "year": 2023,
+              "measure": "Nutritious food basket, one adult",
+              "value": 5616.0,
+              "unit": "CAD per year",
+              "source": "Grey Bruce Public Health"
+            },
+            {
+              "geography": "Grey Bruce",
+              "year": 2024,
+              "measure": "Nutritious food basket, one adult",
+              "value": 5208.0,
+              "unit": "CAD per year",
+              "source": "Grey Bruce Public Health"
+            }
+          ],
+          "geographyLevel": "annual census-agglomeration context; city-CSD hardship evidence remains authoritative",
+          "limitations": [
+            "Annual tax-file income describes the wider Owen Sound census agglomeration, not the city census subdivision.",
+            "City-CSD household distributions are available only for Census years, so annual regional median-family trends cannot determine local direction.",
+            "Improving regional medians cannot override city-CSD shelter burden, renter burden, core housing need, food insecurity, or matched city household cases."
+          ],
+          "provenance": [
+            {
+              "file": "analysis/owen_sound_absolute_affordability_history.csv",
+              "role": "historical affordability input"
+            },
+            {
+              "file": "analysis/absolute_affordability_validation_history.csv",
+              "role": "hardship and observed-cost validation"
+            }
+          ],
+          "contextOnly": true
+        },
         "directionEvidence": [
           {
             "label": "Mixed-vintage local evidence",
@@ -6780,6 +8781,371 @@
           "limitations": "Regional Grey Bruce prevalence, not an Owen Sound city-CSD estimate."
         }
       ],
+      "historicalAffordability": {
+        "latestYear": 2023,
+        "absoluteStatus": "pressured",
+        "direction": "worsening",
+        "populationBelowBasicNeeds": null,
+        "populationBelowAffordableBuffer": null,
+        "oneYearChange": null,
+        "threeYearChange": null,
+        "fiveYearChange": null,
+        "historicalSeries": [
+          {
+            "year": 2002,
+            "thresholdBase": "2000 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.658944596517127,
+              "Couple with two children": 2.5314572864321607,
+              "Couple without children": 2.4060107722464075,
+              "One parent with one child": 1.4224572193195915,
+              "One parent with two children": 1.2046021696860936,
+              "One person": 1.4520603015075377
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2003,
+            "thresholdBase": "2000 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.703108724084171,
+              "Couple with two children": 2.6452617706960586,
+              "Couple without children": 2.434676996681607,
+              "One parent with one child": 1.5304974857358282,
+              "One parent with two children": 1.1809384923881887,
+              "One person": 1.4695898726089214
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2004,
+            "thresholdBase": "2000 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.782647791760555,
+              "Couple with two children": 2.636975700355982,
+              "Couple without children": 2.4411107807407433,
+              "One parent with one child": 1.4687158340076563,
+              "One parent with two children": 1.2179669043576227,
+              "One person": 1.4765516173966877
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2005,
+            "thresholdBase": "2000 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.736672321302167,
+              "Couple with two children": 2.6035152636447734,
+              "Couple without children": 2.41920788116589,
+              "One parent with one child": 1.3637152797573673,
+              "One parent with two children": 1.1416687654206699,
+              "One person": 1.4512488436632747
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2006,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.502612825832667,
+              "Couple with two children": 2.357749951339778,
+              "Couple without children": 2.23009541513515,
+              "One parent with one child": 1.3396170771846614,
+              "One parent with two children": 1.118140889853392,
+              "One person": 1.3235580354246415
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2007,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.6621857559590727,
+              "Couple with two children": 2.572244735268717,
+              "Couple without children": 2.4398542625941193,
+              "One parent with one child": 1.3876260091842565,
+              "One parent with two children": 1.183619830412001,
+              "One person": 1.440908788945725
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2008,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.7153775932571182,
+              "Couple with two children": 2.6808013355592655,
+              "Couple without children": 2.5068647087274663,
+              "One parent with one child": 1.4326290311318766,
+              "One parent with two children": 1.2499295978048526,
+              "One person": 1.467779632721202
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2009,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.63776692514564,
+              "Couple with two children": 2.657604798226742,
+              "Couple without children": 2.4856377626689246,
+              "One parent with one child": 1.405547021212454,
+              "One parent with two children": 1.2639299849656194,
+              "One person": 1.4466392854814525
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2010,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.773969821382673,
+              "Couple with two children": 2.7650618258353066,
+              "Couple without children": 2.5546813661258256,
+              "One parent with one child": 1.5584812047856622,
+              "One parent with two children": 1.2531280507272855,
+              "One person": 1.4575111812680874
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2011,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.733913231855694,
+              "Couple with two children": 2.6509909515012993,
+              "Couple without children": 2.438421393277383,
+              "One parent with one child": 1.4549941344306303,
+              "One parent with two children": 1.1887208022139013,
+              "One person": 1.4803218635523967
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2012,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.816131326160497,
+              "Couple with two children": 2.7216417443533754,
+              "Couple without children": 2.4898936147893944,
+              "One parent with one child": 1.5130483586673293,
+              "One parent with two children": 1.2083067324277659,
+              "One person": 1.4978414565475817
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2013,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.809404602827575,
+              "Couple with two children": 2.7552184503437855,
+              "Couple without children": 2.5107272506842664,
+              "One parent with one child": 1.5073956418227699,
+              "One parent with two children": 1.3087531770363916,
+              "One person": 1.4960071532081523
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2014,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.8052971297474945,
+              "Couple with two children": 2.827384541179308,
+              "Couple without children": 2.5396328804583765,
+              "One parent with one child": 1.5253997727513968,
+              "One parent with two children": 1.3171912568512867,
+              "One person": 1.4886048474617146
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2015,
+            "thresholdBase": "2018 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.486312332600028,
+              "Couple with two children": 2.4353703037467236,
+              "Couple without children": 2.2259490336473267,
+              "One parent with one child": 1.35737463521188,
+              "One parent with two children": 1.2091804219292412,
+              "One person": 1.3064706789330318
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2016,
+            "thresholdBase": "2018 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.5309145802215136,
+              "Couple with two children": 2.4232756001215434,
+              "Couple without children": 2.232761460902524,
+              "One parent with one child": 1.3743927003919627,
+              "One parent with two children": 1.2277391777206719,
+              "One person": 1.3187481008811912
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2017,
+            "thresholdBase": "2018 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.559340019477664,
+              "Couple with two children": 2.3564083270629546,
+              "Couple without children": 2.2516748668032123,
+              "One parent with one child": 1.4010894335023139,
+              "One parent with two children": 1.2467985497172505,
+              "One person": 1.3368447454226235
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2018,
+            "thresholdBase": "2018 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.6011846610108287,
+              "Couple with two children": 2.4849763300546983,
+              "Couple without children": 2.313372966583966,
+              "One parent with one child": 1.3681126076184078,
+              "One parent with two children": 1.3388283855180951,
+              "One person": 1.3838946258186366
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2019,
+            "thresholdBase": "2018 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.6527577042242507,
+              "Couple with two children": 2.49305355945195,
+              "Couple without children": 2.302145101534817,
+              "One parent with one child": 1.4068288120473948,
+              "One parent with two children": 1.3262405579976315,
+              "One person": 1.3825812014946823
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2020,
+            "thresholdBase": "2023 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.6849379000687836,
+              "Couple with two children": 2.61360993534583,
+              "Couple without children": 2.3756603937440963,
+              "One parent with one child": 1.5057141468310222,
+              "One parent with two children": 1.3956413549367344,
+              "One person": 1.4623935997023116
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2021,
+            "thresholdBase": "2023 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.702735323895659,
+              "Couple with two children": 2.628802969938428,
+              "Couple without children": 2.355208524623972,
+              "One parent with one child": 1.5010972912820177,
+              "One parent with two children": 1.362345890536187,
+              "One person": 1.3966859833393699
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2022,
+            "thresholdBase": "2023 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.6137090539674954,
+              "Couple with two children": 2.5852146967684817,
+              "Couple without children": 2.2695267291355994,
+              "One parent with one child": 1.4008283331417553,
+              "One parent with two children": 1.3199985285589242,
+              "One person": 1.3727102173317314
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2023,
+            "thresholdBase": "2023 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.6212142053653325,
+              "Couple with two children": 2.5682794391765946,
+              "Couple without children": 2.30086208482372,
+              "One parent with one child": 1.4785116261133744,
+              "One parent with two children": 1.3323647714705076,
+              "One person": 1.4186725018234865
+            },
+            "contextOnly": true
+          }
+        ],
+        "validationSeries": [
+          {
+            "geography": "Owen Sound rental market",
+            "year": 2002,
+            "measure": "Average rent, one bedroom",
+            "value": 540.0,
+            "unit": "CAD per month",
+            "source": "CMHC Owen Sound Rental Market Report 2003"
+          },
+          {
+            "geography": "Owen Sound rental market",
+            "year": 2003,
+            "measure": "Average rent, one bedroom",
+            "value": 568.0,
+            "unit": "CAD per month",
+            "source": "CMHC Owen Sound Rental Market Report 2003"
+          },
+          {
+            "geography": "Grey Bruce",
+            "year": 2023,
+            "measure": "Nutritious food basket, family of four",
+            "value": 15660.0,
+            "unit": "CAD per year",
+            "source": "Grey Bruce Public Health"
+          },
+          {
+            "geography": "Grey Bruce",
+            "year": 2024,
+            "measure": "Nutritious food basket, family of four",
+            "value": 15000.0,
+            "unit": "CAD per year",
+            "source": "Grey Bruce Public Health"
+          },
+          {
+            "geography": "Grey Bruce",
+            "year": 2023,
+            "measure": "Nutritious food basket, one adult",
+            "value": 5616.0,
+            "unit": "CAD per year",
+            "source": "Grey Bruce Public Health"
+          },
+          {
+            "geography": "Grey Bruce",
+            "year": 2024,
+            "measure": "Nutritious food basket, one adult",
+            "value": 5208.0,
+            "unit": "CAD per year",
+            "source": "Grey Bruce Public Health"
+          }
+        ],
+        "geographyLevel": "annual census-agglomeration context; city-CSD hardship evidence remains authoritative",
+        "limitations": [
+          "Annual tax-file income describes the wider Owen Sound census agglomeration, not the city census subdivision.",
+          "City-CSD household distributions are available only for Census years, so annual regional median-family trends cannot determine local direction.",
+          "Improving regional medians cannot override city-CSD shelter burden, renter burden, core housing need, food insecurity, or matched city household cases."
+        ],
+        "provenance": [
+          {
+            "file": "analysis/owen_sound_absolute_affordability_history.csv",
+            "role": "historical affordability input"
+          },
+          {
+            "file": "analysis/absolute_affordability_validation_history.csv",
+            "role": "hardship and observed-cost validation"
+          }
+        ],
+        "contextOnly": true
+      },
       "absoluteEvaluation": {
         "absoluteStatus": "pressured",
         "direction": "worsening",
@@ -7071,6 +9437,371 @@
           "unaffordableOrWorseShare": 0.0,
           "nonAffordableShare": 0.398840885142255,
           "evaluatedHouseholdCount": 9490.0
+        },
+        "historicalAffordability": {
+          "latestYear": 2023,
+          "absoluteStatus": "pressured",
+          "direction": "worsening",
+          "populationBelowBasicNeeds": null,
+          "populationBelowAffordableBuffer": null,
+          "oneYearChange": null,
+          "threeYearChange": null,
+          "fiveYearChange": null,
+          "historicalSeries": [
+            {
+              "year": 2002,
+              "thresholdBase": "2000 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.658944596517127,
+                "Couple with two children": 2.5314572864321607,
+                "Couple without children": 2.4060107722464075,
+                "One parent with one child": 1.4224572193195915,
+                "One parent with two children": 1.2046021696860936,
+                "One person": 1.4520603015075377
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2003,
+              "thresholdBase": "2000 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.703108724084171,
+                "Couple with two children": 2.6452617706960586,
+                "Couple without children": 2.434676996681607,
+                "One parent with one child": 1.5304974857358282,
+                "One parent with two children": 1.1809384923881887,
+                "One person": 1.4695898726089214
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2004,
+              "thresholdBase": "2000 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.782647791760555,
+                "Couple with two children": 2.636975700355982,
+                "Couple without children": 2.4411107807407433,
+                "One parent with one child": 1.4687158340076563,
+                "One parent with two children": 1.2179669043576227,
+                "One person": 1.4765516173966877
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2005,
+              "thresholdBase": "2000 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.736672321302167,
+                "Couple with two children": 2.6035152636447734,
+                "Couple without children": 2.41920788116589,
+                "One parent with one child": 1.3637152797573673,
+                "One parent with two children": 1.1416687654206699,
+                "One person": 1.4512488436632747
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2006,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.502612825832667,
+                "Couple with two children": 2.357749951339778,
+                "Couple without children": 2.23009541513515,
+                "One parent with one child": 1.3396170771846614,
+                "One parent with two children": 1.118140889853392,
+                "One person": 1.3235580354246415
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2007,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.6621857559590727,
+                "Couple with two children": 2.572244735268717,
+                "Couple without children": 2.4398542625941193,
+                "One parent with one child": 1.3876260091842565,
+                "One parent with two children": 1.183619830412001,
+                "One person": 1.440908788945725
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2008,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.7153775932571182,
+                "Couple with two children": 2.6808013355592655,
+                "Couple without children": 2.5068647087274663,
+                "One parent with one child": 1.4326290311318766,
+                "One parent with two children": 1.2499295978048526,
+                "One person": 1.467779632721202
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2009,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.63776692514564,
+                "Couple with two children": 2.657604798226742,
+                "Couple without children": 2.4856377626689246,
+                "One parent with one child": 1.405547021212454,
+                "One parent with two children": 1.2639299849656194,
+                "One person": 1.4466392854814525
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2010,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.773969821382673,
+                "Couple with two children": 2.7650618258353066,
+                "Couple without children": 2.5546813661258256,
+                "One parent with one child": 1.5584812047856622,
+                "One parent with two children": 1.2531280507272855,
+                "One person": 1.4575111812680874
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2011,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.733913231855694,
+                "Couple with two children": 2.6509909515012993,
+                "Couple without children": 2.438421393277383,
+                "One parent with one child": 1.4549941344306303,
+                "One parent with two children": 1.1887208022139013,
+                "One person": 1.4803218635523967
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2012,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.816131326160497,
+                "Couple with two children": 2.7216417443533754,
+                "Couple without children": 2.4898936147893944,
+                "One parent with one child": 1.5130483586673293,
+                "One parent with two children": 1.2083067324277659,
+                "One person": 1.4978414565475817
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2013,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.809404602827575,
+                "Couple with two children": 2.7552184503437855,
+                "Couple without children": 2.5107272506842664,
+                "One parent with one child": 1.5073956418227699,
+                "One parent with two children": 1.3087531770363916,
+                "One person": 1.4960071532081523
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2014,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.8052971297474945,
+                "Couple with two children": 2.827384541179308,
+                "Couple without children": 2.5396328804583765,
+                "One parent with one child": 1.5253997727513968,
+                "One parent with two children": 1.3171912568512867,
+                "One person": 1.4886048474617146
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2015,
+              "thresholdBase": "2018 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.486312332600028,
+                "Couple with two children": 2.4353703037467236,
+                "Couple without children": 2.2259490336473267,
+                "One parent with one child": 1.35737463521188,
+                "One parent with two children": 1.2091804219292412,
+                "One person": 1.3064706789330318
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2016,
+              "thresholdBase": "2018 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.5309145802215136,
+                "Couple with two children": 2.4232756001215434,
+                "Couple without children": 2.232761460902524,
+                "One parent with one child": 1.3743927003919627,
+                "One parent with two children": 1.2277391777206719,
+                "One person": 1.3187481008811912
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2017,
+              "thresholdBase": "2018 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.559340019477664,
+                "Couple with two children": 2.3564083270629546,
+                "Couple without children": 2.2516748668032123,
+                "One parent with one child": 1.4010894335023139,
+                "One parent with two children": 1.2467985497172505,
+                "One person": 1.3368447454226235
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2018,
+              "thresholdBase": "2018 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.6011846610108287,
+                "Couple with two children": 2.4849763300546983,
+                "Couple without children": 2.313372966583966,
+                "One parent with one child": 1.3681126076184078,
+                "One parent with two children": 1.3388283855180951,
+                "One person": 1.3838946258186366
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2019,
+              "thresholdBase": "2018 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.6527577042242507,
+                "Couple with two children": 2.49305355945195,
+                "Couple without children": 2.302145101534817,
+                "One parent with one child": 1.4068288120473948,
+                "One parent with two children": 1.3262405579976315,
+                "One person": 1.3825812014946823
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2020,
+              "thresholdBase": "2023 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.6849379000687836,
+                "Couple with two children": 2.61360993534583,
+                "Couple without children": 2.3756603937440963,
+                "One parent with one child": 1.5057141468310222,
+                "One parent with two children": 1.3956413549367344,
+                "One person": 1.4623935997023116
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2021,
+              "thresholdBase": "2023 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.702735323895659,
+                "Couple with two children": 2.628802969938428,
+                "Couple without children": 2.355208524623972,
+                "One parent with one child": 1.5010972912820177,
+                "One parent with two children": 1.362345890536187,
+                "One person": 1.3966859833393699
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2022,
+              "thresholdBase": "2023 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.6137090539674954,
+                "Couple with two children": 2.5852146967684817,
+                "Couple without children": 2.2695267291355994,
+                "One parent with one child": 1.4008283331417553,
+                "One parent with two children": 1.3199985285589242,
+                "One person": 1.3727102173317314
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2023,
+              "thresholdBase": "2023 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.6212142053653325,
+                "Couple with two children": 2.5682794391765946,
+                "Couple without children": 2.30086208482372,
+                "One parent with one child": 1.4785116261133744,
+                "One parent with two children": 1.3323647714705076,
+                "One person": 1.4186725018234865
+              },
+              "contextOnly": true
+            }
+          ],
+          "validationSeries": [
+            {
+              "geography": "Owen Sound rental market",
+              "year": 2002,
+              "measure": "Average rent, one bedroom",
+              "value": 540.0,
+              "unit": "CAD per month",
+              "source": "CMHC Owen Sound Rental Market Report 2003"
+            },
+            {
+              "geography": "Owen Sound rental market",
+              "year": 2003,
+              "measure": "Average rent, one bedroom",
+              "value": 568.0,
+              "unit": "CAD per month",
+              "source": "CMHC Owen Sound Rental Market Report 2003"
+            },
+            {
+              "geography": "Grey Bruce",
+              "year": 2023,
+              "measure": "Nutritious food basket, family of four",
+              "value": 15660.0,
+              "unit": "CAD per year",
+              "source": "Grey Bruce Public Health"
+            },
+            {
+              "geography": "Grey Bruce",
+              "year": 2024,
+              "measure": "Nutritious food basket, family of four",
+              "value": 15000.0,
+              "unit": "CAD per year",
+              "source": "Grey Bruce Public Health"
+            },
+            {
+              "geography": "Grey Bruce",
+              "year": 2023,
+              "measure": "Nutritious food basket, one adult",
+              "value": 5616.0,
+              "unit": "CAD per year",
+              "source": "Grey Bruce Public Health"
+            },
+            {
+              "geography": "Grey Bruce",
+              "year": 2024,
+              "measure": "Nutritious food basket, one adult",
+              "value": 5208.0,
+              "unit": "CAD per year",
+              "source": "Grey Bruce Public Health"
+            }
+          ],
+          "geographyLevel": "annual census-agglomeration context; city-CSD hardship evidence remains authoritative",
+          "limitations": [
+            "Annual tax-file income describes the wider Owen Sound census agglomeration, not the city census subdivision.",
+            "City-CSD household distributions are available only for Census years, so annual regional median-family trends cannot determine local direction.",
+            "Improving regional medians cannot override city-CSD shelter burden, renter burden, core housing need, food insecurity, or matched city household cases."
+          ],
+          "provenance": [
+            {
+              "file": "analysis/owen_sound_absolute_affordability_history.csv",
+              "role": "historical affordability input"
+            },
+            {
+              "file": "analysis/absolute_affordability_validation_history.csv",
+              "role": "hardship and observed-cost validation"
+            }
+          ],
+          "contextOnly": true
         },
         "directionEvidence": [
           {
@@ -7477,6 +10208,371 @@
           "limitations": "Structural Census baseline."
         }
       ],
+      "historicalAffordability": {
+        "latestYear": 2023,
+        "absoluteStatus": "pressured",
+        "direction": "unclear",
+        "populationBelowBasicNeeds": null,
+        "populationBelowAffordableBuffer": null,
+        "oneYearChange": null,
+        "threeYearChange": null,
+        "fiveYearChange": null,
+        "historicalSeries": [
+          {
+            "year": 2002,
+            "thresholdBase": "2000 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.658944596517127,
+              "Couple with two children": 2.5314572864321607,
+              "Couple without children": 2.4060107722464075,
+              "One parent with one child": 1.4224572193195915,
+              "One parent with two children": 1.2046021696860936,
+              "One person": 1.4520603015075377
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2003,
+            "thresholdBase": "2000 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.703108724084171,
+              "Couple with two children": 2.6452617706960586,
+              "Couple without children": 2.434676996681607,
+              "One parent with one child": 1.5304974857358282,
+              "One parent with two children": 1.1809384923881887,
+              "One person": 1.4695898726089214
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2004,
+            "thresholdBase": "2000 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.782647791760555,
+              "Couple with two children": 2.636975700355982,
+              "Couple without children": 2.4411107807407433,
+              "One parent with one child": 1.4687158340076563,
+              "One parent with two children": 1.2179669043576227,
+              "One person": 1.4765516173966877
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2005,
+            "thresholdBase": "2000 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.736672321302167,
+              "Couple with two children": 2.6035152636447734,
+              "Couple without children": 2.41920788116589,
+              "One parent with one child": 1.3637152797573673,
+              "One parent with two children": 1.1416687654206699,
+              "One person": 1.4512488436632747
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2006,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.502612825832667,
+              "Couple with two children": 2.357749951339778,
+              "Couple without children": 2.23009541513515,
+              "One parent with one child": 1.3396170771846614,
+              "One parent with two children": 1.118140889853392,
+              "One person": 1.3235580354246415
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2007,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.6621857559590727,
+              "Couple with two children": 2.572244735268717,
+              "Couple without children": 2.4398542625941193,
+              "One parent with one child": 1.3876260091842565,
+              "One parent with two children": 1.183619830412001,
+              "One person": 1.440908788945725
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2008,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.7153775932571182,
+              "Couple with two children": 2.6808013355592655,
+              "Couple without children": 2.5068647087274663,
+              "One parent with one child": 1.4326290311318766,
+              "One parent with two children": 1.2499295978048526,
+              "One person": 1.467779632721202
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2009,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.63776692514564,
+              "Couple with two children": 2.657604798226742,
+              "Couple without children": 2.4856377626689246,
+              "One parent with one child": 1.405547021212454,
+              "One parent with two children": 1.2639299849656194,
+              "One person": 1.4466392854814525
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2010,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.773969821382673,
+              "Couple with two children": 2.7650618258353066,
+              "Couple without children": 2.5546813661258256,
+              "One parent with one child": 1.5584812047856622,
+              "One parent with two children": 1.2531280507272855,
+              "One person": 1.4575111812680874
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2011,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.733913231855694,
+              "Couple with two children": 2.6509909515012993,
+              "Couple without children": 2.438421393277383,
+              "One parent with one child": 1.4549941344306303,
+              "One parent with two children": 1.1887208022139013,
+              "One person": 1.4803218635523967
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2012,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.816131326160497,
+              "Couple with two children": 2.7216417443533754,
+              "Couple without children": 2.4898936147893944,
+              "One parent with one child": 1.5130483586673293,
+              "One parent with two children": 1.2083067324277659,
+              "One person": 1.4978414565475817
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2013,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.809404602827575,
+              "Couple with two children": 2.7552184503437855,
+              "Couple without children": 2.5107272506842664,
+              "One parent with one child": 1.5073956418227699,
+              "One parent with two children": 1.3087531770363916,
+              "One person": 1.4960071532081523
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2014,
+            "thresholdBase": "2008 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.8052971297474945,
+              "Couple with two children": 2.827384541179308,
+              "Couple without children": 2.5396328804583765,
+              "One parent with one child": 1.5253997727513968,
+              "One parent with two children": 1.3171912568512867,
+              "One person": 1.4886048474617146
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2015,
+            "thresholdBase": "2018 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.486312332600028,
+              "Couple with two children": 2.4353703037467236,
+              "Couple without children": 2.2259490336473267,
+              "One parent with one child": 1.35737463521188,
+              "One parent with two children": 1.2091804219292412,
+              "One person": 1.3064706789330318
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2016,
+            "thresholdBase": "2018 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.5309145802215136,
+              "Couple with two children": 2.4232756001215434,
+              "Couple without children": 2.232761460902524,
+              "One parent with one child": 1.3743927003919627,
+              "One parent with two children": 1.2277391777206719,
+              "One person": 1.3187481008811912
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2017,
+            "thresholdBase": "2018 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.559340019477664,
+              "Couple with two children": 2.3564083270629546,
+              "Couple without children": 2.2516748668032123,
+              "One parent with one child": 1.4010894335023139,
+              "One parent with two children": 1.2467985497172505,
+              "One person": 1.3368447454226235
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2018,
+            "thresholdBase": "2018 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.6011846610108287,
+              "Couple with two children": 2.4849763300546983,
+              "Couple without children": 2.313372966583966,
+              "One parent with one child": 1.3681126076184078,
+              "One parent with two children": 1.3388283855180951,
+              "One person": 1.3838946258186366
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2019,
+            "thresholdBase": "2018 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.6527577042242507,
+              "Couple with two children": 2.49305355945195,
+              "Couple without children": 2.302145101534817,
+              "One parent with one child": 1.4068288120473948,
+              "One parent with two children": 1.3262405579976315,
+              "One person": 1.3825812014946823
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2020,
+            "thresholdBase": "2023 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.6849379000687836,
+              "Couple with two children": 2.61360993534583,
+              "Couple without children": 2.3756603937440963,
+              "One parent with one child": 1.5057141468310222,
+              "One parent with two children": 1.3956413549367344,
+              "One person": 1.4623935997023116
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2021,
+            "thresholdBase": "2023 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.702735323895659,
+              "Couple with two children": 2.628802969938428,
+              "Couple without children": 2.355208524623972,
+              "One parent with one child": 1.5010972912820177,
+              "One parent with two children": 1.362345890536187,
+              "One person": 1.3966859833393699
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2022,
+            "thresholdBase": "2023 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.6137090539674954,
+              "Couple with two children": 2.5852146967684817,
+              "Couple without children": 2.2695267291355994,
+              "One parent with one child": 1.4008283331417553,
+              "One parent with two children": 1.3199985285589242,
+              "One person": 1.3727102173317314
+            },
+            "contextOnly": true
+          },
+          {
+            "year": 2023,
+            "thresholdBase": "2023 base",
+            "medianHouseholdTypeRatios": {
+              "Couple with one child": 2.6212142053653325,
+              "Couple with two children": 2.5682794391765946,
+              "Couple without children": 2.30086208482372,
+              "One parent with one child": 1.4785116261133744,
+              "One parent with two children": 1.3323647714705076,
+              "One person": 1.4186725018234865
+            },
+            "contextOnly": true
+          }
+        ],
+        "validationSeries": [
+          {
+            "geography": "Owen Sound rental market",
+            "year": 2002,
+            "measure": "Average rent, one bedroom",
+            "value": 540.0,
+            "unit": "CAD per month",
+            "source": "CMHC Owen Sound Rental Market Report 2003"
+          },
+          {
+            "geography": "Owen Sound rental market",
+            "year": 2003,
+            "measure": "Average rent, one bedroom",
+            "value": 568.0,
+            "unit": "CAD per month",
+            "source": "CMHC Owen Sound Rental Market Report 2003"
+          },
+          {
+            "geography": "Grey Bruce",
+            "year": 2023,
+            "measure": "Nutritious food basket, family of four",
+            "value": 15660.0,
+            "unit": "CAD per year",
+            "source": "Grey Bruce Public Health"
+          },
+          {
+            "geography": "Grey Bruce",
+            "year": 2024,
+            "measure": "Nutritious food basket, family of four",
+            "value": 15000.0,
+            "unit": "CAD per year",
+            "source": "Grey Bruce Public Health"
+          },
+          {
+            "geography": "Grey Bruce",
+            "year": 2023,
+            "measure": "Nutritious food basket, one adult",
+            "value": 5616.0,
+            "unit": "CAD per year",
+            "source": "Grey Bruce Public Health"
+          },
+          {
+            "geography": "Grey Bruce",
+            "year": 2024,
+            "measure": "Nutritious food basket, one adult",
+            "value": 5208.0,
+            "unit": "CAD per year",
+            "source": "Grey Bruce Public Health"
+          }
+        ],
+        "geographyLevel": "annual census-agglomeration context; city-CSD hardship evidence remains authoritative",
+        "limitations": [
+          "Annual tax-file income describes the wider Owen Sound census agglomeration, not the city census subdivision.",
+          "City-CSD household distributions are available only for Census years, so annual regional median-family trends cannot determine local direction.",
+          "Improving regional medians cannot override city-CSD shelter burden, renter burden, core housing need, food insecurity, or matched city household cases."
+        ],
+        "provenance": [
+          {
+            "file": "analysis/owen_sound_absolute_affordability_history.csv",
+            "role": "historical affordability input"
+          },
+          {
+            "file": "analysis/absolute_affordability_validation_history.csv",
+            "role": "hardship and observed-cost validation"
+          }
+        ],
+        "contextOnly": true
+      },
       "absoluteEvaluation": {
         "absoluteStatus": "pressured",
         "direction": "unclear",
@@ -7845,6 +10941,371 @@
           "unaffordableOrWorseShare": 0.398840885142255,
           "nonAffordableShare": 0.398840885142255,
           "evaluatedHouseholdCount": 9490.0
+        },
+        "historicalAffordability": {
+          "latestYear": 2023,
+          "absoluteStatus": "pressured",
+          "direction": "unclear",
+          "populationBelowBasicNeeds": null,
+          "populationBelowAffordableBuffer": null,
+          "oneYearChange": null,
+          "threeYearChange": null,
+          "fiveYearChange": null,
+          "historicalSeries": [
+            {
+              "year": 2002,
+              "thresholdBase": "2000 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.658944596517127,
+                "Couple with two children": 2.5314572864321607,
+                "Couple without children": 2.4060107722464075,
+                "One parent with one child": 1.4224572193195915,
+                "One parent with two children": 1.2046021696860936,
+                "One person": 1.4520603015075377
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2003,
+              "thresholdBase": "2000 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.703108724084171,
+                "Couple with two children": 2.6452617706960586,
+                "Couple without children": 2.434676996681607,
+                "One parent with one child": 1.5304974857358282,
+                "One parent with two children": 1.1809384923881887,
+                "One person": 1.4695898726089214
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2004,
+              "thresholdBase": "2000 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.782647791760555,
+                "Couple with two children": 2.636975700355982,
+                "Couple without children": 2.4411107807407433,
+                "One parent with one child": 1.4687158340076563,
+                "One parent with two children": 1.2179669043576227,
+                "One person": 1.4765516173966877
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2005,
+              "thresholdBase": "2000 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.736672321302167,
+                "Couple with two children": 2.6035152636447734,
+                "Couple without children": 2.41920788116589,
+                "One parent with one child": 1.3637152797573673,
+                "One parent with two children": 1.1416687654206699,
+                "One person": 1.4512488436632747
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2006,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.502612825832667,
+                "Couple with two children": 2.357749951339778,
+                "Couple without children": 2.23009541513515,
+                "One parent with one child": 1.3396170771846614,
+                "One parent with two children": 1.118140889853392,
+                "One person": 1.3235580354246415
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2007,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.6621857559590727,
+                "Couple with two children": 2.572244735268717,
+                "Couple without children": 2.4398542625941193,
+                "One parent with one child": 1.3876260091842565,
+                "One parent with two children": 1.183619830412001,
+                "One person": 1.440908788945725
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2008,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.7153775932571182,
+                "Couple with two children": 2.6808013355592655,
+                "Couple without children": 2.5068647087274663,
+                "One parent with one child": 1.4326290311318766,
+                "One parent with two children": 1.2499295978048526,
+                "One person": 1.467779632721202
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2009,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.63776692514564,
+                "Couple with two children": 2.657604798226742,
+                "Couple without children": 2.4856377626689246,
+                "One parent with one child": 1.405547021212454,
+                "One parent with two children": 1.2639299849656194,
+                "One person": 1.4466392854814525
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2010,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.773969821382673,
+                "Couple with two children": 2.7650618258353066,
+                "Couple without children": 2.5546813661258256,
+                "One parent with one child": 1.5584812047856622,
+                "One parent with two children": 1.2531280507272855,
+                "One person": 1.4575111812680874
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2011,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.733913231855694,
+                "Couple with two children": 2.6509909515012993,
+                "Couple without children": 2.438421393277383,
+                "One parent with one child": 1.4549941344306303,
+                "One parent with two children": 1.1887208022139013,
+                "One person": 1.4803218635523967
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2012,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.816131326160497,
+                "Couple with two children": 2.7216417443533754,
+                "Couple without children": 2.4898936147893944,
+                "One parent with one child": 1.5130483586673293,
+                "One parent with two children": 1.2083067324277659,
+                "One person": 1.4978414565475817
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2013,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.809404602827575,
+                "Couple with two children": 2.7552184503437855,
+                "Couple without children": 2.5107272506842664,
+                "One parent with one child": 1.5073956418227699,
+                "One parent with two children": 1.3087531770363916,
+                "One person": 1.4960071532081523
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2014,
+              "thresholdBase": "2008 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.8052971297474945,
+                "Couple with two children": 2.827384541179308,
+                "Couple without children": 2.5396328804583765,
+                "One parent with one child": 1.5253997727513968,
+                "One parent with two children": 1.3171912568512867,
+                "One person": 1.4886048474617146
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2015,
+              "thresholdBase": "2018 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.486312332600028,
+                "Couple with two children": 2.4353703037467236,
+                "Couple without children": 2.2259490336473267,
+                "One parent with one child": 1.35737463521188,
+                "One parent with two children": 1.2091804219292412,
+                "One person": 1.3064706789330318
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2016,
+              "thresholdBase": "2018 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.5309145802215136,
+                "Couple with two children": 2.4232756001215434,
+                "Couple without children": 2.232761460902524,
+                "One parent with one child": 1.3743927003919627,
+                "One parent with two children": 1.2277391777206719,
+                "One person": 1.3187481008811912
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2017,
+              "thresholdBase": "2018 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.559340019477664,
+                "Couple with two children": 2.3564083270629546,
+                "Couple without children": 2.2516748668032123,
+                "One parent with one child": 1.4010894335023139,
+                "One parent with two children": 1.2467985497172505,
+                "One person": 1.3368447454226235
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2018,
+              "thresholdBase": "2018 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.6011846610108287,
+                "Couple with two children": 2.4849763300546983,
+                "Couple without children": 2.313372966583966,
+                "One parent with one child": 1.3681126076184078,
+                "One parent with two children": 1.3388283855180951,
+                "One person": 1.3838946258186366
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2019,
+              "thresholdBase": "2018 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.6527577042242507,
+                "Couple with two children": 2.49305355945195,
+                "Couple without children": 2.302145101534817,
+                "One parent with one child": 1.4068288120473948,
+                "One parent with two children": 1.3262405579976315,
+                "One person": 1.3825812014946823
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2020,
+              "thresholdBase": "2023 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.6849379000687836,
+                "Couple with two children": 2.61360993534583,
+                "Couple without children": 2.3756603937440963,
+                "One parent with one child": 1.5057141468310222,
+                "One parent with two children": 1.3956413549367344,
+                "One person": 1.4623935997023116
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2021,
+              "thresholdBase": "2023 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.702735323895659,
+                "Couple with two children": 2.628802969938428,
+                "Couple without children": 2.355208524623972,
+                "One parent with one child": 1.5010972912820177,
+                "One parent with two children": 1.362345890536187,
+                "One person": 1.3966859833393699
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2022,
+              "thresholdBase": "2023 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.6137090539674954,
+                "Couple with two children": 2.5852146967684817,
+                "Couple without children": 2.2695267291355994,
+                "One parent with one child": 1.4008283331417553,
+                "One parent with two children": 1.3199985285589242,
+                "One person": 1.3727102173317314
+              },
+              "contextOnly": true
+            },
+            {
+              "year": 2023,
+              "thresholdBase": "2023 base",
+              "medianHouseholdTypeRatios": {
+                "Couple with one child": 2.6212142053653325,
+                "Couple with two children": 2.5682794391765946,
+                "Couple without children": 2.30086208482372,
+                "One parent with one child": 1.4785116261133744,
+                "One parent with two children": 1.3323647714705076,
+                "One person": 1.4186725018234865
+              },
+              "contextOnly": true
+            }
+          ],
+          "validationSeries": [
+            {
+              "geography": "Owen Sound rental market",
+              "year": 2002,
+              "measure": "Average rent, one bedroom",
+              "value": 540.0,
+              "unit": "CAD per month",
+              "source": "CMHC Owen Sound Rental Market Report 2003"
+            },
+            {
+              "geography": "Owen Sound rental market",
+              "year": 2003,
+              "measure": "Average rent, one bedroom",
+              "value": 568.0,
+              "unit": "CAD per month",
+              "source": "CMHC Owen Sound Rental Market Report 2003"
+            },
+            {
+              "geography": "Grey Bruce",
+              "year": 2023,
+              "measure": "Nutritious food basket, family of four",
+              "value": 15660.0,
+              "unit": "CAD per year",
+              "source": "Grey Bruce Public Health"
+            },
+            {
+              "geography": "Grey Bruce",
+              "year": 2024,
+              "measure": "Nutritious food basket, family of four",
+              "value": 15000.0,
+              "unit": "CAD per year",
+              "source": "Grey Bruce Public Health"
+            },
+            {
+              "geography": "Grey Bruce",
+              "year": 2023,
+              "measure": "Nutritious food basket, one adult",
+              "value": 5616.0,
+              "unit": "CAD per year",
+              "source": "Grey Bruce Public Health"
+            },
+            {
+              "geography": "Grey Bruce",
+              "year": 2024,
+              "measure": "Nutritious food basket, one adult",
+              "value": 5208.0,
+              "unit": "CAD per year",
+              "source": "Grey Bruce Public Health"
+            }
+          ],
+          "geographyLevel": "annual census-agglomeration context; city-CSD hardship evidence remains authoritative",
+          "limitations": [
+            "Annual tax-file income describes the wider Owen Sound census agglomeration, not the city census subdivision.",
+            "City-CSD household distributions are available only for Census years, so annual regional median-family trends cannot determine local direction.",
+            "Improving regional medians cannot override city-CSD shelter burden, renter burden, core housing need, food insecurity, or matched city household cases."
+          ],
+          "provenance": [
+            {
+              "file": "analysis/owen_sound_absolute_affordability_history.csv",
+              "role": "historical affordability input"
+            },
+            {
+              "file": "analysis/absolute_affordability_validation_history.csv",
+              "role": "hardship and observed-cost validation"
+            }
+          ],
+          "contextOnly": true
         },
         "directionEvidence": [
           {
@@ -8223,6 +11684,7 @@
       "thresholdUsed": null,
       "referencePopulation": null,
       "headlineInputs": [],
+      "historicalAffordability": null,
       "absoluteEvaluation": {
         "absoluteStatus": "insufficient",
         "direction": "unclear",
@@ -8289,6 +11751,7 @@
       "thresholdUsed": null,
       "referencePopulation": null,
       "headlineInputs": [],
+      "historicalAffordability": null,
       "absoluteEvaluation": {
         "absoluteStatus": "insufficient",
         "direction": "unclear",
@@ -8355,6 +11818,7 @@
       "thresholdUsed": null,
       "referencePopulation": null,
       "headlineInputs": [],
+      "historicalAffordability": null,
       "absoluteEvaluation": {
         "absoluteStatus": "insufficient",
         "direction": "unclear",
