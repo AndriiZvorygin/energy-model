@@ -1,0 +1,2242 @@
+{
+  "schemaVersion": 1,
+  "scope": "United States energy-economic conditions with global oil-market and global-liquidity inputs.",
+  "frequency": "quarterly",
+  "generatedAt": "2026-07-16T02:21:32+00:00",
+  "rows": [
+    {
+      "date": "2000-03-01",
+      "classification": "Physical tightening",
+      "primaryRegimeId": "B",
+      "primaryRegime": "Physical tightening",
+      "secondaryRegimeId": "C",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "B": 0.7229166666666668,
+        "C": 0.3671875,
+        "A": 0.35626834381551364,
+        "E": 0.13749999999999998,
+        "D": 0.13368055555555552,
+        "H": 0.06666666666666665,
+        "F": 0.0,
+        "G": 0.0
+      },
+      "activeSymptoms": [
+        "inventories_fall_prices_rise"
+      ]
+    },
+    {
+      "date": "2000-06-01",
+      "classification": "Physical tightening",
+      "primaryRegimeId": "B",
+      "primaryRegime": "Physical tightening",
+      "secondaryRegimeId": "H",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "B": 0.9156249999999999,
+        "H": 0.5666666666666667,
+        "A": 0.4081893004115227,
+        "C": 0.3671875,
+        "D": 0.13368055555555552,
+        "G": 0.027031249999999996,
+        "E": 0.0,
+        "F": 0.0
+      },
+      "activeSymptoms": [
+        "inventories_fall_prices_rise"
+      ]
+    },
+    {
+      "date": "2000-09-01",
+      "classification": "Physical tightening",
+      "primaryRegimeId": "B",
+      "primaryRegime": "Physical tightening",
+      "secondaryRegimeId": "A",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "B": 0.9156249999999999,
+        "A": 0.38945454545454544,
+        "H": 0.375,
+        "C": 0.3671875,
+        "D": 0.2053472222222222,
+        "G": 0.07886217948717947,
+        "E": 0.0,
+        "F": 0.0
+      },
+      "activeSymptoms": [
+        "inventories_fall_prices_rise"
+      ]
+    },
+    {
+      "date": "2000-12-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "D",
+      "primaryRegime": "Economic transmission",
+      "secondaryRegimeId": "B",
+      "confidence": "low",
+      "coverage": 0.6666666666666666,
+      "scores": {
+        "D": 0.4119088955026455,
+        "B": 0.3468971499564426,
+        "A": 0.33261904761904765,
+        "E": 0.22017857142857145,
+        "C": 0.2083798363095238,
+        "G": 0.16328124999999996,
+        "H": 0.15583333333333332,
+        "F": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2001-03-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "A",
+      "primaryRegime": "Expansion and rising demand",
+      "secondaryRegimeId": "D",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "A": 0.44166666666666665,
+        "D": 0.4105902777777778,
+        "G": 0.4089964139344262,
+        "H": 0.3,
+        "E": 0.28500000000000003,
+        "F": 0.1719298245614035,
+        "C": 0.13671874999999997,
+        "B": 0.08653455284552845
+      },
+      "activeSymptoms": [
+        "temporary_work_hours_weaken",
+        "industrial_output_weakens_after_oil_spike"
+      ]
+    },
+    {
+      "date": "2001-06-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "E",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.4483999673067658,
+        "E": 0.44125,
+        "G": 0.35661391129032255,
+        "C": 0.353448275862069,
+        "D": 0.26163194444444443,
+        "A": 0.1333333333333333,
+        "B": 0.09270833333333332,
+        "H": 0.0
+      },
+      "activeSymptoms": [
+        "temporary_work_hours_weaken"
+      ]
+    },
+    {
+      "date": "2001-09-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "G",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.519546568627451,
+        "G": 0.5189374999999999,
+        "E": 0.39749999999999996,
+        "D": 0.18142361111111113,
+        "A": 0.1018518518518518,
+        "B": 0.0,
+        "C": 0.0,
+        "H": 0.0
+      },
+      "activeSymptoms": [
+        "temporary_work_hours_weaken"
+      ]
+    },
+    {
+      "date": "2001-12-01",
+      "classification": "Price collapse",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "E",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.6081828034682081,
+        "E": 0.49593750000000003,
+        "G": 0.41272203480113634,
+        "D": 0.18142361111111113,
+        "C": 0.13671874999999997,
+        "H": 0.040416666666666656,
+        "A": 0.0,
+        "B": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2002-03-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "F",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.7333333333333333,
+        "F": 0.5419569672131148,
+        "E": 0.4944230769230769,
+        "G": 0.2984735576923077,
+        "D": 0.18142361111111113,
+        "C": 0.04200819672131148,
+        "A": 0.0,
+        "B": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2002-06-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "G",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.7333333333333333,
+        "G": 0.3310295756477821,
+        "E": 0.3040371456500489,
+        "D": 0.18142361111111113,
+        "F": 0.1641923094251217,
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2002-09-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "G",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.7333333333333333,
+        "G": 0.46352083333333327,
+        "C": 0.3891369047619047,
+        "B": 0.37678571428571417,
+        "D": 0.2806988536155202,
+        "E": 0.2111746821448314,
+        "A": 0.10489417989417987,
+        "F": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2002-12-01",
+      "classification": "Mixed transition: Physical tightening/Recovery or renewed tightening",
+      "primaryRegimeId": "B",
+      "primaryRegime": "Physical tightening",
+      "secondaryRegimeId": "H",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "B": 0.6479166666666668,
+        "H": 0.5666666666666667,
+        "G": 0.5245039062499999,
+        "C": 0.408203125,
+        "D": 0.2877513744212962,
+        "E": 0.25244791666666655,
+        "A": 0.20833333333333331,
+        "F": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2003-03-01",
+      "classification": "Mixed transition: Physical tightening/Energy affordability stress",
+      "primaryRegimeId": "B",
+      "primaryRegime": "Physical tightening",
+      "secondaryRegimeId": "C",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "B": 0.7229166666666668,
+        "C": 0.6796875,
+        "G": 0.3712228260869565,
+        "D": 0.357676282051282,
+        "E": 0.33268115942028986,
+        "H": 0.06666666666666665,
+        "A": 0.0,
+        "F": 0.0
+      },
+      "activeSymptoms": [
+        "inventories_fall_prices_rise"
+      ]
+    },
+    {
+      "date": "2003-06-01",
+      "classification": "Physical tightening",
+      "primaryRegimeId": "B",
+      "primaryRegime": "Physical tightening",
+      "secondaryRegimeId": "C",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "B": 0.7273674242424243,
+        "C": 0.622573390151515,
+        "E": 0.5967099567099567,
+        "D": 0.5514467592592591,
+        "G": 0.45158928571428575,
+        "A": 0.0,
+        "F": 0.0,
+        "H": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2003-09-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "G",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.87375,
+        "G": 0.40058612089201867,
+        "E": 0.3059222374045266,
+        "D": 0.2610618781094527,
+        "C": 0.2096354166666667,
+        "B": 0.20833333333333334,
+        "F": 0.07640961857379763,
+        "A": 0.07354270315091213
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2003-12-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "A",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.9,
+        "A": 0.3405555555555555,
+        "B": 0.3168404070488955,
+        "C": 0.2367876838235294,
+        "D": 0.21360804738562095,
+        "E": 0.06309232026143788,
+        "F": 0.0,
+        "G": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2004-03-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "A",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.375,
+        "A": 0.3466666666666667,
+        "D": 0.2579139828234031,
+        "B": 0.1751499597423511,
+        "E": 0.13434418635431145,
+        "C": 0.03268417874396136,
+        "G": 0.01995331481002844,
+        "F": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2004-06-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "B",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.9,
+        "B": 0.44479166666666664,
+        "C": 0.3671875,
+        "A": 0.3572681252681253,
+        "D": 0.3110664682539682,
+        "E": 0.0,
+        "F": 0.0,
+        "G": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2004-09-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "B",
+      "primaryRegime": "Physical tightening",
+      "secondaryRegimeId": "H",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "B": 0.44743122977346284,
+        "H": 0.42500000000000004,
+        "C": 0.34871992370892013,
+        "A": 0.32892279603547203,
+        "D": 0.2729378586332811,
+        "E": 0.0,
+        "F": 0.0,
+        "G": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2004-12-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "B",
+      "primaryRegime": "Physical tightening",
+      "secondaryRegimeId": "C",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "B": 0.4035416666666667,
+        "C": 0.3671875,
+        "A": 0.3398148148148148,
+        "H": 0.2583333333333333,
+        "D": 0.13368055555555552,
+        "F": 0.10917065390749599,
+        "E": 0.0,
+        "G": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2005-03-01",
+      "classification": "Energy affordability stress",
+      "primaryRegimeId": "C",
+      "primaryRegime": "Energy affordability stress",
+      "secondaryRegimeId": "A",
+      "confidence": "moderate",
+      "coverage": 0.75,
+      "scores": {
+        "C": 0.6796875,
+        "A": 0.503623514993378,
+        "H": 0.42500000000000004,
+        "B": 0.2520833333333333,
+        "D": 0.13368055555555552,
+        "F": 0.12083333333333333,
+        "E": 0.0,
+        "G": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2005-06-01",
+      "classification": "Mixed transition: Energy affordability stress/Recovery or renewed tightening",
+      "primaryRegimeId": "C",
+      "primaryRegime": "Energy affordability stress",
+      "secondaryRegimeId": "H",
+      "confidence": "moderate",
+      "coverage": 0.75,
+      "scores": {
+        "C": 0.6243137668918919,
+        "H": 0.5916666666666667,
+        "A": 0.5303603603603604,
+        "B": 0.44479166666666664,
+        "D": 0.13368055555555552,
+        "F": 0.12083333333333333,
+        "E": 0.0,
+        "G": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2005-09-01",
+      "classification": "Energy affordability stress",
+      "primaryRegimeId": "C",
+      "primaryRegime": "Energy affordability stress",
+      "secondaryRegimeId": "D",
+      "confidence": "moderate",
+      "coverage": 0.75,
+      "scores": {
+        "C": 0.6796875,
+        "D": 0.35235648148148146,
+        "F": 0.3135416666666667,
+        "E": 0.28303333333333336,
+        "B": 0.2520833333333333,
+        "A": 0.20833333333333331,
+        "G": 0.08465130649717514,
+        "H": 0.06666666666666665
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2005-12-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "C",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.9,
+        "C": 0.6386718749999999,
+        "B": 0.2520833333333333,
+        "D": 0.24238395467836252,
+        "A": 0.20833333333333331,
+        "F": 0.13074744152046786,
+        "E": 0.05940789473684213,
+        "G": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2006-03-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "E",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.3135416666666667,
+        "E": 0.3046645021645022,
+        "C": 0.2409530573593074,
+        "H": 0.23333333333333334,
+        "A": 0.20833333333333331,
+        "D": 0.20297619047619048,
+        "G": 0.14469306567496462,
+        "B": 0.05349927849927853
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2006-06-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "C",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.5416666666666666,
+        "C": 0.3263221153846155,
+        "E": 0.3228418803418803,
+        "D": 0.31862980769230764,
+        "F": 0.3135416666666667,
+        "B": 0.2612443739770868,
+        "A": 0.20833333333333331,
+        "G": 0.2064717741935484
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2006-09-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "F",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.7333333333333333,
+        "F": 0.39048874824191276,
+        "A": 0.33459915611814345,
+        "G": 0.2553125,
+        "E": 0.0720253164556962,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2006-12-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "E",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.3745659722222223,
+        "E": 0.34199999999999997,
+        "A": 0.20833333333333331,
+        "D": 0.1060373263888889,
+        "G": 0.09436383928571428,
+        "H": 0.06666666666666665,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2007-03-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "F",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.5666666666666667,
+        "F": 0.5515046296296295,
+        "E": 0.32815843621399177,
+        "A": 0.20833333333333331,
+        "G": 0.19354166666666667,
+        "C": 0.08055555555555552,
+        "D": 0.031058527663465906,
+        "B": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2007-06-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "E",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.5723323170731707,
+        "E": 0.2972967479674797,
+        "H": 0.2583333333333333,
+        "A": 0.20833333333333331,
+        "G": 0.205625,
+        "C": 0.0926321138211382,
+        "B": 0.0,
+        "D": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2007-09-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "C",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.7333333333333333,
+        "C": 0.588027108433735,
+        "G": 0.41937499999999994,
+        "F": 0.3135416666666667,
+        "E": 0.283785140562249,
+        "B": 0.22008032128514055,
+        "A": 0.20833333333333331,
+        "D": 0.18673862115127168
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2007-12-01",
+      "classification": "Energy affordability stress",
+      "primaryRegimeId": "C",
+      "primaryRegime": "Energy affordability stress",
+      "secondaryRegimeId": "G",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "C": 0.7687499999999999,
+        "G": 0.4197426470588235,
+        "E": 0.35285714285714287,
+        "D": 0.33260995370370366,
+        "B": 0.27283163265306115,
+        "H": 0.20833333333333331,
+        "A": 0.14608585858585857,
+        "F": 0.09270833333333332
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2008-03-01",
+      "classification": "Energy affordability stress",
+      "primaryRegimeId": "C",
+      "primaryRegime": "Energy affordability stress",
+      "secondaryRegimeId": "D",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "C": 0.7216346153846154,
+        "D": 0.5937499999999999,
+        "E": 0.485,
+        "G": 0.39600961538461543,
+        "B": 0.2520833333333333,
+        "F": 0.21774193548387094,
+        "A": 0.11388888888888885,
+        "H": 0.0
+      },
+      "activeSymptoms": [
+        "energy_burden_rises_faster_income"
+      ]
+    },
+    {
+      "date": "2008-06-01",
+      "classification": "Economic transmission",
+      "primaryRegimeId": "D",
+      "primaryRegime": "Economic transmission",
+      "secondaryRegimeId": "C",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "D": 0.86375,
+        "C": 0.6166182170542635,
+        "E": 0.5944444444444446,
+        "G": 0.5790185185185186,
+        "B": 0.4407951527224435,
+        "F": 0.09270833333333332,
+        "A": 0.0,
+        "H": 0.0
+      },
+      "activeSymptoms": [
+        "industrial_output_weakens_after_oil_spike"
+      ]
+    },
+    {
+      "date": "2008-09-01",
+      "classification": "Mixed transition: Economic transmission/Demand destruction",
+      "primaryRegimeId": "D",
+      "primaryRegime": "Economic transmission",
+      "secondaryRegimeId": "E",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "D": 0.8336254789272031,
+        "E": 0.76,
+        "G": 0.74125,
+        "C": 0.607375478927203,
+        "B": 0.30496085618608015,
+        "F": 0.09270833333333332,
+        "A": 0.0,
+        "H": 0.0
+      },
+      "activeSymptoms": [
+        "temporary_work_hours_weaken",
+        "industrial_output_weakens_after_oil_spike"
+      ]
+    },
+    {
+      "date": "2008-12-01",
+      "classification": "Mixed transition: Demand destruction/Price collapse",
+      "primaryRegimeId": "E",
+      "primaryRegime": "Demand destruction",
+      "secondaryRegimeId": "F",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "E": 0.8475,
+        "F": 0.8340588521400778,
+        "D": 0.62625,
+        "G": 0.615,
+        "H": 0.08083333333333331,
+        "C": 0.031249999999999986,
+        "A": 0.0,
+        "B": 0.0
+      },
+      "activeSymptoms": [
+        "temporary_work_hours_weaken",
+        "industrial_output_weakens_after_oil_spike"
+      ]
+    },
+    {
+      "date": "2009-03-01",
+      "classification": "Price collapse",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "E",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.9156249999999999,
+        "E": 0.80375,
+        "G": 0.615,
+        "D": 0.46375,
+        "C": 0.11874999999999997,
+        "H": 0.05833333333333332,
+        "A": 0.0,
+        "B": 0.0
+      },
+      "activeSymptoms": [
+        "prices_fall_unemployment_rises",
+        "temporary_work_hours_weaken"
+      ]
+    },
+    {
+      "date": "2009-06-01",
+      "classification": "Price collapse",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "E",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.9156249999999999,
+        "E": 0.76,
+        "G": 0.615,
+        "D": 0.37625,
+        "H": 0.22500000000000003,
+        "C": 0.15625,
+        "A": 0.0,
+        "B": 0.0
+      },
+      "activeSymptoms": [
+        "prices_fall_unemployment_rises",
+        "temporary_work_hours_weaken",
+        "energy_burden_rises_faster_income"
+      ]
+    },
+    {
+      "date": "2009-09-01",
+      "classification": "Price collapse",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "G",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.7229166666666668,
+        "G": 0.615,
+        "H": 0.5833333333333333,
+        "E": 0.5225,
+        "D": 0.37625,
+        "C": 0.15625,
+        "A": 0.0,
+        "B": 0.0
+      },
+      "activeSymptoms": [
+        "prices_fall_unemployment_rises",
+        "temporary_work_hours_weaken",
+        "energy_burden_rises_faster_income"
+      ]
+    },
+    {
+      "date": "2009-12-01",
+      "classification": "Mixed transition: Demand destruction/Energy affordability stress",
+      "primaryRegimeId": "E",
+      "primaryRegime": "Demand destruction",
+      "secondaryRegimeId": "C",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "E": 0.76625,
+        "C": 0.7375,
+        "D": 0.6487499999999999,
+        "G": 0.635,
+        "F": 0.40104166666666674,
+        "H": 0.37250000000000005,
+        "B": 0.19958333333333333,
+        "A": 0.0
+      },
+      "activeSymptoms": [
+        "energy_burden_rises_faster_income"
+      ]
+    },
+    {
+      "date": "2010-03-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "C",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.7333333333333333,
+        "C": 0.6175675675675675,
+        "G": 0.3738682432432432,
+        "E": 0.29125,
+        "B": 0.2520833333333333,
+        "D": 0.22499999999999998,
+        "A": 0.12093787335722823,
+        "F": 0.1056678921568628
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2010-06-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "A",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.7333333333333333,
+        "A": 0.39598108747044924,
+        "G": 0.31062500000000004,
+        "E": 0.15186170212765954,
+        "F": 0.12083333333333333,
+        "C": 0.036037234042553185,
+        "B": 0.0,
+        "D": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2010-09-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "A",
+      "primaryRegime": "Expansion and rising demand",
+      "secondaryRegimeId": "H",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "A": 0.4343859649122807,
+        "H": 0.20833333333333331,
+        "G": 0.205625,
+        "E": 0.13749999999999998,
+        "F": 0.12083333333333333,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2010-12-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "A",
+      "primaryRegime": "Expansion and rising demand",
+      "secondaryRegimeId": "C",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "A": 0.2957175925925926,
+        "C": 0.2655193236714976,
+        "G": 0.22470108695652172,
+        "E": 0.17968749999999997,
+        "B": 0.134765625,
+        "F": 0.12083333333333333,
+        "H": 0.06666666666666665,
+        "D": 0.05928819444444444
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2011-03-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "C",
+      "primaryRegime": "Energy affordability stress",
+      "secondaryRegimeId": "G",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "C": 0.4756022512097622,
+        "G": 0.3297066326530612,
+        "E": 0.31167525773195875,
+        "B": 0.2093642611683848,
+        "F": 0.1283717914589484,
+        "D": 0.10902061855670098,
+        "H": 0.06666666666666665,
+        "A": 0.04183848797250854
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2011-06-01",
+      "classification": "Mixed transition: Energy affordability stress/Demand destruction",
+      "primaryRegimeId": "C",
+      "primaryRegime": "Energy affordability stress",
+      "secondaryRegimeId": "E",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "C": 0.6028061224489796,
+        "E": 0.5552380952380952,
+        "G": 0.33187500000000003,
+        "D": 0.28116496598639457,
+        "F": 0.2645434088269455,
+        "B": 0.20437925170068028,
+        "A": 0.0,
+        "H": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2011-09-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "E",
+      "primaryRegime": "Demand destruction",
+      "secondaryRegimeId": "C",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "E": 0.5533501683501684,
+        "C": 0.5440656565656565,
+        "H": 0.42500000000000004,
+        "G": 0.33187500000000003,
+        "F": 0.22302442528735633,
+        "D": 0.10277777777777775,
+        "A": 0.0,
+        "B": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2011-12-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "E",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.5916666666666667,
+        "E": 0.49083333333333334,
+        "C": 0.3231479885057471,
+        "G": 0.30731167898193756,
+        "F": 0.13087670648464167,
+        "A": 0.0,
+        "B": 0.0,
+        "D": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2012-03-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "E",
+      "primaryRegime": "Demand destruction",
+      "secondaryRegimeId": "F",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "E": 0.43929042904290433,
+        "F": 0.2990983557815241,
+        "G": 0.2343954918032787,
+        "H": 0.06666666666666665,
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2012-06-01",
+      "classification": "Price collapse",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "H",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.840625,
+        "H": 0.6808333333333333,
+        "E": 0.5325,
+        "G": 0.205625,
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2012-09-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "E",
+      "primaryRegime": "Demand destruction",
+      "secondaryRegimeId": "F",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "E": 0.5677467637540453,
+        "F": 0.40104166666666674,
+        "G": 0.2297384475597092,
+        "D": 0.15622977346278322,
+        "C": 0.05088996763754046,
+        "H": 0.040416666666666656,
+        "A": 0.0,
+        "B": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2012-12-01",
+      "classification": "Price collapse",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "E",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.840625,
+        "E": 0.6848397435897436,
+        "G": 0.26151041666666663,
+        "H": 0.15583333333333332,
+        "D": 0.14311378205128203,
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2013-03-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "F",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.8250000000000001,
+        "F": 0.7229166666666668,
+        "E": 0.42583333333333334,
+        "G": 0.27113684585781533,
+        "D": 0.12648809523809518,
+        "C": 0.11874999999999997,
+        "A": 0.0,
+        "B": 0.0
+      },
+      "activeSymptoms": [
+        "prices_fall_unemployment_rises"
+      ]
+    },
+    {
+      "date": "2013-06-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "E",
+      "primaryRegime": "Demand destruction",
+      "secondaryRegimeId": "D",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "E": 0.5616116352201257,
+        "D": 0.42677458547741565,
+        "F": 0.3194215884042144,
+        "G": 0.24730555555555556,
+        "C": 0.21092767295597487,
+        "B": 0.04722484276729556,
+        "A": 0.0,
+        "H": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2013-09-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "G",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.9,
+        "G": 0.22607371794871794,
+        "E": 0.21651869158878506,
+        "A": 0.21103322949117342,
+        "C": 0.11956775700934577,
+        "D": 0.11129283489096573,
+        "B": 0.09543047295383744,
+        "F": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2013-12-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "A",
+      "primaryRegime": "Expansion and rising demand",
+      "secondaryRegimeId": "C",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "A": 0.2416049382716049,
+        "C": 0.18842592592592594,
+        "D": 0.1884259259259259,
+        "E": 0.1769345238095239,
+        "G": 0.17344008799171848,
+        "B": 0.15831964058382922,
+        "F": 0.12083333333333333,
+        "H": 0.06666666666666665
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2014-03-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "E",
+      "primaryRegime": "Demand destruction",
+      "secondaryRegimeId": "H",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "E": 0.35190887932667575,
+        "H": 0.2583333333333333,
+        "G": 0.22740821359469657,
+        "F": 0.1868178994648318,
+        "D": 0.04837538226299695,
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2014-06-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "G",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.9,
+        "G": 0.19675301800196815,
+        "D": 0.08238636363636367,
+        "E": 0.05648086124401917,
+        "F": 0.018124061825687238,
+        "C": 0.012130681818181846,
+        "A": 0.0,
+        "B": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2014-09-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "B",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.3145332832832833,
+        "B": 0.16706604533179428,
+        "H": 0.06666666666666665,
+        "E": 0.03339208773991374,
+        "D": 0.028378378378378352,
+        "G": 0.015753623188405758,
+        "A": 0.0,
+        "C": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2014-12-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "F",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.7333333333333333,
+        "F": 0.47291666666666676,
+        "A": 0.33525930487137384,
+        "B": 0.09270833333333332,
+        "D": 0.0040550595238094955,
+        "C": 0.0,
+        "E": 0.0,
+        "G": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2015-03-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "A",
+      "primaryRegime": "Expansion and rising demand",
+      "secondaryRegimeId": "F",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "A": 0.52246917782316,
+        "F": 0.47291666666666676,
+        "H": 0.375,
+        "D": 0.18125000000000002,
+        "E": 0.04999999999999999,
+        "B": 0.0,
+        "C": 0.0,
+        "G": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2015-06-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "A",
+      "primaryRegime": "Expansion and rising demand",
+      "secondaryRegimeId": "F",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "A": 0.5121399544057885,
+        "F": 0.47291666666666676,
+        "D": 0.33091666666666664,
+        "B": 0.09270833333333332,
+        "H": 0.06666666666666665,
+        "E": 0.04999999999999999,
+        "C": 0.0,
+        "G": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2015-09-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "D",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.47291666666666676,
+        "D": 0.37625,
+        "A": 0.2547101449275362,
+        "E": 0.11104347826086955,
+        "G": 0.08986949325184619,
+        "H": 0.06666666666666665,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2015-12-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "D",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.5001975574712643,
+        "D": 0.37625,
+        "A": 0.20833333333333331,
+        "E": 0.17849137931034478,
+        "B": 0.05048979028697573,
+        "G": 0.0251875,
+        "C": 0.0,
+        "H": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2016-03-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "F",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.7333333333333333,
+        "F": 0.47291666666666676,
+        "A": 0.3754036087369421,
+        "D": 0.37109848484848484,
+        "E": 0.15927350427350428,
+        "G": 0.05886138613861386,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2016-06-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "H",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.5176141713747646,
+        "H": 0.42500000000000004,
+        "D": 0.35624999999999996,
+        "E": 0.21190677966101695,
+        "A": 0.20833333333333331,
+        "G": 0.07937499999999997,
+        "C": 0.026447740112994333,
+        "B": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2016-09-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "A",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.375,
+        "A": 0.3427871148459383,
+        "D": 0.34225,
+        "F": 0.2158380018674136,
+        "E": 0.15500000000000003,
+        "G": 0.06854368932038835,
+        "C": 0.022619047619047594,
+        "B": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2016-12-01",
+      "classification": "Mixed transition: Recovery or renewed tightening/Economic transmission",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "D",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.7333333333333333,
+        "D": 0.7037500000000001,
+        "A": 0.4080555555555556,
+        "C": 0.37559027777777776,
+        "B": 0.3139928343949045,
+        "E": 0.22058333333333335,
+        "F": 0.12083333333333333,
+        "G": 0.07937499999999997
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2017-03-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "D",
+      "primaryRegime": "Economic transmission",
+      "secondaryRegimeId": "C",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "D": 0.5290007259325442,
+        "C": 0.5075757575757576,
+        "H": 0.42500000000000004,
+        "A": 0.33321854912764004,
+        "B": 0.2520833333333333,
+        "E": 0.185154958677686,
+        "G": 0.12811589925226285,
+        "F": 0.12083333333333333
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2017-06-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "A",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.9,
+        "A": 0.5166666666666666,
+        "F": 0.3858265027322405,
+        "D": 0.16338905665803852,
+        "B": 0.09270833333333332,
+        "E": 0.08822404371584697,
+        "G": 0.03126179245283016,
+        "C": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2017-09-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "D",
+      "primaryRegime": "Economic transmission",
+      "secondaryRegimeId": "F",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "D": 0.3217742860120909,
+        "F": 0.2335478771454381,
+        "C": 0.2228658536585366,
+        "E": 0.21665311653116529,
+        "A": 0.20833333333333331,
+        "G": 0.04114485981308408,
+        "B": 0.025338753387533886,
+        "H": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2017-12-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "A",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.7333333333333333,
+        "A": 0.3533691756272402,
+        "B": 0.2481182795698924,
+        "C": 0.1759408602150537,
+        "D": 0.13417338709677418,
+        "G": 0.03510416666666666,
+        "E": 0.0,
+        "F": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2018-03-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "A",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.9,
+        "A": 0.6829022222222222,
+        "B": 0.423116616558742,
+        "C": 0.29396666666666665,
+        "D": 0.19749999999999998,
+        "G": 0.01747706422018347,
+        "E": 0.0,
+        "F": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2018-06-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "B",
+      "primaryRegime": "Physical tightening",
+      "secondaryRegimeId": "C",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "B": 0.570847371967655,
+        "C": 0.4765625,
+        "A": 0.3889065255731922,
+        "D": 0.22377645502645505,
+        "G": 0.13730113636363633,
+        "E": 0.0,
+        "F": 0.0,
+        "H": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2018-09-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "A",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.7333333333333333,
+        "A": 0.5860717410323709,
+        "B": 0.57538435828877,
+        "C": 0.24773622047244093,
+        "D": 0.17030839895013122,
+        "G": 0.03486486486486487,
+        "E": 0.0,
+        "F": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2018-12-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "A",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.39788199912964195,
+        "A": 0.20833333333333331,
+        "E": 0.14904947916666672,
+        "B": 0.09270833333333332,
+        "G": 0.07937499999999997,
+        "H": 0.06666666666666665,
+        "D": 0.02255859375000001,
+        "C": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2019-03-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "D",
+      "primaryRegime": "Economic transmission",
+      "secondaryRegimeId": "E",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "D": 0.5021388888888888,
+        "E": 0.4843410852713178,
+        "F": 0.37313468992248056,
+        "G": 0.16687499999999997,
+        "A": 0.15583333333333332,
+        "H": 0.01416666666666666,
+        "B": 0.0030043859649122456,
+        "C": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2019-06-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "E",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.4510922122916248,
+        "E": 0.3457884615384615,
+        "D": 0.3357065217391304,
+        "H": 0.3,
+        "G": 0.20437499999999997,
+        "A": 0.1333333333333333,
+        "B": 0.09270833333333332,
+        "C": 0.0
+      },
+      "activeSymptoms": [
+        "temporary_work_hours_weaken"
+      ]
+    },
+    {
+      "date": "2019-09-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "F",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.3,
+        "F": 0.26128604749787954,
+        "G": 0.20437499999999997,
+        "D": 0.19997340425531915,
+        "A": 0.1433078880407124,
+        "E": 0.060687022900763374,
+        "B": 0.026241675501336367,
+        "C": 0.0
+      },
+      "activeSymptoms": [
+        "temporary_work_hours_weaken"
+      ]
+    },
+    {
+      "date": "2019-12-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "D",
+      "primaryRegime": "Economic transmission",
+      "secondaryRegimeId": "B",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "D": 0.5506439393939394,
+        "B": 0.38260484898563296,
+        "C": 0.2679924242424242,
+        "A": 0.239040404040404,
+        "G": 0.20437499999999997,
+        "E": 0.08579545454545452,
+        "F": 0.0,
+        "H": 0.0
+      },
+      "activeSymptoms": [
+        "temporary_work_hours_weaken"
+      ]
+    },
+    {
+      "date": "2020-03-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "E",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.44479166666666664,
+        "E": 0.39749999999999996,
+        "D": 0.37625,
+        "G": 0.25134580291970804,
+        "A": 0.1333333333333333,
+        "B": 0.05865221088435378,
+        "C": 0.031249999999999986,
+        "H": 0.0
+      },
+      "activeSymptoms": [
+        "temporary_work_hours_weaken"
+      ]
+    },
+    {
+      "date": "2020-06-01",
+      "classification": "Price collapse",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "E",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.840625,
+        "E": 0.7225,
+        "G": 0.51,
+        "D": 0.37625,
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "H": 0.0
+      },
+      "activeSymptoms": [
+        "temporary_work_hours_weaken"
+      ]
+    },
+    {
+      "date": "2020-09-01",
+      "classification": "Price collapse",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "H",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.9156249999999999,
+        "H": 0.7987500000000001,
+        "E": 0.76,
+        "G": 0.42874999999999996,
+        "D": 0.37625,
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "activeSymptoms": [
+        "prices_fall_unemployment_rises"
+      ]
+    },
+    {
+      "date": "2020-12-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "F",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.87375,
+        "F": 0.7531249999999999,
+        "E": 0.6645833333333333,
+        "D": 0.37625,
+        "G": 0.3728571428571428,
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2021-03-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "D",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.9,
+        "D": 0.45756082725060826,
+        "C": 0.375,
+        "E": 0.28303842901761833,
+        "G": 0.25598584979387684,
+        "B": 0.2520833333333333,
+        "A": 0.20833333333333331,
+        "F": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2021-06-01",
+      "classification": "Mixed transition: Recovery or renewed tightening/Physical tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "B",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.9,
+        "B": 0.8033797554347826,
+        "C": 0.725,
+        "A": 0.5383333333333333,
+        "G": 0.1955927230046948,
+        "D": 0.13749999999999998,
+        "E": 0.015845070422535176,
+        "F": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2021-09-01",
+      "classification": "Energy affordability stress",
+      "primaryRegimeId": "C",
+      "primaryRegime": "Energy affordability stress",
+      "secondaryRegimeId": "A",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "C": 0.85,
+        "A": 0.7443685051958433,
+        "B": 0.7229166666666668,
+        "G": 0.24,
+        "D": 0.13749999999999998,
+        "H": 0.06666666666666665,
+        "E": 0.0,
+        "F": 0.0
+      },
+      "activeSymptoms": [
+        "inventories_fall_prices_rise",
+        "energy_burden_rises_faster_income"
+      ]
+    },
+    {
+      "date": "2021-12-01",
+      "classification": "Energy affordability stress",
+      "primaryRegimeId": "C",
+      "primaryRegime": "Energy affordability stress",
+      "secondaryRegimeId": "B",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "C": 0.8875,
+        "B": 0.7229166666666668,
+        "A": 0.655,
+        "H": 0.375,
+        "G": 0.2775,
+        "D": 0.21217261904761903,
+        "E": 0.0,
+        "F": 0.0
+      },
+      "activeSymptoms": [
+        "inventories_fall_prices_rise",
+        "real_wages_decline_employment_strength",
+        "energy_burden_rises_faster_income"
+      ]
+    },
+    {
+      "date": "2022-03-01",
+      "classification": "Energy affordability stress",
+      "primaryRegimeId": "C",
+      "primaryRegime": "Energy affordability stress",
+      "secondaryRegimeId": "B",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "C": 0.8875,
+        "B": 0.770883068081344,
+        "A": 0.7431008668242711,
+        "H": 0.42500000000000004,
+        "G": 0.2775,
+        "D": 0.1493203309692671,
+        "E": 0.0,
+        "F": 0.0
+      },
+      "activeSymptoms": [
+        "inventories_fall_prices_rise",
+        "real_wages_decline_employment_strength",
+        "energy_burden_rises_faster_income"
+      ]
+    },
+    {
+      "date": "2022-06-01",
+      "classification": "Mixed transition: Physical tightening/Energy affordability stress",
+      "primaryRegimeId": "B",
+      "primaryRegime": "Physical tightening",
+      "secondaryRegimeId": "C",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "B": 0.9156249999999999,
+        "C": 0.8875,
+        "D": 0.3894072769953051,
+        "G": 0.2775,
+        "E": 0.27632629107981216,
+        "A": 0.20833333333333331,
+        "H": 0.06666666666666665,
+        "F": 0.0
+      },
+      "activeSymptoms": [
+        "inventories_fall_prices_rise",
+        "real_wages_decline_employment_strength",
+        "energy_burden_rises_faster_income"
+      ]
+    },
+    {
+      "date": "2022-09-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "C",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.9,
+        "C": 0.6470716783216782,
+        "B": 0.3644150925533563,
+        "G": 0.2775,
+        "A": 0.20833333333333331,
+        "D": 0.08840326340326347,
+        "E": 0.06811188811188812,
+        "F": 0.0
+      },
+      "activeSymptoms": [
+        "real_wages_decline_employment_strength"
+      ]
+    },
+    {
+      "date": "2022-12-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "G",
+      "primaryRegime": "Labour and household after-effects",
+      "secondaryRegimeId": "E",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "G": 0.5443749999999999,
+        "E": 0.485,
+        "C": 0.43350694444444443,
+        "D": 0.35625,
+        "F": 0.16943479938271608,
+        "A": 0.15583333333333332,
+        "B": 0.12083333333333333,
+        "H": 0.0
+      },
+      "activeSymptoms": [
+        "real_wages_decline_employment_strength"
+      ]
+    },
+    {
+      "date": "2023-03-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "H",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.584141355140187,
+        "H": 0.49166666666666675,
+        "G": 0.4846599740932642,
+        "E": 0.39828448275862066,
+        "D": 0.26875,
+        "A": 0.1333333333333333,
+        "C": 0.05903497409326425,
+        "B": 0.0
+      },
+      "activeSymptoms": [
+        "temporary_work_hours_weaken"
+      ]
+    },
+    {
+      "date": "2023-06-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "F",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.34875,
+        "F": 0.2520833333333333,
+        "G": 0.249375,
+        "A": 0.24797374429223745,
+        "B": 0.2200091840680588,
+        "D": 0.18125000000000002,
+        "E": 0.04999999999999999,
+        "C": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2023-09-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "G",
+      "primaryRegime": "Labour and household after-effects",
+      "secondaryRegimeId": "A",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "G": 0.293125,
+        "A": 0.23942743764172342,
+        "E": 0.23497732426303858,
+        "H": 0.2058333333333333,
+        "D": 0.18125000000000002,
+        "B": 0.1572763907522993,
+        "F": 0.060308012093726424,
+        "C": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2023-12-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "A",
+      "primaryRegime": "Expansion and rising demand",
+      "secondaryRegimeId": "H",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "A": 0.553963963963964,
+        "H": 0.49166666666666675,
+        "G": 0.330625,
+        "B": 0.18142168460533026,
+        "F": 0.15014076576576574,
+        "D": 0.0774493243243243,
+        "E": 0.02466216216216216,
+        "C": 0.0
+      },
+      "activeSymptoms": [
+        "temporary_work_hours_weaken"
+      ]
+    },
+    {
+      "date": "2024-03-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "E",
+      "primaryRegime": "Demand destruction",
+      "secondaryRegimeId": "D",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "E": 0.28750000000000003,
+        "D": 0.2548733436585786,
+        "G": 0.23201388888888885,
+        "A": 0.21277684563758387,
+        "B": 0.17219277506609726,
+        "F": 0.09270833333333332,
+        "H": 0.040416666666666656,
+        "C": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2024-06-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "B",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.7333333333333333,
+        "B": 0.446382043725441,
+        "D": 0.4460580808080808,
+        "A": 0.27148888888888884,
+        "E": 0.25972222222222224,
+        "G": 0.205625,
+        "F": 0.09270833333333332,
+        "C": 0.020166666666666652
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2024-09-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "F",
+      "primaryRegime": "Price collapse",
+      "secondaryRegimeId": "D",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "F": 0.37126103752759376,
+        "D": 0.3381902985074627,
+        "A": 0.21266004415011036,
+        "H": 0.20833333333333331,
+        "G": 0.205625,
+        "E": 0.18945916114790284,
+        "B": 0.1685655182291954,
+        "C": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2024-12-01",
+      "classification": "Recovery or renewed tightening",
+      "primaryRegimeId": "H",
+      "primaryRegime": "Recovery or renewed tightening",
+      "secondaryRegimeId": "D",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "H": 0.7333333333333333,
+        "D": 0.37625,
+        "B": 0.28710873983739843,
+        "A": 0.25073099415204675,
+        "G": 0.205625,
+        "E": 0.10861842105263159,
+        "F": 0.07749451754385962,
+        "C": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2025-03-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "D",
+      "primaryRegime": "Economic transmission",
+      "secondaryRegimeId": "F",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "D": 0.29390783366486695,
+        "F": 0.2914805737109659,
+        "H": 0.2583333333333333,
+        "A": 0.20833333333333331,
+        "G": 0.205625,
+        "E": 0.17261437908496735,
+        "B": 0.12083333333333333,
+        "C": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2025-06-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "A",
+      "primaryRegime": "Expansion and rising demand",
+      "secondaryRegimeId": "H",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "A": 0.5166666666666666,
+        "H": 0.375,
+        "B": 0.3135416666666667,
+        "F": 0.2520833333333333,
+        "G": 0.205625,
+        "D": 0.19683874458874456,
+        "E": 0.12294372294372295,
+        "C": 0.11874999999999997
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2025-09-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "A",
+      "primaryRegime": "Expansion and rising demand",
+      "secondaryRegimeId": "B",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "A": 0.5087455197132617,
+        "B": 0.2906159024745269,
+        "H": 0.2583333333333333,
+        "G": 0.205625,
+        "F": 0.18559139784946233,
+        "C": 0.07772849462365593,
+        "D": 0.04767454187490536,
+        "E": 0.016903225806451594
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2025-12-01",
+      "classification": "Unclassified",
+      "primaryRegimeId": "A",
+      "primaryRegime": "Expansion and rising demand",
+      "secondaryRegimeId": "B",
+      "confidence": "low",
+      "coverage": 1.0,
+      "scores": {
+        "A": 0.3967948717948718,
+        "B": 0.28059698120028925,
+        "F": 0.2520833333333333,
+        "G": 0.205625,
+        "C": 0.11874999999999997,
+        "E": 0.10166666666666664,
+        "D": 0.0834134615384615,
+        "H": 0.0
+      },
+      "activeSymptoms": []
+    },
+    {
+      "date": "2026-03-01",
+      "classification": "Energy affordability stress",
+      "primaryRegimeId": "C",
+      "primaryRegime": "Energy affordability stress",
+      "secondaryRegimeId": "B",
+      "confidence": "high",
+      "coverage": 1.0,
+      "scores": {
+        "C": 0.7336074561403508,
+        "B": 0.4413182471264367,
+        "A": 0.392144373673036,
+        "D": 0.3615976645435244,
+        "G": 0.29582376819708844,
+        "H": 0.23333333333333334,
+        "E": 0.03378980891719745,
+        "F": 0.0
+      },
+      "activeSymptoms": [
+        "energy_burden_rises_faster_income"
+      ]
+    },
+    {
+      "date": "2026-06-01",
+      "classification": "Mixed transition: Physical tightening/Energy affordability stress",
+      "primaryRegimeId": "B",
+      "primaryRegime": "Physical tightening",
+      "secondaryRegimeId": "C",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scores": {
+        "B": 0.7950892857142857,
+        "C": 0.7892857142857144,
+        "H": 0.5440476190476191,
+        "G": 0.3321516599597585,
+        "A": 0.3240824992417349,
+        "D": 0.2073693748112353,
+        "E": 0.0,
+        "F": 0.0
+      },
+      "activeSymptoms": [
+        "energy_burden_rises_faster_income"
+      ]
+    }
+  ],
+  "validation": {
+    "method": "walk_forward_latest_vintage",
+    "start": "2000-03-01",
+    "end": "2026-06-01",
+    "observations": 106,
+    "unclassifiedRate": 0.46226415094339623,
+    "transitionStability": 0.3238095238095238,
+    "meanRegimeDurationQuarters": 1.4722222222222223,
+    "controlPeriodStressFlagRate": 0.20833333333333334,
+    "eventPeriodMissRate": 0.5,
+    "falsePositiveRate": null,
+    "falseNegativeRate": null,
+    "classificationRevisionFrequency": null,
+    "thresholdSensitivity": {
+      "25_75": {
+        "classificationChangeRate": 0.0
+      },
+      "20_80": {
+        "classificationChangeRate": 0.09433962264150944
+      },
+      "30_70": {
+        "classificationChangeRate": 0.16037735849056603
+      }
+    },
+    "limitations": [
+      "No independently labelled monthly regime truth set exists, so formal false-positive and false-negative rates remain unavailable. Control-period stress flags and event-period misses are descriptive substitutes, not ground truth.",
+      "Latest-vintage walk-forward evaluation prevents future observations from entering percentile calculations but does not recreate historical publication vintages.",
+      "Classification revision frequency and revised-data sensitivity require real-time vintage histories that are not yet available for every required series."
+    ],
+    "methodComparison": {
+      "transparentRuleClassifier": "primary_public_result",
+      "simpleStatisticalClassifier": "not_promoted_without_independent_regime_labels",
+      "unsupervisedHiddenState": "not_promoted; future robustness research only"
+    }
+  }
+}

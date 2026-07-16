@@ -1,0 +1,1048 @@
+{
+  "schemaVersion": 1,
+  "scope": "United States energy-economic conditions with global oil-market and global-liquidity inputs.",
+  "generationDate": "2026-07-16T02:21:32+00:00",
+  "clock": {
+    "classificationDate": "2026-07-01",
+    "generationDate": "2026-07-16T02:21:32+00:00",
+    "newestObservationDate": "2026-07-01",
+    "oldestRequiredObservationDate": "2026-01-01",
+    "coverage": 1.0,
+    "status": "provisional",
+    "dataVintageStatus": "retrospective_revised_data",
+    "dataVintageWarning": "Retrospective classification using revised data. Real-time vintage histories are not yet available for every required series.",
+    "staleIndicators": [],
+    "missingIndicators": [],
+    "partialPeriodIndicators": [
+      {
+        "indicator": "refinery_utilization_pct",
+        "label": "Refinery utilization",
+        "sourceDate": "2026-07-01"
+      }
+    ]
+  },
+  "thresholdSensitivity": {
+    "20_80": {
+      "symptoms": {
+        "inventories_fall_prices_rise": "active",
+        "prices_fall_unemployment_rises": "inactive",
+        "real_wages_decline_employment_strength": "active",
+        "temporary_work_hours_weaken": "inactive",
+        "energy_burden_rises_faster_income": "active",
+        "industrial_output_weakens_after_oil_spike": "inactive"
+      },
+      "classification": "Mixed transition: Physical tightening/Energy affordability stress",
+      "topScore": 0.7977678571428573
+    },
+    "25_75": {
+      "symptoms": {
+        "inventories_fall_prices_rise": "active",
+        "prices_fall_unemployment_rises": "inactive",
+        "real_wages_decline_employment_strength": "active",
+        "temporary_work_hours_weaken": "inactive",
+        "energy_burden_rises_faster_income": "active",
+        "industrial_output_weakens_after_oil_spike": "inactive"
+      },
+      "classification": "Mixed transition: Physical tightening/Energy affordability stress",
+      "topScore": 0.7977678571428573
+    },
+    "30_70": {
+      "symptoms": {
+        "inventories_fall_prices_rise": "active",
+        "prices_fall_unemployment_rises": "inactive",
+        "real_wages_decline_employment_strength": "active",
+        "temporary_work_hours_weaken": "inactive",
+        "energy_burden_rises_faster_income": "active",
+        "industrial_output_weakens_after_oil_spike": "inactive"
+      },
+      "classification": "Mixed transition: Physical tightening/Energy affordability stress",
+      "topScore": 0.7977678571428573
+    }
+  },
+  "evaluations": [
+    {
+      "id": "inventories_fall_prices_rise",
+      "name": "Inventories fall while prices rise",
+      "plainLanguageMeaning": "Possible physical tightening as demand outruns immediately available supply.",
+      "status": "active",
+      "score": 0.6707142857142857,
+      "evaluationDate": "2026-07-01",
+      "confidence": "high",
+      "coverage": 1.0,
+      "requiredConditionResults": [
+        {
+          "indicator": "CI_zscore",
+          "label": "Comparative inventory z-score",
+          "transformation": "full_history_percentile",
+          "expectedDirection": "low",
+          "group": "inventory",
+          "available": true,
+          "met": true,
+          "strength": 1.0,
+          "value": -1.3818358591603184,
+          "unit": "standard deviations",
+          "historicalPercentile": 14.23982869379015,
+          "sourceDate": "2026-06-01",
+          "frequency": "monthly",
+          "ageMonths": 1,
+          "freshnessWeight": 0.8571428571428572,
+          "reliabilityWeight": 1.0,
+          "metricValue": 14.23982869379015,
+          "threshold": 25.0,
+          "weightedStrength": 0.8571428571428572
+        },
+        {
+          "indicator": "real_WTI_YoY",
+          "label": "Real WTI growth",
+          "transformation": "full_history_percentile",
+          "expectedDirection": "high",
+          "group": "price",
+          "available": true,
+          "met": true,
+          "strength": 1.0,
+          "value": 57.71665447640888,
+          "unit": "index or documented source unit",
+          "historicalPercentile": 92.47881355932203,
+          "sourceDate": "2026-05-01",
+          "frequency": "monthly",
+          "ageMonths": 2,
+          "freshnessWeight": 0.7142857142857143,
+          "reliabilityWeight": 0.85,
+          "metricValue": 92.47881355932203,
+          "threshold": 75.0,
+          "weightedStrength": 0.6071428571428571
+        }
+      ],
+      "requiredGroupResults": [
+        {
+          "group": "inventory",
+          "available": true,
+          "met": true,
+          "strength": 0.8571428571428572
+        },
+        {
+          "group": "price",
+          "available": true,
+          "met": true,
+          "strength": 0.6071428571428571
+        }
+      ],
+      "confirmingEvidence": [
+        {
+          "indicator": "refinery_utilization_pct",
+          "label": "Refinery utilization",
+          "transformation": "full_history_percentile",
+          "expectedDirection": "high",
+          "group": "refining",
+          "available": true,
+          "met": true,
+          "strength": 1.0,
+          "value": 96.0,
+          "unit": "percent",
+          "historicalPercentile": 94.75524475524476,
+          "sourceDate": "2026-07-01",
+          "frequency": "monthly",
+          "ageMonths": 0,
+          "freshnessWeight": 1.0,
+          "reliabilityWeight": 0.85,
+          "metricValue": 94.75524475524476,
+          "threshold": 75.0,
+          "weightedStrength": 0.85
+        }
+      ],
+      "conflictingEvidence": [],
+      "missingEvidence": [],
+      "persistence": {
+        "consecutiveUpdates": 2,
+        "requiredForActive": 2,
+        "updateStepMonths": 1
+      },
+      "historicalAnalogues": [
+        "2007-2009 oil spike and financial crisis",
+        "2021-2023 reopening, war and SPR response"
+      ],
+      "alternativeExplanations": [
+        "Weather and maintenance",
+        "Exports or pipeline timing",
+        "Seasonal inventory movement"
+      ],
+      "evidenceLabel": "Supported historical pattern",
+      "rule": {
+        "requiredIndicators": [
+          {
+            "indicator": "CI_zscore",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "low",
+            "group": "inventory",
+            "trendWindow": 3
+          },
+          {
+            "indicator": "real_WTI_YoY",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "high",
+            "group": "price",
+            "trendWindow": 3
+          }
+        ],
+        "confirmingIndicators": [
+          {
+            "indicator": "refinery_utilization_pct",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "high",
+            "group": "refining"
+          },
+          {
+            "indicator": "petroleum_consumption_YoY",
+            "transformation": "momentum",
+            "expectedDirection": "rising",
+            "group": "demand",
+            "trendWindow": 3
+          }
+        ],
+        "conflictingIndicators": [
+          {
+            "indicator": "petroleum_production_YoY",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "high",
+            "group": "supply"
+          }
+        ],
+        "minimumCoverage": 0.7,
+        "persistenceRequirement": 2,
+        "thresholds": {
+          "low": 25,
+          "high": 75
+        }
+      },
+      "sensitivity": {
+        "20_80": "active",
+        "25_75": "active",
+        "30_70": "active"
+      }
+    },
+    {
+      "id": "prices_fall_unemployment_rises",
+      "name": "Prices fall while unemployment rises",
+      "plainLanguageMeaning": "Possible demand destruction or recession rather than improved physical abundance.",
+      "status": "inactive",
+      "score": 0.026578073089701004,
+      "evaluationDate": "2026-07-01",
+      "confidence": "high",
+      "coverage": 1.0,
+      "requiredConditionResults": [
+        {
+          "indicator": "real_WTI_YoY",
+          "label": "Real WTI growth",
+          "transformation": "full_history_percentile",
+          "expectedDirection": "low",
+          "group": "price",
+          "available": true,
+          "met": false,
+          "strength": 0.0,
+          "value": 57.71665447640888,
+          "unit": "index or documented source unit",
+          "historicalPercentile": 92.47881355932203,
+          "sourceDate": "2026-05-01",
+          "frequency": "monthly",
+          "ageMonths": 2,
+          "freshnessWeight": 0.7142857142857143,
+          "reliabilityWeight": 0.85,
+          "metricValue": 92.47881355932203,
+          "threshold": 25.0,
+          "weightedStrength": 0.0
+        },
+        {
+          "indicator": "unemployment_rate",
+          "label": "Unemployment rate",
+          "transformation": "full_history_percentile",
+          "expectedDirection": "high",
+          "group": "labour",
+          "available": true,
+          "met": false,
+          "strength": 0.0,
+          "value": 4.2,
+          "unit": "index or documented source unit",
+          "historicalPercentile": 17.835051546391753,
+          "sourceDate": "2026-06-01",
+          "frequency": "monthly",
+          "ageMonths": 1,
+          "freshnessWeight": 0.8571428571428572,
+          "reliabilityWeight": 0.85,
+          "metricValue": 17.835051546391753,
+          "threshold": 75.0,
+          "weightedStrength": 0.0
+        }
+      ],
+      "requiredGroupResults": [
+        {
+          "group": "labour",
+          "available": true,
+          "met": false,
+          "strength": 0.0
+        },
+        {
+          "group": "price",
+          "available": true,
+          "met": false,
+          "strength": 0.0
+        }
+      ],
+      "confirmingEvidence": [],
+      "conflictingEvidence": [],
+      "missingEvidence": [],
+      "persistence": {
+        "consecutiveUpdates": 0,
+        "requiredForActive": 2,
+        "updateStepMonths": 1
+      },
+      "historicalAnalogues": [
+        "2007-2009 oil spike and financial crisis",
+        "2020 pandemic collapse"
+      ],
+      "alternativeExplanations": [
+        "Positive supply shock",
+        "Productivity gain",
+        "Currency movement"
+      ],
+      "evidenceLabel": "Supported historical pattern",
+      "rule": {
+        "requiredIndicators": [
+          {
+            "indicator": "real_WTI_YoY",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "low",
+            "group": "price",
+            "trendWindow": 3
+          },
+          {
+            "indicator": "unemployment_rate",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "high",
+            "group": "labour",
+            "trendWindow": 3
+          }
+        ],
+        "confirmingIndicators": [
+          {
+            "indicator": "Industrial_production_YoY",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "low",
+            "group": "output"
+          },
+          {
+            "indicator": "petroleum_consumption_YoY",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "low",
+            "group": "demand"
+          }
+        ],
+        "conflictingIndicators": [
+          {
+            "indicator": "petroleum_production_YoY",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "high",
+            "group": "supply"
+          }
+        ],
+        "minimumCoverage": 0.7,
+        "persistenceRequirement": 2,
+        "thresholds": {
+          "low": 25,
+          "high": 75
+        }
+      },
+      "sensitivity": {
+        "20_80": "inactive",
+        "25_75": "inactive",
+        "30_70": "inactive"
+      }
+    },
+    {
+      "id": "real_wages_decline_employment_strength",
+      "name": "Real wages decline despite employment strength",
+      "plainLanguageMeaning": "Inflation may be eroding household purchasing power before employment quantities weaken.",
+      "status": "active",
+      "score": 0.6678571428571429,
+      "evaluationDate": "2026-07-01",
+      "confidence": "high",
+      "coverage": 1.0,
+      "requiredConditionResults": [
+        {
+          "indicator": "real_wage_growth",
+          "label": "Real wage growth",
+          "transformation": "full_history_percentile",
+          "expectedDirection": "low",
+          "group": "wages",
+          "available": true,
+          "met": true,
+          "strength": 1.0,
+          "value": -0.7452646913116867,
+          "unit": "index or documented source unit",
+          "historicalPercentile": 19.782608695652176,
+          "sourceDate": "2026-05-01",
+          "frequency": "monthly",
+          "ageMonths": 2,
+          "freshnessWeight": 0.7142857142857143,
+          "reliabilityWeight": 0.85,
+          "metricValue": 19.782608695652176,
+          "threshold": 25.0,
+          "weightedStrength": 0.6071428571428571
+        },
+        {
+          "indicator": "prime_age_employment_rate",
+          "label": "Prime-age employment rate",
+          "transformation": "full_history_percentile",
+          "expectedDirection": "high",
+          "group": "employment",
+          "available": true,
+          "met": true,
+          "strength": 1.0,
+          "value": 80.2,
+          "unit": "percent",
+          "historicalPercentile": 76.80412371134021,
+          "sourceDate": "2026-06-01",
+          "frequency": "monthly",
+          "ageMonths": 1,
+          "freshnessWeight": 0.8571428571428572,
+          "reliabilityWeight": 0.85,
+          "metricValue": 76.80412371134021,
+          "threshold": 75.0,
+          "weightedStrength": 0.7285714285714286
+        },
+        {
+          "indicator": "unemployment_rate",
+          "label": "Unemployment rate",
+          "transformation": "full_history_percentile",
+          "expectedDirection": "low",
+          "group": "employment",
+          "available": true,
+          "met": true,
+          "strength": 1.0,
+          "value": 4.2,
+          "unit": "index or documented source unit",
+          "historicalPercentile": 17.835051546391753,
+          "sourceDate": "2026-06-01",
+          "frequency": "monthly",
+          "ageMonths": 1,
+          "freshnessWeight": 0.8571428571428572,
+          "reliabilityWeight": 0.85,
+          "metricValue": 17.835051546391753,
+          "threshold": 25.0,
+          "weightedStrength": 0.7285714285714286
+        }
+      ],
+      "requiredGroupResults": [
+        {
+          "group": "employment",
+          "available": true,
+          "met": true,
+          "strength": 0.7285714285714286
+        },
+        {
+          "group": "wages",
+          "available": true,
+          "met": true,
+          "strength": 0.6071428571428571
+        }
+      ],
+      "confirmingEvidence": [
+        {
+          "indicator": "energy_CPI_YoY",
+          "label": "Energy CPI growth",
+          "transformation": "full_history_percentile",
+          "expectedDirection": "high",
+          "group": "inflation",
+          "available": true,
+          "met": true,
+          "strength": 1.0,
+          "value": 15.45137005619075,
+          "unit": "index or documented source unit",
+          "historicalPercentile": 84.03805496828753,
+          "sourceDate": "2026-06-01",
+          "frequency": "monthly",
+          "ageMonths": 1,
+          "freshnessWeight": 0.8571428571428572,
+          "reliabilityWeight": 0.85,
+          "metricValue": 84.03805496828753,
+          "threshold": 75.0,
+          "weightedStrength": 0.7285714285714286
+        },
+        {
+          "indicator": "consumer_sentiment",
+          "label": "Consumer sentiment",
+          "transformation": "full_history_percentile",
+          "expectedDirection": "low",
+          "group": "household",
+          "available": true,
+          "met": true,
+          "strength": 1.0,
+          "value": 44.8,
+          "unit": "index",
+          "historicalPercentile": 0.10309278350515463,
+          "sourceDate": "2026-05-01",
+          "frequency": "monthly",
+          "ageMonths": 2,
+          "freshnessWeight": 0.7142857142857143,
+          "reliabilityWeight": 0.85,
+          "metricValue": 0.10309278350515463,
+          "threshold": 25.0,
+          "weightedStrength": 0.6071428571428571
+        }
+      ],
+      "conflictingEvidence": [],
+      "missingEvidence": [],
+      "persistence": {
+        "consecutiveUpdates": 3,
+        "requiredForActive": 2,
+        "updateStepMonths": 1
+      },
+      "historicalAnalogues": [
+        "2021-2023 reopening, war and SPR response"
+      ],
+      "alternativeExplanations": [
+        "Broader inflation",
+        "Workforce-composition effects",
+        "Wage measurement effects"
+      ],
+      "evidenceLabel": "Contextual indicator",
+      "rule": {
+        "requiredIndicators": [
+          {
+            "indicator": "real_wage_growth",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "low",
+            "group": "wages",
+            "trendWindow": 3
+          },
+          {
+            "indicator": "prime_age_employment_rate",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "high",
+            "group": "employment"
+          },
+          {
+            "indicator": "unemployment_rate",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "low",
+            "group": "employment"
+          }
+        ],
+        "confirmingIndicators": [
+          {
+            "indicator": "energy_CPI_YoY",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "high",
+            "group": "inflation"
+          },
+          {
+            "indicator": "consumer_sentiment",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "low",
+            "group": "household"
+          }
+        ],
+        "conflictingIndicators": [
+          {
+            "indicator": "real_disposable_income_YoY",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "high",
+            "group": "income"
+          }
+        ],
+        "minimumCoverage": 0.7,
+        "persistenceRequirement": 2,
+        "thresholds": {
+          "low": 25,
+          "high": 75
+        }
+      },
+      "sensitivity": {
+        "20_80": "active",
+        "25_75": "active",
+        "30_70": "active"
+      }
+    },
+    {
+      "id": "temporary_work_hours_weaken",
+      "name": "Temporary work and weekly hours weaken",
+      "plainLanguageMeaning": "Firms may be reducing flexible labour input before broad layoffs.",
+      "status": "inactive",
+      "score": 0.20541506969938023,
+      "evaluationDate": "2026-07-01",
+      "confidence": "high",
+      "coverage": 1.0,
+      "requiredConditionResults": [
+        {
+          "indicator": "temporary_help_YoY",
+          "label": "Temporary-help employment growth",
+          "transformation": "full_history_percentile",
+          "expectedDirection": "low",
+          "group": "temporary",
+          "available": true,
+          "met": false,
+          "strength": 0.6431924882629108,
+          "value": -0.2156032899464977,
+          "unit": "index or documented source unit",
+          "historicalPercentile": 33.92018779342723,
+          "sourceDate": "2026-06-01",
+          "frequency": "monthly",
+          "ageMonths": 1,
+          "freshnessWeight": 0.8571428571428572,
+          "reliabilityWeight": 0.85,
+          "metricValue": 33.92018779342723,
+          "threshold": 25.0,
+          "weightedStrength": 0.4686116700201208
+        },
+        {
+          "indicator": "average_weekly_hours_YoY",
+          "label": "Average weekly hours growth",
+          "transformation": "full_history_percentile",
+          "expectedDirection": "low",
+          "group": "hours",
+          "available": true,
+          "met": false,
+          "strength": 0.0,
+          "value": 1.4634146341463428,
+          "unit": "index or documented source unit",
+          "historicalPercentile": 89.55696202531645,
+          "sourceDate": "2026-06-01",
+          "frequency": "monthly",
+          "ageMonths": 1,
+          "freshnessWeight": 0.8571428571428572,
+          "reliabilityWeight": 0.85,
+          "metricValue": 89.55696202531645,
+          "threshold": 25.0,
+          "weightedStrength": 0.0
+        }
+      ],
+      "requiredGroupResults": [
+        {
+          "group": "hours",
+          "available": true,
+          "met": false,
+          "strength": 0.0
+        },
+        {
+          "group": "temporary",
+          "available": true,
+          "met": false,
+          "strength": 0.4686116700201208
+        }
+      ],
+      "confirmingEvidence": [],
+      "conflictingEvidence": [],
+      "missingEvidence": [],
+      "persistence": {
+        "consecutiveUpdates": 0,
+        "requiredForActive": 2,
+        "updateStepMonths": 1
+      },
+      "historicalAnalogues": [
+        "2007-2009 oil spike and financial crisis",
+        "2020 pandemic collapse"
+      ],
+      "alternativeExplanations": [
+        "Sector rebalancing",
+        "Regulation",
+        "Changes in hiring channels"
+      ],
+      "evidenceLabel": "Supported historical pattern",
+      "rule": {
+        "requiredIndicators": [
+          {
+            "indicator": "temporary_help_YoY",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "low",
+            "group": "temporary",
+            "trendWindow": 3
+          },
+          {
+            "indicator": "average_weekly_hours_YoY",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "low",
+            "group": "hours",
+            "trendWindow": 3
+          }
+        ],
+        "confirmingIndicators": [
+          {
+            "indicator": "manufacturing_output_YoY",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "low",
+            "group": "manufacturing"
+          },
+          {
+            "indicator": "unemployment_rate",
+            "transformation": "momentum",
+            "expectedDirection": "rising",
+            "group": "unemployment",
+            "trendWindow": 3
+          }
+        ],
+        "conflictingIndicators": [
+          {
+            "indicator": "full_time_employment_share",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "high",
+            "group": "job_quality"
+          }
+        ],
+        "minimumCoverage": 0.7,
+        "persistenceRequirement": 2,
+        "thresholds": {
+          "low": 25,
+          "high": 75
+        }
+      },
+      "sensitivity": {
+        "20_80": "inactive",
+        "25_75": "inactive",
+        "30_70": "inactive"
+      }
+    },
+    {
+      "id": "energy_burden_rises_faster_income",
+      "name": "Energy burden rises faster than income",
+      "plainLanguageMeaning": "Households and firms may have less room for non-energy spending and investment.",
+      "status": "active",
+      "score": 0.6484285714285715,
+      "evaluationDate": "2026-07-01",
+      "confidence": "high",
+      "coverage": 1.0,
+      "requiredConditionResults": [
+        {
+          "indicator": "household_energy_expenditure_share",
+          "label": "Household energy expenditure share",
+          "transformation": "momentum",
+          "expectedDirection": "rising",
+          "group": "burden",
+          "available": true,
+          "met": true,
+          "strength": 1.0,
+          "value": 3.8415843258624114,
+          "unit": "percent",
+          "historicalPercentile": 22.577319587628867,
+          "sourceDate": "2026-05-01",
+          "frequency": "monthly",
+          "ageMonths": 2,
+          "freshnessWeight": 0.7142857142857143,
+          "reliabilityWeight": 0.85,
+          "metricValue": 0.5151507689991299,
+          "threshold": null,
+          "weightedStrength": 0.6071428571428571
+        },
+        {
+          "indicator": "energy_expenditure_share_gdp",
+          "label": "Energy expenditure share of GDP",
+          "transformation": "momentum",
+          "expectedDirection": "rising",
+          "group": "burden",
+          "available": true,
+          "met": true,
+          "strength": 1.0,
+          "value": 2.851339845723246,
+          "unit": "percent",
+          "historicalPercentile": 22.989690721649485,
+          "sourceDate": "2026-05-01",
+          "frequency": "quarterly",
+          "ageMonths": 2,
+          "freshnessWeight": 0.8,
+          "reliabilityWeight": 0.85,
+          "metricValue": 0.41047243211600337,
+          "threshold": null,
+          "weightedStrength": 0.68
+        },
+        {
+          "indicator": "real_disposable_income_YoY",
+          "label": "Real disposable income growth",
+          "transformation": "full_history_percentile",
+          "expectedDirection": "low",
+          "group": "income",
+          "available": true,
+          "met": true,
+          "strength": 1.0,
+          "value": 0.016128224949785164,
+          "unit": "index or documented source unit",
+          "historicalPercentile": 8.13953488372093,
+          "sourceDate": "2026-05-01",
+          "frequency": "monthly",
+          "ageMonths": 2,
+          "freshnessWeight": 0.7142857142857143,
+          "reliabilityWeight": 0.85,
+          "metricValue": 8.13953488372093,
+          "threshold": 25.0,
+          "weightedStrength": 0.6071428571428571
+        }
+      ],
+      "requiredGroupResults": [
+        {
+          "group": "burden",
+          "available": true,
+          "met": true,
+          "strength": 0.68
+        },
+        {
+          "group": "income",
+          "available": true,
+          "met": true,
+          "strength": 0.6071428571428571
+        }
+      ],
+      "confirmingEvidence": [
+        {
+          "indicator": "energy_CPI_YoY",
+          "label": "Energy CPI growth",
+          "transformation": "full_history_percentile",
+          "expectedDirection": "high",
+          "group": "inflation",
+          "available": true,
+          "met": true,
+          "strength": 1.0,
+          "value": 15.45137005619075,
+          "unit": "index or documented source unit",
+          "historicalPercentile": 84.03805496828753,
+          "sourceDate": "2026-06-01",
+          "frequency": "monthly",
+          "ageMonths": 1,
+          "freshnessWeight": 0.8571428571428572,
+          "reliabilityWeight": 0.85,
+          "metricValue": 84.03805496828753,
+          "threshold": 75.0,
+          "weightedStrength": 0.7285714285714286
+        },
+        {
+          "indicator": "consumer_sentiment",
+          "label": "Consumer sentiment",
+          "transformation": "full_history_percentile",
+          "expectedDirection": "low",
+          "group": "household",
+          "available": true,
+          "met": true,
+          "strength": 1.0,
+          "value": 44.8,
+          "unit": "index",
+          "historicalPercentile": 0.10309278350515463,
+          "sourceDate": "2026-05-01",
+          "frequency": "monthly",
+          "ageMonths": 2,
+          "freshnessWeight": 0.7142857142857143,
+          "reliabilityWeight": 0.85,
+          "metricValue": 0.10309278350515463,
+          "threshold": 25.0,
+          "weightedStrength": 0.6071428571428571
+        }
+      ],
+      "conflictingEvidence": [],
+      "missingEvidence": [],
+      "persistence": {
+        "consecutiveUpdates": 3,
+        "requiredForActive": 2,
+        "updateStepMonths": 1
+      },
+      "historicalAnalogues": [
+        "2007-2009 oil spike and financial crisis",
+        "2021-2023 reopening, war and SPR response"
+      ],
+      "alternativeExplanations": [
+        "Cold weather",
+        "Utility regulation",
+        "Income-composition shifts"
+      ],
+      "evidenceLabel": "Experimental proxy",
+      "rule": {
+        "requiredIndicators": [
+          {
+            "indicator": "household_energy_expenditure_share",
+            "transformation": "momentum",
+            "expectedDirection": "rising",
+            "group": "burden",
+            "trendWindow": 3
+          },
+          {
+            "indicator": "energy_expenditure_share_gdp",
+            "transformation": "momentum",
+            "expectedDirection": "rising",
+            "group": "burden",
+            "trendWindow": 3
+          },
+          {
+            "indicator": "real_disposable_income_YoY",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "low",
+            "group": "income"
+          }
+        ],
+        "confirmingIndicators": [
+          {
+            "indicator": "energy_CPI_YoY",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "high",
+            "group": "inflation"
+          },
+          {
+            "indicator": "consumer_sentiment",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "low",
+            "group": "household"
+          }
+        ],
+        "conflictingIndicators": [
+          {
+            "indicator": "real_consumer_spending_YoY",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "high",
+            "group": "spending"
+          }
+        ],
+        "minimumCoverage": 0.7,
+        "persistenceRequirement": 2,
+        "thresholds": {
+          "low": 25,
+          "high": 75
+        }
+      },
+      "sensitivity": {
+        "20_80": "active",
+        "25_75": "active",
+        "30_70": "active"
+      }
+    },
+    {
+      "id": "industrial_output_weakens_after_oil_spike",
+      "name": "Industrial output weakens after an oil spike",
+      "plainLanguageMeaning": "A price shock may be transmitting through costs, margins, and demand.",
+      "status": "inactive",
+      "score": 0.3671398369072788,
+      "evaluationDate": "2026-07-01",
+      "confidence": "high",
+      "coverage": 1.0,
+      "requiredConditionResults": [
+        {
+          "indicator": "Industrial_production_YoY",
+          "label": "Industrial production growth",
+          "transformation": "full_history_percentile",
+          "expectedDirection": "low",
+          "group": "output",
+          "available": true,
+          "met": false,
+          "strength": 0.37209302325581406,
+          "value": 1.6659155850265561,
+          "unit": "index or documented source unit",
+          "historicalPercentile": 40.69767441860465,
+          "sourceDate": "2026-05-01",
+          "frequency": "monthly",
+          "ageMonths": 2,
+          "freshnessWeight": 0.7142857142857143,
+          "reliabilityWeight": 1.0,
+          "metricValue": 40.69767441860465,
+          "threshold": 25.0,
+          "weightedStrength": 0.26578073089701004
+        },
+        {
+          "indicator": "real_WTI_YoY",
+          "label": "Real WTI growth",
+          "transformation": "recent_max_percentile",
+          "expectedDirection": "high",
+          "group": "prior_oil_spike",
+          "available": true,
+          "met": true,
+          "strength": 1.0,
+          "value": 57.71665447640888,
+          "unit": "index or documented source unit",
+          "historicalPercentile": 92.47881355932203,
+          "sourceDate": "2026-05-01",
+          "frequency": "monthly",
+          "ageMonths": 2,
+          "freshnessWeight": 0.7142857142857143,
+          "reliabilityWeight": 0.85,
+          "metricDate": "2026-05-01",
+          "metricValue": 92.47881355932203,
+          "threshold": 75.0,
+          "weightedStrength": 0.6071428571428571
+        }
+      ],
+      "requiredGroupResults": [
+        {
+          "group": "output",
+          "available": true,
+          "met": false,
+          "strength": 0.26578073089701004
+        },
+        {
+          "group": "prior_oil_spike",
+          "available": true,
+          "met": true,
+          "strength": 0.6071428571428571
+        }
+      ],
+      "confirmingEvidence": [],
+      "conflictingEvidence": [],
+      "missingEvidence": [],
+      "persistence": {
+        "consecutiveUpdates": 0,
+        "requiredForActive": 2,
+        "updateStepMonths": 1
+      },
+      "historicalAnalogues": [
+        "1979-1982 oil shock and disinflation",
+        "2007-2009 oil spike and financial crisis"
+      ],
+      "alternativeExplanations": [
+        "Monetary tightening",
+        "Financial crisis",
+        "External demand shock"
+      ],
+      "evidenceLabel": "Supported historical pattern",
+      "rule": {
+        "requiredIndicators": [
+          {
+            "indicator": "Industrial_production_YoY",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "low",
+            "group": "output"
+          },
+          {
+            "indicator": "real_WTI_YoY",
+            "transformation": "recent_max_percentile",
+            "expectedDirection": "high",
+            "group": "prior_oil_spike",
+            "trendWindow": 6
+          }
+        ],
+        "confirmingIndicators": [
+          {
+            "indicator": "manufacturing_output_YoY",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "low",
+            "group": "manufacturing"
+          },
+          {
+            "indicator": "business_investment_YoY",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "low",
+            "group": "investment"
+          }
+        ],
+        "conflictingIndicators": [
+          {
+            "indicator": "petroleum_production_YoY",
+            "transformation": "full_history_percentile",
+            "expectedDirection": "high",
+            "group": "supply"
+          }
+        ],
+        "minimumCoverage": 0.7,
+        "persistenceRequirement": 2,
+        "thresholds": {
+          "low": 25,
+          "high": 75
+        }
+      },
+      "sensitivity": {
+        "20_80": "inactive",
+        "25_75": "inactive",
+        "30_70": "inactive"
+      }
+    }
+  ]
+}

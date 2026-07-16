@@ -312,6 +312,7 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
         system_response_catalogue,
         output_quality_rows,
         output_quality_correlation_rows,
+        historical_episode_rows,
     )
     warnings = write_audit_outputs(root, rows, lag_rows, regression_rows, rolling_rows, source_series)
     print(f"Wrote {len(rows)} monthly rows to {processed_dir / 'monthly_dataset.csv'}")

@@ -15,6 +15,17 @@ async function loadJson<T>(file: string, refresh = false): Promise<T> {
   return data
 }
 
+export function useGeneratedJson<T>(file: string) {
+  const [data, setData] = useState<T | null>(null)
+  const [error, setError] = useState<string | null>(null)
+  useEffect(() => {
+    let active = true
+    loadJson<T>(file).then((value) => active && setData(value)).catch((reason: unknown) => active && setError(reason instanceof Error ? reason.message : String(reason)))
+    return () => { active = false }
+  }, [file])
+  return { data, error }
+}
+
 export function useChartDataset(file: string) {
   const [dataset, setDataset] = useState<ChartDataset | null>(null)
   const [error, setError] = useState<string | null>(null)

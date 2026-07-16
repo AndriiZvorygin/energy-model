@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.1.0",
   "indicatorSchemaVersion": 1,
-  "generatedAt": "2026-07-16T00:54:44+00:00",
+  "generatedAt": "2026-07-16T02:21:32+00:00",
   "currentState": {
-    "asOf": "2026-07-16T00:54:44+00:00",
+    "asOf": "2026-07-16T02:21:32+00:00",
     "latestObservationDate": "2026-07-01",
     "oldestLatestObservationDate": "2026-03-01",
     "classificationMethod": "Interpretation labels are generated from each indicator's documented direction, full-history percentile, and recent change.",
@@ -816,6 +816,10 @@
     "recessions.json",
     "events.json",
     "cross-layer.json",
-    "output-quality-correlations.json"
+    "output-quality-correlations.json",
+    "current-classification.json",
+    "symptom-evaluations.json",
+    "regime-scores.json",
+    "regime-history.json"
   ]
 }

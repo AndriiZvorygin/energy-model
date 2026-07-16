@@ -1,0 +1,108 @@
+{
+  "version": "1.0.0",
+  "scope": "United States energy-economic conditions with global oil-market and global-liquidity inputs.",
+  "settings": {
+    "minimumEvidenceCoverage": 0.70,
+    "minimumTopRegimeScore": 0.60,
+    "minimumMargin": 0.10,
+    "confirmedMonthlyPersistence": 2,
+    "layerContributionCap": 0.30
+  },
+  "regimes": [
+    {
+      "id": "A", "name": "Expansion and rising demand",
+      "requiredLayers": ["physical", "activity", "labour"],
+      "indicatorEvidence": [
+        {"indicator": "petroleum_consumption_YoY", "expectedDirection": "high", "layer": "physical"},
+        {"indicator": "Industrial_production_YoY", "expectedDirection": "high", "layer": "activity"},
+        {"indicator": "Real_GDP_growth", "expectedDirection": "high", "layer": "activity"},
+        {"indicator": "unemployment_rate", "expectedDirection": "low", "layer": "labour"}
+      ],
+      "expectedSymptoms": [], "conflictingSymptoms": ["prices_fall_unemployment_rises", "temporary_work_hours_weaken"],
+      "predecessors": ["H"], "successors": ["B", "C"], "exceptionalJumpConditions": [], "minimumCoverage": 0.70, "classificationThreshold": 0.60
+    },
+    {
+      "id": "B", "name": "Physical tightening",
+      "requiredLayers": ["physical", "pricing"],
+      "indicatorEvidence": [
+        {"indicator": "CI_zscore", "expectedDirection": "low", "layer": "physical"},
+        {"indicator": "refinery_utilization_pct", "expectedDirection": "high", "layer": "physical"},
+        {"indicator": "real_WTI_YoY", "expectedDirection": "high", "layer": "pricing"}
+      ],
+      "expectedSymptoms": ["inventories_fall_prices_rise"], "conflictingSymptoms": ["prices_fall_unemployment_rises"],
+      "predecessors": ["A", "H"], "successors": ["C", "E"], "exceptionalJumpConditions": ["Documented supply shock"], "minimumCoverage": 0.70, "classificationThreshold": 0.60
+    },
+    {
+      "id": "C", "name": "Energy affordability stress",
+      "requiredLayers": ["pricing", "affordability", "household"],
+      "indicatorEvidence": [
+        {"indicator": "real_WTI_YoY", "expectedDirection": "high", "layer": "pricing"},
+        {"indicator": "energy_CPI_YoY", "expectedDirection": "high", "layer": "affordability"},
+        {"indicator": "real_disposable_income_YoY", "expectedDirection": "low", "layer": "household"},
+        {"indicator": "real_wage_growth", "expectedDirection": "low", "layer": "household"}
+      ],
+      "expectedSymptoms": ["energy_burden_rises_faster_income", "real_wages_decline_employment_strength"], "conflictingSymptoms": [],
+      "predecessors": ["A", "B"], "successors": ["D", "E"], "exceptionalJumpConditions": ["Rapid oil-price shock"], "minimumCoverage": 0.70, "classificationThreshold": 0.60
+    },
+    {
+      "id": "D", "name": "Economic transmission",
+      "requiredLayers": ["activity", "investment", "pricing"],
+      "indicatorEvidence": [
+        {"indicator": "Industrial_production_YoY", "expectedDirection": "low", "layer": "activity"},
+        {"indicator": "manufacturing_output_YoY", "expectedDirection": "low", "layer": "activity"},
+        {"indicator": "business_investment_YoY", "expectedDirection": "low", "layer": "investment"},
+        {"indicator": "real_WTI_YoY", "expectedDirection": "high", "layer": "pricing"}
+      ],
+      "expectedSymptoms": ["industrial_output_weakens_after_oil_spike"], "conflictingSymptoms": [],
+      "predecessors": ["C"], "successors": ["E", "G"], "exceptionalJumpConditions": [], "minimumCoverage": 0.70, "classificationThreshold": 0.60
+    },
+    {
+      "id": "E", "name": "Demand destruction",
+      "requiredLayers": ["physical", "activity", "labour"],
+      "indicatorEvidence": [
+        {"indicator": "petroleum_consumption_YoY", "expectedDirection": "low", "layer": "physical"},
+        {"indicator": "Industrial_production_YoY", "expectedDirection": "low", "layer": "activity"},
+        {"indicator": "Real_GDP_growth", "expectedDirection": "low", "layer": "activity"},
+        {"indicator": "unemployment_rate", "expectedDirection": "high", "layer": "labour"}
+      ],
+      "expectedSymptoms": ["prices_fall_unemployment_rises", "industrial_output_weakens_after_oil_spike"], "conflictingSymptoms": [],
+      "predecessors": ["C", "D"], "successors": ["F", "G"], "exceptionalJumpConditions": ["Pandemic or abrupt mobility shock"], "minimumCoverage": 0.70, "classificationThreshold": 0.60
+    },
+    {
+      "id": "F", "name": "Price collapse",
+      "requiredLayers": ["pricing", "physical"],
+      "indicatorEvidence": [
+        {"indicator": "real_WTI_YoY", "expectedDirection": "low", "layer": "pricing"},
+        {"indicator": "petroleum_consumption_YoY", "expectedDirection": "low", "layer": "physical"},
+        {"indicator": "CI_zscore", "expectedDirection": "high", "layer": "physical"}
+      ],
+      "expectedSymptoms": ["prices_fall_unemployment_rises"], "conflictingSymptoms": ["inventories_fall_prices_rise"],
+      "predecessors": ["B", "E"], "successors": ["G", "H"], "exceptionalJumpConditions": ["Supply surge or abrupt demand stop"], "minimumCoverage": 0.70, "classificationThreshold": 0.60
+    },
+    {
+      "id": "G", "name": "Labour and household after-effects",
+      "requiredLayers": ["labour", "household"],
+      "indicatorEvidence": [
+        {"indicator": "unemployment_rate", "expectedDirection": "high", "layer": "labour"},
+        {"indicator": "temporary_help_YoY", "expectedDirection": "low", "layer": "labour"},
+        {"indicator": "real_wage_growth", "expectedDirection": "low", "layer": "household"},
+        {"indicator": "consumer_sentiment", "expectedDirection": "low", "layer": "household"},
+        {"indicator": "credit_card_delinquency_rate", "expectedDirection": "high", "layer": "household"}
+      ],
+      "expectedSymptoms": ["temporary_work_hours_weaken", "real_wages_decline_employment_strength"], "conflictingSymptoms": [],
+      "predecessors": ["D", "E", "F"], "successors": ["H"], "exceptionalJumpConditions": [], "minimumCoverage": 0.70, "classificationThreshold": 0.60
+    },
+    {
+      "id": "H", "name": "Recovery or renewed tightening",
+      "requiredLayers": ["activity", "labour", "physical"],
+      "indicatorEvidence": [
+        {"indicator": "Industrial_production_YoY", "expectedDirection": "rising", "layer": "activity"},
+        {"indicator": "petroleum_consumption_YoY", "expectedDirection": "rising", "layer": "physical"},
+        {"indicator": "average_weekly_hours_YoY", "expectedDirection": "rising", "layer": "labour"},
+        {"indicator": "unemployment_rate", "expectedDirection": "falling", "layer": "labour"}
+      ],
+      "expectedSymptoms": [], "conflictingSymptoms": ["prices_fall_unemployment_rises", "temporary_work_hours_weaken"],
+      "predecessors": ["F", "G"], "successors": ["A", "B"], "exceptionalJumpConditions": ["Policy-supported reopening"], "minimumCoverage": 0.70, "classificationThreshold": 0.60
+    }
+  ]
+}

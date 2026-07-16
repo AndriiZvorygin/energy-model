@@ -243,7 +243,7 @@ class CoreTests(unittest.TestCase):
                 self.assertTrue((root / "analysis" / filename).exists(), filename)
             for filename in required_charts:
                 self.assertTrue((root / "charts" / filename).exists(), filename)
-            for filename in ["manifest.json", "oil-price-layers.json", "gm2-oil-lead.json", "oil-residual-ci.json", "energy-gdp.json", "oil-equities.json", "uso-tracking.json", "lag-results.json", "regimes.json", "events.json", "cross-layer.json"]:
+            for filename in ["manifest.json", "oil-price-layers.json", "gm2-oil-lead.json", "oil-residual-ci.json", "energy-gdp.json", "oil-equities.json", "uso-tracking.json", "lag-results.json", "regimes.json", "events.json", "cross-layer.json", "current-classification.json", "symptom-evaluations.json", "regime-scores.json", "regime-history.json"]:
                 self.assertTrue((root / "website" / "public" / "generated" / filename).exists(), filename)
 
 

@@ -10,4 +10,4 @@ The same symptom sequence does not imply the same cause. The 2008 crisis combine
 
 ## First-Pass Episodes
 
-The CSV includes 1973-1975, 1979-1982, 1990-1991, 2007-2009, 2014-2016, 2020-2021, and 2021-2023. Quantitative peak dates, lag distributions, and real-time-vintage comparisons are the next implementation step.
+The CSV includes 1973-1975, 1979-1982, 1990-1991, 2007-2009, 2014-2016, 2020-2021, and 2021-2023, plus ordinary-period controls. The pipeline adds observed turning points, symptom activation and fading dates, quarterly regime sequences, recovery dates, and data coverage where histories permit. Earlier episodes remain descriptive when data are unavailable. Real-time-vintage comparisons remain future work.

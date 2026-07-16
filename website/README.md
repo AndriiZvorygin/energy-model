@@ -19,7 +19,7 @@ The Python pipeline writes chart-ready JSON under `public/generated/`. The websi
 
 `public/generated/charts/` contains multi-series research views. `public/generated/indicators/` contains one complete historical series and interpretation contract per Current State indicator. `manifest.json` indexes both collections. The Vite build validates required metadata, units, chronological dates, duplicate dates, null handling, reference ranges, and interpretation metadata before compiling React.
 
-The system-response routes consume the generated indicator catalogue, current-state table, energy-burden validation, physical-tightness summary, labour lead scan, and historical episode library. The browser does not recalculate those results. Explanatory symptom definitions and roadmap labels are maintained in the site because they are navigation and interpretation aids rather than measured series.
+The system-response routes consume the generated indicator catalogue, current-state table, energy-burden validation, physical-tightness summary, labour lead scan, historical episode library, symptom evaluations, and regime scores. The browser does not recalculate those results. Version-controlled rules live in `../config/symptom_rules.json` and `../config/regime_rules.json`; Python publishes separate monthly-nowcast and confirmed-quarterly results, including coverage, freshness, conflicts, persistence, sensitivity, and revised-data warnings.
 
 ## Research Sections
 

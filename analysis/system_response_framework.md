@@ -35,7 +35,7 @@ The catalogue contains 37 measured, derived, proxy and proposed indicators; 30 h
 - **G. Labour and household after-effects:** hours, flexible employment, real wages and credit quality deteriorate.
 - **H. Recovery or renewed tightening:** burden eases and activity recovers, or demand re-tightens the physical market.
 
-No automatic regime classifier is promoted in this first pass. Future rules must show contributing indicators, data dates, confidence, conflicting evidence and historical analogues.
+The observatory now publishes an **experimental transparent rule classifier** with separate provisional monthly and confirmed quarterly clocks. It shows contributing indicators, source dates, freshness, coverage, confidence, conflicts, threshold sensitivity and historical analogues, and it can return mixed or unclassified. The formal scope is U.S. energy-economic conditions with global oil-market and global-liquidity inputs. Latest-vintage historical tests are retrospective where real-time vintages are unavailable.
 
 ## Evidence Labels
 

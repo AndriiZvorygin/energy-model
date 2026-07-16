@@ -26,7 +26,9 @@ npm run build
 - `uso-tracking.json`
 - `output-quality-headline.json`, `output-quality-net-output.json`, `output-quality-capacity.json`, `output-quality-household.json`, and `output-quality-financial.json`
 - `output-quality-correlations.json`
-- shared lag, rolling-performance, recession, regime, event, and cross-layer inspection files
+- shared lag, rolling-performance, recession, event, cross-layer, live symptom-evaluation, current-classification, regime-score, and regime-history files
+
+The live diagnostic contract consists of `current-classification.json`, `symptom-evaluations.json`, `regime-scores.json`, and `regime-history.json`. These files are generated from the same 27 indicator histories used by Current State. The website only renders the published evidence; it never embeds or recalculates symptom and regime rules.
 
 The website build fails when a manifest dataset is missing required metadata, units, sources, final observation dates, ordered ISO dates, or unique dates.
 

@@ -169,3 +169,112 @@ export type GeneratedManifest = {
   layers: { id: string; label: string; indicatorFields: string[]; interpretation: string; confidence: string }[]
   shared: string[]
 }
+
+export type DiagnosticCondition = {
+  indicator: string
+  label: string
+  transformation: string
+  expectedDirection: string
+  group: string
+  available: boolean
+  met: boolean
+  strength: number
+  value: number | null
+  unit: string | null
+  historicalPercentile: number | null
+  sourceDate: string | null
+  metricValue?: number | null
+  threshold?: number | null
+}
+
+export type SymptomEvaluation = {
+  id: string
+  name: string
+  plainLanguageMeaning: string
+  status: 'active' | 'emerging' | 'fading' | 'inactive' | 'insufficient_data'
+  score: number
+  evaluationDate: string
+  confidence: string
+  coverage: number
+  requiredConditionResults: DiagnosticCondition[]
+  confirmingEvidence: DiagnosticCondition[]
+  conflictingEvidence: DiagnosticCondition[]
+  missingEvidence: DiagnosticCondition[]
+  persistence: { consecutiveUpdates: number; requiredForActive: number; updateStepMonths: number }
+  historicalAnalogues: string[]
+  alternativeExplanations: string[]
+  evidenceLabel: string
+  sensitivity: Record<string, string>
+  rule: Record<string, unknown>
+}
+
+export type RegimeScore = {
+  id: string
+  name: string
+  score: number
+  coverage: number
+  layerScores: Record<string, { score: number; coverage: number }>
+  supportingEvidence: DiagnosticCondition[]
+  conflictingEvidence: DiagnosticCondition[]
+  missingEvidence: DiagnosticCondition[]
+}
+
+export type ClassificationClock = {
+  classification: string
+  classificationDate: string
+  generationDate: string
+  newestObservationDate: string | null
+  oldestRequiredObservationDate: string | null
+  coverage: number
+  status: string
+  dataVintageStatus: string
+  dataVintageWarning: string
+  partialPeriodIndicators: Array<{ indicator: string; label: string; sourceDate: string }>
+  confidence: string
+  primaryRegime: RegimeScore
+  secondaryRegime: RegimeScore
+}
+
+export type CurrentClassification = {
+  schemaVersion: number
+  scope: string
+  classificationDate: string
+  asOfDate: string
+  provisionalClassification: ClassificationClock
+  confirmedClassification: ClassificationClock
+  primaryRegime: RegimeScore
+  secondaryRegime: RegimeScore
+  confidence: string
+  evidenceCoverage: number
+  allRegimeScores: RegimeScore[]
+  activeSymptoms: SymptomEvaluation[]
+  emergingSymptoms: SymptomEvaluation[]
+  fadingSymptoms: SymptomEvaluation[]
+  supportingIndicators: DiagnosticCondition[]
+  conflictingIndicators: DiagnosticCondition[]
+  staleIndicators: Array<{ indicator: string; label: string; lastAvailableDate?: string }>
+  missingIndicators: Array<{ indicator: string; label: string }>
+  historicalAnalogues: Array<{ episode: string; similarity: number; commonIndicators: number; comparisonDate: string }>
+  ruleVersion: Record<string, string>
+  dataVintageWarning: string
+  monthlyPersistence: { consecutiveUpdates: number; requiredUpdates: number; confirmationStatus: string; note: string }
+  exceptionalTransition: { fromRegime: string; toRegime: string; reasonRequired: boolean; documentedJumpConditions: string[]; note: string } | null
+}
+
+export type SymptomEvaluationsPayload = {
+  schemaVersion: number
+  scope: string
+  generationDate: string
+  clock: ClassificationClock
+  thresholdSensitivity: Record<string, { classification: string; topScore: number }>
+  evaluations: SymptomEvaluation[]
+}
+
+export type RegimeHistoryPayload = {
+  schemaVersion: number
+  scope: string
+  frequency: string
+  generatedAt: string
+  rows: Array<{ date: string; classification: string; primaryRegimeId: string; primaryRegime: string; secondaryRegimeId: string; confidence: string; coverage: number; scores: Record<string, number>; activeSymptoms: string[] }>
+  validation: Record<string, unknown>
+}

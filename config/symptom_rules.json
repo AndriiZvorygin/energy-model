@@ -1,0 +1,137 @@
+{
+  "version": "1.0.0",
+  "scope": "United States energy-economic conditions with global oil-market and global-liquidity inputs.",
+  "settings": {
+    "minimumCoverage": 0.70,
+    "emergingPersistence": 1,
+    "activePersistence": 2,
+    "monthlyMaximumAgeMonths": 6,
+    "quarterlyMaximumAgeMonths": 9,
+    "thresholdSets": {
+      "20_80": {"low": 20, "high": 80},
+      "25_75": {"low": 25, "high": 75},
+      "30_70": {"low": 30, "high": 70}
+    },
+    "primaryThresholdSet": "25_75"
+  },
+  "symptoms": [
+    {
+      "id": "inventories_fall_prices_rise",
+      "name": "Inventories fall while prices rise",
+      "meaning": "Possible physical tightening as demand outruns immediately available supply.",
+      "requiredIndicators": [
+        {"indicator": "CI_zscore", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "inventory", "trendWindow": 3},
+        {"indicator": "real_WTI_YoY", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "price", "trendWindow": 3}
+      ],
+      "confirmingIndicators": [
+        {"indicator": "refinery_utilization_pct", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "refining"},
+        {"indicator": "petroleum_consumption_YoY", "transformation": "momentum", "expectedDirection": "rising", "group": "demand", "trendWindow": 3}
+      ],
+      "conflictingIndicators": [
+        {"indicator": "petroleum_production_YoY", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "supply"}
+      ],
+      "persistenceRequirement": 2,
+      "minimumCoverage": 0.70,
+      "evidenceLabel": "Supported historical pattern",
+      "historicalAnalogues": ["2007-2009 oil spike and financial crisis", "2021-2023 reopening, war and SPR response"],
+      "alternativeExplanations": ["Weather and maintenance", "Exports or pipeline timing", "Seasonal inventory movement"]
+    },
+    {
+      "id": "prices_fall_unemployment_rises",
+      "name": "Prices fall while unemployment rises",
+      "meaning": "Possible demand destruction or recession rather than improved physical abundance.",
+      "requiredIndicators": [
+        {"indicator": "real_WTI_YoY", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "price", "trendWindow": 3},
+        {"indicator": "unemployment_rate", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "labour", "trendWindow": 3}
+      ],
+      "confirmingIndicators": [
+        {"indicator": "Industrial_production_YoY", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "output"},
+        {"indicator": "petroleum_consumption_YoY", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "demand"}
+      ],
+      "conflictingIndicators": [{"indicator": "petroleum_production_YoY", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "supply"}],
+      "persistenceRequirement": 2,
+      "minimumCoverage": 0.70,
+      "evidenceLabel": "Supported historical pattern",
+      "historicalAnalogues": ["2007-2009 oil spike and financial crisis", "2020 pandemic collapse"],
+      "alternativeExplanations": ["Positive supply shock", "Productivity gain", "Currency movement"]
+    },
+    {
+      "id": "real_wages_decline_employment_strength",
+      "name": "Real wages decline despite employment strength",
+      "meaning": "Inflation may be eroding household purchasing power before employment quantities weaken.",
+      "requiredIndicators": [
+        {"indicator": "real_wage_growth", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "wages", "trendWindow": 3},
+        {"indicator": "prime_age_employment_rate", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "employment"},
+        {"indicator": "unemployment_rate", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "employment"}
+      ],
+      "confirmingIndicators": [
+        {"indicator": "energy_CPI_YoY", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "inflation"},
+        {"indicator": "consumer_sentiment", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "household"}
+      ],
+      "conflictingIndicators": [{"indicator": "real_disposable_income_YoY", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "income"}],
+      "persistenceRequirement": 2,
+      "minimumCoverage": 0.70,
+      "evidenceLabel": "Contextual indicator",
+      "historicalAnalogues": ["2021-2023 reopening, war and SPR response"],
+      "alternativeExplanations": ["Broader inflation", "Workforce-composition effects", "Wage measurement effects"]
+    },
+    {
+      "id": "temporary_work_hours_weaken",
+      "name": "Temporary work and weekly hours weaken",
+      "meaning": "Firms may be reducing flexible labour input before broad layoffs.",
+      "requiredIndicators": [
+        {"indicator": "temporary_help_YoY", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "temporary", "trendWindow": 3},
+        {"indicator": "average_weekly_hours_YoY", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "hours", "trendWindow": 3}
+      ],
+      "confirmingIndicators": [
+        {"indicator": "manufacturing_output_YoY", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "manufacturing"},
+        {"indicator": "unemployment_rate", "transformation": "momentum", "expectedDirection": "rising", "group": "unemployment", "trendWindow": 3}
+      ],
+      "conflictingIndicators": [{"indicator": "full_time_employment_share", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "job_quality"}],
+      "persistenceRequirement": 2,
+      "minimumCoverage": 0.70,
+      "evidenceLabel": "Supported historical pattern",
+      "historicalAnalogues": ["2007-2009 oil spike and financial crisis", "2020 pandemic collapse"],
+      "alternativeExplanations": ["Sector rebalancing", "Regulation", "Changes in hiring channels"]
+    },
+    {
+      "id": "energy_burden_rises_faster_income",
+      "name": "Energy burden rises faster than income",
+      "meaning": "Households and firms may have less room for non-energy spending and investment.",
+      "requiredIndicators": [
+        {"indicator": "household_energy_expenditure_share", "transformation": "momentum", "expectedDirection": "rising", "group": "burden", "trendWindow": 3},
+        {"indicator": "energy_expenditure_share_gdp", "transformation": "momentum", "expectedDirection": "rising", "group": "burden", "trendWindow": 3},
+        {"indicator": "real_disposable_income_YoY", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "income"}
+      ],
+      "confirmingIndicators": [
+        {"indicator": "energy_CPI_YoY", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "inflation"},
+        {"indicator": "consumer_sentiment", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "household"}
+      ],
+      "conflictingIndicators": [{"indicator": "real_consumer_spending_YoY", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "spending"}],
+      "persistenceRequirement": 2,
+      "minimumCoverage": 0.70,
+      "evidenceLabel": "Experimental proxy",
+      "historicalAnalogues": ["2007-2009 oil spike and financial crisis", "2021-2023 reopening, war and SPR response"],
+      "alternativeExplanations": ["Cold weather", "Utility regulation", "Income-composition shifts"]
+    },
+    {
+      "id": "industrial_output_weakens_after_oil_spike",
+      "name": "Industrial output weakens after an oil spike",
+      "meaning": "A price shock may be transmitting through costs, margins, and demand.",
+      "requiredIndicators": [
+        {"indicator": "Industrial_production_YoY", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "output"},
+        {"indicator": "real_WTI_YoY", "transformation": "recent_max_percentile", "expectedDirection": "high", "group": "prior_oil_spike", "trendWindow": 6}
+      ],
+      "confirmingIndicators": [
+        {"indicator": "manufacturing_output_YoY", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "manufacturing"},
+        {"indicator": "business_investment_YoY", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "investment"}
+      ],
+      "conflictingIndicators": [{"indicator": "petroleum_production_YoY", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "supply"}],
+      "persistenceRequirement": 2,
+      "minimumCoverage": 0.70,
+      "evidenceLabel": "Supported historical pattern",
+      "historicalAnalogues": ["1979-1982 oil shock and disinflation", "2007-2009 oil spike and financial crisis"],
+      "alternativeExplanations": ["Monetary tightening", "Financial crisis", "External demand shock"]
+    }
+  ]
+}

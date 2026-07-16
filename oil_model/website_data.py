@@ -7,7 +7,8 @@ from pathlib import Path
 from typing import Any
 
 from .analysis import feature, rolling_predictions
-from .storage import Row
+from .classification import build_classification_outputs
+from .storage import Row, write_csv
 
 
 SCHEMA_VERSION = "1.1.0"
@@ -547,6 +548,7 @@ def write_website_chart_data(
     indicator_catalogue_rows: list[Row],
     output_quality_rows: list[Row],
     output_quality_correlations: list[Row],
+    historical_episode_rows: list[Row],
 ) -> list[str]:
     out_dir = root / "website" / "public" / "generated"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -861,7 +863,22 @@ def write_website_chart_data(
             if row.get("target") == "WTI_YoY" and row.get("sample") == "all" and row.get("window_months") in {60, 84, 120} and row.get("lag_months") == 5
         ],
     }
-    shared = {"lag-results.json": lag_payload, "rolling-performance.json": rolling_performance, "regimes.json": {"schemaVersion": SCHEMA_VERSION, "regimes": regimes, "recessions": recession_periods}, "recessions.json": {"schemaVersion": 1, "recessions": recession_periods}, "events.json": {"schemaVersion": SCHEMA_VERSION, "events": events}, "output-quality-correlations.json": {"schemaVersion": SCHEMA_VERSION, "generatedAt": generated_at, "evidenceLabel": "Experimental proxy", "details": correlation_details, "rows": output_quality_correlations}}
+    current_classification, symptom_evaluations, regime_scores, regime_history, expanded_episodes = build_classification_outputs(
+        root, indicator_payloads, historical_episode_rows, generated_at
+    )
+    write_csv(root / "analysis" / "historical_episode_library.csv", expanded_episodes)
+    shared = {
+        "lag-results.json": lag_payload,
+        "rolling-performance.json": rolling_performance,
+        "regimes.json": {"schemaVersion": SCHEMA_VERSION, "regimes": regimes, "recessions": recession_periods},
+        "recessions.json": {"schemaVersion": 1, "recessions": recession_periods},
+        "events.json": {"schemaVersion": SCHEMA_VERSION, "events": events},
+        "output-quality-correlations.json": {"schemaVersion": SCHEMA_VERSION, "generatedAt": generated_at, "evidenceLabel": "Experimental proxy", "details": correlation_details, "rows": output_quality_correlations},
+        "current-classification.json": current_classification,
+        "symptom-evaluations.json": symptom_evaluations,
+        "regime-scores.json": regime_scores,
+        "regime-history.json": regime_history,
+    }
     cross_mapping = {"GM2_YoY": "GM2_YoY", "WTI_YoY": "WTI_YoY", "CI_zscore": "CI_zscore", "household_energy_burden": "household_energy_expenditure_share", "industrial_production": "Industrial_production_YoY", "weekly_hours": "average_weekly_hours_YoY", "temporary_help": "temporary_help_YoY"}
     shared["cross-layer.json"] = {"schemaVersion": SCHEMA_VERSION, "frequency": "monthly", "fields": cross_mapping, "observations": _observations(system_rows, cross_mapping)}
     for filename, payload in shared.items():
@@ -882,7 +899,7 @@ def write_website_chart_data(
             {"id": "production-activity", "label": "Production and economic activity", "indicatorFields": sort_indicator_fields(["Industrial_production_YoY", "manufacturing_output_YoY", "real_consumer_spending_YoY", "business_investment_YoY", "Real_GDP_growth"]), "interpretation": "Production, spending, investment, and GDP indicate whether energy and financial conditions are transmitting into measured activity.", "confidence": "Moderate"},
             {"id": "labour-households", "label": "Labour and household conditions", "indicatorFields": sort_indicator_fields(["average_weekly_hours_YoY", "temporary_help_YoY", "full_time_employment_share", "involuntary_part_time_share", "prime_age_employment_rate", "real_wage_growth", "consumer_sentiment", "unemployment_rate"]), "interpretation": "Hours, job composition, wages, sentiment, and unemployment often move at different stages of household stress.", "confidence": "Moderate"},
         ],
-        "shared": ["lag-results.json", "rolling-performance.json", "regimes.json", "recessions.json", "events.json", "cross-layer.json", "output-quality-correlations.json"],
+        "shared": ["lag-results.json", "rolling-performance.json", "regimes.json", "recessions.json", "events.json", "cross-layer.json", "output-quality-correlations.json", "current-classification.json", "symptom-evaluations.json", "regime-scores.json", "regime-history.json"],
     }
     (out_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, allow_nan=False) + "\n", encoding="utf-8")
     files.append("manifest.json")

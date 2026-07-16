@@ -70,6 +70,27 @@ for (const file of manifest.shared ?? []) {
   }
 }
 
+const currentClassification = JSON.parse(await readFile(resolve(generatedRoot, 'current-classification.json'), 'utf8'))
+const symptomEvaluations = JSON.parse(await readFile(resolve(generatedRoot, 'symptom-evaluations.json'), 'utf8'))
+const regimeScores = JSON.parse(await readFile(resolve(generatedRoot, 'regime-scores.json'), 'utf8'))
+const regimeHistory = JSON.parse(await readFile(resolve(generatedRoot, 'regime-history.json'), 'utf8'))
+const requiredCurrent = ['scope', 'classificationDate', 'asOfDate', 'provisionalClassification', 'confirmedClassification', 'primaryRegime', 'secondaryRegime', 'confidence', 'evidenceCoverage', 'allRegimeScores', 'activeSymptoms', 'emergingSymptoms', 'fadingSymptoms', 'supportingIndicators', 'conflictingIndicators', 'staleIndicators', 'missingIndicators', 'historicalAnalogues', 'ruleVersion', 'dataVintageWarning']
+const missingCurrent = requiredCurrent.filter((field) => !(field in currentClassification))
+if (missingCurrent.length) failures.push(`current-classification.json: missing ${missingCurrent.join(', ')}`)
+if (!currentClassification.scope?.includes('United States energy-economic conditions')) failures.push('current-classification.json: missing formal classification scope')
+for (const clock of ['provisionalClassification', 'confirmedClassification']) {
+  const value = currentClassification[clock]
+  if (!value?.classificationDate || !value?.classification || typeof value.coverage !== 'number') failures.push(`current-classification.json: incomplete ${clock}`)
+}
+const allowedSymptomStatuses = new Set(['active', 'emerging', 'fading', 'inactive', 'insufficient_data'])
+if (symptomEvaluations.evaluations?.length !== 6) failures.push('symptom-evaluations.json: expected six documented symptoms')
+for (const symptom of symptomEvaluations.evaluations ?? []) {
+  if (!symptom.id || !allowedSymptomStatuses.has(symptom.status) || !symptom.evaluationDate || !Array.isArray(symptom.requiredConditionResults)) failures.push(`symptom-evaluations.json: invalid evaluation ${symptom.id ?? '<unknown>'}`)
+}
+if (regimeScores.scores?.length !== 8 || regimeScores.scores.some((row) => typeof row.score !== 'number' || row.score < 0 || row.score > 1)) failures.push('regime-scores.json: expected eight normalized scores')
+const regimeDates = (regimeHistory.rows ?? []).map((row) => row.date)
+if (!regimeDates.length || regimeDates.some((date, index) => index > 0 && date <= regimeDates[index - 1])) failures.push('regime-history.json: dates must be strictly increasing and unique')
+
 if (failures.length) {
   throw new Error(`Chart-data validation failed:\n- ${failures.join('\n- ')}`)
 }
