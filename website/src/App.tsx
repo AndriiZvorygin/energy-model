@@ -20,12 +20,24 @@ const EnergyBurden = lazy(() => import('./pages/EnergyBurden').then((module) => 
 const Labour = lazy(() => import('./pages/Labour').then((module) => ({ default: module.Labour })))
 const Roadmap = lazy(() => import('./pages/Roadmap').then((module) => ({ default: module.Roadmap })))
 const OutputQuality = lazy(() => import('./pages/OutputQuality').then((module) => ({ default: module.OutputQuality })))
+const Canada = lazy(() => import('./pages/Canada').then((module) => ({ default: module.Canada })))
+const CanadaCurrentState = lazy(() => import('./pages/CanadaCurrentState').then((module) => ({ default: module.CanadaCurrentState })))
+const CanadaEnergy = lazy(() => import('./pages/CanadaCurrentState').then((module) => ({ default: module.CanadaEnergy })))
+const CanadaEconomy = lazy(() => import('./pages/CanadaCurrentState').then((module) => ({ default: module.CanadaEconomy })))
+const CanadaLabour = lazy(() => import('./pages/CanadaCurrentState').then((module) => ({ default: module.CanadaLabour })))
+const CanadaHouseholds = lazy(() => import('./pages/CanadaCurrentState').then((module) => ({ default: module.CanadaHouseholds })))
+const CanadaOntario = lazy(() => import('./pages/CanadaCurrentState').then((module) => ({ default: module.CanadaOntario })))
+const CanadaUsComparison = lazy(() => import('./pages/CanadaUsComparison').then((module) => ({ default: module.CanadaUsComparison })))
 
 const navItems = [
   { to: '/', label: 'Home', icon: HomeIcon },
+  { to: '/canada', label: 'Canadian conditions', icon: Map },
+  { to: '/canada/current-state', label: 'Canada current state', icon: Activity },
+  { to: '/canada/ontario', label: 'Ontario context', icon: Map },
+  { to: '/compare/canada-us', label: 'Canada–U.S. comparison', icon: Scale },
   { to: '/overview', label: 'System overview', icon: Network },
   { to: '/system-response', label: 'System response', icon: RouteIcon },
-  { to: '/current-state', label: 'Current state', icon: Activity },
+  { to: '/current-state/us', label: 'U.S. current state', icon: Activity },
   { to: '/regimes', label: 'Regimes', icon: BarChart3 },
   { to: '/symptoms', label: 'Symptoms', icon: AlertTriangle },
   { to: '/indicators', label: 'Indicators', icon: ListFilter },
@@ -79,14 +91,14 @@ export default function App() {
   return (
     <div className="min-h-screen lg:grid lg:grid-cols-[248px_1fr]">
       <header className="sticky top-0 z-40 flex h-16 items-center justify-between border-b border-stone-200 bg-paper/95 px-4 backdrop-blur lg:hidden dark:border-stone-800 dark:bg-[#111715]/95">
-        <NavLink to="/" className="font-semibold text-ink dark:text-white">Oil system research</NavLink>
+        <NavLink to="/" className="font-semibold text-ink dark:text-white">Canadian energy research</NavLink>
         <button type="button" onClick={() => setMenuOpen(!menuOpen)} className="flex h-9 w-9 items-center justify-center rounded-md border border-stone-300 dark:border-stone-700" aria-label="Toggle navigation">{menuOpen ? <X size={19} /> : <Menu size={19} />}</button>
       </header>
 
       <aside className={`${menuOpen ? 'block' : 'hidden'} fixed inset-x-0 top-16 z-30 max-h-[calc(100vh-4rem)] overflow-y-auto border-b border-stone-200 bg-paper p-4 lg:sticky lg:top-0 lg:block lg:h-screen lg:max-h-none lg:border-b-0 lg:border-r lg:p-5 dark:border-stone-800 dark:bg-[#111715]`}>
         <NavLink to="/" className="mb-6 hidden lg:block">
           <span className="block text-xs font-semibold uppercase tracking-widest text-petroleum">Research atlas</span>
-          <span className="mt-2 block max-w-40 text-xl font-semibold leading-6 text-ink dark:text-white">Oil and the macro system</span>
+          <span className="mt-2 block max-w-40 text-xl font-semibold leading-6 text-ink dark:text-white">Canada in the global energy system</span>
         </NavLink>
         <nav className="grid grid-cols-2 gap-1 sm:grid-cols-4 lg:block" aria-label="Research sections">
           {navItems.map(({ to, label, icon: Icon }) => (
@@ -111,7 +123,16 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/overview" element={<Overview />} />
             <Route path="/system-response" element={<SystemResponse />} />
-            <Route path="/current-state" element={<CurrentState />} />
+            <Route path="/current-state" element={<CanadaCurrentState />} />
+            <Route path="/current-state/us" element={<CurrentState />} />
+            <Route path="/canada" element={<Canada />} />
+            <Route path="/canada/current-state" element={<CanadaCurrentState />} />
+            <Route path="/canada/energy" element={<CanadaEnergy />} />
+            <Route path="/canada/economy" element={<CanadaEconomy />} />
+            <Route path="/canada/labour" element={<CanadaLabour />} />
+            <Route path="/canada/households" element={<CanadaHouseholds />} />
+            <Route path="/canada/ontario" element={<CanadaOntario />} />
+            <Route path="/compare/canada-us" element={<CanadaUsComparison />} />
             <Route path="/regimes" element={<Regimes />} />
             <Route path="/symptoms" element={<Symptoms />} />
             <Route path="/indicators" element={<Indicators />} />

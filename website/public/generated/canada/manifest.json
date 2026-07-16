@@ -1,0 +1,440 @@
+{
+  "schemaVersion": 1,
+  "scope": "Canadian energy-economic conditions with global oil-market and global-liquidity inputs.",
+  "generatedAt": "2026-07-16T10:23:39+00:00",
+  "defaultGeography": "Canada",
+  "geographies": [
+    "Global",
+    "Canada",
+    "Ontario",
+    "Alberta",
+    "United States"
+  ],
+  "indicators": [
+    {
+      "id": "global-brent-yoy",
+      "file": "indicators/global-brent-yoy.json",
+      "label": "Brent price growth",
+      "geography": "Global",
+      "layer": "Global oil and liquidity inputs",
+      "core": true,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "global-gm2-yoy",
+      "file": "indicators/global-gm2-yoy.json",
+      "label": "Global M2 growth",
+      "geography": "Global",
+      "layer": "Global oil and liquidity inputs",
+      "core": true,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "global-wti-yoy",
+      "file": "indicators/global-wti-yoy.json",
+      "label": "WTI price growth",
+      "geography": "Global",
+      "layer": "Global oil and liquidity inputs",
+      "core": true,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "alberta-crude-production-growth",
+      "file": "indicators/alberta-crude-production-growth.json",
+      "label": "Alberta crude oil production growth",
+      "geography": "Alberta",
+      "layer": "Physical energy conditions",
+      "core": false,
+      "latestDate": "2026-04-01"
+    },
+    {
+      "id": "canada-policy-rate",
+      "file": "indicators/canada-policy-rate.json",
+      "label": "Bank of Canada policy rate",
+      "geography": "Canada",
+      "layer": "Energy affordability and finance",
+      "core": true,
+      "latestDate": "2026-07-01"
+    },
+    {
+      "id": "canada-m2pp-yoy",
+      "file": "indicators/canada-m2pp-yoy.json",
+      "label": "Canada M2++ growth",
+      "geography": "Canada",
+      "layer": "Energy affordability and finance",
+      "core": false,
+      "latestDate": "2026-04-01"
+    },
+    {
+      "id": "canada-cpi-yoy",
+      "file": "indicators/canada-cpi-yoy.json",
+      "label": "Canada all-items CPI growth",
+      "geography": "Canada",
+      "layer": "Energy affordability and finance",
+      "core": true,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "canada-electricity-cpi-yoy",
+      "file": "indicators/canada-electricity-cpi-yoy.json",
+      "label": "Canada electricity CPI growth",
+      "geography": "Canada",
+      "layer": "Energy affordability and finance",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "canada-energy-cpi-yoy",
+      "file": "indicators/canada-energy-cpi-yoy.json",
+      "label": "Canada energy CPI growth",
+      "geography": "Canada",
+      "layer": "Energy affordability and finance",
+      "core": true,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "canada-food-cpi-yoy",
+      "file": "indicators/canada-food-cpi-yoy.json",
+      "label": "Canada food CPI growth",
+      "geography": "Canada",
+      "layer": "Energy affordability and finance",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "canada-fuel-oil-cpi-yoy",
+      "file": "indicators/canada-fuel-oil-cpi-yoy.json",
+      "label": "Canada fuel oil CPI growth",
+      "geography": "Canada",
+      "layer": "Energy affordability and finance",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "canada-gasoline-cpi-yoy",
+      "file": "indicators/canada-gasoline-cpi-yoy.json",
+      "label": "Canada gasoline CPI growth",
+      "geography": "Canada",
+      "layer": "Energy affordability and finance",
+      "core": true,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "canada-natural-gas-cpi-yoy",
+      "file": "indicators/canada-natural-gas-cpi-yoy.json",
+      "label": "Canada natural gas CPI growth",
+      "geography": "Canada",
+      "layer": "Energy affordability and finance",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "canada-shelter-cpi-yoy",
+      "file": "indicators/canada-shelter-cpi-yoy.json",
+      "label": "Canada shelter CPI growth",
+      "geography": "Canada",
+      "layer": "Energy affordability and finance",
+      "core": true,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "cad-per-usd",
+      "file": "indicators/cad-per-usd.json",
+      "label": "Canadian dollars per U.S. dollar",
+      "geography": "Canada",
+      "layer": "Energy affordability and finance",
+      "core": true,
+      "latestDate": "2026-07-01"
+    },
+    {
+      "id": "canada-real-wti-cad-yoy",
+      "file": "indicators/canada-real-wti-cad-yoy.json",
+      "label": "Real WTI price in Canadian dollars growth",
+      "geography": "Canada",
+      "layer": "Energy affordability and finance",
+      "core": true,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "canada-employment-rate",
+      "file": "indicators/canada-employment-rate.json",
+      "label": "Canada employment rate",
+      "geography": "Canada",
+      "layer": "Labour and households",
+      "core": true,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "canada-employment-relative-population-growth",
+      "file": "indicators/canada-employment-relative-population-growth.json",
+      "label": "Canada employment relative to working-age population growth",
+      "geography": "Canada",
+      "layer": "Labour and households",
+      "core": true,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "canada-full-time-employment",
+      "file": "indicators/canada-full-time-employment.json",
+      "label": "Canada full-time employment",
+      "geography": "Canada",
+      "layer": "Labour and households",
+      "core": false,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "canada-full-time-employment-share",
+      "file": "indicators/canada-full-time-employment-share.json",
+      "label": "Canada full-time employment share",
+      "geography": "Canada",
+      "layer": "Labour and households",
+      "core": true,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "canada-household-debt-service-ratio",
+      "file": "indicators/canada-household-debt-service-ratio.json",
+      "label": "Canada household debt-service ratio",
+      "geography": "Canada",
+      "layer": "Labour and households",
+      "core": true,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "canada-part-time-employment",
+      "file": "indicators/canada-part-time-employment.json",
+      "label": "Canada part-time employment",
+      "geography": "Canada",
+      "layer": "Labour and households",
+      "core": false,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "canada-participation-rate",
+      "file": "indicators/canada-participation-rate.json",
+      "label": "Canada participation rate",
+      "geography": "Canada",
+      "layer": "Labour and households",
+      "core": true,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "canada-prime-age-employment-rate",
+      "file": "indicators/canada-prime-age-employment-rate.json",
+      "label": "Canada prime-age employment rate",
+      "geography": "Canada",
+      "layer": "Labour and households",
+      "core": true,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "canada-unemployment-rate",
+      "file": "indicators/canada-unemployment-rate.json",
+      "label": "Canada unemployment rate",
+      "geography": "Canada",
+      "layer": "Labour and households",
+      "core": true,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "canada-crude-inventory",
+      "file": "indicators/canada-crude-inventory.json",
+      "label": "Canadian crude closing inventory",
+      "geography": "Canada",
+      "layer": "Physical energy conditions",
+      "core": true,
+      "latestDate": "2026-04-01"
+    },
+    {
+      "id": "canada-crude-exports-growth",
+      "file": "indicators/canada-crude-exports-growth.json",
+      "label": "Canadian crude oil export growth",
+      "geography": "Canada",
+      "layer": "Physical energy conditions",
+      "core": true,
+      "latestDate": "2026-04-01"
+    },
+    {
+      "id": "canada-crude-imports-growth",
+      "file": "indicators/canada-crude-imports-growth.json",
+      "label": "Canadian crude oil import growth",
+      "geography": "Canada",
+      "layer": "Physical energy conditions",
+      "core": true,
+      "latestDate": "2026-04-01"
+    },
+    {
+      "id": "canada-crude-production-growth",
+      "file": "indicators/canada-crude-production-growth.json",
+      "label": "Canadian crude oil production growth",
+      "geography": "Canada",
+      "layer": "Physical energy conditions",
+      "core": true,
+      "latestDate": "2026-04-01"
+    },
+    {
+      "id": "canada-electricity-generation-growth",
+      "file": "indicators/canada-electricity-generation-growth.json",
+      "label": "Canadian electricity generation growth",
+      "geography": "Canada",
+      "layer": "Physical energy conditions",
+      "core": false,
+      "latestDate": "2026-04-01"
+    },
+    {
+      "id": "canada-refinery-input-growth",
+      "file": "indicators/canada-refinery-input-growth.json",
+      "label": "Crude input to Canadian refineries growth",
+      "geography": "Canada",
+      "layer": "Physical energy conditions",
+      "core": true,
+      "latestDate": "2026-04-01"
+    },
+    {
+      "id": "canada-manufacturing-gdp-growth",
+      "file": "indicators/canada-manufacturing-gdp-growth.json",
+      "label": "Canada manufacturing real GDP growth",
+      "geography": "Canada",
+      "layer": "Production and output",
+      "core": true,
+      "latestDate": "2026-04-01"
+    },
+    {
+      "id": "canada-mining-oil-gas-gdp-growth",
+      "file": "indicators/canada-mining-oil-gas-gdp-growth.json",
+      "label": "Canada mining and oil-and-gas real GDP growth",
+      "geography": "Canada",
+      "layer": "Production and output",
+      "core": true,
+      "latestDate": "2026-04-01"
+    },
+    {
+      "id": "canada-real-gdp-growth",
+      "file": "indicators/canada-real-gdp-growth.json",
+      "label": "Canada monthly real GDP growth",
+      "geography": "Canada",
+      "layer": "Production and output",
+      "core": true,
+      "latestDate": "2026-04-01"
+    },
+    {
+      "id": "canada-retail-gdp-growth",
+      "file": "indicators/canada-retail-gdp-growth.json",
+      "label": "Canada retail-trade real GDP growth",
+      "geography": "Canada",
+      "layer": "Production and output",
+      "core": false,
+      "latestDate": "2026-04-01"
+    },
+    {
+      "id": "ontario-cpi-yoy",
+      "file": "indicators/ontario-cpi-yoy.json",
+      "label": "Ontario all-items CPI growth",
+      "geography": "Ontario",
+      "layer": "Energy affordability and finance",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-energy-cpi-yoy",
+      "file": "indicators/ontario-energy-cpi-yoy.json",
+      "label": "Ontario energy CPI growth",
+      "geography": "Ontario",
+      "layer": "Energy affordability and finance",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-gasoline-cpi-yoy",
+      "file": "indicators/ontario-gasoline-cpi-yoy.json",
+      "label": "Ontario gasoline CPI growth",
+      "geography": "Ontario",
+      "layer": "Energy affordability and finance",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-shelter-cpi-yoy",
+      "file": "indicators/ontario-shelter-cpi-yoy.json",
+      "label": "Ontario shelter CPI growth",
+      "geography": "Ontario",
+      "layer": "Energy affordability and finance",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-employment-rate",
+      "file": "indicators/ontario-employment-rate.json",
+      "label": "Ontario employment rate",
+      "geography": "Ontario",
+      "layer": "Labour and households",
+      "core": false,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "ontario-employment-relative-population-growth",
+      "file": "indicators/ontario-employment-relative-population-growth.json",
+      "label": "Ontario employment relative to working-age population growth",
+      "geography": "Ontario",
+      "layer": "Labour and households",
+      "core": false,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "ontario-full-time-employment",
+      "file": "indicators/ontario-full-time-employment.json",
+      "label": "Ontario full-time employment",
+      "geography": "Ontario",
+      "layer": "Labour and households",
+      "core": false,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "ontario-full-time-employment-share",
+      "file": "indicators/ontario-full-time-employment-share.json",
+      "label": "Ontario full-time employment share",
+      "geography": "Ontario",
+      "layer": "Labour and households",
+      "core": false,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "ontario-part-time-employment",
+      "file": "indicators/ontario-part-time-employment.json",
+      "label": "Ontario part-time employment",
+      "geography": "Ontario",
+      "layer": "Labour and households",
+      "core": false,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "ontario-participation-rate",
+      "file": "indicators/ontario-participation-rate.json",
+      "label": "Ontario participation rate",
+      "geography": "Ontario",
+      "layer": "Labour and households",
+      "core": false,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "ontario-prime-age-employment-rate",
+      "file": "indicators/ontario-prime-age-employment-rate.json",
+      "label": "Ontario prime-age employment rate",
+      "geography": "Ontario",
+      "layer": "Labour and households",
+      "core": false,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "ontario-unemployment-rate",
+      "file": "indicators/ontario-unemployment-rate.json",
+      "label": "Ontario unemployment rate",
+      "geography": "Ontario",
+      "layer": "Labour and households",
+      "core": false,
+      "latestDate": "2026-06-01"
+    }
+  ],
+  "currentStateFile": "current-state.json",
+  "classificationImplemented": false
+}

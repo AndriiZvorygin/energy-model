@@ -1,0 +1,632 @@
+{
+  "schemaVersion": 1,
+  "id": "canada-crude-imports-growth",
+  "field": "canada_crude_imports_growth",
+  "label": "Canadian crude oil import growth",
+  "description": "imports reflect regional refinery needs as well as domestic supply",
+  "unit": "Barrels",
+  "frequency": "monthly",
+  "status": "derived",
+  "layer": "Physical energy conditions",
+  "geography": "Canada",
+  "geographyLevel": "national",
+  "inputType": "domestic",
+  "domesticOrExternal": "domestic",
+  "directlyComparableAcrossCountries": false,
+  "comparisonLimitations": "Definitions, currencies, industrial structure and release timing differ across countries.",
+  "core": true,
+  "interpretationDirection": "context-dependent",
+  "interpretationLabel": "Direction unclear",
+  "interpretation": "imports reflect regional refinery needs as well as domestic supply",
+  "source": "Statistics Canada, StatCan 25-10-0063-01",
+  "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=2510006301",
+  "sourceIdentifier": "v107757069",
+  "seasonalAdjustment": "not seasonally adjusted",
+  "nominalOrReal": "physical quantity",
+  "startDate": "2017-01-01",
+  "endDate": "2026-04-01",
+  "latest": {
+    "date": "2026-04-01",
+    "sourceDate": "2026-06-30",
+    "value": 14.582229803481184,
+    "previousValue": 23.61405917856021,
+    "oneYearChange": 22.78338860064015,
+    "threeMonthChange": 14.047640203253664,
+    "fourQuarterChange": 22.78338860064015,
+    "historicalPercentile": 77.23214285714286,
+    "percentileSince2000": 77.23214285714286,
+    "distanceFromMedian": 13.537602542015915,
+    "momentum": "falling"
+  },
+  "referenceRanges": {
+    "historicalMedian": 1.0446272614652696,
+    "p10": -19.09787341642009,
+    "p25": -10.554727057440983,
+    "p75": 13.021846741281639,
+    "p90": 23.857659586809863,
+    "minimum": -55.227698097023925,
+    "maximum": 64.59309875393133
+  },
+  "observations": [
+    {
+      "date": "2017-01-01",
+      "value": 8.809914763422855,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2017-02-01",
+      "value": 17.98791847693082,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2017-03-01",
+      "value": -12.671540120654223,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2017-04-01",
+      "value": -2.040679500148601,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2017-05-01",
+      "value": 6.374504755977872,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2017-06-01",
+      "value": 9.350768325331927,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2017-07-01",
+      "value": -6.733412669573724,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2017-08-01",
+      "value": -25.998612793799623,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2017-09-01",
+      "value": 14.651909791101602,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2017-10-01",
+      "value": 15.588035547356194,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2017-11-01",
+      "value": -5.305041715187198,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2017-12-01",
+      "value": 12.455101556061887,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2018-01-01",
+      "value": -8.915454075583662,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2018-02-01",
+      "value": -2.16376951959083,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2018-03-01",
+      "value": 3.715481818679822,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2018-04-01",
+      "value": -11.410923025589659,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2018-05-01",
+      "value": -15.027078337882049,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2018-06-01",
+      "value": -19.23441615765622,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2018-07-01",
+      "value": -8.207504307146928,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2018-08-01",
+      "value": 38.561607815453726,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2018-09-01",
+      "value": -6.048734106226994,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2018-10-01",
+      "value": -13.99558748457832,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2018-11-01",
+      "value": -20.821937039744988,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2018-12-01",
+      "value": -16.393073149091673,
+      "sourceDate": "2020-03-04"
+    },
+    {
+      "date": "2019-01-01",
+      "value": 12.846062802897883,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2019-02-01",
+      "value": 9.454375489042842,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2019-03-01",
+      "value": 6.316410450551713,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2019-04-01",
+      "value": 27.076245435452396,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2019-05-01",
+      "value": 34.404978490084616,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2019-06-01",
+      "value": -3.677565664247473,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2019-07-01",
+      "value": 19.288927380280253,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2019-08-01",
+      "value": 16.6490766529523,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2019-09-01",
+      "value": 20.990614095326364,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2019-10-01",
+      "value": 44.3858125978974,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2019-11-01",
+      "value": 64.59309875393133,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2019-12-01",
+      "value": 21.384050424897303,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2020-01-01",
+      "value": 24.46515872287347,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2020-02-01",
+      "value": 7.079246638692505,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2020-03-01",
+      "value": -3.594532500416381,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2020-04-01",
+      "value": -41.751794569518786,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2020-05-01",
+      "value": -55.227698097023925,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2020-06-01",
+      "value": -17.868988745294935,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2020-07-01",
+      "value": -32.77479829768922,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2020-08-01",
+      "value": -49.716817564827295,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2020-09-01",
+      "value": -25.845624209044683,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2020-10-01",
+      "value": -25.123227814372516,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2020-11-01",
+      "value": -19.984606206635057,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2020-12-01",
+      "value": -1.408409884377293,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2021-01-01",
+      "value": -36.88625425698003,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2021-02-01",
+      "value": -33.00749603897961,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2021-03-01",
+      "value": -12.053664305306688,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2021-04-01",
+      "value": 37.05869935579016,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2021-05-01",
+      "value": 49.5156545098262,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2021-06-01",
+      "value": 8.572669597935189,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2021-07-01",
+      "value": 15.439717425595155,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2021-08-01",
+      "value": 39.752214674464966,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2021-09-01",
+      "value": -5.7292261778366775,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2021-10-01",
+      "value": -14.320060037806826,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2021-11-01",
+      "value": -7.5661967047512935,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2021-12-01",
+      "value": -3.899891743926176,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2022-01-01",
+      "value": -12.261205040518286,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2022-02-01",
+      "value": 11.94923840386426,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2022-03-01",
+      "value": 4.207503052594719,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2022-04-01",
+      "value": -10.766590459544013,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2022-05-01",
+      "value": -0.18444997891098325,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2022-06-01",
+      "value": 24.73236092194362,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2022-07-01",
+      "value": 8.286165928599631,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2022-08-01",
+      "value": 9.089335578392156,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2022-09-01",
+      "value": 9.455303046585616,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2022-10-01",
+      "value": 28.178912579935034,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2022-11-01",
+      "value": 11.722667931368624,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2022-12-01",
+      "value": -8.165159496607021,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2023-01-01",
+      "value": 23.8847262988376,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2023-02-01",
+      "value": 11.057065577252656,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2023-03-01",
+      "value": 9.373934508401206,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2023-04-01",
+      "value": -2.843388888771625,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2023-05-01",
+      "value": 12.92689438611314,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2023-06-01",
+      "value": -9.015762795201676,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2023-07-01",
+      "value": -1.022273053454681,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2023-08-01",
+      "value": 7.013761011848341,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2023-09-01",
+      "value": 5.806624624400203,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2023-10-01",
+      "value": -10.48410592340664,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2023-11-01",
+      "value": -10.336636704135959,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2023-12-01",
+      "value": -5.7990246039399285,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2024-01-01",
+      "value": -3.8846357394599518,
+      "sourceDate": "2026-03-02"
+    },
+    {
+      "date": "2024-02-01",
+      "value": -13.556278515933451,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2024-03-01",
+      "value": -5.454660754632834,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2024-04-01",
+      "value": 13.656594759126794,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2024-05-01",
+      "value": -13.56765888385586,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2024-06-01",
+      "value": 16.142427719533714,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2024-07-01",
+      "value": 9.024338505784701,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2024-08-01",
+      "value": -12.960461289407643,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2024-09-01",
+      "value": 1.5546649227030196,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2024-10-01",
+      "value": 13.306703806787134,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2024-11-01",
+      "value": 15.346031798877814,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2024-12-01",
+      "value": 12.85866660531443,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2025-01-01",
+      "value": -2.0893512796598346,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2025-02-01",
+      "value": 19.088595722045532,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2025-03-01",
+      "value": -15.24223846712831,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2025-04-01",
+      "value": -8.20115879715897,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2025-05-01",
+      "value": -10.903302416442262,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2025-06-01",
+      "value": -5.603225026490466,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2025-07-01",
+      "value": 15.053132562174888,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2025-08-01",
+      "value": 3.16738657701201,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2025-09-01",
+      "value": -1.1456894834464548,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2025-10-01",
+      "value": 3.5113203136410753,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2025-11-01",
+      "value": -13.195900732528054,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2025-12-01",
+      "value": 3.3689085605832947,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2026-01-01",
+      "value": 0.5345896002275197,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2026-02-01",
+      "value": 12.63725468709076,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2026-03-01",
+      "value": 23.61405917856021,
+      "sourceDate": "2026-06-01"
+    },
+    {
+      "date": "2026-04-01",
+      "value": 14.582229803481184,
+      "sourceDate": "2026-06-30"
+    }
+  ],
+  "confirmingIndicators": [
+    "Production, trade, refinery inputs and inventories",
+    "Benchmark oil prices"
+  ],
+  "conflictingIndicators": [
+    "Weak domestic demand or strong export demand"
+  ],
+  "evidenceChecks": [],
+  "confidenceLevel": "medium",
+  "evidenceLabel": "Contextual indicator",
+  "calculation": {
+    "formula": "Year-over-year percent change",
+    "explanation": "Year-over-year percent change",
+    "example": "Latest observation: 14.58 Barrels at 2026-04."
+  },
+  "limitations": [
+    "Statistics Canada may revise recent and historical observations.",
+    "Cross-country definitions differ."
+  ],
+  "generatedAt": "2026-07-16T10:23:39+00:00"
+}

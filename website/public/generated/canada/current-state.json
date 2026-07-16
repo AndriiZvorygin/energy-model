@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "scope": "Canadian energy-economic conditions with global oil-market and global-liquidity inputs.",
+  "generatedAt": "2026-07-16T10:23:39+00:00",
+  "status": "Canadian regime status: evidence assembled, classification pending calibration.",
+  "latestObservationDate": "2026-07-01",
+  "layers": [
+    {
+      "id": "global-oil-and-liquidity-inputs",
+      "label": "Global oil and liquidity inputs",
+      "indicatorIds": [
+        "global-brent-yoy",
+        "global-gm2-yoy",
+        "global-wti-yoy"
+      ]
+    },
+    {
+      "id": "physical-energy-conditions",
+      "label": "Physical energy conditions",
+      "indicatorIds": [
+        "canada-crude-inventory",
+        "canada-crude-exports-growth",
+        "canada-crude-imports-growth",
+        "canada-crude-production-growth",
+        "canada-electricity-generation-growth",
+        "canada-refinery-input-growth"
+      ]
+    },
+    {
+      "id": "energy-affordability-and-finance",
+      "label": "Energy affordability and finance",
+      "indicatorIds": [
+        "canada-policy-rate",
+        "canada-m2pp-yoy",
+        "canada-cpi-yoy",
+        "canada-electricity-cpi-yoy",
+        "canada-energy-cpi-yoy",
+        "canada-food-cpi-yoy",
+        "canada-fuel-oil-cpi-yoy",
+        "canada-gasoline-cpi-yoy",
+        "canada-natural-gas-cpi-yoy",
+        "canada-shelter-cpi-yoy",
+        "cad-per-usd",
+        "canada-real-wti-cad-yoy"
+      ]
+    },
+    {
+      "id": "production-and-output",
+      "label": "Production and output",
+      "indicatorIds": [
+        "canada-manufacturing-gdp-growth",
+        "canada-mining-oil-gas-gdp-growth",
+        "canada-real-gdp-growth",
+        "canada-retail-gdp-growth"
+      ]
+    },
+    {
+      "id": "labour-and-households",
+      "label": "Labour and households",
+      "indicatorIds": [
+        "canada-employment-rate",
+        "canada-employment-relative-population-growth",
+        "canada-full-time-employment",
+        "canada-full-time-employment-share",
+        "canada-household-debt-service-ratio",
+        "canada-part-time-employment",
+        "canada-participation-rate",
+        "canada-prime-age-employment-rate",
+        "canada-unemployment-rate"
+      ]
+    }
+  ],
+  "notes": [
+    "No Canadian symptom or regime classifier is calculated in this release.",
+    "Global oil and liquidity inputs are inherited without mixing Canadian, Ontario, and U.S. values into a score."
+  ]
+}

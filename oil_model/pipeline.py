@@ -8,6 +8,7 @@ from .adapters import BisAdapter, BojAdapter, ChinaM2Adapter, EcbAdapter, EiaInv
 from .analysis import energy_gdp_suite, final_reporting_suite, integrated_synthesis_suite, lag_correlations, oil_equity_robustness_suite, oil_equity_suite, physical_realised_price_suite, regression_suite, second_stage_suite, third_stage_suite, uso_suite
 from .audit import terminal_summary, write_audit_outputs
 from .cache import RawCache
+from .canada import build_canadian_outputs
 from .charts import make_charts
 from .storage import Store, maybe_write_parquet, write_csv
 from .output_quality import build_output_quality_dataset, energy_output_quality_tests, output_quality_markdown
@@ -171,6 +172,7 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
         "GDPC1": gdpc1,
     }
     system_response_core = build_core_dataset(rows, system_response_series)
+    canadian_catalogue, _canadian_payloads = build_canadian_outputs(root, rows, system_response_core, cache)
     system_response_catalogue = indicator_catalogue(system_response_series, system_response_core)
     system_response_current = current_state(system_response_core)
     energy_burden_rows, energy_burden_findings = energy_burden_analysis(system_response_core)
@@ -269,6 +271,7 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
         store.write_rows("historical_episode_library", historical_episode_rows)
         store.write_rows("economic_output_quality", output_quality_rows)
         store.write_rows("energy_output_quality_correlations", output_quality_correlation_rows)
+        store.write_rows("canadian_indicator_catalogue", canadian_catalogue)
         if bis_rows:
             store.write_rows("bis_total_credit_quarterly", bis_rows)
     finally:

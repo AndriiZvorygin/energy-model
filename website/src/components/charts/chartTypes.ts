@@ -84,7 +84,7 @@ export type ChartState = {
   lag?: number
 }
 
-export type IndicatorObservation = { date: string; value: number | null }
+export type IndicatorObservation = { date: string; value: number | null; sourceDate?: string }
 
 export type IndicatorDataset = {
   schemaVersion: 1
@@ -105,6 +105,7 @@ export type IndicatorDataset = {
   endDate: string
   latest: {
     date: string
+    sourceDate?: string
     value: number
     previousValue: number | null
     oneYearChange: number | null
@@ -140,6 +141,15 @@ export type IndicatorDataset = {
   calculation: ChartCalculation
   limitations: string[]
   generatedAt: string
+  geography?: 'Global' | 'Canada' | 'Ontario' | 'Alberta' | 'United States'
+  geographyLevel?: 'global' | 'national' | 'provincial'
+  domesticOrExternal?: 'domestic' | 'external'
+  directlyComparableAcrossCountries?: boolean
+  comparisonLimitations?: string
+  seasonalAdjustment?: string
+  nominalOrReal?: string
+  sourceIdentifier?: string
+  core?: boolean
 }
 
 export type GeneratedManifest = {

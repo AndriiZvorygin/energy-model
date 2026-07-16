@@ -45,6 +45,8 @@ REQUIRED_ANALYSIS = [
     "analysis/economic_output_quality.csv",
     "analysis/energy_output_quality_correlations.csv",
     "analysis/website_visual_audit.md",
+    "analysis/canadian_data_audit.md",
+    "analysis/canadian_indicator_catalogue.csv",
 ]
 
 REQUIRED_CHARTS = [
@@ -129,6 +131,12 @@ REQUIRED_DATA = [
     "website/public/generated/indicators/ci-zscore.json",
     "website/public/generated/indicators/gm2-yoy.json",
     "website/public/generated/indicators/unemployment-rate.json",
+    "data/processed/canadian_core.csv",
+    "website/public/generated/canada/manifest.json",
+    "website/public/generated/canada/current-state.json",
+    "website/public/generated/canada/canada-us-comparison.json",
+    "website/public/generated/canada/indicators/canada-unemployment-rate.json",
+    "website/public/generated/canada/indicators/ontario-unemployment-rate.json",
 ]
 
 

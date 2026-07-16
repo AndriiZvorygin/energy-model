@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -171,6 +172,8 @@ class CoreTests(unittest.TestCase):
             "economic_output_quality.md",
             "economic_output_quality.csv",
             "energy_output_quality_correlations.csv",
+            "canadian_data_audit.md",
+            "canadian_indicator_catalogue.csv",
         ]
         required_charts = [
             "residual_vs_ci_zscore.png",
@@ -236,6 +239,7 @@ class CoreTests(unittest.TestCase):
                 patch("oil_model.pipeline.integrated_synthesis_suite", fake_integrated_synthesis_suite),
                 patch("oil_model.pipeline.make_charts", fake_make_charts),
                 patch("oil_model.pipeline.make_system_response_charts", fake_make_system_response_charts),
+                patch("oil_model.pipeline.build_canadian_outputs", fake_build_canadian_outputs),
             ):
                 build(root)
             self.assertTrue((root / "data" / "raw").exists())
@@ -245,6 +249,8 @@ class CoreTests(unittest.TestCase):
                 self.assertTrue((root / "charts" / filename).exists(), filename)
             for filename in ["manifest.json", "oil-price-layers.json", "gm2-oil-lead.json", "oil-residual-ci.json", "energy-gdp.json", "oil-equities.json", "uso-tracking.json", "lag-results.json", "regimes.json", "events.json", "cross-layer.json", "current-classification.json", "symptom-evaluations.json", "regime-scores.json", "regime-history.json"]:
                 self.assertTrue((root / "website" / "public" / "generated" / filename).exists(), filename)
+            for filename in ["manifest.json", "current-state.json", "canada-us-comparison.json", "indicators/canada-unemployment-rate.json", "indicators/ontario-unemployment-rate.json"]:
+                self.assertTrue((root / "website" / "public" / "generated" / "canada" / filename).exists(), filename)
 
 
 def fake_series(name: str, observations: list[tuple[str, float]]):
@@ -419,6 +425,25 @@ def fake_physical_realised_price_suite(rows):
 def fake_integrated_synthesis_suite(lag_rows, rolling_extended_rows, residual_diagnostic_rows, oil_equity_rows, energy_gdp_rows):
     row = {"layer": "fake", "signal": "fake", "target": "fake"}
     return [row], "# Atlas\n", "# System\n"
+
+
+def fake_build_canadian_outputs(root, global_rows, us_rows, cache):
+    from oil_model.storage import write_csv
+
+    write_csv(root / "analysis" / "canadian_indicator_catalogue.csv", [{"indicator_name": "Fake Canada"}])
+    (root / "analysis" / "canadian_data_audit.md").write_text("# Canadian Data Audit\n", encoding="utf-8")
+    write_csv(root / "data" / "processed" / "canadian_core.csv", [{"indicator_id": "canada-unemployment-rate", "date": "2020-01-01", "value": 5.0}])
+    out = root / "website" / "public" / "generated" / "canada"
+    indicators = out / "indicators"
+    indicators.mkdir(parents=True, exist_ok=True)
+    payload = {"schemaVersion": 1, "id": "canada-unemployment-rate", "field": "canada_unemployment_rate", "label": "Canada unemployment", "description": "fake", "unit": "percent", "frequency": "monthly", "status": "measured", "layer": "Labour and households", "geography": "Canada", "geographyLevel": "national", "domesticOrExternal": "domestic", "directlyComparableAcrossCountries": True, "comparisonLimitations": "fake", "interpretationDirection": "context-dependent", "interpretationLabel": "Direction unclear", "interpretation": "fake", "source": "fake", "sourceUrl": "https://example.test", "sourceIdentifier": "fake", "seasonalAdjustment": "seasonally adjusted", "nominalOrReal": "rate", "core": True, "startDate": "2020-01-01", "endDate": "2020-01-01", "latest": {"date": "2020-01-01", "sourceDate": "2020-02-01", "value": 5.0, "previousValue": None, "oneYearChange": None, "threeMonthChange": None, "fourQuarterChange": None, "historicalPercentile": 50.0, "percentileSince2000": 50.0, "distanceFromMedian": 0.0, "momentum": "steady"}, "referenceRanges": {"historicalMedian": 5.0, "p10": 5.0, "p25": 5.0, "p75": 5.0, "p90": 5.0, "minimum": 5.0, "maximum": 5.0}, "observations": [{"date": "2020-01-01", "value": 5.0, "sourceDate": "2020-02-01"}], "confirmingIndicators": [], "conflictingIndicators": [], "evidenceChecks": [], "confidenceLevel": "medium", "evidenceLabel": "Contextual indicator", "calculation": {"formula": "fake", "explanation": "fake", "example": "fake"}, "limitations": ["fake"], "generatedAt": "2020-01-01"}
+    (indicators / "canada-unemployment-rate.json").write_text(json.dumps(payload), encoding="utf-8")
+    ontario = {**payload, "id": "ontario-unemployment-rate", "field": "ontario_unemployment_rate", "label": "Ontario unemployment", "geography": "Ontario", "geographyLevel": "provincial", "core": False}
+    (indicators / "ontario-unemployment-rate.json").write_text(json.dumps(ontario), encoding="utf-8")
+    (out / "manifest.json").write_text(json.dumps({"schemaVersion": 1, "defaultGeography": "Canada", "classificationImplemented": False, "indicators": []}), encoding="utf-8")
+    (out / "current-state.json").write_text(json.dumps({"status": "Canadian regime status: evidence assembled, classification pending calibration."}), encoding="utf-8")
+    (out / "canada-us-comparison.json").write_text(json.dumps({"datasets": []}), encoding="utf-8")
+    return [{"indicator_name": "Fake Canada"}], [payload, ontario]
 
 
 def fake_make_charts(rows, lag_rows, out_dir, residual_rows=None, rolling_rows=None, target_rows=None, oil_equity_rows=None, oil_equity_return_rows=None, uso_lead_lag_rows=None, uso_tracking_rows=None, uso_model_rows=None, physical_price_rows=None, energy_gdp_rows=None, energy_gdp_model_rows=None, system_signal_rows=None):

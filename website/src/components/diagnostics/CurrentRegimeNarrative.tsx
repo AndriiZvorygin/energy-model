@@ -30,7 +30,7 @@ export function buildPlainLanguageSummary(classification: CurrentClassification)
 }
 
 function IndicatorEvidence({ item }: { item: DiagnosticCondition }) {
-  return <li className="py-3"><Link to={`/current-state?indicator=${slug(item.indicator)}`} className="font-medium underline decoration-stone-300 underline-offset-2 hover:text-petroleum dark:decoration-stone-700">{item.label}</Link><p className="mt-1 text-xs leading-5 text-stone-500">{item.value === null ? 'Value unavailable' : `${item.value.toLocaleString(undefined, { maximumFractionDigits: 2 })}${item.unit ? ` ${item.unit}` : ''}`} · expected {item.expectedDirection} · source {sourceMonth(item.sourceDate)} · strength {scorePct(item.strength)}</p></li>
+  return <li className="py-3"><Link to={`/current-state/us?indicator=${slug(item.indicator)}`} className="font-medium underline decoration-stone-300 underline-offset-2 hover:text-petroleum dark:decoration-stone-700">{item.label}</Link><p className="mt-1 text-xs leading-5 text-stone-500">{item.value === null ? 'Value unavailable' : `${item.value.toLocaleString(undefined, { maximumFractionDigits: 2 })}${item.unit ? ` ${item.unit}` : ''}`} · expected {item.expectedDirection} · source {sourceMonth(item.sourceDate)} · strength {scorePct(item.strength)}</p></li>
 }
 
 function EvidenceColumn({ title, children }: { title: string; children: React.ReactNode }) {

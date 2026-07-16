@@ -32,7 +32,7 @@ export function IndicatorHistoryChart({ indicator, onSelectIndicator }: { indica
     calculation: indicator.calculation,
     patternsToWatch: [`Current percentile: ${indicator.latest.historicalPercentile?.toFixed(1) ?? 'not available'}`, `Momentum is ${indicator.latest.momentum}; confirm with ${indicator.confirmingIndicators.join(', ') || 'other indicators in the same layer'}.`],
     limitations: indicator.limitations,
-    sourceNotes: [`${indicator.source}. Latest observation: ${indicator.latest.date}.`],
+    sourceNotes: [`${indicator.source}. Latest observation: ${indicator.latest.date}.${indicator.latest.sourceDate ? ` Source release or recorded source date: ${indicator.latest.sourceDate}.` : ''}`],
     transformation: { type: 'raw', referenceStart: indicator.startDate, referenceEnd: indicator.endDate, mean: null, standardDeviation: null },
   }
   const downloadCsv = () => {

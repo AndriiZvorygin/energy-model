@@ -30,6 +30,12 @@ npm run build
 
 The live diagnostic contract consists of `current-classification.json`, `symptom-evaluations.json`, `regime-scores.json`, and `regime-history.json`. These files are generated from the same 27 indicator histories used by Current State. The website only renders the published evidence; it never embeds or recalculates symptom and regime rules.
 
+## Canadian Namespace
+
+`website/public/generated/canada/` contains `manifest.json`, `current-state.json`, `canada-us-comparison.json`, and `indicators/`. Canada is the domestic website default, but this namespace deliberately contains no classifier output. Each Canadian or provincial indicator adds geography, national/provincial level, domestic/external input status, cross-country comparability, seasonal adjustment, nominal/real status, source identifier, per-observation source date and revision limitations.
+
+Statistics Canada WDS release timestamps are preserved. Bank of Canada Valet observations retain their native observation dates and the pipeline retrieval timestamp. These are latest-vintage histories; they do not yet constitute a complete real-time vintage archive.
+
 The website build fails when a manifest dataset is missing required metadata, units, sources, final observation dates, ordered ISO dates, or unique dates.
 
 Each indicator file includes latest and previous values, 3- and 12-month context, full-history and post-2000 percentiles, momentum, a seven-point historical range, interpretation direction and label, source URL, confirming/conflicting indicators, calculation details, and full observations with explicit `null` values. The Current State page loads this manifest lazily and does not duplicate readings in React source.

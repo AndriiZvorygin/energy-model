@@ -1,6 +1,6 @@
 # Energy Model: Oil, Liquidity, Inventory, and the Real Economy
 
-This project explores how financial conditions, energy markets, physical resource constraints, and economic activity interact over time.
+This Canadian-centred project explores how financial conditions, energy markets, physical resource constraints, and economic activity interact over time. Global liquidity and oil benchmarks remain upstream inputs, while existing United States evidence is retained as a comparison dataset.
 
 It began as an oil-market model linking global liquidity to oil-price momentum and is expanding toward broader energy-system modelling. The repository combines a reproducible Python research pipeline with a Node.js educational website that explains the evidence for non-technical readers.
 
@@ -25,6 +25,14 @@ Economic activity
 ```
 
 The locked oil model uses year-over-year growth in G4 global M2, lagged five months, to describe WTI and Brent price momentum. Comparative inventory, equities, tradable oil exposure, realised crude prices, energy consumption, industrial production, and GDP are analysed as related but conceptually separate layers.
+
+## Canadian Evidence Layer
+
+Canada is now the website's primary domestic geography. The first release publishes 25 core global/Canadian indicators plus Ontario and Alberta context across physical crude balances, consumer energy prices, Canadian-dollar real oil, monetary and financial conditions, monthly GDP by industry, labour utilization, employment structure and household debt service.
+
+The formal scope is **Canadian energy-economic conditions with global oil-market and global-liquidity inputs.** Canadian evidence is assembled for later calibration; no Canadian symptom or regime classifier is implemented. The existing U.S. classifier remains unchanged and available only as a comparison layer.
+
+See [the Canadian data audit](analysis/canadian_data_audit.md), [indicator catalogue](analysis/canadian_indicator_catalogue.csv), and [processed long-form core](data/processed/canadian_core.csv).
 
 ## Research Framework
 
@@ -88,7 +96,7 @@ The Python pipeline owns data acquisition, transformations, models, validation, 
 
 ## Website
 
-The educational website uses Node.js, TypeScript, Vite, React, Tailwind CSS, Recharts, and React Router. It presents the model as an explanatory research atlas rather than a trading dashboard.
+The educational website uses Node.js, TypeScript, Vite, React, Tailwind CSS, Recharts, and React Router. It presents Canadian conditions as the domestic default, with Ontario regional context, global inputs and a separate United States comparison.
 
 Its system-response sections provide current readings by layer, live symptom evaluation, transparent regime candidates, a searchable indicator catalogue, historical episode comparison, energy-burden and labour diagnostics, and an explicit implemented/experimental/proposed roadmap. The formal classification scope is United States energy-economic conditions with global oil-market and global-liquidity inputs. Separate provisional monthly and confirmed quarterly clocks preserve coverage, freshness, source-date, and revised-data warnings; mixed and unclassified outcomes remain available. Rules live in `config/symptom_rules.json` and `config/regime_rules.json`, not in React components.
 
@@ -111,6 +119,10 @@ Create a production build with `npm run build`. See [website/README.md](website/
 ## Data Sources
 
 Primary public sources include:
+
+- **Statistics Canada:** Canadian and Ontario CPI, labour-force rates, monthly real GDP by industry, crude production/trade/refinery/inventory balances, electricity generation, and household debt service.
+- **Bank of Canada:** policy rate, CAD/USD exchange rate, and Canadian M2++ through the official Valet API.
+- **Canada Energy Regulator:** documented public commodity-data adapter and physical-market source audit; some confidential or unstable series remain proposed.
 
 - **Federal Reserve Economic Data (FRED):** U.S. M2, WTI, Brent, exchange rates, CPI, S&P 500, U.S. real GDP, and industrial production.
 - **Bureau of Economic Analysis and Bureau of Labor Statistics via FRED:** energy expenditures, disposable income, spending, investment, productivity, hours, wages, employment structure, and energy CPI.

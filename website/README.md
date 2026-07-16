@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This Node.js/TypeScript application explains the Energy Model for human readers. It presents global liquidity, benchmark and realised oil prices, comparative inventory, tradable oil exposure, equities, energy throughput, economic activity, affordability, labour, and household consequences as related analytical layers.
+This Node.js/TypeScript application explains a Canadian-centred Energy Model for human readers. Canada is the default domestic geography; Ontario provides regional context, global liquidity and benchmark oil remain upstream inputs, and the United States remains a separate comparison dataset.
 
 The website is an educational research atlas, not a trading dashboard. It does not run models or fetch research data in the browser.
 
@@ -19,12 +19,20 @@ The Python pipeline writes chart-ready JSON under `public/generated/`. The websi
 
 `public/generated/charts/` contains multi-series research views. `public/generated/indicators/` contains one complete historical series and interpretation contract per Current State indicator. `manifest.json` indexes both collections. The Vite build validates required metadata, units, chronological dates, duplicate dates, null handling, reference ranges, and interpretation metadata before compiling React.
 
+`public/generated/canada/` is an independent namespace containing its own manifest, current-state evidence, country-comparison foundation, and indicator histories with geography, source-release dates, seasonal adjustment, nominal/real status and comparability limitations. It does not contain Canadian symptoms or regime scores.
+
 The system-response routes consume the generated indicator catalogue, current-state table, energy-burden validation, physical-tightness summary, labour lead scan, historical episode library, symptom evaluations, and regime scores. The browser does not recalculate those results. Version-controlled rules live in `../config/symptom_rules.json` and `../config/regime_rules.json`; Python publishes separate monthly-nowcast and confirmed-quarterly results, including coverage, freshness, conflicts, persistence, sensitivity, and revised-data warnings.
 
 ## Research Sections
 
+- `/canada`: Canadian evidence overview
+- `/canada/current-state`: default Canadian Current State
+- `/canada/energy`, `/canada/economy`, `/canada/labour`, `/canada/households`: Canadian evidence layers
+- `/canada/ontario`: Ontario CPI and labour context with global inputs
+- `/compare/canada-us`: native-source country comparisons
+- `/current-state/us`: existing U.S. Current State and classifier evidence
 - `/system-response`: complete transmission framework
-- `/current-state`: dated readings grouped by five evidence layers
+- `/current-state`: Canadian Current State alias
 - `/regimes`: interpretable system-state sequence
 - `/symptoms`: observable patterns, confirmations, and alternatives
 - `/indicators`: searchable source and definition catalogue

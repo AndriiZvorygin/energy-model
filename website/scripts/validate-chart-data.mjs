@@ -74,6 +74,8 @@ const currentClassification = JSON.parse(await readFile(resolve(generatedRoot, '
 const symptomEvaluations = JSON.parse(await readFile(resolve(generatedRoot, 'symptom-evaluations.json'), 'utf8'))
 const regimeScores = JSON.parse(await readFile(resolve(generatedRoot, 'regime-scores.json'), 'utf8'))
 const regimeHistory = JSON.parse(await readFile(resolve(generatedRoot, 'regime-history.json'), 'utf8'))
+const canadaManifest = JSON.parse(await readFile(resolve(generatedRoot, 'canada/manifest.json'), 'utf8'))
+const canadaCurrentState = JSON.parse(await readFile(resolve(generatedRoot, 'canada/current-state.json'), 'utf8'))
 const requiredCurrent = ['scope', 'classificationDate', 'asOfDate', 'provisionalClassification', 'confirmedClassification', 'primaryRegime', 'secondaryRegime', 'confidence', 'evidenceCoverage', 'allRegimeScores', 'activeSymptoms', 'emergingSymptoms', 'fadingSymptoms', 'supportingIndicators', 'conflictingIndicators', 'staleIndicators', 'missingIndicators', 'historicalAnalogues', 'ruleVersion', 'dataVintageWarning']
 const missingCurrent = requiredCurrent.filter((field) => !(field in currentClassification))
 if (missingCurrent.length) failures.push(`current-classification.json: missing ${missingCurrent.join(', ')}`)
@@ -90,6 +92,25 @@ for (const symptom of symptomEvaluations.evaluations ?? []) {
 if (regimeScores.scores?.length !== 8 || regimeScores.scores.some((row) => typeof row.score !== 'number' || row.score < 0 || row.score > 1)) failures.push('regime-scores.json: expected eight normalized scores')
 const regimeDates = (regimeHistory.rows ?? []).map((row) => row.date)
 if (!regimeDates.length || regimeDates.some((date, index) => index > 0 && date <= regimeDates[index - 1])) failures.push('regime-history.json: dates must be strictly increasing and unique')
+if (canadaManifest.defaultGeography !== 'Canada' || canadaManifest.classificationImplemented !== false || !Array.isArray(canadaManifest.indicators)) failures.push('canada/manifest.json: invalid geography or classifier status')
+const canadaCore = canadaManifest.indicators.filter((item) => item.core && ['Global', 'Canada'].includes(item.geography))
+if (canadaCore.length < 15 || canadaCore.length > 25) failures.push(`canada/manifest.json: expected 15-25 core indicators, received ${canadaCore.length}`)
+if (canadaCurrentState.status !== 'Canadian regime status: evidence assembled, classification pending calibration.') failures.push('canada/current-state.json: missing pending-calibration status')
+for (const entry of canadaManifest.indicators ?? []) {
+  let indicator
+  try {
+    indicator = JSON.parse(await readFile(resolve(generatedRoot, 'canada', entry.file), 'utf8'))
+  } catch (error) {
+    failures.push(`canada/${entry.file}: ${error.message}`)
+    continue
+  }
+  const required = ['id', 'label', 'unit', 'frequency', 'geography', 'geographyLevel', 'domesticOrExternal', 'directlyComparableAcrossCountries', 'comparisonLimitations', 'seasonalAdjustment', 'nominalOrReal', 'sourceIdentifier', 'latest', 'observations']
+  const missing = required.filter((field) => !(field in indicator))
+  if (missing.length) failures.push(`canada/${entry.file}: missing ${missing.join(', ')}`)
+  const dates = (indicator.observations ?? []).map((row) => row.date)
+  if (dates.some((date, index) => index > 0 && date <= dates[index - 1])) failures.push(`canada/${entry.file}: dates must be chronological and unique`)
+  if ((indicator.observations ?? []).some((row) => !row.sourceDate)) failures.push(`canada/${entry.file}: missing source dates`)
+}
 
 if (failures.length) {
   throw new Error(`Chart-data validation failed:\n- ${failures.join('\n- ')}`)

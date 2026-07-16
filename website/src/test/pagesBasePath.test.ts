@@ -9,6 +9,8 @@ describe('GitHub Pages configuration', () => {
     const pagesScript = readFileSync(resolve(root, 'scripts/prepare-pages.mjs'), 'utf8')
     expect(pagesScript).toContain("resolve(distRoot, '404.html')")
     expect(pagesScript).toContain("'output-quality'")
+    expect(pagesScript).toContain("'canada/current-state'")
+    expect(pagesScript).toContain("'compare/canada-us'")
     expect(pagesScript).toContain("resolve(routeDirectory, 'index.html')")
   })
 })
