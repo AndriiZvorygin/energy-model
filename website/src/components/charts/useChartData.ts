@@ -5,9 +5,10 @@ import { validateDataset } from './chartUtils'
 const base = import.meta.env.BASE_URL
 const cache = new Map<string, unknown>()
 
-async function loadJson<T>(file: string): Promise<T> {
-  if (cache.has(file)) return cache.get(file) as T
-  const response = await fetch(`${base}generated/${file}`)
+async function loadJson<T>(file: string, refresh = false): Promise<T> {
+  if (!refresh && cache.has(file)) return cache.get(file) as T
+  const version = refresh ? `?refresh=${Date.now()}` : ''
+  const response = await fetch(`${base}generated/${file}${version}`, { cache: 'no-store' })
   if (!response.ok) throw new Error(`Could not load chart data: ${file} (${response.status})`)
   const data = await response.json() as T
   cache.set(file, data)
@@ -61,6 +62,10 @@ export function useGeneratedManifest() {
   useEffect(() => {
     let active = true
     loadJson<GeneratedManifest>('manifest.json').then((data) => {
+      if (!data.currentState) return loadJson<GeneratedManifest>('manifest.json', true)
+      return data
+    }).then((data) => {
+      if (!data.currentState) throw new Error('Current-state metadata is unavailable after refreshing the generated manifest.')
       if (active) setManifest(data)
     }).catch((reason: unknown) => active && setError(reason instanceof Error ? reason.message : String(reason)))
     return () => { active = false }
