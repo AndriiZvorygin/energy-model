@@ -254,7 +254,7 @@ class CoreTests(unittest.TestCase):
                 self.assertTrue((root / "analysis" / filename).exists(), filename)
             for filename in required_charts:
                 self.assertTrue((root / "charts" / filename).exists(), filename)
-            for filename in ["manifest.json", "oil-price-layers.json", "gm2-oil-lead.json", "oil-residual-ci.json", "energy-gdp.json", "oil-equities.json", "uso-tracking.json", "lag-results.json", "regimes.json", "events.json", "cross-layer.json", "current-classification.json", "symptom-evaluations.json", "regime-scores.json", "regime-history.json", "evidence-summary.json", "presentation-manifest.json"]:
+            for filename in ["manifest.json", "oil-price-layers.json", "gm2-oil-lead.json", "oil-residual-ci.json", "ci-wti-annual.json", "energy-gdp.json", "oil-equities.json", "uso-tracking.json", "lag-results.json", "regimes.json", "events.json", "cross-layer.json", "current-classification.json", "symptom-evaluations.json", "regime-scores.json", "regime-history.json", "evidence-summary.json", "presentation-manifest.json"]:
                 self.assertTrue((root / "website" / "public" / "generated" / filename).exists(), filename)
             for filename in ["manifest.json", "current-state.json", "canada-us-comparison.json", "indicators/canada-unemployment-rate.json", "indicators/ontario-unemployment-rate.json"]:
                 self.assertTrue((root / "website" / "public" / "generated" / "canada" / filename).exists(), filename)

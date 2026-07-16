@@ -646,7 +646,8 @@ def make_system_response_charts(
     out_dir.mkdir(parents=True, exist_ok=True)
     _chain_chart(out_dir / "system_response_chain.png")
     _current_layers_chart(current, out_dir / "current_state_layers.png")
-    _timeseries_panels(core, [("CI_zscore", "CI z-score"), ("petroleum_production_YoY", "Production YoY"), ("petroleum_consumption_YoY", "Consumption YoY"), ("refinery_utilization_pct", "Refinery utilization")], "Physical tightness indicators", out_dir / "physical_tightness_dashboard.png")
+    tightness_rows = [{**row, "inventory_tightness_zscore": -float(row["CI_zscore"]) if _num(row.get("CI_zscore")) is not None else None} for row in core]
+    _timeseries_panels(tightness_rows, [("inventory_tightness_zscore", "Inventory tightness (-CI)"), ("petroleum_production_YoY", "Production YoY"), ("petroleum_consumption_YoY", "Consumption YoY"), ("refinery_utilization_pct", "Refinery utilization")], "Physical tightness indicators", out_dir / "physical_tightness_dashboard.png")
     _timeseries_panels(core, [("household_energy_expenditure_share", "Energy / disposable income"), ("energy_expenditure_share_gdp", "Energy / GDP"), ("real_WTI_YoY", "Real WTI YoY"), ("energy_CPI_YoY", "Energy CPI YoY")], "Energy affordability and burden", out_dir / "energy_burden_dashboard.png")
     _cycle_chart(core, out_dir / "demand_destruction_cycle.png")
     _timeseries_panels(core, [("household_energy_expenditure_share", "Energy burden"), ("Industrial_production_YoY", "Industrial production"), ("manufacturing_output_YoY", "Manufacturing"), ("Real_GDP_growth", "Real GDP")], "Industrial transmission", out_dir / "industrial_transmission.png")

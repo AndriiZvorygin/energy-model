@@ -1,0 +1,211 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "ci-wti-annual",
+  "title": "Annual WTI and comparative inventory",
+  "description": "A descriptive annual first pass showing the inverse relationship between WTI price levels and comparative-inventory surplus.",
+  "plainLanguageSummary": "Across 2010-2025, an extra 10 million barrels of comparative-inventory surplus corresponded to about $2.56/bbl lower annual WTI in this simple fit.",
+  "howToRead": "The scatter uses inverted inventory tightness on the horizontal axis, so tighter-than-normal inventories appear to the right and the equivalent relationship slopes upward.",
+  "calculation": {
+    "formula": "WTI = 77.57 -0.256 * CI; R2 = 0.358",
+    "explanation": "Monthly WTI and comparative inventory are averaged within each complete calendar year, then fitted with ordinary least squares.",
+    "example": "A 10-million-barrel larger surplus changes fitted WTI by -2.56 USD/bbl."
+  },
+  "patternsToWatch": [
+    "Years that sit far from the fitted inverse relationship",
+    "Whether shock years are dominated by geopolitics, demand destruction, OPEC policy, shale response, or risk premium"
+  ],
+  "limitations": [
+    "Only 16 annual observations are included.",
+    "Annual averaging and overlapping structural regimes make this unsuitable as a precise timing or causal model.",
+    "Comparative inventory is U.S. crude inventory relative to a moving seasonal norm, not global total petroleum inventory."
+  ],
+  "sourceNotes": [
+    "FRED DCOILWTICO",
+    "EIA WCESTUS1, project derivation"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2010-01-01",
+    "referenceEnd": "2025-01-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "WTI_annual_average": {
+        "mean": 71.6142251180797,
+        "standardDeviation": 19.347798912776554,
+        "n": 16
+      },
+      "Inventory_tightness_mmb": {
+        "mean": -23.22760291666667,
+        "standardDeviation": 45.15240147531687,
+        "n": 16
+      },
+      "CI_surplus_mmb": {
+        "mean": 23.22760291666667,
+        "standardDeviation": 45.15240147531687,
+        "n": 16
+      }
+    }
+  },
+  "frequency": "annual",
+  "dateRange": {
+    "start": "2010-01-01",
+    "end": "2025-01-01"
+  },
+  "series": [
+    {
+      "key": "WTI_annual_average",
+      "label": "WTI annual average",
+      "unit": "USD per barrel",
+      "source": "FRED DCOILWTICO",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2025-01-01"
+    },
+    {
+      "key": "Inventory_tightness_mmb",
+      "label": "Inventory tightness (-CI)",
+      "unit": "million barrels",
+      "source": "EIA WCESTUS1, project derivation",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#be123c",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2025-01-01"
+    },
+    {
+      "key": "CI_surplus_mmb",
+      "label": "Comparative inventory surplus",
+      "unit": "million barrels",
+      "source": "EIA WCESTUS1, project derivation",
+      "status": "derived",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#d97706",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2025-01-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "2010-01-01",
+      "WTI_annual_average": 79.39508710387629,
+      "CI_surplus_mmb": 23.010512500000004,
+      "Inventory_tightness_mmb": -23.010512500000004
+    },
+    {
+      "date": "2011-01-01",
+      "WTI_annual_average": 94.87500047921186,
+      "CI_surplus_mmb": 11.040546666666677,
+      "Inventory_tightness_mmb": -11.040546666666677
+    },
+    {
+      "date": "2012-01-01",
+      "WTI_annual_average": 94.11138046945428,
+      "CI_surplus_mmb": 21.804064166666674,
+      "Inventory_tightness_mmb": -21.804064166666674
+    },
+    {
+      "date": "2013-01-01",
+      "WTI_annual_average": 97.90567987120305,
+      "CI_surplus_mmb": 24.61988916666667,
+      "Inventory_tightness_mmb": -24.61988916666667
+    },
+    {
+      "date": "2014-01-01",
+      "WTI_annual_average": 93.25770111213474,
+      "CI_surplus_mmb": 8.519380833333335,
+      "Inventory_tightness_mmb": -8.519380833333335
+    },
+    {
+      "date": "2015-01-01",
+      "WTI_annual_average": 48.68900618022329,
+      "CI_surplus_mmb": 91.54180583333334,
+      "Inventory_tightness_mmb": -91.54180583333334
+    },
+    {
+      "date": "2016-01-01",
+      "WTI_annual_average": 43.14519239592724,
+      "CI_surplus_mmb": 130.0807825,
+      "Inventory_tightness_mmb": -130.0807825
+    },
+    {
+      "date": "2017-01-01",
+      "WTI_annual_average": 50.88351215860798,
+      "CI_surplus_mmb": 99.27013249999999,
+      "Inventory_tightness_mmb": -99.27013249999999
+    },
+    {
+      "date": "2018-01-01",
+      "WTI_annual_average": 64.93852426094331,
+      "CI_surplus_mmb": 3.210814999999983,
+      "Inventory_tightness_mmb": -3.210814999999983
+    },
+    {
+      "date": "2019-01-01",
+      "WTI_annual_average": 56.98068672298334,
+      "CI_surplus_mmb": 13.54761166666666,
+      "Inventory_tightness_mmb": -13.54761166666666
+    },
+    {
+      "date": "2020-01-01",
+      "WTI_annual_average": 39.2274053030303,
+      "CI_surplus_mmb": 38.12293833333333,
+      "Inventory_tightness_mmb": -38.12293833333333
+    },
+    {
+      "date": "2021-01-01",
+      "WTI_annual_average": 67.98749973088188,
+      "CI_surplus_mmb": -12.407423333333325,
+      "Inventory_tightness_mmb": 12.407423333333325
+    },
+    {
+      "date": "2022-01-01",
+      "WTI_annual_average": 94.78644822654462,
+      "CI_surplus_mmb": -39.954719166666656,
+      "Inventory_tightness_mmb": 39.954719166666656
+    },
+    {
+      "date": "2023-01-01",
+      "WTI_annual_average": 77.63426343980835,
+      "CI_surplus_mmb": 0.8679016666666817,
+      "Inventory_tightness_mmb": -0.8679016666666817
+    },
+    {
+      "date": "2024-01-01",
+      "WTI_annual_average": 76.54927492974862,
+      "CI_surplus_mmb": -17.192023333333328,
+      "Inventory_tightness_mmb": 17.192023333333328
+    },
+    {
+      "date": "2025-01-01",
+      "WTI_annual_average": 65.46093950469609,
+      "CI_surplus_mmb": -24.440568333333328,
+      "Inventory_tightness_mmb": 24.440568333333328
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw"
+  ],
+  "evidenceLabel": "Supported historical pattern",
+  "methodology": {
+    "formula": "WTI annual average = 77.57 -0.256 * CI surplus (million barrels); equivalently WTI = 77.57 + 0.256 * inventory tightness.",
+    "r2": 0.3582546170920139,
+    "n": 16,
+    "sample": "2010-2025",
+    "notes": "Annual averages reduce monthly noise but leave only 16 observations. This is descriptive and is not part of the locked oil forecast."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T19:00:48+00:00"
+}

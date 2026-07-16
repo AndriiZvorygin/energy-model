@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from oil_model.website_data import _attach_evidence_checks, _current_state_snapshot, _indicator_payload, _percentile, _quantile, validate_chart_dataset, validate_indicator_dataset
+from oil_model.website_data import _annual_ci_wti_relationship, _attach_evidence_checks, _current_state_snapshot, _indicator_payload, _percentile, _quantile, validate_chart_dataset, validate_indicator_dataset
 
 
 def dataset() -> dict:
@@ -55,6 +55,17 @@ class WebsiteDataTests(unittest.TestCase):
     def test_percentile_and_historical_ranges_are_stable(self) -> None:
         self.assertEqual(_quantile([1.0, 2.0, 3.0, 4.0], 0.5), 2.5)
         self.assertEqual(_percentile([1.0, 2.0, 3.0, 4.0], 4.0), 87.5)
+
+    def test_inventory_tightness_preserves_inverse_ci_relationship(self) -> None:
+        rows = []
+        for year, wti, ci_kb in ((2010, 70.0, 10_000.0), (2011, 60.0, 20_000.0)):
+            rows.extend({"month": f"{year}-{month:02d}", "WTI": wti, "comparative_inventory_kb": ci_kb} for month in range(1, 13))
+        observations, fit = _annual_ci_wti_relationship(rows, 2010, 2011)
+        self.assertEqual([row["CI_surplus_mmb"] for row in observations], [10.0, 20.0])
+        self.assertEqual([row["Inventory_tightness_mmb"] for row in observations], [-10.0, -20.0])
+        self.assertAlmostEqual(float(fit["slopeVsSurplus"]), -1.0)
+        self.assertAlmostEqual(float(fit["slopeVsTightness"]), 1.0)
+        self.assertAlmostEqual(float(fit["r2"]), 1.0)
 
     def test_indicator_schema_preserves_nulls_and_latest_context(self) -> None:
         current = {"indicator_id": "Industrial_production_YoY", "indicator": "Industrial production growth", "layer": "Production", "update_frequency": "monthly", "interpretation": "Rising is generally supportive.", "confirming_indicators": "Manufacturing; GDP", "conflicting_indicators": "Energy burden", "confidence_level": "medium", "evidence_label": "Contextual indicator"}

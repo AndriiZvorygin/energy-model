@@ -409,6 +409,18 @@
       "evidenceLabel": "Validated relationship"
     },
     {
+      "id": "ci-wti-annual",
+      "file": "charts/ci-wti-annual.json",
+      "legacyFile": "ci-wti-annual.json",
+      "title": "Annual WTI and comparative inventory",
+      "frequency": "annual",
+      "dateRange": {
+        "start": "2010-01-01",
+        "end": "2025-01-01"
+      },
+      "evidenceLabel": "Supported historical pattern"
+    },
+    {
       "id": "energy-gdp",
       "file": "charts/energy-gdp.json",
       "legacyFile": "energy-gdp.json",

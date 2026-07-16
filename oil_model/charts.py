@@ -240,7 +240,7 @@ def plot_residual_vs_ci(rows: list[Row], residual_rows: list[Row], path: Path) -
         for row in rows:
             month = row["month"]
             if month in actual and is_num(row.get("CI_zscore")):
-                xs.append(float(row["CI_zscore"]))
+                xs.append(-float(row["CI_zscore"]))
                 ys.append(float(actual[month] - forecast[month]))
         ax.scatter(xs, ys, s=24, alpha=0.72, color="#2b6cb0")
         ax.axhline(0, color="#777", linewidth=0.7)
@@ -320,10 +320,10 @@ def plot_residual_vs_ci_zscore(rows: list[Row], path: Path) -> None:
         ax.scatter(xs, ys, s=24, alpha=0.72, color="#2b6cb0")
         ax.axhline(0, color="#777", linewidth=0.7)
         ax.axvline(0, color="#777", linewidth=0.7)
-        ax.set_title(f"{target} residual vs CI")
-        ax.set_xlabel("CI z-score")
+        ax.set_title(f"{target} residual vs inventory tightness")
+        ax.set_xlabel("Inventory tightness (-CI z-score)")
     axes[0].set_ylabel("Actual minus GM2-implied Oil YoY")
-    add_note(fig, "Formula: residual = Oil_YoY[t] - rolling fitted(alpha + beta*GM2_YoY[t-5]); x = CI_zscore[t]. Source: processed monthly dataset.")
+    add_note(fig, "Formula: residual = Oil_YoY[t] - rolling fitted(alpha + beta*GM2_YoY[t-5]); inventory tightness = -CI_zscore. Raw CI retains its original sign. Source: processed monthly dataset.")
     fig.tight_layout(rect=(0, 0.05, 1, 1))
     fig.savefig(path, dpi=160)
     plt.close(fig)
@@ -438,9 +438,10 @@ def plot_final_residual_ci_diagnostic(rows: list[Row], path: Path) -> None:
     for row in rows:
         month = row["month"]
         if month in actual and is_num(row.get("CI_zscore")):
-            xs.append(float(row["CI_zscore"]))
+            tightness = -float(row["CI_zscore"])
+            xs.append(tightness)
             ys.append(float(actual[month] - forecast[month]))
-            colors.append("#c05621" if float(row["CI_zscore"]) > 0.5 else "#2b6cb0" if float(row["CI_zscore"]) < -0.5 else "#555555")
+            colors.append("#c05621" if tightness > 0.5 else "#2b6cb0" if tightness < -0.5 else "#555555")
     fig, ax = plt.subplots(figsize=(10, 6))
     ax.scatter(xs, ys, s=28, alpha=0.72, color=colors)
     if xs and ys:
@@ -448,12 +449,12 @@ def plot_final_residual_ci_diagnostic(rows: list[Row], path: Path) -> None:
         ax.scatter([latest_x], [latest_y], s=90, facecolor="none", edgecolor="#111111", linewidth=1.8, label="latest")
     ax.axhline(0, color="#777", linewidth=0.8)
     ax.axvline(0, color="#777", linewidth=0.8)
-    ax.set_title("Residual Diagnostic: WTI Rich/Cheap vs Comparative Inventory")
-    ax.set_xlabel("CI z-score")
+    ax.set_title("Residual Diagnostic: WTI Rich/Cheap vs Inventory Tightness")
+    ax.set_xlabel("Inventory tightness (-CI z-score)")
     ax.set_ylabel("WTI YoY residual vs GM2-only path")
     ax.legend()
     ax.grid(True, alpha=0.25)
-    add_note(fig, "Formula: residual = actual WTI_YoY[t] - rolling predicted WTI_YoY[t] from GM2_YoY[t-5]; x = CI_zscore[t]. Source: processed monthly dataset.")
+    add_note(fig, "Formula: residual = actual WTI_YoY[t] - rolling predicted WTI_YoY[t] from GM2_YoY[t-5]; inventory tightness = -CI_zscore. Source: processed monthly dataset.")
     fig.tight_layout(rect=(0, 0.05, 1, 1))
     fig.savefig(path, dpi=180)
     plt.close(fig)
@@ -1063,13 +1064,13 @@ def plot_final_oil_residual_ci_time_series(rows: list[Row], path: Path) -> None:
         if month in actual:
             dates.append(to_date(month))
             residuals.append(actual[month] - forecast[month])
-            ci.append(row.get("CI_zscore"))
+            ci.append(-float(row["CI_zscore"]) if is_num(row.get("CI_zscore")) else None)
             uso_residual.append(row.get("USO_tracking_residual"))
 
     fig, axes = plt.subplots(3, 1, figsize=(12, 9), sharex=True)
     panels = [
         (residuals, "WTI actual minus GM2-implied WTI YoY", "#222222", "YoY pct residual"),
-        (ci, "Comparative inventory z-score", "#2b6cb0", "z-score"),
+        (ci, "Inventory tightness (-CI z-score)", "#2b6cb0", "z-score"),
         (uso_residual, "USO tracking residual vs WTI", "#805ad5", "YoY pct spread"),
     ]
     for ax, (values, title, color, ylabel) in zip(axes, panels):
@@ -1079,7 +1080,7 @@ def plot_final_oil_residual_ci_time_series(rows: list[Row], path: Path) -> None:
         style_time_axis(ax)
         ax.set_title(title)
         ax.set_ylabel(ylabel)
-    add_note(fig, "Formulas: WTI residual = WTI_YoY[t] - rolling fitted(alpha + beta*GM2_YoY[t-5]); USO tracking residual = USO_YoY - WTI_YoY; CI uses prior 5-year same-month inventory history. Sources: processed monthly dataset.")
+    add_note(fig, "Formulas: WTI residual = WTI_YoY[t] - rolling fitted(alpha + beta*GM2_YoY[t-5]); inventory tightness = -CI_zscore; USO tracking residual = USO_YoY - WTI_YoY. Sources: processed monthly dataset.")
     fig.tight_layout(rect=(0, 0.05, 1, 1))
     fig.savefig(path, dpi=180)
     plt.close(fig)

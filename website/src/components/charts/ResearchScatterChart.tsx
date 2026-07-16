@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import {
   CartesianGrid,
   ResponsiveContainer,
+  ReferenceLine,
   Scatter,
   ScatterChart,
   Tooltip,
@@ -21,12 +22,14 @@ export function ResearchScatterChart({
   yKey,
   title,
   description,
+  trendLine = false,
 }: {
   file: string;
   xKey: string;
   yKey: string;
   title: string;
   description: string;
+  trendLine?: boolean;
 }) {
   const { dataset, error } = useChartDataset(file);
   const points = useMemo(
@@ -39,6 +42,18 @@ export function ResearchScatterChart({
         .map((row) => ({ date: row.date, x: row[xKey], y: row[yKey] })) ?? [],
     [dataset, xKey, yKey],
   );
+  const trend = useMemo<readonly [{ x: number; y: number }, { x: number; y: number }] | null>(() => {
+    if (!trendLine || points.length < 2) return null;
+    const meanX = points.reduce((sum, point) => sum + Number(point.x), 0) / points.length;
+    const meanY = points.reduce((sum, point) => sum + Number(point.y), 0) / points.length;
+    const denominator = points.reduce((sum, point) => sum + (Number(point.x) - meanX) ** 2, 0);
+    if (!denominator) return null;
+    const slope = points.reduce((sum, point) => sum + (Number(point.x) - meanX) * (Number(point.y) - meanY), 0) / denominator;
+    const intercept = meanY - slope * meanX;
+    const minimum = Math.min(...points.map((point) => Number(point.x)));
+    const maximum = Math.max(...points.map((point) => Number(point.x)));
+    return [{ x: minimum, y: intercept + slope * minimum }, { x: maximum, y: intercept + slope * maximum }] as const;
+  }, [points, trendLine]);
   if (error)
     return <p className="border border-amber-300 p-4 text-sm">{error}</p>;
   if (!dataset)
@@ -98,6 +113,7 @@ export function ResearchScatterChart({
               }}
             />
             <ZAxis range={[35, 35]} />
+            {trend && <ReferenceLine segment={trend} stroke="var(--chart-2)" strokeWidth={2.25} strokeDasharray="7 4" ifOverflow="extendDomain" />}
             <Tooltip
               cursor={{ strokeDasharray: "3 3" }}
               content={({ active, payload }) =>

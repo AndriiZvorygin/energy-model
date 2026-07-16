@@ -170,6 +170,37 @@ def _observations(rows: list[Row], mapping: dict[str, str], date_field: str = "m
     ]
 
 
+def _annual_ci_wti_relationship(rows: list[Row], start_year: int = 2010, end_year: int = 2025) -> tuple[list[dict[str, Any]], dict[str, float | int]]:
+    grouped: dict[int, list[tuple[float, float]]] = {}
+    for row in rows:
+        year = int(str(row.get("month", "0"))[:4] or 0)
+        wti = _number(row.get("WTI"))
+        ci_kb = _number(row.get("comparative_inventory_kb"))
+        if start_year <= year <= end_year and wti is not None and ci_kb is not None:
+            grouped.setdefault(year, []).append((wti, ci_kb / 1000.0))
+    observations = [
+        {
+            "date": f"{year}-01-01",
+            "WTI_annual_average": sum(value[0] for value in values) / len(values),
+            "CI_surplus_mmb": sum(value[1] for value in values) / len(values),
+            "Inventory_tightness_mmb": -sum(value[1] for value in values) / len(values),
+        }
+        for year, values in sorted(grouped.items())
+        if len(values) == 12
+    ]
+    xs = [float(row["CI_surplus_mmb"]) for row in observations]
+    ys = [float(row["WTI_annual_average"]) for row in observations]
+    mean_x = sum(xs) / len(xs)
+    mean_y = sum(ys) / len(ys)
+    denominator = sum((value - mean_x) ** 2 for value in xs)
+    slope = sum((x - mean_x) * (y - mean_y) for x, y in zip(xs, ys)) / denominator if denominator else 0.0
+    intercept = mean_y - slope * mean_x
+    fitted = [intercept + slope * value for value in xs]
+    total = sum((value - mean_y) ** 2 for value in ys)
+    r2 = 1 - sum((actual - predicted) ** 2 for actual, predicted in zip(ys, fitted)) / total if total else 0.0
+    return observations, {"startYear": start_year, "endYear": end_year, "n": len(observations), "intercept": intercept, "slopeVsSurplus": slope, "slopeVsTightness": -slope, "r2": r2}
+
+
 def _quality_observations(rows: list[Row], indicators: list[str]) -> list[dict[str, Any]]:
     dates = sorted({str(row["date"]) for row in rows if row.get("indicator") in indicators})
     lookup = {(str(row["date"]), str(row["indicator"])): _number(row.get("value")) for row in rows}
@@ -604,7 +635,7 @@ def write_website_chart_data(
     wti_residual = {month: float(actual - pred) for month, actual, pred in zip(wti_pred.get("months", []), wti_pred.get("actuals", []), wti_pred.get("preds", []))}
     brent_residual = {month: float(actual - pred) for month, actual, pred in zip(brent_pred.get("months", []), brent_pred.get("actuals", []), brent_pred.get("preds", []))}
     residual_observations = [
-        {"date": _iso_date(row["month"]), "WTI_residual": wti_residual.get(str(row["month"])), "Brent_residual": brent_residual.get(str(row["month"])), "CI_zscore": _number(row.get("CI_zscore")), "USO_tracking_residual": _number(row.get("USO_tracking_residual"))}
+        {"date": _iso_date(row["month"]), "WTI_residual": wti_residual.get(str(row["month"])), "Brent_residual": brent_residual.get(str(row["month"])), "CI_zscore": _number(row.get("CI_zscore")), "Inventory_tightness_zscore": -float(row["CI_zscore"]) if _number(row.get("CI_zscore")) is not None else None, "USO_tracking_residual": _number(row.get("USO_tracking_residual"))}
         for row in rows
     ]
     residuals = _dataset(
@@ -612,11 +643,40 @@ def write_website_chart_data(
         [
             _series("WTI_residual", "WTI model residual", "YoY percentage points", "Project rolling GM2 lag-5 model", "modelled", color="#0f766e"),
             _series("Brent_residual", "Brent model residual", "YoY percentage points", "Project rolling GM2 lag-5 model", "modelled", False, color="#2563eb"),
-            _series("CI_zscore", "Comparative inventory z-score", "standard deviations", "Derived from EIA WCESTUS1", "derived", color="#be123c"),
+            _series("Inventory_tightness_zscore", "Inventory tightness (-CI z-score)", "standard deviations", "Derived from EIA WCESTUS1", "derived", color="#be123c"),
+            _series("CI_zscore", "Comparative inventory surplus z-score", "standard deviations", "Derived from EIA WCESTUS1", "derived", False, color="#d97706"),
             _series("USO_tracking_residual", "USO minus WTI YoY", "percentage points", "Yahoo-compatible data and FRED WTI", "derived", False, color="#7c3aed"),
         ], residual_observations, ["raw", "zscore"], "Validated relationship",
-        {"formula": "Oil residual = actual Oil_YoY - rolling fitted(alpha + beta*GM2_YoY[t-5]); CI uses only the prior five same-month inventory observations.", "windowMonths": 60, "notes": "Different units are shown in synchronized panels in raw mode and may share an axis only after standardization."},
+        {"formula": "Oil residual = actual Oil_YoY - rolling fitted(alpha + beta*GM2_YoY[t-5]); inventory tightness = -CI_zscore; raw CI = current inventory minus its prior five-year same-month mean.", "windowMonths": 60, "notes": "The inverted tightness series is a display transformation: deficits plot upward and surpluses downward. Raw CI remains available and all models retain the original sign convention."},
         "final_oil_residual_ci_time_series.png", generated_at, ["gfc_2008", "shale_2014", "covid_2020", "reopening_2021"],
+        details={
+            "plainLanguageSummary": "Oil tends to be richer when comparative inventory is lower. The default tightness line therefore plots minus CI so physical tightness and positive oil residuals point in the same visual direction.",
+            "howToRead": "A positive tightness value means inventories are below their seasonal norm. Toggle raw comparative inventory to see the same evidence with the original, inverse sign.",
+            "patternsToWatch": ["Positive oil residuals coinciding with positive inventory tightness", "Divergences where geopolitics, demand, OPEC policy, or positioning overwhelm inventory"],
+            "limitations": ["Sign inversion improves visual alignment but adds no information and does not make CI a causal or forecast-improving variable.", "U.S. crude inventories excluding SPR are not a complete global petroleum balance."],
+        },
+    )
+
+    annual_ci_observations, annual_ci_fit = _annual_ci_wti_relationship(rows)
+    ci_wti_annual = _dataset(
+        "ci-wti-annual", "Annual WTI and comparative inventory", "A descriptive annual first pass showing the inverse relationship between WTI price levels and comparative-inventory surplus.", "annual",
+        [
+            _series("WTI_annual_average", "WTI annual average", "USD per barrel", "FRED DCOILWTICO", "measured", color="#0f766e", transformations=["raw"]),
+            _series("Inventory_tightness_mmb", "Inventory tightness (-CI)", "million barrels", "EIA WCESTUS1, project derivation", "derived", color="#be123c", transformations=["raw"]),
+            _series("CI_surplus_mmb", "Comparative inventory surplus", "million barrels", "EIA WCESTUS1, project derivation", "derived", False, color="#d97706", transformations=["raw"]),
+        ], annual_ci_observations, ["raw"], "Supported historical pattern",
+        {
+            "formula": f"WTI annual average = {annual_ci_fit['intercept']:.2f} {annual_ci_fit['slopeVsSurplus']:+.3f} * CI surplus (million barrels); equivalently WTI = {annual_ci_fit['intercept']:.2f} + {annual_ci_fit['slopeVsTightness']:.3f} * inventory tightness.",
+            "r2": annual_ci_fit["r2"], "n": annual_ci_fit["n"], "sample": f"{annual_ci_fit['startYear']}-{annual_ci_fit['endYear']}",
+            "notes": "Annual averages reduce monthly noise but leave only 16 observations. This is descriptive and is not part of the locked oil forecast.",
+        }, "", generated_at,
+        details={
+            "plainLanguageSummary": f"Across {annual_ci_fit['startYear']}-{annual_ci_fit['endYear']}, an extra 10 million barrels of comparative-inventory surplus corresponded to about ${abs(float(annual_ci_fit['slopeVsSurplus'])) * 10:.2f}/bbl lower annual WTI in this simple fit.",
+            "howToRead": "The scatter uses inverted inventory tightness on the horizontal axis, so tighter-than-normal inventories appear to the right and the equivalent relationship slopes upward.",
+            "calculation": {"formula": f"WTI = {annual_ci_fit['intercept']:.2f} {annual_ci_fit['slopeVsSurplus']:+.3f} * CI; R2 = {annual_ci_fit['r2']:.3f}", "explanation": "Monthly WTI and comparative inventory are averaged within each complete calendar year, then fitted with ordinary least squares.", "example": f"A 10-million-barrel larger surplus changes fitted WTI by {float(annual_ci_fit['slopeVsSurplus']) * 10:.2f} USD/bbl."},
+            "patternsToWatch": ["Years that sit far from the fitted inverse relationship", "Whether shock years are dominated by geopolitics, demand destruction, OPEC policy, shale response, or risk premium"],
+            "limitations": ["Only 16 annual observations are included.", "Annual averaging and overlapping structural regimes make this unsuitable as a precise timing or causal model.", "Comparative inventory is U.S. crude inventory relative to a moving seasonal norm, not global total petroleum inventory."],
+        }, reference_period=("2010-01-01", "2025-01-01"),
     )
 
     quarterly = sorted([dict(row) for row in energy_rows if row.get("section") == "time_series" and row.get("frequency") == "quarterly" and row.get("month")], key=lambda row: str(row["month"]))
@@ -742,14 +802,15 @@ def write_website_chart_data(
     physical_tightness = _dataset(
         "physical-tightness", "Physical energy conditions", "Inventory, supply, consumption, and refinery utilization provide distinct evidence about physical oil-market tightness.", "monthly",
         [
-            _series("CI_zscore", "Comparative inventory", "standard deviations", "EIA WCESTUS1, project derivation", "derived", color="#be123c"),
+            _series("Inventory_tightness_zscore", "Inventory tightness (-CI)", "standard deviations", "EIA WCESTUS1, project derivation", "derived", color="#be123c"),
+            _series("CI_zscore", "Comparative inventory surplus", "standard deviations", "EIA WCESTUS1, project derivation", "derived", False, color="#7c3aed"),
             _series("petroleum_production_YoY", "Petroleum production growth", "percent", "EIA Monthly Energy Review", "derived", color="#0f766e"),
             _series("petroleum_consumption_YoY", "Petroleum consumption growth", "percent", "EIA Monthly Energy Review", "derived", color="#d97706"),
             _series("refinery_utilization_pct", "Refinery utilization", "percent", "EIA WPULEUS3", "measured", False, color="#2563eb"),
         ],
-        _observations(system_rows, {"CI_zscore": "CI_zscore", "petroleum_production_YoY": "petroleum_production_YoY", "petroleum_consumption_YoY": "petroleum_consumption_YoY", "refinery_utilization_pct": "refinery_utilization_pct"}),
+        [{**row, "Inventory_tightness_zscore": -float(row["CI_zscore"]) if row.get("CI_zscore") is not None else None} for row in _observations(system_rows, {"CI_zscore": "CI_zscore", "petroleum_production_YoY": "petroleum_production_YoY", "petroleum_consumption_YoY": "petroleum_consumption_YoY", "refinery_utilization_pct": "refinery_utilization_pct"})],
         ["raw", "zscore"], "Contextual indicator",
-        {"formula": "CI_zscore uses the prior five-year same-month inventory history; growth rates are year-over-year; refinery utilization is the published rate.", "notes": "No single physical indicator defines tightness. Demand weakness can raise inventories even when supply is constrained."},
+        {"formula": "Inventory tightness = -CI_zscore, where CI_zscore uses the prior five-year same-month inventory history; growth rates are year-over-year; refinery utilization is the published rate.", "notes": "The raw surplus series remains available. No single physical indicator defines tightness, and demand weakness can raise inventories even when supply is constrained."},
         "physical_tightness_dashboard.png", generated_at, [event["id"] for event in events], reference_period=("2000-01-01", "2019-12-01"),
     )
     energy_burden = _dataset(
@@ -810,7 +871,7 @@ def write_website_chart_data(
         "demand_destruction_cycle.png", generated_at, [event["id"] for event in events], reference_period=("2000-01-01", "2019-12-01"),
     )
 
-    datasets = [oil_prices, gm2_lead, residuals, energy_gdp, equities, uso, headline, net_output, capacity, household, financial, output_comparison, physical_tightness, energy_burden, industrial_transmission, labour_warning, demand_destruction]
+    datasets = [oil_prices, gm2_lead, residuals, ci_wti_annual, energy_gdp, equities, uso, headline, net_output, capacity, household, financial, output_comparison, physical_tightness, energy_burden, industrial_transmission, labour_warning, demand_destruction]
     files: list[str] = []
     for dataset in datasets:
         filename = f"{dataset['id']}.json"
