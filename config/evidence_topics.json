@@ -96,6 +96,15 @@
       "scope": "Alberta producing-region conditions with Canadian and global upstream inputs.",
       "indicatorGeographies": ["Alberta"]
     },
+    "owen-sound": {
+      "label": "Owen Sound",
+      "scope": "Owen Sound city census subdivision household affordability with Grey Bruce regional food context.",
+      "topicOverrides": {
+        "affordability": {"groups": {}},
+        "food": {"groups": {}},
+        "housing": {"groups": {}}
+      }
+    },
     "global": {
       "label": "Global inputs",
       "scope": "Global oil-market, liquidity, food-commodity and international housing inputs.",
@@ -135,6 +144,7 @@
     {"geography": "canada", "topics": ["overview", "current-state", "regimes", "symptoms", "affordability", "food", "housing"]},
     {"geography": "ontario", "topics": ["indicator-state"]},
     {"geography": "alberta", "topics": ["indicator-state"]},
+    {"geography": "owen-sound", "topics": ["affordability", "food", "housing"]},
     {"geography": "global", "topics": ["indicator-state", "affordability", "food", "housing"]}
   ]
 }

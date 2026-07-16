@@ -258,6 +258,46 @@ class EvidenceRefinery:
             return "stable", details
         return "unclear", details
 
+    def _matched_case_evaluations(self, cases: list[dict[str, Any]], topic_rule: dict[str, Any]) -> tuple[list[dict[str, Any]], dict[str, float]]:
+        if not topic_rule.get("caseStatusRules"):
+            return cases, {}
+        evaluated: list[dict[str, Any]] = []
+        status_weights = {status: 0.0 for status in ("affordable", "pressured", "unaffordable", "severe-shortfall")}
+        total_weight = 0.0
+        for case in cases:
+            income = float(case["income"])
+            metrics = {
+                "incomeToBasicNeeds": income / float(case["basicNeedsCost"]) if case.get("basicNeedsCost") else None,
+                "foodShare": float(case["foodCost"]) / income if case.get("foodCost") else None,
+                "renterHousingShare": float(case["renterHousingCost"]) / income if case.get("renterHousingCost") else None,
+                "ownerHousingShare": float(case["ownerHousingCost"]) / income if case.get("ownerHousingCost") else None,
+                "foodAndRenterHousingShare": (float(case.get("foodCost") or 0) + float(case.get("renterHousingCost") or 0)) / income,
+                "newerFoodShareOfStaleIncome": float(case["newerFoodCost"]) / income if case.get("newerFoodCost") else None,
+                "newerRenterHousingShareOfStaleIncome": float(case["newerRenterHousingCost"]) / income if case.get("newerRenterHousingCost") else None,
+            }
+            status = "insufficient"
+            selected_rule = None
+            for rule in topic_rule.get("caseStatusRules", []):
+                matched = bool(rule.get("otherwise"))
+                if "any" in rule:
+                    matched = any(self._predicate(metrics.get(item["metric"]), item["operator"], float(item["value"])) for item in rule["any"])
+                if "all" in rule:
+                    matched = all(self._predicate(metrics.get(item["metric"]), item["operator"], float(item["value"])) for item in rule["all"])
+                if matched:
+                    status = rule["status"]
+                    selected_rule = rule
+                    break
+            weight = float(case.get("householdCount") or 0)
+            if status in status_weights:
+                status_weights[status] += weight
+                total_weight += weight
+            evaluated.append({**case, "status": status, "metrics": metrics, "classificationRule": selected_rule, "classificationBasis": topic_rule.get("caseStatusBasis")})
+        shares = {f"{status}Share": value / total_weight if total_weight else 0.0 for status, value in status_weights.items()}
+        shares["unaffordableOrWorseShare"] = shares["unaffordableShare"] + shares["severe-shortfallShare"]
+        shares["nonAffordableShare"] = shares["pressuredShare"] + shares["unaffordableOrWorseShare"]
+        shares["evaluatedHouseholdCount"] = total_weight
+        return evaluated, shares
+
     def _absolute_affordability(self, geography: str, topic: str) -> dict[str, Any]:
         geography_rule = self.absolute_rules["geographies"].get(geography)
         if not geography_rule or geography_rule.get("unsupportedReason"):
@@ -277,6 +317,7 @@ class EvidenceRefinery:
         missing = [f"{item['label']} is not yet integrated." for item in headline_inputs if item.get("value") is None]
         matched_cases = geography_rule.get("matchedHouseholdCases", [])
         matched_cases_complete = bool(matched_cases) and all(item.get("status") == "evaluated" for item in matched_cases)
+        case_evaluations, case_metrics = self._matched_case_evaluations(matched_cases, topic_rule or {})
 
         if not topic_rule or not available_inputs:
             status = "insufficient"
@@ -293,6 +334,26 @@ class EvidenceRefinery:
                 "limitations": "Population hardship is measured, but a single absolute national budget verdict is not supportable yet.",
             }
             missing.append(topic_rule["unresolvedReason"])
+        elif topic_rule.get("headlineMethod") == "matched-household-cases":
+            status = "insufficient"
+            selected_threshold = None
+            for rule in topic_rule.get("aggregateStatusRules", []):
+                matched = bool(rule.get("otherwise"))
+                if "any" in rule:
+                    matched = any(self._predicate(case_metrics.get(item["metric"]), item["operator"], float(item["value"])) for item in rule["any"])
+                if "all" in rule:
+                    matched = all(self._predicate(case_metrics.get(item["metric"]), item["operator"], float(item["value"])) for item in rule["all"])
+                if matched:
+                    status = rule["status"]
+                    selected_threshold = {
+                        **rule, "geography": geography,
+                        "definition": f"Household-type-weighted rule for {topic}",
+                        "formula": json.dumps({key: value for key, value in rule.items() if key != "status"}, sort_keys=True),
+                        "source": "Project rule applied to matched official household-type incomes and basic-needs thresholds",
+                        "observationDate": geography_rule.get("observationDate"),
+                        "limitations": topic_rule.get("aggregateLimitations", "Household-type medians describe central cases, not the full within-type income distribution."),
+                    }
+                    break
         else:
             status = "insufficient"
             selected_threshold = None
@@ -316,7 +377,12 @@ class EvidenceRefinery:
                     break
         if status not in ABSOLUTE_STATUSES:
             raise ValueError(f"Invalid absolute affordability status: {status}")
-        direction, direction_evidence = self._direction(topic_rule.get("directionIndicators", []) if topic_rule else [])
+        direction_override = topic_rule.get("directionOverride") if topic_rule else None
+        if direction_override:
+            direction = direction_override["value"]
+            direction_evidence = direction_override.get("evidence", [])
+        else:
+            direction, direction_evidence = self._direction(topic_rule.get("directionIndicators", []) if topic_rule else [])
         if direction not in DIRECTIONS:
             raise ValueError(f"Invalid affordability direction: {direction}")
         limitations = [item.get("limitations", "") for item in headline_inputs]
@@ -327,6 +393,7 @@ class EvidenceRefinery:
             "direction": direction,
             "householdType": geography_rule.get("referencePopulation"),
             "referencePopulation": geography_rule.get("referencePopulation"),
+            "assessmentLabel": geography_rule.get("assessmentLabel", "Absolute"),
             "observationDate": geography_rule.get("observationDate"),
             "income": geography_rule.get("descriptiveIncome"),
             "essentialCost": None,
@@ -338,8 +405,10 @@ class EvidenceRefinery:
             "components": {},
             "distributionMeasures": list(measures.values()),
             "headlineInputs": headline_inputs,
+            "contextEvidence": [item for item in geography_rule.get("contextEvidence", []) if topic in item.get("topics", [])],
             "representativeBudgets": geography_rule.get("representativeBudgets", []),
-            "matchedHouseholdCases": matched_cases,
+            "matchedHouseholdCases": case_evaluations,
+            "matchedHouseholdSummary": case_metrics,
             "directionEvidence": direction_evidence,
             "limitations": [item for item in limitations if item],
             "missingEvidence": missing,
@@ -365,10 +434,61 @@ class EvidenceRefinery:
             })
         return rows
 
+    def _context_rows(self, assessment: dict[str, Any]) -> list[dict[str, Any]]:
+        rows: list[dict[str, Any]] = []
+        for item in assessment.get("contextEvidence", []):
+            disposition = item.get("status", "mixed")
+            rows.append({
+                "indicator": item["id"], "label": item["label"], "status": disposition,
+                "reason": STATUS_TEXT[disposition] + " " + item["reason"],
+                "chart": None, "indicatorFile": None, "group": "Newer local context",
+                "value": item.get("value"), "unit": item.get("unit"), "historicalPercentile": None,
+                "direction": item.get("direction"), "sourceDate": item.get("observationDate"),
+                "source": item.get("source"), "calculation": item.get("definition"),
+                "limitations": [item.get("limitations", "")], "absoluteStatus": None,
+            })
+        return rows
+
+    def _matched_case_rows(self, topic: str, assessment: dict[str, Any]) -> list[dict[str, Any]]:
+        rows: list[dict[str, Any]] = []
+        headline_is_pressure = assessment["absoluteStatus"] in {"pressured", "unaffordable", "severe-shortfall"}
+        for case in assessment.get("matchedHouseholdCases", []):
+            if not case.get("metrics"):
+                continue
+            status = case.get("status")
+            if status == "insufficient":
+                disposition = "insufficient"
+            elif (status == "affordable") == headline_is_pressure:
+                disposition = "contradicting"
+            elif status == "pressured":
+                disposition = "supporting" if headline_is_pressure else "mixed"
+            else:
+                disposition = "supporting"
+            ratio = case.get("metrics", {}).get("incomeToBasicNeeds")
+            reason = STATUS_TEXT[disposition]
+            basis = f", using {case['classificationBasis']}," if case.get("classificationBasis") else ""
+            reason += f" The {case['householdType']} median case{basis} is classified {str(status).replace('-', ' ')}"
+            if ratio is not None:
+                reason += f" with income at {ratio:.2f} times its matched basic-needs threshold."
+            else:
+                reason += "."
+            if case.get("newerFoodCost") and case.get("newerRenterHousingCost"):
+                newer_share = (float(case["newerFoodCost"]) + float(case["newerRenterHousingCost"])) / float(case["income"])
+                reason += f" For scale only, the newer regional food and rental references equal {newer_share * 100:.1f}% of the older 2020 median income; that mixed-year ratio does not determine status."
+            rows.append({
+                "indicator": case["id"], "label": case["householdType"], "status": disposition,
+                "reason": reason, "chart": None, "indicatorFile": None, "group": "Matched household cases",
+                "value": case.get("income"), "unit": case.get("unit"), "historicalPercentile": None,
+                "direction": assessment.get("direction"), "sourceDate": case.get("observationDate"),
+                "source": case.get("source"), "calculation": f"income / matched basic-needs cost; {topic} context publishes food and tenure-specific housing components separately",
+                "limitations": [case.get("limitations", "")], "absoluteStatus": status,
+            })
+        return rows
+
     def _absolute_row(self, topic: str, assessment: dict[str, Any]) -> dict[str, Any]:
         status = assessment["absoluteStatus"]
         disposition = "insufficient" if status == "insufficient" else "mixed" if status == "unresolved" else "supporting"
-        label = f"National {topic.replace('-', ' ')} assessment"
+        label = f"{assessment.get('assessmentLabel', 'Absolute')} {topic.replace('-', ' ')} assessment"
         cost = assessment.get("essentialCost") or {}
         reason = STATUS_TEXT[disposition]
         if status == "insufficient":
@@ -389,7 +509,7 @@ class EvidenceRefinery:
 
     def _indicator_groups(self, geography: str, topic: str, geography_rule: dict[str, Any], topic_rule: dict[str, Any]) -> dict[str, Any]:
         assessment = self._absolute_affordability(geography, topic)
-        rows = [self._absolute_row(topic, assessment), *self._distribution_rows(assessment)]
+        rows = [self._absolute_row(topic, assessment), *self._distribution_rows(assessment), *self._matched_case_rows(topic, assessment), *self._context_rows(assessment)]
         pressure_headline = assessment["absoluteStatus"] in {"pressured", "unaffordable", "severe-shortfall"}
         for group, ids in topic_rule["groups"].items():
             for indicator_id in ids:

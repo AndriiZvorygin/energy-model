@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "refineryVersion": "2.0.0",
-  "generatedAt": "2026-07-16T17:55:22+00:00",
+  "generatedAt": "2026-07-16T18:11:43+00:00",
   "regenerationCommand": "python -m oil_model.pipeline --root . --refresh",
   "policy": {
     "includeStatusesInDiagnosticSummary": [
@@ -524,15 +524,15 @@
     },
     {
       "file": "config/evidence_topics.json",
-      "sha256": "66bbc5b620493dbd591784e0663e331081a1ab99c61cf5dedd97fd0a68df41f2"
+      "sha256": "6ea34b34d4ab34a6960433cce21fe35a9b62db307e47868f33243fc9adf521b4"
     },
     {
       "file": "config/absolute_affordability.json",
-      "sha256": "1799ec198caf9bec26232b00d3a2f14dbe259e05e717a80bcc364cf7299b6a8d"
+      "sha256": "573bc0495edded15f95599903fb723c33af960d9c13359e5f5aa9b4cfdf1e08e"
     },
     {
       "file": "website/public/generated/evidence-summary.json",
-      "sha256": "decbf6177d450d7e3c0b412fbbb365dc7c6f7cf6ac8bc52dbb37628a391eab09"
+      "sha256": "fe42b3b679a7de77d66828d58f455a63bee03ac8de909616222375e3c5146807"
     }
   ]
 }

@@ -3,6 +3,7 @@
   "statusOrder": ["severe-shortfall", "unaffordable", "pressured", "affordable", "unresolved", "insufficient"],
   "geographies": {
     "canada": {
+      "assessmentLabel": "National",
       "referencePopulation": "People and households in Canada",
       "observationDate": "2024-01-01",
       "descriptiveIncome": {
@@ -130,6 +131,7 @@
       }
     },
     "us": {
+      "assessmentLabel": "National",
       "referencePopulation": "People and households in the United States",
       "observationDate": "2024-01-01",
       "descriptiveIncome": {
@@ -158,6 +160,276 @@
         "affordability": {"directionIndicators": ["us-food-affordability-pressure", "us-rent-pressure", "us-house-price-to-income-index"], "headlineMeasures": ["official-poverty-rate", "deep-poverty-rate", "food-insecurity-rate", "very-low-food-security-rate", "housing-burden-30-rate", "housing-burden-50-rate"], "requiresCompletedMatchedHouseholdCases": true, "unresolvedReason": "Matched household-type income and official basic-needs cases are incomplete, so the national absolute verdict is unresolved.", "statusRules": []},
         "food": {"directionIndicators": ["us-food-affordability-pressure", "us-food-at-home-cpi-yoy"], "headlineMeasures": ["food-insecurity-rate", "very-low-food-security-rate", "official-poverty-rate"], "statusRules": [{"status": "severe-shortfall", "all": [{"measure": "very-low-food-security-rate", "operator": "gte", "value": 0.15}]}, {"status": "unaffordable", "all": [{"measure": "food-insecurity-rate", "operator": "gte", "value": 0.20}]}, {"status": "pressured", "all": [{"measure": "food-insecurity-rate", "operator": "gte", "value": 0.10}]}, {"status": "affordable", "otherwise": true}]},
         "housing": {"directionIndicators": ["us-rent-pressure", "us-shelter-cpi-yoy", "us-house-price-to-income-index"], "headlineMeasures": ["housing-burden-30-rate", "housing-burden-50-rate"], "statusRules": [{"status": "severe-shortfall", "all": [{"measure": "housing-burden-50-rate", "operator": "gte", "value": 0.25}]}, {"status": "unaffordable", "all": [{"measure": "housing-burden-50-rate", "operator": "gte", "value": 0.20}]}, {"status": "pressured", "any": [{"measure": "housing-burden-30-rate", "operator": "gte", "value": 0.20}, {"measure": "housing-burden-50-rate", "operator": "gte", "value": 0.10}]}, {"status": "affordable", "otherwise": true}]}
+      }
+    },
+    "owen-sound": {
+      "assessmentLabel": "Local",
+      "referencePopulation": "Households in the Owen Sound city census subdivision (DGUID 2021A00053542059)",
+      "observationDate": "2020-01-01",
+      "descriptiveIncome": {
+        "value": 57600,
+        "unit": "2020 CAD per year",
+        "definition": "Median after-tax income of private households in the Owen Sound city census subdivision",
+        "source": "Statistics Canada, 2021 Census Profile",
+        "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?DGUIDlist=2021A00053542059&Lang=E",
+        "observationDate": "2020-01-01",
+        "releaseDate": "2022-07-13",
+        "limitations": "Structural baseline using 2020 income reported in the 2021 Census; pandemic transfers affected 2020 incomes."
+      },
+      "distributionMeasures": {
+        "food-insecurity-rate": {
+          "label": "Grey Bruce household food-insecurity prevalence",
+          "value": 0.183,
+          "unit": "share of households",
+          "definition": "Households experiencing food insecurity in the Grey Bruce health-unit geography, 2021 to 2023 combined",
+          "source": "Grey Bruce Public Health, Monitoring Food Affordability in Grey Bruce 2024",
+          "sourceUrl": "https://www.publichealthgreybruce.on.ca/Portals/0/Topics/Eating%20Well/Monitoring%20Food%20Affordability%20-%202024%20OCT%2016.pdf",
+          "observationDate": "2023-12-31",
+          "limitations": "Regional Grey Bruce prevalence, not an Owen Sound city-CSD estimate."
+        },
+        "shelter-burden-30-rate": {
+          "label": "Owen Sound households spending at least 30% of income on shelter",
+          "value": 0.243,
+          "unit": "share of assessed households",
+          "definition": "Owner and tenant households with positive income spending 30% or more on shelter costs",
+          "source": "Statistics Canada, 2021 Census Profile, Owen Sound city CSD",
+          "sourceUrl": "https://api.statcan.gc.ca/census-recensement/profile/sdmx/rest/data/STC_CP,DF_CSD/A5.2021A00053542059.1..1?format=csv",
+          "observationDate": "2020-01-01",
+          "limitations": "2021 Census structural baseline using 2020 income; long-form estimates are subject to sampling and random rounding."
+        },
+        "owner-shelter-burden-30-rate": {
+          "label": "Owen Sound owner households spending at least 30% on shelter",
+          "value": 0.14,
+          "unit": "share of owner households",
+          "definition": "Owner households spending 30% or more of total income on shelter costs",
+          "source": "Statistics Canada, 2021 Census Profile, Owen Sound city CSD",
+          "sourceUrl": "https://api.statcan.gc.ca/census-recensement/profile/sdmx/rest/data/STC_CP,DF_CSD/A5.2021A00053542059.1..1?format=csv",
+          "observationDate": "2020-01-01",
+          "limitations": "Does not identify current mortgage-renewal exposure."
+        },
+        "renter-shelter-burden-30-rate": {
+          "label": "Owen Sound renter households spending at least 30% on shelter",
+          "value": 0.385,
+          "unit": "share of renter households",
+          "definition": "Tenant households spending 30% or more of total income on shelter costs",
+          "source": "Statistics Canada, 2021 Census Profile, Owen Sound city CSD",
+          "sourceUrl": "https://api.statcan.gc.ca/census-recensement/profile/sdmx/rest/data/STC_CP,DF_CSD/A5.2021A00053542059.1..1?format=csv",
+          "observationDate": "2020-01-01",
+          "limitations": "The Census baseline predates recent rental-market changes."
+        },
+        "core-housing-need-rate": {
+          "label": "Owen Sound households in core housing need",
+          "value": 0.114,
+          "unit": "share of assessed households",
+          "definition": "Households below an adequacy, suitability, or affordability standard that could not afford acceptable local alternatives",
+          "source": "Statistics Canada, 2021 Census Profile, Owen Sound city CSD",
+          "sourceUrl": "https://api.statcan.gc.ca/census-recensement/profile/sdmx/rest/data/STC_CP,DF_CSD/A5.2021A00053542059.1..1?format=csv",
+          "observationDate": "2020-01-01",
+          "limitations": "Excludes households not assessable under the official core-housing-need definition."
+        },
+        "owner-core-housing-need-rate": {
+          "label": "Owen Sound owner households in core housing need",
+          "value": 0.042,
+          "unit": "share of owner households",
+          "definition": "Owner households in core housing need",
+          "source": "Statistics Canada, 2021 Census Profile, Owen Sound city CSD",
+          "sourceUrl": "https://api.statcan.gc.ca/census-recensement/profile/sdmx/rest/data/STC_CP,DF_CSD/A5.2021A00053542059.1..1?format=csv",
+          "observationDate": "2020-01-01",
+          "limitations": "Structural Census baseline."
+        },
+        "renter-core-housing-need-rate": {
+          "label": "Owen Sound renter households in core housing need",
+          "value": 0.214,
+          "unit": "share of renter households",
+          "definition": "Tenant households in core housing need",
+          "source": "Statistics Canada, 2021 Census Profile, Owen Sound city CSD",
+          "sourceUrl": "https://api.statcan.gc.ca/census-recensement/profile/sdmx/rest/data/STC_CP,DF_CSD/A5.2021A00053542059.1..1?format=csv",
+          "observationDate": "2020-01-01",
+          "limitations": "Structural Census baseline."
+        }
+      },
+      "contextEvidence": [
+        {
+          "id": "grey-bruce-food-basket-family-four-2024",
+          "label": "Grey Bruce nutritious food basket, family of four",
+          "value": 1250,
+          "unit": "2024 CAD per month",
+          "definition": "Monthly cost of the Ontario Nutritious Food Basket for a reference family of four",
+          "source": "Grey Bruce Public Health, Monitoring Food Affordability in Grey Bruce 2024",
+          "observationDate": "2024-01-01",
+          "status": "supporting",
+          "direction": "worsening",
+          "topics": ["affordability", "food"],
+          "reason": "The measured family-of-four basket was about 1% more expensive than in 2023, adding current regional food-cost pressure.",
+          "limitations": "Grey Bruce regional basket, not an Owen Sound-only grocery survey; excludes restaurant food, special diets, and transportation."
+        },
+        {
+          "id": "owen-sound-one-bedroom-rent-2023",
+          "label": "Owen Sound-area one-bedroom rental reference",
+          "value": 947,
+          "unit": "2023 CAD per month",
+          "definition": "One-bedroom rent used in Grey Bruce Public Health affordability scenarios from CMHC rental-market data",
+          "source": "Grey Bruce Public Health citing CMHC Rental Market Survey",
+          "observationDate": "2023-10-01",
+          "status": "mixed",
+          "direction": "unclear",
+          "topics": ["affordability", "housing"],
+          "reason": "It provides newer rental-cost context, but it cannot establish a direction against the Census baseline because coverage and building samples differ.",
+          "limitations": "Purpose-built buildings with at least three units; utilities may or may not be included and new-tenant rents may be higher."
+        },
+        {
+          "id": "owen-sound-three-bedroom-rent-2023",
+          "label": "Owen Sound-area three-bedroom rental reference",
+          "value": 1285,
+          "unit": "2023 CAD per month",
+          "definition": "Three-bedroom rent used in Grey Bruce Public Health family affordability scenarios from CMHC rental-market data",
+          "source": "Grey Bruce Public Health citing CMHC Rental Market Survey",
+          "observationDate": "2023-10-01",
+          "status": "mixed",
+          "direction": "unclear",
+          "topics": ["affordability", "housing"],
+          "reason": "It gives a newer family-rental reference while remaining non-comparable with the older city-wide Census shelter-cost measure.",
+          "limitations": "Small local rental samples can be suppressed or imprecise; new-tenant rents may be higher."
+        }
+      ],
+      "representativeBudgets": [],
+      "matchedHouseholdCases": [
+        {
+          "id": "owen-sound-one-person",
+          "householdType": "One-person household",
+          "householdCount": 3785,
+          "householdSize": 1,
+          "income": 31800,
+          "basicNeedsCost": 21499,
+          "foodCost": 6129,
+          "renterHousingCost": 11160,
+          "ownerHousingCost": 12720,
+          "newerFoodCost": 5205.24,
+          "newerRenterHousingCost": 11364,
+          "unit": "2020 CAD per year",
+          "status": "evaluated",
+          "observationDate": "2020-01-01",
+          "source": "Statistics Canada 2021 Census Profile and Tables 11-10-0104-01 / 11-10-0066-01",
+          "limitations": "Median city-CSD income; MBM Ontario 30,000-to-99,999 threshold based on Owen Sound's 32,712-person census agglomeration. Housing scenarios use city-wide tenure medians rather than household-specific costs."
+        },
+        {
+          "id": "owen-sound-couple-only",
+          "householdType": "Couple-only economic family",
+          "householdCount": 2595,
+          "householdSize": 2,
+          "income": 71000,
+          "basicNeedsCost": 30404,
+          "foodCost": 8668,
+          "renterHousingCost": 11160,
+          "ownerHousingCost": 12720,
+          "newerFoodCost": 8656.44,
+          "newerRenterHousingCost": 11364,
+          "unit": "2020 CAD per year",
+          "status": "evaluated",
+          "observationDate": "2020-01-01",
+          "source": "Statistics Canada 2021 Census Profile and Tables 11-10-0104-01 / 11-10-0066-01",
+          "limitations": "Economic-family income and household shelter-cost concepts are not perfectly identical populations."
+        },
+        {
+          "id": "owen-sound-couple-with-children",
+          "householdType": "Couple-with-children economic family",
+          "householdCount": 1890,
+          "householdSize": 4,
+          "income": 101000,
+          "basicNeedsCost": 42998,
+          "foodCost": 12259,
+          "renterHousingCost": 11160,
+          "ownerHousingCost": 12720,
+          "newerFoodCost": 14994.48,
+          "newerRenterHousingCost": 15420,
+          "unit": "2020 CAD per year",
+          "status": "evaluated",
+          "observationDate": "2020-01-01",
+          "source": "Statistics Canada 2021 Census Profile and Tables 11-10-0104-01 / 11-10-0066-01",
+          "limitations": "Average family size was 3.9 and is matched to the four-person MBM threshold. City-wide tenure costs do not capture bedroom needs."
+        },
+        {
+          "id": "owen-sound-one-parent",
+          "householdType": "One-parent economic family",
+          "householdCount": 1220,
+          "householdSize": 3,
+          "income": 56400,
+          "basicNeedsCost": 37237,
+          "foodCost": 10616,
+          "renterHousingCost": 11160,
+          "ownerHousingCost": 12720,
+          "newerFoodCost": 11189.52,
+          "newerRenterHousingCost": 15420,
+          "unit": "2020 CAD per year",
+          "status": "evaluated",
+          "observationDate": "2020-01-01",
+          "source": "Statistics Canada 2021 Census Profile and Tables 11-10-0104-01 / 11-10-0066-01",
+          "limitations": "Average family size was 2.6 and is matched to the three-person MBM threshold. Family composition and actual tenure vary."
+        }
+      ],
+      "topics": {
+        "affordability": {
+          "headlineMethod": "matched-household-cases",
+          "caseStatusBasis": "the matched 2020 MBM total threshold",
+          "headlineMeasures": ["food-insecurity-rate", "shelter-burden-30-rate", "core-housing-need-rate"],
+          "caseStatusRules": [
+            {"status": "severe-shortfall", "all": [{"metric": "incomeToBasicNeeds", "operator": "lt", "value": 0.75}]},
+            {"status": "unaffordable", "all": [{"metric": "incomeToBasicNeeds", "operator": "lt", "value": 1.0}]},
+            {"status": "pressured", "all": [{"metric": "incomeToBasicNeeds", "operator": "lt", "value": 1.5}]},
+            {"status": "affordable", "otherwise": true}
+          ],
+          "aggregateStatusRules": [
+            {"status": "severe-shortfall", "all": [{"metric": "severe-shortfallShare", "operator": "gte", "value": 0.25}]},
+            {"status": "unaffordable", "all": [{"metric": "unaffordableOrWorseShare", "operator": "gte", "value": 0.25}]},
+            {"status": "pressured", "all": [{"metric": "nonAffordableShare", "operator": "gte", "value": 0.25}]},
+            {"status": "affordable", "otherwise": true}
+          ],
+          "aggregateLimitations": "The four Census household categories cover most, but not all, city households and economic-family counts are not a perfect mutually exclusive household distribution. Medians hide within-type hardship.",
+          "directionOverride": {
+            "value": "unclear",
+            "evidence": [{"label": "Mixed-vintage local evidence", "available": true, "direction": "unclear", "sourceDate": "2024-01-01"}]
+          }
+        },
+        "food": {
+          "headlineMeasures": ["food-insecurity-rate"],
+          "caseStatusBasis": "the matched 2020 MBM total threshold; food costs are published separately",
+          "caseStatusRules": [
+            {"status": "severe-shortfall", "all": [{"metric": "incomeToBasicNeeds", "operator": "lt", "value": 0.75}]},
+            {"status": "unaffordable", "all": [{"metric": "incomeToBasicNeeds", "operator": "lt", "value": 1.0}]},
+            {"status": "pressured", "all": [{"metric": "incomeToBasicNeeds", "operator": "lt", "value": 1.5}]},
+            {"status": "affordable", "otherwise": true}
+          ],
+          "statusRules": [
+            {"status": "severe-shortfall", "all": [{"measure": "food-insecurity-rate", "operator": "gte", "value": 0.30}]},
+            {"status": "unaffordable", "all": [{"measure": "food-insecurity-rate", "operator": "gte", "value": 0.25}]},
+            {"status": "pressured", "all": [{"measure": "food-insecurity-rate", "operator": "gte", "value": 0.10}]},
+            {"status": "affordable", "otherwise": true}
+          ],
+          "directionOverride": {
+            "value": "worsening",
+            "evidence": [{"label": "Grey Bruce nutritious food basket", "available": true, "direction": "worsening", "sourceDate": "2024-01-01"}]
+          }
+        },
+        "housing": {
+          "headlineMeasures": ["shelter-burden-30-rate", "owner-shelter-burden-30-rate", "renter-shelter-burden-30-rate", "core-housing-need-rate", "owner-core-housing-need-rate", "renter-core-housing-need-rate"],
+          "caseStatusBasis": "the city-CSD renter shelter-cost reference; owner burdens are published separately",
+          "caseStatusRules": [
+            {"status": "severe-shortfall", "all": [{"metric": "renterHousingShare", "operator": "gte", "value": 0.50}]},
+            {"status": "unaffordable", "all": [{"metric": "renterHousingShare", "operator": "gte", "value": 0.30}]},
+            {"status": "pressured", "all": [{"metric": "renterHousingShare", "operator": "gte", "value": 0.25}]},
+            {"status": "affordable", "otherwise": true}
+          ],
+          "statusRules": [
+            {"status": "severe-shortfall", "all": [{"measure": "shelter-burden-30-rate", "operator": "gte", "value": 0.50}]},
+            {"status": "unaffordable", "all": [{"measure": "shelter-burden-30-rate", "operator": "gte", "value": 0.30}]},
+            {"status": "pressured", "any": [{"measure": "shelter-burden-30-rate", "operator": "gte", "value": 0.20}, {"measure": "renter-shelter-burden-30-rate", "operator": "gte", "value": 0.30}]},
+            {"status": "affordable", "otherwise": true}
+          ],
+          "directionOverride": {
+            "value": "unclear",
+            "evidence": [{"label": "Local housing evidence lacks a consistent post-Census time series", "available": true, "direction": "unclear", "sourceDate": "2023-10-01"}]
+          }
+        }
       }
     },
     "global": {

@@ -26,6 +26,7 @@ def test_evidence_summary_schema_and_statuses() -> None:
         "canada:affordability", "canada:food", "canada:housing",
         "ontario:indicator-state", "alberta:indicator-state", "global:indicator-state",
         "global:affordability", "global:food", "global:housing",
+        "owen-sound:affordability", "owen-sound:food", "owen-sound:housing",
     }
     assert required <= payload["evidence"].keys()
     observed: set[str] = set()
@@ -127,6 +128,7 @@ def test_one_interface_handles_all_configured_geographies() -> None:
         ("ontario", "indicator-state"): "ontario:indicator-state",
         ("alberta", "indicator-state"): "alberta:indicator-state",
         ("global", "indicator-state"): "global:indicator-state",
+        ("owen-sound", "affordability"): "owen-sound:affordability",
     }
     for arguments, key in expected.items():
         result = generate_evidence_summary(*arguments, ROOT)
@@ -138,6 +140,47 @@ def test_migrated_narratives_remain_unchanged() -> None:
     assert payload["us:current-state"]["interpretation"] == "Mixed transition: Physical tightening/Energy affordability stress"
     assert payload["canada:current-state"]["interpretation"] == "Consumer affordability stress"
     assert payload["canada:food"]["interpretation"] == "Pressured · worsening"
+
+
+def test_owen_sound_uses_city_csd_and_local_household_incomes() -> None:
+    config = json.loads((ROOT / "config" / "absolute_affordability.json").read_text(encoding="utf-8"))
+    local = config["geographies"]["owen-sound"]
+    assert "2021A00053542059" in local["referencePopulation"]
+    assert local["descriptiveIncome"]["value"] == 57_600
+    cases = {case["id"]: case for case in local["matchedHouseholdCases"]}
+    assert cases["owen-sound-one-person"]["income"] == 31_800
+    assert cases["owen-sound-couple-only"]["income"] == 71_000
+    assert cases["owen-sound-couple-with-children"]["income"] == 101_000
+    assert cases["owen-sound-one-parent"]["income"] == 56_400
+    assert all(case["income"] not in {75_500, 133_900} for case in cases.values())
+
+
+def test_owen_sound_household_cases_and_distribution_drive_topics() -> None:
+    affordability = generate_evidence_summary("owen-sound", "affordability", ROOT)
+    food = generate_evidence_summary("owen-sound", "food", ROOT)
+    housing = generate_evidence_summary("owen-sound", "housing", ROOT)
+    assert affordability["interpretation"] == "Pressured · unclear"
+    assert food["interpretation"] == "Pressured · worsening"
+    assert housing["interpretation"] == "Pressured · unclear"
+    cases = {case["id"]: case for case in affordability["absoluteEvaluation"]["matchedHouseholdCases"]}
+    assert cases["owen-sound-one-person"]["status"] == "pressured"
+    assert cases["owen-sound-couple-only"]["status"] == "affordable"
+    assert cases["owen-sound-couple-with-children"]["status"] == "affordable"
+    assert cases["owen-sound-one-parent"]["status"] == "affordable"
+    assert affordability["absoluteEvaluation"]["matchedHouseholdSummary"]["nonAffordableShare"] > 0.39
+    housing_inputs = {item["id"]: item["value"] for item in housing["headlineInputs"]}
+    assert housing_inputs["renter-shelter-burden-30-rate"] == 0.385
+    assert housing_inputs["owner-shelter-burden-30-rate"] == 0.14
+    assert housing_inputs["core-housing-need-rate"] == 0.114
+
+
+def test_owen_sound_newer_context_does_not_set_structural_status() -> None:
+    result = generate_evidence_summary("owen-sound", "affordability", ROOT)
+    cases = result["absoluteEvaluation"]["matchedHouseholdCases"]
+    assert all(case["classificationRule"] is not None for case in cases)
+    assert all(case["basicNeedsCost"] and case["observationDate"] == "2020-01-01" for case in cases)
+    assert all(case["newerFoodCost"] and case["newerRenterHousingCost"] for case in cases)
+    assert result["direction"] == "unclear"
 
 
 def test_generation_does_not_modify_classifiers_or_locked_outputs() -> None:

@@ -2,7 +2,7 @@
 
 Evidence summaries use canonical `geography:topic` keys and one `generate_evidence_summary(geography, topic)` interface.
 
-Generated geography/topic combinations: 31.
+Generated geography/topic combinations: 34.
 
 ## Remaining Manually Named Topics
 
