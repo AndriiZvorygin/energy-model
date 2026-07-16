@@ -4,7 +4,9 @@ import { GeneratedEvidenceSummary } from './GeneratedEvidenceSummary'
 
 type PresentationRoute = {
   route: string
-  evidenceTopic: string
+  geography: string
+  topic: string
+  evidenceKey: string
   interpretation: string
   confidence: string
   coverage: number | null
@@ -24,12 +26,13 @@ export function resolvePresentationRoute(manifest: PresentationManifest, pathnam
   return manifest.routes[pathname.replace(/\/$/, '') || '/']
 }
 
-export function GeneratedRouteEvidenceSummary({ title = 'Diagnostic summary' }: { title?: string }) {
+export function GeneratedRouteEvidenceSummary({ title = 'Diagnostic summary', topic }: { title?: string; topic?: string }) {
   const location = useLocation()
   const { data, error } = useGeneratedJson<PresentationManifest>('presentation-manifest.json')
   if (error) return <p className="border-y border-amber-500 py-4 text-sm text-amber-700">Refinery presentation unavailable: {error}</p>
   if (!data) return <p className="border-y border-stone-300 py-6 text-sm text-stone-500 dark:border-stone-700">Loading refinery interpretation…</p>
   const route = resolvePresentationRoute(data, location.pathname)
   if (!route) return <p className="border-y border-amber-500 py-4 text-sm text-amber-700">No refinery presentation contract exists for {location.pathname}.</p>
-  return <GeneratedEvidenceSummary topic={route.evidenceTopic} title={title} includeStatuses={data.policy.includeStatusesInDiagnosticSummary} />
+  const key = topic ? `${route.geography}:${topic}` : route.evidenceKey
+  return <GeneratedEvidenceSummary evidenceKey={key} title={title} includeStatuses={topic ? undefined : data.policy.includeStatusesInDiagnosticSummary} />
 }

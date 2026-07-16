@@ -28,24 +28,33 @@ def write_presentation_contract(root: Path) -> dict[str, Any]:
     evidence_path = generated / "evidence-summary.json"
     rules = _read(config_path)
     evidence = _read(evidence_path)
-    topics = evidence.get("topics", {})
+    summaries = evidence.get("evidence", {})
     routes: dict[str, Any] = {}
-    for route, topic_id in rules["routes"].items():
-        if topic_id not in topics:
-            raise ValueError(f"Presentation route {route} references missing evidence topic {topic_id}")
-        topic = topics[topic_id]
-        dates = _topic_dates(topic)
+    for route, mapping in rules["routes"].items():
+        geography = mapping["geography"]
+        topic = mapping["topic"]
+        key = f"{geography}:{topic}"
+        if key not in summaries:
+            raise ValueError(f"Presentation route {route} references missing evidence key {key}")
+        summary = summaries[key]
+        dates = _topic_dates(summary)
         routes[route] = {
             "route": route,
-            "evidenceTopic": topic_id,
-            "interpretation": topic["interpretation"],
-            "confidence": topic["confidence"],
-            "coverage": topic["coverage"],
-            "scope": topic.get("scope"),
+            "geography": geography,
+            "topic": topic,
+            "evidenceKey": key,
+            "interpretation": summary["interpretation"],
+            "confidence": summary["confidence"],
+            "coverage": summary["coverage"],
+            "scope": summary.get("scope"),
             "oldestObservationDate": dates[0] if dates else None,
             "newestObservationDate": dates[-1] if dates else None,
-            "evidenceCounts": {status: len(topic.get(status, [])) for status in ("supporting", "mixed", "contradicting", "insufficient")},
-            "provenance": ["website/public/generated/evidence-summary.json"],
+            "evidenceCounts": {status: len(summary.get(status, [])) for status in ("supporting", "mixed", "contradicting", "insufficient")},
+            "provenance": [
+                {"file": "website/public/generated/evidence-summary.json", "evidenceKey": key},
+                {"file": "config/evidence_topics.json"},
+                {"file": "config/presentation_rules.json"},
+            ],
         }
     payload = {
         "schemaVersion": rules["schemaVersion"],
@@ -56,6 +65,7 @@ def write_presentation_contract(root: Path) -> dict[str, Any]:
         "routes": routes,
         "inputs": [
             {"file": "config/presentation_rules.json", "sha256": _hash(config_path)},
+            {"file": "config/evidence_topics.json", "sha256": _hash(root / "config" / "evidence_topics.json")},
             {"file": "website/public/generated/evidence-summary.json", "sha256": _hash(evidence_path)},
         ],
     }

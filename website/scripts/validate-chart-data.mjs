@@ -157,19 +157,20 @@ for (const [namespace, namespaceManifest] of [['global', globalAffordabilityMani
 }
 
 const evidenceStatuses = ['supporting', 'mixed', 'contradicting', 'insufficient']
-const requiredEvidenceTopics = ['current_state_us', 'current_state_canada', 'regimes_us', 'regimes_canada', 'symptoms_us', 'symptoms_canada', 'affordability', 'food', 'housing', 'canada']
-if (evidenceSummary.schemaVersion !== 1 || !evidenceSummary.generatedAt || !evidenceSummary.topics) failures.push('evidence-summary.json: missing schema metadata or topics')
-for (const topicName of requiredEvidenceTopics) {
-  const topic = evidenceSummary.topics?.[topicName]
-  if (!topic?.interpretation || !topic?.confidence || !('coverage' in (topic ?? {}))) failures.push(`evidence-summary.json: incomplete topic ${topicName}`)
+const requiredEvidenceKeys = ['us:current-state', 'us:regimes', 'us:symptoms', 'canada:overview', 'canada:current-state', 'canada:regimes', 'canada:symptoms', 'canada:affordability', 'canada:food', 'canada:housing', 'ontario:indicator-state', 'alberta:indicator-state', 'global:indicator-state']
+if (evidenceSummary.schemaVersion !== 2 || !evidenceSummary.generatedAt || !evidenceSummary.evidence) failures.push('evidence-summary.json: missing schema metadata or evidence')
+for (const evidenceKey of requiredEvidenceKeys) {
+  const topic = evidenceSummary.evidence?.[evidenceKey]
+  if (!topic?.interpretation || !topic?.confidence || !('coverage' in (topic ?? {}))) failures.push(`evidence-summary.json: incomplete evidence ${evidenceKey}`)
+  if (topic && (topic.evidenceKey !== evidenceKey || `${topic.geography}:${topic.topic}` !== evidenceKey)) failures.push(`evidence-summary.json: inconsistent geography/topic key ${evidenceKey}`)
   for (const status of evidenceStatuses) {
     const rows = topic?.[status]
     if (!Array.isArray(rows)) {
-      failures.push(`evidence-summary.json: ${topicName}.${status} must be an array`)
+      failures.push(`evidence-summary.json: ${evidenceKey}.${status} must be an array`)
       continue
     }
     for (const row of rows) {
-      if (!row.indicator || !row.label || row.status !== status || !row.reason || !row.group) failures.push(`evidence-summary.json: invalid ${topicName}.${status} row`)
+      if (!row.indicator || !row.label || row.status !== status || !row.reason || !row.group) failures.push(`evidence-summary.json: invalid ${evidenceKey}.${status} row`)
       if (row.indicatorFile) {
         try {
           await readFile(resolve(generatedRoot, row.indicatorFile), 'utf8')
@@ -188,8 +189,10 @@ if (presentationManifest.schemaVersion !== 1 || !presentationManifest.refineryVe
 if (!Array.isArray(presentationManifest.inputs) || presentationManifest.inputs.some((input) => !input.file || !/^[a-f0-9]{64}$/.test(input.sha256))) failures.push('presentation-manifest.json: invalid input provenance')
 for (const route of requiredPresentationRoutes) {
   const presentation = presentationManifest.routes?.[route]
-  if (!presentation?.evidenceTopic || !presentation?.interpretation || !presentation?.confidence || !presentation?.provenance?.length) failures.push(`presentation-manifest.json: incomplete route ${route}`)
-  if (presentation?.evidenceTopic && !evidenceSummary.topics?.[presentation.evidenceTopic]) failures.push(`presentation-manifest.json: ${route} references missing topic ${presentation.evidenceTopic}`)
+  if (!presentation?.geography || !presentation?.topic || !presentation?.evidenceKey || !presentation?.interpretation || !presentation?.confidence || !presentation?.provenance?.length) failures.push(`presentation-manifest.json: incomplete route ${route}`)
+  if (presentation?.evidenceKey !== `${presentation?.geography}:${presentation?.topic}`) failures.push(`presentation-manifest.json: inconsistent evidence key for ${route}`)
+  if (presentation?.evidenceKey && !evidenceSummary.evidence?.[presentation.evidenceKey]) failures.push(`presentation-manifest.json: ${route} references missing evidence ${presentation.evidenceKey}`)
+  if (presentation?.provenance?.some((item) => !item.file)) failures.push(`presentation-manifest.json: invalid provenance for ${route}`)
   if ((presentation?.evidenceCounts?.insufficient ?? 0) > 0 && presentationManifest.policy?.excludeStatusesFromDiagnosticSummary?.includes('insufficient') !== true) failures.push(`presentation-manifest.json: ${route} exposes insufficient evidence without an explicit policy`)
 }
 

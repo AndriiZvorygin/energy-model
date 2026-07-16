@@ -55,6 +55,7 @@ REQUIRED_ANALYSIS = [
     "analysis/canadian_income_data_audit.md",
     "analysis/canadian_income_indicator_catalogue.csv",
     "analysis/refinery_presentation_audit.md",
+    "analysis/evidence_topic_audit.md",
 ]
 
 REQUIRED_CHARTS = [

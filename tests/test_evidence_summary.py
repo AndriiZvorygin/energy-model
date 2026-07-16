@@ -4,7 +4,7 @@ import hashlib
 import json
 from pathlib import Path
 
-from oil_model.evidence_summary import STATUS_TEXT, write_evidence_summary
+from oil_model.evidence_summary import STATUS_TEXT, generate_evidence_summary, write_evidence_summary
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,15 +17,18 @@ def _hash(path: Path) -> str:
 
 def test_evidence_summary_schema_and_statuses() -> None:
     payload = json.loads((GENERATED / "evidence-summary.json").read_text(encoding="utf-8"))
-    assert payload["schemaVersion"] == 1
+    assert payload["schemaVersion"] == 2
     assert payload["statusDefinitions"] == STATUS_TEXT
     required = {
-        "current_state_us", "current_state_canada", "regimes_us", "regimes_canada",
-        "symptoms_us", "symptoms_canada", "affordability", "food", "housing", "canada",
+        "us:current-state", "us:regimes", "us:symptoms",
+        "canada:overview", "canada:current-state", "canada:regimes", "canada:symptoms",
+        "canada:affordability", "canada:food", "canada:housing",
+        "ontario:indicator-state", "alberta:indicator-state", "global:indicator-state",
     }
-    assert required <= payload["topics"].keys()
+    assert required <= payload["evidence"].keys()
     observed: set[str] = set()
-    for topic in payload["topics"].values():
+    for key, topic in payload["evidence"].items():
+        assert key == topic["evidenceKey"] == f"{topic['geography']}:{topic['topic']}"
         assert topic["interpretation"]
         assert topic["confidence"]
         for status in STATUS_TEXT:
@@ -42,18 +45,38 @@ def test_evidence_summary_schema_and_statuses() -> None:
 
 def test_symptom_evidence_preserves_checklist_groups_and_missing_data() -> None:
     payload = json.loads((GENERATED / "evidence-summary.json").read_text(encoding="utf-8"))
-    symptom_topics = [value for key, value in payload["topics"].items() if key.startswith("symptom_")]
+    symptom_topics = [value for key, value in payload["evidence"].items() if ":symptom/" in key]
     groups = {row["group"] for topic in symptom_topics for status in STATUS_TEXT for row in topic[status]}
     assert {"Required evidence", "Confirming evidence", "Conflicting evidence", "Missing evidence"} <= groups
-    household = payload["topics"]["symptom_canada_household_stress"]
+    household = payload["evidence"]["canada:symptom/household_stress"]
     assert household["insufficient"]
 
 
 def test_affordability_summary_uses_documented_categories() -> None:
     payload = json.loads((GENERATED / "evidence-summary.json").read_text(encoding="utf-8"))
-    topic = payload["topics"]["affordability"]
+    topic = payload["evidence"]["canada:affordability"]
     groups = {row["group"] for status in STATUS_TEXT for row in topic[status]}
     assert groups == {"Food", "Housing", "Energy"}
+
+
+def test_one_interface_handles_all_configured_geographies() -> None:
+    expected = {
+        ("us", "current-state"): "us:current-state",
+        ("canada", "current-state"): "canada:current-state",
+        ("ontario", "indicator-state"): "ontario:indicator-state",
+        ("alberta", "indicator-state"): "alberta:indicator-state",
+        ("global", "indicator-state"): "global:indicator-state",
+    }
+    for arguments, key in expected.items():
+        result = generate_evidence_summary(*arguments, ROOT)
+        assert result["evidenceKey"] == key
+
+
+def test_migrated_narratives_remain_unchanged() -> None:
+    payload = json.loads((GENERATED / "evidence-summary.json").read_text(encoding="utf-8"))["evidence"]
+    assert payload["us:current-state"]["interpretation"] == "Mixed transition: Physical tightening/Energy affordability stress"
+    assert payload["canada:current-state"]["interpretation"] == "Consumer affordability stress"
+    assert payload["canada:food"]["interpretation"] == "Food affordability evidence is mixed across costs and purchasing power"
 
 
 def test_generation_does_not_modify_classifiers_or_locked_outputs() -> None:

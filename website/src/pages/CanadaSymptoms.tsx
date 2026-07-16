@@ -12,7 +12,6 @@ import type {
   CanadianCondition,
   CanadianSymptomPayload,
 } from "../components/diagnostics/canadaTypes";
-import { GeneratedEvidenceSummary } from "../components/diagnostics/GeneratedEvidenceSummary";
 import { GeneratedRouteEvidenceSummary } from "../components/diagnostics/GeneratedRouteEvidenceSummary";
 import { PageBody, PageHeader } from "../components/PageHeader";
 
@@ -182,8 +181,8 @@ export function CanadaSymptoms() {
                       <span>Score {(item.score * 100).toFixed(0)}%</span>
                     </div>
                     <div className="mt-6">
-                      <GeneratedEvidenceSummary
-                        topic={`symptom_canada_${item.id}`}
+                      <GeneratedRouteEvidenceSummary
+                        topic={`symptom/${item.id}`}
                         title="Why is this symptom active or inactive?"
                       />
                     </div>

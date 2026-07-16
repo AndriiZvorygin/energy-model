@@ -139,7 +139,7 @@ Canadian indicator histories and diagnostics are namespaced below `website/publi
 
 Each topic publishes an interpretation, confidence, coverage, scope, and four arrays: `supporting`, `mixed`, `contradicting`, and `insufficient`. Rows retain their rule role (`Required evidence`, `Confirming evidence`, `Conflicting evidence`, or `Missing evidence`), current value, percentile, source date, calculation, limitations, and an optional link to the full indicator history. `npm run validate:chart-data` validates this contract and fails when required topics, statuses, reasons, or linked indicator files are missing.
 
-`presentation-manifest.json` is the route-level contract above the evidence topics. It is generated from `config/presentation_rules.json`, records source hashes and the exact regeneration command, and maps each diagnostic route to one evidence topic. `GeneratedRouteEvidenceSummary` resolves this mapping at runtime; pages do not select their analytical topic in React. See [refinery_architecture.md](refinery_architecture.md) for the ownership boundary.
+`presentation-manifest.json` is the route-level contract above canonical geography/topic evidence keys. It is generated from `config/evidence_topics.json` and `config/presentation_rules.json`, records source hashes and the exact regeneration command, and maps each diagnostic route to explicit `geography`, `topic`, and `evidenceKey` fields. `GeneratedRouteEvidenceSummary` resolves this mapping at runtime; pages do not select a geography-specific analytical topic in React. See [refinery_architecture.md](refinery_architecture.md) for the ownership boundary.
 
 ## Adding An Event
 

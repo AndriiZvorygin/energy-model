@@ -100,7 +100,7 @@ energy-model/
 
 The Python pipeline owns data acquisition, transformations, models, validation, written findings, chart generation, and website data contracts. The website is an interactive research-observatory layer: it loads generated histories and metadata but does not run, refit, or alter the research model.
 
-Data-dependent website interpretation is refinery-driven. Route-level summaries resolve through `website/public/generated/presentation-manifest.json`, generated from classifier and indicator outputs plus `config/presentation_rules.json`. React renders this contract and does not choose evidence status or compose current analytical conclusions. See [docs/refinery_architecture.md](docs/refinery_architecture.md).
+Data-dependent website interpretation is refinery-driven. One `generate_evidence_summary(geography, topic)` interface produces canonical evidence keys across global, Canadian, U.S., Ontario and Alberta contexts. Route-level summaries resolve through `website/public/generated/presentation-manifest.json`, generated from classifier and indicator outputs plus structured evidence and presentation configuration. React renders this contract and does not choose geography, evidence status, or current analytical conclusions. See [docs/refinery_architecture.md](docs/refinery_architecture.md).
 
 ## Website
 

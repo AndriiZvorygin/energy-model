@@ -2,7 +2,7 @@
 
 ## Implemented Boundary
 
-Current State, Regimes, Symptoms, Canada, Food, Housing and Affordability now resolve their diagnostic evidence topic through the generated `presentation-manifest.json`. Their current interpretation, confidence, coverage, evidence rows and observation dates originate in the Python pipeline.
+Current State, Regimes, Symptoms, Canada, Food, Housing and Affordability now resolve structured geography/topic evidence through the generated `presentation-manifest.json`. Their current interpretation, confidence, coverage, evidence rows and observation dates originate in the Python pipeline. Flat aliases such as `current_state_canada` and `symptoms_us` have been replaced by canonical keys such as `canada:current-state` and `us:symptoms`.
 
 The Canadian diagnostic narrative is generated from the current regime and symptoms whose status is active, emerging or fading. Inactive and insufficient-data symptoms remain available in detailed rule outputs but are excluded from the top diagnostic narrative.
 

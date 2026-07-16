@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "geographies": {
+    "us": {
+      "label": "United States",
+      "scope": "United States energy-economic conditions with global oil-market and global-liquidity inputs.",
+      "symptomInterpretation": "Current documented symptom balance",
+      "symptomCalculation": "Version-controlled symptom rule",
+      "symptomReasonIncludesScore": true,
+      "symptomLimitationsField": "alternativeExplanations",
+      "classification": {
+        "file": "current-classification.json",
+        "primaryKey": "primaryRegime",
+        "secondaryKey": "secondaryRegime",
+        "currentInterpretationPath": "provisionalClassification.classification",
+        "overviewInterpretationPath": "provisionalClassification.classification",
+        "coveragePath": "evidenceCoverage",
+        "confidencePath": "confidence"
+      },
+      "symptomsFile": "symptom-evaluations.json"
+    },
+    "canada": {
+      "label": "Canada",
+      "scope": "Canadian energy-economic conditions with global oil-market and global-liquidity inputs.",
+      "symptomInterpretation": "Current Canadian symptom balance",
+      "symptomCalculation": "Version-controlled Canadian symptom rule",
+      "symptomReasonIncludesScore": false,
+      "symptomLimitationsField": "limitations",
+      "classification": {
+        "file": "canada/current-classification.json",
+        "primaryKey": "primaryState",
+        "secondaryKey": "secondaryState",
+        "currentInterpretationPath": "status",
+        "overviewInterpretationPath": "summary",
+        "coveragePath": "coverage",
+        "confidencePath": "confidence"
+      },
+      "symptomsFile": "canada/symptom-evaluations.json",
+      "topicOverrides": {
+        "affordability": {
+          "scope": "Canadian household affordability with global commodity context",
+          "groups": {
+            "Food": ["food-to-income", "food-to-wage"],
+            "Housing": ["mortgage-interest-to-income", "rent-to-income", "nhpi-to-income"],
+            "Energy": ["canada-energy-cpi-yoy", "canada-real-wti-cad-yoy"]
+          }
+        },
+        "food": {
+          "scope": "Canadian household affordability with global commodity context",
+          "groups": {
+            "Food": ["food-to-income", "grocery-to-income", "food-to-wage", "grocery-to-wage"],
+            "Purchasing power": ["real-disposable-income-per-person", "real-wage-growth", "household-saving-rate"]
+          }
+        },
+        "housing": {
+          "scope": "Canadian household affordability with global commodity context",
+          "groups": {
+            "Asset affordability": ["nhpi-to-income", "residential-property-price-to-income"],
+            "Current costs": ["rent-to-income", "shelter-to-income", "mortgage-interest-to-income"],
+            "Purchasing power": ["real-disposable-income-per-person", "real-wage-growth"]
+          }
+        }
+      }
+    },
+    "ontario": {
+      "label": "Ontario",
+      "scope": "Ontario energy-economic conditions with Canadian and global upstream inputs.",
+      "indicatorGeographies": ["Ontario"]
+    },
+    "alberta": {
+      "label": "Alberta",
+      "scope": "Alberta producing-region conditions with Canadian and global upstream inputs.",
+      "indicatorGeographies": ["Alberta"]
+    },
+    "global": {
+      "label": "Global inputs",
+      "scope": "Global oil-market, liquidity, food-commodity and international housing inputs.",
+      "indicatorGeographies": ["Global"]
+    }
+  },
+  "topics": {
+    "overview": {"evaluator": "regime", "interpretation": "overview"},
+    "current-state": {"evaluator": "regime", "interpretation": "current"},
+    "regimes": {"evaluator": "regime", "interpretation": "current"},
+    "symptoms": {"evaluator": "symptom-aggregate"},
+    "symptom/*": {"evaluator": "symptom-detail"},
+    "affordability": {
+      "evaluator": "indicator-groups",
+      "title": "Household affordability",
+      "groups": {}
+    },
+    "food": {
+      "evaluator": "indicator-groups",
+      "title": "Food affordability",
+      "groups": {}
+    },
+    "housing": {
+      "evaluator": "indicator-groups",
+      "title": "Housing affordability",
+      "groups": {}
+    },
+    "indicator-state": {"evaluator": "indicator-state"}
+  },
+  "outputs": [
+    {"geography": "us", "topics": ["current-state", "regimes", "symptoms"]},
+    {"geography": "canada", "topics": ["overview", "current-state", "regimes", "symptoms", "affordability", "food", "housing"]},
+    {"geography": "ontario", "topics": ["indicator-state"]},
+    {"geography": "alberta", "topics": ["indicator-state"]},
+    {"geography": "global", "topics": ["indicator-state"]}
+  ]
+}

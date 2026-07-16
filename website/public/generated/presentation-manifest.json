@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "refineryVersion": "1.0.0",
-  "generatedAt": "2026-07-16T15:49:49+00:00",
+  "refineryVersion": "2.0.0",
+  "generatedAt": "2026-07-16T16:43:30+00:00",
   "regenerationCommand": "python -m oil_model.pipeline --root . --refresh",
   "policy": {
     "includeStatusesInDiagnosticSummary": [
@@ -23,7 +23,9 @@
   "routes": {
     "/canada": {
       "route": "/canada",
-      "evidenceTopic": "canada",
+      "geography": "canada",
+      "topic": "overview",
+      "evidenceKey": "canada:overview",
       "interpretation": "Current Canadian state: Consumer affordability stress. Canadian energy affordability pressure is active: Canadian-dollar oil and consumer energy costs are elevated while rates, currency movements, and debt service limit household room. Resource-producing-region expansion is active: Resource GDP, Alberta crude production, exports, and national crude production are rising, indicating expansion in producing-region activity.",
       "confidence": "low",
       "coverage": 0.8888888888888888,
@@ -37,12 +39,23 @@
         "insufficient": 0
       },
       "provenance": [
-        "website/public/generated/evidence-summary.json"
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "canada:overview"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
       ]
     },
     "/current-state": {
       "route": "/current-state",
-      "evidenceTopic": "current_state_canada",
+      "geography": "canada",
+      "topic": "current-state",
+      "evidenceKey": "canada:current-state",
       "interpretation": "Consumer affordability stress",
       "confidence": "low",
       "coverage": 0.8888888888888888,
@@ -56,12 +69,23 @@
         "insufficient": 0
       },
       "provenance": [
-        "website/public/generated/evidence-summary.json"
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "canada:current-state"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
       ]
     },
     "/canada/current-state": {
       "route": "/canada/current-state",
-      "evidenceTopic": "current_state_canada",
+      "geography": "canada",
+      "topic": "current-state",
+      "evidenceKey": "canada:current-state",
       "interpretation": "Consumer affordability stress",
       "confidence": "low",
       "coverage": 0.8888888888888888,
@@ -75,12 +99,23 @@
         "insufficient": 0
       },
       "provenance": [
-        "website/public/generated/evidence-summary.json"
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "canada:current-state"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
       ]
     },
     "/canada/regimes": {
       "route": "/canada/regimes",
-      "evidenceTopic": "regimes_canada",
+      "geography": "canada",
+      "topic": "regimes",
+      "evidenceKey": "canada:regimes",
       "interpretation": "Consumer affordability stress",
       "confidence": "low",
       "coverage": 0.8888888888888888,
@@ -94,15 +129,26 @@
         "insufficient": 0
       },
       "provenance": [
-        "website/public/generated/evidence-summary.json"
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "canada:regimes"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
       ]
     },
     "/canada/symptoms": {
       "route": "/canada/symptoms",
-      "evidenceTopic": "symptoms_canada",
+      "geography": "canada",
+      "topic": "symptoms",
+      "evidenceKey": "canada:symptoms",
       "interpretation": "Current Canadian symptom balance",
       "confidence": "low",
-      "coverage": 0.8888888888888888,
+      "coverage": 1.0,
       "scope": "Canadian energy-economic conditions with global oil-market and global-liquidity inputs.",
       "oldestObservationDate": "2026-07-01",
       "newestObservationDate": "2026-07-01",
@@ -113,12 +159,23 @@
         "insufficient": 0
       },
       "provenance": [
-        "website/public/generated/evidence-summary.json"
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "canada:symptoms"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
       ]
     },
     "/current-state/us": {
       "route": "/current-state/us",
-      "evidenceTopic": "current_state_us",
+      "geography": "us",
+      "topic": "current-state",
+      "evidenceKey": "us:current-state",
       "interpretation": "Mixed transition: Physical tightening/Energy affordability stress",
       "confidence": "moderate",
       "coverage": 1.0,
@@ -132,12 +189,23 @@
         "insufficient": 0
       },
       "provenance": [
-        "website/public/generated/evidence-summary.json"
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "us:current-state"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
       ]
     },
     "/regimes": {
       "route": "/regimes",
-      "evidenceTopic": "regimes_us",
+      "geography": "us",
+      "topic": "regimes",
+      "evidenceKey": "us:regimes",
       "interpretation": "Mixed transition: Physical tightening/Energy affordability stress",
       "confidence": "moderate",
       "coverage": 1.0,
@@ -151,14 +219,25 @@
         "insufficient": 0
       },
       "provenance": [
-        "website/public/generated/evidence-summary.json"
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "us:regimes"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
       ]
     },
     "/symptoms": {
       "route": "/symptoms",
-      "evidenceTopic": "symptoms_us",
+      "geography": "us",
+      "topic": "symptoms",
+      "evidenceKey": "us:symptoms",
       "interpretation": "Current documented symptom balance",
-      "confidence": "moderate",
+      "confidence": "low",
       "coverage": 1.0,
       "scope": "United States energy-economic conditions with global oil-market and global-liquidity inputs.",
       "oldestObservationDate": "2026-07-01",
@@ -170,12 +249,23 @@
         "insufficient": 0
       },
       "provenance": [
-        "website/public/generated/evidence-summary.json"
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "us:symptoms"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
       ]
     },
     "/affordability": {
       "route": "/affordability",
-      "evidenceTopic": "affordability",
+      "geography": "canada",
+      "topic": "affordability",
+      "evidenceKey": "canada:affordability",
       "interpretation": "Household affordability evidence remains mixed or context-dependent",
       "confidence": "moderate",
       "coverage": 1.0,
@@ -189,12 +279,23 @@
         "insufficient": 0
       },
       "provenance": [
-        "website/public/generated/evidence-summary.json"
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "canada:affordability"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
       ]
     },
     "/affordability/food": {
       "route": "/affordability/food",
-      "evidenceTopic": "food",
+      "geography": "canada",
+      "topic": "food",
+      "evidenceKey": "canada:food",
       "interpretation": "Food affordability evidence is mixed across costs and purchasing power",
       "confidence": "moderate",
       "coverage": 1.0,
@@ -208,12 +309,23 @@
         "insufficient": 0
       },
       "provenance": [
-        "website/public/generated/evidence-summary.json"
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "canada:food"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
       ]
     },
     "/canada/food": {
       "route": "/canada/food",
-      "evidenceTopic": "food",
+      "geography": "canada",
+      "topic": "food",
+      "evidenceKey": "canada:food",
       "interpretation": "Food affordability evidence is mixed across costs and purchasing power",
       "confidence": "moderate",
       "coverage": 1.0,
@@ -227,12 +339,23 @@
         "insufficient": 0
       },
       "provenance": [
-        "website/public/generated/evidence-summary.json"
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "canada:food"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
       ]
     },
     "/compare/food": {
       "route": "/compare/food",
-      "evidenceTopic": "food",
+      "geography": "canada",
+      "topic": "food",
+      "evidenceKey": "canada:food",
       "interpretation": "Food affordability evidence is mixed across costs and purchasing power",
       "confidence": "moderate",
       "coverage": 1.0,
@@ -246,12 +369,23 @@
         "insufficient": 0
       },
       "provenance": [
-        "website/public/generated/evidence-summary.json"
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "canada:food"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
       ]
     },
     "/affordability/housing": {
       "route": "/affordability/housing",
-      "evidenceTopic": "housing",
+      "geography": "canada",
+      "topic": "housing",
+      "evidenceKey": "canada:housing",
       "interpretation": "Housing affordability evidence is mixed across costs and purchasing power",
       "confidence": "moderate",
       "coverage": 1.0,
@@ -265,12 +399,23 @@
         "insufficient": 0
       },
       "provenance": [
-        "website/public/generated/evidence-summary.json"
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "canada:housing"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
       ]
     },
     "/canada/housing": {
       "route": "/canada/housing",
-      "evidenceTopic": "housing",
+      "geography": "canada",
+      "topic": "housing",
+      "evidenceKey": "canada:housing",
       "interpretation": "Housing affordability evidence is mixed across costs and purchasing power",
       "confidence": "moderate",
       "coverage": 1.0,
@@ -284,12 +429,23 @@
         "insufficient": 0
       },
       "provenance": [
-        "website/public/generated/evidence-summary.json"
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "canada:housing"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
       ]
     },
     "/compare/housing": {
       "route": "/compare/housing",
-      "evidenceTopic": "housing",
+      "geography": "canada",
+      "topic": "housing",
+      "evidenceKey": "canada:housing",
       "interpretation": "Housing affordability evidence is mixed across costs and purchasing power",
       "confidence": "moderate",
       "coverage": 1.0,
@@ -303,18 +459,31 @@
         "insufficient": 0
       },
       "provenance": [
-        "website/public/generated/evidence-summary.json"
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "canada:housing"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
       ]
     }
   },
   "inputs": [
     {
       "file": "config/presentation_rules.json",
-      "sha256": "837e446e63d316b28396b9153b1f05ab41777e29e55789ca5140980dbd9d513f"
+      "sha256": "6ef911aff3795bb638b429e6754d480709d5031f4c9c19e13378081b7b693741"
+    },
+    {
+      "file": "config/evidence_topics.json",
+      "sha256": "bfa17938e853ac8277062bceea0298d49b8a755f001307fc266d0b75954d4ac3"
     },
     {
       "file": "website/public/generated/evidence-summary.json",
-      "sha256": "1a894411b3b51da4904c4e5f3073dbeea0a3bd9d46327a7a2cfce0a93186a970"
+      "sha256": "3d3b8e6b6d69e3fddc9123dea5e8bf904b8e2caf857f33b4846053685497fbad"
     }
   ]
 }
