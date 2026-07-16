@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-16T16:43:30+00:00",
+  "generatedAt": "2026-07-16T17:09:19+00:00",
   "statusDefinitions": {
     "supporting": "The indicator is consistent with this interpretation.",
     "mixed": "The indicator provides partial or ambiguous evidence.",
@@ -303,6 +303,860 @@
       "mixed": [],
       "contradicting": [],
       "insufficient": []
+    },
+    "us:affordability": {
+      "geography": "us",
+      "topic": "affordability",
+      "evidenceKey": "us:affordability",
+      "interpretation": "Affordable \u00b7 easing",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "United States household affordability with official national income and expenditure inputs",
+      "supporting": [
+        {
+          "indicator": "absolute-affordability",
+          "label": "Absolute affordability assessment",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. The configured household reference is affordable and easing. Measured costs are 43.2% of after-tax income.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Absolute affordability",
+          "value": 31222.0,
+          "unit": "2024 USD per year",
+          "historicalPercentile": null,
+          "direction": "easing",
+          "absoluteStatus": "affordable",
+          "sourceDate": "2024-01-01",
+          "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Surveys 2024",
+          "calculation": "otherwise",
+          "limitations": [
+            "Median Census households are not the same statistical population as average BLS consumer units.",
+            "These are averages across consumer units, not costs for the median Census household. Housing uses shelter plus separately reported utilities rather than the broader BLS housing total to avoid double counting.",
+            "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy.",
+            "A national central estimate does not represent low-income, renter, regional, or family-type outcomes."
+          ]
+        }
+      ],
+      "mixed": [
+        {
+          "indicator": "us_food_affordability_pressure",
+          "label": "U.S. food affordability pressure",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Consumer affordability depends on price growth relative to wages or income, not the price index alone.",
+          "chart": "us/indicators/us-food-affordability-pressure.json",
+          "indicatorFile": "us/indicators/us-food-affordability-pressure.json",
+          "group": "Food",
+          "value": -0.5061958398798527,
+          "unit": "percentage points",
+          "historicalPercentile": 55.62770562770563,
+          "direction": "falling",
+          "sourceDate": "2026-06-01",
+          "calculation": "Food CPI growth minus average hourly earnings growth; experimental, with components published.",
+          "limitations": [
+            "Derived difference. The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here. The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here.",
+            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "us_food_at_home_cpi_yoy",
+          "label": "U.S. food-at-home CPI growth",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Consumer affordability depends on price growth relative to wages or income, not the price index alone.",
+          "chart": "us/indicators/us-food-at-home-cpi-yoy.json",
+          "indicatorFile": "us/indicators/us-food-at-home-cpi-yoy.json",
+          "group": "Food",
+          "value": 2.7043088739927557,
+          "unit": "percent",
+          "historicalPercentile": 52.04313280363223,
+          "direction": "falling",
+          "sourceDate": "2026-06-01",
+          "calculation": "Food-at-home CPI year-over-year percent change.",
+          "limitations": [
+            "The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here.",
+            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "us_rent_pressure",
+          "label": "U.S. rent pressure",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Consumer affordability depends on price growth relative to wages or income, not the price index alone.",
+          "chart": "us/indicators/us-rent-pressure.json",
+          "indicatorFile": "us/indicators/us-rent-pressure.json",
+          "group": "Housing",
+          "value": -0.6783891917220286,
+          "unit": "percentage points",
+          "historicalPercentile": 20.995670995670995,
+          "direction": "falling",
+          "sourceDate": "2026-06-01",
+          "calculation": "Rent pressure = rent CPI growth - average hourly earnings growth.",
+          "limitations": [
+            "Derived difference. The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here. The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here.",
+            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "us_house_price_to_income_index",
+          "label": "U.S. house-price-to-income index",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Property purchase-price changes are not equivalent to current shelter-service costs and are not universally supportive.",
+          "chart": "us/indicators/us-house-price-to-income-index.json",
+          "indicatorFile": "us/indicators/us-house-price-to-income-index.json",
+          "group": "Housing",
+          "value": 239.34408363663937,
+          "unit": "index",
+          "historicalPercentile": 99.64539007092199,
+          "direction": "rising",
+          "sourceDate": "2026-01-01",
+          "calculation": "House-price-to-income index = rebased house-price index / rebased real disposable-income-per-person index \u00d7 100.",
+          "limitations": [
+            "Derived ratio. The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here. The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here.",
+            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
+        }
+      ],
+      "contradicting": [
+        {
+          "indicator": "us_shelter_cpi_yoy",
+          "label": "U.S. shelter CPI growth",
+          "status": "contradicting",
+          "reason": "The indicator moves against this interpretation. Consumer affordability depends on price growth relative to wages or income, not the price index alone.",
+          "chart": "us/indicators/us-shelter-cpi-yoy.json",
+          "indicatorFile": "us/indicators/us-shelter-cpi-yoy.json",
+          "group": "Housing",
+          "value": 3.2579804858535732,
+          "unit": "percent",
+          "historicalPercentile": 47.12313003452244,
+          "direction": "falling",
+          "sourceDate": "2026-06-01",
+          "calculation": "Shelter CPI year-over-year percent change.",
+          "limitations": [
+            "The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here.",
+            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "real_disposable_income_YoY",
+          "label": "Real disposable income growth",
+          "status": "contradicting",
+          "reason": "The indicator moves against this interpretation. Real disposable income growth is in its low historical range and is not moving in the stress-consistent direction. Interpret with confirming and conflicting evidence.",
+          "chart": "indicators/real-disposable-income-yoy.json",
+          "indicatorFile": "indicators/real-disposable-income-yoy.json",
+          "group": "Purchasing power",
+          "value": 0.016128224949785164,
+          "unit": "index or documented source unit",
+          "historicalPercentile": 8.13953488372093,
+          "direction": "decelerating",
+          "sourceDate": null,
+          "calculation": "Real disposable income growth",
+          "limitations": [
+            "Latest-vintage data may be revised.",
+            "Interpret alongside other indicators."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "real_wage_growth",
+          "label": "Canada real wage growth",
+          "status": "contradicting",
+          "reason": "The indicator moves against this interpretation. Rising real income or wages generally increase purchasing power, while household experiences can differ from the average.",
+          "chart": "canada/indicators/real-wage-growth.json",
+          "indicatorFile": "canada/indicators/real-wage-growth.json",
+          "group": "Purchasing power",
+          "value": -0.1820875805558897,
+          "unit": "percentage points",
+          "historicalPercentile": 18.328445747800586,
+          "direction": "falling",
+          "sourceDate": "2026-06-22",
+          "calculation": "Hourly wage YoY - all-items CPI YoY",
+          "limitations": [
+            "Derived difference. Statistics Canada table 14-10-0063-01 is latest-vintage and may revise recent or historical observations. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
+            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
+        }
+      ],
+      "insufficient": [],
+      "absoluteStatus": "affordable",
+      "direction": "easing",
+      "householdType": "National all-household / all-consumer-unit proxy",
+      "income": {
+        "value": 72330,
+        "unit": "2024 USD per year",
+        "definition": "Median post-tax household income",
+        "source": "U.S. Census Bureau, Income in the United States: 2024",
+        "sourceUrl": "https://www.census.gov/newsroom/press-releases/2025/income-poverty-health-insurance-coverage.html",
+        "observationDate": "2024-01-01",
+        "releaseDate": "2025-09-09",
+        "limitations": "Median Census households are not the same statistical population as average BLS consumer units."
+      },
+      "essentialCost": {
+        "value": 31222.0,
+        "unit": "2024 USD per year",
+        "metric": "totalMeasuredEssentials",
+        "definition": "Average Consumer Expenditure Survey food, shelter, and utilities/fuels/public-services expenditures",
+        "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Surveys 2024",
+        "sourceUrl": "https://www.bls.gov/news.release/cesan.nr0.htm",
+        "observationDate": "2024-01-01"
+      },
+      "costShare": 0.43166044518180563,
+      "residualIncome": 41108.0,
+      "thresholdUsed": {
+        "classification": {
+          "geography": "us",
+          "householdType": "National all-household / all-consumer-unit proxy",
+          "status": "affordable",
+          "definition": "Income clears the configured basic-needs and essential-cost pressure bands",
+          "formula": "otherwise",
+          "source": "Project evaluation of official U.S. inputs",
+          "observationDate": "2024-01-01",
+          "limitations": "A national central estimate does not represent low-income, renter, regional, or family-type outcomes."
+        },
+        "basicNeeds": {
+          "value": 32130,
+          "unit": "2024 USD per year",
+          "definition": "Weighted-average official poverty threshold for a family of four",
+          "source": "U.S. Census Bureau, Income in the United States: 2024",
+          "sourceUrl": "https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-poverty-thresholds.html",
+          "observationDate": "2024-01-01",
+          "limitations": "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy."
+        }
+      },
+      "absoluteEvaluation": {
+        "absoluteStatus": "affordable",
+        "direction": "easing",
+        "householdType": "National all-household / all-consumer-unit proxy",
+        "observationDate": "2024-01-01",
+        "income": {
+          "value": 72330,
+          "unit": "2024 USD per year",
+          "definition": "Median post-tax household income",
+          "source": "U.S. Census Bureau, Income in the United States: 2024",
+          "sourceUrl": "https://www.census.gov/newsroom/press-releases/2025/income-poverty-health-insurance-coverage.html",
+          "observationDate": "2024-01-01",
+          "releaseDate": "2025-09-09",
+          "limitations": "Median Census households are not the same statistical population as average BLS consumer units."
+        },
+        "essentialCost": {
+          "value": 31222.0,
+          "unit": "2024 USD per year",
+          "metric": "totalMeasuredEssentials",
+          "definition": "Average Consumer Expenditure Survey food, shelter, and utilities/fuels/public-services expenditures",
+          "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Surveys 2024",
+          "sourceUrl": "https://www.bls.gov/news.release/cesan.nr0.htm",
+          "observationDate": "2024-01-01"
+        },
+        "costShare": 0.43166044518180563,
+        "residualIncome": 41108.0,
+        "incomeRemainingAfterHousing": 51277.0,
+        "incomeRemainingAfterMeasuredEssentials": 41108.0,
+        "thresholdUsed": {
+          "classification": {
+            "geography": "us",
+            "householdType": "National all-household / all-consumer-unit proxy",
+            "status": "affordable",
+            "definition": "Income clears the configured basic-needs and essential-cost pressure bands",
+            "formula": "otherwise",
+            "source": "Project evaluation of official U.S. inputs",
+            "observationDate": "2024-01-01",
+            "limitations": "A national central estimate does not represent low-income, renter, regional, or family-type outcomes."
+          },
+          "basicNeeds": {
+            "value": 32130,
+            "unit": "2024 USD per year",
+            "definition": "Weighted-average official poverty threshold for a family of four",
+            "source": "U.S. Census Bureau, Income in the United States: 2024",
+            "sourceUrl": "https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-poverty-thresholds.html",
+            "observationDate": "2024-01-01",
+            "limitations": "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy."
+          }
+        },
+        "components": {
+          "food": 10169,
+          "housing": 16317,
+          "utilitiesAndEnergy": 4736,
+          "totalMeasuredEssentials": 31222,
+          "unit": "2024 USD per year"
+        },
+        "directionEvidence": [
+          {
+            "indicator": "us-food-affordability-pressure",
+            "label": "U.S. food affordability pressure",
+            "available": true,
+            "direction": "easing",
+            "momentum": "falling",
+            "sourceDate": "2026-06-01"
+          },
+          {
+            "indicator": "us-rent-pressure",
+            "label": "U.S. rent pressure",
+            "available": true,
+            "direction": "easing",
+            "momentum": "falling",
+            "sourceDate": "2026-06-01"
+          },
+          {
+            "indicator": "us-house-price-to-income-index",
+            "label": "U.S. house-price-to-income index",
+            "available": true,
+            "direction": "worsening",
+            "momentum": "rising",
+            "sourceDate": "2026-01-01"
+          }
+        ],
+        "limitations": [
+          "Median Census households are not the same statistical population as average BLS consumer units.",
+          "These are averages across consumer units, not costs for the median Census household. Housing uses shelter plus separately reported utilities rather than the broader BLS housing total to avoid double counting.",
+          "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy.",
+          "A national central estimate does not represent low-income, renter, regional, or family-type outcomes."
+        ],
+        "missingEvidence": []
+      }
+    },
+    "us:food": {
+      "geography": "us",
+      "topic": "food",
+      "evidenceKey": "us:food",
+      "interpretation": "Affordable \u00b7 easing",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "United States household food affordability",
+      "supporting": [
+        {
+          "indicator": "absolute-food",
+          "label": "Absolute food assessment",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. The configured household reference is affordable and easing. Measured costs are 14.1% of after-tax income.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Absolute affordability",
+          "value": 10169.0,
+          "unit": "2024 USD per year",
+          "historicalPercentile": null,
+          "direction": "easing",
+          "absoluteStatus": "affordable",
+          "sourceDate": "2024-01-01",
+          "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Surveys 2024",
+          "calculation": "otherwise",
+          "limitations": [
+            "Median Census households are not the same statistical population as average BLS consumer units.",
+            "These are averages across consumer units, not costs for the median Census household. Housing uses shelter plus separately reported utilities rather than the broader BLS housing total to avoid double counting.",
+            "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy.",
+            "Food insecurity remains heterogeneous and is not ruled out by a national proxy."
+          ]
+        }
+      ],
+      "mixed": [
+        {
+          "indicator": "us_food_affordability_pressure",
+          "label": "U.S. food affordability pressure",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Consumer affordability depends on price growth relative to wages or income, not the price index alone.",
+          "chart": "us/indicators/us-food-affordability-pressure.json",
+          "indicatorFile": "us/indicators/us-food-affordability-pressure.json",
+          "group": "Food",
+          "value": -0.5061958398798527,
+          "unit": "percentage points",
+          "historicalPercentile": 55.62770562770563,
+          "direction": "falling",
+          "sourceDate": "2026-06-01",
+          "calculation": "Food CPI growth minus average hourly earnings growth; experimental, with components published.",
+          "limitations": [
+            "Derived difference. The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here. The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here.",
+            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "us_food_at_home_cpi_yoy",
+          "label": "U.S. food-at-home CPI growth",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Consumer affordability depends on price growth relative to wages or income, not the price index alone.",
+          "chart": "us/indicators/us-food-at-home-cpi-yoy.json",
+          "indicatorFile": "us/indicators/us-food-at-home-cpi-yoy.json",
+          "group": "Food",
+          "value": 2.7043088739927557,
+          "unit": "percent",
+          "historicalPercentile": 52.04313280363223,
+          "direction": "falling",
+          "sourceDate": "2026-06-01",
+          "calculation": "Food-at-home CPI year-over-year percent change.",
+          "limitations": [
+            "The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here.",
+            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
+        }
+      ],
+      "contradicting": [
+        {
+          "indicator": "us_food_cpi_yoy",
+          "label": "U.S. food CPI growth",
+          "status": "contradicting",
+          "reason": "The indicator moves against this interpretation. Consumer affordability depends on price growth relative to wages or income, not the price index alone.",
+          "chart": "us/indicators/us-food-cpi-yoy.json",
+          "indicatorFile": "us/indicators/us-food-cpi-yoy.json",
+          "group": "Food",
+          "value": 3.0141561953236806,
+          "unit": "percent",
+          "historicalPercentile": 54.07709414381023,
+          "direction": "falling",
+          "sourceDate": "2026-06-01",
+          "calculation": "Food CPI year-over-year percent change.",
+          "limitations": [
+            "The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here.",
+            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "real_disposable_income_YoY",
+          "label": "Real disposable income growth",
+          "status": "contradicting",
+          "reason": "The indicator moves against this interpretation. Real disposable income growth is in its low historical range and is not moving in the stress-consistent direction. Interpret with confirming and conflicting evidence.",
+          "chart": "indicators/real-disposable-income-yoy.json",
+          "indicatorFile": "indicators/real-disposable-income-yoy.json",
+          "group": "Purchasing power",
+          "value": 0.016128224949785164,
+          "unit": "index or documented source unit",
+          "historicalPercentile": 8.13953488372093,
+          "direction": "decelerating",
+          "sourceDate": null,
+          "calculation": "Real disposable income growth",
+          "limitations": [
+            "Latest-vintage data may be revised.",
+            "Interpret alongside other indicators."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "real_wage_growth",
+          "label": "Canada real wage growth",
+          "status": "contradicting",
+          "reason": "The indicator moves against this interpretation. Rising real income or wages generally increase purchasing power, while household experiences can differ from the average.",
+          "chart": "canada/indicators/real-wage-growth.json",
+          "indicatorFile": "canada/indicators/real-wage-growth.json",
+          "group": "Purchasing power",
+          "value": -0.1820875805558897,
+          "unit": "percentage points",
+          "historicalPercentile": 18.328445747800586,
+          "direction": "falling",
+          "sourceDate": "2026-06-22",
+          "calculation": "Hourly wage YoY - all-items CPI YoY",
+          "limitations": [
+            "Derived difference. Statistics Canada table 14-10-0063-01 is latest-vintage and may revise recent or historical observations. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
+            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
+        }
+      ],
+      "insufficient": [],
+      "absoluteStatus": "affordable",
+      "direction": "easing",
+      "householdType": "National all-household / all-consumer-unit proxy",
+      "income": {
+        "value": 72330,
+        "unit": "2024 USD per year",
+        "definition": "Median post-tax household income",
+        "source": "U.S. Census Bureau, Income in the United States: 2024",
+        "sourceUrl": "https://www.census.gov/newsroom/press-releases/2025/income-poverty-health-insurance-coverage.html",
+        "observationDate": "2024-01-01",
+        "releaseDate": "2025-09-09",
+        "limitations": "Median Census households are not the same statistical population as average BLS consumer units."
+      },
+      "essentialCost": {
+        "value": 10169.0,
+        "unit": "2024 USD per year",
+        "metric": "food",
+        "definition": "Average Consumer Expenditure Survey food, shelter, and utilities/fuels/public-services expenditures",
+        "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Surveys 2024",
+        "sourceUrl": "https://www.bls.gov/news.release/cesan.nr0.htm",
+        "observationDate": "2024-01-01"
+      },
+      "costShare": 0.14059173233789576,
+      "residualIncome": 41108.0,
+      "thresholdUsed": {
+        "classification": {
+          "geography": "us",
+          "householdType": "National all-household / all-consumer-unit proxy",
+          "status": "affordable",
+          "definition": "Income remaining after shelter and utilities covers food and its share is below the pressure band",
+          "formula": "otherwise",
+          "source": "Project evaluation of official U.S. inputs",
+          "observationDate": "2024-01-01",
+          "limitations": "Food insecurity remains heterogeneous and is not ruled out by a national proxy."
+        },
+        "basicNeeds": {
+          "value": 32130,
+          "unit": "2024 USD per year",
+          "definition": "Weighted-average official poverty threshold for a family of four",
+          "source": "U.S. Census Bureau, Income in the United States: 2024",
+          "sourceUrl": "https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-poverty-thresholds.html",
+          "observationDate": "2024-01-01",
+          "limitations": "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy."
+        }
+      },
+      "absoluteEvaluation": {
+        "absoluteStatus": "affordable",
+        "direction": "easing",
+        "householdType": "National all-household / all-consumer-unit proxy",
+        "observationDate": "2024-01-01",
+        "income": {
+          "value": 72330,
+          "unit": "2024 USD per year",
+          "definition": "Median post-tax household income",
+          "source": "U.S. Census Bureau, Income in the United States: 2024",
+          "sourceUrl": "https://www.census.gov/newsroom/press-releases/2025/income-poverty-health-insurance-coverage.html",
+          "observationDate": "2024-01-01",
+          "releaseDate": "2025-09-09",
+          "limitations": "Median Census households are not the same statistical population as average BLS consumer units."
+        },
+        "essentialCost": {
+          "value": 10169.0,
+          "unit": "2024 USD per year",
+          "metric": "food",
+          "definition": "Average Consumer Expenditure Survey food, shelter, and utilities/fuels/public-services expenditures",
+          "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Surveys 2024",
+          "sourceUrl": "https://www.bls.gov/news.release/cesan.nr0.htm",
+          "observationDate": "2024-01-01"
+        },
+        "costShare": 0.14059173233789576,
+        "residualIncome": 41108.0,
+        "incomeRemainingAfterHousing": 51277.0,
+        "incomeRemainingAfterMeasuredEssentials": 41108.0,
+        "thresholdUsed": {
+          "classification": {
+            "geography": "us",
+            "householdType": "National all-household / all-consumer-unit proxy",
+            "status": "affordable",
+            "definition": "Income remaining after shelter and utilities covers food and its share is below the pressure band",
+            "formula": "otherwise",
+            "source": "Project evaluation of official U.S. inputs",
+            "observationDate": "2024-01-01",
+            "limitations": "Food insecurity remains heterogeneous and is not ruled out by a national proxy."
+          },
+          "basicNeeds": {
+            "value": 32130,
+            "unit": "2024 USD per year",
+            "definition": "Weighted-average official poverty threshold for a family of four",
+            "source": "U.S. Census Bureau, Income in the United States: 2024",
+            "sourceUrl": "https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-poverty-thresholds.html",
+            "observationDate": "2024-01-01",
+            "limitations": "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy."
+          }
+        },
+        "components": {
+          "food": 10169,
+          "housing": 16317,
+          "utilitiesAndEnergy": 4736,
+          "totalMeasuredEssentials": 31222,
+          "unit": "2024 USD per year"
+        },
+        "directionEvidence": [
+          {
+            "indicator": "us-food-affordability-pressure",
+            "label": "U.S. food affordability pressure",
+            "available": true,
+            "direction": "easing",
+            "momentum": "falling",
+            "sourceDate": "2026-06-01"
+          },
+          {
+            "indicator": "us-food-at-home-cpi-yoy",
+            "label": "U.S. food-at-home CPI growth",
+            "available": true,
+            "direction": "easing",
+            "momentum": "falling",
+            "sourceDate": "2026-06-01"
+          }
+        ],
+        "limitations": [
+          "Median Census households are not the same statistical population as average BLS consumer units.",
+          "These are averages across consumer units, not costs for the median Census household. Housing uses shelter plus separately reported utilities rather than the broader BLS housing total to avoid double counting.",
+          "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy.",
+          "Food insecurity remains heterogeneous and is not ruled out by a national proxy."
+        ],
+        "missingEvidence": []
+      }
+    },
+    "us:housing": {
+      "geography": "us",
+      "topic": "housing",
+      "evidenceKey": "us:housing",
+      "interpretation": "Affordable \u00b7 easing",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "United States housing affordability and shelter-cost pressure",
+      "supporting": [
+        {
+          "indicator": "absolute-housing",
+          "label": "Absolute housing assessment",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. The configured household reference is affordable and easing. Measured costs are 22.6% of after-tax income.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Absolute affordability",
+          "value": 16317.0,
+          "unit": "2024 USD per year",
+          "historicalPercentile": null,
+          "direction": "easing",
+          "absoluteStatus": "affordable",
+          "sourceDate": "2024-01-01",
+          "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Surveys 2024",
+          "calculation": "otherwise",
+          "limitations": [
+            "Median Census households are not the same statistical population as average BLS consumer units.",
+            "These are averages across consumer units, not costs for the median Census household. Housing uses shelter plus separately reported utilities rather than the broader BLS housing total to avoid double counting.",
+            "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy.",
+            "Renter, owner, mortgage, family, and regional outcomes differ substantially."
+          ]
+        }
+      ],
+      "mixed": [
+        {
+          "indicator": "us_rent_pressure",
+          "label": "U.S. rent pressure",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Consumer affordability depends on price growth relative to wages or income, not the price index alone.",
+          "chart": "us/indicators/us-rent-pressure.json",
+          "indicatorFile": "us/indicators/us-rent-pressure.json",
+          "group": "Current costs",
+          "value": -0.6783891917220286,
+          "unit": "percentage points",
+          "historicalPercentile": 20.995670995670995,
+          "direction": "falling",
+          "sourceDate": "2026-06-01",
+          "calculation": "Rent pressure = rent CPI growth - average hourly earnings growth.",
+          "limitations": [
+            "Derived difference. The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here. The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here.",
+            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "us_rent_cpi_yoy",
+          "label": "U.S. rent CPI growth",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Consumer affordability depends on price growth relative to wages or income, not the price index alone.",
+          "chart": "us/indicators/us-rent-cpi-yoy.json",
+          "indicatorFile": "us/indicators/us-rent-cpi-yoy.json",
+          "group": "Current costs",
+          "value": 2.8419628434815047,
+          "unit": "percent",
+          "historicalPercentile": 38.17049808429119,
+          "direction": "falling",
+          "sourceDate": "2026-06-01",
+          "calculation": "Rent CPI year-over-year percent change.",
+          "limitations": [
+            "The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here.",
+            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "us_house_price_to_income_index",
+          "label": "U.S. house-price-to-income index",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Property purchase-price changes are not equivalent to current shelter-service costs and are not universally supportive.",
+          "chart": "us/indicators/us-house-price-to-income-index.json",
+          "indicatorFile": "us/indicators/us-house-price-to-income-index.json",
+          "group": "Asset affordability",
+          "value": 239.34408363663937,
+          "unit": "index",
+          "historicalPercentile": 99.64539007092199,
+          "direction": "rising",
+          "sourceDate": "2026-01-01",
+          "calculation": "House-price-to-income index = rebased house-price index / rebased real disposable-income-per-person index \u00d7 100.",
+          "limitations": [
+            "Derived ratio. The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here. The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here.",
+            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "us_fhfa_house_price_yoy",
+          "label": "FHFA U.S. house price growth",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Property purchase-price changes are not equivalent to current shelter-service costs and are not universally supportive.",
+          "chart": "us/indicators/us-fhfa-house-price-yoy.json",
+          "indicatorFile": "us/indicators/us-fhfa-house-price-yoy.json",
+          "group": "Asset affordability",
+          "value": 1.998844598497973,
+          "unit": "percent",
+          "historicalPercentile": 17.597087378640776,
+          "direction": "rising",
+          "sourceDate": "2026-04-01",
+          "calculation": "FHFA house-price index year-over-year percent change.",
+          "limitations": [
+            "The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here.",
+            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
+        }
+      ],
+      "contradicting": [
+        {
+          "indicator": "us_shelter_cpi_yoy",
+          "label": "U.S. shelter CPI growth",
+          "status": "contradicting",
+          "reason": "The indicator moves against this interpretation. Consumer affordability depends on price growth relative to wages or income, not the price index alone.",
+          "chart": "us/indicators/us-shelter-cpi-yoy.json",
+          "indicatorFile": "us/indicators/us-shelter-cpi-yoy.json",
+          "group": "Current costs",
+          "value": 3.2579804858535732,
+          "unit": "percent",
+          "historicalPercentile": 47.12313003452244,
+          "direction": "falling",
+          "sourceDate": "2026-06-01",
+          "calculation": "Shelter CPI year-over-year percent change.",
+          "limitations": [
+            "The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here.",
+            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
+        }
+      ],
+      "insufficient": [],
+      "absoluteStatus": "affordable",
+      "direction": "easing",
+      "householdType": "National all-household / all-consumer-unit proxy",
+      "income": {
+        "value": 72330,
+        "unit": "2024 USD per year",
+        "definition": "Median post-tax household income",
+        "source": "U.S. Census Bureau, Income in the United States: 2024",
+        "sourceUrl": "https://www.census.gov/newsroom/press-releases/2025/income-poverty-health-insurance-coverage.html",
+        "observationDate": "2024-01-01",
+        "releaseDate": "2025-09-09",
+        "limitations": "Median Census households are not the same statistical population as average BLS consumer units."
+      },
+      "essentialCost": {
+        "value": 16317.0,
+        "unit": "2024 USD per year",
+        "metric": "housing",
+        "definition": "Average Consumer Expenditure Survey food, shelter, and utilities/fuels/public-services expenditures",
+        "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Surveys 2024",
+        "sourceUrl": "https://www.bls.gov/news.release/cesan.nr0.htm",
+        "observationDate": "2024-01-01"
+      },
+      "costShare": 0.22559104106180008,
+      "residualIncome": 41108.0,
+      "thresholdUsed": {
+        "classification": {
+          "geography": "us",
+          "householdType": "National all-household / all-consumer-unit proxy",
+          "status": "affordable",
+          "definition": "Shelter share remains below the configured pressure bands",
+          "formula": "otherwise",
+          "source": "Project evaluation of official U.S. inputs",
+          "observationDate": "2024-01-01",
+          "limitations": "Renter, owner, mortgage, family, and regional outcomes differ substantially."
+        },
+        "basicNeeds": {
+          "value": 32130,
+          "unit": "2024 USD per year",
+          "definition": "Weighted-average official poverty threshold for a family of four",
+          "source": "U.S. Census Bureau, Income in the United States: 2024",
+          "sourceUrl": "https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-poverty-thresholds.html",
+          "observationDate": "2024-01-01",
+          "limitations": "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy."
+        }
+      },
+      "absoluteEvaluation": {
+        "absoluteStatus": "affordable",
+        "direction": "easing",
+        "householdType": "National all-household / all-consumer-unit proxy",
+        "observationDate": "2024-01-01",
+        "income": {
+          "value": 72330,
+          "unit": "2024 USD per year",
+          "definition": "Median post-tax household income",
+          "source": "U.S. Census Bureau, Income in the United States: 2024",
+          "sourceUrl": "https://www.census.gov/newsroom/press-releases/2025/income-poverty-health-insurance-coverage.html",
+          "observationDate": "2024-01-01",
+          "releaseDate": "2025-09-09",
+          "limitations": "Median Census households are not the same statistical population as average BLS consumer units."
+        },
+        "essentialCost": {
+          "value": 16317.0,
+          "unit": "2024 USD per year",
+          "metric": "housing",
+          "definition": "Average Consumer Expenditure Survey food, shelter, and utilities/fuels/public-services expenditures",
+          "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Surveys 2024",
+          "sourceUrl": "https://www.bls.gov/news.release/cesan.nr0.htm",
+          "observationDate": "2024-01-01"
+        },
+        "costShare": 0.22559104106180008,
+        "residualIncome": 41108.0,
+        "incomeRemainingAfterHousing": 51277.0,
+        "incomeRemainingAfterMeasuredEssentials": 41108.0,
+        "thresholdUsed": {
+          "classification": {
+            "geography": "us",
+            "householdType": "National all-household / all-consumer-unit proxy",
+            "status": "affordable",
+            "definition": "Shelter share remains below the configured pressure bands",
+            "formula": "otherwise",
+            "source": "Project evaluation of official U.S. inputs",
+            "observationDate": "2024-01-01",
+            "limitations": "Renter, owner, mortgage, family, and regional outcomes differ substantially."
+          },
+          "basicNeeds": {
+            "value": 32130,
+            "unit": "2024 USD per year",
+            "definition": "Weighted-average official poverty threshold for a family of four",
+            "source": "U.S. Census Bureau, Income in the United States: 2024",
+            "sourceUrl": "https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-poverty-thresholds.html",
+            "observationDate": "2024-01-01",
+            "limitations": "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy."
+          }
+        },
+        "components": {
+          "food": 10169,
+          "housing": 16317,
+          "utilitiesAndEnergy": 4736,
+          "totalMeasuredEssentials": 31222,
+          "unit": "2024 USD per year"
+        },
+        "directionEvidence": [
+          {
+            "indicator": "us-rent-pressure",
+            "label": "U.S. rent pressure",
+            "available": true,
+            "direction": "easing",
+            "momentum": "falling",
+            "sourceDate": "2026-06-01"
+          },
+          {
+            "indicator": "us-shelter-cpi-yoy",
+            "label": "U.S. shelter CPI growth",
+            "available": true,
+            "direction": "easing",
+            "momentum": "falling",
+            "sourceDate": "2026-06-01"
+          },
+          {
+            "indicator": "us-house-price-to-income-index",
+            "label": "U.S. house-price-to-income index",
+            "available": true,
+            "direction": "worsening",
+            "momentum": "rising",
+            "sourceDate": "2026-01-01"
+          }
+        ],
+        "limitations": [
+          "Median Census households are not the same statistical population as average BLS consumer units.",
+          "These are averages across consumer units, not costs for the median Census household. Housing uses shelter plus separately reported utilities rather than the broader BLS housing total to avoid double counting.",
+          "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy.",
+          "Renter, owner, mortgage, family, and regional outcomes differ substantially."
+        ],
+        "missingEvidence": []
+      }
     },
     "us:symptom/inventories_fall_prices_rise": {
       "geography": "us",
@@ -1272,11 +2126,35 @@
       "geography": "canada",
       "topic": "affordability",
       "evidenceKey": "canada:affordability",
-      "interpretation": "Household affordability evidence remains mixed or context-dependent",
+      "interpretation": "Affordable \u00b7 easing",
       "confidence": "moderate",
       "coverage": 1.0,
       "scope": "Canadian household affordability with global commodity context",
-      "supporting": [],
+      "supporting": [
+        {
+          "indicator": "absolute-affordability",
+          "label": "Absolute affordability assessment",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. The configured household reference is affordable and easing. Measured costs are 46.1% of after-tax income.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Absolute affordability",
+          "value": 61763.0,
+          "unit": "2024 CAD per year",
+          "historicalPercentile": null,
+          "direction": "easing",
+          "absoluteStatus": "affordable",
+          "sourceDate": "2024-01-01",
+          "source": "Statistics Canada, Table 11-10-0066-01",
+          "calculation": "otherwise",
+          "limitations": [
+            "The income estimate is national and the family composition is broader than the exact MBM reference family ages.",
+            "The MBM is a modest basic-needs reference basket for a specified family and region, not observed spending by the median Canadian household. Utilities and household energy are embedded in the shelter and other basket components and are not separately additive here.",
+            "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average.",
+            "A median reference case can be affordable while many households remain under pressure."
+          ]
+        }
+      ],
       "mixed": [
         {
           "indicator": "food_to_income",
@@ -1295,7 +2173,8 @@
           "limitations": [
             "Derived ratio. Normalized to 100 at 2017-01-01. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table. Normalized to 100 at 2017-01-01. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "food_to_wage",
@@ -1314,7 +2193,8 @@
           "limitations": [
             "Derived difference. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table. Statistics Canada table 14-10-0063-01 is latest-vintage and may revise recent or historical observations.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "mortgage_interest_to_income",
@@ -1333,7 +2213,8 @@
           "limitations": [
             "Derived ratio. Normalized to 100 at 2017-01-01. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table. Normalized to 100 at 2017-01-01. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "rent_to_income",
@@ -1352,7 +2233,8 @@
           "limitations": [
             "Derived ratio. Normalized to 100 at 2017-01-01. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table. Normalized to 100 at 2017-01-01. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "nhpi_to_income",
@@ -1371,7 +2253,8 @@
           "limitations": [
             "Derived ratio. Normalized to 100 at 2017-01-01. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0205-01 may revise recent and historical observations; classifications and baskets follow the native table. Normalized to 100 at 2017-01-01. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "canada_energy_cpi_yoy",
@@ -1390,7 +2273,8 @@
           "limitations": [
             "Statistics Canada may revise recent and historical observations.",
             "Cross-country definitions differ."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "canada_real_wti_cad_yoy",
@@ -1409,39 +2293,209 @@
           "limitations": [
             "CPI and benchmark histories may be revised; daily prices are monthly averaged.",
             "Cross-country definitions differ."
-          ]
+          ],
+          "absoluteStatus": null
         }
       ],
       "contradicting": [],
-      "insufficient": []
+      "insufficient": [],
+      "absoluteStatus": "affordable",
+      "direction": "easing",
+      "householdType": "Two-parent family with children; Toronto MBM reference family of four",
+      "income": {
+        "value": 133900,
+        "unit": "2024 CAD per year",
+        "definition": "Median after-tax income of Canadian two-parent families with children",
+        "source": "Statistics Canada, Table 11-10-0190-01",
+        "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110019001",
+        "observationDate": "2024-01-01",
+        "releaseDate": "2026-04-29",
+        "limitations": "The income estimate is national and the family composition is broader than the exact MBM reference family ages."
+      },
+      "essentialCost": {
+        "value": 61763.0,
+        "unit": "2024 CAD per year",
+        "metric": "totalMeasuredEssentials",
+        "definition": "2023-base Market Basket Measure components and total threshold for the Toronto reference family of four, current dollars",
+        "source": "Statistics Canada, Table 11-10-0066-01",
+        "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
+        "observationDate": "2024-01-01"
+      },
+      "costShare": 0.4612621359223301,
+      "residualIncome": 72137.0,
+      "thresholdUsed": {
+        "classification": {
+          "geography": "canada",
+          "householdType": "Two-parent family with children; Toronto MBM reference family of four",
+          "status": "affordable",
+          "definition": "Income clears the configured basic-needs and essential-cost pressure bands",
+          "formula": "otherwise",
+          "source": "Project evaluation of official Statistics Canada inputs",
+          "observationDate": "2024-01-01",
+          "limitations": "A median reference case can be affordable while many households remain under pressure."
+        },
+        "basicNeeds": {
+          "value": 61763,
+          "unit": "2024 CAD per year",
+          "definition": "2023-base Market Basket Measure total threshold for the Toronto reference family of four",
+          "source": "Statistics Canada, Table 11-10-0066-01",
+          "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
+          "observationDate": "2024-01-01",
+          "limitations": "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average."
+        }
+      },
+      "absoluteEvaluation": {
+        "absoluteStatus": "affordable",
+        "direction": "easing",
+        "householdType": "Two-parent family with children; Toronto MBM reference family of four",
+        "observationDate": "2024-01-01",
+        "income": {
+          "value": 133900,
+          "unit": "2024 CAD per year",
+          "definition": "Median after-tax income of Canadian two-parent families with children",
+          "source": "Statistics Canada, Table 11-10-0190-01",
+          "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110019001",
+          "observationDate": "2024-01-01",
+          "releaseDate": "2026-04-29",
+          "limitations": "The income estimate is national and the family composition is broader than the exact MBM reference family ages."
+        },
+        "essentialCost": {
+          "value": 61763.0,
+          "unit": "2024 CAD per year",
+          "metric": "totalMeasuredEssentials",
+          "definition": "2023-base Market Basket Measure components and total threshold for the Toronto reference family of four, current dollars",
+          "source": "Statistics Canada, Table 11-10-0066-01",
+          "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
+          "observationDate": "2024-01-01"
+        },
+        "costShare": 0.4612621359223301,
+        "residualIncome": 72137.0,
+        "incomeRemainingAfterHousing": 107610.0,
+        "incomeRemainingAfterMeasuredEssentials": 72137.0,
+        "thresholdUsed": {
+          "classification": {
+            "geography": "canada",
+            "householdType": "Two-parent family with children; Toronto MBM reference family of four",
+            "status": "affordable",
+            "definition": "Income clears the configured basic-needs and essential-cost pressure bands",
+            "formula": "otherwise",
+            "source": "Project evaluation of official Statistics Canada inputs",
+            "observationDate": "2024-01-01",
+            "limitations": "A median reference case can be affordable while many households remain under pressure."
+          },
+          "basicNeeds": {
+            "value": 61763,
+            "unit": "2024 CAD per year",
+            "definition": "2023-base Market Basket Measure total threshold for the Toronto reference family of four",
+            "source": "Statistics Canada, Table 11-10-0066-01",
+            "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
+            "observationDate": "2024-01-01",
+            "limitations": "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average."
+          }
+        },
+        "components": {
+          "food": 14522,
+          "housing": 26290,
+          "utilitiesAndEnergy": null,
+          "totalMeasuredEssentials": 61763,
+          "unit": "2024 CAD per year"
+        },
+        "directionEvidence": [
+          {
+            "indicator": "food-to-income",
+            "label": "Canada food-price-to-income index",
+            "available": true,
+            "direction": "worsening",
+            "momentum": "rising",
+            "sourceDate": "2026-06-17"
+          },
+          {
+            "indicator": "rent-to-income",
+            "label": "Canada rent-to-income index",
+            "available": true,
+            "direction": "easing",
+            "momentum": "falling",
+            "sourceDate": "2026-06-17"
+          },
+          {
+            "indicator": "shelter-to-income",
+            "label": "Canada shelter-to-income index",
+            "available": true,
+            "direction": "easing",
+            "momentum": "falling",
+            "sourceDate": "2026-06-17"
+          },
+          {
+            "indicator": "mortgage-interest-to-income",
+            "label": "Canada mortgage-interest-to-income index",
+            "available": true,
+            "direction": "easing",
+            "momentum": "falling",
+            "sourceDate": "2026-06-17"
+          }
+        ],
+        "limitations": [
+          "The income estimate is national and the family composition is broader than the exact MBM reference family ages.",
+          "The MBM is a modest basic-needs reference basket for a specified family and region, not observed spending by the median Canadian household. Utilities and household energy are embedded in the shelter and other basket components and are not separately additive here.",
+          "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average.",
+          "A median reference case can be affordable while many households remain under pressure."
+        ],
+        "missingEvidence": [
+          "Utilities and household energy are not separately reported in the Canadian MBM input."
+        ]
+      }
     },
     "canada:food": {
       "geography": "canada",
       "topic": "food",
       "evidenceKey": "canada:food",
-      "interpretation": "Food affordability evidence is mixed across costs and purchasing power",
+      "interpretation": "Affordable \u00b7 worsening",
       "confidence": "moderate",
       "coverage": 1.0,
       "scope": "Canadian household affordability with global commodity context",
       "supporting": [
         {
-          "indicator": "real_wage_growth",
-          "label": "Canada real wage growth",
+          "indicator": "absolute-food",
+          "label": "Absolute food assessment",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. The configured household reference is affordable and worsening. Measured costs are 10.8% of after-tax income.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Absolute affordability",
+          "value": 14522.0,
+          "unit": "2024 CAD per year",
+          "historicalPercentile": null,
+          "direction": "worsening",
+          "absoluteStatus": "affordable",
+          "sourceDate": "2024-01-01",
+          "source": "Statistics Canada, Table 11-10-0066-01",
+          "calculation": "otherwise",
+          "limitations": [
+            "The income estimate is national and the family composition is broader than the exact MBM reference family ages.",
+            "The MBM is a modest basic-needs reference basket for a specified family and region, not observed spending by the median Canadian household. Utilities and household energy are embedded in the shelter and other basket components and are not separately additive here.",
+            "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average.",
+            "Food insecurity can persist for households below the median or facing other essential costs."
+          ]
+        },
+        {
+          "indicator": "real_disposable_income_per_person",
+          "label": "Canada real household disposable income per person",
           "status": "supporting",
           "reason": "The indicator is consistent with this interpretation. Rising real income or wages generally increase purchasing power, while household experiences can differ from the average.",
-          "chart": "canada/indicators/real-wage-growth.json",
-          "indicatorFile": "canada/indicators/real-wage-growth.json",
+          "chart": "canada/indicators/real-disposable-income-per-person.json",
+          "indicatorFile": "canada/indicators/real-disposable-income-per-person.json",
           "group": "Purchasing power",
-          "value": -0.1820875805558897,
-          "unit": "percentage points",
-          "historicalPercentile": 18.328445747800586,
-          "direction": "falling",
-          "sourceDate": "2026-06-22",
-          "calculation": "Hourly wage YoY - all-items CPI YoY",
+          "value": 26304.197886920163,
+          "unit": "CPI-deflated annualized CAD per person",
+          "historicalPercentile": 96.26865671641791,
+          "direction": "rising",
+          "sourceDate": "2026-06-17",
+          "calculation": "Nominal disposable income per person / quarterly-average all-items CPI \u00d7 100",
           "limitations": [
-            "Derived difference. Statistics Canada table 14-10-0063-01 is latest-vintage and may revise recent or historical observations. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
+            "Deflated by the aligned all-items CPI; this is a derived CPI-deflated measure, not an official chained-dollar series. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         }
       ],
       "mixed": [
@@ -1462,7 +2516,8 @@
           "limitations": [
             "Derived ratio. Normalized to 100 at 2017-01-01. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table. Normalized to 100 at 2017-01-01. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "grocery_to_income",
@@ -1481,7 +2536,8 @@
           "limitations": [
             "Derived ratio. Normalized to 100 at 2017-01-01. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table. Normalized to 100 at 2017-01-01. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "food_to_wage",
@@ -1500,7 +2556,8 @@
           "limitations": [
             "Derived difference. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table. Statistics Canada table 14-10-0063-01 is latest-vintage and may revise recent or historical observations.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "grocery_to_wage",
@@ -1519,7 +2576,8 @@
           "limitations": [
             "Derived difference. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table. Statistics Canada table 14-10-0063-01 is latest-vintage and may revise recent or historical observations.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "household_saving_rate",
@@ -1538,46 +2596,16 @@
           "limitations": [
             "Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         }
       ],
       "contradicting": [
         {
-          "indicator": "real_disposable_income_per_person",
-          "label": "Canada real household disposable income per person",
-          "status": "contradicting",
-          "reason": "The indicator moves against this interpretation. Rising real income or wages generally increase purchasing power, while household experiences can differ from the average.",
-          "chart": "canada/indicators/real-disposable-income-per-person.json",
-          "indicatorFile": "canada/indicators/real-disposable-income-per-person.json",
-          "group": "Purchasing power",
-          "value": 26304.197886920163,
-          "unit": "CPI-deflated annualized CAD per person",
-          "historicalPercentile": 96.26865671641791,
-          "direction": "rising",
-          "sourceDate": "2026-06-17",
-          "calculation": "Nominal disposable income per person / quarterly-average all-items CPI \u00d7 100",
-          "limitations": [
-            "Deflated by the aligned all-items CPI; this is a derived CPI-deflated measure, not an official chained-dollar series. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
-            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
-        }
-      ],
-      "insufficient": []
-    },
-    "canada:housing": {
-      "geography": "canada",
-      "topic": "housing",
-      "evidenceKey": "canada:housing",
-      "interpretation": "Housing affordability evidence is mixed across costs and purchasing power",
-      "confidence": "moderate",
-      "coverage": 1.0,
-      "scope": "Canadian household affordability with global commodity context",
-      "supporting": [
-        {
           "indicator": "real_wage_growth",
           "label": "Canada real wage growth",
-          "status": "supporting",
-          "reason": "The indicator is consistent with this interpretation. Rising real income or wages generally increase purchasing power, while household experiences can differ from the average.",
+          "status": "contradicting",
+          "reason": "The indicator moves against this interpretation. Rising real income or wages generally increase purchasing power, while household experiences can differ from the average.",
           "chart": "canada/indicators/real-wage-growth.json",
           "indicatorFile": "canada/indicators/real-wage-growth.json",
           "group": "Purchasing power",
@@ -1590,7 +2618,208 @@
           "limitations": [
             "Derived difference. Statistics Canada table 14-10-0063-01 is latest-vintage and may revise recent or historical observations. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
+        }
+      ],
+      "insufficient": [],
+      "absoluteStatus": "affordable",
+      "direction": "worsening",
+      "householdType": "Two-parent family with children; Toronto MBM reference family of four",
+      "income": {
+        "value": 133900,
+        "unit": "2024 CAD per year",
+        "definition": "Median after-tax income of Canadian two-parent families with children",
+        "source": "Statistics Canada, Table 11-10-0190-01",
+        "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110019001",
+        "observationDate": "2024-01-01",
+        "releaseDate": "2026-04-29",
+        "limitations": "The income estimate is national and the family composition is broader than the exact MBM reference family ages."
+      },
+      "essentialCost": {
+        "value": 14522.0,
+        "unit": "2024 CAD per year",
+        "metric": "food",
+        "definition": "2023-base Market Basket Measure components and total threshold for the Toronto reference family of four, current dollars",
+        "source": "Statistics Canada, Table 11-10-0066-01",
+        "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
+        "observationDate": "2024-01-01"
+      },
+      "costShare": 0.10845407020164302,
+      "residualIncome": 72137.0,
+      "thresholdUsed": {
+        "classification": {
+          "geography": "canada",
+          "householdType": "Two-parent family with children; Toronto MBM reference family of four",
+          "status": "affordable",
+          "definition": "Income remaining after shelter covers the reference food basket and its share is below the pressure band",
+          "formula": "otherwise",
+          "source": "Project evaluation of official Statistics Canada inputs",
+          "observationDate": "2024-01-01",
+          "limitations": "Food insecurity can persist for households below the median or facing other essential costs."
+        },
+        "basicNeeds": {
+          "value": 61763,
+          "unit": "2024 CAD per year",
+          "definition": "2023-base Market Basket Measure total threshold for the Toronto reference family of four",
+          "source": "Statistics Canada, Table 11-10-0066-01",
+          "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
+          "observationDate": "2024-01-01",
+          "limitations": "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average."
+        }
+      },
+      "absoluteEvaluation": {
+        "absoluteStatus": "affordable",
+        "direction": "worsening",
+        "householdType": "Two-parent family with children; Toronto MBM reference family of four",
+        "observationDate": "2024-01-01",
+        "income": {
+          "value": 133900,
+          "unit": "2024 CAD per year",
+          "definition": "Median after-tax income of Canadian two-parent families with children",
+          "source": "Statistics Canada, Table 11-10-0190-01",
+          "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110019001",
+          "observationDate": "2024-01-01",
+          "releaseDate": "2026-04-29",
+          "limitations": "The income estimate is national and the family composition is broader than the exact MBM reference family ages."
+        },
+        "essentialCost": {
+          "value": 14522.0,
+          "unit": "2024 CAD per year",
+          "metric": "food",
+          "definition": "2023-base Market Basket Measure components and total threshold for the Toronto reference family of four, current dollars",
+          "source": "Statistics Canada, Table 11-10-0066-01",
+          "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
+          "observationDate": "2024-01-01"
+        },
+        "costShare": 0.10845407020164302,
+        "residualIncome": 72137.0,
+        "incomeRemainingAfterHousing": 107610.0,
+        "incomeRemainingAfterMeasuredEssentials": 72137.0,
+        "thresholdUsed": {
+          "classification": {
+            "geography": "canada",
+            "householdType": "Two-parent family with children; Toronto MBM reference family of four",
+            "status": "affordable",
+            "definition": "Income remaining after shelter covers the reference food basket and its share is below the pressure band",
+            "formula": "otherwise",
+            "source": "Project evaluation of official Statistics Canada inputs",
+            "observationDate": "2024-01-01",
+            "limitations": "Food insecurity can persist for households below the median or facing other essential costs."
+          },
+          "basicNeeds": {
+            "value": 61763,
+            "unit": "2024 CAD per year",
+            "definition": "2023-base Market Basket Measure total threshold for the Toronto reference family of four",
+            "source": "Statistics Canada, Table 11-10-0066-01",
+            "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
+            "observationDate": "2024-01-01",
+            "limitations": "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average."
+          }
+        },
+        "components": {
+          "food": 14522,
+          "housing": 26290,
+          "utilitiesAndEnergy": null,
+          "totalMeasuredEssentials": 61763,
+          "unit": "2024 CAD per year"
+        },
+        "directionEvidence": [
+          {
+            "indicator": "food-to-income",
+            "label": "Canada food-price-to-income index",
+            "available": true,
+            "direction": "worsening",
+            "momentum": "rising",
+            "sourceDate": "2026-06-17"
+          },
+          {
+            "indicator": "grocery-to-income",
+            "label": "Canada grocery-price-to-income index",
+            "available": true,
+            "direction": "worsening",
+            "momentum": "rising",
+            "sourceDate": "2026-06-17"
+          },
+          {
+            "indicator": "food-to-wage",
+            "label": "Canada food wage-pressure gap",
+            "available": true,
+            "direction": "worsening",
+            "momentum": "rising",
+            "sourceDate": "2026-06-22"
+          },
+          {
+            "indicator": "grocery-to-wage",
+            "label": "Canada grocery wage-pressure gap",
+            "available": true,
+            "direction": "worsening",
+            "momentum": "rising",
+            "sourceDate": "2026-06-22"
+          }
+        ],
+        "limitations": [
+          "The income estimate is national and the family composition is broader than the exact MBM reference family ages.",
+          "The MBM is a modest basic-needs reference basket for a specified family and region, not observed spending by the median Canadian household. Utilities and household energy are embedded in the shelter and other basket components and are not separately additive here.",
+          "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average.",
+          "Food insecurity can persist for households below the median or facing other essential costs."
+        ],
+        "missingEvidence": [
+          "Utilities and household energy are not separately reported in the Canadian MBM input."
+        ]
+      }
+    },
+    "canada:housing": {
+      "geography": "canada",
+      "topic": "housing",
+      "evidenceKey": "canada:housing",
+      "interpretation": "Affordable \u00b7 easing",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "Canadian household affordability with global commodity context",
+      "supporting": [
+        {
+          "indicator": "absolute-housing",
+          "label": "Absolute housing assessment",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. The configured household reference is affordable and easing. Measured costs are 19.6% of after-tax income.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Absolute affordability",
+          "value": 26290.0,
+          "unit": "2024 CAD per year",
+          "historicalPercentile": null,
+          "direction": "easing",
+          "absoluteStatus": "affordable",
+          "sourceDate": "2024-01-01",
+          "source": "Statistics Canada, Table 11-10-0066-01",
+          "calculation": "otherwise",
+          "limitations": [
+            "The income estimate is national and the family composition is broader than the exact MBM reference family ages.",
+            "The MBM is a modest basic-needs reference basket for a specified family and region, not observed spending by the median Canadian household. Utilities and household energy are embedded in the shelter and other basket components and are not separately additive here.",
+            "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average.",
+            "Tenure, mortgage status, location, and actual dwelling costs can produce very different outcomes."
           ]
+        },
+        {
+          "indicator": "real_disposable_income_per_person",
+          "label": "Canada real household disposable income per person",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Rising real income or wages generally increase purchasing power, while household experiences can differ from the average.",
+          "chart": "canada/indicators/real-disposable-income-per-person.json",
+          "indicatorFile": "canada/indicators/real-disposable-income-per-person.json",
+          "group": "Purchasing power",
+          "value": 26304.197886920163,
+          "unit": "CPI-deflated annualized CAD per person",
+          "historicalPercentile": 96.26865671641791,
+          "direction": "rising",
+          "sourceDate": "2026-06-17",
+          "calculation": "Nominal disposable income per person / quarterly-average all-items CPI \u00d7 100",
+          "limitations": [
+            "Deflated by the aligned all-items CPI; this is a derived CPI-deflated measure, not an official chained-dollar series. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
+            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
         }
       ],
       "mixed": [
@@ -1611,7 +2840,8 @@
           "limitations": [
             "Derived ratio. Normalized to 100 at 2017-01-01. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0205-01 may revise recent and historical observations; classifications and baskets follow the native table. Normalized to 100 at 2017-01-01. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "residential_property_price_to_income",
@@ -1630,7 +2860,8 @@
           "limitations": [
             "Derived ratio. Normalized to 100 at 2017-01-01. Statistics Canada table 18-10-0169-01; inactive broad new-and-resale property index. The series is inactive and ends in 2021 Q4. It is not spliced to NHPI, resale, rent, or shelter CPI. Normalized to 100 at 2017-01-01. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "rent_to_income",
@@ -1649,7 +2880,8 @@
           "limitations": [
             "Derived ratio. Normalized to 100 at 2017-01-01. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table. Normalized to 100 at 2017-01-01. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "shelter_to_income",
@@ -1668,7 +2900,8 @@
           "limitations": [
             "Derived ratio. Normalized to 100 at 2017-01-01. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table. Normalized to 100 at 2017-01-01. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "mortgage_interest_to_income",
@@ -1687,31 +2920,178 @@
           "limitations": [
             "Derived ratio. Normalized to 100 at 2017-01-01. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table. Normalized to 100 at 2017-01-01. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         }
       ],
       "contradicting": [
         {
-          "indicator": "real_disposable_income_per_person",
-          "label": "Canada real household disposable income per person",
+          "indicator": "real_wage_growth",
+          "label": "Canada real wage growth",
           "status": "contradicting",
           "reason": "The indicator moves against this interpretation. Rising real income or wages generally increase purchasing power, while household experiences can differ from the average.",
-          "chart": "canada/indicators/real-disposable-income-per-person.json",
-          "indicatorFile": "canada/indicators/real-disposable-income-per-person.json",
+          "chart": "canada/indicators/real-wage-growth.json",
+          "indicatorFile": "canada/indicators/real-wage-growth.json",
           "group": "Purchasing power",
-          "value": 26304.197886920163,
-          "unit": "CPI-deflated annualized CAD per person",
-          "historicalPercentile": 96.26865671641791,
-          "direction": "rising",
-          "sourceDate": "2026-06-17",
-          "calculation": "Nominal disposable income per person / quarterly-average all-items CPI \u00d7 100",
+          "value": -0.1820875805558897,
+          "unit": "percentage points",
+          "historicalPercentile": 18.328445747800586,
+          "direction": "falling",
+          "sourceDate": "2026-06-22",
+          "calculation": "Hourly wage YoY - all-items CPI YoY",
           "limitations": [
-            "Deflated by the aligned all-items CPI; this is a derived CPI-deflated measure, not an official chained-dollar series. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
+            "Derived difference. Statistics Canada table 14-10-0063-01 is latest-vintage and may revise recent or historical observations. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         }
       ],
-      "insufficient": []
+      "insufficient": [],
+      "absoluteStatus": "affordable",
+      "direction": "easing",
+      "householdType": "Two-parent family with children; Toronto MBM reference family of four",
+      "income": {
+        "value": 133900,
+        "unit": "2024 CAD per year",
+        "definition": "Median after-tax income of Canadian two-parent families with children",
+        "source": "Statistics Canada, Table 11-10-0190-01",
+        "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110019001",
+        "observationDate": "2024-01-01",
+        "releaseDate": "2026-04-29",
+        "limitations": "The income estimate is national and the family composition is broader than the exact MBM reference family ages."
+      },
+      "essentialCost": {
+        "value": 26290.0,
+        "unit": "2024 CAD per year",
+        "metric": "housing",
+        "definition": "2023-base Market Basket Measure components and total threshold for the Toronto reference family of four, current dollars",
+        "source": "Statistics Canada, Table 11-10-0066-01",
+        "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
+        "observationDate": "2024-01-01"
+      },
+      "costShare": 0.19634055265123226,
+      "residualIncome": 72137.0,
+      "thresholdUsed": {
+        "classification": {
+          "geography": "canada",
+          "householdType": "Two-parent family with children; Toronto MBM reference family of four",
+          "status": "affordable",
+          "definition": "Shelter share remains below the configured pressure bands",
+          "formula": "otherwise",
+          "source": "Project evaluation of official Statistics Canada inputs",
+          "observationDate": "2024-01-01",
+          "limitations": "Tenure, mortgage status, location, and actual dwelling costs can produce very different outcomes."
+        },
+        "basicNeeds": {
+          "value": 61763,
+          "unit": "2024 CAD per year",
+          "definition": "2023-base Market Basket Measure total threshold for the Toronto reference family of four",
+          "source": "Statistics Canada, Table 11-10-0066-01",
+          "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
+          "observationDate": "2024-01-01",
+          "limitations": "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average."
+        }
+      },
+      "absoluteEvaluation": {
+        "absoluteStatus": "affordable",
+        "direction": "easing",
+        "householdType": "Two-parent family with children; Toronto MBM reference family of four",
+        "observationDate": "2024-01-01",
+        "income": {
+          "value": 133900,
+          "unit": "2024 CAD per year",
+          "definition": "Median after-tax income of Canadian two-parent families with children",
+          "source": "Statistics Canada, Table 11-10-0190-01",
+          "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110019001",
+          "observationDate": "2024-01-01",
+          "releaseDate": "2026-04-29",
+          "limitations": "The income estimate is national and the family composition is broader than the exact MBM reference family ages."
+        },
+        "essentialCost": {
+          "value": 26290.0,
+          "unit": "2024 CAD per year",
+          "metric": "housing",
+          "definition": "2023-base Market Basket Measure components and total threshold for the Toronto reference family of four, current dollars",
+          "source": "Statistics Canada, Table 11-10-0066-01",
+          "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
+          "observationDate": "2024-01-01"
+        },
+        "costShare": 0.19634055265123226,
+        "residualIncome": 72137.0,
+        "incomeRemainingAfterHousing": 107610.0,
+        "incomeRemainingAfterMeasuredEssentials": 72137.0,
+        "thresholdUsed": {
+          "classification": {
+            "geography": "canada",
+            "householdType": "Two-parent family with children; Toronto MBM reference family of four",
+            "status": "affordable",
+            "definition": "Shelter share remains below the configured pressure bands",
+            "formula": "otherwise",
+            "source": "Project evaluation of official Statistics Canada inputs",
+            "observationDate": "2024-01-01",
+            "limitations": "Tenure, mortgage status, location, and actual dwelling costs can produce very different outcomes."
+          },
+          "basicNeeds": {
+            "value": 61763,
+            "unit": "2024 CAD per year",
+            "definition": "2023-base Market Basket Measure total threshold for the Toronto reference family of four",
+            "source": "Statistics Canada, Table 11-10-0066-01",
+            "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
+            "observationDate": "2024-01-01",
+            "limitations": "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average."
+          }
+        },
+        "components": {
+          "food": 14522,
+          "housing": 26290,
+          "utilitiesAndEnergy": null,
+          "totalMeasuredEssentials": 61763,
+          "unit": "2024 CAD per year"
+        },
+        "directionEvidence": [
+          {
+            "indicator": "rent-to-income",
+            "label": "Canada rent-to-income index",
+            "available": true,
+            "direction": "easing",
+            "momentum": "falling",
+            "sourceDate": "2026-06-17"
+          },
+          {
+            "indicator": "shelter-to-income",
+            "label": "Canada shelter-to-income index",
+            "available": true,
+            "direction": "easing",
+            "momentum": "falling",
+            "sourceDate": "2026-06-17"
+          },
+          {
+            "indicator": "mortgage-interest-to-income",
+            "label": "Canada mortgage-interest-to-income index",
+            "available": true,
+            "direction": "easing",
+            "momentum": "falling",
+            "sourceDate": "2026-06-17"
+          },
+          {
+            "indicator": "nhpi-to-income",
+            "label": "Canada new-house-price-to-income index",
+            "available": true,
+            "direction": "easing",
+            "momentum": "falling",
+            "sourceDate": "2026-06-17"
+          }
+        ],
+        "limitations": [
+          "The income estimate is national and the family composition is broader than the exact MBM reference family ages.",
+          "The MBM is a modest basic-needs reference basket for a specified family and region, not observed spending by the median Canadian household. Utilities and household energy are embedded in the shelter and other basket components and are not separately additive here.",
+          "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average.",
+          "Tenure, mortgage status, location, and actual dwelling costs can produce very different outcomes."
+        ],
+        "missingEvidence": [
+          "Utilities and household energy are not separately reported in the Canadian MBM input."
+        ]
+      }
     },
     "canada:symptom/physical_tightening": {
       "geography": "canada",
@@ -2420,7 +3800,8 @@
           "limitations": [
             "Statistics Canada may revise recent and historical observations.",
             "Cross-country definitions differ."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_energy_cpi_yoy",
@@ -2439,7 +3820,8 @@
           "limitations": [
             "Statistics Canada may revise recent and historical observations.",
             "Cross-country definitions differ."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_gasoline_cpi_yoy",
@@ -2458,7 +3840,8 @@
           "limitations": [
             "Statistics Canada may revise recent and historical observations.",
             "Cross-country definitions differ."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_shelter_cpi_yoy",
@@ -2477,7 +3860,8 @@
           "limitations": [
             "Statistics Canada may revise recent and historical observations.",
             "Cross-country definitions differ."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_employment_rate",
@@ -2496,7 +3880,8 @@
           "limitations": [
             "Statistics Canada may revise recent and historical observations.",
             "Cross-country definitions differ."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_employment_relative_population_growth",
@@ -2515,7 +3900,8 @@
           "limitations": [
             "Statistics Canada may revise recent and historical observations.",
             "Cross-country definitions differ."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_full_time_employment",
@@ -2534,7 +3920,8 @@
           "limitations": [
             "Statistics Canada may revise recent and historical observations.",
             "Cross-country definitions differ."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_full_time_employment_share",
@@ -2553,7 +3940,8 @@
           "limitations": [
             "Statistics Canada may revise recent and historical observations.",
             "Cross-country definitions differ."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_part_time_employment",
@@ -2572,7 +3960,8 @@
           "limitations": [
             "Statistics Canada may revise recent and historical observations.",
             "Cross-country definitions differ."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_participation_rate",
@@ -2591,7 +3980,8 @@
           "limitations": [
             "Statistics Canada may revise recent and historical observations.",
             "Cross-country definitions differ."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_prime_age_employment_rate",
@@ -2610,7 +4000,8 @@
           "limitations": [
             "Statistics Canada may revise recent and historical observations.",
             "Cross-country definitions differ."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_unemployment_rate",
@@ -2629,7 +4020,8 @@
           "limitations": [
             "Statistics Canada may revise recent and historical observations.",
             "Cross-country definitions differ."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_all_items_cpi",
@@ -2648,7 +4040,8 @@
           "limitations": [
             "Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_meat_cpi",
@@ -2667,7 +4060,8 @@
           "limitations": [
             "Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_dairy_eggs_cpi",
@@ -2686,7 +4080,8 @@
           "limitations": [
             "Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_bakery_cereals_cpi",
@@ -2705,7 +4100,8 @@
           "limitations": [
             "Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_fresh_fruit_cpi",
@@ -2724,7 +4120,8 @@
           "limitations": [
             "Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_fresh_vegetables_cpi",
@@ -2743,7 +4140,8 @@
           "limitations": [
             "Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_shelter_cpi",
@@ -2762,7 +4160,8 @@
           "limitations": [
             "Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_rent_cpi",
@@ -2781,7 +4180,8 @@
           "limitations": [
             "Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_homeowners_replacement_cost",
@@ -2800,7 +4200,8 @@
           "limitations": [
             "Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_property_taxes_cpi",
@@ -2819,7 +4220,8 @@
           "limitations": [
             "Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_new_housing_price_index",
@@ -2838,7 +4240,8 @@
           "limitations": [
             "Statistics Canada table 18-10-0205-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_new_housing_house_component",
@@ -2857,7 +4260,8 @@
           "limitations": [
             "Statistics Canada table 18-10-0205-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_new_housing_land_component",
@@ -2876,7 +4280,8 @@
           "limitations": [
             "Statistics Canada table 18-10-0205-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_average_hourly_wages",
@@ -2895,7 +4300,8 @@
           "limitations": [
             "Statistics Canada table 14-10-0063-01 is latest-vintage and may revise recent or historical observations.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_goods_producing_hourly_wages",
@@ -2914,7 +4320,8 @@
           "limitations": [
             "Statistics Canada table 14-10-0063-01 is latest-vintage and may revise recent or historical observations.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_services_producing_hourly_wages",
@@ -2933,7 +4340,8 @@
           "limitations": [
             "Statistics Canada table 14-10-0063-01 is latest-vintage and may revise recent or historical observations.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_average_weekly_earnings",
@@ -2952,7 +4360,8 @@
           "limitations": [
             "Statistics Canada table 14-10-0223-01 is latest-vintage and may revise recent or historical observations.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         }
       ],
       "contradicting": [
@@ -2973,7 +4382,8 @@
           "limitations": [
             "Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_grocery_cpi",
@@ -2992,7 +4402,8 @@
           "limitations": [
             "Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "ontario_restaurant_food_cpi",
@@ -3011,7 +4422,8 @@
           "limitations": [
             "Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         }
       ],
       "insufficient": []
@@ -3043,7 +4455,8 @@
           "limitations": [
             "Statistics Canada may revise recent and historical observations.",
             "Cross-country definitions differ."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "alberta_new_housing_price_index",
@@ -3062,7 +4475,8 @@
           "limitations": [
             "Statistics Canada table 18-10-0205-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "alberta_new_housing_house_component",
@@ -3081,7 +4495,8 @@
           "limitations": [
             "Statistics Canada table 18-10-0205-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "alberta_new_housing_land_component",
@@ -3100,7 +4515,8 @@
           "limitations": [
             "Statistics Canada table 18-10-0205-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         }
       ],
       "contradicting": [],
@@ -3133,7 +4549,8 @@
           "limitations": [
             "Uses the existing project output unchanged.",
             "Cross-country definitions differ."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "global_gm2_yoy",
@@ -3152,7 +4569,8 @@
           "limitations": [
             "Uses the existing project output unchanged.",
             "Cross-country definitions differ."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "global_wti_yoy",
@@ -3171,7 +4589,8 @@
           "limitations": [
             "Uses the existing project output unchanged.",
             "Cross-country definitions differ."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "fao_food_price_index",
@@ -3190,7 +4609,8 @@
           "limitations": [
             "FAO may revise the full history. Recent meat-index observations combine projected and observed prices and may be revised materially.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "fao_food_price_index_real",
@@ -3209,7 +4629,8 @@
           "limitations": [
             "FAO may revise the full history. Recent meat-index observations combine projected and observed prices and may be revised materially.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "fao_cereals_price_index",
@@ -3228,7 +4649,8 @@
           "limitations": [
             "FAO may revise the full history. Recent meat-index observations combine projected and observed prices and may be revised materially.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "fao_cereals_price_index_real",
@@ -3247,7 +4669,8 @@
           "limitations": [
             "FAO may revise the full history. Recent meat-index observations combine projected and observed prices and may be revised materially.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "fao_vegetable_oils_price_index",
@@ -3266,7 +4689,8 @@
           "limitations": [
             "FAO may revise the full history. Recent meat-index observations combine projected and observed prices and may be revised materially.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "fao_vegetable_oils_price_index_real",
@@ -3285,7 +4709,8 @@
           "limitations": [
             "FAO may revise the full history. Recent meat-index observations combine projected and observed prices and may be revised materially.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "fao_dairy_price_index",
@@ -3304,7 +4729,8 @@
           "limitations": [
             "FAO may revise the full history. Recent meat-index observations combine projected and observed prices and may be revised materially.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "fao_dairy_price_index_real",
@@ -3323,7 +4749,8 @@
           "limitations": [
             "FAO may revise the full history. Recent meat-index observations combine projected and observed prices and may be revised materially.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "fao_meat_price_index",
@@ -3342,7 +4769,8 @@
           "limitations": [
             "FAO may revise the full history. Recent meat-index observations combine projected and observed prices and may be revised materially.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "fao_meat_price_index_real",
@@ -3361,7 +4789,8 @@
           "limitations": [
             "FAO may revise the full history. Recent meat-index observations combine projected and observed prices and may be revised materially.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "fao_sugar_price_index",
@@ -3380,7 +4809,8 @@
           "limitations": [
             "FAO may revise the full history. Recent meat-index observations combine projected and observed prices and may be revised materially.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         },
         {
           "indicator": "fao_sugar_price_index_real",
@@ -3399,11 +4829,192 @@
           "limitations": [
             "FAO may revise the full history. Recent meat-index observations combine projected and observed prices and may be revised materially.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ]
+          ],
+          "absoluteStatus": null
         }
       ],
       "contradicting": [],
       "insufficient": []
+    },
+    "global:affordability": {
+      "geography": "global",
+      "topic": "affordability",
+      "evidenceKey": "global:affordability",
+      "interpretation": "Insufficient \u00b7 unclear",
+      "confidence": "low",
+      "coverage": 0.0,
+      "scope": "Global oil-market, liquidity, food-commodity and international housing inputs.",
+      "supporting": [],
+      "mixed": [],
+      "contradicting": [],
+      "insufficient": [
+        {
+          "indicator": "absolute-affordability",
+          "label": "Absolute affordability assessment",
+          "status": "insufficient",
+          "reason": "The available data cannot evaluate this indicator. No valid globally comparable absolute household-income and essential-cost measure is available in the project.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Absolute affordability",
+          "value": null,
+          "unit": null,
+          "historicalPercentile": null,
+          "direction": "unclear",
+          "absoluteStatus": "insufficient",
+          "sourceDate": null,
+          "source": null,
+          "calculation": null,
+          "limitations": [
+            "No valid globally comparable absolute household-income and essential-cost measure is available in the project."
+          ]
+        }
+      ],
+      "absoluteStatus": "insufficient",
+      "direction": "unclear",
+      "householdType": null,
+      "income": null,
+      "essentialCost": null,
+      "costShare": null,
+      "residualIncome": null,
+      "thresholdUsed": null,
+      "absoluteEvaluation": {
+        "absoluteStatus": "insufficient",
+        "direction": "unclear",
+        "householdType": null,
+        "income": null,
+        "essentialCost": null,
+        "costShare": null,
+        "residualIncome": null,
+        "thresholdUsed": null,
+        "components": {},
+        "directionEvidence": [],
+        "limitations": [
+          "No valid globally comparable absolute household-income and essential-cost measure is available in the project."
+        ],
+        "missingEvidence": [
+          "No valid globally comparable absolute household-income and essential-cost measure is available in the project."
+        ]
+      }
+    },
+    "global:food": {
+      "geography": "global",
+      "topic": "food",
+      "evidenceKey": "global:food",
+      "interpretation": "Insufficient \u00b7 unclear",
+      "confidence": "low",
+      "coverage": 0.0,
+      "scope": "Global oil-market, liquidity, food-commodity and international housing inputs.",
+      "supporting": [],
+      "mixed": [],
+      "contradicting": [],
+      "insufficient": [
+        {
+          "indicator": "absolute-food",
+          "label": "Absolute food assessment",
+          "status": "insufficient",
+          "reason": "The available data cannot evaluate this indicator. No valid globally comparable absolute household-income and essential-cost measure is available in the project.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Absolute affordability",
+          "value": null,
+          "unit": null,
+          "historicalPercentile": null,
+          "direction": "unclear",
+          "absoluteStatus": "insufficient",
+          "sourceDate": null,
+          "source": null,
+          "calculation": null,
+          "limitations": [
+            "No valid globally comparable absolute household-income and essential-cost measure is available in the project."
+          ]
+        }
+      ],
+      "absoluteStatus": "insufficient",
+      "direction": "unclear",
+      "householdType": null,
+      "income": null,
+      "essentialCost": null,
+      "costShare": null,
+      "residualIncome": null,
+      "thresholdUsed": null,
+      "absoluteEvaluation": {
+        "absoluteStatus": "insufficient",
+        "direction": "unclear",
+        "householdType": null,
+        "income": null,
+        "essentialCost": null,
+        "costShare": null,
+        "residualIncome": null,
+        "thresholdUsed": null,
+        "components": {},
+        "directionEvidence": [],
+        "limitations": [
+          "No valid globally comparable absolute household-income and essential-cost measure is available in the project."
+        ],
+        "missingEvidence": [
+          "No valid globally comparable absolute household-income and essential-cost measure is available in the project."
+        ]
+      }
+    },
+    "global:housing": {
+      "geography": "global",
+      "topic": "housing",
+      "evidenceKey": "global:housing",
+      "interpretation": "Insufficient \u00b7 unclear",
+      "confidence": "low",
+      "coverage": 0.0,
+      "scope": "Global oil-market, liquidity, food-commodity and international housing inputs.",
+      "supporting": [],
+      "mixed": [],
+      "contradicting": [],
+      "insufficient": [
+        {
+          "indicator": "absolute-housing",
+          "label": "Absolute housing assessment",
+          "status": "insufficient",
+          "reason": "The available data cannot evaluate this indicator. No valid globally comparable absolute household-income and essential-cost measure is available in the project.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Absolute affordability",
+          "value": null,
+          "unit": null,
+          "historicalPercentile": null,
+          "direction": "unclear",
+          "absoluteStatus": "insufficient",
+          "sourceDate": null,
+          "source": null,
+          "calculation": null,
+          "limitations": [
+            "No valid globally comparable absolute household-income and essential-cost measure is available in the project."
+          ]
+        }
+      ],
+      "absoluteStatus": "insufficient",
+      "direction": "unclear",
+      "householdType": null,
+      "income": null,
+      "essentialCost": null,
+      "costShare": null,
+      "residualIncome": null,
+      "thresholdUsed": null,
+      "absoluteEvaluation": {
+        "absoluteStatus": "insufficient",
+        "direction": "unclear",
+        "householdType": null,
+        "income": null,
+        "essentialCost": null,
+        "costShare": null,
+        "residualIncome": null,
+        "thresholdUsed": null,
+        "components": {},
+        "directionEvidence": [],
+        "limitations": [
+          "No valid globally comparable absolute household-income and essential-cost measure is available in the project."
+        ],
+        "missingEvidence": [
+          "No valid globally comparable absolute household-income and essential-cost measure is available in the project."
+        ]
+      }
     }
   }
 }

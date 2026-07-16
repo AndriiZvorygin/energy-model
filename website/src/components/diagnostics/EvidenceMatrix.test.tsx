@@ -32,6 +32,18 @@ describe('EvidenceMatrix', () => {
     expect(screen.getByText('The indicator is consistent with this interpretation.')).toBeInTheDocument()
   })
 
+  it('shows absolute affordability separately from its direction', () => {
+    const absoluteRows: EvidenceMatrixRow[] = [{
+      id: 'absolute', label: 'Absolute affordability assessment', disposition: 'supports',
+      status: 'Absolute affordability · supporting', reason: 'The reference household can cover measured essentials.',
+      absoluteStatus: 'affordable', direction: 'easing',
+    }]
+    render(<EvidenceMatrix interpretation="Affordable · easing" confidence="moderate" coverage={1} rows={absoluteRows} absoluteStatus="affordable" direction="easing" />)
+    expect(screen.getByText(/Absolute status: affordable/)).toBeInTheDocument()
+    expect(screen.getByText(/Direction: easing/)).toBeInTheDocument()
+    expect(screen.getByText('affordable · easing')).toBeInTheDocument()
+  })
+
   it('keeps the matrix usable at a mobile viewport', () => {
     Object.defineProperty(window, 'innerWidth', { configurable: true, value: 390 })
     render(<EvidenceMatrix interpretation="Current evidence" confidence="low" coverage={null} rows={rows} />)

@@ -13,6 +13,9 @@ STATUS_TEXT = {
     "insufficient": "The available data cannot evaluate this indicator.",
 }
 
+ABSOLUTE_STATUSES = {"affordable", "pressured", "unaffordable", "severe-shortfall", "insufficient"}
+DIRECTIONS = {"worsening", "stable", "easing", "unclear"}
+
 
 def evidence_key(geography: str, topic: str) -> str:
     return f"{geography}:{topic}"
@@ -84,7 +87,7 @@ def _dedupe(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return list(selected.values())
 
 
-def _topic(geography: str, topic: str, interpretation: str, confidence: str, coverage: float | None, rows: list[dict[str, Any]], scope: str | None = None) -> dict[str, Any]:
+def _topic(geography: str, topic: str, interpretation: str, confidence: str, coverage: float | None, rows: list[dict[str, Any]], scope: str | None = None, **extra: Any) -> dict[str, Any]:
     rows = _dedupe(rows)
     return {
         "geography": geography, "topic": topic, "evidenceKey": evidence_key(geography, topic),
@@ -93,6 +96,7 @@ def _topic(geography: str, topic: str, interpretation: str, confidence: str, cov
         "mixed": [row for row in rows if row["status"] == "mixed"],
         "contradicting": [row for row in rows if row["status"] == "contradicting"],
         "insufficient": [row for row in rows if row["status"] == "insufficient"],
+        **extra,
     }
 
 
@@ -101,6 +105,7 @@ class EvidenceRefinery:
         self.root = root
         self.generated = root / "website" / "public" / "generated"
         self.rules = _read(root / "config" / "evidence_topics.json")
+        self.absolute_rules = _read(root / "config" / "absolute_affordability.json")
         self.lookup, self.files = _indicator_maps(self.generated)
 
     def generate(self, geography: str, topic: str) -> dict[str, Any]:
@@ -203,10 +208,164 @@ class EvidenceRefinery:
             "historicalPercentile": indicator.get("latest", {}).get("historicalPercentile"),
             "direction": indicator.get("latest", {}).get("momentum"), "sourceDate": indicator.get("latest", {}).get("sourceDate"),
             "calculation": indicator.get("calculation", {}).get("formula"), "limitations": indicator.get("limitations", []),
+            "absoluteStatus": None,
+        }
+
+    @staticmethod
+    def _predicate(metric: float | None, operator: str, expected: float) -> bool:
+        if metric is None:
+            return False
+        operations = {
+            "lt": lambda: metric < expected,
+            "lte": lambda: metric <= expected,
+            "gt": lambda: metric > expected,
+            "gte": lambda: metric >= expected,
+            "eq": lambda: metric == expected,
+        }
+        if operator not in operations:
+            raise ValueError(f"Unsupported affordability threshold operator: {operator}")
+        return operations[operator]()
+
+    def _direction(self, indicator_ids: list[str]) -> tuple[str, list[dict[str, Any]]]:
+        votes: list[str] = []
+        details: list[dict[str, Any]] = []
+        for indicator_id in indicator_ids:
+            record = self.lookup.get(indicator_id)
+            if not record:
+                details.append({"indicator": indicator_id, "available": False, "direction": "unclear"})
+                continue
+            latest = record["payload"].get("latest", {})
+            momentum = str(latest.get("momentum") or "").lower()
+            vote = "worsening" if momentum == "rising" else "easing" if momentum == "falling" else "stable" if momentum in {"stable", "flat"} else "unclear"
+            if vote != "unclear":
+                votes.append(vote)
+            details.append({
+                "indicator": indicator_id,
+                "label": record["payload"].get("label"),
+                "available": True,
+                "direction": vote,
+                "momentum": momentum or None,
+                "sourceDate": latest.get("sourceDate"),
+            })
+        worsening = votes.count("worsening")
+        easing = votes.count("easing")
+        stable = votes.count("stable")
+        if worsening > easing and worsening >= stable:
+            return "worsening", details
+        if easing > worsening and easing >= stable:
+            return "easing", details
+        if stable > worsening and stable > easing:
+            return "stable", details
+        return "unclear", details
+
+    def _absolute_affordability(self, geography: str, topic: str) -> dict[str, Any]:
+        geography_rule = self.absolute_rules["geographies"].get(geography)
+        if not geography_rule or geography_rule.get("unsupportedReason"):
+            reason = (geography_rule or {}).get("unsupportedReason", "No configured absolute household affordability measure is available.")
+            return {
+                "absoluteStatus": "insufficient", "direction": "unclear", "householdType": None,
+                "income": None, "essentialCost": None, "costShare": None, "residualIncome": None,
+                "thresholdUsed": None, "components": {}, "directionEvidence": [],
+                "limitations": [reason], "missingEvidence": [reason],
+            }
+        topic_rule = geography_rule.get("topics", {}).get(topic)
+        income_record = geography_rule.get("income")
+        costs = geography_rule.get("costs")
+        basic = geography_rule.get("basicNeedsThreshold")
+        if not topic_rule or not income_record or not costs or not basic:
+            reason = f"Absolute {topic} inputs are not configured for {geography}."
+            return {
+                "absoluteStatus": "insufficient", "direction": "unclear", "householdType": geography_rule.get("householdType"),
+                "income": income_record, "essentialCost": None, "costShare": None, "residualIncome": None,
+                "thresholdUsed": None, "components": costs or {}, "directionEvidence": [],
+                "limitations": [reason], "missingEvidence": [reason],
+            }
+        income = float(income_record["value"])
+        cost_value = costs.get(topic_rule["costMetric"])
+        if cost_value is None:
+            reason = f"The configured {topic} essential cost is unavailable."
+            return {
+                "absoluteStatus": "insufficient", "direction": "unclear", "householdType": geography_rule.get("householdType"),
+                "income": income_record, "essentialCost": None, "costShare": None, "residualIncome": None,
+                "thresholdUsed": None, "components": costs, "directionEvidence": [],
+                "limitations": [reason], "missingEvidence": [reason],
+            }
+        cost = float(cost_value)
+        housing = float(costs.get("housing") or 0)
+        utilities = float(costs.get("utilitiesAndEnergy") or 0)
+        food = float(costs.get("food") or 0)
+        residual_after_housing = income - housing - utilities
+        metrics = {
+            "costShare": cost / income if income else None,
+            "incomeToThreshold": income / float(basic["value"]) if basic.get("value") else None,
+            "residualAfterHousingToFood": residual_after_housing / food if food else None,
+        }
+        status = "insufficient"
+        selected_threshold: dict[str, Any] | None = None
+        for rule in topic_rule["statusRules"]:
+            matched = bool(rule.get("otherwise"))
+            if "any" in rule:
+                matched = any(self._predicate(metrics.get(item["metric"]), item["operator"], float(item["value"])) for item in rule["any"])
+            if "all" in rule:
+                matched = all(self._predicate(metrics.get(item["metric"]), item["operator"], float(item["value"])) for item in rule["all"])
+            if matched:
+                status = rule["status"]
+                selected_threshold = next((item for item in topic_rule["thresholds"] if item["status"] == status), None)
+                break
+        if status not in ABSOLUTE_STATUSES:
+            raise ValueError(f"Invalid absolute affordability status: {status}")
+        direction, direction_evidence = self._direction(topic_rule.get("directionIndicators", []))
+        if direction not in DIRECTIONS:
+            raise ValueError(f"Invalid affordability direction: {direction}")
+        total_essentials = float(costs.get("totalMeasuredEssentials") or 0)
+        limitations = [income_record.get("limitations", ""), costs.get("limitations", ""), basic.get("limitations", "")]
+        if selected_threshold:
+            limitations.append(selected_threshold.get("limitations", ""))
+        return {
+            "absoluteStatus": status,
+            "direction": direction,
+            "householdType": geography_rule["householdType"],
+            "observationDate": geography_rule.get("observationDate"),
+            "income": income_record,
+            "essentialCost": {"value": cost, "unit": costs["unit"], "metric": topic_rule["costMetric"], "definition": costs["definition"], "source": costs["source"], "sourceUrl": costs["sourceUrl"], "observationDate": costs["observationDate"]},
+            "costShare": metrics["costShare"],
+            "residualIncome": income - total_essentials,
+            "incomeRemainingAfterHousing": residual_after_housing,
+            "incomeRemainingAfterMeasuredEssentials": income - total_essentials,
+            "thresholdUsed": {"classification": selected_threshold, "basicNeeds": basic},
+            "components": {"food": costs.get("food"), "housing": costs.get("housing"), "utilitiesAndEnergy": costs.get("utilitiesAndEnergy"), "totalMeasuredEssentials": costs.get("totalMeasuredEssentials"), "unit": costs["unit"]},
+            "directionEvidence": direction_evidence,
+            "limitations": [item for item in limitations if item],
+            "missingEvidence": costs.get("missingEvidence", []),
+        }
+
+    def _absolute_row(self, topic: str, assessment: dict[str, Any]) -> dict[str, Any]:
+        status = assessment["absoluteStatus"]
+        disposition = "insufficient" if status == "insufficient" else "supporting"
+        label = f"Absolute {topic.replace('-', ' ')} assessment"
+        cost = assessment.get("essentialCost") or {}
+        share = assessment.get("costShare")
+        reason = STATUS_TEXT[disposition]
+        if status == "insufficient":
+            reason += " " + " ".join(assessment.get("missingEvidence", []))
+        else:
+            reason += f" The configured household reference is {status.replace('-', ' ')} and {assessment['direction']}."
+            if share is not None:
+                reason += f" Measured costs are {share * 100:.1f}% of after-tax income."
+        threshold = assessment.get("thresholdUsed") or {}
+        classification = threshold.get("classification") or {}
+        return {
+            "indicator": f"absolute-{topic}", "label": label, "status": disposition, "reason": reason,
+            "chart": None, "indicatorFile": None, "group": "Absolute affordability", "value": cost.get("value"),
+            "unit": cost.get("unit"), "historicalPercentile": None, "direction": assessment["direction"],
+            "absoluteStatus": status, "sourceDate": assessment.get("observationDate"),
+            "source": cost.get("source"), "calculation": classification.get("formula"), "limitations": assessment.get("limitations", []),
         }
 
     def _indicator_groups(self, geography: str, topic: str, geography_rule: dict[str, Any], topic_rule: dict[str, Any]) -> dict[str, Any]:
-        rows = []
+        assessment = self._absolute_affordability(geography, topic)
+        rows = [self._absolute_row(topic, assessment)]
+        pressure_headline = assessment["absoluteStatus"] in {"pressured", "unaffordable", "severe-shortfall"}
         for group, ids in topic_rule["groups"].items():
             for indicator_id in ids:
                 record = self.lookup.get(indicator_id)
@@ -214,16 +373,29 @@ class EvidenceRefinery:
                     rows.append({"indicator": indicator_id, "label": indicator_id.replace("-", " ").title(), "status": "insufficient", "reason": STATUS_TEXT["insufficient"], "chart": None, "indicatorFile": None, "group": group, "value": None, "unit": None, "historicalPercentile": None, "direction": None, "sourceDate": None, "calculation": None, "limitations": []})
                     continue
                 label = record["payload"].get("interpretationLabel")
-                status = "supporting" if label == "Stressful" else "contradicting" if label == "Supportive" else "mixed"
+                if label == "Stressful":
+                    status = "supporting" if pressure_headline else "contradicting"
+                elif label == "Supportive":
+                    status = "contradicting" if pressure_headline else "supporting"
+                else:
+                    status = "mixed"
                 row = self._indicator_row(indicator_id, status, group)
                 if row:
                     rows.append(row)
-        support = sum(row["status"] == "supporting" for row in rows)
-        contradiction = sum(row["status"] == "contradicting" for row in rows)
         title = topic_rule["title"]
-        interpretation = f"{title} evidence is mixed across costs and purchasing power" if support and contradiction else f"{title} pressure is present but not broad-based" if support else f"{title} evidence remains mixed or context-dependent"
+        absolute_label = assessment["absoluteStatus"].replace("-", " ").capitalize()
+        direction_label = assessment["direction"].replace("-", " ")
+        interpretation = f"{absolute_label} · {direction_label}"
         available = sum(row["status"] != "insufficient" for row in rows)
-        return _topic(geography, topic, interpretation, "moderate" if available == len(rows) else "low", available / len(rows) if rows else 0, rows, topic_rule.get("scope") or geography_rule["scope"])
+        return _topic(
+            geography, topic, interpretation, "moderate" if assessment["absoluteStatus"] != "insufficient" else "low",
+            available / len(rows) if rows else 0, rows, topic_rule.get("scope") or geography_rule["scope"],
+            absoluteStatus=assessment["absoluteStatus"], direction=assessment["direction"],
+            householdType=assessment.get("householdType"), income=assessment.get("income"),
+            essentialCost=assessment.get("essentialCost"), costShare=assessment.get("costShare"),
+            residualIncome=assessment.get("residualIncome"), thresholdUsed=assessment.get("thresholdUsed"),
+            absoluteEvaluation=assessment,
+        )
 
     def _indicator_state(self, geography: str, topic: str, geography_rule: dict[str, Any]) -> dict[str, Any]:
         allowed = set(geography_rule.get("indicatorGeographies", []))

@@ -17,7 +17,31 @@
         "coveragePath": "evidenceCoverage",
         "confidencePath": "confidence"
       },
-      "symptomsFile": "symptom-evaluations.json"
+      "symptomsFile": "symptom-evaluations.json",
+      "topicOverrides": {
+        "affordability": {
+          "scope": "United States household affordability with official national income and expenditure inputs",
+          "groups": {
+            "Food": ["us-food-affordability-pressure", "us-food-at-home-cpi-yoy"],
+            "Housing": ["us-rent-pressure", "us-shelter-cpi-yoy", "us-house-price-to-income-index"],
+            "Purchasing power": ["real-disposable-income-yoy", "real-wage-growth"]
+          }
+        },
+        "food": {
+          "scope": "United States household food affordability",
+          "groups": {
+            "Food": ["us-food-affordability-pressure", "us-food-at-home-cpi-yoy", "us-food-cpi-yoy"],
+            "Purchasing power": ["real-disposable-income-yoy", "real-wage-growth"]
+          }
+        },
+        "housing": {
+          "scope": "United States housing affordability and shelter-cost pressure",
+          "groups": {
+            "Current costs": ["us-rent-pressure", "us-rent-cpi-yoy", "us-shelter-cpi-yoy"],
+            "Asset affordability": ["us-house-price-to-income-index", "us-fhfa-house-price-yoy"]
+          }
+        }
+      }
     },
     "canada": {
       "label": "Canada",
@@ -75,7 +99,12 @@
     "global": {
       "label": "Global inputs",
       "scope": "Global oil-market, liquidity, food-commodity and international housing inputs.",
-      "indicatorGeographies": ["Global"]
+      "indicatorGeographies": ["Global"],
+      "topicOverrides": {
+        "affordability": {"groups": {}},
+        "food": {"groups": {}},
+        "housing": {"groups": {}}
+      }
     }
   },
   "topics": {
@@ -102,10 +131,10 @@
     "indicator-state": {"evaluator": "indicator-state"}
   },
   "outputs": [
-    {"geography": "us", "topics": ["current-state", "regimes", "symptoms"]},
+    {"geography": "us", "topics": ["current-state", "regimes", "symptoms", "affordability", "food", "housing"]},
     {"geography": "canada", "topics": ["overview", "current-state", "regimes", "symptoms", "affordability", "food", "housing"]},
     {"geography": "ontario", "topics": ["indicator-state"]},
     {"geography": "alberta", "topics": ["indicator-state"]},
-    {"geography": "global", "topics": ["indicator-state"]}
+    {"geography": "global", "topics": ["indicator-state", "affordability", "food", "housing"]}
   ]
 }

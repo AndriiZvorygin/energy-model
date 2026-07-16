@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { ChartDataset, ChartObservation, ChartSeries } from './chartTypes'
-import { chartStateSearch, parseChartState, rowsToCsv, shiftSeries, transformObservations, validateDataset } from './chartUtils'
+import { chartStateSearch, parseChartState, rollingLinearResiduals, rowsToCsv, shiftSeries, transformObservations, validateDataset } from './chartUtils'
 
 const series: ChartSeries[] = [{ key: 'price', label: 'Price', unit: 'USD', source: 'Test source', status: 'measured', defaultVisible: true, finalObservationDate: '2021-01-01', frequency: 'monthly' }]
 const observations: ChartObservation[] = Array.from({ length: 13 }, (_, index) => ({ date: `${2020 + Math.floor(index / 12)}-${String(index % 12 + 1).padStart(2, '0')}-01`, price: 100 + index }))
@@ -28,6 +28,15 @@ describe('chart transformations', () => {
     const subset = transformObservations(observations.slice(6), series, 'zscore', observations)
     expect(subset[0].price).toBeCloseTo(Number(full[6].price))
     expect(subset[0].__raw_price).toBe(106)
+  })
+
+  it('fits rolling residuals from prior observations without using the current target', () => {
+    const rows = Array.from({ length: 5 }, (_, index) => ({ date: `2020-0${index + 1}-01`, liquidity: index + 1, oil: 2 * (index + 1) + (index === 4 ? 5 : 0) }))
+    const residuals = rollingLinearResiduals(rows, 'liquidity', 'oil', 4, 'residual')
+    expect(residuals.slice(0, 4).every((row) => row.residual === null)).toBe(true)
+    expect(residuals[4].residual).toBeCloseTo(5)
+    const revisedCurrent = rollingLinearResiduals(rows.map((row, index) => index === 4 ? { ...row, oil: 100 } : row), 'liquidity', 'oil', 4, 'residual')
+    expect(Number(revisedCurrent[4].residual) - Number(residuals[4].residual)).toBeCloseTo(85)
   })
 })
 

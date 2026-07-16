@@ -49,6 +49,31 @@ export function shiftSeries(rows: ChartObservation[], key: string, lag: number, 
   }))
 }
 
+export function rollingLinearResiduals(rows: ChartObservation[], predictor: string, target: string, window: number, outputKey: string): ChartObservation[] {
+  const history: Array<{ x: number; y: number }> = []
+  return rows.map((row) => {
+    const next = { ...row, [outputKey]: null } as ChartObservation
+    const x = value(row, predictor)
+    const y = value(row, target)
+    if (x === null || y === null) return next
+    if (history.length >= window) {
+      const sample = history.slice(-window)
+      const meanX = sample.reduce((sum, item) => sum + item.x, 0) / sample.length
+      const meanY = sample.reduce((sum, item) => sum + item.y, 0) / sample.length
+      const variance = sample.reduce((sum, item) => sum + (item.x - meanX) ** 2, 0)
+      if (variance > 0) {
+        const beta = sample.reduce((sum, item) => sum + (item.x - meanX) * (item.y - meanY), 0) / variance
+        const predicted = meanY - beta * meanX + beta * x
+        next[outputKey] = y - predicted
+        const sourceDate = row[`__sourceDate_${predictor}`]
+        if (typeof sourceDate === 'string') next[`__sourceDate_${outputKey}`] = sourceDate
+      }
+    }
+    history.push({ x, y })
+    return next
+  })
+}
+
 export function rangeRows(rows: ChartObservation[], range: string, from?: string, to?: string): ChartObservation[] {
   if (!rows.length) return []
   if (range === 'custom') return rows.filter((row) => (!from || row.date >= from) && (!to || row.date <= to))

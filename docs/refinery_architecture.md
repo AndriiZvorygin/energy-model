@@ -72,3 +72,14 @@ The website build validates all required fields and fails when a configured rout
 Do not add a current analytical sentence directly to a React component.
 
 Adding a future geography requires source metadata plus a geography entry in `config/evidence_topics.json`. Route-specific Python and React branches are not part of the extension path.
+
+## Absolute Affordability
+
+`config/absolute_affordability.json` supplies geography-specific household references, official income and essential-cost observations, basic-needs definitions, machine-readable status predicates, and trend-indicator lists. The shared evidence evaluator applies those rules for the canonical `affordability`, `food`, and `housing` topics.
+
+The generated contract keeps two concepts separate:
+
+- `absoluteStatus`: `affordable`, `pressured`, `unaffordable`, `severe-shortfall`, or `insufficient`
+- `direction`: `worsening`, `stable`, `easing`, or `unclear`
+
+Changing trend evidence cannot turn an unaffordable absolute condition into an affordable one. A geography without comparable household income and cost inputs returns `insufficient`, not `mixed`.

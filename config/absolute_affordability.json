@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "statusOrder": ["severe-shortfall", "unaffordable", "pressured", "affordable"],
+  "geographies": {
+    "canada": {
+      "householdType": "Two-parent family with children; Toronto MBM reference family of four",
+      "observationDate": "2024-01-01",
+      "income": {
+        "value": 133900,
+        "unit": "2024 CAD per year",
+        "definition": "Median after-tax income of Canadian two-parent families with children",
+        "source": "Statistics Canada, Table 11-10-0190-01",
+        "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110019001",
+        "observationDate": "2024-01-01",
+        "releaseDate": "2026-04-29",
+        "limitations": "The income estimate is national and the family composition is broader than the exact MBM reference family ages."
+      },
+      "costs": {
+        "food": 14522,
+        "housing": 26290,
+        "utilitiesAndEnergy": null,
+        "totalMeasuredEssentials": 61763,
+        "unit": "2024 CAD per year",
+        "definition": "2023-base Market Basket Measure components and total threshold for the Toronto reference family of four, current dollars",
+        "source": "Statistics Canada, Table 11-10-0066-01",
+        "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
+        "observationDate": "2024-01-01",
+        "releaseDate": "2026-04-29",
+        "limitations": "The MBM is a modest basic-needs reference basket for a specified family and region, not observed spending by the median Canadian household. Utilities and household energy are embedded in the shelter and other basket components and are not separately additive here.",
+        "missingEvidence": ["Utilities and household energy are not separately reported in the Canadian MBM input."]
+      },
+      "basicNeedsThreshold": {
+        "value": 61763,
+        "unit": "2024 CAD per year",
+        "definition": "2023-base Market Basket Measure total threshold for the Toronto reference family of four",
+        "source": "Statistics Canada, Table 11-10-0066-01",
+        "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
+        "observationDate": "2024-01-01",
+        "limitations": "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average."
+      },
+      "topics": {
+        "affordability": {
+          "costMetric": "totalMeasuredEssentials",
+          "directionIndicators": ["food-to-income", "rent-to-income", "shelter-to-income", "mortgage-interest-to-income"],
+          "statusRules": [
+            {"status": "severe-shortfall", "any": [{"metric": "incomeToThreshold", "operator": "lt", "value": 0.75}, {"metric": "costShare", "operator": "gte", "value": 1.0}]},
+            {"status": "unaffordable", "any": [{"metric": "incomeToThreshold", "operator": "lt", "value": 1.0}, {"metric": "costShare", "operator": "gte", "value": 0.7}]},
+            {"status": "pressured", "any": [{"metric": "incomeToThreshold", "operator": "lt", "value": 1.5}, {"metric": "costShare", "operator": "gte", "value": 0.5}]},
+            {"status": "affordable", "otherwise": true}
+          ],
+          "thresholds": [
+            {"geography": "canada", "householdType": "Two-parent family with children; Toronto MBM reference family of four", "status": "severe-shortfall", "definition": "Income is below 75% of the official basic-needs threshold or measured essentials consume all income", "formula": "incomeToThreshold < 0.75 OR costShare >= 1.00", "source": "Statistics Canada Market Basket Measure", "observationDate": "2024-01-01", "limitations": "A reference-family threshold does not describe every Canadian household."},
+            {"geography": "canada", "householdType": "Two-parent family with children; Toronto MBM reference family of four", "status": "unaffordable", "definition": "Income is below the official basic-needs threshold or essentials consume at least 70% of income", "formula": "incomeToThreshold < 1.00 OR costShare >= 0.70", "source": "Statistics Canada Market Basket Measure", "observationDate": "2024-01-01", "limitations": "The 70% share is a transparent project threshold, not an official Canadian cutoff."},
+            {"geography": "canada", "householdType": "Two-parent family with children; Toronto MBM reference family of four", "status": "pressured", "definition": "Income is less than 150% of basic needs or essentials consume at least half of income", "formula": "incomeToThreshold < 1.50 OR costShare >= 0.50", "source": "Statistics Canada Market Basket Measure plus project sensitivity band", "observationDate": "2024-01-01", "limitations": "The 150% and 50% bands are diagnostic thresholds, not official poverty definitions."},
+            {"geography": "canada", "householdType": "Two-parent family with children; Toronto MBM reference family of four", "status": "affordable", "definition": "Income clears the configured basic-needs and essential-cost pressure bands", "formula": "otherwise", "source": "Project evaluation of official Statistics Canada inputs", "observationDate": "2024-01-01", "limitations": "A median reference case can be affordable while many households remain under pressure."}
+          ]
+        },
+        "food": {
+          "costMetric": "food",
+          "directionIndicators": ["food-to-income", "grocery-to-income", "food-to-wage", "grocery-to-wage"],
+          "statusRules": [
+            {"status": "severe-shortfall", "all": [{"metric": "residualAfterHousingToFood", "operator": "lt", "value": 0.5}]},
+            {"status": "unaffordable", "all": [{"metric": "residualAfterHousingToFood", "operator": "lt", "value": 1.0}]},
+            {"status": "pressured", "all": [{"metric": "costShare", "operator": "gte", "value": 0.2}]},
+            {"status": "affordable", "otherwise": true}
+          ],
+          "thresholds": [
+            {"geography": "canada", "householdType": "Two-parent family with children; Toronto MBM reference family of four", "status": "severe-shortfall", "definition": "Income remaining after shelter is less than half the food basket", "formula": "residualAfterHousing < 0.50 * foodCost", "source": "Statistics Canada Market Basket Measure", "observationDate": "2024-01-01", "limitations": "The calculation omits household-specific debt, taxes already paid, and non-MBM expenses."},
+            {"geography": "canada", "householdType": "Two-parent family with children; Toronto MBM reference family of four", "status": "unaffordable", "definition": "Income remaining after shelter cannot cover the food basket", "formula": "residualAfterHousing < foodCost", "source": "Statistics Canada Market Basket Measure", "observationDate": "2024-01-01", "limitations": "This is a reference-basket test, not observed food insecurity."},
+            {"geography": "canada", "householdType": "Two-parent family with children; Toronto MBM reference family of four", "status": "pressured", "definition": "Food basket consumes at least 20% of after-tax income", "formula": "costShare >= 0.20", "source": "Project pressure band using Statistics Canada inputs", "observationDate": "2024-01-01", "limitations": "Canada has no universal official food-share affordability cutoff."},
+            {"geography": "canada", "householdType": "Two-parent family with children; Toronto MBM reference family of four", "status": "affordable", "definition": "Income remaining after shelter covers the reference food basket and its share is below the pressure band", "formula": "otherwise", "source": "Project evaluation of official Statistics Canada inputs", "observationDate": "2024-01-01", "limitations": "Food insecurity can persist for households below the median or facing other essential costs."}
+          ]
+        },
+        "housing": {
+          "costMetric": "housing",
+          "directionIndicators": ["rent-to-income", "shelter-to-income", "mortgage-interest-to-income", "nhpi-to-income"],
+          "statusRules": [
+            {"status": "severe-shortfall", "all": [{"metric": "costShare", "operator": "gte", "value": 0.5}]},
+            {"status": "unaffordable", "all": [{"metric": "costShare", "operator": "gte", "value": 0.3}]},
+            {"status": "pressured", "all": [{"metric": "costShare", "operator": "gte", "value": 0.25}]},
+            {"status": "affordable", "otherwise": true}
+          ],
+          "thresholds": [
+            {"geography": "canada", "householdType": "Two-parent family with children; Toronto MBM reference family of four", "status": "severe-shortfall", "definition": "Shelter consumes at least 50% of income", "formula": "costShare >= 0.50", "source": "Statistics Canada shelter-cost-to-income classifications", "observationDate": "2024-01-01", "limitations": "The official classification uses before-tax household income; this diagnostic uses after-tax income."},
+            {"geography": "canada", "householdType": "Two-parent family with children; Toronto MBM reference family of four", "status": "unaffordable", "definition": "Shelter consumes at least 30% of income", "formula": "costShare >= 0.30", "source": "Statistics Canada and CMHC housing affordability definition", "observationDate": "2024-01-01", "limitations": "The official 30% definition uses before-tax income and actual shelter costs, unlike this after-tax MBM reference comparison."},
+            {"geography": "canada", "householdType": "Two-parent family with children; Toronto MBM reference family of four", "status": "pressured", "definition": "Shelter consumes 25% to less than 30% of income", "formula": "costShare >= 0.25", "source": "Project early-pressure band below the official 30% threshold", "observationDate": "2024-01-01", "limitations": "The 25% band is not an official Canadian affordability threshold."},
+            {"geography": "canada", "householdType": "Two-parent family with children; Toronto MBM reference family of four", "status": "affordable", "definition": "Shelter share remains below the configured pressure bands", "formula": "otherwise", "source": "Project evaluation of official Statistics Canada inputs", "observationDate": "2024-01-01", "limitations": "Tenure, mortgage status, location, and actual dwelling costs can produce very different outcomes."}
+          ]
+        }
+      }
+    },
+    "us": {
+      "householdType": "National all-household / all-consumer-unit proxy",
+      "observationDate": "2024-01-01",
+      "income": {
+        "value": 72330,
+        "unit": "2024 USD per year",
+        "definition": "Median post-tax household income",
+        "source": "U.S. Census Bureau, Income in the United States: 2024",
+        "sourceUrl": "https://www.census.gov/newsroom/press-releases/2025/income-poverty-health-insurance-coverage.html",
+        "observationDate": "2024-01-01",
+        "releaseDate": "2025-09-09",
+        "limitations": "Median Census households are not the same statistical population as average BLS consumer units."
+      },
+      "costs": {
+        "food": 10169,
+        "housing": 16317,
+        "utilitiesAndEnergy": 4736,
+        "totalMeasuredEssentials": 31222,
+        "unit": "2024 USD per year",
+        "definition": "Average Consumer Expenditure Survey food, shelter, and utilities/fuels/public-services expenditures",
+        "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Surveys 2024",
+        "sourceUrl": "https://www.bls.gov/news.release/cesan.nr0.htm",
+        "observationDate": "2024-01-01",
+        "releaseDate": "2025-12-19",
+        "limitations": "These are averages across consumer units, not costs for the median Census household. Housing uses shelter plus separately reported utilities rather than the broader BLS housing total to avoid double counting.",
+        "missingEvidence": []
+      },
+      "basicNeedsThreshold": {
+        "value": 32130,
+        "unit": "2024 USD per year",
+        "definition": "Weighted-average official poverty threshold for a family of four",
+        "source": "U.S. Census Bureau, Income in the United States: 2024",
+        "sourceUrl": "https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-poverty-thresholds.html",
+        "observationDate": "2024-01-01",
+        "limitations": "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy."
+      },
+      "topics": {
+        "affordability": {
+          "costMetric": "totalMeasuredEssentials",
+          "directionIndicators": ["us-food-affordability-pressure", "us-rent-pressure", "us-house-price-to-income-index"],
+          "statusRules": [
+            {"status": "severe-shortfall", "any": [{"metric": "incomeToThreshold", "operator": "lt", "value": 0.75}, {"metric": "costShare", "operator": "gte", "value": 1.0}]},
+            {"status": "unaffordable", "any": [{"metric": "incomeToThreshold", "operator": "lt", "value": 1.0}, {"metric": "costShare", "operator": "gte", "value": 0.7}]},
+            {"status": "pressured", "any": [{"metric": "incomeToThreshold", "operator": "lt", "value": 1.5}, {"metric": "costShare", "operator": "gte", "value": 0.5}]},
+            {"status": "affordable", "otherwise": true}
+          ],
+          "thresholds": [
+            {"geography": "us", "householdType": "National all-household / all-consumer-unit proxy", "status": "severe-shortfall", "definition": "Income is below 75% of the poverty threshold or measured essentials consume all income", "formula": "incomeToThreshold < 0.75 OR costShare >= 1.00", "source": "U.S. Census Bureau and BLS Consumer Expenditure Surveys", "observationDate": "2024-01-01", "limitations": "Income, threshold, and expense populations are not exactly matched."},
+            {"geography": "us", "householdType": "National all-household / all-consumer-unit proxy", "status": "unaffordable", "definition": "Income is below the poverty threshold or essentials consume at least 70% of income", "formula": "incomeToThreshold < 1.00 OR costShare >= 0.70", "source": "U.S. Census Bureau and BLS plus project share band", "observationDate": "2024-01-01", "limitations": "The 70% share is a transparent project threshold, not an official U.S. cutoff."},
+            {"geography": "us", "householdType": "National all-household / all-consumer-unit proxy", "status": "pressured", "definition": "Income is less than 150% of poverty or essentials consume at least half of income", "formula": "incomeToThreshold < 1.50 OR costShare >= 0.50", "source": "U.S. Census Bureau and BLS plus project sensitivity band", "observationDate": "2024-01-01", "limitations": "The threshold combines unlike household concepts and should be read as a national proxy."},
+            {"geography": "us", "householdType": "National all-household / all-consumer-unit proxy", "status": "affordable", "definition": "Income clears the configured basic-needs and essential-cost pressure bands", "formula": "otherwise", "source": "Project evaluation of official U.S. inputs", "observationDate": "2024-01-01", "limitations": "A national central estimate does not represent low-income, renter, regional, or family-type outcomes."}
+          ]
+        },
+        "food": {
+          "costMetric": "food",
+          "directionIndicators": ["us-food-affordability-pressure", "us-food-at-home-cpi-yoy"],
+          "statusRules": [
+            {"status": "severe-shortfall", "all": [{"metric": "residualAfterHousingToFood", "operator": "lt", "value": 0.5}]},
+            {"status": "unaffordable", "all": [{"metric": "residualAfterHousingToFood", "operator": "lt", "value": 1.0}]},
+            {"status": "pressured", "all": [{"metric": "costShare", "operator": "gte", "value": 0.2}]},
+            {"status": "affordable", "otherwise": true}
+          ],
+          "thresholds": [
+            {"geography": "us", "householdType": "National all-household / all-consumer-unit proxy", "status": "severe-shortfall", "definition": "Income remaining after shelter and utilities is less than half average food expenditure", "formula": "residualAfterHousing < 0.50 * foodCost", "source": "U.S. Census Bureau and BLS Consumer Expenditure Surveys", "observationDate": "2024-01-01", "limitations": "The inputs describe different central tendencies."},
+            {"geography": "us", "householdType": "National all-household / all-consumer-unit proxy", "status": "unaffordable", "definition": "Income remaining after shelter and utilities cannot cover average food expenditure", "formula": "residualAfterHousing < foodCost", "source": "U.S. Census Bureau and BLS Consumer Expenditure Surveys", "observationDate": "2024-01-01", "limitations": "This is not a direct measure of food insecurity."},
+            {"geography": "us", "householdType": "National all-household / all-consumer-unit proxy", "status": "pressured", "definition": "Food consumes at least 20% of post-tax income", "formula": "costShare >= 0.20", "source": "Project pressure band using official U.S. inputs", "observationDate": "2024-01-01", "limitations": "The U.S. has no universal official food-share affordability cutoff."},
+            {"geography": "us", "householdType": "National all-household / all-consumer-unit proxy", "status": "affordable", "definition": "Income remaining after shelter and utilities covers food and its share is below the pressure band", "formula": "otherwise", "source": "Project evaluation of official U.S. inputs", "observationDate": "2024-01-01", "limitations": "Food insecurity remains heterogeneous and is not ruled out by a national proxy."}
+          ]
+        },
+        "housing": {
+          "costMetric": "housing",
+          "directionIndicators": ["us-rent-pressure", "us-shelter-cpi-yoy", "us-house-price-to-income-index"],
+          "statusRules": [
+            {"status": "severe-shortfall", "all": [{"metric": "costShare", "operator": "gte", "value": 0.5}]},
+            {"status": "unaffordable", "all": [{"metric": "costShare", "operator": "gte", "value": 0.3}]},
+            {"status": "pressured", "all": [{"metric": "costShare", "operator": "gte", "value": 0.25}]},
+            {"status": "affordable", "otherwise": true}
+          ],
+          "thresholds": [
+            {"geography": "us", "householdType": "National all-household / all-consumer-unit proxy", "status": "severe-shortfall", "definition": "Shelter consumes at least 50% of income", "formula": "costShare >= 0.50", "source": "HUD severe housing-cost-burden convention", "observationDate": "2024-01-01", "limitations": "HUD burden definitions use household-level income and housing payments; this proxy combines aggregate sources."},
+            {"geography": "us", "householdType": "National all-household / all-consumer-unit proxy", "status": "unaffordable", "definition": "Shelter consumes at least 30% of income", "formula": "costShare >= 0.30", "source": "HUD housing-cost-burden convention", "observationDate": "2024-01-01", "limitations": "The numerator and denominator are not household-level matched observations."},
+            {"geography": "us", "householdType": "National all-household / all-consumer-unit proxy", "status": "pressured", "definition": "Shelter consumes 25% to less than 30% of income", "formula": "costShare >= 0.25", "source": "Project early-pressure band below the HUD 30% threshold", "observationDate": "2024-01-01", "limitations": "The 25% band is not an official U.S. threshold."},
+            {"geography": "us", "householdType": "National all-household / all-consumer-unit proxy", "status": "affordable", "definition": "Shelter share remains below the configured pressure bands", "formula": "otherwise", "source": "Project evaluation of official U.S. inputs", "observationDate": "2024-01-01", "limitations": "Renter, owner, mortgage, family, and regional outcomes differ substantially."}
+          ]
+        }
+      }
+    },
+    "global": {
+      "householdType": null,
+      "observationDate": null,
+      "unsupportedReason": "No valid globally comparable absolute household-income and essential-cost measure is available in the project.",
+      "topics": {
+        "affordability": {},
+        "food": {},
+        "housing": {}
+      }
+    }
+  }
+}

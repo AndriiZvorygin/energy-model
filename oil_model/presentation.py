@@ -53,6 +53,7 @@ def write_presentation_contract(root: Path) -> dict[str, Any]:
             "provenance": [
                 {"file": "website/public/generated/evidence-summary.json", "evidenceKey": key},
                 {"file": "config/evidence_topics.json"},
+                {"file": "config/absolute_affordability.json"},
                 {"file": "config/presentation_rules.json"},
             ],
         }
@@ -66,6 +67,7 @@ def write_presentation_contract(root: Path) -> dict[str, Any]:
         "inputs": [
             {"file": "config/presentation_rules.json", "sha256": _hash(config_path)},
             {"file": "config/evidence_topics.json", "sha256": _hash(root / "config" / "evidence_topics.json")},
+            {"file": "config/absolute_affordability.json", "sha256": _hash(root / "config" / "absolute_affordability.json")},
             {"file": "website/public/generated/evidence-summary.json", "sha256": _hash(evidence_path)},
         ],
     }

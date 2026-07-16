@@ -4,6 +4,7 @@ import {
   CartesianGrid,
   Line,
   LineChart,
+  ReferenceLine,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -33,6 +34,7 @@ import {
   parseChartState,
   rangeRows,
   referenceStatistics,
+  rollingLinearResiduals,
   shiftSeries,
   transformObservations,
 } from "./chartUtils";
@@ -52,6 +54,10 @@ type ResearchTimeSeriesChartProps = {
   inspectCrossLayer?: boolean;
   showRegimes?: boolean;
   showRecessions?: boolean;
+  showNormalizationControls?: boolean;
+  zeroLine?: boolean;
+  dynamicGm2Residuals?: boolean;
+  startAtSeries?: string;
 };
 
 const transformedUnit = (transformation: Transformation, raw: string) =>
@@ -166,8 +172,13 @@ export function ResearchTimeSeriesChart({
   inspectCrossLayer = false,
   showRegimes = true,
   showRecessions = true,
+  showNormalizationControls = true,
+  zeroLine = false,
+  dynamicGm2Residuals = false,
+  startAtSeries,
 }: ResearchTimeSeriesChartProps) {
   const { dataset, error } = useChartDataset(file);
+  const residualSource = useChartDataset(dynamicGm2Residuals ? "gm2-oil-lead.json" : file);
   const { events, regimes, recessions } = useChartContext();
   const crossLayer = useCrossLayerData(inspectCrossLayer);
   const defaults = useMemo<ChartState>(
@@ -218,7 +229,7 @@ export function ResearchTimeSeriesChart({
         overlap: null,
       };
     const lag = state.lag ?? 5;
-    const virtual = lagControl
+    const virtual = lagControl && !dynamicGm2Residuals
       ? {
           ...dataset.series.find((item) => item.key === "GM2_YoY")!,
           key: "GM2_shifted",
@@ -227,13 +238,33 @@ export function ResearchTimeSeriesChart({
           color: "var(--chart-3)",
         }
       : null;
-    const series = virtual ? [...dataset.series, virtual] : dataset.series;
-    const shifted = virtual
-      ? shiftSeries(dataset.observations, "GM2_YoY", lag, "GM2_shifted")
+    const series = dynamicGm2Residuals
+      ? dataset.series.map((item) => item.key === "WTI_residual" || item.key === "Brent_residual" ? { ...item, label: `${item.key.startsWith("WTI") ? "WTI" : "Brent"} residual (lag ${lag}m)`, source: `Exploratory rolling GM2 lag-${lag} model` } : item)
+      : virtual ? [...dataset.series, virtual] : dataset.series;
+    const sourceByDate = dynamicGm2Residuals && residualSource.dataset
+      ? new Map(residualSource.dataset.observations.map((row) => [row.date, row]))
+      : null;
+    const modelInput: ChartObservation[] = sourceByDate
+      ? dataset.observations.map((row) => ({ ...row, ...sourceByDate.get(row.date), date: row.date }))
       : dataset.observations;
-    const ranged = rangeRows(shifted, state.range, state.from, state.to);
+    const shiftedInput = lagControl
+      ? shiftSeries(modelInput, "GM2_YoY", lag, "GM2_shifted")
+      : modelInput;
+    const shifted = dynamicGm2Residuals
+      ? rollingLinearResiduals(
+          rollingLinearResiduals(shiftedInput, "GM2_shifted", "WTI_YoY", 60, "WTI_residual"),
+          "GM2_shifted", "Brent_YoY", 60, "Brent_residual",
+        )
+      : shiftedInput;
+    const firstRequiredDate = startAtSeries
+      ? modelInput.find((row) => typeof row[startAtSeries] === "number")?.date
+      : undefined;
+    const displayHistory = firstRequiredDate
+      ? shifted.filter((row) => row.date >= firstRequiredDate)
+      : shifted;
+    const ranged = rangeRows(displayHistory, state.range, state.from, state.to);
     const baselineStats = referenceStatistics(
-      shifted,
+      displayHistory,
       series,
       dataset.transformation.referenceStart,
       dataset.transformation.referenceEnd,
@@ -244,10 +275,10 @@ export function ResearchTimeSeriesChart({
       dataset.availableTransformations.includes(state.transformation)
         ? state.transformation
         : initialTransformation,
-      shifted,
+      displayHistory,
       baselineStats,
     );
-    const overlapRows = virtual
+    const overlapRows = lagControl
       ? shifted.filter(
           (row) =>
             typeof row.GM2_shifted === "number" &&
@@ -258,7 +289,7 @@ export function ResearchTimeSeriesChart({
       rows: transformed,
       series,
       baselineStats,
-      stats: virtual ? correlation(shifted, "GM2_shifted", "WTI_YoY") : null,
+      stats: lagControl ? correlation(shifted, "GM2_shifted", "WTI_YoY") : null,
       overlap: overlapRows.length
         ? {
             start: overlapRows[0].date,
@@ -268,8 +299,11 @@ export function ResearchTimeSeriesChart({
     };
   }, [
     dataset,
+    dynamicGm2Residuals,
     initialTransformation,
     lagControl,
+    residualSource.dataset,
+    startAtSeries,
     state.from,
     state.lag,
     state.range,
@@ -277,10 +311,10 @@ export function ResearchTimeSeriesChart({
     state.transformation,
   ]);
 
-  if (error)
+  if (error || (dynamicGm2Residuals && residualSource.error))
     return (
       <div className="border border-amber-300 bg-amber-50 p-5 text-sm text-amber-900 dark:border-amber-900 dark:bg-amber-950/30 dark:text-amber-200">
-        <p>Interactive data could not be loaded: {error}</p>
+        <p>Interactive data could not be loaded: {error ?? residualSource.error}</p>
         {fallbackFigures[file] && (
           <img
             src={`${import.meta.env.BASE_URL}charts/${fallbackFigures[file]}`}
@@ -290,7 +324,7 @@ export function ResearchTimeSeriesChart({
         )}
       </div>
     );
-  if (!dataset)
+  if (!dataset || (dynamicGm2Residuals && !residualSource.dataset))
     return (
       <div className="flex h-80 items-center justify-center border border-stone-200 text-sm text-stone-500 dark:border-stone-800">
         Loading full-resolution research data…
@@ -402,15 +436,17 @@ export function ResearchTimeSeriesChart({
             onToggle={updateSeries}
             onFocus={setFocused}
           />
-          <NormalizationControls
-            available={
-              validTransformations.length ? validTransformations : ["raw"]
-            }
-            selected={state.transformation}
-            onChange={(transformation) =>
-              setState((current) => ({ ...current, transformation }))
-            }
-          />
+          {showNormalizationControls && (
+            <NormalizationControls
+              available={
+                validTransformations.length ? validTransformations : ["raw"]
+              }
+              selected={state.transformation}
+              onChange={(transformation) =>
+                setState((current) => ({ ...current, transformation }))
+              }
+            />
+          )}
         </div>
         <TimeRangeControls
           range={state.range}
@@ -492,6 +528,10 @@ export function ResearchTimeSeriesChart({
               ·{" "}
               {(state.lag ?? 5) === 5 ? "locked benchmark" : "exploratory lag"}
             </span>
+            <div className="inline-flex border border-stone-300 dark:border-stone-700" aria-label="Reference GM2 lead choices">
+              <button type="button" onClick={() => setState((current) => ({ ...current, lag: 4 }))} aria-pressed={(state.lag ?? 5) === 4} className={`px-3 py-2 text-xs font-semibold ${(state.lag ?? 5) === 4 ? "bg-signal text-white" : ""}`}>Peak correlation 4m</button>
+              <button type="button" onClick={() => setState((current) => ({ ...current, lag: 5 }))} aria-pressed={(state.lag ?? 5) === 5} className={`border-l border-stone-300 px-3 py-2 text-xs font-semibold dark:border-stone-700 ${(state.lag ?? 5) === 5 ? "bg-petroleum text-white" : ""}`}>Locked benchmark 5m</button>
+            </div>
           </div>
           <p className="mt-2 text-xs leading-5 text-stone-500">
             A model lag uses an earlier GM2 observation to estimate a later oil
@@ -561,6 +601,15 @@ export function ResearchTimeSeriesChart({
                   events={activeEvents}
                   enabled={eventsEnabled}
                 />
+                {zeroLine && (
+                  <ReferenceLine
+                    y={0}
+                    stroke="currentColor"
+                    strokeDasharray="5 4"
+                    strokeOpacity={0.65}
+                    label={{ value: "Liquidity-implied path", position: "insideTopRight", fontSize: 10 }}
+                  />
+                )}
                 {panelSeries.map((item, seriesIndex) => (
                   <Line
                     key={item.key}

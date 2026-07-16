@@ -1,7 +1,7 @@
 import { Clock3, Gauge, LockKeyhole } from 'lucide-react'
 import { PublicationFigure } from '../components/charts/PublicationFigure'
 import { ResearchLagChart } from '../components/charts/ResearchLagChart'
-import { ResearchTimeSeriesChart } from '../components/charts/ResearchTimeSeriesChart'
+import { LiquiditySignalChart } from '../components/charts/LiquiditySignalChart'
 import { RollingModelPerformanceChart } from '../components/charts/RollingModelPerformanceChart'
 import { MetricCard } from '../components/MetricCard'
 import { PageBody, PageHeader } from '../components/PageHeader'
@@ -17,7 +17,7 @@ export function Liquidity() {
       <MetricCard icon={LockKeyhole} label="Locked model" value={`${metrics.lockedLagMonths} months`} detail="Selected from rolling validation" tone="inventory" />
     </div>
 
-    <div className="mt-12"><ResearchTimeSeriesChart file="gm2-oil-lead.json" initialSeries={['GM2_shifted', 'WTI_YoY', 'Brent_YoY', 'RAC_composite_YoY']} initialTransformation="zscore" lagControl inspectCrossLayer /></div>
+    <div className="mt-12"><LiquiditySignalChart /></div>
     <div className="mt-12"><ResearchLagChart mode="gm2" title="Correlation across GM2 lead times" description="Explore the tested lag range while keeping descriptive correlation separate from the locked rolling-validation choice." /></div>
     <div className="mt-12"><RollingModelPerformanceChart /></div>
     <div className="mt-10 flex items-start gap-3 border-l-2 border-signal pl-5"><Clock3 className="mt-1 shrink-0 text-signal" size={20} /><p className="max-w-3xl text-sm leading-6 text-stone-600 dark:text-stone-300">Lead time is an empirical relationship, not a countdown clock. Policy shifts, geopolitics, and physical disruptions can move oil away from the liquidity-implied path.</p></div>

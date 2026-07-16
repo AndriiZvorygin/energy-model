@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { useGeneratedJson, useIndicatorDatasets } from '../charts/useChartData'
-import type { EvidenceDisposition, EvidenceMatrixRow } from './EvidenceMatrix'
+import type { AbsoluteAffordabilityStatus, AffordabilityDirection, EvidenceDisposition, EvidenceMatrixRow } from './EvidenceMatrix'
 import { EvidenceMatrix } from './EvidenceMatrix'
 
 type GeneratedEvidenceRow = {
@@ -18,6 +18,8 @@ type GeneratedEvidenceRow = {
   sourceDate: string | null
   calculation: string | null
   limitations: string[]
+  absoluteStatus?: AbsoluteAffordabilityStatus | null
+  source?: string | null
 }
 type GeneratedTopic = {
   topic: string
@@ -25,6 +27,8 @@ type GeneratedTopic = {
   confidence: string
   coverage: number | null
   scope: string | null
+  absoluteStatus?: AbsoluteAffordabilityStatus
+  direction?: AffordabilityDirection
   supporting: GeneratedEvidenceRow[]
   mixed: GeneratedEvidenceRow[]
   contradicting: GeneratedEvidenceRow[]
@@ -48,9 +52,9 @@ export function GeneratedEvidenceSummary({ evidenceKey, title = 'Diagnostic summ
     status: `${row.group} · ${row.status}`, reason: row.reason,
     indicator: row.indicatorFile ? byFile.get(row.indicatorFile) : undefined,
     value: row.value, unit: row.unit, percentile: row.historicalPercentile, direction: row.direction,
-    sourceDate: row.sourceDate, calculation: row.calculation, limitations: row.limitations,
+    absoluteStatus: row.absoluteStatus, source: row.source, sourceDate: row.sourceDate, calculation: row.calculation, limitations: row.limitations,
   })), [byFile, evidenceKey, generatedRows])
   if (error || indicatorError) return <p className="border-y border-amber-500 py-4 text-sm text-amber-700">Diagnostic summary unavailable: {error ?? indicatorError}</p>
   if (!selected) return <p className="border-y border-stone-300 py-6 text-sm text-stone-500 dark:border-stone-700">Loading diagnostic summary…</p>
-  return <EvidenceMatrix title={title} interpretation={selected.interpretation} confidence={selected.confidence} coverage={selected.coverage} rows={rows} />
+  return <EvidenceMatrix title={title} interpretation={selected.interpretation} confidence={selected.confidence} coverage={selected.coverage} rows={rows} absoluteStatus={selected.absoluteStatus} direction={selected.direction} />
 }
