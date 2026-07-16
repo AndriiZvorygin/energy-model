@@ -1,7 +1,8 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
-import { Activity, AlertTriangle, BarChart3, BookOpen, BriefcaseBusiness, CircleHelp, Clock3, Droplets, Factory, Fuel, History, Home as HomeIcon, House, Landmark, ListFilter, Map, Menu, Moon, Network, Route as RouteIcon, Scale, Sun, TrendingUp, X } from 'lucide-react'
+import { CircleHelp, Clock3, Menu, Moon, Sun, X } from 'lucide-react'
 import { NavLink, Route, Routes, useLocation } from 'react-router-dom'
 import { readThemePreference, resolveTheme, type ThemePreference } from './lib/theme'
+import { ResearchNavigation } from './components/ResearchNavigation'
 const Home = lazy(() => import('./pages/Home').then((module) => ({ default: module.Home })))
 const Overview = lazy(() => import('./pages/Overview').then((module) => ({ default: module.Overview })))
 const Liquidity = lazy(() => import('./pages/Liquidity').then((module) => ({ default: module.Liquidity })))
@@ -33,34 +34,6 @@ const CanadaRegimes = lazy(() => import('./pages/CanadaRegimes').then((module) =
 const Affordability = lazy(() => import('./pages/Affordability').then((module) => ({ default: module.Affordability })))
 const FoodAffordability = lazy(() => import('./pages/FoodAffordability').then((module) => ({ default: module.FoodAffordability })))
 const HousingAffordability = lazy(() => import('./pages/HousingAffordability').then((module) => ({ default: module.HousingAffordability })))
-
-const navItems = [
-  { to: '/', label: 'Home', icon: HomeIcon },
-  { to: '/canada', label: 'Canadian conditions', icon: Map },
-  { to: '/canada/current-state', label: 'Canada current state', icon: Activity },
-  { to: '/canada/regimes', label: 'Canada regimes', icon: BarChart3 },
-  { to: '/canada/symptoms', label: 'Canada symptoms', icon: AlertTriangle },
-  { to: '/affordability', label: 'Food and housing', icon: House },
-  { to: '/canada/ontario', label: 'Ontario context', icon: Map },
-  { to: '/compare/canada-us', label: 'Canada–U.S. comparison', icon: Scale },
-  { to: '/overview', label: 'System overview', icon: Network },
-  { to: '/system-response', label: 'System response', icon: RouteIcon },
-  { to: '/current-state/us', label: 'U.S. current state', icon: Activity },
-  { to: '/regimes', label: 'Regimes', icon: BarChart3 },
-  { to: '/symptoms', label: 'Symptoms', icon: AlertTriangle },
-  { to: '/indicators', label: 'Indicators', icon: ListFilter },
-  { to: '/episodes', label: 'Episodes', icon: History },
-  { to: '/energy-burden', label: 'Energy burden', icon: Scale },
-  { to: '/labour', label: 'Labour', icon: BriefcaseBusiness },
-  { to: '/liquidity', label: 'Liquidity', icon: TrendingUp },
-  { to: '/physical-market', label: 'Physical market', icon: Droplets },
-  { to: '/oil-prices', label: 'Oil prices', icon: Fuel },
-  { to: '/equities', label: 'Equities', icon: Landmark },
-  { to: '/economy', label: 'Economy', icon: Factory },
-  { to: '/output-quality', label: 'Output quality', icon: Scale },
-  { to: '/methodology', label: 'Methodology', icon: BookOpen },
-  { to: '/roadmap', label: 'Roadmap', icon: Map },
-]
 
 const glossary = {
   GM2: 'A USD-converted aggregate of broad money from the United States, euro area, China, and Japan.',
@@ -108,13 +81,7 @@ export default function App() {
           <span className="block text-xs font-semibold uppercase tracking-widest text-petroleum">Research atlas</span>
           <span className="mt-2 block max-w-40 text-xl font-semibold leading-6 text-ink dark:text-white">Canada in the global energy system</span>
         </NavLink>
-        <nav className="grid grid-cols-2 gap-1 sm:grid-cols-4 lg:block" aria-label="Research sections">
-          {navItems.map(({ to, label, icon: Icon }) => (
-            <NavLink key={to} to={to} end={to === '/'} className={({ isActive }) => `flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition lg:mb-0.5 ${isActive ? 'bg-petroleum text-white' : 'text-stone-600 hover:bg-stone-200/70 hover:text-ink dark:text-stone-400 dark:hover:bg-stone-800 dark:hover:text-white'}`}>
-              <Icon size={17} aria-hidden="true" /><span>{label}</span>
-            </NavLink>
-          ))}
-        </nav>
+        <ResearchNavigation />
         <div className="mt-5 border-t border-stone-200 pt-5 dark:border-stone-800">
           <button type="button" onClick={() => setGlossaryOpen(true)} className="flex h-9 w-full items-center justify-center gap-2 rounded-md border border-stone-300 px-3 text-xs font-semibold dark:border-stone-700"><CircleHelp size={15} />Glossary</button>
           <fieldset className="mt-3"><legend className="mb-2 text-xs font-semibold text-stone-500">Theme · Auto is {resolvedTheme}</legend><div className="grid grid-cols-3 border border-stone-300 dark:border-stone-700">{([
