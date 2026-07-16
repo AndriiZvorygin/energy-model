@@ -121,6 +121,13 @@ for (const entry of canadaManifest.indicators ?? []) {
   const dates = (indicator.observations ?? []).map((row) => row.date)
   if (dates.some((date, index) => index > 0 && date <= dates[index - 1])) failures.push(`canada/${entry.file}: dates must be chronological and unique`)
   if ((indicator.observations ?? []).some((row) => !row.sourceDate)) failures.push(`canada/${entry.file}: missing source dates`)
+  if (indicator.layer === 'Canadian purchasing power') {
+    for (const field of ['calculation', 'components', 'futureClassifierMetadata']) {
+      if (!(field in indicator)) failures.push(`canada/${entry.file}: missing purchasing-power field ${field}`)
+    }
+    if (indicator.futureClassifierMetadata?.status !== 'Not yet evaluated') failures.push(`canada/${entry.file}: purchasing-power classifier metadata must remain not evaluated`)
+    if (indicator.frequency === 'quarterly' && dates.some((date) => !['01', '04', '07', '10'].includes(date.slice(5, 7)))) failures.push(`canada/${entry.file}: quarterly observations are not aligned to quarter starts`)
+  }
 }
 for (const [namespace, namespaceManifest] of [['global', globalAffordabilityManifest], ['us', usAffordabilityManifest]]) {
   if (!Array.isArray(namespaceManifest.indicators) || !namespaceManifest.indicators.length) failures.push(`${namespace}/manifest.json: no indicators`)

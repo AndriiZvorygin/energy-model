@@ -1,0 +1,2184 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "affordability-canada-property-income",
+  "title": "Official Canadian residential property evidence and income",
+  "description": "The broad RPPI is an inactive six-CMA history ending in 2021 Q4. Active condominium series cover new apartments only and are not spliced to it.",
+  "plainLanguageSummary": "The broad RPPI is an inactive six-CMA history ending in 2021 Q4. Active condominium series cover new apartments only and are not spliced to it.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "explanation": "The broad RPPI is an inactive six-CMA history ending in 2021 Q4. Active condominium series cover new apartments only and are not spliced to it.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "The broad RPPI is an inactive six-CMA history ending in 2021 Q4. Active condominium series cover new apartments only and are not spliced to it."
+  ],
+  "sourceNotes": [
+    "Statistics Canada",
+    "Derived from Statistics Canada; Statistics Canada"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "Six_CMA_broad_RPPI": {
+        "mean": 102.55,
+        "standardDeviation": 2.4564540839728024,
+        "n": 12
+      },
+      "Toronto_new_condominiums": {
+        "mean": 105.77499999999999,
+        "standardDeviation": 5.148968343270329,
+        "n": 12
+      },
+      "Ottawa_new_condominiums": {
+        "mean": 106.39166666666667,
+        "standardDeviation": 8.770543344374712,
+        "n": 12
+      },
+      "Calgary_new_condominiums": {
+        "mean": 91.89999999999999,
+        "standardDeviation": 7.185517842623917,
+        "n": 12
+      },
+      "Edmonton_new_condominiums": {
+        "mean": 96.7,
+        "standardDeviation": 3.1307613557514506,
+        "n": 12
+      },
+      "Disposable_income": {
+        "mean": 83.57526132147999,
+        "standardDeviation": 14.771614695397515,
+        "n": 80
+      }
+    }
+  },
+  "frequency": "quarterly",
+  "dateRange": {
+    "start": "1971-01-01",
+    "end": "2026-01-01"
+  },
+  "series": [
+    {
+      "key": "Six_CMA_broad_RPPI",
+      "label": "Six-CMA residential property price index",
+      "unit": "index, 2017=100",
+      "source": "Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2021-10-01"
+    },
+    {
+      "key": "Toronto_new_condominiums",
+      "label": "Toronto new condominium apartment price index",
+      "unit": "index, 2017=100",
+      "source": "Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Ottawa_new_condominiums",
+      "label": "Ottawa new condominium apartment price index",
+      "unit": "index, 2017=100",
+      "source": "Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Calgary_new_condominiums",
+      "label": "Calgary new condominium apartment price index",
+      "unit": "index, 2017=100",
+      "source": "Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Edmonton_new_condominiums",
+      "label": "Edmonton new condominium apartment price index",
+      "unit": "index, 2017=100",
+      "source": "Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Disposable_income",
+      "label": "Disposable income per person index",
+      "unit": "index, 2017-01=100",
+      "source": "Derived from Statistics Canada; Statistics Canada",
+      "status": "derived",
+      "defaultVisible": false,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1971-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 7.998135344503812
+    },
+    {
+      "date": "1971-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 8.143258624595314
+    },
+    {
+      "date": "1971-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 8.21806301673503
+    },
+    {
+      "date": "1971-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 8.43172351247826
+    },
+    {
+      "date": "1972-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 8.762843311096344
+    },
+    {
+      "date": "1972-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 8.971578233664056
+    },
+    {
+      "date": "1972-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 9.186250786029285
+    },
+    {
+      "date": "1972-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 9.570458117342012
+    },
+    {
+      "date": "1973-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 9.852230824396628
+    },
+    {
+      "date": "1973-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 10.279101595588699
+    },
+    {
+      "date": "1973-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 10.652307879516481
+    },
+    {
+      "date": "1973-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 11.182087151225865
+    },
+    {
+      "date": "1974-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 11.653034789469778
+    },
+    {
+      "date": "1974-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 11.716789542215116
+    },
+    {
+      "date": "1974-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 12.478960106679677
+    },
+    {
+      "date": "1974-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 12.93513050408634
+    },
+    {
+      "date": "1975-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 13.229868313252016
+    },
+    {
+      "date": "1975-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 13.698631974768894
+    },
+    {
+      "date": "1975-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 14.312174546886213
+    },
+    {
+      "date": "1975-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 14.601443911986355
+    },
+    {
+      "date": "1976-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 14.91790318471352
+    },
+    {
+      "date": "1976-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 15.645130960122316
+    },
+    {
+      "date": "1976-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 15.350007113942672
+    },
+    {
+      "date": "1976-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 16.012254888933168
+    },
+    {
+      "date": "1977-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 16.200348327776112
+    },
+    {
+      "date": "1977-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 16.831318824013835
+    },
+    {
+      "date": "1977-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 16.93825531256439
+    },
+    {
+      "date": "1977-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 17.414085158083452
+    },
+    {
+      "date": "1978-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 18.339352102138587
+    },
+    {
+      "date": "1978-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 18.500331849611484
+    },
+    {
+      "date": "1978-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 18.81869756669801
+    },
+    {
+      "date": "1978-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 19.368772646696986
+    },
+    {
+      "date": "1979-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 19.756081458359485
+    },
+    {
+      "date": "1979-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 20.746072509628828
+    },
+    {
+      "date": "1979-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 20.938179366782677
+    },
+    {
+      "date": "1979-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 21.67263702978116
+    },
+    {
+      "date": "1980-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 22.1458221705028
+    },
+    {
+      "date": "1980-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 22.77366643720621
+    },
+    {
+      "date": "1980-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 23.428678285322235
+    },
+    {
+      "date": "1980-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 24.4579364725076
+    },
+    {
+      "date": "1981-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 25.588141506149796
+    },
+    {
+      "date": "1981-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 26.270442743203272
+    },
+    {
+      "date": "1981-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 26.8114950623707
+    },
+    {
+      "date": "1981-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 27.544262166198898
+    },
+    {
+      "date": "1982-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 28.524054911883255
+    },
+    {
+      "date": "1982-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 28.85018286143286
+    },
+    {
+      "date": "1982-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 29.294039770079973
+    },
+    {
+      "date": "1982-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 28.837543647947804
+    },
+    {
+      "date": "1983-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 29.03465373394466
+    },
+    {
+      "date": "1983-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 29.255672277928582
+    },
+    {
+      "date": "1983-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 31.384857649857
+    },
+    {
+      "date": "1983-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 31.091230226616656
+    },
+    {
+      "date": "1984-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 31.062437542163337
+    },
+    {
+      "date": "1984-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 32.344570086737775
+    },
+    {
+      "date": "1984-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 32.879832990430074
+    },
+    {
+      "date": "1984-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 33.36924942742099
+    },
+    {
+      "date": "1985-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 33.80145157548478
+    },
+    {
+      "date": "1985-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 35.33571681521514
+    },
+    {
+      "date": "1985-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 35.46780378591543
+    },
+    {
+      "date": "1985-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 35.8813917927121
+    },
+    {
+      "date": "1986-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 36.26972725177724
+    },
+    {
+      "date": "1986-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 36.92418590153813
+    },
+    {
+      "date": "1986-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 36.9172410518087
+    },
+    {
+      "date": "1986-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 37.12266499580134
+    },
+    {
+      "date": "1987-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 38.06391622042263
+    },
+    {
+      "date": "1987-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 37.98497433517551
+    },
+    {
+      "date": "1987-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 39.48584202225113
+    },
+    {
+      "date": "1987-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 39.55083183216039
+    },
+    {
+      "date": "1988-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 39.66396785304146
+    },
+    {
+      "date": "1988-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 41.00626789077984
+    },
+    {
+      "date": "1988-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 42.42388490878259
+    },
+    {
+      "date": "1988-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 43.37649452506403
+    },
+    {
+      "date": "1989-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 44.035490820029345
+    },
+    {
+      "date": "1989-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 45.21728870762119
+    },
+    {
+      "date": "1989-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 44.47460441199556
+    },
+    {
+      "date": "1989-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 44.84837044832167
+    },
+    {
+      "date": "1990-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 46.04700555981971
+    },
+    {
+      "date": "1990-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 44.66498109175919
+    },
+    {
+      "date": "1990-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 45.8619729993977
+    },
+    {
+      "date": "1990-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 46.48680703156164
+    },
+    {
+      "date": "1991-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 46.97080434641645
+    },
+    {
+      "date": "1991-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 46.26343871864573
+    },
+    {
+      "date": "1991-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 46.99691859689444
+    },
+    {
+      "date": "1991-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 47.277926706647264
+    },
+    {
+      "date": "1992-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 46.726415434546844
+    },
+    {
+      "date": "1992-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 47.566498198276385
+    },
+    {
+      "date": "1992-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 48.888346379421534
+    },
+    {
+      "date": "1992-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 47.96365772340182
+    },
+    {
+      "date": "1993-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 48.27610910115053
+    },
+    {
+      "date": "1993-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 50.27952063497461
+    },
+    {
+      "date": "1993-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 48.615094907343654
+    },
+    {
+      "date": "1993-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 48.15898320135821
+    },
+    {
+      "date": "1994-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 48.93730340904732
+    },
+    {
+      "date": "1994-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 49.305416086147034
+    },
+    {
+      "date": "1994-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 49.10628017743755
+    },
+    {
+      "date": "1994-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 49.53664382151868
+    },
+    {
+      "date": "1995-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 49.70458997845486
+    },
+    {
+      "date": "1995-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 50.01205623630862
+    },
+    {
+      "date": "1995-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 49.851996717664136
+    },
+    {
+      "date": "1995-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 50.037845998090184
+    },
+    {
+      "date": "1996-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 50.28073621684411
+    },
+    {
+      "date": "1996-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 50.32960267575198
+    },
+    {
+      "date": "1996-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 50.339260459710346
+    },
+    {
+      "date": "1996-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 50.76306017005162
+    },
+    {
+      "date": "1997-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 51.15036094875672
+    },
+    {
+      "date": "1997-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 51.250864134521386
+    },
+    {
+      "date": "1997-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 52.56227897486784
+    },
+    {
+      "date": "1997-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 52.88039444355606
+    },
+    {
+      "date": "1998-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 53.08793874476428
+    },
+    {
+      "date": "1998-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 53.231508519982995
+    },
+    {
+      "date": "1998-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 54.42728100891761
+    },
+    {
+      "date": "1998-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 55.17917447385226
+    },
+    {
+      "date": "1999-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 55.36932203122541
+    },
+    {
+      "date": "1999-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 56.183650491730084
+    },
+    {
+      "date": "1999-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 56.78403089843213
+    },
+    {
+      "date": "1999-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 57.29076846438256
+    },
+    {
+      "date": "2000-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 57.90374918564371
+    },
+    {
+      "date": "2000-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 58.75257939217935
+    },
+    {
+      "date": "2000-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 59.88791856399563
+    },
+    {
+      "date": "2000-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 60.69182330717007
+    },
+    {
+      "date": "2001-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 62.52021511242307
+    },
+    {
+      "date": "2001-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 61.15172974962612
+    },
+    {
+      "date": "2001-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 62.57318604199816
+    },
+    {
+      "date": "2001-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 62.93871688617885
+    },
+    {
+      "date": "2002-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 63.82252309233958
+    },
+    {
+      "date": "2002-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 63.81436829718271
+    },
+    {
+      "date": "2002-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 64.71357675226173
+    },
+    {
+      "date": "2002-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 65.08848929512743
+    },
+    {
+      "date": "2003-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 66.04753283793978
+    },
+    {
+      "date": "2003-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 65.53457291896159
+    },
+    {
+      "date": "2003-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 65.55498554790911
+    },
+    {
+      "date": "2003-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 66.11242745891167
+    },
+    {
+      "date": "2004-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 66.91390594835353
+    },
+    {
+      "date": "2004-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 68.37484572472108
+    },
+    {
+      "date": "2004-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 68.9678795340524
+    },
+    {
+      "date": "2004-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 69.11096091554677
+    },
+    {
+      "date": "2005-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 68.81266637182686
+    },
+    {
+      "date": "2005-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 70.21736005309725
+    },
+    {
+      "date": "2005-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 70.49982901199242
+    },
+    {
+      "date": "2005-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 71.49252308391488
+    },
+    {
+      "date": "2006-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 73.55238694462533
+    },
+    {
+      "date": "2006-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 73.45413969501152
+    },
+    {
+      "date": "2006-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 75.21499175320221
+    },
+    {
+      "date": "2006-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 76.36163488948465
+    },
+    {
+      "date": "2007-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 77.85055617608266
+    },
+    {
+      "date": "2007-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 77.51053138892688
+    },
+    {
+      "date": "2007-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 77.66003358170694
+    },
+    {
+      "date": "2007-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 78.6870707057228
+    },
+    {
+      "date": "2008-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 80.04185889175403
+    },
+    {
+      "date": "2008-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 81.21972624771388
+    },
+    {
+      "date": "2008-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 82.5015480580756
+    },
+    {
+      "date": "2008-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 82.05479546043057
+    },
+    {
+      "date": "2009-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 81.60701549629573
+    },
+    {
+      "date": "2009-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 81.80310872060976
+    },
+    {
+      "date": "2009-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 83.0842828926979
+    },
+    {
+      "date": "2009-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 83.96664574773806
+    },
+    {
+      "date": "2010-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 85.82255001726554
+    },
+    {
+      "date": "2010-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 84.55852079425834
+    },
+    {
+      "date": "2010-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 85.58127541770136
+    },
+    {
+      "date": "2010-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 86.83037596126063
+    },
+    {
+      "date": "2011-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 87.22684103840011
+    },
+    {
+      "date": "2011-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 87.36259884686868
+    },
+    {
+      "date": "2011-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 87.92737132101443
+    },
+    {
+      "date": "2011-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 89.32097762602574
+    },
+    {
+      "date": "2012-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 89.89214415078692
+    },
+    {
+      "date": "2012-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 90.11521677415497
+    },
+    {
+      "date": "2012-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 90.96336384701219
+    },
+    {
+      "date": "2012-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 91.32607766686787
+    },
+    {
+      "date": "2013-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 93.15644842691725
+    },
+    {
+      "date": "2013-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 93.47532756464453
+    },
+    {
+      "date": "2013-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 93.71658866821114
+    },
+    {
+      "date": "2013-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 94.44943487498547
+    },
+    {
+      "date": "2014-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 94.98864134859957
+    },
+    {
+      "date": "2014-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 95.29165923400448
+    },
+    {
+      "date": "2014-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 96.56231879561633
+    },
+    {
+      "date": "2014-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 96.52833266098756
+    },
+    {
+      "date": "2015-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 98.53685234734935
+    },
+    {
+      "date": "2015-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 99.29868499436921
+    },
+    {
+      "date": "2015-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 99.80037198908988
+    },
+    {
+      "date": "2015-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 99.60829872615643
+    },
+    {
+      "date": "2016-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 96.82828476967231
+    },
+    {
+      "date": "2016-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 98.34704834616022
+    },
+    {
+      "date": "2016-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 99.0852516222481
+    },
+    {
+      "date": "2016-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": null,
+      "Ottawa_new_condominiums": null,
+      "Calgary_new_condominiums": null,
+      "Edmonton_new_condominiums": null,
+      "Disposable_income": 99.82793774881115
+    },
+    {
+      "date": "2017-01-01",
+      "Six_CMA_broad_RPPI": 95.4,
+      "Toronto_new_condominiums": 97.2,
+      "Ottawa_new_condominiums": 101.5,
+      "Calgary_new_condominiums": 100.9,
+      "Edmonton_new_condominiums": 100.2,
+      "Disposable_income": 100.0
+    },
+    {
+      "date": "2017-04-01",
+      "Six_CMA_broad_RPPI": 100.8,
+      "Toronto_new_condominiums": 99.3,
+      "Ottawa_new_condominiums": 99.6,
+      "Calgary_new_condominiums": 102.4,
+      "Edmonton_new_condominiums": 100.4,
+      "Disposable_income": 101.58758699790702
+    },
+    {
+      "date": "2017-07-01",
+      "Six_CMA_broad_RPPI": 102.1,
+      "Toronto_new_condominiums": 100.8,
+      "Ottawa_new_condominiums": 101.3,
+      "Calgary_new_condominiums": 99.5,
+      "Edmonton_new_condominiums": 100.1,
+      "Disposable_income": 103.30471761840097
+    },
+    {
+      "date": "2017-10-01",
+      "Six_CMA_broad_RPPI": 101.8,
+      "Toronto_new_condominiums": 102.7,
+      "Ottawa_new_condominiums": 97.6,
+      "Calgary_new_condominiums": 97.1,
+      "Edmonton_new_condominiums": 99.3,
+      "Disposable_income": 103.87454874896947
+    },
+    {
+      "date": "2018-01-01",
+      "Six_CMA_broad_RPPI": 102.5,
+      "Toronto_new_condominiums": 104.6,
+      "Ottawa_new_condominiums": 98.9,
+      "Calgary_new_condominiums": 95.9,
+      "Edmonton_new_condominiums": 98.6,
+      "Disposable_income": 103.58913462108065
+    },
+    {
+      "date": "2018-04-01",
+      "Six_CMA_broad_RPPI": 103.8,
+      "Toronto_new_condominiums": 105.0,
+      "Ottawa_new_condominiums": 101.5,
+      "Calgary_new_condominiums": 92.3,
+      "Edmonton_new_condominiums": 97.9,
+      "Disposable_income": 103.365101162646
+    },
+    {
+      "date": "2018-07-01",
+      "Six_CMA_broad_RPPI": 104.0,
+      "Toronto_new_condominiums": 105.7,
+      "Ottawa_new_condominiums": 103.3,
+      "Calgary_new_condominiums": 92.6,
+      "Edmonton_new_condominiums": 97.6,
+      "Disposable_income": 103.44723305635902
+    },
+    {
+      "date": "2018-10-01",
+      "Six_CMA_broad_RPPI": 103.6,
+      "Toronto_new_condominiums": 109.3,
+      "Ottawa_new_condominiums": 103.3,
+      "Calgary_new_condominiums": 89.0,
+      "Edmonton_new_condominiums": 94.7,
+      "Disposable_income": 104.7422741851663
+    },
+    {
+      "date": "2019-01-01",
+      "Six_CMA_broad_RPPI": 103.1,
+      "Toronto_new_condominiums": 110.1,
+      "Ottawa_new_condominiums": 107.4,
+      "Calgary_new_condominiums": 86.0,
+      "Edmonton_new_condominiums": 94.2,
+      "Disposable_income": 105.08127330642938
+    },
+    {
+      "date": "2019-04-01",
+      "Six_CMA_broad_RPPI": 104.0,
+      "Toronto_new_condominiums": 110.1,
+      "Ottawa_new_condominiums": 117.0,
+      "Calgary_new_condominiums": 84.4,
+      "Edmonton_new_condominiums": 93.9,
+      "Disposable_income": 106.7799171703761
+    },
+    {
+      "date": "2019-07-01",
+      "Six_CMA_broad_RPPI": 104.2,
+      "Toronto_new_condominiums": 108.2,
+      "Ottawa_new_condominiums": 120.6,
+      "Calgary_new_condominiums": 82.9,
+      "Edmonton_new_condominiums": 92.2,
+      "Disposable_income": 107.31141687942576
+    },
+    {
+      "date": "2019-10-01",
+      "Six_CMA_broad_RPPI": 105.3,
+      "Toronto_new_condominiums": 116.3,
+      "Ottawa_new_condominiums": 124.7,
+      "Calgary_new_condominiums": 79.8,
+      "Edmonton_new_condominiums": 91.3,
+      "Disposable_income": 108.44021465876524
+    },
+    {
+      "date": "2020-01-01",
+      "Six_CMA_broad_RPPI": 107.5,
+      "Toronto_new_condominiums": 125.6,
+      "Ottawa_new_condominiums": 131.7,
+      "Calgary_new_condominiums": 78.0,
+      "Edmonton_new_condominiums": 89.3,
+      "Disposable_income": 109.4449402486596
+    },
+    {
+      "date": "2020-04-01",
+      "Six_CMA_broad_RPPI": 109.9,
+      "Toronto_new_condominiums": 130.0,
+      "Ottawa_new_condominiums": 135.2,
+      "Calgary_new_condominiums": 78.0,
+      "Edmonton_new_condominiums": 89.6,
+      "Disposable_income": 119.81470256634977
+    },
+    {
+      "date": "2020-07-01",
+      "Six_CMA_broad_RPPI": 111.4,
+      "Toronto_new_condominiums": 129.7,
+      "Ottawa_new_condominiums": 135.2,
+      "Calgary_new_condominiums": 77.5,
+      "Edmonton_new_condominiums": 88.4,
+      "Disposable_income": 114.93202853913668
+    },
+    {
+      "date": "2020-10-01",
+      "Six_CMA_broad_RPPI": 114.1,
+      "Toronto_new_condominiums": 129.1,
+      "Ottawa_new_condominiums": 136.1,
+      "Calgary_new_condominiums": 78.6,
+      "Edmonton_new_condominiums": 85.9,
+      "Disposable_income": 113.87264996477651
+    },
+    {
+      "date": "2021-01-01",
+      "Six_CMA_broad_RPPI": 116.9,
+      "Toronto_new_condominiums": 128.5,
+      "Ottawa_new_condominiums": 136.1,
+      "Calgary_new_condominiums": 78.7,
+      "Edmonton_new_condominiums": 85.8,
+      "Disposable_income": 118.03183438957291
+    },
+    {
+      "date": "2021-04-01",
+      "Six_CMA_broad_RPPI": 124.7,
+      "Toronto_new_condominiums": 131.2,
+      "Ottawa_new_condominiums": 137.2,
+      "Calgary_new_condominiums": 79.4,
+      "Edmonton_new_condominiums": 87.9,
+      "Disposable_income": 117.36702433037316
+    },
+    {
+      "date": "2021-07-01",
+      "Six_CMA_broad_RPPI": 127.4,
+      "Toronto_new_condominiums": 134.8,
+      "Ottawa_new_condominiums": 140.4,
+      "Calgary_new_condominiums": 80.5,
+      "Edmonton_new_condominiums": 88.4,
+      "Disposable_income": 117.93913880942077
+    },
+    {
+      "date": "2021-10-01",
+      "Six_CMA_broad_RPPI": 130.0,
+      "Toronto_new_condominiums": 138.0,
+      "Ottawa_new_condominiums": 140.4,
+      "Calgary_new_condominiums": 80.9,
+      "Edmonton_new_condominiums": 85.9,
+      "Disposable_income": 116.3367459748591
+    },
+    {
+      "date": "2022-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": 140.0,
+      "Ottawa_new_condominiums": 139.6,
+      "Calgary_new_condominiums": 80.9,
+      "Edmonton_new_condominiums": 85.4,
+      "Disposable_income": 119.12379144323639
+    },
+    {
+      "date": "2022-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": 138.3,
+      "Ottawa_new_condominiums": 138.4,
+      "Calgary_new_condominiums": 81.9,
+      "Edmonton_new_condominiums": 88.4,
+      "Disposable_income": 120.74333667011851
+    },
+    {
+      "date": "2022-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": 139.1,
+      "Ottawa_new_condominiums": 138.3,
+      "Calgary_new_condominiums": 82.4,
+      "Edmonton_new_condominiums": 89.2,
+      "Disposable_income": 121.05084748828929
+    },
+    {
+      "date": "2022-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": 139.1,
+      "Ottawa_new_condominiums": 138.0,
+      "Calgary_new_condominiums": 82.8,
+      "Edmonton_new_condominiums": 87.7,
+      "Disposable_income": 123.79843906727022
+    },
+    {
+      "date": "2023-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": 138.9,
+      "Ottawa_new_condominiums": 135.8,
+      "Calgary_new_condominiums": 84.2,
+      "Edmonton_new_condominiums": 88.7,
+      "Disposable_income": 122.52061473218345
+    },
+    {
+      "date": "2023-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": 138.2,
+      "Ottawa_new_condominiums": 138.4,
+      "Calgary_new_condominiums": 87.7,
+      "Edmonton_new_condominiums": 88.9,
+      "Disposable_income": 124.59429241034037
+    },
+    {
+      "date": "2023-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": 138.1,
+      "Ottawa_new_condominiums": 143.1,
+      "Calgary_new_condominiums": 93.1,
+      "Edmonton_new_condominiums": 91.0,
+      "Disposable_income": 126.88646309512757
+    },
+    {
+      "date": "2023-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": 136.5,
+      "Ottawa_new_condominiums": 140.7,
+      "Calgary_new_condominiums": 96.8,
+      "Edmonton_new_condominiums": 94.6,
+      "Disposable_income": 127.23087158578771
+    },
+    {
+      "date": "2024-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": 135.7,
+      "Ottawa_new_condominiums": 139.0,
+      "Calgary_new_condominiums": 102.3,
+      "Edmonton_new_condominiums": 99.9,
+      "Disposable_income": 127.69446236214752
+    },
+    {
+      "date": "2024-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": 135.5,
+      "Ottawa_new_condominiums": 143.4,
+      "Calgary_new_condominiums": 107.0,
+      "Edmonton_new_condominiums": 104.5,
+      "Disposable_income": 130.22830764856076
+    },
+    {
+      "date": "2024-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": 135.9,
+      "Ottawa_new_condominiums": 145.2,
+      "Calgary_new_condominiums": 107.6,
+      "Edmonton_new_condominiums": 105.1,
+      "Disposable_income": 132.8580175800994
+    },
+    {
+      "date": "2024-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": 136.0,
+      "Ottawa_new_condominiums": 145.8,
+      "Calgary_new_condominiums": 109.2,
+      "Edmonton_new_condominiums": 106.7,
+      "Disposable_income": 133.42110992554277
+    },
+    {
+      "date": "2025-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": 136.6,
+      "Ottawa_new_condominiums": 146.4,
+      "Calgary_new_condominiums": 109.1,
+      "Edmonton_new_condominiums": 106.8,
+      "Disposable_income": 134.01455280859253
+    },
+    {
+      "date": "2025-04-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": 135.6,
+      "Ottawa_new_condominiums": 145.8,
+      "Calgary_new_condominiums": 108.0,
+      "Edmonton_new_condominiums": 109.9,
+      "Disposable_income": 133.84905653845513
+    },
+    {
+      "date": "2025-07-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": 131.2,
+      "Ottawa_new_condominiums": 145.6,
+      "Calgary_new_condominiums": 107.5,
+      "Edmonton_new_condominiums": 109.0,
+      "Disposable_income": 134.78334186803585
+    },
+    {
+      "date": "2025-10-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": 130.6,
+      "Ottawa_new_condominiums": 143.1,
+      "Calgary_new_condominiums": 107.5,
+      "Edmonton_new_condominiums": 108.9,
+      "Disposable_income": 135.87379613860122
+    },
+    {
+      "date": "2026-01-01",
+      "Six_CMA_broad_RPPI": null,
+      "Toronto_new_condominiums": 128.6,
+      "Ottawa_new_condominiums": 142.0,
+      "Calgary_new_condominiums": 107.3,
+      "Edmonton_new_condominiums": 110.2,
+      "Disposable_income": 137.00804797590737
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "yoy",
+    "pct_change",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "notes": "The broad RPPI is an inactive six-CMA history ending in 2021 Q4. Active condominium series cover new apartments only and are not spliced to it."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T14:52:20+00:00"
+}

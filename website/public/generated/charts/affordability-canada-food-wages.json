@@ -1,0 +1,6352 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "affordability-canada-food-wages",
+  "title": "Canadian food prices relative to wages",
+  "description": "Monthly wage-based pressure differs from household-income affordability because wages cover employed workers while disposable income includes other income and transfers.",
+  "plainLanguageSummary": "Monthly wage-based pressure differs from household-income affordability because wages cover employed workers while disposable income includes other income and transfers.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "explanation": "Monthly wage-based pressure differs from household-income affordability because wages cover employed workers while disposable income includes other income and transfers.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "Monthly wage-based pressure differs from household-income affordability because wages cover employed workers while disposable income includes other income and transfers."
+  ],
+  "sourceNotes": [
+    "Derived from Statistics Canada",
+    "Derived from Statistics Canada; Derived from Statistics Canada"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "Food_YoY": {
+        "mean": 2.491839748381186,
+        "standardDeviation": 1.6024906879504142,
+        "n": 240
+      },
+      "Grocery_YoY": {
+        "mean": 2.4109264722801913,
+        "standardDeviation": 2.1726850079768982,
+        "n": 240
+      },
+      "Hourly_wage_YoY": {
+        "mean": 2.844942953326506,
+        "standardDeviation": 1.0522975587358039,
+        "n": 240
+      },
+      "Food_wage_gap": {
+        "mean": -0.35310320494531944,
+        "standardDeviation": 1.5799796257857301,
+        "n": 240
+      },
+      "Grocery_wage_gap": {
+        "mean": -0.43401648104631374,
+        "standardDeviation": 2.069057248395993,
+        "n": 240
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "1962-01-01",
+    "end": "2026-06-01"
+  },
+  "series": [
+    {
+      "key": "Food_YoY",
+      "label": "Canada food CPI growth",
+      "unit": "percent",
+      "source": "Derived from Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "Grocery_YoY",
+      "label": "Canada grocery CPI growth",
+      "unit": "percent",
+      "source": "Derived from Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "Hourly_wage_YoY",
+      "label": "Canada hourly wage growth",
+      "unit": "percent",
+      "source": "Derived from Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "Food_wage_gap",
+      "label": "Canada food wage-pressure gap",
+      "unit": "percentage points",
+      "source": "Derived from Statistics Canada; Derived from Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "Grocery_wage_gap",
+      "label": "Canada grocery wage-pressure gap",
+      "unit": "percentage points",
+      "source": "Derived from Statistics Canada; Derived from Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1962-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.6493506493506551,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1962-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.6493506493506551,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1962-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.0,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1962-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.298701298701288,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1962-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.3157894736842257,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1962-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.9607843137254832,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1962-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.9354838709677358,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1962-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.580645161290329,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1962-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.289473684210531,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1962-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.267973856209161,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1962-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.267973856209161,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1962-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.5974025974025983,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1963-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.2258064516129004,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1963-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.8709677419354938,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1963-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.8961038961038863,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1963-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.564102564102577,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1963-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.2467532467532534,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1963-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.205128205128216,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1963-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.7974683544303556,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1963-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.7735849056603765,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1963-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.821656050955413,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1963-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.8987341772152,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1963-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.5316455696202445,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1963-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.5316455696202445,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1964-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.2499999999999956,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1964-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.6211180124223503,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1964-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.2499999999999956,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1964-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.2499999999999956,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1964-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.8867924528301883,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1964-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.8633540372670732,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1964-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.4390243902439046,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1964-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.2121212121211977,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1964-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.6134969325153339,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1964-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.0,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1964-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.0,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1964-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.2345679012345734,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1965-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.6172839506172867,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1965-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.2345679012345734,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1965-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.2345679012345734,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1965-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.2345679012345734,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1965-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.4691358024691468,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1965-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.658536585365857,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1965-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.9761904761904656,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1965-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.7964071856287456,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1965-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.4390243902439046,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1965-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.7267080745341463,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1965-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 4.938271604938271,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1965-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.487804878048785,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1966-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 6.134969325153383,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1966-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 6.707317073170738,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1966-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 8.536585365853666,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1966-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 8.536585365853666,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1966-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 7.2289156626506035,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1966-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.294117647058805,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1966-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.4682080924855363,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1966-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 8.23529411764705,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1966-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 7.738095238095233,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1966-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 7.18562874251496,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1966-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 4.705882352941182,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1966-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.8901734104046284,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1967-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.8901734104046284,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1967-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.5714285714285783,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1967-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -1.6853932584269704,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1967-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -1.6853932584269704,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1967-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -1.6853932584269704,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1967-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -1.1173184357541888,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1967-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.6759776536312998,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1967-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.5434782608695787,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1967-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.0,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1967-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.0,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1967-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.1235955056179803,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1967-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.6853932584269593,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1968-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.3707865168539186,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1968-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.9772727272727293,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1968-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.4285714285714475,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1968-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 4.571428571428582,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1968-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.4285714285714475,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1968-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.824858757062154,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1968-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.6483516483516425,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1968-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.6216216216216273,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1968-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.3149171270718147,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1968-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.3519553072625774,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1968-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.888888888888875,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1968-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 4.41988950276242,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1969-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.717391304347827,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1969-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.1857923497267784,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1969-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.3149171270718147,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1969-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.2786885245901454,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1969-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 4.41988950276242,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1969-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 6.593406593406592,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1969-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 4.86486486486486,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1969-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.319148936170204,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1969-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.743315508021383,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1969-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.7837837837837895,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1969-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.743315508021383,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1969-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.1746031746031855,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1970-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.1746031746031855,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1970-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.882352941176472,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1970-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 4.81283422459895,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1970-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.291005291005302,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1970-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.1746031746031855,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1970-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.546391752577314,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1970-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.0618556701031077,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1970-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.5050505050504972,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1970-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.0,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1970-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.0,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1970-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -2.577319587628868,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1970-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -4.10256410256411,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1971-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -3.589743589743588,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1971-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -4.545454545454552,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1971-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -3.0612244897959218,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1971-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -3.015075376884413,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1971-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -0.5128205128205221,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1971-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -1.5228426395939132,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1971-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.5050505050504972,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1971-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.5125628140703515,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1971-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.0927835051546504,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1971-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.645833333333326,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1971-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.291005291005302,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1971-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 8.02139037433156,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1972-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 8.51063829787233,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1972-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 8.994708994709,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1972-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 7.36842105263158,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1972-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 6.735751295336789,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1972-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.154639175257736,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1972-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.154639175257736,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1972-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 7.035175879396993,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1972-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 7.352941176470584,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1972-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 9.499999999999996,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1972-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 9.045226130653262,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1972-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 9.045226130653262,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1972-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 8.415841584158423,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1973-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 9.80392156862746,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1973-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 10.679611650485432,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1973-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 11.764705882352944,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1973-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 13.592233009708732,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1973-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 15.686274509803933,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1973-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 18.13725490196081,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1973-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 15.492957746478876,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1973-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 15.981735159817356,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1973-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 16.43835616438356,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1973-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 17.050691244239637,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1973-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 17.972350230414747,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1973-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 16.894977168949787,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1974-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 16.07142857142858,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1974-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 16.666666666666675,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1974-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 18.421052631578938,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1974-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 15.384615384615397,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1974-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 17.796610169491522,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1974-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 16.597510373443992,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1974-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 15.4471544715447,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1974-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 13.38582677165354,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1974-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 12.941176470588234,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1974-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 14.960629921259837,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1974-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 15.234375,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1974-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 17.1875,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1975-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 15.384615384615374,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1975-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 13.909774436090228,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1975-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 11.851851851851848,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1975-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 12.222222222222223,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1975-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 10.07194244604317,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1975-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 13.167259786476858,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1975-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 14.7887323943662,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1975-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 14.236111111111093,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1975-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 13.194444444444443,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1975-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 11.986301369863028,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1975-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 11.525423728813555,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1975-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 8.666666666666668,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1976-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 8.333333333333325,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1976-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 6.600660066006592,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1976-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.96026490066226,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1976-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 4.950495049504955,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1976-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.555555555555536,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1976-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.8867924528301883,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1976-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -0.30674846625767804,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1976-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -2.127659574468077,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1976-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -1.8404907975460127,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1976-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -2.140672782874631,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1976-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -3.6474164133738607,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1976-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -2.4539877300613466,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1977-01-01",
+      "Food_YoY": 0.6410256410256387,
+      "Grocery_YoY": -0.6153846153846287,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1977-02-01",
+      "Food_YoY": 2.893890675241151,
+      "Grocery_YoY": 2.1671826625387025,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1977-03-01",
+      "Food_YoY": 4.53074433656957,
+      "Grocery_YoY": 4.062499999999991,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1977-04-01",
+      "Food_YoY": 6.168831168831179,
+      "Grocery_YoY": 6.2893081761006275,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1977-05-01",
+      "Food_YoY": 6.08974358974359,
+      "Grocery_YoY": 6.19195046439629,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1977-06-01",
+      "Food_YoY": 7.028753993610226,
+      "Grocery_YoY": 7.407407407407396,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1977-07-01",
+      "Food_YoY": 9.26517571884984,
+      "Grocery_YoY": 9.23076923076922,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1977-08-01",
+      "Food_YoY": 9.935897435897424,
+      "Grocery_YoY": 11.180124223602462,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1977-09-01",
+      "Food_YoY": 11.290322580645151,
+      "Grocery_YoY": 12.187499999999996,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1977-10-01",
+      "Food_YoY": 12.903225806451623,
+      "Grocery_YoY": 14.0625,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1977-11-01",
+      "Food_YoY": 13.548387096774196,
+      "Grocery_YoY": 16.088328075709768,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1977-12-01",
+      "Food_YoY": 15.48387096774193,
+      "Grocery_YoY": 17.9245283018868,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1978-01-01",
+      "Food_YoY": 14.968152866242047,
+      "Grocery_YoY": 17.02786377708978,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1978-02-01",
+      "Food_YoY": 13.437499999999991,
+      "Grocery_YoY": 15.454545454545453,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1978-03-01",
+      "Food_YoY": 13.931888544891645,
+      "Grocery_YoY": 16.216216216216228,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1978-04-01",
+      "Food_YoY": 14.37308868501528,
+      "Grocery_YoY": 16.863905325443795,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1978-05-01",
+      "Food_YoY": 16.918429003021163,
+      "Grocery_YoY": 19.53352769679302,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1978-06-01",
+      "Food_YoY": 17.611940298507456,
+      "Grocery_YoY": 20.402298850574716,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1978-07-01",
+      "Food_YoY": 20.175438596491226,
+      "Grocery_YoY": 23.380281690140837,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1978-08-01",
+      "Food_YoY": 18.075801749271147,
+      "Grocery_YoY": 20.11173184357542,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1978-09-01",
+      "Food_YoY": 14.782608695652177,
+      "Grocery_YoY": 16.15598885793874,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1978-10-01",
+      "Food_YoY": 14.28571428571428,
+      "Grocery_YoY": 15.616438356164398,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1978-11-01",
+      "Food_YoY": 13.920454545454541,
+      "Grocery_YoY": 14.945652173913038,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1978-12-01",
+      "Food_YoY": 12.849162011173188,
+      "Grocery_YoY": 13.600000000000012,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1979-01-01",
+      "Food_YoY": 13.850415512465375,
+      "Grocery_YoY": 15.343915343915349,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1979-02-01",
+      "Food_YoY": 15.977961432506893,
+      "Grocery_YoY": 17.322834645669303,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1979-03-01",
+      "Food_YoY": 17.663043478260864,
+      "Grocery_YoY": 18.86304909560723,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1979-04-01",
+      "Food_YoY": 16.577540106951872,
+      "Grocery_YoY": 17.721518987341778,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1979-05-01",
+      "Food_YoY": 13.436692506459934,
+      "Grocery_YoY": 13.658536585365866,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1979-06-01",
+      "Food_YoY": 11.928934010152293,
+      "Grocery_YoY": 11.217183770883054,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1979-07-01",
+      "Food_YoY": 9.245742092457409,
+      "Grocery_YoY": 8.675799086757996,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1979-08-01",
+      "Food_YoY": 10.123456790123452,
+      "Grocery_YoY": 9.534883720930232,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1979-09-01",
+      "Food_YoY": 12.62626262626263,
+      "Grocery_YoY": 12.949640287769771,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1979-10-01",
+      "Food_YoY": 12.5,
+      "Grocery_YoY": 12.559241706161139,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1979-11-01",
+      "Food_YoY": 12.468827930174564,
+      "Grocery_YoY": 12.293144208037843,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1979-12-01",
+      "Food_YoY": 12.871287128712883,
+      "Grocery_YoY": 13.145539906103298,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1980-01-01",
+      "Food_YoY": 11.435523114355227,
+      "Grocery_YoY": 10.779816513761453,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1980-02-01",
+      "Food_YoY": 10.213776722090252,
+      "Grocery_YoY": 9.843400447427285,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1980-03-01",
+      "Food_YoY": 8.314087759815237,
+      "Grocery_YoY": 7.826086956521738,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1980-04-01",
+      "Food_YoY": 7.7981651376146655,
+      "Grocery_YoY": 6.666666666666665,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1980-05-01",
+      "Food_YoY": 7.9726651480637845,
+      "Grocery_YoY": 7.725321888412018,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1980-06-01",
+      "Food_YoY": 9.977324263038545,
+      "Grocery_YoY": 10.729613733905573,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1980-07-01",
+      "Food_YoY": 9.131403118040083,
+      "Grocery_YoY": 9.243697478991585,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1980-08-01",
+      "Food_YoY": 11.210762331838575,
+      "Grocery_YoY": 12.314225053078554,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1980-09-01",
+      "Food_YoY": 13.228699551569512,
+      "Grocery_YoY": 14.225053078556261,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1980-10-01",
+      "Food_YoY": 12.444444444444457,
+      "Grocery_YoY": 13.89473684210527,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1980-11-01",
+      "Food_YoY": 13.52549889135255,
+      "Grocery_YoY": 15.157894736842103,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1980-12-01",
+      "Food_YoY": 13.596491228070162,
+      "Grocery_YoY": 14.937759336099576,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1981-01-01",
+      "Food_YoY": 13.53711790393013,
+      "Grocery_YoY": 15.3209109730849,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1981-02-01",
+      "Food_YoY": 14.008620689655181,
+      "Grocery_YoY": 15.478615071283098,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1981-03-01",
+      "Food_YoY": 13.646055437100202,
+      "Grocery_YoY": 15.120967741935477,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1981-04-01",
+      "Food_YoY": 14.468085106382977,
+      "Grocery_YoY": 16.129032258064523,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1981-05-01",
+      "Food_YoY": 12.869198312236296,
+      "Grocery_YoY": 13.94422310756973,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1981-06-01",
+      "Food_YoY": 12.371134020618557,
+      "Grocery_YoY": 13.178294573643413,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1981-07-01",
+      "Food_YoY": 12.857142857142856,
+      "Grocery_YoY": 13.846153846153841,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1981-08-01",
+      "Food_YoY": 11.693548387096776,
+      "Grocery_YoY": 11.909262759924388,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1981-09-01",
+      "Food_YoY": 9.70297029702969,
+      "Grocery_YoY": 9.66542750929369,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1981-10-01",
+      "Food_YoY": 9.288537549407106,
+      "Grocery_YoY": 8.872458410351204,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1981-11-01",
+      "Food_YoY": 7.6171875,
+      "Grocery_YoY": 7.1297989031078535,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1981-12-01",
+      "Food_YoY": 5.598455598455621,
+      "Grocery_YoY": 4.512635379061369,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1982-01-01",
+      "Food_YoY": 6.153846153846154,
+      "Grocery_YoY": 5.0269299820466795,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1982-02-01",
+      "Food_YoY": 6.427221172022679,
+      "Grocery_YoY": 5.291005291005302,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1982-03-01",
+      "Food_YoY": 6.566604127579745,
+      "Grocery_YoY": 5.429071803852903,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1982-04-01",
+      "Food_YoY": 6.133828996282542,
+      "Grocery_YoY": 5.381944444444442,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1982-05-01",
+      "Food_YoY": 9.158878504672895,
+      "Grocery_YoY": 8.74125874125875,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1982-06-01",
+      "Food_YoY": 9.541284403669724,
+      "Grocery_YoY": 8.90410958904111,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1982-07-01",
+      "Food_YoY": 8.318264014466559,
+      "Grocery_YoY": 7.939189189189189,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1982-08-01",
+      "Food_YoY": 7.2202166064981865,
+      "Grocery_YoY": 6.418918918918903,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1982-09-01",
+      "Food_YoY": 6.3176895306859215,
+      "Grocery_YoY": 5.59322033898304,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1982-10-01",
+      "Food_YoY": 6.329113924050622,
+      "Grocery_YoY": 5.093378607809851,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1982-11-01",
+      "Food_YoY": 6.896551724137923,
+      "Grocery_YoY": 6.1433447098976135,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1982-12-01",
+      "Food_YoY": 7.495429616087734,
+      "Grocery_YoY": 6.563039723661501,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1983-01-01",
+      "Food_YoY": 6.702898550724634,
+      "Grocery_YoY": 5.470085470085473,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1983-02-01",
+      "Food_YoY": 5.328596802841923,
+      "Grocery_YoY": 4.187604690117253,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1983-03-01",
+      "Food_YoY": 4.049295774647899,
+      "Grocery_YoY": 2.9900332225913484,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1983-04-01",
+      "Food_YoY": 4.728546409807355,
+      "Grocery_YoY": 3.294892915980241,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1983-05-01",
+      "Food_YoY": 3.9383561643835607,
+      "Grocery_YoY": 3.0546623794212024,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1983-06-01",
+      "Food_YoY": 1.8425460636515734,
+      "Grocery_YoY": 0.9433962264151052,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1983-07-01",
+      "Food_YoY": 2.17028380634392,
+      "Grocery_YoY": 0.9389671361502261,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1983-08-01",
+      "Food_YoY": 2.8619528619528767,
+      "Grocery_YoY": 2.3809523809523725,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1983-09-01",
+      "Food_YoY": 2.716468590831922,
+      "Grocery_YoY": 1.9261637239165408,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1983-10-01",
+      "Food_YoY": 4.081632653061229,
+      "Grocery_YoY": 3.8772213247172838,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1983-11-01",
+      "Food_YoY": 3.2258064516129004,
+      "Grocery_YoY": 2.5723472668810254,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1983-12-01",
+      "Food_YoY": 3.741496598639471,
+      "Grocery_YoY": 3.7277147487844386,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1984-01-01",
+      "Food_YoY": 5.602716468590829,
+      "Grocery_YoY": 6.158833063209079,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1984-02-01",
+      "Food_YoY": 6.070826306914001,
+      "Grocery_YoY": 6.913183279742752,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1984-03-01",
+      "Food_YoY": 7.106598984771573,
+      "Grocery_YoY": 8.387096774193559,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1984-04-01",
+      "Food_YoY": 6.354515050167242,
+      "Grocery_YoY": 7.336523125996797,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1984-05-01",
+      "Food_YoY": 4.283360790774293,
+      "Grocery_YoY": 4.680187207488307,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1984-06-01",
+      "Food_YoY": 5.592105263157898,
+      "Grocery_YoY": 6.074766355140171,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1984-07-01",
+      "Food_YoY": 5.882352941176472,
+      "Grocery_YoY": 6.666666666666665,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1984-08-01",
+      "Food_YoY": 5.237315875613735,
+      "Grocery_YoY": 5.581395348837193,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1984-09-01",
+      "Food_YoY": 5.454545454545445,
+      "Grocery_YoY": 5.98425196850394,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1984-10-01",
+      "Food_YoY": 4.24836601307188,
+      "Grocery_YoY": 4.665629860031095,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1984-11-01",
+      "Food_YoY": 4.9342105263157965,
+      "Grocery_YoY": 5.4858934169278895,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1984-12-01",
+      "Food_YoY": 4.590163934426217,
+      "Grocery_YoY": 5.000000000000004,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1985-01-01",
+      "Food_YoY": 3.858520900321527,
+      "Grocery_YoY": 3.969465648854964,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1985-02-01",
+      "Food_YoY": 3.8155802861685295,
+      "Grocery_YoY": 3.759398496240607,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1985-03-01",
+      "Food_YoY": 3.001579778830976,
+      "Grocery_YoY": 2.3809523809523725,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1985-04-01",
+      "Food_YoY": 3.7735849056603765,
+      "Grocery_YoY": 3.714710252600306,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1985-05-01",
+      "Food_YoY": 3.4755134281200695,
+      "Grocery_YoY": 2.980625931445613,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1985-06-01",
+      "Food_YoY": 2.492211838006231,
+      "Grocery_YoY": 2.055800293685772,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1985-07-01",
+      "Food_YoY": 2.1604938271605034,
+      "Grocery_YoY": 1.744186046511631,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1985-08-01",
+      "Food_YoY": 2.3328149300155587,
+      "Grocery_YoY": 1.7621145374449476,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1985-09-01",
+      "Food_YoY": 2.1943573667711602,
+      "Grocery_YoY": 1.3372956909361244,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1985-10-01",
+      "Food_YoY": 1.8808777429467183,
+      "Grocery_YoY": 0.8915304606240904,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1985-11-01",
+      "Food_YoY": 2.351097178683381,
+      "Grocery_YoY": 1.4858841010401136,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1985-12-01",
+      "Food_YoY": 3.7617554858934366,
+      "Grocery_YoY": 3.4226190476190466,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1986-01-01",
+      "Food_YoY": 4.179566563467496,
+      "Grocery_YoY": 3.96475770925111,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1986-02-01",
+      "Food_YoY": 2.4502297090352343,
+      "Grocery_YoY": 1.8840579710144967,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1986-03-01",
+      "Food_YoY": 2.7607361963190247,
+      "Grocery_YoY": 2.1802325581395277,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1986-04-01",
+      "Food_YoY": 2.575757575757587,
+      "Grocery_YoY": 1.862464183381074,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1986-05-01",
+      "Food_YoY": 4.122137404580162,
+      "Grocery_YoY": 4.05209840810421,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1986-06-01",
+      "Food_YoY": 3.951367781155035,
+      "Grocery_YoY": 3.597122302158273,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1986-07-01",
+      "Food_YoY": 4.53172205438066,
+      "Grocery_YoY": 4.142857142857159,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1986-08-01",
+      "Food_YoY": 5.623100303951367,
+      "Grocery_YoY": 5.772005772005762,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1986-09-01",
+      "Food_YoY": 7.208588957055229,
+      "Grocery_YoY": 8.211143695014655,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1986-10-01",
+      "Food_YoY": 8.000000000000007,
+      "Grocery_YoY": 8.98379970544918,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1986-11-01",
+      "Food_YoY": 8.116385911179158,
+      "Grocery_YoY": 9.077598828696921,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1986-12-01",
+      "Food_YoY": 6.495468277945604,
+      "Grocery_YoY": 6.906474820143882,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1987-01-01",
+      "Food_YoY": 5.794947994056465,
+      "Grocery_YoY": 6.214689265536721,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1987-02-01",
+      "Food_YoY": 6.427503736920781,
+      "Grocery_YoY": 6.970128022759603,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1987-03-01",
+      "Food_YoY": 6.26865671641792,
+      "Grocery_YoY": 6.685633001422486,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1987-04-01",
+      "Food_YoY": 5.169867060561306,
+      "Grocery_YoY": 5.485232067510548,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1987-05-01",
+      "Food_YoY": 5.278592375366564,
+      "Grocery_YoY": 5.424200278164104,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1987-06-01",
+      "Food_YoY": 6.140350877192957,
+      "Grocery_YoY": 7.08333333333333,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1987-07-01",
+      "Food_YoY": 5.2023121387283044,
+      "Grocery_YoY": 5.8984910836762605,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1987-08-01",
+      "Food_YoY": 3.7410071942445944,
+      "Grocery_YoY": 3.683492496589369,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1987-09-01",
+      "Food_YoY": 2.5751072961373245,
+      "Grocery_YoY": 2.168021680216814,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1987-10-01",
+      "Food_YoY": 2.2792022792022637,
+      "Grocery_YoY": 2.0270270270270174,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1987-11-01",
+      "Food_YoY": 2.1246458923512845,
+      "Grocery_YoY": 1.744966442953011,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1987-12-01",
+      "Food_YoY": 2.269503546099272,
+      "Grocery_YoY": 1.6150740242261152,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1988-01-01",
+      "Food_YoY": 2.2471910112359383,
+      "Grocery_YoY": 1.7287234042553168,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1988-02-01",
+      "Food_YoY": 1.9662921348314377,
+      "Grocery_YoY": 1.3297872340425565,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1988-03-01",
+      "Food_YoY": 1.8258426966291985,
+      "Grocery_YoY": 1.0666666666666602,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1988-04-01",
+      "Food_YoY": 2.2471910112359383,
+      "Grocery_YoY": 1.73333333333332,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1988-05-01",
+      "Food_YoY": 2.089136490250687,
+      "Grocery_YoY": 1.3192612137203241,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1988-06-01",
+      "Food_YoY": 1.7906336088154395,
+      "Grocery_YoY": 0.6485084306095956,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1988-07-01",
+      "Food_YoY": 2.4725274725274637,
+      "Grocery_YoY": 1.4248704663212264,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1988-08-01",
+      "Food_YoY": 3.7447988904299567,
+      "Grocery_YoY": 3.289473684210531,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1988-09-01",
+      "Food_YoY": 4.044630404463034,
+      "Grocery_YoY": 3.7135278514588865,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1988-10-01",
+      "Food_YoY": 3.899721448467952,
+      "Grocery_YoY": 3.443708609271523,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1988-11-01",
+      "Food_YoY": 3.051317614424409,
+      "Grocery_YoY": 2.242744063324542,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1988-12-01",
+      "Food_YoY": 2.77392510402219,
+      "Grocery_YoY": 1.9867549668874274,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1989-01-01",
+      "Food_YoY": 2.8846153846153966,
+      "Grocery_YoY": 2.2222222222222365,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1989-02-01",
+      "Food_YoY": 4.132231404958686,
+      "Grocery_YoY": 3.543307086614167,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1989-03-01",
+      "Food_YoY": 4.275862068965508,
+      "Grocery_YoY": 3.95778364116095,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1989-04-01",
+      "Food_YoY": 4.258241758241765,
+      "Grocery_YoY": 3.8007863695937116,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1989-05-01",
+      "Food_YoY": 4.229195088676674,
+      "Grocery_YoY": 3.90625,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1989-06-01",
+      "Food_YoY": 4.059539918809207,
+      "Grocery_YoY": 3.6082474226804218,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1989-07-01",
+      "Food_YoY": 4.021447721179627,
+      "Grocery_YoY": 3.575989782886335,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1989-08-01",
+      "Food_YoY": 3.074866310160429,
+      "Grocery_YoY": 2.420382165605095,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1989-09-01",
+      "Food_YoY": 2.9490616621983934,
+      "Grocery_YoY": 2.0460358056265893,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1989-10-01",
+      "Food_YoY": 3.351206434316345,
+      "Grocery_YoY": 2.432778489116516,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1989-11-01",
+      "Food_YoY": 3.6339165545087537,
+      "Grocery_YoY": 3.0967741935483906,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1989-12-01",
+      "Food_YoY": 3.373819163292846,
+      "Grocery_YoY": 2.857142857142869,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1990-01-01",
+      "Food_YoY": 4.806408544726293,
+      "Grocery_YoY": 4.603580562659837,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1990-02-01",
+      "Food_YoY": 4.761904761904767,
+      "Grocery_YoY": 4.816223067173642,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1990-03-01",
+      "Food_YoY": 5.026455026455046,
+      "Grocery_YoY": 5.203045685279206,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1990-04-01",
+      "Food_YoY": 3.820816864295118,
+      "Grocery_YoY": 3.409090909090917,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1990-05-01",
+      "Food_YoY": 3.4031413612565453,
+      "Grocery_YoY": 2.7568922305764465,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1990-06-01",
+      "Food_YoY": 4.16124837451235,
+      "Grocery_YoY": 3.980099502487544,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1990-07-01",
+      "Food_YoY": 3.8659793814433074,
+      "Grocery_YoY": 3.6991368680641123,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1990-08-01",
+      "Food_YoY": 3.6316472114137577,
+      "Grocery_YoY": 3.109452736318419,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1990-09-01",
+      "Food_YoY": 3.776041666666674,
+      "Grocery_YoY": 3.50877192982455,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1990-10-01",
+      "Food_YoY": 3.891050583657596,
+      "Grocery_YoY": 3.750000000000009,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1990-11-01",
+      "Food_YoY": 4.155844155844157,
+      "Grocery_YoY": 4.005006257822252,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1990-12-01",
+      "Food_YoY": 4.308093994778073,
+      "Grocery_YoY": 4.040404040404044,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1991-01-01",
+      "Food_YoY": 5.987261146496814,
+      "Grocery_YoY": 3.667481662591676,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1991-02-01",
+      "Food_YoY": 5.050505050505061,
+      "Grocery_YoY": 2.41837968561065,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1991-03-01",
+      "Food_YoY": 5.163727959697728,
+      "Grocery_YoY": 2.4125452352231624,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1991-04-01",
+      "Food_YoY": 6.345177664974622,
+      "Grocery_YoY": 4.2735042735042805,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1991-05-01",
+      "Food_YoY": 6.329113924050622,
+      "Grocery_YoY": 4.146341463414638,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1991-06-01",
+      "Food_YoY": 6.741573033707882,
+      "Grocery_YoY": 4.9043062200957,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1991-07-01",
+      "Food_YoY": 5.334987593052132,
+      "Grocery_YoY": 3.3293697978596937,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1991-08-01",
+      "Food_YoY": 5.1314142678347885,
+      "Grocery_YoY": 3.0156815440289586,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1991-09-01",
+      "Food_YoY": 4.015056461731503,
+      "Grocery_YoY": 1.3317191283293006,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1991-10-01",
+      "Food_YoY": 2.4968789013732895,
+      "Grocery_YoY": -0.6024096385542133,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1991-11-01",
+      "Food_YoY": 2.6184538653366562,
+      "Grocery_YoY": -0.48134777376653837,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1991-12-01",
+      "Food_YoY": 2.252816020025028,
+      "Grocery_YoY": -0.8495145631068013,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1992-01-01",
+      "Food_YoY": -0.9615384615384581,
+      "Grocery_YoY": -2.594339622641517,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1992-02-01",
+      "Food_YoY": -0.8413461538461564,
+      "Grocery_YoY": -2.3612750885478206,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1992-03-01",
+      "Food_YoY": -0.7185628742514938,
+      "Grocery_YoY": -1.8845700824499545,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1992-04-01",
+      "Food_YoY": -0.7159904534606132,
+      "Grocery_YoY": -1.9906323185011732,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1992-05-01",
+      "Food_YoY": -1.1904761904761862,
+      "Grocery_YoY": -2.3419203747072626,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1992-06-01",
+      "Food_YoY": -2.1052631578947323,
+      "Grocery_YoY": -3.876852907639683,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1992-07-01",
+      "Food_YoY": -1.6489988221437102,
+      "Grocery_YoY": -3.222094361334882,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1992-08-01",
+      "Food_YoY": -0.7142857142857117,
+      "Grocery_YoY": -1.756440281030447,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1992-09-01",
+      "Food_YoY": 0.12062726176114147,
+      "Grocery_YoY": -0.4778972520908087,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1992-10-01",
+      "Food_YoY": 1.0962241169305775,
+      "Grocery_YoY": 0.60606060606061,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1992-11-01",
+      "Food_YoY": 0.9720534629404476,
+      "Grocery_YoY": 0.7255139056831839,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1992-12-01",
+      "Food_YoY": 2.0807833537331843,
+      "Grocery_YoY": 2.447980416156681,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1993-01-01",
+      "Food_YoY": 2.0631067961164984,
+      "Grocery_YoY": 2.421307506053272,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1993-02-01",
+      "Food_YoY": 2.4242424242424176,
+      "Grocery_YoY": 3.022974607013307,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1993-03-01",
+      "Food_YoY": 1.5681544028950611,
+      "Grocery_YoY": 1.6806722689075793,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1993-04-01",
+      "Food_YoY": 0.9615384615384581,
+      "Grocery_YoY": 0.8363201911589124,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1993-05-01",
+      "Food_YoY": 2.2891566265060392,
+      "Grocery_YoY": 2.5179856115107757,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1993-06-01",
+      "Food_YoY": 1.433691756272415,
+      "Grocery_YoY": 1.542111506524324,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1993-07-01",
+      "Food_YoY": 1.6766467065868262,
+      "Grocery_YoY": 1.664684898929858,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1993-08-01",
+      "Food_YoY": 1.318944844124692,
+      "Grocery_YoY": 1.1918951132300348,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1993-09-01",
+      "Food_YoY": 1.3253012048192625,
+      "Grocery_YoY": 1.3205282112845218,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1993-10-01",
+      "Food_YoY": 1.4457831325301207,
+      "Grocery_YoY": 1.6867469879518149,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1993-11-01",
+      "Food_YoY": 1.6847172081829287,
+      "Grocery_YoY": 1.9207683073229287,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1993-12-01",
+      "Food_YoY": 1.7985611510791255,
+      "Grocery_YoY": 2.0310633213858953,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1994-01-01",
+      "Food_YoY": 1.3079667063020217,
+      "Grocery_YoY": 1.4184397163120588,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1994-02-01",
+      "Food_YoY": 0.4733727810650956,
+      "Grocery_YoY": 0.0,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1994-03-01",
+      "Food_YoY": 0.11876484560569,
+      "Grocery_YoY": -0.47225501770956635,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1994-04-01",
+      "Food_YoY": 0.7142857142857117,
+      "Grocery_YoY": 0.4739336492890933,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1994-05-01",
+      "Food_YoY": -0.35335689045937757,
+      "Grocery_YoY": -0.8187134502923965,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1994-06-01",
+      "Food_YoY": 0.0,
+      "Grocery_YoY": -0.4672897196261627,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1994-07-01",
+      "Food_YoY": 0.4711425206124664,
+      "Grocery_YoY": 0.35087719298245723,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1994-08-01",
+      "Food_YoY": 0.7100591715976323,
+      "Grocery_YoY": 0.5889281507656108,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1994-09-01",
+      "Food_YoY": 0.47562425683711496,
+      "Grocery_YoY": 0.0,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1994-10-01",
+      "Food_YoY": 0.7125890736342066,
+      "Grocery_YoY": 0.35545023696681444,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1994-11-01",
+      "Food_YoY": 0.4733727810650956,
+      "Grocery_YoY": 0.0,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1994-12-01",
+      "Food_YoY": 0.2355712603062221,
+      "Grocery_YoY": -0.23419203747072626,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1995-01-01",
+      "Food_YoY": 1.4084507042253502,
+      "Grocery_YoY": 1.3986013986013957,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1995-02-01",
+      "Food_YoY": 2.355712603062421,
+      "Grocery_YoY": 2.8169014084507005,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1995-03-01",
+      "Food_YoY": 3.084223013048648,
+      "Grocery_YoY": 3.677342823250296,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1995-04-01",
+      "Food_YoY": 3.78250591016549,
+      "Grocery_YoY": 4.716981132075482,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1995-05-01",
+      "Food_YoY": 3.1914893617021267,
+      "Grocery_YoY": 3.655660377358494,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1995-06-01",
+      "Food_YoY": 2.9446407538280317,
+      "Grocery_YoY": 3.4037558685446,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1995-07-01",
+      "Food_YoY": 2.4618991793669442,
+      "Grocery_YoY": 2.564102564102577,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1995-08-01",
+      "Food_YoY": 1.7626321974148151,
+      "Grocery_YoY": 1.6393442622950616,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1995-09-01",
+      "Food_YoY": 2.2485207100591875,
+      "Grocery_YoY": 2.369668246445489,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1995-10-01",
+      "Food_YoY": 1.8867924528301883,
+      "Grocery_YoY": 2.007083825265643,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1995-11-01",
+      "Food_YoY": 1.7667844522968101,
+      "Grocery_YoY": 1.7667844522968101,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1995-12-01",
+      "Food_YoY": 1.9976498237367801,
+      "Grocery_YoY": 1.9953051643192499,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1996-01-01",
+      "Food_YoY": 0.92592592592593,
+      "Grocery_YoY": 0.45977011494253706,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1996-02-01",
+      "Food_YoY": 0.4602991944764101,
+      "Grocery_YoY": -0.22831050228309113,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1996-03-01",
+      "Food_YoY": 0.5753739930955071,
+      "Grocery_YoY": 0.3432494279176135,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1996-04-01",
+      "Food_YoY": 0.5694760820045497,
+      "Grocery_YoY": 0.0,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1996-05-01",
+      "Food_YoY": 0.6872852233677174,
+      "Grocery_YoY": 0.34129692832765013,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1996-06-01",
+      "Food_YoY": 1.258581235697931,
+      "Grocery_YoY": 0.9080590238365716,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1996-07-01",
+      "Food_YoY": 1.0297482837528404,
+      "Grocery_YoY": 0.6818181818181834,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1996-08-01",
+      "Food_YoY": 1.616628175519641,
+      "Grocery_YoY": 1.6129032258064502,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1996-09-01",
+      "Food_YoY": 1.504629629629628,
+      "Grocery_YoY": 1.6203703703703498,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1996-10-01",
+      "Food_YoY": 2.19907407407407,
+      "Grocery_YoY": 2.430555555555558,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1996-11-01",
+      "Food_YoY": 2.893518518518512,
+      "Grocery_YoY": 3.356481481481466,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1996-12-01",
+      "Food_YoY": 2.188940092165903,
+      "Grocery_YoY": 2.4165707710011475,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1997-01-01",
+      "Food_YoY": 2.178899082568808,
+      "Grocery_YoY": 2.517162471395862,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1997-02-01",
+      "Food_YoY": 2.4054982817869552,
+      "Grocery_YoY": 2.7459954233409523,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1997-03-01",
+      "Food_YoY": 2.2883295194507935,
+      "Grocery_YoY": 2.2805017103762815,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1997-04-01",
+      "Food_YoY": 0.7927519818799578,
+      "Grocery_YoY": 0.6756756756756799,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1997-05-01",
+      "Food_YoY": 1.7064846416382284,
+      "Grocery_YoY": 1.814058956916087,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1997-06-01",
+      "Food_YoY": 1.3559322033898313,
+      "Grocery_YoY": 1.3498312710910954,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1997-07-01",
+      "Food_YoY": 2.0385050962627327,
+      "Grocery_YoY": 2.257336343115135,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1997-08-01",
+      "Food_YoY": 1.7045454545454586,
+      "Grocery_YoY": 1.814058956916087,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1997-09-01",
+      "Food_YoY": 1.3683010262257822,
+      "Grocery_YoY": 1.025056947608216,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1997-10-01",
+      "Food_YoY": 0.679501698754259,
+      "Grocery_YoY": 0.4519774011299438,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1997-11-01",
+      "Food_YoY": 1.012373453318327,
+      "Grocery_YoY": 0.6718924972004547,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1997-12-01",
+      "Food_YoY": 1.1273957158962844,
+      "Grocery_YoY": 0.8988764044943753,
+      "Hourly_wage_YoY": null,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    },
+    {
+      "date": "1998-01-01",
+      "Food_YoY": 2.3569023569023573,
+      "Grocery_YoY": 2.4553571428571397,
+      "Hourly_wage_YoY": 1.151631477927051,
+      "Food_wage_gap": 1.2052708789753064,
+      "Grocery_wage_gap": 1.3037256649300888
+    },
+    {
+      "date": "1998-02-01",
+      "Food_YoY": 1.230425055928408,
+      "Grocery_YoY": 1.1135857461024523,
+      "Hourly_wage_YoY": 1.0869565217391353,
+      "Food_wage_gap": 0.14346853418927275,
+      "Grocery_wage_gap": 0.02662922436331705
+    },
+    {
+      "date": "1998-03-01",
+      "Food_YoY": 1.4541387024608499,
+      "Grocery_YoY": 1.5607580824972045,
+      "Hourly_wage_YoY": 1.0236724248240403,
+      "Food_wage_gap": 0.43046627763680956,
+      "Grocery_wage_gap": 0.5370856576731642
+    },
+    {
+      "date": "1998-04-01",
+      "Food_YoY": 1.6853932584269593,
+      "Grocery_YoY": 1.5659955257270708,
+      "Hourly_wage_YoY": 0.957243139757491,
+      "Food_wage_gap": 0.7281501186694683,
+      "Grocery_wage_gap": 0.6087523859695798
+    },
+    {
+      "date": "1998-05-01",
+      "Food_YoY": 1.6778523489932917,
+      "Grocery_YoY": 1.6703786191536674,
+      "Hourly_wage_YoY": 1.0262989095574104,
+      "Food_wage_gap": 0.6515534394358813,
+      "Grocery_wage_gap": 0.6440797095962569
+    },
+    {
+      "date": "1998-06-01",
+      "Food_YoY": 2.1181716833890585,
+      "Grocery_YoY": 2.3307436182020025,
+      "Hourly_wage_YoY": 1.5503875968992276,
+      "Food_wage_gap": 0.5677840864898309,
+      "Grocery_wage_gap": 0.7803560213027749
+    },
+    {
+      "date": "1998-07-01",
+      "Food_YoY": 1.3318534961154205,
+      "Grocery_YoY": 1.2141280353201056,
+      "Hourly_wage_YoY": 1.1074918566775338,
+      "Food_wage_gap": 0.22436163943788667,
+      "Grocery_wage_gap": 0.1066361786425718
+    },
+    {
+      "date": "1998-08-01",
+      "Food_YoY": 1.452513966480451,
+      "Grocery_YoY": 1.2249443207126953,
+      "Hourly_wage_YoY": 1.3020833333333481,
+      "Food_wage_gap": 0.1504306331471028,
+      "Grocery_wage_gap": -0.07713901262065281
+    },
+    {
+      "date": "1998-09-01",
+      "Food_YoY": 1.3498312710910954,
+      "Grocery_YoY": 1.2401352874858995,
+      "Hourly_wage_YoY": 1.2771392081736943,
+      "Food_wage_gap": 0.07269206291740105,
+      "Grocery_wage_gap": -0.03700392068779479
+    },
+    {
+      "date": "1998-10-01",
+      "Food_YoY": 1.462317210348707,
+      "Grocery_YoY": 1.1248593925759387,
+      "Hourly_wage_YoY": 1.5325670498084198,
+      "Food_wage_gap": -0.07024983945971286,
+      "Grocery_wage_gap": -0.40770765723248115
+    },
+    {
+      "date": "1998-11-01",
+      "Food_YoY": 1.5590200445434466,
+      "Grocery_YoY": 1.6685205784204626,
+      "Hourly_wage_YoY": 1.4631043256997378,
+      "Food_wage_gap": 0.09591571884370875,
+      "Grocery_wage_gap": 0.20541625272072483
+    },
+    {
+      "date": "1998-12-01",
+      "Food_YoY": 1.6722408026755842,
+      "Grocery_YoY": 1.6703786191536674,
+      "Hourly_wage_YoY": 1.4621741894469187,
+      "Food_wage_gap": 0.2100666132286655,
+      "Grocery_wage_gap": 0.20820442970674868
+    },
+    {
+      "date": "1999-01-01",
+      "Food_YoY": 1.2061403508771829,
+      "Grocery_YoY": 1.089324618736387,
+      "Hourly_wage_YoY": 1.7077798861479865,
+      "Food_wage_gap": -0.5016395352708036,
+      "Grocery_wage_gap": -0.6184552674115995
+    },
+    {
+      "date": "1999-02-01",
+      "Food_YoY": 1.436464088397793,
+      "Grocery_YoY": 1.4317180616740144,
+      "Hourly_wage_YoY": 1.7710309930423662,
+      "Food_wage_gap": -0.33456690464457317,
+      "Grocery_wage_gap": -0.33931293136835183
+    },
+    {
+      "date": "1999-03-01",
+      "Food_YoY": 1.4332965821389099,
+      "Grocery_YoY": 1.207464324917673,
+      "Hourly_wage_YoY": 2.1532615579480607,
+      "Food_wage_gap": -0.7199649758091509,
+      "Grocery_wage_gap": -0.9457972330303877
+    },
+    {
+      "date": "1999-04-01",
+      "Food_YoY": 1.878453038674044,
+      "Grocery_YoY": 1.7621145374449476,
+      "Hourly_wage_YoY": 2.0859671302149163,
+      "Food_wage_gap": -0.20751409154087241,
+      "Grocery_wage_gap": -0.3238525927699687
+    },
+    {
+      "date": "1999-05-01",
+      "Food_YoY": 1.650165016501659,
+      "Grocery_YoY": 1.4238773274917849,
+      "Hourly_wage_YoY": 2.15873015873016,
+      "Food_wage_gap": -0.5085651422285009,
+      "Grocery_wage_gap": -0.7348528312383751
+    },
+    {
+      "date": "1999-06-01",
+      "Food_YoY": 1.2008733624454315,
+      "Grocery_YoY": 0.8676789587852562,
+      "Hourly_wage_YoY": 2.0992366412213803,
+      "Food_wage_gap": -0.8983632787759488,
+      "Grocery_wage_gap": -1.231557682436124
+    },
+    {
+      "date": "1999-07-01",
+      "Food_YoY": 1.3143483023001057,
+      "Grocery_YoY": 1.0905125408942284,
+      "Hourly_wage_YoY": 2.770618556701021,
+      "Food_wage_gap": -1.4562702544009154,
+      "Grocery_wage_gap": -1.6801060158067926
+    },
+    {
+      "date": "1999-08-01",
+      "Food_YoY": 1.1013215859030812,
+      "Grocery_YoY": 0.7700770077007535,
+      "Hourly_wage_YoY": 3.341902313624656,
+      "Food_wage_gap": -2.240580727721575,
+      "Grocery_wage_gap": -2.5718253059239027
+    },
+    {
+      "date": "1999-09-01",
+      "Food_YoY": 1.2208657047724891,
+      "Grocery_YoY": 1.1135857461024523,
+      "Hourly_wage_YoY": 2.7112232030264805,
+      "Food_wage_gap": -1.4903574982539913,
+      "Grocery_wage_gap": -1.5976374569240281
+    },
+    {
+      "date": "1999-10-01",
+      "Food_YoY": 1.330376940133049,
+      "Grocery_YoY": 1.1123470522803158,
+      "Hourly_wage_YoY": 2.7044025157232587,
+      "Food_wage_gap": -1.3740255755902098,
+      "Grocery_wage_gap": -1.592055463442943
+    },
+    {
+      "date": "1999-11-01",
+      "Food_YoY": 0.8771929824561431,
+      "Grocery_YoY": 0.1094091903719896,
+      "Hourly_wage_YoY": 2.758620689655178,
+      "Food_wage_gap": -1.8814277071990348,
+      "Grocery_wage_gap": -2.6492114992831883
+    },
+    {
+      "date": "1999-12-01",
+      "Food_YoY": 1.0964912280701844,
+      "Grocery_YoY": 0.657174151150075,
+      "Hourly_wage_YoY": 3.0701754385964897,
+      "Food_wage_gap": -1.9736842105263053,
+      "Grocery_wage_gap": -2.4130012874464146
+    },
+    {
+      "date": "2000-01-01",
+      "Food_YoY": -0.21668472372697867,
+      "Grocery_YoY": -1.1853448275861989,
+      "Hourly_wage_YoY": 3.2960199004975266,
+      "Food_wage_gap": -3.5127046242245052,
+      "Grocery_wage_gap": -4.481364728083726
+    },
+    {
+      "date": "2000-02-01",
+      "Food_YoY": 0.10893246187364536,
+      "Grocery_YoY": -0.7600434310531923,
+      "Hourly_wage_YoY": 2.9210689869484163,
+      "Food_wage_gap": -2.812136525074771,
+      "Grocery_wage_gap": -3.6811124180016086
+    },
+    {
+      "date": "2000-03-01",
+      "Food_YoY": 0.3260869565217428,
+      "Grocery_YoY": -0.32537960954446277,
+      "Hourly_wage_YoY": 2.7898326100433968,
+      "Food_wage_gap": -2.463745653521654,
+      "Grocery_wage_gap": -3.1152122195878595
+    },
+    {
+      "date": "2000-04-01",
+      "Food_YoY": 0.32537960954446277,
+      "Grocery_YoY": -0.32467532467533866,
+      "Hourly_wage_YoY": 3.529411764705892,
+      "Food_wage_gap": -3.2040321551614293,
+      "Grocery_wage_gap": -3.8540870893812307
+    },
+    {
+      "date": "2000-05-01",
+      "Food_YoY": 0.8658008658008587,
+      "Grocery_YoY": 0.4319654427645814,
+      "Hourly_wage_YoY": 2.9210689869484163,
+      "Food_wage_gap": -2.0552681211475576,
+      "Grocery_wage_gap": -2.489103544183835
+    },
+    {
+      "date": "2000-06-01",
+      "Food_YoY": 1.1866235167206085,
+      "Grocery_YoY": 0.8602150537634357,
+      "Hourly_wage_YoY": 2.7414330218068494,
+      "Food_wage_gap": -1.554809505086241,
+      "Grocery_wage_gap": -1.8812179680434138
+    },
+    {
+      "date": "2000-07-01",
+      "Food_YoY": 1.9459459459459483,
+      "Grocery_YoY": 1.8338727076591121,
+      "Hourly_wage_YoY": 2.8213166144200663,
+      "Food_wage_gap": -0.875370668474118,
+      "Grocery_wage_gap": -0.9874439067609542
+    },
+    {
+      "date": "2000-08-01",
+      "Food_YoY": 2.3965141612200425,
+      "Grocery_YoY": 2.510917030567694,
+      "Hourly_wage_YoY": 2.7985074626865947,
+      "Food_wage_gap": -0.4019933014665522,
+      "Grocery_wage_gap": -0.28759043211890045
+    },
+    {
+      "date": "2000-09-01",
+      "Food_YoY": 2.3026315789473673,
+      "Grocery_YoY": 2.2026431718061623,
+      "Hourly_wage_YoY": 3.3763044812768594,
+      "Food_wage_gap": -1.0736729023294922,
+      "Grocery_wage_gap": -1.1736613094706971
+    },
+    {
+      "date": "2000-10-01",
+      "Food_YoY": 1.8599562363238453,
+      "Grocery_YoY": 1.7601760176017445,
+      "Hourly_wage_YoY": 3.306797305572573,
+      "Food_wage_gap": -1.4468410692487277,
+      "Grocery_wage_gap": -1.5466212879708285
+    },
+    {
+      "date": "2000-11-01",
+      "Food_YoY": 2.0652173913043637,
+      "Grocery_YoY": 2.2950819672131084,
+      "Hourly_wage_YoY": 2.9896278218425776,
+      "Food_wage_gap": -0.9244104305382139,
+      "Grocery_wage_gap": -0.6945458546294692
+    },
+    {
+      "date": "2000-12-01",
+      "Food_YoY": 3.145336225596518,
+      "Grocery_YoY": 3.59085963003265,
+      "Hourly_wage_YoY": 2.857142857142869,
+      "Food_wage_gap": 0.2881933684536486,
+      "Grocery_wage_gap": 0.7337167728897809
+    },
+    {
+      "date": "2001-01-01",
+      "Food_YoY": 3.4744842562432154,
+      "Grocery_YoY": 3.925845147219187,
+      "Hourly_wage_YoY": 2.8898254063816964,
+      "Food_wage_gap": 0.5846588498615191,
+      "Grocery_wage_gap": 1.0360197408374905
+    },
+    {
+      "date": "2001-02-01",
+      "Food_YoY": 4.570184983677894,
+      "Grocery_YoY": 5.361050328227557,
+      "Hourly_wage_YoY": 3.6835748792270806,
+      "Food_wage_gap": 0.8866101044508135,
+      "Grocery_wage_gap": 1.6774754490004762
+    },
+    {
+      "date": "2001-03-01",
+      "Food_YoY": 4.983748645720487,
+      "Grocery_YoY": 5.875952121871597,
+      "Hourly_wage_YoY": 3.799758745476489,
+      "Food_wage_gap": 1.183989900243998,
+      "Grocery_wage_gap": 2.076193376395108
+    },
+    {
+      "date": "2001-04-01",
+      "Food_YoY": 5.081081081081074,
+      "Grocery_YoY": 6.080347448425627,
+      "Hourly_wage_YoY": 3.528708133971281,
+      "Food_wage_gap": 1.5523729471097925,
+      "Grocery_wage_gap": 2.551639314454346
+    },
+    {
+      "date": "2001-05-01",
+      "Food_YoY": 5.150214592274671,
+      "Grocery_YoY": 6.129032258064515,
+      "Hourly_wage_YoY": 4.106280193236711,
+      "Food_wage_gap": 1.0439343990379601,
+      "Grocery_wage_gap": 2.022752064827804
+    },
+    {
+      "date": "2001-06-01",
+      "Food_YoY": 4.6908315565032055,
+      "Grocery_YoY": 5.330490405117261,
+      "Hourly_wage_YoY": 3.8811400848999478,
+      "Food_wage_gap": 0.8096914716032577,
+      "Grocery_wage_gap": 1.449350320217313
+    },
+    {
+      "date": "2001-07-01",
+      "Food_YoY": 4.559915164369022,
+      "Grocery_YoY": 4.978813559322015,
+      "Hourly_wage_YoY": 3.2926829268292934,
+      "Food_wage_gap": 1.2672322375397282,
+      "Grocery_wage_gap": 1.6861306324927217
+    },
+    {
+      "date": "2001-08-01",
+      "Food_YoY": 4.148936170212769,
+      "Grocery_YoY": 4.259850905218321,
+      "Hourly_wage_YoY": 2.7828191167573957,
+      "Food_wage_gap": 1.3661170534553735,
+      "Grocery_wage_gap": 1.4770317884609252
+    },
+    {
+      "date": "2001-09-01",
+      "Food_YoY": 4.180064308681675,
+      "Grocery_YoY": 4.418103448275867,
+      "Hourly_wage_YoY": 2.8503562945368266,
+      "Food_wage_gap": 1.329708014144848,
+      "Grocery_wage_gap": 1.5677471537390408
+    },
+    {
+      "date": "2001-10-01",
+      "Food_YoY": 4.1890440386681105,
+      "Grocery_YoY": 4.432432432432432,
+      "Hourly_wage_YoY": 2.7267338470657876,
+      "Food_wage_gap": 1.462310191602323,
+      "Grocery_wage_gap": 1.705698585366644
+    },
+    {
+      "date": "2001-11-01",
+      "Food_YoY": 3.833865814696469,
+      "Grocery_YoY": 3.8461538461538547,
+      "Hourly_wage_YoY": 3.1398104265403015,
+      "Food_wage_gap": 0.6940553881561673,
+      "Grocery_wage_gap": 0.7063434196135532
+    },
+    {
+      "date": "2001-12-01",
+      "Food_YoY": 3.680336487907465,
+      "Grocery_YoY": 3.5714285714285587,
+      "Hourly_wage_YoY": 3.4278959810874587,
+      "Food_wage_gap": 0.2524405068200064,
+      "Grocery_wage_gap": 0.1435325903411
+    },
+    {
+      "date": "2002-01-01",
+      "Food_YoY": 4.616998950682061,
+      "Grocery_YoY": 4.931794333683115,
+      "Hourly_wage_YoY": 3.2182562902282053,
+      "Food_wage_gap": 1.3987426604538555,
+      "Grocery_wage_gap": 1.7135380434549097
+    },
+    {
+      "date": "2002-02-01",
+      "Food_YoY": 4.3704474505723345,
+      "Grocery_YoY": 4.569055036344771,
+      "Hourly_wage_YoY": 3.028538147932447,
+      "Food_wage_gap": 1.3419093026398876,
+      "Grocery_wage_gap": 1.5405168884123244
+    },
+    {
+      "date": "2002-03-01",
+      "Food_YoY": 3.302373581011331,
+      "Grocery_YoY": 3.1860226104830414,
+      "Hourly_wage_YoY": 3.079604880883191,
+      "Food_wage_gap": 0.22276870012813976,
+      "Grocery_wage_gap": 0.1064177295998503
+    },
+    {
+      "date": "2002-04-01",
+      "Food_YoY": 3.3950617283950546,
+      "Grocery_YoY": 3.2753326509723735,
+      "Hourly_wage_YoY": 2.6574234546504982,
+      "Food_wage_gap": 0.7376382737445564,
+      "Grocery_wage_gap": 0.6179091963218752
+    },
+    {
+      "date": "2002-05-01",
+      "Food_YoY": 2.1428571428571352,
+      "Grocery_YoY": 1.6210739614994862,
+      "Hourly_wage_YoY": 2.146171693735499,
+      "Food_wage_gap": -0.0033145508783638533,
+      "Grocery_wage_gap": -0.5250977322360129
+    },
+    {
+      "date": "2002-06-01",
+      "Food_YoY": 2.3421588594704668,
+      "Grocery_YoY": 1.9230769230769384,
+      "Hourly_wage_YoY": 2.510215995329834,
+      "Food_wage_gap": -0.16805713585936743,
+      "Grocery_wage_gap": -0.5871390722528957
+    },
+    {
+      "date": "2002-07-01",
+      "Food_YoY": 1.9269776876267741,
+      "Grocery_YoY": 1.5136226034308864,
+      "Hourly_wage_YoY": 2.4793388429751984,
+      "Food_wage_gap": -0.5523611553484242,
+      "Grocery_wage_gap": -0.965716239544312
+    },
+    {
+      "date": "2002-08-01",
+      "Food_YoY": 2.0429009193054126,
+      "Grocery_YoY": 1.8386108273748647,
+      "Hourly_wage_YoY": 2.589758681577403,
+      "Food_wage_gap": -0.5468577622719906,
+      "Grocery_wage_gap": -0.7511478542025385
+    },
+    {
+      "date": "2002-09-01",
+      "Food_YoY": 1.8518518518518379,
+      "Grocery_YoY": 1.5479876160990669,
+      "Hourly_wage_YoY": 2.713625866050795,
+      "Food_wage_gap": -0.8617740141989572,
+      "Grocery_wage_gap": -1.1656382499517282
+    },
+    {
+      "date": "2002-10-01",
+      "Food_YoY": 1.546391752577314,
+      "Grocery_YoY": 1.1387163561076719,
+      "Hourly_wage_YoY": 2.4812463935372397,
+      "Food_wage_gap": -0.9348546409599257,
+      "Grocery_wage_gap": -1.342530037429568
+    },
+    {
+      "date": "2002-11-01",
+      "Food_YoY": 2.6666666666666616,
+      "Grocery_YoY": 2.77777777777779,
+      "Hourly_wage_YoY": 2.3549684089603673,
+      "Food_wage_gap": 0.31169825770629433,
+      "Grocery_wage_gap": 0.4228093688174228
+    },
+    {
+      "date": "2002-12-01",
+      "Food_YoY": 2.2312373225152227,
+      "Grocery_YoY": 2.129817444219073,
+      "Hourly_wage_YoY": 1.7714285714285571,
+      "Food_wage_gap": 0.4598087510866655,
+      "Grocery_wage_gap": 0.358388872790516
+    },
+    {
+      "date": "2003-01-01",
+      "Food_YoY": 1.9057171514543558,
+      "Grocery_YoY": 1.8000000000000016,
+      "Hourly_wage_YoY": 2.0408163265306145,
+      "Food_wage_gap": -0.13509917507625868,
+      "Grocery_wage_gap": -0.2408163265306129
+    },
+    {
+      "date": "2003-02-01",
+      "Food_YoY": 1.1964107676969205,
+      "Grocery_YoY": 0.7944389275074348,
+      "Hourly_wage_YoY": 2.0350480497456136,
+      "Food_wage_gap": -0.8386372820486931,
+      "Grocery_wage_gap": -1.2406091222381788
+    },
+    {
+      "date": "2003-03-01",
+      "Food_YoY": 1.598401598401611,
+      "Grocery_YoY": 1.294820717131473,
+      "Hourly_wage_YoY": 1.5783540022547893,
+      "Food_wage_gap": 0.02004759614682161,
+      "Grocery_wage_gap": -0.2835332851233163
+    },
+    {
+      "date": "2003-04-01",
+      "Food_YoY": 1.2935323383084452,
+      "Grocery_YoY": 0.7928642220019766,
+      "Hourly_wage_YoY": 1.4631401238041741,
+      "Food_wage_gap": -0.16960778549572897,
+      "Grocery_wage_gap": -0.6702759018021975
+    },
+    {
+      "date": "2003-05-01",
+      "Food_YoY": 1.998001998001997,
+      "Grocery_YoY": 1.7946161515453696,
+      "Hourly_wage_YoY": 2.1010789324247714,
+      "Food_wage_gap": -0.10307693442277444,
+      "Grocery_wage_gap": -0.3064627808794018
+    },
+    {
+      "date": "2003-06-01",
+      "Food_YoY": 1.8905472636816079,
+      "Grocery_YoY": 1.688182720953324,
+      "Hourly_wage_YoY": 1.3667425968109548,
+      "Food_wage_gap": 0.5238046668706531,
+      "Grocery_wage_gap": 0.3214401241423692
+    },
+    {
+      "date": "2003-07-01",
+      "Food_YoY": 1.8905472636816079,
+      "Grocery_YoY": 1.6898608349900535,
+      "Hourly_wage_YoY": 2.246543778801846,
+      "Food_wage_gap": -0.3559965151202382,
+      "Grocery_wage_gap": -0.5566829438117926
+    },
+    {
+      "date": "2003-08-01",
+      "Food_YoY": 1.6016016016015877,
+      "Grocery_YoY": 1.3039117352056095,
+      "Hourly_wage_YoY": 2.4096385542168752,
+      "Food_wage_gap": -0.8080369526152875,
+      "Grocery_wage_gap": -1.1057268190112657
+    },
+    {
+      "date": "2003-09-01",
+      "Food_YoY": 1.8181818181818077,
+      "Grocery_YoY": 1.6260162601625883,
+      "Hourly_wage_YoY": 2.6419336706014818,
+      "Food_wage_gap": -0.8237518524196741,
+      "Grocery_wage_gap": -1.0159174104388935
+    },
+    {
+      "date": "2003-10-01",
+      "Food_YoY": 2.233502538071064,
+      "Grocery_YoY": 1.9447287615148356,
+      "Hourly_wage_YoY": 2.8153153153153143,
+      "Food_wage_gap": -0.5818127772442505,
+      "Grocery_wage_gap": -0.8705865538004787
+    },
+    {
+      "date": "2003-11-01",
+      "Food_YoY": 1.598401598401611,
+      "Grocery_YoY": 1.1011011011010874,
+      "Hourly_wage_YoY": 2.4691358024691468,
+      "Food_wage_gap": -0.8707342040675359,
+      "Grocery_wage_gap": -1.3680347013680594
+    },
+    {
+      "date": "2003-12-01",
+      "Food_YoY": 1.7857142857142794,
+      "Grocery_YoY": 1.4895729890764597,
+      "Hourly_wage_YoY": 2.8635597978663663,
+      "Food_wage_gap": -1.077845512152087,
+      "Grocery_wage_gap": -1.3739868087899065
+    },
+    {
+      "date": "2004-01-01",
+      "Food_YoY": 1.1811023622047223,
+      "Grocery_YoY": 0.39292730844793233,
+      "Hourly_wage_YoY": 2.777777777777768,
+      "Food_wage_gap": -1.5966754155730456,
+      "Grocery_wage_gap": -2.3848504693298356
+    },
+    {
+      "date": "2004-02-01",
+      "Food_YoY": 1.0837438423645374,
+      "Grocery_YoY": 0.3940886699507429,
+      "Hourly_wage_YoY": 2.659279778393353,
+      "Food_wage_gap": -1.5755359360288157,
+      "Grocery_wage_gap": -2.26519110844261
+    },
+    {
+      "date": "2004-03-01",
+      "Food_YoY": 0.9832841691248762,
+      "Grocery_YoY": 0.3933136676499416,
+      "Hourly_wage_YoY": 2.7746947835738167,
+      "Food_wage_gap": -1.7914106144489406,
+      "Grocery_wage_gap": -2.381381115923875
+    },
+    {
+      "date": "2004-04-01",
+      "Food_YoY": 0.6876227897838927,
+      "Grocery_YoY": 0.0,
+      "Hourly_wage_YoY": 2.9395452024403745,
+      "Food_wage_gap": -2.251922412656482,
+      "Grocery_wage_gap": -2.9395452024403745
+    },
+    {
+      "date": "2004-05-01",
+      "Food_YoY": 1.2732615083251853,
+      "Grocery_YoY": 0.6856023506366382,
+      "Hourly_wage_YoY": 2.6696329254727535,
+      "Food_wage_gap": -1.3963714171475683,
+      "Grocery_wage_gap": -1.9840305748361153
+    },
+    {
+      "date": "2004-06-01",
+      "Food_YoY": 1.953125,
+      "Grocery_YoY": 1.7578125,
+      "Hourly_wage_YoY": 3.314606741573023,
+      "Food_wage_gap": -1.361481741573023,
+      "Grocery_wage_gap": -1.556794241573023
+    },
+    {
+      "date": "2004-07-01",
+      "Food_YoY": 1.953125,
+      "Grocery_YoY": 1.6617790811339184,
+      "Hourly_wage_YoY": 2.4788732394366297,
+      "Food_wage_gap": -0.5257482394366297,
+      "Grocery_wage_gap": -0.8170941583027114
+    },
+    {
+      "date": "2004-08-01",
+      "Food_YoY": 2.5615763546797954,
+      "Grocery_YoY": 2.5742574257425765,
+      "Hourly_wage_YoY": 2.0728291316526537,
+      "Food_wage_gap": 0.4887472230271417,
+      "Grocery_wage_gap": 0.5014282940899228
+    },
+    {
+      "date": "2004-09-01",
+      "Food_YoY": 2.876984126984139,
+      "Grocery_YoY": 2.8000000000000025,
+      "Hourly_wage_YoY": 1.8072289156626509,
+      "Food_wage_gap": 1.069755211321488,
+      "Grocery_wage_gap": 0.9927710843373516
+    },
+    {
+      "date": "2004-10-01",
+      "Food_YoY": 3.47567030784508,
+      "Grocery_YoY": 3.81526104417671,
+      "Hourly_wage_YoY": 1.9167579408543078,
+      "Food_wage_gap": 1.5589123669907723,
+      "Grocery_wage_gap": 1.898503103322402
+    },
+    {
+      "date": "2004-11-01",
+      "Food_YoY": 3.4414945919370776,
+      "Grocery_YoY": 3.7623762376237657,
+      "Hourly_wage_YoY": 2.4644030668127037,
+      "Food_wage_gap": 0.9770915251243739,
+      "Grocery_wage_gap": 1.297973170811062
+    },
+    {
+      "date": "2004-12-01",
+      "Food_YoY": 3.021442495126725,
+      "Grocery_YoY": 3.131115459882583,
+      "Hourly_wage_YoY": 2.2925764192139653,
+      "Food_wage_gap": 0.7288660759127596,
+      "Grocery_wage_gap": 0.8385390406686177
+    },
+    {
+      "date": "2005-01-01",
+      "Food_YoY": 2.529182879377445,
+      "Grocery_YoY": 2.544031311154593,
+      "Hourly_wage_YoY": 2.8108108108108043,
+      "Food_wage_gap": -0.2816279314333592,
+      "Grocery_wage_gap": -0.26677949965621117
+    },
+    {
+      "date": "2005-02-01",
+      "Food_YoY": 2.5341130604288553,
+      "Grocery_YoY": 2.4533856722276814,
+      "Hourly_wage_YoY": 2.4284943335132203,
+      "Food_wage_gap": 0.10561872691563501,
+      "Grocery_wage_gap": 0.024891338714461142
+    },
+    {
+      "date": "2005-03-01",
+      "Food_YoY": 2.8237585199610393,
+      "Grocery_YoY": 2.840352595494622,
+      "Hourly_wage_YoY": 2.861771058315332,
+      "Food_wage_gap": -0.03801253835429286,
+      "Grocery_wage_gap": -0.02141846282071036
+    },
+    {
+      "date": "2005-04-01",
+      "Food_YoY": 4.0000000000000036,
+      "Grocery_YoY": 4.424778761061954,
+      "Hourly_wage_YoY": 2.8556034482758674,
+      "Food_wage_gap": 1.1443965517241361,
+      "Grocery_wage_gap": 1.5691753127860864
+    },
+    {
+      "date": "2005-05-01",
+      "Food_YoY": 3.2882011605415817,
+      "Grocery_YoY": 3.5019455252918386,
+      "Hourly_wage_YoY": 2.221018418201526,
+      "Food_wage_gap": 1.067182742340056,
+      "Grocery_wage_gap": 1.2809271070903128
+    },
+    {
+      "date": "2005-06-01",
+      "Food_YoY": 2.6819923371647514,
+      "Grocery_YoY": 2.399232245681371,
+      "Hourly_wage_YoY": 2.718868950516584,
+      "Food_wage_gap": -0.03687661335183279,
+      "Grocery_wage_gap": -0.31963670483521334
+    },
+    {
+      "date": "2005-07-01",
+      "Food_YoY": 2.3946360153256796,
+      "Grocery_YoY": 2.2115384615384537,
+      "Hourly_wage_YoY": 3.133589884551946,
+      "Food_wage_gap": -0.7389538692262665,
+      "Grocery_wage_gap": -0.9220514230134924
+    },
+    {
+      "date": "2005-08-01",
+      "Food_YoY": 2.5936599423631135,
+      "Grocery_YoY": 2.316602316602312,
+      "Hourly_wage_YoY": 3.6223929747530192,
+      "Food_wage_gap": -1.0287330323899058,
+      "Grocery_wage_gap": -1.3057906581507073
+    },
+    {
+      "date": "2005-09-01",
+      "Food_YoY": 2.0250723240115676,
+      "Grocery_YoY": 1.6536964980544688,
+      "Hourly_wage_YoY": 3.819257665411513,
+      "Food_wage_gap": -1.7941853413999453,
+      "Grocery_wage_gap": -2.165561167357044
+    },
+    {
+      "date": "2005-10-01",
+      "Food_YoY": 1.9193857965451144,
+      "Grocery_YoY": 1.4506769825918697,
+      "Hourly_wage_YoY": 3.868887694787748,
+      "Food_wage_gap": -1.9495018982426338,
+      "Grocery_wage_gap": -2.4182107121958785
+    },
+    {
+      "date": "2005-11-01",
+      "Food_YoY": 1.425855513307983,
+      "Grocery_YoY": 0.7633587786259444,
+      "Hourly_wage_YoY": 3.955104222340977,
+      "Food_wage_gap": -2.529248709032994,
+      "Grocery_wage_gap": -3.1917454437150328
+    },
+    {
+      "date": "2005-12-01",
+      "Food_YoY": 1.7029328287606393,
+      "Grocery_YoY": 1.0436432637571214,
+      "Hourly_wage_YoY": 3.7886872998932786,
+      "Food_wage_gap": -2.0857544711326392,
+      "Grocery_wage_gap": -2.745044036136157
+    },
+    {
+      "date": "2006-01-01",
+      "Food_YoY": 2.8462998102466885,
+      "Grocery_YoY": 2.8625954198473247,
+      "Hourly_wage_YoY": 4.153522607781279,
+      "Food_wage_gap": -1.3072227975345907,
+      "Grocery_wage_gap": -1.2909271879339546
+    },
+    {
+      "date": "2006-02-01",
+      "Food_YoY": 2.851711026615966,
+      "Grocery_YoY": 2.8735632183908066,
+      "Hourly_wage_YoY": 4.741833508956783,
+      "Food_wage_gap": -1.890122482340817,
+      "Grocery_wage_gap": -1.8682702905659765
+    },
+    {
+      "date": "2006-03-01",
+      "Food_YoY": 2.4621212121212155,
+      "Grocery_YoY": 2.0952380952381056,
+      "Hourly_wage_YoY": 5.249343832021003,
+      "Food_wage_gap": -2.7872226198997874,
+      "Grocery_wage_gap": -3.1541057367828973
+    },
+    {
+      "date": "2006-04-01",
+      "Food_YoY": 1.40712945590995,
+      "Grocery_YoY": 0.6591337099811634,
+      "Hourly_wage_YoY": 5.552645364064945,
+      "Food_wage_gap": -4.145515908154995,
+      "Grocery_wage_gap": -4.893511654083782
+    },
+    {
+      "date": "2006-05-01",
+      "Food_YoY": 1.7790262172284743,
+      "Grocery_YoY": 1.2218045112782017,
+      "Hourly_wage_YoY": 5.93534711181769,
+      "Food_wage_gap": -4.156320894589216,
+      "Grocery_wage_gap": -4.713542600539489
+    },
+    {
+      "date": "2006-06-01",
+      "Food_YoY": 1.8656716417910557,
+      "Grocery_YoY": 1.4058106841611906,
+      "Hourly_wage_YoY": 5.558496559025938,
+      "Food_wage_gap": -3.6928249172348826,
+      "Grocery_wage_gap": -4.152685874864748
+    },
+    {
+      "date": "2006-07-01",
+      "Food_YoY": 2.1515434985968085,
+      "Grocery_YoY": 2.069614299153333,
+      "Hourly_wage_YoY": 6.023454157782515,
+      "Food_wage_gap": -3.8719106591857066,
+      "Grocery_wage_gap": -3.9538398586291823
+    },
+    {
+      "date": "2006-08-01",
+      "Food_YoY": 2.2471910112359605,
+      "Grocery_YoY": 2.264150943396226,
+      "Hourly_wage_YoY": 6.302966101694918,
+      "Food_wage_gap": -4.055775090458957,
+      "Grocery_wage_gap": -4.038815158298692
+    },
+    {
+      "date": "2006-09-01",
+      "Food_YoY": 2.835538752362954,
+      "Grocery_YoY": 3.157894736842093,
+      "Hourly_wage_YoY": 5.803108808290158,
+      "Food_wage_gap": -2.9675700559272045,
+      "Grocery_wage_gap": -2.6452140714480654
+    },
+    {
+      "date": "2006-10-01",
+      "Food_YoY": 2.824858757062154,
+      "Grocery_YoY": 3.1458531935176337,
+      "Hourly_wage_YoY": 6.311433005690659,
+      "Food_wage_gap": -3.4865742486285045,
+      "Grocery_wage_gap": -3.165579812173025
+    },
+    {
+      "date": "2006-11-01",
+      "Food_YoY": 3.1865042174320513,
+      "Grocery_YoY": 3.3143939393939448,
+      "Hourly_wage_YoY": 5.964010282776355,
+      "Food_wage_gap": -2.777506065344304,
+      "Grocery_wage_gap": -2.6496163433824105
+    },
+    {
+      "date": "2006-12-01",
+      "Food_YoY": 2.2325581395348904,
+      "Grocery_YoY": 2.2535211267605604,
+      "Hourly_wage_YoY": 5.655526992287929,
+      "Food_wage_gap": -3.422968852753039,
+      "Grocery_wage_gap": -3.402005865527369
+    },
+    {
+      "date": "2007-01-01",
+      "Food_YoY": 2.306273062730635,
+      "Grocery_YoY": 2.226345083487935,
+      "Hourly_wage_YoY": 4.492680464411913,
+      "Food_wage_gap": -2.1864074016812785,
+      "Grocery_wage_gap": -2.2663353809239783
+    },
+    {
+      "date": "2007-02-01",
+      "Food_YoY": 4.066543438077619,
+      "Grocery_YoY": 4.748603351955305,
+      "Hourly_wage_YoY": 4.124748490945684,
+      "Food_wage_gap": -0.05820505286806554,
+      "Grocery_wage_gap": 0.6238548610096206
+    },
+    {
+      "date": "2007-03-01",
+      "Food_YoY": 3.6968576709796697,
+      "Grocery_YoY": 4.3843283582089665,
+      "Hourly_wage_YoY": 3.4912718204488824,
+      "Food_wage_gap": 0.20558585053078726,
+      "Grocery_wage_gap": 0.8930565377600841
+    },
+    {
+      "date": "2007-04-01",
+      "Food_YoY": 3.7927844588344195,
+      "Grocery_YoY": 4.490177736202061,
+      "Hourly_wage_YoY": 3.2754342431761785,
+      "Food_wage_gap": 0.517350215658241,
+      "Grocery_wage_gap": 1.2147434930258827
+    },
+    {
+      "date": "2007-05-01",
+      "Food_YoY": 3.4958601655933785,
+      "Grocery_YoY": 3.9925719591457742,
+      "Hourly_wage_YoY": 4.0520260130065155,
+      "Food_wage_gap": -0.556165847413137,
+      "Grocery_wage_gap": -0.05945405386074132
+    },
+    {
+      "date": "2007-06-01",
+      "Food_YoY": 3.1135531135531025,
+      "Grocery_YoY": 3.419593345656202,
+      "Hourly_wage_YoY": 4.312938816449341,
+      "Food_wage_gap": -1.1993857028962385,
+      "Grocery_wage_gap": -0.8933454707931388
+    },
+    {
+      "date": "2007-07-01",
+      "Food_YoY": 2.8388278388278287,
+      "Grocery_YoY": 2.6728110599078425,
+      "Hourly_wage_YoY": 4.3237807943690365,
+      "Food_wage_gap": -1.4849529555412078,
+      "Grocery_wage_gap": -1.650969734461194
+    },
+    {
+      "date": "2007-08-01",
+      "Food_YoY": 2.3809523809523725,
+      "Grocery_YoY": 2.0295202952029356,
+      "Hourly_wage_YoY": 4.285002491280521,
+      "Food_wage_gap": -1.9040501103281482,
+      "Grocery_wage_gap": -2.255482196077585
+    },
+    {
+      "date": "2007-09-01",
+      "Food_YoY": 1.930147058823528,
+      "Grocery_YoY": 1.2987012987013102,
+      "Hourly_wage_YoY": 4.70127326150831,
+      "Food_wage_gap": -2.7711262026847816,
+      "Grocery_wage_gap": -3.4025719628069995
+    },
+    {
+      "date": "2007-10-01",
+      "Food_YoY": 1.3736263736263687,
+      "Grocery_YoY": 0.6469500924214389,
+      "Hourly_wage_YoY": 4.136253041362514,
+      "Food_wage_gap": -2.7626266677361455,
+      "Grocery_wage_gap": -3.4893029489410754
+    },
+    {
+      "date": "2007-11-01",
+      "Food_YoY": 1.089918256130784,
+      "Grocery_YoY": 0.6416131989001039,
+      "Hourly_wage_YoY": 3.9786511402231994,
+      "Food_wage_gap": -2.8887328840924154,
+      "Grocery_wage_gap": -3.3370379413230955
+    },
+    {
+      "date": "2007-12-01",
+      "Food_YoY": 1.6378525932666088,
+      "Grocery_YoY": 1.1019283746556363,
+      "Hourly_wage_YoY": 4.136253041362514,
+      "Food_wage_gap": -2.4984004480959054,
+      "Grocery_wage_gap": -3.034324666706878
+    },
+    {
+      "date": "2008-01-01",
+      "Food_YoY": 1.352569882777277,
+      "Grocery_YoY": 1.0889292196007316,
+      "Hourly_wage_YoY": 4.251207729468587,
+      "Food_wage_gap": -2.89863784669131,
+      "Grocery_wage_gap": -3.162278509867855
+    },
+    {
+      "date": "2008-02-01",
+      "Food_YoY": 0.1776198934280604,
+      "Grocery_YoY": -0.622222222222224,
+      "Hourly_wage_YoY": 4.347826086956541,
+      "Food_wage_gap": -4.170206193528481,
+      "Grocery_wage_gap": -4.970048309178765
+    },
+    {
+      "date": "2008-03-01",
+      "Food_YoY": 0.35650623885916666,
+      "Grocery_YoY": -0.2680965147453196,
+      "Hourly_wage_YoY": 3.903614457831317,
+      "Food_wage_gap": -3.5471082189721503,
+      "Grocery_wage_gap": -4.171710972576637
+    },
+    {
+      "date": "2008-04-01",
+      "Food_YoY": 1.158645276292325,
+      "Grocery_YoY": 0.8952551477170889,
+      "Hourly_wage_YoY": 4.228736184526682,
+      "Food_wage_gap": -3.0700909082343575,
+      "Grocery_wage_gap": -3.3334810368095935
+    },
+    {
+      "date": "2008-05-01",
+      "Food_YoY": 1.866666666666661,
+      "Grocery_YoY": 1.8750000000000044,
+      "Hourly_wage_YoY": 4.3269230769230616,
+      "Food_wage_gap": -2.4602564102564006,
+      "Grocery_wage_gap": -2.451923076923057
+    },
+    {
+      "date": "2008-06-01",
+      "Food_YoY": 2.841918294849033,
+      "Grocery_YoY": 3.038427167113489,
+      "Hourly_wage_YoY": 4.230769230769216,
+      "Food_wage_gap": -1.3888509359201828,
+      "Grocery_wage_gap": -1.192342063655727
+    },
+    {
+      "date": "2008-07-01",
+      "Food_YoY": 3.7399821905609976,
+      "Grocery_YoY": 4.308797127468589,
+      "Hourly_wage_YoY": 3.855421686746996,
+      "Food_wage_gap": -0.11543949618599836,
+      "Grocery_wage_gap": 0.45337544072159286
+    },
+    {
+      "date": "2008-08-01",
+      "Food_YoY": 4.472271914132375,
+      "Grocery_YoY": 5.244122965641962,
+      "Hourly_wage_YoY": 3.3922599139990517,
+      "Food_wage_gap": 1.0800120001333235,
+      "Grocery_wage_gap": 1.8518630516429102
+    },
+    {
+      "date": "2008-09-01",
+      "Food_YoY": 5.590622182146077,
+      "Grocery_YoY": 6.684981684981683,
+      "Hourly_wage_YoY": 3.788587464920501,
+      "Food_wage_gap": 1.8020347172255757,
+      "Grocery_wage_gap": 2.8963942200611825
+    },
+    {
+      "date": "2008-10-01",
+      "Food_YoY": 6.052393857271898,
+      "Grocery_YoY": 7.2543617998163334,
+      "Hourly_wage_YoY": 3.831775700934581,
+      "Food_wage_gap": 2.2206181563373173,
+      "Grocery_wage_gap": 3.4225860988817525
+    },
+    {
+      "date": "2008-11-01",
+      "Food_YoY": 7.367475292003589,
+      "Grocery_YoY": 9.016393442622949,
+      "Hourly_wage_YoY": 4.433037797480166,
+      "Food_wage_gap": 2.934437494523423,
+      "Grocery_wage_gap": 4.583355645142783
+    },
+    {
+      "date": "2008-12-01",
+      "Food_YoY": 7.251566696508505,
+      "Grocery_YoY": 8.99182561307903,
+      "Hourly_wage_YoY": 4.859813084112163,
+      "Food_wage_gap": 2.391753612396341,
+      "Grocery_wage_gap": 4.132012528966866
+    },
+    {
+      "date": "2009-01-01",
+      "Food_YoY": 7.295373665480409,
+      "Grocery_YoY": 8.617594254937156,
+      "Hourly_wage_YoY": 5.050973123262303,
+      "Food_wage_gap": 2.2444005422181057,
+      "Grocery_wage_gap": 3.566621131674853
+    },
+    {
+      "date": "2009-02-01",
+      "Food_YoY": 7.446808510638303,
+      "Grocery_YoY": 8.94454382826475,
+      "Hourly_wage_YoY": 4.166666666666652,
+      "Food_wage_gap": 3.280141843971651,
+      "Grocery_wage_gap": 4.777877161598099
+    },
+    {
+      "date": "2009-03-01",
+      "Food_YoY": 7.904085257548843,
+      "Grocery_YoY": 9.498207885304666,
+      "Hourly_wage_YoY": 4.77736549165122,
+      "Food_wage_gap": 3.126719765897623,
+      "Grocery_wage_gap": 4.720842393653446
+    },
+    {
+      "date": "2009-04-01",
+      "Food_YoY": 7.13656387665198,
+      "Grocery_YoY": 8.340727595385978,
+      "Hourly_wage_YoY": 4.2415859843245585,
+      "Food_wage_gap": 2.8949778923274216,
+      "Grocery_wage_gap": 4.09914161106142
+    },
+    {
+      "date": "2009-05-01",
+      "Food_YoY": 6.369982547993036,
+      "Grocery_YoY": 7.361963190184051,
+      "Hourly_wage_YoY": 3.5023041474654404,
+      "Food_wage_gap": 2.8676784005275957,
+      "Grocery_wage_gap": 3.8596590427186106
+    },
+    {
+      "date": "2009-06-01",
+      "Food_YoY": 5.526770293609684,
+      "Grocery_YoY": 6.418039895923688,
+      "Hourly_wage_YoY": 3.182656826568264,
+      "Food_wage_gap": 2.34411346704142,
+      "Grocery_wage_gap": 3.235383069355424
+    },
+    {
+      "date": "2009-07-01",
+      "Food_YoY": 4.978540772532192,
+      "Grocery_YoY": 5.59380378657488,
+      "Hourly_wage_YoY": 3.248259860788849,
+      "Food_wage_gap": 1.7302809117433426,
+      "Grocery_wage_gap": 2.345543925786031
+    },
+    {
+      "date": "2009-08-01",
+      "Food_YoY": 4.023972602739723,
+      "Grocery_YoY": 4.381443298969057,
+      "Hourly_wage_YoY": 3.41959334565618,
+      "Food_wage_gap": 0.6043792570835427,
+      "Grocery_wage_gap": 0.9618499533128766
+    },
+    {
+      "date": "2009-09-01",
+      "Food_YoY": 2.818104184457737,
+      "Grocery_YoY": 2.746781115879826,
+      "Hourly_wage_YoY": 3.154574132492116,
+      "Food_wage_gap": -0.33646994803437913,
+      "Grocery_wage_gap": -0.40779301661229006
+    },
+    {
+      "date": "2009-10-01",
+      "Food_YoY": 2.2998296422487075,
+      "Grocery_YoY": 2.1404109589041154,
+      "Hourly_wage_YoY": 3.4653465346534684,
+      "Food_wage_gap": -1.165516892404761,
+      "Grocery_wage_gap": -1.324935575749353
+    },
+    {
+      "date": "2009-11-01",
+      "Food_YoY": 1.673640167364021,
+      "Grocery_YoY": 1.2531328320801949,
+      "Hourly_wage_YoY": 2.2341376228775633,
+      "Food_wage_gap": -0.5604974555135422,
+      "Grocery_wage_gap": -0.9810047907973685
+    },
+    {
+      "date": "2009-12-01",
+      "Food_YoY": 1.6694490818029983,
+      "Grocery_YoY": 1.2499999999999956,
+      "Hourly_wage_YoY": 2.450980392156854,
+      "Food_wage_gap": -0.7815313103538557,
+      "Grocery_wage_gap": -1.2009803921568585
+    },
+    {
+      "date": "2010-01-01",
+      "Food_YoY": 1.4096185737976885,
+      "Grocery_YoY": 0.9090909090909038,
+      "Hourly_wage_YoY": 2.1614468460520397,
+      "Food_wage_gap": -0.7518282722543512,
+      "Grocery_wage_gap": -1.252355936961136
+    },
+    {
+      "date": "2010-02-01",
+      "Food_YoY": 1.2376237623762387,
+      "Grocery_YoY": 0.5747126436781658,
+      "Hourly_wage_YoY": 2.7555555555555555,
+      "Food_wage_gap": -1.5179317931793168,
+      "Grocery_wage_gap": -2.1808429118773898
+    },
+    {
+      "date": "2010-03-01",
+      "Food_YoY": 1.3168724279835287,
+      "Grocery_YoY": 0.7364975450081745,
+      "Hourly_wage_YoY": 2.5232403718459473,
+      "Food_wage_gap": -1.2063679438624186,
+      "Grocery_wage_gap": -1.7867428268377727
+    },
+    {
+      "date": "2010-04-01",
+      "Food_YoY": 0.9868421052631637,
+      "Grocery_YoY": 0.40950040950040734,
+      "Hourly_wage_YoY": 2.2556390977443774,
+      "Food_wage_gap": -1.2687969924812137,
+      "Grocery_wage_gap": -1.84613868824397
+    },
+    {
+      "date": "2010-05-01",
+      "Food_YoY": 0.8203445447087843,
+      "Grocery_YoY": 0.2448979591836764,
+      "Hourly_wage_YoY": 2.270703472840596,
+      "Food_wage_gap": -1.4503589281318119,
+      "Grocery_wage_gap": -2.0258055136569197
+    },
+    {
+      "date": "2010-06-01",
+      "Food_YoY": 0.6546644844517058,
+      "Grocery_YoY": 0.08149959250203231,
+      "Hourly_wage_YoY": 2.279839070183276,
+      "Food_wage_gap": -1.6251745857315703,
+      "Grocery_wage_gap": -2.1983394776812437
+    },
+    {
+      "date": "2010-07-01",
+      "Food_YoY": 1.1447260834014816,
+      "Grocery_YoY": 0.5704971475142706,
+      "Hourly_wage_YoY": 2.157303370786523,
+      "Food_wage_gap": -1.0125772873850414,
+      "Grocery_wage_gap": -1.5868062232722524
+    },
+    {
+      "date": "2010-08-01",
+      "Food_YoY": 1.6460905349794164,
+      "Grocery_YoY": 1.2345679012345734,
+      "Hourly_wage_YoY": 1.7426273458445163,
+      "Food_wage_gap": -0.09653681086509991,
+      "Grocery_wage_gap": -0.5080594446099429
+    },
+    {
+      "date": "2010-09-01",
+      "Food_YoY": 2.0764119601328845,
+      "Grocery_YoY": 2.172096908939003,
+      "Hourly_wage_YoY": 1.4853647881170717,
+      "Food_wage_gap": 0.5910471720158128,
+      "Grocery_wage_gap": 0.6867321208219312
+    },
+    {
+      "date": "2010-10-01",
+      "Food_YoY": 2.164862614487939,
+      "Grocery_YoY": 2.095557418273253,
+      "Hourly_wage_YoY": 1.0874293170943794,
+      "Food_wage_gap": 1.0774332973935596,
+      "Grocery_wage_gap": 1.0081281011788734
+    },
+    {
+      "date": "2010-11-01",
+      "Food_YoY": 1.4814814814814836,
+      "Grocery_YoY": 0.990099009900991,
+      "Hourly_wage_YoY": 2.3164335664335622,
+      "Food_wage_gap": -0.8349520849520786,
+      "Grocery_wage_gap": -1.3263345565325713
+    },
+    {
+      "date": "2010-12-01",
+      "Food_YoY": 1.7241379310344973,
+      "Grocery_YoY": 1.3991769547325061,
+      "Hourly_wage_YoY": 1.6093953892996948,
+      "Food_wage_gap": 0.11474254173480247,
+      "Grocery_wage_gap": -0.2102184345671887
+    },
+    {
+      "date": "2011-01-01",
+      "Food_YoY": 2.1259198691741643,
+      "Grocery_YoY": 1.8837018837018826,
+      "Hourly_wage_YoY": 1.8134715025906578,
+      "Food_wage_gap": 0.3124483665835065,
+      "Grocery_wage_gap": 0.07023038111122482
+    },
+    {
+      "date": "2011-02-01",
+      "Food_YoY": 2.1189894050529734,
+      "Grocery_YoY": 1.959183673469389,
+      "Hourly_wage_YoY": 2.076124567474058,
+      "Food_wage_gap": 0.04286483757891535,
+      "Grocery_wage_gap": -0.116940894004669
+    },
+    {
+      "date": "2011-03-01",
+      "Food_YoY": 3.3306255077172997,
+      "Grocery_YoY": 3.6555645816409355,
+      "Hourly_wage_YoY": 2.2452504317789224,
+      "Food_wage_gap": 1.0853750759383773,
+      "Grocery_wage_gap": 1.410314149862013
+    },
+    {
+      "date": "2011-04-01",
+      "Food_YoY": 3.338762214983726,
+      "Grocery_YoY": 3.6704730831973897,
+      "Hourly_wage_YoY": 2.3356401384083014,
+      "Food_wage_gap": 1.0031220765754245,
+      "Grocery_wage_gap": 1.3348329447890883
+    },
+    {
+      "date": "2011-05-01",
+      "Food_YoY": 3.9056143205858485,
+      "Grocery_YoY": 4.234527687296419,
+      "Hourly_wage_YoY": 2.220287331301707,
+      "Food_wage_gap": 1.6853269892841416,
+      "Grocery_wage_gap": 2.014240355994712
+    },
+    {
+      "date": "2011-06-01",
+      "Food_YoY": 4.3089430894309055,
+      "Grocery_YoY": 4.80456026058631,
+      "Hourly_wage_YoY": 2.1853146853146876,
+      "Food_wage_gap": 2.123628404116218,
+      "Grocery_wage_gap": 2.6192455752716226
+    },
+    {
+      "date": "2011-07-01",
+      "Food_YoY": 4.284559417946632,
+      "Grocery_YoY": 5.105348460291714,
+      "Hourly_wage_YoY": 1.979762428508569,
+      "Food_wage_gap": 2.3047969894380627,
+      "Grocery_wage_gap": 3.125586031783145
+    },
+    {
+      "date": "2011-08-01",
+      "Food_YoY": 4.3724696356275405,
+      "Grocery_YoY": 5.040650406504055,
+      "Hourly_wage_YoY": 2.371541501976271,
+      "Food_wage_gap": 2.0009281336512696,
+      "Grocery_wage_gap": 2.669108904527784
+    },
+    {
+      "date": "2011-09-01",
+      "Food_YoY": 4.312449145646857,
+      "Grocery_YoY": 4.824202780049047,
+      "Hourly_wage_YoY": 2.06629358588033,
+      "Food_wage_gap": 2.2461555597665273,
+      "Grocery_wage_gap": 2.7579091941687173
+    },
+    {
+      "date": "2011-10-01",
+      "Food_YoY": 4.319478402607979,
+      "Grocery_YoY": 4.92610837438423,
+      "Hourly_wage_YoY": 2.3666092943201322,
+      "Food_wage_gap": 1.9528691082878469,
+      "Grocery_wage_gap": 2.559499080064098
+    },
+    {
+      "date": "2011-11-01",
+      "Food_YoY": 4.785077047850761,
+      "Grocery_YoY": 5.718954248366015,
+      "Hourly_wage_YoY": 2.0504058094831246,
+      "Food_wage_gap": 2.7346712383676364,
+      "Grocery_wage_gap": 3.6685484388828904
+    },
+    {
+      "date": "2011-12-01",
+      "Food_YoY": 4.358353510895885,
+      "Grocery_YoY": 5.032467532467533,
+      "Hourly_wage_YoY": 2.4828767123287854,
+      "Food_wage_gap": 1.8754767985670995,
+      "Grocery_wage_gap": 2.5495908201387474
+    },
+    {
+      "date": "2012-01-01",
+      "Food_YoY": 4.243394715772597,
+      "Grocery_YoY": 4.903536977491951,
+      "Hourly_wage_YoY": 2.120441051738764,
+      "Food_wage_gap": 2.122953664033833,
+      "Grocery_wage_gap": 2.7830959257531873
+    },
+    {
+      "date": "2012-02-01",
+      "Food_YoY": 4.0702314445331345,
+      "Grocery_YoY": 4.723779023218588,
+      "Hourly_wage_YoY": 1.9915254237288016,
+      "Food_wage_gap": 2.078706020804333,
+      "Grocery_wage_gap": 2.7322535994897867
+    },
+    {
+      "date": "2012-03-01",
+      "Food_YoY": 2.2012578616352085,
+      "Grocery_YoY": 1.9592476489028288,
+      "Hourly_wage_YoY": 1.858108108108114,
+      "Food_wage_gap": 0.3431497535270944,
+      "Grocery_wage_gap": 0.10113954079471466
+    },
+    {
+      "date": "2012-04-01",
+      "Food_YoY": 2.521670606776971,
+      "Grocery_YoY": 2.3603461841070095,
+      "Hourly_wage_YoY": 2.0287404902789463,
+      "Food_wage_gap": 0.4929301164980249,
+      "Grocery_wage_gap": 0.33160569382806315
+    },
+    {
+      "date": "2012-05-01",
+      "Food_YoY": 2.5058731401722767,
+      "Grocery_YoY": 2.499999999999991,
+      "Hourly_wage_YoY": 2.555366269165238,
+      "Food_wage_gap": -0.04949312899296121,
+      "Grocery_wage_gap": -0.055366269165246784
+    },
+    {
+      "date": "2012-06-01",
+      "Food_YoY": 2.0265003897116163,
+      "Grocery_YoY": 1.787101787101797,
+      "Hourly_wage_YoY": 2.951240376390074,
+      "Food_wage_gap": -0.9247399866784578,
+      "Grocery_wage_gap": -1.1641385892882772
+    },
+    {
+      "date": "2012-07-01",
+      "Food_YoY": 2.0930232558139528,
+      "Grocery_YoY": 1.927525057825763,
+      "Hourly_wage_YoY": 3.1492666091458066,
+      "Food_wage_gap": -1.0562433533318538,
+      "Grocery_wage_gap": -1.2217415513200436
+    },
+    {
+      "date": "2012-08-01",
+      "Food_YoY": 2.172226532195487,
+      "Grocery_YoY": 2.244582043343657,
+      "Hourly_wage_YoY": 3.4320034320034276,
+      "Food_wage_gap": -1.2597768998079406,
+      "Grocery_wage_gap": -1.1874213886597706
+    },
+    {
+      "date": "2012-09-01",
+      "Food_YoY": 1.6380655226209129,
+      "Grocery_YoY": 1.404056162246503,
+      "Hourly_wage_YoY": 3.1632222690847644,
+      "Food_wage_gap": -1.5251567464638516,
+      "Grocery_wage_gap": -1.7591661068382614
+    },
+    {
+      "date": "2012-10-01",
+      "Food_YoY": 1.953125,
+      "Grocery_YoY": 1.8779342723004522,
+      "Hourly_wage_YoY": 3.110550651534272,
+      "Food_wage_gap": -1.1574256515342718,
+      "Grocery_wage_gap": -1.2326163792338196
+    },
+    {
+      "date": "2012-11-01",
+      "Food_YoY": 1.702786377708998,
+      "Grocery_YoY": 1.4683153013910433,
+      "Hourly_wage_YoY": 2.5115110925073125,
+      "Food_wage_gap": -0.8087247147983145,
+      "Grocery_wage_gap": -1.0431957911162693
+    },
+    {
+      "date": "2012-12-01",
+      "Food_YoY": 1.4694508894044667,
+      "Grocery_YoY": 1.2364760432766575,
+      "Hourly_wage_YoY": 2.2974101921470202,
+      "Food_wage_gap": -0.8279593027425536,
+      "Grocery_wage_gap": -1.0609341488703627
+    },
+    {
+      "date": "2013-01-01",
+      "Food_YoY": 1.0752688172043001,
+      "Grocery_YoY": 0.6130268199233901,
+      "Hourly_wage_YoY": 2.3255813953488413,
+      "Food_wage_gap": -1.2503125781445412,
+      "Grocery_wage_gap": -1.7125545754254512
+    },
+    {
+      "date": "2013-02-01",
+      "Food_YoY": 1.917177914110435,
+      "Grocery_YoY": 1.758409785932713,
+      "Hourly_wage_YoY": 2.409638554216853,
+      "Food_wage_gap": -0.492460640106418,
+      "Grocery_wage_gap": -0.65122876828414
+    },
+    {
+      "date": "2013-03-01",
+      "Food_YoY": 1.846153846153853,
+      "Grocery_YoY": 1.6910069177555886,
+      "Hourly_wage_YoY": 2.736318407960203,
+      "Food_wage_gap": -0.8901645618063503,
+      "Grocery_wage_gap": -1.0453114902046146
+    },
+    {
+      "date": "2013-04-01",
+      "Food_YoY": 1.537279016141424,
+      "Grocery_YoY": 1.6910069177555886,
+      "Hourly_wage_YoY": 3.189726594863296,
+      "Food_wage_gap": -1.6524475787218718,
+      "Grocery_wage_gap": -1.4987196771077071
+    },
+    {
+      "date": "2013-05-01",
+      "Food_YoY": 1.298701298701288,
+      "Grocery_YoY": 1.2957317073170938,
+      "Hourly_wage_YoY": 2.53322259136215,
+      "Food_wage_gap": -1.2345212926608617,
+      "Grocery_wage_gap": -1.237490884045056
+    },
+    {
+      "date": "2013-06-01",
+      "Food_YoY": 1.2223071046600475,
+      "Grocery_YoY": 1.2977099236641143,
+      "Hourly_wage_YoY": 1.7864561695056125,
+      "Food_wage_gap": -0.5641490648455649,
+      "Grocery_wage_gap": -0.4887462458414982
+    },
+    {
+      "date": "2013-07-01",
+      "Food_YoY": 0.7593014426727329,
+      "Grocery_YoY": 0.4538577912254427,
+      "Hourly_wage_YoY": 2.049351735675442,
+      "Food_wage_gap": -1.2900502930027091,
+      "Grocery_wage_gap": -1.5954939444499994
+    },
+    {
+      "date": "2013-08-01",
+      "Food_YoY": 0.9870918754745661,
+      "Grocery_YoY": 0.681302043906129,
+      "Hourly_wage_YoY": 1.4516798009124976,
+      "Food_wage_gap": -0.4645879254379315,
+      "Grocery_wage_gap": -0.7703777570063686
+    },
+    {
+      "date": "2013-09-01",
+      "Food_YoY": 1.2279355333844943,
+      "Grocery_YoY": 1.0769230769230864,
+      "Hourly_wage_YoY": 1.676206050695006,
+      "Food_wage_gap": -0.4482705173105117,
+      "Grocery_wage_gap": -0.5992829737719196
+    },
+    {
+      "date": "2013-10-01",
+      "Food_YoY": 0.9195402298850519,
+      "Grocery_YoY": 0.691244239631339,
+      "Hourly_wage_YoY": 1.7121891561353353,
+      "Food_wage_gap": -0.7926489262502834,
+      "Grocery_wage_gap": -1.0209449165039963
+    },
+    {
+      "date": "2013-11-01",
+      "Food_YoY": 1.0654490106544845,
+      "Grocery_YoY": 1.0662604722010416,
+      "Hourly_wage_YoY": 2.409146590445088,
+      "Food_wage_gap": -1.3436975797906037,
+      "Grocery_wage_gap": -1.3428861182440466
+    },
+    {
+      "date": "2013-12-01",
+      "Food_YoY": 0.9908536585365946,
+      "Grocery_YoY": 0.7633587786259444,
+      "Hourly_wage_YoY": 2.3274806043283025,
+      "Food_wage_gap": -1.336626945791708,
+      "Grocery_wage_gap": -1.5641218257023581
+    },
+    {
+      "date": "2014-01-01",
+      "Food_YoY": 1.0638297872340496,
+      "Grocery_YoY": 0.9900990099009688,
+      "Hourly_wage_YoY": 1.9480519480519431,
+      "Food_wage_gap": -0.8842221608178935,
+      "Grocery_wage_gap": -0.9579529381509744
+    },
+    {
+      "date": "2014-02-01",
+      "Food_YoY": 1.0534236267870645,
+      "Grocery_YoY": 0.9767092411720579,
+      "Hourly_wage_YoY": 2.0283975659229236,
+      "Food_wage_gap": -0.9749739391358592,
+      "Grocery_wage_gap": -1.0516883247508657
+    },
+    {
+      "date": "2014-03-01",
+      "Food_YoY": 1.5105740181268867,
+      "Grocery_YoY": 1.7384731670445852,
+      "Hourly_wage_YoY": 1.6142050040355072,
+      "Food_wage_gap": -0.10363098590862041,
+      "Grocery_wage_gap": 0.12426816300907806
+    },
+    {
+      "date": "2014-04-01",
+      "Food_YoY": 1.8925056775170424,
+      "Grocery_YoY": 1.7384731670445852,
+      "Hourly_wage_YoY": 1.1240465676435107,
+      "Food_wage_gap": 0.7684591098735316,
+      "Grocery_wage_gap": 0.6144265994010745
+    },
+    {
+      "date": "2014-05-01",
+      "Food_YoY": 2.337858220211153,
+      "Grocery_YoY": 2.483069977426622,
+      "Hourly_wage_YoY": 1.2150668286755595,
+      "Food_wage_gap": 1.1227913915355936,
+      "Grocery_wage_gap": 1.2680031487510623
+    },
+    {
+      "date": "2014-06-01",
+      "Food_YoY": 2.943396226415107,
+      "Grocery_YoY": 3.240391861341374,
+      "Hourly_wage_YoY": 1.8775510204081636,
+      "Food_wage_gap": 1.0658452060069434,
+      "Grocery_wage_gap": 1.3628408409332105
+    },
+    {
+      "date": "2014-07-01",
+      "Food_YoY": 2.8636021100226117,
+      "Grocery_YoY": 3.1626506024096335,
+      "Hourly_wage_YoY": 1.5983606557377072,
+      "Food_wage_gap": 1.2652414542849044,
+      "Grocery_wage_gap": 1.5642899466719262
+    },
+    {
+      "date": "2014-08-01",
+      "Food_YoY": 2.1804511278195493,
+      "Grocery_YoY": 2.2556390977443552,
+      "Hourly_wage_YoY": 1.9215044971381712,
+      "Food_wage_gap": 0.25894663068137813,
+      "Grocery_wage_gap": 0.33413460060618405
+    },
+    {
+      "date": "2014-09-01",
+      "Food_YoY": 2.7293404094010487,
+      "Grocery_YoY": 2.9680365296803624,
+      "Hourly_wage_YoY": 2.372336147969434,
+      "Food_wage_gap": 0.3570042614316149,
+      "Grocery_wage_gap": 0.5957003817109285
+    },
+    {
+      "date": "2014-10-01",
+      "Food_YoY": 2.809415337889165,
+      "Grocery_YoY": 3.0511060259343914,
+      "Hourly_wage_YoY": 1.8837675350701577,
+      "Food_wage_gap": 0.9256478028190074,
+      "Grocery_wage_gap": 1.1673384908642337
+    },
+    {
+      "date": "2014-11-01",
+      "Food_YoY": 3.0873493975903665,
+      "Grocery_YoY": 3.31574981160514,
+      "Hourly_wage_YoY": 1.5550239234449759,
+      "Food_wage_gap": 1.5323254741453907,
+      "Grocery_wage_gap": 1.760725888160164
+    },
+    {
+      "date": "2014-12-01",
+      "Food_YoY": 3.6981132075471823,
+      "Grocery_YoY": 4.2424242424242475,
+      "Hourly_wage_YoY": 1.7557861133280284,
+      "Food_wage_gap": 1.942327094219154,
+      "Grocery_wage_gap": 2.486638129096219
+    },
+    {
+      "date": "2015-01-01",
+      "Food_YoY": 4.586466165413539,
+      "Grocery_YoY": 5.354449472096534,
+      "Hourly_wage_YoY": 2.109872611464958,
+      "Food_wage_gap": 2.4765935539485806,
+      "Grocery_wage_gap": 3.244576860631576
+    },
+    {
+      "date": "2015-02-01",
+      "Food_YoY": 3.87192851824274,
+      "Grocery_YoY": 4.315476190476186,
+      "Hourly_wage_YoY": 1.8687872763419655,
+      "Food_wage_gap": 2.0031412419007744,
+      "Grocery_wage_gap": 2.4466889141342207
+    },
+    {
+      "date": "2015-03-01",
+      "Food_YoY": 3.7946428571428603,
+      "Grocery_YoY": 4.160475482912318,
+      "Hourly_wage_YoY": 1.9062748212867353,
+      "Food_wage_gap": 1.888368035856125,
+      "Grocery_wage_gap": 2.2542006616255827
+    },
+    {
+      "date": "2015-04-01",
+      "Food_YoY": 3.566121842496295,
+      "Grocery_YoY": 4.011887072808329,
+      "Hourly_wage_YoY": 2.500992457324336,
+      "Food_wage_gap": 1.065129385171959,
+      "Grocery_wage_gap": 1.510894615483993
+    },
+    {
+      "date": "2015-05-01",
+      "Food_YoY": 3.7582903463522666,
+      "Grocery_YoY": 4.111600587371522,
+      "Hourly_wage_YoY": 2.761104441776707,
+      "Food_wage_gap": 0.9971859045755593,
+      "Grocery_wage_gap": 1.350496145594815
+    },
+    {
+      "date": "2015-06-01",
+      "Food_YoY": 3.372434017595305,
+      "Grocery_YoY": 3.5766423357664223,
+      "Hourly_wage_YoY": 3.004807692307687,
+      "Food_wage_gap": 0.36762632528761774,
+      "Grocery_wage_gap": 0.5718346434587351
+    },
+    {
+      "date": "2015-07-01",
+      "Food_YoY": 3.223443223443234,
+      "Grocery_YoY": 3.50364963503651,
+      "Hourly_wage_YoY": 3.630496167809616,
+      "Food_wage_gap": -0.40705294436638173,
+      "Grocery_wage_gap": -0.1268465327731061
+    },
+    {
+      "date": "2015-08-01",
+      "Food_YoY": 3.6055923473142126,
+      "Grocery_YoY": 3.9705882352941257,
+      "Hourly_wage_YoY": 3.128760529482566,
+      "Food_wage_gap": 0.47683181783164663,
+      "Grocery_wage_gap": 0.8418277058115597
+    },
+    {
+      "date": "2015-09-01",
+      "Food_YoY": 3.542435424354262,
+      "Grocery_YoY": 3.917220990391712,
+      "Hourly_wage_YoY": 2.631578947368407,
+      "Food_wage_gap": 0.9108564769858551,
+      "Grocery_wage_gap": 1.285642043023305
+    },
+    {
+      "date": "2015-10-01",
+      "Food_YoY": 4.062038404726742,
+      "Grocery_YoY": 4.589193190229479,
+      "Hourly_wage_YoY": 3.0291109362706514,
+      "Food_wage_gap": 1.0329274684560907,
+      "Grocery_wage_gap": 1.5600822539588277
+    },
+    {
+      "date": "2015-11-01",
+      "Food_YoY": 3.4331628926223434,
+      "Grocery_YoY": 3.7199124726476906,
+      "Hourly_wage_YoY": 3.180212014134276,
+      "Food_wage_gap": 0.2529508784880674,
+      "Grocery_wage_gap": 0.5397004585134146
+    },
+    {
+      "date": "2015-12-01",
+      "Food_YoY": 3.7117903930131035,
+      "Grocery_YoY": 4.06976744186045,
+      "Hourly_wage_YoY": 2.941176470588225,
+      "Food_wage_gap": 0.7706139224248787,
+      "Grocery_wage_gap": 1.1285909712722253
+    },
+    {
+      "date": "2016-01-01",
+      "Food_YoY": 3.953989935298341,
+      "Grocery_YoY": 4.58124552612742,
+      "Hourly_wage_YoY": 2.923976608187129,
+      "Food_wage_gap": 1.0300133271112122,
+      "Grocery_wage_gap": 1.657268917940291
+    },
+    {
+      "date": "2016-02-01",
+      "Food_YoY": 3.942652329749108,
+      "Grocery_YoY": 4.422253922967201,
+      "Hourly_wage_YoY": 3.2006245120999255,
+      "Food_wage_gap": 0.7420278176491824,
+      "Grocery_wage_gap": 1.2216294108672754
+    },
+    {
+      "date": "2016-03-01",
+      "Food_YoY": 3.584229390680993,
+      "Grocery_YoY": 3.9942938659058624,
+      "Hourly_wage_YoY": 3.3125487139516796,
+      "Food_wage_gap": 0.2716806767293134,
+      "Grocery_wage_gap": 0.6817451519541828
+    },
+    {
+      "date": "2016-04-01",
+      "Food_YoY": 3.1563845050215145,
+      "Grocery_YoY": 3.285714285714292,
+      "Hourly_wage_YoY": 2.8272656855151013,
+      "Food_wage_gap": 0.3291188195064132,
+      "Grocery_wage_gap": 0.45844860019919054
+    },
+    {
+      "date": "2016-05-01",
+      "Food_YoY": 1.7755681818181879,
+      "Grocery_YoY": 1.4104372355430161,
+      "Hourly_wage_YoY": 2.063862928348925,
+      "Food_wage_gap": -0.2882947465307373,
+      "Grocery_wage_gap": -0.653425692805909
+    },
+    {
+      "date": "2016-06-01",
+      "Food_YoY": 1.276595744680864,
+      "Grocery_YoY": 0.8456659619450191,
+      "Hourly_wage_YoY": 1.5947102294826987,
+      "Food_wage_gap": -0.3181144848018347,
+      "Grocery_wage_gap": -0.7490442675376796
+    },
+    {
+      "date": "2016-07-01",
+      "Food_YoY": 1.6323633782824531,
+      "Grocery_YoY": 1.128349788434413,
+      "Hourly_wage_YoY": 1.440249124172821,
+      "Food_wage_gap": 0.19211425410963212,
+      "Grocery_wage_gap": -0.3118993357384081
+    },
+    {
+      "date": "2016-08-01",
+      "Food_YoY": 1.0653409090909172,
+      "Grocery_YoY": 0.4243281471004279,
+      "Hourly_wage_YoY": 1.5947102294826987,
+      "Food_wage_gap": -0.5293693203917815,
+      "Grocery_wage_gap": -1.1703820823822708
+    },
+    {
+      "date": "2016-09-01",
+      "Food_YoY": 0.07127583749109156,
+      "Grocery_YoY": -0.9246088193456514,
+      "Hourly_wage_YoY": 1.4925373134328401,
+      "Food_wage_gap": -1.4212614759417486,
+      "Grocery_wage_gap": -2.4171461327784916
+    },
+    {
+      "date": "2016-10-01",
+      "Food_YoY": -0.709723207948898,
+      "Grocery_YoY": -2.0523708421797626,
+      "Hourly_wage_YoY": 1.4891179839633395,
+      "Food_wage_gap": -2.1988411919122375,
+      "Grocery_wage_gap": -3.541488826143102
+    },
+    {
+      "date": "2016-11-01",
+      "Food_YoY": -0.7062146892655385,
+      "Grocery_YoY": -1.9690576652601877,
+      "Hourly_wage_YoY": 1.3698630136986356,
+      "Food_wage_gap": -2.076077702964174,
+      "Grocery_wage_gap": -3.3389206789588233
+    },
+    {
+      "date": "2016-12-01",
+      "Food_YoY": -1.333333333333342,
+      "Grocery_YoY": -2.7932960893854775,
+      "Hourly_wage_YoY": 1.371428571428579,
+      "Food_wage_gap": -2.704761904761921,
+      "Grocery_wage_gap": -4.1647246608140565
+    },
+    {
+      "date": "2017-01-01",
+      "Food_YoY": -2.1438450899031736,
+      "Grocery_YoY": -3.9698836413415317,
+      "Hourly_wage_YoY": 1.0227272727272751,
+      "Food_wage_gap": -3.1665723626304487,
+      "Grocery_wage_gap": -4.992610914068807
+    },
+    {
+      "date": "2017-02-01",
+      "Food_YoY": -2.2758620689655285,
+      "Grocery_YoY": -4.098360655737709,
+      "Hourly_wage_YoY": 1.210287443267788,
+      "Food_wage_gap": -3.4861495122333164,
+      "Grocery_wage_gap": -5.308648099005497
+    },
+    {
+      "date": "2017-03-01",
+      "Food_YoY": -1.868512110726639,
+      "Grocery_YoY": -3.566529492455428,
+      "Hourly_wage_YoY": 1.1316484345529787,
+      "Food_wage_gap": -3.0001605452796176,
+      "Grocery_wage_gap": -4.698177927008407
+    },
+    {
+      "date": "2017-04-01",
+      "Food_YoY": -1.1126564673157313,
+      "Grocery_YoY": -2.5587828492392717,
+      "Hourly_wage_YoY": 0.7532956685499137,
+      "Food_wage_gap": -1.865952135865645,
+      "Grocery_wage_gap": -3.3120785177891854
+    },
+    {
+      "date": "2017-05-01",
+      "Food_YoY": -0.13956734124216386,
+      "Grocery_YoY": -1.1821974965229631,
+      "Hourly_wage_YoY": 1.297214803510105,
+      "Food_wage_gap": -1.4367821447522688,
+      "Grocery_wage_gap": -2.479412300033068
+    },
+    {
+      "date": "2017-06-01",
+      "Food_YoY": 0.5602240896358524,
+      "Grocery_YoY": -0.34940600978337066,
+      "Hourly_wage_YoY": 1.6845329249617125,
+      "Food_wage_gap": -1.1243088353258601,
+      "Grocery_wage_gap": -2.033938934745083
+    },
+    {
+      "date": "2017-07-01",
+      "Food_YoY": 0.6284916201117374,
+      "Grocery_YoY": -0.1394700139470184,
+      "Hourly_wage_YoY": 1.6116653875671627,
+      "Food_wage_gap": -0.9831737674554253,
+      "Grocery_wage_gap": -1.7511354015141811
+    },
+    {
+      "date": "2017-08-01",
+      "Food_YoY": 0.9135628952916308,
+      "Grocery_YoY": 0.28169014084507005,
+      "Hourly_wage_YoY": 2.0290964777947895,
+      "Food_wage_gap": -1.1155335825031587,
+      "Grocery_wage_gap": -1.7474063369497195
+    },
+    {
+      "date": "2017-09-01",
+      "Food_YoY": 1.4245014245014342,
+      "Grocery_YoY": 0.8614501076812608,
+      "Hourly_wage_YoY": 2.036199095022617,
+      "Food_wage_gap": -0.611697670521183,
+      "Grocery_wage_gap": -1.1747489873413564
+    },
+    {
+      "date": "2017-10-01",
+      "Food_YoY": 1.2866333095067795,
+      "Grocery_YoY": 0.5780346820809079,
+      "Hourly_wage_YoY": 1.8811136192625977,
+      "Food_wage_gap": -0.5944803097558182,
+      "Grocery_wage_gap": -1.3030789371816898
+    },
+    {
+      "date": "2017-11-01",
+      "Food_YoY": 1.6358463726884764,
+      "Grocery_YoY": 0.9325681492108995,
+      "Hourly_wage_YoY": 1.9519519519519468,
+      "Food_wage_gap": -0.3161055792634704,
+      "Grocery_wage_gap": -1.0193838027410473
+    },
+    {
+      "date": "2017-12-01",
+      "Food_YoY": 1.9914651493598834,
+      "Grocery_YoY": 1.5086206896551824,
+      "Hourly_wage_YoY": 2.367531003382184,
+      "Food_wage_gap": -0.3760658540223005,
+      "Grocery_wage_gap": -0.8589103137270016
+    },
+    {
+      "date": "2018-01-01",
+      "Food_YoY": 2.2614840989399143,
+      "Grocery_YoY": 1.6393442622950616,
+      "Hourly_wage_YoY": 3.074615673040859,
+      "Food_wage_gap": -0.8131315741009448,
+      "Grocery_wage_gap": -1.4352714107457976
+    },
+    {
+      "date": "2018-02-01",
+      "Food_YoY": 2.117148906139743,
+      "Grocery_YoY": 1.3532763532763559,
+      "Hourly_wage_YoY": 2.9895366218235964,
+      "Food_wage_gap": -0.8723877156838533,
+      "Grocery_wage_gap": -1.6362602685472405
+    },
+    {
+      "date": "2018-03-01",
+      "Food_YoY": 1.6925246826515972,
+      "Grocery_YoY": 0.4978662873399875,
+      "Hourly_wage_YoY": 2.7974636329727742,
+      "Food_wage_gap": -1.104938950321177,
+      "Grocery_wage_gap": -2.2995973456327867
+    },
+    {
+      "date": "2018-04-01",
+      "Food_YoY": 1.8284106891701901,
+      "Grocery_YoY": 0.7097232079489091,
+      "Hourly_wage_YoY": 3.1401869158878437,
+      "Food_wage_gap": -1.3117762267176536,
+      "Grocery_wage_gap": -2.4304637079389346
+    },
+    {
+      "date": "2018-05-01",
+      "Food_YoY": 1.048218029350112,
+      "Grocery_YoY": -0.49261083743841194,
+      "Hourly_wage_YoY": 3.427495291902072,
+      "Food_wage_gap": -2.37927726255196,
+      "Grocery_wage_gap": -3.9201061293404837
+    },
+    {
+      "date": "2018-06-01",
+      "Food_YoY": 1.392757660167132,
+      "Grocery_YoY": 0.07012622720896644,
+      "Hourly_wage_YoY": 3.1626506024096335,
+      "Food_wage_gap": -1.7698929422425014,
+      "Grocery_wage_gap": -3.092524375200667
+    },
+    {
+      "date": "2018-07-01",
+      "Food_YoY": 1.3879250520471897,
+      "Grocery_YoY": 0.0698324022346597,
+      "Hourly_wage_YoY": 2.8700906344410804,
+      "Food_wage_gap": -1.4821655823938906,
+      "Grocery_wage_gap": -2.8002582322064207
+    },
+    {
+      "date": "2018-08-01",
+      "Food_YoY": 1.6016713091921986,
+      "Grocery_YoY": 0.2808988764045006,
+      "Hourly_wage_YoY": 2.1388367729831215,
+      "Food_wage_gap": -0.5371654637909229,
+      "Grocery_wage_gap": -1.8579378965786209
+    },
+    {
+      "date": "2018-09-01",
+      "Food_YoY": 1.755617977528079,
+      "Grocery_YoY": 0.6405693950177982,
+      "Hourly_wage_YoY": 2.291204730229124,
+      "Food_wage_gap": -0.5355867527010449,
+      "Grocery_wage_gap": -1.6506353352113257
+    },
+    {
+      "date": "2018-10-01",
+      "Food_YoY": 2.0465772759350687,
+      "Grocery_YoY": 1.0775862068965525,
+      "Hourly_wage_YoY": 2.584933530280664,
+      "Food_wage_gap": -0.5383562543455955,
+      "Grocery_wage_gap": -1.5073473233841117
+    },
+    {
+      "date": "2018-11-01",
+      "Food_YoY": 2.2393282015395366,
+      "Grocery_YoY": 1.4214641080312784,
+      "Hourly_wage_YoY": 2.4300441826214936,
+      "Food_wage_gap": -0.19071598108195698,
+      "Grocery_wage_gap": -1.0085800745902151
+    },
+    {
+      "date": "2018-12-01",
+      "Food_YoY": 2.8591352859135277,
+      "Grocery_YoY": 2.4769992922859085,
+      "Hourly_wage_YoY": 2.422907488986792,
+      "Food_wage_gap": 0.43622779692673586,
+      "Grocery_wage_gap": 0.05409180329911667
+    },
+    {
+      "date": "2019-01-01",
+      "Food_YoY": 2.764340013821709,
+      "Grocery_YoY": 2.4544179523141585,
+      "Hourly_wage_YoY": 2.29174245180066,
+      "Food_wage_gap": 0.47259756202104874,
+      "Grocery_wage_gap": 0.16267550051349833
+    },
+    {
+      "date": "2019-02-01",
+      "Food_YoY": 3.178991015894961,
+      "Grocery_YoY": 3.373155305692177,
+      "Hourly_wage_YoY": 2.1770682148040787,
+      "Food_wage_gap": 1.001922801090882,
+      "Grocery_wage_gap": 1.1960870908880983
+    },
+    {
+      "date": "2019-03-01",
+      "Food_YoY": 3.6061026352288694,
+      "Grocery_YoY": 4.033970276008492,
+      "Hourly_wage_YoY": 2.0682148040638726,
+      "Food_wage_gap": 1.5378878311649968,
+      "Grocery_wage_gap": 1.965755471944619
+    },
+    {
+      "date": "2019-04-01",
+      "Food_YoY": 2.900552486187835,
+      "Grocery_YoY": 2.9598308668076,
+      "Hourly_wage_YoY": 2.1384559623051747,
+      "Food_wage_gap": 0.7620965238826605,
+      "Grocery_wage_gap": 0.8213749045024255
+    },
+    {
+      "date": "2019-05-01",
+      "Food_YoY": 3.526970954356834,
+      "Grocery_YoY": 4.0311173974540315,
+      "Hourly_wage_YoY": 2.367079388201021,
+      "Food_wage_gap": 1.159891566155813,
+      "Grocery_wage_gap": 1.6640380092530105
+    },
+    {
+      "date": "2019-06-01",
+      "Food_YoY": 3.5027472527472403,
+      "Grocery_YoY": 3.9243167484232844,
+      "Hourly_wage_YoY": 3.138686131386881,
+      "Food_wage_gap": 0.3640611213603595,
+      "Grocery_wage_gap": 0.7856306170364036
+    },
+    {
+      "date": "2019-07-01",
+      "Food_YoY": 3.7645448323066377,
+      "Grocery_YoY": 4.187020237264472,
+      "Hourly_wage_YoY": 3.267254038179157,
+      "Food_wage_gap": 0.4972907941274807,
+      "Grocery_wage_gap": 0.9197661990853145
+    },
+    {
+      "date": "2019-08-01",
+      "Food_YoY": 3.5640849897189852,
+      "Grocery_YoY": 3.9215686274509665,
+      "Hourly_wage_YoY": 3.232916972814115,
+      "Food_wage_gap": 0.3311680169048703,
+      "Grocery_wage_gap": 0.6886516546368515
+    },
+    {
+      "date": "2019-09-01",
+      "Food_YoY": 3.657694962042779,
+      "Grocery_YoY": 4.101838755304099,
+      "Hourly_wage_YoY": 3.395953757225434,
+      "Food_wage_gap": 0.2617412048173451,
+      "Grocery_wage_gap": 0.7058849980786652
+    },
+    {
+      "date": "2019-10-01",
+      "Food_YoY": 3.665283540802222,
+      "Grocery_YoY": 4.12224591329069,
+      "Hourly_wage_YoY": 3.167746580273567,
+      "Food_wage_gap": 0.49753696052865504,
+      "Grocery_wage_gap": 0.9544993330171225
+    },
+    {
+      "date": "2019-11-01",
+      "Food_YoY": 3.4223134839151292,
+      "Grocery_YoY": 3.854239663629988,
+      "Hourly_wage_YoY": 3.0194104960460155,
+      "Food_wage_gap": 0.4029029878691137,
+      "Grocery_wage_gap": 0.8348291675839725
+    },
+    {
+      "date": "2019-12-01",
+      "Food_YoY": 2.9830508474576245,
+      "Grocery_YoY": 3.176795580110503,
+      "Hourly_wage_YoY": 2.6523297491039433,
+      "Food_wage_gap": 0.33072109835368124,
+      "Grocery_wage_gap": 0.5244658310065597
+    },
+    {
+      "date": "2020-01-01",
+      "Food_YoY": 3.227975790181592,
+      "Grocery_YoY": 3.7645448323066377,
+      "Hourly_wage_YoY": 2.95163584637268,
+      "Food_wage_gap": 0.276339943808912,
+      "Grocery_wage_gap": 0.8129089859339578
+    },
+    {
+      "date": "2020-02-01",
+      "Food_YoY": 2.4112525117213623,
+      "Grocery_YoY": 2.3793337865397612,
+      "Hourly_wage_YoY": 3.302556818181812,
+      "Food_wage_gap": -0.8913043064604498,
+      "Grocery_wage_gap": -0.9232230316420509
+    },
+    {
+      "date": "2020-03-01",
+      "Food_YoY": 2.27576974564927,
+      "Grocery_YoY": 2.3809523809523725,
+      "Hourly_wage_YoY": 6.221116246000702,
+      "Food_wage_gap": -3.945346500351432,
+      "Grocery_wage_gap": -3.8401638650483294
+    },
+    {
+      "date": "2020-04-01",
+      "Food_YoY": 3.3557046979865834,
+      "Grocery_YoY": 3.969883641341565,
+      "Hourly_wage_YoY": 10.503903477643718,
+      "Food_wage_gap": -7.148198779657134,
+      "Grocery_wage_gap": -6.534019836302153
+    },
+    {
+      "date": "2020-05-01",
+      "Food_YoY": 3.072812291249183,
+      "Grocery_YoY": 3.5350101971448167,
+      "Hourly_wage_YoY": 10.174315190323725,
+      "Food_wage_gap": -7.101502899074542,
+      "Grocery_wage_gap": -6.639304993178908
+    },
+    {
+      "date": "2020-06-01",
+      "Food_YoY": 2.720637027206396,
+      "Grocery_YoY": 3.0343897505057393,
+      "Hourly_wage_YoY": 7.1832979476291525,
+      "Food_wage_gap": -4.462660920422756,
+      "Grocery_wage_gap": -4.148908197123413
+    },
+    {
+      "date": "2020-07-01",
+      "Food_YoY": 2.242744063324542,
+      "Grocery_YoY": 2.4112525117213623,
+      "Hourly_wage_YoY": 6.505510131532177,
+      "Food_wage_gap": -4.262766068207635,
+      "Grocery_wage_gap": -4.094257619810815
+    },
+    {
+      "date": "2020-08-01",
+      "Food_YoY": 1.7868960953011381,
+      "Grocery_YoY": 1.6172506738544534,
+      "Hourly_wage_YoY": 6.334519572953723,
+      "Food_wage_gap": -4.547623477652585,
+      "Grocery_wage_gap": -4.7172688990992695
+    },
+    {
+      "date": "2020-09-01",
+      "Food_YoY": 1.5978695073235683,
+      "Grocery_YoY": 1.2907608695652106,
+      "Hourly_wage_YoY": 5.031446540880502,
+      "Food_wage_gap": -3.4335770335569338,
+      "Grocery_wage_gap": -3.7406856713152914
+    },
+    {
+      "date": "2020-10-01",
+      "Food_YoY": 2.2681787858572333,
+      "Grocery_YoY": 2.320819112627981,
+      "Hourly_wage_YoY": 5.582693649685977,
+      "Food_wage_gap": -3.3145148638287436,
+      "Grocery_wage_gap": -3.261874537057996
+    },
+    {
+      "date": "2020-11-01",
+      "Food_YoY": 1.8530774321641408,
+      "Grocery_YoY": 1.6194331983805599,
+      "Hourly_wage_YoY": 5.16399162595953,
+      "Food_wage_gap": -3.310914193795389,
+      "Grocery_wage_gap": -3.54455842757897
+    },
+    {
+      "date": "2020-12-01",
+      "Food_YoY": 1.119157340355481,
+      "Grocery_YoY": 0.5354752342703994,
+      "Hourly_wage_YoY": 5.44692737430168,
+      "Food_wage_gap": -4.327770033946199,
+      "Grocery_wage_gap": -4.9114521400312805
+    },
+    {
+      "date": "2021-01-01",
+      "Food_YoY": 0.9771986970684043,
+      "Grocery_YoY": 0.06596306068600288,
+      "Hourly_wage_YoY": 6.217616580310881,
+      "Food_wage_gap": -5.240417883242476,
+      "Grocery_wage_gap": -6.151653519624878
+    },
+    {
+      "date": "2021-02-01",
+      "Food_YoY": 1.7658600392413293,
+      "Grocery_YoY": 1.3280212483399723,
+      "Hourly_wage_YoY": 5.328291509109673,
+      "Food_wage_gap": -3.5624314698683435,
+      "Grocery_wage_gap": -4.0002702607697005
+    },
+    {
+      "date": "2021-03-01",
+      "Food_YoY": 1.7670157068062853,
+      "Grocery_YoY": 1.3289036544850585,
+      "Hourly_wage_YoY": 2.0414993306559603,
+      "Food_wage_gap": -0.27448362384967506,
+      "Grocery_wage_gap": -0.7125956761709018
+    },
+    {
+      "date": "2021-04-01",
+      "Food_YoY": 0.9090909090909038,
+      "Grocery_YoY": 0.06583278472678256,
+      "Hourly_wage_YoY": -1.2845215157353929,
+      "Food_wage_gap": 2.1936124248262967,
+      "Grocery_wage_gap": 1.3503543004621754
+    },
+    {
+      "date": "2021-05-01",
+      "Food_YoY": 1.490602721970169,
+      "Grocery_YoY": 0.8535784635587573,
+      "Hourly_wage_YoY": -1.3561511139812632,
+      "Food_wage_gap": 2.846753835951432,
+      "Grocery_wage_gap": 2.2097295775400205
+    },
+    {
+      "date": "2021-06-01",
+      "Food_YoY": 1.2919896640826822,
+      "Grocery_YoY": 0.654450261780104,
+      "Hourly_wage_YoY": 0.0660283922086391,
+      "Food_wage_gap": 1.2259612718740431,
+      "Grocery_wage_gap": 0.5884218695714649
+    },
+    {
+      "date": "2021-07-01",
+      "Food_YoY": 1.6774193548387162,
+      "Grocery_YoY": 0.9810333551340644,
+      "Hourly_wage_YoY": 1.3351134846461887,
+      "Food_wage_gap": 0.34230587019252745,
+      "Grocery_wage_gap": -0.3540801295121243
+    },
+    {
+      "date": "2021-08-01",
+      "Food_YoY": 2.730819245773719,
+      "Grocery_YoY": 2.5862068965517127,
+      "Hourly_wage_YoY": 1.907630522088355,
+      "Food_wage_gap": 0.8231887236853641,
+      "Grocery_wage_gap": 0.6785763744633577
+    },
+    {
+      "date": "2021-09-01",
+      "Food_YoY": 3.8663171690694664,
+      "Grocery_YoY": 4.225352112676073,
+      "Hourly_wage_YoY": 2.727877578176985,
+      "Food_wage_gap": 1.1384395908924816,
+      "Grocery_wage_gap": 1.497474534499088
+    },
+    {
+      "date": "2021-10-01",
+      "Food_YoY": 3.848662752772336,
+      "Grocery_YoY": 3.935957304869908,
+      "Hourly_wage_YoY": 2.0489094514209993,
+      "Food_wage_gap": 1.7997533013513367,
+      "Grocery_wage_gap": 1.8870478534489088
+    },
+    {
+      "date": "2021-11-01",
+      "Food_YoY": 4.418453541260559,
+      "Grocery_YoY": 4.7144754316069015,
+      "Hourly_wage_YoY": 2.6874585268745754,
+      "Food_wage_gap": 1.7309950143859831,
+      "Grocery_wage_gap": 2.027016904732326
+    },
+    {
+      "date": "2021-12-01",
+      "Food_YoY": 5.208333333333326,
+      "Grocery_YoY": 5.725699067909473,
+      "Hourly_wage_YoY": 3.31125827814569,
+      "Food_wage_gap": 1.8970750551876359,
+      "Grocery_wage_gap": 2.414440789763783
+    },
+    {
+      "date": "2022-01-01",
+      "Food_YoY": 5.7419354838709635,
+      "Grocery_YoY": 6.46011865524061,
+      "Hourly_wage_YoY": 2.8292682926829293,
+      "Food_wage_gap": 2.912667191188034,
+      "Grocery_wage_gap": 3.6308503625576805
+    },
+    {
+      "date": "2022-02-01",
+      "Food_YoY": 6.683804627249357,
+      "Grocery_YoY": 7.404980340760159,
+      "Hourly_wage_YoY": 2.741514360313313,
+      "Food_wage_gap": 3.942290266936044,
+      "Grocery_wage_gap": 4.663465980446846
+    },
+    {
+      "date": "2022-03-01",
+      "Food_YoY": 7.717041800643076,
+      "Grocery_YoY": 8.655737704918032,
+      "Hourly_wage_YoY": 3.148573302722202,
+      "Food_wage_gap": 4.5684684979208745,
+      "Grocery_wage_gap": 5.50716440219583
+    },
+    {
+      "date": "2022-04-01",
+      "Food_YoY": 8.751608751608742,
+      "Grocery_YoY": 9.736842105263154,
+      "Hourly_wage_YoY": 3.2530904359141077,
+      "Food_wage_gap": 5.498518315694635,
+      "Grocery_wage_gap": 6.483751669349046
+    },
+    {
+      "date": "2022-05-01",
+      "Food_YoY": 8.812260536398476,
+      "Grocery_YoY": 9.700520833333348,
+      "Hourly_wage_YoY": 3.6006546644844484,
+      "Food_wage_gap": 5.211605871914028,
+      "Grocery_wage_gap": 6.0998661688489
+    },
+    {
+      "date": "2022-06-01",
+      "Food_YoY": 8.801020408163263,
+      "Grocery_YoY": 9.427828348504551,
+      "Hourly_wage_YoY": 4.915869350049484,
+      "Food_wage_gap": 3.8851510581137783,
+      "Grocery_wage_gap": 4.511958998455067
+    },
+    {
+      "date": "2022-07-01",
+      "Food_YoY": 9.200507614213205,
+      "Grocery_YoY": 9.909326424870457,
+      "Hourly_wage_YoY": 4.281949934123852,
+      "Food_wage_gap": 4.918557680089353,
+      "Grocery_wage_gap": 5.627376490746605
+    },
+    {
+      "date": "2022-08-01",
+      "Food_YoY": 9.810126582278489,
+      "Grocery_YoY": 10.795087265675507,
+      "Hourly_wage_YoY": 4.8604269293924585,
+      "Food_wage_gap": 4.94969965288603,
+      "Grocery_wage_gap": 5.934660336283049
+    },
+    {
+      "date": "2022-09-01",
+      "Food_YoY": 10.283911671924306,
+      "Grocery_YoY": 11.389961389961378,
+      "Hourly_wage_YoY": 4.88989637305699,
+      "Food_wage_gap": 5.394015298867316,
+      "Grocery_wage_gap": 6.500065016904388
+    },
+    {
+      "date": "2022-10-01",
+      "Food_YoY": 10.050251256281406,
+      "Grocery_YoY": 11.039794608472398,
+      "Hourly_wage_YoY": 5.34326424870466,
+      "Food_wage_gap": 4.706987007576746,
+      "Grocery_wage_gap": 5.696530359767738
+    },
+    {
+      "date": "2022-11-01",
+      "Food_YoY": 10.329807093963916,
+      "Grocery_YoY": 11.414077362079889,
+      "Hourly_wage_YoY": 5.718901453957992,
+      "Food_wage_gap": 4.6109056400059245,
+      "Grocery_wage_gap": 5.695175908121897
+    },
+    {
+      "date": "2022-12-01",
+      "Food_YoY": 10.086633663366351,
+      "Grocery_YoY": 11.020151133501255,
+      "Hourly_wage_YoY": 4.743589743589749,
+      "Food_wage_gap": 5.343043919776602,
+      "Grocery_wage_gap": 6.276561389911506
+    },
+    {
+      "date": "2023-01-01",
+      "Food_YoY": 10.433190970103713,
+      "Grocery_YoY": 11.393188854489168,
+      "Hourly_wage_YoY": 4.459203036053139,
+      "Food_wage_gap": 5.973987934050574,
+      "Grocery_wage_gap": 6.933985818436029
+    },
+    {
+      "date": "2023-02-01",
+      "Food_YoY": 9.698795180722897,
+      "Grocery_YoY": 10.555216595485039,
+      "Hourly_wage_YoY": 5.368487928843724,
+      "Food_wage_gap": 4.330307251879173,
+      "Grocery_wage_gap": 5.186728666641315
+    },
+    {
+      "date": "2023-03-01",
+      "Food_YoY": 8.895522388059707,
+      "Grocery_YoY": 9.656004828002418,
+      "Hourly_wage_YoY": 5.341812400635937,
+      "Food_wage_gap": 3.55370998742377,
+      "Grocery_wage_gap": 4.314192427366481
+    },
+    {
+      "date": "2023-04-01",
+      "Food_YoY": 8.343195266272186,
+      "Grocery_YoY": 9.11270983213428,
+      "Hourly_wage_YoY": 5.13547574039066,
+      "Food_wage_gap": 3.207719525881526,
+      "Grocery_wage_gap": 3.97723409174362
+    },
+    {
+      "date": "2023-05-01",
+      "Food_YoY": 8.333333333333325,
+      "Grocery_YoY": 9.020771513353099,
+      "Hourly_wage_YoY": 5.086887835702991,
+      "Food_wage_gap": 3.246445497630334,
+      "Grocery_wage_gap": 3.9338836776501074
+    },
+    {
+      "date": "2023-06-01",
+      "Food_YoY": 8.32356389214537,
+      "Grocery_YoY": 9.090909090909083,
+      "Hourly_wage_YoY": 4.182389937106934,
+      "Food_wage_gap": 4.141173955038435,
+      "Grocery_wage_gap": 4.908519153802149
+    },
+    {
+      "date": "2023-07-01",
+      "Food_YoY": 7.786170830912265,
+      "Grocery_YoY": 8.485562757807896,
+      "Hourly_wage_YoY": 5.0221099178774375,
+      "Food_wage_gap": 2.764060913034827,
+      "Grocery_wage_gap": 3.4634528399304587
+    },
+    {
+      "date": "2023-08-01",
+      "Food_YoY": 6.80115273775217,
+      "Grocery_YoY": 6.942823803967335,
+      "Hourly_wage_YoY": 4.917005950516762,
+      "Food_wage_gap": 1.8841467872354078,
+      "Grocery_wage_gap": 2.0258178534505733
+    },
+    {
+      "date": "2023-09-01",
+      "Food_YoY": 5.949656750572063,
+      "Grocery_YoY": 5.777007510109766,
+      "Hourly_wage_YoY": 5.063291139240511,
+      "Food_wage_gap": 0.8863656113315521,
+      "Grocery_wage_gap": 0.7137163708692551
+    },
+    {
+      "date": "2023-10-01",
+      "Food_YoY": 5.593607305936077,
+      "Grocery_YoY": 5.433526011560708,
+      "Hourly_wage_YoY": 4.826314171533963,
+      "Food_wage_gap": 0.7672931344021139,
+      "Grocery_wage_gap": 0.6072118400267446
+    },
+    {
+      "date": "2023-11-01",
+      "Food_YoY": 5.019740552735463,
+      "Grocery_YoY": 4.667046101309058,
+      "Hourly_wage_YoY": 4.798288508557458,
+      "Food_wage_gap": 0.22145204417800546,
+      "Grocery_wage_gap": -0.13124240724839975
+    },
+    {
+      "date": "2023-12-01",
+      "Food_YoY": 5.0028105677346835,
+      "Grocery_YoY": 4.6511627906976605,
+      "Hourly_wage_YoY": 5.446756425948607,
+      "Food_wage_gap": -0.4439458582139233,
+      "Grocery_wage_gap": -0.7955936352509463
+    },
+    {
+      "date": "2024-01-01",
+      "Food_YoY": 3.9226519337016486,
+      "Grocery_YoY": 3.3907726514730285,
+      "Hourly_wage_YoY": 5.237662730850734,
+      "Food_wage_gap": -1.3150107971490854,
+      "Grocery_wage_gap": -1.8468900793777054
+    },
+    {
+      "date": "2024-02-01",
+      "Food_YoY": 3.294892915980241,
+      "Grocery_YoY": 2.428256070640189,
+      "Hourly_wage_YoY": 4.974374434730167,
+      "Food_wage_gap": -1.6794815187499257,
+      "Grocery_wage_gap": -2.5461183640899776
+    },
+    {
+      "date": "2024-03-01",
+      "Food_YoY": 2.960526315789469,
+      "Grocery_YoY": 1.871216290588884,
+      "Hourly_wage_YoY": 5.070932689405372,
+      "Food_wage_gap": -2.110406373615903,
+      "Grocery_wage_gap": -3.199716398816488
+    },
+    {
+      "date": "2024-04-01",
+      "Food_YoY": 2.348443473511752,
+      "Grocery_YoY": 1.3736263736263687,
+      "Hourly_wage_YoY": 4.67485765657778,
+      "Food_wage_gap": -2.326414183066028,
+      "Grocery_wage_gap": -3.301231282951411
+    },
+    {
+      "date": "2024-05-01",
+      "Food_YoY": 2.383531960996743,
+      "Grocery_YoY": 1.5242242787153026,
+      "Hourly_wage_YoY": 5.051112447384254,
+      "Food_wage_gap": -2.6675804863875108,
+      "Grocery_wage_gap": -3.5268881686689513
+    },
+    {
+      "date": "2024-06-01",
+      "Food_YoY": 2.813852813852802,
+      "Grocery_YoY": 2.12418300653594,
+      "Hourly_wage_YoY": 5.372773920917573,
+      "Food_wage_gap": -2.558921107064771,
+      "Grocery_wage_gap": -3.2485909143816327
+    },
+    {
+      "date": "2024-07-01",
+      "Food_YoY": 2.695417789757415,
+      "Grocery_YoY": 2.1184139054861495,
+      "Hourly_wage_YoY": 5.233082706766923,
+      "Food_wage_gap": -2.537664917009508,
+      "Grocery_wage_gap": -3.1146688012807733
+    },
+    {
+      "date": "2024-08-01",
+      "Food_YoY": 2.698327037236914,
+      "Grocery_YoY": 2.4004364429896174,
+      "Hourly_wage_YoY": 5.044776119402972,
+      "Food_wage_gap": -2.3464490821660577,
+      "Grocery_wage_gap": -2.644339676413354
+    },
+    {
+      "date": "2024-09-01",
+      "Food_YoY": 2.7537796976242035,
+      "Grocery_YoY": 2.403058438012029,
+      "Hourly_wage_YoY": 4.64296209227153,
+      "Food_wage_gap": -1.8891823946473263,
+      "Grocery_wage_gap": -2.2399036542595008
+    },
+    {
+      "date": "2024-10-01",
+      "Food_YoY": 2.972972972972965,
+      "Grocery_YoY": 2.7412280701754277,
+      "Hourly_wage_YoY": 4.956011730205279,
+      "Food_wage_gap": -1.9830387572323138,
+      "Grocery_wage_gap": -2.214783660029851
+    },
+    {
+      "date": "2024-11-01",
+      "Food_YoY": 2.84640171858217,
+      "Grocery_YoY": 2.5557368134855762,
+      "Hourly_wage_YoY": 4.199475065616798,
+      "Food_wage_gap": -1.353073347034628,
+      "Grocery_wage_gap": -1.6437382521312216
+    },
+    {
+      "date": "2024-12-01",
+      "Food_YoY": 0.6423982869379063,
+      "Grocery_YoY": 1.8970189701897011,
+      "Hourly_wage_YoY": 3.975623911781767,
+      "Food_wage_gap": -3.3332256248438608,
+      "Grocery_wage_gap": -2.078604941592066
+    },
+    {
+      "date": "2025-01-01",
+      "Food_YoY": -0.5847953216374213,
+      "Grocery_YoY": 1.8817204301075252,
+      "Hourly_wage_YoY": 3.538550057537404,
+      "Food_wage_gap": -4.123345379174825,
+      "Grocery_wage_gap": -1.6568296274298788
+    },
+    {
+      "date": "2025-02-01",
+      "Food_YoY": 1.2759170653907637,
+      "Grocery_YoY": 2.80172413793105,
+      "Hourly_wage_YoY": 3.790924755887426,
+      "Food_wage_gap": -2.5150076904966623,
+      "Grocery_wage_gap": -0.9892006179563761
+    },
+    {
+      "date": "2025-03-01",
+      "Food_YoY": 3.194888178913735,
+      "Grocery_YoY": 3.1874662344678617,
+      "Hourly_wage_YoY": 3.562194771617344,
+      "Food_wage_gap": -0.367306592703609,
+      "Grocery_wage_gap": -0.3747285371494824
+    },
+    {
+      "date": "2025-04-01",
+      "Food_YoY": 3.7886872998932786,
+      "Grocery_YoY": 3.848238482384825,
+      "Hourly_wage_YoY": 3.435442313197834,
+      "Food_wage_gap": 0.3532449866954446,
+      "Grocery_wage_gap": 0.4127961691869908
+    },
+    {
+      "date": "2025-05-01",
+      "Food_YoY": 3.3862433862433816,
+      "Grocery_YoY": 3.324396782841821,
+      "Hourly_wage_YoY": 3.434459072696061,
+      "Food_wage_gap": -0.048215686452679485,
+      "Grocery_wage_gap": -0.11006228985424027
+    },
+    {
+      "date": "2025-06-01",
+      "Food_YoY": 2.947368421052632,
+      "Grocery_YoY": 2.826666666666666,
+      "Hourly_wage_YoY": 3.150959610426818,
+      "Food_wage_gap": -0.20359118937418597,
+      "Grocery_wage_gap": -0.3242929437601516
+    },
+    {
+      "date": "2025-07-01",
+      "Food_YoY": 3.307086614173227,
+      "Grocery_YoY": 3.404255319148941,
+      "Hourly_wage_YoY": 3.3438125178622213,
+      "Food_wage_gap": -0.03672590368899442,
+      "Grocery_wage_gap": 0.06044280128671975
+    },
+    {
+      "date": "2025-08-01",
+      "Food_YoY": 3.4156594850236477,
+      "Grocery_YoY": 3.4629728289824246,
+      "Hourly_wage_YoY": 3.182722364308055,
+      "Food_wage_gap": 0.2329371207155928,
+      "Grocery_wage_gap": 0.28025046467436976
+    },
+    {
+      "date": "2025-09-01",
+      "Food_YoY": 3.7834997372569568,
+      "Grocery_YoY": 4.0000000000000036,
+      "Hourly_wage_YoY": 3.2855939342881335,
+      "Food_wage_gap": 0.49790580296882325,
+      "Grocery_wage_gap": 0.71440606571187
+    },
+    {
+      "date": "2025-10-01",
+      "Food_YoY": 3.3595800524934383,
+      "Grocery_YoY": 3.415154749199578,
+      "Hourly_wage_YoY": 3.54847722827607,
+      "Food_wage_gap": -0.18889717578263188,
+      "Grocery_wage_gap": -0.13332247907649197
+    },
+    {
+      "date": "2025-11-01",
+      "Food_YoY": 4.177545691906004,
+      "Grocery_YoY": 4.665959703075306,
+      "Hourly_wage_YoY": 3.5544360481388315,
+      "Food_wage_gap": 0.6231096437671724,
+      "Grocery_wage_gap": 1.1115236549364749
+    },
+    {
+      "date": "2025-12-01",
+      "Food_YoY": 6.223404255319154,
+      "Grocery_YoY": 5.000000000000004,
+      "Hourly_wage_YoY": 3.432877476974605,
+      "Food_wage_gap": 2.7905267783445487,
+      "Grocery_wage_gap": 1.5671225230253993
+    },
+    {
+      "date": "2026-01-01",
+      "Food_YoY": 7.326203208556148,
+      "Grocery_YoY": 4.802110817941951,
+      "Hourly_wage_YoY": 3.2786885245901676,
+      "Food_wage_gap": 4.04751468396598,
+      "Grocery_wage_gap": 1.5234222933517838
+    },
+    {
+      "date": "2026-02-01",
+      "Food_YoY": 5.406824146981637,
+      "Grocery_YoY": 4.088050314465397,
+      "Hourly_wage_YoY": 3.9291643608190485,
+      "Food_wage_gap": 1.4776597861625884,
+      "Grocery_wage_gap": 0.15888595364634828
+    },
+    {
+      "date": "2026-03-01",
+      "Food_YoY": 3.973168214654277,
+      "Grocery_YoY": 4.397905759162302,
+      "Hourly_wage_YoY": 4.660194174757271,
+      "Food_wage_gap": -0.6870259601029938,
+      "Grocery_wage_gap": -0.26228841559496896
+    },
+    {
+      "date": "2026-04-01",
+      "Food_YoY": 3.4961439588689025,
+      "Grocery_YoY": 3.8100208768267363,
+      "Hourly_wage_YoY": 4.539164129532236,
+      "Food_wage_gap": -1.0430201706633335,
+      "Grocery_wage_gap": -0.7291432527054997
+    },
+    {
+      "date": "2026-05-01",
+      "Food_YoY": 3.7871033776867957,
+      "Grocery_YoY": 4.255319148936176,
+      "Hourly_wage_YoY": 3.0437188710570107,
+      "Food_wage_gap": 0.7433845066297851,
+      "Grocery_wage_gap": 1.2116002778791657
+    },
+    {
+      "date": "2026-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": null,
+      "Hourly_wage_YoY": 3.3046376006665046,
+      "Food_wage_gap": null,
+      "Grocery_wage_gap": null
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "notes": "Monthly wage-based pressure differs from household-income affordability because wages cover employed workers while disposable income includes other income and transfers."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T14:52:20+00:00"
+}

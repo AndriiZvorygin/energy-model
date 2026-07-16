@@ -1,0 +1,1657 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "affordability-canada-housing-gaps",
+  "title": "Canadian housing cost and income growth gaps",
+  "description": "Positive values mean the specified housing cost grew faster than disposable income per person over the prior year.",
+  "plainLanguageSummary": "Positive values mean the specified housing cost grew faster than disposable income per person over the prior year.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "explanation": "Positive values mean the specified housing cost grew faster than disposable income per person over the prior year.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "Positive values mean the specified housing cost grew faster than disposable income per person over the prior year."
+  ],
+  "sourceNotes": [
+    "Derived from Derived from Statistics Canada; Derived from Statistics Canada; Statistics Canada"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "NHPI_gap": {
+        "mean": -0.18276845704693984,
+        "standardDeviation": 2.476992698551305,
+        "n": 80
+      },
+      "Rent_gap": {
+        "mean": -1.9222732176670256,
+        "standardDeviation": 1.780485623249669,
+        "n": 80
+      },
+      "Shelter_gap": {
+        "mean": -0.9886454420001838,
+        "standardDeviation": 1.783734605623717,
+        "n": 80
+      },
+      "Mortgage_interest_gap": {
+        "mean": -2.2128739166878564,
+        "standardDeviation": 3.6921576597270036,
+        "n": 80
+      }
+    }
+  },
+  "frequency": "quarterly",
+  "dateRange": {
+    "start": "1972-01-01",
+    "end": "2026-01-01"
+  },
+  "series": [
+    {
+      "key": "NHPI_gap",
+      "label": "Canada NHPI income-growth gap",
+      "unit": "percentage points",
+      "source": "Derived from Derived from Statistics Canada; Derived from Statistics Canada; Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Rent_gap",
+      "label": "Canada rent income-growth gap",
+      "unit": "percentage points",
+      "source": "Derived from Derived from Statistics Canada; Derived from Statistics Canada; Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Shelter_gap",
+      "label": "Canada shelter income-growth gap",
+      "unit": "percentage points",
+      "source": "Derived from Derived from Statistics Canada; Derived from Statistics Canada; Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Mortgage_interest_gap",
+      "label": "Canada mortgage-interest income-growth gap",
+      "unit": "percentage points",
+      "source": "Derived from Derived from Statistics Canada; Derived from Statistics Canada; Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1972-01-01",
+      "NHPI_gap": null,
+      "Rent_gap": -8.258472886588676,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": 0.14765976706816275
+    },
+    {
+      "date": "1972-04-01",
+      "NHPI_gap": null,
+      "Rent_gap": -9.172843556776034,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -2.190623898500043
+    },
+    {
+      "date": "1972-07-01",
+      "NHPI_gap": null,
+      "Rent_gap": -10.685598643841555,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -4.441766632437649
+    },
+    {
+      "date": "1972-10-01",
+      "NHPI_gap": null,
+      "Rent_gap": -12.213113364070672,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -3.3997791911294826
+    },
+    {
+      "date": "1973-01-01",
+      "NHPI_gap": null,
+      "Rent_gap": -11.244951766115129,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -1.369948483638339
+    },
+    {
+      "date": "1973-04-01",
+      "NHPI_gap": null,
+      "Rent_gap": -13.189294306827872,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -3.4146415738471454
+    },
+    {
+      "date": "1973-07-01",
+      "NHPI_gap": null,
+      "Rent_gap": -14.57994362760715,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -3.8509918641725704
+    },
+    {
+      "date": "1973-10-01",
+      "NHPI_gap": null,
+      "Rent_gap": -15.171320403826805,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -5.880718551352571
+    },
+    {
+      "date": "1974-01-01",
+      "NHPI_gap": null,
+      "Rent_gap": -16.616355050822285,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -7.38835989556841
+    },
+    {
+      "date": "1974-04-01",
+      "NHPI_gap": null,
+      "Rent_gap": -11.742611199904962,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -1.991728762788524
+    },
+    {
+      "date": "1974-07-01",
+      "NHPI_gap": null,
+      "Rent_gap": -13.84376929060662,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -3.552014178687111
+    },
+    {
+      "date": "1974-10-01",
+      "NHPI_gap": null,
+      "Rent_gap": -11.816242516639441,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -0.3686044023346611
+    },
+    {
+      "date": "1975-01-01",
+      "NHPI_gap": null,
+      "Rent_gap": -9.204603707903281,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": 2.037335490622727
+    },
+    {
+      "date": "1975-04-01",
+      "NHPI_gap": null,
+      "Rent_gap": -12.048139553305258,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -1.3150174247872997
+    },
+    {
+      "date": "1975-07-01",
+      "NHPI_gap": null,
+      "Rent_gap": -9.140113092019785,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -0.48462579403027917
+    },
+    {
+      "date": "1975-10-01",
+      "NHPI_gap": null,
+      "Rent_gap": -6.283563496491707,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": 0.28708837458284364
+    },
+    {
+      "date": "1976-01-01",
+      "NHPI_gap": null,
+      "Rent_gap": -5.201668223656953,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": 0.6086037373755229
+    },
+    {
+      "date": "1976-04-01",
+      "NHPI_gap": null,
+      "Rent_gap": -7.1120794492793635,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -0.010044916375264279
+    },
+    {
+      "date": "1976-07-01",
+      "NHPI_gap": null,
+      "Rent_gap": -0.2103985822037746,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": 7.53802533548904
+    },
+    {
+      "date": "1976-10-01",
+      "NHPI_gap": null,
+      "Rent_gap": -3.123336455373993,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": 4.907403107089593
+    },
+    {
+      "date": "1977-01-01",
+      "NHPI_gap": null,
+      "Rent_gap": -2.51270897751128,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": 5.023059074134451
+    },
+    {
+      "date": "1977-04-01",
+      "NHPI_gap": null,
+      "Rent_gap": -1.2097014942382023,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": 3.970194184099828
+    },
+    {
+      "date": "1977-07-01",
+      "NHPI_gap": null,
+      "Rent_gap": -4.185356950220686,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -0.10798115701084932
+    },
+    {
+      "date": "1977-10-01",
+      "NHPI_gap": null,
+      "Rent_gap": -2.617254122411051,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": 0.1635157165312151
+    },
+    {
+      "date": "1978-01-01",
+      "NHPI_gap": null,
+      "Rent_gap": -7.226060229966614,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -4.917039243947331
+    },
+    {
+      "date": "1978-04-01",
+      "NHPI_gap": null,
+      "Rent_gap": -4.404933455749016,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -1.4576175406598058
+    },
+    {
+      "date": "1978-07-01",
+      "NHPI_gap": null,
+      "Rent_gap": -5.925276430176641,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -2.820013272281898
+    },
+    {
+      "date": "1978-10-01",
+      "NHPI_gap": null,
+      "Rent_gap": -6.598689659264224,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -3.5674336494486045
+    },
+    {
+      "date": "1979-01-01",
+      "NHPI_gap": null,
+      "Rent_gap": -3.304346846879458,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -0.5185406641519563
+    },
+    {
+      "date": "1979-04-01",
+      "NHPI_gap": null,
+      "Rent_gap": -7.672607558115518,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -5.724926787959483
+    },
+    {
+      "date": "1979-07-01",
+      "NHPI_gap": null,
+      "Rent_gap": -7.012078805330125,
+      "Shelter_gap": null,
+      "Mortgage_interest_gap": -6.044625223113399
+    },
+    {
+      "date": "1979-10-01",
+      "NHPI_gap": null,
+      "Rent_gap": -7.546909966321768,
+      "Shelter_gap": -6.002480161022382,
+      "Mortgage_interest_gap": -6.260933236376886
+    },
+    {
+      "date": "1980-01-01",
+      "NHPI_gap": null,
+      "Rent_gap": -7.789658935706334,
+      "Shelter_gap": -5.79440406650007,
+      "Mortgage_interest_gap": -5.374121556665323
+    },
+    {
+      "date": "1980-04-01",
+      "NHPI_gap": null,
+      "Rent_gap": -5.353097019172393,
+      "Shelter_gap": -2.3720710847711546,
+      "Mortgage_interest_gap": -0.3898252304092473
+    },
+    {
+      "date": "1980-07-01",
+      "NHPI_gap": null,
+      "Rent_gap": -6.958911944014568,
+      "Shelter_gap": -3.871843824009826,
+      "Mortgage_interest_gap": -0.41355600074157906
+    },
+    {
+      "date": "1980-10-01",
+      "NHPI_gap": null,
+      "Rent_gap": -7.413833740448994,
+      "Shelter_gap": -3.7101924121815575,
+      "Mortgage_interest_gap": -0.11835351446032227
+    },
+    {
+      "date": "1981-01-01",
+      "NHPI_gap": null,
+      "Rent_gap": -9.94555639150527,
+      "Shelter_gap": -4.701443198006205,
+      "Mortgage_interest_gap": -1.5179028693801158
+    },
+    {
+      "date": "1981-04-01",
+      "NHPI_gap": null,
+      "Rent_gap": -9.247602076269668,
+      "Shelter_gap": -2.950184403286494,
+      "Mortgage_interest_gap": -0.32629447183960636
+    },
+    {
+      "date": "1981-07-01",
+      "NHPI_gap": null,
+      "Rent_gap": -7.826652636449172,
+      "Shelter_gap": 0.039833412465917206,
+      "Mortgage_interest_gap": 4.330257023853234
+    },
+    {
+      "date": "1981-10-01",
+      "NHPI_gap": null,
+      "Rent_gap": -5.318176100139382,
+      "Shelter_gap": 2.8945612724695646,
+      "Mortgage_interest_gap": 10.621773112884282
+    },
+    {
+      "date": "1982-01-01",
+      "NHPI_gap": -7.601093237810309,
+      "Rent_gap": -3.5877093985623674,
+      "Shelter_gap": 3.7972093320751448,
+      "Mortgage_interest_gap": 13.241535330481756
+    },
+    {
+      "date": "1982-04-01",
+      "NHPI_gap": -11.880939692169733,
+      "Rent_gap": -1.3176448435249455,
+      "Shelter_gap": 4.4852431903630325,
+      "Mortgage_interest_gap": 15.438639840214208
+    },
+    {
+      "date": "1982-07-01",
+      "NHPI_gap": -13.856956188856007,
+      "Rent_gap": 0.2675991805181539,
+      "Shelter_gap": 3.6503124572927703,
+      "Mortgage_interest_gap": 14.342592061646766
+    },
+    {
+      "date": "1982-10-01",
+      "NHPI_gap": -10.158860693866036,
+      "Rent_gap": 5.229809098033166,
+      "Shelter_gap": 7.284538920307647,
+      "Mortgage_interest_gap": 14.738496655093591
+    },
+    {
+      "date": "1983-01-01",
+      "NHPI_gap": -7.672416884184385,
+      "Rent_gap": 7.5465453936013995,
+      "Shelter_gap": 7.855845702901697,
+      "Mortgage_interest_gap": 13.41541550904688
+    },
+    {
+      "date": "1983-04-01",
+      "NHPI_gap": -6.035129963694363,
+      "Rent_gap": 6.852486404934654,
+      "Shelter_gap": 6.6993864358995125,
+      "Mortgage_interest_gap": 8.937828653332035
+    },
+    {
+      "date": "1983-07-01",
+      "NHPI_gap": -9.20275356102509,
+      "Rent_gap": -0.3072264940381153,
+      "Shelter_gap": -0.5209822838927014,
+      "Mortgage_interest_gap": -1.3258090278666534
+    },
+    {
+      "date": "1983-10-01",
+      "NHPI_gap": -8.16537554498975,
+      "Rent_gap": -2.0797352216183285,
+      "Shelter_gap": -3.141689424543559,
+      "Mortgage_interest_gap": -5.002738400397688
+    },
+    {
+      "date": "1984-01-01",
+      "NHPI_gap": -6.543871524424372,
+      "Rent_gap": -1.422214616685813,
+      "Shelter_gap": -2.3626315231696227,
+      "Mortgage_interest_gap": -5.636410308456363
+    },
+    {
+      "date": "1984-04-01",
+      "NHPI_gap": -9.499151843812914,
+      "Rent_gap": -5.213075302238712,
+      "Shelter_gap": -6.423777511975892,
+      "Mortgage_interest_gap": -9.691804016259864
+    },
+    {
+      "date": "1984-07-01",
+      "NHPI_gap": -4.587618126487336,
+      "Rent_gap": 0.1546677359690829,
+      "Shelter_gap": -1.2794238424240545,
+      "Mortgage_interest_gap": -3.429508636636047
+    },
+    {
+      "date": "1984-10-01",
+      "NHPI_gap": -7.502633587325036,
+      "Rent_gap": -2.9230198530143747,
+      "Shelter_gap": -3.5076289974847352,
+      "Mortgage_interest_gap": -5.763776072821991
+    },
+    {
+      "date": "1985-01-01",
+      "NHPI_gap": -8.817769145140609,
+      "Rent_gap": -4.506965526194363,
+      "Shelter_gap": -5.145603099371577,
+      "Mortgage_interest_gap": -6.666810991053796
+    },
+    {
+      "date": "1985-04-01",
+      "NHPI_gap": -9.247755405176417,
+      "Rent_gap": -4.966571472829684,
+      "Shelter_gap": -5.383276845091722,
+      "Mortgage_interest_gap": -6.709684339186572
+    },
+    {
+      "date": "1985-07-01",
+      "NHPI_gap": -6.379769316698769,
+      "Rent_gap": -3.7564140535408796,
+      "Shelter_gap": -4.136121006022009,
+      "Mortgage_interest_gap": -6.6321278553217455
+    },
+    {
+      "date": "1985-10-01",
+      "NHPI_gap": -4.183245042740946,
+      "Rent_gap": -3.3616487986094734,
+      "Shelter_gap": -4.264066760612928,
+      "Mortgage_interest_gap": -7.3744101170653
+    },
+    {
+      "date": "1986-01-01",
+      "NHPI_gap": -1.5178775050887827,
+      "Rent_gap": -3.1186036851313492,
+      "Shelter_gap": -4.222195018995478,
+      "Mortgage_interest_gap": -7.799980064166878
+    },
+    {
+      "date": "1986-04-01",
+      "NHPI_gap": 3.102889293589439,
+      "Rent_gap": -0.28857229373462356,
+      "Shelter_gap": -1.9469440019070916,
+      "Mortgage_interest_gap": -5.4854629914207305
+    },
+    {
+      "date": "1986-07-01",
+      "NHPI_gap": 5.161427131098217,
+      "Rent_gap": 0.015422841139933752,
+      "Shelter_gap": -1.5004212878211076,
+      "Mortgage_interest_gap": -4.73672378666733
+    },
+    {
+      "date": "1986-10-01",
+      "NHPI_gap": 8.1249484477814,
+      "Rent_gap": 0.4912386448495898,
+      "Shelter_gap": -0.29831491607044125,
+      "Mortgage_interest_gap": -3.536213060922011
+    },
+    {
+      "date": "1987-01-01",
+      "NHPI_gap": 7.8949616567751235,
+      "Rent_gap": -1.175981835601636,
+      "Shelter_gap": -1.4109381903979257,
+      "Mortgage_interest_gap": -4.4850787194705255
+    },
+    {
+      "date": "1987-04-01",
+      "NHPI_gap": 12.630364365355895,
+      "Rent_gap": 0.8722537988795631,
+      "Shelter_gap": 1.6499804351707725,
+      "Mortgage_interest_gap": -2.14211315712165
+    },
+    {
+      "date": "1987-07-01",
+      "NHPI_gap": 7.678348618557873,
+      "Rent_gap": -3.3536908099058182,
+      "Shelter_gap": -2.0145735987281865,
+      "Mortgage_interest_gap": -5.649028331579031
+    },
+    {
+      "date": "1987-10-01",
+      "NHPI_gap": 5.749148208455756,
+      "Rent_gap": -2.9779827592510966,
+      "Shelter_gap": -1.579838633258679,
+      "Mortgage_interest_gap": -4.349463306199497
+    },
+    {
+      "date": "1988-01-01",
+      "NHPI_gap": 5.48803823051045,
+      "Rent_gap": -0.6169942738085243,
+      "Shelter_gap": 0.5583130364681166,
+      "Mortgage_interest_gap": -1.5992255821965617
+    },
+    {
+      "date": "1988-04-01",
+      "NHPI_gap": 1.2519854307271086,
+      "Rent_gap": -4.297096212717499,
+      "Shelter_gap": -3.5316636680906788,
+      "Mortgage_interest_gap": -4.746586548675258
+    },
+    {
+      "date": "1988-07-01",
+      "NHPI_gap": 2.566151067463495,
+      "Rent_gap": -3.3591175907244253,
+      "Shelter_gap": -2.96595043219825,
+      "Mortgage_interest_gap": -3.6033642255485443
+    },
+    {
+      "date": "1988-10-01",
+      "NHPI_gap": 2.5637994694452484,
+      "Rent_gap": -4.993875207333343,
+      "Shelter_gap": -4.992514790365554,
+      "Mortgage_interest_gap": -5.383835237983425
+    },
+    {
+      "date": "1989-01-01",
+      "NHPI_gap": 4.5073857923508385,
+      "Rent_gap": -5.918890306730406,
+      "Shelter_gap": -5.7413225395995795,
+      "Mortgage_interest_gap": -5.049018248598357
+    },
+    {
+      "date": "1989-04-01",
+      "NHPI_gap": 4.273901972837702,
+      "Rent_gap": -4.751347350919088,
+      "Shelter_gap": -4.258283608528202,
+      "Mortgage_interest_gap": -1.5011770541836214
+    },
+    {
+      "date": "1989-07-01",
+      "NHPI_gap": 7.901377649723806,
+      "Rent_gap": 0.7365304173439169,
+      "Shelter_gap": 1.3428562331854632,
+      "Mortgage_interest_gap": 6.252838327595135
+    },
+    {
+      "date": "1989-10-01",
+      "NHPI_gap": 7.024671559446038,
+      "Rent_gap": 1.5585397008693436,
+      "Shelter_gap": 2.6713733987004717,
+      "Mortgage_interest_gap": 9.088705513243767
+    },
+    {
+      "date": "1990-01-01",
+      "NHPI_gap": 2.848050865298113,
+      "Rent_gap": -0.05992079232510772,
+      "Shelter_gap": 1.712042690890514,
+      "Mortgage_interest_gap": 8.077357775300609
+    },
+    {
+      "date": "1990-04-01",
+      "NHPI_gap": 4.648418598648096,
+      "Rent_gap": 5.379189126058915,
+      "Shelter_gap": 7.0204213786782095,
+      "Mortgage_interest_gap": 13.262268633043861
+    },
+    {
+      "date": "1990-07-01",
+      "NHPI_gap": -3.397703970343058,
+      "Rent_gap": 0.6796088814081003,
+      "Shelter_gap": 1.9760789445646632,
+      "Mortgage_interest_gap": 9.397006581498957
+    },
+    {
+      "date": "1990-10-01",
+      "NHPI_gap": -7.9867962608839775,
+      "Rent_gap": 0.10454873125429476,
+      "Shelter_gap": 1.6472207559579788,
+      "Mortgage_interest_gap": 8.950953404235351
+    },
+    {
+      "date": "1991-01-01",
+      "NHPI_gap": -11.013759408422462,
+      "Rent_gap": 1.768159314510953,
+      "Shelter_gap": 3.533389698367473,
+      "Mortgage_interest_gap": 9.563522914064702
+    },
+    {
+      "date": "1991-04-01",
+      "NHPI_gap": -12.215382067067882,
+      "Rent_gap": 0.0014753842635828462,
+      "Shelter_gap": 0.9685285112842168,
+      "Mortgage_interest_gap": 5.134039642510935
+    },
+    {
+      "date": "1991-07-01",
+      "NHPI_gap": -8.334073586368373,
+      "Rent_gap": 0.8599903115576346,
+      "Shelter_gap": 2.2929781813084027,
+      "Mortgage_interest_gap": 1.8871281115238947
+    },
+    {
+      "date": "1991-10-01",
+      "NHPI_gap": -5.371540243897899,
+      "Rent_gap": 1.3565346273479495,
+      "Shelter_gap": 1.984272517231811,
+      "Mortgage_interest_gap": -0.8758399677017303
+    },
+    {
+      "date": "1992-01-01",
+      "NHPI_gap": -0.19102226305958148,
+      "Rent_gap": 3.397997451814627,
+      "Shelter_gap": 2.6587132959355775,
+      "Mortgage_interest_gap": -1.6097452329613349
+    },
+    {
+      "date": "1992-04-01",
+      "NHPI_gap": -2.816607489026701,
+      "Rent_gap": 0.04394078272538238,
+      "Shelter_gap": -0.8748599162111681,
+      "Mortgage_interest_gap": -5.916300312260436
+    },
+    {
+      "date": "1992-07-01",
+      "NHPI_gap": -3.965301466615312,
+      "Rent_gap": -1.4271756919750578,
+      "Shelter_gap": -2.481963557406952,
+      "Mortgage_interest_gap": -7.979697503963889
+    },
+    {
+      "date": "1992-10-01",
+      "NHPI_gap": -0.914711028004378,
+      "Rent_gap": 1.0876457522712046,
+      "Shelter_gap": 0.1168529737431312,
+      "Mortgage_interest_gap": -6.61991683914237
+    },
+    {
+      "date": "1993-01-01",
+      "NHPI_gap": -2.2418990269991834,
+      "Rent_gap": -0.8301234062683349,
+      "Shelter_gap": -1.793876482697443,
+      "Mortgage_interest_gap": -7.841153613174822
+    },
+    {
+      "date": "1993-04-01",
+      "NHPI_gap": -4.217315498430141,
+      "Rent_gap": -3.4247691496362753,
+      "Shelter_gap": -4.065546062950842,
+      "Mortgage_interest_gap": -10.746868966752142
+    },
+    {
+      "date": "1993-07-01",
+      "NHPI_gap": 1.980730615803239,
+      "Rent_gap": 2.6686343092861886,
+      "Shelter_gap": 1.9261913466294578,
+      "Mortgage_interest_gap": -4.756490892811704
+    },
+    {
+      "date": "1993-10-01",
+      "NHPI_gap": 0.7768962125641377,
+      "Rent_gap": 1.534880878362288,
+      "Shelter_gap": 0.6465836875650943,
+      "Mortgage_interest_gap": -5.292550678981911
+    },
+    {
+      "date": "1994-01-01",
+      "NHPI_gap": -0.4836085908847654,
+      "Rent_gap": 0.44995050071436893,
+      "Shelter_gap": -0.7321894497600123,
+      "Mortgage_interest_gap": -7.9982840373666315
+    },
+    {
+      "date": "1994-04-01",
+      "NHPI_gap": 1.9959606612491743,
+      "Rent_gap": 3.7500671748584957,
+      "Shelter_gap": 2.0498221312171716,
+      "Mortgage_interest_gap": -4.9214987333884626
+    },
+    {
+      "date": "1994-07-01",
+      "NHPI_gap": -1.1855891137322772,
+      "Rent_gap": 0.6425370931109953,
+      "Shelter_gap": -0.5982160908282408,
+      "Mortgage_interest_gap": -5.544593593486901
+    },
+    {
+      "date": "1994-10-01",
+      "NHPI_gap": -3.0947063883594472,
+      "Rent_gap": -1.2543757037004832,
+      "Shelter_gap": -2.4509679589905575,
+      "Mortgage_interest_gap": -4.708443430532439
+    },
+    {
+      "date": "1995-01-01",
+      "NHPI_gap": -1.9777331828180644,
+      "Rent_gap": 0.07022648662764475,
+      "Shelter_gap": -0.7109671619536462,
+      "Mortgage_interest_gap": 0.712860993902531
+    },
+    {
+      "date": "1995-04-01",
+      "NHPI_gap": -2.3699578605770433,
+      "Rent_gap": 0.12467379078955343,
+      "Shelter_gap": -0.010501578908295173,
+      "Mortgage_interest_gap": 3.6173153398109115
+    },
+    {
+      "date": "1995-07-01",
+      "NHPI_gap": -2.864392989661524,
+      "Rent_gap": -0.0034252076873242387,
+      "Shelter_gap": -0.2126065735851057,
+      "Mortgage_interest_gap": 2.6171260235262617
+    },
+    {
+      "date": "1995-10-01",
+      "NHPI_gap": -2.9472645204145387,
+      "Rent_gap": 0.4220428799649678,
+      "Shelter_gap": -0.2699408868354958,
+      "Mortgage_interest_gap": 1.891856874484299
+    },
+    {
+      "date": "1996-01-01",
+      "NHPI_gap": -3.393120925381632,
+      "Rent_gap": 0.1229103684274202,
+      "Shelter_gap": -0.7527870163205996,
+      "Mortgage_interest_gap": -0.46818613975450063
+    },
+    {
+      "date": "1996-04-01",
+      "NHPI_gap": -2.999005973059754,
+      "Rent_gap": 0.6798885626490447,
+      "Shelter_gap": -0.4134558367921537,
+      "Mortgage_interest_gap": -2.06173878665048
+    },
+    {
+      "date": "1996-07-01",
+      "NHPI_gap": -3.1126520302950267,
+      "Rent_gap": 0.3695032034313428,
+      "Shelter_gap": -1.0510855386150708,
+      "Mortgage_interest_gap": -3.428553198831219
+    },
+    {
+      "date": "1996-10-01",
+      "NHPI_gap": -2.5258863400418496,
+      "Rent_gap": -0.2170007615696523,
+      "Shelter_gap": -1.191599357355555,
+      "Mortgage_interest_gap": -5.387315812242455
+    },
+    {
+      "date": "1997-01-01",
+      "NHPI_gap": -1.7896708725005928,
+      "Rent_gap": -0.46371579665018814,
+      "Shelter_gap": -1.3984127536456947,
+      "Mortgage_interest_gap": -6.907330222134045
+    },
+    {
+      "date": "1997-04-01",
+      "NHPI_gap": -0.9224661358891328,
+      "Rent_gap": -0.7129366236944268,
+      "Shelter_gap": -1.4989647379519244,
+      "Mortgage_interest_gap": -7.651727690432564
+    },
+    {
+      "date": "1997-07-01",
+      "NHPI_gap": -3.3251639599389815,
+      "Rent_gap": -3.3744063841814054,
+      "Shelter_gap": -4.158056095448148,
+      "Mortgage_interest_gap": -10.968235900720845
+    },
+    {
+      "date": "1997-10-01",
+      "NHPI_gap": -3.0222835054964037,
+      "Rent_gap": -3.168507590497316,
+      "Shelter_gap": -4.2077380574100935,
+      "Mortgage_interest_gap": -10.885022894250573
+    },
+    {
+      "date": "1998-01-01",
+      "NHPI_gap": -2.7049716600588525,
+      "Rent_gap": -2.788004151033574,
+      "Shelter_gap": -3.9346854858337443,
+      "Mortgage_interest_gap": -9.544583098401993
+    },
+    {
+      "date": "1998-04-01",
+      "NHPI_gap": -2.904798771480932,
+      "Rent_gap": -2.8307387171816467,
+      "Shelter_gap": -3.717763931752849,
+      "Mortgage_interest_gap": -8.007607143986196
+    },
+    {
+      "date": "1998-07-01",
+      "NHPI_gap": -2.4690390551977304,
+      "Rent_gap": -2.5527971464851085,
+      "Shelter_gap": -3.143763981139336,
+      "Mortgage_interest_gap": -5.896712165178119
+    },
+    {
+      "date": "1998-10-01",
+      "NHPI_gap": -3.5103109362083718,
+      "Rent_gap": -3.319126766079661,
+      "Shelter_gap": -3.3552133123224026,
+      "Mortgage_interest_gap": -4.969968390132562
+    },
+    {
+      "date": "1999-01-01",
+      "NHPI_gap": -3.702128388379866,
+      "Rent_gap": -3.3072674737169683,
+      "Shelter_gap": -3.158916244910648,
+      "Mortgage_interest_gap": -4.297366483617959
+    },
+    {
+      "date": "1999-04-01",
+      "NHPI_gap": -5.011095068584859,
+      "Rent_gap": -4.557851604008412,
+      "Shelter_gap": -4.409490790510007,
+      "Mortgage_interest_gap": -5.6852758280587
+    },
+    {
+      "date": "1999-07-01",
+      "NHPI_gap": -3.499721599278871,
+      "Rent_gap": -3.379719745387999,
+      "Shelter_gap": -2.8288077517230503,
+      "Mortgage_interest_gap": -4.295233983264901
+    },
+    {
+      "date": "1999-10-01",
+      "NHPI_gap": -2.344874613481762,
+      "Rent_gap": -2.9145144807848578,
+      "Shelter_gap": -2.18983628839593,
+      "Mortgage_interest_gap": -3.1304163524557005
+    },
+    {
+      "date": "2000-01-01",
+      "NHPI_gap": -2.742993435574137,
+      "Rent_gap": -3.6319348109408622,
+      "Shelter_gap": -1.96293387723403,
+      "Mortgage_interest_gap": -2.2736480407353987
+    },
+    {
+      "date": "2000-04-01",
+      "NHPI_gap": -2.20831185201138,
+      "Rent_gap": -3.524160016514677,
+      "Shelter_gap": -1.564041692113416,
+      "Mortgage_interest_gap": -0.6631284821649652
+    },
+    {
+      "date": "2000-07-01",
+      "NHPI_gap": -2.9955395059987566,
+      "Rent_gap": -4.315500126230121,
+      "Shelter_gap": -1.7503990255641533,
+      "Mortgage_interest_gap": -0.030587671606463473
+    },
+    {
+      "date": "2000-10-01",
+      "NHPI_gap": -3.4832086770689052,
+      "Rent_gap": -4.684741179376117,
+      "Shelter_gap": -1.068906333595887,
+      "Mortgage_interest_gap": 0.08011780526717693
+    },
+    {
+      "date": "2001-01-01",
+      "NHPI_gap": -5.416001497831746,
+      "Rent_gap": -6.585210971387179,
+      "Shelter_gap": -4.221769963885125,
+      "Mortgage_interest_gap": -2.479648806421264
+    },
+    {
+      "date": "2001-04-01",
+      "NHPI_gap": -1.3121183129009673,
+      "Rent_gap": -2.5966205952183685,
+      "Shelter_gap": 1.1944923587627665,
+      "Mortgage_interest_gap": -0.1197590318540609
+    },
+    {
+      "date": "2001-07-01",
+      "NHPI_gap": -1.6135576185937417,
+      "Rent_gap": -2.794748949347503,
+      "Shelter_gap": -0.3446912481050557,
+      "Mortgage_interest_gap": -2.3027245249233497
+    },
+    {
+      "date": "2001-10-01",
+      "NHPI_gap": -0.9655335179974633,
+      "Rent_gap": -1.8477399660533633,
+      "Shelter_gap": -2.30281816430562,
+      "Mortgage_interest_gap": -3.5390566402467627
+    },
+    {
+      "date": "2002-01-01",
+      "NHPI_gap": 1.1464427239302521,
+      "Rent_gap": -0.2013905685367412,
+      "Shelter_gap": -0.4118048441762667,
+      "Mortgage_interest_gap": -4.152876729726984
+    },
+    {
+      "date": "2002-04-01",
+      "NHPI_gap": -0.36538678359079313,
+      "Rent_gap": -2.4461440142245605,
+      "Shelter_gap": -4.82206526703729,
+      "Mortgage_interest_gap": -7.35899735519051
+    },
+    {
+      "date": "2002-07-01",
+      "NHPI_gap": 0.7646481865591026,
+      "Rent_gap": -1.45451797566849,
+      "Shelter_gap": -3.0532182009778808,
+      "Mortgage_interest_gap": -6.719455375629025
+    },
+    {
+      "date": "2002-10-01",
+      "NHPI_gap": 1.5232969820783815,
+      "Rent_gap": -1.4601641156904321,
+      "Shelter_gap": -1.2615028831373998,
+      "Mortgage_interest_gap": -6.41142658387156
+    },
+    {
+      "date": "2003-01-01",
+      "NHPI_gap": 1.3984966885147276,
+      "Rent_gap": -1.7065274217000104,
+      "Shelter_gap": -0.23230372287228462,
+      "Mortgage_interest_gap": -4.774224217134282
+    },
+    {
+      "date": "2003-04-01",
+      "NHPI_gap": 1.7343994091806314,
+      "Rent_gap": -1.1242575991214476,
+      "Shelter_gap": 0.9309566220062404,
+      "Mortgage_interest_gap": -2.629016156383268
+    },
+    {
+      "date": "2003-07-01",
+      "NHPI_gap": 3.466801455773827,
+      "Rent_gap": 0.06282747886239282,
+      "Shelter_gap": 1.961026845166769,
+      "Mortgage_interest_gap": -1.1998699878706942
+    },
+    {
+      "date": "2003-10-01",
+      "NHPI_gap": 3.4506490923031263,
+      "Rent_gap": -0.3826716500604732,
+      "Shelter_gap": 1.293408996366141,
+      "Mortgage_interest_gap": -1.136759790855546
+    },
+    {
+      "date": "2004-01-01",
+      "NHPI_gap": 3.7641346827820943,
+      "Rent_gap": -0.18999982232570378,
+      "Shelter_gap": 0.5076214012061264,
+      "Mortgage_interest_gap": -1.1110057895480807
+    },
+    {
+      "date": "2004-04-01",
+      "NHPI_gap": 1.5118287512860595,
+      "Rent_gap": -3.280682181962624,
+      "Shelter_gap": -1.9036762126399376,
+      "Mortgage_interest_gap": -4.933207802837636
+    },
+    {
+      "date": "2004-07-01",
+      "NHPI_gap": 0.7243156095786851,
+      "Rent_gap": -4.222225580968875,
+      "Shelter_gap": -2.4990970519593425,
+      "Mortgage_interest_gap": -5.139332152035481
+    },
+    {
+      "date": "2004-10-01",
+      "NHPI_gap": 0.8018550126724255,
+      "Rent_gap": -3.6531535768661083,
+      "Shelter_gap": -1.4605545641668494,
+      "Mortgage_interest_gap": -3.9339022399677237
+    },
+    {
+      "date": "2005-01-01",
+      "NHPI_gap": 2.2420641958154297,
+      "Rent_gap": -1.956703539117588,
+      "Shelter_gap": 0.32128528211479157,
+      "Mortgage_interest_gap": -2.1364484647276916
+    },
+    {
+      "date": "2005-04-01",
+      "NHPI_gap": 1.9973567210584298,
+      "Rent_gap": -1.8803931428214904,
+      "Shelter_gap": 0.3739237712792054,
+      "Mortgage_interest_gap": -1.455609516299461
+    },
+    {
+      "date": "2005-07-01",
+      "NHPI_gap": 2.5084790717569527,
+      "Rent_gap": -1.4092987255271971,
+      "Shelter_gap": 0.9164964396111364,
+      "Mortgage_interest_gap": -1.3865261170712628
+    },
+    {
+      "date": "2005-10-01",
+      "NHPI_gap": 2.146736460840848,
+      "Rent_gap": -2.700937836047146,
+      "Shelter_gap": -0.2763271619216301,
+      "Mortgage_interest_gap": -3.3131073993320603
+    },
+    {
+      "date": "2006-01-01",
+      "NHPI_gap": 0.17375071923757535,
+      "Rent_gap": -6.111664018688767,
+      "Shelter_gap": -3.1452067733265254,
+      "Mortgage_interest_gap": -6.423669673737664
+    },
+    {
+      "date": "2006-04-01",
+      "NHPI_gap": 4.4939841874021225,
+      "Rent_gap": -3.7049722934131557,
+      "Shelter_gap": -0.8650286626734616,
+      "Mortgage_interest_gap": -3.683425049531164
+    },
+    {
+      "date": "2006-07-01",
+      "NHPI_gap": 4.92471290351828,
+      "Rent_gap": -5.721695476927358,
+      "Shelter_gap": -3.0374449617770694,
+      "Mortgage_interest_gap": -4.105408865334548
+    },
+    {
+      "date": "2006-10-01",
+      "NHPI_gap": 4.370871316969671,
+      "Rent_gap": -5.620948176217366,
+      "Shelter_gap": -3.5576467389570876,
+      "Mortgage_interest_gap": -2.3315612423588705
+    },
+    {
+      "date": "2007-01-01",
+      "NHPI_gap": 3.9394056398603716,
+      "Rent_gap": -4.527894749226569,
+      "Shelter_gap": -2.9516150517718165,
+      "Mortgage_interest_gap": -0.59615947043552
+    },
+    {
+      "date": "2007-04-01",
+      "NHPI_gap": 2.90726468182565,
+      "Rent_gap": -4.0494032467526475,
+      "Shelter_gap": -2.267908060247481,
+      "Mortgage_interest_gap": 0.18070225085433655
+    },
+    {
+      "date": "2007-07-01",
+      "NHPI_gap": 3.5618142618562443,
+      "Rent_gap": -1.5596078014783021,
+      "Shelter_gap": 0.1833689034512087,
+      "Mortgage_interest_gap": 2.9145305664004972
+    },
+    {
+      "date": "2007-10-01",
+      "NHPI_gap": 3.102915083700708,
+      "Rent_gap": -1.2975971667337438,
+      "Shelter_gap": 1.0095490883909708,
+      "Mortgage_interest_gap": 3.941051486033098
+    },
+    {
+      "date": "2008-01-01",
+      "NHPI_gap": 3.475567204055352,
+      "Rent_gap": -0.9775681735489483,
+      "Shelter_gap": 1.1840855390867766,
+      "Mortgage_interest_gap": 5.212839480732233
+    },
+    {
+      "date": "2008-04-01",
+      "NHPI_gap": -0.4444446940832014,
+      "Rent_gap": -2.955177242002649,
+      "Shelter_gap": -0.17222708282269572,
+      "Mortgage_interest_gap": 4.082809455681557
+    },
+    {
+      "date": "2008-07-01",
+      "NHPI_gap": -3.914953307272784,
+      "Rent_gap": -4.5084811550511805,
+      "Shelter_gap": -1.1831637386315208,
+      "Mortgage_interest_gap": 1.8533225505814155
+    },
+    {
+      "date": "2008-10-01",
+      "NHPI_gap": -3.359297564097097,
+      "Rent_gap": -2.5622195008325743,
+      "Shelter_gap": -0.5512724599184615,
+      "Mortgage_interest_gap": 2.4876908679652088
+    },
+    {
+      "date": "2009-01-01",
+      "NHPI_gap": -3.5487458248816384,
+      "Rent_gap": -0.33800425640873044,
+      "Shelter_gap": 0.8308688381990947,
+      "Mortgage_interest_gap": 3.008292921867106
+    },
+    {
+      "date": "2009-04-01",
+      "NHPI_gap": -3.857459883352199,
+      "Rent_gap": 0.8001613504977634,
+      "Shelter_gap": -0.9921743896881052,
+      "Mortgage_interest_gap": 1.2754571515469548
+    },
+    {
+      "date": "2009-07-01",
+      "NHPI_gap": -3.690842767139546,
+      "Rent_gap": 0.7433903933505848,
+      "Shelter_gap": -2.705251503204975,
+      "Mortgage_interest_gap": -1.8315078089537362
+    },
+    {
+      "date": "2009-10-01",
+      "NHPI_gap": -3.8122938809402873,
+      "Rent_gap": -0.9176251225883725,
+      "Shelter_gap": -4.005643444871366,
+      "Mortgage_interest_gap": -6.333303882623564
+    },
+    {
+      "date": "2010-01-01",
+      "NHPI_gap": -4.3175410883276255,
+      "Rent_gap": -3.8494598884878384,
+      "Shelter_gap": -6.141526334426972,
+      "Mortgage_interest_gap": -10.91786450315151
+    },
+    {
+      "date": "2010-04-01",
+      "NHPI_gap": -0.4788501167863224,
+      "Rent_gap": -2.08629512524654,
+      "Shelter_gap": -2.1049572285007923,
+      "Mortgage_interest_gap": -8.869603039523465
+    },
+    {
+      "date": "2010-07-01",
+      "NHPI_gap": -0.20163458559741,
+      "Rent_gap": -1.7891977741357978,
+      "Shelter_gap": -0.4144136971802048,
+      "Mortgage_interest_gap": -6.789156687138198
+    },
+    {
+      "date": "2010-10-01",
+      "NHPI_gap": -1.1729025590931696,
+      "Rent_gap": -2.2298121026058215,
+      "Shelter_gap": -0.7167690845887975,
+      "Mortgage_interest_gap": -6.16178769386595
+    },
+    {
+      "date": "2011-01-01",
+      "NHPI_gap": 0.27504220925353984,
+      "Rent_gap": -0.48823652167950815,
+      "Shelter_gap": 0.6358323436242763,
+      "Mortgage_interest_gap": -3.9543478928268594
+    },
+    {
+      "date": "2011-04-01",
+      "NHPI_gap": -1.3806550896853231,
+      "Rent_gap": -2.170870726777263,
+      "Shelter_gap": -1.390454122030893,
+      "Mortgage_interest_gap": -5.266493570582154
+    },
+    {
+      "date": "2011-07-01",
+      "NHPI_gap": -0.4686386298750733,
+      "Rent_gap": -1.6599600750264898,
+      "Shelter_gap": -1.2367984657404296,
+      "Mortgage_interest_gap": -4.515464069367569
+    },
+    {
+      "date": "2011-10-01",
+      "NHPI_gap": -0.37778692882997067,
+      "Rent_gap": -1.7911536846986875,
+      "Shelter_gap": -1.2623572492211022,
+      "Mortgage_interest_gap": -3.910640042206115
+    },
+    {
+      "date": "2012-01-01",
+      "NHPI_gap": -0.6174901947420208,
+      "Rent_gap": -1.8309880136412326,
+      "Shelter_gap": -1.1819380518883316,
+      "Mortgage_interest_gap": -3.2358340267198415
+    },
+    {
+      "date": "2012-04-01",
+      "NHPI_gap": -0.7308414285062126,
+      "Rent_gap": -1.8695095056856514,
+      "Shelter_gap": -1.9533513027006233,
+      "Mortgage_interest_gap": -3.723430869345856
+    },
+    {
+      "date": "2012-07-01",
+      "NHPI_gap": -1.082470855729345,
+      "Rent_gap": -2.026392489101192,
+      "Shelter_gap": -2.3940799767614207,
+      "Mortgage_interest_gap": -5.258982105088261
+    },
+    {
+      "date": "2012-10-01",
+      "NHPI_gap": 0.037943324362599284,
+      "Rent_gap": -0.7054530435416595,
+      "Shelter_gap": -1.4545198684253968,
+      "Mortgage_interest_gap": -5.31434095129546
+    },
+    {
+      "date": "2013-01-01",
+      "NHPI_gap": -1.544208997882368,
+      "Rent_gap": -2.037966182233597,
+      "Shelter_gap": -2.816853147217402,
+      "Mortgage_interest_gap": -7.754137182798626
+    },
+    {
+      "date": "2013-04-01",
+      "NHPI_gap": -1.9111621231652665,
+      "Rent_gap": -2.110560047309362,
+      "Shelter_gap": -2.4928166034092314,
+      "Mortgage_interest_gap": -7.790519944934493
+    },
+    {
+      "date": "2013-07-01",
+      "NHPI_gap": -1.3263061789261954,
+      "Rent_gap": -1.3859550993941872,
+      "Shelter_gap": -1.76953760838785,
+      "Mortgage_interest_gap": -6.4908727664166115
+    },
+    {
+      "date": "2013-10-01",
+      "NHPI_gap": -2.0521152914672935,
+      "Rent_gap": -1.8165073179477353,
+      "Shelter_gap": -1.7733775277597008,
+      "Mortgage_interest_gap": -5.438012690398764
+    },
+    {
+      "date": "2014-01-01",
+      "NHPI_gap": -0.4603350574992948,
+      "Rent_gap": -0.456480523045788,
+      "Shelter_gap": 0.35272916015942624,
+      "Mortgage_interest_gap": -2.5003757304218
+    },
+    {
+      "date": "2014-04-01",
+      "NHPI_gap": -0.4079474453712928,
+      "Rent_gap": -0.4665645287315723,
+      "Shelter_gap": 1.2257177113213835,
+      "Mortgage_interest_gap": -1.7851355744134212
+    },
+    {
+      "date": "2014-07-01",
+      "NHPI_gap": -1.506822918436379,
+      "Rent_gap": -1.5951900885918135,
+      "Shelter_gap": -0.2170760202573785,
+      "Mortgage_interest_gap": -3.004771536796902
+    },
+    {
+      "date": "2014-10-01",
+      "NHPI_gap": -0.4965241323226621,
+      "Rent_gap": -0.7950437619039796,
+      "Shelter_gap": 0.29314486414759866,
+      "Mortgage_interest_gap": -2.644669079897255
+    },
+    {
+      "date": "2015-01-01",
+      "NHPI_gap": -2.3926493851456954,
+      "Rent_gap": -2.3906273142418,
+      "Shelter_gap": -1.9778915597216562,
+      "Mortgage_interest_gap": -4.429630876559331
+    },
+    {
+      "date": "2015-04-01",
+      "NHPI_gap": -3.0446745045296986,
+      "Rent_gap": -2.9211318860882907,
+      "Shelter_gap": -3.5504299827506802,
+      "Mortgage_interest_gap": -5.056747073045187
+    },
+    {
+      "date": "2015-07-01",
+      "NHPI_gap": -1.9868268347300155,
+      "Rent_gap": -2.245060593484416,
+      "Shelter_gap": -2.3218834473183403,
+      "Mortgage_interest_gap": -4.55967919454805
+    },
+    {
+      "date": "2015-10-01",
+      "NHPI_gap": -1.6893412216187897,
+      "Rent_gap": -2.3135448872073416,
+      "Shelter_gap": -2.0366987326840613,
+      "Mortgage_interest_gap": -4.431985482648837
+    },
+    {
+      "date": "2016-01-01",
+      "NHPI_gap": 3.5121803234618665,
+      "Rent_gap": 2.4962188427014254,
+      "Shelter_gap": 2.885376944761553,
+      "Mortgage_interest_gap": 0.3040043758569033
+    },
+    {
+      "date": "2016-04-01",
+      "NHPI_gap": 3.4262062082020095,
+      "Rent_gap": 1.5780760648112513,
+      "Shelter_gap": 2.409083117633448,
+      "Mortgage_interest_gap": -0.4415786115767095
+    },
+    {
+      "date": "2016-07-01",
+      "NHPI_gap": 3.516412538179825,
+      "Rent_gap": 1.2505586725465534,
+      "Shelter_gap": 2.409777894590359,
+      "Mortgage_interest_gap": 0.04174360501345564
+    },
+    {
+      "date": "2016-10-01",
+      "NHPI_gap": 2.841072772720654,
+      "Rent_gap": 0.28440610122932863,
+      "Shelter_gap": 1.8132274240548307,
+      "Mortgage_interest_gap": -0.7361327701248865
+    },
+    {
+      "date": "2017-01-01",
+      "NHPI_gap": -0.05532727618990929,
+      "Rent_gap": -2.7432461881483627,
+      "Shelter_gap": -1.048436702107658,
+      "Mortgage_interest_gap": -3.630218123390583
+    },
+    {
+      "date": "2017-04-01",
+      "NHPI_gap": 0.5381037252835119,
+      "Rent_gap": -2.679102010265555,
+      "Shelter_gap": -1.3719265429557481,
+      "Mortgage_interest_gap": -3.295003466032642
+    },
+    {
+      "date": "2017-07-01",
+      "NHPI_gap": -0.425198571555474,
+      "Rent_gap": -3.6154228975987746,
+      "Shelter_gap": -2.9361867175969003,
+      "Mortgage_interest_gap": -4.064307884511931
+    },
+    {
+      "date": "2017-10-01",
+      "NHPI_gap": -0.6490463051042283,
+      "Rent_gap": -3.3279367933801707,
+      "Shelter_gap": -2.7653017823472403,
+      "Mortgage_interest_gap": -3.1465562124939783
+    },
+    {
+      "date": "2018-01-01",
+      "NHPI_gap": -0.8675946277185487,
+      "Rent_gap": -2.6972728596536655,
+      "Shelter_gap": -1.991458513600608,
+      "Mortgage_interest_gap": -1.2921433561178697
+    },
+    {
+      "date": "2018-04-01",
+      "NHPI_gap": -0.6716565308831912,
+      "Rent_gap": -0.6924178382055945,
+      "Shelter_gap": 0.1370568628160429,
+      "Mortgage_interest_gap": 2.0579443067267222
+    },
+    {
+      "date": "2018-07-01",
+      "NHPI_gap": 0.2182612470711387,
+      "Rent_gap": 1.1398214082686042,
+      "Shelter_gap": 2.2545037561554127,
+      "Mortgage_interest_gap": 5.67411983326771
+    },
+    {
+      "date": "2018-10-01",
+      "NHPI_gap": -0.8030801532463938,
+      "Rent_gap": 0.5500662827223612,
+      "Shelter_gap": 1.5404508923525961,
+      "Mortgage_interest_gap": 6.38775492183441
+    },
+    {
+      "date": "2019-01-01",
+      "NHPI_gap": -1.4081291992681155,
+      "Rent_gap": 1.045748468329788,
+      "Shelter_gap": 1.0613476137335542,
+      "Mortgage_interest_gap": 6.560825645163804
+    },
+    {
+      "date": "2019-04-01",
+      "NHPI_gap": -3.33596563160935,
+      "Rent_gap": -1.0459357599521324,
+      "Shelter_gap": -0.6683173757258132,
+      "Mortgage_interest_gap": 4.8405887471063105
+    },
+    {
+      "date": "2019-07-01",
+      "NHPI_gap": -3.9935631399277915,
+      "Rent_gap": -0.8829743190511108,
+      "Shelter_gap": -1.3752548594048397,
+      "Mortgage_interest_gap": 4.015576410438548
+    },
+    {
+      "date": "2019-10-01",
+      "NHPI_gap": -3.53051382774221,
+      "Rent_gap": -0.11427988404173473,
+      "Shelter_gap": -0.8816624447136157,
+      "Mortgage_interest_gap": 2.966492160281753
+    },
+    {
+      "date": "2020-01-01",
+      "NHPI_gap": -3.6035633822550928,
+      "Rent_gap": -1.565057911323109,
+      "Shelter_gap": -1.9676287709871954,
+      "Mortgage_interest_gap": 0.6496836166591136
+    },
+    {
+      "date": "2020-04-01",
+      "NHPI_gap": -11.140225375079881,
+      "Rent_gap": -10.349315472214093,
+      "Shelter_gap": -10.88862189086297,
+      "Mortgage_interest_gap": -8.959090903012589
+    },
+    {
+      "date": "2020-07-01",
+      "NHPI_gap": -4.739703545652607,
+      "Rent_gap": -5.714732123243427,
+      "Shelter_gap": -5.533494708748021,
+      "Mortgage_interest_gap": -6.223460528794256
+    },
+    {
+      "date": "2020-10-01",
+      "NHPI_gap": -0.6533692488240872,
+      "Rent_gap": -4.005384868675543,
+      "Shelter_gap": -3.2283846074827593,
+      "Mortgage_interest_gap": -6.949450139727897
+    },
+    {
+      "date": "2021-01-01",
+      "NHPI_gap": -1.0678299543611214,
+      "Rent_gap": -7.346645809557217,
+      "Shelter_gap": -6.1170131764416436,
+      "Mortgage_interest_gap": -13.154603040070889
+    },
+    {
+      "date": "2021-04-01",
+      "NHPI_gap": 13.07935470680517,
+      "Rent_gap": 3.893269670353061,
+      "Shelter_gap": 5.969827015940199,
+      "Mortgage_interest_gap": -5.974930995266836
+    },
+    {
+      "date": "2021-07-01",
+      "NHPI_gap": 9.172449891933043,
+      "Rent_gap": -0.5911750815488892,
+      "Shelter_gap": 2.2189893518904658,
+      "Mortgage_interest_gap": -11.768586656945379
+    },
+    {
+      "date": "2021-10-01",
+      "NHPI_gap": 9.431642271314299,
+      "Rent_gap": -0.0707600882309034,
+      "Shelter_gap": 2.8618970705232227,
+      "Mortgage_interest_gap": -10.392116047693044
+    },
+    {
+      "date": "2022-01-01",
+      "NHPI_gap": 10.326366464582048,
+      "Rent_gap": 2.917999507691005,
+      "Shelter_gap": 5.604379247422275,
+      "Mortgage_interest_gap": -6.974119747801111
+    },
+    {
+      "date": "2022-04-01",
+      "NHPI_gap": 5.651088877293198,
+      "Rent_gap": 1.53543347050904,
+      "Shelter_gap": 4.438752820414216,
+      "Mortgage_interest_gap": -5.479618477942805
+    },
+    {
+      "date": "2022-07-01",
+      "NHPI_gap": 4.260099485684887,
+      "Rent_gap": 1.976189320228161,
+      "Shelter_gap": 4.161078225194559,
+      "Mortgage_interest_gap": 2.2750713546749957
+    },
+    {
+      "date": "2022-10-01",
+      "NHPI_gap": -2.035930650146267,
+      "Rent_gap": -0.955135570813459,
+      "Shelter_gap": 0.6572639666254432,
+      "Mortgage_interest_gap": 8.206556436313363
+    },
+    {
+      "date": "2023-01-01",
+      "NHPI_gap": -1.4453415364312105,
+      "Rent_gap": 2.6369119012343623,
+      "Shelter_gap": 3.1938330190845354,
+      "Mortgage_interest_gap": 20.98643266719913
+    },
+    {
+      "date": "2023-04-01",
+      "NHPI_gap": -3.720299765803159,
+      "Rent_gap": 2.6520385825615556,
+      "Shelter_gap": 1.6008007029282734,
+      "Mortgage_interest_gap": 26.332068590253478
+    },
+    {
+      "date": "2023-07-01",
+      "NHPI_gap": -5.746478022428492,
+      "Rent_gap": 1.6109427876216165,
+      "Shelter_gap": 0.8969645715118713,
+      "Mortgage_interest_gap": 25.871397417868877
+    },
+    {
+      "date": "2023-10-01",
+      "NHPI_gap": -3.622079920928012,
+      "Rent_gap": 5.028131465864183,
+      "Shelter_gap": 3.213036903021571,
+      "Mortgage_interest_gap": 26.854003679514584
+    },
+    {
+      "date": "2024-01-01",
+      "NHPI_gap": -4.729505118198696,
+      "Rent_gap": 3.9871854148164187,
+      "Shelter_gap": 2.1706690702415044,
+      "Mortgage_interest_gap": 22.127656095766987
+    },
+    {
+      "date": "2024-04-01",
+      "NHPI_gap": -4.628640775442228,
+      "Rent_gap": 4.1206664831092485,
+      "Shelter_gap": 1.8270075616815928,
+      "Mortgage_interest_gap": 18.846633365815777
+    },
+    {
+      "date": "2024-07-01",
+      "NHPI_gap": -4.599438158510338,
+      "Rent_gap": 3.837425637673509,
+      "Shelter_gap": 0.6447594113409227,
+      "Mortgage_interest_gap": 14.112803137170868
+    },
+    {
+      "date": "2024-10-01",
+      "NHPI_gap": -4.838584985421335,
+      "Rent_gap": 2.506147114001278,
+      "Shelter_gap": -0.21550934954450707,
+      "Mortgage_interest_gap": 8.339014675909695
+    },
+    {
+      "date": "2025-01-01",
+      "NHPI_gap": -4.868977508907113,
+      "Rent_gap": 0.7409547495453195,
+      "Shelter_gap": -0.744733743596937,
+      "Mortgage_interest_gap": 4.083132155033487
+    },
+    {
+      "date": "2025-04-01",
+      "NHPI_gap": -3.6352378416482867,
+      "Rent_gap": 2.018653746038246,
+      "Shelter_gap": 0.28728871441334736,
+      "Mortgage_interest_gap": 3.4040554202040108
+    },
+    {
+      "date": "2025-07-01",
+      "NHPI_gap": -3.075825944371291,
+      "Rent_gap": 3.3289977188824205,
+      "Shelter_gap": 1.2451789709755356,
+      "Mortgage_interest_gap": 2.7238301001406118
+    },
+    {
+      "date": "2025-10-01",
+      "NHPI_gap": -3.765499319851129,
+      "Rent_gap": 3.0745655808533945,
+      "Shelter_gap": 0.4642679460714172,
+      "Mortgage_interest_gap": 0.4833894488377677
+    },
+    {
+      "date": "2026-01-01",
+      "NHPI_gap": -4.483307315807816,
+      "Rent_gap": 1.9190455611974855,
+      "Shelter_gap": -0.6089991565505493,
+      "Mortgage_interest_gap": -1.5157414303765826
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "notes": "Positive values mean the specified housing cost grew faster than disposable income per person over the prior year."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T14:52:20+00:00"
+}

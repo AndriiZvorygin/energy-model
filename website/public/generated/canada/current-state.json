@@ -91,6 +91,20 @@
         "canada-nhpi-yoy",
         "bis-canada-real-house-price-index"
       ]
+    },
+    {
+      "id": "canadian-purchasing-power",
+      "label": "Canadian purchasing power",
+      "indicatorIds": [
+        "household-saving-rate",
+        "real-disposable-income-per-person",
+        "real-wage-growth",
+        "food-to-income",
+        "rent-to-income",
+        "shelter-to-income",
+        "mortgage-interest-to-income",
+        "nhpi-to-income"
+      ]
     }
   ],
   "notes": [

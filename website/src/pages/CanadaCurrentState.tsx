@@ -20,13 +20,14 @@ type CanadaManifest = {
 }
 type CanadaState = { status: string; latestObservationDate: string; notes: string[] }
 
-const layerOrder = ['Global oil and liquidity inputs', 'Physical energy conditions', 'Energy affordability and finance', 'Food affordability', 'Housing purchase prices and shelter costs', 'Production and output', 'Labour and households']
+const layerOrder = ['Global oil and liquidity inputs', 'Physical energy conditions', 'Energy affordability and finance', 'Food affordability', 'Housing purchase prices and shelter costs', 'Canadian purchasing power', 'Production and output', 'Labour and households']
 const layerText: Record<string, string> = {
   'Global oil and liquidity inputs': 'External global liquidity and benchmark oil conditions inherited from the existing locked research layer.',
   'Physical energy conditions': 'Canadian production, trade, refinery inputs and inventories are shown separately; production is not treated as household affordability.',
   'Energy affordability and finance': 'Domestic-currency oil, consumer energy prices, shelter, rates, exchange rates and debt service describe financial exposure.',
   'Food affordability': 'Consumer food, grocery, and inflation-gap measures remain distinct from international commodity quotations and require income context.',
   'Housing purchase prices and shelter costs': 'New-property purchase prices, rent, mortgage interest, replacement cost, and shelter services are separate housing evidence.',
+  'Canadian purchasing power': 'Quarterly household income and monthly worker wages provide separate denominators for food and housing affordability.',
   'Production and output': 'Monthly real GDP by industry provides the main high-frequency Canadian output evidence.',
   'Labour and households': 'Employment rates, participation, prime-age employment and job composition supplement unemployment.',
 }

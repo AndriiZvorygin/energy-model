@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "toronto-residential-property-price-index",
+  "field": "toronto_residential_property_price_index",
+  "label": "Toronto broad residential property price index",
+  "description": "Statistics Canada inactive broad new-and-resale property index; retained separately from NHPI and housing-service costs.",
+  "definition": "Statistics Canada inactive broad new-and-resale property index; retained separately from NHPI and housing-service costs.",
+  "unit": "index, 2017=100",
+  "frequency": "quarterly",
+  "status": "measured",
+  "layer": "Housing purchase prices and shelter costs",
+  "geography": "Toronto",
+  "geographyLevel": "provincial_or_metro",
+  "domesticOrExternal": "domestic",
+  "directlyComparableAcrossCountries": false,
+  "comparisonLimitations": "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels.",
+  "interpretationDirection": "context-dependent",
+  "interpretationLabel": "Direction unclear",
+  "interpretation": "Interpret with its documented comparison series.",
+  "source": "Statistics Canada",
+  "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1810016901",
+  "sourceIdentifier": "StatCan vector v1073542643",
+  "sourceDate": "2022-02-07",
+  "retrievalDate": "2026-07-16T14:52:20+00:00",
+  "revisionStatus": "Statistics Canada table 18-10-0169-01; inactive broad new-and-resale property index. The series is inactive and ends in 2021 Q4. It is not spliced to NHPI, resale, rent, or shelter CPI.",
+  "seasonalAdjustment": "not seasonally adjusted",
+  "nominalOrReal": "nominal property purchase price",
+  "startDate": "2017-01-01",
+  "endDate": "2021-10-01",
+  "latest": {
+    "date": "2021-10-01",
+    "sourceDate": "2022-02-07",
+    "value": 133.3,
+    "previousValue": 129.9,
+    "oneYearChange": 17.10000000000001,
+    "threeMonthChange": 3.4000000000000057,
+    "fourQuarterChange": 17.10000000000001,
+    "monthOverMonthChange": 3.4000000000000057,
+    "yearOverYearPercentChange": 14.716006884681597,
+    "cumulativeChange": 39.87408184679959,
+    "historicalPercentile": 97.5,
+    "percentileSince2000": 97.5,
+    "distanceFromMedian": 28.950000000000017,
+    "distanceFromPreviousPeakPercent": 2.617397998460369,
+    "momentumThreeMonth": 3.4000000000000057,
+    "momentumTwelveMonth": 17.10000000000001,
+    "momentum": "rising"
+  },
+  "referenceRanges": {
+    "historicalMedian": 104.35,
+    "p10": 99.95,
+    "p25": 101.875,
+    "p75": 114.55,
+    "p90": 127.47000000000001,
+    "minimum": 95.3,
+    "maximum": 133.3
+  },
+  "observations": [
+    {
+      "date": "2017-01-01",
+      "value": 95.3,
+      "sourceDate": "2019-11-14"
+    },
+    {
+      "date": "2017-04-01",
+      "value": 103.3,
+      "sourceDate": "2019-11-14"
+    },
+    {
+      "date": "2017-07-01",
+      "value": 101.9,
+      "sourceDate": "2019-11-14"
+    },
+    {
+      "date": "2017-10-01",
+      "value": 99.5,
+      "sourceDate": "2019-11-14"
+    },
+    {
+      "date": "2018-01-01",
+      "value": 100.0,
+      "sourceDate": "2019-11-14"
+    },
+    {
+      "date": "2018-04-01",
+      "value": 101.6,
+      "sourceDate": "2019-11-14"
+    },
+    {
+      "date": "2018-07-01",
+      "value": 101.8,
+      "sourceDate": "2019-11-14"
+    },
+    {
+      "date": "2018-10-01",
+      "value": 102.5,
+      "sourceDate": "2019-11-14"
+    },
+    {
+      "date": "2019-01-01",
+      "value": 102.5,
+      "sourceDate": "2019-11-14"
+    },
+    {
+      "date": "2019-04-01",
+      "value": 104.0,
+      "sourceDate": "2019-11-14"
+    },
+    {
+      "date": "2019-07-01",
+      "value": 104.7,
+      "sourceDate": "2020-01-29"
+    },
+    {
+      "date": "2019-10-01",
+      "value": 106.5,
+      "sourceDate": "2020-05-01"
+    },
+    {
+      "date": "2020-01-01",
+      "value": 109.2,
+      "sourceDate": "2020-07-30"
+    },
+    {
+      "date": "2020-04-01",
+      "value": 113.2,
+      "sourceDate": "2020-10-29"
+    },
+    {
+      "date": "2020-07-01",
+      "value": 114.0,
+      "sourceDate": "2021-02-08"
+    },
+    {
+      "date": "2020-10-01",
+      "value": 116.2,
+      "sourceDate": "2021-05-07"
+    },
+    {
+      "date": "2021-01-01",
+      "value": 118.7,
+      "sourceDate": "2022-02-07"
+    },
+    {
+      "date": "2021-04-01",
+      "value": 127.2,
+      "sourceDate": "2022-02-07"
+    },
+    {
+      "date": "2021-07-01",
+      "value": 129.9,
+      "sourceDate": "2022-02-07"
+    },
+    {
+      "date": "2021-10-01",
+      "value": 133.3,
+      "sourceDate": "2022-02-07"
+    }
+  ],
+  "transformations": [
+    "raw",
+    "indexed",
+    "yoy",
+    "pct_change",
+    "zscore"
+  ],
+  "confirmingIndicators": [],
+  "conflictingIndicators": [],
+  "evidenceChecks": [],
+  "confidenceLevel": "medium",
+  "evidenceLabel": "Contextual indicator",
+  "calculation": {
+    "formula": "Statistics Canada inactive broad new-and-resale property index; retained separately from NHPI and housing-service costs.",
+    "explanation": "Statistics Canada inactive broad new-and-resale property index; retained separately from NHPI and housing-service costs.",
+    "example": "Latest observation: 133.30 index, 2017=100 at 2021-10."
+  },
+  "components": [
+    "18-10-0169-01"
+  ],
+  "referencePeriod": null,
+  "limitations": [
+    "Statistics Canada table 18-10-0169-01; inactive broad new-and-resale property index. The series is inactive and ends in 2021 Q4. It is not spliced to NHPI, resale, rent, or shelter CPI.",
+    "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+  ],
+  "futureClassifierMetadata": {
+    "status": "Not yet evaluated",
+    "candidateSymptoms": [
+      "residential property prices diverging from income"
+    ]
+  },
+  "generatedAt": "2026-07-16T14:52:20+00:00"
+}

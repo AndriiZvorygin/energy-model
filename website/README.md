@@ -23,6 +23,8 @@ The Python pipeline writes chart-ready JSON under `public/generated/`. The websi
 
 Affordability evidence is split across `public/generated/global/`, `public/generated/canada/`, and `public/generated/us/`. The manifests index self-describing food commodity, consumer food, property purchase-price, and shelter-cost histories. `oil_model.affordability` also writes multi-series chart contracts and descriptive food-transmission results without invoking or modifying either classifier.
 
+The Canadian namespace also publishes quarterly household disposable income, income per person, CPI-deflated real income, saving, monthly Canada/Ontario wages, and purchasing-power ratios. Monthly price indexes are averaged over completed quarters for household-income comparisons; quarterly income is never interpolated or forward-filled into monthly rows. Wage-based comparisons remain monthly and distinct from household-income measures.
+
 The system-response routes consume the generated indicator catalogue, current-state table, energy-burden validation, physical-tightness summary, labour lead scan, historical episode library, symptom evaluations, and regime scores. The browser does not recalculate those results. Version-controlled rules live in `../config/symptom_rules.json` and `../config/regime_rules.json`; Python publishes separate monthly-nowcast and confirmed-quarterly results, including coverage, freshness, conflicts, persistence, sensitivity, and revised-data warnings.
 
 ## Research Sections

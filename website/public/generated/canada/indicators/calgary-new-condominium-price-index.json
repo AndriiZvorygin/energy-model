@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 1,
+  "id": "calgary-new-condominium-price-index",
+  "field": "calgary_new_condominium_price_index",
+  "label": "Calgary new condominium apartment price index",
+  "description": "Statistics Canada active new-condominium-only index; retained separately from NHPI and housing-service costs.",
+  "definition": "Statistics Canada active new-condominium-only index; retained separately from NHPI and housing-service costs.",
+  "unit": "index, 2017=100",
+  "frequency": "quarterly",
+  "status": "measured",
+  "layer": "Housing purchase prices and shelter costs",
+  "geography": "Calgary",
+  "geographyLevel": "provincial_or_metro",
+  "domesticOrExternal": "domestic",
+  "directlyComparableAcrossCountries": false,
+  "comparisonLimitations": "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels.",
+  "interpretationDirection": "context-dependent",
+  "interpretationLabel": "Direction unclear",
+  "interpretation": "Interpret with its documented comparison series.",
+  "source": "Statistics Canada",
+  "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1810027301",
+  "sourceIdentifier": "StatCan vector v1353834724",
+  "sourceDate": "2026-05-06",
+  "retrievalDate": "2026-07-16T14:52:20+00:00",
+  "revisionStatus": "Statistics Canada table 18-10-0273-01; active new-condominium-only index. It is not spliced to NHPI, resale, rent, or shelter CPI.",
+  "seasonalAdjustment": "not seasonally adjusted",
+  "nominalOrReal": "nominal property purchase price",
+  "startDate": "2017-01-01",
+  "endDate": "2026-01-01",
+  "latest": {
+    "date": "2026-01-01",
+    "sourceDate": "2026-05-06",
+    "value": 107.3,
+    "previousValue": 107.5,
+    "oneYearChange": -1.7999999999999972,
+    "threeMonthChange": -0.20000000000000284,
+    "fourQuarterChange": -1.7999999999999972,
+    "monthOverMonthChange": -0.20000000000000284,
+    "yearOverYearPercentChange": -1.6498625114573784,
+    "cumulativeChange": 6.342913776015857,
+    "historicalPercentile": 82.43243243243244,
+    "percentileSince2000": 82.43243243243244,
+    "distanceFromMedian": 18.299999999999997,
+    "distanceFromPreviousPeakPercent": -1.7399267399267448,
+    "momentumThreeMonth": -0.20000000000000284,
+    "momentumTwelveMonth": -1.7999999999999972,
+    "momentum": "falling"
+  },
+  "referenceRanges": {
+    "historicalMedian": 89.0,
+    "p10": 78.66,
+    "p25": 80.9,
+    "p75": 102.3,
+    "p90": 107.53999999999999,
+    "minimum": 77.5,
+    "maximum": 109.2
+  },
+  "observations": [
+    {
+      "date": "2017-01-01",
+      "value": 100.9,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2017-04-01",
+      "value": 102.4,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2017-07-01",
+      "value": 99.5,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2017-10-01",
+      "value": 97.1,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2018-01-01",
+      "value": 95.9,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2018-04-01",
+      "value": 92.3,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2018-07-01",
+      "value": 92.6,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2018-10-01",
+      "value": 89.0,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2019-01-01",
+      "value": 86.0,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2019-04-01",
+      "value": 84.4,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2019-07-01",
+      "value": 82.9,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2019-10-01",
+      "value": 79.8,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2020-01-01",
+      "value": 78.0,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2020-04-01",
+      "value": 78.0,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2020-07-01",
+      "value": 77.5,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2020-10-01",
+      "value": 78.6,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2021-01-01",
+      "value": 78.7,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2021-04-01",
+      "value": 79.4,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2021-07-01",
+      "value": 80.5,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2021-10-01",
+      "value": 80.9,
+      "sourceDate": "2022-05-04"
+    },
+    {
+      "date": "2022-01-01",
+      "value": 80.9,
+      "sourceDate": "2022-08-05"
+    },
+    {
+      "date": "2022-04-01",
+      "value": 81.9,
+      "sourceDate": "2022-11-04"
+    },
+    {
+      "date": "2022-07-01",
+      "value": 82.4,
+      "sourceDate": "2023-02-06"
+    },
+    {
+      "date": "2022-10-01",
+      "value": 82.8,
+      "sourceDate": "2023-05-05"
+    },
+    {
+      "date": "2023-01-01",
+      "value": 84.2,
+      "sourceDate": "2023-08-10"
+    },
+    {
+      "date": "2023-04-01",
+      "value": 87.7,
+      "sourceDate": "2023-11-03"
+    },
+    {
+      "date": "2023-07-01",
+      "value": 93.1,
+      "sourceDate": "2024-02-09"
+    },
+    {
+      "date": "2023-10-01",
+      "value": 96.8,
+      "sourceDate": "2024-05-02"
+    },
+    {
+      "date": "2024-01-01",
+      "value": 102.3,
+      "sourceDate": "2024-07-30"
+    },
+    {
+      "date": "2024-04-01",
+      "value": 107.0,
+      "sourceDate": "2024-11-01"
+    },
+    {
+      "date": "2024-07-01",
+      "value": 107.6,
+      "sourceDate": "2025-02-04"
+    },
+    {
+      "date": "2024-10-01",
+      "value": 109.2,
+      "sourceDate": "2025-05-06"
+    },
+    {
+      "date": "2025-01-01",
+      "value": 109.1,
+      "sourceDate": "2025-07-31"
+    },
+    {
+      "date": "2025-04-01",
+      "value": 108.0,
+      "sourceDate": "2025-11-03"
+    },
+    {
+      "date": "2025-07-01",
+      "value": 107.5,
+      "sourceDate": "2026-01-30"
+    },
+    {
+      "date": "2025-10-01",
+      "value": 107.5,
+      "sourceDate": "2026-05-06"
+    },
+    {
+      "date": "2026-01-01",
+      "value": 107.3,
+      "sourceDate": "2026-05-06"
+    }
+  ],
+  "transformations": [
+    "raw",
+    "indexed",
+    "yoy",
+    "pct_change",
+    "zscore"
+  ],
+  "confirmingIndicators": [],
+  "conflictingIndicators": [],
+  "evidenceChecks": [],
+  "confidenceLevel": "medium",
+  "evidenceLabel": "Contextual indicator",
+  "calculation": {
+    "formula": "Statistics Canada active new-condominium-only index; retained separately from NHPI and housing-service costs.",
+    "explanation": "Statistics Canada active new-condominium-only index; retained separately from NHPI and housing-service costs.",
+    "example": "Latest observation: 107.30 index, 2017=100 at 2026-01."
+  },
+  "components": [
+    "18-10-0273-01"
+  ],
+  "referencePeriod": null,
+  "limitations": [
+    "Statistics Canada table 18-10-0273-01; active new-condominium-only index. It is not spliced to NHPI, resale, rent, or shelter CPI.",
+    "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+  ],
+  "futureClassifierMetadata": {
+    "status": "Not yet evaluated",
+    "candidateSymptoms": [
+      "residential property prices diverging from income"
+    ]
+  },
+  "generatedAt": "2026-07-16T14:52:20+00:00"
+}

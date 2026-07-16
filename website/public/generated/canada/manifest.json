@@ -883,6 +883,393 @@
       "layer": "Housing purchase prices and shelter costs",
       "core": false,
       "latestDate": "2026-03-01"
+    },
+    {
+      "id": "household-disposable-income",
+      "file": "indicators/household-disposable-income.json",
+      "label": "Household disposable income",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "household-consumption-expenditure",
+      "file": "indicators/household-consumption-expenditure.json",
+      "label": "Household final consumption expenditure",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "household-saving-rate",
+      "file": "indicators/household-saving-rate.json",
+      "label": "Household saving rate",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "canada-population-quarterly",
+      "file": "indicators/canada-population-quarterly.json",
+      "label": "Canada quarterly population estimate",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-04-01"
+    },
+    {
+      "id": "average-hourly-wages",
+      "file": "indicators/average-hourly-wages.json",
+      "label": "Canada average hourly wage rate",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "goods-producing-hourly-wages",
+      "file": "indicators/goods-producing-hourly-wages.json",
+      "label": "Canada goods-producing hourly wage rate",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "services-producing-hourly-wages",
+      "file": "indicators/services-producing-hourly-wages.json",
+      "label": "Canada services-producing hourly wage rate",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "ontario-average-hourly-wages",
+      "file": "indicators/ontario-average-hourly-wages.json",
+      "label": "Ontario average hourly wage rate",
+      "geography": "Ontario",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "ontario-goods-producing-hourly-wages",
+      "file": "indicators/ontario-goods-producing-hourly-wages.json",
+      "label": "Ontario goods-producing hourly wage rate",
+      "geography": "Ontario",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "ontario-services-producing-hourly-wages",
+      "file": "indicators/ontario-services-producing-hourly-wages.json",
+      "label": "Ontario services-producing hourly wage rate",
+      "geography": "Ontario",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "average-weekly-earnings",
+      "file": "indicators/average-weekly-earnings.json",
+      "label": "Canada average weekly earnings",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-04-01"
+    },
+    {
+      "id": "ontario-average-weekly-earnings",
+      "file": "indicators/ontario-average-weekly-earnings.json",
+      "label": "Ontario average weekly earnings",
+      "geography": "Ontario",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-04-01"
+    },
+    {
+      "id": "six-cma-residential-property-price-index",
+      "file": "indicators/six-cma-residential-property-price-index.json",
+      "label": "Six-CMA residential property price index",
+      "geography": "Six-CMA composite",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2021-10-01"
+    },
+    {
+      "id": "ottawa-residential-property-price-index",
+      "file": "indicators/ottawa-residential-property-price-index.json",
+      "label": "Ottawa broad residential property price index",
+      "geography": "Ottawa-Gatineau, Ontario part",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2021-10-01"
+    },
+    {
+      "id": "toronto-residential-property-price-index",
+      "file": "indicators/toronto-residential-property-price-index.json",
+      "label": "Toronto broad residential property price index",
+      "geography": "Toronto",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2021-10-01"
+    },
+    {
+      "id": "calgary-residential-property-price-index",
+      "file": "indicators/calgary-residential-property-price-index.json",
+      "label": "Calgary broad residential property price index",
+      "geography": "Calgary",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2021-10-01"
+    },
+    {
+      "id": "ottawa-new-condominium-price-index",
+      "file": "indicators/ottawa-new-condominium-price-index.json",
+      "label": "Ottawa new condominium apartment price index",
+      "geography": "Ottawa-Gatineau, Ontario part",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "toronto-new-condominium-price-index",
+      "file": "indicators/toronto-new-condominium-price-index.json",
+      "label": "Toronto new condominium apartment price index",
+      "geography": "Toronto",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "calgary-new-condominium-price-index",
+      "file": "indicators/calgary-new-condominium-price-index.json",
+      "label": "Calgary new condominium apartment price index",
+      "geography": "Calgary",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "edmonton-new-condominium-price-index",
+      "file": "indicators/edmonton-new-condominium-price-index.json",
+      "label": "Edmonton new condominium apartment price index",
+      "geography": "Edmonton",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "household-disposable-income-per-person",
+      "file": "indicators/household-disposable-income-per-person.json",
+      "label": "Canada household disposable income per person",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "real-disposable-income-per-person",
+      "file": "indicators/real-disposable-income-per-person.json",
+      "label": "Canada real household disposable income per person",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "nominal-wage-growth",
+      "file": "indicators/nominal-wage-growth.json",
+      "label": "Canada hourly wage growth",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "real-wage-index",
+      "file": "indicators/real-wage-index.json",
+      "label": "Canada real wage index",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "real-wage-growth",
+      "file": "indicators/real-wage-growth.json",
+      "label": "Canada real wage growth",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "food-to-income",
+      "file": "indicators/food-to-income.json",
+      "label": "Canada food-price-to-income index",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "grocery-to-income",
+      "file": "indicators/grocery-to-income.json",
+      "label": "Canada grocery-price-to-income index",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "food-income-gap",
+      "file": "indicators/food-income-gap.json",
+      "label": "Canada food income-growth gap",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "grocery-income-gap",
+      "file": "indicators/grocery-income-gap.json",
+      "label": "Canada grocery income-growth gap",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "food-to-wage",
+      "file": "indicators/food-to-wage.json",
+      "label": "Canada food wage-pressure gap",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "grocery-to-wage",
+      "file": "indicators/grocery-to-wage.json",
+      "label": "Canada grocery wage-pressure gap",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "rent-to-wage",
+      "file": "indicators/rent-to-wage.json",
+      "label": "Canada rent wage-pressure gap",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "shelter-to-wage",
+      "file": "indicators/shelter-to-wage.json",
+      "label": "Canada shelter wage-pressure gap",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "rent-to-income",
+      "file": "indicators/rent-to-income.json",
+      "label": "Canada rent-to-income index",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "shelter-to-income",
+      "file": "indicators/shelter-to-income.json",
+      "label": "Canada shelter-to-income index",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "mortgage-interest-to-income",
+      "file": "indicators/mortgage-interest-to-income.json",
+      "label": "Canada mortgage-interest-to-income index",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "nhpi-to-income",
+      "file": "indicators/nhpi-to-income.json",
+      "label": "Canada new-house-price-to-income index",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "real-nhpi",
+      "file": "indicators/real-nhpi.json",
+      "label": "Canada real new-house-price index",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "rent-income-gap",
+      "file": "indicators/rent-income-gap.json",
+      "label": "Canada rent income-growth gap",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "shelter-income-gap",
+      "file": "indicators/shelter-income-gap.json",
+      "label": "Canada shelter income-growth gap",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "mortgage-income-gap",
+      "file": "indicators/mortgage-income-gap.json",
+      "label": "Canada mortgage-interest income-growth gap",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "nhpi-income-gap",
+      "file": "indicators/nhpi-income-gap.json",
+      "label": "Canada NHPI income-growth gap",
+      "geography": "Canada",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2026-01-01"
+    },
+    {
+      "id": "residential-property-price-to-income",
+      "file": "indicators/residential-property-price-to-income.json",
+      "label": "Six-CMA residential-property-price-to-income index",
+      "geography": "Six-CMA composite",
+      "layer": "Canadian purchasing power",
+      "core": false,
+      "latestDate": "2021-10-01"
     }
   ],
   "currentStateFile": "current-state.json",

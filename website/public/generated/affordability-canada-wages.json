@@ -1,0 +1,2626 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "affordability-canada-wages",
+  "title": "Canada and Ontario wage histories",
+  "description": "Hourly wages are unadjusted LFS estimates; weekly earnings are separate seasonally adjusted SEPH confirmation measures. Their levels should not be compared on one raw axis.",
+  "plainLanguageSummary": "Hourly wages are unadjusted LFS estimates; weekly earnings are separate seasonally adjusted SEPH confirmation measures. Their levels should not be compared on one raw axis.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "explanation": "Hourly wages are unadjusted LFS estimates; weekly earnings are separate seasonally adjusted SEPH confirmation measures. Their levels should not be compared on one raw axis.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "Hourly wages are unadjusted LFS estimates; weekly earnings are separate seasonally adjusted SEPH confirmation measures. Their levels should not be compared on one raw axis."
+  ],
+  "sourceNotes": [
+    "Statistics Canada"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "Canada_hourly": {
+        "mean": 22.43025,
+        "standardDeviation": 3.6272806532580297,
+        "n": 240
+      },
+      "Ontario_hourly": {
+        "mean": 23.117,
+        "standardDeviation": 3.447811044706482,
+        "n": 240
+      },
+      "Canada_weekly": {
+        "mean": 843.2497368421052,
+        "standardDeviation": 114.21525079412922,
+        "n": 228
+      },
+      "Ontario_weekly": {
+        "mean": 867.9960964912281,
+        "standardDeviation": 104.9380537659417,
+        "n": 228
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "1997-01-01",
+    "end": "2026-06-01"
+  },
+  "series": [
+    {
+      "key": "Canada_hourly",
+      "label": "Canada average hourly wage rate",
+      "unit": "CAD per hour",
+      "source": "Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "Ontario_hourly",
+      "label": "Ontario average hourly wage rate",
+      "unit": "CAD per hour",
+      "source": "Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "Canada_weekly",
+      "label": "Canada average weekly earnings",
+      "unit": "CAD per week",
+      "source": "Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-04-01"
+    },
+    {
+      "key": "Ontario_weekly",
+      "label": "Ontario average weekly earnings",
+      "unit": "CAD per week",
+      "source": "Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-04-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1997-01-01",
+      "Canada_hourly": 15.63,
+      "Ontario_hourly": 16.31,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1997-02-01",
+      "Canada_hourly": 15.64,
+      "Ontario_hourly": 16.32,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1997-03-01",
+      "Canada_hourly": 15.63,
+      "Ontario_hourly": 16.31,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1997-04-01",
+      "Canada_hourly": 15.67,
+      "Ontario_hourly": 16.38,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1997-05-01",
+      "Canada_hourly": 15.59,
+      "Ontario_hourly": 16.33,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1997-06-01",
+      "Canada_hourly": 15.48,
+      "Ontario_hourly": 16.28,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1997-07-01",
+      "Canada_hourly": 15.35,
+      "Ontario_hourly": 16.12,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1997-08-01",
+      "Canada_hourly": 15.36,
+      "Ontario_hourly": 16.08,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1997-09-01",
+      "Canada_hourly": 15.66,
+      "Ontario_hourly": 16.45,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1997-10-01",
+      "Canada_hourly": 15.66,
+      "Ontario_hourly": 16.49,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1997-11-01",
+      "Canada_hourly": 15.72,
+      "Ontario_hourly": 16.5,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1997-12-01",
+      "Canada_hourly": 15.73,
+      "Ontario_hourly": 16.53,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1998-01-01",
+      "Canada_hourly": 15.81,
+      "Ontario_hourly": 16.57,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1998-02-01",
+      "Canada_hourly": 15.81,
+      "Ontario_hourly": 16.55,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1998-03-01",
+      "Canada_hourly": 15.79,
+      "Ontario_hourly": 16.49,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1998-04-01",
+      "Canada_hourly": 15.82,
+      "Ontario_hourly": 16.52,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1998-05-01",
+      "Canada_hourly": 15.75,
+      "Ontario_hourly": 16.46,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1998-06-01",
+      "Canada_hourly": 15.72,
+      "Ontario_hourly": 16.41,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1998-07-01",
+      "Canada_hourly": 15.52,
+      "Ontario_hourly": 16.23,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1998-08-01",
+      "Canada_hourly": 15.56,
+      "Ontario_hourly": 16.31,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1998-09-01",
+      "Canada_hourly": 15.86,
+      "Ontario_hourly": 16.54,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1998-10-01",
+      "Canada_hourly": 15.9,
+      "Ontario_hourly": 16.54,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1998-11-01",
+      "Canada_hourly": 15.95,
+      "Ontario_hourly": 16.57,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1998-12-01",
+      "Canada_hourly": 15.96,
+      "Ontario_hourly": 16.68,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1999-01-01",
+      "Canada_hourly": 16.08,
+      "Ontario_hourly": 16.79,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1999-02-01",
+      "Canada_hourly": 16.09,
+      "Ontario_hourly": 16.82,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1999-03-01",
+      "Canada_hourly": 16.13,
+      "Ontario_hourly": 16.87,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1999-04-01",
+      "Canada_hourly": 16.15,
+      "Ontario_hourly": 16.9,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1999-05-01",
+      "Canada_hourly": 16.09,
+      "Ontario_hourly": 16.91,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1999-06-01",
+      "Canada_hourly": 16.05,
+      "Ontario_hourly": 16.93,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1999-07-01",
+      "Canada_hourly": 15.95,
+      "Ontario_hourly": 16.83,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1999-08-01",
+      "Canada_hourly": 16.08,
+      "Ontario_hourly": 16.97,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1999-09-01",
+      "Canada_hourly": 16.29,
+      "Ontario_hourly": 17.2,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1999-10-01",
+      "Canada_hourly": 16.33,
+      "Ontario_hourly": 17.25,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1999-11-01",
+      "Canada_hourly": 16.39,
+      "Ontario_hourly": 17.35,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "1999-12-01",
+      "Canada_hourly": 16.45,
+      "Ontario_hourly": 17.2,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "2000-01-01",
+      "Canada_hourly": 16.61,
+      "Ontario_hourly": 17.39,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "2000-02-01",
+      "Canada_hourly": 16.56,
+      "Ontario_hourly": 17.37,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "2000-03-01",
+      "Canada_hourly": 16.58,
+      "Ontario_hourly": 17.41,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "2000-04-01",
+      "Canada_hourly": 16.72,
+      "Ontario_hourly": 17.6,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "2000-05-01",
+      "Canada_hourly": 16.56,
+      "Ontario_hourly": 17.53,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "2000-06-01",
+      "Canada_hourly": 16.49,
+      "Ontario_hourly": 17.51,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "2000-07-01",
+      "Canada_hourly": 16.4,
+      "Ontario_hourly": 17.41,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "2000-08-01",
+      "Canada_hourly": 16.53,
+      "Ontario_hourly": 17.54,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "2000-09-01",
+      "Canada_hourly": 16.84,
+      "Ontario_hourly": 17.83,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "2000-10-01",
+      "Canada_hourly": 16.87,
+      "Ontario_hourly": 17.75,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "2000-11-01",
+      "Canada_hourly": 16.88,
+      "Ontario_hourly": 17.81,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "2000-12-01",
+      "Canada_hourly": 16.92,
+      "Ontario_hourly": 17.86,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "2001-01-01",
+      "Canada_hourly": 17.09,
+      "Ontario_hourly": 17.98,
+      "Canada_weekly": 656.88,
+      "Ontario_weekly": 697.75
+    },
+    {
+      "date": "2001-02-01",
+      "Canada_hourly": 17.17,
+      "Ontario_hourly": 18.11,
+      "Canada_weekly": 653.23,
+      "Ontario_weekly": 691.7
+    },
+    {
+      "date": "2001-03-01",
+      "Canada_hourly": 17.21,
+      "Ontario_hourly": 18.15,
+      "Canada_weekly": 655.25,
+      "Ontario_weekly": 695.77
+    },
+    {
+      "date": "2001-04-01",
+      "Canada_hourly": 17.31,
+      "Ontario_hourly": 18.21,
+      "Canada_weekly": 652.41,
+      "Ontario_weekly": 691.91
+    },
+    {
+      "date": "2001-05-01",
+      "Canada_hourly": 17.24,
+      "Ontario_hourly": 18.15,
+      "Canada_weekly": 652.19,
+      "Ontario_weekly": 690.65
+    },
+    {
+      "date": "2001-06-01",
+      "Canada_hourly": 17.13,
+      "Ontario_hourly": 18.05,
+      "Canada_weekly": 656.72,
+      "Ontario_weekly": 695.09
+    },
+    {
+      "date": "2001-07-01",
+      "Canada_hourly": 16.94,
+      "Ontario_hourly": 17.93,
+      "Canada_weekly": 657.14,
+      "Ontario_weekly": 696.28
+    },
+    {
+      "date": "2001-08-01",
+      "Canada_hourly": 16.99,
+      "Ontario_hourly": 18.0,
+      "Canada_weekly": 659.47,
+      "Ontario_weekly": 695.53
+    },
+    {
+      "date": "2001-09-01",
+      "Canada_hourly": 17.32,
+      "Ontario_hourly": 18.34,
+      "Canada_weekly": 659.92,
+      "Ontario_weekly": 698.91
+    },
+    {
+      "date": "2001-10-01",
+      "Canada_hourly": 17.33,
+      "Ontario_hourly": 18.28,
+      "Canada_weekly": 660.91,
+      "Ontario_weekly": 697.46
+    },
+    {
+      "date": "2001-11-01",
+      "Canada_hourly": 17.41,
+      "Ontario_hourly": 18.37,
+      "Canada_weekly": 659.71,
+      "Ontario_weekly": 700.87
+    },
+    {
+      "date": "2001-12-01",
+      "Canada_hourly": 17.5,
+      "Ontario_hourly": 18.48,
+      "Canada_weekly": 660.39,
+      "Ontario_weekly": 698.38
+    },
+    {
+      "date": "2002-01-01",
+      "Canada_hourly": 17.64,
+      "Ontario_hourly": 18.61,
+      "Canada_weekly": 662.86,
+      "Ontario_weekly": 697.67
+    },
+    {
+      "date": "2002-02-01",
+      "Canada_hourly": 17.69,
+      "Ontario_hourly": 18.65,
+      "Canada_weekly": 659.68,
+      "Ontario_weekly": 696.62
+    },
+    {
+      "date": "2002-03-01",
+      "Canada_hourly": 17.74,
+      "Ontario_hourly": 18.65,
+      "Canada_weekly": 667.09,
+      "Ontario_weekly": 703.95
+    },
+    {
+      "date": "2002-04-01",
+      "Canada_hourly": 17.77,
+      "Ontario_hourly": 18.61,
+      "Canada_weekly": 672.33,
+      "Ontario_weekly": 709.06
+    },
+    {
+      "date": "2002-05-01",
+      "Canada_hourly": 17.61,
+      "Ontario_hourly": 18.46,
+      "Canada_weekly": 671.43,
+      "Ontario_weekly": 708.39
+    },
+    {
+      "date": "2002-06-01",
+      "Canada_hourly": 17.56,
+      "Ontario_hourly": 18.45,
+      "Canada_weekly": 670.32,
+      "Ontario_weekly": 708.94
+    },
+    {
+      "date": "2002-07-01",
+      "Canada_hourly": 17.36,
+      "Ontario_hourly": 18.18,
+      "Canada_weekly": 677.47,
+      "Ontario_weekly": 716.27
+    },
+    {
+      "date": "2002-08-01",
+      "Canada_hourly": 17.43,
+      "Ontario_hourly": 18.29,
+      "Canada_weekly": 672.17,
+      "Ontario_weekly": 712.09
+    },
+    {
+      "date": "2002-09-01",
+      "Canada_hourly": 17.79,
+      "Ontario_hourly": 18.68,
+      "Canada_weekly": 674.17,
+      "Ontario_weekly": 715.54
+    },
+    {
+      "date": "2002-10-01",
+      "Canada_hourly": 17.76,
+      "Ontario_hourly": 18.63,
+      "Canada_weekly": 679.35,
+      "Ontario_weekly": 719.4
+    },
+    {
+      "date": "2002-11-01",
+      "Canada_hourly": 17.82,
+      "Ontario_hourly": 18.67,
+      "Canada_weekly": 680.45,
+      "Ontario_weekly": 720.22
+    },
+    {
+      "date": "2002-12-01",
+      "Canada_hourly": 17.81,
+      "Ontario_hourly": 18.62,
+      "Canada_weekly": 685.21,
+      "Ontario_weekly": 722.68
+    },
+    {
+      "date": "2003-01-01",
+      "Canada_hourly": 18.0,
+      "Ontario_hourly": 18.79,
+      "Canada_weekly": 680.23,
+      "Ontario_weekly": 715.27
+    },
+    {
+      "date": "2003-02-01",
+      "Canada_hourly": 18.05,
+      "Ontario_hourly": 18.84,
+      "Canada_weekly": 686.95,
+      "Ontario_weekly": 724.14
+    },
+    {
+      "date": "2003-03-01",
+      "Canada_hourly": 18.02,
+      "Ontario_hourly": 18.76,
+      "Canada_weekly": 682.41,
+      "Ontario_weekly": 720.48
+    },
+    {
+      "date": "2003-04-01",
+      "Canada_hourly": 18.03,
+      "Ontario_hourly": 18.87,
+      "Canada_weekly": 685.79,
+      "Ontario_weekly": 721.21
+    },
+    {
+      "date": "2003-05-01",
+      "Canada_hourly": 17.98,
+      "Ontario_hourly": 18.83,
+      "Canada_weekly": 684.85,
+      "Ontario_weekly": 722.77
+    },
+    {
+      "date": "2003-06-01",
+      "Canada_hourly": 17.8,
+      "Ontario_hourly": 18.62,
+      "Canada_weekly": 691.5,
+      "Ontario_weekly": 728.74
+    },
+    {
+      "date": "2003-07-01",
+      "Canada_hourly": 17.75,
+      "Ontario_hourly": 18.6,
+      "Canada_weekly": 691.46,
+      "Ontario_weekly": 726.86
+    },
+    {
+      "date": "2003-08-01",
+      "Canada_hourly": 17.85,
+      "Ontario_hourly": 18.7,
+      "Canada_weekly": 694.25,
+      "Ontario_weekly": 734.62
+    },
+    {
+      "date": "2003-09-01",
+      "Canada_hourly": 18.26,
+      "Ontario_hourly": 19.15,
+      "Canada_weekly": 697.73,
+      "Ontario_weekly": 736.52
+    },
+    {
+      "date": "2003-10-01",
+      "Canada_hourly": 18.26,
+      "Ontario_hourly": 19.07,
+      "Canada_weekly": 696.98,
+      "Ontario_weekly": 736.24
+    },
+    {
+      "date": "2003-11-01",
+      "Canada_hourly": 18.26,
+      "Ontario_hourly": 19.11,
+      "Canada_weekly": 700.21,
+      "Ontario_weekly": 737.35
+    },
+    {
+      "date": "2003-12-01",
+      "Canada_hourly": 18.32,
+      "Ontario_hourly": 19.27,
+      "Canada_weekly": 698.61,
+      "Ontario_weekly": 737.23
+    },
+    {
+      "date": "2004-01-01",
+      "Canada_hourly": 18.5,
+      "Ontario_hourly": 19.48,
+      "Canada_weekly": 701.73,
+      "Ontario_weekly": 744.15
+    },
+    {
+      "date": "2004-02-01",
+      "Canada_hourly": 18.53,
+      "Ontario_hourly": 19.6,
+      "Canada_weekly": 701.71,
+      "Ontario_weekly": 742.48
+    },
+    {
+      "date": "2004-03-01",
+      "Canada_hourly": 18.52,
+      "Ontario_hourly": 19.6,
+      "Canada_weekly": 705.2,
+      "Ontario_weekly": 744.72
+    },
+    {
+      "date": "2004-04-01",
+      "Canada_hourly": 18.56,
+      "Ontario_hourly": 19.65,
+      "Canada_weekly": 704.12,
+      "Ontario_weekly": 746.72
+    },
+    {
+      "date": "2004-05-01",
+      "Canada_hourly": 18.46,
+      "Ontario_hourly": 19.5,
+      "Canada_weekly": 710.06,
+      "Ontario_weekly": 752.13
+    },
+    {
+      "date": "2004-06-01",
+      "Canada_hourly": 18.39,
+      "Ontario_hourly": 19.37,
+      "Canada_weekly": 705.85,
+      "Ontario_weekly": 745.69
+    },
+    {
+      "date": "2004-07-01",
+      "Canada_hourly": 18.19,
+      "Ontario_hourly": 19.1,
+      "Canada_weekly": 709.13,
+      "Ontario_weekly": 749.95
+    },
+    {
+      "date": "2004-08-01",
+      "Canada_hourly": 18.22,
+      "Ontario_hourly": 19.03,
+      "Canada_weekly": 711.46,
+      "Ontario_weekly": 750.17
+    },
+    {
+      "date": "2004-09-01",
+      "Canada_hourly": 18.59,
+      "Ontario_hourly": 19.42,
+      "Canada_weekly": 710.99,
+      "Ontario_weekly": 744.37
+    },
+    {
+      "date": "2004-10-01",
+      "Canada_hourly": 18.61,
+      "Ontario_hourly": 19.32,
+      "Canada_weekly": 712.2,
+      "Ontario_weekly": 750.74
+    },
+    {
+      "date": "2004-11-01",
+      "Canada_hourly": 18.71,
+      "Ontario_hourly": 19.44,
+      "Canada_weekly": 716.86,
+      "Ontario_weekly": 755.09
+    },
+    {
+      "date": "2004-12-01",
+      "Canada_hourly": 18.74,
+      "Ontario_hourly": 19.5,
+      "Canada_weekly": 719.66,
+      "Ontario_weekly": 759.14
+    },
+    {
+      "date": "2005-01-01",
+      "Canada_hourly": 19.02,
+      "Ontario_hourly": 19.96,
+      "Canada_weekly": 725.18,
+      "Ontario_weekly": 763.06
+    },
+    {
+      "date": "2005-02-01",
+      "Canada_hourly": 18.98,
+      "Ontario_hourly": 19.81,
+      "Canada_weekly": 731.91,
+      "Ontario_weekly": 770.01
+    },
+    {
+      "date": "2005-03-01",
+      "Canada_hourly": 19.05,
+      "Ontario_hourly": 19.97,
+      "Canada_weekly": 725.15,
+      "Ontario_weekly": 764.02
+    },
+    {
+      "date": "2005-04-01",
+      "Canada_hourly": 19.09,
+      "Ontario_hourly": 20.07,
+      "Canada_weekly": 728.86,
+      "Ontario_weekly": 770.68
+    },
+    {
+      "date": "2005-05-01",
+      "Canada_hourly": 18.87,
+      "Ontario_hourly": 19.73,
+      "Canada_weekly": 733.11,
+      "Ontario_weekly": 773.58
+    },
+    {
+      "date": "2005-06-01",
+      "Canada_hourly": 18.89,
+      "Ontario_hourly": 19.85,
+      "Canada_weekly": 735.61,
+      "Ontario_weekly": 777.47
+    },
+    {
+      "date": "2005-07-01",
+      "Canada_hourly": 18.76,
+      "Ontario_hourly": 19.79,
+      "Canada_weekly": 736.1,
+      "Ontario_weekly": 775.07
+    },
+    {
+      "date": "2005-08-01",
+      "Canada_hourly": 18.88,
+      "Ontario_hourly": 19.89,
+      "Canada_weekly": 741.45,
+      "Ontario_weekly": 780.54
+    },
+    {
+      "date": "2005-09-01",
+      "Canada_hourly": 19.3,
+      "Ontario_hourly": 20.32,
+      "Canada_weekly": 749.99,
+      "Ontario_weekly": 790.07
+    },
+    {
+      "date": "2005-10-01",
+      "Canada_hourly": 19.33,
+      "Ontario_hourly": 20.26,
+      "Canada_weekly": 745.56,
+      "Ontario_weekly": 784.3
+    },
+    {
+      "date": "2005-11-01",
+      "Canada_hourly": 19.45,
+      "Ontario_hourly": 20.34,
+      "Canada_weekly": 744.35,
+      "Ontario_weekly": 782.19
+    },
+    {
+      "date": "2005-12-01",
+      "Canada_hourly": 19.45,
+      "Ontario_hourly": 20.36,
+      "Canada_weekly": 743.96,
+      "Ontario_weekly": 781.8
+    },
+    {
+      "date": "2006-01-01",
+      "Canada_hourly": 19.81,
+      "Ontario_hourly": 20.77,
+      "Canada_weekly": 745.59,
+      "Ontario_weekly": 782.93
+    },
+    {
+      "date": "2006-02-01",
+      "Canada_hourly": 19.88,
+      "Ontario_hourly": 20.85,
+      "Canada_weekly": 745.61,
+      "Ontario_weekly": 780.53
+    },
+    {
+      "date": "2006-03-01",
+      "Canada_hourly": 20.05,
+      "Ontario_hourly": 21.06,
+      "Canada_weekly": 748.21,
+      "Ontario_weekly": 783.45
+    },
+    {
+      "date": "2006-04-01",
+      "Canada_hourly": 20.15,
+      "Ontario_hourly": 21.16,
+      "Canada_weekly": 750.45,
+      "Ontario_weekly": 782.54
+    },
+    {
+      "date": "2006-05-01",
+      "Canada_hourly": 19.99,
+      "Ontario_hourly": 20.9,
+      "Canada_weekly": 751.0,
+      "Ontario_weekly": 783.46
+    },
+    {
+      "date": "2006-06-01",
+      "Canada_hourly": 19.94,
+      "Ontario_hourly": 20.97,
+      "Canada_weekly": 751.83,
+      "Ontario_weekly": 781.74
+    },
+    {
+      "date": "2006-07-01",
+      "Canada_hourly": 19.89,
+      "Ontario_hourly": 20.97,
+      "Canada_weekly": 754.55,
+      "Ontario_weekly": 787.37
+    },
+    {
+      "date": "2006-08-01",
+      "Canada_hourly": 20.07,
+      "Ontario_hourly": 21.06,
+      "Canada_weekly": 758.87,
+      "Ontario_weekly": 790.05
+    },
+    {
+      "date": "2006-09-01",
+      "Canada_hourly": 20.42,
+      "Ontario_hourly": 21.31,
+      "Canada_weekly": 757.15,
+      "Ontario_weekly": 794.53
+    },
+    {
+      "date": "2006-10-01",
+      "Canada_hourly": 20.55,
+      "Ontario_hourly": 21.45,
+      "Canada_weekly": 762.11,
+      "Ontario_weekly": 796.51
+    },
+    {
+      "date": "2006-11-01",
+      "Canada_hourly": 20.61,
+      "Ontario_hourly": 21.41,
+      "Canada_weekly": 760.4,
+      "Ontario_weekly": 793.3
+    },
+    {
+      "date": "2006-12-01",
+      "Canada_hourly": 20.55,
+      "Ontario_hourly": 21.32,
+      "Canada_weekly": 772.6,
+      "Ontario_weekly": 806.28
+    },
+    {
+      "date": "2007-01-01",
+      "Canada_hourly": 20.7,
+      "Ontario_hourly": 21.5,
+      "Canada_weekly": 773.77,
+      "Ontario_weekly": 806.1
+    },
+    {
+      "date": "2007-02-01",
+      "Canada_hourly": 20.7,
+      "Ontario_hourly": 21.4,
+      "Canada_weekly": 770.86,
+      "Ontario_weekly": 801.57
+    },
+    {
+      "date": "2007-03-01",
+      "Canada_hourly": 20.75,
+      "Ontario_hourly": 21.52,
+      "Canada_weekly": 780.6,
+      "Ontario_weekly": 812.79
+    },
+    {
+      "date": "2007-04-01",
+      "Canada_hourly": 20.81,
+      "Ontario_hourly": 21.53,
+      "Canada_weekly": 781.42,
+      "Ontario_weekly": 814.55
+    },
+    {
+      "date": "2007-05-01",
+      "Canada_hourly": 20.8,
+      "Ontario_hourly": 21.6,
+      "Canada_weekly": 785.96,
+      "Ontario_weekly": 817.01
+    },
+    {
+      "date": "2007-06-01",
+      "Canada_hourly": 20.8,
+      "Ontario_hourly": 21.67,
+      "Canada_weekly": 790.68,
+      "Ontario_weekly": 824.64
+    },
+    {
+      "date": "2007-07-01",
+      "Canada_hourly": 20.75,
+      "Ontario_hourly": 21.66,
+      "Canada_weekly": 791.72,
+      "Ontario_weekly": 824.49
+    },
+    {
+      "date": "2007-08-01",
+      "Canada_hourly": 20.93,
+      "Ontario_hourly": 21.94,
+      "Canada_weekly": 789.25,
+      "Ontario_weekly": 821.01
+    },
+    {
+      "date": "2007-09-01",
+      "Canada_hourly": 21.38,
+      "Ontario_hourly": 22.38,
+      "Canada_weekly": 791.33,
+      "Ontario_weekly": 821.6
+    },
+    {
+      "date": "2007-10-01",
+      "Canada_hourly": 21.4,
+      "Ontario_hourly": 22.38,
+      "Canada_weekly": 793.89,
+      "Ontario_weekly": 823.55
+    },
+    {
+      "date": "2007-11-01",
+      "Canada_hourly": 21.43,
+      "Ontario_hourly": 22.32,
+      "Canada_weekly": 799.03,
+      "Ontario_weekly": 831.64
+    },
+    {
+      "date": "2007-12-01",
+      "Canada_hourly": 21.4,
+      "Ontario_hourly": 22.21,
+      "Canada_weekly": 798.33,
+      "Ontario_weekly": 827.34
+    },
+    {
+      "date": "2008-01-01",
+      "Canada_hourly": 21.58,
+      "Ontario_hourly": 22.39,
+      "Canada_weekly": 798.03,
+      "Ontario_weekly": 828.4
+    },
+    {
+      "date": "2008-02-01",
+      "Canada_hourly": 21.6,
+      "Ontario_hourly": 22.46,
+      "Canada_weekly": 803.1,
+      "Ontario_weekly": 834.88
+    },
+    {
+      "date": "2008-03-01",
+      "Canada_hourly": 21.56,
+      "Ontario_hourly": 22.35,
+      "Canada_weekly": 804.96,
+      "Ontario_weekly": 833.01
+    },
+    {
+      "date": "2008-04-01",
+      "Canada_hourly": 21.69,
+      "Ontario_hourly": 22.54,
+      "Canada_weekly": 809.01,
+      "Ontario_weekly": 834.91
+    },
+    {
+      "date": "2008-05-01",
+      "Canada_hourly": 21.7,
+      "Ontario_hourly": 22.62,
+      "Canada_weekly": 808.46,
+      "Ontario_weekly": 837.67
+    },
+    {
+      "date": "2008-06-01",
+      "Canada_hourly": 21.68,
+      "Ontario_hourly": 22.66,
+      "Canada_weekly": 809.39,
+      "Ontario_weekly": 839.94
+    },
+    {
+      "date": "2008-07-01",
+      "Canada_hourly": 21.55,
+      "Ontario_hourly": 22.38,
+      "Canada_weekly": 810.87,
+      "Ontario_weekly": 837.77
+    },
+    {
+      "date": "2008-08-01",
+      "Canada_hourly": 21.64,
+      "Ontario_hourly": 22.37,
+      "Canada_weekly": 811.51,
+      "Ontario_weekly": 840.04
+    },
+    {
+      "date": "2008-09-01",
+      "Canada_hourly": 22.19,
+      "Ontario_hourly": 23.0,
+      "Canada_weekly": 813.96,
+      "Ontario_weekly": 840.42
+    },
+    {
+      "date": "2008-10-01",
+      "Canada_hourly": 22.22,
+      "Ontario_hourly": 22.95,
+      "Canada_weekly": 818.06,
+      "Ontario_weekly": 846.53
+    },
+    {
+      "date": "2008-11-01",
+      "Canada_hourly": 22.38,
+      "Ontario_hourly": 23.21,
+      "Canada_weekly": 818.17,
+      "Ontario_weekly": 846.63
+    },
+    {
+      "date": "2008-12-01",
+      "Canada_hourly": 22.44,
+      "Ontario_hourly": 23.15,
+      "Canada_weekly": 813.1,
+      "Ontario_weekly": 835.75
+    },
+    {
+      "date": "2009-01-01",
+      "Canada_hourly": 22.67,
+      "Ontario_hourly": 23.49,
+      "Canada_weekly": 816.0,
+      "Ontario_weekly": 840.61
+    },
+    {
+      "date": "2009-02-01",
+      "Canada_hourly": 22.5,
+      "Ontario_hourly": 23.33,
+      "Canada_weekly": 818.03,
+      "Ontario_weekly": 843.37
+    },
+    {
+      "date": "2009-03-01",
+      "Canada_hourly": 22.59,
+      "Ontario_hourly": 23.38,
+      "Canada_weekly": 819.94,
+      "Ontario_weekly": 846.28
+    },
+    {
+      "date": "2009-04-01",
+      "Canada_hourly": 22.61,
+      "Ontario_hourly": 23.46,
+      "Canada_weekly": 817.49,
+      "Ontario_weekly": 846.82
+    },
+    {
+      "date": "2009-05-01",
+      "Canada_hourly": 22.46,
+      "Ontario_hourly": 23.26,
+      "Canada_weekly": 818.0,
+      "Ontario_weekly": 843.6
+    },
+    {
+      "date": "2009-06-01",
+      "Canada_hourly": 22.37,
+      "Ontario_hourly": 23.15,
+      "Canada_weekly": 821.11,
+      "Ontario_weekly": 843.44
+    },
+    {
+      "date": "2009-07-01",
+      "Canada_hourly": 22.25,
+      "Ontario_hourly": 22.97,
+      "Canada_weekly": 822.12,
+      "Ontario_weekly": 844.27
+    },
+    {
+      "date": "2009-08-01",
+      "Canada_hourly": 22.38,
+      "Ontario_hourly": 23.02,
+      "Canada_weekly": 821.7,
+      "Ontario_weekly": 847.76
+    },
+    {
+      "date": "2009-09-01",
+      "Canada_hourly": 22.89,
+      "Ontario_hourly": 23.54,
+      "Canada_weekly": 827.52,
+      "Ontario_weekly": 854.08
+    },
+    {
+      "date": "2009-10-01",
+      "Canada_hourly": 22.99,
+      "Ontario_hourly": 23.6,
+      "Canada_weekly": 825.52,
+      "Ontario_weekly": 853.27
+    },
+    {
+      "date": "2009-11-01",
+      "Canada_hourly": 22.88,
+      "Ontario_hourly": 23.43,
+      "Canada_weekly": 827.78,
+      "Ontario_weekly": 856.23
+    },
+    {
+      "date": "2009-12-01",
+      "Canada_hourly": 22.99,
+      "Ontario_hourly": 23.7,
+      "Canada_weekly": 832.76,
+      "Ontario_weekly": 863.25
+    },
+    {
+      "date": "2010-01-01",
+      "Canada_hourly": 23.16,
+      "Ontario_hourly": 23.93,
+      "Canada_weekly": 834.47,
+      "Ontario_weekly": 863.97
+    },
+    {
+      "date": "2010-02-01",
+      "Canada_hourly": 23.12,
+      "Ontario_hourly": 23.83,
+      "Canada_weekly": 841.1,
+      "Ontario_weekly": 872.98
+    },
+    {
+      "date": "2010-03-01",
+      "Canada_hourly": 23.16,
+      "Ontario_hourly": 23.89,
+      "Canada_weekly": 841.99,
+      "Ontario_weekly": 870.01
+    },
+    {
+      "date": "2010-04-01",
+      "Canada_hourly": 23.12,
+      "Ontario_hourly": 23.85,
+      "Canada_weekly": 845.56,
+      "Ontario_weekly": 871.84
+    },
+    {
+      "date": "2010-05-01",
+      "Canada_hourly": 22.97,
+      "Ontario_hourly": 23.54,
+      "Canada_weekly": 846.99,
+      "Ontario_weekly": 873.35
+    },
+    {
+      "date": "2010-06-01",
+      "Canada_hourly": 22.88,
+      "Ontario_hourly": 23.5,
+      "Canada_weekly": 850.13,
+      "Ontario_weekly": 875.54
+    },
+    {
+      "date": "2010-07-01",
+      "Canada_hourly": 22.73,
+      "Ontario_hourly": 23.39,
+      "Canada_weekly": 853.39,
+      "Ontario_weekly": 883.24
+    },
+    {
+      "date": "2010-08-01",
+      "Canada_hourly": 22.77,
+      "Ontario_hourly": 23.4,
+      "Canada_weekly": 858.39,
+      "Ontario_weekly": 888.74
+    },
+    {
+      "date": "2010-09-01",
+      "Canada_hourly": 23.23,
+      "Ontario_hourly": 24.04,
+      "Canada_weekly": 864.85,
+      "Ontario_weekly": 902.94
+    },
+    {
+      "date": "2010-10-01",
+      "Canada_hourly": 23.24,
+      "Ontario_hourly": 23.87,
+      "Canada_weekly": 860.37,
+      "Ontario_weekly": 887.88
+    },
+    {
+      "date": "2010-11-01",
+      "Canada_hourly": 23.41,
+      "Ontario_hourly": 24.02,
+      "Canada_weekly": 863.56,
+      "Ontario_weekly": 891.74
+    },
+    {
+      "date": "2010-12-01",
+      "Canada_hourly": 23.36,
+      "Ontario_hourly": 24.0,
+      "Canada_weekly": 866.04,
+      "Ontario_weekly": 892.78
+    },
+    {
+      "date": "2011-01-01",
+      "Canada_hourly": 23.58,
+      "Ontario_hourly": 24.31,
+      "Canada_weekly": 872.79,
+      "Ontario_weekly": 897.63
+    },
+    {
+      "date": "2011-02-01",
+      "Canada_hourly": 23.6,
+      "Ontario_hourly": 24.35,
+      "Canada_weekly": 870.39,
+      "Ontario_weekly": 894.34
+    },
+    {
+      "date": "2011-03-01",
+      "Canada_hourly": 23.68,
+      "Ontario_hourly": 24.43,
+      "Canada_weekly": 870.27,
+      "Ontario_weekly": 896.05
+    },
+    {
+      "date": "2011-04-01",
+      "Canada_hourly": 23.66,
+      "Ontario_hourly": 24.59,
+      "Canada_weekly": 869.97,
+      "Ontario_weekly": 890.44
+    },
+    {
+      "date": "2011-05-01",
+      "Canada_hourly": 23.48,
+      "Ontario_hourly": 24.27,
+      "Canada_weekly": 871.57,
+      "Ontario_weekly": 892.85
+    },
+    {
+      "date": "2011-06-01",
+      "Canada_hourly": 23.38,
+      "Ontario_hourly": 24.14,
+      "Canada_weekly": 870.23,
+      "Ontario_weekly": 889.67
+    },
+    {
+      "date": "2011-07-01",
+      "Canada_hourly": 23.18,
+      "Ontario_hourly": 23.95,
+      "Canada_weekly": 868.68,
+      "Ontario_weekly": 887.4
+    },
+    {
+      "date": "2011-08-01",
+      "Canada_hourly": 23.31,
+      "Ontario_hourly": 24.06,
+      "Canada_weekly": 872.48,
+      "Ontario_weekly": 888.94
+    },
+    {
+      "date": "2011-09-01",
+      "Canada_hourly": 23.71,
+      "Ontario_hourly": 24.48,
+      "Canada_weekly": 872.81,
+      "Ontario_weekly": 889.32
+    },
+    {
+      "date": "2011-10-01",
+      "Canada_hourly": 23.79,
+      "Ontario_hourly": 24.53,
+      "Canada_weekly": 882.16,
+      "Ontario_weekly": 903.05
+    },
+    {
+      "date": "2011-11-01",
+      "Canada_hourly": 23.89,
+      "Ontario_hourly": 24.53,
+      "Canada_weekly": 880.17,
+      "Ontario_weekly": 894.31
+    },
+    {
+      "date": "2011-12-01",
+      "Canada_hourly": 23.94,
+      "Ontario_hourly": 24.61,
+      "Canada_weekly": 880.78,
+      "Ontario_weekly": 896.51
+    },
+    {
+      "date": "2012-01-01",
+      "Canada_hourly": 24.08,
+      "Ontario_hourly": 24.69,
+      "Canada_weekly": 885.06,
+      "Ontario_weekly": 897.91
+    },
+    {
+      "date": "2012-02-01",
+      "Canada_hourly": 24.07,
+      "Ontario_hourly": 24.56,
+      "Canada_weekly": 880.62,
+      "Ontario_weekly": 891.71
+    },
+    {
+      "date": "2012-03-01",
+      "Canada_hourly": 24.12,
+      "Ontario_hourly": 24.67,
+      "Canada_weekly": 886.96,
+      "Ontario_weekly": 895.63
+    },
+    {
+      "date": "2012-04-01",
+      "Canada_hourly": 24.14,
+      "Ontario_hourly": 24.66,
+      "Canada_weekly": 889.5,
+      "Ontario_weekly": 903.81
+    },
+    {
+      "date": "2012-05-01",
+      "Canada_hourly": 24.08,
+      "Ontario_hourly": 24.65,
+      "Canada_weekly": 890.13,
+      "Ontario_weekly": 902.26
+    },
+    {
+      "date": "2012-06-01",
+      "Canada_hourly": 24.07,
+      "Ontario_hourly": 24.62,
+      "Canada_weekly": 893.66,
+      "Ontario_weekly": 909.23
+    },
+    {
+      "date": "2012-07-01",
+      "Canada_hourly": 23.91,
+      "Ontario_hourly": 24.53,
+      "Canada_weekly": 900.56,
+      "Ontario_weekly": 912.88
+    },
+    {
+      "date": "2012-08-01",
+      "Canada_hourly": 24.11,
+      "Ontario_hourly": 24.62,
+      "Canada_weekly": 903.79,
+      "Ontario_weekly": 909.64
+    },
+    {
+      "date": "2012-09-01",
+      "Canada_hourly": 24.46,
+      "Ontario_hourly": 25.0,
+      "Canada_weekly": 902.73,
+      "Ontario_weekly": 911.36
+    },
+    {
+      "date": "2012-10-01",
+      "Canada_hourly": 24.53,
+      "Ontario_hourly": 24.9,
+      "Canada_weekly": 903.29,
+      "Ontario_weekly": 912.17
+    },
+    {
+      "date": "2012-11-01",
+      "Canada_hourly": 24.49,
+      "Ontario_hourly": 24.85,
+      "Canada_weekly": 903.7,
+      "Ontario_weekly": 911.12
+    },
+    {
+      "date": "2012-12-01",
+      "Canada_hourly": 24.49,
+      "Ontario_hourly": 24.9,
+      "Canada_weekly": 903.13,
+      "Ontario_weekly": 912.25
+    },
+    {
+      "date": "2013-01-01",
+      "Canada_hourly": 24.64,
+      "Ontario_hourly": 24.97,
+      "Canada_weekly": 900.81,
+      "Ontario_weekly": 911.63
+    },
+    {
+      "date": "2013-02-01",
+      "Canada_hourly": 24.65,
+      "Ontario_hourly": 24.97,
+      "Canada_weekly": 904.87,
+      "Ontario_weekly": 913.44
+    },
+    {
+      "date": "2013-03-01",
+      "Canada_hourly": 24.78,
+      "Ontario_hourly": 25.07,
+      "Canada_weekly": 902.77,
+      "Ontario_weekly": 915.65
+    },
+    {
+      "date": "2013-04-01",
+      "Canada_hourly": 24.91,
+      "Ontario_hourly": 25.33,
+      "Canada_weekly": 904.66,
+      "Ontario_weekly": 913.63
+    },
+    {
+      "date": "2013-05-01",
+      "Canada_hourly": 24.69,
+      "Ontario_hourly": 25.05,
+      "Canada_weekly": 913.08,
+      "Ontario_weekly": 921.11
+    },
+    {
+      "date": "2013-06-01",
+      "Canada_hourly": 24.5,
+      "Ontario_hourly": 24.79,
+      "Canada_weekly": 910.33,
+      "Ontario_weekly": 919.16
+    },
+    {
+      "date": "2013-07-01",
+      "Canada_hourly": 24.4,
+      "Ontario_hourly": 24.85,
+      "Canada_weekly": 909.83,
+      "Ontario_weekly": 917.32
+    },
+    {
+      "date": "2013-08-01",
+      "Canada_hourly": 24.46,
+      "Ontario_hourly": 24.74,
+      "Canada_weekly": 910.96,
+      "Ontario_weekly": 923.78
+    },
+    {
+      "date": "2013-09-01",
+      "Canada_hourly": 24.87,
+      "Ontario_hourly": 25.18,
+      "Canada_weekly": 912.92,
+      "Ontario_weekly": 920.12
+    },
+    {
+      "date": "2013-10-01",
+      "Canada_hourly": 24.95,
+      "Ontario_hourly": 25.23,
+      "Canada_weekly": 916.81,
+      "Ontario_weekly": 925.1
+    },
+    {
+      "date": "2013-11-01",
+      "Canada_hourly": 25.08,
+      "Ontario_hourly": 25.41,
+      "Canada_weekly": 922.93,
+      "Ontario_weekly": 930.2
+    },
+    {
+      "date": "2013-12-01",
+      "Canada_hourly": 25.06,
+      "Ontario_hourly": 25.29,
+      "Canada_weekly": 924.39,
+      "Ontario_weekly": 926.59
+    },
+    {
+      "date": "2014-01-01",
+      "Canada_hourly": 25.12,
+      "Ontario_hourly": 25.34,
+      "Canada_weekly": 923.33,
+      "Ontario_weekly": 930.85
+    },
+    {
+      "date": "2014-02-01",
+      "Canada_hourly": 25.15,
+      "Ontario_hourly": 25.46,
+      "Canada_weekly": 926.26,
+      "Ontario_weekly": 932.75
+    },
+    {
+      "date": "2014-03-01",
+      "Canada_hourly": 25.18,
+      "Ontario_hourly": 25.57,
+      "Canada_weekly": 926.85,
+      "Ontario_weekly": 928.43
+    },
+    {
+      "date": "2014-04-01",
+      "Canada_hourly": 25.19,
+      "Ontario_hourly": 25.39,
+      "Canada_weekly": 931.42,
+      "Ontario_weekly": 932.89
+    },
+    {
+      "date": "2014-05-01",
+      "Canada_hourly": 24.99,
+      "Ontario_hourly": 25.18,
+      "Canada_weekly": 935.94,
+      "Ontario_weekly": 938.41
+    },
+    {
+      "date": "2014-06-01",
+      "Canada_hourly": 24.96,
+      "Ontario_hourly": 25.21,
+      "Canada_weekly": 936.69,
+      "Ontario_weekly": 938.52
+    },
+    {
+      "date": "2014-07-01",
+      "Canada_hourly": 24.79,
+      "Ontario_hourly": 25.05,
+      "Canada_weekly": 942.9,
+      "Ontario_weekly": 946.82
+    },
+    {
+      "date": "2014-08-01",
+      "Canada_hourly": 24.93,
+      "Ontario_hourly": 25.15,
+      "Canada_weekly": 939.59,
+      "Ontario_weekly": 942.82
+    },
+    {
+      "date": "2014-09-01",
+      "Canada_hourly": 25.46,
+      "Ontario_hourly": 25.93,
+      "Canada_weekly": 940.3,
+      "Ontario_weekly": 943.89
+    },
+    {
+      "date": "2014-10-01",
+      "Canada_hourly": 25.42,
+      "Ontario_hourly": 25.72,
+      "Canada_weekly": 942.13,
+      "Ontario_weekly": 942.57
+    },
+    {
+      "date": "2014-11-01",
+      "Canada_hourly": 25.47,
+      "Ontario_hourly": 25.72,
+      "Canada_weekly": 938.74,
+      "Ontario_weekly": 940.02
+    },
+    {
+      "date": "2014-12-01",
+      "Canada_hourly": 25.5,
+      "Ontario_hourly": 25.69,
+      "Canada_weekly": 940.0,
+      "Ontario_weekly": 941.18
+    },
+    {
+      "date": "2015-01-01",
+      "Canada_hourly": 25.65,
+      "Ontario_hourly": 25.87,
+      "Canada_weekly": 948.5,
+      "Ontario_weekly": 950.44
+    },
+    {
+      "date": "2015-02-01",
+      "Canada_hourly": 25.62,
+      "Ontario_hourly": 25.67,
+      "Canada_weekly": 949.46,
+      "Ontario_weekly": 956.94
+    },
+    {
+      "date": "2015-03-01",
+      "Canada_hourly": 25.66,
+      "Ontario_hourly": 25.87,
+      "Canada_weekly": 951.71,
+      "Ontario_weekly": 963.32
+    },
+    {
+      "date": "2015-04-01",
+      "Canada_hourly": 25.82,
+      "Ontario_hourly": 26.02,
+      "Canada_weekly": 954.11,
+      "Ontario_weekly": 964.4
+    },
+    {
+      "date": "2015-05-01",
+      "Canada_hourly": 25.68,
+      "Ontario_hourly": 25.85,
+      "Canada_weekly": 948.27,
+      "Ontario_weekly": 955.98
+    },
+    {
+      "date": "2015-06-01",
+      "Canada_hourly": 25.71,
+      "Ontario_hourly": 26.01,
+      "Canada_weekly": 953.22,
+      "Ontario_weekly": 960.54
+    },
+    {
+      "date": "2015-07-01",
+      "Canada_hourly": 25.69,
+      "Ontario_hourly": 26.09,
+      "Canada_weekly": 957.59,
+      "Ontario_weekly": 973.86
+    },
+    {
+      "date": "2015-08-01",
+      "Canada_hourly": 25.71,
+      "Ontario_hourly": 26.1,
+      "Canada_weekly": 944.6,
+      "Ontario_weekly": 959.32
+    },
+    {
+      "date": "2015-09-01",
+      "Canada_hourly": 26.13,
+      "Ontario_hourly": 26.59,
+      "Canada_weekly": 954.06,
+      "Ontario_weekly": 966.24
+    },
+    {
+      "date": "2015-10-01",
+      "Canada_hourly": 26.19,
+      "Ontario_hourly": 26.68,
+      "Canada_weekly": 955.52,
+      "Ontario_weekly": 968.51
+    },
+    {
+      "date": "2015-11-01",
+      "Canada_hourly": 26.28,
+      "Ontario_hourly": 26.76,
+      "Canada_weekly": 951.46,
+      "Ontario_weekly": 967.22
+    },
+    {
+      "date": "2015-12-01",
+      "Canada_hourly": 26.25,
+      "Ontario_hourly": 26.66,
+      "Canada_weekly": 954.88,
+      "Ontario_weekly": 970.48
+    },
+    {
+      "date": "2016-01-01",
+      "Canada_hourly": 26.4,
+      "Ontario_hourly": 26.87,
+      "Canada_weekly": 949.76,
+      "Ontario_weekly": 963.61
+    },
+    {
+      "date": "2016-02-01",
+      "Canada_hourly": 26.44,
+      "Ontario_hourly": 27.05,
+      "Canada_weekly": 953.9,
+      "Ontario_weekly": 965.3
+    },
+    {
+      "date": "2016-03-01",
+      "Canada_hourly": 26.51,
+      "Ontario_hourly": 27.1,
+      "Canada_weekly": 955.46,
+      "Ontario_weekly": 970.15
+    },
+    {
+      "date": "2016-04-01",
+      "Canada_hourly": 26.55,
+      "Ontario_hourly": 27.11,
+      "Canada_weekly": 953.17,
+      "Ontario_weekly": 970.43
+    },
+    {
+      "date": "2016-05-01",
+      "Canada_hourly": 26.21,
+      "Ontario_hourly": 26.68,
+      "Canada_weekly": 954.67,
+      "Ontario_weekly": 974.36
+    },
+    {
+      "date": "2016-06-01",
+      "Canada_hourly": 26.12,
+      "Ontario_hourly": 26.56,
+      "Canada_weekly": 956.87,
+      "Ontario_weekly": 979.29
+    },
+    {
+      "date": "2016-07-01",
+      "Canada_hourly": 26.06,
+      "Ontario_hourly": 26.47,
+      "Canada_weekly": 957.51,
+      "Ontario_weekly": 977.22
+    },
+    {
+      "date": "2016-08-01",
+      "Canada_hourly": 26.12,
+      "Ontario_hourly": 26.49,
+      "Canada_weekly": 958.3,
+      "Ontario_weekly": 979.11
+    },
+    {
+      "date": "2016-09-01",
+      "Canada_hourly": 26.52,
+      "Ontario_hourly": 27.04,
+      "Canada_weekly": 955.66,
+      "Ontario_weekly": 969.75
+    },
+    {
+      "date": "2016-10-01",
+      "Canada_hourly": 26.58,
+      "Ontario_hourly": 27.1,
+      "Canada_weekly": 955.17,
+      "Ontario_weekly": 973.93
+    },
+    {
+      "date": "2016-11-01",
+      "Canada_hourly": 26.64,
+      "Ontario_hourly": 27.13,
+      "Canada_weekly": 960.0,
+      "Ontario_weekly": 977.18
+    },
+    {
+      "date": "2016-12-01",
+      "Canada_hourly": 26.61,
+      "Ontario_hourly": 27.11,
+      "Canada_weekly": 968.34,
+      "Ontario_weekly": 988.03
+    },
+    {
+      "date": "2017-01-01",
+      "Canada_hourly": 26.67,
+      "Ontario_hourly": 27.13,
+      "Canada_weekly": 967.0,
+      "Ontario_weekly": 987.2
+    },
+    {
+      "date": "2017-02-01",
+      "Canada_hourly": 26.76,
+      "Ontario_hourly": 27.04,
+      "Canada_weekly": 964.5,
+      "Ontario_weekly": 984.98
+    },
+    {
+      "date": "2017-03-01",
+      "Canada_hourly": 26.81,
+      "Ontario_hourly": 27.24,
+      "Canada_weekly": 967.02,
+      "Ontario_weekly": 984.58
+    },
+    {
+      "date": "2017-04-01",
+      "Canada_hourly": 26.75,
+      "Ontario_hourly": 27.21,
+      "Canada_weekly": 971.07,
+      "Ontario_weekly": 988.65
+    },
+    {
+      "date": "2017-05-01",
+      "Canada_hourly": 26.55,
+      "Ontario_hourly": 26.88,
+      "Canada_weekly": 970.15,
+      "Ontario_weekly": 987.31
+    },
+    {
+      "date": "2017-06-01",
+      "Canada_hourly": 26.56,
+      "Ontario_hourly": 26.81,
+      "Canada_weekly": 971.94,
+      "Ontario_weekly": 986.79
+    },
+    {
+      "date": "2017-07-01",
+      "Canada_hourly": 26.48,
+      "Ontario_hourly": 26.64,
+      "Canada_weekly": 970.07,
+      "Ontario_weekly": 984.55
+    },
+    {
+      "date": "2017-08-01",
+      "Canada_hourly": 26.65,
+      "Ontario_hourly": 26.94,
+      "Canada_weekly": 976.45,
+      "Ontario_weekly": 990.84
+    },
+    {
+      "date": "2017-09-01",
+      "Canada_hourly": 27.06,
+      "Ontario_hourly": 27.42,
+      "Canada_weekly": 985.54,
+      "Ontario_weekly": 1000.87
+    },
+    {
+      "date": "2017-10-01",
+      "Canada_hourly": 27.08,
+      "Ontario_hourly": 27.35,
+      "Canada_weekly": 983.54,
+      "Ontario_weekly": 999.65
+    },
+    {
+      "date": "2017-11-01",
+      "Canada_hourly": 27.16,
+      "Ontario_hourly": 27.47,
+      "Canada_weekly": 990.93,
+      "Ontario_weekly": 1007.09
+    },
+    {
+      "date": "2017-12-01",
+      "Canada_hourly": 27.24,
+      "Ontario_hourly": 27.6,
+      "Canada_weekly": 991.96,
+      "Ontario_weekly": 1009.04
+    },
+    {
+      "date": "2018-01-01",
+      "Canada_hourly": 27.49,
+      "Ontario_hourly": 27.96,
+      "Canada_weekly": 991.47,
+      "Ontario_weekly": 1012.14
+    },
+    {
+      "date": "2018-02-01",
+      "Canada_hourly": 27.56,
+      "Ontario_hourly": 28.13,
+      "Canada_weekly": 998.68,
+      "Ontario_weekly": 1018.29
+    },
+    {
+      "date": "2018-03-01",
+      "Canada_hourly": 27.56,
+      "Ontario_hourly": 28.21,
+      "Canada_weekly": 997.53,
+      "Ontario_weekly": 1014.76
+    },
+    {
+      "date": "2018-04-01",
+      "Canada_hourly": 27.59,
+      "Ontario_hourly": 28.26,
+      "Canada_weekly": 993.11,
+      "Ontario_weekly": 1013.31
+    },
+    {
+      "date": "2018-05-01",
+      "Canada_hourly": 27.46,
+      "Ontario_hourly": 28.06,
+      "Canada_weekly": 994.78,
+      "Ontario_weekly": 1013.49
+    },
+    {
+      "date": "2018-06-01",
+      "Canada_hourly": 27.4,
+      "Ontario_hourly": 28.09,
+      "Canada_weekly": 1001.65,
+      "Ontario_weekly": 1019.42
+    },
+    {
+      "date": "2018-07-01",
+      "Canada_hourly": 27.24,
+      "Ontario_hourly": 27.91,
+      "Canada_weekly": 999.89,
+      "Ontario_weekly": 1016.84
+    },
+    {
+      "date": "2018-08-01",
+      "Canada_hourly": 27.22,
+      "Ontario_hourly": 27.78,
+      "Canada_weekly": 1005.43,
+      "Ontario_weekly": 1022.73
+    },
+    {
+      "date": "2018-09-01",
+      "Canada_hourly": 27.68,
+      "Ontario_hourly": 28.4,
+      "Canada_weekly": 1000.53,
+      "Ontario_weekly": 1024.19
+    },
+    {
+      "date": "2018-10-01",
+      "Canada_hourly": 27.78,
+      "Ontario_hourly": 28.51,
+      "Canada_weekly": 1007.51,
+      "Ontario_weekly": 1029.93
+    },
+    {
+      "date": "2018-11-01",
+      "Canada_hourly": 27.82,
+      "Ontario_hourly": 28.46,
+      "Canada_weekly": 1011.43,
+      "Ontario_weekly": 1033.76
+    },
+    {
+      "date": "2018-12-01",
+      "Canada_hourly": 27.9,
+      "Ontario_hourly": 28.36,
+      "Canada_weekly": 1009.66,
+      "Ontario_weekly": 1032.16
+    },
+    {
+      "date": "2019-01-01",
+      "Canada_hourly": 28.12,
+      "Ontario_hourly": 28.76,
+      "Canada_weekly": 1009.29,
+      "Ontario_weekly": 1027.9
+    },
+    {
+      "date": "2019-02-01",
+      "Canada_hourly": 28.16,
+      "Ontario_hourly": 28.76,
+      "Canada_weekly": 1009.37,
+      "Ontario_weekly": 1029.59
+    },
+    {
+      "date": "2019-03-01",
+      "Canada_hourly": 28.13,
+      "Ontario_hourly": 28.71,
+      "Canada_weekly": 1014.84,
+      "Ontario_weekly": 1036.26
+    },
+    {
+      "date": "2019-04-01",
+      "Canada_hourly": 28.18,
+      "Ontario_hourly": 28.72,
+      "Canada_weekly": 1016.98,
+      "Ontario_weekly": 1039.39
+    },
+    {
+      "date": "2019-05-01",
+      "Canada_hourly": 28.11,
+      "Ontario_hourly": 28.67,
+      "Canada_weekly": 1030.54,
+      "Ontario_weekly": 1052.33
+    },
+    {
+      "date": "2019-06-01",
+      "Canada_hourly": 28.26,
+      "Ontario_hourly": 29.0,
+      "Canada_weekly": 1022.02,
+      "Ontario_weekly": 1036.47
+    },
+    {
+      "date": "2019-07-01",
+      "Canada_hourly": 28.13,
+      "Ontario_hourly": 28.89,
+      "Canada_weekly": 1027.69,
+      "Ontario_weekly": 1049.96
+    },
+    {
+      "date": "2019-08-01",
+      "Canada_hourly": 28.1,
+      "Ontario_hourly": 28.84,
+      "Canada_weekly": 1031.71,
+      "Ontario_weekly": 1055.74
+    },
+    {
+      "date": "2019-09-01",
+      "Canada_hourly": 28.62,
+      "Ontario_hourly": 29.46,
+      "Canada_weekly": 1038.63,
+      "Ontario_weekly": 1062.22
+    },
+    {
+      "date": "2019-10-01",
+      "Canada_hourly": 28.66,
+      "Ontario_hourly": 29.39,
+      "Canada_weekly": 1046.38,
+      "Ontario_weekly": 1065.77
+    },
+    {
+      "date": "2019-11-01",
+      "Canada_hourly": 28.66,
+      "Ontario_hourly": 29.15,
+      "Canada_weekly": 1042.76,
+      "Ontario_weekly": 1062.35
+    },
+    {
+      "date": "2019-12-01",
+      "Canada_hourly": 28.64,
+      "Ontario_hourly": 29.26,
+      "Canada_weekly": 1046.2,
+      "Ontario_weekly": 1065.97
+    },
+    {
+      "date": "2020-01-01",
+      "Canada_hourly": 28.95,
+      "Ontario_hourly": 29.64,
+      "Canada_weekly": 1046.42,
+      "Ontario_weekly": 1062.24
+    },
+    {
+      "date": "2020-02-01",
+      "Canada_hourly": 29.09,
+      "Ontario_hourly": 29.65,
+      "Canada_weekly": 1045.5,
+      "Ontario_weekly": 1063.45
+    },
+    {
+      "date": "2020-03-01",
+      "Canada_hourly": 29.88,
+      "Ontario_hourly": 30.67,
+      "Canada_weekly": 1047.06,
+      "Ontario_weekly": 1062.28
+    },
+    {
+      "date": "2020-04-01",
+      "Canada_hourly": 31.14,
+      "Ontario_hourly": 32.05,
+      "Canada_weekly": 1112.45,
+      "Ontario_weekly": 1129.11
+    },
+    {
+      "date": "2020-05-01",
+      "Canada_hourly": 30.97,
+      "Ontario_hourly": 32.2,
+      "Canada_weekly": 1134.87,
+      "Ontario_weekly": 1166.79
+    },
+    {
+      "date": "2020-06-01",
+      "Canada_hourly": 30.29,
+      "Ontario_hourly": 31.46,
+      "Canada_weekly": 1116.38,
+      "Ontario_weekly": 1148.17
+    },
+    {
+      "date": "2020-07-01",
+      "Canada_hourly": 29.96,
+      "Ontario_hourly": 31.23,
+      "Canada_weekly": 1111.9,
+      "Ontario_weekly": 1150.92
+    },
+    {
+      "date": "2020-08-01",
+      "Canada_hourly": 29.88,
+      "Ontario_hourly": 30.75,
+      "Canada_weekly": 1108.21,
+      "Ontario_weekly": 1146.34
+    },
+    {
+      "date": "2020-09-01",
+      "Canada_hourly": 30.06,
+      "Ontario_hourly": 30.95,
+      "Canada_weekly": 1107.12,
+      "Ontario_weekly": 1146.75
+    },
+    {
+      "date": "2020-10-01",
+      "Canada_hourly": 30.26,
+      "Ontario_hourly": 31.0,
+      "Canada_weekly": 1107.5,
+      "Ontario_weekly": 1141.36
+    },
+    {
+      "date": "2020-11-01",
+      "Canada_hourly": 30.14,
+      "Ontario_hourly": 30.7,
+      "Canada_weekly": 1112.71,
+      "Ontario_weekly": 1149.77
+    },
+    {
+      "date": "2020-12-01",
+      "Canada_hourly": 30.2,
+      "Ontario_hourly": 30.92,
+      "Canada_weekly": 1119.5,
+      "Ontario_weekly": 1152.68
+    },
+    {
+      "date": "2021-01-01",
+      "Canada_hourly": 30.75,
+      "Ontario_hourly": 31.86,
+      "Canada_weekly": 1129.25,
+      "Ontario_weekly": 1171.18
+    },
+    {
+      "date": "2021-02-01",
+      "Canada_hourly": 30.64,
+      "Ontario_hourly": 31.68,
+      "Canada_weekly": 1134.55,
+      "Ontario_weekly": 1181.23
+    },
+    {
+      "date": "2021-03-01",
+      "Canada_hourly": 30.49,
+      "Ontario_hourly": 31.32,
+      "Canada_weekly": 1119.47,
+      "Ontario_weekly": 1161.14
+    },
+    {
+      "date": "2021-04-01",
+      "Canada_hourly": 30.74,
+      "Ontario_hourly": 31.92,
+      "Canada_weekly": 1123.45,
+      "Ontario_weekly": 1161.15
+    },
+    {
+      "date": "2021-05-01",
+      "Canada_hourly": 30.55,
+      "Ontario_hourly": 31.6,
+      "Canada_weekly": 1130.3,
+      "Ontario_weekly": 1173.89
+    },
+    {
+      "date": "2021-06-01",
+      "Canada_hourly": 30.31,
+      "Ontario_hourly": 31.32,
+      "Canada_weekly": 1122.22,
+      "Ontario_weekly": 1152.77
+    },
+    {
+      "date": "2021-07-01",
+      "Canada_hourly": 30.36,
+      "Ontario_hourly": 31.36,
+      "Canada_weekly": 1127.99,
+      "Ontario_weekly": 1159.1
+    },
+    {
+      "date": "2021-08-01",
+      "Canada_hourly": 30.45,
+      "Ontario_hourly": 31.36,
+      "Canada_weekly": 1131.39,
+      "Ontario_weekly": 1165.44
+    },
+    {
+      "date": "2021-09-01",
+      "Canada_hourly": 30.88,
+      "Ontario_hourly": 31.93,
+      "Canada_weekly": 1134.34,
+      "Ontario_weekly": 1162.21
+    },
+    {
+      "date": "2021-10-01",
+      "Canada_hourly": 30.88,
+      "Ontario_hourly": 31.78,
+      "Canada_weekly": 1133.31,
+      "Ontario_weekly": 1169.2
+    },
+    {
+      "date": "2021-11-01",
+      "Canada_hourly": 30.95,
+      "Ontario_hourly": 31.75,
+      "Canada_weekly": 1132.67,
+      "Ontario_weekly": 1158.22
+    },
+    {
+      "date": "2021-12-01",
+      "Canada_hourly": 31.2,
+      "Ontario_hourly": 31.98,
+      "Canada_weekly": 1141.53,
+      "Ontario_weekly": 1164.45
+    },
+    {
+      "date": "2022-01-01",
+      "Canada_hourly": 31.62,
+      "Ontario_hourly": 32.83,
+      "Canada_weekly": 1151.01,
+      "Ontario_weekly": 1182.05
+    },
+    {
+      "date": "2022-02-01",
+      "Canada_hourly": 31.48,
+      "Ontario_hourly": 32.46,
+      "Canada_weekly": 1159.84,
+      "Ontario_weekly": 1189.33
+    },
+    {
+      "date": "2022-03-01",
+      "Canada_hourly": 31.45,
+      "Ontario_hourly": 32.28,
+      "Canada_weekly": 1168.29,
+      "Ontario_weekly": 1201.33
+    },
+    {
+      "date": "2022-04-01",
+      "Canada_hourly": 31.74,
+      "Ontario_hourly": 32.69,
+      "Canada_weekly": 1160.49,
+      "Ontario_weekly": 1191.26
+    },
+    {
+      "date": "2022-05-01",
+      "Canada_hourly": 31.65,
+      "Ontario_hourly": 32.63,
+      "Canada_weekly": 1159.93,
+      "Ontario_weekly": 1190.67
+    },
+    {
+      "date": "2022-06-01",
+      "Canada_hourly": 31.8,
+      "Ontario_hourly": 32.81,
+      "Canada_weekly": 1162.39,
+      "Ontario_weekly": 1182.89
+    },
+    {
+      "date": "2022-07-01",
+      "Canada_hourly": 31.66,
+      "Ontario_hourly": 32.61,
+      "Canada_weekly": 1161.84,
+      "Ontario_weekly": 1189.66
+    },
+    {
+      "date": "2022-08-01",
+      "Canada_hourly": 31.93,
+      "Ontario_hourly": 32.93,
+      "Canada_weekly": 1165.97,
+      "Ontario_weekly": 1192.16
+    },
+    {
+      "date": "2022-09-01",
+      "Canada_hourly": 32.39,
+      "Ontario_hourly": 33.6,
+      "Canada_weekly": 1169.01,
+      "Ontario_weekly": 1198.79
+    },
+    {
+      "date": "2022-10-01",
+      "Canada_hourly": 32.53,
+      "Ontario_hourly": 33.54,
+      "Canada_weekly": 1172.4,
+      "Ontario_weekly": 1198.84
+    },
+    {
+      "date": "2022-11-01",
+      "Canada_hourly": 32.72,
+      "Ontario_hourly": 33.67,
+      "Canada_weekly": 1176.99,
+      "Ontario_weekly": 1201.48
+    },
+    {
+      "date": "2022-12-01",
+      "Canada_hourly": 32.68,
+      "Ontario_hourly": 33.57,
+      "Canada_weekly": 1173.83,
+      "Ontario_weekly": 1193.19
+    },
+    {
+      "date": "2023-01-01",
+      "Canada_hourly": 33.03,
+      "Ontario_hourly": 33.97,
+      "Canada_weekly": 1182.47,
+      "Ontario_weekly": 1211.24
+    },
+    {
+      "date": "2023-02-01",
+      "Canada_hourly": 33.17,
+      "Ontario_hourly": 34.0,
+      "Canada_weekly": 1180.47,
+      "Ontario_weekly": 1211.1
+    },
+    {
+      "date": "2023-03-01",
+      "Canada_hourly": 33.13,
+      "Ontario_hourly": 34.19,
+      "Canada_weekly": 1189.47,
+      "Ontario_weekly": 1218.19
+    },
+    {
+      "date": "2023-04-01",
+      "Canada_hourly": 33.37,
+      "Ontario_hourly": 34.46,
+      "Canada_weekly": 1197.61,
+      "Ontario_weekly": 1230.05
+    },
+    {
+      "date": "2023-05-01",
+      "Canada_hourly": 33.26,
+      "Ontario_hourly": 34.29,
+      "Canada_weekly": 1203.01,
+      "Ontario_weekly": 1232.1
+    },
+    {
+      "date": "2023-06-01",
+      "Canada_hourly": 33.13,
+      "Ontario_hourly": 34.02,
+      "Canada_weekly": 1206.25,
+      "Ontario_weekly": 1233.03
+    },
+    {
+      "date": "2023-07-01",
+      "Canada_hourly": 33.25,
+      "Ontario_hourly": 34.44,
+      "Canada_weekly": 1211.39,
+      "Ontario_weekly": 1238.69
+    },
+    {
+      "date": "2023-08-01",
+      "Canada_hourly": 33.5,
+      "Ontario_hourly": 34.63,
+      "Canada_weekly": 1211.81,
+      "Ontario_weekly": 1239.85
+    },
+    {
+      "date": "2023-09-01",
+      "Canada_hourly": 34.03,
+      "Ontario_hourly": 35.09,
+      "Canada_weekly": 1214.71,
+      "Ontario_weekly": 1238.68
+    },
+    {
+      "date": "2023-10-01",
+      "Canada_hourly": 34.1,
+      "Ontario_hourly": 35.28,
+      "Canada_weekly": 1218.02,
+      "Ontario_weekly": 1241.77
+    },
+    {
+      "date": "2023-11-01",
+      "Canada_hourly": 34.29,
+      "Ontario_hourly": 35.45,
+      "Canada_weekly": 1222.57,
+      "Ontario_weekly": 1237.82
+    },
+    {
+      "date": "2023-12-01",
+      "Canada_hourly": 34.46,
+      "Ontario_hourly": 35.7,
+      "Canada_weekly": 1219.55,
+      "Ontario_weekly": 1243.23
+    },
+    {
+      "date": "2024-01-01",
+      "Canada_hourly": 34.76,
+      "Ontario_hourly": 36.11,
+      "Canada_weekly": 1225.25,
+      "Ontario_weekly": 1250.62
+    },
+    {
+      "date": "2024-02-01",
+      "Canada_hourly": 34.82,
+      "Ontario_hourly": 35.97,
+      "Canada_weekly": 1231.12,
+      "Ontario_weekly": 1254.71
+    },
+    {
+      "date": "2024-03-01",
+      "Canada_hourly": 34.81,
+      "Ontario_hourly": 35.81,
+      "Canada_weekly": 1239.28,
+      "Ontario_weekly": 1271.72
+    },
+    {
+      "date": "2024-04-01",
+      "Canada_hourly": 34.93,
+      "Ontario_hourly": 35.83,
+      "Canada_weekly": 1242.86,
+      "Ontario_weekly": 1275.22
+    },
+    {
+      "date": "2024-05-01",
+      "Canada_hourly": 34.94,
+      "Ontario_hourly": 35.65,
+      "Canada_weekly": 1254.01,
+      "Ontario_weekly": 1284.65
+    },
+    {
+      "date": "2024-06-01",
+      "Canada_hourly": 34.91,
+      "Ontario_hourly": 35.81,
+      "Canada_weekly": 1255.72,
+      "Ontario_weekly": 1290.57
+    },
+    {
+      "date": "2024-07-01",
+      "Canada_hourly": 34.99,
+      "Ontario_hourly": 36.11,
+      "Canada_weekly": 1264.48,
+      "Ontario_weekly": 1295.28
+    },
+    {
+      "date": "2024-08-01",
+      "Canada_hourly": 35.19,
+      "Ontario_hourly": 36.61,
+      "Canada_weekly": 1273.0,
+      "Ontario_weekly": 1303.22
+    },
+    {
+      "date": "2024-09-01",
+      "Canada_hourly": 35.61,
+      "Ontario_hourly": 37.09,
+      "Canada_weekly": 1275.17,
+      "Ontario_weekly": 1309.69
+    },
+    {
+      "date": "2024-10-01",
+      "Canada_hourly": 35.79,
+      "Ontario_hourly": 37.48,
+      "Canada_weekly": 1283.79,
+      "Ontario_weekly": 1315.99
+    },
+    {
+      "date": "2024-11-01",
+      "Canada_hourly": 35.73,
+      "Ontario_hourly": 37.42,
+      "Canada_weekly": 1283.9,
+      "Ontario_weekly": 1324.79
+    },
+    {
+      "date": "2024-12-01",
+      "Canada_hourly": 35.83,
+      "Ontario_hourly": 37.39,
+      "Canada_weekly": 1291.58,
+      "Ontario_weekly": 1331.88
+    },
+    {
+      "date": "2025-01-01",
+      "Canada_hourly": 35.99,
+      "Ontario_hourly": 37.29,
+      "Canada_weekly": 1294.3,
+      "Ontario_weekly": 1334.75
+    },
+    {
+      "date": "2025-02-01",
+      "Canada_hourly": 36.14,
+      "Ontario_hourly": 37.39,
+      "Canada_weekly": 1294.74,
+      "Ontario_weekly": 1334.91
+    },
+    {
+      "date": "2025-03-01",
+      "Canada_hourly": 36.05,
+      "Ontario_hourly": 37.28,
+      "Canada_weekly": 1288.12,
+      "Ontario_weekly": 1321.96
+    },
+    {
+      "date": "2025-04-01",
+      "Canada_hourly": 36.13,
+      "Ontario_hourly": 37.36,
+      "Canada_weekly": 1295.9,
+      "Ontario_weekly": 1327.88
+    },
+    {
+      "date": "2025-05-01",
+      "Canada_hourly": 36.14,
+      "Ontario_hourly": 37.44,
+      "Canada_weekly": 1293.19,
+      "Ontario_weekly": 1327.18
+    },
+    {
+      "date": "2025-06-01",
+      "Canada_hourly": 36.01,
+      "Ontario_hourly": 37.12,
+      "Canada_weekly": 1299.68,
+      "Ontario_weekly": 1332.34
+    },
+    {
+      "date": "2025-07-01",
+      "Canada_hourly": 36.16,
+      "Ontario_hourly": 37.42,
+      "Canada_weekly": 1305.63,
+      "Ontario_weekly": 1342.65
+    },
+    {
+      "date": "2025-08-01",
+      "Canada_hourly": 36.31,
+      "Ontario_hourly": 37.61,
+      "Canada_weekly": 1306.43,
+      "Ontario_weekly": 1343.45
+    },
+    {
+      "date": "2025-09-01",
+      "Canada_hourly": 36.78,
+      "Ontario_hourly": 38.17,
+      "Canada_weekly": 1314.65,
+      "Ontario_weekly": 1350.22
+    },
+    {
+      "date": "2025-10-01",
+      "Canada_hourly": 37.06,
+      "Ontario_hourly": 38.68,
+      "Canada_weekly": 1309.49,
+      "Ontario_weekly": 1353.13
+    },
+    {
+      "date": "2025-11-01",
+      "Canada_hourly": 37.0,
+      "Ontario_hourly": 38.48,
+      "Canada_weekly": 1315.19,
+      "Ontario_weekly": 1356.91
+    },
+    {
+      "date": "2025-12-01",
+      "Canada_hourly": 37.06,
+      "Ontario_hourly": 38.32,
+      "Canada_weekly": 1316.48,
+      "Ontario_weekly": 1350.61
+    },
+    {
+      "date": "2026-01-01",
+      "Canada_hourly": 37.17,
+      "Ontario_hourly": 38.49,
+      "Canada_weekly": 1319.29,
+      "Ontario_weekly": 1354.0
+    },
+    {
+      "date": "2026-02-01",
+      "Canada_hourly": 37.56,
+      "Ontario_hourly": 38.97,
+      "Canada_weekly": 1331.61,
+      "Ontario_weekly": 1371.86
+    },
+    {
+      "date": "2026-03-01",
+      "Canada_hourly": 37.73,
+      "Ontario_hourly": 39.09,
+      "Canada_weekly": 1332.83,
+      "Ontario_weekly": 1367.87
+    },
+    {
+      "date": "2026-04-01",
+      "Canada_hourly": 37.77,
+      "Ontario_hourly": 38.93,
+      "Canada_weekly": 1345.79,
+      "Ontario_weekly": 1381.76
+    },
+    {
+      "date": "2026-05-01",
+      "Canada_hourly": 37.24,
+      "Ontario_hourly": 38.22,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    },
+    {
+      "date": "2026-06-01",
+      "Canada_hourly": 37.2,
+      "Ontario_hourly": 38.31,
+      "Canada_weekly": null,
+      "Ontario_weekly": null
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "yoy",
+    "pct_change",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "notes": "Hourly wages are unadjusted LFS estimates; weekly earnings are separate seasonally adjusted SEPH confirmation measures. Their levels should not be compared on one raw axis."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T14:52:20+00:00"
+}

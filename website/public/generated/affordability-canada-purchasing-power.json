@@ -1,0 +1,1685 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "affordability-canada-purchasing-power",
+  "title": "Canadian household income, wages, and saving",
+  "description": "Household income includes broader income and transfers; average wages describe employed workers. Quarterly values remain at their native frequency and are latest-vintage revised data.",
+  "plainLanguageSummary": "Household income includes broader income and transfers; average wages describe employed workers. Quarterly values remain at their native frequency and are latest-vintage revised data.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "explanation": "Household income includes broader income and transfers; average wages describe employed workers. Quarterly values remain at their native frequency and are latest-vintage revised data.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "Household income includes broader income and transfers; average wages describe employed workers. Quarterly values remain at their native frequency and are latest-vintage revised data."
+  ],
+  "sourceNotes": [
+    "Statistics Canada; Statistics Canada",
+    "Statistics Canada; Statistics Canada; Derived from Statistics Canada",
+    "Statistics Canada"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "Disposable_income_per_person": {
+        "mean": 26651.7886101952,
+        "standardDeviation": 4710.603904409257,
+        "n": 80
+      },
+      "Real_disposable_income_per_person": {
+        "mean": 22824.40461263636,
+        "standardDeviation": 1781.1528371797049,
+        "n": 80
+      },
+      "Saving_rate": {
+        "mean": 3.2924999999999995,
+        "standardDeviation": 1.5352341026696874,
+        "n": 80
+      }
+    }
+  },
+  "frequency": "quarterly",
+  "dateRange": {
+    "start": "1961-01-01",
+    "end": "2026-01-01"
+  },
+  "series": [
+    {
+      "key": "Disposable_income_per_person",
+      "label": "Canada household disposable income per person",
+      "unit": "annualized CAD per person",
+      "source": "Statistics Canada; Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Real_disposable_income_per_person",
+      "label": "Canada real household disposable income per person",
+      "unit": "CPI-deflated annualized CAD per person",
+      "source": "Statistics Canada; Statistics Canada; Derived from Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Saving_rate",
+      "label": "Household saving rate",
+      "unit": "percent",
+      "source": "Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1961-01-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 1.3
+    },
+    {
+      "date": "1961-04-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 0.4
+    },
+    {
+      "date": "1961-07-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 1.1
+    },
+    {
+      "date": "1961-10-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 2.1
+    },
+    {
+      "date": "1962-01-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 3.7
+    },
+    {
+      "date": "1962-04-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 3.0
+    },
+    {
+      "date": "1962-07-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 4.6
+    },
+    {
+      "date": "1962-10-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 3.6
+    },
+    {
+      "date": "1963-01-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 4.7
+    },
+    {
+      "date": "1963-04-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 3.7
+    },
+    {
+      "date": "1963-07-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 3.4
+    },
+    {
+      "date": "1963-10-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 4.1
+    },
+    {
+      "date": "1964-01-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 3.9
+    },
+    {
+      "date": "1964-04-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 3.3
+    },
+    {
+      "date": "1964-07-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 3.0
+    },
+    {
+      "date": "1964-10-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 3.1
+    },
+    {
+      "date": "1965-01-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 5.7
+    },
+    {
+      "date": "1965-04-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 3.3
+    },
+    {
+      "date": "1965-07-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 4.7
+    },
+    {
+      "date": "1965-10-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 4.8
+    },
+    {
+      "date": "1966-01-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 6.2
+    },
+    {
+      "date": "1966-04-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 6.8
+    },
+    {
+      "date": "1966-07-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 5.8
+    },
+    {
+      "date": "1966-10-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 6.6
+    },
+    {
+      "date": "1967-01-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 5.9
+    },
+    {
+      "date": "1967-04-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 6.1
+    },
+    {
+      "date": "1967-07-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 6.0
+    },
+    {
+      "date": "1967-10-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 4.7
+    },
+    {
+      "date": "1968-01-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 3.2
+    },
+    {
+      "date": "1968-04-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 5.7
+    },
+    {
+      "date": "1968-07-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 4.3
+    },
+    {
+      "date": "1968-10-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 4.0
+    },
+    {
+      "date": "1969-01-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 4.5
+    },
+    {
+      "date": "1969-04-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 3.6
+    },
+    {
+      "date": "1969-07-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 4.7
+    },
+    {
+      "date": "1969-10-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 4.3
+    },
+    {
+      "date": "1970-01-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 6.6
+    },
+    {
+      "date": "1970-04-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 4.2
+    },
+    {
+      "date": "1970-07-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 5.0
+    },
+    {
+      "date": "1970-10-01",
+      "Disposable_income_per_person": null,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 5.5
+    },
+    {
+      "date": "1971-01-01",
+      "Disposable_income_per_person": 2550.5706964826463,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 7.9
+    },
+    {
+      "date": "1971-04-01",
+      "Disposable_income_per_person": 2596.849881522093,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 5.6
+    },
+    {
+      "date": "1971-07-01",
+      "Disposable_income_per_person": 2620.7046779642246,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 5.5
+    },
+    {
+      "date": "1971-10-01",
+      "Disposable_income_per_person": 2688.8400840264794,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 5.2
+    },
+    {
+      "date": "1972-01-01",
+      "Disposable_income_per_person": 2794.432752692792,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 7.9
+    },
+    {
+      "date": "1972-04-01",
+      "Disposable_income_per_person": 2860.9974148174006,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 7.2
+    },
+    {
+      "date": "1972-07-01",
+      "Disposable_income_per_person": 2929.4555613500356,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 7.5
+    },
+    {
+      "date": "1972-10-01",
+      "Disposable_income_per_person": 3051.9776141049247,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 8.5
+    },
+    {
+      "date": "1973-01-01",
+      "Disposable_income_per_person": 3141.8337091478725,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 7.7
+    },
+    {
+      "date": "1973-04-01",
+      "Disposable_income_per_person": 3277.9609479718097,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 9.3
+    },
+    {
+      "date": "1973-07-01",
+      "Disposable_income_per_person": 3396.974814395501,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 10.2
+    },
+    {
+      "date": "1973-10-01",
+      "Disposable_income_per_person": 3565.919128016603,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 11.7
+    },
+    {
+      "date": "1974-01-01",
+      "Disposable_income_per_person": 3716.1022887089352,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 11.2
+    },
+    {
+      "date": "1974-04-01",
+      "Disposable_income_per_person": 3736.4334030386644,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 8.9
+    },
+    {
+      "date": "1974-07-01",
+      "Disposable_income_per_person": 3979.486292707606,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 11.9
+    },
+    {
+      "date": "1974-10-01",
+      "Disposable_income_per_person": 4124.957055343276,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 13.8
+    },
+    {
+      "date": "1975-01-01",
+      "Disposable_income_per_person": 4218.94766525713,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 12.1
+    },
+    {
+      "date": "1975-04-01",
+      "Disposable_income_per_person": 4368.434365236828,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 12.8
+    },
+    {
+      "date": "1975-07-01",
+      "Disposable_income_per_person": 4564.090432317812,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 13.2
+    },
+    {
+      "date": "1975-10-01",
+      "Disposable_income_per_person": 4656.337179120061,
+      "Real_disposable_income_per_person": null,
+      "Saving_rate": 12.0
+    },
+    {
+      "date": "1976-01-01",
+      "Disposable_income_per_person": 4757.254669620241,
+      "Real_disposable_income_per_person": 15614.621453895757,
+      "Saving_rate": 12.8
+    },
+    {
+      "date": "1976-04-01",
+      "Disposable_income_per_person": 4989.164455305545,
+      "Real_disposable_income_per_person": 16146.163285778463,
+      "Saving_rate": 13.6
+    },
+    {
+      "date": "1976-07-01",
+      "Disposable_income_per_person": 4895.050739861068,
+      "Real_disposable_income_per_person": 15605.900339620834,
+      "Saving_rate": 10.7
+    },
+    {
+      "date": "1976-10-01",
+      "Disposable_income_per_person": 5106.238685044106,
+      "Real_disposable_income_per_person": 16057.354355484611,
+      "Saving_rate": 11.8
+    },
+    {
+      "date": "1977-01-01",
+      "Disposable_income_per_person": 5166.220867471557,
+      "Real_disposable_income_per_person": 15912.384602068449,
+      "Saving_rate": 11.2
+    },
+    {
+      "date": "1977-04-01",
+      "Disposable_income_per_person": 5367.434624019819,
+      "Real_disposable_income_per_person": 16118.422294353808,
+      "Saving_rate": 13.4
+    },
+    {
+      "date": "1977-07-01",
+      "Disposable_income_per_person": 5401.5362067430015,
+      "Real_disposable_income_per_person": 15886.871196302945,
+      "Saving_rate": 10.9
+    },
+    {
+      "date": "1977-10-01",
+      "Disposable_income_per_person": 5553.276282175305,
+      "Real_disposable_income_per_person": 16003.678046614712,
+      "Saving_rate": 11.4
+    },
+    {
+      "date": "1978-01-01",
+      "Disposable_income_per_person": 5848.339900416374,
+      "Real_disposable_income_per_person": 16520.73418196716,
+      "Saving_rate": 13.7
+    },
+    {
+      "date": "1978-04-01",
+      "Disposable_income_per_person": 5899.6756441799125,
+      "Real_disposable_income_per_person": 16282.453479797368,
+      "Saving_rate": 12.8
+    },
+    {
+      "date": "1978-07-01",
+      "Disposable_income_per_person": 6001.201091523533,
+      "Real_disposable_income_per_person": 16161.223765323697,
+      "Saving_rate": 12.1
+    },
+    {
+      "date": "1978-10-01",
+      "Disposable_income_per_person": 6176.617650443715,
+      "Real_disposable_income_per_person": 16354.680451307277,
+      "Saving_rate": 12.6
+    },
+    {
+      "date": "1979-01-01",
+      "Disposable_income_per_person": 6300.128751839958,
+      "Real_disposable_income_per_person": 16335.683885496863,
+      "Saving_rate": 11.6
+    },
+    {
+      "date": "1979-04-01",
+      "Disposable_income_per_person": 6615.83260734958,
+      "Real_disposable_income_per_person": 16692.596990789523,
+      "Saving_rate": 14.1
+    },
+    {
+      "date": "1979-07-01",
+      "Disposable_income_per_person": 6677.094651481741,
+      "Real_disposable_income_per_person": 16527.46200861817,
+      "Saving_rate": 13.2
+    },
+    {
+      "date": "1979-10-01",
+      "Disposable_income_per_person": 6911.310016984195,
+      "Real_disposable_income_per_person": 16720.911331413372,
+      "Saving_rate": 14.4
+    },
+    {
+      "date": "1980-01-01",
+      "Disposable_income_per_person": 7062.20670751907,
+      "Real_disposable_income_per_person": 16721.878549768913,
+      "Saving_rate": 14.1
+    },
+    {
+      "date": "1980-04-01",
+      "Disposable_income_per_person": 7262.423523018294,
+      "Real_disposable_income_per_person": 16733.694753498374,
+      "Saving_rate": 14.9
+    },
+    {
+      "date": "1980-07-01",
+      "Disposable_income_per_person": 7471.3039624824405,
+      "Real_disposable_income_per_person": 16739.291924904646,
+      "Saving_rate": 13.9
+    },
+    {
+      "date": "1980-10-01",
+      "Disposable_income_per_person": 7799.529937447198,
+      "Real_disposable_income_per_person": 17004.78910780639,
+      "Saving_rate": 14.9
+    },
+    {
+      "date": "1981-01-01",
+      "Disposable_income_per_person": 8159.947424231275,
+      "Real_disposable_income_per_person": 17202.98121763445,
+      "Saving_rate": 16.4
+    },
+    {
+      "date": "1981-04-01",
+      "Disposable_income_per_person": 8377.530331552083,
+      "Real_disposable_income_per_person": 17155.352214782422,
+      "Saving_rate": 17.3
+    },
+    {
+      "date": "1981-07-01",
+      "Disposable_income_per_person": 8550.069571148813,
+      "Real_disposable_income_per_person": 16998.150240852512,
+      "Saving_rate": 17.8
+    },
+    {
+      "date": "1981-10-01",
+      "Disposable_income_per_person": 8783.74582465895,
+      "Real_disposable_income_per_person": 17044.784912016075,
+      "Saving_rate": 18.2
+    },
+    {
+      "date": "1982-01-01",
+      "Disposable_income_per_person": 9096.197484718203,
+      "Real_disposable_income_per_person": 17216.77757359912,
+      "Saving_rate": 21.6
+    },
+    {
+      "date": "1982-04-01",
+      "Disposable_income_per_person": 9200.198274351851,
+      "Real_disposable_income_per_person": 16891.428900278795,
+      "Saving_rate": 21.3
+    },
+    {
+      "date": "1982-07-01",
+      "Disposable_income_per_person": 9341.74231879024,
+      "Real_disposable_income_per_person": 16791.627894769754,
+      "Saving_rate": 20.2
+    },
+    {
+      "date": "1982-10-01",
+      "Disposable_income_per_person": 9196.167683951337,
+      "Real_disposable_income_per_person": 16276.402980444842,
+      "Saving_rate": 18.6
+    },
+    {
+      "date": "1983-01-01",
+      "Disposable_income_per_person": 9259.025236076937,
+      "Real_disposable_income_per_person": 16272.45208449374,
+      "Saving_rate": 16.6
+    },
+    {
+      "date": "1983-04-01",
+      "Disposable_income_per_person": 9329.507091832484,
+      "Real_disposable_income_per_person": 16178.335997397371,
+      "Saving_rate": 14.7
+    },
+    {
+      "date": "1983-07-01",
+      "Disposable_income_per_person": 10008.495078795217,
+      "Real_disposable_income_per_person": 17079.343137875796,
+      "Saving_rate": 18.7
+    },
+    {
+      "date": "1983-10-01",
+      "Disposable_income_per_person": 9914.858566140405,
+      "Real_disposable_income_per_person": 16766.953606776333,
+      "Saving_rate": 15.7
+    },
+    {
+      "date": "1984-01-01",
+      "Disposable_income_per_person": 9905.676703859195,
+      "Real_disposable_income_per_person": 16555.44853012679,
+      "Saving_rate": 14.6
+    },
+    {
+      "date": "1984-04-01",
+      "Disposable_income_per_person": 10314.543215407477,
+      "Real_disposable_income_per_person": 17095.927981338362,
+      "Saving_rate": 17.0
+    },
+    {
+      "date": "1984-07-01",
+      "Disposable_income_per_person": 10485.236235501212,
+      "Real_disposable_income_per_person": 17236.004770686923,
+      "Saving_rate": 17.7
+    },
+    {
+      "date": "1984-10-01",
+      "Disposable_income_per_person": 10641.30901606797,
+      "Real_disposable_income_per_person": 17359.394805983637,
+      "Saving_rate": 17.1
+    },
+    {
+      "date": "1985-01-01",
+      "Disposable_income_per_person": 10779.136407869471,
+      "Real_disposable_income_per_person": 17385.703883660437,
+      "Saving_rate": 15.8
+    },
+    {
+      "date": "1985-04-01",
+      "Disposable_income_per_person": 11268.40694312958,
+      "Real_disposable_income_per_person": 17962.39151402165,
+      "Saving_rate": 17.6
+    },
+    {
+      "date": "1985-07-01",
+      "Disposable_income_per_person": 11310.528905605099,
+      "Real_disposable_income_per_person": 17858.72985095542,
+      "Saving_rate": 14.6
+    },
+    {
+      "date": "1985-10-01",
+      "Disposable_income_per_person": 11442.42032843244,
+      "Real_disposable_income_per_person": 17925.462655507738,
+      "Saving_rate": 14.3
+    },
+    {
+      "date": "1986-01-01",
+      "Disposable_income_per_person": 11566.258823235774,
+      "Real_disposable_income_per_person": 17885.967252426453,
+      "Saving_rate": 14.0
+    },
+    {
+      "date": "1986-04-01",
+      "Disposable_income_per_person": 11774.962850142094,
+      "Real_disposable_income_per_person": 18059.758972610573,
+      "Saving_rate": 14.0
+    },
+    {
+      "date": "1986-07-01",
+      "Disposable_income_per_person": 11772.748167663194,
+      "Real_disposable_income_per_person": 17846.51061293056,
+      "Saving_rate": 12.0
+    },
+    {
+      "date": "1986-10-01",
+      "Disposable_income_per_person": 11838.256973070387,
+      "Real_disposable_income_per_person": 17766.26859390253,
+      "Saving_rate": 12.3
+    },
+    {
+      "date": "1987-01-01",
+      "Disposable_income_per_person": 12138.417909106212,
+      "Real_disposable_income_per_person": 18045.219884697046,
+      "Saving_rate": 12.5
+    },
+    {
+      "date": "1987-04-01",
+      "Disposable_income_per_person": 12113.243684044519,
+      "Real_disposable_income_per_person": 17752.67760241014,
+      "Saving_rate": 11.0
+    },
+    {
+      "date": "1987-07-01",
+      "Disposable_income_per_person": 12591.86388451204,
+      "Real_disposable_income_per_person": 18257.89833423689,
+      "Saving_rate": 11.3
+    },
+    {
+      "date": "1987-10-01",
+      "Disposable_income_per_person": 12612.588853218458,
+      "Real_disposable_income_per_person": 18165.03435413124,
+      "Saving_rate": 11.0
+    },
+    {
+      "date": "1988-01-01",
+      "Disposable_income_per_person": 12648.667439932326,
+      "Real_disposable_income_per_person": 18060.924473963336,
+      "Saving_rate": 10.0
+    },
+    {
+      "date": "1988-04-01",
+      "Disposable_income_per_person": 13076.72110427744,
+      "Real_disposable_income_per_person": 18435.227120691878,
+      "Saving_rate": 11.5
+    },
+    {
+      "date": "1988-07-01",
+      "Disposable_income_per_person": 13528.793027196025,
+      "Real_disposable_income_per_person": 18868.60952189125,
+      "Saving_rate": 13.0
+    },
+    {
+      "date": "1988-10-01",
+      "Disposable_income_per_person": 13832.576105103637,
+      "Real_disposable_income_per_person": 19141.018595623114,
+      "Saving_rate": 13.2
+    },
+    {
+      "date": "1989-01-01",
+      "Disposable_income_per_person": 14042.727167398949,
+      "Real_disposable_income_per_person": 19192.79339507829,
+      "Saving_rate": 13.5
+    },
+    {
+      "date": "1989-04-01",
+      "Disposable_income_per_person": 14419.597391697942,
+      "Real_disposable_income_per_person": 19372.499854497906,
+      "Saving_rate": 12.8
+    },
+    {
+      "date": "1989-07-01",
+      "Disposable_income_per_person": 14182.758588705903,
+      "Real_disposable_income_per_person": 18785.11071351775,
+      "Saving_rate": 12.1
+    },
+    {
+      "date": "1989-10-01",
+      "Disposable_income_per_person": 14301.95095774339,
+      "Real_disposable_income_per_person": 18810.106476646284,
+      "Saving_rate": 12.2
+    },
+    {
+      "date": "1990-01-01",
+      "Disposable_income_per_person": 14684.190499771516,
+      "Real_disposable_income_per_person": 19037.412056747857,
+      "Saving_rate": 13.1
+    },
+    {
+      "date": "1990-04-01",
+      "Disposable_income_per_person": 14243.468886767121,
+      "Real_disposable_income_per_person": 18292.126138827636,
+      "Saving_rate": 11.4
+    },
+    {
+      "date": "1990-07-01",
+      "Disposable_income_per_person": 14625.184418206287,
+      "Real_disposable_income_per_person": 18599.217149054202,
+      "Saving_rate": 13.1
+    },
+    {
+      "date": "1990-10-01",
+      "Disposable_income_per_person": 14824.441282957592,
+      "Real_disposable_income_per_person": 18576.99408891929,
+      "Saving_rate": 13.9
+    },
+    {
+      "date": "1991-01-01",
+      "Disposable_income_per_person": 14978.785928962274,
+      "Real_disposable_income_per_person": 18244.56264185417,
+      "Saving_rate": 14.8
+    },
+    {
+      "date": "1991-04-01",
+      "Disposable_income_per_person": 14753.210096073817,
+      "Real_disposable_income_per_person": 17839.431796945366,
+      "Saving_rate": 11.6
+    },
+    {
+      "date": "1991-07-01",
+      "Disposable_income_per_person": 14987.113650257406,
+      "Real_disposable_income_per_person": 18013.35775271323,
+      "Saving_rate": 12.7
+    },
+    {
+      "date": "1991-10-01",
+      "Disposable_income_per_person": 15076.725918534668,
+      "Real_disposable_income_per_person": 18150.15158732103,
+      "Saving_rate": 13.1
+    },
+    {
+      "date": "1992-01-01",
+      "Disposable_income_per_person": 14900.851364177966,
+      "Real_disposable_income_per_person": 17866.728254410034,
+      "Saving_rate": 12.0
+    },
+    {
+      "date": "1992-04-01",
+      "Disposable_income_per_person": 15168.750116511676,
+      "Real_disposable_income_per_person": 18093.936520689873,
+      "Saving_rate": 13.0
+    },
+    {
+      "date": "1992-07-01",
+      "Disposable_income_per_person": 15590.281772430018,
+      "Real_disposable_income_per_person": 18515.77407652021,
+      "Saving_rate": 14.6
+    },
+    {
+      "date": "1992-10-01",
+      "Disposable_income_per_person": 15295.402567737076,
+      "Real_disposable_income_per_person": 18086.79846401704,
+      "Saving_rate": 12.2
+    },
+    {
+      "date": "1993-01-01",
+      "Disposable_income_per_person": 15395.041957899322,
+      "Real_disposable_income_per_person": 18076.370204969848,
+      "Saving_rate": 12.3
+    },
+    {
+      "date": "1993-04-01",
+      "Disposable_income_per_person": 16033.92121300951,
+      "Real_disposable_income_per_person": 18789.751421495523,
+      "Saving_rate": 15.4
+    },
+    {
+      "date": "1993-07-01",
+      "Disposable_income_per_person": 15503.143062289095,
+      "Real_disposable_income_per_person": 18097.054158314117,
+      "Saving_rate": 11.7
+    },
+    {
+      "date": "1993-10-01",
+      "Disposable_income_per_person": 15357.691016093277,
+      "Real_disposable_income_per_person": 17837.039507657697,
+      "Saving_rate": 10.4
+    },
+    {
+      "date": "1994-01-01",
+      "Disposable_income_per_person": 15605.893956992031,
+      "Real_disposable_income_per_person": 18224.087921750135,
+      "Saving_rate": 10.3
+    },
+    {
+      "date": "1994-04-01",
+      "Disposable_income_per_person": 15723.283494274556,
+      "Real_disposable_income_per_person": 18425.722844852997,
+      "Saving_rate": 11.0
+    },
+    {
+      "date": "1994-07-01",
+      "Disposable_income_per_person": 15659.779916066056,
+      "Real_disposable_income_per_person": 18251.491743666735,
+      "Saving_rate": 10.0
+    },
+    {
+      "date": "1994-10-01",
+      "Disposable_income_per_person": 15797.021016915785,
+      "Real_disposable_income_per_person": 18354.400871706956,
+      "Saving_rate": 9.6
+    },
+    {
+      "date": "1995-01-01",
+      "Disposable_income_per_person": 15850.578318463908,
+      "Real_disposable_income_per_person": 18233.02720682198,
+      "Saving_rate": 10.0
+    },
+    {
+      "date": "1995-04-01",
+      "Disposable_income_per_person": 15948.627975497766,
+      "Real_disposable_income_per_person": 18199.27117782172,
+      "Saving_rate": 9.8
+    },
+    {
+      "date": "1995-07-01",
+      "Disposable_income_per_person": 15897.585688719228,
+      "Real_disposable_income_per_person": 18106.589622687046,
+      "Saving_rate": 8.7
+    },
+    {
+      "date": "1995-10-01",
+      "Disposable_income_per_person": 15956.852218753982,
+      "Real_disposable_income_per_person": 18167.194176949506,
+      "Saving_rate": 8.9
+    },
+    {
+      "date": "1996-01-01",
+      "Disposable_income_per_person": 16034.308856799216,
+      "Real_disposable_income_per_person": 18179.488499772353,
+      "Saving_rate": 7.6
+    },
+    {
+      "date": "1996-04-01",
+      "Disposable_income_per_person": 16049.89215875183,
+      "Real_disposable_income_per_person": 18053.871944602735,
+      "Saving_rate": 7.2
+    },
+    {
+      "date": "1996-07-01",
+      "Disposable_income_per_person": 16052.971984198157,
+      "Real_disposable_income_per_person": 18030.294254060074,
+      "Saving_rate": 6.9
+    },
+    {
+      "date": "1996-10-01",
+      "Disposable_income_per_person": 16188.119875027121,
+      "Real_disposable_income_per_person": 18073.82196690784,
+      "Saving_rate": 5.6
+    },
+    {
+      "date": "1997-01-01",
+      "Disposable_income_per_person": 16311.628414748066,
+      "Real_disposable_income_per_person": 18110.61630060851,
+      "Saving_rate": 4.5
+    },
+    {
+      "date": "1997-04-01",
+      "Disposable_income_per_person": 16343.678445095535,
+      "Real_disposable_income_per_person": 18092.63296505041,
+      "Saving_rate": 4.3
+    },
+    {
+      "date": "1997-07-01",
+      "Disposable_income_per_person": 16761.882953852524,
+      "Real_disposable_income_per_person": 18507.783901935065,
+      "Saving_rate": 4.9
+    },
+    {
+      "date": "1997-10-01",
+      "Disposable_income_per_person": 16863.32859806653,
+      "Real_disposable_income_per_person": 18633.51226305694,
+      "Saving_rate": 3.7
+    },
+    {
+      "date": "1998-01-01",
+      "Disposable_income_per_person": 16929.513576199894,
+      "Real_disposable_income_per_person": 18603.861072747135,
+      "Saving_rate": 4.9
+    },
+    {
+      "date": "1998-04-01",
+      "Disposable_income_per_person": 16975.297355268485,
+      "Real_disposable_income_per_person": 18606.464035734545,
+      "Saving_rate": 3.6
+    },
+    {
+      "date": "1998-07-01",
+      "Disposable_income_per_person": 17356.624019368086,
+      "Real_disposable_income_per_person": 19003.602940913963,
+      "Saving_rate": 4.6
+    },
+    {
+      "date": "1998-10-01",
+      "Disposable_income_per_person": 17596.399586539123,
+      "Real_disposable_income_per_person": 19231.03779949631,
+      "Saving_rate": 5.5
+    },
+    {
+      "date": "1999-01-01",
+      "Disposable_income_per_person": 17657.03681846306,
+      "Real_disposable_income_per_person": 19255.22008556495,
+      "Saving_rate": 4.5
+    },
+    {
+      "date": "1999-04-01",
+      "Disposable_income_per_person": 17916.722635120605,
+      "Real_disposable_income_per_person": 19327.640383085873,
+      "Saving_rate": 5.0
+    },
+    {
+      "date": "1999-07-01",
+      "Disposable_income_per_person": 18108.181344697063,
+      "Real_disposable_income_per_person": 19401.622869318282,
+      "Saving_rate": 4.6
+    },
+    {
+      "date": "1999-10-01",
+      "Disposable_income_per_person": 18269.77775821716,
+      "Real_disposable_income_per_person": 19505.10080948451,
+      "Saving_rate": 4.2
+    },
+    {
+      "date": "2000-01-01",
+      "Disposable_income_per_person": 18465.254653495238,
+      "Real_disposable_income_per_person": 19616.06372538446,
+      "Saving_rate": 4.6
+    },
+    {
+      "date": "2000-04-01",
+      "Disposable_income_per_person": 18735.942927427346,
+      "Real_disposable_income_per_person": 19728.96763154863,
+      "Saving_rate": 4.6
+    },
+    {
+      "date": "2000-07-01",
+      "Disposable_income_per_person": 19097.997668623168,
+      "Real_disposable_income_per_person": 19921.41620510066,
+      "Saving_rate": 4.7
+    },
+    {
+      "date": "2000-10-01",
+      "Disposable_income_per_person": 19354.359407001743,
+      "Real_disposable_income_per_person": 20049.40546305429,
+      "Saving_rate": 5.8
+    },
+    {
+      "date": "2001-01-01",
+      "Disposable_income_per_person": 19937.425629227146,
+      "Real_disposable_income_per_person": 20610.708782798567,
+      "Saving_rate": 6.5
+    },
+    {
+      "date": "2001-04-01",
+      "Disposable_income_per_person": 19501.021578211195,
+      "Real_disposable_income_per_person": 19824.827087303824,
+      "Saving_rate": 2.9
+    },
+    {
+      "date": "2001-07-01",
+      "Disposable_income_per_person": 19954.31782908627,
+      "Real_disposable_income_per_person": 20265.048573885855,
+      "Saving_rate": 4.8
+    },
+    {
+      "date": "2001-10-01",
+      "Disposable_income_per_person": 20070.884031040892,
+      "Real_disposable_income_per_person": 20571.456130209317,
+      "Saving_rate": 5.1
+    },
+    {
+      "date": "2002-01-01",
+      "Disposable_income_per_person": 20352.725999663253,
+      "Real_disposable_income_per_person": 20718.75738004403,
+      "Saving_rate": 5.2
+    },
+    {
+      "date": "2002-04-01",
+      "Disposable_income_per_person": 20350.12547083159,
+      "Real_disposable_income_per_person": 20411.359549480032,
+      "Saving_rate": 2.5
+    },
+    {
+      "date": "2002-07-01",
+      "Disposable_income_per_person": 20636.879149878798,
+      "Real_disposable_income_per_person": 20479.866837458285,
+      "Saving_rate": 2.7
+    },
+    {
+      "date": "2002-10-01",
+      "Disposable_income_per_person": 20756.43713488266,
+      "Real_disposable_income_per_person": 20496.810863939427,
+      "Saving_rate": 2.4
+    },
+    {
+      "date": "2003-01-01",
+      "Disposable_income_per_person": 21062.27196407557,
+      "Real_disposable_income_per_person": 20521.862907511113,
+      "Saving_rate": 2.5
+    },
+    {
+      "date": "2003-04-01",
+      "Disposable_income_per_person": 20898.691269143346,
+      "Real_disposable_income_per_person": 20395.599807231636,
+      "Saving_rate": 3.0
+    },
+    {
+      "date": "2003-07-01",
+      "Disposable_income_per_person": 20905.200768043927,
+      "Real_disposable_income_per_person": 20322.619022725787,
+      "Saving_rate": 1.2
+    },
+    {
+      "date": "2003-10-01",
+      "Disposable_income_per_person": 21082.966577442417,
+      "Real_disposable_income_per_person": 20462.277493473714,
+      "Saving_rate": 2.0
+    },
+    {
+      "date": "2004-01-01",
+      "Disposable_income_per_person": 21338.554594021352,
+      "Real_disposable_income_per_person": 20603.689662717752,
+      "Saving_rate": 1.8
+    },
+    {
+      "date": "2004-04-01",
+      "Disposable_income_per_person": 21804.44195681643,
+      "Real_disposable_income_per_person": 20819.0088702894,
+      "Saving_rate": 2.9
+    },
+    {
+      "date": "2004-07-01",
+      "Disposable_income_per_person": 21993.557868332402,
+      "Real_disposable_income_per_person": 20959.5532417399,
+      "Saving_rate": 2.6
+    },
+    {
+      "date": "2004-10-01",
+      "Disposable_income_per_person": 22039.185900759054,
+      "Real_disposable_income_per_person": 20910.043549107264,
+      "Saving_rate": 2.7
+    },
+    {
+      "date": "2005-01-01",
+      "Disposable_income_per_person": 21944.06106361117,
+      "Real_disposable_income_per_person": 20747.61525081422,
+      "Saving_rate": 0.4
+    },
+    {
+      "date": "2005-04-01",
+      "Disposable_income_per_person": 22392.0117904571,
+      "Real_disposable_income_per_person": 20979.398929222767,
+      "Saving_rate": 1.3
+    },
+    {
+      "date": "2005-07-01",
+      "Disposable_income_per_person": 22482.08991719436,
+      "Real_disposable_income_per_person": 20881.198065505596,
+      "Saving_rate": 2.1
+    },
+    {
+      "date": "2005-10-01",
+      "Disposable_income_per_person": 22798.65575427504,
+      "Real_disposable_income_per_person": 21162.1185837949,
+      "Saving_rate": 2.1
+    },
+    {
+      "date": "2006-01-01",
+      "Disposable_income_per_person": 23455.537411758127,
+      "Real_disposable_income_per_person": 21664.597363077086,
+      "Saving_rate": 3.1
+    },
+    {
+      "date": "2006-04-01",
+      "Disposable_income_per_person": 23424.206789671665,
+      "Real_disposable_income_per_person": 21398.48366900579,
+      "Saving_rate": 1.3
+    },
+    {
+      "date": "2006-07-01",
+      "Disposable_income_per_person": 23985.734879284282,
+      "Real_disposable_income_per_person": 21898.114618944866,
+      "Saving_rate": 2.8
+    },
+    {
+      "date": "2006-10-01",
+      "Disposable_income_per_person": 24351.39440575562,
+      "Real_disposable_income_per_person": 22299.81172688243,
+      "Saving_rate": 3.5
+    },
+    {
+      "date": "2007-01-01",
+      "Disposable_income_per_person": 24826.204950887968,
+      "Real_disposable_income_per_person": 22521.50434008585,
+      "Saving_rate": 4.5
+    },
+    {
+      "date": "2007-04-01",
+      "Disposable_income_per_person": 24717.772519972266,
+      "Real_disposable_income_per_person": 22095.744207364954,
+      "Saving_rate": 1.7
+    },
+    {
+      "date": "2007-07-01",
+      "Disposable_income_per_person": 24765.448121289362,
+      "Real_disposable_income_per_person": 22138.362444537568,
+      "Saving_rate": 1.3
+    },
+    {
+      "date": "2007-10-01",
+      "Disposable_income_per_person": 25092.965808835717,
+      "Real_disposable_income_per_person": 22437.823376008095,
+      "Saving_rate": 1.1
+    },
+    {
+      "date": "2008-01-01",
+      "Disposable_income_per_person": 25525.001889546293,
+      "Real_disposable_income_per_person": 22749.55605128903,
+      "Saving_rate": 2.5
+    },
+    {
+      "date": "2008-04-01",
+      "Disposable_income_per_person": 25900.618684343237,
+      "Real_disposable_income_per_person": 22620.627671915492,
+      "Saving_rate": 3.0
+    },
+    {
+      "date": "2008-07-01",
+      "Disposable_income_per_person": 26309.386104097845,
+      "Real_disposable_income_per_person": 22739.313832409545,
+      "Saving_rate": 3.1
+    },
+    {
+      "date": "2008-10-01",
+      "Disposable_income_per_person": 26166.918636988285,
+      "Real_disposable_income_per_person": 22960.15089528074,
+      "Saving_rate": 5.0
+    },
+    {
+      "date": "2009-01-01",
+      "Disposable_income_per_person": 26024.12354715785,
+      "Real_disposable_income_per_person": 22908.559460526278,
+      "Saving_rate": 4.6
+    },
+    {
+      "date": "2009-04-01",
+      "Disposable_income_per_person": 26086.6568265,
+      "Real_disposable_income_per_person": 22769.84884477742,
+      "Saving_rate": 4.8
+    },
+    {
+      "date": "2009-07-01",
+      "Disposable_income_per_person": 26495.217717216103,
+      "Real_disposable_income_per_person": 23099.579526779515,
+      "Saving_rate": 4.8
+    },
+    {
+      "date": "2009-10-01",
+      "Disposable_income_per_person": 26776.599407421774,
+      "Real_disposable_income_per_person": 23311.02676211994,
+      "Saving_rate": 4.3
+    },
+    {
+      "date": "2010-01-01",
+      "Disposable_income_per_person": 27368.43923526198,
+      "Real_disposable_income_per_person": 23709.303409120977,
+      "Saving_rate": 5.4
+    },
+    {
+      "date": "2010-04-01",
+      "Disposable_income_per_person": 26965.34579449952,
+      "Real_disposable_income_per_person": 23212.636264992412,
+      "Saving_rate": 3.7
+    },
+    {
+      "date": "2010-07-01",
+      "Disposable_income_per_person": 27291.49781117407,
+      "Real_disposable_income_per_person": 23366.0083999778,
+      "Saving_rate": 3.8
+    },
+    {
+      "date": "2010-10-01",
+      "Disposable_income_per_person": 27689.83056076328,
+      "Real_disposable_income_per_person": 23572.500477380774,
+      "Saving_rate": 4.2
+    },
+    {
+      "date": "2011-01-01",
+      "Disposable_income_per_person": 27816.261555535777,
+      "Real_disposable_income_per_person": 23486.851862259307,
+      "Saving_rate": 4.5
+    },
+    {
+      "date": "2011-04-01",
+      "Disposable_income_per_person": 27859.55413226575,
+      "Real_disposable_income_per_person": 23203.4043300381,
+      "Saving_rate": 4.3
+    },
+    {
+      "date": "2011-07-01",
+      "Disposable_income_per_person": 28039.657626479064,
+      "Real_disposable_income_per_person": 23308.111077704958,
+      "Saving_rate": 4.3
+    },
+    {
+      "date": "2011-10-01",
+      "Disposable_income_per_person": 28484.07263708999,
+      "Real_disposable_income_per_person": 23612.107740058018,
+      "Saving_rate": 4.3
+    },
+    {
+      "date": "2012-01-01",
+      "Disposable_income_per_person": 28666.215166331982,
+      "Real_disposable_income_per_person": 23651.992711495033,
+      "Saving_rate": 4.7
+    },
+    {
+      "date": "2012-04-01",
+      "Disposable_income_per_person": 28737.352059100504,
+      "Real_disposable_income_per_person": 23561.644213528703,
+      "Saving_rate": 4.9
+    },
+    {
+      "date": "2012-07-01",
+      "Disposable_income_per_person": 29007.822484663342,
+      "Real_disposable_income_per_person": 23822.46576895429,
+      "Saving_rate": 5.4
+    },
+    {
+      "date": "2012-10-01",
+      "Disposable_income_per_person": 29123.490349770043,
+      "Real_disposable_income_per_person": 23917.457171998394,
+      "Saving_rate": 5.2
+    },
+    {
+      "date": "2013-01-01",
+      "Disposable_income_per_person": 29707.187652102984,
+      "Real_disposable_income_per_person": 24290.423264188867,
+      "Saving_rate": 5.8
+    },
+    {
+      "date": "2013-04-01",
+      "Disposable_income_per_person": 29808.876827063712,
+      "Real_disposable_income_per_person": 24254.57837840823,
+      "Saving_rate": 5.0
+    },
+    {
+      "date": "2013-07-01",
+      "Disposable_income_per_person": 29885.813947336494,
+      "Real_disposable_income_per_person": 24264.53094506346,
+      "Saving_rate": 4.8
+    },
+    {
+      "date": "2013-10-01",
+      "Disposable_income_per_person": 30119.51542643331,
+      "Real_disposable_income_per_person": 24507.335578871694,
+      "Saving_rate": 4.9
+    },
+    {
+      "date": "2014-01-01",
+      "Disposable_income_per_person": 30291.466033883204,
+      "Real_disposable_income_per_person": 24428.60164022839,
+      "Saving_rate": 4.3
+    },
+    {
+      "date": "2014-04-01",
+      "Disposable_income_per_person": 30388.097124222902,
+      "Real_disposable_income_per_person": 24187.92554329231,
+      "Saving_rate": 3.9
+    },
+    {
+      "date": "2014-07-01",
+      "Disposable_income_per_person": 30793.3049512297,
+      "Real_disposable_income_per_person": 24490.963640956812,
+      "Saving_rate": 3.8
+    },
+    {
+      "date": "2014-10-01",
+      "Disposable_income_per_person": 30782.466920196577,
+      "Real_disposable_income_per_person": 24573.54996290307,
+      "Saving_rate": 3.5
+    },
+    {
+      "date": "2015-01-01",
+      "Disposable_income_per_person": 31422.975143011692,
+      "Real_disposable_income_per_person": 25071.522720488054,
+      "Saving_rate": 5.1
+    },
+    {
+      "date": "2015-04-01",
+      "Disposable_income_per_person": 31665.920272272095,
+      "Real_disposable_income_per_person": 24979.689933425267,
+      "Saving_rate": 5.2
+    },
+    {
+      "date": "2015-07-01",
+      "Disposable_income_per_person": 31825.9060805168,
+      "Real_disposable_income_per_person": 25013.811433468796,
+      "Saving_rate": 4.3
+    },
+    {
+      "date": "2015-10-01",
+      "Disposable_income_per_person": 31764.654749435922,
+      "Real_disposable_income_per_person": 25024.675485374937,
+      "Saving_rate": 3.6
+    },
+    {
+      "date": "2016-01-01",
+      "Disposable_income_per_person": 30878.12034762766,
+      "Real_disposable_income_per_person": 24262.53563197564,
+      "Saving_rate": 0.7
+    },
+    {
+      "date": "2016-04-01",
+      "Disposable_income_per_person": 31362.44746966583,
+      "Real_disposable_income_per_person": 24362.33620119044,
+      "Saving_rate": 2.2
+    },
+    {
+      "date": "2016-07-01",
+      "Disposable_income_per_person": 31597.85729494855,
+      "Real_disposable_income_per_person": 24532.497899804777,
+      "Saving_rate": 2.4
+    },
+    {
+      "date": "2016-10-01",
+      "Disposable_income_per_person": 31834.6966818186,
+      "Real_disposable_income_per_person": 24735.584057357108,
+      "Saving_rate": 2.5
+    },
+    {
+      "date": "2017-01-01",
+      "Disposable_income_per_person": 31889.56658798425,
+      "Real_disposable_income_per_person": 24587.175472616997,
+      "Saving_rate": 1.1
+    },
+    {
+      "date": "2017-04-01",
+      "Disposable_income_per_person": 32395.841200823987,
+      "Real_disposable_income_per_person": 24837.08755493789,
+      "Saving_rate": 1.5
+    },
+    {
+      "date": "2017-07-01",
+      "Disposable_income_per_person": 32943.42671344907,
+      "Real_disposable_income_per_person": 25231.115685562218,
+      "Saving_rate": 2.8
+    },
+    {
+      "date": "2017-10-01",
+      "Disposable_income_per_person": 33125.14339127078,
+      "Real_disposable_income_per_person": 25286.369000970062,
+      "Saving_rate": 2.6
+    },
+    {
+      "date": "2018-01-01",
+      "Disposable_income_per_person": 33034.12606290616,
+      "Real_disposable_income_per_person": 24956.529385222482,
+      "Saving_rate": 1.4
+    },
+    {
+      "date": "2018-04-01",
+      "Disposable_income_per_person": 32962.68276399928,
+      "Real_disposable_income_per_person": 24703.48445965472,
+      "Saving_rate": 0.1
+    },
+    {
+      "date": "2018-07-01",
+      "Disposable_income_per_person": 32988.874268934866,
+      "Real_disposable_income_per_person": 24606.320936550124,
+      "Saving_rate": -0.1
+    },
+    {
+      "date": "2018-10-01",
+      "Disposable_income_per_person": 33401.857272047644,
+      "Real_disposable_income_per_person": 24988.920652404722,
+      "Saving_rate": 1.1
+    },
+    {
+      "date": "2019-01-01",
+      "Disposable_income_per_person": 33509.96262255552,
+      "Real_disposable_income_per_person": 24914.470351342392,
+      "Saving_rate": 1.0
+    },
+    {
+      "date": "2019-04-01",
+      "Disposable_income_per_person": 34051.65278864151,
+      "Real_disposable_income_per_person": 24982.870718005513,
+      "Saving_rate": 2.1
+    },
+    {
+      "date": "2019-07-01",
+      "Disposable_income_per_person": 34221.145742273846,
+      "Real_disposable_income_per_person": 25039.862738249158,
+      "Saving_rate": 2.5
+    },
+    {
+      "date": "2019-10-01",
+      "Disposable_income_per_person": 34581.11446176,
+      "Real_disposable_income_per_person": 25340.337905539815,
+      "Saving_rate": 2.8
+    },
+    {
+      "date": "2020-01-01",
+      "Disposable_income_per_person": 34901.51709777588,
+      "Real_disposable_income_per_person": 25487.962827002833,
+      "Saving_rate": 5.3
+    },
+    {
+      "date": "2020-04-01",
+      "Disposable_income_per_person": 38208.38935709138,
+      "Real_disposable_income_per_person": 28025.7134648592,
+      "Saving_rate": 26.5
+    },
+    {
+      "date": "2020-07-01",
+      "Disposable_income_per_person": 36651.325771909054,
+      "Real_disposable_income_per_person": 26746.28492233694,
+      "Saving_rate": 13.6
+    },
+    {
+      "date": "2020-10-01",
+      "Disposable_income_per_person": 36313.49453601963,
+      "Real_disposable_income_per_person": 26403.413380528087,
+      "Saving_rate": 11.4
+    },
+    {
+      "date": "2021-01-01",
+      "Disposable_income_per_person": 37639.840422682144,
+      "Real_disposable_income_per_person": 27098.51722295331,
+      "Saving_rate": 14.0
+    },
+    {
+      "date": "2021-04-01",
+      "Disposable_income_per_person": 37427.83537617002,
+      "Real_disposable_income_per_person": 26563.403389758707,
+      "Saving_rate": 12.7
+    },
+    {
+      "date": "2021-07-01",
+      "Disposable_income_per_person": 37610.28020392541,
+      "Real_disposable_income_per_person": 26374.67054973732,
+      "Saving_rate": 7.6
+    },
+    {
+      "date": "2021-10-01",
+      "Disposable_income_per_person": 37099.28407394678,
+      "Real_disposable_income_per_person": 25757.429350113478,
+      "Saving_rate": 4.1
+    },
+    {
+      "date": "2022-01-01",
+      "Disposable_income_per_person": 37988.06079442235,
+      "Real_disposable_income_per_person": 25842.2182274982,
+      "Saving_rate": 4.6
+    },
+    {
+      "date": "2022-04-01",
+      "Disposable_income_per_person": 38504.526747971446,
+      "Real_disposable_income_per_person": 25409.93846104583,
+      "Saving_rate": 1.2
+    },
+    {
+      "date": "2022-07-01",
+      "Disposable_income_per_person": 38602.59061509727,
+      "Real_disposable_income_per_person": 25263.475533440625,
+      "Saving_rate": 0.5
+    },
+    {
+      "date": "2022-10-01",
+      "Disposable_income_per_person": 39478.78566124225,
+      "Real_disposable_income_per_person": 25696.757861515893,
+      "Saving_rate": 2.1
+    },
+    {
+      "date": "2023-01-01",
+      "Disposable_income_per_person": 39071.29301902728,
+      "Real_disposable_income_per_person": 25277.95537137844,
+      "Saving_rate": 0.4
+    },
+    {
+      "date": "2023-04-01",
+      "Disposable_income_per_person": 39732.5798430233,
+      "Real_disposable_income_per_person": 25328.886427766658,
+      "Saving_rate": 1.7
+    },
+    {
+      "date": "2023-07-01",
+      "Disposable_income_per_person": 40463.54313985877,
+      "Real_disposable_income_per_person": 25539.7915883813,
+      "Saving_rate": 3.4
+    },
+    {
+      "date": "2023-10-01",
+      "Disposable_income_per_person": 40573.3735148225,
+      "Real_disposable_income_per_person": 25587.580522276116,
+      "Saving_rate": 3.5
+    },
+    {
+      "date": "2024-01-01",
+      "Disposable_income_per_person": 40721.21060414552,
+      "Real_disposable_income_per_person": 25616.194550731085,
+      "Saving_rate": 3.5
+    },
+    {
+      "date": "2024-04-01",
+      "Disposable_income_per_person": 41529.24288399277,
+      "Real_disposable_income_per_person": 25767.885967317125,
+      "Saving_rate": 5.0
+    },
+    {
+      "date": "2024-07-01",
+      "Disposable_income_per_person": 42367.845983681626,
+      "Real_disposable_income_per_person": 26206.915041452554,
+      "Saving_rate": 5.9
+    },
+    {
+      "date": "2024-10-01",
+      "Disposable_income_per_person": 42547.413692133625,
+      "Real_disposable_income_per_person": 26328.845106518333,
+      "Saving_rate": 5.5
+    },
+    {
+      "date": "2025-01-01",
+      "Disposable_income_per_person": 42736.66005548543,
+      "Real_disposable_income_per_person": 26283.308767211212,
+      "Saving_rate": 5.3
+    },
+    {
+      "date": "2025-04-01",
+      "Disposable_income_per_person": 42683.884012219336,
+      "Real_disposable_income_per_person": 26021.469627445236,
+      "Saving_rate": 4.3
+    },
+    {
+      "date": "2025-07-01",
+      "Disposable_income_per_person": 42981.82355451775,
+      "Real_disposable_income_per_person": 26070.65723080333,
+      "Saving_rate": 4.4
+    },
+    {
+      "date": "2025-10-01",
+      "Disposable_income_per_person": 43329.564695241206,
+      "Real_disposable_income_per_person": 26223.258843196207,
+      "Saving_rate": 3.7
+    },
+    {
+      "date": "2026-01-01",
+      "Disposable_income_per_person": 43691.27269017439,
+      "Real_disposable_income_per_person": 26304.197886920163,
+      "Saving_rate": 3.5
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "notes": "Household income includes broader income and transfers; average wages describe employed workers. Quarterly values remain at their native frequency and are latest-vintage revised data."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T14:52:20+00:00"
+}

@@ -83,11 +83,13 @@ def test_country_histories_and_percentiles_are_separate() -> None:
     assert canada["latest"]["historicalPercentile"] != us["latest"]["historicalPercentile"]
 
 
-def test_missing_canadian_income_is_not_fabricated() -> None:
-    assert not (GENERATED / "canada/indicators/canada-house-price-to-income-index.json").exists()
+def test_canadian_income_ratios_use_published_components() -> None:
+    ratio = json.loads((GENERATED / "canada/indicators/nhpi-to-income.json").read_text())
+    assert ratio["components"] == ["new-housing-price-index", "household-disposable-income-per-person"]
+    assert ratio["frequency"] == "quarterly"
     findings = (ROOT / "analysis/food_housing_affordability_findings.md").read_text()
-    assert "not calculated" in findings
-    assert "Canadian food-to-income" in findings
+    assert "food-" in findings
+    assert "Quarterly income comparisons" in findings
 
 
 def test_frequency_and_international_comparison_metadata() -> None:

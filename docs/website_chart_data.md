@@ -36,6 +36,8 @@ The live diagnostic contract consists of `current-classification.json`, `symptom
 
 Food and housing data use three namespaces: `global/` for FAO and BIS evidence, `canada/` for Statistics Canada and Canadian BIS histories, and `us/` for BLS, FHFA, and U.S. BIS histories. Their manifests preserve native geography and frequency. International food commodities are not relabelled as retail groceries; property purchase prices are not combined with shelter-service costs. `futureClassifierMetadata.status` is `metadata_only_not_scored`, so these fields can support later rule design without changing current symptom or regime scores.
 
+New Canadian purchasing-power indicators use `futureClassifierMetadata.status: "Not yet evaluated"`. This is presentation and rule-preparation metadata only. Household-income ratios are quarterly and include only completed-quarter CPI or housing averages; wage ratios are monthly. Components, formulas, reference periods, source dates, and latest-vintage revision warnings are embedded in every indicator payload.
+
 Statistics Canada WDS release timestamps are preserved. Bank of Canada Valet observations retain their native observation dates and the pipeline retrieval timestamp. These are latest-vintage histories; they do not yet constitute a complete real-time vintage archive.
 
 The website build fails when a manifest dataset is missing required metadata, units, sources, final observation dates, ordered ISO dates, or unique dates.

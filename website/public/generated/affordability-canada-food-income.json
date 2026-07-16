@@ -1,0 +1,2261 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "affordability-canada-food-income",
+  "title": "Canadian food prices relative to disposable income",
+  "description": "Monthly consumer-price observations are averaged within completed quarters and compared with quarterly disposable income per person. No monthly income values are invented.",
+  "plainLanguageSummary": "Monthly consumer-price observations are averaged within completed quarters and compared with quarterly disposable income per person. No monthly income values are invented.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "explanation": "Monthly consumer-price observations are averaged within completed quarters and compared with quarterly disposable income per person. No monthly income values are invented.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "Monthly consumer-price observations are averaged within completed quarters and compared with quarterly disposable income per person. No monthly income values are invented."
+  ],
+  "sourceNotes": [
+    "Derived from Derived from Statistics Canada",
+    "Derived from Statistics Canada; Statistics Canada",
+    "Derived from Derived from Statistics Canada; Derived from Statistics Canada; Statistics Canada"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "Food_price_index": {
+        "mean": 85.80823529411765,
+        "standardDeviation": 12.388952607577556,
+        "n": 80
+      },
+      "Grocery_price_index": {
+        "mean": 86.18502254925231,
+        "standardDeviation": 12.30270324057629,
+        "n": 80
+      },
+      "Disposable_income_per_person": {
+        "mean": 83.57526132147999,
+        "standardDeviation": 14.771614695397515,
+        "n": 80
+      },
+      "Food_to_income": {
+        "mean": 103.3340446554043,
+        "standardDeviation": 4.192652913136874,
+        "n": 80
+      },
+      "Grocery_to_income": {
+        "mean": 103.82219828820664,
+        "standardDeviation": 4.517530839807162,
+        "n": 80
+      }
+    }
+  },
+  "frequency": "quarterly",
+  "dateRange": {
+    "start": "1961-01-01",
+    "end": "2026-01-01"
+  },
+  "series": [
+    {
+      "key": "Food_price_index",
+      "label": "Food CPI quarterly index",
+      "unit": "index, 2017-01=100",
+      "source": "Derived from Derived from Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Grocery_price_index",
+      "label": "Grocery CPI quarterly index",
+      "unit": "index, 2017-01=100",
+      "source": "Derived from Derived from Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Disposable_income_per_person",
+      "label": "Disposable income per person index",
+      "unit": "index, 2017-01=100",
+      "source": "Derived from Statistics Canada; Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Food_to_income",
+      "label": "Canada food-price-to-income index",
+      "unit": "index",
+      "source": "Derived from Derived from Statistics Canada; Derived from Statistics Canada; Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Grocery_to_income",
+      "label": "Canada grocery-price-to-income index",
+      "unit": "index",
+      "source": "Derived from Derived from Statistics Canada; Derived from Statistics Canada; Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1961-01-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 10.966057441253263,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1961-04-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 10.89484927605032,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1961-07-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 10.966057441253263,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1961-10-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 10.918585331117969,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1962-01-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 11.01352955138856,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1962-04-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 11.061001661523854,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1962-07-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 11.250890102065037,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1962-10-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 11.250890102065037,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1963-01-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 11.417042487538572,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1963-04-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 11.393306432470924,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1963-07-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 11.678139093282697,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1963-10-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 11.511986707809163,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1964-01-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 11.53572276287681,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1964-04-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 11.583194873012104,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1964-07-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 11.84429147875623,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1964-10-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 11.559458817944458,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1965-01-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 11.654403038215046,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1965-04-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 11.868027533823879,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1965-07-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 12.129124139568004,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1965-10-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 12.105388084500357,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1966-01-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 12.48516496558272,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1966-04-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 12.698789461191549,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1966-07-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 12.912413956800378,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1966-10-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 12.698789461191549,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1967-01-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 12.556373130785666,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1967-04-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 12.508901020650368,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1967-07-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 13.00735817707097,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1967-10-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 12.81746973652979,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1968-01-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 13.00735817707097,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1968-04-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 12.959886066935676,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1968-07-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 13.292190837882744,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1968-10-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 13.315926892950392,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1969-01-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 13.363399003085686,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1969-04-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 13.577023498694517,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1969-07-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 13.909328269641582,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1969-10-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 13.790647994303344,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1970-01-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 13.980536434844531,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1970-04-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 14.028008544979825,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1970-07-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 14.028008544979825,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1970-10-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 13.482079278423925,
+      "Disposable_income_per_person": null,
+      "Food_to_income": null,
+      "Grocery_to_income": null
+    },
+    {
+      "date": "1971-01-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 13.45834322335628,
+      "Disposable_income_per_person": 7.998135344503812,
+      "Food_to_income": null,
+      "Grocery_to_income": 168.2685106423541
+    },
+    {
+      "date": "1971-04-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 13.790647994303344,
+      "Disposable_income_per_person": 8.143258624595314,
+      "Food_to_income": null,
+      "Grocery_to_income": 169.35048523021314
+    },
+    {
+      "date": "1971-07-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 14.312841205791596,
+      "Disposable_income_per_person": 8.21806301673503,
+      "Food_to_income": null,
+      "Grocery_to_income": 174.16319607972503
+    },
+    {
+      "date": "1971-10-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 14.241633040588654,
+      "Disposable_income_per_person": 8.43172351247826,
+      "Food_to_income": null,
+      "Grocery_to_income": 168.90536103932016
+    },
+    {
+      "date": "1972-01-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 14.573937811535721,
+      "Disposable_income_per_person": 8.762843311096344,
+      "Food_to_income": null,
+      "Grocery_to_income": 166.31517070584633
+    },
+    {
+      "date": "1972-04-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 14.573937811535721,
+      "Disposable_income_per_person": 8.971578233664056,
+      "Food_to_income": null,
+      "Grocery_to_income": 162.44564146863178
+    },
+    {
+      "date": "1972-07-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 15.45217184903869,
+      "Disposable_income_per_person": 9.186250786029285,
+      "Food_to_income": null,
+      "Grocery_to_income": 168.20977577205704
+    },
+    {
+      "date": "1972-10-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 15.499643959173984,
+      "Disposable_income_per_person": 9.570458117342012,
+      "Food_to_income": null,
+      "Grocery_to_income": 161.9529992100177
+    },
+    {
+      "date": "1973-01-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 16.140517446000477,
+      "Disposable_income_per_person": 9.852230824396628,
+      "Food_to_income": null,
+      "Grocery_to_income": 163.8260180225625
+    },
+    {
+      "date": "1973-04-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 16.876335153097553,
+      "Disposable_income_per_person": 10.279101595588699,
+      "Food_to_income": null,
+      "Grocery_to_income": 164.18103271145867
+    },
+    {
+      "date": "1973-07-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 17.920721576074058,
+      "Disposable_income_per_person": 10.652307879516481,
+      "Food_to_income": null,
+      "Grocery_to_income": 168.23322963218274
+    },
+    {
+      "date": "1973-10-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 18.18181818181818,
+      "Disposable_income_per_person": 11.182087151225865,
+      "Food_to_income": null,
+      "Grocery_to_income": 162.59771486242576
+    },
+    {
+      "date": "1974-01-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 18.893899833847613,
+      "Disposable_income_per_person": 11.653034789469778,
+      "Food_to_income": null,
+      "Grocery_to_income": 162.13716147935142
+    },
+    {
+      "date": "1974-04-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 19.677189651079992,
+      "Disposable_income_per_person": 11.716789542215116,
+      "Food_to_income": null,
+      "Grocery_to_income": 167.94011346012385
+    },
+    {
+      "date": "1974-07-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 20.413007358177072,
+      "Disposable_income_per_person": 12.478960106679677,
+      "Food_to_income": null,
+      "Grocery_to_income": 163.57939430586444
+    },
+    {
+      "date": "1974-10-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 21.053880845003558,
+      "Disposable_income_per_person": 12.93513050408634,
+      "Food_to_income": null,
+      "Grocery_to_income": 162.7651212204811
+    },
+    {
+      "date": "1975-01-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 21.48112983622122,
+      "Disposable_income_per_person": 13.229868313252016,
+      "Food_to_income": null,
+      "Grocery_to_income": 162.36843275835278
+    },
+    {
+      "date": "1975-04-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 22.00332304770947,
+      "Disposable_income_per_person": 13.698631974768894,
+      "Food_to_income": null,
+      "Grocery_to_income": 160.624236699232
+    },
+    {
+      "date": "1975-07-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 23.285070021362447,
+      "Disposable_income_per_person": 14.312174546886213,
+      "Food_to_income": null,
+      "Grocery_to_income": 162.69414507964058
+    },
+    {
+      "date": "1975-10-01",
+      "Food_price_index": null,
+      "Grocery_price_index": 23.3088060764301,
+      "Disposable_income_per_person": 14.601443911986355,
+      "Food_to_income": null,
+      "Grocery_to_income": 159.63356923417587
+    },
+    {
+      "date": "1976-01-01",
+      "Food_price_index": 21.929411764705883,
+      "Grocery_price_index": 22.976501305483026,
+      "Disposable_income_per_person": 14.91790318471352,
+      "Food_to_income": 147.00063067292933,
+      "Grocery_to_income": 154.01964351818026
+    },
+    {
+      "date": "1976-04-01",
+      "Food_price_index": 21.95294117647059,
+      "Grocery_price_index": 22.905293140280083,
+      "Disposable_income_per_person": 15.645130960122316,
+      "Food_to_income": 140.31804036940423,
+      "Grocery_to_income": 146.40525028945495
+    },
+    {
+      "date": "1976-07-01",
+      "Food_price_index": 22.000000000000004,
+      "Grocery_price_index": 22.952765250415382,
+      "Disposable_income_per_person": 15.350007113942672,
+      "Food_to_income": 143.32240914740052,
+      "Grocery_to_income": 149.52934601292137
+    },
+    {
+      "date": "1976-10-01",
+      "Food_price_index": 21.88235294117647,
+      "Grocery_price_index": 22.667932589603605,
+      "Disposable_income_per_person": 16.012254888933168,
+      "Food_to_income": 136.66003378637453,
+      "Grocery_to_income": 141.5661488455976
+    },
+    {
+      "date": "1977-01-01",
+      "Food_price_index": 22.517647058823528,
+      "Grocery_price_index": 23.403750296700686,
+      "Disposable_income_per_person": 16.200348327776112,
+      "Food_to_income": 138.99483272354192,
+      "Grocery_to_income": 144.46448818988705
+    },
+    {
+      "date": "1977-04-01",
+      "Food_price_index": 23.364705882352943,
+      "Grocery_price_index": 24.42440066460954,
+      "Disposable_income_per_person": 16.831318824013835,
+      "Food_to_income": 138.8168457068123,
+      "Grocery_to_income": 145.1128156978548
+    },
+    {
+      "date": "1977-07-01",
+      "Food_price_index": 24.23529411764706,
+      "Grocery_price_index": 25.44505103251839,
+      "Disposable_income_per_person": 16.93825531256439,
+      "Food_to_income": 143.08022680275639,
+      "Grocery_to_income": 150.22238455482403
+    },
+    {
+      "date": "1977-10-01",
+      "Food_price_index": 24.94117647058824,
+      "Grocery_price_index": 26.299549014953712,
+      "Disposable_income_per_person": 17.414085158083452,
+      "Food_to_income": 143.22415587252817,
+      "Grocery_to_income": 151.02458025333425
+    },
+    {
+      "date": "1978-01-01",
+      "Food_price_index": 25.694117647058825,
+      "Grocery_price_index": 27.201519107524327,
+      "Disposable_income_per_person": 18.339352102138587,
+      "Food_to_income": 140.1037370565702,
+      "Grocery_to_income": 148.32322841084613
+    },
+    {
+      "date": "1978-04-01",
+      "Food_price_index": 27.176470588235297,
+      "Grocery_price_index": 29.05293140280086,
+      "Disposable_income_per_person": 18.500331849611484,
+      "Food_to_income": 146.89720600231297,
+      "Grocery_to_income": 157.04005549182074
+    },
+    {
+      "date": "1978-07-01",
+      "Food_price_index": 28.51764705882353,
+      "Grocery_price_index": 30.50083076192737,
+      "Disposable_income_per_person": 18.81869756669801,
+      "Food_to_income": 151.53889878802772,
+      "Grocery_to_income": 162.07726732323033
+    },
+    {
+      "date": "1978-10-01",
+      "Food_price_index": 28.35294117647059,
+      "Grocery_price_index": 30.1685259909803,
+      "Disposable_income_per_person": 19.368772646696986,
+      "Food_to_income": 146.38481071388745,
+      "Grocery_to_income": 155.75858388799367
+    },
+    {
+      "date": "1979-01-01",
+      "Food_price_index": 29.76470588235294,
+      "Grocery_price_index": 31.877521955850938,
+      "Disposable_income_per_person": 19.756081458359485,
+      "Food_to_income": 150.66097973471582,
+      "Grocery_to_income": 161.35548956426504
+    },
+    {
+      "date": "1979-04-01",
+      "Food_price_index": 30.964705882352945,
+      "Grocery_price_index": 33.15926892950391,
+      "Disposable_income_per_person": 20.746072509628828,
+      "Food_to_income": 149.25574885550682,
+      "Grocery_to_income": 159.83395851968498
+    },
+    {
+      "date": "1979-07-01",
+      "Food_price_index": 31.55294117647059,
+      "Grocery_price_index": 33.65772608592452,
+      "Disposable_income_per_person": 20.938179366782677,
+      "Food_to_income": 150.69572489443698,
+      "Grocery_to_income": 160.74810276637874
+    },
+    {
+      "date": "1979-10-01",
+      "Food_price_index": 31.929411764705883,
+      "Grocery_price_index": 33.990030856871584,
+      "Disposable_income_per_person": 21.67263702978116,
+      "Food_to_income": 147.32591941087057,
+      "Grocery_to_income": 156.83384910735433
+    },
+    {
+      "date": "1980-01-01",
+      "Food_price_index": 32.72941176470589,
+      "Grocery_price_index": 34.8920009494422,
+      "Disposable_income_per_person": 22.1458221705028,
+      "Food_to_income": 147.79045687587944,
+      "Grocery_to_income": 157.55568107070195
+    },
+    {
+      "date": "1980-04-01",
+      "Food_price_index": 33.62352941176471,
+      "Grocery_price_index": 35.93638737241871,
+      "Disposable_income_per_person": 22.77366643720621,
+      "Food_to_income": 147.6421440722986,
+      "Grocery_to_income": 157.79798773950625
+    },
+    {
+      "date": "1980-07-01",
+      "Food_price_index": 35.082352941176474,
+      "Grocery_price_index": 37.66911939235699,
+      "Disposable_income_per_person": 23.428678285322235,
+      "Food_to_income": 149.74106739582965,
+      "Grocery_to_income": 160.7820933541787
+    },
+    {
+      "date": "1980-10-01",
+      "Food_price_index": 36.141176470588235,
+      "Grocery_price_index": 38.97460242107761,
+      "Disposable_income_per_person": 24.4579364725076,
+      "Food_to_income": 147.76870694391326,
+      "Grocery_to_income": 159.3536006804488
+    },
+    {
+      "date": "1981-01-01",
+      "Food_price_index": 37.22352941176471,
+      "Grocery_price_index": 40.23261333966295,
+      "Disposable_income_per_person": 25.588141506149796,
+      "Food_to_income": 145.47179756223596,
+      "Grocery_to_income": 157.23147900363742
+    },
+    {
+      "date": "1981-04-01",
+      "Food_price_index": 38.070588235294125,
+      "Grocery_price_index": 41.11084737716591,
+      "Disposable_income_per_person": 26.270442743203272,
+      "Food_to_income": 144.9179544000788,
+      "Grocery_to_income": 156.49088132632318
+    },
+    {
+      "date": "1981-07-01",
+      "Food_price_index": 39.082352941176474,
+      "Grocery_price_index": 42.107761690007116,
+      "Disposable_income_per_person": 26.8114950623707,
+      "Food_to_income": 145.76715267186884,
+      "Grocery_to_income": 157.05115135151254
+    },
+    {
+      "date": "1981-10-01",
+      "Food_price_index": 38.84705882352941,
+      "Grocery_price_index": 41.63304058865417,
+      "Disposable_income_per_person": 27.544262166198898,
+      "Food_to_income": 141.03503150358773,
+      "Grocery_to_income": 151.1495945596408
+    },
+    {
+      "date": "1982-01-01",
+      "Food_price_index": 39.6,
+      "Grocery_price_index": 42.3451222406836,
+      "Disposable_income_per_person": 28.524054911883255,
+      "Food_to_income": 138.83019129760004,
+      "Grocery_to_income": 148.45407629278694
+    },
+    {
+      "date": "1982-04-01",
+      "Food_price_index": 41.22352941176471,
+      "Grocery_price_index": 44.26774270116306,
+      "Disposable_income_per_person": 28.85018286143286,
+      "Food_to_income": 142.888277726907,
+      "Grocery_to_income": 153.4400766670374
+    },
+    {
+      "date": "1982-07-01",
+      "Food_price_index": 41.92941176470588,
+      "Grocery_price_index": 44.90861618798955,
+      "Disposable_income_per_person": 29.294039770079973,
+      "Food_to_income": 143.13291063232353,
+      "Grocery_to_income": 153.3029126076965
+    },
+    {
+      "date": "1982-10-01",
+      "Food_price_index": 41.52941176470589,
+      "Grocery_price_index": 44.101590315689535,
+      "Disposable_income_per_person": 28.837543647947804,
+      "Food_to_income": 144.011613026761,
+      "Grocery_to_income": 152.9311610381489
+    },
+    {
+      "date": "1983-01-01",
+      "Food_price_index": 41.71764705882353,
+      "Grocery_price_index": 44.12532637075718,
+      "Disposable_income_per_person": 29.03465373394466,
+      "Food_to_income": 143.68226134569355,
+      "Grocery_to_income": 151.97469470479643
+    },
+    {
+      "date": "1983-04-01",
+      "Food_price_index": 42.65882352941177,
+      "Grocery_price_index": 45.33586517920721,
+      "Disposable_income_per_person": 29.255672277928582,
+      "Food_to_income": 145.8138549138553,
+      "Grocery_to_income": 154.96435955570246
+    },
+    {
+      "date": "1983-07-01",
+      "Food_price_index": 43.011764705882364,
+      "Grocery_price_index": 45.69190600522193,
+      "Disposable_income_per_person": 31.384857649857,
+      "Food_to_income": 137.04623161188158,
+      "Grocery_to_income": 145.58583159745544
+    },
+    {
+      "date": "1983-10-01",
+      "Food_price_index": 43.05882352941177,
+      "Grocery_price_index": 45.59696178495134,
+      "Disposable_income_per_person": 31.091230226616656,
+      "Food_to_income": 138.49186158143675,
+      "Grocery_to_income": 146.6553798373555
+    },
+    {
+      "date": "1984-01-01",
+      "Food_price_index": 44.32941176470589,
+      "Grocery_price_index": 47.28222169475433,
+      "Disposable_income_per_person": 31.062437542163337,
+      "Food_to_income": 142.71066687710618,
+      "Grocery_to_income": 152.2167139348761
+    },
+    {
+      "date": "1984-04-01",
+      "Food_price_index": 44.964705882352945,
+      "Grocery_price_index": 48.065511511986706,
+      "Disposable_income_per_person": 32.344570086737775,
+      "Food_to_income": 139.01778802986718,
+      "Grocery_to_income": 148.6045768519736
+    },
+    {
+      "date": "1984-07-01",
+      "Food_price_index": 45.38823529411765,
+      "Grocery_price_index": 48.469024448136715,
+      "Disposable_income_per_person": 32.879832990430074,
+      "Food_to_income": 138.042779314993,
+      "Grocery_to_income": 147.4126236050043
+    },
+    {
+      "date": "1984-10-01",
+      "Food_price_index": 45.035294117647055,
+      "Grocery_price_index": 47.899359126513176,
+      "Disposable_income_per_person": 33.36924942742099,
+      "Food_to_income": 134.96046477041693,
+      "Grocery_to_income": 143.5434118190029
+    },
+    {
+      "date": "1985-01-01",
+      "Food_price_index": 45.90588235294118,
+      "Grocery_price_index": 48.87253738428672,
+      "Disposable_income_per_person": 33.80145157548478,
+      "Food_to_income": 135.81038746346442,
+      "Grocery_to_income": 144.58709643029817
+    },
+    {
+      "date": "1985-04-01",
+      "Food_price_index": 46.42352941176471,
+      "Grocery_price_index": 49.46593876097791,
+      "Disposable_income_per_person": 35.33571681521514,
+      "Food_to_income": 131.3784849888068,
+      "Grocery_to_income": 139.98849668072523
+    },
+    {
+      "date": "1985-07-01",
+      "Food_price_index": 46.4,
+      "Grocery_price_index": 49.252314265369094,
+      "Disposable_income_per_person": 35.46780378591543,
+      "Food_to_income": 130.82287327422804,
+      "Grocery_to_income": 138.8648549051904
+    },
+    {
+      "date": "1985-10-01",
+      "Food_price_index": 46.235294117647065,
+      "Grocery_price_index": 48.82506527415143,
+      "Disposable_income_per_person": 35.8813917927121,
+      "Food_to_income": 128.85591056431082,
+      "Grocery_to_income": 136.0734989217122
+    },
+    {
+      "date": "1986-01-01",
+      "Food_price_index": 47.34117647058824,
+      "Grocery_price_index": 50.178020413007346,
+      "Disposable_income_per_person": 36.26972725177724,
+      "Food_to_income": 130.52531700047038,
+      "Grocery_to_income": 138.346836921826
+    },
+    {
+      "date": "1986-04-01",
+      "Food_price_index": 48.070588235294125,
+      "Grocery_price_index": 51.03251839544268,
+      "Disposable_income_per_person": 36.92418590153813,
+      "Food_to_income": 130.18726631774345,
+      "Grocery_to_income": 138.20891957246062
+    },
+    {
+      "date": "1986-07-01",
+      "Food_price_index": 49.08235294117649,
+      "Grocery_price_index": 52.21932114882506,
+      "Disposable_income_per_person": 36.9172410518087,
+      "Food_to_income": 132.95238631807717,
+      "Grocery_to_income": 141.44968491968783
+    },
+    {
+      "date": "1986-10-01",
+      "Food_price_index": 49.71764705882354,
+      "Grocery_price_index": 52.883930690719204,
+      "Disposable_income_per_person": 37.12266499580134,
+      "Food_to_income": 133.92801153809063,
+      "Grocery_to_income": 142.45725811091555
+    },
+    {
+      "date": "1987-01-01",
+      "Food_price_index": 50.25882352941177,
+      "Grocery_price_index": 53.501068122478046,
+      "Disposable_income_per_person": 38.06391622042263,
+      "Food_to_income": 132.03797328254456,
+      "Grocery_to_income": 140.55586874629796
+    },
+    {
+      "date": "1987-04-01",
+      "Food_price_index": 50.72941176470588,
+      "Grocery_price_index": 54.09446949916923,
+      "Disposable_income_per_person": 37.98497433517551,
+      "Food_to_income": 133.55125981414326,
+      "Grocery_to_income": 142.41017782938377
+    },
+    {
+      "date": "1987-07-01",
+      "Food_price_index": 50.964705882352945,
+      "Grocery_price_index": 54.260621884642774,
+      "Disposable_income_per_person": 39.48584202225113,
+      "Food_to_income": 129.070834689642,
+      "Grocery_to_income": 137.41791767810278
+    },
+    {
+      "date": "1987-10-01",
+      "Food_price_index": 50.82352941176471,
+      "Grocery_price_index": 53.83337289342512,
+      "Disposable_income_per_person": 39.55083183216039,
+      "Food_to_income": 128.5017964412016,
+      "Grocery_to_income": 136.11186010416856
+    },
+    {
+      "date": "1988-01-01",
+      "Food_price_index": 51.27058823529411,
+      "Grocery_price_index": 54.23688582957512,
+      "Disposable_income_per_person": 39.66396785304146,
+      "Food_to_income": 129.26237845204045,
+      "Grocery_to_income": 136.74094843593969
+    },
+    {
+      "date": "1988-04-01",
+      "Food_price_index": 51.76470588235294,
+      "Grocery_price_index": 54.759079041063366,
+      "Disposable_income_per_person": 41.00626789077984,
+      "Food_to_income": 126.23608181126895,
+      "Grocery_to_income": 133.5383146472001
+    },
+    {
+      "date": "1988-07-01",
+      "Food_price_index": 52.70588235294118,
+      "Grocery_price_index": 55.77972940897222,
+      "Disposable_income_per_person": 42.42388490878259,
+      "Food_to_income": 124.23634107594425,
+      "Grocery_to_income": 131.48189876741984
+    },
+    {
+      "date": "1988-10-01",
+      "Food_price_index": 52.470588235294116,
+      "Grocery_price_index": 55.21006408734868,
+      "Disposable_income_per_person": 43.37649452506403,
+      "Food_to_income": 120.96548789800266,
+      "Grocery_to_income": 127.28106476065489
+    },
+    {
+      "date": "1989-01-01",
+      "Food_price_index": 53.199999999999996,
+      "Grocery_price_index": 55.99335390458106,
+      "Disposable_income_per_person": 44.035490820029345,
+      "Food_to_income": 120.81164308449634,
+      "Grocery_to_income": 127.15505802676948
+    },
+    {
+      "date": "1989-04-01",
+      "Food_price_index": 53.92941176470589,
+      "Grocery_price_index": 56.82411583194873,
+      "Disposable_income_per_person": 45.21728870762119,
+      "Food_to_income": 119.26723893911029,
+      "Grocery_to_income": 125.66900284397472
+    },
+    {
+      "date": "1989-07-01",
+      "Food_price_index": 54.47058823529412,
+      "Grocery_price_index": 57.27510087823404,
+      "Disposable_income_per_person": 44.47460441199556,
+      "Food_to_income": 122.4757116009389,
+      "Grocery_to_income": 128.78158588586788
+    },
+    {
+      "date": "1989-10-01",
+      "Food_price_index": 54.28235294117647,
+      "Grocery_price_index": 56.752907666745784,
+      "Disposable_income_per_person": 44.84837044832167,
+      "Food_to_income": 121.03528489117679,
+      "Grocery_to_income": 126.5439682633321
+    },
+    {
+      "date": "1990-01-01",
+      "Food_price_index": 55.78823529411766,
+      "Grocery_price_index": 58.723000237360544,
+      "Disposable_income_per_person": 46.04700555981971,
+      "Food_to_income": 121.15496896240757,
+      "Grocery_to_income": 127.52838001826946
+    },
+    {
+      "date": "1990-04-01",
+      "Food_price_index": 55.9764705882353,
+      "Grocery_price_index": 58.746736292428196,
+      "Disposable_income_per_person": 44.66498109175919,
+      "Food_to_income": 125.32518590624258,
+      "Grocery_to_income": 131.52750735915376
+    },
+    {
+      "date": "1990-07-01",
+      "Food_price_index": 56.51764705882353,
+      "Grocery_price_index": 59.2451934488488,
+      "Disposable_income_per_person": 45.8619729993977,
+      "Food_to_income": 123.23422513803706,
+      "Grocery_to_income": 129.18151918502693
+    },
+    {
+      "date": "1990-10-01",
+      "Food_price_index": 56.51764705882353,
+      "Grocery_price_index": 58.984096843104666,
+      "Disposable_income_per_person": 46.48680703156164,
+      "Food_to_income": 121.57782103737858,
+      "Grocery_to_income": 126.8835194532895
+    },
+    {
+      "date": "1991-01-01",
+      "Food_price_index": 58.800000000000004,
+      "Grocery_price_index": 60.384524092095894,
+      "Disposable_income_per_person": 46.97080434641645,
+      "Food_to_income": 125.18414538175998,
+      "Grocery_to_income": 128.55756875430816
+    },
+    {
+      "date": "1991-04-01",
+      "Food_price_index": 59.60000000000001,
+      "Grocery_price_index": 61.357702349869456,
+      "Disposable_income_per_person": 46.26343871864573,
+      "Food_to_income": 128.8274318786839,
+      "Grocery_to_income": 132.62676543138207
+    },
+    {
+      "date": "1991-07-01",
+      "Food_price_index": 59.24705882352942,
+      "Grocery_price_index": 60.764300973178244,
+      "Disposable_income_per_person": 46.99691859689444,
+      "Food_to_income": 126.06583706414419,
+      "Grocery_to_income": 129.29422350935482
+    },
+    {
+      "date": "1991-10-01",
+      "Food_price_index": 57.905882352941184,
+      "Grocery_price_index": 58.60431996202231,
+      "Disposable_income_per_person": 47.277926706647264,
+      "Food_to_income": 122.47974136479979,
+      "Grocery_to_income": 123.95704305236075
+    },
+    {
+      "date": "1992-01-01",
+      "Food_price_index": 58.30588235294118,
+      "Grocery_price_index": 59.00783289817232,
+      "Disposable_income_per_person": 46.726415434546844,
+      "Food_to_income": 124.7814149891608,
+      "Grocery_to_income": 126.28367134395097
+    },
+    {
+      "date": "1992-04-01",
+      "Food_price_index": 58.800000000000004,
+      "Grocery_price_index": 59.67244244006646,
+      "Disposable_income_per_person": 47.566498198276385,
+      "Food_to_income": 123.6164153915595,
+      "Grocery_to_income": 125.45056857313232
+    },
+    {
+      "date": "1992-07-01",
+      "Food_price_index": 58.800000000000004,
+      "Grocery_price_index": 59.64870638499881,
+      "Disposable_income_per_person": 48.888346379421534,
+      "Food_to_income": 120.27406192808058,
+      "Grocery_to_income": 122.0100715251572
+    },
+    {
+      "date": "1992-10-01",
+      "Food_price_index": 58.70588235294119,
+      "Grocery_price_index": 59.34013766911938,
+      "Disposable_income_per_person": 47.96365772340182,
+      "Food_to_income": 122.39659179349484,
+      "Grocery_to_income": 123.7189582398485
+    },
+    {
+      "date": "1993-01-01",
+      "Food_price_index": 59.48235294117647,
+      "Grocery_price_index": 60.40826014716353,
+      "Disposable_income_per_person": 48.27610910115053,
+      "Food_to_income": 123.2128148864401,
+      "Grocery_to_income": 125.13075571312739
+    },
+    {
+      "date": "1993-04-01",
+      "Food_price_index": 59.71764705882353,
+      "Grocery_price_index": 60.64562069784002,
+      "Disposable_income_per_person": 50.27952063497461,
+      "Food_to_income": 118.771313458553,
+      "Grocery_to_income": 120.61694290628283
+    },
+    {
+      "date": "1993-07-01",
+      "Food_price_index": 59.64705882352941,
+      "Grocery_price_index": 60.479468312366485,
+      "Disposable_income_per_person": 48.615094907343654,
+      "Food_to_income": 122.69246606884502,
+      "Grocery_to_income": 124.40471098047911
+    },
+    {
+      "date": "1993-10-01",
+      "Food_price_index": 59.670588235294126,
+      "Grocery_price_index": 60.455732257298834,
+      "Disposable_income_per_person": 48.15898320135821,
+      "Food_to_income": 123.90333904228123,
+      "Grocery_to_income": 125.53365590076208
+    },
+    {
+      "date": "1994-01-01",
+      "Food_price_index": 59.858823529411765,
+      "Grocery_price_index": 60.59814858770472,
+      "Disposable_income_per_person": 48.93730340904732,
+      "Food_to_income": 122.31737214671564,
+      "Grocery_to_income": 123.82813184696563
+    },
+    {
+      "date": "1994-04-01",
+      "Food_price_index": 59.78823529411765,
+      "Grocery_price_index": 60.479468312366485,
+      "Disposable_income_per_person": 49.305416086147034,
+      "Food_to_income": 121.2609892382916,
+      "Grocery_to_income": 122.66293059305293
+    },
+    {
+      "date": "1994-07-01",
+      "Food_price_index": 59.976470588235294,
+      "Grocery_price_index": 60.66935675290767,
+      "Disposable_income_per_person": 49.10628017743755,
+      "Food_to_income": 122.13604934342428,
+      "Grocery_to_income": 123.5470423206336
+    },
+    {
+      "date": "1994-10-01",
+      "Food_price_index": 59.952941176470596,
+      "Grocery_price_index": 60.479468312366485,
+      "Disposable_income_per_person": 49.53664382151868,
+      "Food_to_income": 121.0274587686683,
+      "Grocery_to_income": 122.0903631062996
+    },
+    {
+      "date": "1995-01-01",
+      "Food_price_index": 61.22352941176473,
+      "Grocery_price_index": 62.18846427723711,
+      "Disposable_income_per_person": 49.70458997845486,
+      "Food_to_income": 123.17480023133258,
+      "Grocery_to_income": 125.11613978546761
+    },
+    {
+      "date": "1995-04-01",
+      "Food_price_index": 61.76470588235294,
+      "Grocery_price_index": 62.853073819131254,
+      "Disposable_income_per_person": 50.01205623630862,
+      "Food_to_income": 123.49963294952855,
+      "Grocery_to_income": 125.67584408477109
+    },
+    {
+      "date": "1995-07-01",
+      "Food_price_index": 61.27058823529412,
+      "Grocery_price_index": 61.998575836695935,
+      "Disposable_income_per_person": 49.851996717664136,
+      "Food_to_income": 122.90498328943364,
+      "Grocery_to_income": 124.36528106953013
+    },
+    {
+      "date": "1995-10-01",
+      "Food_price_index": 61.08235294117648,
+      "Grocery_price_index": 61.64253501068123,
+      "Disposable_income_per_person": 50.037845998090184,
+      "Food_to_income": 122.07230691646446,
+      "Grocery_to_income": 123.19182367089496
+    },
+    {
+      "date": "1996-01-01",
+      "Food_price_index": 61.62352941176471,
+      "Grocery_price_index": 62.30714455257536,
+      "Disposable_income_per_person": 50.28073621684411,
+      "Food_to_income": 122.55892424884729,
+      "Grocery_to_income": 123.91852077078852
+    },
+    {
+      "date": "1996-04-01",
+      "Food_price_index": 62.28235294117648,
+      "Grocery_price_index": 63.114170424875375,
+      "Disposable_income_per_person": 50.32960267575198,
+      "Food_to_income": 123.74894620652975,
+      "Grocery_to_income": 125.40168622329061
+    },
+    {
+      "date": "1996-07-01",
+      "Food_price_index": 62.117647058823536,
+      "Grocery_price_index": 62.805601708995965,
+      "Disposable_income_per_person": 50.339260459710346,
+      "Food_to_income": 123.39801278673961,
+      "Grocery_to_income": 124.7646491733092
+    },
+    {
+      "date": "1996-10-01",
+      "Food_price_index": 62.56470588235294,
+      "Grocery_price_index": 63.327794920484216,
+      "Disposable_income_per_person": 50.76306017005162,
+      "Food_to_income": 123.2484914675492,
+      "Grocery_to_income": 124.75172834013922
+    },
+    {
+      "date": "1997-01-01",
+      "Food_price_index": 63.03529411764706,
+      "Grocery_price_index": 63.87372418704011,
+      "Disposable_income_per_person": 51.15036094875672,
+      "Food_to_income": 123.23528700178062,
+      "Grocery_to_income": 124.87443490580617
+    },
+    {
+      "date": "1997-04-01",
+      "Food_price_index": 63.08235294117648,
+      "Grocery_price_index": 63.921196297175406,
+      "Disposable_income_per_person": 51.250864134521386,
+      "Food_to_income": 123.08544257049059,
+      "Grocery_to_income": 124.72218249705486
+    },
+    {
+      "date": "1997-07-01",
+      "Food_price_index": 63.1764705882353,
+      "Grocery_price_index": 63.87372418704011,
+      "Disposable_income_per_person": 52.56227897486784,
+      "Food_to_income": 120.19355290595854,
+      "Grocery_to_income": 121.52008138304036
+    },
+    {
+      "date": "1997-10-01",
+      "Food_price_index": 63.15294117647059,
+      "Grocery_price_index": 63.755043911701875,
+      "Disposable_income_per_person": 52.88039444355606,
+      "Food_to_income": 119.42600247409149,
+      "Grocery_to_income": 120.56461488719283
+    },
+    {
+      "date": "1998-01-01",
+      "Food_price_index": 64.09411764705882,
+      "Grocery_price_index": 64.96558272015191,
+      "Disposable_income_per_person": 53.08793874476428,
+      "Food_to_income": 120.73197634440085,
+      "Grocery_to_income": 122.3735263719559
+    },
+    {
+      "date": "1998-04-01",
+      "Food_price_index": 64.23529411764706,
+      "Grocery_price_index": 65.1079990505578,
+      "Disposable_income_per_person": 53.231508519982995,
+      "Food_to_income": 120.67156446173841,
+      "Grocery_to_income": 122.31101627735458
+    },
+    {
+      "date": "1998-07-01",
+      "Food_price_index": 64.04705882352943,
+      "Grocery_price_index": 64.65701400427248,
+      "Disposable_income_per_person": 54.42728100891761,
+      "Food_to_income": 117.67455150485226,
+      "Grocery_to_income": 118.79523063751576
+    },
+    {
+      "date": "1998-10-01",
+      "Food_price_index": 64.14117647058825,
+      "Grocery_price_index": 64.70448611440779,
+      "Disposable_income_per_person": 55.17917447385226,
+      "Food_to_income": 116.24163841193894,
+      "Grocery_to_income": 117.26251204622368
+    },
+    {
+      "date": "1999-01-01",
+      "Food_price_index": 64.96470588235294,
+      "Grocery_price_index": 65.77260859245195,
+      "Disposable_income_per_person": 55.36932203122541,
+      "Food_to_income": 117.32978389317508,
+      "Grocery_to_income": 118.7889000254683
+    },
+    {
+      "date": "1999-04-01",
+      "Food_price_index": 65.24705882352941,
+      "Grocery_price_index": 65.98623308806077,
+      "Disposable_income_per_person": 56.183650491730084,
+      "Food_to_income": 116.1317540823258,
+      "Grocery_to_income": 117.44739352202394
+    },
+    {
+      "date": "1999-07-01",
+      "Food_price_index": 64.8235294117647,
+      "Grocery_price_index": 65.29788749109898,
+      "Disposable_income_per_person": 56.78403089843213,
+      "Food_to_income": 114.15802715328994,
+      "Grocery_to_income": 114.99339947862335
+    },
+    {
+      "date": "1999-10-01",
+      "Food_price_index": 64.84705882352942,
+      "Grocery_price_index": 65.1079990505578,
+      "Disposable_income_per_person": 57.29076846438256,
+      "Food_to_income": 113.18936813327016,
+      "Grocery_to_income": 113.6448345793008
+    },
+    {
+      "date": "2000-01-01",
+      "Food_price_index": 65.01176470588236,
+      "Grocery_price_index": 65.27415143603133,
+      "Disposable_income_per_person": 57.90374918564371,
+      "Food_to_income": 112.27557044268382,
+      "Grocery_to_income": 112.72871334593131
+    },
+    {
+      "date": "2000-04-01",
+      "Food_price_index": 65.76470588235296,
+      "Grocery_price_index": 66.19985758366958,
+      "Disposable_income_per_person": 58.75257939217935,
+      "Food_to_income": 111.93501045012331,
+      "Grocery_to_income": 112.67566167908801
+    },
+    {
+      "date": "2000-07-01",
+      "Food_price_index": 66.25882352941177,
+      "Grocery_price_index": 66.72205079515784,
+      "Disposable_income_per_person": 59.88791856399563,
+      "Food_to_income": 110.63804706888962,
+      "Grocery_to_income": 111.41153741026969
+    },
+    {
+      "date": "2000-10-01",
+      "Food_price_index": 66.3764705882353,
+      "Grocery_price_index": 66.76952290529313,
+      "Disposable_income_per_person": 60.69182330717007,
+      "Food_to_income": 109.36641374620501,
+      "Grocery_to_income": 110.01403363244329
+    },
+    {
+      "date": "2001-01-01",
+      "Food_price_index": 67.83529411764707,
+      "Grocery_price_index": 68.57346309043437,
+      "Disposable_income_per_person": 62.52021511242307,
+      "Food_to_income": 108.50137670778402,
+      "Grocery_to_income": 109.68206518024039
+    },
+    {
+      "date": "2001-04-01",
+      "Food_price_index": 69.03529411764707,
+      "Grocery_price_index": 70.06883455969617,
+      "Disposable_income_per_person": 61.15172974962612,
+      "Food_to_income": 112.891809275549,
+      "Grocery_to_income": 114.58193389881104
+    },
+    {
+      "date": "2001-07-01",
+      "Food_price_index": 69.10588235294118,
+      "Grocery_price_index": 69.76026584381675,
+      "Disposable_income_per_person": 62.57318604199816,
+      "Food_to_income": 110.44008899684023,
+      "Grocery_to_income": 111.48587798772901
+    },
+    {
+      "date": "2001-10-01",
+      "Food_price_index": 68.96470588235294,
+      "Grocery_price_index": 69.40422501780203,
+      "Disposable_income_per_person": 62.93871688617885,
+      "Food_to_income": 109.57437535161665,
+      "Grocery_to_income": 110.27270407071643
+    },
+    {
+      "date": "2002-01-01",
+      "Food_price_index": 70.61176470588236,
+      "Grocery_price_index": 71.4692618086874,
+      "Disposable_income_per_person": 63.82252309233958,
+      "Food_to_income": 110.63768914889181,
+      "Grocery_to_income": 111.98125418088594
+    },
+    {
+      "date": "2002-04-01",
+      "Food_price_index": 70.84705882352942,
+      "Grocery_price_index": 71.65915024922857,
+      "Disposable_income_per_person": 63.81436829718271,
+      "Food_to_income": 111.02054398406885,
+      "Grocery_to_income": 112.29312796063861
+    },
+    {
+      "date": "2002-07-01",
+      "Food_price_index": 70.44705882352942,
+      "Grocery_price_index": 70.89959648706385,
+      "Disposable_income_per_person": 64.71357675226173,
+      "Food_to_income": 108.85978238108636,
+      "Grocery_to_income": 109.55907561481821
+    },
+    {
+      "date": "2002-10-01",
+      "Food_price_index": 70.44705882352942,
+      "Grocery_price_index": 70.80465226679325,
+      "Disposable_income_per_person": 65.08848929512743,
+      "Food_to_income": 108.23274527713325,
+      "Grocery_to_income": 108.78214110293345
+    },
+    {
+      "date": "2003-01-01",
+      "Food_price_index": 71.71764705882353,
+      "Grocery_price_index": 72.39496795632567,
+      "Disposable_income_per_person": 66.04753283793978,
+      "Food_to_income": 108.58489935543308,
+      "Grocery_to_income": 109.61040457629285
+    },
+    {
+      "date": "2003-04-01",
+      "Food_price_index": 72.07058823529412,
+      "Grocery_price_index": 72.67980061713743,
+      "Disposable_income_per_person": 65.53457291896159,
+      "Food_to_income": 109.97338507785015,
+      "Grocery_to_income": 110.90298964336192
+    },
+    {
+      "date": "2003-07-01",
+      "Food_price_index": 71.69411764705882,
+      "Grocery_price_index": 71.99145502017565,
+      "Disposable_income_per_person": 65.55498554790911,
+      "Food_to_income": 109.36485920611345,
+      "Grocery_to_income": 109.8184286343296
+    },
+    {
+      "date": "2003-10-01",
+      "Food_price_index": 71.76470588235296,
+      "Grocery_price_index": 71.87277474483741,
+      "Disposable_income_per_person": 66.11242745891167,
+      "Food_to_income": 108.54949461196858,
+      "Grocery_to_income": 108.7129568635273
+    },
+    {
+      "date": "2004-01-01",
+      "Food_price_index": 72.49411764705883,
+      "Grocery_price_index": 72.67980061713743,
+      "Disposable_income_per_person": 66.91390594835353,
+      "Food_to_income": 108.33939017550746,
+      "Grocery_to_income": 108.61688551440147
+    },
+    {
+      "date": "2004-04-01",
+      "Food_price_index": 73.01176470588236,
+      "Grocery_price_index": 73.27320199382862,
+      "Disposable_income_per_person": 68.37484572472108,
+      "Food_to_income": 106.7816152738825,
+      "Grocery_to_income": 107.16397414456839
+    },
+    {
+      "date": "2004-07-01",
+      "Food_price_index": 73.45882352941176,
+      "Grocery_price_index": 73.67671492997863,
+      "Disposable_income_per_person": 68.9678795340524,
+      "Food_to_income": 106.51164574828198,
+      "Grocery_to_income": 106.82757745741809
+    },
+    {
+      "date": "2004-10-01",
+      "Food_price_index": 74.14117647058825,
+      "Grocery_price_index": 74.43626869214337,
+      "Disposable_income_per_person": 69.11096091554677,
+      "Food_to_income": 107.27846276249636,
+      "Grocery_to_income": 107.70544600458399
+    },
+    {
+      "date": "2005-01-01",
+      "Food_price_index": 74.4,
+      "Grocery_price_index": 74.57868502254925,
+      "Disposable_income_per_person": 68.81266637182686,
+      "Food_to_income": 108.1196296013036,
+      "Grocery_to_income": 108.37929839771925
+    },
+    {
+      "date": "2005-04-01",
+      "Food_price_index": 75.43529411764708,
+      "Grocery_price_index": 75.78922383099929,
+      "Disposable_income_per_person": 70.21736005309725,
+      "Food_to_income": 107.43111683578549,
+      "Grocery_to_income": 107.93516556829918
+    },
+    {
+      "date": "2005-07-01",
+      "Food_price_index": 75.1764705882353,
+      "Grocery_price_index": 75.19582245430809,
+      "Disposable_income_per_person": 70.49982901199242,
+      "Food_to_income": 106.63355023945854,
+      "Grocery_to_income": 106.66099976145595
+    },
+    {
+      "date": "2005-10-01",
+      "Food_price_index": 75.38823529411765,
+      "Grocery_price_index": 75.2432945644434,
+      "Disposable_income_per_person": 71.49252308391488,
+      "Food_to_income": 105.44911837232287,
+      "Grocery_to_income": 105.24638286457737
+    },
+    {
+      "date": "2006-01-01",
+      "Food_price_index": 76.4235294117647,
+      "Grocery_price_index": 76.52504153809636,
+      "Disposable_income_per_person": 73.55238694462533,
+      "Food_to_income": 103.9035340475095,
+      "Grocery_to_income": 104.04154741532592
+    },
+    {
+      "date": "2006-04-01",
+      "Food_price_index": 76.70588235294119,
+      "Grocery_price_index": 76.61998575836695,
+      "Disposable_income_per_person": 73.45413969501152,
+      "Food_to_income": 104.42690183484717,
+      "Grocery_to_income": 104.30996275567357
+    },
+    {
+      "date": "2006-07-01",
+      "Food_price_index": 76.98823529411764,
+      "Grocery_price_index": 77.07097080465226,
+      "Disposable_income_per_person": 75.21499175320221,
+      "Food_to_income": 102.3575666228002,
+      "Grocery_to_income": 102.46756531934477
+    },
+    {
+      "date": "2006-10-01",
+      "Food_price_index": 77.45882352941177,
+      "Grocery_price_index": 77.42701163066698,
+      "Disposable_income_per_person": 76.36163488948465,
+      "Food_to_income": 101.43683230658307,
+      "Grocery_to_income": 101.39517277586346
+    },
+    {
+      "date": "2007-01-01",
+      "Food_price_index": 78.98823529411766,
+      "Grocery_price_index": 79.4208402563494,
+      "Disposable_income_per_person": 77.85055617608266,
+      "Food_to_income": 101.46136286484811,
+      "Grocery_to_income": 102.01704927671301
+    },
+    {
+      "date": "2007-04-01",
+      "Food_price_index": 79.36470588235295,
+      "Grocery_price_index": 79.65820080702588,
+      "Disposable_income_per_person": 77.51053138892688,
+      "Food_to_income": 102.3921581496098,
+      "Grocery_to_income": 102.77080982366458
+    },
+    {
+      "date": "2007-07-01",
+      "Food_price_index": 78.82352941176472,
+      "Grocery_price_index": 78.61381438404936,
+      "Disposable_income_per_person": 77.66003358170694,
+      "Food_to_income": 101.49819125281945,
+      "Grocery_to_income": 101.22814884098517
+    },
+    {
+      "date": "2007-10-01",
+      "Food_price_index": 78.51764705882354,
+      "Grocery_price_index": 78.04414906242582,
+      "Disposable_income_per_person": 78.6870707057228,
+      "Food_to_income": 99.78468680384242,
+      "Grocery_to_income": 99.18293864858508
+    },
+    {
+      "date": "2008-01-01",
+      "Food_price_index": 79.48235294117647,
+      "Grocery_price_index": 79.46831236648468,
+      "Disposable_income_per_person": 80.04185889175403,
+      "Food_to_income": 99.30098331257621,
+      "Grocery_to_income": 99.28344177257927
+    },
+    {
+      "date": "2008-04-01",
+      "Food_price_index": 80.91764705882353,
+      "Grocery_price_index": 81.20104438642298,
+      "Disposable_income_per_person": 81.21972624771388,
+      "Food_to_income": 99.62807164854381,
+      "Grocery_to_income": 99.9769983695415
+    },
+    {
+      "date": "2008-07-01",
+      "Food_price_index": 82.44705882352942,
+      "Grocery_price_index": 82.86256824115833,
+      "Disposable_income_per_person": 82.5015480580756,
+      "Food_to_income": 99.93395368228991,
+      "Grocery_to_income": 100.43759201079305
+    },
+    {
+      "date": "2008-10-01",
+      "Food_price_index": 83.92941176470589,
+      "Grocery_price_index": 84.61903631616424,
+      "Disposable_income_per_person": 82.05479546043057,
+      "Food_to_income": 102.28459079540248,
+      "Grocery_to_income": 103.12503472995704
+    },
+    {
+      "date": "2009-01-01",
+      "Food_price_index": 85.48235294117647,
+      "Grocery_price_index": 86.63660099691432,
+      "Disposable_income_per_person": 81.60701549629573,
+      "Food_to_income": 104.74877977256335,
+      "Grocery_to_income": 106.16317784694246
+    },
+    {
+      "date": "2009-04-01",
+      "Food_price_index": 86.04705882352941,
+      "Grocery_price_index": 87.18253026347021,
+      "Disposable_income_per_person": 81.80310872060976,
+      "Food_to_income": 105.18800589524591,
+      "Grocery_to_income": 106.57606003854124
+    },
+    {
+      "date": "2009-07-01",
+      "Food_price_index": 85.69411764705883,
+      "Grocery_price_index": 86.37550439117018,
+      "Disposable_income_per_person": 83.0842828926979,
+      "Food_to_income": 103.14118948072465,
+      "Grocery_to_income": 103.96130457396238
+    },
+    {
+      "date": "2009-10-01",
+      "Food_price_index": 85.50588235294117,
+      "Grocery_price_index": 85.92451934488489,
+      "Disposable_income_per_person": 83.96664574773806,
+      "Food_to_income": 101.83315242796225,
+      "Grocery_to_income": 102.33172777084474
+    },
+    {
+      "date": "2010-01-01",
+      "Food_price_index": 86.61176470588236,
+      "Grocery_price_index": 87.27747448374079,
+      "Disposable_income_per_person": 85.82255001726554,
+      "Food_to_income": 100.91958895238844,
+      "Grocery_to_income": 101.69527060916106
+    },
+    {
+      "date": "2010-04-01",
+      "Food_price_index": 86.7529411764706,
+      "Grocery_price_index": 87.39615475907904,
+      "Disposable_income_per_person": 84.55852079425834,
+      "Food_to_income": 102.59514991700429,
+      "Grocery_to_income": 103.35582261629791
+    },
+    {
+      "date": "2010-07-01",
+      "Food_price_index": 87.08235294117648,
+      "Grocery_price_index": 87.51483503441727,
+      "Disposable_income_per_person": 85.58127541770136,
+      "Food_to_income": 101.75397891203272,
+      "Grocery_to_income": 102.25932554437716
+    },
+    {
+      "date": "2010-10-01",
+      "Food_price_index": 87.03529411764707,
+      "Grocery_price_index": 87.20626631853786,
+      "Disposable_income_per_person": 86.83037596126063,
+      "Food_to_income": 100.2359982369279,
+      "Grocery_to_income": 100.432901911475
+    },
+    {
+      "date": "2011-01-01",
+      "Food_price_index": 88.80000000000001,
+      "Grocery_price_index": 89.46119154996438,
+      "Disposable_income_per_person": 87.22684103840011,
+      "Food_to_income": 101.80352623443895,
+      "Grocery_to_income": 102.56154010046133
+    },
+    {
+      "date": "2011-04-01",
+      "Food_price_index": 90.09411764705884,
+      "Grocery_price_index": 91.09897934963207,
+      "Disposable_income_per_person": 87.36259884686868,
+      "Food_to_income": 103.12664553967542,
+      "Grocery_to_income": 104.27686510255106
+    },
+    {
+      "date": "2011-07-01",
+      "Food_price_index": 90.84705882352944,
+      "Grocery_price_index": 91.88226916686448,
+      "Disposable_income_per_person": 87.92737132101443,
+      "Food_to_income": 103.32056725755568,
+      "Grocery_to_income": 104.49791434274896
+    },
+    {
+      "date": "2011-10-01",
+      "Food_price_index": 90.94117647058825,
+      "Grocery_price_index": 91.76358889152624,
+      "Disposable_income_per_person": 89.32097762602574,
+      "Food_to_income": 101.81390630468249,
+      "Grocery_to_income": 102.73464457109657
+    },
+    {
+      "date": "2012-01-01",
+      "Food_price_index": 91.90588235294119,
+      "Grocery_price_index": 92.90291953477332,
+      "Disposable_income_per_person": 89.89214415078692,
+      "Food_to_income": 102.24017150906577,
+      "Grocery_to_income": 103.34931980144567
+    },
+    {
+      "date": "2012-04-01",
+      "Food_price_index": 92.21176470588235,
+      "Grocery_price_index": 93.11654403038213,
+      "Disposable_income_per_person": 90.11521677415497,
+      "Food_to_income": 102.32651932356963,
+      "Grocery_to_income": 103.33054434496788
+    },
+    {
+      "date": "2012-07-01",
+      "Food_price_index": 92.63529411764705,
+      "Grocery_price_index": 93.59126513173508,
+      "Disposable_income_per_person": 90.96336384701219,
+      "Food_to_income": 101.83802599192221,
+      "Grocery_to_income": 102.88896669338511
+    },
+    {
+      "date": "2012-10-01",
+      "Food_price_index": 92.49411764705883,
+      "Grocery_price_index": 93.16401614051745,
+      "Disposable_income_per_person": 91.32607766686787,
+      "Food_to_income": 101.27897749474322,
+      "Grocery_to_income": 102.01250127083512
+    },
+    {
+      "date": "2013-01-01",
+      "Food_price_index": 93.38823529411764,
+      "Grocery_price_index": 94.16093045335866,
+      "Disposable_income_per_person": 93.15644842691725,
+      "Food_to_income": 100.24881462433835,
+      "Grocery_to_income": 101.07827428310497
+    },
+    {
+      "date": "2013-04-01",
+      "Food_price_index": 93.45882352941177,
+      "Grocery_price_index": 94.44576311417042,
+      "Disposable_income_per_person": 93.47532756464453,
+      "Food_to_income": 99.98234396641044,
+      "Grocery_to_income": 101.03817293269688
+    },
+    {
+      "date": "2013-07-01",
+      "Food_price_index": 93.5529411764706,
+      "Grocery_price_index": 94.2796107286969,
+      "Disposable_income_per_person": 93.71658866821114,
+      "Food_to_income": 99.82538044324264,
+      "Grocery_to_income": 100.60077097180633
+    },
+    {
+      "date": "2013-10-01",
+      "Food_price_index": 93.41176470588236,
+      "Grocery_price_index": 93.9473059577498,
+      "Disposable_income_per_person": 94.44943487498547,
+      "Food_to_income": 98.90134846177048,
+      "Grocery_to_income": 99.46836217929702
+    },
+    {
+      "date": "2014-01-01",
+      "Food_price_index": 94.51764705882354,
+      "Grocery_price_index": 95.3239971516734,
+      "Disposable_income_per_person": 94.98864134859957,
+      "Food_to_income": 99.50415725176285,
+      "Grocery_to_income": 100.35304832063352
+    },
+    {
+      "date": "2014-04-01",
+      "Food_price_index": 95.69411764705883,
+      "Grocery_price_index": 96.79563256586754,
+      "Disposable_income_per_person": 95.29165923400448,
+      "Food_to_income": 100.42234379828149,
+      "Grocery_to_income": 101.57828433669077
+    },
+    {
+      "date": "2014-07-01",
+      "Food_price_index": 95.9764705882353,
+      "Grocery_price_index": 96.91431284120578,
+      "Disposable_income_per_person": 96.56231879561633,
+      "Food_to_income": 99.39329521630374,
+      "Grocery_to_income": 100.3645252620067
+    },
+    {
+      "date": "2014-10-01",
+      "Food_price_index": 96.40000000000003,
+      "Grocery_price_index": 97.2703536672205,
+      "Disposable_income_per_person": 96.52833266098756,
+      "Food_to_income": 99.8670518204865,
+      "Grocery_to_income": 100.76870799047047
+    },
+    {
+      "date": "2015-01-01",
+      "Food_price_index": 98.3764705882353,
+      "Grocery_price_index": 99.71516733918823,
+      "Disposable_income_per_person": 98.53685234734935,
+      "Food_to_income": 99.83723677457375,
+      "Grocery_to_income": 101.19581147943029
+    },
+    {
+      "date": "2015-04-01",
+      "Food_price_index": 99.10588235294118,
+      "Grocery_price_index": 100.56966532162356,
+      "Disposable_income_per_person": 99.29868499436921,
+      "Food_to_income": 99.80583565488408,
+      "Grocery_to_income": 101.27995685675639
+    },
+    {
+      "date": "2015-07-01",
+      "Food_price_index": 99.29411764705883,
+      "Grocery_price_index": 100.5934013766912,
+      "Disposable_income_per_person": 99.80037198908988,
+      "Food_to_income": 99.49273301096873,
+      "Grocery_to_income": 100.79461566304383
+    },
+    {
+      "date": "2015-10-01",
+      "Food_price_index": 100.0,
+      "Grocery_price_index": 101.28174697365297,
+      "Disposable_income_per_person": 99.60829872615643,
+      "Food_to_income": 100.39324160622444,
+      "Grocery_to_income": 101.68002894226433
+    },
+    {
+      "date": "2016-01-01",
+      "Food_price_index": 102.14117647058825,
+      "Grocery_price_index": 104.03512936150011,
+      "Disposable_income_per_person": 96.82828476967231,
+      "Food_to_income": 105.4869212168261,
+      "Grocery_to_income": 107.44291258382908
+    },
+    {
+      "date": "2016-04-01",
+      "Food_price_index": 101.1529411764706,
+      "Grocery_price_index": 102.42107761690008,
+      "Disposable_income_per_person": 98.34704834616022,
+      "Food_to_income": 102.85305240726113,
+      "Grocery_to_income": 104.14250283994305
+    },
+    {
+      "date": "2016-07-01",
+      "Food_price_index": 100.21176470588236,
+      "Grocery_price_index": 100.80702587230004,
+      "Disposable_income_per_person": 99.0852516222481,
+      "Food_to_income": 101.13691297664457,
+      "Grocery_to_income": 101.73766955410885
+    },
+    {
+      "date": "2016-10-01",
+      "Food_price_index": 99.08235294117648,
+      "Grocery_price_index": 98.97934963209114,
+      "Disposable_income_per_person": 99.82793774881115,
+      "Food_to_income": 99.25313011122125,
+      "Grocery_to_income": 99.14994926685229
+    },
+    {
+      "date": "2017-01-01",
+      "Food_price_index": 100.0,
+      "Grocery_price_index": 100.0,
+      "Disposable_income_per_person": 100.0,
+      "Food_to_income": 100.0,
+      "Grocery_to_income": 100.0
+    },
+    {
+      "date": "2017-04-01",
+      "Food_price_index": 100.91764705882353,
+      "Grocery_price_index": 101.02065036790886,
+      "Disposable_income_per_person": 101.58758699790702,
+      "Food_to_income": 99.34052972525345,
+      "Grocery_to_income": 99.44192332276792
+    },
+    {
+      "date": "2017-07-01",
+      "Food_price_index": 101.20000000000002,
+      "Grocery_price_index": 101.13933064324709,
+      "Disposable_income_per_person": 103.30471761840097,
+      "Food_to_income": 97.96261229213596,
+      "Grocery_to_income": 97.90388374793042
+    },
+    {
+      "date": "2017-10-01",
+      "Food_price_index": 100.70588235294117,
+      "Grocery_price_index": 99.97626394493236,
+      "Disposable_income_per_person": 103.87454874896947,
+      "Food_to_income": 96.94952571713604,
+      "Grocery_to_income": 96.2471222729853
+    },
+    {
+      "date": "2018-01-01",
+      "Food_price_index": 102.02352941176471,
+      "Grocery_price_index": 101.16306669831476,
+      "Disposable_income_per_person": 103.58913462108065,
+      "Food_to_income": 98.48863955178044,
+      "Grocery_to_income": 97.65798997004829
+    },
+    {
+      "date": "2018-04-01",
+      "Food_price_index": 102.3529411764706,
+      "Grocery_price_index": 101.11559458817945,
+      "Disposable_income_per_person": 103.365101162646,
+      "Food_to_income": 99.02079137466062,
+      "Grocery_to_income": 97.82372720660629
+    },
+    {
+      "date": "2018-07-01",
+      "Food_price_index": 102.8,
+      "Grocery_price_index": 101.47163541419415,
+      "Disposable_income_per_person": 103.44723305635902,
+      "Food_to_income": 99.37433507186567,
+      "Grocery_to_income": 98.09023636128717
+    },
+    {
+      "date": "2018-10-01",
+      "Food_price_index": 103.10588235294118,
+      "Grocery_price_index": 101.63778779966768,
+      "Disposable_income_per_person": 104.7422741851663,
+      "Food_to_income": 98.43769686599293,
+      "Grocery_to_income": 97.03607124281986
+    },
+    {
+      "date": "2019-01-01",
+      "Food_price_index": 105.27058823529411,
+      "Grocery_price_index": 104.48611440778541,
+      "Disposable_income_per_person": 105.08127330642938,
+      "Food_to_income": 100.18016048236555,
+      "Grocery_to_income": 99.4336203969394
+    },
+    {
+      "date": "2019-04-01",
+      "Food_price_index": 105.74117647058823,
+      "Grocery_price_index": 104.79468312366484,
+      "Disposable_income_per_person": 106.7799171703761,
+      "Food_to_income": 99.02721342428983,
+      "Grocery_to_income": 98.14081701941794
+    },
+    {
+      "date": "2019-07-01",
+      "Food_price_index": 106.56470588235294,
+      "Grocery_price_index": 105.60170899596486,
+      "Disposable_income_per_person": 107.31141687942576,
+      "Food_to_income": 99.3041644414109,
+      "Grocery_to_income": 98.40677913573546
+    },
+    {
+      "date": "2019-10-01",
+      "Food_price_index": 106.56470588235294,
+      "Grocery_price_index": 105.41182055542369,
+      "Disposable_income_per_person": 108.44021465876524,
+      "Food_to_income": 98.27046748080122,
+      "Grocery_to_income": 97.20731454389761
+    },
+    {
+      "date": "2020-01-01",
+      "Food_price_index": 108.04705882352944,
+      "Grocery_price_index": 107.45312129124139,
+      "Disposable_income_per_person": 109.4449402486596,
+      "Food_to_income": 98.72275372259863,
+      "Grocery_to_income": 98.18007214139567
+    },
+    {
+      "date": "2020-04-01",
+      "Food_price_index": 108.96470588235296,
+      "Grocery_price_index": 108.47377165915024,
+      "Disposable_income_per_person": 119.81470256634977,
+      "Food_to_income": 90.94435286187986,
+      "Grocery_to_income": 90.53460830408584
+    },
+    {
+      "date": "2020-07-01",
+      "Food_price_index": 108.56470588235294,
+      "Grocery_price_index": 107.47685734630905,
+      "Disposable_income_per_person": 114.93202853913668,
+      "Food_to_income": 94.45992319311101,
+      "Grocery_to_income": 93.51340850101762
+    },
+    {
+      "date": "2020-10-01",
+      "Food_price_index": 108.42352941176472,
+      "Grocery_price_index": 106.97840018988843,
+      "Disposable_income_per_person": 113.87264996477651,
+      "Food_to_income": 95.21472403189235,
+      "Grocery_to_income": 93.94564912907478
+    },
+    {
+      "date": "2021-01-01",
+      "Food_price_index": 109.67058823529413,
+      "Grocery_price_index": 108.42629954901493,
+      "Disposable_income_per_person": 118.03183438957291,
+      "Food_to_income": 92.91610928736237,
+      "Grocery_to_income": 91.86191175437112
+    },
+    {
+      "date": "2021-04-01",
+      "Food_price_index": 110.3058823529412,
+      "Grocery_price_index": 109.04343698077379,
+      "Disposable_income_per_person": 117.36702433037316,
+      "Food_to_income": 93.98370878215694,
+      "Grocery_to_income": 92.90806987985864
+    },
+    {
+      "date": "2021-07-01",
+      "Food_price_index": 111.5529411764706,
+      "Grocery_price_index": 110.25397578922383,
+      "Disposable_income_per_person": 117.93913880942077,
+      "Food_to_income": 94.58517528835809,
+      "Grocery_to_income": 93.483789098532
+    },
+    {
+      "date": "2021-10-01",
+      "Food_price_index": 113.29411764705883,
+      "Grocery_price_index": 112.10538808450036,
+      "Disposable_income_per_person": 116.3367459748591,
+      "Food_to_income": 97.38463689842435,
+      "Grocery_to_income": 96.36283630343833
+    },
+    {
+      "date": "2022-01-01",
+      "Food_price_index": 117.03529411764707,
+      "Grocery_price_index": 116.56776643721814,
+      "Disposable_income_per_person": 119.12379144323639,
+      "Food_to_income": 98.2467840384475,
+      "Grocery_to_income": 97.85431190944236
+    },
+    {
+      "date": "2022-04-01",
+      "Food_price_index": 120.00000000000001,
+      "Grocery_price_index": 119.5347733206741,
+      "Disposable_income_per_person": 120.74333667011851,
+      "Food_to_income": 99.38436630076792,
+      "Grocery_to_income": 98.99906414484279
+    },
+    {
+      "date": "2022-07-01",
+      "Food_price_index": 122.44705882352943,
+      "Grocery_price_index": 122.05079515784476,
+      "Disposable_income_per_person": 121.05084748828929,
+      "Food_to_income": 101.15340897169283,
+      "Grocery_to_income": 100.8260559015518
+    },
+    {
+      "date": "2022-10-01",
+      "Food_price_index": 124.80000000000001,
+      "Grocery_price_index": 124.61428910515072,
+      "Disposable_income_per_person": 123.79843906727022,
+      "Food_to_income": 100.80902549359735,
+      "Grocery_to_income": 100.65901480182409
+    },
+    {
+      "date": "2023-01-01",
+      "Food_price_index": 128.3529411764706,
+      "Grocery_price_index": 128.83930690719203,
+      "Disposable_income_per_person": 122.52061473218345,
+      "Food_to_income": 104.76028173465828,
+      "Grocery_to_income": 105.15724818131262
+    },
+    {
+      "date": "2023-04-01",
+      "Food_price_index": 130.0,
+      "Grocery_price_index": 130.38215048658913,
+      "Disposable_income_per_person": 124.59429241034037,
+      "Food_to_income": 104.33864785062256,
+      "Grocery_to_income": 104.64536373559308
+    },
+    {
+      "date": "2023-07-01",
+      "Food_price_index": 130.82352941176472,
+      "Grocery_price_index": 130.66698314740088,
+      "Disposable_income_per_person": 126.88646309512757,
+      "Food_to_income": 103.10282611761785,
+      "Grocery_to_income": 102.9794510462783
+    },
+    {
+      "date": "2023-10-01",
+      "Food_price_index": 131.29411764705884,
+      "Grocery_price_index": 130.73819131260385,
+      "Disposable_income_per_person": 127.23087158578771,
+      "Food_to_income": 103.19360074377187,
+      "Grocery_to_income": 102.756657785254
+    },
+    {
+      "date": "2024-01-01",
+      "Food_price_index": 132.7058823529412,
+      "Grocery_price_index": 132.13861856159508,
+      "Disposable_income_per_person": 127.69446236214752,
+      "Food_to_income": 103.92453979451439,
+      "Grocery_to_income": 103.48030456234173
+    },
+    {
+      "date": "2024-04-01",
+      "Food_price_index": 133.27058823529413,
+      "Grocery_price_index": 132.5658675528127,
+      "Disposable_income_per_person": 130.22830764856076,
+      "Food_to_income": 102.33611312445477,
+      "Grocery_to_income": 101.7949706530474
+    },
+    {
+      "date": "2024-07-01",
+      "Food_price_index": 134.37647058823532,
+      "Grocery_price_index": 133.68146214099218,
+      "Disposable_income_per_person": 132.8580175800994,
+      "Food_to_income": 101.14291409415351,
+      "Grocery_to_income": 100.6197929006402
+    },
+    {
+      "date": "2024-10-01",
+      "Food_price_index": 134.11764705882354,
+      "Grocery_price_index": 133.87135058153333,
+      "Disposable_income_per_person": 133.42110992554277,
+      "Food_to_income": 100.52205916565188,
+      "Grocery_to_income": 100.33745833492303
+    },
+    {
+      "date": "2025-01-01",
+      "Food_price_index": 134.42352941176472,
+      "Grocery_price_index": 135.60408260147162,
+      "Disposable_income_per_person": 134.01455280859253,
+      "Food_to_income": 100.30517327752928,
+      "Grocery_to_income": 101.18608745062885
+    },
+    {
+      "date": "2025-04-01",
+      "Food_price_index": 137.76470588235293,
+      "Grocery_price_index": 136.9807737953952,
+      "Disposable_income_per_person": 133.84905653845513,
+      "Food_to_income": 102.92542169901125,
+      "Grocery_to_income": 102.33973801379791
+    },
+    {
+      "date": "2025-07-01",
+      "Food_price_index": 139.08235294117648,
+      "Grocery_price_index": 138.5236173747923,
+      "Disposable_income_per_person": 134.78334186803585,
+      "Food_to_income": 103.18957151051332,
+      "Grocery_to_income": 102.7750280226903
+    },
+    {
+      "date": "2025-10-01",
+      "Food_price_index": 140.25882352941179,
+      "Grocery_price_index": 139.7104201281747,
+      "Disposable_income_per_person": 135.87379613860122,
+      "Food_to_income": 103.22727966350297,
+      "Grocery_to_income": 102.8236673285111
+    },
+    {
+      "date": "2026-01-01",
+      "Food_price_index": 141.8823529411765,
+      "Grocery_price_index": 141.6093045335865,
+      "Disposable_income_per_person": 137.00804797590737,
+      "Food_to_income": 103.5576778424916,
+      "Grocery_to_income": 103.35838414287039
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "yoy",
+    "pct_change",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "notes": "Monthly consumer-price observations are averaged within completed quarters and compared with quarterly disposable income per person. No monthly income values are invented."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T14:52:20+00:00"
+}

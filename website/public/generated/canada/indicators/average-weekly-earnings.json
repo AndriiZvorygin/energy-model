@@ -1,0 +1,1610 @@
+{
+  "schemaVersion": 1,
+  "id": "average-weekly-earnings",
+  "field": "average_weekly_earnings",
+  "label": "Canada average weekly earnings",
+  "description": "SEPH average weekly earnings including overtime for all employees, seasonally adjusted.",
+  "definition": "SEPH average weekly earnings including overtime for all employees, seasonally adjusted.",
+  "unit": "CAD per week",
+  "frequency": "monthly",
+  "status": "measured",
+  "layer": "Canadian purchasing power",
+  "geography": "Canada",
+  "geographyLevel": "national",
+  "domesticOrExternal": "domestic",
+  "directlyComparableAcrossCountries": false,
+  "comparisonLimitations": "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels.",
+  "interpretationDirection": "context-dependent",
+  "interpretationLabel": "Direction unclear",
+  "interpretation": "Interpret with its documented comparison series.",
+  "source": "Statistics Canada",
+  "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410022301",
+  "sourceIdentifier": "StatCan vector v79311153",
+  "sourceDate": "2026-06-25",
+  "retrievalDate": "2026-07-16T14:52:20+00:00",
+  "revisionStatus": "Statistics Canada table 14-10-0223-01 is latest-vintage and may revise recent or historical observations.",
+  "seasonalAdjustment": "seasonally adjusted",
+  "nominalOrReal": "nominal earnings",
+  "startDate": "2001-01-01",
+  "endDate": "2026-04-01",
+  "latest": {
+    "date": "2026-04-01",
+    "sourceDate": "2026-06-25",
+    "value": 1345.79,
+    "previousValue": 1332.83,
+    "oneYearChange": 49.88999999999987,
+    "threeMonthChange": 26.5,
+    "fourQuarterChange": 49.88999999999987,
+    "monthOverMonthChange": 12.960000000000036,
+    "yearOverYearPercentChange": 3.849834092136728,
+    "cumulativeChange": 104.87608086712945,
+    "historicalPercentile": 99.83552631578948,
+    "percentileSince2000": 99.83552631578948,
+    "distanceFromMedian": 432.78999999999996,
+    "distanceFromPreviousPeakPercent": 0.9723670685683805,
+    "momentumThreeMonth": 26.5,
+    "momentumTwelveMonth": 49.88999999999987,
+    "momentum": "rising"
+  },
+  "referenceRanges": {
+    "historicalMedian": 913.0,
+    "p10": 692.325,
+    "p25": 784.825,
+    "p75": 1046.2450000000001,
+    "p90": 1217.027,
+    "minimum": 652.19,
+    "maximum": 1345.79
+  },
+  "observations": [
+    {
+      "date": "2001-01-01",
+      "value": 656.88,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2001-02-01",
+      "value": 653.23,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2001-03-01",
+      "value": 655.25,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2001-04-01",
+      "value": 652.41,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2001-05-01",
+      "value": 652.19,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2001-06-01",
+      "value": 656.72,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2001-07-01",
+      "value": 657.14,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2001-08-01",
+      "value": 659.47,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2001-09-01",
+      "value": 659.92,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2001-10-01",
+      "value": 660.91,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2001-11-01",
+      "value": 659.71,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2001-12-01",
+      "value": 660.39,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2002-01-01",
+      "value": 662.86,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2002-02-01",
+      "value": 659.68,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2002-03-01",
+      "value": 667.09,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2002-04-01",
+      "value": 672.33,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2002-05-01",
+      "value": 671.43,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2002-06-01",
+      "value": 670.32,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2002-07-01",
+      "value": 677.47,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2002-08-01",
+      "value": 672.17,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2002-09-01",
+      "value": 674.17,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2002-10-01",
+      "value": 679.35,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2002-11-01",
+      "value": 680.45,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2002-12-01",
+      "value": 685.21,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2003-01-01",
+      "value": 680.23,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2003-02-01",
+      "value": 686.95,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2003-03-01",
+      "value": 682.41,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2003-04-01",
+      "value": 685.79,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2003-05-01",
+      "value": 684.85,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2003-06-01",
+      "value": 691.5,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2003-07-01",
+      "value": 691.46,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2003-08-01",
+      "value": 694.25,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2003-09-01",
+      "value": 697.73,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2003-10-01",
+      "value": 696.98,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2003-11-01",
+      "value": 700.21,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2003-12-01",
+      "value": 698.61,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2004-01-01",
+      "value": 701.73,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2004-02-01",
+      "value": 701.71,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2004-03-01",
+      "value": 705.2,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2004-04-01",
+      "value": 704.12,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2004-05-01",
+      "value": 710.06,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2004-06-01",
+      "value": 705.85,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2004-07-01",
+      "value": 709.13,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2004-08-01",
+      "value": 711.46,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2004-09-01",
+      "value": 710.99,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2004-10-01",
+      "value": 712.2,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2004-11-01",
+      "value": 716.86,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2004-12-01",
+      "value": 719.66,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2005-01-01",
+      "value": 725.18,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2005-02-01",
+      "value": 731.91,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2005-03-01",
+      "value": 725.15,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2005-04-01",
+      "value": 728.86,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2005-05-01",
+      "value": 733.11,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2005-06-01",
+      "value": 735.61,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2005-07-01",
+      "value": 736.1,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2005-08-01",
+      "value": 741.45,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2005-09-01",
+      "value": 749.99,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2005-10-01",
+      "value": 745.56,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2005-11-01",
+      "value": 744.35,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2005-12-01",
+      "value": 743.96,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2006-01-01",
+      "value": 745.59,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2006-02-01",
+      "value": 745.61,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2006-03-01",
+      "value": 748.21,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2006-04-01",
+      "value": 750.45,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2006-05-01",
+      "value": 751.0,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2006-06-01",
+      "value": 751.83,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2006-07-01",
+      "value": 754.55,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2006-08-01",
+      "value": 758.87,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2006-09-01",
+      "value": 757.15,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2006-10-01",
+      "value": 762.11,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2006-11-01",
+      "value": 760.4,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2006-12-01",
+      "value": 772.6,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2007-01-01",
+      "value": 773.77,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2007-02-01",
+      "value": 770.86,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2007-03-01",
+      "value": 780.6,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2007-04-01",
+      "value": 781.42,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2007-05-01",
+      "value": 785.96,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2007-06-01",
+      "value": 790.68,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2007-07-01",
+      "value": 791.72,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2007-08-01",
+      "value": 789.25,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2007-09-01",
+      "value": 791.33,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2007-10-01",
+      "value": 793.89,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2007-11-01",
+      "value": 799.03,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2007-12-01",
+      "value": 798.33,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2008-01-01",
+      "value": 798.03,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2008-02-01",
+      "value": 803.1,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2008-03-01",
+      "value": 804.96,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2008-04-01",
+      "value": 809.01,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2008-05-01",
+      "value": 808.46,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2008-06-01",
+      "value": 809.39,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2008-07-01",
+      "value": 810.87,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2008-08-01",
+      "value": 811.51,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2008-09-01",
+      "value": 813.96,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2008-10-01",
+      "value": 818.06,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2008-11-01",
+      "value": 818.17,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2008-12-01",
+      "value": 813.1,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2009-01-01",
+      "value": 816.0,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2009-02-01",
+      "value": 818.03,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2009-03-01",
+      "value": 819.94,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2009-04-01",
+      "value": 817.49,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2009-05-01",
+      "value": 818.0,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2009-06-01",
+      "value": 821.11,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2009-07-01",
+      "value": 822.12,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2009-08-01",
+      "value": 821.7,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2009-09-01",
+      "value": 827.52,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2009-10-01",
+      "value": 825.52,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2009-11-01",
+      "value": 827.78,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2009-12-01",
+      "value": 832.76,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2010-01-01",
+      "value": 834.47,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2010-02-01",
+      "value": 841.1,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2010-03-01",
+      "value": 841.99,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2010-04-01",
+      "value": 845.56,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2010-05-01",
+      "value": 846.99,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2010-06-01",
+      "value": 850.13,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2010-07-01",
+      "value": 853.39,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2010-08-01",
+      "value": 858.39,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2010-09-01",
+      "value": 864.85,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2010-10-01",
+      "value": 860.37,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2010-11-01",
+      "value": 863.56,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2010-12-01",
+      "value": 866.04,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2011-01-01",
+      "value": 872.79,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2011-02-01",
+      "value": 870.39,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2011-03-01",
+      "value": 870.27,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2011-04-01",
+      "value": 869.97,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2011-05-01",
+      "value": 871.57,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2011-06-01",
+      "value": 870.23,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2011-07-01",
+      "value": 868.68,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2011-08-01",
+      "value": 872.48,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2011-09-01",
+      "value": 872.81,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2011-10-01",
+      "value": 882.16,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2011-11-01",
+      "value": 880.17,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2011-12-01",
+      "value": 880.78,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2012-01-01",
+      "value": 885.06,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2012-02-01",
+      "value": 880.62,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2012-03-01",
+      "value": 886.96,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2012-04-01",
+      "value": 889.5,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2012-05-01",
+      "value": 890.13,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2012-06-01",
+      "value": 893.66,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2012-07-01",
+      "value": 900.56,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2012-08-01",
+      "value": 903.79,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2012-09-01",
+      "value": 902.73,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2012-10-01",
+      "value": 903.29,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2012-11-01",
+      "value": 903.7,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2012-12-01",
+      "value": 903.13,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2013-01-01",
+      "value": 900.81,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2013-02-01",
+      "value": 904.87,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2013-03-01",
+      "value": 902.77,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2013-04-01",
+      "value": 904.66,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2013-05-01",
+      "value": 913.08,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2013-06-01",
+      "value": 910.33,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2013-07-01",
+      "value": 909.83,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2013-08-01",
+      "value": 910.96,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2013-09-01",
+      "value": 912.92,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2013-10-01",
+      "value": 916.81,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2013-11-01",
+      "value": 922.93,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2013-12-01",
+      "value": 924.39,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2014-01-01",
+      "value": 923.33,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2014-02-01",
+      "value": 926.26,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2014-03-01",
+      "value": 926.85,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2014-04-01",
+      "value": 931.42,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2014-05-01",
+      "value": 935.94,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2014-06-01",
+      "value": 936.69,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2014-07-01",
+      "value": 942.9,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2014-08-01",
+      "value": 939.59,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2014-09-01",
+      "value": 940.3,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2014-10-01",
+      "value": 942.13,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2014-11-01",
+      "value": 938.74,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2014-12-01",
+      "value": 940.0,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2015-01-01",
+      "value": 948.5,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2015-02-01",
+      "value": 949.46,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2015-03-01",
+      "value": 951.71,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2015-04-01",
+      "value": 954.11,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2015-05-01",
+      "value": 948.27,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2015-06-01",
+      "value": 953.22,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2015-07-01",
+      "value": 957.59,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2015-08-01",
+      "value": 944.6,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2015-09-01",
+      "value": 954.06,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2015-10-01",
+      "value": 955.52,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2015-11-01",
+      "value": 951.46,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2015-12-01",
+      "value": 954.88,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2016-01-01",
+      "value": 949.76,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2016-02-01",
+      "value": 953.9,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2016-03-01",
+      "value": 955.46,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2016-04-01",
+      "value": 953.17,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2016-05-01",
+      "value": 954.67,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2016-06-01",
+      "value": 956.87,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2016-07-01",
+      "value": 957.51,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2016-08-01",
+      "value": 958.3,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2016-09-01",
+      "value": 955.66,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2016-10-01",
+      "value": 955.17,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2016-11-01",
+      "value": 960.0,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2016-12-01",
+      "value": 968.34,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2017-01-01",
+      "value": 967.0,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2017-02-01",
+      "value": 964.5,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2017-03-01",
+      "value": 967.02,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2017-04-01",
+      "value": 971.07,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2017-05-01",
+      "value": 970.15,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2017-06-01",
+      "value": 971.94,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2017-07-01",
+      "value": 970.07,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2017-08-01",
+      "value": 976.45,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2017-09-01",
+      "value": 985.54,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2017-10-01",
+      "value": 983.54,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2017-11-01",
+      "value": 990.93,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2017-12-01",
+      "value": 991.96,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2018-01-01",
+      "value": 991.47,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2018-02-01",
+      "value": 998.68,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2018-03-01",
+      "value": 997.53,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2018-04-01",
+      "value": 993.11,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2018-05-01",
+      "value": 994.78,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2018-06-01",
+      "value": 1001.65,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2018-07-01",
+      "value": 999.89,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2018-08-01",
+      "value": 1005.43,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2018-09-01",
+      "value": 1000.53,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2018-10-01",
+      "value": 1007.51,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2018-11-01",
+      "value": 1011.43,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2018-12-01",
+      "value": 1009.66,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2019-01-01",
+      "value": 1009.29,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2019-02-01",
+      "value": 1009.37,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2019-03-01",
+      "value": 1014.84,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2019-04-01",
+      "value": 1016.98,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2019-05-01",
+      "value": 1030.54,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2019-06-01",
+      "value": 1022.02,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2019-07-01",
+      "value": 1027.69,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2019-08-01",
+      "value": 1031.71,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2019-09-01",
+      "value": 1038.63,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2019-10-01",
+      "value": 1046.38,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2019-11-01",
+      "value": 1042.76,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2019-12-01",
+      "value": 1046.2,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2020-01-01",
+      "value": 1046.42,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2020-02-01",
+      "value": 1045.5,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2020-03-01",
+      "value": 1047.06,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2020-04-01",
+      "value": 1112.45,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2020-05-01",
+      "value": 1134.87,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2020-06-01",
+      "value": 1116.38,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2020-07-01",
+      "value": 1111.9,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2020-08-01",
+      "value": 1108.21,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2020-09-01",
+      "value": 1107.12,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2020-10-01",
+      "value": 1107.5,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2020-11-01",
+      "value": 1112.71,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2020-12-01",
+      "value": 1119.5,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2021-01-01",
+      "value": 1129.25,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2021-02-01",
+      "value": 1134.55,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2021-03-01",
+      "value": 1119.47,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2021-04-01",
+      "value": 1123.45,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2021-05-01",
+      "value": 1130.3,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2021-06-01",
+      "value": 1122.22,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2021-07-01",
+      "value": 1127.99,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2021-08-01",
+      "value": 1131.39,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2021-09-01",
+      "value": 1134.34,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2021-10-01",
+      "value": 1133.31,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2021-11-01",
+      "value": 1132.67,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2021-12-01",
+      "value": 1141.53,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2022-01-01",
+      "value": 1151.01,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2022-02-01",
+      "value": 1159.84,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2022-03-01",
+      "value": 1168.29,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2022-04-01",
+      "value": 1160.49,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2022-05-01",
+      "value": 1159.93,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2022-06-01",
+      "value": 1162.39,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2022-07-01",
+      "value": 1161.84,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2022-08-01",
+      "value": 1165.97,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2022-09-01",
+      "value": 1169.01,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2022-10-01",
+      "value": 1172.4,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2022-11-01",
+      "value": 1176.99,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2022-12-01",
+      "value": 1173.83,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2023-01-01",
+      "value": 1182.47,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2023-02-01",
+      "value": 1180.47,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2023-03-01",
+      "value": 1189.47,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2023-04-01",
+      "value": 1197.61,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2023-05-01",
+      "value": 1203.01,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2023-06-01",
+      "value": 1206.25,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2023-07-01",
+      "value": 1211.39,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2023-08-01",
+      "value": 1211.81,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2023-09-01",
+      "value": 1214.71,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2023-10-01",
+      "value": 1218.02,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2023-11-01",
+      "value": 1222.57,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2023-12-01",
+      "value": 1219.55,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2024-01-01",
+      "value": 1225.25,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2024-02-01",
+      "value": 1231.12,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2024-03-01",
+      "value": 1239.28,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2024-04-01",
+      "value": 1242.86,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2024-05-01",
+      "value": 1254.01,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2024-06-01",
+      "value": 1255.72,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2024-07-01",
+      "value": 1264.48,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2024-08-01",
+      "value": 1273.0,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2024-09-01",
+      "value": 1275.17,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2024-10-01",
+      "value": 1283.79,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2024-11-01",
+      "value": 1283.9,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2024-12-01",
+      "value": 1291.58,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2025-01-01",
+      "value": 1294.3,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2025-02-01",
+      "value": 1294.74,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2025-03-01",
+      "value": 1288.12,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2025-04-01",
+      "value": 1295.9,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2025-05-01",
+      "value": 1293.19,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2025-06-01",
+      "value": 1299.68,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2025-07-01",
+      "value": 1305.63,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2025-08-01",
+      "value": 1306.43,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2025-09-01",
+      "value": 1314.65,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2025-10-01",
+      "value": 1309.49,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2025-11-01",
+      "value": 1315.19,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2025-12-01",
+      "value": 1316.48,
+      "sourceDate": "2026-03-26"
+    },
+    {
+      "date": "2026-01-01",
+      "value": 1319.29,
+      "sourceDate": "2026-04-30"
+    },
+    {
+      "date": "2026-02-01",
+      "value": 1331.61,
+      "sourceDate": "2026-05-28"
+    },
+    {
+      "date": "2026-03-01",
+      "value": 1332.83,
+      "sourceDate": "2026-06-25"
+    },
+    {
+      "date": "2026-04-01",
+      "value": 1345.79,
+      "sourceDate": "2026-06-25"
+    }
+  ],
+  "transformations": [
+    "raw",
+    "indexed",
+    "yoy",
+    "pct_change",
+    "zscore"
+  ],
+  "confirmingIndicators": [],
+  "conflictingIndicators": [],
+  "evidenceChecks": [],
+  "confidenceLevel": "medium",
+  "evidenceLabel": "Contextual indicator",
+  "calculation": {
+    "formula": "SEPH average weekly earnings including overtime for all employees, seasonally adjusted.",
+    "explanation": "SEPH average weekly earnings including overtime for all employees, seasonally adjusted.",
+    "example": "Latest observation: 1345.79 CAD per week at 2026-04."
+  },
+  "components": [
+    "StatCan vector v79311153"
+  ],
+  "referencePeriod": null,
+  "limitations": [
+    "Statistics Canada table 14-10-0223-01 is latest-vintage and may revise recent or historical observations.",
+    "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+  ],
+  "futureClassifierMetadata": {
+    "status": "Not yet evaluated",
+    "candidateSymptoms": []
+  },
+  "generatedAt": "2026-07-16T14:52:20+00:00"
+}

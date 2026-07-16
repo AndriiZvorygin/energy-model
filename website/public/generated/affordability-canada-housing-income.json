@@ -1,0 +1,2644 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "affordability-canada-housing-income",
+  "title": "Canadian housing costs relative to disposable income",
+  "description": "Purchase prices, rent, shelter services, mortgage interest, and income are separate quarterly-aligned series normalized to 100 in 2017 Q1.",
+  "plainLanguageSummary": "Purchase prices, rent, shelter services, mortgage interest, and income are separate quarterly-aligned series normalized to 100 in 2017 Q1.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "explanation": "Purchase prices, rent, shelter services, mortgage interest, and income are separate quarterly-aligned series normalized to 100 in 2017 Q1.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "Purchase prices, rent, shelter services, mortgage interest, and income are separate quarterly-aligned series normalized to 100 in 2017 Q1."
+  ],
+  "sourceNotes": [
+    "Derived from Derived from Statistics Canada",
+    "Derived from Statistics Canada; Statistics Canada"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "NHPI": {
+        "mean": 83.82758048456688,
+        "standardDeviation": 14.655064787745188,
+        "n": 80
+      },
+      "Rent": {
+        "mean": 92.06277870680044,
+        "standardDeviation": 6.860919557617541,
+        "n": 80
+      },
+      "Shelter": {
+        "mean": 87.74086177680948,
+        "standardDeviation": 10.546814380447161,
+        "n": 80
+      },
+      "Mortgage_interest": {
+        "mean": 103.33993853121964,
+        "standardDeviation": 5.838317990544734,
+        "n": 80
+      },
+      "Disposable_income": {
+        "mean": 83.57526132147999,
+        "standardDeviation": 14.771614695397515,
+        "n": 80
+      }
+    }
+  },
+  "frequency": "quarterly",
+  "dateRange": {
+    "start": "1949-01-01",
+    "end": "2026-01-01"
+  },
+  "series": [
+    {
+      "key": "NHPI",
+      "label": "NHPI quarterly index",
+      "unit": "index, 2017-01=100",
+      "source": "Derived from Derived from Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Rent",
+      "label": "Rent CPI quarterly index",
+      "unit": "index, 2017-01=100",
+      "source": "Derived from Derived from Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Shelter",
+      "label": "Shelter CPI quarterly index",
+      "unit": "index, 2017-01=100",
+      "source": "Derived from Derived from Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Mortgage_interest",
+      "label": "Mortgage-interest-cost quarterly index",
+      "unit": "index, 2017-01=100",
+      "source": "Derived from Derived from Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Disposable_income",
+      "label": "Disposable income per person index",
+      "unit": "index, 2017-01=100",
+      "source": "Derived from Statistics Canada; Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1949-01-01",
+      "NHPI": null,
+      "Rent": 15.969899665551841,
+      "Shelter": null,
+      "Mortgage_interest": 9.608540925266903,
+      "Disposable_income": null
+    },
+    {
+      "date": "1949-04-01",
+      "NHPI": null,
+      "Rent": 16.05351170568562,
+      "Shelter": null,
+      "Mortgage_interest": 9.608540925266903,
+      "Disposable_income": null
+    },
+    {
+      "date": "1949-07-01",
+      "NHPI": null,
+      "Rent": 16.1092530657748,
+      "Shelter": null,
+      "Mortgage_interest": 9.608540925266903,
+      "Disposable_income": null
+    },
+    {
+      "date": "1949-10-01",
+      "NHPI": null,
+      "Rent": 16.248606465997767,
+      "Shelter": null,
+      "Mortgage_interest": 9.608540925266903,
+      "Disposable_income": null
+    },
+    {
+      "date": "1950-01-01",
+      "NHPI": null,
+      "Rent": 16.666666666666664,
+      "Shelter": null,
+      "Mortgage_interest": 9.608540925266903,
+      "Disposable_income": null
+    },
+    {
+      "date": "1950-04-01",
+      "NHPI": null,
+      "Rent": 17.391304347826086,
+      "Shelter": null,
+      "Mortgage_interest": 9.608540925266903,
+      "Disposable_income": null
+    },
+    {
+      "date": "1950-07-01",
+      "NHPI": null,
+      "Rent": 17.725752508361204,
+      "Shelter": null,
+      "Mortgage_interest": 9.608540925266903,
+      "Disposable_income": null
+    },
+    {
+      "date": "1950-10-01",
+      "NHPI": null,
+      "Rent": 17.837235228539573,
+      "Shelter": null,
+      "Mortgage_interest": 9.608540925266903,
+      "Disposable_income": null
+    },
+    {
+      "date": "1951-01-01",
+      "NHPI": null,
+      "Rent": 17.920847268673356,
+      "Shelter": null,
+      "Mortgage_interest": 9.608540925266903,
+      "Disposable_income": null
+    },
+    {
+      "date": "1951-04-01",
+      "NHPI": null,
+      "Rent": 18.088071348940915,
+      "Shelter": null,
+      "Mortgage_interest": 9.640892914914266,
+      "Disposable_income": null
+    },
+    {
+      "date": "1951-07-01",
+      "NHPI": null,
+      "Rent": 18.478260869565215,
+      "Shelter": null,
+      "Mortgage_interest": 9.705596894208993,
+      "Disposable_income": null
+    },
+    {
+      "date": "1951-10-01",
+      "NHPI": null,
+      "Rent": 18.97993311036789,
+      "Shelter": null,
+      "Mortgage_interest": 9.705596894208993,
+      "Disposable_income": null
+    },
+    {
+      "date": "1952-01-01",
+      "NHPI": null,
+      "Rent": 19.14715719063545,
+      "Shelter": null,
+      "Mortgage_interest": 9.705596894208993,
+      "Disposable_income": null
+    },
+    {
+      "date": "1952-04-01",
+      "NHPI": null,
+      "Rent": 19.342251950947603,
+      "Shelter": null,
+      "Mortgage_interest": 9.705596894208993,
+      "Disposable_income": null
+    },
+    {
+      "date": "1952-07-01",
+      "NHPI": null,
+      "Rent": 19.48160535117057,
+      "Shelter": null,
+      "Mortgage_interest": 9.705596894208993,
+      "Disposable_income": null
+    },
+    {
+      "date": "1952-10-01",
+      "NHPI": null,
+      "Rent": 19.70457079152731,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1953-01-01",
+      "NHPI": null,
+      "Rent": 19.899665551839462,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1953-04-01",
+      "NHPI": null,
+      "Rent": 19.98327759197324,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1953-07-01",
+      "NHPI": null,
+      "Rent": 20.23411371237458,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1953-10-01",
+      "NHPI": null,
+      "Rent": 20.429208472686735,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1954-01-01",
+      "NHPI": null,
+      "Rent": 20.5685618729097,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1954-04-01",
+      "NHPI": null,
+      "Rent": 20.735785953177256,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1954-07-01",
+      "NHPI": null,
+      "Rent": 20.986622073578598,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1954-10-01",
+      "NHPI": null,
+      "Rent": 21.098104793756967,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1955-01-01",
+      "NHPI": null,
+      "Rent": 21.29319955406912,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1955-04-01",
+      "NHPI": null,
+      "Rent": 21.376811594202895,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1955-07-01",
+      "NHPI": null,
+      "Rent": 21.48829431438127,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1955-10-01",
+      "NHPI": null,
+      "Rent": 21.571906354515047,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1956-01-01",
+      "NHPI": null,
+      "Rent": 21.655518394648823,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1956-04-01",
+      "NHPI": null,
+      "Rent": 21.711259754738016,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1956-07-01",
+      "NHPI": null,
+      "Rent": 21.878483835005575,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1956-10-01",
+      "NHPI": null,
+      "Rent": 21.989966555183944,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1957-01-01",
+      "NHPI": null,
+      "Rent": 22.017837235228537,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1957-04-01",
+      "NHPI": null,
+      "Rent": 22.10144927536232,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1957-07-01",
+      "NHPI": null,
+      "Rent": 22.268673355629875,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1957-10-01",
+      "NHPI": null,
+      "Rent": 22.352285395763655,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1958-01-01",
+      "NHPI": null,
+      "Rent": 22.49163879598662,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1958-04-01",
+      "NHPI": null,
+      "Rent": 22.5752508361204,
+      "Shelter": null,
+      "Mortgage_interest": 9.802652863151083,
+      "Disposable_income": null
+    },
+    {
+      "date": "1958-07-01",
+      "NHPI": null,
+      "Rent": 22.630992196209586,
+      "Shelter": null,
+      "Mortgage_interest": 10.320284697508894,
+      "Disposable_income": null
+    },
+    {
+      "date": "1958-10-01",
+      "NHPI": null,
+      "Rent": 22.71460423634337,
+      "Shelter": null,
+      "Mortgage_interest": 10.579100614687801,
+      "Disposable_income": null
+    },
+    {
+      "date": "1959-01-01",
+      "NHPI": null,
+      "Rent": 22.74247491638796,
+      "Shelter": null,
+      "Mortgage_interest": 10.579100614687801,
+      "Disposable_income": null
+    },
+    {
+      "date": "1959-04-01",
+      "NHPI": null,
+      "Rent": 22.770345596432552,
+      "Shelter": null,
+      "Mortgage_interest": 10.579100614687801,
+      "Disposable_income": null
+    },
+    {
+      "date": "1959-07-01",
+      "NHPI": null,
+      "Rent": 22.82608695652174,
+      "Shelter": null,
+      "Mortgage_interest": 10.579100614687801,
+      "Disposable_income": null
+    },
+    {
+      "date": "1959-10-01",
+      "NHPI": null,
+      "Rent": 22.82608695652174,
+      "Shelter": null,
+      "Mortgage_interest": 10.579100614687801,
+      "Disposable_income": null
+    },
+    {
+      "date": "1960-01-01",
+      "NHPI": null,
+      "Rent": 22.853957636566328,
+      "Shelter": null,
+      "Mortgage_interest": 10.579100614687801,
+      "Disposable_income": null
+    },
+    {
+      "date": "1960-04-01",
+      "NHPI": null,
+      "Rent": 22.93756967670011,
+      "Shelter": null,
+      "Mortgage_interest": 10.579100614687801,
+      "Disposable_income": null
+    },
+    {
+      "date": "1960-07-01",
+      "NHPI": null,
+      "Rent": 23.021181716833887,
+      "Shelter": null,
+      "Mortgage_interest": 10.579100614687801,
+      "Disposable_income": null
+    },
+    {
+      "date": "1960-10-01",
+      "NHPI": null,
+      "Rent": 23.07692307692308,
+      "Shelter": null,
+      "Mortgage_interest": 10.579100614687801,
+      "Disposable_income": null
+    },
+    {
+      "date": "1961-01-01",
+      "NHPI": null,
+      "Rent": 23.07692307692308,
+      "Shelter": null,
+      "Mortgage_interest": 10.579100614687801,
+      "Disposable_income": null
+    },
+    {
+      "date": "1961-04-01",
+      "NHPI": null,
+      "Rent": 23.07692307692308,
+      "Shelter": null,
+      "Mortgage_interest": 10.579100614687801,
+      "Disposable_income": null
+    },
+    {
+      "date": "1961-07-01",
+      "NHPI": null,
+      "Rent": 23.07692307692308,
+      "Shelter": null,
+      "Mortgage_interest": 10.579100614687801,
+      "Disposable_income": null
+    },
+    {
+      "date": "1961-10-01",
+      "NHPI": null,
+      "Rent": 23.07692307692308,
+      "Shelter": null,
+      "Mortgage_interest": 10.579100614687801,
+      "Disposable_income": null
+    },
+    {
+      "date": "1962-01-01",
+      "NHPI": null,
+      "Rent": 23.07692307692308,
+      "Shelter": null,
+      "Mortgage_interest": 10.579100614687801,
+      "Disposable_income": null
+    },
+    {
+      "date": "1962-04-01",
+      "NHPI": null,
+      "Rent": 23.07692307692308,
+      "Shelter": null,
+      "Mortgage_interest": 10.837916531866707,
+      "Disposable_income": null
+    },
+    {
+      "date": "1962-07-01",
+      "NHPI": null,
+      "Rent": 23.07692307692308,
+      "Shelter": null,
+      "Mortgage_interest": 11.161436428340341,
+      "Disposable_income": null
+    },
+    {
+      "date": "1962-10-01",
+      "NHPI": null,
+      "Rent": 23.07692307692308,
+      "Shelter": null,
+      "Mortgage_interest": 11.161436428340341,
+      "Disposable_income": null
+    },
+    {
+      "date": "1963-01-01",
+      "NHPI": null,
+      "Rent": 23.07692307692308,
+      "Shelter": null,
+      "Mortgage_interest": 11.258492397282431,
+      "Disposable_income": null
+    },
+    {
+      "date": "1963-04-01",
+      "NHPI": null,
+      "Rent": 23.10479375696767,
+      "Shelter": null,
+      "Mortgage_interest": 11.258492397282431,
+      "Disposable_income": null
+    },
+    {
+      "date": "1963-07-01",
+      "NHPI": null,
+      "Rent": 23.160535117056856,
+      "Shelter": null,
+      "Mortgage_interest": 11.35554836622452,
+      "Disposable_income": null
+    },
+    {
+      "date": "1963-10-01",
+      "NHPI": null,
+      "Rent": 23.160535117056856,
+      "Shelter": null,
+      "Mortgage_interest": 11.35554836622452,
+      "Disposable_income": null
+    },
+    {
+      "date": "1964-01-01",
+      "NHPI": null,
+      "Rent": 23.160535117056856,
+      "Shelter": null,
+      "Mortgage_interest": 11.549660304108702,
+      "Disposable_income": null
+    },
+    {
+      "date": "1964-04-01",
+      "NHPI": null,
+      "Rent": 23.18840579710145,
+      "Shelter": null,
+      "Mortgage_interest": 11.549660304108702,
+      "Disposable_income": null
+    },
+    {
+      "date": "1964-07-01",
+      "NHPI": null,
+      "Rent": 23.272017837235225,
+      "Shelter": null,
+      "Mortgage_interest": 11.64671627305079,
+      "Disposable_income": null
+    },
+    {
+      "date": "1964-10-01",
+      "NHPI": null,
+      "Rent": 23.327759197324408,
+      "Shelter": null,
+      "Mortgage_interest": 11.64671627305079,
+      "Disposable_income": null
+    },
+    {
+      "date": "1965-01-01",
+      "NHPI": null,
+      "Rent": 23.327759197324408,
+      "Shelter": null,
+      "Mortgage_interest": 11.937884179877063,
+      "Disposable_income": null
+    },
+    {
+      "date": "1965-04-01",
+      "NHPI": null,
+      "Rent": 23.327759197324408,
+      "Shelter": null,
+      "Mortgage_interest": 11.937884179877063,
+      "Disposable_income": null
+    },
+    {
+      "date": "1965-07-01",
+      "NHPI": null,
+      "Rent": 23.327759197324408,
+      "Shelter": null,
+      "Mortgage_interest": 12.22905208670333,
+      "Disposable_income": null
+    },
+    {
+      "date": "1965-10-01",
+      "NHPI": null,
+      "Rent": 23.494983277591974,
+      "Shelter": null,
+      "Mortgage_interest": 12.22905208670333,
+      "Disposable_income": null
+    },
+    {
+      "date": "1966-01-01",
+      "NHPI": null,
+      "Rent": 23.57859531772575,
+      "Shelter": null,
+      "Mortgage_interest": 12.326108055645419,
+      "Disposable_income": null
+    },
+    {
+      "date": "1966-04-01",
+      "NHPI": null,
+      "Rent": 23.634336677814936,
+      "Shelter": null,
+      "Mortgage_interest": 12.326108055645419,
+      "Disposable_income": null
+    },
+    {
+      "date": "1966-07-01",
+      "NHPI": null,
+      "Rent": 23.8015607580825,
+      "Shelter": null,
+      "Mortgage_interest": 12.714331931413781,
+      "Disposable_income": null
+    },
+    {
+      "date": "1966-10-01",
+      "NHPI": null,
+      "Rent": 23.996655518394647,
+      "Shelter": null,
+      "Mortgage_interest": 12.714331931413781,
+      "Disposable_income": null
+    },
+    {
+      "date": "1967-01-01",
+      "NHPI": null,
+      "Rent": 24.1917502787068,
+      "Shelter": null,
+      "Mortgage_interest": 12.908443869297962,
+      "Disposable_income": null
+    },
+    {
+      "date": "1967-04-01",
+      "NHPI": null,
+      "Rent": 24.331103678929765,
+      "Shelter": null,
+      "Mortgage_interest": 12.908443869297962,
+      "Disposable_income": null
+    },
+    {
+      "date": "1967-07-01",
+      "NHPI": null,
+      "Rent": 24.721293199554065,
+      "Shelter": null,
+      "Mortgage_interest": 13.296667745066317,
+      "Disposable_income": null
+    },
+    {
+      "date": "1967-10-01",
+      "NHPI": null,
+      "Rent": 24.972129319955403,
+      "Shelter": null,
+      "Mortgage_interest": 13.296667745066317,
+      "Disposable_income": null
+    },
+    {
+      "date": "1968-01-01",
+      "NHPI": null,
+      "Rent": 25.167224080267555,
+      "Shelter": null,
+      "Mortgage_interest": 13.976059527660949,
+      "Disposable_income": null
+    },
+    {
+      "date": "1968-04-01",
+      "NHPI": null,
+      "Rent": 25.418060200668894,
+      "Shelter": null,
+      "Mortgage_interest": 13.976059527660949,
+      "Disposable_income": null
+    },
+    {
+      "date": "1968-07-01",
+      "NHPI": null,
+      "Rent": 25.75250836120401,
+      "Shelter": null,
+      "Mortgage_interest": 14.202523455192491,
+      "Disposable_income": null
+    },
+    {
+      "date": "1968-10-01",
+      "NHPI": null,
+      "Rent": 26.00334448160535,
+      "Shelter": null,
+      "Mortgage_interest": 15.237787123908117,
+      "Disposable_income": null
+    },
+    {
+      "date": "1969-01-01",
+      "NHPI": null,
+      "Rent": 26.198439241917498,
+      "Shelter": null,
+      "Mortgage_interest": 15.626010999676481,
+      "Disposable_income": null
+    },
+    {
+      "date": "1969-04-01",
+      "NHPI": null,
+      "Rent": 26.39353400222965,
+      "Shelter": null,
+      "Mortgage_interest": 16.01423487544484,
+      "Disposable_income": null
+    },
+    {
+      "date": "1969-07-01",
+      "NHPI": null,
+      "Rent": 26.81159420289855,
+      "Shelter": null,
+      "Mortgage_interest": 16.59657068909738,
+      "Disposable_income": null
+    },
+    {
+      "date": "1969-10-01",
+      "NHPI": null,
+      "Rent": 27.006688963210703,
+      "Shelter": null,
+      "Mortgage_interest": 17.08185053380783,
+      "Disposable_income": null
+    },
+    {
+      "date": "1970-01-01",
+      "NHPI": null,
+      "Rent": 27.229654403567448,
+      "Shelter": null,
+      "Mortgage_interest": 17.664186347460365,
+      "Disposable_income": null
+    },
+    {
+      "date": "1970-04-01",
+      "NHPI": null,
+      "Rent": 27.39687848383501,
+      "Shelter": null,
+      "Mortgage_interest": 18.246522161112907,
+      "Disposable_income": null
+    },
+    {
+      "date": "1970-07-01",
+      "NHPI": null,
+      "Rent": 27.591973244147155,
+      "Shelter": null,
+      "Mortgage_interest": 18.925913943707535,
+      "Disposable_income": null
+    },
+    {
+      "date": "1970-10-01",
+      "NHPI": null,
+      "Rent": 27.73132664437012,
+      "Shelter": null,
+      "Mortgage_interest": 19.411193788417986,
+      "Disposable_income": null
+    },
+    {
+      "date": "1971-01-01",
+      "NHPI": null,
+      "Rent": 27.8149386845039,
+      "Shelter": null,
+      "Mortgage_interest": 19.993529602070524,
+      "Disposable_income": 7.998135344503812
+    },
+    {
+      "date": "1971-04-01",
+      "NHPI": null,
+      "Rent": 27.898550724637676,
+      "Shelter": null,
+      "Mortgage_interest": 20.672921384665155,
+      "Disposable_income": 8.143258624595314
+    },
+    {
+      "date": "1971-07-01",
+      "NHPI": null,
+      "Rent": 27.98216276477146,
+      "Shelter": null,
+      "Mortgage_interest": 21.158201229375603,
+      "Disposable_income": 8.21806301673503
+    },
+    {
+      "date": "1971-10-01",
+      "NHPI": null,
+      "Rent": 28.037904124860642,
+      "Shelter": null,
+      "Mortgage_interest": 21.449369136201877,
+      "Disposable_income": 8.43172351247826
+    },
+    {
+      "date": "1972-01-01",
+      "NHPI": null,
+      "Rent": 28.177257525083615,
+      "Shelter": null,
+      "Mortgage_interest": 21.93464898091233,
+      "Disposable_income": 8.762843311096344
+    },
+    {
+      "date": "1972-04-01",
+      "NHPI": null,
+      "Rent": 28.177257525083615,
+      "Shelter": null,
+      "Mortgage_interest": 22.322872856680682,
+      "Disposable_income": 8.971578233664056
+    },
+    {
+      "date": "1972-07-01",
+      "NHPI": null,
+      "Rent": 28.288740245261984,
+      "Shelter": null,
+      "Mortgage_interest": 22.71109673244904,
+      "Disposable_income": 9.186250786029285
+    },
+    {
+      "date": "1972-10-01",
+      "NHPI": null,
+      "Rent": 28.400222965440356,
+      "Shelter": null,
+      "Mortgage_interest": 23.61695244257521,
+      "Disposable_income": 9.570458117342012
+    },
+    {
+      "date": "1973-01-01",
+      "NHPI": null,
+      "Rent": 28.511705685618725,
+      "Shelter": null,
+      "Mortgage_interest": 24.36104820446457,
+      "Disposable_income": 9.852230824396628
+    },
+    {
+      "date": "1973-04-01",
+      "NHPI": null,
+      "Rent": 28.56744704570791,
+      "Shelter": null,
+      "Mortgage_interest": 24.813976059527658,
+      "Disposable_income": 10.279101595588699
+    },
+    {
+      "date": "1973-07-01",
+      "NHPI": null,
+      "Rent": 28.67892976588628,
+      "Shelter": null,
+      "Mortgage_interest": 25.461015852474926,
+      "Disposable_income": 10.652307879516481
+    },
+    {
+      "date": "1973-10-01",
+      "NHPI": null,
+      "Rent": 28.874024526198436,
+      "Shelter": null,
+      "Mortgage_interest": 26.20511161436428,
+      "Disposable_income": 11.182087151225865
+    },
+    {
+      "date": "1974-01-01",
+      "NHPI": null,
+      "Rent": 28.98550724637681,
+      "Shelter": null,
+      "Mortgage_interest": 27.01391135554836,
+      "Disposable_income": 11.653034789469778
+    },
+    {
+      "date": "1974-04-01",
+      "NHPI": null,
+      "Rent": 29.20847268673355,
+      "Shelter": null,
+      "Mortgage_interest": 27.790359107085084,
+      "Disposable_income": 11.716789542215116
+    },
+    {
+      "date": "1974-07-01",
+      "NHPI": null,
+      "Rent": 29.626532887402448,
+      "Shelter": null,
+      "Mortgage_interest": 28.922678744742797,
+      "Disposable_income": 12.478960106679677
+    },
+    {
+      "date": "1974-10-01",
+      "NHPI": null,
+      "Rent": 29.98885172798216,
+      "Shelter": null,
+      "Mortgage_interest": 30.216758330637333,
+      "Disposable_income": 12.93513050408634
+    },
+    {
+      "date": "1975-01-01",
+      "NHPI": null,
+      "Rent": 30.239687848383497,
+      "Shelter": null,
+      "Mortgage_interest": 31.21967000970559,
+      "Disposable_income": 13.229868313252016
+    },
+    {
+      "date": "1975-04-01",
+      "NHPI": null,
+      "Rent": 30.629877369007804,
+      "Shelter": null,
+      "Mortgage_interest": 32.125525719831764,
+      "Disposable_income": 13.698631974768894
+    },
+    {
+      "date": "1975-07-01",
+      "NHPI": null,
+      "Rent": 31.270903010033443,
+      "Shelter": null,
+      "Mortgage_interest": 33.03138142995793,
+      "Disposable_income": 14.312174546886213
+    },
+    {
+      "date": "1975-10-01",
+      "NHPI": null,
+      "Rent": 31.96767001114827,
+      "Shelter": null,
+      "Mortgage_interest": 34.19605305726302,
+      "Disposable_income": 14.601443911986355
+    },
+    {
+      "date": "1976-01-01",
+      "NHPI": null,
+      "Rent": 32.525083612040135,
+      "Shelter": null,
+      "Mortgage_interest": 35.393076674215465,
+      "Disposable_income": 14.91790318471352
+    },
+    {
+      "date": "1976-04-01",
+      "NHPI": null,
+      "Rent": 32.803790412486066,
+      "Shelter": null,
+      "Mortgage_interest": 36.68715626010999,
+      "Disposable_income": 15.645130960122316
+    },
+    {
+      "date": "1976-07-01",
+      "NHPI": null,
+      "Rent": 33.472686733556294,
+      "Shelter": null,
+      "Mortgage_interest": 37.9165318667098,
+      "Disposable_income": 15.350007113942672
+    },
+    {
+      "date": "1976-10-01",
+      "NHPI": null,
+      "Rent": 34.05797101449274,
+      "Shelter": null,
+      "Mortgage_interest": 39.178259462956966,
+      "Disposable_income": 16.012254888933168
+    },
+    {
+      "date": "1977-01-01",
+      "NHPI": null,
+      "Rent": 34.50390189520624,
+      "Shelter": null,
+      "Mortgage_interest": 40.2135231316726,
+      "Disposable_income": 16.200348327776112
+    },
+    {
+      "date": "1977-04-01",
+      "NHPI": null,
+      "Rent": 34.894091415830545,
+      "Shelter": null,
+      "Mortgage_interest": 40.92526690391458,
+      "Disposable_income": 16.831318824013835
+    },
+    {
+      "date": "1977-07-01",
+      "NHPI": null,
+      "Rent": 35.53511705685619,
+      "Shelter": null,
+      "Mortgage_interest": 41.79877062439339,
+      "Disposable_income": 16.93825531256439
+    },
+    {
+      "date": "1977-10-01",
+      "NHPI": null,
+      "Rent": 36.14827201783723,
+      "Shelter": null,
+      "Mortgage_interest": 42.67227434487221,
+      "Disposable_income": 17.414085158083452
+    },
+    {
+      "date": "1978-01-01",
+      "NHPI": null,
+      "Rent": 36.566332218506126,
+      "Shelter": null,
+      "Mortgage_interest": 43.545778065351016,
+      "Disposable_income": 18.339352102138587
+    },
+    {
+      "date": "1978-04-01",
+      "NHPI": null,
+      "Rent": 36.817168338907464,
+      "Shelter": null,
+      "Mortgage_interest": 44.38692979618246,
+      "Disposable_income": 18.500331849611484
+    },
+    {
+      "date": "1978-07-01",
+      "NHPI": null,
+      "Rent": 37.37458193979933,
+      "Shelter": null,
+      "Mortgage_interest": 45.260433516661266,
+      "Disposable_income": 18.81869756669801
+    },
+    {
+      "date": "1978-10-01",
+      "NHPI": null,
+      "Rent": 37.82051282051282,
+      "Shelter": 28.75816993464052,
+      "Mortgage_interest": 45.93982529925591,
+      "Disposable_income": 19.368772646696986
+    },
+    {
+      "date": "1979-01-01",
+      "NHPI": null,
+      "Rent": 38.18283166109252,
+      "Shelter": 29.19389978213507,
+      "Mortgage_interest": 46.683921061145256,
+      "Disposable_income": 19.756081458359485
+    },
+    {
+      "date": "1979-04-01",
+      "NHPI": null,
+      "Rent": 38.46153846153846,
+      "Shelter": 29.435971919632046,
+      "Mortgage_interest": 47.23390488515042,
+      "Disposable_income": 20.746072509628828
+    },
+    {
+      "date": "1979-07-01",
+      "NHPI": null,
+      "Rent": 38.96321070234114,
+      "Shelter": 29.8717017671266,
+      "Mortgage_interest": 47.622128760918784,
+      "Disposable_income": 20.938179366782677
+    },
+    {
+      "date": "1979-10-01",
+      "NHPI": null,
+      "Rent": 39.46488294314381,
+      "Shelter": 30.45267489711934,
+      "Mortgage_interest": 48.52798447104497,
+      "Disposable_income": 21.67263702978116
+    },
+    {
+      "date": "1980-01-01",
+      "NHPI": null,
+      "Rent": 39.82720178372352,
+      "Shelter": 31.033648027112072,
+      "Mortgage_interest": 49.8220640569395,
+      "Disposable_income": 22.1458221705028
+    },
+    {
+      "date": "1980-04-01",
+      "NHPI": null,
+      "Rent": 40.161649944258635,
+      "Shelter": 31.61462115710481,
+      "Mortgage_interest": 51.6661274668392,
+      "Disposable_income": 22.77366643720621
+    },
+    {
+      "date": "1980-07-01",
+      "NHPI": null,
+      "Rent": 40.886287625418056,
+      "Shelter": 32.26821592834665,
+      "Mortgage_interest": 53.08961501132319,
+      "Disposable_income": 23.428678285322235
+    },
+    {
+      "date": "1980-10-01",
+      "NHPI": null,
+      "Rent": 41.61092530657748,
+      "Shelter": 33.23650447833454,
+      "Mortgage_interest": 54.70721449369136,
+      "Disposable_income": 24.4579364725076
+    },
+    {
+      "date": "1981-01-01",
+      "NHPI": 38.56621307666777,
+      "Rent": 42.05685618729097,
+      "Shelter": 34.398450738320015,
+      "Mortgage_interest": 56.810093820769964,
+      "Disposable_income": 25.588141506149796
+    },
+    {
+      "date": "1981-04-01",
+      "NHPI": 40.258878194490535,
+      "Rent": 42.61426978818283,
+      "Shelter": 35.536189784555795,
+      "Mortgage_interest": 59.4306049822064,
+      "Disposable_income": 26.270442743203272
+    },
+    {
+      "date": "1981-07-01",
+      "NHPI": 40.4248257550614,
+      "Rent": 43.589743589743584,
+      "Shelter": 36.94020818203825,
+      "Mortgage_interest": 63.05402782271109,
+      "Disposable_income": 26.8114950623707
+    },
+    {
+      "date": "1981-10-01",
+      "NHPI": 40.09293063391968,
+      "Rent": 44.64882943143812,
+      "Shelter": 38.39264100702009,
+      "Mortgage_interest": 67.42154642510512,
+      "Disposable_income": 27.544262166198898
+    },
+    {
+      "date": "1982-01-01",
+      "NHPI": 40.0597411218055,
+      "Rent": 45.373467112597545,
+      "Shelter": 39.65141612200435,
+      "Mortgage_interest": 70.85085732772565,
+      "Disposable_income": 28.524054911883255
+    },
+    {
+      "date": "1982-04-01",
+      "NHPI": 39.42914039163624,
+      "Rent": 46.23745819397993,
+      "Shelter": 40.61970467199225,
+      "Mortgage_interest": 74.44192817858297,
+      "Disposable_income": 28.85018286143286
+    },
+    {
+      "date": "1982-07-01",
+      "NHPI": 38.566213076667765,
+      "Rent": 47.742474916387955,
+      "Shelter": 41.70902929072864,
+      "Mortgage_interest": 77.93594306049822,
+      "Disposable_income": 29.294039770079973
+    },
+    {
+      "date": "1982-10-01",
+      "NHPI": 37.902422834384325,
+      "Rent": 49.080267558528426,
+      "Shelter": 42.992011619462595,
+      "Mortgage_interest": 80.52410223228728,
+      "Disposable_income": 28.837543647947804
+    },
+    {
+      "date": "1983-01-01",
+      "NHPI": 37.7032857616993,
+      "Rent": 49.609810479375696,
+      "Shelter": 43.47615589445655,
+      "Mortgage_interest": 81.62406988029763,
+      "Disposable_income": 29.03465373394466
+    },
+    {
+      "date": "1983-04-01",
+      "NHPI": 37.60371722535678,
+      "Rent": 50.055741360089186,
+      "Shelter": 43.911885741951096,
+      "Mortgage_interest": 82.14170171465543,
+      "Disposable_income": 29.255672277928582
+    },
+    {
+      "date": "1983-07-01",
+      "NHPI": 37.769664785927645,
+      "Rent": 51.003344481605346,
+      "Shelter": 44.46865165819413,
+      "Mortgage_interest": 82.46522161112907,
+      "Disposable_income": 31.384857649857
+    },
+    {
+      "date": "1983-10-01",
+      "NHPI": 37.769664785927645,
+      "Rent": 51.89520624303232,
+      "Shelter": 45.00121036068748,
+      "Mortgage_interest": 82.78874150760271,
+      "Disposable_income": 31.091230226616656
+    },
+    {
+      "date": "1984-01-01",
+      "NHPI": 37.869233322270155,
+      "Rent": 52.3690078037904,
+      "Shelter": 45.485354635681425,
+      "Mortgage_interest": 82.72403752830799,
+      "Disposable_income": 31.062437542163337
+    },
+    {
+      "date": "1984-04-01",
+      "NHPI": 38.00199137072685,
+      "Rent": 52.731326644370114,
+      "Shelter": 45.7274267731784,
+      "Mortgage_interest": 82.85344548689744,
+      "Disposable_income": 32.344570086737775
+    },
+    {
+      "date": "1984-07-01",
+      "NHPI": 37.83604381015599,
+      "Rent": 53.51170568561872,
+      "Shelter": 46.01791333817477,
+      "Mortgage_interest": 83.56518925913943,
+      "Disposable_income": 32.879832990430074
+    },
+    {
+      "date": "1984-10-01",
+      "NHPI": 37.7032857616993,
+      "Rent": 54.18060200668896,
+      "Shelter": 46.719922536915995,
+      "Mortgage_interest": 84.08282109349723,
+      "Disposable_income": 33.36924942742099
+    },
+    {
+      "date": "1985-01-01",
+      "NHPI": 37.869233322270155,
+      "Rent": 54.62653288740245,
+      "Shelter": 47.15565238441055,
+      "Mortgage_interest": 84.50339695891296,
+      "Disposable_income": 33.80145157548478
+    },
+    {
+      "date": "1985-04-01",
+      "NHPI": 38.00199137072685,
+      "Rent": 54.98885172798216,
+      "Shelter": 47.4945533769063,
+      "Mortgage_interest": 84.95632481397605,
+      "Disposable_income": 35.33571681521514
+    },
+    {
+      "date": "1985-07-01",
+      "NHPI": 38.40026551609691,
+      "Rent": 55.713489409141566,
+      "Shelter": 47.736625514403286,
+      "Mortgage_interest": 84.60045292785506,
+      "Disposable_income": 35.46780378591543
+    },
+    {
+      "date": "1985-10-01",
+      "NHPI": 38.96448722203784,
+      "Rent": 56.438127090301,
+      "Shelter": 48.244977003146936,
+      "Mortgage_interest": 84.21222905208668,
+      "Disposable_income": 35.8813917927121
+    },
+    {
+      "date": "1986-01-01",
+      "NHPI": 40.0597411218055,
+      "Rent": 56.91192865105908,
+      "Shelter": 48.6080852093924,
+      "Mortgage_interest": 84.08282109349723,
+      "Disposable_income": 36.26972725177724
+    },
+    {
+      "date": "1986-04-01",
+      "NHPI": 40.8894789246598,
+      "Rent": 57.30211817168338,
+      "Shelter": 48.704914064391176,
+      "Mortgage_interest": 84.11517308314461,
+      "Disposable_income": 36.92418590153813
+    },
+    {
+      "date": "1986-07-01",
+      "NHPI": 41.951543312313305,
+      "Rent": 57.998885172798225,
+      "Shelter": 48.971193415637856,
+      "Mortgage_interest": 84.05046910384986,
+      "Disposable_income": 36.9172410518087
+    },
+    {
+      "date": "1986-10-01",
+      "NHPI": 43.47826086956521,
+      "Rent": 58.667781493868446,
+      "Shelter": 49.77003146937787,
+      "Mortgage_interest": 84.14752507279196,
+      "Disposable_income": 37.12266499580134
+    },
+    {
+      "date": "1987-01-01",
+      "NHPI": 45.20411549950216,
+      "Rent": 59.057971014492736,
+      "Shelter": 50.32679738562091,
+      "Mortgage_interest": 84.4710449692656,
+      "Disposable_income": 38.06391622042263
+    },
+    {
+      "date": "1987-04-01",
+      "NHPI": 47.22867573846665,
+      "Rent": 59.44816053511706,
+      "Shelter": 50.907770515613656,
+      "Mortgage_interest": 84.72986088644451,
+      "Disposable_income": 37.98497433517551
+    },
+    {
+      "date": "1987-07-01",
+      "NHPI": 48.091603053435115,
+      "Rent": 60.089186176142704,
+      "Shelter": 51.39191479060759,
+      "Mortgage_interest": 85.15043675186024,
+      "Disposable_income": 39.48584202225113
+    },
+    {
+      "date": "1987-10-01",
+      "NHPI": 48.821772319946895,
+      "Rent": 60.75808249721293,
+      "Shelter": 52.23916727184701,
+      "Mortgage_interest": 85.99158848269168,
+      "Disposable_income": 39.55083183216039
+    },
+    {
+      "date": "1988-01-01",
+      "NHPI": 49.58513109857284,
+      "Rent": 61.17614269788183,
+      "Shelter": 52.72331154684096,
+      "Mortgage_interest": 86.6709802652863,
+      "Disposable_income": 39.66396785304146
+    },
+    {
+      "date": "1988-04-01",
+      "NHPI": 51.576501825423165,
+      "Rent": 61.62207357859531,
+      "Shelter": 53.1590413943355,
+      "Mortgage_interest": 87.44742801682303,
+      "Disposable_income": 41.00626789077984
+    },
+    {
+      "date": "1988-07-01",
+      "NHPI": 52.90408230999004,
+      "Rent": 62.541806020066886,
+      "Shelter": 53.69160009682885,
+      "Mortgage_interest": 88.41798770624392,
+      "Disposable_income": 42.42388490878259
+    },
+    {
+      "date": "1988-10-01",
+      "NHPI": 54.795884500497834,
+      "Rent": 63.60089186176142,
+      "Shelter": 54.684095860566444,
+      "Mortgage_interest": 89.67971530249109,
+      "Disposable_income": 43.37649452506403
+    },
+    {
+      "date": "1989-01-01",
+      "NHPI": 57.28509790906073,
+      "Rent": 64.29765886287625,
+      "Shelter": 55.507141128056155,
+      "Mortgage_interest": 91.84729860886442,
+      "Disposable_income": 44.035490820029345
+    },
+    {
+      "date": "1989-04-01",
+      "NHPI": 59.077331563226025,
+      "Rent": 65.02229654403567,
+      "Shelter": 56.35439360929557,
+      "Mortgage_interest": 95.11484956324813,
+      "Disposable_income": 45.21728870762119
+    },
+    {
+      "date": "1989-07-01",
+      "NHPI": 59.64155326916694,
+      "Rent": 66.02564102564102,
+      "Shelter": 57.00798838053739,
+      "Mortgage_interest": 98.220640569395,
+      "Disposable_income": 44.47460441199556
+    },
+    {
+      "date": "1989-10-01",
+      "NHPI": 60.504480584135415,
+      "Rent": 66.75027870680044,
+      "Shelter": 58.000484144274985,
+      "Mortgage_interest": 100.87350372047881,
+      "Disposable_income": 44.84837044832167
+    },
+    {
+      "date": "1990-01-01",
+      "NHPI": 61.53335545967474,
+      "Rent": 67.19620958751392,
+      "Shelter": 58.99297990801258,
+      "Mortgage_interest": 103.46166289226787,
+      "Disposable_income": 46.04700555981971
+    },
+    {
+      "date": "1990-04-01",
+      "NHPI": 61.10189180219051,
+      "Rent": 67.7257525083612,
+      "Shelter": 59.622367465504716,
+      "Mortgage_interest": 106.56745389841474,
+      "Disposable_income": 44.66498109175919
+    },
+    {
+      "date": "1990-07-01",
+      "NHPI": 59.47560570859608,
+      "Rent": 68.53400222965439,
+      "Shelter": 59.91285403050108,
+      "Mortgage_interest": 110.51439663539307,
+      "Disposable_income": 45.8619729993977
+    },
+    {
+      "date": "1990-10-01",
+      "NHPI": 57.882509127115824,
+      "Rent": 69.25863991081381,
+      "Shelter": 61.07480029048656,
+      "Mortgage_interest": 113.58783565189259,
+      "Disposable_income": 46.48680703156164
+    },
+    {
+      "date": "1991-01-01",
+      "NHPI": 55.99070693660803,
+      "Rent": 69.7324414715719,
+      "Shelter": 62.26095376422173,
+      "Mortgage_interest": 115.4318990617923,
+      "Disposable_income": 46.97080434641645
+    },
+    {
+      "date": "1991-04-01",
+      "NHPI": 55.824759376037164,
+      "Rent": 70.1505016722408,
+      "Shelter": 62.33357540547081,
+      "Mortgage_interest": 115.85247492720802,
+      "Disposable_income": 46.26343871864573
+    },
+    {
+      "date": "1991-07-01",
+      "NHPI": 55.99070693660803,
+      "Rent": 70.81939799331103,
+      "Shelter": 62.76930525296538,
+      "Mortgage_interest": 115.33484309285018,
+      "Disposable_income": 46.99691859689444
+    },
+    {
+      "date": "1991-10-01",
+      "NHPI": 55.758380351808825,
+      "Rent": 71.3768115942029,
+      "Shelter": 63.32607116920842,
+      "Mortgage_interest": 114.52604335166612,
+      "Disposable_income": 47.277926706647264
+    },
+    {
+      "date": "1992-01-01",
+      "NHPI": 55.592432791237975,
+      "Rent": 71.73913043478261,
+      "Shelter": 63.592350520455085,
+      "Mortgage_interest": 112.97314784859267,
+      "Disposable_income": 46.726415434546844
+    },
+    {
+      "date": "1992-04-01",
+      "NHPI": 55.824759376037164,
+      "Rent": 72.1571906354515,
+      "Shelter": 63.54393609295569,
+      "Mortgage_interest": 112.2614040763507,
+      "Disposable_income": 47.566498198276385
+    },
+    {
+      "date": "1992-07-01",
+      "NHPI": 56.023896448722205,
+      "Rent": 72.65886287625418,
+      "Shelter": 63.73759380295327,
+      "Mortgage_interest": 110.77321255257196,
+      "Disposable_income": 48.888346379421534
+    },
+    {
+      "date": "1992-10-01",
+      "NHPI": 56.05708596083637,
+      "Rent": 73.18840579710145,
+      "Shelter": 64.31856693294601,
+      "Mortgage_interest": 108.60562924619863,
+      "Disposable_income": 47.96365772340182
+    },
+    {
+      "date": "1993-01-01",
+      "NHPI": 56.18984400929307,
+      "Rent": 73.52285395763657,
+      "Shelter": 64.560639070443,
+      "Mortgage_interest": 107.86153348430926,
+      "Disposable_income": 48.27610910115053
+    },
+    {
+      "date": "1993-04-01",
+      "NHPI": 56.65449717889147,
+      "Rent": 73.80156075808249,
+      "Shelter": 64.58484628419268,
+      "Mortgage_interest": 106.5998058880621,
+      "Disposable_income": 50.27952063497461
+    },
+    {
+      "date": "1993-07-01",
+      "NHPI": 56.820444739462324,
+      "Rent": 74.1917502787068,
+      "Shelter": 64.60905349794237,
+      "Mortgage_interest": 104.88515043675184,
+      "Disposable_income": 48.615094907343654
+    },
+    {
+      "date": "1993-10-01",
+      "NHPI": 56.720876203119815,
+      "Rent": 74.6098104793757,
+      "Shelter": 64.99636891793753,
+      "Mortgage_interest": 103.29990294403105,
+      "Disposable_income": 48.15898320135821
+    },
+    {
+      "date": "1994-01-01",
+      "NHPI": 56.687686691005645,
+      "Rent": 74.86064659977704,
+      "Shelter": 64.97216170418784,
+      "Mortgage_interest": 100.71174377224197,
+      "Disposable_income": 48.93730340904732
+    },
+    {
+      "date": "1994-04-01",
+      "NHPI": 56.687686691005645,
+      "Rent": 75.13935340022297,
+      "Shelter": 64.65746792544178,
+      "Mortgage_interest": 99.288256227758,
+      "Disposable_income": 49.305416086147034
+    },
+    {
+      "date": "1994-07-01",
+      "NHPI": 56.720876203119815,
+      "Rent": 75.41806020066889,
+      "Shelter": 64.87533284918904,
+      "Mortgage_interest": 100.12940795858945,
+      "Disposable_income": 49.10628017743755
+    },
+    {
+      "date": "1994-10-01",
+      "NHPI": 56.58811815466313,
+      "Rent": 75.80824972129321,
+      "Shelter": 65.26264826918421,
+      "Mortgage_interest": 101.39113555483661,
+      "Disposable_income": 49.53664382151868
+    },
+    {
+      "date": "1995-01-01",
+      "NHPI": 56.455360106206435,
+      "Rent": 76.08695652173913,
+      "Shelter": 65.52892762043088,
+      "Mortgage_interest": 103.00873503720476,
+      "Disposable_income": 49.70458997845486
+    },
+    {
+      "date": "1995-04-01",
+      "NHPI": 56.15665449717889,
+      "Rent": 76.30992196209587,
+      "Shelter": 65.57734204793027,
+      "Mortgage_interest": 104.30281462309931,
+      "Disposable_income": 50.01205623630862
+    },
+    {
+      "date": "1995-07-01",
+      "NHPI": 55.957517424493865,
+      "Rent": 76.5607580824972,
+      "Shelter": 65.72258533042846,
+      "Mortgage_interest": 104.27046263345196,
+      "Disposable_income": 49.851996717664136
+    },
+    {
+      "date": "1995-10-01",
+      "NHPI": 55.49286425489545,
+      "Rent": 76.89520624303232,
+      "Shelter": 65.74679254417816,
+      "Mortgage_interest": 104.33516661274668,
+      "Disposable_income": 50.037845998090184
+    },
+    {
+      "date": "1996-01-01",
+      "NHPI": 55.19415864586791,
+      "Rent": 77.06243032329989,
+      "Shelter": 65.79520697167754,
+      "Mortgage_interest": 103.72047880944677,
+      "Disposable_income": 50.28073621684411
+    },
+    {
+      "date": "1996-04-01",
+      "NHPI": 54.829074012612004,
+      "Rent": 77.31326644370121,
+      "Shelter": 65.72258533042846,
+      "Mortgage_interest": 102.8146230993206,
+      "Disposable_income": 50.32960267575198
+    },
+    {
+      "date": "1996-07-01",
+      "NHPI": 54.76269498838367,
+      "Rent": 77.59197324414716,
+      "Shelter": 65.67417090292906,
+      "Mortgage_interest": 101.71465545131025,
+      "Disposable_income": 50.339260459710346
+    },
+    {
+      "date": "1996-10-01",
+      "NHPI": 54.89545303684035,
+      "Rent": 77.84280936454849,
+      "Shelter": 65.91624304042604,
+      "Mortgage_interest": 100.22646392753153,
+      "Disposable_income": 50.76306017005162
+    },
+    {
+      "date": "1997-01-01",
+      "NHPI": 55.16096913375373,
+      "Rent": 78.03790412486063,
+      "Shelter": 66.01307189542484,
+      "Mortgage_interest": 98.35004852798444,
+      "Disposable_income": 51.15036094875672
+    },
+    {
+      "date": "1997-04-01",
+      "NHPI": 55.32691669432459,
+      "Rent": 78.1772575250836,
+      "Shelter": 65.94045025417573,
+      "Mortgage_interest": 96.82950501455838,
+      "Disposable_income": 51.250864134521386
+    },
+    {
+      "date": "1997-07-01",
+      "NHPI": 55.360106206438765,
+      "Rent": 78.40022296544035,
+      "Shelter": 65.84362139917695,
+      "Mortgage_interest": 95.05014558395341,
+      "Disposable_income": 52.56227897486784
+    },
+    {
+      "date": "1997-10-01",
+      "NHPI": 55.52605376700963,
+      "Rent": 78.6231884057971,
+      "Shelter": 65.89203582667635,
+      "Mortgage_interest": 93.49725008087995,
+      "Disposable_income": 52.88039444355606
+    },
+    {
+      "date": "1998-01-01",
+      "NHPI": 55.758380351808825,
+      "Rent": 78.81828316610924,
+      "Shelter": 65.91624304042604,
+      "Mortgage_interest": 92.68845033969588,
+      "Disposable_income": 53.08793874476428
+    },
+    {
+      "date": "1998-04-01",
+      "NHPI": 55.85794888815134,
+      "Rent": 78.9855072463768,
+      "Shelter": 66.03727910917453,
+      "Mortgage_interest": 92.81785829828532,
+      "Disposable_income": 53.231508519982995
+    },
+    {
+      "date": "1998-07-01",
+      "NHPI": 55.957517424493865,
+      "Rent": 79.18060200668896,
+      "Shelter": 66.10990075042362,
+      "Mortgage_interest": 92.81785829828532,
+      "Disposable_income": 54.42728100891761
+    },
+    {
+      "date": "1998-10-01",
+      "NHPI": 55.99070693660803,
+      "Rent": 79.43143812709029,
+      "Shelter": 66.54563059791816,
+      "Mortgage_interest": 92.91491426722743,
+      "Disposable_income": 55.17917447385226
+    },
+    {
+      "date": "1999-01-01",
+      "NHPI": 56.09027547295055,
+      "Rent": 79.59866220735785,
+      "Shelter": 66.66666666666666,
+      "Mortgage_interest": 92.68845033969588,
+      "Disposable_income": 55.36932203122541
+    },
+    {
+      "date": "1999-04-01",
+      "NHPI": 56.15665449717889,
+      "Rent": 79.7658862876254,
+      "Shelter": 66.78770273541514,
+      "Mortgage_interest": 92.68845033969588,
+      "Disposable_income": 56.183650491730084
+    },
+    {
+      "date": "1999-07-01",
+      "NHPI": 56.42217059409226,
+      "Rent": 79.93311036789297,
+      "Shelter": 67.10239651416121,
+      "Mortgage_interest": 92.85021028793271,
+      "Disposable_income": 56.78403089843213
+    },
+    {
+      "date": "1999-10-01",
+      "NHPI": 56.820444739462324,
+      "Rent": 80.15607580824972,
+      "Shelter": 67.63495521665455,
+      "Mortgage_interest": 93.56195406017468,
+      "Disposable_income": 57.29076846438256
+    },
+    {
+      "date": "2000-01-01",
+      "NHPI": 57.119150348489875,
+      "Rent": 80.35117056856187,
+      "Shelter": 68.40958605664487,
+      "Mortgage_interest": 94.82368165642185,
+      "Disposable_income": 57.90374918564371
+    },
+    {
+      "date": "2000-04-01",
+      "NHPI": 57.484234981745765,
+      "Rent": 80.6020066889632,
+      "Shelter": 68.79690147664003,
+      "Mortgage_interest": 96.31187318020058,
+      "Disposable_income": 58.75257939217935
+    },
+    {
+      "date": "2000-07-01",
+      "NHPI": 57.81613010288748,
+      "Rent": 80.85284280936455,
+      "Shelter": 69.59573953038003,
+      "Mortgage_interest": 97.89712067292139,
+      "Disposable_income": 59.88791856399563
+    },
+    {
+      "date": "2000-10-01",
+      "NHPI": 58.21440424825755,
+      "Rent": 81.15942028985506,
+      "Shelter": 70.9271362866134,
+      "Mortgage_interest": 99.19120025881591,
+      "Disposable_income": 60.69182330717007
+    },
+    {
+      "date": "2001-01-01",
+      "NHPI": 58.57948888151345,
+      "Rent": 81.4659977703456,
+      "Shelter": 70.9755507141128,
+      "Mortgage_interest": 100.03235198964734,
+      "Disposable_income": 62.52021511242307
+    },
+    {
+      "date": "2001-04-01",
+      "NHPI": 59.077331563226025,
+      "Rent": 81.8004459308807,
+      "Shelter": 72.42798353909464,
+      "Mortgage_interest": 100.12940795858945,
+      "Disposable_income": 61.15172974962612
+    },
+    {
+      "date": "2001-07-01",
+      "NHPI": 59.47560570859608,
+      "Rent": 82.21850613154959,
+      "Shelter": 72.47639796659404,
+      "Mortgage_interest": 100.03235198964734,
+      "Disposable_income": 62.57318604199816
+    },
+    {
+      "date": "2001-10-01",
+      "NHPI": 59.8075008297378,
+      "Rent": 82.66443701226311,
+      "Shelter": 71.919632050351,
+      "Mortgage_interest": 99.35296020705273,
+      "Disposable_income": 62.93871688617885
+    },
+    {
+      "date": "2002-01-01",
+      "NHPI": 60.47129107202124,
+      "Rent": 82.99888517279821,
+      "Shelter": 72.16170418784797,
+      "Mortgage_interest": 97.96182465221611,
+      "Disposable_income": 63.82252309233958
+    },
+    {
+      "date": "2002-04-01",
+      "NHPI": 61.43378692333223,
+      "Rent": 83.36120401337791,
+      "Shelter": 72.08908254659887,
+      "Mortgage_interest": 97.12067292138465,
+      "Disposable_income": 63.81436829718271
+    },
+    {
+      "date": "2002-07-01",
+      "NHPI": 61.964819117158974,
+      "Rent": 83.83500557413599,
+      "Shelter": 72.74267731784072,
+      "Mortgage_interest": 96.7324490456163,
+      "Disposable_income": 64.71357675226173
+    },
+    {
+      "date": "2002-10-01",
+      "NHPI": 62.7613674078991,
+      "Rent": 84.2809364548495,
+      "Shelter": 73.46889373033164,
+      "Mortgage_interest": 96.3765771594953,
+      "Disposable_income": 65.08848929512743
+    },
+    {
+      "date": "2003-01-01",
+      "NHPI": 63.42515765018254,
+      "Rent": 84.47603121516165,
+      "Shelter": 74.50980392156862,
+      "Mortgage_interest": 96.70009705596893,
+      "Disposable_income": 66.04753283793978
+    },
+    {
+      "date": "2003-04-01",
+      "NHPI": 64.15532691669434,
+      "Rent": 84.67112597547379,
+      "Shelter": 74.7034616315662,
+      "Mortgage_interest": 97.18537690067937,
+      "Disposable_income": 65.53457291896159
+    },
+    {
+      "date": "2003-07-01",
+      "NHPI": 64.91868569532028,
+      "Rent": 84.9777034559643,
+      "Shelter": 75.11498426531105,
+      "Mortgage_interest": 96.82950501455838,
+      "Disposable_income": 65.55498554790911
+    },
+    {
+      "date": "2003-10-01",
+      "NHPI": 65.91437105874543,
+      "Rent": 85.28428093645485,
+      "Shelter": 75.5749213265553,
+      "Mortgage_interest": 96.79715302491103,
+      "Disposable_income": 66.11242745891167
+    },
+    {
+      "date": "2004-01-01",
+      "NHPI": 66.64454032525722,
+      "Rent": 85.42363433667782,
+      "Shelter": 75.86540789155167,
+      "Mortgage_interest": 96.8942089938531,
+      "Disposable_income": 66.91390594835353
+    },
+    {
+      "date": "2004-04-01",
+      "NHPI": 67.90574178559575,
+      "Rent": 85.56298773690077,
+      "Shelter": 76.51900266279351,
+      "Mortgage_interest": 96.60304108702685,
+      "Disposable_income": 68.37484572472108
+    },
+    {
+      "date": "2004-07-01",
+      "NHPI": 68.76866910056421,
+      "Rent": 85.8138238573021,
+      "Shelter": 77.14839022028563,
+      "Mortgage_interest": 96.8942089938531,
+      "Disposable_income": 68.9678795340524
+    },
+    {
+      "date": "2004-10-01",
+      "NHPI": 69.43245934284765,
+      "Rent": 86.03678929765886,
+      "Shelter": 77.89881384652625,
+      "Mortgage_interest": 97.37948883856355,
+      "Disposable_income": 69.11096091554677
+    },
+    {
+      "date": "2005-01-01",
+      "NHPI": 70.02987056090275,
+      "Rent": 86.17614269788182,
+      "Shelter": 78.26192205277171,
+      "Mortgage_interest": 97.57360077644775,
+      "Disposable_income": 68.81266637182686
+    },
+    {
+      "date": "2005-04-01",
+      "NHPI": 71.09193494855624,
+      "Rent": 86.25975473801562,
+      "Shelter": 78.86710239651416,
+      "Mortgage_interest": 97.80006470397927,
+      "Disposable_income": 70.21736005309725
+    },
+    {
+      "date": "2005-07-01",
+      "NHPI": 72.02124128775307,
+      "Rent": 86.51059085841693,
+      "Shelter": 79.56911159525538,
+      "Mortgage_interest": 97.7030087350372,
+      "Disposable_income": 70.49982901199242
+    },
+    {
+      "date": "2005-10-01",
+      "NHPI": 73.31563226020576,
+      "Rent": 86.6778149386845,
+      "Shelter": 80.3679496489954,
+      "Mortgage_interest": 97.50889679715301,
+      "Disposable_income": 71.49252308391488
+    },
+    {
+      "date": "2006-01-01",
+      "NHPI": 74.97510786591437,
+      "Rent": 86.84503901895206,
+      "Shelter": 81.1909949164851,
+      "Mortgage_interest": 98.02652863151083,
+      "Disposable_income": 73.55238694462533
+    },
+    {
+      "date": "2006-04-01",
+      "NHPI": 77.56388981081977,
+      "Rent": 87.04013377926421,
+      "Shelter": 81.82038247397725,
+      "Mortgage_interest": 98.70592041410545,
+      "Disposable_income": 73.45413969501152
+    },
+    {
+      "date": "2006-07-01",
+      "NHPI": 80.38499834052439,
+      "Rent": 87.34671125975473,
+      "Shelter": 82.47397724521906,
+      "Mortgage_interest": 100.22646392753153,
+      "Disposable_income": 75.21499175320221
+    },
+    {
+      "date": "2006-10-01",
+      "NHPI": 81.51344175240624,
+      "Rent": 87.70903010033445,
+      "Shelter": 82.98232873396269,
+      "Mortgage_interest": 101.87641539954706,
+      "Disposable_income": 76.36163488948465
+    },
+    {
+      "date": "2007-01-01",
+      "NHPI": 82.30999004314637,
+      "Rent": 87.98773690078038,
+      "Shelter": 83.53909465020575,
+      "Mortgage_interest": 103.1704949854416,
+      "Disposable_income": 77.85055617608266
+    },
+    {
+      "date": "2007-04-01",
+      "NHPI": 84.10222369731164,
+      "Rent": 88.32218506131548,
+      "Shelter": 84.48317598644394,
+      "Mortgage_interest": 104.33516661274668,
+      "Disposable_income": 77.51053138892688
+    },
+    {
+      "date": "2007-07-01",
+      "NHPI": 85.86126783936277,
+      "Rent": 88.82385730211817,
+      "Shelter": 85.30622125393366,
+      "Mortgage_interest": 106.4056939501779,
+      "Disposable_income": 77.66003358170694
+    },
+    {
+      "date": "2007-10-01",
+      "NHPI": 86.5250580816462,
+      "Rent": 89.24191750278706,
+      "Shelter": 86.34713144517065,
+      "Mortgage_interest": 108.99385312196699,
+      "Disposable_income": 78.6870707057228
+    },
+    {
+      "date": "2008-01-01",
+      "NHPI": 87.4875539329572,
+      "Rent": 89.60423634336678,
+      "Shelter": 86.87969014766398,
+      "Mortgage_interest": 111.45260433516658,
+      "Disposable_income": 80.04185889175403
+    },
+    {
+      "date": "2008-04-01",
+      "NHPI": 87.75307002987054,
+      "Rent": 89.93868450390188,
+      "Shelter": 88.38053740014523,
+      "Mortgage_interest": 113.58783565189259,
+      "Disposable_income": 81.21972624771388
+    },
+    {
+      "date": "2008-07-01",
+      "NHPI": 87.85263856621307,
+      "Rent": 90.35674470457079,
+      "Shelter": 89.6151053013798,
+      "Mortgage_interest": 115.01132319637657,
+      "Disposable_income": 82.5015480580756
+    },
+    {
+      "date": "2008-10-01",
+      "NHPI": 87.32160637238633,
+      "Rent": 90.77480490523968,
+      "Shelter": 89.56669087388039,
+      "Mortgage_interest": 116.37010676156584,
+      "Disposable_income": 82.05479546043057
+    },
+    {
+      "date": "2009-01-01",
+      "NHPI": 86.09359442416195,
+      "Rent": 91.05351170568561,
+      "Shelter": 89.30041152263372,
+      "Mortgage_interest": 116.98479456486574,
+      "Disposable_income": 81.60701549629573
+    },
+    {
+      "date": "2009-04-01",
+      "NHPI": 84.9983405243943,
+      "Rent": 91.30434782608695,
+      "Shelter": 88.13846526264827,
+      "Mortgage_interest": 115.85247492720802,
+      "Disposable_income": 81.80310872060976
+    },
+    {
+      "date": "2009-07-01",
+      "NHPI": 85.23066710919349,
+      "Rent": 91.66666666666664,
+      "Shelter": 87.82377148390219,
+      "Mortgage_interest": 113.71724361048204,
+      "Disposable_income": 83.0842828926979
+    },
+    {
+      "date": "2009-10-01",
+      "NHPI": 86.02721539993362,
+      "Rent": 92.05685618729096,
+      "Shelter": 88.06584362139917,
+      "Mortgage_interest": 111.7114202523455,
+      "Disposable_income": 83.96664574773806
+    },
+    {
+      "date": "2010-01-01",
+      "NHPI": 86.82376369067374,
+      "Rent": 92.2519509476031,
+      "Shelter": 88.42895182764462,
+      "Mortgage_interest": 110.25558071821416,
+      "Disposable_income": 85.82255001726554
+    },
+    {
+      "date": "2010-04-01",
+      "NHPI": 87.45436442084299,
+      "Rent": 92.47491638795987,
+      "Shelter": 89.25199709513434,
+      "Mortgage_interest": 109.47913296667744,
+      "Disposable_income": 84.55852079425834
+    },
+    {
+      "date": "2010-07-01",
+      "NHPI": 87.62031198141386,
+      "Rent": 92.78149386845038,
+      "Shelter": 90.09924957637375,
+      "Mortgage_interest": 109.41442898738272,
+      "Disposable_income": 85.58127541770136
+    },
+    {
+      "date": "2010-10-01",
+      "NHPI": 87.95220710255558,
+      "Rent": 93.14381270903009,
+      "Shelter": 90.43815056886952,
+      "Mortgage_interest": 108.637981235846,
+      "Disposable_income": 86.83037596126063
+    },
+    {
+      "date": "2011-01-01",
+      "NHPI": 88.48323929638235,
+      "Rent": 93.31103678929765,
+      "Shelter": 90.43815056886952,
+      "Mortgage_interest": 107.69977353607246,
+      "Disposable_income": 87.22684103840011
+    },
+    {
+      "date": "2011-04-01",
+      "NHPI": 89.14702953866579,
+      "Rent": 93.5340022296544,
+      "Shelter": 90.97070927136285,
+      "Mortgage_interest": 107.34390164995146,
+      "Disposable_income": 87.36259884686868
+    },
+    {
+      "date": "2011-07-01",
+      "NHPI": 89.61168270826418,
+      "Rent": 93.78483835005575,
+      "Shelter": 91.4548535463568,
+      "Mortgage_interest": 107.47330960854092,
+      "Disposable_income": 87.92737132101443
+    },
+    {
+      "date": "2011-10-01",
+      "NHPI": 90.14271490209094,
+      "Rent": 94.14715719063544,
+      "Shelter": 91.89058339385136,
+      "Mortgage_interest": 107.50566159818827,
+      "Disposable_income": 89.32097762602574
+    },
+    {
+      "date": "2012-01-01",
+      "NHPI": 90.64055758380353,
+      "Rent": 94.45373467112596,
+      "Shelter": 92.13265553134833,
+      "Mortgage_interest": 107.50566159818827,
+      "Disposable_income": 89.89214415078692
+    },
+    {
+      "date": "2012-04-01",
+      "NHPI": 91.30434782608695,
+      "Rent": 94.7324414715719,
+      "Shelter": 92.06003389009923,
+      "Mortgage_interest": 106.72921384665155,
+      "Disposable_income": 90.11521677415497
+    },
+    {
+      "date": "2012-07-01",
+      "NHPI": 91.73581148357117,
+      "Rent": 95.12263099219619,
+      "Shelter": 92.42314209634469,
+      "Mortgage_interest": 105.53219022969913,
+      "Disposable_income": 90.96336384701219
+    },
+    {
+      "date": "2012-10-01",
+      "NHPI": 92.20046465316959,
+      "Rent": 95.59643255295427,
+      "Shelter": 92.61679980634229,
+      "Mortgage_interest": 104.20575865415724,
+      "Disposable_income": 91.32607766686787
+    },
+    {
+      "date": "2013-01-01",
+      "NHPI": 92.53235977431132,
+      "Rent": 95.95875139353399,
+      "Shelter": 92.88307915758895,
+      "Mortgage_interest": 103.0734390164995,
+      "Disposable_income": 93.15644842691725
+    },
+    {
+      "date": "2013-04-01",
+      "NHPI": 92.96382343179556,
+      "Rent": 96.2653288740245,
+      "Shelter": 93.19777293633503,
+      "Mortgage_interest": 102.39404723390487,
+      "Disposable_income": 93.47532756464453
+    },
+    {
+      "date": "2013-07-01",
+      "NHPI": 93.29571855293727,
+      "Rent": 96.68338907469341,
+      "Shelter": 93.58508835633019,
+      "Mortgage_interest": 101.87641539954706,
+      "Disposable_income": 93.71658866821114
+    },
+    {
+      "date": "2013-10-01",
+      "NHPI": 93.46166611350814,
+      "Rent": 97.12931995540691,
+      "Shelter": 94.14185427257321,
+      "Mortgage_interest": 102.1028793270786,
+      "Disposable_income": 94.44943487498547
+    },
+    {
+      "date": "2014-01-01",
+      "NHPI": 93.92631928310652,
+      "Rent": 97.40802675585283,
+      "Shelter": 95.03752118131203,
+      "Mortgage_interest": 102.52345519249431,
+      "Disposable_income": 94.98864134859957
+    },
+    {
+      "date": "2014-04-01",
+      "NHPI": 94.39097245270494,
+      "Rent": 97.68673355629876,
+      "Shelter": 96.1510530137981,
+      "Mortgage_interest": 102.5558071821417,
+      "Disposable_income": 95.29165923400448
+    },
+    {
+      "date": "2014-07-01",
+      "NHPI": 94.72286757384664,
+      "Rent": 98.07692307692307,
+      "Shelter": 96.22367465504719,
+      "Mortgage_interest": 101.90876738919442,
+      "Disposable_income": 96.56231879561633
+    },
+    {
+      "date": "2014-10-01",
+      "NHPI": 95.05476269498837,
+      "Rent": 98.49498327759197,
+      "Shelter": 96.48995400629387,
+      "Mortgage_interest": 101.64995147201552,
+      "Disposable_income": 96.52833266098756
+    },
+    {
+      "date": "2015-01-01",
+      "NHPI": 95.18752074344506,
+      "Rent": 98.7179487179487,
+      "Shelter": 96.70781893004114,
+      "Mortgage_interest": 101.81171142025234,
+      "Disposable_income": 98.53685234734935
+    },
+    {
+      "date": "2015-04-01",
+      "NHPI": 95.48622635247261,
+      "Rent": 98.94091415830545,
+      "Shelter": 96.78044057129021,
+      "Mortgage_interest": 101.68230346166287,
+      "Disposable_income": 99.29868499436921
+    },
+    {
+      "date": "2015-07-01",
+      "NHPI": 96.01725854629937,
+      "Rent": 99.1638795986622,
+      "Shelter": 97.2161704187848,
+      "Mortgage_interest": 100.67939178259462,
+      "Disposable_income": 99.80037198908988
+    },
+    {
+      "date": "2015-10-01",
+      "NHPI": 96.48191171589777,
+      "Rent": 99.35897435897434,
+      "Shelter": 97.60348583877995,
+      "Mortgage_interest": 100.38822387576835,
+      "Disposable_income": 99.60829872615643
+    },
+    {
+      "date": "2016-01-01",
+      "NHPI": 96.88018586126783,
+      "Rent": 99.47045707915272,
+      "Shelter": 97.82135076252723,
+      "Mortgage_interest": 100.35587188612101,
+      "Disposable_income": 96.82828476967231
+    },
+    {
+      "date": "2016-04-01",
+      "NHPI": 97.84268171257881,
+      "Rent": 99.5540691192865,
+      "Shelter": 98.1844589687727,
+      "Mortgage_interest": 100.2588159171789,
+      "Disposable_income": 98.34704834616022
+    },
+    {
+      "date": "2016-07-01",
+      "NHPI": 98.70560902754728,
+      "Rent": 99.69342251950947,
+      "Shelter": 98.8622609537642,
+      "Mortgage_interest": 100.0,
+      "Disposable_income": 99.0852516222481
+    },
+    {
+      "date": "2016-10-01",
+      "NHPI": 99.43577829405909,
+      "Rent": 99.86064659977703,
+      "Shelter": 99.58847736625512,
+      "Mortgage_interest": 99.87059204141053,
+      "Disposable_income": 99.82793774881115
+    },
+    {
+      "date": "2017-01-01",
+      "NHPI": 100.0,
+      "Rent": 99.99999999999999,
+      "Shelter": 100.0,
+      "Mortgage_interest": 100.0,
+      "Disposable_income": 100.0
+    },
+    {
+      "date": "2017-04-01",
+      "NHPI": 101.59309658148025,
+      "Rent": 100.16722408026754,
+      "Shelter": 100.07262164124907,
+      "Mortgage_interest": 100.2588159171789,
+      "Disposable_income": 101.58758699790702
+    },
+    {
+      "date": "2017-07-01",
+      "NHPI": 102.48921340856289,
+      "Rent": 100.3344481605351,
+      "Shelter": 100.16945049624785,
+      "Mortgage_interest": 100.19411193788417,
+      "Disposable_income": 103.30471761840097
+    },
+    {
+      "date": "2017-10-01",
+      "NHPI": 102.8211085297046,
+      "Rent": 100.58528428093645,
+      "Shelter": 100.8714596949891,
+      "Mortgage_interest": 100.7764477515367,
+      "Disposable_income": 103.87454874896947
+    },
+    {
+      "date": "2018-01-01",
+      "NHPI": 102.7215399933621,
+      "Rent": 100.89186176142698,
+      "Shelter": 101.59767610748001,
+      "Mortgage_interest": 102.29699126496278,
+      "Disposable_income": 103.58913462108065
+    },
+    {
+      "date": "2018-04-01",
+      "NHPI": 102.68835048124791,
+      "Rent": 101.22630992196208,
+      "Shelter": 101.96078431372548,
+      "Mortgage_interest": 104.07635069556777,
+      "Disposable_income": 103.365101162646
+    },
+    {
+      "date": "2018-07-01",
+      "NHPI": 102.85429804181878,
+      "Rent": 101.6164994425864,
+      "Shelter": 102.5659646574679,
+      "Mortgage_interest": 106.01747007440957,
+      "Disposable_income": 103.44723305635902
+    },
+    {
+      "date": "2018-10-01",
+      "NHPI": 102.85429804181878,
+      "Rent": 101.97881828316609,
+      "Shelter": 103.26797385620915,
+      "Mortgage_interest": 108.05564542219344,
+      "Disposable_income": 104.7422741851663
+    },
+    {
+      "date": "2019-01-01",
+      "NHPI": 102.75472950547626,
+      "Rent": 103.40022296544036,
+      "Shelter": 104.13943355119824,
+      "Mortgage_interest": 110.48204464574569,
+      "Disposable_income": 105.08127330642938
+    },
+    {
+      "date": "2019-04-01",
+      "NHPI": 102.65516096913375,
+      "Rent": 103.51170568561872,
+      "Shelter": 104.6477850399419,
+      "Mortgage_interest": 112.55257198317695,
+      "Disposable_income": 106.7799171703761
+    },
+    {
+      "date": "2019-07-01",
+      "NHPI": 102.5887819449054,
+      "Rent": 104.51505016722408,
+      "Shelter": 104.98668603243767,
+      "Mortgage_interest": 114.23487544483984,
+      "Disposable_income": 107.31141687942576
+    },
+    {
+      "date": "2019-10-01",
+      "NHPI": 102.85429804181878,
+      "Rent": 105.46265328874023,
+      "Shelter": 106.00338900992494,
+      "Mortgage_interest": 115.07602717567129,
+      "Disposable_income": 108.44021465876524
+    },
+    {
+      "date": "2020-01-01",
+      "NHPI": 103.31895121141719,
+      "Rent": 106.07580824972129,
+      "Shelter": 106.41491164366981,
+      "Mortgage_interest": 115.78777094791329,
+      "Disposable_income": 109.4449402486596
+    },
+    {
+      "date": "2020-04-01",
+      "NHPI": 103.75041486890143,
+      "Rent": 105.43478260869564,
+      "Shelter": 106.02759622367464,
+      "Mortgage_interest": 116.20834681332902,
+      "Disposable_income": 119.81470256634977
+    },
+    {
+      "date": "2020-07-01",
+      "NHPI": 105.01161632923996,
+      "Rent": 105.96432552954292,
+      "Shelter": 106.63277656741708,
+      "Mortgage_interest": 115.2377871239081,
+      "Disposable_income": 114.93202853913668
+    },
+    {
+      "date": "2020-10-01",
+      "NHPI": 107.33488217723199,
+      "Rent": 106.52173913043478,
+      "Shelter": 107.89155168240134,
+      "Mortgage_interest": 112.84373989000322,
+      "Disposable_income": 113.87264996477651
+    },
+    {
+      "date": "2021-01-01",
+      "NHPI": 110.32193826750746,
+      "Rent": 106.60535117056855,
+      "Shelter": 108.25465988864683,
+      "Mortgage_interest": 109.64089291491425,
+      "Disposable_income": 118.03183438957291
+    },
+    {
+      "date": "2021-04-01",
+      "NHPI": 115.20079654829074,
+      "Rent": 107.38573021181716,
+      "Shelter": 110.19123698862259,
+      "Mortgage_interest": 106.89097379488837,
+      "Disposable_income": 117.36702433037316
+    },
+    {
+      "date": "2021-07-01",
+      "NHPI": 117.39130434782608,
+      "Rent": 108.11036789297657,
+      "Shelter": 111.78891309610263,
+      "Mortgage_interest": 104.69103849886768,
+      "Disposable_income": 117.93913880942077
+    },
+    {
+      "date": "2021-10-01",
+      "NHPI": 119.78094922004647,
+      "Rent": 108.75139353400225,
+      "Shelter": 113.31396756233356,
+      "Mortgage_interest": 103.55871886120995,
+      "Disposable_income": 116.3367459748591
+    },
+    {
+      "date": "2022-01-01",
+      "NHPI": 122.73481579820776,
+      "Rent": 110.70234113712374,
+      "Shelter": 115.32316630355844,
+      "Mortgage_interest": 103.00873503720476,
+      "Disposable_income": 119.12379144323639
+    },
+    {
+      "date": "2022-04-01",
+      "NHPI": 125.02489213408562,
+      "Rent": 112.12374581939798,
+      "Shelter": 118.25223916727184,
+      "Mortgage_interest": 104.10870268521512,
+      "Disposable_income": 120.74333667011851
+    },
+    {
+      "date": "2022-07-01",
+      "NHPI": 125.48954530368404,
+      "Rent": 113.09921962095872,
+      "Shelter": 119.3899782135076,
+      "Mortgage_interest": 109.83500485279845,
+      "Disposable_income": 121.05084748828929
+    },
+    {
+      "date": "2022-10-01",
+      "NHPI": 125.02489213408562,
+      "Rent": 114.68784838350055,
+      "Shelter": 121.32655531348341,
+      "Mortgage_interest": 118.69945001617599,
+      "Disposable_income": 123.79843906727022
+    },
+    {
+      "date": "2023-01-01",
+      "NHPI": 124.4606704281447,
+      "Rent": 116.77814938684503,
+      "Shelter": 122.2948438634713,
+      "Mortgage_interest": 127.5638951795535,
+      "Disposable_income": 122.52061473218345
+    },
+    {
+      "date": "2023-04-01",
+      "NHPI": 124.36110189180219,
+      "Rent": 118.67335562987736,
+      "Shelter": 123.91672718470102,
+      "Mortgage_interest": 134.84309285021024,
+      "Disposable_income": 124.59429241034037
+    },
+    {
+      "date": "2023-07-01",
+      "NHPI": 124.32791237968803,
+      "Rent": 120.37346711259754,
+      "Shelter": 126.21641249092228,
+      "Mortgage_interest": 143.54577806535102,
+      "Disposable_income": 126.88646309512757
+    },
+    {
+      "date": "2023-10-01",
+      "NHPI": 123.96282774643213,
+      "Rent": 123.63433667781494,
+      "Shelter": 128.58871943839264,
+      "Mortgage_interest": 153.8660627628599,
+      "Disposable_income": 127.23087158578771
+    },
+    {
+      "date": "2024-01-01",
+      "NHPI": 123.83006969797545,
+      "Rent": 126.36566332218504,
+      "Shelter": 130.11377390462354,
+      "Mortgage_interest": 161.17761242316402,
+      "Disposable_income": 127.69446236214752
+    },
+    {
+      "date": "2024-04-01",
+      "NHPI": 124.2283438433455,
+      "Rent": 128.92976588628764,
+      "Shelter": 131.7840716533527,
+      "Mortgage_interest": 166.35393076674214,
+      "Disposable_income": 130.22830764856076
+    },
+    {
+      "date": "2024-07-01",
+      "NHPI": 124.4606704281447,
+      "Rent": 130.65774804905237,
+      "Shelter": 132.97022512708784,
+      "Mortgage_interest": 170.5596894208994,
+      "Disposable_income": 132.8580175800994
+    },
+    {
+      "date": "2024-10-01",
+      "NHPI": 123.9960172585463,
+      "Rent": 132.74804905239688,
+      "Shelter": 134.5679012345679,
+      "Mortgage_interest": 174.18311226140406,
+      "Disposable_income": 133.42110992554277
+    },
+    {
+      "date": "2025-01-01",
+      "NHPI": 123.92963823431795,
+      "Rent": 133.5562987736901,
+      "Shelter": 135.58460421205518,
+      "Mortgage_interest": 175.7360077644775,
+      "Disposable_income": 134.01455280859253
+    },
+    {
+      "date": "2025-04-01",
+      "NHPI": 123.16627945569199,
+      "Rent": 135.11705685618728,
+      "Shelter": 135.82667634955214,
+      "Mortgage_interest": 176.64186347460367,
+      "Disposable_income": 133.84905653845513
+    },
+    {
+      "date": "2025-07-01",
+      "NHPI": 122.43611018918021,
+      "Rent": 136.90078037904124,
+      "Shelter": 136.55289276204306,
+      "Mortgage_interest": 177.6771271433193,
+      "Disposable_income": 134.78334186803585
+    },
+    {
+      "date": "2025-10-01",
+      "NHPI": 121.6063723863259,
+      "Rent": 139.26978818283166,
+      "Shelter": 137.66642459452916,
+      "Mortgage_interest": 178.22711096732445,
+      "Disposable_income": 135.87379613860122
+    },
+    {
+      "date": "2026-01-01",
+      "NHPI": 121.14171921672752,
+      "Rent": 139.10256410256412,
+      "Shelter": 137.78746066327767,
+      "Mortgage_interest": 176.99773536072468,
+      "Disposable_income": 137.00804797590737
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "yoy",
+    "pct_change",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "notes": "Purchase prices, rent, shelter services, mortgage interest, and income are separate quarterly-aligned series normalized to 100 in 2017 Q1."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T14:52:20+00:00"
+}

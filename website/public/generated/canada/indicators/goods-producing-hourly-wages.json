@@ -1,0 +1,1860 @@
+{
+  "schemaVersion": 1,
+  "id": "goods-producing-hourly-wages",
+  "field": "goods_producing_hourly_wages",
+  "label": "Canada goods-producing hourly wage rate",
+  "description": "Average hourly wage rate for employees in goods-producing industries.",
+  "definition": "Average hourly wage rate for employees in goods-producing industries.",
+  "unit": "CAD per hour",
+  "frequency": "monthly",
+  "status": "measured",
+  "layer": "Canadian purchasing power",
+  "geography": "Canada",
+  "geographyLevel": "national",
+  "domesticOrExternal": "domestic",
+  "directlyComparableAcrossCountries": false,
+  "comparisonLimitations": "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels.",
+  "interpretationDirection": "context-dependent",
+  "interpretationLabel": "Direction unclear",
+  "interpretation": "Interpret with its documented comparison series.",
+  "source": "Statistics Canada",
+  "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410006301",
+  "sourceIdentifier": "StatCan vector v2132654",
+  "sourceDate": "2026-07-10",
+  "retrievalDate": "2026-07-16T14:52:20+00:00",
+  "revisionStatus": "Statistics Canada table 14-10-0063-01 is latest-vintage and may revise recent or historical observations.",
+  "seasonalAdjustment": "not seasonally adjusted",
+  "nominalOrReal": "nominal wage",
+  "startDate": "1997-01-01",
+  "endDate": "2026-06-01",
+  "latest": {
+    "date": "2026-06-01",
+    "sourceDate": "2026-07-10",
+    "value": 38.97,
+    "previousValue": 38.93,
+    "oneYearChange": 1.3999999999999986,
+    "threeMonthChange": -0.7800000000000011,
+    "fourQuarterChange": 1.3999999999999986,
+    "monthOverMonthChange": 0.03999999999999915,
+    "yearOverYearPercentChange": 3.7263774287995766,
+    "cumulativeChange": 129.7759433962264,
+    "historicalPercentile": 98.72881355932203,
+    "percentileSince2000": 98.58490566037736,
+    "distanceFromMedian": 13.229999999999997,
+    "distanceFromPreviousPeakPercent": -1.9622641509433936,
+    "momentumThreeMonth": -0.7800000000000011,
+    "momentumTwelveMonth": 1.3999999999999986,
+    "momentum": "rising"
+  },
+  "referenceRanges": {
+    "historicalMedian": 25.740000000000002,
+    "p10": 17.423000000000002,
+    "p25": 19.735,
+    "p75": 29.7975,
+    "p90": 35.342,
+    "minimum": 16.23,
+    "maximum": 39.75
+  },
+  "observations": [
+    {
+      "date": "1997-01-01",
+      "value": 16.96,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1997-02-01",
+      "value": 16.96,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1997-03-01",
+      "value": 16.91,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1997-04-01",
+      "value": 16.77,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1997-05-01",
+      "value": 16.52,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1997-06-01",
+      "value": 16.39,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1997-07-01",
+      "value": 16.25,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1997-08-01",
+      "value": 16.23,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1997-09-01",
+      "value": 16.51,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1997-10-01",
+      "value": 16.51,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1997-11-01",
+      "value": 16.7,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1997-12-01",
+      "value": 16.72,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1998-01-01",
+      "value": 16.89,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1998-02-01",
+      "value": 16.95,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1998-03-01",
+      "value": 16.84,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1998-04-01",
+      "value": 16.88,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1998-05-01",
+      "value": 16.76,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1998-06-01",
+      "value": 16.69,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1998-07-01",
+      "value": 16.54,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1998-08-01",
+      "value": 16.52,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1998-09-01",
+      "value": 16.93,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1998-10-01",
+      "value": 16.93,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1998-11-01",
+      "value": 17.1,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1998-12-01",
+      "value": 17.25,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1999-01-01",
+      "value": 17.32,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1999-02-01",
+      "value": 17.28,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1999-03-01",
+      "value": 17.26,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1999-04-01",
+      "value": 17.3,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1999-05-01",
+      "value": 17.04,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1999-06-01",
+      "value": 16.95,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1999-07-01",
+      "value": 16.85,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1999-08-01",
+      "value": 16.99,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1999-09-01",
+      "value": 17.15,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1999-10-01",
+      "value": 17.18,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1999-11-01",
+      "value": 17.29,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "1999-12-01",
+      "value": 17.5,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2000-01-01",
+      "value": 17.78,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2000-02-01",
+      "value": 17.88,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2000-03-01",
+      "value": 17.85,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2000-04-01",
+      "value": 17.92,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2000-05-01",
+      "value": 17.66,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2000-06-01",
+      "value": 17.52,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2000-07-01",
+      "value": 17.39,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2000-08-01",
+      "value": 17.54,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2000-09-01",
+      "value": 17.9,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2000-10-01",
+      "value": 17.97,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2000-11-01",
+      "value": 18.06,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2000-12-01",
+      "value": 18.16,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2001-01-01",
+      "value": 18.38,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2001-02-01",
+      "value": 18.37,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2001-03-01",
+      "value": 18.38,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2001-04-01",
+      "value": 18.44,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2001-05-01",
+      "value": 18.33,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2001-06-01",
+      "value": 18.18,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2001-07-01",
+      "value": 18.01,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2001-08-01",
+      "value": 18.06,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2001-09-01",
+      "value": 18.38,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2001-10-01",
+      "value": 18.52,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2001-11-01",
+      "value": 18.78,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2001-12-01",
+      "value": 18.94,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2002-01-01",
+      "value": 19.1,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2002-02-01",
+      "value": 19.24,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2002-03-01",
+      "value": 19.25,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2002-04-01",
+      "value": 19.19,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2002-05-01",
+      "value": 18.8,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2002-06-01",
+      "value": 18.67,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2002-07-01",
+      "value": 18.4,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2002-08-01",
+      "value": 18.45,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2002-09-01",
+      "value": 18.7,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2002-10-01",
+      "value": 18.81,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2002-11-01",
+      "value": 18.98,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2002-12-01",
+      "value": 19.02,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2003-01-01",
+      "value": 19.32,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2003-02-01",
+      "value": 19.45,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2003-03-01",
+      "value": 19.32,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2003-04-01",
+      "value": 19.31,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2003-05-01",
+      "value": 19.22,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2003-06-01",
+      "value": 18.96,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2003-07-01",
+      "value": 18.92,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2003-08-01",
+      "value": 19.1,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2003-09-01",
+      "value": 19.5,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2003-10-01",
+      "value": 19.4,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2003-11-01",
+      "value": 19.56,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2003-12-01",
+      "value": 19.7,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2004-01-01",
+      "value": 19.91,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2004-02-01",
+      "value": 19.87,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2004-03-01",
+      "value": 19.86,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2004-04-01",
+      "value": 19.89,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2004-05-01",
+      "value": 19.62,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2004-06-01",
+      "value": 19.41,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2004-07-01",
+      "value": 19.3,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2004-08-01",
+      "value": 19.28,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2004-09-01",
+      "value": 19.73,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2004-10-01",
+      "value": 19.77,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2004-11-01",
+      "value": 20.03,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2004-12-01",
+      "value": 20.2,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2005-01-01",
+      "value": 20.61,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2005-02-01",
+      "value": 20.39,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2005-03-01",
+      "value": 20.41,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2005-04-01",
+      "value": 20.3,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2005-05-01",
+      "value": 19.87,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2005-06-01",
+      "value": 19.75,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2005-07-01",
+      "value": 19.76,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2005-08-01",
+      "value": 19.94,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2005-09-01",
+      "value": 20.37,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2005-10-01",
+      "value": 20.46,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2005-11-01",
+      "value": 20.78,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2005-12-01",
+      "value": 20.92,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2006-01-01",
+      "value": 21.35,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2006-02-01",
+      "value": 21.4,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2006-03-01",
+      "value": 21.57,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2006-04-01",
+      "value": 21.59,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2006-05-01",
+      "value": 21.26,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2006-06-01",
+      "value": 21.27,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2006-07-01",
+      "value": 21.29,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2006-08-01",
+      "value": 21.51,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2006-09-01",
+      "value": 21.76,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2006-10-01",
+      "value": 21.93,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2006-11-01",
+      "value": 22.04,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2006-12-01",
+      "value": 21.93,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2007-01-01",
+      "value": 22.0,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2007-02-01",
+      "value": 22.24,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2007-03-01",
+      "value": 22.21,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2007-04-01",
+      "value": 22.23,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2007-05-01",
+      "value": 22.1,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2007-06-01",
+      "value": 22.12,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2007-07-01",
+      "value": 22.37,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2007-08-01",
+      "value": 22.49,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2007-09-01",
+      "value": 22.93,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2007-10-01",
+      "value": 23.02,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2007-11-01",
+      "value": 23.19,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2007-12-01",
+      "value": 23.33,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2008-01-01",
+      "value": 23.41,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2008-02-01",
+      "value": 23.47,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2008-03-01",
+      "value": 23.4,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2008-04-01",
+      "value": 23.55,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2008-05-01",
+      "value": 23.19,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2008-06-01",
+      "value": 23.1,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2008-07-01",
+      "value": 23.1,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2008-08-01",
+      "value": 23.33,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2008-09-01",
+      "value": 23.84,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2008-10-01",
+      "value": 24.08,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2008-11-01",
+      "value": 24.48,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2008-12-01",
+      "value": 24.85,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2009-01-01",
+      "value": 25.03,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2009-02-01",
+      "value": 24.76,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2009-03-01",
+      "value": 24.72,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2009-04-01",
+      "value": 24.71,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2009-05-01",
+      "value": 24.25,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2009-06-01",
+      "value": 23.98,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2009-07-01",
+      "value": 23.98,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2009-08-01",
+      "value": 24.23,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2009-09-01",
+      "value": 24.58,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2009-10-01",
+      "value": 24.64,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2009-11-01",
+      "value": 24.78,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2009-12-01",
+      "value": 25.25,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2010-01-01",
+      "value": 25.31,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2010-02-01",
+      "value": 25.39,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2010-03-01",
+      "value": 25.48,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2010-04-01",
+      "value": 25.44,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2010-05-01",
+      "value": 25.05,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2010-06-01",
+      "value": 24.77,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2010-07-01",
+      "value": 24.66,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2010-08-01",
+      "value": 24.5,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2010-09-01",
+      "value": 24.99,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2010-10-01",
+      "value": 25.01,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2010-11-01",
+      "value": 25.39,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2010-12-01",
+      "value": 25.42,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2011-01-01",
+      "value": 25.75,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2011-02-01",
+      "value": 25.82,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2011-03-01",
+      "value": 25.79,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2011-04-01",
+      "value": 25.55,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2011-05-01",
+      "value": 25.18,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2011-06-01",
+      "value": 25.12,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2011-07-01",
+      "value": 25.0,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2011-08-01",
+      "value": 24.93,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2011-09-01",
+      "value": 25.2,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2011-10-01",
+      "value": 25.38,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2011-11-01",
+      "value": 25.59,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2011-12-01",
+      "value": 25.73,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2012-01-01",
+      "value": 26.06,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2012-02-01",
+      "value": 26.18,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2012-03-01",
+      "value": 26.03,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2012-04-01",
+      "value": 25.96,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2012-05-01",
+      "value": 25.87,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2012-06-01",
+      "value": 25.98,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2012-07-01",
+      "value": 25.76,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2012-08-01",
+      "value": 25.98,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2012-09-01",
+      "value": 26.23,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2012-10-01",
+      "value": 26.49,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2012-11-01",
+      "value": 26.72,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2012-12-01",
+      "value": 26.72,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2013-01-01",
+      "value": 27.04,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2013-02-01",
+      "value": 26.89,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2013-03-01",
+      "value": 27.08,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2013-04-01",
+      "value": 27.11,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2013-05-01",
+      "value": 26.8,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2013-06-01",
+      "value": 26.58,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2013-07-01",
+      "value": 26.33,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2013-08-01",
+      "value": 26.42,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2013-09-01",
+      "value": 26.55,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2013-10-01",
+      "value": 26.73,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2013-11-01",
+      "value": 26.97,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2013-12-01",
+      "value": 27.07,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2014-01-01",
+      "value": 27.46,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2014-02-01",
+      "value": 27.7,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2014-03-01",
+      "value": 27.77,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2014-04-01",
+      "value": 27.72,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2014-05-01",
+      "value": 27.33,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2014-06-01",
+      "value": 27.23,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2014-07-01",
+      "value": 27.07,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2014-08-01",
+      "value": 27.22,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2014-09-01",
+      "value": 27.74,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2014-10-01",
+      "value": 27.7,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2014-11-01",
+      "value": 27.81,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2014-12-01",
+      "value": 28.01,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2015-01-01",
+      "value": 28.13,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2015-02-01",
+      "value": 28.43,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2015-03-01",
+      "value": 28.34,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2015-04-01",
+      "value": 28.26,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2015-05-01",
+      "value": 27.88,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2015-06-01",
+      "value": 27.84,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2015-07-01",
+      "value": 27.76,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2015-08-01",
+      "value": 27.58,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2015-09-01",
+      "value": 28.07,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2015-10-01",
+      "value": 28.24,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2015-11-01",
+      "value": 28.32,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2015-12-01",
+      "value": 28.34,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2016-01-01",
+      "value": 28.54,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2016-02-01",
+      "value": 28.67,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2016-03-01",
+      "value": 28.76,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2016-04-01",
+      "value": 28.71,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2016-05-01",
+      "value": 28.1,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2016-06-01",
+      "value": 28.29,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2016-07-01",
+      "value": 28.16,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2016-08-01",
+      "value": 28.23,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2016-09-01",
+      "value": 28.43,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2016-10-01",
+      "value": 28.43,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2016-11-01",
+      "value": 28.48,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2016-12-01",
+      "value": 28.71,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2017-01-01",
+      "value": 28.7,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2017-02-01",
+      "value": 28.87,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2017-03-01",
+      "value": 28.97,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2017-04-01",
+      "value": 28.91,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2017-05-01",
+      "value": 28.5,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2017-06-01",
+      "value": 28.48,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2017-07-01",
+      "value": 28.37,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2017-08-01",
+      "value": 28.81,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2017-09-01",
+      "value": 28.98,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2017-10-01",
+      "value": 28.87,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2017-11-01",
+      "value": 28.9,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2017-12-01",
+      "value": 29.1,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2018-01-01",
+      "value": 29.33,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2018-02-01",
+      "value": 29.38,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2018-03-01",
+      "value": 29.71,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2018-04-01",
+      "value": 29.4,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2018-05-01",
+      "value": 29.18,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2018-06-01",
+      "value": 29.18,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2018-07-01",
+      "value": 29.13,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2018-08-01",
+      "value": 29.18,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2018-09-01",
+      "value": 29.39,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2018-10-01",
+      "value": 29.45,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2018-11-01",
+      "value": 29.79,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2018-12-01",
+      "value": 29.74,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2019-01-01",
+      "value": 30.25,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2019-02-01",
+      "value": 30.35,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2019-03-01",
+      "value": 30.38,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2019-04-01",
+      "value": 30.31,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2019-05-01",
+      "value": 29.8,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2019-06-01",
+      "value": 30.12,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2019-07-01",
+      "value": 29.77,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2019-08-01",
+      "value": 29.82,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2019-09-01",
+      "value": 30.32,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2019-10-01",
+      "value": 30.66,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2019-11-01",
+      "value": 30.91,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2019-12-01",
+      "value": 30.73,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2020-01-01",
+      "value": 30.95,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2020-02-01",
+      "value": 30.99,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2020-03-01",
+      "value": 31.59,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2020-04-01",
+      "value": 32.13,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2020-05-01",
+      "value": 31.86,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2020-06-01",
+      "value": 31.29,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2020-07-01",
+      "value": 31.31,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2020-08-01",
+      "value": 31.29,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2020-09-01",
+      "value": 31.34,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2020-10-01",
+      "value": 31.35,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2020-11-01",
+      "value": 31.47,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2020-12-01",
+      "value": 31.75,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2021-01-01",
+      "value": 31.66,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2021-02-01",
+      "value": 31.59,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2021-03-01",
+      "value": 31.57,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2021-04-01",
+      "value": 31.8,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2021-05-01",
+      "value": 31.62,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2021-06-01",
+      "value": 31.54,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2021-07-01",
+      "value": 31.88,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2021-08-01",
+      "value": 31.64,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2021-09-01",
+      "value": 32.17,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2021-10-01",
+      "value": 32.16,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2021-11-01",
+      "value": 32.42,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2021-12-01",
+      "value": 32.82,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2022-01-01",
+      "value": 33.29,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2022-02-01",
+      "value": 33.49,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2022-03-01",
+      "value": 33.21,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2022-04-01",
+      "value": 33.39,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2022-05-01",
+      "value": 32.8,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2022-06-01",
+      "value": 32.94,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2022-07-01",
+      "value": 32.67,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2022-08-01",
+      "value": 33.06,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2022-09-01",
+      "value": 33.61,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2022-10-01",
+      "value": 33.67,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2022-11-01",
+      "value": 34.46,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2022-12-01",
+      "value": 34.77,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2023-01-01",
+      "value": 35.25,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2023-02-01",
+      "value": 35.3,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2023-03-01",
+      "value": 35.36,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2023-04-01",
+      "value": 35.48,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2023-05-01",
+      "value": 35.11,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2023-06-01",
+      "value": 34.74,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2023-07-01",
+      "value": 35.06,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2023-08-01",
+      "value": 35.23,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2023-09-01",
+      "value": 35.93,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2023-10-01",
+      "value": 35.88,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2023-11-01",
+      "value": 36.13,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2023-12-01",
+      "value": 36.6,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2024-01-01",
+      "value": 36.64,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2024-02-01",
+      "value": 36.95,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2024-03-01",
+      "value": 36.93,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2024-04-01",
+      "value": 36.88,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2024-05-01",
+      "value": 36.57,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2024-06-01",
+      "value": 36.53,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2024-07-01",
+      "value": 36.73,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2024-08-01",
+      "value": 36.9,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2024-09-01",
+      "value": 37.33,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2024-10-01",
+      "value": 37.38,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2024-11-01",
+      "value": 37.53,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2024-12-01",
+      "value": 37.67,
+      "sourceDate": "2025-01-24"
+    },
+    {
+      "date": "2025-01-01",
+      "value": 37.82,
+      "sourceDate": "2025-02-07"
+    },
+    {
+      "date": "2025-02-01",
+      "value": 37.97,
+      "sourceDate": "2025-03-07"
+    },
+    {
+      "date": "2025-03-01",
+      "value": 38.09,
+      "sourceDate": "2025-04-04"
+    },
+    {
+      "date": "2025-04-01",
+      "value": 38.18,
+      "sourceDate": "2025-05-09"
+    },
+    {
+      "date": "2025-05-01",
+      "value": 37.89,
+      "sourceDate": "2025-06-06"
+    },
+    {
+      "date": "2025-06-01",
+      "value": 37.57,
+      "sourceDate": "2025-07-11"
+    },
+    {
+      "date": "2025-07-01",
+      "value": 37.76,
+      "sourceDate": "2025-08-08"
+    },
+    {
+      "date": "2025-08-01",
+      "value": 37.97,
+      "sourceDate": "2025-09-05"
+    },
+    {
+      "date": "2025-09-01",
+      "value": 38.25,
+      "sourceDate": "2025-10-10"
+    },
+    {
+      "date": "2025-10-01",
+      "value": 38.65,
+      "sourceDate": "2025-11-07"
+    },
+    {
+      "date": "2025-11-01",
+      "value": 38.58,
+      "sourceDate": "2025-12-05"
+    },
+    {
+      "date": "2025-12-01",
+      "value": 38.76,
+      "sourceDate": "2026-01-09"
+    },
+    {
+      "date": "2026-01-01",
+      "value": 38.99,
+      "sourceDate": "2026-02-06"
+    },
+    {
+      "date": "2026-02-01",
+      "value": 39.36,
+      "sourceDate": "2026-03-13"
+    },
+    {
+      "date": "2026-03-01",
+      "value": 39.75,
+      "sourceDate": "2026-04-10"
+    },
+    {
+      "date": "2026-04-01",
+      "value": 39.37,
+      "sourceDate": "2026-05-08"
+    },
+    {
+      "date": "2026-05-01",
+      "value": 38.93,
+      "sourceDate": "2026-06-05"
+    },
+    {
+      "date": "2026-06-01",
+      "value": 38.97,
+      "sourceDate": "2026-07-10"
+    }
+  ],
+  "transformations": [
+    "raw",
+    "indexed",
+    "yoy",
+    "pct_change",
+    "zscore"
+  ],
+  "confirmingIndicators": [],
+  "conflictingIndicators": [],
+  "evidenceChecks": [],
+  "confidenceLevel": "medium",
+  "evidenceLabel": "Contextual indicator",
+  "calculation": {
+    "formula": "Average hourly wage rate for employees in goods-producing industries.",
+    "explanation": "Average hourly wage rate for employees in goods-producing industries.",
+    "example": "Latest observation: 38.97 CAD per hour at 2026-06."
+  },
+  "components": [
+    "StatCan vector v2132654"
+  ],
+  "referencePeriod": null,
+  "limitations": [
+    "Statistics Canada table 14-10-0063-01 is latest-vintage and may revise recent or historical observations.",
+    "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+  ],
+  "futureClassifierMetadata": {
+    "status": "Not yet evaluated",
+    "candidateSymptoms": []
+  },
+  "generatedAt": "2026-07-16T14:52:20+00:00"
+}

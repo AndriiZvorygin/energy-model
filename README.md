@@ -48,7 +48,7 @@ The project prioritizes interpretable specifications, chronological validation, 
 
 The affordability layer keeps four concepts separate: international food commodity prices, domestic consumer food prices, residential property purchase prices, and current shelter costs. FAO food indices describe international commodity quotations rather than grocery bills. Statistics Canada and BLS food CPIs describe domestic consumer baskets. Statistics Canada NHPI, FHFA, and BIS series describe property purchase prices, while rent, mortgage-interest cost, replacement cost, and shelter CPI describe distinct current housing-service costs.
 
-Interactive pages at `/affordability/food` and `/affordability/housing` compare these histories across global, Canadian, Ontario, and U.S. evidence. Derived measures include food and grocery inflation gaps, real food-price indices, real house-price indices, U.S. food-to-wage and rent-to-wage pressure, and a U.S. house-price-to-income index. Canadian income-relative measures remain unpublished until a suitable Canadian wage or disposable-income-per-person history is integrated. The new metadata identifies candidate future symptoms but does not alter either live classifier.
+Interactive pages at `/affordability/food` and `/affordability/housing` compare these histories across global, Canadian, Ontario, and U.S. evidence. Canadian purchasing-power denominators now include quarterly disposable income per person, CPI-deflated real income per person, the household saving rate, monthly Canada and Ontario wages, and separate food, rent, shelter, mortgage-interest, and house-price comparisons with income or wages. Quarterly income is never forward-filled into monthly observations. The new metadata identifies candidate future symptoms but does not alter either live classifier.
 
 ## System-Response Diagnostic Framework
 
@@ -127,6 +127,7 @@ Create a production build with `npm run build`. See [website/README.md](website/
 Primary public sources include:
 
 - **Statistics Canada:** Canadian and Ontario CPI, labour-force rates, monthly real GDP by industry, crude production/trade/refinery/inventory balances, electricity generation, and household debt service.
+- **Statistics Canada household accounts and labour tables:** quarterly household disposable income, consumption, saving, and population; monthly Canada and Ontario hourly wages and weekly earnings.
 - **Food and Agriculture Organization:** monthly nominal and real international Food Price Indices and commodity components.
 - **Bank for International Settlements:** quarterly selected nominal and real residential-property price statistics and documented country-group aggregates.
 - **Federal Housing Finance Agency:** U.S. monthly purchase-only House Price Index, distributed through FRED.

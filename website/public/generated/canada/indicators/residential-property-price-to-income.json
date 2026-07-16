@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "id": "residential-property-price-to-income",
+  "field": "residential_property_price_to_income",
+  "label": "Six-CMA residential-property-price-to-income index",
+  "description": "Archived broad new-and-resale property prices relative to national disposable income per person; the geography mismatch is explicit.",
+  "definition": "Archived broad new-and-resale property prices relative to national disposable income per person; the geography mismatch is explicit.",
+  "unit": "index",
+  "frequency": "quarterly",
+  "status": "derived",
+  "layer": "Canadian purchasing power",
+  "geography": "Six-CMA composite",
+  "geographyLevel": "provincial_or_metro",
+  "domesticOrExternal": "domestic",
+  "directlyComparableAcrossCountries": false,
+  "comparisonLimitations": "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels.",
+  "interpretationDirection": "up-is-stressful",
+  "interpretationLabel": "Historically elevated",
+  "interpretation": "A rising affordability ratio or growth gap means the documented cost is increasing relative to income or wages.",
+  "source": "Derived from Statistics Canada; Derived from Statistics Canada; Statistics Canada",
+  "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1810016901",
+  "sourceIdentifier": "CA_RPPI_TO_INCOME",
+  "sourceDate": "2026-06-17",
+  "retrievalDate": "2026-07-16T14:52:20+00:00",
+  "revisionStatus": "Derived ratio. Normalized to 100 at 2017-01-01. Statistics Canada table 18-10-0169-01; inactive broad new-and-resale property index. The series is inactive and ends in 2021 Q4. It is not spliced to NHPI, resale, rent, or shelter CPI. Normalized to 100 at 2017-01-01. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations.",
+  "seasonalAdjustment": "not seasonally adjusted",
+  "nominalOrReal": "real or relative index",
+  "startDate": "2017-01-01",
+  "endDate": "2021-10-01",
+  "latest": {
+    "date": "2021-10-01",
+    "sourceDate": "2026-06-17",
+    "value": 117.13267607206568,
+    "previousValue": 113.230415523889,
+    "oneYearChange": 12.10159337938876,
+    "threeMonthChange": 3.9022605481766846,
+    "fourQuarterChange": 12.10159337938876,
+    "monthOverMonthChange": 3.9022605481766846,
+    "yearOverYearPercentChange": 11.521916245306429,
+    "cumulativeChange": 17.132676072065678,
+    "historicalPercentile": 97.5,
+    "percentileSince2000": 97.5,
+    "distanceFromMedian": 13.493648654957767,
+    "distanceFromPreviousPeakPercent": 3.4463006517479355,
+    "momentumThreeMonth": 3.9022605481766846,
+    "momentumTwelveMonth": 12.10159337938876,
+    "momentum": "rising"
+  },
+  "referenceRanges": {
+    "historicalMedian": 103.63902741710791,
+    "p10": 101.44042871117928,
+    "p25": 102.0162401892175,
+    "p75": 105.08901969615745,
+    "p90": 111.55691056726353,
+    "minimum": 96.14776730909355,
+    "maximum": 117.13267607206568
+  },
+  "observations": [
+    {
+      "date": "2017-01-01",
+      "value": 100.0,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2017-04-01",
+      "value": 104.009141747473,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2017-07-01",
+      "value": 103.59939339070648,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2017-10-01",
+      "value": 102.72833593310729,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2018-01-01",
+      "value": 103.71970805760643,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2018-04-01",
+      "value": 105.26283070659903,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2018-07-01",
+      "value": 105.38191484833497,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2018-10-01",
+      "value": 103.67866144350934,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2019-01-01",
+      "value": 102.84542185822892,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2019-04-01",
+      "value": 102.092863472135,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2019-07-01",
+      "value": 101.7825706103615,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2019-10-01",
+      "value": 101.78637034046501,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2020-01-01",
+      "value": 102.9590202152048,
+      "sourceDate": "2023-11-30"
+    },
+    {
+      "date": "2020-04-01",
+      "value": 96.14776730909355,
+      "sourceDate": "2023-11-30"
+    },
+    {
+      "date": "2020-07-01",
+      "value": 101.60047634575476,
+      "sourceDate": "2023-11-30"
+    },
+    {
+      "date": "2020-10-01",
+      "value": 105.03108269267692,
+      "sourceDate": "2023-11-30"
+    },
+    {
+      "date": "2021-01-01",
+      "value": 103.81664257338045,
+      "sourceDate": "2024-11-29"
+    },
+    {
+      "date": "2021-04-01",
+      "value": 111.37096557208292,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2021-07-01",
+      "value": 113.230415523889,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2021-10-01",
+      "value": 117.13267607206568,
+      "sourceDate": "2026-06-17"
+    }
+  ],
+  "transformations": [
+    "raw",
+    "indexed",
+    "yoy",
+    "pct_change",
+    "zscore"
+  ],
+  "confirmingIndicators": [],
+  "conflictingIndicators": [],
+  "evidenceChecks": [],
+  "confidenceLevel": "medium",
+  "evidenceLabel": "Contextual indicator",
+  "calculation": {
+    "formula": "Rebased Six-CMA RPPI / rebased Canada disposable income per person \u00d7 100",
+    "explanation": "Archived broad new-and-resale property prices relative to national disposable income per person; the geography mismatch is explicit.",
+    "example": "Latest observation: 117.13 index at 2021-10."
+  },
+  "components": [
+    "six-cma-residential-property-price-index",
+    "household-disposable-income-per-person"
+  ],
+  "referencePeriod": "2017-01-01",
+  "limitations": [
+    "Derived ratio. Normalized to 100 at 2017-01-01. Statistics Canada table 18-10-0169-01; inactive broad new-and-resale property index. The series is inactive and ends in 2021 Q4. It is not spliced to NHPI, resale, rent, or shelter CPI. Normalized to 100 at 2017-01-01. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations.",
+    "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+  ],
+  "futureClassifierMetadata": {
+    "status": "Not yet evaluated",
+    "candidateSymptoms": [
+      "residential property prices diverging from income"
+    ]
+  },
+  "generatedAt": "2026-07-16T14:52:20+00:00"
+}

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import math
+from dataclasses import replace
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -78,6 +79,32 @@ US_FRED_SPECS = [
     ("A229RX0Q048SBEA", "real-disposable-income-per-capita", "U.S. real disposable personal income per capita", "chained USD per person", "seasonally adjusted annual rate", "real income"),
 ]
 
+STATCAN_PURCHASING_POWER_SPECS = [
+    (62305981, "household-disposable-income", "Household disposable income", "Canada", "quarterly", "millions CAD at annual rates", "seasonally adjusted at annual rates", "nominal annualized flow", "1961-01-01", "36-10-0112-01"),
+    (62305982, "household-consumption-expenditure", "Household final consumption expenditure", "Canada", "quarterly", "millions CAD at annual rates", "seasonally adjusted at annual rates", "nominal annualized flow", "1961-01-01", "36-10-0112-01"),
+    (62305984, "household-saving-rate", "Household saving rate", "Canada", "quarterly", "percent", "seasonally adjusted at annual rates", "rate", "1961-01-01", "36-10-0112-01"),
+    (1, "canada-population-quarterly", "Canada quarterly population estimate", "Canada", "quarterly", "persons", "not seasonally adjusted", "population", "1971-01-01", "17-10-0009-01"),
+    (2132579, "average-hourly-wages", "Canada average hourly wage rate", "Canada", "monthly", "CAD per hour", "not seasonally adjusted", "nominal wage", "1997-01-01", "14-10-0063-01"),
+    (2132654, "goods-producing-hourly-wages", "Canada goods-producing hourly wage rate", "Canada", "monthly", "CAD per hour", "not seasonally adjusted", "nominal wage", "1997-01-01", "14-10-0063-01"),
+    (2132594, "services-producing-hourly-wages", "Canada services-producing hourly wage rate", "Canada", "monthly", "CAD per hour", "not seasonally adjusted", "nominal wage", "1997-01-01", "14-10-0063-01"),
+    (2153099, "ontario-average-hourly-wages", "Ontario average hourly wage rate", "Ontario", "monthly", "CAD per hour", "not seasonally adjusted", "nominal wage", "1997-01-01", "14-10-0063-01"),
+    (2153174, "ontario-goods-producing-hourly-wages", "Ontario goods-producing hourly wage rate", "Ontario", "monthly", "CAD per hour", "not seasonally adjusted", "nominal wage", "1997-01-01", "14-10-0063-01"),
+    (2153114, "ontario-services-producing-hourly-wages", "Ontario services-producing hourly wage rate", "Ontario", "monthly", "CAD per hour", "not seasonally adjusted", "nominal wage", "1997-01-01", "14-10-0063-01"),
+    (79311153, "average-weekly-earnings", "Canada average weekly earnings", "Canada", "monthly", "CAD per week", "seasonally adjusted", "nominal earnings", "2001-01-01", "14-10-0223-01"),
+    (79311309, "ontario-average-weekly-earnings", "Ontario average weekly earnings", "Ontario", "monthly", "CAD per week", "seasonally adjusted", "nominal earnings", "2001-01-01", "14-10-0223-01"),
+]
+
+STATCAN_PROPERTY_AUDIT_SPECS = [
+    (1073542616, "six-cma-residential-property-price-index", "Six-CMA residential property price index", "Six-CMA composite", "2017-01-01", "18-10-0169-01", "inactive broad new-and-resale property index"),
+    (1073542634, "ottawa-residential-property-price-index", "Ottawa broad residential property price index", "Ottawa-Gatineau, Ontario part", "2017-01-01", "18-10-0169-01", "inactive broad new-and-resale property index"),
+    (1073542643, "toronto-residential-property-price-index", "Toronto broad residential property price index", "Toronto", "2017-01-01", "18-10-0169-01", "inactive broad new-and-resale property index"),
+    (1073542652, "calgary-residential-property-price-index", "Calgary broad residential property price index", "Calgary", "2017-01-01", "18-10-0169-01", "inactive broad new-and-resale property index"),
+    (1353834722, "ottawa-new-condominium-price-index", "Ottawa new condominium apartment price index", "Ottawa-Gatineau, Ontario part", "2017-01-01", "18-10-0273-01", "active new-condominium-only index"),
+    (1353834723, "toronto-new-condominium-price-index", "Toronto new condominium apartment price index", "Toronto", "2017-01-01", "18-10-0273-01", "active new-condominium-only index"),
+    (1353834724, "calgary-new-condominium-price-index", "Calgary new condominium apartment price index", "Calgary", "2017-01-01", "18-10-0273-01", "active new-condominium-only index"),
+    (1353834725, "edmonton-new-condominium-price-index", "Edmonton new condominium apartment price index", "Edmonton", "2017-01-01", "18-10-0273-01", "active new-condominium-only index"),
+]
+
 
 def _quantile(values: list[float], q: float) -> float | None:
     if not values:
@@ -106,6 +133,11 @@ def _lookup(series: SourceSeries) -> dict[str, SourceObservation]:
     return {item.date[:7]: item for item in series.observations}
 
 
+def _combined_release(*items: SourceObservation) -> str | None:
+    releases = [item.release_date for item in items if item.release_date]
+    return max(releases) if releases else None
+
+
 def _yoy(series: SourceSeries, source_id: str, label: str) -> SourceSeries:
     lookup = _lookup(series)
     rows = []
@@ -118,7 +150,7 @@ def _yoy(series: SourceSeries, source_id: str, label: str) -> SourceSeries:
 
 def _difference(left: SourceSeries, right: SourceSeries, source_id: str, label: str, unit: str = "percentage points") -> SourceSeries:
     other = _lookup(right)
-    rows = [SourceObservation(item.date, item.value - other[item.date[:7]].value, item.release_date) for item in left.observations if item.date[:7] in other]
+    rows = [SourceObservation(item.date, item.value - other[item.date[:7]].value, _combined_release(item, other[item.date[:7]])) for item in left.observations if item.date[:7] in other]
     return SourceSeries(source_id, label, unit, left.geography, left.frequency, left.seasonal_adjustment, "derived", f"{left.source}; {right.source}", left.source_url, left.retrieval_date, f"Derived difference. {left.revision_notes} {right.revision_notes}", rows)
 
 
@@ -128,8 +160,43 @@ def _ratio(left: SourceSeries, right: SourceSeries, source_id: str, label: str, 
     if not common:
         return SourceSeries(source_id, label, "index", left.geography, left.frequency, left.seasonal_adjustment, "derived", f"{left.source}; {right.source}", left.source_url, left.retrieval_date, "No common observations available.", [])
     first_ratio = common[0][0].value / common[0][1].value
-    rows = [SourceObservation(item.date, 100 * (item.value / comparison.value) / first_ratio if rebase else 100 * item.value / comparison.value, item.release_date) for item, comparison in common]
+    rows = [SourceObservation(item.date, 100 * (item.value / comparison.value) / first_ratio if rebase else 100 * item.value / comparison.value, _combined_release(item, comparison)) for item, comparison in common]
     return SourceSeries(source_id, label, "index", left.geography, left.frequency, left.seasonal_adjustment, "real or relative index", f"{left.source}; {right.source}", left.source_url, left.retrieval_date, f"Derived ratio. {left.revision_notes} {right.revision_notes}", rows)
+
+
+def _quarterly_average(series: SourceSeries, source_id: str, label: str) -> SourceSeries:
+    grouped: dict[str, list[SourceObservation]] = {}
+    for item in series.observations:
+        year, month = map(int, item.date[:7].split("-"))
+        quarter_month = ((month - 1) // 3) * 3 + 1
+        grouped.setdefault(f"{year:04d}-{quarter_month:02d}-01", []).append(item)
+    rows = []
+    for date, items in sorted(grouped.items()):
+        if len(items) != 3:
+            continue
+        releases = [item.release_date for item in items if item.release_date]
+        rows.append(SourceObservation(date, sum(item.value for item in items) / 3, max(releases) if releases else None))
+    return SourceSeries(source_id, label, series.unit, series.geography, "quarterly", "quarterly average of monthly observations", series.nominal_real, "Derived from " + series.source, series.source_url, series.retrieval_date, f"Only completed quarters with all three monthly observations are included. {series.revision_notes}", rows)
+
+
+def _per_person(income: SourceSeries, population: SourceSeries, source_id: str, label: str) -> SourceSeries:
+    people = _lookup(population)
+    rows = [SourceObservation(item.date, item.value * 1_000_000 / people[item.date[:7]].value, _combined_release(item, people[item.date[:7]])) for item in income.observations if item.date[:7] in people and people[item.date[:7]].value]
+    return SourceSeries(source_id, label, "annualized CAD per person", "Canada", "quarterly", "seasonally adjusted annual-rate numerator aligned to quarterly population", "nominal annualized per-person income", f"{income.source}; {population.source}", income.source_url, income.retrieval_date, f"Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. {income.revision_notes} {population.revision_notes}", rows)
+
+
+def _rebase(series: SourceSeries, source_id: str, label: str, reference_date: str) -> SourceSeries:
+    reference = next((item for item in series.observations if item.date == reference_date), None)
+    if reference is None or reference.value == 0:
+        raise ValueError(f"{series.label} has no valid reference observation at {reference_date}")
+    rows = [SourceObservation(item.date, 100 * item.value / reference.value, item.release_date) for item in series.observations]
+    return SourceSeries(source_id, label, f"index, {reference_date[:7]}=100", series.geography, series.frequency, series.seasonal_adjustment, "derived index", "Derived from " + series.source, series.source_url, series.retrieval_date, f"Normalized to 100 at {reference_date}. {series.revision_notes}", rows)
+
+
+def _deflate(nominal: SourceSeries, cpi: SourceSeries, source_id: str, label: str, unit: str) -> SourceSeries:
+    prices = _lookup(cpi)
+    rows = [SourceObservation(item.date, item.value / prices[item.date[:7]].value * 100, _combined_release(item, prices[item.date[:7]])) for item in nominal.observations if item.date[:7] in prices and prices[item.date[:7]].value]
+    return SourceSeries(source_id, label, unit, nominal.geography, nominal.frequency, nominal.seasonal_adjustment, "real CPI-deflated", f"{nominal.source}; {cpi.source}", nominal.source_url, nominal.retrieval_date, f"Deflated by the aligned all-items CPI; this is a derived CPI-deflated measure, not an official chained-dollar series. {nominal.revision_notes} {cpi.revision_notes}", rows)
 
 
 def _fred_series(fred: FredAdapter, spec: tuple[str, str, str, str, str, str]) -> SourceSeries:
@@ -141,6 +208,14 @@ def _fred_series(fred: FredAdapter, spec: tuple[str, str, str, str, str, str]) -
 
 
 def _interpretation(series_id: str, percentile: float | None, latest_yoy: float | None, latest_value: float) -> tuple[str, str, str]:
+    if any(term in series_id for term in ("to-income", "to-wage", "income-gap", "wage-gap")):
+        label = "Stressful" if latest_value > 0 and ("gap" in series_id or "pressure" in series_id) else "Historically elevated" if (percentile or 0) >= 75 else "Easing" if (percentile or 100) <= 25 else "Mixed"
+        return "up-is-stressful", label, "A rising affordability ratio or growth gap means the documented cost is increasing relative to income or wages."
+    if "real-disposable-income" in series_id or "real-wage" in series_id:
+        label = "Supportive" if (latest_yoy or latest_value) > 0 else "Stressful"
+        return "up-is-supportive", label, "Rising real income or wages generally increase purchasing power, while household experiences can differ from the average."
+    if "saving-rate" in series_id:
+        return "context-dependent", "Historically elevated" if (percentile or 0) >= 75 else "Historically depressed" if (percentile or 100) <= 25 else "Mixed", "The saving rate can fall because households are confident or because essential costs are absorbing income; supporting evidence is required."
     if series_id.startswith("fao"):
         label = "Elevated" if (percentile or 0) >= 75 else "Depressed" if (percentile or 100) <= 25 else "Normal"
         return "context-dependent", label, "International food commodity pressure; this is not a global grocery-price index."
@@ -155,7 +230,7 @@ def _interpretation(series_id: str, percentile: float | None, latest_yoy: float 
     return "context-dependent", "Direction unclear", "Interpret with its documented comparison series."
 
 
-def _payload(series: SourceSeries, indicator_id: str, layer: str, generated_at: str, *, definition: str, comparability: str, future_metadata: list[str] | None = None) -> dict[str, Any]:
+def _payload(series: SourceSeries, indicator_id: str, layer: str, generated_at: str, *, definition: str, comparability: str, future_metadata: list[str] | None = None, formula: str | None = None, components: list[str] | None = None, reference_period: str | None = None, future_status: str = "metadata_only_not_scored") -> dict[str, Any]:
     if not series.observations:
         raise ValueError(f"Affordability indicator {indicator_id} has no observations")
     values = [item.value for item in series.observations if math.isfinite(item.value)]
@@ -220,9 +295,11 @@ def _payload(series: SourceSeries, indicator_id: str, layer: str, generated_at: 
         "transformations": ["raw", "indexed", "yoy", "pct_change", "zscore"],
         "confirmingIndicators": [], "conflictingIndicators": [], "evidenceChecks": [],
         "confidenceLevel": "medium", "evidenceLabel": "Contextual indicator",
-        "calculation": {"formula": definition, "explanation": definition, "example": f"Latest observation: {latest.value:.2f} {series.unit} at {latest.date[:7]}."},
+        "calculation": {"formula": formula or definition, "explanation": definition, "example": f"Latest observation: {latest.value:.2f} {series.unit} at {latest.date[:7]}."},
+        "components": components or [],
+        "referencePeriod": reference_period,
         "limitations": [series.revision_notes, comparability],
-        "futureClassifierMetadata": {"status": "metadata_only_not_scored", "candidateSymptoms": future_metadata or []},
+        "futureClassifierMetadata": {"status": future_status, "candidateSymptoms": future_metadata or []},
         "generatedAt": generated_at,
     }
 
@@ -230,6 +307,28 @@ def _payload(series: SourceSeries, indicator_id: str, layer: str, generated_at: 
 def _statcan_series(adapter: StatCanAdapter, spec: tuple[int, str, str, str, str], table: str) -> SourceSeries:
     vector, _, label, geography, _ = spec
     return adapter.fetch_vector(vector, label=label, unit="index, 2002=100" if table == "18-10-0004-01" else "index, December 2016=100", geography=geography, start="1914-01-01" if table == "18-10-0004-01" else "1981-01-01", seasonal_adjustment="not seasonally adjusted", nominal_real="consumer price index" if table == "18-10-0004-01" else "nominal property purchase price", revision_notes=f"Statistics Canada table {table} may revise recent and historical observations; classifications and baskets follow the native table.")
+
+
+def _statcan_purchasing_series(adapter: StatCanAdapter, spec: tuple[Any, ...]) -> SourceSeries:
+    vector, _, label, geography, frequency, unit, seasonal, nominal_real, start, table = spec
+    annualized = " Values are published at seasonally adjusted annual rates." if "annual rates" in seasonal else ""
+    result = adapter.fetch_vector(
+        vector, label=label, unit=unit, geography=geography, frequency=frequency,
+        seasonal_adjustment=seasonal, nominal_real=nominal_real, start=start,
+        revision_notes=f"Statistics Canada table {table} is latest-vintage and may revise recent or historical observations.{annualized}",
+    )
+    return replace(result, source_url=f"https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid={table.replace('-', '')}")
+
+
+def _statcan_property_series(adapter: StatCanAdapter, spec: tuple[Any, ...]) -> SourceSeries:
+    vector, _, label, geography, start, table, coverage = spec
+    inactive = " The series is inactive and ends in 2021 Q4." if "inactive" in coverage else ""
+    result = adapter.fetch_vector(
+        vector, label=label, unit="index, 2017=100", geography=geography, frequency="quarterly",
+        seasonal_adjustment="not seasonally adjusted", nominal_real="nominal property purchase price", start=start,
+        revision_notes=f"Statistics Canada table {table}; {coverage}.{inactive} It is not spliced to NHPI, resale, rent, or shelter CPI.",
+    )
+    return replace(result, source_url=f"https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid={table.replace('-', '')}")
 
 
 def _generated_series(path: Path, source_id: str) -> SourceSeries:
@@ -325,7 +424,7 @@ def _append_manifests(root: Path, payloads: dict[str, list[dict[str, Any]]]) -> 
     canada_state = json.loads(canada_state_path.read_text(encoding="utf-8"))
     managed_canada = {item["id"] for item in payloads["canada"]} | {"shelter-cpi-index", "ontario-shelter-cpi-index"}
     canada["indicators"] = [item for item in canada["indicators"] if item["id"] not in managed_canada]
-    canada_state["layers"] = [row for row in canada_state["layers"] if row["label"] not in {"Food affordability", "Housing purchase prices and shelter costs"}]
+    canada_state["layers"] = [row for row in canada_state["layers"] if row["label"] not in {"Food affordability", "Housing purchase prices and shelter costs", "Canadian purchasing power"}]
     existing = {item["id"] for item in canada["indicators"]}
     for item in payloads["canada"]:
         if item["id"] not in existing:
@@ -333,6 +432,7 @@ def _append_manifests(root: Path, payloads: dict[str, list[dict[str, Any]]]) -> 
     for layer, ids in (
         ("Food affordability", ["canada-food-cpi-yoy"] + [item["id"] for item in payloads["canada"] if item["id"] in {"food-cpi", "grocery-cpi", "canada-food-inflation-gap", "canada-grocery-inflation-gap"}]),
         ("Housing purchase prices and shelter costs", [item["id"] for item in payloads["canada"] if item["id"] in {"new-housing-price-index", "bis-canada-real-house-price-index", "rent-cpi", "mortgage-interest-cost", "shelter-cpi", "canada-nhpi-yoy"}]),
+        ("Canadian purchasing power", [item["id"] for item in payloads["canada"] if item["id"] in {"real-disposable-income-per-person", "real-wage-growth", "household-saving-rate", "food-to-income", "rent-to-income", "shelter-to-income", "mortgage-interest-to-income", "nhpi-to-income"}]),
     ):
         if not any(row["label"] == layer for row in canada_state["layers"]):
             canada_state["layers"].append({"id": layer.lower().replace(" ", "-"), "label": layer, "indicatorIds": ids})
@@ -383,6 +483,10 @@ def build_affordability_outputs(root: Path, cache: RawCache) -> tuple[list[dict[
         series[f"ca_{spec[1]}"] = _statcan_series(statcan, spec, "18-10-0004-01")
     for spec in STATCAN_NHPI_SPECS:
         series[f"ca_{spec[1]}"] = _statcan_series(statcan, spec, "18-10-0205-01")
+    for spec in STATCAN_PURCHASING_POWER_SPECS:
+        series[f"ca_{spec[1]}"] = _statcan_purchasing_series(statcan, spec)
+    for spec in STATCAN_PROPERTY_AUDIT_SPECS:
+        series[f"ca_{spec[1]}"] = _statcan_property_series(statcan, spec)
     for spec in US_FRED_SPECS:
         series[f"us_{spec[1]}"] = _fred_series(fred, spec)
     canada_generated = root / "website" / "public" / "generated" / "canada" / "indicators"
@@ -390,6 +494,65 @@ def build_affordability_outputs(root: Path, cache: RawCache) -> tuple[list[dict[
     series["ca_cad_per_usd"] = _generated_series(canada_generated / "cad-per-usd.json", "CA_CAD_PER_USD")
     series["ca_policy_rate"] = _generated_series(canada_generated / "canada-policy-rate.json", "CA_POLICY_RATE")
     series["ca_debt_service"] = _generated_series(canada_generated / "canada-household-debt-service-ratio.json", "CA_DEBT_SERVICE")
+
+    # Quarterly purchasing-power measures retain completed quarters only. No
+    # quarterly income observation is copied into monthly rows.
+    ca_cpi_q = _quarterly_average(series["ca_canada-all-items-cpi"], "CA_CPI_Q", "Canada all-items CPI, quarterly average")
+    ca_food_q = _quarterly_average(series["ca_food-cpi"], "CA_FOOD_Q", "Canada food CPI, quarterly average")
+    ca_grocery_q = _quarterly_average(series["ca_grocery-cpi"], "CA_GROCERY_Q", "Canada grocery CPI, quarterly average")
+    ca_rent_q = _quarterly_average(series["ca_rent-cpi"], "CA_RENT_Q", "Canada rent CPI, quarterly average")
+    ca_shelter_q = _quarterly_average(series["ca_shelter-cpi"], "CA_SHELTER_Q", "Canada shelter CPI, quarterly average")
+    ca_mortgage_q = _quarterly_average(series["ca_mortgage-interest-cost"], "CA_MIC_Q", "Canada mortgage-interest-cost index, quarterly average")
+    ca_nhpi_q = _quarterly_average(series["ca_new-housing-price-index"], "CA_NHPI_Q", "Canada NHPI, quarterly average")
+    income_pp = _per_person(series["ca_household-disposable-income"], series["ca_canada-population-quarterly"], "CA_HDIPC", "Canada household disposable income per person")
+    series["ca_household-disposable-income-per-person"] = income_pp
+    series["ca_real-disposable-income-per-person"] = _deflate(income_pp, ca_cpi_q, "CA_REAL_HDIPC", "Canada real household disposable income per person", "CPI-deflated annualized CAD per person")
+
+    reference = "2017-01-01"
+    income_index = _rebase(income_pp, "CA_HDIPC_INDEX", "Disposable income per person index", reference)
+    food_index = _rebase(ca_food_q, "CA_FOOD_Q_INDEX", "Food CPI quarterly index", reference)
+    grocery_index = _rebase(ca_grocery_q, "CA_GROCERY_Q_INDEX", "Grocery CPI quarterly index", reference)
+    rent_index = _rebase(ca_rent_q, "CA_RENT_Q_INDEX", "Rent CPI quarterly index", reference)
+    shelter_index = _rebase(ca_shelter_q, "CA_SHELTER_Q_INDEX", "Shelter CPI quarterly index", reference)
+    mortgage_index = _rebase(ca_mortgage_q, "CA_MIC_Q_INDEX", "Mortgage-interest-cost quarterly index", reference)
+    nhpi_index = _rebase(ca_nhpi_q, "CA_NHPI_Q_INDEX", "NHPI quarterly index", reference)
+    series["ca_income-index"] = income_index
+    series["ca_food-quarterly-index"] = food_index
+    series["ca_grocery-quarterly-index"] = grocery_index
+    series["ca_rent-quarterly-index"] = rent_index
+    series["ca_shelter-quarterly-index"] = shelter_index
+    series["ca_mortgage-quarterly-index"] = mortgage_index
+    series["ca_nhpi-quarterly-index"] = nhpi_index
+    series["ca_food-to-income"] = _ratio(food_index, income_index, "CA_FOOD_TO_INCOME", "Canada food-price-to-income index")
+    series["ca_grocery-to-income"] = _ratio(grocery_index, income_index, "CA_GROCERY_TO_INCOME", "Canada grocery-price-to-income index")
+    series["ca_rent-to-income"] = _ratio(rent_index, income_index, "CA_RENT_TO_INCOME", "Canada rent-to-income index")
+    series["ca_shelter-to-income"] = _ratio(shelter_index, income_index, "CA_SHELTER_TO_INCOME", "Canada shelter-to-income index")
+    series["ca_mortgage-interest-to-income"] = _ratio(mortgage_index, income_index, "CA_MIC_TO_INCOME", "Canada mortgage-interest-to-income index")
+    series["ca_nhpi-to-income"] = _ratio(nhpi_index, income_index, "CA_NHPI_TO_INCOME", "Canada new-house-price-to-income index")
+    series["ca_real-nhpi"] = _deflate(ca_nhpi_q, ca_cpi_q, "CA_REAL_NHPI", "Canada real new-house-price index", "real index, CPI-adjusted")
+
+    income_yoy = _yoy(income_pp, "CA_HDIPC_YOY", "Canada disposable income per person growth")
+    series["ca_food-income-gap"] = _difference(_yoy(ca_food_q, "CA_FOOD_Q_YOY", "Canada quarterly food CPI growth"), income_yoy, "CA_FOOD_INCOME_GAP", "Canada food income-growth gap")
+    series["ca_grocery-income-gap"] = _difference(_yoy(ca_grocery_q, "CA_GROCERY_Q_YOY", "Canada quarterly grocery CPI growth"), income_yoy, "CA_GROCERY_INCOME_GAP", "Canada grocery income-growth gap")
+    series["ca_rent-income-gap"] = _difference(_yoy(ca_rent_q, "CA_RENT_Q_YOY", "Canada quarterly rent CPI growth"), income_yoy, "CA_RENT_INCOME_GAP", "Canada rent income-growth gap")
+    series["ca_shelter-income-gap"] = _difference(_yoy(ca_shelter_q, "CA_SHELTER_Q_YOY", "Canada quarterly shelter CPI growth"), income_yoy, "CA_SHELTER_INCOME_GAP", "Canada shelter income-growth gap")
+    series["ca_mortgage-income-gap"] = _difference(_yoy(ca_mortgage_q, "CA_MIC_Q_YOY", "Canada quarterly mortgage-interest growth"), income_yoy, "CA_MIC_INCOME_GAP", "Canada mortgage-interest income-growth gap")
+    series["ca_nhpi-income-gap"] = _difference(_yoy(ca_nhpi_q, "CA_NHPI_Q_YOY", "Canada quarterly NHPI growth"), income_yoy, "CA_NHPI_INCOME_GAP", "Canada NHPI income-growth gap")
+
+    wage_yoy_ca = _yoy(series["ca_average-hourly-wages"], "CA_WAGE_YOY", "Canada hourly wage growth")
+    cpi_yoy_ca = _yoy(series["ca_canada-all-items-cpi"], "CA_CPI_YOY_PP", "Canada all-items CPI growth")
+    series["ca_nominal-wage-growth"] = wage_yoy_ca
+    series["ca_food-monthly-yoy"] = _yoy(series["ca_food-cpi"], "CA_FOOD_YOY_PP", "Canada food CPI growth")
+    series["ca_grocery-monthly-yoy"] = _yoy(series["ca_grocery-cpi"], "CA_GROCERY_YOY_PP", "Canada grocery CPI growth")
+    series["ca_real-wage-index"] = _ratio(_rebase(series["ca_average-hourly-wages"], "CA_WAGE_INDEX", "Canada hourly wage index", reference), _rebase(series["ca_canada-all-items-cpi"], "CA_CPI_INDEX_PP", "Canada all-items CPI index", reference), "CA_REAL_WAGE_INDEX", "Canada real wage index")
+    series["ca_real-wage-growth"] = _difference(wage_yoy_ca, cpi_yoy_ca, "CA_REAL_WAGE_GROWTH", "Canada real wage growth")
+    series["ca_food-to-wage"] = _difference(series["ca_food-monthly-yoy"], wage_yoy_ca, "CA_FOOD_WAGE_GAP", "Canada food wage-pressure gap")
+    series["ca_grocery-to-wage"] = _difference(series["ca_grocery-monthly-yoy"], wage_yoy_ca, "CA_GROCERY_WAGE_GAP", "Canada grocery wage-pressure gap")
+    series["ca_rent-to-wage"] = _difference(_yoy(series["ca_rent-cpi"], "CA_RENT_YOY_PP", "Canada rent CPI growth"), wage_yoy_ca, "CA_RENT_WAGE_GAP", "Canada rent wage-pressure gap")
+    series["ca_shelter-to-wage"] = _difference(_yoy(series["ca_shelter-cpi"], "CA_SHELTER_YOY_PP", "Canada shelter CPI growth"), wage_yoy_ca, "CA_SHELTER_WAGE_GAP", "Canada shelter wage-pressure gap")
+
+    broad_index = _rebase(series["ca_six-cma-residential-property-price-index"], "CA_RPPI_INDEX", "Six-CMA residential property price index", reference)
+    series["ca_residential-property-price-to-income"] = _ratio(broad_index, income_index, "CA_RPPI_TO_INCOME", "Six-CMA residential-property-price-to-income index")
 
     # Derived Canadian measures. Income-based measures remain unavailable and are documented rather than estimated.
     series["ca_food_yoy"] = _yoy(series["ca_food-cpi"], "CA_FOOD_CPI_YOY", "Canada food CPI growth")
@@ -429,8 +592,8 @@ def build_affordability_outputs(root: Path, cache: RawCache) -> tuple[list[dict[
     }
     payload_groups: dict[str, list[dict[str, Any]]] = {"global": [], "canada": [], "us": []}
 
-    def add(group: str, key: str, indicator_id: str, layer: str, definition: str, candidates: list[str]) -> None:
-        payload_groups[group].append(_payload(series[key], indicator_id, layer, generated_at, definition=definition, comparability="Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels.", future_metadata=candidates))
+    def add(group: str, key: str, indicator_id: str, layer: str, definition: str, candidates: list[str], *, formula: str | None = None, components: list[str] | None = None, reference_period: str | None = None, future_status: str = "metadata_only_not_scored") -> None:
+        payload_groups[group].append(_payload(series[key], indicator_id, layer, generated_at, definition=definition, comparability="Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels.", future_metadata=candidates, formula=formula, components=components, reference_period=reference_period, future_status=future_status))
 
     for key, indicator_id in (("fao_food_nominal", "fao-food-price-index"), ("fao_food_real", "fao-food-price-index-real"), ("fao_cereals_nominal", "fao-cereals-price-index"), ("fao_cereals_real", "fao-cereals-price-index-real"), ("fao_oils_nominal", "fao-vegetable-oils-price-index"), ("fao_oils_real", "fao-vegetable-oils-price-index-real"), ("fao_dairy_nominal", "fao-dairy-price-index"), ("fao_dairy_real", "fao-dairy-price-index-real"), ("fao_meat_nominal", "fao-meat-price-index"), ("fao_meat_real", "fao-meat-price-index-real"), ("fao_sugar_nominal", "fao-sugar-price-index"), ("fao_sugar_real", "fao-sugar-price-index-real")):
         add("global", key, indicator_id, "International food commodity prices", "FAO international food commodity index, 2014-2016=100; not a global grocery-price index.", ["global commodity food pressure transmitting into retail prices"])
@@ -450,6 +613,57 @@ def build_affordability_outputs(root: Path, cache: RawCache) -> tuple[list[dict[
         add("canada", key, indicator_id, layer, definition, ["food prices rising faster than income"] if layer == "Food affordability" else ["rent rising faster than income", "mortgage-interest burden rising", "house prices diverging from income"])
     add("canada", "bis_ca_nominal_house_prices", "bis-canada-nominal-house-price-index", "Housing purchase prices and shelter costs", "BIS representative national residential property-price index, nominal, 2010=100.", ["property-price growth occurring alongside resource or liquidity expansion"])
     add("canada", "bis_ca_real_house_prices", "bis-canada-real-house-price-index", "Housing purchase prices and shelter costs", "BIS representative national residential property-price index deflated by Canadian CPI, 2010=100.", ["house prices diverging from income"])
+
+    income_sources = {
+        "household-disposable-income": "Official quarterly household disposable income, published in millions of CAD at seasonally adjusted annual rates.",
+        "household-consumption-expenditure": "Official quarterly household final consumption expenditure, published in millions of CAD at seasonally adjusted annual rates.",
+        "household-saving-rate": "Official quarterly household saving as a percentage of household disposable income.",
+        "canada-population-quarterly": "Official quarterly Canadian population estimate used only at matching quarter dates.",
+        "average-hourly-wages": "Average hourly wage rate for employees aged 15 and older, both full- and part-time, all industries.",
+        "goods-producing-hourly-wages": "Average hourly wage rate for employees in goods-producing industries.",
+        "services-producing-hourly-wages": "Average hourly wage rate for employees in services-producing industries.",
+        "ontario-average-hourly-wages": "Ontario average hourly wage rate for employees aged 15 and older, all industries.",
+        "ontario-goods-producing-hourly-wages": "Ontario average hourly wage rate in goods-producing industries.",
+        "ontario-services-producing-hourly-wages": "Ontario average hourly wage rate in services-producing industries.",
+        "average-weekly-earnings": "SEPH average weekly earnings including overtime for all employees, seasonally adjusted.",
+        "ontario-average-weekly-earnings": "Ontario SEPH average weekly earnings including overtime for all employees, seasonally adjusted.",
+    }
+    for spec in STATCAN_PURCHASING_POWER_SPECS:
+        _, indicator_id, _, _, _, _, _, _, _, _ = spec
+        add("canada", f"ca_{indicator_id}", indicator_id, "Canadian purchasing power", income_sources[indicator_id], [], components=[f"StatCan vector v{spec[0]}"], future_status="Not yet evaluated")
+
+    for spec in STATCAN_PROPERTY_AUDIT_SPECS:
+        _, indicator_id, _, _, _, table, coverage = spec
+        add("canada", f"ca_{indicator_id}", indicator_id, "Housing purchase prices and shelter costs", f"Statistics Canada {coverage}; retained separately from NHPI and housing-service costs.", ["residential property prices diverging from income"], components=[table], future_status="Not yet evaluated")
+
+    purchasing_measures = [
+        ("household-disposable-income-per-person", "Household disposable income per person", "Household disposable income at an annual rate divided by the matching quarterly population estimate.", "Household disposable income SAAR × 1,000,000 / quarterly population", ["household-disposable-income", "canada-population-quarterly"], []),
+        ("real-disposable-income-per-person", "Real household disposable income per person", "CPI-deflated household disposable income per person; this is derived rather than an official chained-dollar series.", "Nominal disposable income per person / quarterly-average all-items CPI × 100", ["household-disposable-income-per-person", "canada-all-items-cpi"], ["real disposable income per person declining"]),
+        ("nominal-wage-growth", "Nominal hourly wage growth", "Year-over-year growth in the Canada average hourly wage rate.", "100 × (hourly wage / hourly wage one year earlier - 1)", ["average-hourly-wages"], []),
+        ("real-wage-index", "Real wage index", "Average hourly wages relative to all-items CPI, normalized at the fixed reference month.", "Rebased hourly wage index / rebased all-items CPI index × 100", ["average-hourly-wages", "canada-all-items-cpi"], []),
+        ("real-wage-growth", "Real wage growth", "Nominal hourly wage growth minus all-items CPI growth.", "Hourly wage YoY - all-items CPI YoY", ["average-hourly-wages", "canada-all-items-cpi"], []),
+        ("food-to-income", "Food-price-to-income index", "Quarterly food CPI relative to disposable income per person; rising values indicate food prices gaining on income.", "Rebased quarterly food CPI / rebased disposable income per person × 100", ["food-cpi", "household-disposable-income-per-person"], ["food prices rising faster than disposable income"]),
+        ("grocery-to-income", "Grocery-price-to-income index", "Quarterly food-from-stores CPI relative to disposable income per person.", "Rebased quarterly grocery CPI / rebased disposable income per person × 100", ["grocery-cpi", "household-disposable-income-per-person"], ["food prices rising faster than disposable income"]),
+        ("food-income-gap", "Food income-growth gap", "Quarterly food inflation minus disposable-income-per-person growth.", "Food CPI YoY - disposable income per person YoY", ["food-cpi", "household-disposable-income-per-person"], ["food prices rising faster than disposable income"]),
+        ("grocery-income-gap", "Grocery income-growth gap", "Quarterly grocery inflation minus disposable-income-per-person growth.", "Grocery CPI YoY - disposable income per person YoY", ["grocery-cpi", "household-disposable-income-per-person"], ["food prices rising faster than disposable income"]),
+        ("food-to-wage", "Food wage-pressure gap", "Monthly food inflation minus average hourly wage growth.", "Food CPI YoY - average hourly wage YoY", ["food-cpi", "average-hourly-wages"], ["food prices rising faster than wages"]),
+        ("grocery-to-wage", "Grocery wage-pressure gap", "Monthly grocery inflation minus average hourly wage growth.", "Grocery CPI YoY - average hourly wage YoY", ["grocery-cpi", "average-hourly-wages"], ["food prices rising faster than wages"]),
+        ("rent-to-wage", "Rent wage-pressure gap", "Monthly rent inflation minus average hourly wage growth.", "Rent CPI YoY - average hourly wage YoY", ["rent-cpi", "average-hourly-wages"], ["rent rising faster than income"]),
+        ("shelter-to-wage", "Shelter wage-pressure gap", "Monthly shelter inflation minus average hourly wage growth.", "Shelter CPI YoY - average hourly wage YoY", ["shelter-cpi", "average-hourly-wages"], ["shelter costs rising faster than income"]),
+        ("rent-to-income", "Rent-to-income index", "Quarterly rent CPI relative to disposable income per person.", "Rebased quarterly rent CPI / rebased disposable income per person × 100", ["rent-cpi", "household-disposable-income-per-person"], ["rent rising faster than income"]),
+        ("shelter-to-income", "Shelter-to-income index", "Quarterly shelter CPI relative to disposable income per person.", "Rebased quarterly shelter CPI / rebased disposable income per person × 100", ["shelter-cpi", "household-disposable-income-per-person"], ["shelter costs rising faster than income"]),
+        ("mortgage-interest-to-income", "Mortgage-interest-to-income index", "Quarterly mortgage-interest-cost index relative to disposable income per person.", "Rebased quarterly mortgage-interest-cost index / rebased disposable income per person × 100", ["mortgage-interest-cost", "household-disposable-income-per-person"], ["mortgage-interest costs rising faster than income"]),
+        ("nhpi-to-income", "New-house-price-to-income index", "Quarterly-average NHPI relative to disposable income per person.", "Rebased quarterly NHPI / rebased disposable income per person × 100", ["new-housing-price-index", "household-disposable-income-per-person"], ["residential property prices diverging from income"]),
+        ("real-nhpi", "Real new-house-price index", "Quarterly-average NHPI deflated by quarterly-average all-items CPI.", "Quarterly NHPI / quarterly all-items CPI × 100", ["new-housing-price-index", "canada-all-items-cpi"], []),
+        ("rent-income-gap", "Rent income-growth gap", "Quarterly rent inflation minus disposable-income-per-person growth.", "Rent CPI YoY - disposable income per person YoY", ["rent-cpi", "household-disposable-income-per-person"], ["rent rising faster than income"]),
+        ("shelter-income-gap", "Shelter income-growth gap", "Quarterly shelter inflation minus disposable-income-per-person growth.", "Shelter CPI YoY - disposable income per person YoY", ["shelter-cpi", "household-disposable-income-per-person"], ["shelter costs rising faster than income"]),
+        ("mortgage-income-gap", "Mortgage-interest income-growth gap", "Quarterly mortgage-interest-cost growth minus disposable-income-per-person growth.", "Mortgage-interest-cost YoY - disposable income per person YoY", ["mortgage-interest-cost", "household-disposable-income-per-person"], ["mortgage-interest costs rising faster than income"]),
+        ("nhpi-income-gap", "NHPI income-growth gap", "Quarterly new-house-price growth minus disposable-income-per-person growth.", "NHPI YoY - disposable income per person YoY", ["new-housing-price-index", "household-disposable-income-per-person"], ["residential property prices diverging from income"]),
+        ("residential-property-price-to-income", "Six-CMA residential-property-price-to-income index", "Archived broad new-and-resale property prices relative to national disposable income per person; the geography mismatch is explicit.", "Rebased Six-CMA RPPI / rebased Canada disposable income per person × 100", ["six-cma-residential-property-price-index", "household-disposable-income-per-person"], ["residential property prices diverging from income"]),
+    ]
+    for indicator_id, label, definition, formula, components, candidates in purchasing_measures:
+        series_key = f"ca_{indicator_id}"
+        add("canada", series_key, indicator_id, "Canadian purchasing power", definition, candidates, formula=formula, components=components, reference_period=reference if "index" in label.lower() else None, future_status="Not yet evaluated")
 
     us_keys = [(f"us_{spec[1]}", f"us-{spec[1]}", "Food affordability" if "food" in spec[1] or any(word in spec[1] for word in ("cereals", "meat", "dairy", "fruit")) else "Housing purchase prices and shelter costs") for spec in US_FRED_SPECS if spec[1] not in {"average-hourly-earnings", "real-disposable-income-per-capita", "us-all-items-cpi"}]
     for key, indicator_id, layer in us_keys:
@@ -487,6 +701,14 @@ def build_affordability_outputs(root: Path, cache: RawCache) -> tuple[list[dict[
         ("affordability-real-house-prices", "International real residential property prices", "quarterly", {"World": "bis_xw_real_house_prices", "Canada": "bis_ca_real_house_prices", "United_States": "bis_us_real_house_prices", "Advanced": "bis_5r_real_house_prices", "Emerging": "bis_4t_real_house_prices", "Germany": "bis_de_real_house_prices", "China": "bis_cn_real_house_prices", "Brazil": "bis_br_real_house_prices"}, "BIS selected series improve comparability but differ in national source coverage and aggregate weighting.", index_views),
         ("affordability-house-price-income", "U.S. house prices relative to income", "quarterly", {"House_price_to_income": "us_house_income", "BIS_US_real_house": "bis_us_real_house_prices"}, "The U.S. ratio uses real disposable income per person. A comparable Canadian income series is not yet implemented.", index_views),
         ("affordability-us-food-income", "U.S. food prices relative to wages", "monthly", {"Food_YoY": "us_food_yoy", "Food_at_home_YoY": "us_home_yoy", "Wage_YoY": "us_wage_yoy", "Food_minus_wage": "us_food_affordability"}, "The experimental pressure measure publishes food and wage components rather than replacing them with a composite score.", rate_views),
+        ("affordability-canada-purchasing-power", "Canadian household income, wages, and saving", "quarterly", {"Disposable_income_per_person": "ca_household-disposable-income-per-person", "Real_disposable_income_per_person": "ca_real-disposable-income-per-person", "Saving_rate": "ca_household-saving-rate"}, "Household income includes broader income and transfers; average wages describe employed workers. Quarterly values remain at their native frequency and are latest-vintage revised data.", ["raw", "indexed", "zscore"]),
+        ("affordability-canada-food-income", "Canadian food prices relative to disposable income", "quarterly", {"Food_price_index": "ca_food-quarterly-index", "Grocery_price_index": "ca_grocery-quarterly-index", "Disposable_income_per_person": "ca_income-index", "Food_to_income": "ca_food-to-income", "Grocery_to_income": "ca_grocery-to-income"}, "Monthly consumer-price observations are averaged within completed quarters and compared with quarterly disposable income per person. No monthly income values are invented.", index_views),
+        ("affordability-canada-food-wages", "Canadian food prices relative to wages", "monthly", {"Food_YoY": "ca_food-monthly-yoy", "Grocery_YoY": "ca_grocery-monthly-yoy", "Hourly_wage_YoY": "ca_nominal-wage-growth", "Food_wage_gap": "ca_food-to-wage", "Grocery_wage_gap": "ca_grocery-to-wage"}, "Monthly wage-based pressure differs from household-income affordability because wages cover employed workers while disposable income includes other income and transfers.", rate_views),
+        ("affordability-canada-housing-income", "Canadian housing costs relative to disposable income", "quarterly", {"NHPI": "ca_nhpi-quarterly-index", "Rent": "ca_rent-quarterly-index", "Shelter": "ca_shelter-quarterly-index", "Mortgage_interest": "ca_mortgage-quarterly-index", "Disposable_income": "ca_income-index"}, "Purchase prices, rent, shelter services, mortgage interest, and income are separate quarterly-aligned series normalized to 100 in 2017 Q1.", index_views),
+        ("affordability-canada-housing-ratios", "Canadian housing affordability ratios", "quarterly", {"NHPI_to_income": "ca_nhpi-to-income", "Rent_to_income": "ca_rent-to-income", "Shelter_to_income": "ca_shelter-to-income", "Mortgage_interest_to_income": "ca_mortgage-interest-to-income"}, "Each ratio uses the same fixed 2017 Q1 reference and is published separately; there is no combined housing-stress score.", index_views),
+        ("affordability-canada-housing-gaps", "Canadian housing cost and income growth gaps", "quarterly", {"NHPI_gap": "ca_nhpi-income-gap", "Rent_gap": "ca_rent-income-gap", "Shelter_gap": "ca_shelter-income-gap", "Mortgage_interest_gap": "ca_mortgage-income-gap"}, "Positive values mean the specified housing cost grew faster than disposable income per person over the prior year.", rate_views),
+        ("affordability-canada-property-income", "Official Canadian residential property evidence and income", "quarterly", {"Six_CMA_broad_RPPI": "ca_six-cma-residential-property-price-index", "Toronto_new_condominiums": "ca_toronto-new-condominium-price-index", "Ottawa_new_condominiums": "ca_ottawa-new-condominium-price-index", "Calgary_new_condominiums": "ca_calgary-new-condominium-price-index", "Edmonton_new_condominiums": "ca_edmonton-new-condominium-price-index", "Disposable_income": "ca_income-index"}, "The broad RPPI is an inactive six-CMA history ending in 2021 Q4. Active condominium series cover new apartments only and are not spliced to it.", index_views),
+        ("affordability-canada-wages", "Canada and Ontario wage histories", "monthly", {"Canada_hourly": "ca_average-hourly-wages", "Ontario_hourly": "ca_ontario-average-hourly-wages", "Canada_weekly": "ca_average-weekly-earnings", "Ontario_weekly": "ca_ontario-average-weekly-earnings"}, "Hourly wages are unadjusted LFS estimates; weekly earnings are separate seasonally adjusted SEPH confirmation measures. Their levels should not be compared on one raw axis.", index_views),
     ]
     series["fao_food_nominal_yoy"] = _yoy(series["fao_food_nominal"], "FAO_FOOD_YOY", "FAO Food Price Index growth")
     series["fao_cereals_nominal_yoy"] = _yoy(series["fao_cereals_nominal"], "FAO_CEREALS_YOY", "FAO cereals growth")
@@ -522,13 +744,72 @@ International food commodity prices, domestic consumer food prices, residential 
 
 The strongest descriptive food transmission relationship in the implemented set is **{strongest['relationship']}**, with peak lag correlation {float(strongest['peak_lag_correlation']):.3f} at {strongest['peak_lag_months']} months. This is a latest-vintage association, not a causal estimate. Retail transmission also depends on exchange rates, energy and transport, fertilizer and farm inputs, processing, labour, wholesale and retail margins, domestic supply, taxes, and regulation.
 
-Canada's food inflation and grocery inflation gaps and real food-price index are available. A Canadian food-to-income, rent-to-income, and house-price-to-income measure is not calculated because the required Canadian wage or disposable-income-per-person history is not yet implemented. U.S. food-to-wage, rent-to-wage, real FHFA, and house-price-to-income measures are published with their components.
+Canada's food inflation, grocery inflation, income-growth, and wage-growth gaps are available alongside food-, grocery-, rent-, shelter-, mortgage-interest-, and NHPI-to-income indexes. Quarterly income comparisons include completed quarters only; monthly wage comparisons remain monthly. U.S. food-to-wage, rent-to-wage, real FHFA, and house-price-to-income measures remain published with their components.
 
-BIS world, advanced-economy, and emerging-market property-price aggregates cover participating national series; they are not measurements of every house in the world. Statistics Canada NHPI measures new-property purchase prices, while rent, mortgage-interest cost, replacement cost, and shelter CPI measure distinct current housing costs.
+BIS world, advanced-economy, and emerging-market property-price aggregates cover participating national series; they are not measurements of every house in the world. Statistics Canada NHPI measures new-property purchase prices, while rent, mortgage-interest cost, replacement cost, and shelter CPI measure distinct current housing costs. The official broad RPPI covers six CMAs and is inactive after 2021 Q4; active new-condominium indexes are narrower and are not spliced to it.
 """
     (root / "analysis" / "food_housing_affordability_findings.md").write_text(findings, encoding="utf-8")
     (root / "analysis" / "food_housing_indicator_catalogue.csv").write_text("", encoding="utf-8")
-    catalogue = [{"id": item["id"], "label": item["label"], "geography": item["geography"], "layer": item["layer"], "source": item["source"], "source_identifier": item["sourceIdentifier"], "frequency": item["frequency"], "unit": item["unit"], "start_date": item["startDate"], "latest_date": item["endDate"], "revision_status": item["revisionStatus"], "future_classifier_status": "metadata_only_not_scored"} for group in payload_groups.values() for item in group]
+    catalogue = [{"id": item["id"], "label": item["label"], "geography": item["geography"], "layer": item["layer"], "source": item["source"], "source_identifier": item["sourceIdentifier"], "frequency": item["frequency"], "unit": item["unit"], "start_date": item["startDate"], "latest_date": item["endDate"], "revision_status": item["revisionStatus"], "future_classifier_status": item["futureClassifierMetadata"]["status"]} for group in payload_groups.values() for item in group]
     write_csv(root / "analysis" / "food_housing_indicator_catalogue.csv", catalogue)
+    income_catalogue = []
+    for spec in STATCAN_PURCHASING_POWER_SPECS:
+        vector, indicator_id, label, geography, frequency, unit, seasonal, nominal_real, _, table = spec
+        source = series[f"ca_{indicator_id}"]
+        income_catalogue.append({
+            "indicator_name": label, "source_table": table, "vector_id": f"v{vector}", "definition": income_sources[indicator_id],
+            "geography": geography, "frequency": frequency, "unit": unit, "seasonal_adjustment": seasonal,
+            "annualized_or_native_flow": "seasonally adjusted annual rate" if "annual rates" in seasonal else "native observation",
+            "nominal_or_real": nominal_real, "revision_behaviour": source.revision_notes,
+            "start_date": source.observations[0].date, "latest_date": source.observations[-1].date,
+            "retrieval_date": source.retrieval_date, "intended_use": "purchasing-power denominator or confirmation series",
+            "limitations": "Latest-vintage history; release-time fields are retained but a complete real-time vintage archive is not available.",
+        })
+    for spec in STATCAN_PROPERTY_AUDIT_SPECS:
+        vector, indicator_id, label, geography, _, table, coverage = spec
+        source = series[f"ca_{indicator_id}"]
+        income_catalogue.append({
+            "indicator_name": label, "source_table": table, "vector_id": f"v{vector}", "definition": coverage,
+            "geography": geography, "frequency": "quarterly", "unit": "index, 2017=100", "seasonal_adjustment": "not seasonally adjusted",
+            "annualized_or_native_flow": "native quarterly index", "nominal_or_real": "nominal property purchase price",
+            "revision_behaviour": source.revision_notes, "start_date": source.observations[0].date, "latest_date": source.observations[-1].date,
+            "retrieval_date": source.retrieval_date, "intended_use": "broader official property-price audit and historical comparison",
+            "limitations": "Broad RPPI is inactive; active NCAPI covers new condominium apartments only. Neither is a Canada- or Ontario-wide resale index.",
+        })
+    write_csv(root / "analysis" / "canadian_income_indicator_catalogue.csv", income_catalogue)
+    audit = f"""# Canadian Income, Wage, And Property-Price Source Audit
+
+## Implemented Sources
+
+- **Table 36-10-0112-01:** household disposable income (`v62305981`), household final consumption expenditure (`v62305982`), and household saving rate (`v62305984`), quarterly from 1961. Income and consumption are seasonally adjusted annual rates in millions of current Canadian dollars.
+- **Table 17-10-0009-01:** Canada quarterly population (`v1`) from 1971. It is matched to the same quarter as income; no monthly population or income values are created.
+- **Table 14-10-0063-01:** Canada and Ontario average hourly wage rates for all employees (`v2132579`, `v2153099`) and goods/services confirmation series, monthly from 1997, unadjusted for seasonality.
+- **Table 14-10-0223-01:** Canada and Ontario average weekly earnings (`v79311153`, `v79311309`), monthly from 2001, seasonally adjusted. These SEPH estimates confirm rather than replace LFS hourly wages.
+- **Table 18-10-0169-01:** archived broad residential property price indexes for a six-CMA composite, Ottawa, Toronto, and Calgary from 2017 Q1 through 2021 Q4. The source includes new and resale transactions but is inactive and has no Canada or Ontario aggregate.
+- **Table 18-10-0273-01:** active new condominium apartment price indexes for Ottawa, Toronto, Calgary, and Edmonton from 2017 Q1. These cover new condominium apartments only.
+
+## Definitions And Alignment
+
+Disposable income per person divides the annual-rate household-income flow by the matching quarterly population. The result is therefore annualized CAD per person; it is not divided by four. Real disposable income per person is a transparent CPI-deflated derivative because no directly published national quarterly real-per-person series with the required history was identified.
+
+Monthly CPI and housing indexes are averaged from all three months of each completed quarter before comparison with income. Missing or partial quarters are omitted. Quarterly income is never forward-filled or interpolated to monthly frequency. Wage-based affordability remains monthly and is analytically separate because average wages describe employed workers, while household disposable income includes broader income and transfers.
+
+## Property-Price Finding
+
+No active official broad Canada- or Ontario-wide transaction-price index was identified in the audited Statistics Canada tables. NHPI remains the current national new-housing measure. The inactive six-CMA RPPI and active metro new-condominium indexes are published separately and are not spliced into one history.
+
+## Remaining Gaps
+
+No directly published national quarterly real disposable-income-per-person series with the required history was identified. Ontario quarterly household income is available only through newer distributional household-account products with shorter coverage and a different analytical construction, so it is not mixed with the national accounts denominator in this release. A consistent monthly permanent-employee wage history was not added; the LFS all-employee hourly wage remains the primary wage measure and SEPH weekly earnings are a separate confirmation series.
+
+## Later Classifier Candidates
+
+The generated metadata marks, but does not evaluate, candidate evidence for food prices outgrowing disposable income or wages; rent, shelter, and mortgage-interest costs outgrowing income; residential property prices diverging from income; declining real disposable income per person; and a falling saving rate alongside rising essential costs. Calibration and historical validation belong to a later classifier task.
+
+## Revisions And Vintages
+
+All histories are latest-vintage Statistics Canada observations retrieved at pipeline generation. Per-observation release dates are retained where supplied, but the project does not yet hold complete real-time vintages for national accounts, population, or LFS wages. National accounts and population can undergo historical revisions; current LFS wage estimates can also be revised and are composition-sensitive.
+"""
+    (root / "analysis" / "canadian_income_data_audit.md").write_text(audit, encoding="utf-8")
     _append_manifests(root, payload_groups)
     return [item for group in payload_groups.values() for item in group], transmission

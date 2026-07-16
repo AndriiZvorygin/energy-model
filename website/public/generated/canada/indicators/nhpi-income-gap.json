@@ -1,0 +1,978 @@
+{
+  "schemaVersion": 1,
+  "id": "nhpi-income-gap",
+  "field": "nhpi_income_gap",
+  "label": "Canada NHPI income-growth gap",
+  "description": "Quarterly new-house-price growth minus disposable-income-per-person growth.",
+  "definition": "Quarterly new-house-price growth minus disposable-income-per-person growth.",
+  "unit": "percentage points",
+  "frequency": "quarterly",
+  "status": "derived",
+  "layer": "Canadian purchasing power",
+  "geography": "Canada",
+  "geographyLevel": "national",
+  "domesticOrExternal": "domestic",
+  "directlyComparableAcrossCountries": false,
+  "comparisonLimitations": "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels.",
+  "interpretationDirection": "up-is-stressful",
+  "interpretationLabel": "Easing",
+  "interpretation": "A rising affordability ratio or growth gap means the documented cost is increasing relative to income or wages.",
+  "source": "Derived from Derived from Statistics Canada; Derived from Statistics Canada; Statistics Canada",
+  "sourceUrl": "https://www150.statcan.gc.ca/t1/wds/rest/getSeriesInfoFromVector",
+  "sourceIdentifier": "CA_NHPI_INCOME_GAP",
+  "sourceDate": "2026-06-17",
+  "retrievalDate": "2026-07-16T14:52:20+00:00",
+  "revisionStatus": "Derived difference. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0205-01 may revise recent and historical observations; classifications and baskets follow the native table. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations.",
+  "seasonalAdjustment": "quarterly average of monthly observations",
+  "nominalOrReal": "derived",
+  "startDate": "1982-01-01",
+  "endDate": "2026-01-01",
+  "latest": {
+    "date": "2026-01-01",
+    "sourceDate": "2026-06-17",
+    "value": -4.483307315807816,
+    "previousValue": -3.765499319851129,
+    "oneYearChange": 0.38567019309929673,
+    "threeMonthChange": -0.7178079959566874,
+    "fourQuarterChange": 0.38567019309929673,
+    "monthOverMonthChange": -0.7178079959566874,
+    "yearOverYearPercentChange": -7.920968876807644,
+    "cumulativeChange": -41.01759871190123,
+    "historicalPercentile": 17.231638418079097,
+    "percentileSince2000": 9.047619047619047,
+    "distanceFromMedian": -3.0751781165397007,
+    "distanceFromPreviousPeakPercent": -134.2777408848401,
+    "momentumThreeMonth": -0.7178079959566874,
+    "momentumTwelveMonth": 0.38567019309929673,
+    "momentum": "falling"
+  },
+  "referenceRanges": {
+    "historicalMedian": -1.4081291992681155,
+    "p10": -6.172985704896125,
+    "p25": -3.622079920928012,
+    "p75": 1.5232969820783815,
+    "p90": 4.4201164651426526,
+    "minimum": -13.856956188856007,
+    "maximum": 13.07935470680517
+  },
+  "observations": [
+    {
+      "date": "1982-01-01",
+      "value": -7.601093237810309,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1982-04-01",
+      "value": -11.880939692169733,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1982-07-01",
+      "value": -13.856956188856007,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1982-10-01",
+      "value": -10.158860693866036,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1983-01-01",
+      "value": -7.672416884184385,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1983-04-01",
+      "value": -6.035129963694363,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1983-07-01",
+      "value": -9.20275356102509,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1983-10-01",
+      "value": -8.16537554498975,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1984-01-01",
+      "value": -6.543871524424372,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1984-04-01",
+      "value": -9.499151843812914,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1984-07-01",
+      "value": -4.587618126487336,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1984-10-01",
+      "value": -7.502633587325036,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1985-01-01",
+      "value": -8.817769145140609,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1985-04-01",
+      "value": -9.247755405176417,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1985-07-01",
+      "value": -6.379769316698769,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1985-10-01",
+      "value": -4.183245042740946,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1986-01-01",
+      "value": -1.5178775050887827,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1986-04-01",
+      "value": 3.102889293589439,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1986-07-01",
+      "value": 5.161427131098217,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1986-10-01",
+      "value": 8.1249484477814,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1987-01-01",
+      "value": 7.8949616567751235,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1987-04-01",
+      "value": 12.630364365355895,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1987-07-01",
+      "value": 7.678348618557873,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1987-10-01",
+      "value": 5.749148208455756,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1988-01-01",
+      "value": 5.48803823051045,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1988-04-01",
+      "value": 1.2519854307271086,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1988-07-01",
+      "value": 2.566151067463495,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1988-10-01",
+      "value": 2.5637994694452484,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1989-01-01",
+      "value": 4.5073857923508385,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1989-04-01",
+      "value": 4.273901972837702,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1989-07-01",
+      "value": 7.901377649723806,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1989-10-01",
+      "value": 7.024671559446038,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1990-01-01",
+      "value": 2.848050865298113,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1990-04-01",
+      "value": 4.648418598648096,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1990-07-01",
+      "value": -3.397703970343058,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1990-10-01",
+      "value": -7.9867962608839775,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1991-01-01",
+      "value": -11.013759408422462,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1991-04-01",
+      "value": -12.215382067067882,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1991-07-01",
+      "value": -8.334073586368373,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1991-10-01",
+      "value": -5.371540243897899,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1992-01-01",
+      "value": -0.19102226305958148,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1992-04-01",
+      "value": -2.816607489026701,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1992-07-01",
+      "value": -3.965301466615312,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1992-10-01",
+      "value": -0.914711028004378,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1993-01-01",
+      "value": -2.2418990269991834,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1993-04-01",
+      "value": -4.217315498430141,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1993-07-01",
+      "value": 1.980730615803239,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1993-10-01",
+      "value": 0.7768962125641377,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1994-01-01",
+      "value": -0.4836085908847654,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1994-04-01",
+      "value": 1.9959606612491743,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1994-07-01",
+      "value": -1.1855891137322772,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1994-10-01",
+      "value": -3.0947063883594472,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1995-01-01",
+      "value": -1.9777331828180644,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1995-04-01",
+      "value": -2.3699578605770433,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1995-07-01",
+      "value": -2.864392989661524,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1995-10-01",
+      "value": -2.9472645204145387,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1996-01-01",
+      "value": -3.393120925381632,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1996-04-01",
+      "value": -2.999005973059754,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1996-07-01",
+      "value": -3.1126520302950267,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1996-10-01",
+      "value": -2.5258863400418496,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1997-01-01",
+      "value": -1.7896708725005928,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1997-04-01",
+      "value": -0.9224661358891328,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1997-07-01",
+      "value": -3.3251639599389815,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1997-10-01",
+      "value": -3.0222835054964037,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1998-01-01",
+      "value": -2.7049716600588525,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1998-04-01",
+      "value": -2.904798771480932,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1998-07-01",
+      "value": -2.4690390551977304,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1998-10-01",
+      "value": -3.5103109362083718,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1999-01-01",
+      "value": -3.702128388379866,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1999-04-01",
+      "value": -5.011095068584859,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1999-07-01",
+      "value": -3.499721599278871,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "1999-10-01",
+      "value": -2.344874613481762,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "2000-01-01",
+      "value": -2.742993435574137,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "2000-04-01",
+      "value": -2.20831185201138,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "2000-07-01",
+      "value": -2.9955395059987566,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "2000-10-01",
+      "value": -3.4832086770689052,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "2001-01-01",
+      "value": -5.416001497831746,
+      "sourceDate": "2022-01-05"
+    },
+    {
+      "date": "2001-04-01",
+      "value": -1.3121183129009673,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2001-07-01",
+      "value": -1.6135576185937417,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2001-10-01",
+      "value": -0.9655335179974633,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2002-01-01",
+      "value": 1.1464427239302521,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2002-04-01",
+      "value": -0.36538678359079313,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2002-07-01",
+      "value": 0.7646481865591026,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2002-10-01",
+      "value": 1.5232969820783815,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2003-01-01",
+      "value": 1.3984966885147276,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2003-04-01",
+      "value": 1.7343994091806314,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2003-07-01",
+      "value": 3.466801455773827,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2003-10-01",
+      "value": 3.4506490923031263,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2004-01-01",
+      "value": 3.7641346827820943,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2004-04-01",
+      "value": 1.5118287512860595,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2004-07-01",
+      "value": 0.7243156095786851,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2004-10-01",
+      "value": 0.8018550126724255,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2005-01-01",
+      "value": 2.2420641958154297,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2005-04-01",
+      "value": 1.9973567210584298,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2005-07-01",
+      "value": 2.5084790717569527,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2005-10-01",
+      "value": 2.146736460840848,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2006-01-01",
+      "value": 0.17375071923757535,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2006-04-01",
+      "value": 4.4939841874021225,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2006-07-01",
+      "value": 4.92471290351828,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2006-10-01",
+      "value": 4.370871316969671,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2007-01-01",
+      "value": 3.9394056398603716,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2007-04-01",
+      "value": 2.90726468182565,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2007-07-01",
+      "value": 3.5618142618562443,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2007-10-01",
+      "value": 3.102915083700708,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2008-01-01",
+      "value": 3.475567204055352,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2008-04-01",
+      "value": -0.4444446940832014,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2008-07-01",
+      "value": -3.914953307272784,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2008-10-01",
+      "value": -3.359297564097097,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2009-01-01",
+      "value": -3.5487458248816384,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2009-04-01",
+      "value": -3.857459883352199,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2009-07-01",
+      "value": -3.690842767139546,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2009-10-01",
+      "value": -3.8122938809402873,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2010-01-01",
+      "value": -4.3175410883276255,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2010-04-01",
+      "value": -0.4788501167863224,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2010-07-01",
+      "value": -0.20163458559741,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2010-10-01",
+      "value": -1.1729025590931696,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2011-01-01",
+      "value": 0.27504220925353984,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2011-04-01",
+      "value": -1.3806550896853231,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2011-07-01",
+      "value": -0.4686386298750733,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2011-10-01",
+      "value": -0.37778692882997067,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2012-01-01",
+      "value": -0.6174901947420208,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2012-04-01",
+      "value": -0.7308414285062126,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2012-07-01",
+      "value": -1.082470855729345,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2012-10-01",
+      "value": 0.037943324362599284,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2013-01-01",
+      "value": -1.544208997882368,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2013-04-01",
+      "value": -1.9111621231652665,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2013-07-01",
+      "value": -1.3263061789261954,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2013-10-01",
+      "value": -2.0521152914672935,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2014-01-01",
+      "value": -0.4603350574992948,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2014-04-01",
+      "value": -0.4079474453712928,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2014-07-01",
+      "value": -1.506822918436379,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2014-10-01",
+      "value": -0.4965241323226621,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2015-01-01",
+      "value": -2.3926493851456954,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2015-04-01",
+      "value": -3.0446745045296986,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2015-07-01",
+      "value": -1.9868268347300155,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2015-10-01",
+      "value": -1.6893412216187897,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2016-01-01",
+      "value": 3.5121803234618665,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2016-04-01",
+      "value": 3.4262062082020095,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2016-07-01",
+      "value": 3.516412538179825,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2016-10-01",
+      "value": 2.841072772720654,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2017-01-01",
+      "value": -0.05532727618990929,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2017-04-01",
+      "value": 0.5381037252835119,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2017-07-01",
+      "value": -0.425198571555474,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2017-10-01",
+      "value": -0.6490463051042283,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2018-01-01",
+      "value": -0.8675946277185487,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2018-04-01",
+      "value": -0.6716565308831912,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2018-07-01",
+      "value": 0.2182612470711387,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2018-10-01",
+      "value": -0.8030801532463938,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2019-01-01",
+      "value": -1.4081291992681155,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2019-04-01",
+      "value": -3.33596563160935,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2019-07-01",
+      "value": -3.9935631399277915,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2019-10-01",
+      "value": -3.53051382774221,
+      "sourceDate": "2023-09-27"
+    },
+    {
+      "date": "2020-01-01",
+      "value": -3.6035633822550928,
+      "sourceDate": "2023-11-30"
+    },
+    {
+      "date": "2020-04-01",
+      "value": -11.140225375079881,
+      "sourceDate": "2023-11-30"
+    },
+    {
+      "date": "2020-07-01",
+      "value": -4.739703545652607,
+      "sourceDate": "2023-11-30"
+    },
+    {
+      "date": "2020-10-01",
+      "value": -0.6533692488240872,
+      "sourceDate": "2023-11-30"
+    },
+    {
+      "date": "2021-01-01",
+      "value": -1.0678299543611214,
+      "sourceDate": "2024-11-29"
+    },
+    {
+      "date": "2021-04-01",
+      "value": 13.07935470680517,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2021-07-01",
+      "value": 9.172449891933043,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2021-10-01",
+      "value": 9.431642271314299,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2022-01-01",
+      "value": 10.326366464582048,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2022-04-01",
+      "value": 5.651088877293198,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2022-07-01",
+      "value": 4.260099485684887,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2022-10-01",
+      "value": -2.035930650146267,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2023-01-01",
+      "value": -1.4453415364312105,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2023-04-01",
+      "value": -3.720299765803159,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2023-07-01",
+      "value": -5.746478022428492,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2023-10-01",
+      "value": -3.622079920928012,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2024-01-01",
+      "value": -4.729505118198696,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2024-04-01",
+      "value": -4.628640775442228,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2024-07-01",
+      "value": -4.599438158510338,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2024-10-01",
+      "value": -4.838584985421335,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2025-01-01",
+      "value": -4.868977508907113,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2025-04-01",
+      "value": -3.6352378416482867,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2025-07-01",
+      "value": -3.075825944371291,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2025-10-01",
+      "value": -3.765499319851129,
+      "sourceDate": "2026-06-17"
+    },
+    {
+      "date": "2026-01-01",
+      "value": -4.483307315807816,
+      "sourceDate": "2026-06-17"
+    }
+  ],
+  "transformations": [
+    "raw",
+    "indexed",
+    "yoy",
+    "pct_change",
+    "zscore"
+  ],
+  "confirmingIndicators": [],
+  "conflictingIndicators": [],
+  "evidenceChecks": [],
+  "confidenceLevel": "medium",
+  "evidenceLabel": "Contextual indicator",
+  "calculation": {
+    "formula": "NHPI YoY - disposable income per person YoY",
+    "explanation": "Quarterly new-house-price growth minus disposable-income-per-person growth.",
+    "example": "Latest observation: -4.48 percentage points at 2026-01."
+  },
+  "components": [
+    "new-housing-price-index",
+    "household-disposable-income-per-person"
+  ],
+  "referencePeriod": null,
+  "limitations": [
+    "Derived difference. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0205-01 may revise recent and historical observations; classifications and baskets follow the native table. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations.",
+    "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+  ],
+  "futureClassifierMetadata": {
+    "status": "Not yet evaluated",
+    "candidateSymptoms": [
+      "residential property prices diverging from income"
+    ]
+  },
+  "generatedAt": "2026-07-16T14:52:20+00:00"
+}

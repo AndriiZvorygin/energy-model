@@ -28,6 +28,25 @@ describe('affordability evidence', () => {
     expect(chart.availableTransformations).toContain('indexed')
   })
 
+  it('publishes quarterly income ratios without monthly forward filling', () => {
+    const income = JSON.parse(readFileSync(resolve(generated, 'canada/indicators/household-disposable-income-per-person.json'), 'utf8'))
+    const food = JSON.parse(readFileSync(resolve(generated, 'canada/indicators/food-to-income.json'), 'utf8'))
+    expect(income.frequency).toBe('quarterly')
+    expect(food.frequency).toBe('quarterly')
+    expect(food.referencePeriod).toBe('2017-01-01')
+    expect(food.components).toEqual(['food-cpi', 'household-disposable-income-per-person'])
+    expect(food.futureClassifierMetadata.status).toBe('Not yet evaluated')
+    expect(food.observations.every((row: { date: string }) => ['01', '04', '07', '10'].includes(row.date.slice(5, 7)))).toBe(true)
+  })
+
+  it('keeps monthly wages distinct from quarterly household income', () => {
+    const wage = JSON.parse(readFileSync(resolve(generated, 'canada/indicators/average-hourly-wages.json'), 'utf8'))
+    const income = JSON.parse(readFileSync(resolve(generated, 'canada/indicators/real-disposable-income-per-person.json'), 'utf8'))
+    expect(wage.frequency).toBe('monthly')
+    expect(income.frequency).toBe('quarterly')
+    expect(wage.sourceIdentifier).not.toBe(income.sourceIdentifier)
+  })
+
   it('renders the affordability observatory entry point', () => {
     vi.stubGlobal('fetch', vi.fn(() => new Promise(() => undefined)))
     render(<MemoryRouter><Affordability /></MemoryRouter>)

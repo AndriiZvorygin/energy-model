@@ -52,6 +52,8 @@ REQUIRED_ANALYSIS = [
     "analysis/food_housing_affordability_findings.md",
     "analysis/food_housing_indicator_catalogue.csv",
     "analysis/food_price_transmission_summary.csv",
+    "analysis/canadian_income_data_audit.md",
+    "analysis/canadian_income_indicator_catalogue.csv",
 ]
 
 REQUIRED_CHARTS = [
@@ -164,6 +166,17 @@ REQUIRED_DATA = [
     "website/public/generated/affordability-us-housing.json",
     "website/public/generated/affordability-real-house-prices.json",
     "website/public/generated/food-transmission-analysis.json",
+    "website/public/generated/canada/indicators/household-disposable-income-per-person.json",
+    "website/public/generated/canada/indicators/real-disposable-income-per-person.json",
+    "website/public/generated/canada/indicators/average-hourly-wages.json",
+    "website/public/generated/canada/indicators/ontario-average-hourly-wages.json",
+    "website/public/generated/canada/indicators/food-to-income.json",
+    "website/public/generated/canada/indicators/rent-to-income.json",
+    "website/public/generated/canada/indicators/mortgage-interest-to-income.json",
+    "website/public/generated/canada/indicators/nhpi-to-income.json",
+    "website/public/generated/affordability-canada-purchasing-power.json",
+    "website/public/generated/affordability-canada-food-income.json",
+    "website/public/generated/affordability-canada-housing-ratios.json",
     "website/public/generated/canada/indicators/canada-unemployment-rate.json",
     "website/public/generated/canada/indicators/ontario-unemployment-rate.json",
 ]

@@ -1,0 +1,1695 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "affordability-canada-housing-ratios",
+  "title": "Canadian housing affordability ratios",
+  "description": "Each ratio uses the same fixed 2017 Q1 reference and is published separately; there is no combined housing-stress score.",
+  "plainLanguageSummary": "Each ratio uses the same fixed 2017 Q1 reference and is published separately; there is no combined housing-stress score.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "explanation": "Each ratio uses the same fixed 2017 Q1 reference and is published separately; there is no combined housing-stress score.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "Each ratio uses the same fixed 2017 Q1 reference and is published separately; there is no combined housing-stress score."
+  ],
+  "sourceNotes": [
+    "Derived from Derived from Statistics Canada; Derived from Statistics Canada; Statistics Canada"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "NHPI_to_income": {
+        "mean": 100.32772889386816,
+        "standardDeviation": 3.778713650617343,
+        "n": 80
+      },
+      "Rent_to_income": {
+        "mean": 112.30923944315938,
+        "standardDeviation": 12.401663498575635,
+        "n": 80
+      },
+      "Shelter_to_income": {
+        "mean": 106.10614320394669,
+        "standardDeviation": 6.470343604988996,
+        "n": 80
+      },
+      "Mortgage_interest_to_income": {
+        "mean": 127.12573898177837,
+        "standardDeviation": 20.43793780704858,
+        "n": 80
+      }
+    }
+  },
+  "frequency": "quarterly",
+  "dateRange": {
+    "start": "1971-01-01",
+    "end": "2026-01-01"
+  },
+  "series": [
+    {
+      "key": "NHPI_to_income",
+      "label": "Canada new-house-price-to-income index",
+      "unit": "index",
+      "source": "Derived from Derived from Statistics Canada; Derived from Statistics Canada; Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Rent_to_income",
+      "label": "Canada rent-to-income index",
+      "unit": "index",
+      "source": "Derived from Derived from Statistics Canada; Derived from Statistics Canada; Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Shelter_to_income",
+      "label": "Canada shelter-to-income index",
+      "unit": "index",
+      "source": "Derived from Derived from Statistics Canada; Derived from Statistics Canada; Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "Mortgage_interest_to_income",
+      "label": "Canada mortgage-interest-to-income index",
+      "unit": "index",
+      "source": "Derived from Derived from Statistics Canada; Derived from Statistics Canada; Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1971-01-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 347.76779194688015,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 249.97738523904513
+    },
+    {
+      "date": "1971-04-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 342.5968891663946,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 253.8654651373364
+    },
+    {
+      "date": "1971-07-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 340.49584078132983,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 257.45971022964466
+    },
+    {
+      "date": "1971-10-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 332.52874199879585,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 254.38890523934478
+    },
+    {
+      "date": "1972-01-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 321.5538213424734,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 250.3142895769527
+    },
+    {
+      "date": "1972-04-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 314.0724718796307,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 248.81768040453082
+    },
+    {
+      "date": "1972-07-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 307.94652687127063,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 247.22922617123334
+    },
+    {
+      "date": "1972-10-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 296.7488349797816,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 246.76929936907044
+    },
+    {
+      "date": "1973-01-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 289.3933992595514,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 247.26428601470056
+    },
+    {
+      "date": "1973-04-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 277.91774193542074,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 241.40218703720797
+    },
+    {
+      "date": "1973-07-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 269.2273833075509,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 239.01877546587232
+    },
+    {
+      "date": "1973-10-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 258.2167723762826,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 234.34901964157453
+    },
+    {
+      "date": "1974-01-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 248.73784185875303,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 231.81867937062523
+    },
+    {
+      "date": "1974-04-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 249.2873374698471,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 237.18407680668454
+    },
+    {
+      "date": "1974-07-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 237.41187273724915,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 231.77154584588507
+    },
+    {
+      "date": "1974-10-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 231.84034918324463,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 233.60226880657717
+    },
+    {
+      "date": "1975-01-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 228.57134426722286,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 235.97869056968358
+    },
+    {
+      "date": "1975-04-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 223.59807479625755,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 234.51630629250295
+    },
+    {
+      "date": "1975-07-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 218.4916268844472,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 230.79219249142199
+    },
+    {
+      "date": "1975-10-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 218.9349916613791,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 234.19637991549186
+    },
+    {
+      "date": "1976-01-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 218.02717988791358,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 237.25235534765366
+    },
+    {
+      "date": "1976-04-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 209.67411839568007,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 234.49568018076317
+    },
+    {
+      "date": "1976-07-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 218.0630046949782,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 247.01312243868324
+    },
+    {
+      "date": "1976-10-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 212.69940586588982,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 244.67671626958006
+    },
+    {
+      "date": "1977-01-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 212.9824692475778,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 248.22628697881137
+    },
+    {
+      "date": "1977-04-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 207.3164425240755,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 243.14949607825778
+    },
+    {
+      "date": "1977-07-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 209.79207362931348,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 246.77140504186443
+    },
+    {
+      "date": "1977-10-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 207.58065491058855,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 245.0445944044562
+    },
+    {
+      "date": "1978-01-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 199.38726305517662,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 237.4444736260506
+    },
+    {
+      "date": "1978-04-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 199.00815097908983,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 239.92504651809585
+    },
+    {
+      "date": "1978-07-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 198.6034464252097,
+      "Shelter_to_income": null,
+      "Mortgage_interest_to_income": 240.50778942722982
+    },
+    {
+      "date": "1978-10-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 195.26540741838107,
+      "Shelter_to_income": 148.4769864317899,
+      "Mortgage_interest_to_income": 237.18500979508457
+    },
+    {
+      "date": "1979-01-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 193.2712807525707,
+      "Shelter_to_income": 147.77171193421108,
+      "Mortgage_interest_to_income": 236.30152143046396
+    },
+    {
+      "date": "1979-04-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 185.39190221998595,
+      "Shelter_to_income": 141.8869615247416,
+      "Mortgage_interest_to_income": 227.67637037433403
+    },
+    {
+      "date": "1979-07-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 186.08690860750875,
+      "Shelter_to_income": 142.66618526783893,
+      "Mortgage_interest_to_income": 227.44159330523644
+    },
+    {
+      "date": "1979-10-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 182.09543623562595,
+      "Shelter_to_income": 140.51208837795423,
+      "Mortgage_interest_to_income": 223.91361237841474
+    },
+    {
+      "date": "1980-01-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 179.8407007745754,
+      "Shelter_to_income": 140.1331943703921,
+      "Mortgage_interest_to_income": 224.9727450773996
+    },
+    {
+      "date": "1980-04-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 176.3512698097879,
+      "Shelter_to_income": 138.82095465073994,
+      "Mortgage_interest_to_income": 226.86785023965342
+    },
+    {
+      "date": "1980-07-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 174.51384635313718,
+      "Shelter_to_income": 137.7295617591978,
+      "Mortgage_interest_to_income": 226.600981774474
+    },
+    {
+      "date": "1980-10-01",
+      "NHPI_to_income": null,
+      "Rent_to_income": 170.13260850256523,
+      "Shelter_to_income": 135.89251290964242,
+      "Mortgage_interest_to_income": 223.6787823665583
+    },
+    {
+      "date": "1981-01-01",
+      "NHPI_to_income": 150.71908629002561,
+      "Rent_to_income": 164.36073005608134,
+      "Shelter_to_income": 134.4312197509646,
+      "Mortgage_interest_to_income": 222.0172723646864
+    },
+    {
+      "date": "1981-04-01",
+      "NHPI_to_income": 153.24781005035163,
+      "Rent_to_income": 162.21374799329584,
+      "Shelter_to_income": 135.27061622800312,
+      "Mortgage_interest_to_income": 226.2261263091288
+    },
+    {
+      "date": "1981-07-01",
+      "NHPI_to_income": 150.77423195171494,
+      "Rent_to_income": 162.57856374044863,
+      "Shelter_to_income": 137.77750213520528,
+      "Mortgage_interest_to_income": 235.17535175129393
+    },
+    {
+      "date": "1981-10-01",
+      "NHPI_to_income": 145.55819426929486,
+      "Rent_to_income": 162.09847685166602,
+      "Shelter_to_income": 139.38525844462023,
+      "Mortgage_interest_to_income": 244.77528575022737
+    },
+    {
+      "date": "1982-01-01",
+      "NHPI_to_income": 140.4419576583988,
+      "Rent_to_income": 159.07088684538587,
+      "Shelter_to_income": 139.010446601985,
+      "Mortgage_interest_to_income": 248.3898504143212
+    },
+    {
+      "date": "1982-04-01",
+      "NHPI_to_income": 136.66859784221822,
+      "Rent_to_income": 160.26747010948935,
+      "Shelter_to_income": 140.79531095899216,
+      "Mortgage_interest_to_income": 258.029311412433
+    },
+    {
+      "date": "1982-07-01",
+      "NHPI_to_income": 131.65208137683388,
+      "Rent_to_income": 162.97675326142843,
+      "Shelter_to_income": 142.3805989822167,
+      "Mortgage_interest_to_income": 266.04709924678804
+    },
+    {
+      "date": "1982-10-01",
+      "NHPI_to_income": 131.4342972380091,
+      "Rent_to_income": 170.19572872678143,
+      "Shelter_to_income": 149.08347307355382,
+      "Mortgage_interest_to_income": 279.2335686261465
+    },
+    {
+      "date": "1983-01-01",
+      "NHPI_to_income": 129.8561577733578,
+      "Rent_to_income": 170.86413681378417,
+      "Shelter_to_income": 149.73884756072775,
+      "Mortgage_interest_to_income": 281.12637618567584
+    },
+    {
+      "date": "1983-04-01",
+      "NHPI_to_income": 128.53479102487154,
+      "Rent_to_income": 171.0975597640012,
+      "Shelter_to_income": 150.09699768574328,
+      "Mortgage_interest_to_income": 280.771882232991
+    },
+    {
+      "date": "1983-07-01",
+      "NHPI_to_income": 120.34359119070191,
+      "Rent_to_income": 162.50940198812,
+      "Shelter_to_income": 141.68823753896092,
+      "Mortgage_interest_to_income": 262.7548052986145
+    },
+    {
+      "date": "1983-10-01",
+      "NHPI_to_income": 121.48012320719846,
+      "Rent_to_income": 166.91268201605527,
+      "Shelter_to_income": 144.73924007729593,
+      "Mortgage_interest_to_income": 266.27682759471105
+    },
+    {
+      "date": "1984-01-01",
+      "NHPI_to_income": 121.91326991279243,
+      "Rent_to_income": 168.59271823953316,
+      "Shelter_to_income": 146.43201961835996,
+      "Mortgage_interest_to_income": 266.31534442852575
+    },
+    {
+      "date": "1984-04-01",
+      "NHPI_to_income": 117.49110057365945,
+      "Rent_to_income": 163.02991971438044,
+      "Shelter_to_income": 141.37589910934693,
+      "Mortgage_interest_to_income": 256.15874709328654
+    },
+    {
+      "date": "1984-07-01",
+      "NHPI_to_income": 115.0737104448446,
+      "Rent_to_income": 162.74932327422013,
+      "Shelter_to_income": 139.95786825185104,
+      "Mortgage_interest_to_income": 254.15332639755715
+    },
+    {
+      "date": "1984-10-01",
+      "NHPI_to_income": 112.98811453252779,
+      "Rent_to_income": 162.36685851904826,
+      "Shelter_to_income": 140.00891041476098,
+      "Mortgage_interest_to_income": 251.97696243177302
+    },
+    {
+      "date": "1985-01-01",
+      "NHPI_to_income": 112.03434041198283,
+      "Rent_to_income": 161.6100206981096,
+      "Shelter_to_income": 139.5077731472668,
+      "Mortgage_interest_to_income": 249.99931369870765
+    },
+    {
+      "date": "1985-04-01",
+      "NHPI_to_income": 107.54555106227147,
+      "Rent_to_income": 155.6183280943224,
+      "Shelter_to_income": 134.40948042818735,
+      "Mortgage_interest_to_income": 240.42621027966487
+    },
+    {
+      "date": "1985-07-01",
+      "NHPI_to_income": 108.26795407993653,
+      "Rent_to_income": 157.0818699275253,
+      "Shelter_to_income": 134.59143340969962,
+      "Mortgage_interest_to_income": 238.52746405868703
+    },
+    {
+      "date": "1985-10-01",
+      "NHPI_to_income": 108.59246332231724,
+      "Rent_to_income": 157.2907969020427,
+      "Shelter_to_income": 134.45681617329572,
+      "Mortgage_interest_to_income": 234.69610526420854
+    },
+    {
+      "date": "1986-01-01",
+      "NHPI_to_income": 110.44952404444273,
+      "Rent_to_income": 156.9130317853999,
+      "Shelter_to_income": 134.01833675771735,
+      "Mortgage_interest_to_income": 231.82644994766844
+    },
+    {
+      "date": "1986-04-01",
+      "NHPI_to_income": 110.73901272649721,
+      "Rent_to_income": 155.18857565197226,
+      "Shelter_to_income": 131.90518050761494,
+      "Mortgage_interest_to_income": 227.80508501242454
+    },
+    {
+      "date": "1986-07-01",
+      "NHPI_to_income": 113.63672397251895,
+      "Rent_to_income": 157.10514523933165,
+      "Shelter_to_income": 132.65128167869574,
+      "Mortgage_interest_to_income": 227.67267192555263
+    },
+    {
+      "date": "1986-10-01",
+      "NHPI_to_income": 117.12052697316507,
+      "Rent_to_income": 158.0376341528926,
+      "Shelter_to_income": 134.06912320278457,
+      "Mortgage_interest_to_income": 226.67425704029935
+    },
+    {
+      "date": "1987-01-01",
+      "NHPI_to_income": 118.75844628737535,
+      "Rent_to_income": 155.15474201996602,
+      "Shelter_to_income": 132.2165514819487,
+      "Mortgage_interest_to_income": 221.91895463437345
+    },
+    {
+      "date": "1987-04-01",
+      "NHPI_to_income": 124.335152425603,
+      "Rent_to_income": 156.50441148268945,
+      "Shelter_to_income": 134.0208106142411,
+      "Mortgage_interest_to_income": 223.06151937552184
+    },
+    {
+      "date": "1987-07-01",
+      "NHPI_to_income": 121.79454860386276,
+      "Rent_to_income": 152.1790674801392,
+      "Shelter_to_income": 130.15276402526035,
+      "Mortgage_interest_to_income": 215.64802063452547
+    },
+    {
+      "date": "1987-10-01",
+      "NHPI_to_income": 123.44057016835718,
+      "Rent_to_income": 153.6202392785278,
+      "Shelter_to_income": 132.08108363821876,
+      "Mortgage_interest_to_income": 217.420429607168
+    },
+    {
+      "date": "1988-01-01",
+      "NHPI_to_income": 125.01303773311376,
+      "Rent_to_income": 154.236063634745,
+      "Shelter_to_income": 132.92495532011705,
+      "Mortgage_interest_to_income": 218.51313662417743
+    },
+    {
+      "date": "1988-04-01",
+      "NHPI_to_income": 125.77711769039098,
+      "Rent_to_income": 150.27476712273756,
+      "Shelter_to_income": 129.63638031123574,
+      "Mortgage_interest_to_income": 213.25380853907308
+    },
+    {
+      "date": "1988-07-01",
+      "NHPI_to_income": 124.70353062606446,
+      "Rent_to_income": 147.421213673714,
+      "Shelter_to_income": 126.5598381955671,
+      "Mortgage_interest_to_income": 208.4155845141368
+    },
+    {
+      "date": "1988-10-01",
+      "NHPI_to_income": 126.32621676893551,
+      "Rent_to_income": 146.62524613419654,
+      "Shelter_to_income": 126.06849967778884,
+      "Mortgage_interest_to_income": 206.7472631995928
+    },
+    {
+      "date": "1989-01-01",
+      "NHPI_to_income": 130.08847373402017,
+      "Rent_to_income": 146.01326717500956,
+      "Shelter_to_income": 126.05091959780991,
+      "Mortgage_interest_to_income": 208.57562138739257
+    },
+    {
+      "date": "1989-04-01",
+      "NHPI_to_income": 130.65208740228775,
+      "Rent_to_income": 143.79963594118908,
+      "Shelter_to_income": 124.63019172531074,
+      "Mortgage_interest_to_income": 210.3506253509997
+    },
+    {
+      "date": "1989-07-01",
+      "NHPI_to_income": 134.10249300178285,
+      "Rent_to_income": 148.45694953012958,
+      "Shelter_to_income": 128.1809903297563,
+      "Mortgage_interest_to_income": 220.84657495661327
+    },
+    {
+      "date": "1989-10-01",
+      "NHPI_to_income": 134.90898326808582,
+      "Rent_to_income": 148.83546055194165,
+      "Shelter_to_income": 129.32573372115797,
+      "Mortgage_interest_to_income": 224.92122391986203
+    },
+    {
+      "date": "1990-01-01",
+      "NHPI_to_income": 133.63161124502807,
+      "Rent_to_income": 145.9295968773024,
+      "Shelter_to_income": 128.11469321577218,
+      "Mortgage_interest_to_income": 224.68705974346307
+    },
+    {
+      "date": "1990-04-01",
+      "NHPI_to_income": 136.80044255848566,
+      "Rent_to_income": 151.6305410926431,
+      "Shelter_to_income": 133.48794963780966,
+      "Mortgage_interest_to_income": 238.59285573072083
+    },
+    {
+      "date": "1990-07-01",
+      "NHPI_to_income": 129.68392290793324,
+      "Rent_to_income": 149.4353551482716,
+      "Shelter_to_income": 130.63732349955356,
+      "Mortgage_interest_to_income": 240.97174501595134
+    },
+    {
+      "date": "1990-10-01",
+      "NHPI_to_income": 124.51384128795341,
+      "Rent_to_income": 148.98558178838033,
+      "Shelter_to_income": 131.38093190401435,
+      "Mortgage_interest_to_income": 244.34424066762327
+    },
+    {
+      "date": "1991-01-01",
+      "NHPI_to_income": 119.20321083639212,
+      "Rent_to_income": 148.45911719391708,
+      "Shelter_to_income": 132.55245387121374,
+      "Mortgage_interest_to_income": 245.75244275244984
+    },
+    {
+      "date": "1991-04-01",
+      "NHPI_to_income": 120.66712056477094,
+      "Rent_to_income": 151.63270093013594,
+      "Shelter_to_income": 134.73614831045464,
+      "Mortgage_interest_to_income": 250.4190741889568
+    },
+    {
+      "date": "1991-07-01",
+      "NHPI_to_income": 119.13697452561901,
+      "Rent_to_income": 150.68944966530375,
+      "Shelter_to_income": 133.56046976474153,
+      "Mortgage_interest_to_income": 245.4093726486815
+    },
+    {
+      "date": "1991-10-01",
+      "NHPI_to_income": 117.93744826794449,
+      "Rent_to_income": 150.9728039410141,
+      "Shelter_to_income": 133.94426443895813,
+      "Mortgage_interest_to_income": 242.2399866692204
+    },
+    {
+      "date": "1992-01-01",
+      "NHPI_to_income": 118.97431522242579,
+      "Rent_to_income": 153.53013871837211,
+      "Shelter_to_income": 136.0950758346392,
+      "Mortgage_interest_to_income": 241.77576387566586
+    },
+    {
+      "date": "1992-04-01",
+      "NHPI_to_income": 117.36150755377663,
+      "Rent_to_income": 151.69750427006664,
+      "Shelter_to_income": 133.58968706941363,
+      "Mortgage_interest_to_income": 236.0093938561544
+    },
+    {
+      "date": "1992-07-01",
+      "NHPI_to_income": 114.59560528785696,
+      "Rent_to_income": 148.62205056466854,
+      "Shelter_to_income": 130.3737976905314,
+      "Mortgage_interest_to_income": 226.5840854850421
+    },
+    {
+      "date": "1992-10-01",
+      "NHPI_to_income": 116.87408471661597,
+      "Rent_to_income": 152.59137703626863,
+      "Shelter_to_income": 134.0985445769381,
+      "Mortgage_interest_to_income": 226.43316711270987
+    },
+    {
+      "date": "1993-01-01",
+      "NHPI_to_income": 116.3926527126726,
+      "Rent_to_income": 152.29656102480791,
+      "Shelter_to_income": 133.73206804047175,
+      "Mortgage_interest_to_income": 223.42631892373998
+    },
+    {
+      "date": "1993-04-01",
+      "NHPI_to_income": 112.67907184358158,
+      "Rent_to_income": 146.78254650412453,
+      "Shelter_to_income": 128.45159513964666,
+      "Mortgage_interest_to_income": 212.01436398323753
+    },
+    {
+      "date": "1993-07-01",
+      "NHPI_to_income": 116.87819358937259,
+      "Rent_to_income": 152.61052234930352,
+      "Shelter_to_income": 132.89916150751506,
+      "Mortgage_interest_to_income": 215.74605713853745
+    },
+    {
+      "date": "1993-10-01",
+      "NHPI_to_income": 117.77839238416507,
+      "Rent_to_income": 154.92397372142088,
+      "Shelter_to_income": 134.96208723132773,
+      "Mortgage_interest_to_income": 214.49768262781288
+    },
+    {
+      "date": "1994-01-01",
+      "NHPI_to_income": 115.83737301006552,
+      "Rent_to_income": 152.9725615938559,
+      "Shelter_to_income": 132.7661255895356,
+      "Mortgage_interest_to_income": 205.79749343855923
+    },
+    {
+      "date": "1994-04-01",
+      "NHPI_to_income": 114.97253484680104,
+      "Rent_to_income": 152.39573938274563,
+      "Shelter_to_income": 131.1366439185331,
+      "Mortgage_interest_to_income": 201.37393436510163
+    },
+    {
+      "date": "1994-07-01",
+      "NHPI_to_income": 115.50635885709153,
+      "Rent_to_income": 153.5812933257376,
+      "Shelter_to_income": 132.11208956323424,
+      "Mortgage_interest_to_income": 203.90346733002
+    },
+    {
+      "date": "1994-10-01",
+      "NHPI_to_income": 114.23486491848543,
+      "Rent_to_income": 153.03469083297517,
+      "Shelter_to_income": 131.74620489899675,
+      "Mortgage_interest_to_income": 204.67905722509278
+    },
+    {
+      "date": "1995-01-01",
+      "NHPI_to_income": 113.58178415852095,
+      "Rent_to_income": 153.07833050171033,
+      "Shelter_to_income": 131.8367733218105,
+      "Mortgage_interest_to_income": 207.24189673801817
+    },
+    {
+      "date": "1995-04-01",
+      "NHPI_to_income": 112.28623400692993,
+      "Rent_to_income": 152.58305237746868,
+      "Shelter_to_income": 131.12306708221547,
+      "Mortgage_interest_to_income": 208.5553413966126
+    },
+    {
+      "date": "1995-07-01",
+      "NHPI_to_income": 112.2472942085113,
+      "Rent_to_income": 153.57611153691124,
+      "Shelter_to_income": 131.83541213533954,
+      "Mortgage_interest_to_income": 209.16005275372578
+    },
+    {
+      "date": "1995-10-01",
+      "NHPI_to_income": 110.90178473512523,
+      "Rent_to_income": 153.6740934970846,
+      "Shelter_to_income": 131.39413024830753,
+      "Mortgage_interest_to_income": 208.512505947456
+    },
+    {
+      "date": "1996-01-01",
+      "NHPI_to_income": 109.7719778959358,
+      "Rent_to_income": 153.26432371824316,
+      "Shelter_to_income": 130.85569528641082,
+      "Mortgage_interest_to_income": 206.28273691565454
+    },
+    {
+      "date": "1996-04-01",
+      "NHPI_to_income": 108.94000965167126,
+      "Rent_to_income": 153.613901825912,
+      "Shelter_to_income": 130.5843516267069,
+      "Mortgage_interest_to_income": 204.28260433864918
+    },
+    {
+      "date": "1996-07-01",
+      "NHPI_to_income": 108.7872457566469,
+      "Rent_to_income": 154.1380873210262,
+      "Shelter_to_income": 130.46312222940225,
+      "Mortgage_interest_to_income": 202.05830304702
+    },
+    {
+      "date": "1996-10-01",
+      "NHPI_to_income": 108.14055112703134,
+      "Rent_to_income": 153.34538363877627,
+      "Shelter_to_income": 129.85080651090112,
+      "Mortgage_interest_to_income": 197.4397595254936
+    },
+    {
+      "date": "1997-01-01",
+      "NHPI_to_income": 107.84082088690421,
+      "Rent_to_income": 152.5656958765947,
+      "Shelter_to_income": 129.05690335510602,
+      "Mortgage_interest_to_income": 192.27635290103456
+    },
+    {
+      "date": "1997-04-01",
+      "NHPI_to_income": 107.95313918825745,
+      "Rent_to_income": 152.53841831795617,
+      "Shelter_to_income": 128.66212378604516,
+      "Mortgage_interest_to_income": 188.93243392034103
+    },
+    {
+      "date": "1997-07-01",
+      "NHPI_to_income": 105.32288037379179,
+      "Rent_to_income": 149.156818339111,
+      "Shelter_to_income": 125.26782073254371,
+      "Mortgage_interest_to_income": 180.83337982624528
+    },
+    {
+      "date": "1997-10-01",
+      "NHPI_to_income": 105.00310058442835,
+      "Rent_to_income": 148.68116857509187,
+      "Shelter_to_income": 124.60579486979579,
+      "Mortgage_interest_to_income": 176.808912007413
+    },
+    {
+      "date": "1998-01-01",
+      "NHPI_to_income": 105.03022281555039,
+      "Rent_to_income": 148.46740150347725,
+      "Shelter_to_income": 124.16425387570155,
+      "Mortgage_interest_to_income": 174.59417813398744
+    },
+    {
+      "date": "1998-04-01",
+      "NHPI_to_income": 104.93399575024702,
+      "Rent_to_income": 148.38111757949864,
+      "Shelter_to_income": 124.05674936749966,
+      "Mortgage_interest_to_income": 174.36638727501344
+    },
+    {
+      "date": "1998-07-01",
+      "NHPI_to_income": 102.81152463839877,
+      "Rent_to_income": 145.4796207690692,
+      "Shelter_to_income": 121.46463965302966,
+      "Mortgage_interest_to_income": 170.53554132729434
+    },
+    {
+      "date": "1998-10-01",
+      "NHPI_to_income": 101.4707223703398,
+      "Rent_to_income": 143.95184212973402,
+      "Shelter_to_income": 120.59917755647491,
+      "Mortgage_interest_to_income": 168.38764833507432
+    },
+    {
+      "date": "1999-01-01",
+      "NHPI_to_income": 101.30208103562937,
+      "Rent_to_income": 143.75950307368467,
+      "Shelter_to_income": 120.40361742025691,
+      "Mortgage_interest_to_income": 167.40037070965838
+    },
+    {
+      "date": "1999-04-01",
+      "NHPI_to_income": 99.9519504440973,
+      "Rent_to_income": 141.97348443808664,
+      "Shelter_to_income": 118.8739110949117,
+      "Mortgage_interest_to_income": 164.97406189962524
+    },
+    {
+      "date": "1999-07-01",
+      "NHPI_to_income": 99.36274283700092,
+      "Rent_to_income": 140.76688305355935,
+      "Shelter_to_income": 118.17124542318109,
+      "Mortgage_interest_to_income": 163.51465159986805
+    },
+    {
+      "date": "1999-10-01",
+      "NHPI_to_income": 99.17905844601712,
+      "Rent_to_income": 139.91098034944747,
+      "Shelter_to_income": 118.05559085614802,
+      "Mortgage_interest_to_income": 163.3106983341335
+    },
+    {
+      "date": "2000-01-01",
+      "NHPI_to_income": 98.6449947573544,
+      "Rent_to_income": 138.76678401419235,
+      "Shelter_to_income": 118.14362112774194,
+      "Mortgage_interest_to_income": 163.76086693870218
+    },
+    {
+      "date": "2000-04-01",
+      "NHPI_to_income": 97.84121067780318,
+      "Rent_to_income": 137.18888178668163,
+      "Shelter_to_income": 117.09596785089865,
+      "Mortgage_interest_to_income": 163.92790610486935
+    },
+    {
+      "date": "2000-07-01",
+      "NHPI_to_income": 96.54055690899615,
+      "Rent_to_income": 135.0069341998687,
+      "Shelter_to_income": 116.20998224543523,
+      "Mortgage_interest_to_income": 163.46722848333675
+    },
+    {
+      "date": "2000-10-01",
+      "NHPI_to_income": 95.91803487864594,
+      "Rent_to_income": 133.72381297410612,
+      "Shelter_to_income": 116.86440186125392,
+      "Mortgage_interest_to_income": 163.43420720250066
+    },
+    {
+      "date": "2001-01-01",
+      "NHPI_to_income": 93.69687672407484,
+      "Rent_to_income": 130.3034508500242,
+      "Shelter_to_income": 113.52416268319847,
+      "Mortgage_interest_to_income": 160.0000124915924
+    },
+    {
+      "date": "2001-04-01",
+      "NHPI_to_income": 96.60778493937406,
+      "Rent_to_income": 133.7663648531231,
+      "Shelter_to_income": 118.43979530200855,
+      "Mortgage_interest_to_income": 163.73928974462353
+    },
+    {
+      "date": "2001-07-01",
+      "NHPI_to_income": 95.04966818962512,
+      "Rent_to_income": 131.3957484542433,
+      "Shelter_to_income": 115.82660649235439,
+      "Mortgage_interest_to_income": 159.86456550655285
+    },
+    {
+      "date": "2001-10-01",
+      "NHPI_to_income": 95.02497633991541,
+      "Rent_to_income": 131.34115390651692,
+      "Shelter_to_income": 114.26930132753363,
+      "Mortgage_interest_to_income": 157.85666617056557
+    },
+    {
+      "date": "2002-01-01",
+      "NHPI_to_income": 94.74913892785197,
+      "Rent_to_income": 130.04638668501704,
+      "Shelter_to_income": 113.06620404750078,
+      "Mortgage_interest_to_income": 153.49099331357235
+    },
+    {
+      "date": "2002-04-01",
+      "NHPI_to_income": 96.2695213674072,
+      "Rent_to_income": 130.63077522787006,
+      "Shelter_to_income": 112.96685130671658,
+      "Mortgage_interest_to_income": 152.19248503580712
+    },
+    {
+      "date": "2002-07-01",
+      "NHPI_to_income": 95.75242511223631,
+      "Rent_to_income": 129.54778545941826,
+      "Shelter_to_income": 112.4071345898809,
+      "Mortgage_interest_to_income": 149.4778281471446
+    },
+    {
+      "date": "2002-10-01",
+      "NHPI_to_income": 96.42467982829255,
+      "Rent_to_income": 129.48669936507318,
+      "Shelter_to_income": 112.87540166619227,
+      "Mortgage_interest_to_income": 148.07007844735784
+    },
+    {
+      "date": "2003-01-01",
+      "NHPI_to_income": 96.02956374738214,
+      "Rent_to_income": 127.9018724627303,
+      "Shelter_to_income": 112.81239543707504,
+      "Mortgage_interest_to_income": 146.40985499525175
+    },
+    {
+      "date": "2003-04-01",
+      "NHPI_to_income": 97.89539178965461,
+      "Rent_to_income": 129.2006985079097,
+      "Shelter_to_income": 113.99091853996306,
+      "Mortgage_interest_to_income": 148.2963458400139
+    },
+    {
+      "date": "2003-07-01",
+      "NHPI_to_income": 99.02936466651524,
+      "Rent_to_income": 129.62813239255559,
+      "Shelter_to_income": 114.58317569212988,
+      "Mortgage_interest_to_income": 147.70730891824104
+    },
+    {
+      "date": "2003-10-01",
+      "NHPI_to_income": 99.70042485538845,
+      "Rent_to_income": 128.99886483438885,
+      "Shelter_to_income": 114.31273095141529,
+      "Mortgage_interest_to_income": 146.41294646920906
+    },
+    {
+      "date": "2004-01-01",
+      "NHPI_to_income": 99.59744447842543,
+      "Rent_to_income": 127.66200556669153,
+      "Shelter_to_income": 113.37764074048707,
+      "Mortgage_interest_to_income": 144.80429384684166
+    },
+    {
+      "date": "2004-04-01",
+      "NHPI_to_income": 99.31392322110098,
+      "Rent_to_income": 125.13810719424448,
+      "Shelter_to_income": 111.91104250656889,
+      "Mortgage_interest_to_income": 141.28447393644325
+    },
+    {
+      "date": "2004-07-01",
+      "NHPI_to_income": 99.71115476532836,
+      "Rent_to_income": 124.42578260642642,
+      "Shelter_to_income": 111.86133420586633,
+      "Mortgage_interest_to_income": 140.49179074153247
+    },
+    {
+      "date": "2004-10-01",
+      "NHPI_to_income": 100.46519166141208,
+      "Rent_to_income": 124.49080168744196,
+      "Shelter_to_income": 112.71557046026057,
+      "Mortgage_interest_to_income": 140.90310357218266
+    },
+    {
+      "date": "2005-01-01",
+      "NHPI_to_income": 101.76886647946291,
+      "Rent_to_income": 125.2329654430654,
+      "Shelter_to_income": 113.73185516440552,
+      "Mortgage_interest_to_income": 141.79598890880374
+    },
+    {
+      "date": "2005-04-01",
+      "NHPI_to_income": 101.24552517325866,
+      "Rent_to_income": 122.84676420871898,
+      "Shelter_to_income": 112.31852399018719,
+      "Mortgage_interest_to_income": 139.2818878836009
+    },
+    {
+      "date": "2005-07-01",
+      "NHPI_to_income": 102.15803683084374,
+      "Rent_to_income": 122.71035557221137,
+      "Shelter_to_income": 112.86426181504672,
+      "Mortgage_interest_to_income": 138.58616411455037
+    },
+    {
+      "date": "2005-10-01",
+      "NHPI_to_income": 102.55006971029823,
+      "Rent_to_income": 121.24039158185226,
+      "Shelter_to_income": 112.4144822174802,
+      "Mortgage_interest_to_income": 136.39034208192825
+    },
+    {
+      "date": "2006-01-01",
+      "NHPI_to_income": 101.93429605807376,
+      "Rent_to_income": 118.07235988729265,
+      "Shelter_to_income": 110.38526183740383,
+      "Mortgage_interest_to_income": 133.27443568257155
+    },
+    {
+      "date": "2006-04-01",
+      "NHPI_to_income": 105.5949877472833,
+      "Rent_to_income": 118.49588619601703,
+      "Shelter_to_income": 111.38974986801718,
+      "Mortgage_interest_to_income": 134.37761414665218
+    },
+    {
+      "date": "2006-07-01",
+      "NHPI_to_income": 106.87363844203581,
+      "Rent_to_income": 116.12939019704939,
+      "Shelter_to_income": 109.65098223481199,
+      "Mortgage_interest_to_income": 133.25330707526732
+    },
+    {
+      "date": "2006-10-01",
+      "NHPI_to_income": 106.7465905757225,
+      "Rent_to_income": 114.86007368395458,
+      "Shelter_to_income": 108.67018346851783,
+      "Mortgage_interest_to_income": 133.41308832241347
+    },
+    {
+      "date": "2007-01-01",
+      "NHPI_to_income": 105.7281978268432,
+      "Rent_to_income": 113.02133372274105,
+      "Shelter_to_income": 107.30699786043498,
+      "Mortgage_interest_to_income": 132.52377382133304
+    },
+    {
+      "date": "2007-04-01",
+      "NHPI_to_income": 108.50425379657047,
+      "Rent_to_income": 113.94862540438363,
+      "Shelter_to_income": 108.9957383500962,
+      "Mortgage_interest_to_income": 134.60772974090582
+    },
+    {
+      "date": "2007-07-01",
+      "NHPI_to_income": 110.56043099572861,
+      "Rent_to_income": 114.37524966901496,
+      "Shelter_to_income": 109.84571770006006,
+      "Mortgage_interest_to_income": 137.01474110003744
+    },
+    {
+      "date": "2007-10-01",
+      "NHPI_to_income": 109.96095966672368,
+      "Rent_to_income": 113.41369897544885,
+      "Shelter_to_income": 109.73484038832156,
+      "Mortgage_interest_to_income": 138.51558095177637
+    },
+    {
+      "date": "2008-01-01",
+      "NHPI_to_income": 109.3022515272571,
+      "Rent_to_income": 111.94672085832562,
+      "Shelter_to_income": 108.54281915810728,
+      "Mortgage_interest_to_income": 139.2428985012597
+    },
+    {
+      "date": "2008-04-01",
+      "NHPI_to_income": 108.04403570904742,
+      "Rent_to_income": 110.73502541684991,
+      "Shelter_to_income": 108.81659109585203,
+      "Mortgage_interest_to_income": 139.85252216371487
+    },
+    {
+      "date": "2008-07-01",
+      "NHPI_to_income": 106.4860486064706,
+      "Rent_to_income": 109.52127182021562,
+      "Shelter_to_income": 108.62233183587868,
+      "Mortgage_interest_to_income": 139.40504863668284
+    },
+    {
+      "date": "2008-10-01",
+      "NHPI_to_income": 106.4186509544047,
+      "Rent_to_income": 110.62705646376776,
+      "Shelter_to_income": 109.15473053256504,
+      "Mortgage_interest_to_income": 141.81999492970914
+    },
+    {
+      "date": "2009-01-01",
+      "NHPI_to_income": 105.49778582218813,
+      "Rent_to_income": 111.57559328930327,
+      "Shelter_to_income": 109.42737089397322,
+      "Mortgage_interest_to_income": 143.35139430527985
+    },
+    {
+      "date": "2009-04-01",
+      "NHPI_to_income": 103.9060029059501,
+      "Rent_to_income": 111.61476532380661,
+      "Shelter_to_income": 107.744640321282,
+      "Mortgage_interest_to_income": 141.6235602034275
+    },
+    {
+      "date": "2009-07-01",
+      "NHPI_to_income": 102.58338176820713,
+      "Rent_to_income": 110.32973202049871,
+      "Shelter_to_income": 105.70443461289216,
+      "Mortgage_interest_to_income": 136.86974196713732
+    },
+    {
+      "date": "2009-10-01",
+      "NHPI_to_income": 102.45403354373136,
+      "Rent_to_income": 109.63502872778605,
+      "Shelter_to_income": 104.88193596059128,
+      "Mortgage_interest_to_income": 133.0426138349761
+    },
+    {
+      "date": "2010-01-01",
+      "NHPI_to_income": 101.1666090942378,
+      "Rent_to_income": 107.491505354996,
+      "Shelter_to_income": 103.0369661701438,
+      "Mortgage_interest_to_income": 128.4692434517889
+    },
+    {
+      "date": "2010-04-01",
+      "NHPI_to_income": 103.4246621149282,
+      "Rent_to_income": 109.36203178502036,
+      "Shelter_to_income": 105.55056575823485,
+      "Mortgage_interest_to_income": 129.47143816890332
+    },
+    {
+      "date": "2010-07-01",
+      "NHPI_to_income": 102.38257323668111,
+      "Rent_to_income": 108.41331052336683,
+      "Shelter_to_income": 105.27916198563442,
+      "Mortgage_interest_to_income": 127.8485608602554
+    },
+    {
+      "date": "2010-10-01",
+      "NHPI_to_income": 101.29198005752671,
+      "Rent_to_income": 107.27100012855661,
+      "Shelter_to_income": 104.1549683134143,
+      "Mortgage_interest_to_income": 125.11518006591936
+    },
+    {
+      "date": "2011-01-01",
+      "NHPI_to_income": 101.4403803267725,
+      "Rent_to_income": 106.97514168628332,
+      "Shelter_to_income": 103.68156119405457,
+      "Mortgage_interest_to_income": 123.47090901602122
+    },
+    {
+      "date": "2011-04-01",
+      "NHPI_to_income": 102.04255678671477,
+      "Rent_to_income": 107.0641252254905,
+      "Shelter_to_income": 104.1300401683546,
+      "Mortgage_interest_to_income": 122.87169002161497
+    },
+    {
+      "date": "2011-07-01",
+      "NHPI_to_income": 101.91557118329,
+      "Rent_to_income": 106.66171061529437,
+      "Shelter_to_income": 104.01181358244393,
+      "Mortgage_interest_to_income": 122.2296402063086
+    },
+    {
+      "date": "2011-10-01",
+      "NHPI_to_income": 100.91998240268451,
+      "Rent_to_income": 105.40318712678699,
+      "Shelter_to_income": 102.87682226070588,
+      "Mortgage_interest_to_income": 120.3588053506302
+    },
+    {
+      "date": "2012-01-01",
+      "NHPI_to_income": 100.83256822950091,
+      "Rent_to_income": 105.074515202004,
+      "Shelter_to_income": 102.49244403026269,
+      "Mortgage_interest_to_income": 119.59405642594983
+    },
+    {
+      "date": "2012-04-01",
+      "NHPI_to_income": 101.31956743211545,
+      "Rent_to_income": 105.12369038515276,
+      "Shelter_to_income": 102.15814507867005,
+      "Mortgage_interest_to_income": 118.43639472580337
+    },
+    {
+      "date": "2012-07-01",
+      "NHPI_to_income": 100.84918543454278,
+      "Rent_to_income": 104.57246408804683,
+      "Shelter_to_income": 101.60479800613756,
+      "Mortgage_interest_to_income": 116.01614734387977
+    },
+    {
+      "date": "2012-10-01",
+      "NHPI_to_income": 100.95743407429718,
+      "Rent_to_income": 104.67594250753159,
+      "Shelter_to_income": 101.41331169852997,
+      "Mortgage_interest_to_income": 114.1029608588588
+    },
+    {
+      "date": "2013-01-01",
+      "NHPI_to_income": 99.33006392671192,
+      "Rent_to_income": 103.00816853147336,
+      "Shelter_to_income": 99.706548205793,
+      "Mortgage_interest_to_income": 110.64552240563603
+    },
+    {
+      "date": "2013-04-01",
+      "NHPI_to_income": 99.45279236117655,
+      "Rent_to_income": 102.9847462234893,
+      "Shelter_to_income": 99.70307177782549,
+      "Mortgage_interest_to_income": 109.54125532546804
+    },
+    {
+      "date": "2013-07-01",
+      "NHPI_to_income": 99.55091182761261,
+      "Rent_to_income": 103.16571532174069,
+      "Shelter_to_income": 99.85968299342765,
+      "Mortgage_interest_to_income": 108.70691821724807
+    },
+    {
+      "date": "2013-10-01",
+      "NHPI_to_income": 98.95418245457503,
+      "Rent_to_income": 102.83737545276854,
+      "Shelter_to_income": 99.67434362860999,
+      "Mortgage_interest_to_income": 108.10321889402866
+    },
+    {
+      "date": "2014-01-01",
+      "NHPI_to_income": 98.88163252952064,
+      "Rent_to_income": 102.54702601585207,
+      "Shelter_to_income": 100.05145860812249,
+      "Mortgage_interest_to_income": 107.93233142080922
+    },
+    {
+      "date": "2014-04-01",
+      "NHPI_to_income": 99.05481047497791,
+      "Rent_to_income": 102.51341443894138,
+      "Shelter_to_income": 100.901856245029,
+      "Mortgage_interest_to_income": 107.62306796474066
+    },
+    {
+      "date": "2014-07-01",
+      "NHPI_to_income": 98.09506312119215,
+      "Rent_to_income": 101.56852517648477,
+      "Shelter_to_income": 99.64929990829455,
+      "Mortgage_interest_to_income": 105.53678563259687
+    },
+    {
+      "date": "2014-10-01",
+      "NHPI_to_income": 98.4734326954818,
+      "Rent_to_income": 102.03738173279278,
+      "Shelter_to_income": 99.96024104671062,
+      "Mortgage_interest_to_income": 105.3058192033787
+    },
+    {
+      "date": "2015-01-01",
+      "NHPI_to_income": 96.60093505717265,
+      "Rent_to_income": 100.18378542269745,
+      "Shelter_to_income": 98.14380774934769,
+      "Mortgage_interest_to_income": 103.32348658891486
+    },
+    {
+      "date": "2015-04-01",
+      "NHPI_to_income": 96.16061517621026,
+      "Rent_to_income": 99.63970234239854,
+      "Shelter_to_income": 97.46397001811073,
+      "Mortgage_interest_to_income": 102.40045320582928
+    },
+    {
+      "date": "2015-07-01",
+      "NHPI_to_income": 96.20931929672159,
+      "Rent_to_income": 99.36223445089237,
+      "Shelter_to_income": 97.41062932051237,
+      "Mortgage_interest_to_income": 100.8807780732529
+    },
+    {
+      "date": "2015-10-01",
+      "NHPI_to_income": 96.8613187352454,
+      "Rent_to_income": 99.74969518567168,
+      "Shelter_to_income": 97.9873033542234,
+      "Mortgage_interest_to_income": 100.7829921397976
+    },
+    {
+      "date": "2016-01-01",
+      "NHPI_to_income": 100.05360116800477,
+      "Rent_to_income": 102.72871952215762,
+      "Shelter_to_income": 101.02559494389182,
+      "Mortgage_interest_to_income": 103.64313704909661
+    },
+    {
+      "date": "2016-04-01",
+      "NHPI_to_income": 99.48715630813226,
+      "Rent_to_income": 101.22730757396786,
+      "Shelter_to_income": 99.83467792870078,
+      "Mortgage_interest_to_income": 101.94389928642256
+    },
+    {
+      "date": "2016-07-01",
+      "NHPI_to_income": 99.61685257040256,
+      "Rent_to_income": 100.61378549007472,
+      "Shelter_to_income": 99.7749506966647,
+      "Mortgage_interest_to_income": 100.9231932732424
+    },
+    {
+      "date": "2016-10-01",
+      "NHPI_to_income": 99.60716462385628,
+      "Rent_to_income": 100.03276522755401,
+      "Shelter_to_income": 99.76012688636465,
+      "Mortgage_interest_to_income": 100.04272781103292
+    },
+    {
+      "date": "2017-01-01",
+      "NHPI_to_income": 100.0,
+      "Rent_to_income": 99.99999999999999,
+      "Shelter_to_income": 100.0,
+      "Mortgage_interest_to_income": 100.0
+    },
+    {
+      "date": "2017-04-01",
+      "NHPI_to_income": 100.00542348109258,
+      "Rent_to_income": 98.6018341811104,
+      "Shelter_to_income": 98.5087101668345,
+      "Mortgage_interest_to_income": 98.69199464226323
+    },
+    {
+      "date": "2017-07-01",
+      "NHPI_to_income": 99.2105837674805,
+      "Rent_to_income": 97.12474945351693,
+      "Shelter_to_income": 96.96503006403391,
+      "Mortgage_interest_to_income": 96.98890258622349
+    },
+    {
+      "date": "2017-10-01",
+      "NHPI_to_income": 98.9858533856925,
+      "Rent_to_income": 96.83342598581864,
+      "Shelter_to_income": 97.1089269795647,
+      "Mortgage_interest_to_income": 97.01745900728784
+    },
+    {
+      "date": "2018-01-01",
+      "NHPI_to_income": 99.16246560906978,
+      "Rent_to_income": 97.39618168496143,
+      "Shelter_to_income": 98.07754112351147,
+      "Mortgage_interest_to_income": 98.75262655601439
+    },
+    {
+      "date": "2018-04-01",
+      "NHPI_to_income": 99.345281266321,
+      "Rent_to_income": 97.93083814882695,
+      "Shelter_to_income": 98.64140136939372,
+      "Mortgage_interest_to_income": 100.68809445830523
+    },
+    {
+      "date": "2018-07-01",
+      "NHPI_to_income": 99.42682370806651,
+      "Rent_to_income": 98.23027300036608,
+      "Shelter_to_income": 99.14809862685162,
+      "Mortgage_interest_to_income": 102.48458749655514
+    },
+    {
+      "date": "2018-10-01",
+      "NHPI_to_income": 98.1975031972192,
+      "Rent_to_income": 97.36166135068359,
+      "Shelter_to_income": 98.59244957164971,
+      "Mortgage_interest_to_income": 103.16335621200058
+    },
+    {
+      "date": "2019-01-01",
+      "NHPI_to_income": 97.78595773752318,
+      "Rent_to_income": 98.40023794145807,
+      "Shelter_to_income": 99.1037035186235,
+      "Mortgage_interest_to_income": 105.13961352901293
+    },
+    {
+      "date": "2019-04-01",
+      "NHPI_to_income": 96.1371423479745,
+      "Rent_to_income": 96.93930134863967,
+      "Shelter_to_income": 98.00324612817202,
+      "Mortgage_interest_to_income": 105.40612407817297
+    },
+    {
+      "date": "2019-07-01",
+      "NHPI_to_income": 95.59913094817611,
+      "Rent_to_income": 97.39415731008037,
+      "Shelter_to_income": 97.83365934903262,
+      "Mortgage_interest_to_income": 106.45174462023292
+    },
+    {
+      "date": "2019-10-01",
+      "NHPI_to_income": 94.8488513836643,
+      "Rent_to_income": 97.25419081897368,
+      "Shelter_to_income": 97.75283951944544,
+      "Mortgage_interest_to_income": 106.11932809040199
+    },
+    {
+      "date": "2020-01-01",
+      "NHPI_to_income": 94.4026749675918,
+      "Rent_to_income": 96.92161922581013,
+      "Shelter_to_income": 97.23145848670066,
+      "Mortgage_interest_to_income": 105.7954535722188
+    },
+    {
+      "date": "2020-04-01",
+      "NHPI_to_income": 86.59239028820154,
+      "Rent_to_income": 87.99820084710308,
+      "Shelter_to_income": 88.49297619794177,
+      "Mortgage_interest_to_income": 96.99005574793823
+    },
+    {
+      "date": "2020-07-01",
+      "NHPI_to_income": 91.36845287080386,
+      "Rent_to_income": 92.19738559948928,
+      "Shelter_to_income": 92.77899113309957,
+      "Mortgage_interest_to_income": 100.26603427143662
+    },
+    {
+      "date": "2020-10-01",
+      "NHPI_to_income": 94.25870234023112,
+      "Rent_to_income": 93.54462126189604,
+      "Shelter_to_income": 94.74755502376975,
+      "Mortgage_interest_to_income": 99.09643792860571
+    },
+    {
+      "date": "2021-01-01",
+      "NHPI_to_income": 93.46795196233387,
+      "Rent_to_income": 90.31915137293352,
+      "Shelter_to_income": 91.71649364640407,
+      "Mortgage_interest_to_income": 92.89095054901567
+    },
+    {
+      "date": "2021-04-01",
+      "NHPI_to_income": 98.15431310928975,
+      "Rent_to_income": 91.4956571698879,
+      "Shelter_to_income": 93.886027712902,
+      "Mortgage_interest_to_income": 91.0741108115717
+    },
+    {
+      "date": "2021-07-01",
+      "NHPI_to_income": 99.53549392752483,
+      "Rent_to_income": 91.66623479222905,
+      "Shelter_to_income": 94.78525468694801,
+      "Mortgage_interest_to_income": 88.76700267248785
+    },
+    {
+      "date": "2021-10-01",
+      "NHPI_to_income": 102.9605463143448,
+      "Rent_to_income": 93.47983100498953,
+      "Shelter_to_income": 97.40169936231604,
+      "Mortgage_interest_to_income": 89.01634474423881
+    },
+    {
+      "date": "2022-01-01",
+      "NHPI_to_income": 103.03132087320446,
+      "Rent_to_income": 92.93050514587965,
+      "Shelter_to_income": 96.80951630767312,
+      "Mortgage_interest_to_income": 86.47200847891867
+    },
+    {
+      "date": "2022-04-01",
+      "NHPI_to_income": 103.54599730473302,
+      "Rent_to_income": 92.86122854607703,
+      "Shelter_to_income": 97.93686544405132,
+      "Mortgage_interest_to_income": 86.22314535637632
+    },
+    {
+      "date": "2022-07-01",
+      "NHPI_to_income": 103.66680441111671,
+      "Rent_to_income": 93.43116712330342,
+      "Shelter_to_income": 98.62795733425793,
+      "Mortgage_interest_to_income": 90.73460213768773
+    },
+    {
+      "date": "2022-10-01",
+      "NHPI_to_income": 100.99068540448152,
+      "Rent_to_income": 92.64078711136324,
+      "Shelter_to_income": 98.00329974076358,
+      "Mortgage_interest_to_income": 95.88121700926816
+    },
+    {
+      "date": "2023-01-01",
+      "NHPI_to_income": 101.58345246651103,
+      "Rent_to_income": 95.31306192195427,
+      "Shelter_to_income": 99.81572825992944,
+      "Mortgage_interest_to_income": 104.11627092991175
+    },
+    {
+      "date": "2023-04-01",
+      "NHPI_to_income": 99.81284012772416,
+      "Rent_to_income": 95.24782663321132,
+      "Shelter_to_income": 99.45618277327836,
+      "Mortgage_interest_to_income": 108.22573830759144
+    },
+    {
+      "date": "2023-07-01",
+      "NHPI_to_income": 97.98359048473013,
+      "Rent_to_income": 94.86706790964203,
+      "Shelter_to_income": 99.47192900813782,
+      "Mortgage_interest_to_income": 113.12930833112895
+    },
+    {
+      "date": "2023-10-01",
+      "NHPI_to_income": 97.431406545736,
+      "Rent_to_income": 97.1732215120858,
+      "Shelter_to_income": 101.0672314318694,
+      "Mortgage_interest_to_income": 120.93453486963888
+    },
+    {
+      "date": "2024-01-01",
+      "NHPI_to_income": 96.97371946074492,
+      "Rent_to_income": 98.9593918049524,
+      "Shelter_to_income": 101.89460959991729,
+      "Mortgage_interest_to_income": 126.22130156753134
+    },
+    {
+      "date": "2024-04-01",
+      "NHPI_to_income": 95.39273456474072,
+      "Rent_to_income": 99.0028728886062,
+      "Shelter_to_income": 101.19464349409375,
+      "Mortgage_interest_to_income": 127.7402231285009
+    },
+    {
+      "date": "2024-07-01",
+      "NHPI_to_income": 93.67945773623184,
+      "Rent_to_income": 98.34389405237022,
+      "Shelter_to_income": 100.08445673737438,
+      "Mortgage_interest_to_income": 128.37741562572225
+    },
+    {
+      "date": "2024-10-01",
+      "NHPI_to_income": 92.93583101485497,
+      "Rent_to_income": 99.49553644582818,
+      "Shelter_to_income": 100.85952763371937,
+      "Mortgage_interest_to_income": 130.55138902577636
+    },
+    {
+      "date": "2025-01-01",
+      "NHPI_to_income": 92.47476161139123,
+      "Rent_to_income": 99.65805651304382,
+      "Shelter_to_income": 101.17155291761865,
+      "Mortgage_interest_to_income": 131.13203311245908
+    },
+    {
+      "date": "2025-04-01",
+      "NHPI_to_income": 92.01878791002612,
+      "Rent_to_income": 100.94733601455596,
+      "Shelter_to_income": 101.47750000055386,
+      "Mortgage_interest_to_income": 131.97094401920873
+    },
+    {
+      "date": "2025-07-01",
+      "NHPI_to_income": 90.83920052157143,
+      "Rent_to_income": 101.57099422054584,
+      "Shelter_to_income": 101.31288545712107,
+      "Mortgage_interest_to_income": 131.8242482199915
+    },
+    {
+      "date": "2025-10-01",
+      "NHPI_to_income": 89.49950309938974,
+      "Rent_to_income": 102.49937231514917,
+      "Shelter_to_income": 101.319333460073,
+      "Mortgage_interest_to_income": 131.17106905993833
+    },
+    {
+      "date": "2026-01-01",
+      "NHPI_to_income": 88.41941842571912,
+      "Rent_to_income": 101.52875408240621,
+      "Shelter_to_income": 100.56888095180172,
+      "Mortgage_interest_to_income": 129.18783821505832
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "yoy",
+    "pct_change",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "notes": "Each ratio uses the same fixed 2017 Q1 reference and is published separately; there is no combined housing-stress score."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T14:52:20+00:00"
+}
