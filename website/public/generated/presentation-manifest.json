@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "refineryVersion": "2.0.0",
-  "generatedAt": "2026-07-16T17:09:19+00:00",
+  "generatedAt": "2026-07-16T17:55:22+00:00",
   "regenerationCommand": "python -m oil_model.pipeline --root . --refresh",
   "policy": {
     "includeStatusesInDiagnosticSummary": [
@@ -290,17 +290,17 @@
       "geography": "canada",
       "topic": "affordability",
       "evidenceKey": "canada:affordability",
-      "interpretation": "Affordable \u00b7 easing",
-      "confidence": "moderate",
-      "coverage": 1.0,
+      "interpretation": "Unresolved \u00b7 easing",
+      "confidence": "low",
+      "coverage": 0.9285714285714286,
       "scope": "Canadian household affordability with global commodity context",
-      "oldestObservationDate": "2024-01-01",
+      "oldestObservationDate": "2021-01-01",
       "newestObservationDate": "2026-06-22",
       "evidenceCounts": {
-        "supporting": 1,
-        "mixed": 7,
+        "supporting": 5,
+        "mixed": 8,
         "contradicting": 0,
-        "insufficient": 0
+        "insufficient": 1
       },
       "provenance": [
         {
@@ -323,14 +323,14 @@
       "geography": "canada",
       "topic": "food",
       "evidenceKey": "canada:food",
-      "interpretation": "Affordable \u00b7 worsening",
+      "interpretation": "Pressured \u00b7 worsening",
       "confidence": "moderate",
       "coverage": 1.0,
       "scope": "Canadian household affordability with global commodity context",
       "oldestObservationDate": "2024-01-01",
       "newestObservationDate": "2026-06-22",
       "evidenceCounts": {
-        "supporting": 2,
+        "supporting": 4,
         "mixed": 5,
         "contradicting": 1,
         "insufficient": 0
@@ -356,14 +356,14 @@
       "geography": "canada",
       "topic": "food",
       "evidenceKey": "canada:food",
-      "interpretation": "Affordable \u00b7 worsening",
+      "interpretation": "Pressured \u00b7 worsening",
       "confidence": "moderate",
       "coverage": 1.0,
       "scope": "Canadian household affordability with global commodity context",
       "oldestObservationDate": "2024-01-01",
       "newestObservationDate": "2026-06-22",
       "evidenceCounts": {
-        "supporting": 2,
+        "supporting": 4,
         "mixed": 5,
         "contradicting": 1,
         "insufficient": 0
@@ -389,14 +389,14 @@
       "geography": "canada",
       "topic": "food",
       "evidenceKey": "canada:food",
-      "interpretation": "Affordable \u00b7 worsening",
+      "interpretation": "Pressured \u00b7 worsening",
       "confidence": "moderate",
       "coverage": 1.0,
       "scope": "Canadian household affordability with global commodity context",
       "oldestObservationDate": "2024-01-01",
       "newestObservationDate": "2026-06-22",
       "evidenceCounts": {
-        "supporting": 2,
+        "supporting": 4,
         "mixed": 5,
         "contradicting": 1,
         "insufficient": 0
@@ -422,17 +422,17 @@
       "geography": "canada",
       "topic": "housing",
       "evidenceKey": "canada:housing",
-      "interpretation": "Affordable \u00b7 easing",
+      "interpretation": "Pressured \u00b7 easing",
       "confidence": "moderate",
-      "coverage": 1.0,
+      "coverage": 0.9090909090909091,
       "scope": "Canadian household affordability with global commodity context",
-      "oldestObservationDate": "2024-01-01",
+      "oldestObservationDate": "2021-01-01",
       "newestObservationDate": "2026-06-22",
       "evidenceCounts": {
-        "supporting": 2,
+        "supporting": 4,
         "mixed": 5,
         "contradicting": 1,
-        "insufficient": 0
+        "insufficient": 1
       },
       "provenance": [
         {
@@ -455,17 +455,17 @@
       "geography": "canada",
       "topic": "housing",
       "evidenceKey": "canada:housing",
-      "interpretation": "Affordable \u00b7 easing",
+      "interpretation": "Pressured \u00b7 easing",
       "confidence": "moderate",
-      "coverage": 1.0,
+      "coverage": 0.9090909090909091,
       "scope": "Canadian household affordability with global commodity context",
-      "oldestObservationDate": "2024-01-01",
+      "oldestObservationDate": "2021-01-01",
       "newestObservationDate": "2026-06-22",
       "evidenceCounts": {
-        "supporting": 2,
+        "supporting": 4,
         "mixed": 5,
         "contradicting": 1,
-        "insufficient": 0
+        "insufficient": 1
       },
       "provenance": [
         {
@@ -488,17 +488,17 @@
       "geography": "canada",
       "topic": "housing",
       "evidenceKey": "canada:housing",
-      "interpretation": "Affordable \u00b7 easing",
+      "interpretation": "Pressured \u00b7 easing",
       "confidence": "moderate",
-      "coverage": 1.0,
+      "coverage": 0.9090909090909091,
       "scope": "Canadian household affordability with global commodity context",
-      "oldestObservationDate": "2024-01-01",
+      "oldestObservationDate": "2021-01-01",
       "newestObservationDate": "2026-06-22",
       "evidenceCounts": {
-        "supporting": 2,
+        "supporting": 4,
         "mixed": 5,
         "contradicting": 1,
-        "insufficient": 0
+        "insufficient": 1
       },
       "provenance": [
         {
@@ -528,11 +528,11 @@
     },
     {
       "file": "config/absolute_affordability.json",
-      "sha256": "3acf634fe9417f28c2414c309f0b9e86654eab10f2f3e6c1ae87f567f4606262"
+      "sha256": "1799ec198caf9bec26232b00d3a2f14dbe259e05e717a80bcc364cf7299b6a8d"
     },
     {
       "file": "website/public/generated/evidence-summary.json",
-      "sha256": "46149bb9e1dac8af8e82257454af4c3f4076f1e91b4262574a8b8750ff79683f"
+      "sha256": "decbf6177d450d7e3c0b412fbbb365dc7c6f7cf6ac8bc52dbb37628a391eab09"
     }
   ]
 }

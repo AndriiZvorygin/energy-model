@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-16T17:09:19+00:00",
+  "generatedAt": "2026-07-16T17:55:24+00:00",
   "statusDefinitions": {
     "supporting": "The indicator is consistent with this interpretation.",
     "mixed": "The indicator provides partial or ambiguous evidence.",
@@ -308,36 +308,159 @@
       "geography": "us",
       "topic": "affordability",
       "evidenceKey": "us:affordability",
-      "interpretation": "Affordable \u00b7 easing",
-      "confidence": "moderate",
+      "interpretation": "Unresolved \u00b7 easing",
+      "confidence": "low",
       "coverage": 1.0,
       "scope": "United States household affordability with official national income and expenditure inputs",
       "supporting": [
         {
-          "indicator": "absolute-affordability",
-          "label": "Absolute affordability assessment",
+          "indicator": "official-poverty-rate",
+          "label": "Official poverty rate",
           "status": "supporting",
-          "reason": "The indicator is consistent with this interpretation. The configured household reference is affordable and easing. Measured costs are 43.2% of after-tax income.",
+          "reason": "The indicator is consistent with this interpretation. Official poverty rate is 10.6% of the published reference population.",
           "chart": null,
           "indicatorFile": null,
-          "group": "Absolute affordability",
-          "value": 31222.0,
-          "unit": "2024 USD per year",
+          "group": "Population hardship evidence",
+          "value": 10.6,
+          "unit": "% of population/households",
           "historicalPercentile": null,
-          "direction": "easing",
-          "absoluteStatus": "affordable",
+          "direction": null,
           "sourceDate": "2024-01-01",
-          "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Surveys 2024",
-          "calculation": "otherwise",
+          "source": "U.S. Census Bureau, Income in the United States: 2024",
+          "calculation": "Share below the official U.S. poverty threshold",
           "limitations": [
-            "Median Census households are not the same statistical population as average BLS consumer units.",
-            "These are averages across consumer units, not costs for the median Census household. Housing uses shelter plus separately reported utilities rather than the broader BLS housing total to avoid double counting.",
-            "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy.",
-            "A national central estimate does not represent low-income, renter, regional, or family-type outcomes."
-          ]
+            "Official thresholds vary by family size and composition but not geography."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "deep-poverty-rate",
+          "label": "Share below 50% of the poverty threshold",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Share below 50% of the poverty threshold is 5.0% of the published reference population.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": 5.0,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": "2024-01-01",
+          "source": "U.S. Census Bureau, Income in the United States: 2024",
+          "calculation": "Population with income-to-poverty ratio below 0.50",
+          "limitations": [
+            "Income threshold measure, not a direct household budget."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "food-insecurity-rate",
+          "label": "Food-insecure households",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Food-insecure households is 13.7% of the published reference population.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": 13.700000000000001,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": "2024-01-01",
+          "source": "USDA Economic Research Service, Household Food Security in the United States in 2024",
+          "calculation": "Share of households experiencing food insecurity",
+          "limitations": [
+            "Household experiential measure; not a retail food-price index."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "very-low-food-security-rate",
+          "label": "Households with very low food security",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Households with very low food security is 5.4% of the published reference population.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": 5.4,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": "2024-01-01",
+          "source": "USDA Economic Research Service, 2024",
+          "calculation": "Share of households with disrupted eating patterns and reduced food intake",
+          "limitations": [
+            "Survey estimate subject to sampling and non-sampling error."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "housing-burden-30-rate",
+          "label": "Households with housing-cost burden",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Households with housing-cost burden is 30.4% of the published reference population.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": 30.4,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": "2023-01-01",
+          "source": "U.S. Census Bureau, ACS Housing Availability and Affordability: 2023",
+          "calculation": "Share spending more than 30% of household income on housing costs",
+          "limitations": [
+            "All-household national estimate; renter and owner burdens differ substantially."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "housing-burden-50-rate",
+          "label": "Households with severe housing-cost burden",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Households with severe housing-cost burden is 14.7% of the published reference population.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": 14.7,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": "2023-01-01",
+          "source": "U.S. Census Bureau, ACS Housing Availability and Affordability: 2023",
+          "calculation": "Share spending more than 50% of household income on housing costs",
+          "limitations": [
+            "All-household national estimate; renter and owner burdens differ substantially."
+          ],
+          "absoluteStatus": null
         }
       ],
       "mixed": [
+        {
+          "indicator": "absolute-affordability",
+          "label": "National affordability assessment",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Population hardship measures show pressure, but incomplete matched household-type budgets prevent a defensible national absolute verdict.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Absolute affordability",
+          "value": null,
+          "unit": null,
+          "historicalPercentile": null,
+          "direction": "easing",
+          "absoluteStatus": "unresolved",
+          "sourceDate": "2024-01-01",
+          "source": null,
+          "calculation": "population hardship measures available AND matched household-type cases incomplete",
+          "limitations": [
+            "Official thresholds vary by family size and composition but not geography.",
+            "Income threshold measure, not a direct household budget.",
+            "Household experiential measure; not a retail food-price index.",
+            "Survey estimate subject to sampling and non-sampling error.",
+            "All-household national estimate; renter and owner burdens differ substantially.",
+            "All-household national estimate; renter and owner burdens differ substantially.",
+            "Population hardship is measured, but a single absolute national budget verdict is not supportable yet."
+          ]
+        },
         {
           "indicator": "us_food_affordability_pressure",
           "label": "U.S. food affordability pressure",
@@ -482,9 +605,9 @@
         }
       ],
       "insufficient": [],
-      "absoluteStatus": "affordable",
+      "absoluteStatus": "unresolved",
       "direction": "easing",
-      "householdType": "National all-household / all-consumer-unit proxy",
+      "householdType": "People and households in the United States",
       "income": {
         "value": 72330,
         "unit": "2024 USD per year",
@@ -493,44 +616,96 @@
         "sourceUrl": "https://www.census.gov/newsroom/press-releases/2025/income-poverty-health-insurance-coverage.html",
         "observationDate": "2024-01-01",
         "releaseDate": "2025-09-09",
-        "limitations": "Median Census households are not the same statistical population as average BLS consumer units."
+        "limitations": "Descriptive only; it is not household-type matched and does not determine the national verdict."
       },
-      "essentialCost": {
-        "value": 31222.0,
-        "unit": "2024 USD per year",
-        "metric": "totalMeasuredEssentials",
-        "definition": "Average Consumer Expenditure Survey food, shelter, and utilities/fuels/public-services expenditures",
-        "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Surveys 2024",
-        "sourceUrl": "https://www.bls.gov/news.release/cesan.nr0.htm",
-        "observationDate": "2024-01-01"
-      },
-      "costShare": 0.43166044518180563,
-      "residualIncome": 41108.0,
+      "essentialCost": null,
+      "costShare": null,
+      "residualIncome": null,
       "thresholdUsed": {
         "classification": {
-          "geography": "us",
-          "householdType": "National all-household / all-consumer-unit proxy",
-          "status": "affordable",
-          "definition": "Income clears the configured basic-needs and essential-cost pressure bands",
-          "formula": "otherwise",
-          "source": "Project evaluation of official U.S. inputs",
+          "status": "unresolved",
+          "definition": "Matched household-type income and official basic-needs cases are incomplete, so the national absolute verdict is unresolved.",
+          "formula": "population hardship measures available AND matched household-type cases incomplete",
+          "source": "Configured official distribution measures",
           "observationDate": "2024-01-01",
-          "limitations": "A national central estimate does not represent low-income, renter, regional, or family-type outcomes."
+          "limitations": "Population hardship is measured, but a single absolute national budget verdict is not supportable yet."
         },
-        "basicNeeds": {
-          "value": 32130,
-          "unit": "2024 USD per year",
-          "definition": "Weighted-average official poverty threshold for a family of four",
-          "source": "U.S. Census Bureau, Income in the United States: 2024",
-          "sourceUrl": "https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-poverty-thresholds.html",
-          "observationDate": "2024-01-01",
-          "limitations": "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy."
-        }
+        "basicNeeds": null
       },
+      "referencePopulation": "People and households in the United States",
+      "headlineInputs": [
+        {
+          "id": "official-poverty-rate",
+          "label": "Official poverty rate",
+          "value": 0.106,
+          "unit": "share of population",
+          "definition": "Share below the official U.S. poverty threshold",
+          "source": "U.S. Census Bureau, Income in the United States: 2024",
+          "sourceUrl": "https://www.census.gov/library/publications/2025/demo/p60-287.html",
+          "observationDate": "2024-01-01",
+          "limitations": "Official thresholds vary by family size and composition but not geography."
+        },
+        {
+          "id": "deep-poverty-rate",
+          "label": "Share below 50% of the poverty threshold",
+          "value": 0.05,
+          "unit": "share of population",
+          "definition": "Population with income-to-poverty ratio below 0.50",
+          "source": "U.S. Census Bureau, Income in the United States: 2024",
+          "sourceUrl": "https://www.census.gov/library/publications/2025/demo/p60-287.html",
+          "observationDate": "2024-01-01",
+          "limitations": "Income threshold measure, not a direct household budget."
+        },
+        {
+          "id": "food-insecurity-rate",
+          "label": "Food-insecure households",
+          "value": 0.137,
+          "unit": "share of households",
+          "definition": "Share of households experiencing food insecurity",
+          "source": "USDA Economic Research Service, Household Food Security in the United States in 2024",
+          "sourceUrl": "https://ers.usda.gov/publications/113622",
+          "observationDate": "2024-01-01",
+          "limitations": "Household experiential measure; not a retail food-price index."
+        },
+        {
+          "id": "very-low-food-security-rate",
+          "label": "Households with very low food security",
+          "value": 0.054,
+          "unit": "share of households",
+          "definition": "Share of households with disrupted eating patterns and reduced food intake",
+          "source": "USDA Economic Research Service, 2024",
+          "sourceUrl": "https://ers.usda.gov/data-products/chart-gallery/58378",
+          "observationDate": "2024-01-01",
+          "limitations": "Survey estimate subject to sampling and non-sampling error."
+        },
+        {
+          "id": "housing-burden-30-rate",
+          "label": "Households with housing-cost burden",
+          "value": 0.304,
+          "unit": "share of households",
+          "definition": "Share spending more than 30% of household income on housing costs",
+          "source": "U.S. Census Bureau, ACS Housing Availability and Affordability: 2023",
+          "sourceUrl": "https://www2.census.gov/library/publications/2025/demo/acs-61.pdf",
+          "observationDate": "2023-01-01",
+          "limitations": "All-household national estimate; renter and owner burdens differ substantially."
+        },
+        {
+          "id": "housing-burden-50-rate",
+          "label": "Households with severe housing-cost burden",
+          "value": 0.147,
+          "unit": "share of households",
+          "definition": "Share spending more than 50% of household income on housing costs",
+          "source": "U.S. Census Bureau, ACS Housing Availability and Affordability: 2023",
+          "sourceUrl": "https://www2.census.gov/library/publications/2025/demo/acs-61.pdf",
+          "observationDate": "2023-01-01",
+          "limitations": "All-household national estimate; renter and owner burdens differ substantially."
+        }
+      ],
       "absoluteEvaluation": {
-        "absoluteStatus": "affordable",
+        "absoluteStatus": "unresolved",
         "direction": "easing",
-        "householdType": "National all-household / all-consumer-unit proxy",
+        "householdType": "People and households in the United States",
+        "referencePopulation": "People and households in the United States",
         "observationDate": "2024-01-01",
         "income": {
           "value": 72330,
@@ -540,49 +715,172 @@
           "sourceUrl": "https://www.census.gov/newsroom/press-releases/2025/income-poverty-health-insurance-coverage.html",
           "observationDate": "2024-01-01",
           "releaseDate": "2025-09-09",
-          "limitations": "Median Census households are not the same statistical population as average BLS consumer units."
+          "limitations": "Descriptive only; it is not household-type matched and does not determine the national verdict."
         },
-        "essentialCost": {
-          "value": 31222.0,
-          "unit": "2024 USD per year",
-          "metric": "totalMeasuredEssentials",
-          "definition": "Average Consumer Expenditure Survey food, shelter, and utilities/fuels/public-services expenditures",
-          "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Surveys 2024",
-          "sourceUrl": "https://www.bls.gov/news.release/cesan.nr0.htm",
-          "observationDate": "2024-01-01"
-        },
-        "costShare": 0.43166044518180563,
-        "residualIncome": 41108.0,
-        "incomeRemainingAfterHousing": 51277.0,
-        "incomeRemainingAfterMeasuredEssentials": 41108.0,
+        "essentialCost": null,
+        "costShare": null,
+        "residualIncome": null,
+        "incomeRemainingAfterHousing": null,
+        "incomeRemainingAfterMeasuredEssentials": null,
         "thresholdUsed": {
           "classification": {
-            "geography": "us",
-            "householdType": "National all-household / all-consumer-unit proxy",
-            "status": "affordable",
-            "definition": "Income clears the configured basic-needs and essential-cost pressure bands",
-            "formula": "otherwise",
-            "source": "Project evaluation of official U.S. inputs",
+            "status": "unresolved",
+            "definition": "Matched household-type income and official basic-needs cases are incomplete, so the national absolute verdict is unresolved.",
+            "formula": "population hardship measures available AND matched household-type cases incomplete",
+            "source": "Configured official distribution measures",
             "observationDate": "2024-01-01",
-            "limitations": "A national central estimate does not represent low-income, renter, regional, or family-type outcomes."
+            "limitations": "Population hardship is measured, but a single absolute national budget verdict is not supportable yet."
           },
-          "basicNeeds": {
-            "value": 32130,
-            "unit": "2024 USD per year",
-            "definition": "Weighted-average official poverty threshold for a family of four",
+          "basicNeeds": null
+        },
+        "components": {},
+        "distributionMeasures": [
+          {
+            "label": "Official poverty rate",
+            "value": 0.106,
+            "unit": "share of population",
+            "definition": "Share below the official U.S. poverty threshold",
             "source": "U.S. Census Bureau, Income in the United States: 2024",
-            "sourceUrl": "https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-poverty-thresholds.html",
+            "sourceUrl": "https://www.census.gov/library/publications/2025/demo/p60-287.html",
             "observationDate": "2024-01-01",
-            "limitations": "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy."
+            "limitations": "Official thresholds vary by family size and composition but not geography."
+          },
+          {
+            "label": "Share below 50% of the poverty threshold",
+            "value": 0.05,
+            "unit": "share of population",
+            "definition": "Population with income-to-poverty ratio below 0.50",
+            "source": "U.S. Census Bureau, Income in the United States: 2024",
+            "sourceUrl": "https://www.census.gov/library/publications/2025/demo/p60-287.html",
+            "observationDate": "2024-01-01",
+            "limitations": "Income threshold measure, not a direct household budget."
+          },
+          {
+            "label": "Food-insecure households",
+            "value": 0.137,
+            "unit": "share of households",
+            "definition": "Share of households experiencing food insecurity",
+            "source": "USDA Economic Research Service, Household Food Security in the United States in 2024",
+            "sourceUrl": "https://ers.usda.gov/publications/113622",
+            "observationDate": "2024-01-01",
+            "limitations": "Household experiential measure; not a retail food-price index."
+          },
+          {
+            "label": "Households with very low food security",
+            "value": 0.054,
+            "unit": "share of households",
+            "definition": "Share of households with disrupted eating patterns and reduced food intake",
+            "source": "USDA Economic Research Service, 2024",
+            "sourceUrl": "https://ers.usda.gov/data-products/chart-gallery/58378",
+            "observationDate": "2024-01-01",
+            "limitations": "Survey estimate subject to sampling and non-sampling error."
+          },
+          {
+            "label": "Households with housing-cost burden",
+            "value": 0.304,
+            "unit": "share of households",
+            "definition": "Share spending more than 30% of household income on housing costs",
+            "source": "U.S. Census Bureau, ACS Housing Availability and Affordability: 2023",
+            "sourceUrl": "https://www2.census.gov/library/publications/2025/demo/acs-61.pdf",
+            "observationDate": "2023-01-01",
+            "limitations": "All-household national estimate; renter and owner burdens differ substantially."
+          },
+          {
+            "label": "Households with severe housing-cost burden",
+            "value": 0.147,
+            "unit": "share of households",
+            "definition": "Share spending more than 50% of household income on housing costs",
+            "source": "U.S. Census Bureau, ACS Housing Availability and Affordability: 2023",
+            "sourceUrl": "https://www2.census.gov/library/publications/2025/demo/acs-61.pdf",
+            "observationDate": "2023-01-01",
+            "limitations": "All-household national estimate; renter and owner burdens differ substantially."
           }
-        },
-        "components": {
-          "food": 10169,
-          "housing": 16317,
-          "utilitiesAndEnergy": 4736,
-          "totalMeasuredEssentials": 31222,
-          "unit": "2024 USD per year"
-        },
+        ],
+        "headlineInputs": [
+          {
+            "id": "official-poverty-rate",
+            "label": "Official poverty rate",
+            "value": 0.106,
+            "unit": "share of population",
+            "definition": "Share below the official U.S. poverty threshold",
+            "source": "U.S. Census Bureau, Income in the United States: 2024",
+            "sourceUrl": "https://www.census.gov/library/publications/2025/demo/p60-287.html",
+            "observationDate": "2024-01-01",
+            "limitations": "Official thresholds vary by family size and composition but not geography."
+          },
+          {
+            "id": "deep-poverty-rate",
+            "label": "Share below 50% of the poverty threshold",
+            "value": 0.05,
+            "unit": "share of population",
+            "definition": "Population with income-to-poverty ratio below 0.50",
+            "source": "U.S. Census Bureau, Income in the United States: 2024",
+            "sourceUrl": "https://www.census.gov/library/publications/2025/demo/p60-287.html",
+            "observationDate": "2024-01-01",
+            "limitations": "Income threshold measure, not a direct household budget."
+          },
+          {
+            "id": "food-insecurity-rate",
+            "label": "Food-insecure households",
+            "value": 0.137,
+            "unit": "share of households",
+            "definition": "Share of households experiencing food insecurity",
+            "source": "USDA Economic Research Service, Household Food Security in the United States in 2024",
+            "sourceUrl": "https://ers.usda.gov/publications/113622",
+            "observationDate": "2024-01-01",
+            "limitations": "Household experiential measure; not a retail food-price index."
+          },
+          {
+            "id": "very-low-food-security-rate",
+            "label": "Households with very low food security",
+            "value": 0.054,
+            "unit": "share of households",
+            "definition": "Share of households with disrupted eating patterns and reduced food intake",
+            "source": "USDA Economic Research Service, 2024",
+            "sourceUrl": "https://ers.usda.gov/data-products/chart-gallery/58378",
+            "observationDate": "2024-01-01",
+            "limitations": "Survey estimate subject to sampling and non-sampling error."
+          },
+          {
+            "id": "housing-burden-30-rate",
+            "label": "Households with housing-cost burden",
+            "value": 0.304,
+            "unit": "share of households",
+            "definition": "Share spending more than 30% of household income on housing costs",
+            "source": "U.S. Census Bureau, ACS Housing Availability and Affordability: 2023",
+            "sourceUrl": "https://www2.census.gov/library/publications/2025/demo/acs-61.pdf",
+            "observationDate": "2023-01-01",
+            "limitations": "All-household national estimate; renter and owner burdens differ substantially."
+          },
+          {
+            "id": "housing-burden-50-rate",
+            "label": "Households with severe housing-cost burden",
+            "value": 0.147,
+            "unit": "share of households",
+            "definition": "Share spending more than 50% of household income on housing costs",
+            "source": "U.S. Census Bureau, ACS Housing Availability and Affordability: 2023",
+            "sourceUrl": "https://www2.census.gov/library/publications/2025/demo/acs-61.pdf",
+            "observationDate": "2023-01-01",
+            "limitations": "All-household national estimate; renter and owner burdens differ substantially."
+          }
+        ],
+        "representativeBudgets": [
+          {
+            "id": "national-consumer-unit-proxy",
+            "householdType": "National all-household / all-consumer-unit proxy",
+            "incomeReference": 72330,
+            "foodCost": 10169,
+            "housingCost": 16317,
+            "utilitiesAndEnergy": 4736,
+            "totalMeasuredEssentials": 31222,
+            "unit": "2024 USD per year",
+            "source": "U.S. Census Bureau and BLS Consumer Expenditure Surveys",
+            "sourceUrl": "https://www.bls.gov/news.release/cesan.nr0.htm",
+            "observationDate": "2024-01-01",
+            "limitations": "Illustrative only. Median Census households and average BLS consumer units are not matched, so this case cannot determine a national verdict."
+          }
+        ],
+        "matchedHouseholdCases": [],
         "directionEvidence": [
           {
             "indicator": "us-food-affordability-pressure",
@@ -610,45 +908,170 @@
           }
         ],
         "limitations": [
-          "Median Census households are not the same statistical population as average BLS consumer units.",
-          "These are averages across consumer units, not costs for the median Census household. Housing uses shelter plus separately reported utilities rather than the broader BLS housing total to avoid double counting.",
-          "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy.",
-          "A national central estimate does not represent low-income, renter, regional, or family-type outcomes."
+          "Official thresholds vary by family size and composition but not geography.",
+          "Income threshold measure, not a direct household budget.",
+          "Household experiential measure; not a retail food-price index.",
+          "Survey estimate subject to sampling and non-sampling error.",
+          "All-household national estimate; renter and owner burdens differ substantially.",
+          "All-household national estimate; renter and owner burdens differ substantially.",
+          "Population hardship is measured, but a single absolute national budget verdict is not supportable yet."
         ],
-        "missingEvidence": []
+        "missingEvidence": [
+          "Matched household-type income and official basic-needs cases are incomplete, so the national absolute verdict is unresolved."
+        ]
       }
     },
     "us:food": {
       "geography": "us",
       "topic": "food",
       "evidenceKey": "us:food",
-      "interpretation": "Affordable \u00b7 easing",
+      "interpretation": "Pressured \u00b7 easing",
       "confidence": "moderate",
       "coverage": 1.0,
       "scope": "United States household food affordability",
       "supporting": [
         {
           "indicator": "absolute-food",
-          "label": "Absolute food assessment",
+          "label": "National food assessment",
           "status": "supporting",
-          "reason": "The indicator is consistent with this interpretation. The configured household reference is affordable and easing. Measured costs are 14.1% of after-tax income.",
+          "reason": "The indicator is consistent with this interpretation. The configured population-distribution evidence is pressured and easing.",
           "chart": null,
           "indicatorFile": null,
           "group": "Absolute affordability",
-          "value": 10169.0,
-          "unit": "2024 USD per year",
+          "value": null,
+          "unit": null,
           "historicalPercentile": null,
           "direction": "easing",
-          "absoluteStatus": "affordable",
+          "absoluteStatus": "pressured",
           "sourceDate": "2024-01-01",
-          "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Surveys 2024",
-          "calculation": "otherwise",
+          "source": null,
+          "calculation": "{\"all\": [{\"measure\": \"food-insecurity-rate\", \"operator\": \"gte\", \"value\": 0.1}]}",
           "limitations": [
-            "Median Census households are not the same statistical population as average BLS consumer units.",
-            "These are averages across consumer units, not costs for the median Census household. Housing uses shelter plus separately reported utilities rather than the broader BLS housing total to avoid double counting.",
-            "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy.",
-            "Food insecurity remains heterogeneous and is not ruled out by a national proxy."
+            "Household experiential measure; not a retail food-price index.",
+            "Survey estimate subject to sampling and non-sampling error.",
+            "Official thresholds vary by family size and composition but not geography.",
+            "Transparent project classification threshold; not an official national affordability verdict."
           ]
+        },
+        {
+          "indicator": "food-insecurity-rate",
+          "label": "Food-insecure households",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Food-insecure households is 13.7% of the published reference population.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": 13.700000000000001,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": "2024-01-01",
+          "source": "USDA Economic Research Service, Household Food Security in the United States in 2024",
+          "calculation": "Share of households experiencing food insecurity",
+          "limitations": [
+            "Household experiential measure; not a retail food-price index."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "very-low-food-security-rate",
+          "label": "Households with very low food security",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Households with very low food security is 5.4% of the published reference population.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": 5.4,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": "2024-01-01",
+          "source": "USDA Economic Research Service, 2024",
+          "calculation": "Share of households with disrupted eating patterns and reduced food intake",
+          "limitations": [
+            "Survey estimate subject to sampling and non-sampling error."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "official-poverty-rate",
+          "label": "Official poverty rate",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Official poverty rate is 10.6% of the published reference population.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": 10.6,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": "2024-01-01",
+          "source": "U.S. Census Bureau, Income in the United States: 2024",
+          "calculation": "Share below the official U.S. poverty threshold",
+          "limitations": [
+            "Official thresholds vary by family size and composition but not geography."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "us_food_cpi_yoy",
+          "label": "U.S. food CPI growth",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Consumer affordability depends on price growth relative to wages or income, not the price index alone.",
+          "chart": "us/indicators/us-food-cpi-yoy.json",
+          "indicatorFile": "us/indicators/us-food-cpi-yoy.json",
+          "group": "Food",
+          "value": 3.0141561953236806,
+          "unit": "percent",
+          "historicalPercentile": 54.07709414381023,
+          "direction": "falling",
+          "sourceDate": "2026-06-01",
+          "calculation": "Food CPI year-over-year percent change.",
+          "limitations": [
+            "The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here.",
+            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "real_disposable_income_YoY",
+          "label": "Real disposable income growth",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Real disposable income growth is in its low historical range and is not moving in the stress-consistent direction. Interpret with confirming and conflicting evidence.",
+          "chart": "indicators/real-disposable-income-yoy.json",
+          "indicatorFile": "indicators/real-disposable-income-yoy.json",
+          "group": "Purchasing power",
+          "value": 0.016128224949785164,
+          "unit": "index or documented source unit",
+          "historicalPercentile": 8.13953488372093,
+          "direction": "decelerating",
+          "sourceDate": null,
+          "calculation": "Real disposable income growth",
+          "limitations": [
+            "Latest-vintage data may be revised.",
+            "Interpret alongside other indicators."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "real_wage_growth",
+          "label": "Canada real wage growth",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Rising real income or wages generally increase purchasing power, while household experiences can differ from the average.",
+          "chart": "canada/indicators/real-wage-growth.json",
+          "indicatorFile": "canada/indicators/real-wage-growth.json",
+          "group": "Purchasing power",
+          "value": -0.1820875805558897,
+          "unit": "percentage points",
+          "historicalPercentile": 18.328445747800586,
+          "direction": "falling",
+          "sourceDate": "2026-06-22",
+          "calculation": "Hourly wage YoY - all-items CPI YoY",
+          "limitations": [
+            "Derived difference. Statistics Canada table 14-10-0063-01 is latest-vintage and may revise recent or historical observations. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
+            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
         }
       ],
       "mixed": [
@@ -693,72 +1116,11 @@
           "absoluteStatus": null
         }
       ],
-      "contradicting": [
-        {
-          "indicator": "us_food_cpi_yoy",
-          "label": "U.S. food CPI growth",
-          "status": "contradicting",
-          "reason": "The indicator moves against this interpretation. Consumer affordability depends on price growth relative to wages or income, not the price index alone.",
-          "chart": "us/indicators/us-food-cpi-yoy.json",
-          "indicatorFile": "us/indicators/us-food-cpi-yoy.json",
-          "group": "Food",
-          "value": 3.0141561953236806,
-          "unit": "percent",
-          "historicalPercentile": 54.07709414381023,
-          "direction": "falling",
-          "sourceDate": "2026-06-01",
-          "calculation": "Food CPI year-over-year percent change.",
-          "limitations": [
-            "The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here.",
-            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ],
-          "absoluteStatus": null
-        },
-        {
-          "indicator": "real_disposable_income_YoY",
-          "label": "Real disposable income growth",
-          "status": "contradicting",
-          "reason": "The indicator moves against this interpretation. Real disposable income growth is in its low historical range and is not moving in the stress-consistent direction. Interpret with confirming and conflicting evidence.",
-          "chart": "indicators/real-disposable-income-yoy.json",
-          "indicatorFile": "indicators/real-disposable-income-yoy.json",
-          "group": "Purchasing power",
-          "value": 0.016128224949785164,
-          "unit": "index or documented source unit",
-          "historicalPercentile": 8.13953488372093,
-          "direction": "decelerating",
-          "sourceDate": null,
-          "calculation": "Real disposable income growth",
-          "limitations": [
-            "Latest-vintage data may be revised.",
-            "Interpret alongside other indicators."
-          ],
-          "absoluteStatus": null
-        },
-        {
-          "indicator": "real_wage_growth",
-          "label": "Canada real wage growth",
-          "status": "contradicting",
-          "reason": "The indicator moves against this interpretation. Rising real income or wages generally increase purchasing power, while household experiences can differ from the average.",
-          "chart": "canada/indicators/real-wage-growth.json",
-          "indicatorFile": "canada/indicators/real-wage-growth.json",
-          "group": "Purchasing power",
-          "value": -0.1820875805558897,
-          "unit": "percentage points",
-          "historicalPercentile": 18.328445747800586,
-          "direction": "falling",
-          "sourceDate": "2026-06-22",
-          "calculation": "Hourly wage YoY - all-items CPI YoY",
-          "limitations": [
-            "Derived difference. Statistics Canada table 14-10-0063-01 is latest-vintage and may revise recent or historical observations. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
-            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ],
-          "absoluteStatus": null
-        }
-      ],
+      "contradicting": [],
       "insufficient": [],
-      "absoluteStatus": "affordable",
+      "absoluteStatus": "pressured",
       "direction": "easing",
-      "householdType": "National all-household / all-consumer-unit proxy",
+      "householdType": "People and households in the United States",
       "income": {
         "value": 72330,
         "unit": "2024 USD per year",
@@ -767,44 +1129,71 @@
         "sourceUrl": "https://www.census.gov/newsroom/press-releases/2025/income-poverty-health-insurance-coverage.html",
         "observationDate": "2024-01-01",
         "releaseDate": "2025-09-09",
-        "limitations": "Median Census households are not the same statistical population as average BLS consumer units."
+        "limitations": "Descriptive only; it is not household-type matched and does not determine the national verdict."
       },
-      "essentialCost": {
-        "value": 10169.0,
-        "unit": "2024 USD per year",
-        "metric": "food",
-        "definition": "Average Consumer Expenditure Survey food, shelter, and utilities/fuels/public-services expenditures",
-        "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Surveys 2024",
-        "sourceUrl": "https://www.bls.gov/news.release/cesan.nr0.htm",
-        "observationDate": "2024-01-01"
-      },
-      "costShare": 0.14059173233789576,
-      "residualIncome": 41108.0,
+      "essentialCost": null,
+      "costShare": null,
+      "residualIncome": null,
       "thresholdUsed": {
         "classification": {
+          "status": "pressured",
+          "all": [
+            {
+              "measure": "food-insecurity-rate",
+              "operator": "gte",
+              "value": 0.1
+            }
+          ],
           "geography": "us",
-          "householdType": "National all-household / all-consumer-unit proxy",
-          "status": "affordable",
-          "definition": "Income remaining after shelter and utilities covers food and its share is below the pressure band",
-          "formula": "otherwise",
-          "source": "Project evaluation of official U.S. inputs",
+          "definition": "Population-distribution rule for national food",
+          "formula": "{\"all\": [{\"measure\": \"food-insecurity-rate\", \"operator\": \"gte\", \"value\": 0.1}]}",
+          "source": "Project rule applied to configured official population hardship measures",
           "observationDate": "2024-01-01",
-          "limitations": "Food insecurity remains heterogeneous and is not ruled out by a national proxy."
+          "limitations": "Transparent project classification threshold; not an official national affordability verdict."
         },
-        "basicNeeds": {
-          "value": 32130,
-          "unit": "2024 USD per year",
-          "definition": "Weighted-average official poverty threshold for a family of four",
-          "source": "U.S. Census Bureau, Income in the United States: 2024",
-          "sourceUrl": "https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-poverty-thresholds.html",
-          "observationDate": "2024-01-01",
-          "limitations": "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy."
-        }
+        "basicNeeds": null
       },
+      "referencePopulation": "People and households in the United States",
+      "headlineInputs": [
+        {
+          "id": "food-insecurity-rate",
+          "label": "Food-insecure households",
+          "value": 0.137,
+          "unit": "share of households",
+          "definition": "Share of households experiencing food insecurity",
+          "source": "USDA Economic Research Service, Household Food Security in the United States in 2024",
+          "sourceUrl": "https://ers.usda.gov/publications/113622",
+          "observationDate": "2024-01-01",
+          "limitations": "Household experiential measure; not a retail food-price index."
+        },
+        {
+          "id": "very-low-food-security-rate",
+          "label": "Households with very low food security",
+          "value": 0.054,
+          "unit": "share of households",
+          "definition": "Share of households with disrupted eating patterns and reduced food intake",
+          "source": "USDA Economic Research Service, 2024",
+          "sourceUrl": "https://ers.usda.gov/data-products/chart-gallery/58378",
+          "observationDate": "2024-01-01",
+          "limitations": "Survey estimate subject to sampling and non-sampling error."
+        },
+        {
+          "id": "official-poverty-rate",
+          "label": "Official poverty rate",
+          "value": 0.106,
+          "unit": "share of population",
+          "definition": "Share below the official U.S. poverty threshold",
+          "source": "U.S. Census Bureau, Income in the United States: 2024",
+          "sourceUrl": "https://www.census.gov/library/publications/2025/demo/p60-287.html",
+          "observationDate": "2024-01-01",
+          "limitations": "Official thresholds vary by family size and composition but not geography."
+        }
+      ],
       "absoluteEvaluation": {
-        "absoluteStatus": "affordable",
+        "absoluteStatus": "pressured",
         "direction": "easing",
-        "householdType": "National all-household / all-consumer-unit proxy",
+        "householdType": "People and households in the United States",
+        "referencePopulation": "People and households in the United States",
         "observationDate": "2024-01-01",
         "income": {
           "value": 72330,
@@ -814,49 +1203,147 @@
           "sourceUrl": "https://www.census.gov/newsroom/press-releases/2025/income-poverty-health-insurance-coverage.html",
           "observationDate": "2024-01-01",
           "releaseDate": "2025-09-09",
-          "limitations": "Median Census households are not the same statistical population as average BLS consumer units."
+          "limitations": "Descriptive only; it is not household-type matched and does not determine the national verdict."
         },
-        "essentialCost": {
-          "value": 10169.0,
-          "unit": "2024 USD per year",
-          "metric": "food",
-          "definition": "Average Consumer Expenditure Survey food, shelter, and utilities/fuels/public-services expenditures",
-          "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Surveys 2024",
-          "sourceUrl": "https://www.bls.gov/news.release/cesan.nr0.htm",
-          "observationDate": "2024-01-01"
-        },
-        "costShare": 0.14059173233789576,
-        "residualIncome": 41108.0,
-        "incomeRemainingAfterHousing": 51277.0,
-        "incomeRemainingAfterMeasuredEssentials": 41108.0,
+        "essentialCost": null,
+        "costShare": null,
+        "residualIncome": null,
+        "incomeRemainingAfterHousing": null,
+        "incomeRemainingAfterMeasuredEssentials": null,
         "thresholdUsed": {
           "classification": {
+            "status": "pressured",
+            "all": [
+              {
+                "measure": "food-insecurity-rate",
+                "operator": "gte",
+                "value": 0.1
+              }
+            ],
             "geography": "us",
-            "householdType": "National all-household / all-consumer-unit proxy",
-            "status": "affordable",
-            "definition": "Income remaining after shelter and utilities covers food and its share is below the pressure band",
-            "formula": "otherwise",
-            "source": "Project evaluation of official U.S. inputs",
+            "definition": "Population-distribution rule for national food",
+            "formula": "{\"all\": [{\"measure\": \"food-insecurity-rate\", \"operator\": \"gte\", \"value\": 0.1}]}",
+            "source": "Project rule applied to configured official population hardship measures",
             "observationDate": "2024-01-01",
-            "limitations": "Food insecurity remains heterogeneous and is not ruled out by a national proxy."
+            "limitations": "Transparent project classification threshold; not an official national affordability verdict."
           },
-          "basicNeeds": {
-            "value": 32130,
-            "unit": "2024 USD per year",
-            "definition": "Weighted-average official poverty threshold for a family of four",
+          "basicNeeds": null
+        },
+        "components": {},
+        "distributionMeasures": [
+          {
+            "label": "Official poverty rate",
+            "value": 0.106,
+            "unit": "share of population",
+            "definition": "Share below the official U.S. poverty threshold",
             "source": "U.S. Census Bureau, Income in the United States: 2024",
-            "sourceUrl": "https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-poverty-thresholds.html",
+            "sourceUrl": "https://www.census.gov/library/publications/2025/demo/p60-287.html",
             "observationDate": "2024-01-01",
-            "limitations": "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy."
+            "limitations": "Official thresholds vary by family size and composition but not geography."
+          },
+          {
+            "label": "Share below 50% of the poverty threshold",
+            "value": 0.05,
+            "unit": "share of population",
+            "definition": "Population with income-to-poverty ratio below 0.50",
+            "source": "U.S. Census Bureau, Income in the United States: 2024",
+            "sourceUrl": "https://www.census.gov/library/publications/2025/demo/p60-287.html",
+            "observationDate": "2024-01-01",
+            "limitations": "Income threshold measure, not a direct household budget."
+          },
+          {
+            "label": "Food-insecure households",
+            "value": 0.137,
+            "unit": "share of households",
+            "definition": "Share of households experiencing food insecurity",
+            "source": "USDA Economic Research Service, Household Food Security in the United States in 2024",
+            "sourceUrl": "https://ers.usda.gov/publications/113622",
+            "observationDate": "2024-01-01",
+            "limitations": "Household experiential measure; not a retail food-price index."
+          },
+          {
+            "label": "Households with very low food security",
+            "value": 0.054,
+            "unit": "share of households",
+            "definition": "Share of households with disrupted eating patterns and reduced food intake",
+            "source": "USDA Economic Research Service, 2024",
+            "sourceUrl": "https://ers.usda.gov/data-products/chart-gallery/58378",
+            "observationDate": "2024-01-01",
+            "limitations": "Survey estimate subject to sampling and non-sampling error."
+          },
+          {
+            "label": "Households with housing-cost burden",
+            "value": 0.304,
+            "unit": "share of households",
+            "definition": "Share spending more than 30% of household income on housing costs",
+            "source": "U.S. Census Bureau, ACS Housing Availability and Affordability: 2023",
+            "sourceUrl": "https://www2.census.gov/library/publications/2025/demo/acs-61.pdf",
+            "observationDate": "2023-01-01",
+            "limitations": "All-household national estimate; renter and owner burdens differ substantially."
+          },
+          {
+            "label": "Households with severe housing-cost burden",
+            "value": 0.147,
+            "unit": "share of households",
+            "definition": "Share spending more than 50% of household income on housing costs",
+            "source": "U.S. Census Bureau, ACS Housing Availability and Affordability: 2023",
+            "sourceUrl": "https://www2.census.gov/library/publications/2025/demo/acs-61.pdf",
+            "observationDate": "2023-01-01",
+            "limitations": "All-household national estimate; renter and owner burdens differ substantially."
           }
-        },
-        "components": {
-          "food": 10169,
-          "housing": 16317,
-          "utilitiesAndEnergy": 4736,
-          "totalMeasuredEssentials": 31222,
-          "unit": "2024 USD per year"
-        },
+        ],
+        "headlineInputs": [
+          {
+            "id": "food-insecurity-rate",
+            "label": "Food-insecure households",
+            "value": 0.137,
+            "unit": "share of households",
+            "definition": "Share of households experiencing food insecurity",
+            "source": "USDA Economic Research Service, Household Food Security in the United States in 2024",
+            "sourceUrl": "https://ers.usda.gov/publications/113622",
+            "observationDate": "2024-01-01",
+            "limitations": "Household experiential measure; not a retail food-price index."
+          },
+          {
+            "id": "very-low-food-security-rate",
+            "label": "Households with very low food security",
+            "value": 0.054,
+            "unit": "share of households",
+            "definition": "Share of households with disrupted eating patterns and reduced food intake",
+            "source": "USDA Economic Research Service, 2024",
+            "sourceUrl": "https://ers.usda.gov/data-products/chart-gallery/58378",
+            "observationDate": "2024-01-01",
+            "limitations": "Survey estimate subject to sampling and non-sampling error."
+          },
+          {
+            "id": "official-poverty-rate",
+            "label": "Official poverty rate",
+            "value": 0.106,
+            "unit": "share of population",
+            "definition": "Share below the official U.S. poverty threshold",
+            "source": "U.S. Census Bureau, Income in the United States: 2024",
+            "sourceUrl": "https://www.census.gov/library/publications/2025/demo/p60-287.html",
+            "observationDate": "2024-01-01",
+            "limitations": "Official thresholds vary by family size and composition but not geography."
+          }
+        ],
+        "representativeBudgets": [
+          {
+            "id": "national-consumer-unit-proxy",
+            "householdType": "National all-household / all-consumer-unit proxy",
+            "incomeReference": 72330,
+            "foodCost": 10169,
+            "housingCost": 16317,
+            "utilitiesAndEnergy": 4736,
+            "totalMeasuredEssentials": 31222,
+            "unit": "2024 USD per year",
+            "source": "U.S. Census Bureau and BLS Consumer Expenditure Surveys",
+            "sourceUrl": "https://www.bls.gov/news.release/cesan.nr0.htm",
+            "observationDate": "2024-01-01",
+            "limitations": "Illustrative only. Median Census households and average BLS consumer units are not matched, so this case cannot determine a national verdict."
+          }
+        ],
+        "matchedHouseholdCases": [],
         "directionEvidence": [
           {
             "indicator": "us-food-affordability-pressure",
@@ -876,10 +1363,10 @@
           }
         ],
         "limitations": [
-          "Median Census households are not the same statistical population as average BLS consumer units.",
-          "These are averages across consumer units, not costs for the median Census household. Housing uses shelter plus separately reported utilities rather than the broader BLS housing total to avoid double counting.",
-          "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy.",
-          "Food insecurity remains heterogeneous and is not ruled out by a national proxy."
+          "Household experiential measure; not a retail food-price index.",
+          "Survey estimate subject to sampling and non-sampling error.",
+          "Official thresholds vary by family size and composition but not geography.",
+          "Transparent project classification threshold; not an official national affordability verdict."
         ],
         "missingEvidence": []
       }
@@ -888,33 +1375,92 @@
       "geography": "us",
       "topic": "housing",
       "evidenceKey": "us:housing",
-      "interpretation": "Affordable \u00b7 easing",
+      "interpretation": "Pressured \u00b7 easing",
       "confidence": "moderate",
       "coverage": 1.0,
       "scope": "United States housing affordability and shelter-cost pressure",
       "supporting": [
         {
           "indicator": "absolute-housing",
-          "label": "Absolute housing assessment",
+          "label": "National housing assessment",
           "status": "supporting",
-          "reason": "The indicator is consistent with this interpretation. The configured household reference is affordable and easing. Measured costs are 22.6% of after-tax income.",
+          "reason": "The indicator is consistent with this interpretation. The configured population-distribution evidence is pressured and easing.",
           "chart": null,
           "indicatorFile": null,
           "group": "Absolute affordability",
-          "value": 16317.0,
-          "unit": "2024 USD per year",
+          "value": null,
+          "unit": null,
           "historicalPercentile": null,
           "direction": "easing",
-          "absoluteStatus": "affordable",
+          "absoluteStatus": "pressured",
           "sourceDate": "2024-01-01",
-          "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Surveys 2024",
-          "calculation": "otherwise",
+          "source": null,
+          "calculation": "{\"any\": [{\"measure\": \"housing-burden-30-rate\", \"operator\": \"gte\", \"value\": 0.2}, {\"measure\": \"housing-burden-50-rate\", \"operator\": \"gte\", \"value\": 0.1}]}",
           "limitations": [
-            "Median Census households are not the same statistical population as average BLS consumer units.",
-            "These are averages across consumer units, not costs for the median Census household. Housing uses shelter plus separately reported utilities rather than the broader BLS housing total to avoid double counting.",
-            "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy.",
-            "Renter, owner, mortgage, family, and regional outcomes differ substantially."
+            "All-household national estimate; renter and owner burdens differ substantially.",
+            "All-household national estimate; renter and owner burdens differ substantially.",
+            "Transparent project classification threshold; not an official national affordability verdict."
           ]
+        },
+        {
+          "indicator": "housing-burden-30-rate",
+          "label": "Households with housing-cost burden",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Households with housing-cost burden is 30.4% of the published reference population.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": 30.4,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": "2023-01-01",
+          "source": "U.S. Census Bureau, ACS Housing Availability and Affordability: 2023",
+          "calculation": "Share spending more than 30% of household income on housing costs",
+          "limitations": [
+            "All-household national estimate; renter and owner burdens differ substantially."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "housing-burden-50-rate",
+          "label": "Households with severe housing-cost burden",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Households with severe housing-cost burden is 14.7% of the published reference population.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": 14.7,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": "2023-01-01",
+          "source": "U.S. Census Bureau, ACS Housing Availability and Affordability: 2023",
+          "calculation": "Share spending more than 50% of household income on housing costs",
+          "limitations": [
+            "All-household national estimate; renter and owner burdens differ substantially."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "us_shelter_cpi_yoy",
+          "label": "U.S. shelter CPI growth",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Consumer affordability depends on price growth relative to wages or income, not the price index alone.",
+          "chart": "us/indicators/us-shelter-cpi-yoy.json",
+          "indicatorFile": "us/indicators/us-shelter-cpi-yoy.json",
+          "group": "Current costs",
+          "value": 3.2579804858535732,
+          "unit": "percent",
+          "historicalPercentile": 47.12313003452244,
+          "direction": "falling",
+          "sourceDate": "2026-06-01",
+          "calculation": "Shelter CPI year-over-year percent change.",
+          "limitations": [
+            "The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here.",
+            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+          ],
+          "absoluteStatus": null
         }
       ],
       "mixed": [
@@ -999,32 +1545,11 @@
           "absoluteStatus": null
         }
       ],
-      "contradicting": [
-        {
-          "indicator": "us_shelter_cpi_yoy",
-          "label": "U.S. shelter CPI growth",
-          "status": "contradicting",
-          "reason": "The indicator moves against this interpretation. Consumer affordability depends on price growth relative to wages or income, not the price index alone.",
-          "chart": "us/indicators/us-shelter-cpi-yoy.json",
-          "indicatorFile": "us/indicators/us-shelter-cpi-yoy.json",
-          "group": "Current costs",
-          "value": 3.2579804858535732,
-          "unit": "percent",
-          "historicalPercentile": 47.12313003452244,
-          "direction": "falling",
-          "sourceDate": "2026-06-01",
-          "calculation": "Shelter CPI year-over-year percent change.",
-          "limitations": [
-            "The originating BLS, FHFA, or BEA series may be revised; FRED observations do not provide a complete publication-vintage archive here.",
-            "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
-          ],
-          "absoluteStatus": null
-        }
-      ],
+      "contradicting": [],
       "insufficient": [],
-      "absoluteStatus": "affordable",
+      "absoluteStatus": "pressured",
       "direction": "easing",
-      "householdType": "National all-household / all-consumer-unit proxy",
+      "householdType": "People and households in the United States",
       "income": {
         "value": 72330,
         "unit": "2024 USD per year",
@@ -1033,44 +1558,65 @@
         "sourceUrl": "https://www.census.gov/newsroom/press-releases/2025/income-poverty-health-insurance-coverage.html",
         "observationDate": "2024-01-01",
         "releaseDate": "2025-09-09",
-        "limitations": "Median Census households are not the same statistical population as average BLS consumer units."
+        "limitations": "Descriptive only; it is not household-type matched and does not determine the national verdict."
       },
-      "essentialCost": {
-        "value": 16317.0,
-        "unit": "2024 USD per year",
-        "metric": "housing",
-        "definition": "Average Consumer Expenditure Survey food, shelter, and utilities/fuels/public-services expenditures",
-        "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Surveys 2024",
-        "sourceUrl": "https://www.bls.gov/news.release/cesan.nr0.htm",
-        "observationDate": "2024-01-01"
-      },
-      "costShare": 0.22559104106180008,
-      "residualIncome": 41108.0,
+      "essentialCost": null,
+      "costShare": null,
+      "residualIncome": null,
       "thresholdUsed": {
         "classification": {
+          "status": "pressured",
+          "any": [
+            {
+              "measure": "housing-burden-30-rate",
+              "operator": "gte",
+              "value": 0.2
+            },
+            {
+              "measure": "housing-burden-50-rate",
+              "operator": "gte",
+              "value": 0.1
+            }
+          ],
           "geography": "us",
-          "householdType": "National all-household / all-consumer-unit proxy",
-          "status": "affordable",
-          "definition": "Shelter share remains below the configured pressure bands",
-          "formula": "otherwise",
-          "source": "Project evaluation of official U.S. inputs",
+          "definition": "Population-distribution rule for national housing",
+          "formula": "{\"any\": [{\"measure\": \"housing-burden-30-rate\", \"operator\": \"gte\", \"value\": 0.2}, {\"measure\": \"housing-burden-50-rate\", \"operator\": \"gte\", \"value\": 0.1}]}",
+          "source": "Project rule applied to configured official population hardship measures",
           "observationDate": "2024-01-01",
-          "limitations": "Renter, owner, mortgage, family, and regional outcomes differ substantially."
+          "limitations": "Transparent project classification threshold; not an official national affordability verdict."
         },
-        "basicNeeds": {
-          "value": 32130,
-          "unit": "2024 USD per year",
-          "definition": "Weighted-average official poverty threshold for a family of four",
-          "source": "U.S. Census Bureau, Income in the United States: 2024",
-          "sourceUrl": "https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-poverty-thresholds.html",
-          "observationDate": "2024-01-01",
-          "limitations": "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy."
-        }
+        "basicNeeds": null
       },
+      "referencePopulation": "People and households in the United States",
+      "headlineInputs": [
+        {
+          "id": "housing-burden-30-rate",
+          "label": "Households with housing-cost burden",
+          "value": 0.304,
+          "unit": "share of households",
+          "definition": "Share spending more than 30% of household income on housing costs",
+          "source": "U.S. Census Bureau, ACS Housing Availability and Affordability: 2023",
+          "sourceUrl": "https://www2.census.gov/library/publications/2025/demo/acs-61.pdf",
+          "observationDate": "2023-01-01",
+          "limitations": "All-household national estimate; renter and owner burdens differ substantially."
+        },
+        {
+          "id": "housing-burden-50-rate",
+          "label": "Households with severe housing-cost burden",
+          "value": 0.147,
+          "unit": "share of households",
+          "definition": "Share spending more than 50% of household income on housing costs",
+          "source": "U.S. Census Bureau, ACS Housing Availability and Affordability: 2023",
+          "sourceUrl": "https://www2.census.gov/library/publications/2025/demo/acs-61.pdf",
+          "observationDate": "2023-01-01",
+          "limitations": "All-household national estimate; renter and owner burdens differ substantially."
+        }
+      ],
       "absoluteEvaluation": {
-        "absoluteStatus": "affordable",
+        "absoluteStatus": "pressured",
         "direction": "easing",
-        "householdType": "National all-household / all-consumer-unit proxy",
+        "householdType": "People and households in the United States",
+        "referencePopulation": "People and households in the United States",
         "observationDate": "2024-01-01",
         "income": {
           "value": 72330,
@@ -1080,49 +1626,141 @@
           "sourceUrl": "https://www.census.gov/newsroom/press-releases/2025/income-poverty-health-insurance-coverage.html",
           "observationDate": "2024-01-01",
           "releaseDate": "2025-09-09",
-          "limitations": "Median Census households are not the same statistical population as average BLS consumer units."
+          "limitations": "Descriptive only; it is not household-type matched and does not determine the national verdict."
         },
-        "essentialCost": {
-          "value": 16317.0,
-          "unit": "2024 USD per year",
-          "metric": "housing",
-          "definition": "Average Consumer Expenditure Survey food, shelter, and utilities/fuels/public-services expenditures",
-          "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Surveys 2024",
-          "sourceUrl": "https://www.bls.gov/news.release/cesan.nr0.htm",
-          "observationDate": "2024-01-01"
-        },
-        "costShare": 0.22559104106180008,
-        "residualIncome": 41108.0,
-        "incomeRemainingAfterHousing": 51277.0,
-        "incomeRemainingAfterMeasuredEssentials": 41108.0,
+        "essentialCost": null,
+        "costShare": null,
+        "residualIncome": null,
+        "incomeRemainingAfterHousing": null,
+        "incomeRemainingAfterMeasuredEssentials": null,
         "thresholdUsed": {
           "classification": {
+            "status": "pressured",
+            "any": [
+              {
+                "measure": "housing-burden-30-rate",
+                "operator": "gte",
+                "value": 0.2
+              },
+              {
+                "measure": "housing-burden-50-rate",
+                "operator": "gte",
+                "value": 0.1
+              }
+            ],
             "geography": "us",
-            "householdType": "National all-household / all-consumer-unit proxy",
-            "status": "affordable",
-            "definition": "Shelter share remains below the configured pressure bands",
-            "formula": "otherwise",
-            "source": "Project evaluation of official U.S. inputs",
+            "definition": "Population-distribution rule for national housing",
+            "formula": "{\"any\": [{\"measure\": \"housing-burden-30-rate\", \"operator\": \"gte\", \"value\": 0.2}, {\"measure\": \"housing-burden-50-rate\", \"operator\": \"gte\", \"value\": 0.1}]}",
+            "source": "Project rule applied to configured official population hardship measures",
             "observationDate": "2024-01-01",
-            "limitations": "Renter, owner, mortgage, family, and regional outcomes differ substantially."
+            "limitations": "Transparent project classification threshold; not an official national affordability verdict."
           },
-          "basicNeeds": {
-            "value": 32130,
-            "unit": "2024 USD per year",
-            "definition": "Weighted-average official poverty threshold for a family of four",
+          "basicNeeds": null
+        },
+        "components": {},
+        "distributionMeasures": [
+          {
+            "label": "Official poverty rate",
+            "value": 0.106,
+            "unit": "share of population",
+            "definition": "Share below the official U.S. poverty threshold",
             "source": "U.S. Census Bureau, Income in the United States: 2024",
-            "sourceUrl": "https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-poverty-thresholds.html",
+            "sourceUrl": "https://www.census.gov/library/publications/2025/demo/p60-287.html",
             "observationDate": "2024-01-01",
-            "limitations": "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy."
+            "limitations": "Official thresholds vary by family size and composition but not geography."
+          },
+          {
+            "label": "Share below 50% of the poverty threshold",
+            "value": 0.05,
+            "unit": "share of population",
+            "definition": "Population with income-to-poverty ratio below 0.50",
+            "source": "U.S. Census Bureau, Income in the United States: 2024",
+            "sourceUrl": "https://www.census.gov/library/publications/2025/demo/p60-287.html",
+            "observationDate": "2024-01-01",
+            "limitations": "Income threshold measure, not a direct household budget."
+          },
+          {
+            "label": "Food-insecure households",
+            "value": 0.137,
+            "unit": "share of households",
+            "definition": "Share of households experiencing food insecurity",
+            "source": "USDA Economic Research Service, Household Food Security in the United States in 2024",
+            "sourceUrl": "https://ers.usda.gov/publications/113622",
+            "observationDate": "2024-01-01",
+            "limitations": "Household experiential measure; not a retail food-price index."
+          },
+          {
+            "label": "Households with very low food security",
+            "value": 0.054,
+            "unit": "share of households",
+            "definition": "Share of households with disrupted eating patterns and reduced food intake",
+            "source": "USDA Economic Research Service, 2024",
+            "sourceUrl": "https://ers.usda.gov/data-products/chart-gallery/58378",
+            "observationDate": "2024-01-01",
+            "limitations": "Survey estimate subject to sampling and non-sampling error."
+          },
+          {
+            "label": "Households with housing-cost burden",
+            "value": 0.304,
+            "unit": "share of households",
+            "definition": "Share spending more than 30% of household income on housing costs",
+            "source": "U.S. Census Bureau, ACS Housing Availability and Affordability: 2023",
+            "sourceUrl": "https://www2.census.gov/library/publications/2025/demo/acs-61.pdf",
+            "observationDate": "2023-01-01",
+            "limitations": "All-household national estimate; renter and owner burdens differ substantially."
+          },
+          {
+            "label": "Households with severe housing-cost burden",
+            "value": 0.147,
+            "unit": "share of households",
+            "definition": "Share spending more than 50% of household income on housing costs",
+            "source": "U.S. Census Bureau, ACS Housing Availability and Affordability: 2023",
+            "sourceUrl": "https://www2.census.gov/library/publications/2025/demo/acs-61.pdf",
+            "observationDate": "2023-01-01",
+            "limitations": "All-household national estimate; renter and owner burdens differ substantially."
           }
-        },
-        "components": {
-          "food": 10169,
-          "housing": 16317,
-          "utilitiesAndEnergy": 4736,
-          "totalMeasuredEssentials": 31222,
-          "unit": "2024 USD per year"
-        },
+        ],
+        "headlineInputs": [
+          {
+            "id": "housing-burden-30-rate",
+            "label": "Households with housing-cost burden",
+            "value": 0.304,
+            "unit": "share of households",
+            "definition": "Share spending more than 30% of household income on housing costs",
+            "source": "U.S. Census Bureau, ACS Housing Availability and Affordability: 2023",
+            "sourceUrl": "https://www2.census.gov/library/publications/2025/demo/acs-61.pdf",
+            "observationDate": "2023-01-01",
+            "limitations": "All-household national estimate; renter and owner burdens differ substantially."
+          },
+          {
+            "id": "housing-burden-50-rate",
+            "label": "Households with severe housing-cost burden",
+            "value": 0.147,
+            "unit": "share of households",
+            "definition": "Share spending more than 50% of household income on housing costs",
+            "source": "U.S. Census Bureau, ACS Housing Availability and Affordability: 2023",
+            "sourceUrl": "https://www2.census.gov/library/publications/2025/demo/acs-61.pdf",
+            "observationDate": "2023-01-01",
+            "limitations": "All-household national estimate; renter and owner burdens differ substantially."
+          }
+        ],
+        "representativeBudgets": [
+          {
+            "id": "national-consumer-unit-proxy",
+            "householdType": "National all-household / all-consumer-unit proxy",
+            "incomeReference": 72330,
+            "foodCost": 10169,
+            "housingCost": 16317,
+            "utilitiesAndEnergy": 4736,
+            "totalMeasuredEssentials": 31222,
+            "unit": "2024 USD per year",
+            "source": "U.S. Census Bureau and BLS Consumer Expenditure Surveys",
+            "sourceUrl": "https://www.bls.gov/news.release/cesan.nr0.htm",
+            "observationDate": "2024-01-01",
+            "limitations": "Illustrative only. Median Census households and average BLS consumer units are not matched, so this case cannot determine a national verdict."
+          }
+        ],
+        "matchedHouseholdCases": [],
         "directionEvidence": [
           {
             "indicator": "us-rent-pressure",
@@ -1150,10 +1788,9 @@
           }
         ],
         "limitations": [
-          "Median Census households are not the same statistical population as average BLS consumer units.",
-          "These are averages across consumer units, not costs for the median Census household. Housing uses shelter plus separately reported utilities rather than the broader BLS housing total to avoid double counting.",
-          "The family-of-four poverty threshold is not household-type matched to the all-household income and consumer-unit expenditure proxy.",
-          "Renter, owner, mortgage, family, and regional outcomes differ substantially."
+          "All-household national estimate; renter and owner burdens differ substantially.",
+          "All-household national estimate; renter and owner burdens differ substantially.",
+          "Transparent project classification threshold; not an official national affordability verdict."
         ],
         "missingEvidence": []
       }
@@ -2126,36 +2763,139 @@
       "geography": "canada",
       "topic": "affordability",
       "evidenceKey": "canada:affordability",
-      "interpretation": "Affordable \u00b7 easing",
-      "confidence": "moderate",
-      "coverage": 1.0,
+      "interpretation": "Unresolved \u00b7 easing",
+      "confidence": "low",
+      "coverage": 0.9285714285714286,
       "scope": "Canadian household affordability with global commodity context",
       "supporting": [
         {
-          "indicator": "absolute-affordability",
-          "label": "Absolute affordability assessment",
+          "indicator": "mbm-poverty-rate",
+          "label": "Share below the Market Basket Measure",
           "status": "supporting",
-          "reason": "The indicator is consistent with this interpretation. The configured household reference is affordable and easing. Measured costs are 46.1% of after-tax income.",
+          "reason": "The indicator is consistent with this interpretation. Share below the Market Basket Measure is 11.0% of the published reference population.",
           "chart": null,
           "indicatorFile": null,
-          "group": "Absolute affordability",
-          "value": 61763.0,
-          "unit": "2024 CAD per year",
+          "group": "Population hardship evidence",
+          "value": 11.0,
+          "unit": "% of population/households",
           "historicalPercentile": null,
-          "direction": "easing",
-          "absoluteStatus": "affordable",
+          "direction": null,
           "sourceDate": "2024-01-01",
-          "source": "Statistics Canada, Table 11-10-0066-01",
-          "calculation": "otherwise",
+          "source": "Statistics Canada, Canadian Income Survey, 2024",
+          "calculation": "Percentage of people below Canada's official poverty line under the 2023-base Market Basket Measure",
           "limitations": [
-            "The income estimate is national and the family composition is broader than the exact MBM reference family ages.",
-            "The MBM is a modest basic-needs reference basket for a specified family and region, not observed spending by the median Canadian household. Utilities and household energy are embedded in the shelter and other basket components and are not separately additive here.",
-            "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average.",
-            "A median reference case can be affordable while many households remain under pressure."
-          ]
+            "Latest-vintage revised survey estimate; sampling and non-sampling error apply."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "deep-poverty-rate",
+          "label": "Share in deep poverty",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Share in deep poverty is 5.7% of the published reference population.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": 5.7,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": "2024-01-01",
+          "source": "Statistics Canada, Dimensions of Poverty Hub, 2024",
+          "calculation": "Percentage with income below 75% of Canada's official poverty line",
+          "limitations": [
+            "This is an income-threshold measure, not a direct household budget."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "food-insecurity-rate",
+          "label": "Household food-insecurity exposure",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Household food-insecurity exposure is 24.0% of the published reference population.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": 24.0,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": "2024-01-01",
+          "source": "Statistics Canada, Canadian Income Survey, 2024",
+          "calculation": "Percentage of people living in households reporting marginal, moderate, or severe food insecurity",
+          "limitations": [
+            "The measure captures household food-access experience and is not a food-price index."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "shelter-burden-30-rate",
+          "label": "Households spending at least 30% of income on shelter",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Households spending at least 30% of income on shelter is 22.0% of the published reference population.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": 22.0,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": "2022-01-01",
+          "source": "Statistics Canada, Canadian Housing Survey, 2022",
+          "calculation": "Share of households in the provinces spending 30% or more of income on shelter costs",
+          "limitations": [
+            "Older than the income and food-security evidence; provincial household coverage and tenure differences apply."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "core-housing-need-rate",
+          "label": "Households in core housing need",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Households in core housing need is 10.1% of the published reference population.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": 10.100000000000001,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": "2021-01-01",
+          "source": "Statistics Canada, 2021 Census",
+          "calculation": "Share living in unsuitable, inadequate, or unaffordable housing and unable to afford acceptable local alternatives",
+          "limitations": [
+            "Census-period measure; substantially older than current price and income observations."
+          ],
+          "absoluteStatus": null
         }
       ],
       "mixed": [
+        {
+          "indicator": "absolute-affordability",
+          "label": "National affordability assessment",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Population hardship measures show pressure, but incomplete matched household-type budgets prevent a defensible national absolute verdict.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Absolute affordability",
+          "value": null,
+          "unit": null,
+          "historicalPercentile": null,
+          "direction": "easing",
+          "absoluteStatus": "unresolved",
+          "sourceDate": "2024-01-01",
+          "source": null,
+          "calculation": "population hardship measures available AND matched household-type cases incomplete",
+          "limitations": [
+            "Latest-vintage revised survey estimate; sampling and non-sampling error apply.",
+            "This is an income-threshold measure, not a direct household budget.",
+            "The measure captures household food-access experience and is not a food-price index.",
+            "Older than the income and food-security evidence; provincial household coverage and tenure differences apply.",
+            "The official category is defined, but a verified current national estimate has not yet been integrated.",
+            "Census-period measure; substantially older than current price and income observations.",
+            "Population hardship is measured, but a single absolute national budget verdict is not supportable yet."
+          ]
+        },
         {
           "indicator": "food_to_income",
           "label": "Canada food-price-to-income index",
@@ -2298,108 +3038,333 @@
         }
       ],
       "contradicting": [],
-      "insufficient": [],
-      "absoluteStatus": "affordable",
+      "insufficient": [
+        {
+          "indicator": "shelter-burden-50-rate",
+          "label": "Households spending at least 50% of income on shelter",
+          "status": "insufficient",
+          "reason": "The available data cannot evaluate this indicator. Households spending at least 50% of income on shelter has not yet been integrated as a verified national estimate.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": null,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": null,
+          "source": "Statistics Canada shelter-cost-to-income classification",
+          "calculation": "National severe shelter-cost-burden share",
+          "limitations": [
+            "The official category is defined, but a verified current national estimate has not yet been integrated."
+          ],
+          "absoluteStatus": null
+        }
+      ],
+      "absoluteStatus": "unresolved",
       "direction": "easing",
-      "householdType": "Two-parent family with children; Toronto MBM reference family of four",
+      "householdType": "People and households in Canada",
       "income": {
-        "value": 133900,
+        "value": 75500,
         "unit": "2024 CAD per year",
-        "definition": "Median after-tax income of Canadian two-parent families with children",
-        "source": "Statistics Canada, Table 11-10-0190-01",
-        "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110019001",
+        "definition": "Median after-tax income of economic families and unattached individuals",
+        "source": "Statistics Canada, Canadian Income Survey, 2024",
+        "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/t001a-eng.htm",
         "observationDate": "2024-01-01",
         "releaseDate": "2026-04-29",
-        "limitations": "The income estimate is national and the family composition is broader than the exact MBM reference family ages."
+        "limitations": "This is an overall descriptive reference. It is not matched to one household size, tenure, or geography-specific Market Basket Measure threshold and does not determine the national verdict."
       },
-      "essentialCost": {
-        "value": 61763.0,
-        "unit": "2024 CAD per year",
-        "metric": "totalMeasuredEssentials",
-        "definition": "2023-base Market Basket Measure components and total threshold for the Toronto reference family of four, current dollars",
-        "source": "Statistics Canada, Table 11-10-0066-01",
-        "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
-        "observationDate": "2024-01-01"
-      },
-      "costShare": 0.4612621359223301,
-      "residualIncome": 72137.0,
+      "essentialCost": null,
+      "costShare": null,
+      "residualIncome": null,
       "thresholdUsed": {
         "classification": {
-          "geography": "canada",
-          "householdType": "Two-parent family with children; Toronto MBM reference family of four",
-          "status": "affordable",
-          "definition": "Income clears the configured basic-needs and essential-cost pressure bands",
-          "formula": "otherwise",
-          "source": "Project evaluation of official Statistics Canada inputs",
+          "status": "unresolved",
+          "definition": "Matched household-type income and geography-specific basic-needs baskets are incomplete, so the national absolute verdict is unresolved.",
+          "formula": "population hardship measures available AND matched household-type cases incomplete",
+          "source": "Configured official distribution measures",
           "observationDate": "2024-01-01",
-          "limitations": "A median reference case can be affordable while many households remain under pressure."
+          "limitations": "Population hardship is measured, but a single absolute national budget verdict is not supportable yet."
         },
-        "basicNeeds": {
-          "value": 61763,
-          "unit": "2024 CAD per year",
-          "definition": "2023-base Market Basket Measure total threshold for the Toronto reference family of four",
-          "source": "Statistics Canada, Table 11-10-0066-01",
-          "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
-          "observationDate": "2024-01-01",
-          "limitations": "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average."
-        }
+        "basicNeeds": null
       },
+      "referencePopulation": "People and households in Canada",
+      "headlineInputs": [
+        {
+          "id": "mbm-poverty-rate",
+          "label": "Share below the Market Basket Measure",
+          "value": 0.11,
+          "unit": "share of population",
+          "definition": "Percentage of people below Canada's official poverty line under the 2023-base Market Basket Measure",
+          "source": "Statistics Canada, Canadian Income Survey, 2024",
+          "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/dq260429a-eng.htm",
+          "observationDate": "2024-01-01",
+          "limitations": "Latest-vintage revised survey estimate; sampling and non-sampling error apply."
+        },
+        {
+          "id": "deep-poverty-rate",
+          "label": "Share in deep poverty",
+          "value": 0.057,
+          "unit": "share of population",
+          "definition": "Percentage with income below 75% of Canada's official poverty line",
+          "source": "Statistics Canada, Dimensions of Poverty Hub, 2024",
+          "sourceUrl": "https://www150.statcan.gc.ca/n1/pub/11-627-m/11-627-m2026011-eng.htm",
+          "observationDate": "2024-01-01",
+          "limitations": "This is an income-threshold measure, not a direct household budget."
+        },
+        {
+          "id": "food-insecurity-rate",
+          "label": "Household food-insecurity exposure",
+          "value": 0.24,
+          "unit": "share of population",
+          "definition": "Percentage of people living in households reporting marginal, moderate, or severe food insecurity",
+          "source": "Statistics Canada, Canadian Income Survey, 2024",
+          "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/dq260429a-eng.htm",
+          "observationDate": "2024-01-01",
+          "limitations": "The measure captures household food-access experience and is not a food-price index."
+        },
+        {
+          "id": "shelter-burden-30-rate",
+          "label": "Households spending at least 30% of income on shelter",
+          "value": 0.22,
+          "unit": "share of households",
+          "definition": "Share of households in the provinces spending 30% or more of income on shelter costs",
+          "source": "Statistics Canada, Canadian Housing Survey, 2022",
+          "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/240910/dq240910b-eng.htm",
+          "observationDate": "2022-01-01",
+          "limitations": "Older than the income and food-security evidence; provincial household coverage and tenure differences apply."
+        },
+        {
+          "id": "shelter-burden-50-rate",
+          "label": "Households spending at least 50% of income on shelter",
+          "value": null,
+          "unit": "share of households",
+          "definition": "National severe shelter-cost-burden share",
+          "source": "Statistics Canada shelter-cost-to-income classification",
+          "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/definition-eng.cfm?ID=households-menage028",
+          "observationDate": null,
+          "limitations": "The official category is defined, but a verified current national estimate has not yet been integrated."
+        },
+        {
+          "id": "core-housing-need-rate",
+          "label": "Households in core housing need",
+          "value": 0.101,
+          "unit": "share of households",
+          "definition": "Share living in unsuitable, inadequate, or unaffordable housing and unable to afford acceptable local alternatives",
+          "source": "Statistics Canada, 2021 Census",
+          "sourceUrl": "https://www150.statcan.gc.ca/n1/pub/11-627-m/11-627-m2022056-eng.htm",
+          "observationDate": "2021-01-01",
+          "limitations": "Census-period measure; substantially older than current price and income observations."
+        }
+      ],
       "absoluteEvaluation": {
-        "absoluteStatus": "affordable",
+        "absoluteStatus": "unresolved",
         "direction": "easing",
-        "householdType": "Two-parent family with children; Toronto MBM reference family of four",
+        "householdType": "People and households in Canada",
+        "referencePopulation": "People and households in Canada",
         "observationDate": "2024-01-01",
         "income": {
-          "value": 133900,
+          "value": 75500,
           "unit": "2024 CAD per year",
-          "definition": "Median after-tax income of Canadian two-parent families with children",
-          "source": "Statistics Canada, Table 11-10-0190-01",
-          "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110019001",
+          "definition": "Median after-tax income of economic families and unattached individuals",
+          "source": "Statistics Canada, Canadian Income Survey, 2024",
+          "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/t001a-eng.htm",
           "observationDate": "2024-01-01",
           "releaseDate": "2026-04-29",
-          "limitations": "The income estimate is national and the family composition is broader than the exact MBM reference family ages."
+          "limitations": "This is an overall descriptive reference. It is not matched to one household size, tenure, or geography-specific Market Basket Measure threshold and does not determine the national verdict."
         },
-        "essentialCost": {
-          "value": 61763.0,
-          "unit": "2024 CAD per year",
-          "metric": "totalMeasuredEssentials",
-          "definition": "2023-base Market Basket Measure components and total threshold for the Toronto reference family of four, current dollars",
-          "source": "Statistics Canada, Table 11-10-0066-01",
-          "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
-          "observationDate": "2024-01-01"
-        },
-        "costShare": 0.4612621359223301,
-        "residualIncome": 72137.0,
-        "incomeRemainingAfterHousing": 107610.0,
-        "incomeRemainingAfterMeasuredEssentials": 72137.0,
+        "essentialCost": null,
+        "costShare": null,
+        "residualIncome": null,
+        "incomeRemainingAfterHousing": null,
+        "incomeRemainingAfterMeasuredEssentials": null,
         "thresholdUsed": {
           "classification": {
-            "geography": "canada",
-            "householdType": "Two-parent family with children; Toronto MBM reference family of four",
-            "status": "affordable",
-            "definition": "Income clears the configured basic-needs and essential-cost pressure bands",
-            "formula": "otherwise",
-            "source": "Project evaluation of official Statistics Canada inputs",
+            "status": "unresolved",
+            "definition": "Matched household-type income and geography-specific basic-needs baskets are incomplete, so the national absolute verdict is unresolved.",
+            "formula": "population hardship measures available AND matched household-type cases incomplete",
+            "source": "Configured official distribution measures",
             "observationDate": "2024-01-01",
-            "limitations": "A median reference case can be affordable while many households remain under pressure."
+            "limitations": "Population hardship is measured, but a single absolute national budget verdict is not supportable yet."
           },
-          "basicNeeds": {
-            "value": 61763,
+          "basicNeeds": null
+        },
+        "components": {},
+        "distributionMeasures": [
+          {
+            "label": "Share below the Market Basket Measure",
+            "value": 0.11,
+            "unit": "share of population",
+            "definition": "Percentage of people below Canada's official poverty line under the 2023-base Market Basket Measure",
+            "source": "Statistics Canada, Canadian Income Survey, 2024",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/dq260429a-eng.htm",
+            "observationDate": "2024-01-01",
+            "limitations": "Latest-vintage revised survey estimate; sampling and non-sampling error apply."
+          },
+          {
+            "label": "Share in deep poverty",
+            "value": 0.057,
+            "unit": "share of population",
+            "definition": "Percentage with income below 75% of Canada's official poverty line",
+            "source": "Statistics Canada, Dimensions of Poverty Hub, 2024",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/pub/11-627-m/11-627-m2026011-eng.htm",
+            "observationDate": "2024-01-01",
+            "limitations": "This is an income-threshold measure, not a direct household budget."
+          },
+          {
+            "label": "Household food-insecurity exposure",
+            "value": 0.24,
+            "unit": "share of population",
+            "definition": "Percentage of people living in households reporting marginal, moderate, or severe food insecurity",
+            "source": "Statistics Canada, Canadian Income Survey, 2024",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/dq260429a-eng.htm",
+            "observationDate": "2024-01-01",
+            "limitations": "The measure captures household food-access experience and is not a food-price index."
+          },
+          {
+            "label": "Households spending at least 30% of income on shelter",
+            "value": 0.22,
+            "unit": "share of households",
+            "definition": "Share of households in the provinces spending 30% or more of income on shelter costs",
+            "source": "Statistics Canada, Canadian Housing Survey, 2022",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/240910/dq240910b-eng.htm",
+            "observationDate": "2022-01-01",
+            "limitations": "Older than the income and food-security evidence; provincial household coverage and tenure differences apply."
+          },
+          {
+            "label": "Households spending at least 50% of income on shelter",
+            "value": null,
+            "unit": "share of households",
+            "definition": "National severe shelter-cost-burden share",
+            "source": "Statistics Canada shelter-cost-to-income classification",
+            "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/definition-eng.cfm?ID=households-menage028",
+            "observationDate": null,
+            "limitations": "The official category is defined, but a verified current national estimate has not yet been integrated."
+          },
+          {
+            "label": "Households in core housing need",
+            "value": 0.101,
+            "unit": "share of households",
+            "definition": "Share living in unsuitable, inadequate, or unaffordable housing and unable to afford acceptable local alternatives",
+            "source": "Statistics Canada, 2021 Census",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/pub/11-627-m/11-627-m2022056-eng.htm",
+            "observationDate": "2021-01-01",
+            "limitations": "Census-period measure; substantially older than current price and income observations."
+          }
+        ],
+        "headlineInputs": [
+          {
+            "id": "mbm-poverty-rate",
+            "label": "Share below the Market Basket Measure",
+            "value": 0.11,
+            "unit": "share of population",
+            "definition": "Percentage of people below Canada's official poverty line under the 2023-base Market Basket Measure",
+            "source": "Statistics Canada, Canadian Income Survey, 2024",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/dq260429a-eng.htm",
+            "observationDate": "2024-01-01",
+            "limitations": "Latest-vintage revised survey estimate; sampling and non-sampling error apply."
+          },
+          {
+            "id": "deep-poverty-rate",
+            "label": "Share in deep poverty",
+            "value": 0.057,
+            "unit": "share of population",
+            "definition": "Percentage with income below 75% of Canada's official poverty line",
+            "source": "Statistics Canada, Dimensions of Poverty Hub, 2024",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/pub/11-627-m/11-627-m2026011-eng.htm",
+            "observationDate": "2024-01-01",
+            "limitations": "This is an income-threshold measure, not a direct household budget."
+          },
+          {
+            "id": "food-insecurity-rate",
+            "label": "Household food-insecurity exposure",
+            "value": 0.24,
+            "unit": "share of population",
+            "definition": "Percentage of people living in households reporting marginal, moderate, or severe food insecurity",
+            "source": "Statistics Canada, Canadian Income Survey, 2024",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/dq260429a-eng.htm",
+            "observationDate": "2024-01-01",
+            "limitations": "The measure captures household food-access experience and is not a food-price index."
+          },
+          {
+            "id": "shelter-burden-30-rate",
+            "label": "Households spending at least 30% of income on shelter",
+            "value": 0.22,
+            "unit": "share of households",
+            "definition": "Share of households in the provinces spending 30% or more of income on shelter costs",
+            "source": "Statistics Canada, Canadian Housing Survey, 2022",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/240910/dq240910b-eng.htm",
+            "observationDate": "2022-01-01",
+            "limitations": "Older than the income and food-security evidence; provincial household coverage and tenure differences apply."
+          },
+          {
+            "id": "shelter-burden-50-rate",
+            "label": "Households spending at least 50% of income on shelter",
+            "value": null,
+            "unit": "share of households",
+            "definition": "National severe shelter-cost-burden share",
+            "source": "Statistics Canada shelter-cost-to-income classification",
+            "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/definition-eng.cfm?ID=households-menage028",
+            "observationDate": null,
+            "limitations": "The official category is defined, but a verified current national estimate has not yet been integrated."
+          },
+          {
+            "id": "core-housing-need-rate",
+            "label": "Households in core housing need",
+            "value": 0.101,
+            "unit": "share of households",
+            "definition": "Share living in unsuitable, inadequate, or unaffordable housing and unable to afford acceptable local alternatives",
+            "source": "Statistics Canada, 2021 Census",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/pub/11-627-m/11-627-m2022056-eng.htm",
+            "observationDate": "2021-01-01",
+            "limitations": "Census-period measure; substantially older than current price and income observations."
+          }
+        ],
+        "representativeBudgets": [
+          {
+            "id": "toronto-mbm-family-four",
+            "householdType": "Toronto Market Basket Measure reference family of four",
+            "incomeReference": 133900,
+            "incomeDefinition": "Median after-tax income of Canadian two-parent families with children",
+            "foodCost": 14522,
+            "housingCost": 26290,
+            "totalMeasuredEssentials": 61763,
             "unit": "2024 CAD per year",
-            "definition": "2023-base Market Basket Measure total threshold for the Toronto reference family of four",
-            "source": "Statistics Canada, Table 11-10-0066-01",
+            "source": "Statistics Canada Tables 11-10-0190-01 and 11-10-0066-01",
             "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
             "observationDate": "2024-01-01",
-            "limitations": "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average."
+            "limitations": "Illustrative only. National family income is not matched to the Toronto MBM family by geography and exact composition, so this case cannot determine a national verdict."
           }
-        },
-        "components": {
-          "food": 14522,
-          "housing": 26290,
-          "utilitiesAndEnergy": null,
-          "totalMeasuredEssentials": 61763,
-          "unit": "2024 CAD per year"
-        },
+        ],
+        "matchedHouseholdCases": [
+          {
+            "householdType": "Two-parent families with children",
+            "income": 133900,
+            "unit": "2024 CAD per year",
+            "status": "not-evaluated",
+            "missing": "Matching household-size and geography-specific MBM basket"
+          },
+          {
+            "householdType": "One-parent families",
+            "income": 68700,
+            "unit": "2024 CAD per year",
+            "status": "not-evaluated",
+            "missing": "Matching household-size and geography-specific MBM basket"
+          },
+          {
+            "householdType": "Unattached individuals",
+            "income": 41000,
+            "unit": "2024 CAD per year",
+            "status": "not-evaluated",
+            "missing": "Matching single-person and geography-specific MBM basket"
+          },
+          {
+            "householdType": "Unattached seniors",
+            "income": 38600,
+            "unit": "2024 CAD per year",
+            "status": "not-evaluated",
+            "missing": "Matching senior household and geography-specific basic-needs basket"
+          }
+        ],
         "directionEvidence": [
           {
             "indicator": "food-to-income",
@@ -2435,13 +3400,17 @@
           }
         ],
         "limitations": [
-          "The income estimate is national and the family composition is broader than the exact MBM reference family ages.",
-          "The MBM is a modest basic-needs reference basket for a specified family and region, not observed spending by the median Canadian household. Utilities and household energy are embedded in the shelter and other basket components and are not separately additive here.",
-          "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average.",
-          "A median reference case can be affordable while many households remain under pressure."
+          "Latest-vintage revised survey estimate; sampling and non-sampling error apply.",
+          "This is an income-threshold measure, not a direct household budget.",
+          "The measure captures household food-access experience and is not a food-price index.",
+          "Older than the income and food-security evidence; provincial household coverage and tenure differences apply.",
+          "The official category is defined, but a verified current national estimate has not yet been integrated.",
+          "Census-period measure; substantially older than current price and income observations.",
+          "Population hardship is measured, but a single absolute national budget verdict is not supportable yet."
         ],
         "missingEvidence": [
-          "Utilities and household energy are not separately reported in the Canadian MBM input."
+          "Households spending at least 50% of income on shelter is not yet integrated.",
+          "Matched household-type income and geography-specific basic-needs baskets are incomplete, so the national absolute verdict is unresolved."
         ]
       }
     },
@@ -2449,50 +3418,89 @@
       "geography": "canada",
       "topic": "food",
       "evidenceKey": "canada:food",
-      "interpretation": "Affordable \u00b7 worsening",
+      "interpretation": "Pressured \u00b7 worsening",
       "confidence": "moderate",
       "coverage": 1.0,
       "scope": "Canadian household affordability with global commodity context",
       "supporting": [
         {
           "indicator": "absolute-food",
-          "label": "Absolute food assessment",
+          "label": "National food assessment",
           "status": "supporting",
-          "reason": "The indicator is consistent with this interpretation. The configured household reference is affordable and worsening. Measured costs are 10.8% of after-tax income.",
+          "reason": "The indicator is consistent with this interpretation. The configured population-distribution evidence is pressured and worsening.",
           "chart": null,
           "indicatorFile": null,
           "group": "Absolute affordability",
-          "value": 14522.0,
-          "unit": "2024 CAD per year",
+          "value": null,
+          "unit": null,
           "historicalPercentile": null,
           "direction": "worsening",
-          "absoluteStatus": "affordable",
+          "absoluteStatus": "pressured",
           "sourceDate": "2024-01-01",
-          "source": "Statistics Canada, Table 11-10-0066-01",
-          "calculation": "otherwise",
+          "source": null,
+          "calculation": "{\"all\": [{\"measure\": \"food-insecurity-rate\", \"operator\": \"gte\", \"value\": 0.1}]}",
           "limitations": [
-            "The income estimate is national and the family composition is broader than the exact MBM reference family ages.",
-            "The MBM is a modest basic-needs reference basket for a specified family and region, not observed spending by the median Canadian household. Utilities and household energy are embedded in the shelter and other basket components and are not separately additive here.",
-            "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average.",
-            "Food insecurity can persist for households below the median or facing other essential costs."
+            "The measure captures household food-access experience and is not a food-price index.",
+            "Latest-vintage revised survey estimate; sampling and non-sampling error apply.",
+            "Transparent project classification threshold; not an official national affordability verdict."
           ]
         },
         {
-          "indicator": "real_disposable_income_per_person",
-          "label": "Canada real household disposable income per person",
+          "indicator": "food-insecurity-rate",
+          "label": "Household food-insecurity exposure",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Household food-insecurity exposure is 24.0% of the published reference population.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": 24.0,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": "2024-01-01",
+          "source": "Statistics Canada, Canadian Income Survey, 2024",
+          "calculation": "Percentage of people living in households reporting marginal, moderate, or severe food insecurity",
+          "limitations": [
+            "The measure captures household food-access experience and is not a food-price index."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "mbm-poverty-rate",
+          "label": "Share below the Market Basket Measure",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Share below the Market Basket Measure is 11.0% of the published reference population.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": 11.0,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": "2024-01-01",
+          "source": "Statistics Canada, Canadian Income Survey, 2024",
+          "calculation": "Percentage of people below Canada's official poverty line under the 2023-base Market Basket Measure",
+          "limitations": [
+            "Latest-vintage revised survey estimate; sampling and non-sampling error apply."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "real_wage_growth",
+          "label": "Canada real wage growth",
           "status": "supporting",
           "reason": "The indicator is consistent with this interpretation. Rising real income or wages generally increase purchasing power, while household experiences can differ from the average.",
-          "chart": "canada/indicators/real-disposable-income-per-person.json",
-          "indicatorFile": "canada/indicators/real-disposable-income-per-person.json",
+          "chart": "canada/indicators/real-wage-growth.json",
+          "indicatorFile": "canada/indicators/real-wage-growth.json",
           "group": "Purchasing power",
-          "value": 26304.197886920163,
-          "unit": "CPI-deflated annualized CAD per person",
-          "historicalPercentile": 96.26865671641791,
-          "direction": "rising",
-          "sourceDate": "2026-06-17",
-          "calculation": "Nominal disposable income per person / quarterly-average all-items CPI \u00d7 100",
+          "value": -0.1820875805558897,
+          "unit": "percentage points",
+          "historicalPercentile": 18.328445747800586,
+          "direction": "falling",
+          "sourceDate": "2026-06-22",
+          "calculation": "Hourly wage YoY - all-items CPI YoY",
           "limitations": [
-            "Deflated by the aligned all-items CPI; this is a derived CPI-deflated measure, not an official chained-dollar series. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
+            "Derived difference. Statistics Canada table 14-10-0063-01 is latest-vintage and may revise recent or historical observations. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
           ],
           "absoluteStatus": null
@@ -2602,128 +3610,260 @@
       ],
       "contradicting": [
         {
-          "indicator": "real_wage_growth",
-          "label": "Canada real wage growth",
+          "indicator": "real_disposable_income_per_person",
+          "label": "Canada real household disposable income per person",
           "status": "contradicting",
           "reason": "The indicator moves against this interpretation. Rising real income or wages generally increase purchasing power, while household experiences can differ from the average.",
-          "chart": "canada/indicators/real-wage-growth.json",
-          "indicatorFile": "canada/indicators/real-wage-growth.json",
+          "chart": "canada/indicators/real-disposable-income-per-person.json",
+          "indicatorFile": "canada/indicators/real-disposable-income-per-person.json",
           "group": "Purchasing power",
-          "value": -0.1820875805558897,
-          "unit": "percentage points",
-          "historicalPercentile": 18.328445747800586,
-          "direction": "falling",
-          "sourceDate": "2026-06-22",
-          "calculation": "Hourly wage YoY - all-items CPI YoY",
+          "value": 26304.197886920163,
+          "unit": "CPI-deflated annualized CAD per person",
+          "historicalPercentile": 96.26865671641791,
+          "direction": "rising",
+          "sourceDate": "2026-06-17",
+          "calculation": "Nominal disposable income per person / quarterly-average all-items CPI \u00d7 100",
           "limitations": [
-            "Derived difference. Statistics Canada table 14-10-0063-01 is latest-vintage and may revise recent or historical observations. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
+            "Deflated by the aligned all-items CPI; this is a derived CPI-deflated measure, not an official chained-dollar series. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
           ],
           "absoluteStatus": null
         }
       ],
       "insufficient": [],
-      "absoluteStatus": "affordable",
+      "absoluteStatus": "pressured",
       "direction": "worsening",
-      "householdType": "Two-parent family with children; Toronto MBM reference family of four",
+      "householdType": "People and households in Canada",
       "income": {
-        "value": 133900,
+        "value": 75500,
         "unit": "2024 CAD per year",
-        "definition": "Median after-tax income of Canadian two-parent families with children",
-        "source": "Statistics Canada, Table 11-10-0190-01",
-        "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110019001",
+        "definition": "Median after-tax income of economic families and unattached individuals",
+        "source": "Statistics Canada, Canadian Income Survey, 2024",
+        "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/t001a-eng.htm",
         "observationDate": "2024-01-01",
         "releaseDate": "2026-04-29",
-        "limitations": "The income estimate is national and the family composition is broader than the exact MBM reference family ages."
+        "limitations": "This is an overall descriptive reference. It is not matched to one household size, tenure, or geography-specific Market Basket Measure threshold and does not determine the national verdict."
       },
-      "essentialCost": {
-        "value": 14522.0,
-        "unit": "2024 CAD per year",
-        "metric": "food",
-        "definition": "2023-base Market Basket Measure components and total threshold for the Toronto reference family of four, current dollars",
-        "source": "Statistics Canada, Table 11-10-0066-01",
-        "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
-        "observationDate": "2024-01-01"
-      },
-      "costShare": 0.10845407020164302,
-      "residualIncome": 72137.0,
+      "essentialCost": null,
+      "costShare": null,
+      "residualIncome": null,
       "thresholdUsed": {
         "classification": {
+          "status": "pressured",
+          "all": [
+            {
+              "measure": "food-insecurity-rate",
+              "operator": "gte",
+              "value": 0.1
+            }
+          ],
           "geography": "canada",
-          "householdType": "Two-parent family with children; Toronto MBM reference family of four",
-          "status": "affordable",
-          "definition": "Income remaining after shelter covers the reference food basket and its share is below the pressure band",
-          "formula": "otherwise",
-          "source": "Project evaluation of official Statistics Canada inputs",
+          "definition": "Population-distribution rule for national food",
+          "formula": "{\"all\": [{\"measure\": \"food-insecurity-rate\", \"operator\": \"gte\", \"value\": 0.1}]}",
+          "source": "Project rule applied to configured official population hardship measures",
           "observationDate": "2024-01-01",
-          "limitations": "Food insecurity can persist for households below the median or facing other essential costs."
+          "limitations": "Transparent project classification threshold; not an official national affordability verdict."
         },
-        "basicNeeds": {
-          "value": 61763,
-          "unit": "2024 CAD per year",
-          "definition": "2023-base Market Basket Measure total threshold for the Toronto reference family of four",
-          "source": "Statistics Canada, Table 11-10-0066-01",
-          "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
-          "observationDate": "2024-01-01",
-          "limitations": "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average."
-        }
+        "basicNeeds": null
       },
+      "referencePopulation": "People and households in Canada",
+      "headlineInputs": [
+        {
+          "id": "food-insecurity-rate",
+          "label": "Household food-insecurity exposure",
+          "value": 0.24,
+          "unit": "share of population",
+          "definition": "Percentage of people living in households reporting marginal, moderate, or severe food insecurity",
+          "source": "Statistics Canada, Canadian Income Survey, 2024",
+          "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/dq260429a-eng.htm",
+          "observationDate": "2024-01-01",
+          "limitations": "The measure captures household food-access experience and is not a food-price index."
+        },
+        {
+          "id": "mbm-poverty-rate",
+          "label": "Share below the Market Basket Measure",
+          "value": 0.11,
+          "unit": "share of population",
+          "definition": "Percentage of people below Canada's official poverty line under the 2023-base Market Basket Measure",
+          "source": "Statistics Canada, Canadian Income Survey, 2024",
+          "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/dq260429a-eng.htm",
+          "observationDate": "2024-01-01",
+          "limitations": "Latest-vintage revised survey estimate; sampling and non-sampling error apply."
+        }
+      ],
       "absoluteEvaluation": {
-        "absoluteStatus": "affordable",
+        "absoluteStatus": "pressured",
         "direction": "worsening",
-        "householdType": "Two-parent family with children; Toronto MBM reference family of four",
+        "householdType": "People and households in Canada",
+        "referencePopulation": "People and households in Canada",
         "observationDate": "2024-01-01",
         "income": {
-          "value": 133900,
+          "value": 75500,
           "unit": "2024 CAD per year",
-          "definition": "Median after-tax income of Canadian two-parent families with children",
-          "source": "Statistics Canada, Table 11-10-0190-01",
-          "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110019001",
+          "definition": "Median after-tax income of economic families and unattached individuals",
+          "source": "Statistics Canada, Canadian Income Survey, 2024",
+          "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/t001a-eng.htm",
           "observationDate": "2024-01-01",
           "releaseDate": "2026-04-29",
-          "limitations": "The income estimate is national and the family composition is broader than the exact MBM reference family ages."
+          "limitations": "This is an overall descriptive reference. It is not matched to one household size, tenure, or geography-specific Market Basket Measure threshold and does not determine the national verdict."
         },
-        "essentialCost": {
-          "value": 14522.0,
-          "unit": "2024 CAD per year",
-          "metric": "food",
-          "definition": "2023-base Market Basket Measure components and total threshold for the Toronto reference family of four, current dollars",
-          "source": "Statistics Canada, Table 11-10-0066-01",
-          "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
-          "observationDate": "2024-01-01"
-        },
-        "costShare": 0.10845407020164302,
-        "residualIncome": 72137.0,
-        "incomeRemainingAfterHousing": 107610.0,
-        "incomeRemainingAfterMeasuredEssentials": 72137.0,
+        "essentialCost": null,
+        "costShare": null,
+        "residualIncome": null,
+        "incomeRemainingAfterHousing": null,
+        "incomeRemainingAfterMeasuredEssentials": null,
         "thresholdUsed": {
           "classification": {
+            "status": "pressured",
+            "all": [
+              {
+                "measure": "food-insecurity-rate",
+                "operator": "gte",
+                "value": 0.1
+              }
+            ],
             "geography": "canada",
-            "householdType": "Two-parent family with children; Toronto MBM reference family of four",
-            "status": "affordable",
-            "definition": "Income remaining after shelter covers the reference food basket and its share is below the pressure band",
-            "formula": "otherwise",
-            "source": "Project evaluation of official Statistics Canada inputs",
+            "definition": "Population-distribution rule for national food",
+            "formula": "{\"all\": [{\"measure\": \"food-insecurity-rate\", \"operator\": \"gte\", \"value\": 0.1}]}",
+            "source": "Project rule applied to configured official population hardship measures",
             "observationDate": "2024-01-01",
-            "limitations": "Food insecurity can persist for households below the median or facing other essential costs."
+            "limitations": "Transparent project classification threshold; not an official national affordability verdict."
           },
-          "basicNeeds": {
-            "value": 61763,
+          "basicNeeds": null
+        },
+        "components": {},
+        "distributionMeasures": [
+          {
+            "label": "Share below the Market Basket Measure",
+            "value": 0.11,
+            "unit": "share of population",
+            "definition": "Percentage of people below Canada's official poverty line under the 2023-base Market Basket Measure",
+            "source": "Statistics Canada, Canadian Income Survey, 2024",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/dq260429a-eng.htm",
+            "observationDate": "2024-01-01",
+            "limitations": "Latest-vintage revised survey estimate; sampling and non-sampling error apply."
+          },
+          {
+            "label": "Share in deep poverty",
+            "value": 0.057,
+            "unit": "share of population",
+            "definition": "Percentage with income below 75% of Canada's official poverty line",
+            "source": "Statistics Canada, Dimensions of Poverty Hub, 2024",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/pub/11-627-m/11-627-m2026011-eng.htm",
+            "observationDate": "2024-01-01",
+            "limitations": "This is an income-threshold measure, not a direct household budget."
+          },
+          {
+            "label": "Household food-insecurity exposure",
+            "value": 0.24,
+            "unit": "share of population",
+            "definition": "Percentage of people living in households reporting marginal, moderate, or severe food insecurity",
+            "source": "Statistics Canada, Canadian Income Survey, 2024",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/dq260429a-eng.htm",
+            "observationDate": "2024-01-01",
+            "limitations": "The measure captures household food-access experience and is not a food-price index."
+          },
+          {
+            "label": "Households spending at least 30% of income on shelter",
+            "value": 0.22,
+            "unit": "share of households",
+            "definition": "Share of households in the provinces spending 30% or more of income on shelter costs",
+            "source": "Statistics Canada, Canadian Housing Survey, 2022",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/240910/dq240910b-eng.htm",
+            "observationDate": "2022-01-01",
+            "limitations": "Older than the income and food-security evidence; provincial household coverage and tenure differences apply."
+          },
+          {
+            "label": "Households spending at least 50% of income on shelter",
+            "value": null,
+            "unit": "share of households",
+            "definition": "National severe shelter-cost-burden share",
+            "source": "Statistics Canada shelter-cost-to-income classification",
+            "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/definition-eng.cfm?ID=households-menage028",
+            "observationDate": null,
+            "limitations": "The official category is defined, but a verified current national estimate has not yet been integrated."
+          },
+          {
+            "label": "Households in core housing need",
+            "value": 0.101,
+            "unit": "share of households",
+            "definition": "Share living in unsuitable, inadequate, or unaffordable housing and unable to afford acceptable local alternatives",
+            "source": "Statistics Canada, 2021 Census",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/pub/11-627-m/11-627-m2022056-eng.htm",
+            "observationDate": "2021-01-01",
+            "limitations": "Census-period measure; substantially older than current price and income observations."
+          }
+        ],
+        "headlineInputs": [
+          {
+            "id": "food-insecurity-rate",
+            "label": "Household food-insecurity exposure",
+            "value": 0.24,
+            "unit": "share of population",
+            "definition": "Percentage of people living in households reporting marginal, moderate, or severe food insecurity",
+            "source": "Statistics Canada, Canadian Income Survey, 2024",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/dq260429a-eng.htm",
+            "observationDate": "2024-01-01",
+            "limitations": "The measure captures household food-access experience and is not a food-price index."
+          },
+          {
+            "id": "mbm-poverty-rate",
+            "label": "Share below the Market Basket Measure",
+            "value": 0.11,
+            "unit": "share of population",
+            "definition": "Percentage of people below Canada's official poverty line under the 2023-base Market Basket Measure",
+            "source": "Statistics Canada, Canadian Income Survey, 2024",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/dq260429a-eng.htm",
+            "observationDate": "2024-01-01",
+            "limitations": "Latest-vintage revised survey estimate; sampling and non-sampling error apply."
+          }
+        ],
+        "representativeBudgets": [
+          {
+            "id": "toronto-mbm-family-four",
+            "householdType": "Toronto Market Basket Measure reference family of four",
+            "incomeReference": 133900,
+            "incomeDefinition": "Median after-tax income of Canadian two-parent families with children",
+            "foodCost": 14522,
+            "housingCost": 26290,
+            "totalMeasuredEssentials": 61763,
             "unit": "2024 CAD per year",
-            "definition": "2023-base Market Basket Measure total threshold for the Toronto reference family of four",
-            "source": "Statistics Canada, Table 11-10-0066-01",
+            "source": "Statistics Canada Tables 11-10-0190-01 and 11-10-0066-01",
             "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
             "observationDate": "2024-01-01",
-            "limitations": "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average."
+            "limitations": "Illustrative only. National family income is not matched to the Toronto MBM family by geography and exact composition, so this case cannot determine a national verdict."
           }
-        },
-        "components": {
-          "food": 14522,
-          "housing": 26290,
-          "utilitiesAndEnergy": null,
-          "totalMeasuredEssentials": 61763,
-          "unit": "2024 CAD per year"
-        },
+        ],
+        "matchedHouseholdCases": [
+          {
+            "householdType": "Two-parent families with children",
+            "income": 133900,
+            "unit": "2024 CAD per year",
+            "status": "not-evaluated",
+            "missing": "Matching household-size and geography-specific MBM basket"
+          },
+          {
+            "householdType": "One-parent families",
+            "income": 68700,
+            "unit": "2024 CAD per year",
+            "status": "not-evaluated",
+            "missing": "Matching household-size and geography-specific MBM basket"
+          },
+          {
+            "householdType": "Unattached individuals",
+            "income": 41000,
+            "unit": "2024 CAD per year",
+            "status": "not-evaluated",
+            "missing": "Matching single-person and geography-specific MBM basket"
+          },
+          {
+            "householdType": "Unattached seniors",
+            "income": 38600,
+            "unit": "2024 CAD per year",
+            "status": "not-evaluated",
+            "missing": "Matching senior household and geography-specific basic-needs basket"
+          }
+        ],
         "directionEvidence": [
           {
             "indicator": "food-to-income",
@@ -2759,64 +3899,101 @@
           }
         ],
         "limitations": [
-          "The income estimate is national and the family composition is broader than the exact MBM reference family ages.",
-          "The MBM is a modest basic-needs reference basket for a specified family and region, not observed spending by the median Canadian household. Utilities and household energy are embedded in the shelter and other basket components and are not separately additive here.",
-          "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average.",
-          "Food insecurity can persist for households below the median or facing other essential costs."
+          "The measure captures household food-access experience and is not a food-price index.",
+          "Latest-vintage revised survey estimate; sampling and non-sampling error apply.",
+          "Transparent project classification threshold; not an official national affordability verdict."
         ],
-        "missingEvidence": [
-          "Utilities and household energy are not separately reported in the Canadian MBM input."
-        ]
+        "missingEvidence": []
       }
     },
     "canada:housing": {
       "geography": "canada",
       "topic": "housing",
       "evidenceKey": "canada:housing",
-      "interpretation": "Affordable \u00b7 easing",
+      "interpretation": "Pressured \u00b7 easing",
       "confidence": "moderate",
-      "coverage": 1.0,
+      "coverage": 0.9090909090909091,
       "scope": "Canadian household affordability with global commodity context",
       "supporting": [
         {
           "indicator": "absolute-housing",
-          "label": "Absolute housing assessment",
+          "label": "National housing assessment",
           "status": "supporting",
-          "reason": "The indicator is consistent with this interpretation. The configured household reference is affordable and easing. Measured costs are 19.6% of after-tax income.",
+          "reason": "The indicator is consistent with this interpretation. The configured population-distribution evidence is pressured and easing.",
           "chart": null,
           "indicatorFile": null,
           "group": "Absolute affordability",
-          "value": 26290.0,
-          "unit": "2024 CAD per year",
+          "value": null,
+          "unit": null,
           "historicalPercentile": null,
           "direction": "easing",
-          "absoluteStatus": "affordable",
+          "absoluteStatus": "pressured",
           "sourceDate": "2024-01-01",
-          "source": "Statistics Canada, Table 11-10-0066-01",
-          "calculation": "otherwise",
+          "source": null,
+          "calculation": "{\"any\": [{\"measure\": \"shelter-burden-30-rate\", \"operator\": \"gte\", \"value\": 0.2}, {\"measure\": \"core-housing-need-rate\", \"operator\": \"gte\", \"value\": 0.1}]}",
           "limitations": [
-            "The income estimate is national and the family composition is broader than the exact MBM reference family ages.",
-            "The MBM is a modest basic-needs reference basket for a specified family and region, not observed spending by the median Canadian household. Utilities and household energy are embedded in the shelter and other basket components and are not separately additive here.",
-            "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average.",
-            "Tenure, mortgage status, location, and actual dwelling costs can produce very different outcomes."
+            "Older than the income and food-security evidence; provincial household coverage and tenure differences apply.",
+            "The official category is defined, but a verified current national estimate has not yet been integrated.",
+            "Census-period measure; substantially older than current price and income observations.",
+            "Transparent project classification threshold; not an official national affordability verdict."
           ]
         },
         {
-          "indicator": "real_disposable_income_per_person",
-          "label": "Canada real household disposable income per person",
+          "indicator": "shelter-burden-30-rate",
+          "label": "Households spending at least 30% of income on shelter",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Households spending at least 30% of income on shelter is 22.0% of the published reference population.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": 22.0,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": "2022-01-01",
+          "source": "Statistics Canada, Canadian Housing Survey, 2022",
+          "calculation": "Share of households in the provinces spending 30% or more of income on shelter costs",
+          "limitations": [
+            "Older than the income and food-security evidence; provincial household coverage and tenure differences apply."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "core-housing-need-rate",
+          "label": "Households in core housing need",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Households in core housing need is 10.1% of the published reference population.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": 10.100000000000001,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": "2021-01-01",
+          "source": "Statistics Canada, 2021 Census",
+          "calculation": "Share living in unsuitable, inadequate, or unaffordable housing and unable to afford acceptable local alternatives",
+          "limitations": [
+            "Census-period measure; substantially older than current price and income observations."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "real_wage_growth",
+          "label": "Canada real wage growth",
           "status": "supporting",
           "reason": "The indicator is consistent with this interpretation. Rising real income or wages generally increase purchasing power, while household experiences can differ from the average.",
-          "chart": "canada/indicators/real-disposable-income-per-person.json",
-          "indicatorFile": "canada/indicators/real-disposable-income-per-person.json",
+          "chart": "canada/indicators/real-wage-growth.json",
+          "indicatorFile": "canada/indicators/real-wage-growth.json",
           "group": "Purchasing power",
-          "value": 26304.197886920163,
-          "unit": "CPI-deflated annualized CAD per person",
-          "historicalPercentile": 96.26865671641791,
-          "direction": "rising",
-          "sourceDate": "2026-06-17",
-          "calculation": "Nominal disposable income per person / quarterly-average all-items CPI \u00d7 100",
+          "value": -0.1820875805558897,
+          "unit": "percentage points",
+          "historicalPercentile": 18.328445747800586,
+          "direction": "falling",
+          "sourceDate": "2026-06-22",
+          "calculation": "Hourly wage YoY - all-items CPI YoY",
           "limitations": [
-            "Deflated by the aligned all-items CPI; this is a derived CPI-deflated measure, not an official chained-dollar series. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
+            "Derived difference. Statistics Canada table 14-10-0063-01 is latest-vintage and may revise recent or historical observations. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
           ],
           "absoluteStatus": null
@@ -2926,128 +4103,313 @@
       ],
       "contradicting": [
         {
-          "indicator": "real_wage_growth",
-          "label": "Canada real wage growth",
+          "indicator": "real_disposable_income_per_person",
+          "label": "Canada real household disposable income per person",
           "status": "contradicting",
           "reason": "The indicator moves against this interpretation. Rising real income or wages generally increase purchasing power, while household experiences can differ from the average.",
-          "chart": "canada/indicators/real-wage-growth.json",
-          "indicatorFile": "canada/indicators/real-wage-growth.json",
+          "chart": "canada/indicators/real-disposable-income-per-person.json",
+          "indicatorFile": "canada/indicators/real-disposable-income-per-person.json",
           "group": "Purchasing power",
-          "value": -0.1820875805558897,
-          "unit": "percentage points",
-          "historicalPercentile": 18.328445747800586,
-          "direction": "falling",
-          "sourceDate": "2026-06-22",
-          "calculation": "Hourly wage YoY - all-items CPI YoY",
+          "value": 26304.197886920163,
+          "unit": "CPI-deflated annualized CAD per person",
+          "historicalPercentile": 96.26865671641791,
+          "direction": "rising",
+          "sourceDate": "2026-06-17",
+          "calculation": "Nominal disposable income per person / quarterly-average all-items CPI \u00d7 100",
           "limitations": [
-            "Derived difference. Statistics Canada table 14-10-0063-01 is latest-vintage and may revise recent or historical observations. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
+            "Deflated by the aligned all-items CPI; this is a derived CPI-deflated measure, not an official chained-dollar series. Income is a seasonally adjusted annual rate in millions of CAD and is not divided by four; population is the matching quarterly estimate. Statistics Canada table 36-10-0112-01 is latest-vintage and may revise recent or historical observations. Values are published at seasonally adjusted annual rates. Statistics Canada table 17-10-0009-01 is latest-vintage and may revise recent or historical observations. Only completed quarters with all three monthly observations are included. Statistics Canada table 18-10-0004-01 may revise recent and historical observations; classifications and baskets follow the native table.",
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
           ],
           "absoluteStatus": null
         }
       ],
-      "insufficient": [],
-      "absoluteStatus": "affordable",
+      "insufficient": [
+        {
+          "indicator": "shelter-burden-50-rate",
+          "label": "Households spending at least 50% of income on shelter",
+          "status": "insufficient",
+          "reason": "The available data cannot evaluate this indicator. Households spending at least 50% of income on shelter has not yet been integrated as a verified national estimate.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Population hardship evidence",
+          "value": null,
+          "unit": "% of population/households",
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": null,
+          "source": "Statistics Canada shelter-cost-to-income classification",
+          "calculation": "National severe shelter-cost-burden share",
+          "limitations": [
+            "The official category is defined, but a verified current national estimate has not yet been integrated."
+          ],
+          "absoluteStatus": null
+        }
+      ],
+      "absoluteStatus": "pressured",
       "direction": "easing",
-      "householdType": "Two-parent family with children; Toronto MBM reference family of four",
+      "householdType": "People and households in Canada",
       "income": {
-        "value": 133900,
+        "value": 75500,
         "unit": "2024 CAD per year",
-        "definition": "Median after-tax income of Canadian two-parent families with children",
-        "source": "Statistics Canada, Table 11-10-0190-01",
-        "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110019001",
+        "definition": "Median after-tax income of economic families and unattached individuals",
+        "source": "Statistics Canada, Canadian Income Survey, 2024",
+        "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/t001a-eng.htm",
         "observationDate": "2024-01-01",
         "releaseDate": "2026-04-29",
-        "limitations": "The income estimate is national and the family composition is broader than the exact MBM reference family ages."
+        "limitations": "This is an overall descriptive reference. It is not matched to one household size, tenure, or geography-specific Market Basket Measure threshold and does not determine the national verdict."
       },
-      "essentialCost": {
-        "value": 26290.0,
-        "unit": "2024 CAD per year",
-        "metric": "housing",
-        "definition": "2023-base Market Basket Measure components and total threshold for the Toronto reference family of four, current dollars",
-        "source": "Statistics Canada, Table 11-10-0066-01",
-        "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
-        "observationDate": "2024-01-01"
-      },
-      "costShare": 0.19634055265123226,
-      "residualIncome": 72137.0,
+      "essentialCost": null,
+      "costShare": null,
+      "residualIncome": null,
       "thresholdUsed": {
         "classification": {
+          "status": "pressured",
+          "any": [
+            {
+              "measure": "shelter-burden-30-rate",
+              "operator": "gte",
+              "value": 0.2
+            },
+            {
+              "measure": "core-housing-need-rate",
+              "operator": "gte",
+              "value": 0.1
+            }
+          ],
           "geography": "canada",
-          "householdType": "Two-parent family with children; Toronto MBM reference family of four",
-          "status": "affordable",
-          "definition": "Shelter share remains below the configured pressure bands",
-          "formula": "otherwise",
-          "source": "Project evaluation of official Statistics Canada inputs",
+          "definition": "Population-distribution rule for national housing",
+          "formula": "{\"any\": [{\"measure\": \"shelter-burden-30-rate\", \"operator\": \"gte\", \"value\": 0.2}, {\"measure\": \"core-housing-need-rate\", \"operator\": \"gte\", \"value\": 0.1}]}",
+          "source": "Project rule applied to configured official population hardship measures",
           "observationDate": "2024-01-01",
-          "limitations": "Tenure, mortgage status, location, and actual dwelling costs can produce very different outcomes."
+          "limitations": "Transparent project classification threshold; not an official national affordability verdict."
         },
-        "basicNeeds": {
-          "value": 61763,
-          "unit": "2024 CAD per year",
-          "definition": "2023-base Market Basket Measure total threshold for the Toronto reference family of four",
-          "source": "Statistics Canada, Table 11-10-0066-01",
-          "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
-          "observationDate": "2024-01-01",
-          "limitations": "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average."
-        }
+        "basicNeeds": null
       },
+      "referencePopulation": "People and households in Canada",
+      "headlineInputs": [
+        {
+          "id": "shelter-burden-30-rate",
+          "label": "Households spending at least 30% of income on shelter",
+          "value": 0.22,
+          "unit": "share of households",
+          "definition": "Share of households in the provinces spending 30% or more of income on shelter costs",
+          "source": "Statistics Canada, Canadian Housing Survey, 2022",
+          "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/240910/dq240910b-eng.htm",
+          "observationDate": "2022-01-01",
+          "limitations": "Older than the income and food-security evidence; provincial household coverage and tenure differences apply."
+        },
+        {
+          "id": "shelter-burden-50-rate",
+          "label": "Households spending at least 50% of income on shelter",
+          "value": null,
+          "unit": "share of households",
+          "definition": "National severe shelter-cost-burden share",
+          "source": "Statistics Canada shelter-cost-to-income classification",
+          "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/definition-eng.cfm?ID=households-menage028",
+          "observationDate": null,
+          "limitations": "The official category is defined, but a verified current national estimate has not yet been integrated."
+        },
+        {
+          "id": "core-housing-need-rate",
+          "label": "Households in core housing need",
+          "value": 0.101,
+          "unit": "share of households",
+          "definition": "Share living in unsuitable, inadequate, or unaffordable housing and unable to afford acceptable local alternatives",
+          "source": "Statistics Canada, 2021 Census",
+          "sourceUrl": "https://www150.statcan.gc.ca/n1/pub/11-627-m/11-627-m2022056-eng.htm",
+          "observationDate": "2021-01-01",
+          "limitations": "Census-period measure; substantially older than current price and income observations."
+        }
+      ],
       "absoluteEvaluation": {
-        "absoluteStatus": "affordable",
+        "absoluteStatus": "pressured",
         "direction": "easing",
-        "householdType": "Two-parent family with children; Toronto MBM reference family of four",
+        "householdType": "People and households in Canada",
+        "referencePopulation": "People and households in Canada",
         "observationDate": "2024-01-01",
         "income": {
-          "value": 133900,
+          "value": 75500,
           "unit": "2024 CAD per year",
-          "definition": "Median after-tax income of Canadian two-parent families with children",
-          "source": "Statistics Canada, Table 11-10-0190-01",
-          "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110019001",
+          "definition": "Median after-tax income of economic families and unattached individuals",
+          "source": "Statistics Canada, Canadian Income Survey, 2024",
+          "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/t001a-eng.htm",
           "observationDate": "2024-01-01",
           "releaseDate": "2026-04-29",
-          "limitations": "The income estimate is national and the family composition is broader than the exact MBM reference family ages."
+          "limitations": "This is an overall descriptive reference. It is not matched to one household size, tenure, or geography-specific Market Basket Measure threshold and does not determine the national verdict."
         },
-        "essentialCost": {
-          "value": 26290.0,
-          "unit": "2024 CAD per year",
-          "metric": "housing",
-          "definition": "2023-base Market Basket Measure components and total threshold for the Toronto reference family of four, current dollars",
-          "source": "Statistics Canada, Table 11-10-0066-01",
-          "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
-          "observationDate": "2024-01-01"
-        },
-        "costShare": 0.19634055265123226,
-        "residualIncome": 72137.0,
-        "incomeRemainingAfterHousing": 107610.0,
-        "incomeRemainingAfterMeasuredEssentials": 72137.0,
+        "essentialCost": null,
+        "costShare": null,
+        "residualIncome": null,
+        "incomeRemainingAfterHousing": null,
+        "incomeRemainingAfterMeasuredEssentials": null,
         "thresholdUsed": {
           "classification": {
+            "status": "pressured",
+            "any": [
+              {
+                "measure": "shelter-burden-30-rate",
+                "operator": "gte",
+                "value": 0.2
+              },
+              {
+                "measure": "core-housing-need-rate",
+                "operator": "gte",
+                "value": 0.1
+              }
+            ],
             "geography": "canada",
-            "householdType": "Two-parent family with children; Toronto MBM reference family of four",
-            "status": "affordable",
-            "definition": "Shelter share remains below the configured pressure bands",
-            "formula": "otherwise",
-            "source": "Project evaluation of official Statistics Canada inputs",
+            "definition": "Population-distribution rule for national housing",
+            "formula": "{\"any\": [{\"measure\": \"shelter-burden-30-rate\", \"operator\": \"gte\", \"value\": 0.2}, {\"measure\": \"core-housing-need-rate\", \"operator\": \"gte\", \"value\": 0.1}]}",
+            "source": "Project rule applied to configured official population hardship measures",
             "observationDate": "2024-01-01",
-            "limitations": "Tenure, mortgage status, location, and actual dwelling costs can produce very different outcomes."
+            "limitations": "Transparent project classification threshold; not an official national affordability verdict."
           },
-          "basicNeeds": {
-            "value": 61763,
+          "basicNeeds": null
+        },
+        "components": {},
+        "distributionMeasures": [
+          {
+            "label": "Share below the Market Basket Measure",
+            "value": 0.11,
+            "unit": "share of population",
+            "definition": "Percentage of people below Canada's official poverty line under the 2023-base Market Basket Measure",
+            "source": "Statistics Canada, Canadian Income Survey, 2024",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/dq260429a-eng.htm",
+            "observationDate": "2024-01-01",
+            "limitations": "Latest-vintage revised survey estimate; sampling and non-sampling error apply."
+          },
+          {
+            "label": "Share in deep poverty",
+            "value": 0.057,
+            "unit": "share of population",
+            "definition": "Percentage with income below 75% of Canada's official poverty line",
+            "source": "Statistics Canada, Dimensions of Poverty Hub, 2024",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/pub/11-627-m/11-627-m2026011-eng.htm",
+            "observationDate": "2024-01-01",
+            "limitations": "This is an income-threshold measure, not a direct household budget."
+          },
+          {
+            "label": "Household food-insecurity exposure",
+            "value": 0.24,
+            "unit": "share of population",
+            "definition": "Percentage of people living in households reporting marginal, moderate, or severe food insecurity",
+            "source": "Statistics Canada, Canadian Income Survey, 2024",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/260429/dq260429a-eng.htm",
+            "observationDate": "2024-01-01",
+            "limitations": "The measure captures household food-access experience and is not a food-price index."
+          },
+          {
+            "label": "Households spending at least 30% of income on shelter",
+            "value": 0.22,
+            "unit": "share of households",
+            "definition": "Share of households in the provinces spending 30% or more of income on shelter costs",
+            "source": "Statistics Canada, Canadian Housing Survey, 2022",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/240910/dq240910b-eng.htm",
+            "observationDate": "2022-01-01",
+            "limitations": "Older than the income and food-security evidence; provincial household coverage and tenure differences apply."
+          },
+          {
+            "label": "Households spending at least 50% of income on shelter",
+            "value": null,
+            "unit": "share of households",
+            "definition": "National severe shelter-cost-burden share",
+            "source": "Statistics Canada shelter-cost-to-income classification",
+            "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/definition-eng.cfm?ID=households-menage028",
+            "observationDate": null,
+            "limitations": "The official category is defined, but a verified current national estimate has not yet been integrated."
+          },
+          {
+            "label": "Households in core housing need",
+            "value": 0.101,
+            "unit": "share of households",
+            "definition": "Share living in unsuitable, inadequate, or unaffordable housing and unable to afford acceptable local alternatives",
+            "source": "Statistics Canada, 2021 Census",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/pub/11-627-m/11-627-m2022056-eng.htm",
+            "observationDate": "2021-01-01",
+            "limitations": "Census-period measure; substantially older than current price and income observations."
+          }
+        ],
+        "headlineInputs": [
+          {
+            "id": "shelter-burden-30-rate",
+            "label": "Households spending at least 30% of income on shelter",
+            "value": 0.22,
+            "unit": "share of households",
+            "definition": "Share of households in the provinces spending 30% or more of income on shelter costs",
+            "source": "Statistics Canada, Canadian Housing Survey, 2022",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/240910/dq240910b-eng.htm",
+            "observationDate": "2022-01-01",
+            "limitations": "Older than the income and food-security evidence; provincial household coverage and tenure differences apply."
+          },
+          {
+            "id": "shelter-burden-50-rate",
+            "label": "Households spending at least 50% of income on shelter",
+            "value": null,
+            "unit": "share of households",
+            "definition": "National severe shelter-cost-burden share",
+            "source": "Statistics Canada shelter-cost-to-income classification",
+            "sourceUrl": "https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/definition-eng.cfm?ID=households-menage028",
+            "observationDate": null,
+            "limitations": "The official category is defined, but a verified current national estimate has not yet been integrated."
+          },
+          {
+            "id": "core-housing-need-rate",
+            "label": "Households in core housing need",
+            "value": 0.101,
+            "unit": "share of households",
+            "definition": "Share living in unsuitable, inadequate, or unaffordable housing and unable to afford acceptable local alternatives",
+            "source": "Statistics Canada, 2021 Census",
+            "sourceUrl": "https://www150.statcan.gc.ca/n1/pub/11-627-m/11-627-m2022056-eng.htm",
+            "observationDate": "2021-01-01",
+            "limitations": "Census-period measure; substantially older than current price and income observations."
+          }
+        ],
+        "representativeBudgets": [
+          {
+            "id": "toronto-mbm-family-four",
+            "householdType": "Toronto Market Basket Measure reference family of four",
+            "incomeReference": 133900,
+            "incomeDefinition": "Median after-tax income of Canadian two-parent families with children",
+            "foodCost": 14522,
+            "housingCost": 26290,
+            "totalMeasuredEssentials": 61763,
             "unit": "2024 CAD per year",
-            "definition": "2023-base Market Basket Measure total threshold for the Toronto reference family of four",
-            "source": "Statistics Canada, Table 11-10-0066-01",
+            "source": "Statistics Canada Tables 11-10-0190-01 and 11-10-0066-01",
             "sourceUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
             "observationDate": "2024-01-01",
-            "limitations": "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average."
+            "limitations": "Illustrative only. National family income is not matched to the Toronto MBM family by geography and exact composition, so this case cannot determine a national verdict."
           }
-        },
-        "components": {
-          "food": 14522,
-          "housing": 26290,
-          "utilitiesAndEnergy": null,
-          "totalMeasuredEssentials": 61763,
-          "unit": "2024 CAD per year"
-        },
+        ],
+        "matchedHouseholdCases": [
+          {
+            "householdType": "Two-parent families with children",
+            "income": 133900,
+            "unit": "2024 CAD per year",
+            "status": "not-evaluated",
+            "missing": "Matching household-size and geography-specific MBM basket"
+          },
+          {
+            "householdType": "One-parent families",
+            "income": 68700,
+            "unit": "2024 CAD per year",
+            "status": "not-evaluated",
+            "missing": "Matching household-size and geography-specific MBM basket"
+          },
+          {
+            "householdType": "Unattached individuals",
+            "income": 41000,
+            "unit": "2024 CAD per year",
+            "status": "not-evaluated",
+            "missing": "Matching single-person and geography-specific MBM basket"
+          },
+          {
+            "householdType": "Unattached seniors",
+            "income": 38600,
+            "unit": "2024 CAD per year",
+            "status": "not-evaluated",
+            "missing": "Matching senior household and geography-specific basic-needs basket"
+          }
+        ],
         "directionEvidence": [
           {
             "indicator": "rent-to-income",
@@ -3083,13 +4445,13 @@
           }
         ],
         "limitations": [
-          "The income estimate is national and the family composition is broader than the exact MBM reference family ages.",
-          "The MBM is a modest basic-needs reference basket for a specified family and region, not observed spending by the median Canadian household. Utilities and household energy are embedded in the shelter and other basket components and are not separately additive here.",
-          "MBM thresholds vary by region and family size; Toronto is an explicit reference case and is not a national cost average.",
-          "Tenure, mortgage status, location, and actual dwelling costs can produce very different outcomes."
+          "Older than the income and food-security evidence; provincial household coverage and tenure differences apply.",
+          "The official category is defined, but a verified current national estimate has not yet been integrated.",
+          "Census-period measure; substantially older than current price and income observations.",
+          "Transparent project classification threshold; not an official national affordability verdict."
         ],
         "missingEvidence": [
-          "Utilities and household energy are not separately reported in the Canadian MBM input."
+          "Households spending at least 50% of income on shelter is not yet integrated."
         ]
       }
     },
@@ -4850,9 +6212,9 @@
       "insufficient": [
         {
           "indicator": "absolute-affordability",
-          "label": "Absolute affordability assessment",
+          "label": "National affordability assessment",
           "status": "insufficient",
-          "reason": "The available data cannot evaluate this indicator. No valid globally comparable absolute household-income and essential-cost measure is available in the project.",
+          "reason": "The available data cannot evaluate this indicator. No valid globally comparable absolute household-income and essential-cost distribution is available in the project.",
           "chart": null,
           "indicatorFile": null,
           "group": "Absolute affordability",
@@ -4865,7 +6227,7 @@
           "source": null,
           "calculation": null,
           "limitations": [
-            "No valid globally comparable absolute household-income and essential-cost measure is available in the project."
+            "No valid globally comparable absolute household-income and essential-cost distribution is available in the project."
           ]
         }
       ],
@@ -4877,6 +6239,8 @@
       "costShare": null,
       "residualIncome": null,
       "thresholdUsed": null,
+      "referencePopulation": null,
+      "headlineInputs": [],
       "absoluteEvaluation": {
         "absoluteStatus": "insufficient",
         "direction": "unclear",
@@ -4889,11 +6253,15 @@
         "components": {},
         "directionEvidence": [],
         "limitations": [
-          "No valid globally comparable absolute household-income and essential-cost measure is available in the project."
+          "No valid globally comparable absolute household-income and essential-cost distribution is available in the project."
         ],
         "missingEvidence": [
-          "No valid globally comparable absolute household-income and essential-cost measure is available in the project."
-        ]
+          "No valid globally comparable absolute household-income and essential-cost distribution is available in the project."
+        ],
+        "distributionMeasures": [],
+        "headlineInputs": [],
+        "representativeBudgets": [],
+        "matchedHouseholdCases": []
       }
     },
     "global:food": {
@@ -4910,9 +6278,9 @@
       "insufficient": [
         {
           "indicator": "absolute-food",
-          "label": "Absolute food assessment",
+          "label": "National food assessment",
           "status": "insufficient",
-          "reason": "The available data cannot evaluate this indicator. No valid globally comparable absolute household-income and essential-cost measure is available in the project.",
+          "reason": "The available data cannot evaluate this indicator. No valid globally comparable absolute household-income and essential-cost distribution is available in the project.",
           "chart": null,
           "indicatorFile": null,
           "group": "Absolute affordability",
@@ -4925,7 +6293,7 @@
           "source": null,
           "calculation": null,
           "limitations": [
-            "No valid globally comparable absolute household-income and essential-cost measure is available in the project."
+            "No valid globally comparable absolute household-income and essential-cost distribution is available in the project."
           ]
         }
       ],
@@ -4937,6 +6305,8 @@
       "costShare": null,
       "residualIncome": null,
       "thresholdUsed": null,
+      "referencePopulation": null,
+      "headlineInputs": [],
       "absoluteEvaluation": {
         "absoluteStatus": "insufficient",
         "direction": "unclear",
@@ -4949,11 +6319,15 @@
         "components": {},
         "directionEvidence": [],
         "limitations": [
-          "No valid globally comparable absolute household-income and essential-cost measure is available in the project."
+          "No valid globally comparable absolute household-income and essential-cost distribution is available in the project."
         ],
         "missingEvidence": [
-          "No valid globally comparable absolute household-income and essential-cost measure is available in the project."
-        ]
+          "No valid globally comparable absolute household-income and essential-cost distribution is available in the project."
+        ],
+        "distributionMeasures": [],
+        "headlineInputs": [],
+        "representativeBudgets": [],
+        "matchedHouseholdCases": []
       }
     },
     "global:housing": {
@@ -4970,9 +6344,9 @@
       "insufficient": [
         {
           "indicator": "absolute-housing",
-          "label": "Absolute housing assessment",
+          "label": "National housing assessment",
           "status": "insufficient",
-          "reason": "The available data cannot evaluate this indicator. No valid globally comparable absolute household-income and essential-cost measure is available in the project.",
+          "reason": "The available data cannot evaluate this indicator. No valid globally comparable absolute household-income and essential-cost distribution is available in the project.",
           "chart": null,
           "indicatorFile": null,
           "group": "Absolute affordability",
@@ -4985,7 +6359,7 @@
           "source": null,
           "calculation": null,
           "limitations": [
-            "No valid globally comparable absolute household-income and essential-cost measure is available in the project."
+            "No valid globally comparable absolute household-income and essential-cost distribution is available in the project."
           ]
         }
       ],
@@ -4997,6 +6371,8 @@
       "costShare": null,
       "residualIncome": null,
       "thresholdUsed": null,
+      "referencePopulation": null,
+      "headlineInputs": [],
       "absoluteEvaluation": {
         "absoluteStatus": "insufficient",
         "direction": "unclear",
@@ -5009,11 +6385,15 @@
         "components": {},
         "directionEvidence": [],
         "limitations": [
-          "No valid globally comparable absolute household-income and essential-cost measure is available in the project."
+          "No valid globally comparable absolute household-income and essential-cost distribution is available in the project."
         ],
         "missingEvidence": [
-          "No valid globally comparable absolute household-income and essential-cost measure is available in the project."
-        ]
+          "No valid globally comparable absolute household-income and essential-cost distribution is available in the project."
+        ],
+        "distributionMeasures": [],
+        "headlineInputs": [],
+        "representativeBudgets": [],
+        "matchedHouseholdCases": []
       }
     }
   }

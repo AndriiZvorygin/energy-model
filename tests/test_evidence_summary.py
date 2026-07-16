@@ -58,7 +58,7 @@ def test_affordability_summary_uses_documented_categories() -> None:
     payload = json.loads((GENERATED / "evidence-summary.json").read_text(encoding="utf-8"))
     topic = payload["evidence"]["canada:affordability"]
     groups = {row["group"] for status in STATUS_TEXT for row in topic[status]}
-    assert groups == {"Absolute affordability", "Food", "Housing", "Energy"}
+    assert {"Absolute affordability", "Population hardship evidence", "Food", "Housing", "Energy"} <= groups
 
 
 def test_absolute_affordability_is_separate_from_direction() -> None:
@@ -66,18 +66,14 @@ def test_absolute_affordability_is_separate_from_direction() -> None:
     for geography in ("canada", "us"):
         for topic in ("affordability", "food", "housing"):
             result = refinery.generate(geography, topic)
-            assert result["absoluteStatus"] in {"affordable", "pressured", "unaffordable", "severe-shortfall"}
+            assert result["absoluteStatus"] in {"pressured", "unaffordable", "severe-shortfall", "unresolved"}
             assert result["direction"] in {"worsening", "stable", "easing", "unclear"}
             assert result["income"]["value"] > 0
-            assert result["essentialCost"]["value"] > 0
-            assert result["costShare"] > 0
-            assert result["thresholdUsed"]["classification"]["geography"] == geography
+            assert result["headlineInputs"]
+            assert result["absoluteEvaluation"]["representativeBudgets"]
 
-    refinery.absolute_rules["geographies"]["canada"]["income"]["value"] = 65_000
-    result = refinery.generate("canada", "affordability")
-    assert result["absoluteStatus"] == "unaffordable"
-    assert result["direction"] == "easing"
-    assert result["interpretation"] == "Unaffordable · easing"
+    assert refinery.generate("canada", "affordability")["absoluteStatus"] == "unresolved"
+    assert refinery.generate("us", "affordability")["absoluteStatus"] == "unresolved"
 
 
 def test_global_absolute_affordability_is_insufficient_not_mixed() -> None:
@@ -89,14 +85,39 @@ def test_global_absolute_affordability_is_insufficient_not_mixed() -> None:
         assert not result["mixed"]
 
 
-def test_absolute_threshold_configuration_has_published_provenance() -> None:
+def test_absolute_distribution_configuration_has_published_provenance() -> None:
     config = json.loads((ROOT / "config" / "absolute_affordability.json").read_text(encoding="utf-8"))
-    required = {"geography", "householdType", "definition", "source", "observationDate", "limitations"}
+    required = {"label", "definition", "source", "sourceUrl", "observationDate", "limitations", "unit", "value"}
     for geography in ("canada", "us"):
+        geography_rule = config["geographies"][geography]
+        assert all(required <= measure.keys() for measure in geography_rule["distributionMeasures"].values())
         for topic in ("affordability", "food", "housing"):
-            thresholds = config["geographies"][geography]["topics"][topic]["thresholds"]
-            assert {item["status"] for item in thresholds} == {"affordable", "pressured", "unaffordable", "severe-shortfall"}
-            assert all(required <= item.keys() and ("value" in item or "formula" in item) for item in thresholds)
+            assert geography_rule["topics"][topic]["headlineMeasures"]
+
+
+def test_canadian_reference_family_cannot_determine_national_verdict() -> None:
+    result = generate_evidence_summary("canada", "affordability", ROOT)
+    assert result["absoluteStatus"] == "unresolved"
+    assert result["income"]["value"] == 75_500
+    assert result["income"]["definition"] == "Median after-tax income of economic families and unattached individuals"
+    assert all(item.get("value") != 133_900 for item in result["headlineInputs"])
+    budgets = result["absoluteEvaluation"]["representativeBudgets"]
+    assert any(item.get("incomeReference") == 133_900 for item in budgets)
+    cases = result["absoluteEvaluation"]["matchedHouseholdCases"]
+    assert any(item["householdType"] == "Two-parent families with children" and item["status"] == "not-evaluated" for item in cases)
+
+
+def test_national_headlines_use_population_hardship_shares() -> None:
+    canada = generate_evidence_summary("canada", "affordability", ROOT)
+    us = generate_evidence_summary("us", "affordability", ROOT)
+    assert {item["id"] for item in canada["headlineInputs"]} >= {
+        "mbm-poverty-rate", "food-insecurity-rate", "shelter-burden-30-rate", "core-housing-need-rate"
+    }
+    assert {item["id"] for item in us["headlineInputs"]} >= {
+        "official-poverty-rate", "food-insecurity-rate", "housing-burden-30-rate", "housing-burden-50-rate"
+    }
+    assert canada["absoluteStatus"] != "affordable"
+    assert us["absoluteStatus"] != "affordable"
 
 
 def test_one_interface_handles_all_configured_geographies() -> None:
@@ -116,7 +137,7 @@ def test_migrated_narratives_remain_unchanged() -> None:
     payload = json.loads((GENERATED / "evidence-summary.json").read_text(encoding="utf-8"))["evidence"]
     assert payload["us:current-state"]["interpretation"] == "Mixed transition: Physical tightening/Energy affordability stress"
     assert payload["canada:current-state"]["interpretation"] == "Consumer affordability stress"
-    assert payload["canada:food"]["interpretation"] == "Affordable · worsening"
+    assert payload["canada:food"]["interpretation"] == "Pressured · worsening"
 
 
 def test_generation_does_not_modify_classifiers_or_locked_outputs() -> None:

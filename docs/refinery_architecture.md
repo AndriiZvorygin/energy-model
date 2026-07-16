@@ -79,7 +79,7 @@ Adding a future geography requires source metadata plus a geography entry in `co
 
 The generated contract keeps two concepts separate:
 
-- `absoluteStatus`: `affordable`, `pressured`, `unaffordable`, `severe-shortfall`, or `insufficient`
+- `absoluteStatus`: `affordable`, `pressured`, `unaffordable`, `severe-shortfall`, `unresolved`, or `insufficient`
 - `direction`: `worsening`, `stable`, `easing`, or `unclear`
 
-Changing trend evidence cannot turn an unaffordable absolute condition into an affordable one. A geography without comparable household income and cost inputs returns `insufficient`, not `mixed`.
+Changing trend evidence cannot turn an unaffordable absolute condition into an affordable one. National headlines use population hardship shares rather than a single representative household. A geography with useful hardship evidence but incomplete matched household-type budgets returns `unresolved`; a geography without comparable evidence returns `insufficient`, not `mixed`.

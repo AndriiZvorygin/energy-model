@@ -13,7 +13,7 @@ STATUS_TEXT = {
     "insufficient": "The available data cannot evaluate this indicator.",
 }
 
-ABSOLUTE_STATUSES = {"affordable", "pressured", "unaffordable", "severe-shortfall", "insufficient"}
+ABSOLUTE_STATUSES = {"affordable", "pressured", "unaffordable", "severe-shortfall", "unresolved", "insufficient"}
 DIRECTIONS = {"worsening", "stable", "easing", "unclear"}
 
 
@@ -266,92 +266,117 @@ class EvidenceRefinery:
                 "absoluteStatus": "insufficient", "direction": "unclear", "householdType": None,
                 "income": None, "essentialCost": None, "costShare": None, "residualIncome": None,
                 "thresholdUsed": None, "components": {}, "directionEvidence": [],
-                "limitations": [reason], "missingEvidence": [reason],
+                "limitations": [reason], "missingEvidence": [reason], "distributionMeasures": [],
+                "headlineInputs": [], "representativeBudgets": [], "matchedHouseholdCases": [],
             }
         topic_rule = geography_rule.get("topics", {}).get(topic)
-        income_record = geography_rule.get("income")
-        costs = geography_rule.get("costs")
-        basic = geography_rule.get("basicNeedsThreshold")
-        if not topic_rule or not income_record or not costs or not basic:
-            reason = f"Absolute {topic} inputs are not configured for {geography}."
-            return {
-                "absoluteStatus": "insufficient", "direction": "unclear", "householdType": geography_rule.get("householdType"),
-                "income": income_record, "essentialCost": None, "costShare": None, "residualIncome": None,
-                "thresholdUsed": None, "components": costs or {}, "directionEvidence": [],
-                "limitations": [reason], "missingEvidence": [reason],
+        measures = geography_rule.get("distributionMeasures", {})
+        headline_ids = topic_rule.get("headlineMeasures", []) if topic_rule else []
+        headline_inputs = [{"id": identifier, **measures[identifier]} for identifier in headline_ids if identifier in measures]
+        available_inputs = [item for item in headline_inputs if item.get("value") is not None]
+        missing = [f"{item['label']} is not yet integrated." for item in headline_inputs if item.get("value") is None]
+        matched_cases = geography_rule.get("matchedHouseholdCases", [])
+        matched_cases_complete = bool(matched_cases) and all(item.get("status") == "evaluated" for item in matched_cases)
+
+        if not topic_rule or not available_inputs:
+            status = "insufficient"
+            selected_threshold = None
+            missing.append(f"No population-distribution evidence is configured for {geography} {topic}.")
+        elif topic_rule.get("requiresCompletedMatchedHouseholdCases") and not matched_cases_complete:
+            status = "unresolved"
+            selected_threshold = {
+                "status": "unresolved",
+                "definition": topic_rule["unresolvedReason"],
+                "formula": "population hardship measures available AND matched household-type cases incomplete",
+                "source": "Configured official distribution measures",
+                "observationDate": geography_rule.get("observationDate"),
+                "limitations": "Population hardship is measured, but a single absolute national budget verdict is not supportable yet.",
             }
-        income = float(income_record["value"])
-        cost_value = costs.get(topic_rule["costMetric"])
-        if cost_value is None:
-            reason = f"The configured {topic} essential cost is unavailable."
-            return {
-                "absoluteStatus": "insufficient", "direction": "unclear", "householdType": geography_rule.get("householdType"),
-                "income": income_record, "essentialCost": None, "costShare": None, "residualIncome": None,
-                "thresholdUsed": None, "components": costs, "directionEvidence": [],
-                "limitations": [reason], "missingEvidence": [reason],
-            }
-        cost = float(cost_value)
-        housing = float(costs.get("housing") or 0)
-        utilities = float(costs.get("utilitiesAndEnergy") or 0)
-        food = float(costs.get("food") or 0)
-        residual_after_housing = income - housing - utilities
-        metrics = {
-            "costShare": cost / income if income else None,
-            "incomeToThreshold": income / float(basic["value"]) if basic.get("value") else None,
-            "residualAfterHousingToFood": residual_after_housing / food if food else None,
-        }
-        status = "insufficient"
-        selected_threshold: dict[str, Any] | None = None
-        for rule in topic_rule["statusRules"]:
-            matched = bool(rule.get("otherwise"))
-            if "any" in rule:
-                matched = any(self._predicate(metrics.get(item["metric"]), item["operator"], float(item["value"])) for item in rule["any"])
-            if "all" in rule:
-                matched = all(self._predicate(metrics.get(item["metric"]), item["operator"], float(item["value"])) for item in rule["all"])
-            if matched:
-                status = rule["status"]
-                selected_threshold = next((item for item in topic_rule["thresholds"] if item["status"] == status), None)
-                break
+            missing.append(topic_rule["unresolvedReason"])
+        else:
+            status = "insufficient"
+            selected_threshold = None
+            for rule in topic_rule.get("statusRules", []):
+                matched = bool(rule.get("otherwise"))
+                if "any" in rule:
+                    matched = any(self._predicate(measures.get(item["measure"], {}).get("value"), item["operator"], float(item["value"])) for item in rule["any"])
+                if "all" in rule:
+                    matched = all(self._predicate(measures.get(item["measure"], {}).get("value"), item["operator"], float(item["value"])) for item in rule["all"])
+                if matched:
+                    status = rule["status"]
+                    selected_threshold = {
+                        **rule,
+                        "geography": geography,
+                        "definition": f"Population-distribution rule for national {topic}",
+                        "formula": json.dumps({key: value for key, value in rule.items() if key != "status"}, sort_keys=True),
+                        "source": "Project rule applied to configured official population hardship measures",
+                        "observationDate": geography_rule.get("observationDate"),
+                        "limitations": "Transparent project classification threshold; not an official national affordability verdict.",
+                    }
+                    break
         if status not in ABSOLUTE_STATUSES:
             raise ValueError(f"Invalid absolute affordability status: {status}")
-        direction, direction_evidence = self._direction(topic_rule.get("directionIndicators", []))
+        direction, direction_evidence = self._direction(topic_rule.get("directionIndicators", []) if topic_rule else [])
         if direction not in DIRECTIONS:
             raise ValueError(f"Invalid affordability direction: {direction}")
-        total_essentials = float(costs.get("totalMeasuredEssentials") or 0)
-        limitations = [income_record.get("limitations", ""), costs.get("limitations", ""), basic.get("limitations", "")]
-        if selected_threshold:
-            limitations.append(selected_threshold.get("limitations", ""))
+        limitations = [item.get("limitations", "") for item in headline_inputs]
+        if selected_threshold and selected_threshold.get("limitations"):
+            limitations.append(selected_threshold["limitations"])
         return {
             "absoluteStatus": status,
             "direction": direction,
-            "householdType": geography_rule["householdType"],
+            "householdType": geography_rule.get("referencePopulation"),
+            "referencePopulation": geography_rule.get("referencePopulation"),
             "observationDate": geography_rule.get("observationDate"),
-            "income": income_record,
-            "essentialCost": {"value": cost, "unit": costs["unit"], "metric": topic_rule["costMetric"], "definition": costs["definition"], "source": costs["source"], "sourceUrl": costs["sourceUrl"], "observationDate": costs["observationDate"]},
-            "costShare": metrics["costShare"],
-            "residualIncome": income - total_essentials,
-            "incomeRemainingAfterHousing": residual_after_housing,
-            "incomeRemainingAfterMeasuredEssentials": income - total_essentials,
-            "thresholdUsed": {"classification": selected_threshold, "basicNeeds": basic},
-            "components": {"food": costs.get("food"), "housing": costs.get("housing"), "utilitiesAndEnergy": costs.get("utilitiesAndEnergy"), "totalMeasuredEssentials": costs.get("totalMeasuredEssentials"), "unit": costs["unit"]},
+            "income": geography_rule.get("descriptiveIncome"),
+            "essentialCost": None,
+            "costShare": None,
+            "residualIncome": None,
+            "incomeRemainingAfterHousing": None,
+            "incomeRemainingAfterMeasuredEssentials": None,
+            "thresholdUsed": {"classification": selected_threshold, "basicNeeds": None},
+            "components": {},
+            "distributionMeasures": list(measures.values()),
+            "headlineInputs": headline_inputs,
+            "representativeBudgets": geography_rule.get("representativeBudgets", []),
+            "matchedHouseholdCases": matched_cases,
             "directionEvidence": direction_evidence,
             "limitations": [item for item in limitations if item],
-            "missingEvidence": costs.get("missingEvidence", []),
+            "missingEvidence": missing,
         }
+
+    def _distribution_rows(self, assessment: dict[str, Any]) -> list[dict[str, Any]]:
+        rows: list[dict[str, Any]] = []
+        for measure in assessment.get("headlineInputs", []):
+            value = measure.get("value")
+            disposition = "supporting" if value is not None else "insufficient"
+            reason = STATUS_TEXT[disposition]
+            if value is not None:
+                reason += f" {measure['label']} is {float(value) * 100:.1f}% of the published reference population."
+            else:
+                reason += f" {measure['label']} has not yet been integrated as a verified national estimate."
+            rows.append({
+                "indicator": measure["id"], "label": measure["label"], "status": disposition,
+                "reason": reason, "chart": None, "indicatorFile": None, "group": "Population hardship evidence",
+                "value": float(value) * 100 if value is not None else None, "unit": "% of population/households", "historicalPercentile": None, "direction": None,
+                "sourceDate": measure.get("observationDate"), "source": measure.get("source"),
+                "calculation": measure.get("definition"), "limitations": [measure.get("limitations", "")],
+                "absoluteStatus": None,
+            })
+        return rows
 
     def _absolute_row(self, topic: str, assessment: dict[str, Any]) -> dict[str, Any]:
         status = assessment["absoluteStatus"]
-        disposition = "insufficient" if status == "insufficient" else "supporting"
-        label = f"Absolute {topic.replace('-', ' ')} assessment"
+        disposition = "insufficient" if status == "insufficient" else "mixed" if status == "unresolved" else "supporting"
+        label = f"National {topic.replace('-', ' ')} assessment"
         cost = assessment.get("essentialCost") or {}
-        share = assessment.get("costShare")
         reason = STATUS_TEXT[disposition]
         if status == "insufficient":
             reason += " " + " ".join(assessment.get("missingEvidence", []))
+        elif status == "unresolved":
+            reason += " Population hardship measures show pressure, but incomplete matched household-type budgets prevent a defensible national absolute verdict."
         else:
-            reason += f" The configured household reference is {status.replace('-', ' ')} and {assessment['direction']}."
-            if share is not None:
-                reason += f" Measured costs are {share * 100:.1f}% of after-tax income."
+            reason += f" The configured population-distribution evidence is {status.replace('-', ' ')} and {assessment['direction']}."
         threshold = assessment.get("thresholdUsed") or {}
         classification = threshold.get("classification") or {}
         return {
@@ -364,7 +389,7 @@ class EvidenceRefinery:
 
     def _indicator_groups(self, geography: str, topic: str, geography_rule: dict[str, Any], topic_rule: dict[str, Any]) -> dict[str, Any]:
         assessment = self._absolute_affordability(geography, topic)
-        rows = [self._absolute_row(topic, assessment)]
+        rows = [self._absolute_row(topic, assessment), *self._distribution_rows(assessment)]
         pressure_headline = assessment["absoluteStatus"] in {"pressured", "unaffordable", "severe-shortfall"}
         for group, ids in topic_rule["groups"].items():
             for indicator_id in ids:
@@ -388,12 +413,13 @@ class EvidenceRefinery:
         interpretation = f"{absolute_label} · {direction_label}"
         available = sum(row["status"] != "insufficient" for row in rows)
         return _topic(
-            geography, topic, interpretation, "moderate" if assessment["absoluteStatus"] != "insufficient" else "low",
+            geography, topic, interpretation, "low" if assessment["absoluteStatus"] in {"insufficient", "unresolved"} else "moderate",
             available / len(rows) if rows else 0, rows, topic_rule.get("scope") or geography_rule["scope"],
             absoluteStatus=assessment["absoluteStatus"], direction=assessment["direction"],
             householdType=assessment.get("householdType"), income=assessment.get("income"),
             essentialCost=assessment.get("essentialCost"), costShare=assessment.get("costShare"),
             residualIncome=assessment.get("residualIncome"), thresholdUsed=assessment.get("thresholdUsed"),
+            referencePopulation=assessment.get("referencePopulation"), headlineInputs=assessment.get("headlineInputs"),
             absoluteEvaluation=assessment,
         )
 
