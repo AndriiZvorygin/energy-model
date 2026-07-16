@@ -15,7 +15,9 @@ export function ResearchText({ text }: { text: string | undefined }) {
 }
 
 function inlineCode(text: string) {
-  return text.split(/(`[^`]+`)/g).map((part, index) => part.startsWith('`') && part.endsWith('`')
-    ? <code key={index}>{part.slice(1, -1)}</code>
-    : part)
+  return text.split(/(`[^`]+`|\*\*[^*]+\*\*)/g).map((part, index) => {
+    if (part.startsWith('`') && part.endsWith('`')) return <code key={index}>{part.slice(1, -1)}</code>
+    if (part.startsWith('**') && part.endsWith('**')) return <strong key={index}>{part.slice(2, -2)}</strong>
+    return part
+  })
 }
