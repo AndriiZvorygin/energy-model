@@ -11,6 +11,7 @@ from oil_model.canada_classification import (
     _clock,
     _evaluate_symptoms,
     _quarterly_date,
+    _summary,
     load_canadian_rules,
     regional_divergence,
 )
@@ -112,3 +113,17 @@ def test_generated_canadian_classification_schemas() -> None:
     assert len(symptoms["evaluations"]) == 6
     assert len(scores["scores"]) == 8
     assert next(item for item in symptoms["evaluations"] if item["id"] == "household_stress")["statusLabel"] == "Insufficient data"
+
+
+def test_diagnostic_summary_only_reports_currently_relevant_symptoms() -> None:
+    symptoms = [
+        {"name": "Affordability pressure", "status": "active", "statusLabel": "Active", "plainLanguageMeaning": "Essential costs are elevated."},
+        {"name": "Physical tightening", "status": "inactive", "statusLabel": "Inactive", "plainLanguageMeaning": "Inventories and prices are tightening."},
+        {"name": "Household stress", "status": "insufficient_data", "statusLabel": "Insufficient data", "plainLanguageMeaning": "Household evidence is incomplete."},
+    ]
+    summary = _summary(symptoms, {"active": False}, "Consumer affordability stress")
+    assert "Current Canadian state: Consumer affordability stress" in summary
+    assert "Affordability pressure is active" in summary
+    assert "Physical tightening" not in summary
+    assert "Household stress" not in summary
+    assert "insufficient" not in summary.lower()

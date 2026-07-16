@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-16T15:17:09+00:00",
+  "generatedAt": "2026-07-16T15:36:39+00:00",
   "statusDefinitions": {
     "supporting": "The indicator is consistent with this interpretation.",
     "mixed": "The indicator provides partial or ambiguous evidence.",
@@ -574,7 +574,7 @@
     },
     "canada": {
       "topic": "canada",
-      "interpretation": "Physical-tightening evidence is inactive based on benchmark prices, refinery inputs, and inventories. Canadian energy-affordability pressure is active. Manufacturing and output transmission is inactive, while labour weakening is inactive and remains incomplete without wages and hours. Resource-producing-region expansion evidence is active. Ontario and Alberta evidence is shown separately, but the configured regional-divergence threshold is not currently met. Household stress remains insufficiently evaluated because income, expenditure-burden, and insolvency histories are unavailable.",
+      "interpretation": "Current Canadian state: Consumer affordability stress. Canadian energy affordability pressure is active: Canadian-dollar oil and consumer energy costs are elevated while rates, currency movements, and debt service limit household room. Resource-producing-region expansion is active: Resource GDP, Alberta crude production, exports, and national crude production are rising, indicating expansion in producing-region activity.",
       "confidence": "low",
       "coverage": 0.8888888888888888,
       "scope": "Canadian energy-economic conditions with global oil-market and global-liquidity inputs.",
@@ -1859,68 +1859,7 @@
         }
       ],
       "mixed": [],
-      "contradicting": [
-        {
-          "indicator": "prices_fall_unemployment_rises",
-          "label": "Prices fall while unemployment rises",
-          "status": "contradicting",
-          "reason": "The indicator moves against this interpretation. The published symptom status is inactive at a score of 3%.",
-          "chart": null,
-          "indicatorFile": null,
-          "group": "Symptom status",
-          "value": 0.026578073089701004,
-          "unit": "score, 0-1",
-          "historicalPercentile": null,
-          "direction": "inactive",
-          "sourceDate": "2026-07-01",
-          "calculation": "Version-controlled symptom rule",
-          "limitations": [
-            "Positive supply shock",
-            "Productivity gain",
-            "Currency movement"
-          ]
-        },
-        {
-          "indicator": "temporary_work_hours_weaken",
-          "label": "Temporary work and weekly hours weaken",
-          "status": "contradicting",
-          "reason": "The indicator moves against this interpretation. The published symptom status is inactive at a score of 21%.",
-          "chart": null,
-          "indicatorFile": null,
-          "group": "Symptom status",
-          "value": 0.20541506969938023,
-          "unit": "score, 0-1",
-          "historicalPercentile": null,
-          "direction": "inactive",
-          "sourceDate": "2026-07-01",
-          "calculation": "Version-controlled symptom rule",
-          "limitations": [
-            "Sector rebalancing",
-            "Regulation",
-            "Changes in hiring channels"
-          ]
-        },
-        {
-          "indicator": "industrial_output_weakens_after_oil_spike",
-          "label": "Industrial output weakens after an oil spike",
-          "status": "contradicting",
-          "reason": "The indicator moves against this interpretation. The published symptom status is inactive at a score of 37%.",
-          "chart": null,
-          "indicatorFile": null,
-          "group": "Symptom status",
-          "value": 0.3671398369072788,
-          "unit": "score, 0-1",
-          "historicalPercentile": null,
-          "direction": "inactive",
-          "sourceDate": "2026-07-01",
-          "calculation": "Version-controlled symptom rule",
-          "limitations": [
-            "Monetary tightening",
-            "Financial crisis",
-            "External demand shock"
-          ]
-        }
-      ],
+      "contradicting": [],
       "insufficient": []
     },
     "symptoms_canada": {
@@ -1950,7 +1889,7 @@
         },
         {
           "indicator": "resource_region_cycle",
-          "label": "Resource-producing-region expansion or contraction",
+          "label": "Resource-producing-region expansion",
           "status": "supporting",
           "reason": "The indicator is consistent with this interpretation. The published symptom status is active.",
           "chart": null,
@@ -1968,84 +1907,8 @@
         }
       ],
       "mixed": [],
-      "contradicting": [
-        {
-          "indicator": "physical_tightening",
-          "label": "Physical tightening",
-          "status": "contradicting",
-          "reason": "The indicator moves against this interpretation. The published symptom status is inactive.",
-          "chart": null,
-          "indicatorFile": null,
-          "group": "Symptom status",
-          "value": 0.23250070323488045,
-          "unit": "score, 0-1",
-          "historicalPercentile": null,
-          "direction": "inactive",
-          "sourceDate": "2026-07-01",
-          "calculation": "Version-controlled Canadian symptom rule",
-          "limitations": [
-            "Latest-vintage histories are used; this is not a real-time-vintage reconstruction."
-          ]
-        },
-        {
-          "indicator": "manufacturing_output_transmission",
-          "label": "Manufacturing and output transmission",
-          "status": "contradicting",
-          "reason": "The indicator moves against this interpretation. The published symptom status is inactive.",
-          "chart": null,
-          "indicatorFile": null,
-          "group": "Symptom status",
-          "value": 0.2838239057239057,
-          "unit": "score, 0-1",
-          "historicalPercentile": null,
-          "direction": "inactive",
-          "sourceDate": "2026-07-01",
-          "calculation": "Version-controlled Canadian symptom rule",
-          "limitations": [
-            "Latest-vintage histories are used; this is not a real-time-vintage reconstruction."
-          ]
-        },
-        {
-          "indicator": "labour_weakening",
-          "label": "Labour weakening",
-          "status": "contradicting",
-          "reason": "The indicator moves against this interpretation. The published symptom status is inactive.",
-          "chart": null,
-          "indicatorFile": null,
-          "group": "Symptom status",
-          "value": 0.09650278361169448,
-          "unit": "score, 0-1",
-          "historicalPercentile": null,
-          "direction": "inactive",
-          "sourceDate": "2026-07-01",
-          "calculation": "Version-controlled Canadian symptom rule",
-          "limitations": [
-            "Latest-vintage histories are used; this is not a real-time-vintage reconstruction.",
-            "Wages and actual hours are unavailable, so labour confidence is capped at moderate."
-          ]
-        }
-      ],
-      "insufficient": [
-        {
-          "indicator": "household_stress",
-          "label": "Household stress",
-          "status": "insufficient",
-          "reason": "The available data cannot evaluate this indicator. The published symptom status is insufficient data.",
-          "chart": null,
-          "indicatorFile": null,
-          "group": "Symptom status",
-          "value": 0.0,
-          "unit": "score, 0-1",
-          "historicalPercentile": null,
-          "direction": "insufficient_data",
-          "sourceDate": "2026-07-01",
-          "calculation": "Version-controlled Canadian symptom rule",
-          "limitations": [
-            "Latest-vintage histories are used; this is not a real-time-vintage reconstruction.",
-            "Disposable income, household expenditure burden, and insolvency evidence are unavailable."
-          ]
-        }
-      ]
+      "contradicting": [],
+      "insufficient": []
     },
     "affordability": {
       "topic": "affordability",

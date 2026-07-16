@@ -6,7 +6,7 @@
   "score": 0.65375,
   "coverage": 0.8888888888888888,
   "freshnessAdjustedCoverage": 0.4659259259259259,
-  "generationDate": "2026-07-16T10:23:39+00:00",
+  "generationDate": "2026-07-16T15:35:12+00:00",
   "scores": [
     {
       "id": "C",
@@ -1393,7 +1393,7 @@
       "expectedSymptoms": [
         {
           "id": "resource_region_cycle",
-          "name": "Resource-producing-region expansion or contraction",
+          "name": "Resource-producing-region expansion",
           "status": "active",
           "score": 0.3676877637130802
         }
@@ -3028,7 +3028,7 @@
       "conflictingSymptoms": [
         {
           "id": "resource_region_cycle",
-          "name": "Resource-producing-region expansion or contraction",
+          "name": "Resource-producing-region expansion",
           "status": "active"
         }
       ],

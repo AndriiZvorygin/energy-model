@@ -93,8 +93,8 @@
     },
     {
       "id": "resource_region_cycle",
-      "name": "Resource-producing-region expansion or contraction",
-      "meaning": "Resource GDP, Alberta crude production, exports, and oil prices show whether producing-region activity is expanding or contracting.",
+      "name": "Resource-producing-region expansion",
+      "meaning": "Resource GDP, Alberta crude production, exports, and national crude production are rising, indicating expansion in producing-region activity.",
       "requiredIndicators": [
         {"indicator": "canada_mining_oil_gas_gdp_growth", "transformation": "momentum", "expectedDirection": "rising", "group": "resource_output", "trendWindow": 3},
         {"indicator": "alberta_crude_production_growth", "transformation": "momentum", "expectedDirection": "rising", "group": "alberta_production", "trendWindow": 3},

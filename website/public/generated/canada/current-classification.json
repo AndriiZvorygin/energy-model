@@ -8,13 +8,13 @@
     "Alberta producing-region conditions"
   ],
   "date": "2026-07-01",
-  "asOfDate": "2026-07-16T10:23:39+00:00",
+  "asOfDate": "2026-07-16T15:35:12+00:00",
   "status": "Consumer affordability stress",
   "score": 0.65375,
-  "summary": "Physical-tightening evidence is inactive based on benchmark prices, refinery inputs, and inventories. Canadian energy-affordability pressure is active. Manufacturing and output transmission is inactive, while labour weakening is inactive and remains incomplete without wages and hours. Resource-producing-region expansion evidence is active. Ontario and Alberta evidence is shown separately, but the configured regional-divergence threshold is not currently met. Household stress remains insufficiently evaluated because income, expenditure-burden, and insolvency histories are unavailable.",
+  "summary": "Current Canadian state: Consumer affordability stress. Canadian energy affordability pressure is active: Canadian-dollar oil and consumer energy costs are elevated while rates, currency movements, and debt service limit household room. Resource-producing-region expansion is active: Resource GDP, Alberta crude production, exports, and national crude production are rising, indicating expansion in producing-region activity.",
   "provisionalClassification": {
     "classificationDate": "2026-07-01",
-    "generationDate": "2026-07-16T10:23:39+00:00",
+    "generationDate": "2026-07-16T15:35:12+00:00",
     "status": "provisional_monthly",
     "requiredIndicatorAvailability": 0.8888888888888888,
     "freshnessAdjustedCoverage": 0.4659259259259259,
@@ -2427,7 +2427,7 @@
         "expectedSymptoms": [
           {
             "id": "resource_region_cycle",
-            "name": "Resource-producing-region expansion or contraction",
+            "name": "Resource-producing-region expansion",
             "status": "active",
             "score": 0.3676877637130802
           }
@@ -4062,7 +4062,7 @@
         "conflictingSymptoms": [
           {
             "id": "resource_region_cycle",
-            "name": "Resource-producing-region expansion or contraction",
+            "name": "Resource-producing-region expansion",
             "status": "active"
           }
         ],
@@ -4317,7 +4317,7 @@
   },
   "quarterlyAlignedClassification": {
     "classificationDate": "2026-06-01",
-    "generationDate": "2026-07-16T10:23:39+00:00",
+    "generationDate": "2026-07-16T15:35:12+00:00",
     "status": "quarterly_aligned",
     "requiredIndicatorAvailability": 0.8888888888888888,
     "freshnessAdjustedCoverage": 0.6012962962962963,
@@ -7115,7 +7115,7 @@
         "expectedSymptoms": [
           {
             "id": "resource_region_cycle",
-            "name": "Resource-producing-region expansion or contraction",
+            "name": "Resource-producing-region expansion",
             "status": "emerging",
             "score": 0.5361097046413502
           }
@@ -8317,7 +8317,7 @@
         "conflictingSymptoms": [
           {
             "id": "resource_region_cycle",
-            "name": "Resource-producing-region expansion or contraction",
+            "name": "Resource-producing-region expansion",
             "status": "emerging"
           }
         ],
@@ -9985,8 +9985,8 @@
     },
     {
       "id": "resource_region_cycle",
-      "name": "Resource-producing-region expansion or contraction",
-      "plainLanguageMeaning": "Resource GDP, Alberta crude production, exports, and oil prices show whether producing-region activity is expanding or contracting.",
+      "name": "Resource-producing-region expansion",
+      "plainLanguageMeaning": "Resource GDP, Alberta crude production, exports, and national crude production are rising, indicating expansion in producing-region activity.",
       "status": "active",
       "score": 0.3676877637130802,
       "evaluationDate": "2026-07-01",

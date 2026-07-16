@@ -5,10 +5,10 @@
   "status": "provisional",
   "score": 0.2484191927139268,
   "coverage": 0.8888888888888888,
-  "generationDate": "2026-07-16T10:23:39+00:00",
+  "generationDate": "2026-07-16T15:35:12+00:00",
   "clock": {
     "classificationDate": "2026-07-01",
-    "generationDate": "2026-07-16T10:23:39+00:00",
+    "generationDate": "2026-07-16T15:35:12+00:00",
     "status": "provisional_monthly",
     "requiredIndicatorAvailability": 0.8888888888888888,
     "freshnessAdjustedCoverage": 0.4659259259259259,
@@ -2421,7 +2421,7 @@
         "expectedSymptoms": [
           {
             "id": "resource_region_cycle",
-            "name": "Resource-producing-region expansion or contraction",
+            "name": "Resource-producing-region expansion",
             "status": "active",
             "score": 0.3676877637130802
           }
@@ -4056,7 +4056,7 @@
         "conflictingSymptoms": [
           {
             "id": "resource_region_cycle",
-            "name": "Resource-producing-region expansion or contraction",
+            "name": "Resource-producing-region expansion",
             "status": "active"
           }
         ],
@@ -5742,8 +5742,8 @@
     },
     {
       "id": "resource_region_cycle",
-      "name": "Resource-producing-region expansion or contraction",
-      "plainLanguageMeaning": "Resource GDP, Alberta crude production, exports, and oil prices show whether producing-region activity is expanding or contracting.",
+      "name": "Resource-producing-region expansion",
+      "plainLanguageMeaning": "Resource GDP, Alberta crude production, exports, and national crude production are rising, indicating expansion in producing-region activity.",
       "status": "active",
       "score": 0.3676877637130802,
       "evaluationDate": "2026-07-01",

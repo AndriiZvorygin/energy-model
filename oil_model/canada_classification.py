@@ -366,23 +366,15 @@ def _analogues(engine: IndicatorEngine, rows: list[Row], date: str, fields: set[
     return sorted(matches, key=lambda item: (-item["similarity"], item["episode"]))[:3]
 
 
-def _summary(symptoms: list[dict[str, Any]], divergence: dict[str, Any]) -> str:
-    by_id = {item["id"]: item for item in symptoms}
-    clauses = []
-    physical = by_id["physical_tightening"]["statusLabel"]
-    affordability = by_id["energy_affordability_pressure"]["statusLabel"]
-    output = by_id["manufacturing_output_transmission"]["statusLabel"]
-    resource = by_id["resource_region_cycle"]["statusLabel"]
-    labour = by_id["labour_weakening"]["statusLabel"]
-    clauses.append(f"Physical-tightening evidence is {physical.lower()} based on benchmark prices, refinery inputs, and inventories.")
-    clauses.append(f"Canadian energy-affordability pressure is {affordability.lower()}.")
-    clauses.append(f"Manufacturing and output transmission is {output.lower()}, while labour weakening is {labour.lower()} and remains incomplete without wages and hours.")
-    clauses.append(f"Resource-producing-region expansion evidence is {resource.lower()}.")
+def _summary(symptoms: list[dict[str, Any]], divergence: dict[str, Any], classification: str) -> str:
+    clauses = [f"Current Canadian state: {classification}."]
+    relevant = [item for item in symptoms if item["status"] in {"active", "emerging", "fading"}]
+    for symptom in relevant:
+        clauses.append(f"{symptom['name']} is {symptom['statusLabel'].lower()}: {symptom['plainLanguageMeaning']}")
     if divergence["active"]:
         clauses.append("Ontario-facing stress and Alberta producer conditions currently meet the configured regional-divergence rule.")
-    else:
-        clauses.append("Ontario and Alberta evidence is shown separately, but the configured regional-divergence threshold is not currently met.")
-    clauses.append("Household stress remains insufficiently evaluated because income, expenditure-burden, and insolvency histories are unavailable.")
+    if not relevant:
+        clauses.append("No documented symptom is currently active, emerging, or fading.")
     return " ".join(clauses)
 
 
@@ -422,7 +414,7 @@ def build_canadian_classification_outputs(
         "asOfDate": generated_at,
         "status": monthly_regimes["classification"],
         "score": monthly_regimes["primaryRegime"]["score"],
-        "summary": _summary(monthly_symptoms, divergence),
+        "summary": _summary(monthly_symptoms, divergence, monthly_regimes["classification"]),
         "provisionalClassification": monthly_clock,
         "quarterlyAlignedClassification": quarterly_clock,
         "primaryState": monthly_regimes["primaryRegime"],

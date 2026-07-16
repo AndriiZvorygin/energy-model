@@ -79,7 +79,6 @@ def _regime_topic(key: str, classification: dict[str, Any], primary_key: str, se
     primary = classification[primary_key]
     rows = [_condition_row(row, "supporting" if row.get("available", True) else "insufficient", lookup, "Supporting evidence") for row in primary.get("supportingEvidence", [])]
     rows += [_condition_row(row, "contradicting" if row.get("available", True) else "insufficient", lookup, "Conflicting evidence") for row in primary.get("conflictingEvidence", [])]
-    rows += [_condition_row(row, "insufficient", lookup, "Missing evidence") for row in primary.get("missingEvidence", [])]
     named = {row["label"] for row in rows}
     rows += [_condition_row(row, "mixed" if row.get("available", True) else "insufficient", lookup, "Other evaluated evidence") for row in primary.get("indicatorEvidence", []) if row.get("label") not in named]
     secondary = classification[secondary_key]
@@ -158,12 +157,16 @@ def write_evidence_summary(root: Path) -> dict[str, Any]:
         topics[f"symptom_canada_{symptom['id']}"] = _symptom_topic("symptom_canada", symptom, lookup, canada_symptoms["scope"])
     symptom_rows = []
     for symptom in us_symptoms["evaluations"]:
-        status = "supporting" if symptom["status"] in {"active", "emerging"} else "mixed" if symptom["status"] == "fading" else "contradicting" if symptom["status"] == "inactive" else "insufficient"
+        if symptom["status"] not in {"active", "emerging", "fading"}:
+            continue
+        status = "supporting" if symptom["status"] in {"active", "emerging"} else "mixed"
         symptom_rows.append({"indicator": symptom["id"], "label": symptom["name"], "status": status, "reason": STATUS_TEXT[status] + f" The published symptom status is {symptom['status'].replace('_', ' ')} at a score of {100 * symptom['score']:.0f}%.", "chart": None, "indicatorFile": None, "group": "Symptom status", "value": symptom["score"], "unit": "score, 0-1", "historicalPercentile": None, "direction": symptom["status"], "sourceDate": symptom["evaluationDate"], "calculation": "Version-controlled symptom rule", "limitations": symptom.get("alternativeExplanations", [])})
     topics["symptoms_us"] = _topic("symptoms_us", "Current documented symptom balance", us_symptoms["clock"].get("confidence", us["confidence"]), us_symptoms["clock"]["coverage"], symptom_rows, us_symptoms["scope"])
     canada_symptom_rows = []
     for symptom in canada_symptoms["evaluations"]:
-        status = "supporting" if symptom["status"] in {"active", "emerging"} else "mixed" if symptom["status"] == "fading" else "contradicting" if symptom["status"] == "inactive" else "insufficient"
+        if symptom["status"] not in {"active", "emerging", "fading"}:
+            continue
+        status = "supporting" if symptom["status"] in {"active", "emerging"} else "mixed"
         canada_symptom_rows.append({"indicator": symptom["id"], "label": symptom["name"], "status": status, "reason": STATUS_TEXT[status] + f" The published symptom status is {symptom['status'].replace('_', ' ')}.", "chart": None, "indicatorFile": None, "group": "Symptom status", "value": symptom["score"], "unit": "score, 0-1", "historicalPercentile": None, "direction": symptom["status"], "sourceDate": symptom["evaluationDate"], "calculation": "Version-controlled Canadian symptom rule", "limitations": symptom.get("limitations", [])})
     topics["symptoms_canada"] = _topic("symptoms_canada", "Current Canadian symptom balance", canada_symptoms["clock"]["confidence"], canada_symptoms["clock"]["requiredIndicatorAvailability"], canada_symptom_rows, canada_symptoms["scope"])
     topics["affordability"] = _affordability_topic("affordability", "Household affordability", {"Food": ["food-to-income", "food-to-wage"], "Housing": ["mortgage-interest-to-income", "rent-to-income", "nhpi-to-income"], "Energy": ["canada-energy-cpi-yoy", "canada-real-wti-cad-yoy"]}, lookup)
