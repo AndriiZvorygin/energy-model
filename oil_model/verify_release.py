@@ -44,6 +44,7 @@ REQUIRED_ANALYSIS = [
     "analysis/economic_output_quality.md",
     "analysis/economic_output_quality.csv",
     "analysis/energy_output_quality_correlations.csv",
+    "analysis/website_visual_audit.md",
 ]
 
 REQUIRED_CHARTS = [
@@ -113,6 +114,17 @@ REQUIRED_DATA = [
     "website/public/generated/output-quality-household.json",
     "website/public/generated/output-quality-financial.json",
     "website/public/generated/output-quality-correlations.json",
+    "website/public/generated/rolling-performance.json",
+    "website/public/generated/recessions.json",
+    "website/public/generated/charts/physical-tightness.json",
+    "website/public/generated/charts/energy-burden.json",
+    "website/public/generated/charts/industrial-transmission.json",
+    "website/public/generated/charts/labour-warning.json",
+    "website/public/generated/charts/demand-destruction.json",
+    "website/public/generated/charts/output-quality-comparison.json",
+    "website/public/generated/indicators/ci-zscore.json",
+    "website/public/generated/indicators/gm2-yoy.json",
+    "website/public/generated/indicators/unemployment-rate.json",
 ]
 
 

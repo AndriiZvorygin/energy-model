@@ -207,6 +207,206 @@ def _recession_periods(rows: list[Row]) -> list[dict[str, Any]]:
     return periods
 
 
+def _quantile(values: list[float], probability: float) -> float | None:
+    ordered = sorted(values)
+    if not ordered:
+        return None
+    position = (len(ordered) - 1) * probability
+    lower = math.floor(position)
+    upper = math.ceil(position)
+    if lower == upper:
+        return ordered[lower]
+    weight = position - lower
+    return ordered[lower] * (1 - weight) + ordered[upper] * weight
+
+
+def _percentile(values: list[float], value: float) -> float | None:
+    if not values:
+        return None
+    below = sum(item < value for item in values)
+    equal = sum(item == value for item in values)
+    return 100 * (below + 0.5 * equal) / len(values)
+
+
+def _source_url(source: str) -> str:
+    upper = source.upper()
+    if "EIA" in upper:
+        return "https://www.eia.gov/opendata/"
+    if "BEA" in upper:
+        return "https://www.bea.gov/data"
+    if "BLS" in upper:
+        return "https://www.bls.gov/data/"
+    if "FRED" in upper or "FEDERAL RESERVE" in upper:
+        return "https://fred.stlouisfed.org/"
+    return "https://github.com/AndriiZvorygin/energy-model"
+
+
+SUPPORTIVE_WHEN_RISING = {
+    "petroleum_production_YoY", "real_disposable_income_YoY", "Industrial_production_YoY",
+    "manufacturing_output_YoY", "real_consumer_spending_YoY", "business_investment_YoY",
+    "Real_GDP_growth", "average_weekly_hours_YoY", "temporary_help_YoY",
+    "full_time_employment_share", "prime_age_employment_rate", "real_wage_growth",
+    "consumer_sentiment",
+}
+STRESSFUL_WHEN_RISING = {
+    "household_energy_expenditure_share", "energy_expenditure_share_gdp", "energy_CPI_YoY",
+    "credit_tightening_pct", "involuntary_part_time_share", "credit_card_delinquency_rate",
+    "unemployment_rate",
+}
+CONTEXT_DEPENDENT = {
+    "petroleum_consumption_YoY", "oil_consumption_per_person_mmbtu", "CI_zscore",
+    "refinery_utilization_pct", "real_WTI_YoY", "fed_funds_rate", "GM2_YoY",
+}
+
+
+def _interpretation_direction(indicator_id: str) -> str:
+    if indicator_id in SUPPORTIVE_WHEN_RISING:
+        return "higher-generally-supportive"
+    if indicator_id in STRESSFUL_WHEN_RISING:
+        return "higher-generally-stressful"
+    return "context-dependent"
+
+
+def _interpretation_label(indicator_id: str, percentile: float | None, change: float | None) -> str:
+    if percentile is None:
+        return "Direction unclear"
+    direction = _interpretation_direction(indicator_id)
+    if direction == "higher-generally-supportive":
+        if percentile >= 75 and (change is None or change >= 0):
+            return "Supportive"
+        if percentile <= 25 and (change is None or change <= 0):
+            return "Stressful"
+        return "Mixed" if change is not None else "Neutral"
+    if direction == "higher-generally-stressful":
+        if percentile >= 75 and (change is None or change >= 0):
+            return "Stressful"
+        if percentile <= 25 and (change is None or change <= 0):
+            return "Supportive"
+        return "Mixed" if change is not None else "Neutral"
+    if percentile >= 90:
+        return "Historically elevated"
+    if percentile <= 10:
+        return "Historically depressed"
+    return "Neutral" if change is None or abs(change) < 1e-12 else "Mixed"
+
+
+def _indicator_payload(
+    indicator: Row,
+    catalogue: Row | None,
+    system_rows: list[Row],
+    generated_at: str,
+) -> dict[str, Any]:
+    indicator_id = str(indicator["indicator_id"])
+    all_observations = [
+        {"date": _iso_date(row["month"]), "value": _number(row.get(indicator_id))}
+        for row in system_rows
+        if row.get("month")
+    ]
+    non_null = [row for row in all_observations if row["value"] is not None]
+    if not non_null:
+        raise ValueError(f"Current-state indicator {indicator_id} has no observations")
+    start = non_null[0]["date"]
+    end = non_null[-1]["date"]
+    observations = [row for row in all_observations if start <= row["date"] <= end]
+    values = [float(row["value"]) for row in non_null]
+    latest = non_null[-1]
+    previous = non_null[-2] if len(non_null) > 1 else None
+    lookup = {row["date"]: row["value"] for row in non_null}
+
+    def prior_value(months: int) -> float | None:
+        year, month = map(int, latest["date"][:7].split("-"))
+        index = year * 12 + month - 1 - months
+        return _number(lookup.get(f"{index // 12:04d}-{index % 12 + 1:02d}-01"))
+
+    latest_value = float(latest["value"])
+    median = _quantile(values, 0.5)
+    percentile = _percentile(values, latest_value)
+    since_2000 = [float(row["value"]) for row in non_null if row["date"] >= "2000-01-01"]
+    change_3m_base = prior_value(3)
+    change_12m_base = prior_value(12)
+    change_6m_base = prior_value(6)
+    change_3m = latest_value - change_3m_base if change_3m_base is not None else None
+    change_12m = latest_value - change_12m_base if change_12m_base is not None else None
+    previous_3m_change = change_3m_base - change_6m_base if change_3m_base is not None and change_6m_base is not None else None
+    momentum = "unavailable"
+    if change_3m is not None and previous_3m_change is not None:
+        momentum = "accelerating" if change_3m > previous_3m_change else "decelerating" if change_3m < previous_3m_change else "steady"
+    source = str((catalogue or {}).get("source") or "Project processed dataset")
+    unit = str((catalogue or {}).get("unit") or "index or documented source unit")
+    formula = str((catalogue or {}).get("exact_definition") or indicator.get("indicator"))
+    interpretation_label = _interpretation_label(indicator_id, percentile, change_3m)
+    payload = {
+        "schemaVersion": 1,
+        "id": indicator_id.replace("_", "-").lower(),
+        "field": indicator_id,
+        "label": str(indicator["indicator"]),
+        "description": formula,
+        "unit": unit,
+        "frequency": str(indicator.get("update_frequency") or "monthly"),
+        "status": str((catalogue or {}).get("status") or "derived"),
+        "layer": str(indicator["layer"]),
+        "interpretationDirection": _interpretation_direction(indicator_id),
+        "interpretationLabel": interpretation_label,
+        "interpretation": str(indicator.get("interpretation") or "Interpret with confirming and conflicting evidence."),
+        "source": source,
+        "sourceUrl": _source_url(source),
+        "startDate": start,
+        "endDate": end,
+        "latest": {
+            "date": latest["date"],
+            "value": latest_value,
+            "previousValue": previous["value"] if previous else None,
+            "oneYearChange": change_12m,
+            "threeMonthChange": change_3m,
+            "fourQuarterChange": change_12m,
+            "historicalPercentile": percentile,
+            "percentileSince2000": _percentile(since_2000, latest_value),
+            "distanceFromMedian": latest_value - median if median is not None else None,
+            "momentum": momentum,
+        },
+        "referenceRanges": {
+            "historicalMedian": median,
+            "p10": _quantile(values, 0.10),
+            "p25": _quantile(values, 0.25),
+            "p75": _quantile(values, 0.75),
+            "p90": _quantile(values, 0.90),
+            "minimum": min(values),
+            "maximum": max(values),
+        },
+        "observations": observations,
+        "confirmingIndicators": [item.strip() for item in str(indicator.get("confirming_indicators") or "").split(";") if item.strip()],
+        "conflictingIndicators": [item.strip() for item in str(indicator.get("conflicting_indicators") or "").split(";") if item.strip()],
+        "confidenceLevel": str(indicator.get("confidence_level") or "low"),
+        "evidenceLabel": str(indicator.get("evidence_label") or "Contextual indicator"),
+        "calculation": {"formula": formula, "explanation": formula, "example": f"Latest published observation: {latest_value:.2f} {unit} at {latest['date'][:7]}."},
+        "limitations": [str((catalogue or {}).get("data_quality_limitations") or "Latest-vintage data may be revised."), str((catalogue or {}).get("alternative_explanations") or "Interpret alongside other indicators.")],
+        "generatedAt": generated_at,
+    }
+    validate_indicator_dataset(payload)
+    return payload
+
+
+def validate_indicator_dataset(dataset: dict[str, Any]) -> None:
+    required = {"schemaVersion", "id", "label", "description", "unit", "frequency", "status", "interpretationDirection", "source", "sourceUrl", "startDate", "endDate", "latest", "referenceRanges", "observations", "evidenceLabel"}
+    missing = sorted(required - dataset.keys())
+    if missing:
+        raise ValueError(f"Indicator dataset {dataset.get('id', '<unknown>')} missing fields: {', '.join(missing)}")
+    if dataset["schemaVersion"] != 1:
+        raise ValueError(f"Indicator dataset {dataset['id']} has unsupported schema version")
+    dates = [row.get("date") for row in dataset["observations"]]
+    if dates != sorted(dates) or len(dates) != len(set(dates)):
+        raise ValueError(f"Indicator dataset {dataset['id']} dates must be chronological and unique")
+    if any(not isinstance(date, str) or len(date) != 10 for date in dates):
+        raise ValueError(f"Indicator dataset {dataset['id']} contains a non-ISO date")
+    if any(row.get("value") is not None and not isinstance(row.get("value"), (int, float)) for row in dataset["observations"]):
+        raise ValueError(f"Indicator dataset {dataset['id']} contains a non-numeric value")
+    ranges = dataset["referenceRanges"]
+    ordered = [ranges.get(key) for key in ("minimum", "p10", "p25", "historicalMedian", "p75", "p90", "maximum")]
+    available = [value for value in ordered if value is not None]
+    if available != sorted(available):
+        raise ValueError(f"Indicator dataset {dataset['id']} has invalid historical ranges")
+
+
 def write_website_chart_data(
     root: Path,
     rows: list[Row],
@@ -215,11 +415,17 @@ def write_website_chart_data(
     equity_lag_rows: list[Row],
     energy_rows: list[Row],
     system_rows: list[Row],
+    current_state_rows: list[Row],
+    indicator_catalogue_rows: list[Row],
     output_quality_rows: list[Row],
     output_quality_correlations: list[Row],
 ) -> list[str]:
     out_dir = root / "website" / "public" / "generated"
     out_dir.mkdir(parents=True, exist_ok=True)
+    chart_out_dir = out_dir / "charts"
+    indicator_out_dir = out_dir / "indicators"
+    chart_out_dir.mkdir(exist_ok=True)
+    indicator_out_dir.mkdir(exist_ok=True)
     generated_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     regimes = _regimes()
     events = _events()
@@ -232,10 +438,12 @@ def write_website_chart_data(
             _series("Brent", "Brent", "USD per barrel", "FRED DCOILBRENTEU", "measured", color="#2563eb", transformations=["raw", "indexed", "yoy", "zscore", "pct_change"]),
             _series("RAC_composite", "RAC composite", "USD per barrel", "EIA R0000____3", "measured", color="#7c3aed", transformations=["raw", "indexed", "yoy", "zscore", "pct_change"]),
             _series("USO", "USO adjusted close", "USD per share", "Yahoo-compatible chart data", "measured", color="#d97706", transformations=["raw", "indexed", "yoy", "zscore", "pct_change"]),
+            _series("first_purchase_price", "Domestic first purchase", "USD per barrel", "EIA Petroleum Marketing Monthly", "measured", False, color="#be123c", transformations=["raw", "indexed", "yoy", "zscore", "pct_change"]),
+            _series("imported_landed_cost", "Imported landed cost", "USD per barrel", "EIA Petroleum Marketing Monthly", "measured", False, color="#475569", transformations=["raw", "indexed", "yoy", "zscore", "pct_change"]),
             _series("real_WTI", "Real WTI", "CPI-base USD per barrel", "FRED WTI / CPIAUCSL", "derived", False, color="#15803d", transformations=["raw", "indexed", "yoy", "zscore", "pct_change"]),
             _series("real_Brent", "Real Brent", "CPI-base USD per barrel", "FRED Brent / CPIAUCSL", "derived", False, color="#1d4ed8", transformations=["raw", "indexed", "yoy", "zscore", "pct_change"]),
         ],
-        _observations(rows, {"WTI": "WTI", "Brent": "Brent", "RAC_composite": "RAC_composite", "USO": "USO_month_end_adjusted_close", "real_WTI": "real_WTI", "real_Brent": "real_Brent"}),
+        _observations(rows, {"WTI": "WTI", "Brent": "Brent", "RAC_composite": "RAC_composite", "USO": "USO_month_end_adjusted_close", "first_purchase_price": "first_purchase_price", "imported_landed_cost": "imported_landed_cost", "real_WTI": "real_WTI", "real_Brent": "real_Brent"}),
         ["raw", "indexed", "yoy", "zscore", "pct_change"], "Contextual indicator",
         {"formula": "Raw monthly values. Transformations are calculated in-browser within each series; indexed = 100 at first visible observation.", "notes": "USO is a share price and must not be read on a barrel-price axis in raw mode.", "sources": ["FRED", "EIA", "Yahoo-compatible public chart data"]},
         "final_oil_price_layers_time_series.png", generated_at, [event["id"] for event in events],
@@ -384,13 +592,106 @@ def write_website_chart_data(
         ], _quality_observations(output_quality_rows, financial_keys), ["raw", "indexed", "zscore"], "Contextual indicator",
         {"formula": "Value-added and balance-sheet measures retain their official definitions; household debt/GDP = CMDEBT / nominal GDP * 100.", "notes": "A larger financial or real-estate share is not, by itself, evidence of low-quality output."}, "", generated_at, [event["id"] for event in events], reference_period=("2005-01-01", "2019-10-01"),
     )
+    output_comparison_keys = ["A939RX0Q048SBEA", "INDPRO", "MEHOINUSA672N"]
+    output_comparison = _dataset(
+        "output-quality-comparison", "Output, production, and household income", "Real GDP per capita, industrial production, and real median household income can follow different paths even when headline output grows.", "quarterly",
+        [
+            _series("A939RX0Q048SBEA", "Real GDP per capita", "chained 2017 USD per person", "BEA via FRED", "measured", color="#0f766e"),
+            _series("INDPRO", "Industrial production", "index", "Federal Reserve via FRED", "measured", color="#2563eb"),
+            _series("MEHOINUSA672N", "Real median household income", "2024 USD", "Census via FRED", "measured", color="#d97706", frequency="annual"),
+        ], _quality_observations(output_quality_rows, output_comparison_keys), ["raw", "indexed", "zscore"], "Contextual indicator",
+        {"formula": "Official real GDP per capita, industrial-production index, and annual real median household income; no monthly or quarterly interpolation is applied to annual income.", "notes": "The measures differ in concept, population adjustment, frequency, and revisions. Indexed paths compare relative growth rather than levels."}, "", generated_at, [event["id"] for event in events], reference_period=("1990-01-01", "2019-10-01"),
+    )
 
-    datasets = [oil_prices, gm2_lead, residuals, energy_gdp, equities, uso, headline, net_output, capacity, household, financial]
+    physical_tightness = _dataset(
+        "physical-tightness", "Physical energy conditions", "Inventory, supply, consumption, and refinery utilization provide distinct evidence about physical oil-market tightness.", "monthly",
+        [
+            _series("CI_zscore", "Comparative inventory", "standard deviations", "EIA WCESTUS1, project derivation", "derived", color="#be123c"),
+            _series("petroleum_production_YoY", "Petroleum production growth", "percent", "EIA Monthly Energy Review", "derived", color="#0f766e"),
+            _series("petroleum_consumption_YoY", "Petroleum consumption growth", "percent", "EIA Monthly Energy Review", "derived", color="#d97706"),
+            _series("refinery_utilization_pct", "Refinery utilization", "percent", "EIA WPULEUS3", "measured", False, color="#2563eb"),
+        ],
+        _observations(system_rows, {"CI_zscore": "CI_zscore", "petroleum_production_YoY": "petroleum_production_YoY", "petroleum_consumption_YoY": "petroleum_consumption_YoY", "refinery_utilization_pct": "refinery_utilization_pct"}),
+        ["raw", "zscore"], "Contextual indicator",
+        {"formula": "CI_zscore uses the prior five-year same-month inventory history; growth rates are year-over-year; refinery utilization is the published rate.", "notes": "No single physical indicator defines tightness. Demand weakness can raise inventories even when supply is constrained."},
+        "physical_tightness_dashboard.png", generated_at, [event["id"] for event in events], reference_period=("2000-01-01", "2019-12-01"),
+    )
+    energy_burden = _dataset(
+        "energy-burden", "Energy affordability", "Real oil-price momentum and energy costs relative to household income and GDP show whether energy is becoming harder to afford.", "monthly",
+        [
+            _series("real_WTI_YoY", "Real WTI growth", "percent", "FRED WTI and CPI", "derived", color="#be123c"),
+            _series("household_energy_expenditure_share", "Household energy expenditure share", "percent", "BEA via FRED", "derived", color="#d97706"),
+            _series("energy_expenditure_share_gdp", "Energy expenditure share of GDP", "percent", "BEA via FRED", "derived", color="#7c3aed"),
+            _series("energy_CPI_YoY", "Energy CPI growth", "percent", "BLS via FRED", "derived", False, color="#2563eb"),
+            _series("real_disposable_income_YoY", "Real disposable income growth", "percent", "BEA via FRED", "derived", False, color="#0f766e"),
+        ],
+        _observations(system_rows, {"real_WTI_YoY": "real_WTI_YoY", "household_energy_expenditure_share": "household_energy_expenditure_share", "energy_expenditure_share_gdp": "energy_expenditure_share_gdp", "energy_CPI_YoY": "energy_CPI_YoY", "real_disposable_income_YoY": "real_disposable_income_YoY"}),
+        ["raw", "zscore"], "Experimental proxy",
+        {"formula": "Burden shares divide energy expenditure by household disposable income or nominal GDP; price and income series use year-over-year change.", "notes": "Aggregate burden can hide household distribution, regional prices, substitution, and policy support."},
+        "energy_burden_dashboard.png", generated_at, [event["id"] for event in events], reference_period=("2000-01-01", "2019-12-01"),
+    )
+    industrial_transmission = _dataset(
+        "industrial-transmission", "Energy stress and real activity", "Energy affordability is shown beside production, manufacturing, spending, investment, and GDP growth to inspect transmission rather than assume it.", "monthly",
+        [
+            _series("energy_expenditure_share_gdp", "Energy expenditure share of GDP", "percent", "BEA via FRED", "derived", color="#be123c"),
+            _series("Industrial_production_YoY", "Industrial production growth", "percent", "Federal Reserve via FRED", "derived", color="#0f766e"),
+            _series("manufacturing_output_YoY", "Manufacturing output growth", "percent", "Federal Reserve via FRED", "derived", color="#2563eb"),
+            _series("real_consumer_spending_YoY", "Real consumer spending growth", "percent", "BEA via FRED", "derived", False, color="#d97706"),
+            _series("business_investment_YoY", "Business investment growth", "percent", "BEA via FRED", "derived", False, color="#7c3aed"),
+            _series("Real_GDP_growth", "Real GDP growth", "percent", "BEA via FRED", "derived", False, color="#475569"),
+        ],
+        _observations(system_rows, {"energy_expenditure_share_gdp": "energy_expenditure_share_gdp", "Industrial_production_YoY": "Industrial_production_YoY", "manufacturing_output_YoY": "manufacturing_output_YoY", "real_consumer_spending_YoY": "real_consumer_spending_YoY", "business_investment_YoY": "business_investment_YoY", "Real_GDP_growth": "Real_GDP_growth"}),
+        ["raw", "zscore"], "Supported historical pattern",
+        {"formula": "Growth rates are year-over-year; energy burden is the expenditure share of nominal GDP.", "notes": "Common recessions, monetary policy, credit, productivity, and supply shocks can drive several series together."},
+        "industrial_transmission.png", generated_at, [event["id"] for event in events], reference_period=("2000-01-01", "2019-12-01"),
+    )
+    labour_warning = _dataset(
+        "labour-warning", "Labour and household early warnings", "Hours, temporary-help employment, real wages, unemployment, sentiment, and delinquency show different stages of labour and household strain.", "monthly",
+        [
+            _series("average_weekly_hours_YoY", "Average weekly hours growth", "percent", "BLS via FRED", "derived", color="#0f766e"),
+            _series("temporary_help_YoY", "Temporary-help employment growth", "percent", "BLS via FRED", "derived", color="#2563eb"),
+            _series("real_wage_growth", "Real wage growth", "percent", "BLS via FRED", "derived", color="#d97706"),
+            _series("unemployment_rate", "Unemployment rate", "percent", "BLS via FRED", "measured", color="#be123c"),
+            _series("consumer_sentiment", "Consumer sentiment", "index", "University of Michigan via FRED", "measured", False, color="#7c3aed"),
+            _series("credit_card_delinquency_rate", "Credit-card delinquency", "percent", "Federal Reserve via FRED", "measured", False, color="#475569"),
+        ],
+        _observations(system_rows, {"average_weekly_hours_YoY": "average_weekly_hours_YoY", "temporary_help_YoY": "temporary_help_YoY", "real_wage_growth": "real_wage_growth", "unemployment_rate": "unemployment_rate", "consumer_sentiment": "consumer_sentiment", "credit_card_delinquency_rate": "credit_card_delinquency_rate"}),
+        ["raw", "zscore"], "Supported historical pattern",
+        {"formula": "Hours, temporary help, and real wages use year-over-year change; unemployment, sentiment, and delinquency retain published levels.", "notes": "Labour indicators have different publication lags and can respond to policy, demographics, sector mix, and non-energy shocks."},
+        "labour_early_warning_indicators.png", generated_at, [event["id"] for event in events], reference_period=("2000-01-01", "2019-12-01"),
+    )
+    demand_destruction = _dataset(
+        "demand-destruction", "Demand destruction sequence", "Oil prices can fall while activity, petroleum demand, and employment conditions worsen when falling demand drives the decline.", "monthly",
+        [
+            _series("WTI_YoY", "WTI growth", "percent", "FRED DCOILWTICO", "derived", color="#be123c"),
+            _series("petroleum_consumption_YoY", "Petroleum consumption growth", "percent", "EIA Monthly Energy Review", "derived", color="#d97706"),
+            _series("Industrial_production_YoY", "Industrial production growth", "percent", "Federal Reserve via FRED", "derived", color="#0f766e"),
+            _series("unemployment_rate", "Unemployment rate", "percent", "BLS via FRED", "measured", color="#475569"),
+        ],
+        _observations(system_rows, {"WTI_YoY": "WTI_YoY", "petroleum_consumption_YoY": "petroleum_consumption_YoY", "Industrial_production_YoY": "Industrial_production_YoY", "unemployment_rate": "unemployment_rate"}),
+        ["raw", "zscore"], "Supported historical pattern",
+        {"formula": "WTI, petroleum consumption, and industrial production use year-over-year change; unemployment is a published level.", "notes": "A falling oil price can also reflect supply growth, efficiency, currency moves, or policy rather than demand destruction."},
+        "demand_destruction_cycle.png", generated_at, [event["id"] for event in events], reference_period=("2000-01-01", "2019-12-01"),
+    )
+
+    datasets = [oil_prices, gm2_lead, residuals, energy_gdp, equities, uso, headline, net_output, capacity, household, financial, output_comparison, physical_tightness, energy_burden, industrial_transmission, labour_warning, demand_destruction]
     files: list[str] = []
     for dataset in datasets:
         filename = f"{dataset['id']}.json"
-        (out_dir / filename).write_text(json.dumps(dataset, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+        payload = json.dumps(dataset, indent=2, allow_nan=False) + "\n"
+        (out_dir / filename).write_text(payload, encoding="utf-8")
+        (chart_out_dir / filename).write_text(payload, encoding="utf-8")
         files.append(filename)
+
+    catalogue_by_indicator = {str(row.get("indicator")): row for row in indicator_catalogue_rows}
+    indicator_payloads = [
+        _indicator_payload(row, catalogue_by_indicator.get(str(row.get("indicator"))), system_rows, generated_at)
+        for row in current_state_rows
+    ]
+    for payload in indicator_payloads:
+        filename = f"{payload['id']}.json"
+        (indicator_out_dir / filename).write_text(json.dumps(payload, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+        files.append(f"indicators/{filename}")
 
     lag_payload = {
         "schemaVersion": SCHEMA_VERSION,
@@ -413,7 +714,19 @@ def write_website_chart_data(
         "sourceNotes": ["EIA Monthly Energy Review total energy consumption", "BEA, BLS, Federal Reserve, BTS, Census, and World Bank series distributed through FRED"],
         "transformation": {"type": "yoy", "referenceStart": None, "referenceEnd": None, "mean": None, "standardDeviation": None},
     }
-    shared = {"lag-results.json": lag_payload, "regimes.json": {"schemaVersion": SCHEMA_VERSION, "regimes": regimes, "recessions": _recession_periods(system_rows)}, "events.json": {"schemaVersion": SCHEMA_VERSION, "events": events}, "output-quality-correlations.json": {"schemaVersion": SCHEMA_VERSION, "generatedAt": generated_at, "evidenceLabel": "Experimental proxy", "details": correlation_details, "rows": output_quality_correlations}}
+    recession_periods = _recession_periods(system_rows)
+    rolling_performance = {
+        "schemaVersion": 1,
+        "generatedAt": generated_at,
+        "title": "Rolling oil-model performance",
+        "evidenceLabel": "Validated relationship",
+        "rows": [
+            {"target": row.get("target"), "model": row.get("model"), "lagMonths": row.get("lag_months"), "windowMonths": row.get("window_months"), "sample": row.get("sample"), "n": row.get("n_predictions"), "rmse": row.get("rolling_rmse"), "mae": row.get("rolling_mae"), "r2": row.get("rolling_r2"), "directionalAccuracy": row.get("directional_accuracy"), "signAccuracy": row.get("sign_accuracy")}
+            for row in rolling_rows
+            if row.get("target") == "WTI_YoY" and row.get("sample") == "all" and row.get("window_months") in {60, 84, 120} and row.get("lag_months") == 5
+        ],
+    }
+    shared = {"lag-results.json": lag_payload, "rolling-performance.json": rolling_performance, "regimes.json": {"schemaVersion": SCHEMA_VERSION, "regimes": regimes, "recessions": recession_periods}, "recessions.json": {"schemaVersion": 1, "recessions": recession_periods}, "events.json": {"schemaVersion": SCHEMA_VERSION, "events": events}, "output-quality-correlations.json": {"schemaVersion": SCHEMA_VERSION, "generatedAt": generated_at, "evidenceLabel": "Experimental proxy", "details": correlation_details, "rows": output_quality_correlations}}
     cross_mapping = {"GM2_YoY": "GM2_YoY", "WTI_YoY": "WTI_YoY", "CI_zscore": "CI_zscore", "household_energy_burden": "household_energy_expenditure_share", "industrial_production": "Industrial_production_YoY", "weekly_hours": "average_weekly_hours_YoY", "temporary_help": "temporary_help_YoY"}
     shared["cross-layer.json"] = {"schemaVersion": SCHEMA_VERSION, "frequency": "monthly", "fields": cross_mapping, "observations": _observations(system_rows, cross_mapping)}
     for filename, payload in shared.items():
@@ -422,9 +735,18 @@ def write_website_chart_data(
 
     manifest = {
         "schemaVersion": SCHEMA_VERSION,
+        "indicatorSchemaVersion": 1,
         "generatedAt": generated_at,
-        "datasets": [{"id": item["id"], "file": f"{item['id']}.json", "title": item["title"], "frequency": item["frequency"], "dateRange": item["dateRange"], "evidenceLabel": item["evidenceLabel"]} for item in datasets],
-        "shared": ["lag-results.json", "regimes.json", "events.json", "cross-layer.json", "output-quality-correlations.json"],
+        "datasets": [{"id": item["id"], "file": f"charts/{item['id']}.json", "legacyFile": f"{item['id']}.json", "title": item["title"], "frequency": item["frequency"], "dateRange": item["dateRange"], "evidenceLabel": item["evidenceLabel"]} for item in datasets],
+        "indicators": [{"id": item["id"], "file": f"indicators/{item['id']}.json", "label": item["label"], "layer": item["layer"], "latestDate": item["latest"]["date"], "evidenceLabel": item["evidenceLabel"]} for item in indicator_payloads],
+        "layers": [
+            {"id": "liquidity-financial", "label": "Liquidity and financial conditions", "indicatorFields": ["GM2_YoY", "fed_funds_rate", "credit_tightening_pct", "credit_card_delinquency_rate"], "interpretation": "Liquidity support is mixed with the cost and availability of credit; higher GM2 does not automatically mean lower stress.", "confidence": "Moderate"},
+            {"id": "physical-energy", "label": "Physical energy conditions", "indicatorFields": ["petroleum_production_YoY", "petroleum_consumption_YoY", "oil_consumption_per_person_mmbtu", "CI_zscore", "refinery_utilization_pct"], "interpretation": "Supply, demand, inventories, and refinery utilization must confirm one another before physical tightness is inferred.", "confidence": "Moderate"},
+            {"id": "energy-affordability", "label": "Energy affordability", "indicatorFields": ["real_WTI_YoY", "household_energy_expenditure_share", "energy_expenditure_share_gdp", "energy_CPI_YoY", "real_disposable_income_YoY"], "interpretation": "Energy stress depends on costs relative to real household income and economic capacity, not on nominal oil alone.", "confidence": "Moderate"},
+            {"id": "production-activity", "label": "Production and economic activity", "indicatorFields": ["Industrial_production_YoY", "manufacturing_output_YoY", "real_consumer_spending_YoY", "business_investment_YoY", "Real_GDP_growth"], "interpretation": "Production, spending, investment, and GDP indicate whether energy and financial conditions are transmitting into measured activity.", "confidence": "Moderate"},
+            {"id": "labour-households", "label": "Labour and household conditions", "indicatorFields": ["average_weekly_hours_YoY", "temporary_help_YoY", "full_time_employment_share", "involuntary_part_time_share", "prime_age_employment_rate", "real_wage_growth", "consumer_sentiment", "unemployment_rate"], "interpretation": "Hours, job composition, wages, sentiment, and unemployment often move at different stages of household stress.", "confidence": "Moderate"},
+        ],
+        "shared": ["lag-results.json", "rolling-performance.json", "regimes.json", "recessions.json", "events.json", "cross-layer.json", "output-quality-correlations.json"],
     }
     (out_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, allow_nan=False) + "\n", encoding="utf-8")
     files.append("manifest.json")

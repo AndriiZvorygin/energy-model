@@ -1,0 +1,4571 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "labour-warning",
+  "title": "Labour and household early warnings",
+  "description": "Hours, temporary-help employment, real wages, unemployment, sentiment, and delinquency show different stages of labour and household strain.",
+  "plainLanguageSummary": "Hours, temporary-help employment, real wages, unemployment, sentiment, and delinquency show different stages of labour and household strain.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Hours, temporary help, and real wages use year-over-year change; unemployment, sentiment, and delinquency retain published levels.",
+    "explanation": "Labour indicators have different publication lags and can respond to policy, demographics, sector mix, and non-energy shocks.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "Labour indicators have different publication lags and can respond to policy, demographics, sector mix, and non-energy shocks."
+  ],
+  "sourceNotes": [
+    "BLS via FRED",
+    "University of Michigan via FRED",
+    "Federal Reserve via FRED"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "average_weekly_hours_YoY": {
+        "mean": 0.03508447062691364,
+        "standardDeviation": 1.4133236607118764,
+        "n": 240
+      },
+      "temporary_help_YoY": {
+        "mean": 1.3253657384319666,
+        "standardDeviation": 8.816846798127072,
+        "n": 240
+      },
+      "real_wage_growth": {
+        "mean": 0.6695809124106025,
+        "standardDeviation": 1.34806388154887,
+        "n": 154
+      },
+      "unemployment_rate": {
+        "mean": 5.88125,
+        "standardDeviation": 1.805738105087963,
+        "n": 240
+      },
+      "consumer_sentiment": {
+        "mean": 85.78208333333333,
+        "standardDeviation": 12.231777766391478,
+        "n": 240
+      },
+      "credit_card_delinquency_rate": {
+        "mean": 3.717875,
+        "standardDeviation": 1.2132813912588456,
+        "n": 240
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "1986-01-01",
+    "end": "2026-07-01"
+  },
+  "series": [
+    {
+      "key": "average_weekly_hours_YoY",
+      "label": "Average weekly hours growth",
+      "unit": "percent",
+      "source": "BLS via FRED",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "temporary_help_YoY",
+      "label": "Temporary-help employment growth",
+      "unit": "percent",
+      "source": "BLS via FRED",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#2563eb",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "real_wage_growth",
+      "label": "Real wage growth",
+      "unit": "percent",
+      "source": "BLS via FRED",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#d97706",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "unemployment_rate",
+      "label": "Unemployment rate",
+      "unit": "percent",
+      "source": "BLS via FRED",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#be123c",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "consumer_sentiment",
+      "label": "Consumer sentiment",
+      "unit": "index",
+      "source": "University of Michigan via FRED",
+      "status": "measured",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#7c3aed",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "credit_card_delinquency_rate",
+      "label": "Credit-card delinquency",
+      "unit": "percent",
+      "source": "Federal Reserve via FRED",
+      "status": "measured",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#475569",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-07-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1986-01-01",
+      "average_weekly_hours_YoY": null,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.7,
+      "consumer_sentiment": 95.6,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1986-02-01",
+      "average_weekly_hours_YoY": null,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.2,
+      "consumer_sentiment": 95.9,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1986-03-01",
+      "average_weekly_hours_YoY": null,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.2,
+      "consumer_sentiment": 95.1,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1986-04-01",
+      "average_weekly_hours_YoY": null,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.1,
+      "consumer_sentiment": 96.2,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1986-05-01",
+      "average_weekly_hours_YoY": null,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.2,
+      "consumer_sentiment": 94.8,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1986-06-01",
+      "average_weekly_hours_YoY": null,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.2,
+      "consumer_sentiment": 99.3,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1986-07-01",
+      "average_weekly_hours_YoY": null,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.0,
+      "consumer_sentiment": 97.7,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1986-08-01",
+      "average_weekly_hours_YoY": null,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.9,
+      "consumer_sentiment": 94.9,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1986-09-01",
+      "average_weekly_hours_YoY": null,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.0,
+      "consumer_sentiment": 91.9,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1986-10-01",
+      "average_weekly_hours_YoY": null,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.0,
+      "consumer_sentiment": 95.6,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1986-11-01",
+      "average_weekly_hours_YoY": null,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.9,
+      "consumer_sentiment": 91.4,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1986-12-01",
+      "average_weekly_hours_YoY": null,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.6,
+      "consumer_sentiment": 89.1,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1987-01-01",
+      "average_weekly_hours_YoY": 0.24570024570023108,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.6,
+      "consumer_sentiment": 90.4,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1987-02-01",
+      "average_weekly_hours_YoY": 1.228501228501222,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.6,
+      "consumer_sentiment": 90.2,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1987-03-01",
+      "average_weekly_hours_YoY": 0.7371007371007376,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.6,
+      "consumer_sentiment": 90.8,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1987-04-01",
+      "average_weekly_hours_YoY": 0.7407407407407307,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.3,
+      "consumer_sentiment": 92.8,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1987-05-01",
+      "average_weekly_hours_YoY": 0.7371007371007376,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.3,
+      "consumer_sentiment": 91.1,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1987-06-01",
+      "average_weekly_hours_YoY": 0.49140049140048436,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.2,
+      "consumer_sentiment": 91.5,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1987-07-01",
+      "average_weekly_hours_YoY": 0.9852216748768461,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.1,
+      "consumer_sentiment": 93.7,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1987-08-01",
+      "average_weekly_hours_YoY": 0.49140049140048436,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.0,
+      "consumer_sentiment": 94.4,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1987-09-01",
+      "average_weekly_hours_YoY": 0.24570024570023108,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.9,
+      "consumer_sentiment": 93.6,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1987-10-01",
+      "average_weekly_hours_YoY": 1.2315270935960632,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.0,
+      "consumer_sentiment": 89.3,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1987-11-01",
+      "average_weekly_hours_YoY": 0.7371007371007376,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.8,
+      "consumer_sentiment": 83.1,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1987-12-01",
+      "average_weekly_hours_YoY": 0.4901960784313708,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.7,
+      "consumer_sentiment": 86.8,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1988-01-01",
+      "average_weekly_hours_YoY": 0.7352941176470784,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.7,
+      "consumer_sentiment": 90.8,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1988-02-01",
+      "average_weekly_hours_YoY": -0.24271844660194164,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.7,
+      "consumer_sentiment": 91.6,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1988-03-01",
+      "average_weekly_hours_YoY": -0.24390243902439046,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.7,
+      "consumer_sentiment": 94.6,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1988-04-01",
+      "average_weekly_hours_YoY": 0.4901960784313708,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 91.2,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1988-05-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.6,
+      "consumer_sentiment": 94.8,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1988-06-01",
+      "average_weekly_hours_YoY": 0.4889975550122383,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 94.7,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1988-07-01",
+      "average_weekly_hours_YoY": 0.24390243902439046,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 93.4,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1988-08-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.6,
+      "consumer_sentiment": 97.4,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1988-09-01",
+      "average_weekly_hours_YoY": 0.4901960784313708,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 97.3,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1988-10-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 94.1,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1988-11-01",
+      "average_weekly_hours_YoY": 0.24390243902439046,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.3,
+      "consumer_sentiment": 93.0,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1988-12-01",
+      "average_weekly_hours_YoY": -0.24390243902439046,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.3,
+      "consumer_sentiment": 91.9,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1989-01-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 97.9,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1989-02-01",
+      "average_weekly_hours_YoY": 0.24330900243310083,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.2,
+      "consumer_sentiment": 95.4,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1989-03-01",
+      "average_weekly_hours_YoY": 0.4889975550122383,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.0,
+      "consumer_sentiment": 94.3,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1989-04-01",
+      "average_weekly_hours_YoY": 0.24390243902439046,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.2,
+      "consumer_sentiment": 91.5,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1989-05-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.2,
+      "consumer_sentiment": 90.7,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1989-06-01",
+      "average_weekly_hours_YoY": -0.48661800486619056,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.3,
+      "consumer_sentiment": 90.6,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1989-07-01",
+      "average_weekly_hours_YoY": -0.48661800486619056,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.2,
+      "consumer_sentiment": 92.0,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1989-08-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.2,
+      "consumer_sentiment": 89.6,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1989-09-01",
+      "average_weekly_hours_YoY": -0.487804878048792,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.3,
+      "consumer_sentiment": 95.8,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1989-10-01",
+      "average_weekly_hours_YoY": -0.7299270072992803,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.3,
+      "consumer_sentiment": 93.9,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1989-11-01",
+      "average_weekly_hours_YoY": -0.9732360097323589,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 90.9,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1989-12-01",
+      "average_weekly_hours_YoY": -0.9779951100244433,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 90.5,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1990-01-01",
+      "average_weekly_hours_YoY": -1.4598540145985384,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 93.0,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1990-02-01",
+      "average_weekly_hours_YoY": -1.4563106796116498,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.3,
+      "consumer_sentiment": 89.5,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1990-03-01",
+      "average_weekly_hours_YoY": -1.2165450121654486,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.2,
+      "consumer_sentiment": 91.3,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1990-04-01",
+      "average_weekly_hours_YoY": -1.7031630170316392,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 93.9,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1990-05-01",
+      "average_weekly_hours_YoY": -0.9756097560975618,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 90.6,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1990-06-01",
+      "average_weekly_hours_YoY": -0.4889975550122161,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.2,
+      "consumer_sentiment": 88.3,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1990-07-01",
+      "average_weekly_hours_YoY": -0.7334963325183352,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.5,
+      "consumer_sentiment": 88.2,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1990-08-01",
+      "average_weekly_hours_YoY": -0.9779951100244433,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.7,
+      "consumer_sentiment": 76.4,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1990-09-01",
+      "average_weekly_hours_YoY": -0.7352941176470562,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.9,
+      "consumer_sentiment": 72.8,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1990-10-01",
+      "average_weekly_hours_YoY": -0.9803921568627416,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.9,
+      "consumer_sentiment": 63.9,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1990-11-01",
+      "average_weekly_hours_YoY": -1.2285012285012331,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.2,
+      "consumer_sentiment": 66.0,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1990-12-01",
+      "average_weekly_hours_YoY": -0.4938271604938316,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.3,
+      "consumer_sentiment": 65.5,
+      "credit_card_delinquency_rate": null
+    },
+    {
+      "date": "1991-01-01",
+      "average_weekly_hours_YoY": -0.7407407407407307,
+      "temporary_help_YoY": -1.344595759351852,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.4,
+      "consumer_sentiment": 66.8,
+      "credit_card_delinquency_rate": 5.26
+    },
+    {
+      "date": "1991-02-01",
+      "average_weekly_hours_YoY": -1.2315270935960632,
+      "temporary_help_YoY": -3.269824922760056,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.6,
+      "consumer_sentiment": 70.4,
+      "credit_card_delinquency_rate": 5.26
+    },
+    {
+      "date": "1991-03-01",
+      "average_weekly_hours_YoY": -1.4778325123152691,
+      "temporary_help_YoY": -4.566053869174869,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.8,
+      "consumer_sentiment": 87.7,
+      "credit_card_delinquency_rate": 5.26
+    },
+    {
+      "date": "1991-04-01",
+      "average_weekly_hours_YoY": -0.7425742574257321,
+      "temporary_help_YoY": -4.357541899441342,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.7,
+      "consumer_sentiment": 81.8,
+      "credit_card_delinquency_rate": 5.48
+    },
+    {
+      "date": "1991-05-01",
+      "average_weekly_hours_YoY": -0.9852216748768461,
+      "temporary_help_YoY": -4.245973645680811,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.9,
+      "consumer_sentiment": 78.3,
+      "credit_card_delinquency_rate": 5.48
+    },
+    {
+      "date": "1991-06-01",
+      "average_weekly_hours_YoY": -0.7371007371007487,
+      "temporary_help_YoY": -4.222566219470236,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.9,
+      "consumer_sentiment": 82.1,
+      "credit_card_delinquency_rate": 5.48
+    },
+    {
+      "date": "1991-07-01",
+      "average_weekly_hours_YoY": -0.24630541871921707,
+      "temporary_help_YoY": -4.730482474933584,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.8,
+      "consumer_sentiment": 82.9,
+      "credit_card_delinquency_rate": 5.35
+    },
+    {
+      "date": "1991-08-01",
+      "average_weekly_hours_YoY": 0.24691358024691024,
+      "temporary_help_YoY": -3.294807659134036,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.9,
+      "consumer_sentiment": 82.0,
+      "credit_card_delinquency_rate": 5.35
+    },
+    {
+      "date": "1991-09-01",
+      "average_weekly_hours_YoY": 0.24691358024691024,
+      "temporary_help_YoY": -2.8863499699338435,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.9,
+      "consumer_sentiment": 83.0,
+      "credit_card_delinquency_rate": 5.35
+    },
+    {
+      "date": "1991-10-01",
+      "average_weekly_hours_YoY": 0.4950495049504955,
+      "temporary_help_YoY": -0.7452871547566908,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.0,
+      "consumer_sentiment": 78.3,
+      "credit_card_delinquency_rate": 5.32
+    },
+    {
+      "date": "1991-11-01",
+      "average_weekly_hours_YoY": 1.243781094527363,
+      "temporary_help_YoY": -0.1849894291754861,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.0,
+      "consumer_sentiment": 69.1,
+      "credit_card_delinquency_rate": 5.32
+    },
+    {
+      "date": "1991-12-01",
+      "average_weekly_hours_YoY": 0.7444168734491496,
+      "temporary_help_YoY": 1.1724995558713758,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.3,
+      "consumer_sentiment": 68.2,
+      "credit_card_delinquency_rate": 5.32
+    },
+    {
+      "date": "1992-01-01",
+      "average_weekly_hours_YoY": 0.995024875621886,
+      "temporary_help_YoY": 0.4106237987069772,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.3,
+      "consumer_sentiment": 67.5,
+      "credit_card_delinquency_rate": 5.27
+    },
+    {
+      "date": "1992-02-01",
+      "average_weekly_hours_YoY": 1.4962593516209433,
+      "temporary_help_YoY": 2.626208854582579,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.4,
+      "consumer_sentiment": 68.8,
+      "credit_card_delinquency_rate": 5.27
+    },
+    {
+      "date": "1992-03-01",
+      "average_weekly_hours_YoY": 1.750000000000007,
+      "temporary_help_YoY": 4.87411522265031,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.4,
+      "consumer_sentiment": 76.0,
+      "credit_card_delinquency_rate": 5.27
+    },
+    {
+      "date": "1992-04-01",
+      "average_weekly_hours_YoY": 1.74563591022443,
+      "temporary_help_YoY": 6.2994248741912395,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.4,
+      "consumer_sentiment": 77.2,
+      "credit_card_delinquency_rate": 5.1
+    },
+    {
+      "date": "1992-05-01",
+      "average_weekly_hours_YoY": 1.741293532338295,
+      "temporary_help_YoY": 7.7441985968699445,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.6,
+      "consumer_sentiment": 79.2,
+      "credit_card_delinquency_rate": 5.1
+    },
+    {
+      "date": "1992-06-01",
+      "average_weekly_hours_YoY": 0.990099009900991,
+      "temporary_help_YoY": 8.503187572955028,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.8,
+      "consumer_sentiment": 80.4,
+      "credit_card_delinquency_rate": 5.1
+    },
+    {
+      "date": "1992-07-01",
+      "average_weekly_hours_YoY": 0.7407407407407307,
+      "temporary_help_YoY": 8.986237294234044,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.7,
+      "consumer_sentiment": 76.6,
+      "credit_card_delinquency_rate": 4.98
+    },
+    {
+      "date": "1992-08-01",
+      "average_weekly_hours_YoY": 0.49261083743841194,
+      "temporary_help_YoY": 9.088476632179798,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.6,
+      "consumer_sentiment": 76.1,
+      "credit_card_delinquency_rate": 4.98
+    },
+    {
+      "date": "1992-09-01",
+      "average_weekly_hours_YoY": 0.24630541871921707,
+      "temporary_help_YoY": 8.916408668730647,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.6,
+      "consumer_sentiment": 75.6,
+      "credit_card_delinquency_rate": 4.98
+    },
+    {
+      "date": "1992-10-01",
+      "average_weekly_hours_YoY": 0.49261083743841194,
+      "temporary_help_YoY": 10.6183745583039,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.3,
+      "consumer_sentiment": 73.3,
+      "credit_card_delinquency_rate": 4.69
+    },
+    {
+      "date": "1992-11-01",
+      "average_weekly_hours_YoY": 0.49140049140048436,
+      "temporary_help_YoY": 11.631806548407031,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.4,
+      "consumer_sentiment": 85.3,
+      "credit_card_delinquency_rate": 4.69
+    },
+    {
+      "date": "1992-12-01",
+      "average_weekly_hours_YoY": 0.738916256157629,
+      "temporary_help_YoY": 12.625109745390684,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.4,
+      "consumer_sentiment": 91.0,
+      "credit_card_delinquency_rate": 4.69
+    },
+    {
+      "date": "1993-01-01",
+      "average_weekly_hours_YoY": 1.2315270935960632,
+      "temporary_help_YoY": 12.57287044287827,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.3,
+      "consumer_sentiment": 89.3,
+      "credit_card_delinquency_rate": 4.6
+    },
+    {
+      "date": "1993-02-01",
+      "average_weekly_hours_YoY": 0.9828009828009687,
+      "temporary_help_YoY": 12.725858044436755,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.1,
+      "consumer_sentiment": 86.6,
+      "credit_card_delinquency_rate": 4.6
+    },
+    {
+      "date": "1993-03-01",
+      "average_weekly_hours_YoY": 0.24570024570023108,
+      "temporary_help_YoY": 12.669799231097812,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.0,
+      "consumer_sentiment": 85.9,
+      "credit_card_delinquency_rate": 4.6
+    },
+    {
+      "date": "1993-04-01",
+      "average_weekly_hours_YoY": 1.225490196078427,
+      "temporary_help_YoY": 13.399272973201448,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.1,
+      "consumer_sentiment": 85.6,
+      "credit_card_delinquency_rate": 4.46
+    },
+    {
+      "date": "1993-05-01",
+      "average_weekly_hours_YoY": 0.4889975550122383,
+      "temporary_help_YoY": 13.790800567660067,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.1,
+      "consumer_sentiment": 80.3,
+      "credit_card_delinquency_rate": 4.46
+    },
+    {
+      "date": "1993-06-01",
+      "average_weekly_hours_YoY": 0.4901960784313708,
+      "temporary_help_YoY": 14.159218801721284,
+      "real_wage_growth": null,
+      "unemployment_rate": 7.0,
+      "consumer_sentiment": 81.5,
+      "credit_card_delinquency_rate": 4.46
+    },
+    {
+      "date": "1993-07-01",
+      "average_weekly_hours_YoY": 0.7352941176470784,
+      "temporary_help_YoY": 15.392868933641468,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.9,
+      "consumer_sentiment": 77.0,
+      "credit_card_delinquency_rate": 4.08
+    },
+    {
+      "date": "1993-08-01",
+      "average_weekly_hours_YoY": 0.7352941176470784,
+      "temporary_help_YoY": 15.419834845883429,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.8,
+      "consumer_sentiment": 77.3,
+      "credit_card_delinquency_rate": 4.08
+    },
+    {
+      "date": "1993-09-01",
+      "average_weekly_hours_YoY": 1.474201474201453,
+      "temporary_help_YoY": 15.666368878421189,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.7,
+      "consumer_sentiment": 77.9,
+      "credit_card_delinquency_rate": 4.08
+    },
+    {
+      "date": "1993-10-01",
+      "average_weekly_hours_YoY": 1.225490196078427,
+      "temporary_help_YoY": 16.746526114039284,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.8,
+      "consumer_sentiment": 82.7,
+      "credit_card_delinquency_rate": 3.91
+    },
+    {
+      "date": "1993-11-01",
+      "average_weekly_hours_YoY": 0.9779951100244544,
+      "temporary_help_YoY": 16.064511028539783,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.6,
+      "consumer_sentiment": 81.2,
+      "credit_card_delinquency_rate": 3.91
+    },
+    {
+      "date": "1993-12-01",
+      "average_weekly_hours_YoY": 1.2224938875305513,
+      "temporary_help_YoY": 15.770190208917988,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.5,
+      "consumer_sentiment": 88.2,
+      "credit_card_delinquency_rate": 3.91
+    },
+    {
+      "date": "1994-01-01",
+      "average_weekly_hours_YoY": 0.7299270072992581,
+      "temporary_help_YoY": 16.21579842324934,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.6,
+      "consumer_sentiment": 94.3,
+      "credit_card_delinquency_rate": 3.6
+    },
+    {
+      "date": "1994-02-01",
+      "average_weekly_hours_YoY": -0.48661800486619056,
+      "temporary_help_YoY": 17.071861339059737,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.6,
+      "consumer_sentiment": 93.2,
+      "credit_card_delinquency_rate": 3.6
+    },
+    {
+      "date": "1994-03-01",
+      "average_weekly_hours_YoY": 2.205882352941191,
+      "temporary_help_YoY": 18.835304822565966,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.5,
+      "consumer_sentiment": 91.5,
+      "credit_card_delinquency_rate": 3.6
+    },
+    {
+      "date": "1994-04-01",
+      "average_weekly_hours_YoY": 0.9685230024213176,
+      "temporary_help_YoY": 18.801252422841785,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.4,
+      "consumer_sentiment": 92.6,
+      "credit_card_delinquency_rate": 3.29
+    },
+    {
+      "date": "1994-05-01",
+      "average_weekly_hours_YoY": 1.703163017031617,
+      "temporary_help_YoY": 17.37950260435772,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.1,
+      "consumer_sentiment": 92.8,
+      "credit_card_delinquency_rate": 3.29
+    },
+    {
+      "date": "1994-06-01",
+      "average_weekly_hours_YoY": 1.9512195121951237,
+      "temporary_help_YoY": 17.984777093149695,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.1,
+      "consumer_sentiment": 91.2,
+      "credit_card_delinquency_rate": 3.29
+    },
+    {
+      "date": "1994-07-01",
+      "average_weekly_hours_YoY": 1.703163017031617,
+      "temporary_help_YoY": 18.510836134754328,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.1,
+      "consumer_sentiment": 89.0,
+      "credit_card_delinquency_rate": 3.25
+    },
+    {
+      "date": "1994-08-01",
+      "average_weekly_hours_YoY": 1.4598540145985384,
+      "temporary_help_YoY": 17.893320110505062,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.0,
+      "consumer_sentiment": 91.7,
+      "credit_card_delinquency_rate": 3.25
+    },
+    {
+      "date": "1994-09-01",
+      "average_weekly_hours_YoY": 0.7263922518159882,
+      "temporary_help_YoY": 18.038196882460312,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.9,
+      "consumer_sentiment": 91.5,
+      "credit_card_delinquency_rate": 3.25
+    },
+    {
+      "date": "1994-10-01",
+      "average_weekly_hours_YoY": 1.2106537530266248,
+      "temporary_help_YoY": 15.903960599220191,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.8,
+      "consumer_sentiment": 92.7,
+      "credit_card_delinquency_rate": 3.29
+    },
+    {
+      "date": "1994-11-01",
+      "average_weekly_hours_YoY": 1.2106537530266248,
+      "temporary_help_YoY": 16.96750902527078,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.6,
+      "consumer_sentiment": 91.6,
+      "credit_card_delinquency_rate": 3.29
+    },
+    {
+      "date": "1994-12-01",
+      "average_weekly_hours_YoY": 0.9661835748792313,
+      "temporary_help_YoY": 15.985455524880487,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.5,
+      "consumer_sentiment": 95.1,
+      "credit_card_delinquency_rate": 3.29
+    },
+    {
+      "date": "1995-01-01",
+      "average_weekly_hours_YoY": 0.9661835748792313,
+      "temporary_help_YoY": 15.68236233040703,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.6,
+      "consumer_sentiment": 97.6,
+      "credit_card_delinquency_rate": 3.48
+    },
+    {
+      "date": "1995-02-01",
+      "average_weekly_hours_YoY": 1.9559902200489088,
+      "temporary_help_YoY": 14.41860465116278,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 95.1,
+      "credit_card_delinquency_rate": 3.48
+    },
+    {
+      "date": "1995-03-01",
+      "average_weekly_hours_YoY": -0.47961630695444457,
+      "temporary_help_YoY": 10.84099030117407,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 90.3,
+      "credit_card_delinquency_rate": 3.48
+    },
+    {
+      "date": "1995-04-01",
+      "average_weekly_hours_YoY": -1.918465227817756,
+      "temporary_help_YoY": 8.540411646586342,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.8,
+      "consumer_sentiment": 92.5,
+      "credit_card_delinquency_rate": 3.7
+    },
+    {
+      "date": "1995-05-01",
+      "average_weekly_hours_YoY": -1.4354066985645786,
+      "temporary_help_YoY": 7.3875000000000135,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.6,
+      "consumer_sentiment": 89.8,
+      "credit_card_delinquency_rate": 3.7
+    },
+    {
+      "date": "1995-06-01",
+      "average_weekly_hours_YoY": -1.4354066985645786,
+      "temporary_help_YoY": 5.462029982796768,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.6,
+      "consumer_sentiment": 92.7,
+      "credit_card_delinquency_rate": 3.7
+    },
+    {
+      "date": "1995-07-01",
+      "average_weekly_hours_YoY": -1.674641148325351,
+      "temporary_help_YoY": 3.790210634317104,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.7,
+      "consumer_sentiment": 94.4,
+      "credit_card_delinquency_rate": 3.85
+    },
+    {
+      "date": "1995-08-01",
+      "average_weekly_hours_YoY": -1.1990407673860948,
+      "temporary_help_YoY": 4.512407618818726,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.7,
+      "consumer_sentiment": 96.2,
+      "credit_card_delinquency_rate": 3.85
+    },
+    {
+      "date": "1995-09-01",
+      "average_weekly_hours_YoY": -0.7211538461538547,
+      "temporary_help_YoY": 5.33579204092558,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.6,
+      "consumer_sentiment": 88.9,
+      "credit_card_delinquency_rate": 3.85
+    },
+    {
+      "date": "1995-10-01",
+      "average_weekly_hours_YoY": -1.4354066985645786,
+      "temporary_help_YoY": 4.508970727101036,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.5,
+      "consumer_sentiment": 90.2,
+      "credit_card_delinquency_rate": 3.95
+    },
+    {
+      "date": "1995-11-01",
+      "average_weekly_hours_YoY": -1.1961722488038284,
+      "temporary_help_YoY": 3.191241556021418,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.6,
+      "consumer_sentiment": 88.2,
+      "credit_card_delinquency_rate": 3.95
+    },
+    {
+      "date": "1995-12-01",
+      "average_weekly_hours_YoY": -2.1531100478468845,
+      "temporary_help_YoY": 3.158200290275759,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.6,
+      "consumer_sentiment": 91.0,
+      "credit_card_delinquency_rate": 3.95
+    },
+    {
+      "date": "1996-01-01",
+      "average_weekly_hours_YoY": -5.023923444976064,
+      "temporary_help_YoY": 0.5979073243647104,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.6,
+      "consumer_sentiment": 89.3,
+      "credit_card_delinquency_rate": 4.04
+    },
+    {
+      "date": "1996-02-01",
+      "average_weekly_hours_YoY": -0.9592326139088891,
+      "temporary_help_YoY": 2.639413718080852,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.5,
+      "consumer_sentiment": 88.5,
+      "credit_card_delinquency_rate": 4.04
+    },
+    {
+      "date": "1996-03-01",
+      "average_weekly_hours_YoY": -0.9638554216867434,
+      "temporary_help_YoY": 3.350411605549475,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.5,
+      "consumer_sentiment": 93.7,
+      "credit_card_delinquency_rate": 4.04
+    },
+    {
+      "date": "1996-04-01",
+      "average_weekly_hours_YoY": 0.4889975550122383,
+      "temporary_help_YoY": 4.7985199745620655,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.6,
+      "consumer_sentiment": 92.7,
+      "credit_card_delinquency_rate": 4.27
+    },
+    {
+      "date": "1996-05-01",
+      "average_weekly_hours_YoY": 0.4854368932038833,
+      "temporary_help_YoY": 6.646490513327907,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.6,
+      "consumer_sentiment": 89.4,
+      "credit_card_delinquency_rate": 4.27
+    },
+    {
+      "date": "1996-06-01",
+      "average_weekly_hours_YoY": 0.7281553398058138,
+      "temporary_help_YoY": 7.8823186717156934,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.3,
+      "consumer_sentiment": 92.4,
+      "credit_card_delinquency_rate": 4.27
+    },
+    {
+      "date": "1996-07-01",
+      "average_weekly_hours_YoY": 0.7299270072992581,
+      "temporary_help_YoY": 8.728266558120602,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.5,
+      "consumer_sentiment": 94.7,
+      "credit_card_delinquency_rate": 4.46
+    },
+    {
+      "date": "1996-08-01",
+      "average_weekly_hours_YoY": 0.7281553398058138,
+      "temporary_help_YoY": 8.307462343336791,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.1,
+      "consumer_sentiment": 95.3,
+      "credit_card_delinquency_rate": 4.46
+    },
+    {
+      "date": "1996-09-01",
+      "average_weekly_hours_YoY": 0.7263922518159882,
+      "temporary_help_YoY": 6.793539643099167,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.2,
+      "consumer_sentiment": 94.7,
+      "credit_card_delinquency_rate": 4.46
+    },
+    {
+      "date": "1996-10-01",
+      "average_weekly_hours_YoY": 0.4854368932038833,
+      "temporary_help_YoY": 5.9464648746329285,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.2,
+      "consumer_sentiment": 96.5,
+      "credit_card_delinquency_rate": 4.6
+    },
+    {
+      "date": "1996-11-01",
+      "average_weekly_hours_YoY": 0.4842615012106588,
+      "temporary_help_YoY": 7.725733634311527,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 99.2,
+      "credit_card_delinquency_rate": 4.6
+    },
+    {
+      "date": "1996-12-01",
+      "average_weekly_hours_YoY": 1.9559902200489088,
+      "temporary_help_YoY": 8.402273622601154,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 96.9,
+      "credit_card_delinquency_rate": 4.6
+    },
+    {
+      "date": "1997-01-01",
+      "average_weekly_hours_YoY": 4.282115869017611,
+      "temporary_help_YoY": 11.246999657103673,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.3,
+      "consumer_sentiment": 97.4,
+      "credit_card_delinquency_rate": 4.7
+    },
+    {
+      "date": "1997-02-01",
+      "average_weekly_hours_YoY": 0.7263922518159882,
+      "temporary_help_YoY": 10.035142522452167,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.2,
+      "consumer_sentiment": 99.7,
+      "credit_card_delinquency_rate": 4.7
+    },
+    {
+      "date": "1997-03-01",
+      "average_weekly_hours_YoY": 1.703163017031617,
+      "temporary_help_YoY": 11.658218682114407,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.2,
+      "consumer_sentiment": 100.0,
+      "credit_card_delinquency_rate": 4.7
+    },
+    {
+      "date": "1997-04-01",
+      "average_weekly_hours_YoY": 1.703163017031617,
+      "temporary_help_YoY": 11.855243559331385,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.1,
+      "consumer_sentiment": 101.4,
+      "credit_card_delinquency_rate": 4.73
+    },
+    {
+      "date": "1997-05-01",
+      "average_weekly_hours_YoY": 0.7246376811594235,
+      "temporary_help_YoY": 11.831477843265636,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.9,
+      "consumer_sentiment": 103.2,
+      "credit_card_delinquency_rate": 4.73
+    },
+    {
+      "date": "1997-06-01",
+      "average_weekly_hours_YoY": 0.24096385542169418,
+      "temporary_help_YoY": 11.243114807214605,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.0,
+      "consumer_sentiment": 104.5,
+      "credit_card_delinquency_rate": 4.73
+    },
+    {
+      "date": "1997-07-01",
+      "average_weekly_hours_YoY": 0.48309178743961567,
+      "temporary_help_YoY": 11.69643812172425,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.9,
+      "consumer_sentiment": 107.1,
+      "credit_card_delinquency_rate": 4.7
+    },
+    {
+      "date": "1997-08-01",
+      "average_weekly_hours_YoY": 0.48192771084338837,
+      "temporary_help_YoY": 9.666118159137959,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.8,
+      "consumer_sentiment": 104.4,
+      "credit_card_delinquency_rate": 4.7
+    },
+    {
+      "date": "1997-09-01",
+      "average_weekly_hours_YoY": 0.24038461538462563,
+      "temporary_help_YoY": 10.142245254084937,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.9,
+      "consumer_sentiment": 106.0,
+      "credit_card_delinquency_rate": 4.7
+    },
+    {
+      "date": "1997-10-01",
+      "average_weekly_hours_YoY": 0.9661835748792313,
+      "temporary_help_YoY": 12.494003517936147,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.7,
+      "consumer_sentiment": 105.6,
+      "credit_card_delinquency_rate": 4.81
+    },
+    {
+      "date": "1997-11-01",
+      "average_weekly_hours_YoY": 0.7228915662650603,
+      "temporary_help_YoY": 12.08025564461208,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.6,
+      "consumer_sentiment": 107.2,
+      "credit_card_delinquency_rate": 4.81
+    },
+    {
+      "date": "1997-12-01",
+      "average_weekly_hours_YoY": 0.7194244604316502,
+      "temporary_help_YoY": 12.31959298099885,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.7,
+      "consumer_sentiment": 102.1,
+      "credit_card_delinquency_rate": 4.81
+    },
+    {
+      "date": "1998-01-01",
+      "average_weekly_hours_YoY": 1.2077294685990392,
+      "temporary_help_YoY": 11.738415699167781,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.6,
+      "consumer_sentiment": 106.6,
+      "credit_card_delinquency_rate": 4.76
+    },
+    {
+      "date": "1998-02-01",
+      "average_weekly_hours_YoY": 0.24038461538462563,
+      "temporary_help_YoY": 11.015918077664,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.6,
+      "consumer_sentiment": 110.4,
+      "credit_card_delinquency_rate": 4.76
+    },
+    {
+      "date": "1998-03-01",
+      "average_weekly_hours_YoY": -0.7177033492822948,
+      "temporary_help_YoY": 9.428314875785704,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.7,
+      "consumer_sentiment": 106.5,
+      "credit_card_delinquency_rate": 4.76
+    },
+    {
+      "date": "1998-04-01",
+      "average_weekly_hours_YoY": -1.4354066985645786,
+      "temporary_help_YoY": 8.586506214243439,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.3,
+      "consumer_sentiment": 108.7,
+      "credit_card_delinquency_rate": 4.76
+    },
+    {
+      "date": "1998-05-01",
+      "average_weekly_hours_YoY": -0.47961630695444457,
+      "temporary_help_YoY": 8.383759515908661,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.4,
+      "consumer_sentiment": 106.5,
+      "credit_card_delinquency_rate": 4.76
+    },
+    {
+      "date": "1998-06-01",
+      "average_weekly_hours_YoY": -0.48076923076924016,
+      "temporary_help_YoY": 9.300970873786408,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.5,
+      "consumer_sentiment": 105.6,
+      "credit_card_delinquency_rate": 4.76
+    },
+    {
+      "date": "1998-07-01",
+      "average_weekly_hours_YoY": -0.48076923076924016,
+      "temporary_help_YoY": 7.517356954752219,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.5,
+      "consumer_sentiment": 105.2,
+      "credit_card_delinquency_rate": 4.72
+    },
+    {
+      "date": "1998-08-01",
+      "average_weekly_hours_YoY": -0.7194244604316613,
+      "temporary_help_YoY": 9.675701839302997,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.5,
+      "consumer_sentiment": 104.4,
+      "credit_card_delinquency_rate": 4.72
+    },
+    {
+      "date": "1998-09-01",
+      "average_weekly_hours_YoY": -0.9592326139088891,
+      "temporary_help_YoY": 7.662393777905807,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.6,
+      "consumer_sentiment": 100.9,
+      "credit_card_delinquency_rate": 4.72
+    },
+    {
+      "date": "1998-10-01",
+      "average_weekly_hours_YoY": -0.9569377990430561,
+      "temporary_help_YoY": 8.263444681355136,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.5,
+      "consumer_sentiment": 97.4,
+      "credit_card_delinquency_rate": 4.74
+    },
+    {
+      "date": "1998-11-01",
+      "average_weekly_hours_YoY": -0.9569377990430561,
+      "temporary_help_YoY": 7.847627950455727,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.4,
+      "consumer_sentiment": 102.7,
+      "credit_card_delinquency_rate": 4.74
+    },
+    {
+      "date": "1998-12-01",
+      "average_weekly_hours_YoY": -1.1904761904761862,
+      "temporary_help_YoY": 7.825283106078129,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.4,
+      "consumer_sentiment": 100.5,
+      "credit_card_delinquency_rate": 4.74
+    },
+    {
+      "date": "1999-01-01",
+      "average_weekly_hours_YoY": -1.4319809069212486,
+      "temporary_help_YoY": 8.284676566594662,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.3,
+      "consumer_sentiment": 103.9,
+      "credit_card_delinquency_rate": 4.66
+    },
+    {
+      "date": "1999-02-01",
+      "average_weekly_hours_YoY": -0.7194244604316613,
+      "temporary_help_YoY": 9.018676651901902,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.4,
+      "consumer_sentiment": 108.1,
+      "credit_card_delinquency_rate": 4.66
+    },
+    {
+      "date": "1999-03-01",
+      "average_weekly_hours_YoY": -0.48192771084337727,
+      "temporary_help_YoY": 9.577862873814723,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.2,
+      "consumer_sentiment": 105.7,
+      "credit_card_delinquency_rate": 4.66
+    },
+    {
+      "date": "1999-04-01",
+      "average_weekly_hours_YoY": 0.24271844660193054,
+      "temporary_help_YoY": 9.76063950583641,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.3,
+      "consumer_sentiment": 104.6,
+      "credit_card_delinquency_rate": 4.58
+    },
+    {
+      "date": "1999-05-01",
+      "average_weekly_hours_YoY": -0.24096385542169418,
+      "temporary_help_YoY": 9.630796938316077,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.2,
+      "consumer_sentiment": 106.8,
+      "credit_card_delinquency_rate": 4.58
+    },
+    {
+      "date": "1999-06-01",
+      "average_weekly_hours_YoY": -0.24154589371980784,
+      "temporary_help_YoY": 8.998045834073555,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.3,
+      "consumer_sentiment": 107.3,
+      "credit_card_delinquency_rate": 4.58
+    },
+    {
+      "date": "1999-07-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 10.220440881763526,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.3,
+      "consumer_sentiment": 106.0,
+      "credit_card_delinquency_rate": 4.6
+    },
+    {
+      "date": "1999-08-01",
+      "average_weekly_hours_YoY": 0.24154589371980784,
+      "temporary_help_YoY": 9.56352884063727,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.2,
+      "consumer_sentiment": 104.5,
+      "credit_card_delinquency_rate": 4.6
+    },
+    {
+      "date": "1999-09-01",
+      "average_weekly_hours_YoY": 0.2421307506053294,
+      "temporary_help_YoY": 10.390189520624293,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.2,
+      "consumer_sentiment": 107.2,
+      "credit_card_delinquency_rate": 4.6
+    },
+    {
+      "date": "1999-10-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 11.624141100266971,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.1,
+      "consumer_sentiment": 103.2,
+      "credit_card_delinquency_rate": 4.55
+    },
+    {
+      "date": "1999-11-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 11.51079136690647,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.1,
+      "consumer_sentiment": 107.2,
+      "credit_card_delinquency_rate": 4.55
+    },
+    {
+      "date": "1999-12-01",
+      "average_weekly_hours_YoY": -0.24096385542169418,
+      "temporary_help_YoY": 11.604080932784623,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.0,
+      "consumer_sentiment": 105.4,
+      "credit_card_delinquency_rate": 4.55
+    },
+    {
+      "date": "2000-01-01",
+      "average_weekly_hours_YoY": 0.4842615012106588,
+      "temporary_help_YoY": 11.23848342037106,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.0,
+      "consumer_sentiment": 112.0,
+      "credit_card_delinquency_rate": 4.43
+    },
+    {
+      "date": "2000-02-01",
+      "average_weekly_hours_YoY": 0.24154589371980784,
+      "temporary_help_YoY": 9.85591019519141,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.1,
+      "consumer_sentiment": 111.3,
+      "credit_card_delinquency_rate": 4.43
+    },
+    {
+      "date": "2000-03-01",
+      "average_weekly_hours_YoY": 0.2421307506053294,
+      "temporary_help_YoY": 10.055331364146959,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.0,
+      "consumer_sentiment": 107.1,
+      "credit_card_delinquency_rate": 4.43
+    },
+    {
+      "date": "2000-04-01",
+      "average_weekly_hours_YoY": 0.7263922518159882,
+      "temporary_help_YoY": 10.961681701564174,
+      "real_wage_growth": null,
+      "unemployment_rate": 3.8,
+      "consumer_sentiment": 109.2,
+      "credit_card_delinquency_rate": 4.51
+    },
+    {
+      "date": "2000-05-01",
+      "average_weekly_hours_YoY": -0.48309178743960457,
+      "temporary_help_YoY": 8.797075855271252,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.0,
+      "consumer_sentiment": 110.7,
+      "credit_card_delinquency_rate": 4.51
+    },
+    {
+      "date": "2000-06-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 7.953712003911684,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.0,
+      "consumer_sentiment": 106.4,
+      "credit_card_delinquency_rate": 4.51
+    },
+    {
+      "date": "2000-07-01",
+      "average_weekly_hours_YoY": 0.24154589371980784,
+      "temporary_help_YoY": 6.848484848484859,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.0,
+      "consumer_sentiment": 108.3,
+      "credit_card_delinquency_rate": 4.53
+    },
+    {
+      "date": "2000-08-01",
+      "average_weekly_hours_YoY": -0.9638554216867434,
+      "temporary_help_YoY": 6.158865705308947,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.1,
+      "consumer_sentiment": 107.3,
+      "credit_card_delinquency_rate": 4.53
+    },
+    {
+      "date": "2000-09-01",
+      "average_weekly_hours_YoY": -0.7246376811594124,
+      "temporary_help_YoY": 6.645122197535858,
+      "real_wage_growth": null,
+      "unemployment_rate": 3.9,
+      "consumer_sentiment": 106.8,
+      "credit_card_delinquency_rate": 4.53
+    },
+    {
+      "date": "2000-10-01",
+      "average_weekly_hours_YoY": -0.7246376811594124,
+      "temporary_help_YoY": 3.1209566751617235,
+      "real_wage_growth": null,
+      "unemployment_rate": 3.9,
+      "consumer_sentiment": 105.8,
+      "credit_card_delinquency_rate": 4.57
+    },
+    {
+      "date": "2000-11-01",
+      "average_weekly_hours_YoY": -0.7246376811594124,
+      "temporary_help_YoY": 2.3863194714341285,
+      "real_wage_growth": null,
+      "unemployment_rate": 3.9,
+      "consumer_sentiment": 107.6,
+      "credit_card_delinquency_rate": 4.57
+    },
+    {
+      "date": "2000-12-01",
+      "average_weekly_hours_YoY": -2.657004830917875,
+      "temporary_help_YoY": -0.6260802765508,
+      "real_wage_growth": null,
+      "unemployment_rate": 3.9,
+      "consumer_sentiment": 98.4,
+      "credit_card_delinquency_rate": 4.57
+    },
+    {
+      "date": "2001-01-01",
+      "average_weekly_hours_YoY": -1.9277108433734869,
+      "temporary_help_YoY": -2.04580152671755,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.2,
+      "consumer_sentiment": 94.7,
+      "credit_card_delinquency_rate": 4.81
+    },
+    {
+      "date": "2001-02-01",
+      "average_weekly_hours_YoY": -2.409638554216864,
+      "temporary_help_YoY": -3.393449498608303,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.2,
+      "consumer_sentiment": 90.6,
+      "credit_card_delinquency_rate": 4.81
+    },
+    {
+      "date": "2001-03-01",
+      "average_weekly_hours_YoY": -2.1739130434782594,
+      "temporary_help_YoY": -6.0520148181749445,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.3,
+      "consumer_sentiment": 91.5,
+      "credit_card_delinquency_rate": 4.81
+    },
+    {
+      "date": "2001-04-01",
+      "average_weekly_hours_YoY": -2.8846153846153966,
+      "temporary_help_YoY": -10.41954130151035,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.4,
+      "consumer_sentiment": 88.4,
+      "credit_card_delinquency_rate": 4.94
+    },
+    {
+      "date": "2001-05-01",
+      "average_weekly_hours_YoY": -1.9417475728155442,
+      "temporary_help_YoY": -10.1392925899362,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.3,
+      "consumer_sentiment": 92.0,
+      "credit_card_delinquency_rate": 4.94
+    },
+    {
+      "date": "2001-06-01",
+      "average_weekly_hours_YoY": -2.421307506053272,
+      "temporary_help_YoY": -11.568657054427423,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.5,
+      "consumer_sentiment": 92.6,
+      "credit_card_delinquency_rate": 4.94
+    },
+    {
+      "date": "2001-07-01",
+      "average_weekly_hours_YoY": -2.168674698795181,
+      "temporary_help_YoY": -12.490073737946695,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.6,
+      "consumer_sentiment": 92.4,
+      "credit_card_delinquency_rate": 5.0
+    },
+    {
+      "date": "2001-08-01",
+      "average_weekly_hours_YoY": -1.946472019464729,
+      "temporary_help_YoY": -12.915955226712207,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.9,
+      "consumer_sentiment": 91.5,
+      "credit_card_delinquency_rate": 5.0
+    },
+    {
+      "date": "2001-09-01",
+      "average_weekly_hours_YoY": -2.1897810218978075,
+      "temporary_help_YoY": -14.43181818181818,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.0,
+      "consumer_sentiment": 81.8,
+      "credit_card_delinquency_rate": 5.0
+    },
+    {
+      "date": "2001-10-01",
+      "average_weekly_hours_YoY": -2.4330900243308973,
+      "temporary_help_YoY": -15.64579293562982,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.3,
+      "consumer_sentiment": 82.7,
+      "credit_card_delinquency_rate": 4.69
+    },
+    {
+      "date": "2001-11-01",
+      "average_weekly_hours_YoY": -2.676399026763998,
+      "temporary_help_YoY": -18.08381415122988,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.5,
+      "consumer_sentiment": 83.9,
+      "credit_card_delinquency_rate": 4.69
+    },
+    {
+      "date": "2001-12-01",
+      "average_weekly_hours_YoY": -0.2481389578163684,
+      "temporary_help_YoY": -17.35466914038343,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.7,
+      "consumer_sentiment": 88.8,
+      "credit_card_delinquency_rate": 4.69
+    },
+    {
+      "date": "2002-01-01",
+      "average_weekly_hours_YoY": -1.2285012285012331,
+      "temporary_help_YoY": -16.33026807980049,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.7,
+      "consumer_sentiment": 93.0,
+      "credit_card_delinquency_rate": 4.94
+    },
+    {
+      "date": "2002-02-01",
+      "average_weekly_hours_YoY": -0.7407407407407307,
+      "temporary_help_YoY": -14.883372143505547,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.7,
+      "consumer_sentiment": 90.7,
+      "credit_card_delinquency_rate": 4.94
+    },
+    {
+      "date": "2002-03-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": -11.861747072787999,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.7,
+      "consumer_sentiment": 95.7,
+      "credit_card_delinquency_rate": 4.94
+    },
+    {
+      "date": "2002-04-01",
+      "average_weekly_hours_YoY": 0.4950495049504955,
+      "temporary_help_YoY": -7.714083510261838,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.9,
+      "consumer_sentiment": 93.0,
+      "credit_card_delinquency_rate": 4.78
+    },
+    {
+      "date": "2002-05-01",
+      "average_weekly_hours_YoY": 0.4950495049504955,
+      "temporary_help_YoY": -6.486032346145776,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.8,
+      "consumer_sentiment": 96.9,
+      "credit_card_delinquency_rate": 4.78
+    },
+    {
+      "date": "2002-06-01",
+      "average_weekly_hours_YoY": 0.992555831265518,
+      "temporary_help_YoY": -4.81454607537668,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.8,
+      "consumer_sentiment": 92.4,
+      "credit_card_delinquency_rate": 4.78
+    },
+    {
+      "date": "2002-07-01",
+      "average_weekly_hours_YoY": -0.49261083743843415,
+      "temporary_help_YoY": -5.431682654913139,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.8,
+      "consumer_sentiment": 88.1,
+      "credit_card_delinquency_rate": 4.89
+    },
+    {
+      "date": "2002-08-01",
+      "average_weekly_hours_YoY": 0.496277915632759,
+      "temporary_help_YoY": -2.784192409916786,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.7,
+      "consumer_sentiment": 87.6,
+      "credit_card_delinquency_rate": 4.89
+    },
+    {
+      "date": "2002-09-01",
+      "average_weekly_hours_YoY": 0.746268656716409,
+      "temporary_help_YoY": -2.275343072155822,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.7,
+      "consumer_sentiment": 86.1,
+      "credit_card_delinquency_rate": 4.89
+    },
+    {
+      "date": "2002-10-01",
+      "average_weekly_hours_YoY": 0.4987531172069737,
+      "temporary_help_YoY": -0.7211755160912325,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.7,
+      "consumer_sentiment": 80.6,
+      "credit_card_delinquency_rate": 4.84
+    },
+    {
+      "date": "2002-11-01",
+      "average_weekly_hours_YoY": 1.0000000000000009,
+      "temporary_help_YoY": 0.8480074142724892,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.9,
+      "consumer_sentiment": 84.2,
+      "credit_card_delinquency_rate": 4.84
+    },
+    {
+      "date": "2002-12-01",
+      "average_weekly_hours_YoY": 0.746268656716409,
+      "temporary_help_YoY": 0.9868113366383158,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.0,
+      "consumer_sentiment": 86.7,
+      "credit_card_delinquency_rate": 4.84
+    },
+    {
+      "date": "2003-01-01",
+      "average_weekly_hours_YoY": 0.24875621890545485,
+      "temporary_help_YoY": 2.305220509477013,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.8,
+      "consumer_sentiment": 82.4,
+      "credit_card_delinquency_rate": 4.68
+    },
+    {
+      "date": "2003-02-01",
+      "average_weekly_hours_YoY": 0.24875621890545485,
+      "temporary_help_YoY": 1.126773625150701,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.9,
+      "consumer_sentiment": 79.9,
+      "credit_card_delinquency_rate": 4.68
+    },
+    {
+      "date": "2003-03-01",
+      "average_weekly_hours_YoY": -0.24691358024692134,
+      "temporary_help_YoY": -1.0910750970098193,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.9,
+      "consumer_sentiment": 77.6,
+      "credit_card_delinquency_rate": 4.68
+    },
+    {
+      "date": "2003-04-01",
+      "average_weekly_hours_YoY": -1.2315270935960632,
+      "temporary_help_YoY": -3.3291230602670585,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.0,
+      "consumer_sentiment": 86.0,
+      "credit_card_delinquency_rate": 4.53
+    },
+    {
+      "date": "2003-05-01",
+      "average_weekly_hours_YoY": -0.9852216748768461,
+      "temporary_help_YoY": -1.6216701855262472,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.1,
+      "consumer_sentiment": 92.1,
+      "credit_card_delinquency_rate": 4.53
+    },
+    {
+      "date": "2003-06-01",
+      "average_weekly_hours_YoY": -0.982800982801002,
+      "temporary_help_YoY": -0.36769651585130125,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.3,
+      "consumer_sentiment": 89.7,
+      "credit_card_delinquency_rate": 4.53
+    },
+    {
+      "date": "2003-07-01",
+      "average_weekly_hours_YoY": -0.7425742574257321,
+      "temporary_help_YoY": 2.6867717614804665,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.2,
+      "consumer_sentiment": 90.9,
+      "credit_card_delinquency_rate": 4.24
+    },
+    {
+      "date": "2003-08-01",
+      "average_weekly_hours_YoY": -0.7407407407407307,
+      "temporary_help_YoY": 0.6857296522051026,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.1,
+      "consumer_sentiment": 89.3,
+      "credit_card_delinquency_rate": 4.24
+    },
+    {
+      "date": "2003-09-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 2.4143866642507783,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.1,
+      "consumer_sentiment": 87.7,
+      "credit_card_delinquency_rate": 4.24
+    },
+    {
+      "date": "2003-10-01",
+      "average_weekly_hours_YoY": 0.7444168734491496,
+      "temporary_help_YoY": 2.674112412603291,
+      "real_wage_growth": null,
+      "unemployment_rate": 6.0,
+      "consumer_sentiment": 89.6,
+      "credit_card_delinquency_rate": 4.43
+    },
+    {
+      "date": "2003-11-01",
+      "average_weekly_hours_YoY": 1.2376237623762387,
+      "temporary_help_YoY": 4.5719799659973415,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.8,
+      "consumer_sentiment": 93.7,
+      "credit_card_delinquency_rate": 4.43
+    },
+    {
+      "date": "2003-12-01",
+      "average_weekly_hours_YoY": 0.4938271604938427,
+      "temporary_help_YoY": 6.270550641411554,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.7,
+      "consumer_sentiment": 92.6,
+      "credit_card_delinquency_rate": 4.43
+    },
+    {
+      "date": "2004-01-01",
+      "average_weekly_hours_YoY": 1.488833746898277,
+      "temporary_help_YoY": 4.606700655498908,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.7,
+      "consumer_sentiment": 103.8,
+      "credit_card_delinquency_rate": 4.21
+    },
+    {
+      "date": "2004-02-01",
+      "average_weekly_hours_YoY": 1.7369727047146455,
+      "temporary_help_YoY": 5.928745013526515,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.6,
+      "consumer_sentiment": 94.4,
+      "credit_card_delinquency_rate": 4.21
+    },
+    {
+      "date": "2004-03-01",
+      "average_weekly_hours_YoY": 1.2376237623762387,
+      "temporary_help_YoY": 6.789439675066911,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.8,
+      "consumer_sentiment": 95.8,
+      "credit_card_delinquency_rate": 4.21
+    },
+    {
+      "date": "2004-04-01",
+      "average_weekly_hours_YoY": 1.4962593516209433,
+      "temporary_help_YoY": 9.785347643490416,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.6,
+      "consumer_sentiment": 94.2,
+      "credit_card_delinquency_rate": 4.15
+    },
+    {
+      "date": "2004-05-01",
+      "average_weekly_hours_YoY": 2.238805970149249,
+      "temporary_help_YoY": 8.735159817351601,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.6,
+      "consumer_sentiment": 90.2,
+      "credit_card_delinquency_rate": 4.15
+    },
+    {
+      "date": "2004-06-01",
+      "average_weekly_hours_YoY": 1.2406947890818865,
+      "temporary_help_YoY": 7.277555245510592,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.6,
+      "consumer_sentiment": 95.6,
+      "credit_card_delinquency_rate": 4.15
+    },
+    {
+      "date": "2004-07-01",
+      "average_weekly_hours_YoY": 1.74563591022443,
+      "temporary_help_YoY": 6.652427357273161,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.5,
+      "consumer_sentiment": 96.7,
+      "credit_card_delinquency_rate": 4.07
+    },
+    {
+      "date": "2004-08-01",
+      "average_weekly_hours_YoY": 1.492537313432818,
+      "temporary_help_YoY": 6.979746271978637,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 95.9,
+      "credit_card_delinquency_rate": 4.07
+    },
+    {
+      "date": "2004-09-01",
+      "average_weekly_hours_YoY": 0.4938271604938427,
+      "temporary_help_YoY": 7.006059533813969,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 94.2,
+      "credit_card_delinquency_rate": 4.07
+    },
+    {
+      "date": "2004-10-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 9.533495467609999,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.5,
+      "consumer_sentiment": 91.7,
+      "credit_card_delinquency_rate": 4.03
+    },
+    {
+      "date": "2004-11-01",
+      "average_weekly_hours_YoY": -0.9779951100244433,
+      "temporary_help_YoY": 8.067492749802252,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 92.8,
+      "credit_card_delinquency_rate": 4.03
+    },
+    {
+      "date": "2004-12-01",
+      "average_weekly_hours_YoY": -0.24570024570025328,
+      "temporary_help_YoY": 5.904911317383532,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 97.1,
+      "credit_card_delinquency_rate": 4.03
+    },
+    {
+      "date": "2005-01-01",
+      "average_weekly_hours_YoY": -0.4889975550122161,
+      "temporary_help_YoY": 7.023498694516972,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.3,
+      "consumer_sentiment": 95.5,
+      "credit_card_delinquency_rate": 3.7
+    },
+    {
+      "date": "2005-02-01",
+      "average_weekly_hours_YoY": -0.7317073170731603,
+      "temporary_help_YoY": 7.847805384815176,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 94.1,
+      "credit_card_delinquency_rate": 3.7
+    },
+    {
+      "date": "2005-03-01",
+      "average_weekly_hours_YoY": -1.2224938875305624,
+      "temporary_help_YoY": 7.701949258763041,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.2,
+      "consumer_sentiment": 92.6,
+      "credit_card_delinquency_rate": 3.7
+    },
+    {
+      "date": "2005-04-01",
+      "average_weekly_hours_YoY": -0.7371007371007487,
+      "temporary_help_YoY": 6.6094274663152985,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.2,
+      "consumer_sentiment": 87.7,
+      "credit_card_delinquency_rate": 3.67
+    },
+    {
+      "date": "2005-05-01",
+      "average_weekly_hours_YoY": -1.7031630170316392,
+      "temporary_help_YoY": 5.232436064334611,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.1,
+      "consumer_sentiment": 86.9,
+      "credit_card_delinquency_rate": 3.67
+    },
+    {
+      "date": "2005-06-01",
+      "average_weekly_hours_YoY": -0.9803921568627416,
+      "temporary_help_YoY": 6.112602785702315,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.0,
+      "consumer_sentiment": 96.0,
+      "credit_card_delinquency_rate": 3.67
+    },
+    {
+      "date": "2005-07-01",
+      "average_weekly_hours_YoY": -0.7352941176470562,
+      "temporary_help_YoY": 5.924566088117489,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.0,
+      "consumer_sentiment": 96.5,
+      "credit_card_delinquency_rate": 3.9
+    },
+    {
+      "date": "2005-08-01",
+      "average_weekly_hours_YoY": -0.7352941176470562,
+      "temporary_help_YoY": 6.45778720925394,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.9,
+      "consumer_sentiment": 89.1,
+      "credit_card_delinquency_rate": 3.9
+    },
+    {
+      "date": "2005-09-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 7.473236060017352,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.0,
+      "consumer_sentiment": 76.9,
+      "credit_card_delinquency_rate": 3.9
+    },
+    {
+      "date": "2005-10-01",
+      "average_weekly_hours_YoY": 0.9852216748768461,
+      "temporary_help_YoY": 5.155221831980961,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.0,
+      "consumer_sentiment": 74.2,
+      "credit_card_delinquency_rate": 3.54
+    },
+    {
+      "date": "2005-11-01",
+      "average_weekly_hours_YoY": 0.9876543209876409,
+      "temporary_help_YoY": 6.9732455070342425,
+      "real_wage_growth": null,
+      "unemployment_rate": 5.0,
+      "consumer_sentiment": 81.6,
+      "credit_card_delinquency_rate": 3.54
+    },
+    {
+      "date": "2005-12-01",
+      "average_weekly_hours_YoY": 0.49261083743841194,
+      "temporary_help_YoY": 8.365566620031274,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.9,
+      "consumer_sentiment": 91.5,
+      "credit_card_delinquency_rate": 3.54
+    },
+    {
+      "date": "2006-01-01",
+      "average_weekly_hours_YoY": 0.7371007371007376,
+      "temporary_help_YoY": 6.7008213385378435,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.7,
+      "consumer_sentiment": 91.2,
+      "credit_card_delinquency_rate": 3.86
+    },
+    {
+      "date": "2006-02-01",
+      "average_weekly_hours_YoY": 0.7371007371007376,
+      "temporary_help_YoY": 5.635159542444312,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.8,
+      "consumer_sentiment": 86.7,
+      "credit_card_delinquency_rate": 3.86
+    },
+    {
+      "date": "2006-03-01",
+      "average_weekly_hours_YoY": 1.7326732673267342,
+      "temporary_help_YoY": 5.955295156306439,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.7,
+      "consumer_sentiment": 88.9,
+      "credit_card_delinquency_rate": 3.86
+    },
+    {
+      "date": "2006-04-01",
+      "average_weekly_hours_YoY": 1.980198019801982,
+      "temporary_help_YoY": 5.095287457140585,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.7,
+      "consumer_sentiment": 87.4,
+      "credit_card_delinquency_rate": 4.13
+    },
+    {
+      "date": "2006-05-01",
+      "average_weekly_hours_YoY": 1.980198019801982,
+      "temporary_help_YoY": 5.922024023304995,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.6,
+      "consumer_sentiment": 79.1,
+      "credit_card_delinquency_rate": 4.13
+    },
+    {
+      "date": "2006-06-01",
+      "average_weekly_hours_YoY": 1.980198019801982,
+      "temporary_help_YoY": 4.720673704186917,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.6,
+      "consumer_sentiment": 84.9,
+      "credit_card_delinquency_rate": 4.13
+    },
+    {
+      "date": "2006-07-01",
+      "average_weekly_hours_YoY": 2.2222222222222143,
+      "temporary_help_YoY": 4.084606900898047,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.7,
+      "consumer_sentiment": 84.7,
+      "credit_card_delinquency_rate": 4.12
+    },
+    {
+      "date": "2006-08-01",
+      "average_weekly_hours_YoY": 1.4814814814814836,
+      "temporary_help_YoY": 3.631033808872397,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.7,
+      "consumer_sentiment": 82.0,
+      "credit_card_delinquency_rate": 4.12
+    },
+    {
+      "date": "2006-09-01",
+      "average_weekly_hours_YoY": 0.9828009828009687,
+      "temporary_help_YoY": 1.6383985231337217,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.5,
+      "consumer_sentiment": 85.4,
+      "credit_card_delinquency_rate": 4.12
+    },
+    {
+      "date": "2006-10-01",
+      "average_weekly_hours_YoY": 0.24390243902439046,
+      "temporary_help_YoY": 0.9789619164619179,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.4,
+      "consumer_sentiment": 93.6,
+      "credit_card_delinquency_rate": 3.95
+    },
+    {
+      "date": "2006-11-01",
+      "average_weekly_hours_YoY": 0.24449877750611915,
+      "temporary_help_YoY": -0.15584020677333887,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.5,
+      "consumer_sentiment": 92.1,
+      "credit_card_delinquency_rate": 3.95
+    },
+    {
+      "date": "2006-12-01",
+      "average_weekly_hours_YoY": 0.7352941176470784,
+      "temporary_help_YoY": 0.15188912094170615,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.4,
+      "consumer_sentiment": 91.7,
+      "credit_card_delinquency_rate": 3.95
+    },
+    {
+      "date": "2007-01-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 1.0860452709397173,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.6,
+      "consumer_sentiment": 96.9,
+      "credit_card_delinquency_rate": 3.98
+    },
+    {
+      "date": "2007-02-01",
+      "average_weekly_hours_YoY": -0.24390243902439046,
+      "temporary_help_YoY": 0.4179490102207639,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.5,
+      "consumer_sentiment": 91.3,
+      "credit_card_delinquency_rate": 3.98
+    },
+    {
+      "date": "2007-03-01",
+      "average_weekly_hours_YoY": 0.48661800486617945,
+      "temporary_help_YoY": 0.24239669734498204,
+      "real_wage_growth": 0.578819758091087,
+      "unemployment_rate": 4.4,
+      "consumer_sentiment": 88.4,
+      "credit_card_delinquency_rate": 3.98
+    },
+    {
+      "date": "2007-04-01",
+      "average_weekly_hours_YoY": 0.24271844660193054,
+      "temporary_help_YoY": -0.24279210925645112,
+      "real_wage_growth": 0.46879190259896397,
+      "unemployment_rate": 4.5,
+      "consumer_sentiment": 87.1,
+      "credit_card_delinquency_rate": 4.02
+    },
+    {
+      "date": "2007-05-01",
+      "average_weekly_hours_YoY": -0.24271844660194164,
+      "temporary_help_YoY": -1.616245337753841,
+      "real_wage_growth": 0.7956276752678404,
+      "unemployment_rate": 4.4,
+      "consumer_sentiment": 88.3,
+      "credit_card_delinquency_rate": 4.02
+    },
+    {
+      "date": "2007-06-01",
+      "average_weekly_hours_YoY": 0.4854368932038833,
+      "temporary_help_YoY": -1.6762940310340757,
+      "real_wage_growth": 0.8934628741525064,
+      "unemployment_rate": 4.6,
+      "consumer_sentiment": 85.3,
+      "credit_card_delinquency_rate": 4.02
+    },
+    {
+      "date": "2007-07-01",
+      "average_weekly_hours_YoY": -0.24154589371980784,
+      "temporary_help_YoY": -1.8694418164616922,
+      "real_wage_growth": 0.8655944278261885,
+      "unemployment_rate": 4.7,
+      "consumer_sentiment": 90.4,
+      "credit_card_delinquency_rate": 4.41
+    },
+    {
+      "date": "2007-08-01",
+      "average_weekly_hours_YoY": 0.48661800486617945,
+      "temporary_help_YoY": -2.440220260994197,
+      "real_wage_growth": 1.42202600324437,
+      "unemployment_rate": 4.6,
+      "consumer_sentiment": 83.4,
+      "credit_card_delinquency_rate": 4.41
+    },
+    {
+      "date": "2007-09-01",
+      "average_weekly_hours_YoY": 0.48661800486617945,
+      "temporary_help_YoY": -3.2428955235176082,
+      "real_wage_growth": 0.29506679126358737,
+      "unemployment_rate": 4.7,
+      "consumer_sentiment": 83.4,
+      "credit_card_delinquency_rate": 4.41
+    },
+    {
+      "date": "2007-10-01",
+      "average_weekly_hours_YoY": 0.24330900243310083,
+      "temporary_help_YoY": -2.36855111584231,
+      "real_wage_growth": -0.45991022037850104,
+      "unemployment_rate": 4.7,
+      "consumer_sentiment": 80.9,
+      "credit_card_delinquency_rate": 4.6
+    },
+    {
+      "date": "2007-11-01",
+      "average_weekly_hours_YoY": 0.7317073170731714,
+      "temporary_help_YoY": -2.790467488959958,
+      "real_wage_growth": -1.2441852104306261,
+      "unemployment_rate": 4.7,
+      "consumer_sentiment": 76.1,
+      "credit_card_delinquency_rate": 4.6
+    },
+    {
+      "date": "2007-12-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": -3.624644549763034,
+      "real_wage_growth": -1.239609966875821,
+      "unemployment_rate": 5.0,
+      "consumer_sentiment": 75.5,
+      "credit_card_delinquency_rate": 4.6
+    },
+    {
+      "date": "2008-01-01",
+      "average_weekly_hours_YoY": 0.24390243902439046,
+      "temporary_help_YoY": -3.916764051720878,
+      "real_wage_growth": -1.3238062652335736,
+      "unemployment_rate": 5.0,
+      "consumer_sentiment": 78.4,
+      "credit_card_delinquency_rate": 4.77
+    },
+    {
+      "date": "2008-02-01",
+      "average_weekly_hours_YoY": 0.4889975550122383,
+      "temporary_help_YoY": -5.18369972378826,
+      "real_wage_growth": -1.2386446610337054,
+      "unemployment_rate": 4.9,
+      "consumer_sentiment": 70.8,
+      "credit_card_delinquency_rate": 4.77
+    },
+    {
+      "date": "2008-03-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": -6.07926852306645,
+      "real_wage_growth": -0.8522253265703661,
+      "unemployment_rate": 5.1,
+      "consumer_sentiment": 69.5,
+      "credit_card_delinquency_rate": 4.77
+    },
+    {
+      "date": "2008-04-01",
+      "average_weekly_hours_YoY": -0.2421307506053183,
+      "temporary_help_YoY": -6.327958624885921,
+      "real_wage_growth": -1.0258128561220103,
+      "unemployment_rate": 5.0,
+      "consumer_sentiment": 62.6,
+      "credit_card_delinquency_rate": 4.9
+    },
+    {
+      "date": "2008-05-01",
+      "average_weekly_hours_YoY": -0.24330900243308973,
+      "temporary_help_YoY": -7.0230527686298565,
+      "real_wage_growth": -1.0235348531449806,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 59.8,
+      "credit_card_delinquency_rate": 4.9
+    },
+    {
+      "date": "2008-06-01",
+      "average_weekly_hours_YoY": -0.9661835748792202,
+      "temporary_help_YoY": -7.725684444956427,
+      "real_wage_growth": -2.1110039436440076,
+      "unemployment_rate": 5.6,
+      "consumer_sentiment": 56.4,
+      "credit_card_delinquency_rate": 4.9
+    },
+    {
+      "date": "2008-07-01",
+      "average_weekly_hours_YoY": -0.7263922518159771,
+      "temporary_help_YoY": -8.622883807026337,
+      "real_wage_growth": -2.2234169962383366,
+      "unemployment_rate": 5.8,
+      "consumer_sentiment": 61.2,
+      "credit_card_delinquency_rate": 4.8
+    },
+    {
+      "date": "2008-08-01",
+      "average_weekly_hours_YoY": -0.9685230024213065,
+      "temporary_help_YoY": -9.58363938609037,
+      "real_wage_growth": -1.8751505174752658,
+      "unemployment_rate": 6.1,
+      "consumer_sentiment": 63.0,
+      "credit_card_delinquency_rate": 4.8
+    },
+    {
+      "date": "2008-09-01",
+      "average_weekly_hours_YoY": -1.937046004842613,
+      "temporary_help_YoY": -9.820101681658189,
+      "real_wage_growth": -1.5948539755760827,
+      "unemployment_rate": 6.1,
+      "consumer_sentiment": 70.3,
+      "credit_card_delinquency_rate": 4.8
+    },
+    {
+      "date": "2008-10-01",
+      "average_weekly_hours_YoY": -1.6990291262136026,
+      "temporary_help_YoY": -13.115264797507798,
+      "real_wage_growth": -0.39257406708268494,
+      "unemployment_rate": 6.5,
+      "consumer_sentiment": 57.6,
+      "credit_card_delinquency_rate": 5.64
+    },
+    {
+      "date": "2008-11-01",
+      "average_weekly_hours_YoY": -2.9055690072639084,
+      "temporary_help_YoY": -16.69864891325632,
+      "real_wage_growth": 2.377717478226282,
+      "unemployment_rate": 6.8,
+      "consumer_sentiment": 55.3,
+      "credit_card_delinquency_rate": 5.64
+    },
+    {
+      "date": "2008-12-01",
+      "average_weekly_hours_YoY": -3.1630170316301776,
+      "temporary_help_YoY": -19.33199575120973,
+      "real_wage_growth": 3.7565223597177733,
+      "unemployment_rate": 7.3,
+      "consumer_sentiment": 60.1,
+      "credit_card_delinquency_rate": 5.64
+    },
+    {
+      "date": "2009-01-01",
+      "average_weekly_hours_YoY": -3.406326034063256,
+      "temporary_help_YoY": -22.8264281230383,
+      "real_wage_growth": 3.7516368773593767,
+      "unemployment_rate": 7.8,
+      "consumer_sentiment": 61.2,
+      "credit_card_delinquency_rate": 6.51
+    },
+    {
+      "date": "2009-02-01",
+      "average_weekly_hours_YoY": -3.649635036496346,
+      "temporary_help_YoY": -24.246777604852554,
+      "real_wage_growth": 3.329289887627107,
+      "unemployment_rate": 8.3,
+      "consumer_sentiment": 56.3,
+      "credit_card_delinquency_rate": 6.51
+    },
+    {
+      "date": "2009-03-01",
+      "average_weekly_hours_YoY": -4.842615012106533,
+      "temporary_help_YoY": -26.148523614128262,
+      "real_wage_growth": 3.6933056719642643,
+      "unemployment_rate": 8.7,
+      "consumer_sentiment": 57.3,
+      "credit_card_delinquency_rate": 6.51
+    },
+    {
+      "date": "2009-04-01",
+      "average_weekly_hours_YoY": -4.368932038834961,
+      "temporary_help_YoY": -27.813413445923995,
+      "real_wage_growth": 3.966819476039607,
+      "unemployment_rate": 9.0,
+      "consumer_sentiment": 65.1,
+      "credit_card_delinquency_rate": 6.77
+    },
+    {
+      "date": "2009-05-01",
+      "average_weekly_hours_YoY": -4.146341463414638,
+      "temporary_help_YoY": -26.94810543657331,
+      "real_wage_growth": 4.0847328442325415,
+      "unemployment_rate": 9.4,
+      "consumer_sentiment": 68.7,
+      "credit_card_delinquency_rate": 6.77
+    },
+    {
+      "date": "2009-06-01",
+      "average_weekly_hours_YoY": -3.4146341463414553,
+      "temporary_help_YoY": -27.019266780408635,
+      "real_wage_growth": 4.161365964612096,
+      "unemployment_rate": 9.5,
+      "consumer_sentiment": 70.8,
+      "credit_card_delinquency_rate": 6.77
+    },
+    {
+      "date": "2009-07-01",
+      "average_weekly_hours_YoY": -2.682926829268295,
+      "temporary_help_YoY": -25.62565942181895,
+      "real_wage_growth": 4.736727357276327,
+      "unemployment_rate": 9.5,
+      "consumer_sentiment": 66.0,
+      "credit_card_delinquency_rate": 6.49
+    },
+    {
+      "date": "2009-08-01",
+      "average_weekly_hours_YoY": -2.2004889975550057,
+      "temporary_help_YoY": -24.803317940824353,
+      "real_wage_growth": 3.985368190348293,
+      "unemployment_rate": 9.6,
+      "consumer_sentiment": 65.7,
+      "credit_card_delinquency_rate": 6.49
+    },
+    {
+      "date": "2009-09-01",
+      "average_weekly_hours_YoY": -0.987654320987652,
+      "temporary_help_YoY": -22.880437139511688,
+      "real_wage_growth": 3.916960052736984,
+      "unemployment_rate": 9.8,
+      "consumer_sentiment": 73.5,
+      "credit_card_delinquency_rate": 6.49
+    },
+    {
+      "date": "2009-10-01",
+      "average_weekly_hours_YoY": -0.7407407407407307,
+      "temporary_help_YoY": -18.8239512370025,
+      "real_wage_growth": 2.7577182381088416,
+      "unemployment_rate": 10.0,
+      "consumer_sentiment": 70.6,
+      "credit_card_delinquency_rate": 6.33
+    },
+    {
+      "date": "2009-11-01",
+      "average_weekly_hours_YoY": 0.9975062344139696,
+      "temporary_help_YoY": -12.17150110479055,
+      "real_wage_growth": 0.27592146830235365,
+      "unemployment_rate": 9.9,
+      "consumer_sentiment": 67.4,
+      "credit_card_delinquency_rate": 6.33
+    },
+    {
+      "date": "2009-12-01",
+      "average_weekly_hours_YoY": 2.01005025125629,
+      "temporary_help_YoY": -7.07144598878322,
+      "real_wage_growth": -0.8760308995620303,
+      "unemployment_rate": 9.9,
+      "consumer_sentiment": 72.5,
+      "credit_card_delinquency_rate": 6.33
+    },
+    {
+      "date": "2010-01-01",
+      "average_weekly_hours_YoY": 3.0226700251889005,
+      "temporary_help_YoY": -0.6304016268429136,
+      "real_wage_growth": -0.6016972466676207,
+      "unemployment_rate": 9.8,
+      "consumer_sentiment": 74.4,
+      "credit_card_delinquency_rate": 5.78
+    },
+    {
+      "date": "2010-02-01",
+      "average_weekly_hours_YoY": 2.2727272727272707,
+      "temporary_help_YoY": 3.5400094821682604,
+      "real_wage_growth": 0.03178333341478101,
+      "unemployment_rate": 9.8,
+      "consumer_sentiment": 73.6,
+      "credit_card_delinquency_rate": 5.78
+    },
+    {
+      "date": "2010-03-01",
+      "average_weekly_hours_YoY": 4.325699745547085,
+      "temporary_help_YoY": 8.563024294585464,
+      "real_wage_growth": -0.41722258491423414,
+      "unemployment_rate": 9.9,
+      "consumer_sentiment": 73.6,
+      "credit_card_delinquency_rate": 5.78
+    },
+    {
+      "date": "2010-04-01",
+      "average_weekly_hours_YoY": 4.314720812182737,
+      "temporary_help_YoY": 13.700016871941978,
+      "real_wage_growth": -0.432520142181092,
+      "unemployment_rate": 9.9,
+      "consumer_sentiment": 72.2,
+      "credit_card_delinquency_rate": 5.1
+    },
+    {
+      "date": "2010-05-01",
+      "average_weekly_hours_YoY": 5.343511450381677,
+      "temporary_help_YoY": 16.485313187122962,
+      "real_wage_growth": -0.2357159376594864,
+      "unemployment_rate": 9.6,
+      "consumer_sentiment": 73.6,
+      "credit_card_delinquency_rate": 5.1
+    },
+    {
+      "date": "2010-06-01",
+      "average_weekly_hours_YoY": 3.535353535353525,
+      "temporary_help_YoY": 19.386475082677634,
+      "real_wage_growth": 0.632859122572782,
+      "unemployment_rate": 9.4,
+      "consumer_sentiment": 76.0,
+      "credit_card_delinquency_rate": 5.1
+    },
+    {
+      "date": "2010-07-01",
+      "average_weekly_hours_YoY": 3.007518796992481,
+      "temporary_help_YoY": 19.01492367928277,
+      "real_wage_growth": 0.501016175580915,
+      "unemployment_rate": 9.4,
+      "consumer_sentiment": 67.8,
+      "credit_card_delinquency_rate": 4.58
+    },
+    {
+      "date": "2010-08-01",
+      "average_weekly_hours_YoY": 3.0000000000000027,
+      "temporary_help_YoY": 20.42986296696423,
+      "real_wage_growth": 0.5973379781414767,
+      "unemployment_rate": 9.5,
+      "consumer_sentiment": 68.9,
+      "credit_card_delinquency_rate": 4.58
+    },
+    {
+      "date": "2010-09-01",
+      "average_weekly_hours_YoY": 3.2418952618453734,
+      "temporary_help_YoY": 20.733284597649448,
+      "real_wage_growth": 0.6703296765464772,
+      "unemployment_rate": 9.5,
+      "consumer_sentiment": 68.2,
+      "credit_card_delinquency_rate": 4.58
+    },
+    {
+      "date": "2010-10-01",
+      "average_weekly_hours_YoY": 2.736318407960181,
+      "temporary_help_YoY": 20.389796819787986,
+      "real_wage_growth": 0.7076130367978273,
+      "unemployment_rate": 9.4,
+      "consumer_sentiment": 67.7,
+      "credit_card_delinquency_rate": 4.14
+    },
+    {
+      "date": "2010-11-01",
+      "average_weekly_hours_YoY": 1.975308641975304,
+      "temporary_help_YoY": 18.092281340327567,
+      "real_wage_growth": 0.6541086601411505,
+      "unemployment_rate": 9.8,
+      "consumer_sentiment": 71.6,
+      "credit_card_delinquency_rate": 4.14
+    },
+    {
+      "date": "2010-12-01",
+      "average_weekly_hours_YoY": 1.724137931034475,
+      "temporary_help_YoY": 18.56205720283388,
+      "real_wage_growth": 0.30128152088477744,
+      "unemployment_rate": 9.3,
+      "consumer_sentiment": 74.5,
+      "credit_card_delinquency_rate": 4.14
+    },
+    {
+      "date": "2011-01-01",
+      "average_weekly_hours_YoY": 0.24449877750611915,
+      "temporary_help_YoY": 14.176813670316179,
+      "real_wage_growth": 0.39078439768804873,
+      "unemployment_rate": 9.1,
+      "consumer_sentiment": 74.2,
+      "credit_card_delinquency_rate": 3.82
+    },
+    {
+      "date": "2011-02-01",
+      "average_weekly_hours_YoY": 2.2222222222222143,
+      "temporary_help_YoY": 15.288730602900035,
+      "real_wage_growth": -0.293200464250265,
+      "unemployment_rate": 9.0,
+      "consumer_sentiment": 77.5,
+      "credit_card_delinquency_rate": 3.82
+    },
+    {
+      "date": "2011-03-01",
+      "average_weekly_hours_YoY": 0.9756097560975618,
+      "temporary_help_YoY": 15.263421976919211,
+      "real_wage_growth": -0.7735138175818723,
+      "unemployment_rate": 9.0,
+      "consumer_sentiment": 67.5,
+      "credit_card_delinquency_rate": 3.82
+    },
+    {
+      "date": "2011-04-01",
+      "average_weekly_hours_YoY": 0.7299270072992581,
+      "temporary_help_YoY": 13.379828856902588,
+      "real_wage_growth": -1.1736226588911047,
+      "unemployment_rate": 9.1,
+      "consumer_sentiment": 69.8,
+      "credit_card_delinquency_rate": 3.65
+    },
+    {
+      "date": "2011-05-01",
+      "average_weekly_hours_YoY": 0.24154589371980784,
+      "temporary_help_YoY": 11.035283868157396,
+      "real_wage_growth": -1.3681130297673705,
+      "unemployment_rate": 9.0,
+      "consumer_sentiment": 74.3,
+      "credit_card_delinquency_rate": 3.65
+    },
+    {
+      "date": "2011-06-01",
+      "average_weekly_hours_YoY": 0.9756097560975618,
+      "temporary_help_YoY": 8.997994077753347,
+      "real_wage_growth": -1.368288907535209,
+      "unemployment_rate": 9.1,
+      "consumer_sentiment": 71.5,
+      "credit_card_delinquency_rate": 3.65
+    },
+    {
+      "date": "2011-07-01",
+      "average_weekly_hours_YoY": 0.7299270072992581,
+      "temporary_help_YoY": 8.391341661104224,
+      "real_wage_growth": -1.2338086004952675,
+      "unemployment_rate": 9.0,
+      "consumer_sentiment": 63.7,
+      "credit_card_delinquency_rate": 3.45
+    },
+    {
+      "date": "2011-08-01",
+      "average_weekly_hours_YoY": 0.4854368932038833,
+      "temporary_help_YoY": 9.277620396600561,
+      "real_wage_growth": -1.7443157866310233,
+      "unemployment_rate": 9.0,
+      "consumer_sentiment": 55.8,
+      "credit_card_delinquency_rate": 3.45
+    },
+    {
+      "date": "2011-09-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 9.217512808570106,
+      "real_wage_growth": -1.8029894793743617,
+      "unemployment_rate": 9.0,
+      "consumer_sentiment": 59.5,
+      "credit_card_delinquency_rate": 3.45
+    },
+    {
+      "date": "2011-10-01",
+      "average_weekly_hours_YoY": 0.4842615012106588,
+      "temporary_help_YoY": 8.374226094932347,
+      "real_wage_growth": -1.490023093590409,
+      "unemployment_rate": 8.8,
+      "consumer_sentiment": 60.8,
+      "credit_card_delinquency_rate": 3.25
+    },
+    {
+      "date": "2011-11-01",
+      "average_weekly_hours_YoY": 0.4842615012106588,
+      "temporary_help_YoY": 7.701024385821786,
+      "real_wage_growth": -1.380043789513019,
+      "unemployment_rate": 8.6,
+      "consumer_sentiment": 63.7,
+      "credit_card_delinquency_rate": 3.25
+    },
+    {
+      "date": "2011-12-01",
+      "average_weekly_hours_YoY": 0.7263922518159882,
+      "temporary_help_YoY": 6.422627478753551,
+      "real_wage_growth": -1.0100488369983784,
+      "unemployment_rate": 8.5,
+      "consumer_sentiment": 69.9,
+      "credit_card_delinquency_rate": 3.25
+    },
+    {
+      "date": "2012-01-01",
+      "average_weekly_hours_YoY": 1.9512195121951237,
+      "temporary_help_YoY": 8.836313124523908,
+      "real_wage_growth": -1.2654025578453743,
+      "unemployment_rate": 8.3,
+      "consumer_sentiment": 75.0,
+      "credit_card_delinquency_rate": 3.06
+    },
+    {
+      "date": "2012-02-01",
+      "average_weekly_hours_YoY": 0.9661835748792313,
+      "temporary_help_YoY": 9.042365401588714,
+      "real_wage_growth": -1.0743016797980731,
+      "unemployment_rate": 8.3,
+      "consumer_sentiment": 75.3,
+      "credit_card_delinquency_rate": 3.06
+    },
+    {
+      "date": "2012-03-01",
+      "average_weekly_hours_YoY": 0.48309178743961567,
+      "temporary_help_YoY": 7.365488420686073,
+      "real_wage_growth": -0.4292436350462503,
+      "unemployment_rate": 8.2,
+      "consumer_sentiment": 76.2,
+      "credit_card_delinquency_rate": 3.06
+    },
+    {
+      "date": "2012-04-01",
+      "average_weekly_hours_YoY": 0.7246376811594235,
+      "temporary_help_YoY": 7.865805776110291,
+      "real_wage_growth": -0.17405193512513017,
+      "unemployment_rate": 8.2,
+      "consumer_sentiment": 76.4,
+      "credit_card_delinquency_rate": 2.92
+    },
+    {
+      "date": "2012-05-01",
+      "average_weekly_hours_YoY": 0.24096385542169418,
+      "temporary_help_YoY": 8.208011856501463,
+      "real_wage_growth": 0.17456522977097322,
+      "unemployment_rate": 8.2,
+      "consumer_sentiment": 79.3,
+      "credit_card_delinquency_rate": 2.92
+    },
+    {
+      "date": "2012-06-01",
+      "average_weekly_hours_YoY": 0.7246376811594235,
+      "temporary_help_YoY": 9.801945491192733,
+      "real_wage_growth": 0.34049815336685274,
+      "unemployment_rate": 8.2,
+      "consumer_sentiment": 73.2,
+      "credit_card_delinquency_rate": 2.92
+    },
+    {
+      "date": "2012-07-01",
+      "average_weekly_hours_YoY": 0.7246376811594235,
+      "temporary_help_YoY": 10.688836104513054,
+      "real_wage_growth": 0.22362838471561286,
+      "unemployment_rate": 8.2,
+      "consumer_sentiment": 72.3,
+      "credit_card_delinquency_rate": 2.82
+    },
+    {
+      "date": "2012-08-01",
+      "average_weekly_hours_YoY": 0.24154589371980784,
+      "temporary_help_YoY": 8.874486930222524,
+      "real_wage_growth": 0.13315581035953095,
+      "unemployment_rate": 8.1,
+      "consumer_sentiment": 74.3,
+      "credit_card_delinquency_rate": 2.82
+    },
+    {
+      "date": "2012-09-01",
+      "average_weekly_hours_YoY": 0.24154589371980784,
+      "temporary_help_YoY": 6.166574267559377,
+      "real_wage_growth": 0.039983841556101574,
+      "unemployment_rate": 7.8,
+      "consumer_sentiment": 78.3,
+      "credit_card_delinquency_rate": 2.82
+    },
+    {
+      "date": "2012-10-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 6.483009606025991,
+      "real_wage_growth": -0.5054381773482386,
+      "unemployment_rate": 7.8,
+      "consumer_sentiment": 82.6,
+      "credit_card_delinquency_rate": 2.71
+    },
+    {
+      "date": "2012-11-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 6.721097596902492,
+      "real_wage_growth": 0.09956170461842273,
+      "unemployment_rate": 7.7,
+      "consumer_sentiment": 82.7,
+      "credit_card_delinquency_rate": 2.71
+    },
+    {
+      "date": "2012-12-01",
+      "average_weekly_hours_YoY": 0.24038461538462563,
+      "temporary_help_YoY": 5.619099114087267,
+      "real_wage_growth": 0.38700181097923725,
+      "unemployment_rate": 7.9,
+      "consumer_sentiment": 72.9,
+      "credit_card_delinquency_rate": 2.71
+    },
+    {
+      "date": "2013-01-01",
+      "average_weekly_hours_YoY": -0.4784688995215225,
+      "temporary_help_YoY": 5.0516694800115225,
+      "real_wage_growth": 0.3732805104218695,
+      "unemployment_rate": 8.0,
+      "consumer_sentiment": 73.8,
+      "credit_card_delinquency_rate": 2.64
+    },
+    {
+      "date": "2013-02-01",
+      "average_weekly_hours_YoY": 0.23923444976077235,
+      "temporary_help_YoY": 3.9378364158808354,
+      "real_wage_growth": 0.12706155213539905,
+      "unemployment_rate": 7.7,
+      "consumer_sentiment": 77.6,
+      "credit_card_delinquency_rate": 2.64
+    },
+    {
+      "date": "2013-03-01",
+      "average_weekly_hours_YoY": 0.7211538461538325,
+      "temporary_help_YoY": 4.922153746350966,
+      "real_wage_growth": 0.3593566830020878,
+      "unemployment_rate": 7.5,
+      "consumer_sentiment": 78.6,
+      "credit_card_delinquency_rate": 2.64
+    },
+    {
+      "date": "2013-04-01",
+      "average_weekly_hours_YoY": 0.23980815347719453,
+      "temporary_help_YoY": 5.1931243680485295,
+      "real_wage_growth": 0.903066797385299,
+      "unemployment_rate": 7.6,
+      "consumer_sentiment": 76.4,
+      "credit_card_delinquency_rate": 2.53
+    },
+    {
+      "date": "2013-05-01",
+      "average_weekly_hours_YoY": 0.24038461538462563,
+      "temporary_help_YoY": 5.148243635191729,
+      "real_wage_growth": 0.6509660227100866,
+      "unemployment_rate": 7.5,
+      "consumer_sentiment": 84.5,
+      "credit_card_delinquency_rate": 2.53
+    },
+    {
+      "date": "2013-06-01",
+      "average_weekly_hours_YoY": 0.23980815347719453,
+      "temporary_help_YoY": 4.6649906221317705,
+      "real_wage_growth": 0.40848501099277623,
+      "unemployment_rate": 7.5,
+      "consumer_sentiment": 84.1,
+      "credit_card_delinquency_rate": 2.53
+    },
+    {
+      "date": "2013-07-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 4.29184549356223,
+      "real_wage_growth": 0.1968114109381247,
+      "unemployment_rate": 7.3,
+      "consumer_sentiment": 85.1,
+      "credit_card_delinquency_rate": 2.44
+    },
+    {
+      "date": "2013-08-01",
+      "average_weekly_hours_YoY": 0.9638554216867545,
+      "temporary_help_YoY": 4.527957458629306,
+      "real_wage_growth": 0.7494869769316015,
+      "unemployment_rate": 7.2,
+      "consumer_sentiment": 82.1,
+      "credit_card_delinquency_rate": 2.44
+    },
+    {
+      "date": "2013-09-01",
+      "average_weekly_hours_YoY": 0.7228915662650603,
+      "temporary_help_YoY": 6.0212894155452945,
+      "real_wage_growth": 0.9735222848899161,
+      "unemployment_rate": 7.2,
+      "consumer_sentiment": 77.5,
+      "credit_card_delinquency_rate": 2.44
+    },
+    {
+      "date": "2013-10-01",
+      "average_weekly_hours_YoY": 0.9638554216867545,
+      "temporary_help_YoY": 4.9397925525573205,
+      "real_wage_growth": 1.3608445350638654,
+      "unemployment_rate": 7.2,
+      "consumer_sentiment": 73.2,
+      "credit_card_delinquency_rate": 2.38
+    },
+    {
+      "date": "2013-11-01",
+      "average_weekly_hours_YoY": 1.2048192771084265,
+      "temporary_help_YoY": 4.897862607461145,
+      "real_wage_growth": 0.997740511513201,
+      "unemployment_rate": 6.9,
+      "consumer_sentiment": 75.1,
+      "credit_card_delinquency_rate": 2.38
+    },
+    {
+      "date": "2013-12-01",
+      "average_weekly_hours_YoY": 0.47961630695443347,
+      "temporary_help_YoY": 5.741513743403948,
+      "real_wage_growth": 0.4200979669515048,
+      "unemployment_rate": 6.7,
+      "consumer_sentiment": 82.5,
+      "credit_card_delinquency_rate": 2.38
+    },
+    {
+      "date": "2014-01-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 4.859695877096715,
+      "real_wage_growth": 0.4570258043221198,
+      "unemployment_rate": 6.6,
+      "consumer_sentiment": 81.2,
+      "credit_card_delinquency_rate": 2.32
+    },
+    {
+      "date": "2014-02-01",
+      "average_weekly_hours_YoY": -0.7159904534606132,
+      "temporary_help_YoY": 5.237131064558831,
+      "real_wage_growth": 1.1791808986260754,
+      "unemployment_rate": 6.7,
+      "consumer_sentiment": 81.6,
+      "credit_card_delinquency_rate": 2.32
+    },
+    {
+      "date": "2014-03-01",
+      "average_weekly_hours_YoY": 0.23866348448686736,
+      "temporary_help_YoY": 4.919236417033757,
+      "real_wage_growth": 0.5217480250527151,
+      "unemployment_rate": 6.7,
+      "consumer_sentiment": 80.0,
+      "credit_card_delinquency_rate": 2.32
+    },
+    {
+      "date": "2014-04-01",
+      "average_weekly_hours_YoY": 0.23923444976077235,
+      "temporary_help_YoY": 4.8444769118382025,
+      "real_wage_growth": -0.04521541318173172,
+      "unemployment_rate": 6.2,
+      "consumer_sentiment": 84.1,
+      "credit_card_delinquency_rate": 2.26
+    },
+    {
+      "date": "2014-05-01",
+      "average_weekly_hours_YoY": 0.9592326139088669,
+      "temporary_help_YoY": 4.869358669833734,
+      "real_wage_growth": -0.031481079915507415,
+      "unemployment_rate": 6.3,
+      "consumer_sentiment": 81.9,
+      "credit_card_delinquency_rate": 2.26
+    },
+    {
+      "date": "2014-06-01",
+      "average_weekly_hours_YoY": 0.717703349282317,
+      "temporary_help_YoY": 4.895531493060834,
+      "real_wage_growth": 0.027268210202824328,
+      "unemployment_rate": 6.1,
+      "consumer_sentiment": 82.5,
+      "credit_card_delinquency_rate": 2.26
+    },
+    {
+      "date": "2014-07-01",
+      "average_weekly_hours_YoY": 0.7194244604316502,
+      "temporary_help_YoY": 5.4869684499314175,
+      "real_wage_growth": 0.10868727670283462,
+      "unemployment_rate": 6.2,
+      "consumer_sentiment": 81.8,
+      "credit_card_delinquency_rate": 2.2
+    },
+    {
+      "date": "2014-08-01",
+      "average_weekly_hours_YoY": 0.23866348448686736,
+      "temporary_help_YoY": 5.820045558086573,
+      "real_wage_growth": 0.44218043682260344,
+      "unemployment_rate": 6.1,
+      "consumer_sentiment": 82.5,
+      "credit_card_delinquency_rate": 2.2
+    },
+    {
+      "date": "2014-09-01",
+      "average_weekly_hours_YoY": 0.717703349282317,
+      "temporary_help_YoY": 6.387815412593767,
+      "real_wage_growth": 0.38756030417310683,
+      "unemployment_rate": 5.9,
+      "consumer_sentiment": 84.6,
+      "credit_card_delinquency_rate": 2.2
+    },
+    {
+      "date": "2014-10-01",
+      "average_weekly_hours_YoY": 0.4773269689737569,
+      "temporary_help_YoY": 6.36976444747408,
+      "real_wage_growth": 0.4586265332936934,
+      "unemployment_rate": 5.7,
+      "consumer_sentiment": 86.9,
+      "credit_card_delinquency_rate": 2.15
+    },
+    {
+      "date": "2014-11-01",
+      "average_weekly_hours_YoY": 0.4761904761904745,
+      "temporary_help_YoY": 5.845864661654132,
+      "real_wage_growth": 0.8278166654198671,
+      "unemployment_rate": 5.8,
+      "consumer_sentiment": 88.8,
+      "credit_card_delinquency_rate": 2.15
+    },
+    {
+      "date": "2014-12-01",
+      "average_weekly_hours_YoY": 0.4773269689737569,
+      "temporary_help_YoY": 5.515417845970516,
+      "real_wage_growth": 1.2000827942102665,
+      "unemployment_rate": 5.6,
+      "consumer_sentiment": 93.6,
+      "credit_card_delinquency_rate": 2.15
+    },
+    {
+      "date": "2015-01-01",
+      "average_weekly_hours_YoY": 0.9615384615384581,
+      "temporary_help_YoY": 6.080879055165211,
+      "real_wage_growth": 2.382394803897636,
+      "unemployment_rate": 5.7,
+      "consumer_sentiment": 98.1,
+      "credit_card_delinquency_rate": 2.11
+    },
+    {
+      "date": "2015-02-01",
+      "average_weekly_hours_YoY": 0.7211538461538325,
+      "temporary_help_YoY": 5.0468050468050585,
+      "real_wage_growth": 1.9794241395098222,
+      "unemployment_rate": 5.5,
+      "consumer_sentiment": 95.4,
+      "credit_card_delinquency_rate": 2.11
+    },
+    {
+      "date": "2015-03-01",
+      "average_weekly_hours_YoY": -0.4761904761904856,
+      "temporary_help_YoY": 4.692276527568051,
+      "real_wage_growth": 2.2438337334767633,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 93.0,
+      "credit_card_delinquency_rate": 2.11
+    },
+    {
+      "date": "2015-04-01",
+      "average_weekly_hours_YoY": -0.23866348448687846,
+      "temporary_help_YoY": 4.52528512230006,
+      "real_wage_growth": 2.366147405021346,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 95.9,
+      "credit_card_delinquency_rate": 2.12
+    },
+    {
+      "date": "2015-05-01",
+      "average_weekly_hours_YoY": -0.7125890736342178,
+      "temporary_help_YoY": 4.939173638256666,
+      "real_wage_growth": 2.3002265121520926,
+      "unemployment_rate": 5.6,
+      "consumer_sentiment": 90.7,
+      "credit_card_delinquency_rate": 2.12
+    },
+    {
+      "date": "2015-06-01",
+      "average_weekly_hours_YoY": -0.7125890736342178,
+      "temporary_help_YoY": 4.866967141610945,
+      "real_wage_growth": 1.9020494404093258,
+      "unemployment_rate": 5.3,
+      "consumer_sentiment": 96.1,
+      "credit_card_delinquency_rate": 2.12
+    },
+    {
+      "date": "2015-07-01",
+      "average_weekly_hours_YoY": -0.4761904761904856,
+      "temporary_help_YoY": 4.200982516977314,
+      "real_wage_growth": 1.9349795885148735,
+      "unemployment_rate": 5.2,
+      "consumer_sentiment": 93.1,
+      "credit_card_delinquency_rate": 2.15
+    },
+    {
+      "date": "2015-08-01",
+      "average_weekly_hours_YoY": -0.4761904761904856,
+      "temporary_help_YoY": 3.587701359738804,
+      "real_wage_growth": 2.035772395402957,
+      "unemployment_rate": 5.1,
+      "consumer_sentiment": 91.9,
+      "credit_card_delinquency_rate": 2.15
+    },
+    {
+      "date": "2015-09-01",
+      "average_weekly_hours_YoY": -0.7125890736342178,
+      "temporary_help_YoY": 2.663817663817669,
+      "real_wage_growth": 2.230373488075732,
+      "unemployment_rate": 5.0,
+      "consumer_sentiment": 87.2,
+      "credit_card_delinquency_rate": 2.15
+    },
+    {
+      "date": "2015-10-01",
+      "average_weekly_hours_YoY": -0.7125890736342178,
+      "temporary_help_YoY": 3.0689262318427835,
+      "real_wage_growth": 2.350067568479841,
+      "unemployment_rate": 5.0,
+      "consumer_sentiment": 90.0,
+      "credit_card_delinquency_rate": 2.16
+    },
+    {
+      "date": "2015-11-01",
+      "average_weekly_hours_YoY": -0.9478672985782088,
+      "temporary_help_YoY": 2.79168886521044,
+      "real_wage_growth": 1.9477220409273466,
+      "unemployment_rate": 5.1,
+      "consumer_sentiment": 91.3,
+      "credit_card_delinquency_rate": 2.16
+    },
+    {
+      "date": "2015-12-01",
+      "average_weekly_hours_YoY": -0.7125890736342178,
+      "temporary_help_YoY": 3.483570394945823,
+      "real_wage_growth": 1.8666081398782675,
+      "unemployment_rate": 5.0,
+      "consumer_sentiment": 92.6,
+      "credit_card_delinquency_rate": 2.16
+    },
+    {
+      "date": "2016-01-01",
+      "average_weekly_hours_YoY": -0.23809523809523725,
+      "temporary_help_YoY": 1.772187577070783,
+      "real_wage_growth": 1.2929802618533603,
+      "unemployment_rate": 4.8,
+      "consumer_sentiment": 92.0,
+      "credit_card_delinquency_rate": 2.15
+    },
+    {
+      "date": "2016-02-01",
+      "average_weekly_hours_YoY": -0.23866348448687846,
+      "temporary_help_YoY": 1.634320735444339,
+      "real_wage_growth": 1.5198371141126987,
+      "unemployment_rate": 4.9,
+      "consumer_sentiment": 91.7,
+      "credit_card_delinquency_rate": 2.15
+    },
+    {
+      "date": "2016-03-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 1.516270888302551,
+      "real_wage_growth": 1.509412658748155,
+      "unemployment_rate": 5.0,
+      "consumer_sentiment": 91.0,
+      "credit_card_delinquency_rate": 2.15
+    },
+    {
+      "date": "2016-04-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 0.9998947479212816,
+      "real_wage_growth": 1.3824767518959336,
+      "unemployment_rate": 5.1,
+      "consumer_sentiment": 89.0,
+      "credit_card_delinquency_rate": 2.21
+    },
+    {
+      "date": "2016-05-01",
+      "average_weekly_hours_YoY": 0.23923444976077235,
+      "temporary_help_YoY": -0.3690165361183606,
+      "real_wage_growth": 1.3498967371239123,
+      "unemployment_rate": 4.8,
+      "consumer_sentiment": 94.7,
+      "credit_card_delinquency_rate": 2.21
+    },
+    {
+      "date": "2016-06-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": -0.24955807424351661,
+      "real_wage_growth": 1.507566254118431,
+      "unemployment_rate": 4.9,
+      "consumer_sentiment": 93.5,
+      "credit_card_delinquency_rate": 2.21
+    },
+    {
+      "date": "2016-07-01",
+      "average_weekly_hours_YoY": 0.4784688995215447,
+      "temporary_help_YoY": -0.09359725448052636,
+      "real_wage_growth": 1.8346179422783715,
+      "unemployment_rate": 4.8,
+      "consumer_sentiment": 90.0,
+      "credit_card_delinquency_rate": 2.29
+    },
+    {
+      "date": "2016-08-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": -0.29785612856303434,
+      "real_wage_growth": 1.3606043513902932,
+      "unemployment_rate": 4.9,
+      "consumer_sentiment": 89.8,
+      "credit_card_delinquency_rate": 2.29
+    },
+    {
+      "date": "2016-09-01",
+      "average_weekly_hours_YoY": 0.23923444976077235,
+      "temporary_help_YoY": 0.6417371999444921,
+      "real_wage_growth": 1.0633231692781964,
+      "unemployment_rate": 5.0,
+      "consumer_sentiment": 91.2,
+      "credit_card_delinquency_rate": 2.29
+    },
+    {
+      "date": "2016-10-01",
+      "average_weekly_hours_YoY": 0.4784688995215447,
+      "temporary_help_YoY": -0.0138169257340226,
+      "real_wage_growth": 1.0737501890222934,
+      "unemployment_rate": 4.9,
+      "consumer_sentiment": 87.2,
+      "credit_card_delinquency_rate": 2.37
+    },
+    {
+      "date": "2016-11-01",
+      "average_weekly_hours_YoY": 0.23923444976077235,
+      "temporary_help_YoY": 0.32134342282574835,
+      "real_wage_growth": 0.8751829543229617,
+      "unemployment_rate": 4.7,
+      "consumer_sentiment": 93.8,
+      "credit_card_delinquency_rate": 2.37
+    },
+    {
+      "date": "2016-12-01",
+      "average_weekly_hours_YoY": 0.23923444976077235,
+      "temporary_help_YoY": -0.8594815825375135,
+      "real_wage_growth": 0.6293634173071272,
+      "unemployment_rate": 4.7,
+      "consumer_sentiment": 98.2,
+      "credit_card_delinquency_rate": 2.37
+    },
+    {
+      "date": "2017-01-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 0.6993006993007089,
+      "real_wage_growth": -0.026480649174931425,
+      "unemployment_rate": 4.7,
+      "consumer_sentiment": 98.5,
+      "credit_card_delinquency_rate": 2.4
+    },
+    {
+      "date": "2017-02-01",
+      "average_weekly_hours_YoY": 0.23923444976077235,
+      "temporary_help_YoY": 0.6307399064286789,
+      "real_wage_growth": -0.08917929759080234,
+      "unemployment_rate": 4.6,
+      "consumer_sentiment": 96.3,
+      "credit_card_delinquency_rate": 2.4
+    },
+    {
+      "date": "2017-03-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 0.8767673967285949,
+      "real_wage_growth": 0.14849885083925152,
+      "unemployment_rate": 4.4,
+      "consumer_sentiment": 96.9,
+      "credit_card_delinquency_rate": 2.4
+    },
+    {
+      "date": "2017-04-01",
+      "average_weekly_hours_YoY": 0.4784688995215447,
+      "temporary_help_YoY": 1.0073641795192545,
+      "real_wage_growth": 0.3619245267378446,
+      "unemployment_rate": 4.4,
+      "consumer_sentiment": 97.0,
+      "credit_card_delinquency_rate": 2.49
+    },
+    {
+      "date": "2017-05-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 2.508822810021294,
+      "real_wage_growth": 0.5954645778695422,
+      "unemployment_rate": 4.4,
+      "consumer_sentiment": 97.1,
+      "credit_card_delinquency_rate": 2.49
+    },
+    {
+      "date": "2017-06-01",
+      "average_weekly_hours_YoY": 0.4784688995215447,
+      "temporary_help_YoY": 2.3836825463011246,
+      "real_wage_growth": 0.8436420861055671,
+      "unemployment_rate": 4.3,
+      "consumer_sentiment": 95.0,
+      "credit_card_delinquency_rate": 2.49
+    },
+    {
+      "date": "2017-07-01",
+      "average_weekly_hours_YoY": -0.23809523809523725,
+      "temporary_help_YoY": 2.5329632199861285,
+      "real_wage_growth": 0.8296729328998387,
+      "unemployment_rate": 4.3,
+      "consumer_sentiment": 93.4,
+      "credit_card_delinquency_rate": 2.54
+    },
+    {
+      "date": "2017-08-01",
+      "average_weekly_hours_YoY": 0.4784688995215447,
+      "temporary_help_YoY": 2.6539757529440378,
+      "real_wage_growth": 0.6268858374834929,
+      "unemployment_rate": 4.4,
+      "consumer_sentiment": 96.8,
+      "credit_card_delinquency_rate": 2.54
+    },
+    {
+      "date": "2017-09-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 1.5579223106882978,
+      "real_wage_growth": 0.6002914718720165,
+      "unemployment_rate": 4.3,
+      "consumer_sentiment": 95.1,
+      "credit_card_delinquency_rate": 2.54
+    },
+    {
+      "date": "2017-10-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 2.3284737096662678,
+      "real_wage_growth": 0.28998467565368724,
+      "unemployment_rate": 4.2,
+      "consumer_sentiment": 100.7,
+      "credit_card_delinquency_rate": 2.48
+    },
+    {
+      "date": "2017-11-01",
+      "average_weekly_hours_YoY": 0.4773269689737569,
+      "temporary_help_YoY": 2.125094716539233,
+      "real_wage_growth": 0.2922005673498207,
+      "unemployment_rate": 4.2,
+      "consumer_sentiment": 98.5,
+      "credit_card_delinquency_rate": 2.48
+    },
+    {
+      "date": "2017-12-01",
+      "average_weekly_hours_YoY": -0.23866348448687846,
+      "temporary_help_YoY": 2.119168845465791,
+      "real_wage_growth": 0.5577650522065492,
+      "unemployment_rate": 4.1,
+      "consumer_sentiment": 95.9,
+      "credit_card_delinquency_rate": 2.48
+    },
+    {
+      "date": "2018-01-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 2.169279427942783,
+      "real_wage_growth": 0.6048986033796444,
+      "unemployment_rate": 4.0,
+      "consumer_sentiment": 95.7,
+      "credit_card_delinquency_rate": 2.5
+    },
+    {
+      "date": "2018-02-01",
+      "average_weekly_hours_YoY": 0.9546539379474916,
+      "temporary_help_YoY": 2.7275544994317613,
+      "real_wage_growth": 0.2997501531473601,
+      "unemployment_rate": 4.1,
+      "consumer_sentiment": 99.7,
+      "credit_card_delinquency_rate": 2.5
+    },
+    {
+      "date": "2018-03-01",
+      "average_weekly_hours_YoY": 0.9569377990430672,
+      "temporary_help_YoY": 2.6005702703631117,
+      "real_wage_growth": 0.4917509242183371,
+      "unemployment_rate": 4.0,
+      "consumer_sentiment": 101.4,
+      "credit_card_delinquency_rate": 2.5
+    },
+    {
+      "date": "2018-04-01",
+      "average_weekly_hours_YoY": 0.952380952380949,
+      "temporary_help_YoY": 2.9713185225943795,
+      "real_wage_growth": 0.3097381618742956,
+      "unemployment_rate": 4.0,
+      "consumer_sentiment": 98.8,
+      "credit_card_delinquency_rate": 2.5
+    },
+    {
+      "date": "2018-05-01",
+      "average_weekly_hours_YoY": 0.4773269689737569,
+      "temporary_help_YoY": 2.0895115383304352,
+      "real_wage_growth": 0.1516690736109716,
+      "unemployment_rate": 3.8,
+      "consumer_sentiment": 98.0,
+      "credit_card_delinquency_rate": 2.5
+    },
+    {
+      "date": "2018-06-01",
+      "average_weekly_hours_YoY": 0.4761904761904745,
+      "temporary_help_YoY": 1.6901408450704203,
+      "real_wage_growth": 0.12126113706418806,
+      "unemployment_rate": 4.0,
+      "consumer_sentiment": 98.2,
+      "credit_card_delinquency_rate": 2.5
+    },
+    {
+      "date": "2018-07-01",
+      "average_weekly_hours_YoY": 0.7159904534606243,
+      "temporary_help_YoY": 1.3840947546531313,
+      "real_wage_growth": -0.007607838121759247,
+      "unemployment_rate": 3.8,
+      "consumer_sentiment": 97.9,
+      "credit_card_delinquency_rate": 2.52
+    },
+    {
+      "date": "2018-08-01",
+      "average_weekly_hours_YoY": 0.23809523809523725,
+      "temporary_help_YoY": 1.4923352847619364,
+      "real_wage_growth": 0.5285450964032545,
+      "unemployment_rate": 3.8,
+      "consumer_sentiment": 96.2,
+      "credit_card_delinquency_rate": 2.52
+    },
+    {
+      "date": "2018-09-01",
+      "average_weekly_hours_YoY": 0.23866348448686736,
+      "temporary_help_YoY": 1.8225012726964085,
+      "real_wage_growth": 0.782944040855349,
+      "unemployment_rate": 3.7,
+      "consumer_sentiment": 100.1,
+      "credit_card_delinquency_rate": 2.52
+    },
+    {
+      "date": "2018-10-01",
+      "average_weekly_hours_YoY": 0.23809523809523725,
+      "temporary_help_YoY": 1.3166779203241052,
+      "real_wage_growth": 0.7717540365260289,
+      "unemployment_rate": 3.8,
+      "consumer_sentiment": 98.6,
+      "credit_card_delinquency_rate": 2.54
+    },
+    {
+      "date": "2018-11-01",
+      "average_weekly_hours_YoY": -0.47505938242280443,
+      "temporary_help_YoY": 0.9679268827358367,
+      "real_wage_growth": 1.2176326111704272,
+      "unemployment_rate": 3.8,
+      "consumer_sentiment": 97.5,
+      "credit_card_delinquency_rate": 2.54
+    },
+    {
+      "date": "2018-12-01",
+      "average_weekly_hours_YoY": 0.717703349282317,
+      "temporary_help_YoY": 0.3672011858240065,
+      "real_wage_growth": 1.4606727780114293,
+      "unemployment_rate": 3.9,
+      "consumer_sentiment": 98.3,
+      "credit_card_delinquency_rate": 2.54
+    },
+    {
+      "date": "2019-01-01",
+      "average_weekly_hours_YoY": 0.23866348448686736,
+      "temporary_help_YoY": -0.6224973922406507,
+      "real_wage_growth": 1.7424777525140378,
+      "unemployment_rate": 4.0,
+      "consumer_sentiment": 91.2,
+      "credit_card_delinquency_rate": 2.54
+    },
+    {
+      "date": "2019-02-01",
+      "average_weekly_hours_YoY": -1.4184397163120477,
+      "temporary_help_YoY": -1.4214355157732395,
+      "real_wage_growth": 2.0034389931417262,
+      "unemployment_rate": 3.8,
+      "consumer_sentiment": 93.8,
+      "credit_card_delinquency_rate": 2.54
+    },
+    {
+      "date": "2019-03-01",
+      "average_weekly_hours_YoY": -1.1848341232227444,
+      "temporary_help_YoY": -1.7076274023973714,
+      "real_wage_growth": 1.5147316323144144,
+      "unemployment_rate": 3.8,
+      "consumer_sentiment": 98.4,
+      "credit_card_delinquency_rate": 2.54
+    },
+    {
+      "date": "2019-04-01",
+      "average_weekly_hours_YoY": -1.8867924528301772,
+      "temporary_help_YoY": -1.3492752655133167,
+      "real_wage_growth": 1.2446755484106564,
+      "unemployment_rate": 3.7,
+      "consumer_sentiment": 97.2,
+      "credit_card_delinquency_rate": 2.59
+    },
+    {
+      "date": "2019-05-01",
+      "average_weekly_hours_YoY": -1.187648456057011,
+      "temporary_help_YoY": -1.1585976627712768,
+      "real_wage_growth": 1.5127265287175007,
+      "unemployment_rate": 3.6,
+      "consumer_sentiment": 100.0,
+      "credit_card_delinquency_rate": 2.59
+    },
+    {
+      "date": "2019-06-01",
+      "average_weekly_hours_YoY": -1.1848341232227444,
+      "temporary_help_YoY": -1.0579714981810984,
+      "real_wage_growth": 1.7767299475190956,
+      "unemployment_rate": 3.6,
+      "consumer_sentiment": 98.2,
+      "credit_card_delinquency_rate": 2.59
+    },
+    {
+      "date": "2019-07-01",
+      "average_weekly_hours_YoY": -1.65876777251186,
+      "temporary_help_YoY": -1.1448980273039866,
+      "real_wage_growth": 1.5766088802943168,
+      "unemployment_rate": 3.7,
+      "consumer_sentiment": 98.4,
+      "credit_card_delinquency_rate": 2.6
+    },
+    {
+      "date": "2019-08-01",
+      "average_weekly_hours_YoY": -1.4251781472684133,
+      "temporary_help_YoY": -0.8402240597492616,
+      "real_wage_growth": 1.6515223370858978,
+      "unemployment_rate": 3.6,
+      "consumer_sentiment": 89.8,
+      "credit_card_delinquency_rate": 2.6
+    },
+    {
+      "date": "2019-09-01",
+      "average_weekly_hours_YoY": -1.1904761904761862,
+      "temporary_help_YoY": -0.6099593360442523,
+      "real_wage_growth": 1.3671433683208,
+      "unemployment_rate": 3.5,
+      "consumer_sentiment": 93.2,
+      "credit_card_delinquency_rate": 2.6
+    },
+    {
+      "date": "2019-10-01",
+      "average_weekly_hours_YoY": -1.6627078384798155,
+      "temporary_help_YoY": -1.2529156947684084,
+      "real_wage_growth": 1.4200655074209534,
+      "unemployment_rate": 3.6,
+      "consumer_sentiment": 95.5,
+      "credit_card_delinquency_rate": 2.61
+    },
+    {
+      "date": "2019-11-01",
+      "average_weekly_hours_YoY": -1.1933174224343701,
+      "temporary_help_YoY": -1.4262809806934396,
+      "real_wage_growth": 1.16325432847868,
+      "unemployment_rate": 3.6,
+      "consumer_sentiment": 96.8,
+      "credit_card_delinquency_rate": 2.61
+    },
+    {
+      "date": "2019-12-01",
+      "average_weekly_hours_YoY": -1.6627078384798155,
+      "temporary_help_YoY": -1.4332225690598555,
+      "real_wage_growth": 0.6409324852113762,
+      "unemployment_rate": 3.6,
+      "consumer_sentiment": 99.3,
+      "credit_card_delinquency_rate": 2.61
+    },
+    {
+      "date": "2020-01-01",
+      "average_weekly_hours_YoY": -1.6666666666666718,
+      "temporary_help_YoY": -1.2223200379223864,
+      "real_wage_growth": 0.4335422993517746,
+      "unemployment_rate": 3.6,
+      "consumer_sentiment": 99.8,
+      "credit_card_delinquency_rate": 2.69
+    },
+    {
+      "date": "2020-02-01",
+      "average_weekly_hours_YoY": -0.47961630695444457,
+      "temporary_help_YoY": -1.78200986226833,
+      "real_wage_growth": 0.7117199550192854,
+      "unemployment_rate": 3.5,
+      "consumer_sentiment": 101.0,
+      "credit_card_delinquency_rate": 2.69
+    },
+    {
+      "date": "2020-03-01",
+      "average_weekly_hours_YoY": -1.1990407673860948,
+      "temporary_help_YoY": -2.3061725030658065,
+      "real_wage_growth": 1.9340327643140531,
+      "unemployment_rate": 4.4,
+      "consumer_sentiment": 89.1,
+      "credit_card_delinquency_rate": 2.69
+    },
+    {
+      "date": "2020-04-01",
+      "average_weekly_hours_YoY": -7.692307692307699,
+      "temporary_help_YoY": -33.96980161148352,
+      "real_wage_growth": 7.759100618899795,
+      "unemployment_rate": 14.8,
+      "consumer_sentiment": 71.8,
+      "credit_card_delinquency_rate": 2.45
+    },
+    {
+      "date": "2020-05-01",
+      "average_weekly_hours_YoY": -5.288461538461542,
+      "temporary_help_YoY": -31.412356855724088,
+      "real_wage_growth": 6.388848970425798,
+      "unemployment_rate": 13.2,
+      "consumer_sentiment": 72.3,
+      "credit_card_delinquency_rate": 2.45
+    },
+    {
+      "date": "2020-06-01",
+      "average_weekly_hours_YoY": -4.316546762589935,
+      "temporary_help_YoY": -24.978074613775892,
+      "real_wage_growth": 4.293688211342417,
+      "unemployment_rate": 11.0,
+      "consumer_sentiment": 78.1,
+      "credit_card_delinquency_rate": 2.45
+    },
+    {
+      "date": "2020-07-01",
+      "average_weekly_hours_YoY": -1.9277108433734869,
+      "temporary_help_YoY": -20.279578606158832,
+      "real_wage_growth": 3.817028966014413,
+      "unemployment_rate": 10.2,
+      "consumer_sentiment": 72.5,
+      "credit_card_delinquency_rate": 1.99
+    },
+    {
+      "date": "2020-08-01",
+      "average_weekly_hours_YoY": -1.2048192771084376,
+      "temporary_help_YoY": -16.674512441156697,
+      "real_wage_growth": 3.4718941261941083,
+      "unemployment_rate": 8.4,
+      "consumer_sentiment": 74.1,
+      "credit_card_delinquency_rate": 1.99
+    },
+    {
+      "date": "2020-09-01",
+      "average_weekly_hours_YoY": -0.7228915662650492,
+      "temporary_help_YoY": -16.20443341493679,
+      "real_wage_growth": 3.356323965014285,
+      "unemployment_rate": 7.8,
+      "consumer_sentiment": 80.4,
+      "credit_card_delinquency_rate": 1.99
+    },
+    {
+      "date": "2020-10-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": -12.424917324694619,
+      "real_wage_growth": 3.332016415640471,
+      "unemployment_rate": 6.9,
+      "consumer_sentiment": 81.8,
+      "credit_card_delinquency_rate": 2.1
+    },
+    {
+      "date": "2020-11-01",
+      "average_weekly_hours_YoY": -0.24154589371980784,
+      "temporary_help_YoY": -9.33550201619735,
+      "real_wage_growth": 3.3717673561503902,
+      "unemployment_rate": 6.7,
+      "consumer_sentiment": 76.9,
+      "credit_card_delinquency_rate": 2.1
+    },
+    {
+      "date": "2020-12-01",
+      "average_weekly_hours_YoY": 0.24154589371980784,
+      "temporary_help_YoY": -6.361097868283039,
+      "real_wage_growth": 4.017651536296274,
+      "unemployment_rate": 6.7,
+      "consumer_sentiment": 80.7,
+      "credit_card_delinquency_rate": 2.1
+    },
+    {
+      "date": "2021-01-01",
+      "average_weekly_hours_YoY": 0.7263922518159882,
+      "temporary_help_YoY": -3.852877660850784,
+      "real_wage_growth": 3.849388482666116,
+      "unemployment_rate": 6.4,
+      "consumer_sentiment": 79.0,
+      "credit_card_delinquency_rate": 1.88
+    },
+    {
+      "date": "2021-02-01",
+      "average_weekly_hours_YoY": -0.24096385542169418,
+      "temporary_help_YoY": -2.0151656798587214,
+      "real_wage_growth": 3.5615320627421676,
+      "unemployment_rate": 6.2,
+      "consumer_sentiment": 76.8,
+      "credit_card_delinquency_rate": 1.88
+    },
+    {
+      "date": "2021-03-01",
+      "average_weekly_hours_YoY": 0.9708737864077666,
+      "temporary_help_YoY": 0.03486871927194102,
+      "real_wage_growth": 1.8088122624928094,
+      "unemployment_rate": 6.1,
+      "consumer_sentiment": 84.9,
+      "credit_card_delinquency_rate": 1.88
+    },
+    {
+      "date": "2021-04-01",
+      "average_weekly_hours_YoY": 8.333333333333348,
+      "temporary_help_YoY": 44.421657095980315,
+      "real_wage_growth": -3.3936153122598567,
+      "unemployment_rate": 6.1,
+      "consumer_sentiment": 88.3,
+      "credit_card_delinquency_rate": 1.59
+    },
+    {
+      "date": "2021-05-01",
+      "average_weekly_hours_YoY": 5.3299492385786795,
+      "temporary_help_YoY": 38.22892040977146,
+      "real_wage_growth": -2.4748678177415773,
+      "unemployment_rate": 5.8,
+      "consumer_sentiment": 82.9,
+      "credit_card_delinquency_rate": 1.59
+    },
+    {
+      "date": "2021-06-01",
+      "average_weekly_hours_YoY": 3.759398496240607,
+      "temporary_help_YoY": 28.451958095409392,
+      "real_wage_growth": -1.279605299445552,
+      "unemployment_rate": 5.9,
+      "consumer_sentiment": 85.5,
+      "credit_card_delinquency_rate": 1.59
+    },
+    {
+      "date": "2021-07-01",
+      "average_weekly_hours_YoY": 1.7199017199017064,
+      "temporary_help_YoY": 22.3761118170267,
+      "real_wage_growth": -0.8779231393260201,
+      "unemployment_rate": 5.4,
+      "consumer_sentiment": 81.2,
+      "credit_card_delinquency_rate": 1.53
+    },
+    {
+      "date": "2021-08-01",
+      "average_weekly_hours_YoY": 0.9756097560975618,
+      "temporary_help_YoY": 16.87583229086802,
+      "real_wage_growth": -0.7395494116881784,
+      "unemployment_rate": 5.1,
+      "consumer_sentiment": 70.3,
+      "credit_card_delinquency_rate": 1.53
+    },
+    {
+      "date": "2021-09-01",
+      "average_weekly_hours_YoY": 0.24271844660193054,
+      "temporary_help_YoY": 16.308480409813097,
+      "real_wage_growth": -0.3510669893933005,
+      "unemployment_rate": 4.7,
+      "consumer_sentiment": 72.8,
+      "credit_card_delinquency_rate": 1.53
+    },
+    {
+      "date": "2021-10-01",
+      "average_weekly_hours_YoY": -0.24154589371980784,
+      "temporary_help_YoY": 16.499691738594336,
+      "real_wage_growth": -0.7706099687769696,
+      "unemployment_rate": 4.5,
+      "consumer_sentiment": 71.7,
+      "credit_card_delinquency_rate": 1.57
+    },
+    {
+      "date": "2021-11-01",
+      "average_weekly_hours_YoY": 0.4842615012106588,
+      "temporary_help_YoY": 14.01554791448647,
+      "real_wage_growth": -1.4383251573929945,
+      "unemployment_rate": 4.1,
+      "consumer_sentiment": 67.4,
+      "credit_card_delinquency_rate": 1.57
+    },
+    {
+      "date": "2021-12-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": 12.004509418866816,
+      "real_wage_growth": -2.0771412375482856,
+      "unemployment_rate": 3.9,
+      "consumer_sentiment": 70.6,
+      "credit_card_delinquency_rate": 1.57
+    },
+    {
+      "date": "2022-01-01",
+      "average_weekly_hours_YoY": -0.9615384615384581,
+      "temporary_help_YoY": 9.71514135976328,
+      "real_wage_growth": -1.840035113578764,
+      "unemployment_rate": 4.0,
+      "consumer_sentiment": 67.2,
+      "credit_card_delinquency_rate": 1.69
+    },
+    {
+      "date": "2022-02-01",
+      "average_weekly_hours_YoY": 0.24154589371980784,
+      "temporary_help_YoY": 11.20534294498039,
+      "real_wage_growth": -2.4515139091555116,
+      "unemployment_rate": 3.9,
+      "consumer_sentiment": 62.8,
+      "credit_card_delinquency_rate": 1.69
+    },
+    {
+      "date": "2022-03-01",
+      "average_weekly_hours_YoY": -0.24038461538461453,
+      "temporary_help_YoY": 10.195545330963096,
+      "real_wage_growth": -2.46665255877071,
+      "unemployment_rate": 3.7,
+      "consumer_sentiment": 59.4,
+      "credit_card_delinquency_rate": 1.69
+    },
+    {
+      "date": "2022-04-01",
+      "average_weekly_hours_YoY": -0.7211538461538547,
+      "temporary_help_YoY": 11.211303606929835,
+      "real_wage_growth": -2.2858121078863647,
+      "unemployment_rate": 3.7,
+      "consumer_sentiment": 65.2,
+      "credit_card_delinquency_rate": 1.83
+    },
+    {
+      "date": "2022-05-01",
+      "average_weekly_hours_YoY": -0.9638554216867434,
+      "temporary_help_YoY": 10.917123922183425,
+      "real_wage_growth": -2.746304569921554,
+      "unemployment_rate": 3.6,
+      "consumer_sentiment": 58.4,
+      "credit_card_delinquency_rate": 1.83
+    },
+    {
+      "date": "2022-06-01",
+      "average_weekly_hours_YoY": -1.2077294685990392,
+      "temporary_help_YoY": 8.750743813224116,
+      "real_wage_growth": -3.281915562491533,
+      "unemployment_rate": 3.6,
+      "consumer_sentiment": 50.0,
+      "credit_card_delinquency_rate": 1.83
+    },
+    {
+      "date": "2022-07-01",
+      "average_weekly_hours_YoY": -0.9661835748792202,
+      "temporary_help_YoY": 7.122832519987532,
+      "real_wage_growth": -2.7503723062232033,
+      "unemployment_rate": 3.5,
+      "consumer_sentiment": 51.5,
+      "credit_card_delinquency_rate": 2.05
+    },
+    {
+      "date": "2022-08-01",
+      "average_weekly_hours_YoY": -1.2077294685990392,
+      "temporary_help_YoY": 6.370196457549282,
+      "real_wage_growth": -2.614488389620684,
+      "unemployment_rate": 3.6,
+      "consumer_sentiment": 58.2,
+      "credit_card_delinquency_rate": 2.05
+    },
+    {
+      "date": "2022-09-01",
+      "average_weekly_hours_YoY": -0.7263922518159771,
+      "temporary_help_YoY": 6.0353726515725015,
+      "real_wage_growth": -2.8280838009463793,
+      "unemployment_rate": 3.5,
+      "consumer_sentiment": 58.6,
+      "credit_card_delinquency_rate": 2.05
+    },
+    {
+      "date": "2022-10-01",
+      "average_weekly_hours_YoY": -0.7263922518159771,
+      "temporary_help_YoY": 1.5578487795197438,
+      "real_wage_growth": -2.5512345072805975,
+      "unemployment_rate": 3.6,
+      "consumer_sentiment": 59.9,
+      "credit_card_delinquency_rate": 2.26
+    },
+    {
+      "date": "2022-11-01",
+      "average_weekly_hours_YoY": -1.4457831325301207,
+      "temporary_help_YoY": -0.45564806923228396,
+      "real_wage_growth": -1.8965122088383413,
+      "unemployment_rate": 3.6,
+      "consumer_sentiment": 56.7,
+      "credit_card_delinquency_rate": 2.26
+    },
+    {
+      "date": "2022-12-01",
+      "average_weekly_hours_YoY": -2.168674698795181,
+      "temporary_help_YoY": -3.6137536933017356,
+      "real_wage_growth": -1.3784386122575487,
+      "unemployment_rate": 3.5,
+      "consumer_sentiment": 59.8,
+      "credit_card_delinquency_rate": 2.26
+    },
+    {
+      "date": "2023-01-01",
+      "average_weekly_hours_YoY": -0.24271844660194164,
+      "temporary_help_YoY": -3.577695457204133,
+      "real_wage_growth": -1.724401660460173,
+      "unemployment_rate": 3.5,
+      "consumer_sentiment": 64.9,
+      "credit_card_delinquency_rate": 2.47
+    },
+    {
+      "date": "2023-02-01",
+      "average_weekly_hours_YoY": -1.9277108433734869,
+      "temporary_help_YoY": -6.2821734985700655,
+      "real_wage_growth": -1.1187289248195342,
+      "unemployment_rate": 3.6,
+      "consumer_sentiment": 66.9,
+      "credit_card_delinquency_rate": 2.47
+    },
+    {
+      "date": "2023-03-01",
+      "average_weekly_hours_YoY": -2.168674698795181,
+      "temporary_help_YoY": -7.60422597583349,
+      "real_wage_growth": -0.2812469192504663,
+      "unemployment_rate": 3.5,
+      "consumer_sentiment": 62.0,
+      "credit_card_delinquency_rate": 2.47
+    },
+    {
+      "date": "2023-04-01",
+      "average_weekly_hours_YoY": -1.4527845036319431,
+      "temporary_help_YoY": -7.208069973823649,
+      "real_wage_growth": -0.33404501007561205,
+      "unemployment_rate": 3.4,
+      "consumer_sentiment": 63.7,
+      "credit_card_delinquency_rate": 2.75
+    },
+    {
+      "date": "2023-05-01",
+      "average_weekly_hours_YoY": -0.9732360097323589,
+      "temporary_help_YoY": -6.880822357854155,
+      "real_wage_growth": 0.2204123737470587,
+      "unemployment_rate": 3.6,
+      "consumer_sentiment": 59.0,
+      "credit_card_delinquency_rate": 2.75
+    },
+    {
+      "date": "2023-06-01",
+      "average_weekly_hours_YoY": -0.4889975550122161,
+      "temporary_help_YoY": -7.695773922559457,
+      "real_wage_growth": 1.5418702421433617,
+      "unemployment_rate": 3.6,
+      "consumer_sentiment": 64.2,
+      "credit_card_delinquency_rate": 2.75
+    },
+    {
+      "date": "2023-07-01",
+      "average_weekly_hours_YoY": -0.7317073170731603,
+      "temporary_help_YoY": -8.439145746502529,
+      "real_wage_growth": 1.3374200955892368,
+      "unemployment_rate": 3.5,
+      "consumer_sentiment": 71.5,
+      "credit_card_delinquency_rate": 2.94
+    },
+    {
+      "date": "2023-08-01",
+      "average_weekly_hours_YoY": -0.24449877750611915,
+      "temporary_help_YoY": -8.796416515190863,
+      "real_wage_growth": 0.7204661902010079,
+      "unemployment_rate": 3.7,
+      "consumer_sentiment": 69.4,
+      "credit_card_delinquency_rate": 2.94
+    },
+    {
+      "date": "2023-09-01",
+      "average_weekly_hours_YoY": -0.7317073170731603,
+      "temporary_help_YoY": -9.540498442367607,
+      "real_wage_growth": 0.7079368145616494,
+      "unemployment_rate": 3.7,
+      "consumer_sentiment": 67.8,
+      "credit_card_delinquency_rate": 2.94
+    },
+    {
+      "date": "2023-10-01",
+      "average_weekly_hours_YoY": -0.487804878048792,
+      "temporary_help_YoY": -9.68897573685068,
+      "real_wage_growth": 0.9384074547068577,
+      "unemployment_rate": 3.9,
+      "consumer_sentiment": 63.8,
+      "credit_card_delinquency_rate": 3.1
+    },
+    {
+      "date": "2023-11-01",
+      "average_weekly_hours_YoY": -0.9779951100244433,
+      "temporary_help_YoY": -9.945006092139497,
+      "real_wage_growth": 0.9502253944357886,
+      "unemployment_rate": 3.7,
+      "consumer_sentiment": 61.3,
+      "credit_card_delinquency_rate": 3.1
+    },
+    {
+      "date": "2023-12-01",
+      "average_weekly_hours_YoY": -0.7389162561576512,
+      "temporary_help_YoY": -9.52637606952772,
+      "real_wage_growth": 0.7573380648355998,
+      "unemployment_rate": 3.8,
+      "consumer_sentiment": 69.7,
+      "credit_card_delinquency_rate": 3.1
+    },
+    {
+      "date": "2024-01-01",
+      "average_weekly_hours_YoY": -1.946472019464729,
+      "temporary_help_YoY": -9.196913018569076,
+      "real_wage_growth": 1.2639014160994666,
+      "unemployment_rate": 3.7,
+      "consumer_sentiment": 79.0,
+      "credit_card_delinquency_rate": 3.17
+    },
+    {
+      "date": "2024-02-01",
+      "average_weekly_hours_YoY": -0.24570024570025328,
+      "temporary_help_YoY": -9.256433730037639,
+      "real_wage_growth": 0.9457963804736957,
+      "unemployment_rate": 3.9,
+      "consumer_sentiment": 76.9,
+      "credit_card_delinquency_rate": 3.17
+    },
+    {
+      "date": "2024-03-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": -8.582677165354324,
+      "real_wage_growth": 0.6387730983639095,
+      "unemployment_rate": 3.9,
+      "consumer_sentiment": 79.4,
+      "credit_card_delinquency_rate": 3.17
+    },
+    {
+      "date": "2024-04-01",
+      "average_weekly_hours_YoY": -0.24570024570025328,
+      "temporary_help_YoY": -8.659006467593233,
+      "real_wage_growth": 0.5975837665483708,
+      "unemployment_rate": 3.9,
+      "consumer_sentiment": 77.2,
+      "credit_card_delinquency_rate": 3.22
+    },
+    {
+      "date": "2024-05-01",
+      "average_weekly_hours_YoY": 0.24570024570023108,
+      "temporary_help_YoY": -8.876086656547544,
+      "real_wage_growth": 0.8765378186103012,
+      "unemployment_rate": 3.9,
+      "consumer_sentiment": 69.1,
+      "credit_card_delinquency_rate": 3.22
+    },
+    {
+      "date": "2024-06-01",
+      "average_weekly_hours_YoY": 0.24570024570023108,
+      "temporary_help_YoY": -8.79419764279239,
+      "real_wage_growth": 0.9204780592210637,
+      "unemployment_rate": 4.1,
+      "consumer_sentiment": 68.2,
+      "credit_card_delinquency_rate": 3.22
+    },
+    {
+      "date": "2024-07-01",
+      "average_weekly_hours_YoY": 0.0,
+      "temporary_help_YoY": -8.31363139136878,
+      "real_wage_growth": 0.672423036723524,
+      "unemployment_rate": 4.2,
+      "consumer_sentiment": 66.4,
+      "credit_card_delinquency_rate": 3.2
+    },
+    {
+      "date": "2024-08-01",
+      "average_weekly_hours_YoY": -0.2450980392156743,
+      "temporary_help_YoY": -8.082425795430293,
+      "real_wage_growth": 1.283845300356501,
+      "unemployment_rate": 4.2,
+      "consumer_sentiment": 67.9,
+      "credit_card_delinquency_rate": 3.2
+    },
+    {
+      "date": "2024-09-01",
+      "average_weekly_hours_YoY": 0.24570024570023108,
+      "temporary_help_YoY": -8.021236906299322,
+      "real_wage_growth": 1.4489724236074641,
+      "unemployment_rate": 4.1,
+      "consumer_sentiment": 70.1,
+      "credit_card_delinquency_rate": 3.2
+    },
+    {
+      "date": "2024-10-01",
+      "average_weekly_hours_YoY": -0.4901960784313597,
+      "temporary_help_YoY": -8.121168409664614,
+      "real_wage_growth": 1.4334843937257924,
+      "unemployment_rate": 4.1,
+      "consumer_sentiment": 70.5,
+      "credit_card_delinquency_rate": 3.08
+    },
+    {
+      "date": "2024-11-01",
+      "average_weekly_hours_YoY": 0.7407407407407307,
+      "temporary_help_YoY": -6.75394010311916,
+      "real_wage_growth": 1.4266867505410064,
+      "unemployment_rate": 4.2,
+      "consumer_sentiment": 71.8,
+      "credit_card_delinquency_rate": 3.08
+    },
+    {
+      "date": "2024-12-01",
+      "average_weekly_hours_YoY": 1.488833746898277,
+      "temporary_help_YoY": -5.3578077295405535,
+      "real_wage_growth": 1.1783064753921213,
+      "unemployment_rate": 4.1,
+      "consumer_sentiment": 74.0,
+      "credit_card_delinquency_rate": 3.08
+    },
+    {
+      "date": "2025-01-01",
+      "average_weekly_hours_YoY": 0.992555831265518,
+      "temporary_help_YoY": -5.756383610451299,
+      "real_wage_growth": 0.9549304826145466,
+      "unemployment_rate": 4.0,
+      "consumer_sentiment": 71.7,
+      "credit_card_delinquency_rate": 3.06
+    },
+    {
+      "date": "2025-02-01",
+      "average_weekly_hours_YoY": 0.9852216748768461,
+      "temporary_help_YoY": -5.354407203975642,
+      "real_wage_growth": 1.2762195544961052,
+      "unemployment_rate": 4.2,
+      "consumer_sentiment": 64.7,
+      "credit_card_delinquency_rate": 3.06
+    },
+    {
+      "date": "2025-03-01",
+      "average_weekly_hours_YoY": 1.2315270935960632,
+      "temporary_help_YoY": -5.317754559412801,
+      "real_wage_growth": 1.788969821241504,
+      "unemployment_rate": 4.2,
+      "consumer_sentiment": 57.0,
+      "credit_card_delinquency_rate": 3.06
+    },
+    {
+      "date": "2025-04-01",
+      "average_weekly_hours_YoY": 0.738916256157629,
+      "temporary_help_YoY": -4.805845354223948,
+      "real_wage_growth": 1.5510861480633853,
+      "unemployment_rate": 4.2,
+      "consumer_sentiment": 52.2,
+      "credit_card_delinquency_rate": 3.04
+    },
+    {
+      "date": "2025-05-01",
+      "average_weekly_hours_YoY": 0.4901960784313708,
+      "temporary_help_YoY": -4.860874503123225,
+      "real_wage_growth": 1.5693762152110269,
+      "unemployment_rate": 4.3,
+      "consumer_sentiment": 52.2,
+      "credit_card_delinquency_rate": 3.04
+    },
+    {
+      "date": "2025-06-01",
+      "average_weekly_hours_YoY": 0.4901960784313708,
+      "temporary_help_YoY": -4.243768160269157,
+      "real_wage_growth": 1.14489878154449,
+      "unemployment_rate": 4.1,
+      "consumer_sentiment": 60.7,
+      "credit_card_delinquency_rate": 3.04
+    },
+    {
+      "date": "2025-07-01",
+      "average_weekly_hours_YoY": 0.9828009828009687,
+      "temporary_help_YoY": -4.006465766077838,
+      "real_wage_growth": 1.1871934867304423,
+      "unemployment_rate": 4.3,
+      "consumer_sentiment": 61.7,
+      "credit_card_delinquency_rate": 2.98
+    },
+    {
+      "date": "2025-08-01",
+      "average_weekly_hours_YoY": 0.7371007371007376,
+      "temporary_help_YoY": -3.8486854841832008,
+      "real_wage_growth": 1.0068356637663145,
+      "unemployment_rate": 4.3,
+      "consumer_sentiment": 58.2,
+      "credit_card_delinquency_rate": 2.98
+    },
+    {
+      "date": "2025-09-01",
+      "average_weekly_hours_YoY": 0.4901960784313708,
+      "temporary_help_YoY": -3.603744149765997,
+      "real_wage_growth": 0.8015320393028658,
+      "unemployment_rate": 4.4,
+      "consumer_sentiment": 55.1,
+      "credit_card_delinquency_rate": 2.98
+    },
+    {
+      "date": "2025-10-01",
+      "average_weekly_hours_YoY": 1.2315270935960632,
+      "temporary_help_YoY": -3.767956668498307,
+      "real_wage_growth": null,
+      "unemployment_rate": null,
+      "consumer_sentiment": 53.6,
+      "credit_card_delinquency_rate": 2.94
+    },
+    {
+      "date": "2025-11-01",
+      "average_weekly_hours_YoY": 1.225490196078427,
+      "temporary_help_YoY": -3.3137254901960733,
+      "real_wage_growth": 1.2036836973382758,
+      "unemployment_rate": 4.5,
+      "consumer_sentiment": 51.0,
+      "credit_card_delinquency_rate": 2.94
+    },
+    {
+      "date": "2025-12-01",
+      "average_weekly_hours_YoY": 0.4889975550122383,
+      "temporary_help_YoY": -3.560328887839803,
+      "real_wage_growth": 1.0454899020044373,
+      "unemployment_rate": 4.4,
+      "consumer_sentiment": 52.9,
+      "credit_card_delinquency_rate": 2.94
+    },
+    {
+      "date": "2026-01-01",
+      "average_weekly_hours_YoY": 1.7199017199017064,
+      "temporary_help_YoY": -2.7212223841216243,
+      "real_wage_growth": 1.2344151438236084,
+      "unemployment_rate": 4.3,
+      "consumer_sentiment": 56.4,
+      "credit_card_delinquency_rate": 2.92
+    },
+    {
+      "date": "2026-02-01",
+      "average_weekly_hours_YoY": 1.4634146341463428,
+      "temporary_help_YoY": -2.4121594946703517,
+      "real_wage_growth": 1.236511285443842,
+      "unemployment_rate": 4.4,
+      "consumer_sentiment": 56.6,
+      "credit_card_delinquency_rate": 2.92
+    },
+    {
+      "date": "2026-03-01",
+      "average_weekly_hours_YoY": 0.9732360097323589,
+      "temporary_help_YoY": -1.9143297868132736,
+      "real_wage_growth": 0.14328575176780767,
+      "unemployment_rate": 4.3,
+      "consumer_sentiment": 53.3,
+      "credit_card_delinquency_rate": 2.92
+    },
+    {
+      "date": "2026-04-01",
+      "average_weekly_hours_YoY": 1.7114914425427896,
+      "temporary_help_YoY": -1.46785361028684,
+      "real_wage_growth": -0.20024935008672307,
+      "unemployment_rate": 4.3,
+      "consumer_sentiment": 49.8,
+      "credit_card_delinquency_rate": 2.92
+    },
+    {
+      "date": "2026-05-01",
+      "average_weekly_hours_YoY": 1.4634146341463428,
+      "temporary_help_YoY": -0.9231626278301652,
+      "real_wage_growth": -0.7452646913116867,
+      "unemployment_rate": 4.3,
+      "consumer_sentiment": 44.8,
+      "credit_card_delinquency_rate": 2.92
+    },
+    {
+      "date": "2026-06-01",
+      "average_weekly_hours_YoY": 1.4634146341463428,
+      "temporary_help_YoY": -0.2156032899464977,
+      "real_wage_growth": null,
+      "unemployment_rate": 4.2,
+      "consumer_sentiment": null,
+      "credit_card_delinquency_rate": 2.92
+    },
+    {
+      "date": "2026-07-01",
+      "average_weekly_hours_YoY": null,
+      "temporary_help_YoY": null,
+      "real_wage_growth": null,
+      "unemployment_rate": null,
+      "consumer_sentiment": null,
+      "credit_card_delinquency_rate": 2.92
+    }
+  ],
+  "annotations": [
+    "oil_embargo_1973",
+    "gulf_war_1990",
+    "gfc_2008",
+    "shale_2014",
+    "covid_2020",
+    "reopening_2021"
+  ],
+  "availableTransformations": [
+    "raw",
+    "zscore"
+  ],
+  "evidenceLabel": "Supported historical pattern",
+  "methodology": {
+    "formula": "Hours, temporary help, and real wages use year-over-year change; unemployment, sentiment, and delinquency retain published levels.",
+    "notes": "Labour indicators have different publication lags and can respond to policy, demographics, sector mix, and non-energy shocks."
+  },
+  "staticFigure": "labour_early_warning_indicators.png",
+  "generatedAt": "2026-07-16T00:14:53+00:00"
+}

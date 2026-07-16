@@ -84,7 +84,7 @@ energy-model/
 └── pyproject.toml
 ```
 
-The Python pipeline owns data acquisition, transformations, models, validation, written findings, and chart generation. The website is a static presentation layer: its build reads existing files from `analysis/` and `charts/`; it does not run or alter the research model.
+The Python pipeline owns data acquisition, transformations, models, validation, written findings, chart generation, and website data contracts. The website is an interactive research-observatory layer: it loads generated histories and metadata but does not run, refit, or alter the research model.
 
 ## Website
 
@@ -92,7 +92,7 @@ The educational website uses Node.js, TypeScript, Vite, React, Tailwind CSS, Rec
 
 Its system-response sections provide current readings by layer, a symptom guide, a searchable indicator catalogue, historical episode comparison, energy-burden and labour diagnostics, regime concepts, and an explicit implemented/experimental/proposed roadmap. Each current reading retains its own source date, frequency, percentile, interpretation, confirming evidence, conflicts, and confidence instead of being collapsed into one red/green score.
 
-The oil, liquidity, inventory, USO, equities, energy/GDP, and economic-output-quality pages use lazy-loaded interactive research charts backed by Python-generated JSON. Readers can inspect exact observations, select valid transformations and time ranges, compare historical events, explore lag conventions, download displayed or full data, and open unchanged publication PNGs. Every chart includes a permanent plain-language summary and an expandable calculation, interpretation, limitation, source, and observation-date disclosure. Raw incompatible units are kept in synchronized panels rather than forced onto a misleading shared axis. The chart schema and extension workflow are documented in [docs/website_chart_data.md](docs/website_chart_data.md).
+The oil, liquidity, inventory, USO, equities, energy/GDP, system-response, Current State, and economic-output-quality pages use lazy-loaded interactive research charts backed by Python-generated JSON. Readers can inspect exact observations, select valid transformations and time ranges, compare historical episodes, explore lag conventions, download data, and open unchanged publication PNGs. Current readings include historical sparklines, percentiles, normal ranges, momentum, source dates, and full-history modal charts. Every chart includes a permanent plain-language summary and an expandable calculation, interpretation, limitation, source, and observation-date disclosure. Raw incompatible units are kept in synchronized panels rather than forced onto a misleading shared axis. The chart schema and extension workflow are documented in [docs/website_chart_data.md](docs/website_chart_data.md), and the route-by-route conversion record is in [analysis/website_visual_audit.md](analysis/website_visual_audit.md).
 
 ## Economic Output Quality
 

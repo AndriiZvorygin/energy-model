@@ -1,0 +1,4063 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "energy-burden",
+  "title": "Energy affordability",
+  "description": "Real oil-price momentum and energy costs relative to household income and GDP show whether energy is becoming harder to afford.",
+  "plainLanguageSummary": "Real oil-price momentum and energy costs relative to household income and GDP show whether energy is becoming harder to afford.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Burden shares divide energy expenditure by household disposable income or nominal GDP; price and income series use year-over-year change.",
+    "explanation": "Aggregate burden can hide household distribution, regional prices, substitution, and policy support.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "Aggregate burden can hide household distribution, regional prices, substitution, and policy support."
+  ],
+  "sourceNotes": [
+    "FRED WTI and CPI",
+    "BEA via FRED",
+    "BLS via FRED"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "real_WTI_YoY": {
+        "mean": 8.981369851995817,
+        "standardDeviation": 33.905859849028886,
+        "n": 240
+      },
+      "household_energy_expenditure_share": {
+        "mean": 4.576052524909646,
+        "standardDeviation": 0.6631834205417984,
+        "n": 240
+      },
+      "energy_expenditure_share_gdp": {
+        "mean": 3.3826395891220398,
+        "standardDeviation": 0.48572484057972004,
+        "n": 240
+      },
+      "energy_CPI_YoY": {
+        "mean": 4.339697932040417,
+        "standardDeviation": 12.317731109472422,
+        "n": 240
+      },
+      "real_disposable_income_YoY": {
+        "mean": 2.5096514650723534,
+        "standardDeviation": 1.6346399344920899,
+        "n": 240
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "1986-01-01",
+    "end": "2026-06-01"
+  },
+  "series": [
+    {
+      "key": "real_WTI_YoY",
+      "label": "Real WTI growth",
+      "unit": "percent",
+      "source": "FRED WTI and CPI",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#be123c",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "household_energy_expenditure_share",
+      "label": "Household energy expenditure share",
+      "unit": "percent",
+      "source": "BEA via FRED",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#d97706",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "energy_expenditure_share_gdp",
+      "label": "Energy expenditure share of GDP",
+      "unit": "percent",
+      "source": "BEA via FRED",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#7c3aed",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "energy_CPI_YoY",
+      "label": "Energy CPI growth",
+      "unit": "percent",
+      "source": "BLS via FRED",
+      "status": "derived",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#2563eb",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "real_disposable_income_YoY",
+      "label": "Real disposable income growth",
+      "unit": "percent",
+      "source": "BEA via FRED",
+      "status": "derived",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1986-01-01",
+      "real_WTI_YoY": null,
+      "household_energy_expenditure_share": 6.160004965243297,
+      "energy_expenditure_share_gdp": 4.403386592497516,
+      "energy_CPI_YoY": null,
+      "real_disposable_income_YoY": null
+    },
+    {
+      "date": "1986-02-01",
+      "real_WTI_YoY": null,
+      "household_energy_expenditure_share": 6.047416188182996,
+      "energy_expenditure_share_gdp": 4.345709992293519,
+      "energy_CPI_YoY": null,
+      "real_disposable_income_YoY": null
+    },
+    {
+      "date": "1986-03-01",
+      "real_WTI_YoY": null,
+      "household_energy_expenditure_share": 5.696086237520671,
+      "energy_expenditure_share_gdp": 4.126095245362912,
+      "energy_CPI_YoY": null,
+      "real_disposable_income_YoY": null
+    },
+    {
+      "date": "1986-04-01",
+      "real_WTI_YoY": null,
+      "household_energy_expenditure_share": 5.316579534684643,
+      "energy_expenditure_share_gdp": 3.8258964125895973,
+      "energy_CPI_YoY": null,
+      "real_disposable_income_YoY": null
+    },
+    {
+      "date": "1986-05-01",
+      "real_WTI_YoY": null,
+      "household_energy_expenditure_share": 5.363458958409562,
+      "energy_expenditure_share_gdp": 3.8698975214175397,
+      "energy_CPI_YoY": null,
+      "real_disposable_income_YoY": null
+    },
+    {
+      "date": "1986-06-01",
+      "real_WTI_YoY": null,
+      "household_energy_expenditure_share": 5.515857329643932,
+      "energy_expenditure_share_gdp": 3.9909005706943814,
+      "energy_CPI_YoY": null,
+      "real_disposable_income_YoY": null
+    },
+    {
+      "date": "1986-07-01",
+      "real_WTI_YoY": null,
+      "household_energy_expenditure_share": 5.375238210472186,
+      "energy_expenditure_share_gdp": 3.8566138322869983,
+      "energy_CPI_YoY": null,
+      "real_disposable_income_YoY": null
+    },
+    {
+      "date": "1986-08-01",
+      "real_WTI_YoY": null,
+      "household_energy_expenditure_share": 5.066537916050574,
+      "energy_expenditure_share_gdp": 3.6439249433932863,
+      "energy_CPI_YoY": null,
+      "real_disposable_income_YoY": null
+    },
+    {
+      "date": "1986-09-01",
+      "real_WTI_YoY": null,
+      "household_energy_expenditure_share": 5.191642867879152,
+      "energy_expenditure_share_gdp": 3.7480990930555125,
+      "energy_CPI_YoY": null,
+      "real_disposable_income_YoY": null
+    },
+    {
+      "date": "1986-10-01",
+      "real_WTI_YoY": null,
+      "household_energy_expenditure_share": 5.109642535295885,
+      "energy_expenditure_share_gdp": 3.65207432883741,
+      "energy_CPI_YoY": null,
+      "real_disposable_income_YoY": null
+    },
+    {
+      "date": "1986-11-01",
+      "real_WTI_YoY": null,
+      "household_energy_expenditure_share": 5.177945012442659,
+      "energy_expenditure_share_gdp": 3.707896746562144,
+      "energy_CPI_YoY": null,
+      "real_disposable_income_YoY": null
+    },
+    {
+      "date": "1986-12-01",
+      "real_WTI_YoY": null,
+      "household_energy_expenditure_share": 5.09346493195753,
+      "energy_expenditure_share_gdp": 3.6563683609700814,
+      "energy_CPI_YoY": null,
+      "real_disposable_income_YoY": null
+    },
+    {
+      "date": "1987-01-01",
+      "real_WTI_YoY": -19.73861536023471,
+      "household_energy_expenditure_share": 5.1249332304587805,
+      "energy_expenditure_share_gdp": 3.6572277578292627,
+      "energy_CPI_YoY": -16.764132553606224,
+      "real_disposable_income_YoY": 2.9436474597764883
+    },
+    {
+      "date": "1987-02-01",
+      "real_WTI_YoY": 12.687517408414383,
+      "household_energy_expenditure_share": 5.262538262302802,
+      "energy_expenditure_share_gdp": 3.786406039952937,
+      "energy_CPI_YoY": -12.160804020100501,
+      "real_disposable_income_YoY": 2.8903921661384224
+    },
+    {
+      "date": "1987-03-01",
+      "real_WTI_YoY": 41.10733977346228,
+      "household_energy_expenditure_share": 5.335093122158674,
+      "energy_expenditure_share_gdp": 3.8520540193928365,
+      "energy_CPI_YoY": -5.399568034557234,
+      "real_disposable_income_YoY": 1.9355342230547024
+    },
+    {
+      "date": "1987-04-01",
+      "real_WTI_YoY": 40.258137504419686,
+      "household_energy_expenditure_share": 5.552518073021081,
+      "energy_expenditure_share_gdp": 3.8034522362967524,
+      "energy_CPI_YoY": 0.4587155963302614,
+      "real_disposable_income_YoY": -2.303122667330171
+    },
+    {
+      "date": "1987-05-01",
+      "real_WTI_YoY": 21.926852554966203,
+      "household_energy_expenditure_share": 5.471275077890691,
+      "energy_expenditure_share_gdp": 3.909566056893653,
+      "energy_CPI_YoY": -0.11467889908257645,
+      "real_disposable_income_YoY": 1.5724540849622493
+    },
+    {
+      "date": "1987-06-01",
+      "real_WTI_YoY": 44.11204405064759,
+      "household_energy_expenditure_share": 5.461306065535672,
+      "energy_expenditure_share_gdp": 3.911646720042612,
+      "energy_CPI_YoY": -0.33783783783783994,
+      "real_disposable_income_YoY": 1.521042645183357
+    },
+    {
+      "date": "1987-07-01",
+      "real_WTI_YoY": 77.26847710222151,
+      "household_energy_expenditure_share": 5.471256394693488,
+      "energy_expenditure_share_gdp": 3.875480980355426,
+      "energy_CPI_YoY": 4.20560747663552,
+      "real_disposable_income_YoY": 1.2999473830821229
+    },
+    {
+      "date": "1987-08-01",
+      "real_WTI_YoY": 29.007080120725682,
+      "household_energy_expenditure_share": 5.429267593521571,
+      "energy_expenditure_share_gdp": 3.877528249758678,
+      "energy_CPI_YoY": 8.253588516746424,
+      "real_disposable_income_YoY": 1.616842365598048
+    },
+    {
+      "date": "1987-09-01",
+      "real_WTI_YoY": 25.98472912374259,
+      "household_energy_expenditure_share": 5.32133676092545,
+      "energy_expenditure_share_gdp": 3.814062898257876,
+      "energy_CPI_YoY": 6.99052132701421,
+      "real_disposable_income_YoY": 1.581980256144866
+    },
+    {
+      "date": "1987-10-01",
+      "real_WTI_YoY": 27.746673759815543,
+      "household_energy_expenditure_share": 5.441638148032921,
+      "energy_expenditure_share_gdp": 3.8418576380083524,
+      "energy_CPI_YoY": 8.212560386473422,
+      "real_disposable_income_YoY": 2.3755026291370385
+    },
+    {
+      "date": "1987-11-01",
+      "real_WTI_YoY": 18.496920164456853,
+      "household_energy_expenditure_share": 5.247772437248784,
+      "energy_expenditure_share_gdp": 3.728039610271099,
+      "energy_CPI_YoY": 9.622411693057265,
+      "real_disposable_income_YoY": 2.8051401796898023
+    },
+    {
+      "date": "1987-12-01",
+      "real_WTI_YoY": 2.791500353929055,
+      "household_energy_expenditure_share": 5.222055472180535,
+      "energy_expenditure_share_gdp": 3.752001300321047,
+      "energy_CPI_YoY": 8.484848484848495,
+      "real_disposable_income_YoY": 3.6717229447928545
+    },
+    {
+      "date": "1988-01-01",
+      "real_WTI_YoY": -11.801786865069285,
+      "household_energy_expenditure_share": 5.377798636225602,
+      "energy_expenditure_share_gdp": 3.8396553613651827,
+      "energy_CPI_YoY": 3.981264637002324,
+      "real_disposable_income_YoY": 3.6340118875304084
+    },
+    {
+      "date": "1988-02-01",
+      "real_WTI_YoY": -8.95385707248968,
+      "household_energy_expenditure_share": 5.165849516557561,
+      "energy_expenditure_share_gdp": 3.7174486712190626,
+      "energy_CPI_YoY": 1.4874141876430214,
+      "real_disposable_income_YoY": 3.8084291187739483
+    },
+    {
+      "date": "1988-03-01",
+      "real_WTI_YoY": -14.769876882892873,
+      "household_energy_expenditure_share": 5.176489769299748,
+      "energy_expenditure_share_gdp": 3.754899108521906,
+      "energy_CPI_YoY": 0.9132420091324311,
+      "real_disposable_income_YoY": 4.192634560906527
+    },
+    {
+      "date": "1988-04-01",
+      "real_WTI_YoY": -8.033828897830709,
+      "household_energy_expenditure_share": 5.110314916085235,
+      "energy_expenditure_share_gdp": 3.655080619864679,
+      "energy_CPI_YoY": 1.3698630136986356,
+      "real_disposable_income_YoY": 8.71973640227306
+    },
+    {
+      "date": "1988-05-01",
+      "real_WTI_YoY": -13.793707202696758,
+      "household_energy_expenditure_share": 5.108471212893192,
+      "energy_expenditure_share_gdp": 3.6704947711345355,
+      "energy_CPI_YoY": 1.6073478760046056,
+      "real_disposable_income_YoY": 4.661159553311922
+    },
+    {
+      "date": "1988-06-01",
+      "real_WTI_YoY": -20.802627442958155,
+      "household_energy_expenditure_share": 5.21850147618161,
+      "energy_expenditure_share_gdp": 3.7803205989322617,
+      "energy_CPI_YoY": 0.4519774011299438,
+      "real_disposable_income_YoY": 5.2224401004963505
+    },
+    {
+      "date": "1988-07-01",
+      "real_WTI_YoY": -30.26562671512624,
+      "household_energy_expenditure_share": 5.199768079274721,
+      "energy_expenditure_share_gdp": 3.7347371250474413,
+      "energy_CPI_YoY": 0.22421524663678305,
+      "real_disposable_income_YoY": 5.383604754193527
+    },
+    {
+      "date": "1988-08-01",
+      "real_WTI_YoY": -26.58952758785087,
+      "household_energy_expenditure_share": 5.232131628589394,
+      "energy_expenditure_share_gdp": 3.7801672776075725,
+      "energy_CPI_YoY": -0.44198895027625085,
+      "real_disposable_income_YoY": 5.238819592333432
+    },
+    {
+      "date": "1988-09-01",
+      "real_WTI_YoY": -28.56321734982823,
+      "household_energy_expenditure_share": 4.988160599516016,
+      "energy_expenditure_share_gdp": 3.628733435740469,
+      "energy_CPI_YoY": -0.5537098560354337,
+      "real_disposable_income_YoY": 5.430930908095433
+    },
+    {
+      "date": "1988-10-01",
+      "real_WTI_YoY": -33.49286310747481,
+      "household_energy_expenditure_share": 5.17219140977686,
+      "energy_expenditure_share_gdp": 3.7133005982581007,
+      "energy_CPI_YoY": 0.22321428571427937,
+      "real_disposable_income_YoY": 5.291860535379778
+    },
+    {
+      "date": "1988-11-01",
+      "real_WTI_YoY": -28.05046876654216,
+      "household_energy_expenditure_share": 5.02495754644162,
+      "energy_expenditure_share_gdp": 3.6169955453356963,
+      "energy_CPI_YoY": -0.22222222222222365,
+      "real_disposable_income_YoY": 4.870564522194298
+    },
+    {
+      "date": "1988-12-01",
+      "real_WTI_YoY": -9.171748026664739,
+      "household_energy_expenditure_share": 4.954816970439577,
+      "energy_expenditure_share_gdp": 3.5947713023536028,
+      "energy_CPI_YoY": 0.11173184357540222,
+      "real_disposable_income_YoY": 4.37607092304253
+    },
+    {
+      "date": "1989-01-01",
+      "real_WTI_YoY": 0.7091072432000356,
+      "household_energy_expenditure_share": 4.755400414832802,
+      "energy_expenditure_share_gdp": 3.411202497871174,
+      "energy_CPI_YoY": 1.6891891891891886,
+      "real_disposable_income_YoY": 4.505066714213535
+    },
+    {
+      "date": "1989-02-01",
+      "real_WTI_YoY": 2.049710446855868,
+      "household_energy_expenditure_share": 5.317410433689504,
+      "energy_expenditure_share_gdp": 3.8376028101050705,
+      "energy_CPI_YoY": 2.367531003382184,
+      "real_disposable_income_YoY": 4.121945818262351
+    },
+    {
+      "date": "1989-03-01",
+      "real_WTI_YoY": 14.680556696136327,
+      "household_energy_expenditure_share": 5.070043372052445,
+      "energy_expenditure_share_gdp": 3.6906307875904085,
+      "energy_CPI_YoY": 3.8461538461538325,
+      "real_disposable_income_YoY": 4.156195347059954
+    },
+    {
+      "date": "1989-04-01",
+      "real_WTI_YoY": 12.297797906769304,
+      "household_energy_expenditure_share": 5.264598994374471,
+      "energy_expenditure_share_gdp": 3.7683990077083807,
+      "energy_CPI_YoY": 8.783783783783772,
+      "real_disposable_income_YoY": 3.2195721878157
+    },
+    {
+      "date": "1989-05-01",
+      "real_WTI_YoY": 9.70651449255251,
+      "household_energy_expenditure_share": 5.334761916627214,
+      "energy_expenditure_share_gdp": 3.8147244801435662,
+      "energy_CPI_YoY": 10.056497175141255,
+      "real_disposable_income_YoY": 2.5651519359223496
+    },
+    {
+      "date": "1989-06-01",
+      "real_WTI_YoY": 15.350985831243102,
+      "household_energy_expenditure_share": 5.216572037785436,
+      "energy_expenditure_share_gdp": 3.7487997693704176,
+      "energy_CPI_YoY": 8.99887514060742,
+      "real_disposable_income_YoY": 2.4488607410642738
+    },
+    {
+      "date": "1989-07-01",
+      "real_WTI_YoY": 21.491251573250825,
+      "household_energy_expenditure_share": 5.1342091641813115,
+      "energy_expenditure_share_gdp": 3.657359976050701,
+      "energy_CPI_YoY": 8.165548098433995,
+      "real_disposable_income_YoY": 2.3643849120060345
+    },
+    {
+      "date": "1989-08-01",
+      "real_WTI_YoY": 14.388789754581822,
+      "household_energy_expenditure_share": 5.1420705928620585,
+      "energy_expenditure_share_gdp": 3.673162299518995,
+      "energy_CPI_YoY": 5.327413984461726,
+      "real_disposable_income_YoY": 2.335800185013892
+    },
+    {
+      "date": "1989-09-01",
+      "real_WTI_YoY": 29.059746490089267,
+      "household_energy_expenditure_share": 5.063941120375578,
+      "energy_expenditure_share_gdp": 3.636290211426309,
+      "energy_CPI_YoY": 4.454342984409809,
+      "real_disposable_income_YoY": 2.4378281691766146
+    },
+    {
+      "date": "1989-10-01",
+      "real_WTI_YoY": 39.5467211197079,
+      "household_energy_expenditure_share": 5.08215791769667,
+      "energy_expenditure_share_gdp": 3.64870980612075,
+      "energy_CPI_YoY": 5.1224944320712895,
+      "real_disposable_income_YoY": 2.3945824186860643
+    },
+    {
+      "date": "1989-11-01",
+      "real_WTI_YoY": 34.16473679054695,
+      "household_energy_expenditure_share": 5.065951587186549,
+      "energy_expenditure_share_gdp": 3.64870980612075,
+      "energy_CPI_YoY": 4.565701559020052,
+      "real_disposable_income_YoY": 2.4684806150403915
+    },
+    {
+      "date": "1989-12-01",
+      "real_WTI_YoY": 23.086197186443826,
+      "household_energy_expenditure_share": 5.517955634769624,
+      "energy_expenditure_share_gdp": 3.9862633122663986,
+      "energy_CPI_YoY": 5.133928571428581,
+      "real_disposable_income_YoY": 1.9913778336093202
+    },
+    {
+      "date": "1990-01-01",
+      "real_WTI_YoY": 20.57882349550455,
+      "household_energy_expenditure_share": 4.823685961410512,
+      "energy_expenditure_share_gdp": 3.456671810807327,
+      "energy_CPI_YoY": 9.523809523809534,
+      "real_disposable_income_YoY": 2.1895527056615682
+    },
+    {
+      "date": "1990-02-01",
+      "real_WTI_YoY": 17.12067571711311,
+      "household_energy_expenditure_share": 5.06574133087836,
+      "energy_expenditure_share_gdp": 3.6541959142820315,
+      "energy_CPI_YoY": 8.149779735682827,
+      "real_disposable_income_YoY": 2.1353524182228245
+    },
+    {
+      "date": "1990-03-01",
+      "real_WTI_YoY": -0.5696643536554191,
+      "household_energy_expenditure_share": 4.99059708509638,
+      "energy_expenditure_share_gdp": 3.6150316523861847,
+      "energy_CPI_YoY": 6.318082788671031,
+      "real_disposable_income_YoY": 1.679107110101441
+    },
+    {
+      "date": "1990-04-01",
+      "real_WTI_YoY": -16.481921438742365,
+      "household_energy_expenditure_share": 4.98741493427799,
+      "energy_expenditure_share_gdp": 3.5905871583153637,
+      "energy_CPI_YoY": 0.9316770186335477,
+      "real_disposable_income_YoY": 2.8851063829787194
+    },
+    {
+      "date": "1990-05-01",
+      "real_WTI_YoY": -13.343538785116726,
+      "household_energy_expenditure_share": 4.946461824953445,
+      "energy_expenditure_share_gdp": 3.565419491317826,
+      "energy_CPI_YoY": -0.7186858316221789,
+      "real_disposable_income_YoY": 3.2577096277717654
+    },
+    {
+      "date": "1990-06-01",
+      "real_WTI_YoY": -20.451677659180078,
+      "household_energy_expenditure_share": 4.9376431662000515,
+      "energy_expenditure_share_gdp": 3.5805200915163486,
+      "energy_CPI_YoY": 0.41279669762641635,
+      "real_disposable_income_YoY": 3.1349922548922216
+    },
+    {
+      "date": "1990-07-01",
+      "real_WTI_YoY": -10.999213754074145,
+      "household_energy_expenditure_share": 4.914564312489938,
+      "energy_expenditure_share_gdp": 3.552716190344459,
+      "energy_CPI_YoY": 0.4136504653567741,
+      "real_disposable_income_YoY": 3.1495616954385186
+    },
+    {
+      "date": "1990-08-01",
+      "real_WTI_YoY": 39.05889780656933,
+      "household_energy_expenditure_share": 5.275376976829717,
+      "energy_expenditure_share_gdp": 3.8153877664204647,
+      "energy_CPI_YoY": 7.0600632244467665,
+      "real_disposable_income_YoY": 2.247175141242952
+    },
+    {
+      "date": "1990-09-01",
+      "real_WTI_YoY": 61.09224288084618,
+      "household_energy_expenditure_share": 5.402440696558344,
+      "energy_expenditure_share_gdp": 3.930098771162518,
+      "energy_CPI_YoY": 13.539445628997871,
+      "real_disposable_income_YoY": 1.9066662911538579
+    },
+    {
+      "date": "1990-10-01",
+      "real_WTI_YoY": 68.56767678877817,
+      "household_energy_expenditure_share": 5.577826136754094,
+      "energy_expenditure_share_gdp": 4.055134508062223,
+      "energy_CPI_YoY": 17.3728813559322,
+      "real_disposable_income_YoY": 0.5870978589844089
+    },
+    {
+      "date": "1990-11-01",
+      "real_WTI_YoY": 53.33481747390954,
+      "household_energy_expenditure_share": 5.485936428081408,
+      "energy_expenditure_share_gdp": 3.99518180075617,
+      "energy_CPI_YoY": 18.423855165069213,
+      "real_disposable_income_YoY": 0.5305151175811762
+    },
+    {
+      "date": "1990-12-01",
+      "real_WTI_YoY": 21.68265162698384,
+      "household_energy_expenditure_share": 5.512025618314369,
+      "energy_expenditure_share_gdp": 4.041811684216434,
+      "energy_CPI_YoY": 17.834394904458595,
+      "real_disposable_income_YoY": 1.11971111453244
+    },
+    {
+      "date": "1991-01-01",
+      "real_WTI_YoY": 4.4704781221214684,
+      "household_energy_expenditure_share": 5.376344086021506,
+      "energy_expenditure_share_gdp": 3.9269761388976434,
+      "energy_CPI_YoY": 9.706774519716888,
+      "real_disposable_income_YoY": 0.25461223808331823
+    },
+    {
+      "date": "1991-02-01",
+      "real_WTI_YoY": -12.067515100815463,
+      "household_energy_expenditure_share": 5.007697183736304,
+      "energy_expenditure_share_gdp": 3.6651777296378003,
+      "energy_CPI_YoY": 6.4154786150712795,
+      "real_disposable_income_YoY": 0.18741410186997598
+    },
+    {
+      "date": "1991-03-01",
+      "real_WTI_YoY": -6.8746169898490255,
+      "household_energy_expenditure_share": 4.989154013015184,
+      "energy_expenditure_share_gdp": 3.6585499218084374,
+      "energy_CPI_YoY": 4.405737704918056,
+      "real_disposable_income_YoY": 0.31917403311083614
+    },
+    {
+      "date": "1991-04-01",
+      "real_WTI_YoY": 7.861773403572236,
+      "household_energy_expenditure_share": 4.982702071258481,
+      "energy_expenditure_share_gdp": 3.6201239721083973,
+      "energy_CPI_YoY": 3.7948717948717903,
+      "real_disposable_income_YoY": 0.06341853475611003
+    },
+    {
+      "date": "1991-05-01",
+      "real_WTI_YoY": 11.071463803617455,
+      "household_energy_expenditure_share": 5.238553246695148,
+      "energy_expenditure_share_gdp": 3.822511425914277,
+      "energy_CPI_YoY": 5.584281282316428,
+      "real_disposable_income_YoY": 0.18907505037399908
+    },
+    {
+      "date": "1991-06-01",
+      "real_WTI_YoY": 15.50277905942754,
+      "household_energy_expenditure_share": 5.043099617879677,
+      "energy_expenditure_share_gdp": 3.704996130156024,
+      "energy_CPI_YoY": 3.9054470709146916,
+      "real_disposable_income_YoY": 0.5429016300828149
+    },
+    {
+      "date": "1991-07-01",
+      "real_WTI_YoY": 11.126153520065962,
+      "household_energy_expenditure_share": 5.060899715504979,
+      "energy_expenditure_share_gdp": 3.6690672174081045,
+      "energy_CPI_YoY": 3.7075180226570525,
+      "real_disposable_income_YoY": -0.02333978609772025
+    },
+    {
+      "date": "1991-08-01",
+      "real_WTI_YoY": -23.465485359685367,
+      "household_energy_expenditure_share": 4.9428059384472425,
+      "energy_expenditure_share_gdp": 3.599778728014803,
+      "energy_CPI_YoY": -0.49212598425196763,
+      "real_disposable_income_YoY": 0.8177812158969955
+    },
+    {
+      "date": "1991-09-01",
+      "real_WTI_YoY": -36.82727638599268,
+      "household_energy_expenditure_share": 4.980977723044444,
+      "energy_expenditure_share_gdp": 3.649730894786718,
+      "energy_CPI_YoY": -4.694835680751175,
+      "real_disposable_income_YoY": 1.1178974132213026
+    },
+    {
+      "date": "1991-10-01",
+      "real_WTI_YoY": -37.32596704942488,
+      "household_energy_expenditure_share": 4.857305685853317,
+      "energy_expenditure_share_gdp": 3.5373706608944953,
+      "energy_CPI_YoY": -8.303249097472932,
+      "real_disposable_income_YoY": 2.079763745524965
+    },
+    {
+      "date": "1991-11-01",
+      "real_WTI_YoY": -32.59779204850523,
+      "household_energy_expenditure_share": 4.994976630411042,
+      "energy_expenditure_share_gdp": 3.650706995246259,
+      "energy_CPI_YoY": -7.913669064748197,
+      "real_disposable_income_YoY": 2.179089098984943
+    },
+    {
+      "date": "1991-12-01",
+      "real_WTI_YoY": -30.597298678358463,
+      "household_energy_expenditure_share": 4.813319225204604,
+      "energy_expenditure_share_gdp": 3.5581223840856633,
+      "energy_CPI_YoY": -7.117117117117122,
+      "real_disposable_income_YoY": 2.4762273866042905
+    },
+    {
+      "date": "1992-01-01",
+      "real_WTI_YoY": -27.493079492498072,
+      "household_energy_expenditure_share": 4.718270750566021,
+      "energy_expenditure_share_gdp": 3.471577227584911,
+      "energy_CPI_YoY": -6.451612903225811,
+      "real_disposable_income_YoY": 3.734543486406605
+    },
+    {
+      "date": "1992-02-01",
+      "real_WTI_YoY": -9.69974964603214,
+      "household_energy_expenditure_share": 4.550372303188443,
+      "energy_expenditure_share_gdp": 3.3709973531777426,
+      "energy_CPI_YoY": -3.157894736842104,
+      "real_disposable_income_YoY": 4.023944130362489
+    },
+    {
+      "date": "1992-03-01",
+      "real_WTI_YoY": -7.861780342627012,
+      "household_energy_expenditure_share": 4.880008457553653,
+      "energy_expenditure_share_gdp": 3.6271617208084987,
+      "energy_CPI_YoY": -0.6869479882237517,
+      "real_disposable_income_YoY": 3.9382495746358437
+    },
+    {
+      "date": "1992-04-01",
+      "real_WTI_YoY": -5.876257274334618,
+      "household_energy_expenditure_share": 4.876356295735554,
+      "energy_expenditure_share_gdp": 3.5838122953970033,
+      "energy_CPI_YoY": 0.19762845849802257,
+      "real_disposable_income_YoY": 3.8164783686966075
+    },
+    {
+      "date": "1992-05-01",
+      "real_WTI_YoY": -4.108718764417906,
+      "household_energy_expenditure_share": 4.799230785309671,
+      "energy_expenditure_share_gdp": 3.5482678008760327,
+      "energy_CPI_YoY": -0.09794319294808007,
+      "real_disposable_income_YoY": 4.279909084647704
+    },
+    {
+      "date": "1992-06-01",
+      "real_WTI_YoY": 7.630224210552949,
+      "household_energy_expenditure_share": 4.7541869259859535,
+      "energy_expenditure_share_gdp": 3.535904498433956,
+      "energy_CPI_YoY": 2.1760633036597365,
+      "real_disposable_income_YoY": 4.17860128551264
+    },
+    {
+      "date": "1992-07-01",
+      "real_WTI_YoY": -1.3748335747525209,
+      "household_energy_expenditure_share": 4.816779970154203,
+      "energy_expenditure_share_gdp": 3.539100127447199,
+      "energy_CPI_YoY": 2.9791459781529195,
+      "real_disposable_income_YoY": 4.3106289480911775
+    },
+    {
+      "date": "1992-08-01",
+      "real_WTI_YoY": -4.5687261410871205,
+      "household_energy_expenditure_share": 4.702776288106927,
+      "energy_expenditure_share_gdp": 3.4720947894060297,
+      "energy_CPI_YoY": 2.3738872403560984,
+      "real_disposable_income_YoY": 4.443500541221934
+    },
+    {
+      "date": "1992-09-01",
+      "real_WTI_YoY": -2.9285268669264286,
+      "household_energy_expenditure_share": 4.953035130549924,
+      "energy_expenditure_share_gdp": 3.645699528876331,
+      "energy_CPI_YoY": 2.0689655172413834,
+      "real_disposable_income_YoY": 3.6787515202864274
+    },
+    {
+      "date": "1992-10-01",
+      "real_WTI_YoY": -9.614986424397998,
+      "household_energy_expenditure_share": 4.874252988047809,
+      "energy_expenditure_share_gdp": 3.5160444036442926,
+      "energy_CPI_YoY": 2.657480314960625,
+      "real_disposable_income_YoY": 2.864355895196491
+    },
+    {
+      "date": "1992-11-01",
+      "real_WTI_YoY": -12.189612770785562,
+      "household_energy_expenditure_share": 5.066170388751034,
+      "energy_expenditure_share_gdp": 3.6672238352186106,
+      "energy_CPI_YoY": 2.636718749999978,
+      "real_disposable_income_YoY": 2.873923471056372
+    },
+    {
+      "date": "1992-12-01",
+      "real_WTI_YoY": -3.2996570043907325,
+      "household_energy_expenditure_share": 4.791517180897712,
+      "energy_expenditure_share_gdp": 3.5983698366798125,
+      "energy_CPI_YoY": 2.13385063045588,
+      "real_disposable_income_YoY": 5.605381165919288
+    },
+    {
+      "date": "1993-01-01",
+      "real_WTI_YoY": -1.880191100830586,
+      "household_energy_expenditure_share": 4.624171714297329,
+      "energy_expenditure_share_gdp": 3.3806580885625426,
+      "energy_CPI_YoY": 3.4482758620689724,
+      "real_disposable_income_YoY": 2.3184566811152107
+    },
+    {
+      "date": "1993-02-01",
+      "real_WTI_YoY": 2.32464114096107,
+      "household_energy_expenditure_share": 5.015452360272285,
+      "energy_expenditure_share_gdp": 3.689746828088261,
+      "energy_CPI_YoY": 3.063241106719361,
+      "real_disposable_income_YoY": 2.361732736572897
+    },
+    {
+      "date": "1993-03-01",
+      "real_WTI_YoY": 4.252922469811615,
+      "household_energy_expenditure_share": 4.958042665049034,
+      "energy_expenditure_share_gdp": 3.6436807178704855,
+      "energy_CPI_YoY": 3.656126482213451,
+      "real_disposable_income_YoY": 1.9564002235886058
+    },
+    {
+      "date": "1993-04-01",
+      "real_WTI_YoY": -2.9519874709271754,
+      "household_energy_expenditure_share": 4.778910199823449,
+      "energy_expenditure_share_gdp": 3.498342399601465,
+      "energy_CPI_YoY": 3.451676528599612,
+      "real_disposable_income_YoY": 2.1977438619774414
+    },
+    {
+      "date": "1993-05-01",
+      "real_WTI_YoY": -7.859441787825183,
+      "household_energy_expenditure_share": 4.712975203300885,
+      "energy_expenditure_share_gdp": 3.4557513292452757,
+      "energy_CPI_YoY": 2.2549019607843057,
+      "real_disposable_income_YoY": 1.5745951229822142
+    },
+    {
+      "date": "1993-06-01",
+      "real_WTI_YoY": -17.18242489675702,
+      "household_energy_expenditure_share": 4.83851554663992,
+      "energy_expenditure_share_gdp": 3.5424021275561435,
+      "energy_CPI_YoY": 0.5808325266214887,
+      "real_disposable_income_YoY": 0.9669017049042328
+    },
+    {
+      "date": "1993-07-01",
+      "real_WTI_YoY": -20.11664097805256,
+      "household_energy_expenditure_share": 4.7827389871141746,
+      "energy_expenditure_share_gdp": 3.4785903949638612,
+      "energy_CPI_YoY": -0.2892960462873684,
+      "real_disposable_income_YoY": 1.295435695572622
+    },
+    {
+      "date": "1993-08-01",
+      "real_WTI_YoY": -17.92806090318152,
+      "household_energy_expenditure_share": 4.881206062175134,
+      "energy_expenditure_share_gdp": 3.5614139757963343,
+      "energy_CPI_YoY": -0.09661835748792091,
+      "real_disposable_income_YoY": 1.0862435389499492
+    },
+    {
+      "date": "1993-09-01",
+      "real_WTI_YoY": -22.155304983505786,
+      "household_energy_expenditure_share": 4.9074369613788695,
+      "energy_expenditure_share_gdp": 3.5744913832961984,
+      "energy_CPI_YoY": -0.579150579150578,
+      "real_disposable_income_YoY": 1.2851098604172995
+    },
+    {
+      "date": "1993-10-01",
+      "real_WTI_YoY": -18.531968112235987,
+      "household_energy_expenditure_share": 4.9479426869966625,
+      "energy_expenditure_share_gdp": 3.530214558912808,
+      "energy_CPI_YoY": 0.9587727708533,
+      "real_disposable_income_YoY": 1.4460260815346349
+    },
+    {
+      "date": "1993-11-01",
+      "real_WTI_YoY": -20.51832102397515,
+      "household_energy_expenditure_share": 4.805664956040896,
+      "energy_expenditure_share_gdp": 3.4446681641087817,
+      "energy_CPI_YoY": -0.666032350142709,
+      "real_disposable_income_YoY": 1.5736558356403973
+    },
+    {
+      "date": "1993-12-01",
+      "real_WTI_YoY": -27.280073505121983,
+      "household_energy_expenditure_share": 4.769322486970903,
+      "energy_expenditure_share_gdp": 3.535917651899743,
+      "energy_CPI_YoY": -1.5194681861348425,
+      "real_disposable_income_YoY": 1.417133502161505
+    },
+    {
+      "date": "1994-01-01",
+      "real_WTI_YoY": -22.934126557940182,
+      "household_energy_expenditure_share": 4.8864593742040405,
+      "energy_expenditure_share_gdp": 3.5049493707674295,
+      "energy_CPI_YoY": -2.0952380952380945,
+      "real_disposable_income_YoY": 1.7298413985172623
+    },
+    {
+      "date": "1994-02-01",
+      "real_WTI_YoY": -28.217426788751297,
+      "household_energy_expenditure_share": 4.854349989268921,
+      "energy_expenditure_share_gdp": 3.496517255200226,
+      "energy_CPI_YoY": -0.19175455417066445,
+      "real_disposable_income_YoY": 1.4379595289218505
+    },
+    {
+      "date": "1994-03-01",
+      "real_WTI_YoY": -29.625530486345387,
+      "household_energy_expenditure_share": 4.654590589969358,
+      "energy_expenditure_share_gdp": 3.372846226881247,
+      "energy_CPI_YoY": -0.5719733079123102,
+      "real_disposable_income_YoY": 2.0846386800334127
+    },
+    {
+      "date": "1994-04-01",
+      "real_WTI_YoY": -20.79627850560587,
+      "household_energy_expenditure_share": 4.64521627956531,
+      "energy_expenditure_share_gdp": 3.3089869352971624,
+      "energy_CPI_YoY": -1.1439466158245981,
+      "real_disposable_income_YoY": 1.555722930680714
+    },
+    {
+      "date": "1994-05-01",
+      "real_WTI_YoY": -12.334554354264293,
+      "household_energy_expenditure_share": 4.642980074195893,
+      "energy_expenditure_share_gdp": 3.350383769350088,
+      "energy_CPI_YoY": -1.4381591562799612,
+      "real_disposable_income_YoY": 2.8766873878325994
+    },
+    {
+      "date": "1994-06-01",
+      "real_WTI_YoY": -2.608272908827969,
+      "household_energy_expenditure_share": 4.851067081908329,
+      "energy_expenditure_share_gdp": 3.5035520553459114,
+      "energy_CPI_YoY": -0.7699711260827802,
+      "real_disposable_income_YoY": 2.905499602611039
+    },
+    {
+      "date": "1994-07-01",
+      "real_WTI_YoY": 6.975815442981159,
+      "household_energy_expenditure_share": 4.681345030352624,
+      "energy_expenditure_share_gdp": 3.3555788202957957,
+      "energy_CPI_YoY": 1.0638297872340274,
+      "real_disposable_income_YoY": 2.7383907567939847
+    },
+    {
+      "date": "1994-08-01",
+      "real_WTI_YoY": -0.8085257327839934,
+      "household_energy_expenditure_share": 4.784480306449471,
+      "energy_expenditure_share_gdp": 3.4415143754497124,
+      "energy_CPI_YoY": 3.1914893617021267,
+      "real_disposable_income_YoY": 2.7123835232434335
+    },
+    {
+      "date": "1994-09-01",
+      "real_WTI_YoY": -3.205081916322272,
+      "household_energy_expenditure_share": 4.654671645731961,
+      "energy_expenditure_share_gdp": 3.366491271743912,
+      "energy_CPI_YoY": 3.0097087378640808,
+      "real_disposable_income_YoY": 3.443339753266361
+    },
+    {
+      "date": "1994-10-01",
+      "real_WTI_YoY": -4.890316560648267,
+      "household_energy_expenditure_share": 4.621754700089525,
+      "energy_expenditure_share_gdp": 3.323815257036348,
+      "energy_CPI_YoY": 0.3798670465337217,
+      "real_disposable_income_YoY": 4.936640991774444
+    },
+    {
+      "date": "1994-11-01",
+      "real_WTI_YoY": 6.03334143432579,
+      "household_energy_expenditure_share": 4.507037009457145,
+      "energy_expenditure_share_gdp": 3.2473594581456813,
+      "energy_CPI_YoY": 1.6283524904214364,
+      "real_disposable_income_YoY": 4.640002086566408
+    },
+    {
+      "date": "1994-12-01",
+      "real_WTI_YoY": 15.228245526680073,
+      "household_energy_expenditure_share": 4.572730303367041,
+      "energy_expenditure_share_gdp": 3.311743288790453,
+      "energy_CPI_YoY": 2.121504339440694,
+      "real_disposable_income_YoY": 1.6495573435568955
+    },
+    {
+      "date": "1995-01-01",
+      "real_WTI_YoY": 16.699835213588532,
+      "household_energy_expenditure_share": 4.528788576692769,
+      "energy_expenditure_share_gdp": 3.267622395257614,
+      "energy_CPI_YoY": 2.821011673151763,
+      "real_disposable_income_YoY": 3.9278186211505917
+    },
+    {
+      "date": "1995-02-01",
+      "real_WTI_YoY": 22.137046684428352,
+      "household_energy_expenditure_share": 4.649497971695516,
+      "energy_expenditure_share_gdp": 3.367326089173123,
+      "energy_CPI_YoY": 1.6330451488953068,
+      "real_disposable_income_YoY": 3.938422065426561
+    },
+    {
+      "date": "1995-03-01",
+      "real_WTI_YoY": 22.856591286372698,
+      "household_energy_expenditure_share": 4.4217065594737806,
+      "energy_expenditure_share_gdp": 3.2171058570070894,
+      "energy_CPI_YoY": 1.1505273250239645,
+      "real_disposable_income_YoY": 3.883383415382635
+    },
+    {
+      "date": "1995-04-01",
+      "real_WTI_YoY": 17.49937350296349,
+      "household_energy_expenditure_share": 4.599115060495346,
+      "energy_expenditure_share_gdp": 3.3043147227205076,
+      "energy_CPI_YoY": 1.8322082931533146,
+      "real_disposable_income_YoY": 3.1149301825993625
+    },
+    {
+      "date": "1995-05-01",
+      "real_WTI_YoY": 7.019454748947274,
+      "household_energy_expenditure_share": 4.61680852222202,
+      "energy_expenditure_share_gdp": 3.3557591435532816,
+      "energy_CPI_YoY": 2.9182879377431803,
+      "real_disposable_income_YoY": 2.9706975450661144
+    },
+    {
+      "date": "1995-06-01",
+      "real_WTI_YoY": -6.079504612266873,
+      "household_energy_expenditure_share": 4.616691672240198,
+      "energy_expenditure_share_gdp": 3.3689500206898906,
+      "energy_CPI_YoY": 3.491755577109612,
+      "real_disposable_income_YoY": 3.4400678644230798
+    },
+    {
+      "date": "1995-07-01",
+      "real_WTI_YoY": -14.275858576169409,
+      "household_energy_expenditure_share": 4.6440409280876205,
+      "energy_expenditure_share_gdp": 3.35540551533393,
+      "energy_CPI_YoY": 1.2440191387559807,
+      "real_disposable_income_YoY": 3.5774826059456144
+    },
+    {
+      "date": "1995-08-01",
+      "real_WTI_YoY": -4.472845733630216,
+      "household_energy_expenditure_share": 4.688594679073778,
+      "energy_expenditure_share_gdp": 3.3970552346864067,
+      "energy_CPI_YoY": -1.0309278350515538,
+      "real_disposable_income_YoY": 3.520165773779449
+    },
+    {
+      "date": "1995-09-01",
+      "real_WTI_YoY": 1.8768042077446312,
+      "household_energy_expenditure_share": 4.423369419343294,
+      "energy_expenditure_share_gdp": 3.2174408199788496,
+      "energy_CPI_YoY": -1.8850141376060336,
+      "real_disposable_income_YoY": 3.401685746634797
+    },
+    {
+      "date": "1995-10-01",
+      "real_WTI_YoY": -4.225799270710551,
+      "household_energy_expenditure_share": 4.364336524576135,
+      "energy_expenditure_share_gdp": 3.1495309283165214,
+      "energy_CPI_YoY": -1.2298959318826852,
+      "real_disposable_income_YoY": 2.542246149244809
+    },
+    {
+      "date": "1995-11-01",
+      "real_WTI_YoY": -2.9527302438464686,
+      "household_energy_expenditure_share": 4.505689900426742,
+      "energy_expenditure_share_gdp": 3.2601762141969224,
+      "energy_CPI_YoY": -2.544769085768128,
+      "real_disposable_income_YoY": 2.8240631114545334
+    },
+    {
+      "date": "1995-12-01",
+      "real_WTI_YoY": 8.142335897712583,
+      "household_energy_expenditure_share": 4.512424231682677,
+      "energy_expenditure_share_gdp": 3.275615091296513,
+      "energy_CPI_YoY": -1.4164305949008527,
+      "real_disposable_income_YoY": 2.4949753107863293
+    },
+    {
+      "date": "1996-01-01",
+      "real_WTI_YoY": 1.6803854488304015,
+      "household_energy_expenditure_share": 4.620193920983381,
+      "energy_expenditure_share_gdp": 3.324662437465591,
+      "energy_CPI_YoY": 1.1352885525071077,
+      "real_disposable_income_YoY": 2.3015087806084633
+    },
+    {
+      "date": "1996-02-01",
+      "real_WTI_YoY": 0.09933295116995033,
+      "household_energy_expenditure_share": 4.6442445665488385,
+      "energy_expenditure_share_gdp": 3.3729564636978884,
+      "energy_CPI_YoY": 1.2287334593572785,
+      "real_disposable_income_YoY": 2.885707232782031
+    },
+    {
+      "date": "1996-03-01",
+      "real_WTI_YoY": 11.884871774762761,
+      "household_energy_expenditure_share": 4.725053041633335,
+      "energy_expenditure_share_gdp": 3.453022875609331,
+      "energy_CPI_YoY": 2.6540284360189625,
+      "real_disposable_income_YoY": 2.9319809950518083
+    },
+    {
+      "date": "1996-04-01",
+      "real_WTI_YoY": 14.84478008521204,
+      "household_energy_expenditure_share": 4.784914349509821,
+      "energy_expenditure_share_gdp": 3.414732522993113,
+      "energy_CPI_YoY": 5.3030303030303205,
+      "real_disposable_income_YoY": 3.0729166666666474
+    },
+    {
+      "date": "1996-05-01",
+      "real_WTI_YoY": 4.263648286482691,
+      "household_energy_expenditure_share": 4.765262252794497,
+      "energy_expenditure_share_gdp": 3.4495894353678156,
+      "energy_CPI_YoY": 5.860113421550106,
+      "real_disposable_income_YoY": 3.3294048320565484
+    },
+    {
+      "date": "1996-06-01",
+      "real_WTI_YoY": 7.682734698416183,
+      "household_energy_expenditure_share": 4.620828774617068,
+      "energy_expenditure_share_gdp": 3.3649369338863964,
+      "energy_CPI_YoY": 3.373945641986875,
+      "real_disposable_income_YoY": 3.639011970917272
+    },
+    {
+      "date": "1996-07-01",
+      "real_WTI_YoY": 19.50746793943019,
+      "household_energy_expenditure_share": 4.507355456722546,
+      "energy_expenditure_share_gdp": 3.240521198788697,
+      "energy_CPI_YoY": 4.064272211720232,
+      "real_disposable_income_YoY": 3.129045653289042
+    },
+    {
+      "date": "1996-08-01",
+      "real_WTI_YoY": 18.218762447001268,
+      "household_energy_expenditure_share": 4.584121788642833,
+      "energy_expenditure_share_gdp": 3.306930361875827,
+      "energy_CPI_YoY": 3.882575757575757,
+      "real_disposable_income_YoY": 3.3162455754912834
+    },
+    {
+      "date": "1996-09-01",
+      "real_WTI_YoY": 27.690696627035205,
+      "household_energy_expenditure_share": 4.42680506792856,
+      "energy_expenditure_share_gdp": 3.209776215877988,
+      "energy_CPI_YoY": 5.475504322766578,
+      "real_disposable_income_YoY": 3.217996447429261
+    },
+    {
+      "date": "1996-10-01",
+      "real_WTI_YoY": 38.47151316101161,
+      "household_energy_expenditure_share": 4.5798944662427274,
+      "energy_expenditure_share_gdp": 3.2785412573786847,
+      "energy_CPI_YoY": 5.84291187739463,
+      "real_disposable_income_YoY": 3.090515774634217
+    },
+    {
+      "date": "1996-11-01",
+      "real_WTI_YoY": 27.598447123044245,
+      "household_energy_expenditure_share": 4.642195655834316,
+      "energy_expenditure_share_gdp": 3.3378649359649315,
+      "energy_CPI_YoY": 8.123791102514488,
+      "real_disposable_income_YoY": 3.0858735834191853
+    },
+    {
+      "date": "1996-12-01",
+      "real_WTI_YoY": 28.263236376217083,
+      "household_energy_expenditure_share": 4.624926661637749,
+      "energy_expenditure_share_gdp": 3.3402863106011043,
+      "energy_CPI_YoY": 9.099616858237546,
+      "real_disposable_income_YoY": 3.2900390979627936
+    },
+    {
+      "date": "1997-01-01",
+      "real_WTI_YoY": 29.362928605220382,
+      "household_energy_expenditure_share": 4.686456524642714,
+      "energy_expenditure_share_gdp": 3.356589504170625,
+      "energy_CPI_YoY": 7.764265668849379,
+      "real_disposable_income_YoY": 3.436854003215628
+    },
+    {
+      "date": "1997-02-01",
+      "real_WTI_YoY": 12.727696801432975,
+      "household_energy_expenditure_share": 4.654292883135874,
+      "energy_expenditure_share_gdp": 3.3494147492632425,
+      "energy_CPI_YoY": 7.376283846872078,
+      "real_disposable_income_YoY": 2.919935699033105
+    },
+    {
+      "date": "1997-03-01",
+      "real_WTI_YoY": -4.366697294114186,
+      "household_energy_expenditure_share": 4.474258145529046,
+      "energy_expenditure_share_gdp": 3.2382060481988075,
+      "energy_CPI_YoY": 4.339796860572487,
+      "real_disposable_income_YoY": 3.0684970821773794
+    },
+    {
+      "date": "1997-04-01",
+      "real_WTI_YoY": -18.171349258678447,
+      "household_energy_expenditure_share": 4.577470596968147,
+      "energy_expenditure_share_gdp": 3.2574914967733224,
+      "energy_CPI_YoY": -0.17985611510791255,
+      "real_disposable_income_YoY": 3.76212132149476
+    },
+    {
+      "date": "1997-05-01",
+      "real_WTI_YoY": -3.7897055542844837,
+      "household_energy_expenditure_share": 4.387262151237306,
+      "energy_expenditure_share_gdp": 3.1342350617602777,
+      "energy_CPI_YoY": -2.857142857142858,
+      "real_disposable_income_YoY": 2.912033076703735
+    },
+    {
+      "date": "1997-06-01",
+      "real_WTI_YoY": -7.757174416010626,
+      "household_energy_expenditure_share": 4.315322831296723,
+      "energy_expenditure_share_gdp": 3.0966711958515405,
+      "energy_CPI_YoY": -0.27198549410697437,
+      "real_disposable_income_YoY": 2.6289993031852754
+    },
+    {
+      "date": "1997-07-01",
+      "real_WTI_YoY": -9.648954536735078,
+      "household_energy_expenditure_share": 4.382593400866422,
+      "energy_expenditure_share_gdp": 3.106377678500415,
+      "energy_CPI_YoY": -0.9082652134423275,
+      "real_disposable_income_YoY": 3.3053055423969635
+    },
+    {
+      "date": "1997-08-01",
+      "real_WTI_YoY": -10.943754437834896,
+      "household_energy_expenditure_share": 4.344940346105903,
+      "energy_expenditure_share_gdp": 3.0982971717187335,
+      "energy_CPI_YoY": 1.0938924339106704,
+      "real_disposable_income_YoY": 3.5902040237693056
+    },
+    {
+      "date": "1997-09-01",
+      "real_WTI_YoY": -19.181694032272624,
+      "household_energy_expenditure_share": 4.429482636428065,
+      "energy_expenditure_share_gdp": 3.174484807088867,
+      "energy_CPI_YoY": 2.3679417122040247,
+      "real_disposable_income_YoY": 3.625691014745591
+    },
+    {
+      "date": "1997-10-01",
+      "real_WTI_YoY": -16.036173491046178,
+      "household_energy_expenditure_share": 4.571721278673305,
+      "energy_expenditure_share_gdp": 3.2580770021858556,
+      "energy_CPI_YoY": 1.17647058823529,
+      "real_disposable_income_YoY": 4.1508010421209995
+    },
+    {
+      "date": "1997-11-01",
+      "real_WTI_YoY": -16.392178112128697,
+      "household_energy_expenditure_share": 4.375000000000001,
+      "energy_expenditure_share_gdp": 3.1382947594584345,
+      "energy_CPI_YoY": -0.3577817531305816,
+      "real_disposable_income_YoY": 4.551386814969849
+    },
+    {
+      "date": "1997-12-01",
+      "real_WTI_YoY": -28.546076473911263,
+      "household_energy_expenditure_share": 4.393206186545213,
+      "energy_expenditure_share_gdp": 3.1690959075883423,
+      "energy_CPI_YoY": -3.5996488147497896,
+      "real_disposable_income_YoY": 4.8188817662982775
+    },
+    {
+      "date": "1998-01-01",
+      "real_WTI_YoY": -34.52288248941049,
+      "household_energy_expenditure_share": 4.039359468521827,
+      "energy_expenditure_share_gdp": 2.9075800092032016,
+      "energy_CPI_YoY": -6.684027777777779,
+      "real_disposable_income_YoY": 5.45205927726613
+    },
+    {
+      "date": "1998-02-01",
+      "real_WTI_YoY": -28.608575903144974,
+      "household_energy_expenditure_share": 4.052896372330649,
+      "energy_expenditure_share_gdp": 2.9346482482337977,
+      "energy_CPI_YoY": -8.608695652173914,
+      "real_disposable_income_YoY": 5.851361432301383
+    },
+    {
+      "date": "1998-03-01",
+      "real_WTI_YoY": -28.880596515543644,
+      "household_energy_expenditure_share": 4.0379642962206015,
+      "energy_expenditure_share_gdp": 2.9414153079914467,
+      "energy_CPI_YoY": -8.584070796460175,
+      "real_disposable_income_YoY": 5.9798120431604485
+    },
+    {
+      "date": "1998-04-01",
+      "real_WTI_YoY": -23.149312999144932,
+      "household_energy_expenditure_share": 3.8935215870030984,
+      "energy_expenditure_share_gdp": 2.8161480112097403,
+      "energy_CPI_YoY": -7.747747747747747,
+      "real_disposable_income_YoY": 6.256594585193342
+    },
+    {
+      "date": "1998-05-01",
+      "real_WTI_YoY": -29.553210973555288,
+      "household_energy_expenditure_share": 4.011650187782632,
+      "energy_expenditure_share_gdp": 2.917600690948492,
+      "energy_CPI_YoY": -5.147058823529404,
+      "real_disposable_income_YoY": 6.235352520809534
+    },
+    {
+      "date": "1998-06-01",
+      "real_WTI_YoY": -29.892660096568356,
+      "household_energy_expenditure_share": 4.096172329097317,
+      "energy_expenditure_share_gdp": 2.9934114845994273,
+      "energy_CPI_YoY": -5.818181818181822,
+      "real_disposable_income_YoY": 6.496196646604591
+    },
+    {
+      "date": "1998-07-01",
+      "real_WTI_YoY": -29.160774342099295,
+      "household_energy_expenditure_share": 3.9894869574464855,
+      "energy_expenditure_share_gdp": 2.879039659374306,
+      "energy_CPI_YoY": -5.316223648029328,
+      "real_disposable_income_YoY": 6.269560133438801
+    },
+    {
+      "date": "1998-08-01",
+      "real_WTI_YoY": -33.5556735894076,
+      "household_energy_expenditure_share": 3.9381748888418375,
+      "energy_expenditure_share_gdp": 2.8549197536217408,
+      "energy_CPI_YoY": -7.935076645626705,
+      "real_disposable_income_YoY": 6.052277444517928
+    },
+    {
+      "date": "1998-09-01",
+      "real_WTI_YoY": -25.16422850030543,
+      "household_energy_expenditure_share": 3.909763090387808,
+      "energy_expenditure_share_gdp": 2.8406670820406803,
+      "energy_CPI_YoY": -9.87544483985766,
+      "real_disposable_income_YoY": 6.074048797133602
+    },
+    {
+      "date": "1998-10-01",
+      "real_WTI_YoY": -33.181656944461956,
+      "household_energy_expenditure_share": 3.7774436090225563,
+      "energy_expenditure_share_gdp": 2.7028216403480485,
+      "energy_CPI_YoY": -9.2128801431127,
+      "real_disposable_income_YoY": 5.689998641734961
+    },
+    {
+      "date": "1998-11-01",
+      "real_WTI_YoY": -36.55532833250865,
+      "household_energy_expenditure_share": 3.6873951593577763,
+      "energy_expenditure_share_gdp": 2.649023438908,
+      "energy_CPI_YoY": -9.245960502693007,
+      "real_disposable_income_YoY": 5.424979195249757
+    },
+    {
+      "date": "1998-12-01",
+      "real_WTI_YoY": -39.08263360579214,
+      "household_energy_expenditure_share": 3.7069120019117032,
+      "energy_expenditure_share_gdp": 2.6705427194840192,
+      "energy_CPI_YoY": -8.834244080145726,
+      "real_disposable_income_YoY": 5.002068356383416
+    },
+    {
+      "date": "1999-01-01",
+      "real_WTI_YoY": -26.395735339973193,
+      "household_energy_expenditure_share": 3.718260560037969,
+      "energy_expenditure_share_gdp": 2.663710907359598,
+      "energy_CPI_YoY": -7.255813953488365,
+      "real_disposable_income_YoY": 4.668122222345383
+    },
+    {
+      "date": "1999-02-01",
+      "real_WTI_YoY": -26.421304061452012,
+      "household_energy_expenditure_share": 3.592398136508171,
+      "energy_expenditure_share_gdp": 2.580835179089136,
+      "energy_CPI_YoY": -5.613701236917212,
+      "real_disposable_income_YoY": 4.349645421309956
+    },
+    {
+      "date": "1999-03-01",
+      "real_WTI_YoY": -4.55355929467558,
+      "household_energy_expenditure_share": 3.7461976905584597,
+      "energy_expenditure_share_gdp": 2.695586187463622,
+      "energy_CPI_YoY": -2.8073572120038692,
+      "real_disposable_income_YoY": 3.8283850061306746
+    },
+    {
+      "date": "1999-04-01",
+      "real_WTI_YoY": 10.241500381642643,
+      "household_energy_expenditure_share": 3.973402530003243,
+      "energy_expenditure_share_gdp": 2.829036941238961,
+      "energy_CPI_YoY": 3.02734375,
+      "real_disposable_income_YoY": 3.1525190689756677
+    },
+    {
+      "date": "1999-05-01",
+      "real_WTI_YoY": 16.37113426213905,
+      "household_energy_expenditure_share": 3.936046597143572,
+      "energy_expenditure_share_gdp": 2.809091968369373,
+      "energy_CPI_YoY": 1.6472868217054293,
+      "real_disposable_income_YoY": 2.904803303629633
+    },
+    {
+      "date": "1999-06-01",
+      "real_WTI_YoY": 28.100186621668865,
+      "household_energy_expenditure_share": 3.983176282661899,
+      "energy_expenditure_share_gdp": 2.8531808557653044,
+      "energy_CPI_YoY": 0.8687258687258836,
+      "real_disposable_income_YoY": 2.670138963929869
+    },
+    {
+      "date": "1999-07-01",
+      "real_WTI_YoY": 38.867046346984615,
+      "household_energy_expenditure_share": 4.100895748840196,
+      "energy_expenditure_share_gdp": 2.9019392304399902,
+      "energy_CPI_YoY": 3.291384317521784,
+      "real_disposable_income_YoY": 2.686084142394818
+    },
+    {
+      "date": "1999-08-01",
+      "real_WTI_YoY": 54.45088145995942,
+      "household_energy_expenditure_share": 4.106788091474645,
+      "energy_expenditure_share_gdp": 2.9236186056940774,
+      "energy_CPI_YoY": 7.24779627815868,
+      "real_disposable_income_YoY": 2.79375867000744
+    },
+    {
+      "date": "1999-09-01",
+      "real_WTI_YoY": 54.255859622349774,
+      "household_energy_expenditure_share": 4.161120435210371,
+      "energy_expenditure_share_gdp": 2.9690420586074038,
+      "energy_CPI_YoY": 10.365251727541946,
+      "real_disposable_income_YoY": 2.3719907779743865
+    },
+    {
+      "date": "1999-10-01",
+      "real_WTI_YoY": 52.995086181995354,
+      "household_energy_expenditure_share": 4.18037379149847,
+      "energy_expenditure_share_gdp": 2.939343762717586,
+      "energy_CPI_YoY": 10.344827586206895,
+      "real_disposable_income_YoY": 2.7973226238286575
+    },
+    {
+      "date": "1999-11-01",
+      "real_WTI_YoY": 87.38472437995695,
+      "household_energy_expenditure_share": 3.920142602495543,
+      "energy_expenditure_share_gdp": 2.7767202761892245,
+      "energy_CPI_YoY": 10.286844708209708,
+      "real_disposable_income_YoY": 3.0539969705374093
+    },
+    {
+      "date": "1999-12-01",
+      "real_WTI_YoY": 124.03609877980557,
+      "household_energy_expenditure_share": 4.153372674139538,
+      "energy_expenditure_share_gdp": 2.971666443269807,
+      "energy_CPI_YoY": 13.6863136863137,
+      "real_disposable_income_YoY": 3.6649381901040057
+    },
+    {
+      "date": "2000-01-01",
+      "real_WTI_YoY": 111.90069722010696,
+      "household_energy_expenditure_share": 4.068929825297581,
+      "energy_expenditure_share_gdp": 2.908366266990422,
+      "energy_CPI_YoY": 15.346038114343031,
+      "real_disposable_income_YoY": 3.767431518090647
+    },
+    {
+      "date": "2000-02-01",
+      "real_WTI_YoY": 136.81720999273273,
+      "household_energy_expenditure_share": 4.150172923871828,
+      "energy_expenditure_share_gdp": 2.987349056640558,
+      "energy_CPI_YoY": 19.758064516129025,
+      "real_disposable_income_YoY": 3.816930837255428
+    },
+    {
+      "date": "2000-03-01",
+      "real_WTI_YoY": 95.95758761362072,
+      "household_energy_expenditure_share": 4.222185439598334,
+      "energy_expenditure_share_gdp": 3.0603331534058733,
+      "energy_CPI_YoY": 23.804780876494025,
+      "real_disposable_income_YoY": 4.0056515641969215
+    },
+    {
+      "date": "2000-04-01",
+      "real_WTI_YoY": 44.22947891460276,
+      "household_energy_expenditure_share": 4.2251006139856875,
+      "energy_expenditure_share_gdp": 3.0016432923616185,
+      "energy_CPI_YoY": 14.59715639810426,
+      "real_disposable_income_YoY": 4.873585105257594
+    },
+    {
+      "date": "2000-05-01",
+      "real_WTI_YoY": 57.540279518627834,
+      "household_energy_expenditure_share": 4.268434360691588,
+      "energy_expenditure_share_gdp": 3.0475071528105766,
+      "energy_CPI_YoY": 14.394661582459477,
+      "real_disposable_income_YoY": 5.123926795011258
+    },
+    {
+      "date": "2000-06-01",
+      "real_WTI_YoY": 71.15556479657157,
+      "household_energy_expenditure_share": 4.49204689006914,
+      "energy_expenditure_share_gdp": 3.2270592873341584,
+      "energy_CPI_YoY": 21.339712918660283,
+      "real_disposable_income_YoY": 5.062465136349759
+    },
+    {
+      "date": "2000-07-01",
+      "real_WTI_YoY": 42.58881454544403,
+      "household_energy_expenditure_share": 4.396285664227281,
+      "energy_expenditure_share_gdp": 3.161414844596883,
+      "energy_CPI_YoY": 19.306466729147132,
+      "real_disposable_income_YoY": 5.430192247084764
+    },
+    {
+      "date": "2000-08-01",
+      "real_WTI_YoY": 42.162042188597205,
+      "household_energy_expenditure_share": 4.330529361337334,
+      "energy_expenditure_share_gdp": 3.133309071913465,
+      "energy_CPI_YoY": 13.059360730593594,
+      "real_disposable_income_YoY": 5.6406983921080345
+    },
+    {
+      "date": "2000-09-01",
+      "real_WTI_YoY": 37.632431190262096,
+      "household_energy_expenditure_share": 4.494711320704447,
+      "energy_expenditure_share_gdp": 3.269961277029394,
+      "energy_CPI_YoY": 15.563506261180681,
+      "real_disposable_income_YoY": 5.9036106717504255
+    },
+    {
+      "date": "2000-10-01",
+      "real_WTI_YoY": 41.04171723246453,
+      "household_energy_expenditure_share": 4.414729916162581,
+      "energy_expenditure_share_gdp": 3.189039516492547,
+      "energy_CPI_YoY": 15.714285714285703,
+      "real_disposable_income_YoY": 5.630970860637374
+    },
+    {
+      "date": "2000-11-01",
+      "real_WTI_YoY": 33.07221410546326,
+      "household_energy_expenditure_share": 4.459627658165832,
+      "energy_expenditure_share_gdp": 3.227369318373467,
+      "energy_CPI_YoY": 15.874439461883405,
+      "real_disposable_income_YoY": 4.995393803889914
+    },
+    {
+      "date": "2000-12-01",
+      "real_WTI_YoY": 5.323242534322747,
+      "household_energy_expenditure_share": 4.785339208908357,
+      "energy_expenditure_share_gdp": 3.4755547855524243,
+      "energy_CPI_YoY": 14.323374340949035,
+      "real_disposable_income_YoY": 4.400209533787325
+    },
+    {
+      "date": "2001-01-01",
+      "real_WTI_YoY": 4.639833281110195,
+      "household_energy_expenditure_share": 4.581988316321863,
+      "energy_expenditure_share_gdp": 3.348541211745949,
+      "energy_CPI_YoY": 17.391304347826097,
+      "real_disposable_income_YoY": 4.202083694731584
+    },
+    {
+      "date": "2001-02-01",
+      "real_WTI_YoY": -2.608255095646539,
+      "household_energy_expenditure_share": 4.518794640529691,
+      "energy_expenditure_share_gdp": 3.311292749892529,
+      "energy_CPI_YoY": 12.878787878787868,
+      "real_disposable_income_YoY": 3.918519196169923
+    },
+    {
+      "date": "2001-03-01",
+      "real_WTI_YoY": -11.347254179073774,
+      "household_energy_expenditure_share": 4.480074841157439,
+      "energy_expenditure_share_gdp": 3.2931460633485545,
+      "energy_CPI_YoY": 5.953338696701516,
+      "real_disposable_income_YoY": 3.9578264395782714
+    },
+    {
+      "date": "2001-04-01",
+      "real_WTI_YoY": 3.540846346177462,
+      "household_energy_expenditure_share": 4.342457563232733,
+      "energy_expenditure_share_gdp": 3.152184168317766,
+      "energy_CPI_YoY": 9.429280397022332,
+      "real_disposable_income_YoY": 3.221804169986986
+    },
+    {
+      "date": "2001-05-01",
+      "real_WTI_YoY": -3.974109026655359,
+      "household_energy_expenditure_share": 4.537544479364173,
+      "energy_expenditure_share_gdp": 3.296537409189546,
+      "energy_CPI_YoY": 15.333333333333332,
+      "real_disposable_income_YoY": 2.6138932141242632
+    },
+    {
+      "date": "2001-06-01",
+      "real_WTI_YoY": -15.955630851320802,
+      "household_energy_expenditure_share": 4.380224194907018,
+      "energy_expenditure_share_gdp": 3.188980092461553,
+      "energy_CPI_YoY": 7.965299684542604,
+      "real_disposable_income_YoY": 2.3621810604770532
+    },
+    {
+      "date": "2001-07-01",
+      "real_WTI_YoY": -13.375740509712164,
+      "household_energy_expenditure_share": 4.229148039340912,
+      "energy_expenditure_share_gdp": 3.1241684767532045,
+      "energy_CPI_YoY": 1.806755695208162,
+      "real_disposable_income_YoY": 3.3360236750067385
+    },
+    {
+      "date": "2001-08-01",
+      "real_WTI_YoY": -14.76219228366016,
+      "household_energy_expenditure_share": 4.000904727199617,
+      "energy_expenditure_share_gdp": 3.0043347719668385,
+      "energy_CPI_YoY": 2.8271405492730217,
+      "real_disposable_income_YoY": 4.404701781487974
+    },
+    {
+      "date": "2001-09-01",
+      "real_WTI_YoY": -24.632571906838805,
+      "household_energy_expenditure_share": 4.217058995587094,
+      "energy_expenditure_share_gdp": 3.128886339146369,
+      "energy_CPI_YoY": 1.3157894736842257,
+      "real_disposable_income_YoY": 3.387634392649086
+    },
+    {
+      "date": "2001-10-01",
+      "real_WTI_YoY": -34.434934024633655,
+      "household_energy_expenditure_share": 4.069047373309939,
+      "energy_expenditure_share_gdp": 2.9585951457089346,
+      "energy_CPI_YoY": -5.169753086419748,
+      "real_disposable_income_YoY": 1.2673583714691405
+    },
+    {
+      "date": "2001-11-01",
+      "real_WTI_YoY": -44.01059085711346,
+      "household_energy_expenditure_share": 3.7047066408768536,
+      "energy_expenditure_share_gdp": 2.6950043923975175,
+      "energy_CPI_YoY": -9.520123839009276,
+      "real_disposable_income_YoY": 1.3427317986888232
+    },
+    {
+      "date": "2001-12-01",
+      "real_WTI_YoY": -32.892862547653536,
+      "household_energy_expenditure_share": 3.653932873800168,
+      "energy_expenditure_share_gdp": 2.660296713135872,
+      "energy_CPI_YoY": -12.451960030745568,
+      "real_disposable_income_YoY": 1.3242426925612172
+    },
+    {
+      "date": "2002-01-01",
+      "real_WTI_YoY": -34.15139765849394,
+      "household_energy_expenditure_share": 3.461014726649183,
+      "energy_expenditure_share_gdp": 2.545555710112672,
+      "energy_CPI_YoY": -15.407407407407403,
+      "real_disposable_income_YoY": 2.967184699903047
+    },
+    {
+      "date": "2002-02-01",
+      "real_WTI_YoY": -30.796359149520214,
+      "household_energy_expenditure_share": 3.497505372560355,
+      "energy_expenditure_share_gdp": 2.580794732693467,
+      "energy_CPI_YoY": -15.361670395227433,
+      "real_disposable_income_YoY": 3.014652659584871
+    },
+    {
+      "date": "2002-03-01",
+      "real_WTI_YoY": -11.17058102896804,
+      "household_energy_expenditure_share": 3.726015730674816,
+      "energy_expenditure_share_gdp": 2.75884453099643,
+      "energy_CPI_YoY": -10.70615034168565,
+      "real_disposable_income_YoY": 2.7753939772195313
+    },
+    {
+      "date": "2002-04-01",
+      "real_WTI_YoY": -6.308948599802411,
+      "household_energy_expenditure_share": 3.8187106879148742,
+      "energy_expenditure_share_gdp": 2.821594752127677,
+      "energy_CPI_YoY": -8.163265306122458,
+      "real_disposable_income_YoY": 3.3333007593006947
+    },
+    {
+      "date": "2002-05-01",
+      "real_WTI_YoY": -6.703508199632968,
+      "household_energy_expenditure_share": 3.9359069537243263,
+      "energy_expenditure_share_gdp": 2.921709930507208,
+      "energy_CPI_YoY": -11.92196531791907,
+      "real_disposable_income_YoY": 3.9335467512506384
+    },
+    {
+      "date": "2002-06-01",
+      "real_WTI_YoY": -8.516632570732629,
+      "household_energy_expenditure_share": 3.8885192577807355,
+      "energy_expenditure_share_gdp": 2.898747733631169,
+      "energy_CPI_YoY": -11.176040905770645,
+      "real_disposable_income_YoY": 4.209197404605547
+    },
+    {
+      "date": "2002-07-01",
+      "real_WTI_YoY": 0.5749036898211601,
+      "household_energy_expenditure_share": 3.966326895344681,
+      "energy_expenditure_share_gdp": 2.9297052814811306,
+      "energy_CPI_YoY": -5.5555555555555465,
+      "real_disposable_income_YoY": 2.4135304270685554
+    },
+    {
+      "date": "2002-08-01",
+      "real_WTI_YoY": 1.9127274231187652,
+      "household_energy_expenditure_share": 3.949180892409111,
+      "energy_expenditure_share_gdp": 2.9233323986438506,
+      "energy_CPI_YoY": -3.2992930086410133,
+      "real_disposable_income_YoY": 0.7578416215344497
+    },
+    {
+      "date": "2002-09-01",
+      "real_WTI_YoY": 11.530928707097754,
+      "household_energy_expenditure_share": 3.954130128165818,
+      "energy_expenditure_share_gdp": 2.9351677524845132,
+      "energy_CPI_YoY": -5.500381970970203,
+      "real_disposable_income_YoY": 1.7296800857186767
+    },
+    {
+      "date": "2002-10-01",
+      "real_WTI_YoY": 27.488340136814294,
+      "household_energy_expenditure_share": 4.135531135531136,
+      "energy_expenditure_share_gdp": 3.0619902502686585,
+      "energy_CPI_YoY": 3.2546786004882033,
+      "real_disposable_income_YoY": 3.838250046261571
+    },
+    {
+      "date": "2002-11-01",
+      "real_WTI_YoY": 31.25206321736784,
+      "household_energy_expenditure_share": 4.069046055032479,
+      "energy_expenditure_share_gdp": 3.0240204863149285,
+      "energy_CPI_YoY": 8.383233532934131,
+      "real_disposable_income_YoY": 4.000116734924153
+    },
+    {
+      "date": "2002-12-01",
+      "real_WTI_YoY": 48.26965840095219,
+      "household_energy_expenditure_share": 4.0335482619867165,
+      "energy_expenditure_share_gdp": 3.0086517723336565,
+      "energy_CPI_YoY": 11.589113257243188,
+      "real_disposable_income_YoY": 4.087815203565426
+    },
+    {
+      "date": "2003-01-01",
+      "real_WTI_YoY": 62.63457425575043,
+      "household_energy_expenditure_share": 4.2912433478471215,
+      "energy_expenditure_share_gdp": 3.1751915518426537,
+      "energy_CPI_YoY": 16.900175131348515,
+      "real_disposable_income_YoY": 1.86120383843571
+    },
+    {
+      "date": "2003-02-01",
+      "real_WTI_YoY": 67.61312722619914,
+      "household_energy_expenditure_share": 4.478712219174109,
+      "energy_expenditure_share_gdp": 3.3165895972742034,
+      "energy_CPI_YoY": 24.05286343612336,
+      "real_disposable_income_YoY": 1.352121235139947
+    },
+    {
+      "date": "2003-03-01",
+      "real_WTI_YoY": 32.60468399130718,
+      "household_energy_expenditure_share": 4.424182644886569,
+      "energy_expenditure_share_gdp": 3.2915317158053212,
+      "energy_CPI_YoY": 22.36394557823129,
+      "real_disposable_income_YoY": 1.4944491887275868
+    },
+    {
+      "date": "2003-04-01",
+      "real_WTI_YoY": 5.316022181009039,
+      "household_energy_expenditure_share": 4.3534022941662975,
+      "energy_expenditure_share_gdp": 3.2105322429545526,
+      "energy_CPI_YoY": 12.34567901234569,
+      "real_disposable_income_YoY": 1.6880709651794001
+    },
+    {
+      "date": "2003-05-01",
+      "real_WTI_YoY": 2.0142716005685513,
+      "household_energy_expenditure_share": 4.012007433172917,
+      "energy_expenditure_share_gdp": 2.977167564501909,
+      "energy_CPI_YoY": 6.1525840853158265,
+      "real_disposable_income_YoY": 2.029859181462812
+    },
+    {
+      "date": "2003-06-01",
+      "real_WTI_YoY": 17.860619769414733,
+      "household_energy_expenditure_share": 3.901020650367909,
+      "energy_expenditure_share_gdp": 2.905567038158484,
+      "energy_CPI_YoY": 6.743421052631593,
+      "real_disposable_income_YoY": 1.9947033301403128
+    },
+    {
+      "date": "2003-07-01",
+      "real_WTI_YoY": 11.751423413103424,
+      "household_energy_expenditure_share": 3.977877296165944,
+      "energy_expenditure_share_gdp": 2.941209781312148,
+      "energy_CPI_YoY": 8.006535947712411,
+      "real_disposable_income_YoY": 3.484605969306087
+    },
+    {
+      "date": "2003-08-01",
+      "real_WTI_YoY": 8.822555885372463,
+      "household_energy_expenditure_share": 4.19671068621891,
+      "energy_expenditure_share_gdp": 3.134869684608421,
+      "energy_CPI_YoY": 11.941510966693759,
+      "real_disposable_income_YoY": 4.176786218582329
+    },
+    {
+      "date": "2003-09-01",
+      "real_WTI_YoY": -6.775213104316369,
+      "household_energy_expenditure_share": 4.287748290269122,
+      "energy_expenditure_share_gdp": 3.176368235314765,
+      "energy_CPI_YoY": 15.521422797089745,
+      "real_disposable_income_YoY": 2.8889557628648754
+    },
+    {
+      "date": "2003-10-01",
+      "real_WTI_YoY": 3.1024745721945024,
+      "household_energy_expenditure_share": 4.186187093849176,
+      "energy_expenditure_share_gdp": 3.0588926451852725,
+      "energy_CPI_YoY": 8.589440504334123,
+      "real_disposable_income_YoY": 3.006059014425322
+    },
+    {
+      "date": "2003-11-01",
+      "real_WTI_YoY": 15.815404471558958,
+      "household_energy_expenditure_share": 4.165079804729426,
+      "energy_expenditure_share_gdp": 3.0656882967158143,
+      "energy_CPI_YoY": 8.050513022888705,
+      "real_disposable_income_YoY": 3.3439654285420284
+    },
+    {
+      "date": "2003-12-01",
+      "real_WTI_YoY": 6.8811295834257935,
+      "household_energy_expenditure_share": 4.236664058544668,
+      "energy_expenditure_share_gdp": 3.1276986169320113,
+      "energy_CPI_YoY": 9.20535011801733,
+      "real_disposable_income_YoY": 3.14648457541582
+    },
+    {
+      "date": "2004-01-01",
+      "real_WTI_YoY": 2.0682990457024486,
+      "household_energy_expenditure_share": 4.423317315962705,
+      "energy_expenditure_share_gdp": 3.234802821700805,
+      "energy_CPI_YoY": 7.7902621722846455,
+      "real_disposable_income_YoY": 3.1819539886465575
+    },
+    {
+      "date": "2004-02-01",
+      "real_WTI_YoY": -4.799529810016933,
+      "household_energy_expenditure_share": 4.439164258216338,
+      "energy_expenditure_share_gdp": 3.2591246474278788,
+      "energy_CPI_YoY": 3.5511363636363535,
+      "real_disposable_income_YoY": 3.719317968896374
+    },
+    {
+      "date": "2004-03-01",
+      "real_WTI_YoY": 7.756849563376744,
+      "household_energy_expenditure_share": 4.275912209751443,
+      "energy_expenditure_share_gdp": 3.156805242645017,
+      "energy_CPI_YoY": 0.8339124391938846,
+      "real_disposable_income_YoY": 3.9181040527275224
+    },
+    {
+      "date": "2004-04-01",
+      "real_WTI_YoY": 27.531961060233236,
+      "household_energy_expenditure_share": 4.306701322183297,
+      "energy_expenditure_share_gdp": 3.146254607207325,
+      "energy_CPI_YoY": 5.054945054945059,
+      "real_disposable_income_YoY": 3.7255759018664847
+    },
+    {
+      "date": "2004-05-01",
+      "real_WTI_YoY": 39.2486077321903,
+      "household_energy_expenditure_share": 4.408204438466711,
+      "energy_expenditure_share_gdp": 3.246974382090373,
+      "energy_CPI_YoY": 14.064914992272026,
+      "real_disposable_income_YoY": 3.4795051698670587
+    },
+    {
+      "date": "2004-06-01",
+      "real_WTI_YoY": 20.20497802603025,
+      "household_energy_expenditure_share": 4.464475197980542,
+      "energy_expenditure_share_gdp": 3.299810985307709,
+      "energy_CPI_YoY": 16.718027734976882,
+      "real_disposable_income_YoY": 3.2705375393624614
+    },
+    {
+      "date": "2004-07-01",
+      "real_WTI_YoY": 28.80574997990395,
+      "household_energy_expenditure_share": 4.410422002004231,
+      "energy_expenditure_share_gdp": 3.218936349982979,
+      "energy_CPI_YoY": 14.296520423600612,
+      "real_disposable_income_YoY": 2.269108642447071
+    },
+    {
+      "date": "2004-08-01",
+      "real_WTI_YoY": 38.683684002530974,
+      "household_energy_expenditure_share": 4.384826193566998,
+      "energy_expenditure_share_gdp": 3.2116224325000586,
+      "energy_CPI_YoY": 9.941944847605221,
+      "real_disposable_income_YoY": 1.8786087993710732
+    },
+    {
+      "date": "2004-09-01",
+      "real_WTI_YoY": 58.23366980938549,
+      "household_energy_expenditure_share": 4.46948398379563,
+      "energy_expenditure_share_gdp": 3.2815109773368514,
+      "energy_CPI_YoY": 6.997900629811049,
+      "real_disposable_income_YoY": 3.096665691722733
+    },
+    {
+      "date": "2004-10-01",
+      "real_WTI_YoY": 70.19075192769041,
+      "household_energy_expenditure_share": 4.6574406663875365,
+      "energy_expenditure_share_gdp": 3.374253844470127,
+      "energy_CPI_YoY": 15.094339622641506,
+      "real_disposable_income_YoY": 2.733489341941131
+    },
+    {
+      "date": "2004-11-01",
+      "real_WTI_YoY": 50.36159751017344,
+      "household_energy_expenditure_share": 4.7999735720656735,
+      "energy_expenditure_share_gdp": 3.479624440039102,
+      "energy_CPI_YoY": 19.649379108838573,
+      "real_disposable_income_YoY": 1.789399370044542
+    },
+    {
+      "date": "2004-12-01",
+      "real_WTI_YoY": 29.957083437775502,
+      "household_energy_expenditure_share": 4.581838255589291,
+      "energy_expenditure_share_gdp": 3.4452991702704208,
+      "energy_CPI_YoY": 16.930835734870307,
+      "real_disposable_income_YoY": 5.442607531744015
+    },
+    {
+      "date": "2005-01-01",
+      "real_WTI_YoY": 32.7350757461899,
+      "household_energy_expenditure_share": 4.651956574398273,
+      "energy_expenditure_share_gdp": 3.3092389408367606,
+      "energy_CPI_YoY": 9.24252953439888,
+      "real_disposable_income_YoY": 1.5862530765889504
+    },
+    {
+      "date": "2005-02-01",
+      "real_WTI_YoY": 34.70621811883705,
+      "household_energy_expenditure_share": 4.657774850430869,
+      "energy_expenditure_share_gdp": 3.3233374736024555,
+      "energy_CPI_YoY": 10.973936899862835,
+      "real_disposable_income_YoY": 1.427152018787825
+    },
+    {
+      "date": "2005-03-01",
+      "real_WTI_YoY": 42.89946205556596,
+      "household_energy_expenditure_share": 4.829210836277974,
+      "energy_expenditure_share_gdp": 3.4682390603609883,
+      "energy_CPI_YoY": 12.68090971743625,
+      "real_disposable_income_YoY": 1.378243189751327
+    },
+    {
+      "date": "2005-04-01",
+      "real_WTI_YoY": 39.471916721060715,
+      "household_energy_expenditure_share": 4.8234439541615615,
+      "energy_expenditure_share_gdp": 3.4427907080402047,
+      "energy_CPI_YoY": 16.24825662482565,
+      "real_disposable_income_YoY": 1.3529628002474814
+    },
+    {
+      "date": "2005-05-01",
+      "real_WTI_YoY": 20.28259938620527,
+      "household_energy_expenditure_share": 4.749368836717519,
+      "energy_expenditure_share_gdp": 3.406420475790735,
+      "energy_CPI_YoY": 10.636856368563707,
+      "real_disposable_income_YoY": 1.2829091168625073
+    },
+    {
+      "date": "2005-06-01",
+      "real_WTI_YoY": 44.524618375667835,
+      "household_energy_expenditure_share": 4.736847768774682,
+      "energy_expenditure_share_gdp": 3.406420475790735,
+      "energy_CPI_YoY": 8.052805280528052,
+      "real_disposable_income_YoY": 1.4238841634123256
+    },
+    {
+      "date": "2005-07-01",
+      "real_WTI_YoY": 40.369140318469434,
+      "household_energy_expenditure_share": 5.047045096926815,
+      "energy_expenditure_share_gdp": 3.587558726776549,
+      "energy_CPI_YoY": 14.36135009927202,
+      "real_disposable_income_YoY": 1.304212446065578
+    },
+    {
+      "date": "2005-08-01",
+      "real_WTI_YoY": 39.630726768514535,
+      "household_energy_expenditure_share": 5.331672840294631,
+      "energy_expenditure_share_gdp": 3.8112580408109724,
+      "energy_CPI_YoY": 21.12211221122111,
+      "real_disposable_income_YoY": 1.1592428999698257
+    },
+    {
+      "date": "2005-09-01",
+      "real_WTI_YoY": 36.315397177550345,
+      "household_energy_expenditure_share": 5.817693235437252,
+      "energy_expenditure_share_gdp": 4.184090230868344,
+      "energy_CPI_YoY": 36.16742969260953,
+      "real_disposable_income_YoY": 0.7588921592964315
+    },
+    {
+      "date": "2005-10-01",
+      "real_WTI_YoY": 11.981976612673906,
+      "household_energy_expenditure_share": 5.718487394957983,
+      "energy_expenditure_share_gdp": 4.085797545579458,
+      "energy_CPI_YoY": 29.823455233291305,
+      "real_disposable_income_YoY": 1.295812098382454
+    },
+    {
+      "date": "2005-11-01",
+      "real_WTI_YoY": 16.44201429601766,
+      "household_energy_expenditure_share": 5.233482572492573,
+      "energy_expenditure_share_gdp": 3.7548209258879557,
+      "energy_CPI_YoY": 16.60561660561659,
+      "real_disposable_income_YoY": 2.25856074550288
+    },
+    {
+      "date": "2005-12-01",
+      "real_WTI_YoY": 33.240147949319706,
+      "household_energy_expenditure_share": 5.234231603537461,
+      "energy_expenditure_share_gdp": 3.766829147917579,
+      "energy_CPI_YoY": 15.588416512630921,
+      "real_disposable_income_YoY": -1.0618406381336265
+    },
+    {
+      "date": "2006-01-01",
+      "real_WTI_YoY": 34.41290518908539,
+      "household_energy_expenditure_share": 5.005805172254359,
+      "energy_expenditure_share_gdp": 3.582574217819336,
+      "energy_CPI_YoY": 25.063613231552175,
+      "real_disposable_income_YoY": 3.78835790317551
+    },
+    {
+      "date": "2006-02-01",
+      "real_WTI_YoY": 23.5073211501847,
+      "household_energy_expenditure_share": 5.2038604670183615,
+      "energy_expenditure_share_gdp": 3.742878236596966,
+      "energy_CPI_YoY": 19.962917181705798,
+      "real_disposable_income_YoY": 4.219431828301712
+    },
+    {
+      "date": "2006-03-01",
+      "real_WTI_YoY": 11.860226659514804,
+      "household_energy_expenditure_share": 5.140481418232089,
+      "energy_expenditure_share_gdp": 3.7186120319196188,
+      "energy_CPI_YoY": 17.431192660550465,
+      "real_disposable_income_YoY": 4.248012210705676
+    },
+    {
+      "date": "2006-04-01",
+      "real_WTI_YoY": 26.505921598037908,
+      "household_energy_expenditure_share": 5.2749299138725,
+      "energy_expenditure_share_gdp": 3.7896017748016786,
+      "energy_CPI_YoY": 19.0761847630474,
+      "real_disposable_income_YoY": 3.894127846287221
+    },
+    {
+      "date": "2006-05-01",
+      "real_WTI_YoY": 36.72285603154657,
+      "household_energy_expenditure_share": 5.414659273399388,
+      "energy_expenditure_share_gdp": 3.897938433367574,
+      "energy_CPI_YoY": 22.351500306184935,
+      "real_disposable_income_YoY": 3.383336122684466
+    },
+    {
+      "date": "2006-06-01",
+      "real_WTI_YoY": 20.85231864619912,
+      "household_energy_expenditure_share": 5.3390487115243355,
+      "energy_expenditure_share_gdp": 3.857948391615062,
+      "energy_CPI_YoY": 22.052535125229088,
+      "real_disposable_income_YoY": 3.308865544371664
+    },
+    {
+      "date": "2006-07-01",
+      "real_WTI_YoY": 21.156956181830864,
+      "household_energy_expenditure_share": 5.799616769831158,
+      "energy_expenditure_share_gdp": 4.167931970352528,
+      "energy_CPI_YoY": 20.3125,
+      "real_disposable_income_YoY": 3.1597158187773866
+    },
+    {
+      "date": "2006-08-01",
+      "real_WTI_YoY": 8.15278282081,
+      "household_energy_expenditure_share": 5.671160756288223,
+      "energy_expenditure_share_gdp": 4.085020332817407,
+      "energy_CPI_YoY": 15.476839237057227,
+      "real_disposable_income_YoY": 2.908297019806594
+    },
+    {
+      "date": "2006-09-01",
+      "real_WTI_YoY": -4.645776370094923,
+      "household_energy_expenditure_share": 5.2813878740691935,
+      "energy_expenditure_share_gdp": 3.814656297376791,
+      "energy_CPI_YoY": -4.851104707012488,
+      "real_disposable_income_YoY": 3.826593460739791
+    },
+    {
+      "date": "2006-10-01",
+      "real_WTI_YoY": -6.719504730756509,
+      "household_energy_expenditure_share": 4.986105439297204,
+      "energy_expenditure_share_gdp": 3.5656388091934508,
+      "energy_CPI_YoY": -10.587663914521617,
+      "real_disposable_income_YoY": 3.7187081645331466
+    },
+    {
+      "date": "2006-11-01",
+      "real_WTI_YoY": -0.6527527672395284,
+      "household_energy_expenditure_share": 4.798595823168918,
+      "energy_expenditure_share_gdp": 3.4466892124824424,
+      "energy_CPI_YoY": -3.6125654450261835,
+      "real_disposable_income_YoY": 3.49388266188988
+    },
+    {
+      "date": "2006-12-01",
+      "real_WTI_YoY": 1.7197948687106335,
+      "household_energy_expenditure_share": 4.878936291575696,
+      "energy_expenditure_share_gdp": 3.533586522654556,
+      "energy_CPI_YoY": 2.718550106609796,
+      "real_disposable_income_YoY": 3.6705041958526863
+    },
+    {
+      "date": "2007-01-01",
+      "real_WTI_YoY": -18.458001077063212,
+      "household_energy_expenditure_share": 4.9949021606995805,
+      "energy_expenditure_share_gdp": 3.5840778589738873,
+      "energy_CPI_YoY": -3.2141403865717177,
+      "real_disposable_income_YoY": 2.6159048387373707
+    },
+    {
+      "date": "2007-02-01",
+      "real_WTI_YoY": -6.08931237670105,
+      "household_energy_expenditure_share": 5.172514562917649,
+      "energy_expenditure_share_gdp": 3.735319613572393,
+      "energy_CPI_YoY": -0.922205048943836,
+      "real_disposable_income_YoY": 2.5053833270670234
+    },
+    {
+      "date": "2007-03-01",
+      "real_WTI_YoY": -6.203445590725165,
+      "household_energy_expenditure_share": 5.084647383186611,
+      "energy_expenditure_share_gdp": 3.6973333124174195,
+      "energy_CPI_YoY": 4.2739583333333275,
+      "real_disposable_income_YoY": 2.4481804639284954
+    },
+    {
+      "date": "2007-04-01",
+      "real_WTI_YoY": -10.200543779731653,
+      "household_energy_expenditure_share": 5.413193273261697,
+      "energy_expenditure_share_gdp": 3.9001305505690085,
+      "energy_CPI_YoY": 2.421662468513852,
+      "real_disposable_income_YoY": 2.625932359252059
+    },
+    {
+      "date": "2007-05-01",
+      "real_WTI_YoY": -12.793900979313676,
+      "household_energy_expenditure_share": 5.254160784426709,
+      "energy_expenditure_share_gdp": 3.798756318704476,
+      "energy_CPI_YoY": 4.421921921921901,
+      "real_disposable_income_YoY": 2.752879830959043
+    },
+    {
+      "date": "2007-06-01",
+      "real_WTI_YoY": -7.3734502525237495,
+      "household_energy_expenditure_share": 5.3120595257500645,
+      "energy_expenditure_share_gdp": 3.8466660584212753,
+      "energy_CPI_YoY": 5.004504504504492,
+      "real_disposable_income_YoY": 2.564691666879404
+    },
+    {
+      "date": "2007-07-01",
+      "real_WTI_YoY": -2.6507895806528348,
+      "household_energy_expenditure_share": 5.344146591050372,
+      "energy_expenditure_share_gdp": 3.8368271828631966,
+      "energy_CPI_YoY": 0.8364598364598352,
+      "real_disposable_income_YoY": 2.719866517974956
+    },
+    {
+      "date": "2007-08-01",
+      "real_WTI_YoY": -2.785084719830433,
+      "household_energy_expenditure_share": 5.327066196631415,
+      "energy_expenditure_share_gdp": 3.828587754410377,
+      "energy_CPI_YoY": -2.5899008966493664,
+      "real_disposable_income_YoY": 2.844849620857115
+    },
+    {
+      "date": "2007-09-01",
+      "real_WTI_YoY": 21.81024403915457,
+      "household_energy_expenditure_share": 5.402837297251071,
+      "energy_expenditure_share_gdp": 3.9041158485612275,
+      "energy_CPI_YoY": 6.381625441696115,
+      "real_disposable_income_YoY": 2.4533690392454233
+    },
+    {
+      "date": "2007-10-01",
+      "real_WTI_YoY": 40.60833513685118,
+      "household_energy_expenditure_share": 5.255074469799675,
+      "energy_expenditure_share_gdp": 3.7668896717906235,
+      "energy_CPI_YoY": 15.364475828354163,
+      "real_disposable_income_YoY": 1.9124830221787237
+    },
+    {
+      "date": "2007-11-01",
+      "real_WTI_YoY": 53.68576699956806,
+      "household_energy_expenditure_share": 5.650885339978103,
+      "energy_expenditure_share_gdp": 4.068621408084154,
+      "energy_CPI_YoY": 21.571971754481268,
+      "real_disposable_income_YoY": 1.4132197380250178
+    },
+    {
+      "date": "2007-12-01",
+      "real_WTI_YoY": 42.13985450521112,
+      "household_energy_expenditure_share": 5.642453909488176,
+      "energy_expenditure_share_gdp": 4.089008687563447,
+      "energy_CPI_YoY": 17.098598858329005,
+      "real_disposable_income_YoY": 1.353837405716396
+    },
+    {
+      "date": "2008-01-01",
+      "real_WTI_YoY": 63.544899672856346,
+      "household_energy_expenditure_share": 5.594320676287889,
+      "energy_expenditure_share_gdp": 4.072338438863041,
+      "energy_CPI_YoY": 19.179003684025208,
+      "real_disposable_income_YoY": 1.5096264824448369
+    },
+    {
+      "date": "2008-02-01",
+      "real_WTI_YoY": 54.50916294193304,
+      "household_energy_expenditure_share": 5.646205887560455,
+      "energy_expenditure_share_gdp": 4.1199363167592535,
+      "energy_CPI_YoY": 19.458686495762056,
+      "real_disposable_income_YoY": 1.2154051350450112
+    },
+    {
+      "date": "2008-03-01",
+      "real_WTI_YoY": 67.801953108899,
+      "household_energy_expenditure_share": 5.8409348468240845,
+      "energy_expenditure_share_gdp": 4.275649374448289,
+      "energy_CPI_YoY": 16.554448917614863,
+      "real_disposable_income_YoY": 0.9206404599878537
+    },
+    {
+      "date": "2008-04-01",
+      "real_WTI_YoY": 69.35883539229104,
+      "household_energy_expenditure_share": 5.760604537755691,
+      "energy_expenditure_share_gdp": 4.16394759991473,
+      "energy_CPI_YoY": 15.47954571165775,
+      "real_disposable_income_YoY": 0.39824771007566095
+    },
+    {
+      "date": "2008-05-01",
+      "real_WTI_YoY": 89.85592827160221,
+      "household_energy_expenditure_share": 5.633031574298961,
+      "energy_expenditure_share_gdp": 4.2904132136116555,
+      "energy_CPI_YoY": 16.914228197569937,
+      "real_disposable_income_YoY": 5.276163152264957
+    },
+    {
+      "date": "2008-06-01",
+      "real_WTI_YoY": 89.041884871945,
+      "household_energy_expenditure_share": 6.144311721954378,
+      "energy_expenditure_share_gdp": 4.595141527466482,
+      "energy_CPI_YoY": 24.92004251688522,
+      "real_disposable_income_YoY": 2.682252992956302
+    },
+    {
+      "date": "2008-07-01",
+      "real_WTI_YoY": 70.56795160975496,
+      "household_energy_expenditure_share": 6.291080665836341,
+      "energy_expenditure_share_gdp": 4.644607332344945,
+      "energy_CPI_YoY": 29.340914619894185,
+      "real_disposable_income_YoY": 1.0135583106809065
+    },
+    {
+      "date": "2008-08-01",
+      "real_WTI_YoY": 53.11174616424397,
+      "household_energy_expenditure_share": 6.067981151928268,
+      "energy_expenditure_share_gdp": 4.451305755507468,
+      "energy_CPI_YoY": 27.20481367362362,
+      "real_disposable_income_YoY": 0.41173400492093837
+    },
+    {
+      "date": "2008-09-01",
+      "real_WTI_YoY": 24.13300519984056,
+      "household_energy_expenditure_share": 5.966746016544906,
+      "energy_expenditure_share_gdp": 4.390899012745757,
+      "energy_CPI_YoY": 23.43291797553406,
+      "real_disposable_income_YoY": 0.49133139227104383
+    },
+    {
+      "date": "2008-10-01",
+      "real_WTI_YoY": -13.922711989193237,
+      "household_energy_expenditure_share": 5.679943865788202,
+      "energy_expenditure_share_gdp": 4.266779041838736,
+      "energy_CPI_YoY": 12.090721610652299,
+      "real_disposable_income_YoY": 1.325287242144313
+    },
+    {
+      "date": "2008-11-01",
+      "real_WTI_YoY": -40.18724213219089,
+      "household_energy_expenditure_share": 4.699428571428571,
+      "energy_expenditure_share_gdp": 3.5185695933019576,
+      "energy_CPI_YoY": -12.804829009802777,
+      "real_disposable_income_YoY": 2.2849852113901337
+    },
+    {
+      "date": "2008-12-01",
+      "real_WTI_YoY": -55.139811780482304,
+      "household_energy_expenditure_share": 4.2111194243541075,
+      "energy_expenditure_share_gdp": 3.1208480108684094,
+      "energy_CPI_YoY": -21.7443906243768,
+      "real_disposable_income_YoY": 1.3885565776989406
+    },
+    {
+      "date": "2009-01-01",
+      "real_WTI_YoY": -55.08527834415293,
+      "household_energy_expenditure_share": 4.274893265390442,
+      "energy_expenditure_share_gdp": 3.226409548065672,
+      "energy_CPI_YoY": -21.216624407452322,
+      "real_disposable_income_YoY": 1.8488765850161792
+    },
+    {
+      "date": "2009-02-01",
+      "real_WTI_YoY": -59.02536988445162,
+      "household_energy_expenditure_share": 4.353378866122495,
+      "energy_expenditure_share_gdp": 3.2596715021694416,
+      "energy_CPI_YoY": -20.027771611145205,
+      "real_disposable_income_YoY": 0.8244247146222072
+    },
+    {
+      "date": "2009-03-01",
+      "real_WTI_YoY": -54.33640384351766,
+      "household_energy_expenditure_share": 4.356929119998518,
+      "energy_expenditure_share_gdp": 3.2589785447922797,
+      "energy_CPI_YoY": -23.541562209394517,
+      "real_disposable_income_YoY": 0.7969767575889852
+    },
+    {
+      "date": "2009-04-01",
+      "real_WTI_YoY": -55.64554139866298,
+      "household_energy_expenditure_share": 4.225041367898511,
+      "energy_expenditure_share_gdp": 3.1958310120214977,
+      "energy_CPI_YoY": -24.374515499748696,
+      "real_disposable_income_YoY": 1.811450482612731
+    },
+    {
+      "date": "2009-05-01",
+      "real_WTI_YoY": -52.443880419663834,
+      "household_energy_expenditure_share": 4.180695847362514,
+      "energy_expenditure_share_gdp": 3.2118240740921014,
+      "energy_CPI_YoY": -26.276217182401073,
+      "real_disposable_income_YoY": -1.5445566389943433
+    },
+    {
+      "date": "2009-06-01",
+      "real_WTI_YoY": -47.33524779779007,
+      "household_energy_expenditure_share": 4.661712013049495,
+      "energy_expenditure_share_gdp": 3.5372481197026455,
+      "energy_CPI_YoY": -24.819807616729182,
+      "real_disposable_income_YoY": -0.8354475380960791
+    },
+    {
+      "date": "2009-07-01",
+      "real_WTI_YoY": -50.93835063642879,
+      "household_energy_expenditure_share": 4.590930427339414,
+      "energy_expenditure_share_gdp": 3.4521702094321207,
+      "energy_CPI_YoY": -27.796893958672175,
+      "real_disposable_income_YoY": 0.24612961185359605
+    },
+    {
+      "date": "2009-08-01",
+      "real_WTI_YoY": -38.187038534983195,
+      "household_energy_expenditure_share": 4.833934088568486,
+      "energy_expenditure_share_gdp": 3.6383437832767966,
+      "energy_CPI_YoY": -23.225779423078386,
+      "real_disposable_income_YoY": 0.6121809151361957
+    },
+    {
+      "date": "2009-09-01",
+      "real_WTI_YoY": -32.40326101144765,
+      "household_energy_expenditure_share": 4.804708596117056,
+      "energy_expenditure_share_gdp": 3.6328070227163596,
+      "energy_CPI_YoY": -22.046323882748688,
+      "real_disposable_income_YoY": 0.6716602189480669
+    },
+    {
+      "date": "2009-10-01",
+      "real_WTI_YoY": -0.9441249895977277,
+      "household_energy_expenditure_share": 4.961353761719644,
+      "energy_expenditure_share_gdp": 3.7020734546249265,
+      "energy_CPI_YoY": -14.0070989015605,
+      "real_disposable_income_YoY": -0.38642212327927306
+    },
+    {
+      "date": "2009-11-01",
+      "real_WTI_YoY": 33.529170370342484,
+      "household_energy_expenditure_share": 4.85989133501397,
+      "energy_expenditure_share_gdp": 3.644740458646222,
+      "energy_CPI_YoY": 8.084343214368062,
+      "real_disposable_income_YoY": -0.9841323840303229
+    },
+    {
+      "date": "2009-12-01",
+      "real_WTI_YoY": 76.13930136258492,
+      "household_energy_expenditure_share": 5.110235864004708,
+      "energy_expenditure_share_gdp": 3.8522313012358196,
+      "energy_CPI_YoY": 18.87610925173997,
+      "real_disposable_income_YoY": -0.06998242301932134
+    },
+    {
+      "date": "2010-01-01",
+      "real_WTI_YoY": 82.99021920013068,
+      "household_energy_expenditure_share": 5.081409104454699,
+      "energy_expenditure_share_gdp": 3.811140287484736,
+      "energy_CPI_YoY": 19.11217333385573,
+      "real_disposable_income_YoY": -0.6123852283299036
+    },
+    {
+      "date": "2010-02-01",
+      "real_WTI_YoY": 91.31149426747689,
+      "household_energy_expenditure_share": 4.974275656647712,
+      "energy_expenditure_share_gdp": 3.732574040221855,
+      "energy_CPI_YoY": 14.099095911735727,
+      "real_disposable_income_YoY": 0.40925019809017193
+    },
+    {
+      "date": "2010-03-01",
+      "real_WTI_YoY": 65.60289123520056,
+      "household_energy_expenditure_share": 4.797004902048804,
+      "energy_expenditure_share_gdp": 3.6187884407376822,
+      "energy_CPI_YoY": 17.325336995207795,
+      "real_disposable_income_YoY": 0.7972097658196287
+    },
+    {
+      "date": "2010-04-01",
+      "real_WTI_YoY": 66.1196521477017,
+      "household_energy_expenditure_share": 4.746145702669763,
+      "energy_expenditure_share_gdp": 3.5613693361627585,
+      "energy_CPI_YoY": 17.83533837974227,
+      "real_disposable_income_YoY": 1.0316558441558543
+    },
+    {
+      "date": "2010-05-01",
+      "real_WTI_YoY": 22.474793748563158,
+      "household_energy_expenditure_share": 4.797676635712016,
+      "energy_expenditure_share_gdp": 3.628124150336381,
+      "energy_CPI_YoY": 14.903519991102709,
+      "real_disposable_income_YoY": 0.3215974272205768
+    },
+    {
+      "date": "2010-06-01",
+      "real_WTI_YoY": 6.977843308368903,
+      "household_energy_expenditure_share": 4.781368905211304,
+      "energy_expenditure_share_gdp": 3.615440735643393,
+      "energy_CPI_YoY": 3.4161790156978844,
+      "real_disposable_income_YoY": 2.208877880259408
+    },
+    {
+      "date": "2010-07-01",
+      "real_WTI_YoY": 17.392234441855557,
+      "household_energy_expenditure_share": 4.853735710697257,
+      "energy_expenditure_share_gdp": 3.636998371441024,
+      "energy_CPI_YoY": 5.669176311945168,
+      "real_disposable_income_YoY": 2.7457912871254653
+    },
+    {
+      "date": "2010-08-01",
+      "real_WTI_YoY": 6.592071633753904,
+      "household_energy_expenditure_share": 4.865249098296636,
+      "energy_expenditure_share_gdp": 3.6614343510566614,
+      "energy_CPI_YoY": 3.5652808024486227,
+      "real_disposable_income_YoY": 3.252205858234669
+    },
+    {
+      "date": "2010-09-01",
+      "real_WTI_YoY": 7.206185276276056,
+      "household_energy_expenditure_share": 4.857518632178869,
+      "energy_expenditure_share_gdp": 3.6587926235306463,
+      "energy_CPI_YoY": 3.4791914270356106,
+      "real_disposable_income_YoY": 2.9377136035844353
+    },
+    {
+      "date": "2010-10-01",
+      "real_WTI_YoY": 6.911377811453945,
+      "household_energy_expenditure_share": 4.965133958999634,
+      "energy_expenditure_share_gdp": 3.7114273161834306,
+      "energy_CPI_YoY": 5.857297075503509,
+      "real_disposable_income_YoY": 3.2747761047140944
+    },
+    {
+      "date": "2010-11-01",
+      "real_WTI_YoY": 6.871266817293953,
+      "household_energy_expenditure_share": 5.070525609639226,
+      "energy_expenditure_share_gdp": 3.801567578350504,
+      "energy_CPI_YoY": 4.0600762330988305,
+      "real_disposable_income_YoY": 3.1142632767252376
+    },
+    {
+      "date": "2010-12-01",
+      "real_WTI_YoY": 18.010397337148866,
+      "household_energy_expenditure_share": 5.371122440162447,
+      "energy_expenditure_share_gdp": 4.060230939351672,
+      "energy_CPI_YoY": 8.200938475097065,
+      "real_disposable_income_YoY": 3.260533216071404
+    },
+    {
+      "date": "2011-01-01",
+      "real_WTI_YoY": 11.941757773042738,
+      "household_energy_expenditure_share": 5.207377618480059,
+      "energy_expenditure_share_gdp": 3.955978615176887,
+      "energy_CPI_YoY": 7.730478790641304,
+      "real_disposable_income_YoY": 3.6977648993146595
+    },
+    {
+      "date": "2011-02-01",
+      "real_WTI_YoY": 13.546760789406264,
+      "household_energy_expenditure_share": 5.087737248682663,
+      "energy_expenditure_share_gdp": 3.886929754118309,
+      "energy_CPI_YoY": 10.706789298935249,
+      "real_disposable_income_YoY": 3.9424015619915487
+    },
+    {
+      "date": "2011-03-01",
+      "real_WTI_YoY": 23.43218056988876,
+      "household_energy_expenditure_share": 5.354086663317524,
+      "energy_expenditure_share_gdp": 4.0960305503428724,
+      "energy_CPI_YoY": 14.69143823509742,
+      "real_disposable_income_YoY": 3.260860757031847
+    },
+    {
+      "date": "2011-04-01",
+      "real_WTI_YoY": 26.063531057488,
+      "household_energy_expenditure_share": 5.416079224066179,
+      "energy_expenditure_share_gdp": 4.098977351109324,
+      "energy_CPI_YoY": 18.52508615374322,
+      "real_disposable_income_YoY": 2.202922769159077
+    },
+    {
+      "date": "2011-05-01",
+      "real_WTI_YoY": 32.25171464638299,
+      "household_energy_expenditure_share": 5.47680412371134,
+      "energy_expenditure_share_gdp": 4.152327691417003,
+      "energy_CPI_YoY": 21.34868436972188,
+      "real_disposable_income_YoY": 1.3157579962201904
+    },
+    {
+      "date": "2011-06-01",
+      "real_WTI_YoY": 23.45600057577566,
+      "household_energy_expenditure_share": 5.388194954690179,
+      "energy_expenditure_share_gdp": 4.100905676662613,
+      "energy_CPI_YoY": 20.499204962603777,
+      "real_disposable_income_YoY": 1.6947936512997863
+    },
+    {
+      "date": "2011-07-01",
+      "real_WTI_YoY": 23.088478246737697,
+      "household_energy_expenditure_share": 5.471984948891745,
+      "energy_expenditure_share_gdp": 4.163556514448148,
+      "energy_CPI_YoY": 19.001628987272625,
+      "real_disposable_income_YoY": 2.0025170859154784
+    },
+    {
+      "date": "2011-08-01",
+      "real_WTI_YoY": 8.628658867600137,
+      "household_energy_expenditure_share": 5.377831430343879,
+      "energy_expenditure_share_gdp": 4.099649277081331,
+      "energy_CPI_YoY": 18.254538487330542,
+      "real_disposable_income_YoY": 1.6543037311180786
+    },
+    {
+      "date": "2011-09-01",
+      "real_WTI_YoY": 9.479692544022654,
+      "household_energy_expenditure_share": 5.405496034740036,
+      "energy_expenditure_share_gdp": 4.12073866541238,
+      "energy_CPI_YoY": 18.451904380647388,
+      "real_disposable_income_YoY": 1.5234433951024418
+    },
+    {
+      "date": "2011-10-01",
+      "real_WTI_YoY": 1.8224654650164096,
+      "household_energy_expenditure_share": 5.387656637405348,
+      "energy_expenditure_share_gdp": 4.060027045385384,
+      "energy_CPI_YoY": 13.818005629643304,
+      "real_disposable_income_YoY": 1.5834822314869879
+    },
+    {
+      "date": "2011-11-01",
+      "real_WTI_YoY": 11.472692128232076,
+      "household_energy_expenditure_share": 5.308505654821656,
+      "energy_expenditure_share_gdp": 4.005741857900442,
+      "energy_CPI_YoY": 12.822101541713726,
+      "real_disposable_income_YoY": 1.408953518813827
+    },
+    {
+      "date": "2011-12-01",
+      "real_WTI_YoY": 7.278580534310275,
+      "household_energy_expenditure_share": 5.153486059903061,
+      "energy_expenditure_share_gdp": 3.9262077460039,
+      "energy_CPI_YoY": 7.142605556289361,
+      "real_disposable_income_YoY": 1.7183729476523135
+    },
+    {
+      "date": "2012-01-01",
+      "real_WTI_YoY": 9.166851831666389,
+      "household_energy_expenditure_share": 5.005092151516147,
+      "energy_expenditure_share_gdp": 3.7924413171981364,
+      "energy_CPI_YoY": 6.812412216803776,
+      "real_disposable_income_YoY": 1.7849153460333778
+    },
+    {
+      "date": "2012-02-01",
+      "real_WTI_YoY": 12.132698075738713,
+      "household_energy_expenditure_share": 5.181385182526995,
+      "energy_expenditure_share_gdp": 3.9536231847981225,
+      "energy_CPI_YoY": 7.252184704483167,
+      "real_disposable_income_YoY": 1.980182521171514
+    },
+    {
+      "date": "2012-03-01",
+      "real_WTI_YoY": 0.6108714325108622,
+      "household_energy_expenditure_share": 5.015666347387048,
+      "energy_expenditure_share_gdp": 3.845338841313962,
+      "energy_CPI_YoY": 4.024925128811763,
+      "real_disposable_income_YoY": 2.5402779630690375
+    },
+    {
+      "date": "2012-04-01",
+      "real_WTI_YoY": -7.767514665748521,
+      "household_energy_expenditure_share": 5.17810852062118,
+      "energy_expenditure_share_gdp": 3.956287099832389,
+      "energy_CPI_YoY": 0.6855474499651182,
+      "real_disposable_income_YoY": 3.1066007404903617
+    },
+    {
+      "date": "2012-05-01",
+      "real_WTI_YoY": -7.792699814267923,
+      "household_energy_expenditure_share": 5.104689812456026,
+      "energy_expenditure_share_gdp": 3.894585803827517,
+      "energy_CPI_YoY": -3.5645917748779565,
+      "real_disposable_income_YoY": 3.2049617088931504
+    },
+    {
+      "date": "2012-06-01",
+      "real_WTI_YoY": -15.893571402198637,
+      "household_energy_expenditure_share": 4.940621810346224,
+      "energy_expenditure_share_gdp": 3.763162043337139,
+      "energy_CPI_YoY": -3.924914675767921,
+      "real_disposable_income_YoY": 2.6675759784900777
+    },
+    {
+      "date": "2012-07-01",
+      "real_WTI_YoY": -10.931541736174655,
+      "household_energy_expenditure_share": 5.008525670835679,
+      "energy_expenditure_share_gdp": 3.7617479560240086,
+      "energy_CPI_YoY": -5.125778371725554,
+      "real_disposable_income_YoY": 1.516524020740917
+    },
+    {
+      "date": "2012-08-01",
+      "real_WTI_YoY": 7.225020859702003,
+      "household_energy_expenditure_share": 5.235644791675162,
+      "energy_expenditure_share_gdp": 3.933934171310333,
+      "energy_CPI_YoY": -0.7667692806221704,
+      "real_disposable_income_YoY": 1.2648733954702118
+    },
+    {
+      "date": "2012-09-01",
+      "real_WTI_YoY": 8.408955283072682,
+      "household_energy_expenditure_share": 5.216246982553305,
+      "energy_expenditure_share_gdp": 3.959057426921505,
+      "energy_CPI_YoY": 1.7851538925769406,
+      "real_disposable_income_YoY": 2.1233482244146007
+    },
+    {
+      "date": "2012-10-01",
+      "real_WTI_YoY": 1.4833784296285568,
+      "household_energy_expenditure_share": 5.288784419073203,
+      "energy_expenditure_share_gdp": 4.028520831289383,
+      "energy_CPI_YoY": 3.7955849263140884,
+      "real_disposable_income_YoY": 2.7368881870558637
+    },
+    {
+      "date": "2012-11-01",
+      "real_WTI_YoY": -12.511002148282223,
+      "household_energy_expenditure_share": 5.032216291336344,
+      "energy_expenditure_share_gdp": 3.881143349630724,
+      "energy_CPI_YoY": 0.47609433047972605,
+      "real_disposable_income_YoY": 4.169698107598552
+    },
+    {
+      "date": "2012-12-01",
+      "real_WTI_YoY": -12.400735971240785,
+      "household_energy_expenditure_share": 4.694292849875127,
+      "energy_expenditure_share_gdp": 3.7087969557902265,
+      "energy_CPI_YoY": 0.5568043130760536,
+      "real_disposable_income_YoY": 5.769663139124703
+    },
+    {
+      "date": "2013-01-01",
+      "real_WTI_YoY": -7.066837797720826,
+      "household_energy_expenditure_share": 5.20492874885606,
+      "energy_expenditure_share_gdp": 3.826242001457336,
+      "energy_CPI_YoY": 0.06084712262532932,
+      "real_disposable_income_YoY": -0.9408135723925182
+    },
+    {
+      "date": "2013-02-01",
+      "real_WTI_YoY": -8.59112236677081,
+      "household_energy_expenditure_share": 5.438428952716765,
+      "energy_expenditure_share_gdp": 4.002237120205687,
+      "energy_CPI_YoY": 2.731239302846955,
+      "real_disposable_income_YoY": -1.6554614109412502
+    },
+    {
+      "date": "2013-03-01",
+      "real_WTI_YoY": -13.762174574418118,
+      "household_energy_expenditure_share": 5.453019450623772,
+      "energy_expenditure_share_gdp": 4.019656432300234,
+      "energy_CPI_YoY": -1.2601004236371893,
+      "real_disposable_income_YoY": -1.6400844915202328
+    },
+    {
+      "date": "2013-04-01",
+      "real_WTI_YoY": -11.93927984934694,
+      "household_energy_expenditure_share": 5.178511899438162,
+      "energy_expenditure_share_gdp": 3.8072324504606962,
+      "energy_CPI_YoY": -3.686362780712671,
+      "real_disposable_income_YoY": -1.7009110662143168
+    },
+    {
+      "date": "2013-05-01",
+      "real_WTI_YoY": -1.5224100373508298,
+      "household_energy_expenditure_share": 5.091420761934028,
+      "energy_expenditure_share_gdp": 3.7635948356257725,
+      "energy_CPI_YoY": -0.5533361455050789,
+      "real_disposable_income_YoY": -1.2072449952335473
+    },
+    {
+      "date": "2013-06-01",
+      "real_WTI_YoY": 14.402366398897959,
+      "household_energy_expenditure_share": 5.080356278439346,
+      "energy_expenditure_share_gdp": 3.7641926111714565,
+      "energy_CPI_YoY": 2.888548815796743,
+      "real_disposable_income_YoY": -1.0803835934398154
+    },
+    {
+      "date": "2013-07-01",
+      "real_WTI_YoY": 16.88220292283187,
+      "household_energy_expenditure_share": 5.02702266677422,
+      "energy_expenditure_share_gdp": 3.675863836849214,
+      "energy_CPI_YoY": 4.032230442526363,
+      "real_disposable_income_YoY": -0.4461607101647669
+    },
+    {
+      "date": "2013-08-01",
+      "real_WTI_YoY": 11.501301337550206,
+      "household_energy_expenditure_share": 5.060320369075463,
+      "energy_expenditure_share_gdp": 3.7136134012841224,
+      "energy_CPI_YoY": -0.06286047831108865,
+      "real_disposable_income_YoY": 0.06172077521293673
+    },
+    {
+      "date": "2013-09-01",
+      "real_WTI_YoY": 11.241577045001861,
+      "household_energy_expenditure_share": 5.065984163800688,
+      "energy_expenditure_share_gdp": 3.7360272051673493,
+      "energy_CPI_YoY": -4.048429365935791,
+      "real_disposable_income_YoY": -0.1961219940090908
+    },
+    {
+      "date": "2013-10-01",
+      "real_WTI_YoY": 11.367696507776849,
+      "household_energy_expenditure_share": 5.0831689203278625,
+      "energy_expenditure_share_gdp": 3.686594343573026,
+      "energy_CPI_YoY": -5.492994605826951,
+      "real_disposable_income_YoY": -1.273778724699437
+    },
+    {
+      "date": "2013-11-01",
+      "real_WTI_YoY": 7.152827052750688,
+      "household_energy_expenditure_share": 5.204386680095279,
+      "energy_expenditure_share_gdp": 3.7872224315247673,
+      "energy_CPI_YoY": -2.4519831684879367,
+      "real_disposable_income_YoY": -2.3791464211419644
+    },
+    {
+      "date": "2013-12-01",
+      "real_WTI_YoY": 9.459234743543089,
+      "household_energy_expenditure_share": 5.237495817332973,
+      "energy_expenditure_share_gdp": 3.8238673421661526,
+      "energy_CPI_YoY": 0.41886656750085294,
+      "real_disposable_income_YoY": -4.570942701957826
+    },
+    {
+      "date": "2014-01-01",
+      "real_WTI_YoY": -1.6788506716111207,
+      "household_energy_expenditure_share": 5.416976622718855,
+      "energy_expenditure_share_gdp": 3.9801746020319646,
+      "energy_CPI_YoY": 2.1691664115906617,
+      "real_disposable_income_YoY": 1.821649604920017
+    },
+    {
+      "date": "2014-02-01",
+      "real_WTI_YoY": 4.607442569802944,
+      "household_energy_expenditure_share": 5.280717629932722,
+      "energy_expenditure_share_gdp": 3.9022573782668393,
+      "energy_CPI_YoY": -2.256977035229335,
+      "real_disposable_income_YoY": 2.6073248581618413
+    },
+    {
+      "date": "2014-03-01",
+      "real_WTI_YoY": 6.741503713278996,
+      "household_energy_expenditure_share": 5.216236277688791,
+      "energy_expenditure_share_gdp": 3.8819058645968436,
+      "energy_CPI_YoY": 1.3649911798698344,
+      "real_disposable_income_YoY": 2.861789123956382
+    },
+    {
+      "date": "2014-04-01",
+      "real_WTI_YoY": 8.727857557583185,
+      "household_energy_expenditure_share": 5.177933177933178,
+      "energy_expenditure_share_gdp": 3.8039769140157365,
+      "energy_CPI_YoY": 3.9052201286630783,
+      "real_disposable_income_YoY": 2.922425426962638
+    },
+    {
+      "date": "2014-05-01",
+      "real_WTI_YoY": 5.81997664979832,
+      "household_energy_expenditure_share": 5.057761007067411,
+      "energy_expenditure_share_gdp": 3.7337654553686876,
+      "energy_CPI_YoY": 3.636658515894009,
+      "real_disposable_income_YoY": 2.768986120331629
+    },
+    {
+      "date": "2014-06-01",
+      "real_WTI_YoY": 8.23560666518972,
+      "household_energy_expenditure_share": 4.93727391672439,
+      "energy_expenditure_share_gdp": 3.6618415221204907,
+      "energy_CPI_YoY": 2.885324521756316,
+      "real_disposable_income_YoY": 3.1237216051621886
+    },
+    {
+      "date": "2014-07-01",
+      "real_WTI_YoY": -2.94997496673316,
+      "household_energy_expenditure_share": 4.879882183290891,
+      "energy_expenditure_share_gdp": 3.5733085422181747,
+      "energy_CPI_YoY": 2.3696838500983697,
+      "real_disposable_income_YoY": 3.4384706918666685
+    },
+    {
+      "date": "2014-08-01",
+      "real_WTI_YoY": -10.944929158344118,
+      "household_energy_expenditure_share": 4.892616014419699,
+      "energy_expenditure_share_gdp": 3.5980217732552067,
+      "energy_CPI_YoY": 0.3537104883737152,
+      "real_disposable_income_YoY": 3.6724339995065414
+    },
+    {
+      "date": "2014-09-01",
+      "real_WTI_YoY": -13.756141368481757,
+      "household_energy_expenditure_share": 4.770495546928523,
+      "energy_expenditure_share_gdp": 3.519950429751855,
+      "energy_CPI_YoY": -0.4675688479680251,
+      "real_disposable_income_YoY": 3.5217808482057134
+    },
+    {
+      "date": "2014-10-01",
+      "real_WTI_YoY": -17.38461622674642,
+      "household_energy_expenditure_share": 4.767389871096325,
+      "energy_expenditure_share_gdp": 3.512155121691904,
+      "energy_CPI_YoY": -2.0222852277705705,
+      "real_disposable_income_YoY": 4.440213956499628
+    },
+    {
+      "date": "2014-11-01",
+      "real_WTI_YoY": -20.23836382573657,
+      "household_energy_expenditure_share": 4.688042248208223,
+      "energy_expenditure_share_gdp": 3.46916737024217,
+      "energy_CPI_YoY": -5.645234387231268,
+      "real_disposable_income_YoY": 4.811945626168379
+    },
+    {
+      "date": "2014-12-01",
+      "real_WTI_YoY": -39.661372632749966,
+      "household_energy_expenditure_share": 4.332880506165704,
+      "energy_expenditure_share_gdp": 3.2229647937573294,
+      "energy_CPI_YoY": -11.067703564437824,
+      "real_disposable_income_YoY": 5.376715748400418
+    },
+    {
+      "date": "2015-01-01",
+      "real_WTI_YoY": -49.97965496169351,
+      "household_energy_expenditure_share": 4.041032716692786,
+      "energy_expenditure_share_gdp": 2.9833594531832626,
+      "energy_CPI_YoY": -20.138212031636982,
+      "real_disposable_income_YoY": 5.49103559004549
+    },
+    {
+      "date": "2015-02-01",
+      "real_WTI_YoY": -49.78219145577253,
+      "household_energy_expenditure_share": 4.282485959979416,
+      "energy_expenditure_share_gdp": 3.1787808462012053,
+      "energy_CPI_YoY": -18.76723016905072,
+      "real_disposable_income_YoY": 5.324003650745368
+    },
+    {
+      "date": "2015-03-01",
+      "real_WTI_YoY": -52.547254838171185,
+      "household_energy_expenditure_share": 4.20591440385735,
+      "energy_expenditure_share_gdp": 3.119545466447891,
+      "energy_CPI_YoY": -17.684358759966557,
+      "real_disposable_income_YoY": 4.473558801503796
+    },
+    {
+      "date": "2015-04-01",
+      "real_WTI_YoY": -46.59540257000578,
+      "household_energy_expenditure_share": 4.042561107184047,
+      "energy_expenditure_share_gdp": 2.9721357757837836,
+      "energy_CPI_YoY": -18.52487753337816,
+      "real_disposable_income_YoY": 4.308902654067004
+    },
+    {
+      "date": "2015-05-01",
+      "real_WTI_YoY": -42.01810387550056,
+      "household_energy_expenditure_share": 4.146041438183597,
+      "energy_expenditure_share_gdp": 3.0607582671655202,
+      "energy_CPI_YoY": -16.14683022153739,
+      "real_disposable_income_YoY": 4.151612345920119
+    },
+    {
+      "date": "2015-06-01",
+      "real_WTI_YoY": -43.55808675338101,
+      "household_energy_expenditure_share": 4.209382599247559,
+      "energy_expenditure_share_gdp": 3.1154635087591847,
+      "energy_CPI_YoY": -15.096870820218333,
+      "real_disposable_income_YoY": 3.8449447621328847
+    },
+    {
+      "date": "2015-07-01",
+      "real_WTI_YoY": -50.97310547999137,
+      "household_energy_expenditure_share": 4.175354577270216,
+      "energy_expenditure_share_gdp": 3.079619159741645,
+      "energy_CPI_YoY": -14.923375036181785,
+      "real_disposable_income_YoY": 3.8762064122867423
+    },
+    {
+      "date": "2015-08-01",
+      "real_WTI_YoY": -55.70114518686247,
+      "household_energy_expenditure_share": 4.146940335813215,
+      "energy_expenditure_share_gdp": 3.0654899735490764,
+      "energy_CPI_YoY": -15.10791659713715,
+      "real_disposable_income_YoY": 3.643489837050695
+    },
+    {
+      "date": "2015-09-01",
+      "real_WTI_YoY": -51.21277422186448,
+      "household_energy_expenditure_share": 3.8995557839861963,
+      "energy_expenditure_share_gdp": 2.8861579949510983,
+      "energy_CPI_YoY": -18.36182277223625,
+      "real_disposable_income_YoY": 3.6029155513372935
+    },
+    {
+      "date": "2015-10-01",
+      "real_WTI_YoY": -45.300488980777295,
+      "household_energy_expenditure_share": 3.836230906798792,
+      "energy_expenditure_share_gdp": 2.839143533351556,
+      "energy_CPI_YoY": -17.482841968944697,
+      "real_disposable_income_YoY": 3.2928188211678977
+    },
+    {
+      "date": "2015-11-01",
+      "real_WTI_YoY": -44.24144445754459,
+      "household_energy_expenditure_share": 3.727122195683074,
+      "energy_expenditure_share_gdp": 2.7594045002215064,
+      "energy_CPI_YoY": -14.803332518251999,
+      "real_disposable_income_YoY": 2.7083761486744296
+    },
+    {
+      "date": "2015-12-01",
+      "real_WTI_YoY": -37.67527812895456,
+      "household_energy_expenditure_share": 3.574608457036096,
+      "energy_expenditure_share_gdp": 2.6568828861971574,
+      "energy_CPI_YoY": -12.992367390269798,
+      "real_disposable_income_YoY": 2.48631469994387
+    },
+    {
+      "date": "2016-01-01",
+      "real_WTI_YoY": -33.72186892682449,
+      "household_energy_expenditure_share": 3.5671741530594456,
+      "energy_expenditure_share_gdp": 2.650878635909997,
+      "energy_CPI_YoY": -7.3482188409711435,
+      "real_disposable_income_YoY": 2.3438689056871853
+    },
+    {
+      "date": "2016-02-01",
+      "real_WTI_YoY": -40.55805508585384,
+      "household_energy_expenditure_share": 3.3883169495709247,
+      "energy_expenditure_share_gdp": 2.5191713691288853,
+      "energy_CPI_YoY": -13.11194408460208,
+      "real_disposable_income_YoY": 2.0746678220681547
+    },
+    {
+      "date": "2016-03-01",
+      "real_WTI_YoY": -22.183766179314755,
+      "household_energy_expenditure_share": 3.4383601332753875,
+      "energy_expenditure_share_gdp": 2.562354079548922,
+      "energy_CPI_YoY": -11.43241785212653,
+      "real_disposable_income_YoY": 2.346629209415485
+    },
+    {
+      "date": "2016-04-01",
+      "real_WTI_YoY": -26.022484598349095,
+      "household_energy_expenditure_share": 3.5991781575101642,
+      "energy_expenditure_share_gdp": 2.6587640183666883,
+      "energy_CPI_YoY": -8.283843459722862,
+      "real_disposable_income_YoY": 1.9086837162259895
+    },
+    {
+      "date": "2016-05-01",
+      "real_WTI_YoY": -22.021472843512978,
+      "household_energy_expenditure_share": 3.675540488770989,
+      "energy_expenditure_share_gdp": 2.7175507604813287,
+      "energy_CPI_YoY": -9.751020466758863,
+      "real_disposable_income_YoY": 1.658060235402714
+    },
+    {
+      "date": "2016-06-01",
+      "real_WTI_YoY": -19.363043342488197,
+      "household_energy_expenditure_share": 3.7899928613148157,
+      "energy_expenditure_share_gdp": 2.8089374232231785,
+      "energy_CPI_YoY": -9.01634318326533,
+      "real_disposable_income_YoY": 1.6635313281582187
+    },
+    {
+      "date": "2016-07-01",
+      "real_WTI_YoY": -13.03278956134668,
+      "household_energy_expenditure_share": 3.698437320464208,
+      "energy_expenditure_share_gdp": 2.725929395041106,
+      "energy_CPI_YoY": -10.668500115771916,
+      "real_disposable_income_YoY": 1.8294656148198252
+    },
+    {
+      "date": "2016-08-01",
+      "real_WTI_YoY": 3.241781491706308,
+      "household_energy_expenditure_share": 3.700440528634361,
+      "energy_expenditure_share_gdp": 2.734398301899486,
+      "energy_CPI_YoY": -9.496162125621478,
+      "real_disposable_income_YoY": 1.7286413410066315
+    },
+    {
+      "date": "2016-09-01",
+      "real_WTI_YoY": -2.168418770973435,
+      "household_energy_expenditure_share": 3.7035451886725164,
+      "energy_expenditure_share_gdp": 2.748160275544354,
+      "energy_CPI_YoY": -2.536426594202168,
+      "real_disposable_income_YoY": 1.6955096548861182
+    },
+    {
+      "date": "2016-10-01",
+      "real_WTI_YoY": 5.898155235657665,
+      "household_energy_expenditure_share": 3.6571761512608627,
+      "energy_expenditure_share_gdp": 2.6962637181649547,
+      "energy_CPI_YoY": 0.18556764272861237,
+      "real_disposable_income_YoY": 1.703948731504834
+    },
+    {
+      "date": "2016-11-01",
+      "real_WTI_YoY": 5.798553419851227,
+      "household_energy_expenditure_share": 3.635565064004931,
+      "energy_expenditure_share_gdp": 2.6884059455260436,
+      "energy_CPI_YoY": 0.6447512736144079,
+      "real_disposable_income_YoY": 2.002372547057907
+    },
+    {
+      "date": "2016-12-01",
+      "real_WTI_YoY": 36.93990848124618,
+      "household_energy_expenditure_share": 3.8871376083384463,
+      "energy_expenditure_share_gdp": 2.8874695190451196,
+      "energy_CPI_YoY": 4.927870076731722,
+      "real_disposable_income_YoY": 1.8029615510448016
+    },
+    {
+      "date": "2017-01-01",
+      "real_WTI_YoY": 61.65756378359977,
+      "household_energy_expenditure_share": 3.673517930349372,
+      "energy_expenditure_share_gdp": 2.7235358518147534,
+      "energy_CPI_YoY": 10.86943612168325,
+      "real_disposable_income_YoY": 1.7888124862794008
+    },
+    {
+      "date": "2017-02-01",
+      "real_WTI_YoY": 71.50954961287019,
+      "household_energy_expenditure_share": 3.65411941712407,
+      "energy_expenditure_share_gdp": 2.7209425021177296,
+      "energy_CPI_YoY": 15.720999314062833,
+      "real_disposable_income_YoY": 1.9914681683445012
+    },
+    {
+      "date": "2017-03-01",
+      "real_WTI_YoY": 28.247660968775357,
+      "household_energy_expenditure_share": 3.7706909116146714,
+      "energy_expenditure_share_gdp": 2.817933780786432,
+      "energy_CPI_YoY": 11.136231438699685,
+      "real_disposable_income_YoY": 2.41167565120195
+    },
+    {
+      "date": "2017-04-01",
+      "real_WTI_YoY": 22.617372513888622,
+      "household_energy_expenditure_share": 3.7743282096649344,
+      "energy_expenditure_share_gdp": 2.8093524841214483,
+      "energy_CPI_YoY": 8.698376652937934,
+      "real_disposable_income_YoY": 2.85760871106322
+    },
+    {
+      "date": "2017-05-01",
+      "real_WTI_YoY": 1.88492976549548,
+      "household_energy_expenditure_share": 3.6948282018182317,
+      "energy_expenditure_share_gdp": 2.7681973479321575,
+      "energy_CPI_YoY": 5.224395003075366,
+      "real_disposable_income_YoY": 3.655067220034769
+    },
+    {
+      "date": "2017-06-01",
+      "real_WTI_YoY": -8.837148668293892,
+      "household_energy_expenditure_share": 3.654029443427341,
+      "energy_expenditure_share_gdp": 2.7414465094091187,
+      "energy_CPI_YoY": 2.544855079601227,
+      "real_disposable_income_YoY": 3.642705726378792
+    },
+    {
+      "date": "2017-07-01",
+      "real_WTI_YoY": 2.6611459067167997,
+      "household_energy_expenditure_share": 3.5821936065943527,
+      "energy_expenditure_share_gdp": 2.6614064829952575,
+      "energy_CPI_YoY": 3.6752959597135204,
+      "real_disposable_income_YoY": 3.5317547192463383
+    },
+    {
+      "date": "2017-08-01",
+      "real_WTI_YoY": 5.3749658768709185,
+      "household_energy_expenditure_share": 3.637230528215782,
+      "energy_expenditure_share_gdp": 2.711679187024361,
+      "energy_CPI_YoY": 6.716038395524748,
+      "real_disposable_income_YoY": 3.5382000042322836
+    },
+    {
+      "date": "2017-09-01",
+      "real_WTI_YoY": 7.91547923073701,
+      "household_energy_expenditure_share": 3.9040645891046526,
+      "energy_expenditure_share_gdp": 2.92698854569446,
+      "energy_CPI_YoY": 10.653183731007122,
+      "real_disposable_income_YoY": 3.4970547043795763
+    },
+    {
+      "date": "2017-10-01",
+      "real_WTI_YoY": 1.5687974177641895,
+      "household_energy_expenditure_share": 3.8188894059880085,
+      "energy_expenditure_share_gdp": 2.825759910821373,
+      "energy_CPI_YoY": 6.301185331081394,
+      "real_disposable_income_YoY": 3.605097152169945
+    },
+    {
+      "date": "2017-11-01",
+      "real_WTI_YoY": 21.404093701876437,
+      "household_energy_expenditure_share": 3.8842786243628193,
+      "energy_expenditure_share_gdp": 2.8826544056701255,
+      "energy_CPI_YoY": 8.49153647159473,
+      "real_disposable_income_YoY": 3.4854556664051017
+    },
+    {
+      "date": "2017-12-01",
+      "real_WTI_YoY": 9.051098295585213,
+      "household_energy_expenditure_share": 4.0908115934257445,
+      "energy_expenditure_share_gdp": 3.0458517724731253,
+      "energy_CPI_YoY": 7.0476610546681195,
+      "real_disposable_income_YoY": 3.3827731474042277
+    },
+    {
+      "date": "2018-01-01",
+      "real_WTI_YoY": 18.76632632490953,
+      "household_energy_expenditure_share": 4.063167956666622,
+      "energy_expenditure_share_gdp": 3.01103575842314,
+      "energy_CPI_YoY": 5.592859681840978,
+      "real_disposable_income_YoY": 3.5683227004877027
+    },
+    {
+      "date": "2018-02-01",
+      "real_WTI_YoY": 13.809429923945004,
+      "household_energy_expenditure_share": 3.8349193761564893,
+      "energy_expenditure_share_gdp": 2.854605539312119,
+      "energy_CPI_YoY": 7.8419461821459535,
+      "real_disposable_income_YoY": 3.4980023306142805
+    },
+    {
+      "date": "2018-03-01",
+      "real_WTI_YoY": 24.262486689840145,
+      "household_energy_expenditure_share": 4.0078670753686865,
+      "energy_expenditure_share_gdp": 2.9972620284385214,
+      "energy_CPI_YoY": 6.513667246010435,
+      "real_disposable_income_YoY": 3.4435594730697794
+    },
+    {
+      "date": "2018-04-01",
+      "real_WTI_YoY": 26.62650174154355,
+      "household_energy_expenditure_share": 4.07420261005651,
+      "energy_expenditure_share_gdp": 3.023189642907953,
+      "energy_CPI_YoY": 7.987524266582557,
+      "real_disposable_income_YoY": 3.4315921512409364
+    },
+    {
+      "date": "2018-05-01",
+      "real_WTI_YoY": 40.44810596328183,
+      "household_energy_expenditure_share": 3.9414451096764105,
+      "energy_expenditure_share_gdp": 2.9396170587581345,
+      "energy_CPI_YoY": 11.386300762412493,
+      "real_disposable_income_YoY": 3.0600861012819225
+    },
+    {
+      "date": "2018-06-01",
+      "real_WTI_YoY": 46.13350013461874,
+      "household_energy_expenditure_share": 3.9965771407456385,
+      "energy_expenditure_share_gdp": 2.9954940772303966,
+      "energy_CPI_YoY": 11.697706867265234,
+      "real_disposable_income_YoY": 3.424381100918672
+    },
+    {
+      "date": "2018-07-01",
+      "real_WTI_YoY": 47.99692957049781,
+      "household_energy_expenditure_share": 3.9242236665634995,
+      "energy_expenditure_share_gdp": 2.926140201829631,
+      "energy_CPI_YoY": 12.212108533934707,
+      "real_disposable_income_YoY": 3.57771381017995
+    },
+    {
+      "date": "2018-08-01",
+      "real_WTI_YoY": 38.02561834757916,
+      "household_energy_expenditure_share": 3.9801474176233405,
+      "energy_expenditure_share_gdp": 2.980470442185653,
+      "energy_CPI_YoY": 10.58873169520973,
+      "real_disposable_income_YoY": 3.8171995394562064
+    },
+    {
+      "date": "2018-09-01",
+      "real_WTI_YoY": 37.75356071698266,
+      "household_energy_expenditure_share": 3.969728815297073,
+      "energy_expenditure_share_gdp": 2.978547247836767,
+      "energy_CPI_YoY": 5.280106053412181,
+      "real_disposable_income_YoY": 3.6141710866313126
+    },
+    {
+      "date": "2018-10-01",
+      "real_WTI_YoY": 33.833899012966675,
+      "household_energy_expenditure_share": 4.042705262217457,
+      "energy_expenditure_share_gdp": 3.0285114634298043,
+      "energy_CPI_YoY": 8.493337429438185,
+      "real_disposable_income_YoY": 3.5630500522083386
+    },
+    {
+      "date": "2018-11-01",
+      "real_WTI_YoY": -1.5405598998923131,
+      "household_energy_expenditure_share": 3.956685774636238,
+      "energy_expenditure_share_gdp": 2.973056478464081,
+      "energy_CPI_YoY": 2.5595291179880464,
+      "real_disposable_income_YoY": 3.6835442181015754
+    },
+    {
+      "date": "2018-12-01",
+      "real_WTI_YoY": -16.1206782108651,
+      "household_energy_expenditure_share": 3.740659340659341,
+      "energy_expenditure_share_gdp": 2.847804702075982,
+      "energy_CPI_YoY": 0.02622042008857406,
+      "real_disposable_income_YoY": 4.788517289615424
+    },
+    {
+      "date": "2019-01-01",
+      "real_WTI_YoY": -20.52779851759431,
+      "household_energy_expenditure_share": 3.566792708392121,
+      "energy_expenditure_share_gdp": 2.6942533962371398,
+      "energy_CPI_YoY": -5.771137395955817,
+      "real_disposable_income_YoY": 4.3643276503701145
+    },
+    {
+      "date": "2019-02-01",
+      "real_WTI_YoY": -13.011415119806735,
+      "household_energy_expenditure_share": 3.6547258955578323,
+      "energy_expenditure_share_gdp": 2.7700411148373405,
+      "energy_CPI_YoY": -5.449689062918761,
+      "real_disposable_income_YoY": 4.284536662846561
+    },
+    {
+      "date": "2019-03-01",
+      "real_WTI_YoY": -9.004723724980423,
+      "household_energy_expenditure_share": 3.7672342865690993,
+      "energy_expenditure_share_gdp": 2.8628810701225866,
+      "energy_CPI_YoY": -0.3643612089745951,
+      "real_disposable_income_YoY": 3.9513048588295074
+    },
+    {
+      "date": "2019-04-01",
+      "real_WTI_YoY": -5.500046400975722,
+      "household_energy_expenditure_share": 3.8285707167592617,
+      "energy_expenditure_share_gdp": 2.872706706599487,
+      "energy_CPI_YoY": 1.4851823968243139,
+      "real_disposable_income_YoY": 3.511647742416968
+    },
+    {
+      "date": "2019-05-01",
+      "real_WTI_YoY": -14.610963433354895,
+      "household_energy_expenditure_share": 3.7546294855435565,
+      "energy_expenditure_share_gdp": 2.8189632103803652,
+      "energy_CPI_YoY": -0.23615100997533833,
+      "real_disposable_income_YoY": 3.151854852634517
+    },
+    {
+      "date": "2019-06-01",
+      "real_WTI_YoY": -20.794989220112715,
+      "household_energy_expenditure_share": 3.6264957742630575,
+      "energy_expenditure_share_gdp": 2.7292349384319183,
+      "energy_CPI_YoY": -2.7250879170117814,
+      "real_disposable_income_YoY": 2.9287070168592555
+    },
+    {
+      "date": "2019-07-01",
+      "real_WTI_YoY": -20.64215094441886,
+      "household_energy_expenditure_share": 3.68720966243419,
+      "energy_expenditure_share_gdp": 2.7411489277309644,
+      "energy_CPI_YoY": -1.4700198700489775,
+      "real_disposable_income_YoY": 2.61249810664681
+    },
+    {
+      "date": "2019-08-01",
+      "real_WTI_YoY": -20.844422538838494,
+      "household_energy_expenditure_share": 3.6499901468124945,
+      "energy_expenditure_share_gdp": 2.729176834312352,
+      "energy_CPI_YoY": -4.010216311085779,
+      "real_disposable_income_YoY": 2.7935637132019853
+    },
+    {
+      "date": "2019-09-01",
+      "real_WTI_YoY": -20.259231740252382,
+      "household_energy_expenditure_share": 3.6228635300042376,
+      "energy_expenditure_share_gdp": 2.716283810630768,
+      "energy_CPI_YoY": -4.884909914938285,
+      "real_disposable_income_YoY": 3.018867924528301
+    },
+    {
+      "date": "2019-10-01",
+      "real_WTI_YoY": -25.025774191079876,
+      "household_energy_expenditure_share": 3.632567594043887,
+      "energy_expenditure_share_gdp": 2.7050295449135433,
+      "energy_CPI_YoY": -4.757943916963836,
+      "real_disposable_income_YoY": 2.9068815838576345
+    },
+    {
+      "date": "2019-11-01",
+      "real_WTI_YoY": -1.9024812436288174,
+      "household_energy_expenditure_share": 3.693857391983024,
+      "energy_expenditure_share_gdp": 2.7620207286509766,
+      "energy_CPI_YoY": -0.4631578947368431,
+      "real_disposable_income_YoY": 2.9493575010447026
+    },
+    {
+      "date": "2019-12-01",
+      "real_WTI_YoY": 18.048014109681,
+      "household_energy_expenditure_share": 3.606164530110465,
+      "energy_expenditure_share_gdp": 2.689527942936962,
+      "energy_CPI_YoY": 3.534147825679912,
+      "real_disposable_income_YoY": 1.1433914809918289
+    },
+    {
+      "date": "2020-01-01",
+      "real_WTI_YoY": 9.120773268271233,
+      "household_energy_expenditure_share": 3.4634832987971746,
+      "energy_expenditure_share_gdp": 2.6357120454477116,
+      "energy_CPI_YoY": 7.735636683958114,
+      "real_disposable_income_YoY": 1.972799186421481
+    },
+    {
+      "date": "2020-02-01",
+      "real_WTI_YoY": -10.132695052531693,
+      "household_energy_expenditure_share": 3.4290698024119575,
+      "energy_expenditure_share_gdp": 2.6210002391588008,
+      "energy_CPI_YoY": 2.9546852179260563,
+      "real_disposable_income_YoY": 2.1843911467571475
+    },
+    {
+      "date": "2020-03-01",
+      "real_WTI_YoY": -50.51234938094136,
+      "household_energy_expenditure_share": 3.0097004349313394,
+      "energy_expenditure_share_gdp": 2.265158424545766,
+      "energy_CPI_YoY": -6.166078889333459,
+      "real_disposable_income_YoY": 0.8723862139851546
+    },
+    {
+      "date": "2020-04-01",
+      "real_WTI_YoY": -74.16948978999184,
+      "household_energy_expenditure_share": 2.2231370934540964,
+      "energy_expenditure_share_gdp": 2.0833447112280306,
+      "energy_CPI_YoY": -17.90936066900457,
+      "real_disposable_income_YoY": 15.97185564753898
+    },
+    {
+      "date": "2020-05-01",
+      "real_WTI_YoY": -53.135801629906396,
+      "household_energy_expenditure_share": 2.4689691631937998,
+      "energy_expenditure_share_gdp": 2.1995871289781275,
+      "energy_CPI_YoY": -18.357722323748547,
+      "real_disposable_income_YoY": 10.156833457804337
+    },
+    {
+      "date": "2020-06-01",
+      "real_WTI_YoY": -30.41267036009604,
+      "household_energy_expenditure_share": 2.708952200918174,
+      "energy_expenditure_share_gdp": 2.4125312132186068,
+      "energy_CPI_YoY": -12.186520011538848,
+      "real_disposable_income_YoY": 9.562334132282913
+    },
+    {
+      "date": "2020-07-01",
+      "real_WTI_YoY": -29.72459801973183,
+      "household_energy_expenditure_share": 2.774210406346771,
+      "energy_expenditure_share_gdp": 2.2990690797462285,
+      "energy_CPI_YoY": -11.412301103850552,
+      "real_disposable_income_YoY": 10.40663868458549
+    },
+    {
+      "date": "2020-08-01",
+      "real_WTI_YoY": -23.724437600285675,
+      "household_energy_expenditure_share": 2.870634087842902,
+      "energy_expenditure_share_gdp": 2.2940009915944835,
+      "energy_CPI_YoY": -9.604997965835393,
+      "real_disposable_income_YoY": 5.603186864398668
+    },
+    {
+      "date": "2020-09-01",
+      "real_WTI_YoY": -31.35630054600791,
+      "household_energy_expenditure_share": 2.9367323343902747,
+      "energy_expenditure_share_gdp": 2.3640327551458715,
+      "energy_CPI_YoY": -7.656737788418644,
+      "real_disposable_income_YoY": 5.9640070074852725
+    },
+    {
+      "date": "2020-10-01",
+      "real_WTI_YoY": -27.88197966337932,
+      "household_energy_expenditure_share": 2.886248852157943,
+      "energy_expenditure_share_gdp": 2.2768884727597394,
+      "energy_CPI_YoY": -8.89821060259769,
+      "real_disposable_income_YoY": 5.442769800421154
+    },
+    {
+      "date": "2020-11-01",
+      "real_WTI_YoY": -29.07556675234968,
+      "household_energy_expenditure_share": 2.831901527324195,
+      "energy_expenditure_share_gdp": 2.2103339677894307,
+      "energy_CPI_YoY": -9.412473331861992,
+      "real_disposable_income_YoY": 3.899942284152247
+    },
+    {
+      "date": "2020-12-01",
+      "real_WTI_YoY": -22.409309174685312,
+      "household_energy_expenditure_share": 3.0777665560525174,
+      "energy_expenditure_share_gdp": 2.4145250000452747,
+      "energy_CPI_YoY": -7.012388100189904,
+      "real_disposable_income_YoY": 4.551830551269465
+    },
+    {
+      "date": "2021-01-01",
+      "real_WTI_YoY": -10.80591207356566,
+      "household_energy_expenditure_share": 2.829675594760205,
+      "energy_expenditure_share_gdp": 2.408656560890798,
+      "energy_CPI_YoY": -3.4872153606453793,
+      "real_disposable_income_YoY": 14.840810967758223
+    },
+    {
+      "date": "2021-02-01",
+      "real_WTI_YoY": 14.906054750459163,
+      "household_energy_expenditure_share": 3.2791035204374386,
+      "energy_expenditure_share_gdp": 2.5700272914941356,
+      "energy_CPI_YoY": 2.3089773862077223,
+      "real_disposable_income_YoY": 5.01248404118162
+    },
+    {
+      "date": "2021-03-01",
+      "real_WTI_YoY": 107.86732737532417,
+      "household_energy_expenditure_share": 2.7532628396039964,
+      "energy_expenditure_share_gdp": 2.6657033804037646,
+      "energy_CPI_YoY": 13.851577491186573,
+      "real_disposable_income_YoY": 30.681492520204046
+    },
+    {
+      "date": "2021-04-01",
+      "real_WTI_YoY": 258.16096009897205,
+      "household_energy_expenditure_share": 3.202569739397691,
+      "energy_expenditure_share_gdp": 2.5621203189118376,
+      "energy_CPI_YoY": 24.46463584283569,
+      "real_disposable_income_YoY": -3.300527884631388
+    },
+    {
+      "date": "2021-05-01",
+      "real_WTI_YoY": 117.46887315117638,
+      "household_energy_expenditure_share": 3.398453509658734,
+      "energy_expenditure_share_gdp": 2.654752792954468,
+      "energy_CPI_YoY": 27.668295934236852,
+      "real_disposable_income_YoY": -1.0964348334307372
+    },
+    {
+      "date": "2021-06-01",
+      "real_WTI_YoY": 76.95950278261392,
+      "household_energy_expenditure_share": 3.5675073333005587,
+      "energy_expenditure_share_gdp": 2.7879386542507847,
+      "energy_CPI_YoY": 23.773670880710405,
+      "real_disposable_income_YoY": -1.2439736777281385
+    },
+    {
+      "date": "2021-07-01",
+      "real_WTI_YoY": 69.1770496877331,
+      "household_energy_expenditure_share": 3.501010166488402,
+      "energy_expenditure_share_gdp": 2.702400791848048,
+      "energy_CPI_YoY": 23.192648698206963,
+      "real_disposable_income_YoY": -1.4741700527236778
+    },
+    {
+      "date": "2021-08-01",
+      "real_WTI_YoY": 52.13365696024199,
+      "household_energy_expenditure_share": 3.612885833670306,
+      "energy_expenditure_share_gdp": 2.7941348103955823,
+      "energy_CPI_YoY": 24.51282157397301,
+      "real_disposable_income_YoY": 2.2675613589650423
+    },
+    {
+      "date": "2021-09-01",
+      "real_WTI_YoY": 71.5862632760495,
+      "household_energy_expenditure_share": 3.6856091689174137,
+      "energy_expenditure_share_gdp": 2.827909608133538,
+      "energy_CPI_YoY": 24.705523499656845,
+      "real_disposable_income_YoY": 0.569927316231511
+    },
+    {
+      "date": "2021-10-01",
+      "real_WTI_YoY": 94.67685916985037,
+      "household_energy_expenditure_share": 3.743301077764166,
+      "energy_expenditure_share_gdp": 2.795241319276526,
+      "energy_CPI_YoY": 29.902658161366148,
+      "real_disposable_income_YoY": 0.9647873726891021
+    },
+    {
+      "date": "2021-11-01",
+      "real_WTI_YoY": 80.85543724400115,
+      "household_energy_expenditure_share": 3.9230128222359615,
+      "energy_expenditure_share_gdp": 2.9407260534545574,
+      "energy_CPI_YoY": 33.896059730886165,
+      "real_disposable_income_YoY": 1.859380532053878
+    },
+    {
+      "date": "2021-12-01",
+      "real_WTI_YoY": 42.288929055547,
+      "household_energy_expenditure_share": 3.878398832079178,
+      "energy_expenditure_share_gdp": 2.9121127123835318,
+      "energy_CPI_YoY": 30.25672193319395,
+      "real_disposable_income_YoY": 1.2995725010214842
+    },
+    {
+      "date": "2022-01-01",
+      "real_WTI_YoY": 48.771077388503706,
+      "household_energy_expenditure_share": 4.125290657912735,
+      "energy_expenditure_share_gdp": 2.9860975771936915,
+      "energy_CPI_YoY": 27.16571751306067,
+      "real_disposable_income_YoY": -10.926129493239522
+    },
+    {
+      "date": "2022-02-01",
+      "real_WTI_YoY": 43.78904504571568,
+      "household_energy_expenditure_share": 4.239269942787531,
+      "energy_expenditure_share_gdp": 3.08708628835873,
+      "energy_CPI_YoY": 25.579040512310613,
+      "real_disposable_income_YoY": -2.9328094961460716
+    },
+    {
+      "date": "2022-03-01",
+      "real_WTI_YoY": 60.32571659248078,
+      "household_energy_expenditure_share": 4.608324890697208,
+      "energy_expenditure_share_gdp": 3.3686665771365436,
+      "energy_CPI_YoY": 32.001985915676975,
+      "real_disposable_income_YoY": -21.40740740740741
+    },
+    {
+      "date": "2022-04-01",
+      "real_WTI_YoY": 52.36830402664903,
+      "household_energy_expenditure_share": 4.526277691646994,
+      "energy_expenditure_share_gdp": 3.23997733755916,
+      "energy_CPI_YoY": 30.010340806582914,
+      "real_disposable_income_YoY": -7.434833273060216
+    },
+    {
+      "date": "2022-05-01",
+      "real_WTI_YoY": 54.879854528735336,
+      "household_energy_expenditure_share": 4.694295559987743,
+      "energy_expenditure_share_gdp": 3.376474771639406,
+      "energy_CPI_YoY": 34.45578497655033,
+      "real_disposable_income_YoY": -4.842102775020097
+    },
+    {
+      "date": "2022-06-01",
+      "real_WTI_YoY": 47.62932703672944,
+      "household_energy_expenditure_share": 4.883607966222024,
+      "energy_expenditure_share_gdp": 3.537719615864513,
+      "energy_CPI_YoY": 41.460512065341625,
+      "real_disposable_income_YoY": -4.603844851853822
+    },
+    {
+      "date": "2022-07-01",
+      "real_WTI_YoY": 29.254427785472046,
+      "household_energy_expenditure_share": 4.502719338926599,
+      "energy_expenditure_share_gdp": 3.244190984429706,
+      "energy_CPI_YoY": 32.92217786949021,
+      "real_disposable_income_YoY": -4.0054751523661665
+    },
+    {
+      "date": "2022-08-01",
+      "real_WTI_YoY": 27.783999020928785,
+      "household_energy_expenditure_share": 4.262988793981663,
+      "energy_expenditure_share_gdp": 3.0983846480508426,
+      "energy_CPI_YoY": 23.947202233559906,
+      "real_disposable_income_YoY": -3.249966010722871
+    },
+    {
+      "date": "2022-09-01",
+      "real_WTI_YoY": 8.698350976733149,
+      "household_energy_expenditure_share": 4.136750363145881,
+      "energy_expenditure_share_gdp": 3.0277597038673307,
+      "energy_CPI_YoY": 19.89425279859114,
+      "real_disposable_income_YoY": -1.8214424485160086
+    },
+    {
+      "date": "2022-10-01",
+      "real_WTI_YoY": -0.27737185822822585,
+      "household_energy_expenditure_share": 4.243852975844267,
+      "energy_expenditure_share_gdp": 3.0798810960447005,
+      "energy_CPI_YoY": 17.738149444959106,
+      "real_disposable_income_YoY": -1.5370364837003714
+    },
+    {
+      "date": "2022-11-01",
+      "real_WTI_YoY": -0.48898545297878515,
+      "household_energy_expenditure_share": 4.220464691922479,
+      "energy_expenditure_share_gdp": 3.075772097614562,
+      "energy_CPI_YoY": 13.005784729224645,
+      "real_disposable_income_YoY": -1.1008965384984193
+    },
+    {
+      "date": "2022-12-01",
+      "real_WTI_YoY": 0.17360572203946045,
+      "household_energy_expenditure_share": 4.023357485707297,
+      "energy_expenditure_share_gdp": 2.949513782215762,
+      "energy_CPI_YoY": 6.879831578318685,
+      "real_disposable_income_YoY": -0.19625785633442527
+    },
+    {
+      "date": "2023-01-01",
+      "real_WTI_YoY": -11.71305807638695,
+      "household_energy_expenditure_share": 3.786975190839695,
+      "energy_expenditure_share_gdp": 2.799777854896185,
+      "energy_CPI_YoY": 8.300115844834544,
+      "real_disposable_income_YoY": 4.324297641011721
+    },
+    {
+      "date": "2023-02-01",
+      "real_WTI_YoY": -20.873378688052735,
+      "household_energy_expenditure_share": 3.842817573361985,
+      "energy_expenditure_share_gdp": 2.86481206491149,
+      "energy_CPI_YoY": 4.859764203369155,
+      "real_disposable_income_YoY": 4.877958488610279
+    },
+    {
+      "date": "2023-03-01",
+      "real_WTI_YoY": -35.62999316540899,
+      "household_energy_expenditure_share": 3.8549229896080006,
+      "energy_expenditure_share_gdp": 2.894940907969428,
+      "energy_CPI_YoY": -6.6747168416919855,
+      "real_disposable_income_YoY": 6.024604395059274
+    },
+    {
+      "date": "2023-04-01",
+      "real_WTI_YoY": -25.622905338169065,
+      "household_energy_expenditure_share": 3.7449520751228533,
+      "energy_expenditure_share_gdp": 2.79585347722698,
+      "energy_CPI_YoY": -4.939838554094522,
+      "real_disposable_income_YoY": 6.262131406778071
+    },
+    {
+      "date": "2023-05-01",
+      "real_WTI_YoY": -37.255559273071846,
+      "household_energy_expenditure_share": 3.559881514752575,
+      "energy_expenditure_share_gdp": 2.6716256106280936,
+      "energy_CPI_YoY": -11.253446022028657,
+      "real_disposable_income_YoY": 6.791902130037886
+    },
+    {
+      "date": "2023-06-01",
+      "real_WTI_YoY": -40.650468082808736,
+      "household_energy_expenditure_share": 3.565711309983027,
+      "energy_expenditure_share_gdp": 2.6861551856688988,
+      "energy_CPI_YoY": -16.566199433510064,
+      "real_disposable_income_YoY": 7.180521574560017
+    },
+    {
+      "date": "2023-07-01",
+      "real_WTI_YoY": -27.525232473470894,
+      "household_energy_expenditure_share": 3.6146199842341042,
+      "energy_expenditure_share_gdp": 2.678554318695105,
+      "energy_CPI_YoY": -12.342171817588966,
+      "real_disposable_income_YoY": 6.024437014455697
+    },
+    {
+      "date": "2023-08-01",
+      "real_WTI_YoY": -16.22801107566091,
+      "household_energy_expenditure_share": 3.759905822901114,
+      "energy_expenditure_share_gdp": 2.7985905960089683,
+      "energy_CPI_YoY": -3.694218837465768,
+      "real_disposable_income_YoY": 5.54764683240363
+    },
+    {
+      "date": "2023-09-01",
+      "real_WTI_YoY": 2.3580814479753798,
+      "household_energy_expenditure_share": 3.815029452694588,
+      "energy_expenditure_share_gdp": 2.8513068246215845,
+      "energy_CPI_YoY": -0.5032250606080257,
+      "real_disposable_income_YoY": 5.226561453500422
+    },
+    {
+      "date": "2023-10-01",
+      "real_WTI_YoY": -5.2674806140979635,
+      "household_energy_expenditure_share": 3.753969723294265,
+      "energy_expenditure_share_gdp": 2.7820852566297742,
+      "energy_CPI_YoY": -4.3941389254696706,
+      "real_disposable_income_YoY": 5.2499651013880655
+    },
+    {
+      "date": "2023-11-01",
+      "real_WTI_YoY": -10.721361089972737,
+      "household_energy_expenditure_share": 3.6204331294428833,
+      "energy_expenditure_share_gdp": 2.696596293888116,
+      "energy_CPI_YoY": -5.354117816757076,
+      "real_disposable_income_YoY": 5.601507632084424
+    },
+    {
+      "date": "2023-12-01",
+      "real_WTI_YoY": -8.954761034087044,
+      "household_energy_expenditure_share": 3.521418159589975,
+      "energy_expenditure_share_gdp": 2.634678362025845,
+      "energy_CPI_YoY": -1.944260119442609,
+      "real_disposable_income_YoY": 5.449928218986377
+    },
+    {
+      "date": "2024-01-01",
+      "real_WTI_YoY": -7.926080915943102,
+      "household_energy_expenditure_share": 3.485421932973013,
+      "energy_expenditure_share_gdp": 2.6079692112636543,
+      "energy_CPI_YoY": -4.327187601455851,
+      "real_disposable_income_YoY": 3.954006943910482
+    },
+    {
+      "date": "2024-02-01",
+      "real_WTI_YoY": -2.535122323663419,
+      "household_energy_expenditure_share": 3.441194195911177,
+      "energy_expenditure_share_gdp": 2.5856758989194746,
+      "energy_CPI_YoY": -1.8603958406938625,
+      "real_disposable_income_YoY": 3.5180195550116977
+    },
+    {
+      "date": "2024-03-01",
+      "real_WTI_YoY": 7.180388566564844,
+      "household_energy_expenditure_share": 3.5369240848566497,
+      "energy_expenditure_share_gdp": 2.670320819226282,
+      "energy_CPI_YoY": 2.057496782951773,
+      "real_disposable_income_YoY": 3.0306220319554544
+    },
+    {
+      "date": "2024-04-01",
+      "real_WTI_YoY": 3.93457487665132,
+      "household_energy_expenditure_share": 3.5951843560524224,
+      "energy_expenditure_share_gdp": 2.683290971118718,
+      "energy_CPI_YoY": 2.403688670511994,
+      "real_disposable_income_YoY": 2.937211487397362
+    },
+    {
+      "date": "2024-05-01",
+      "real_WTI_YoY": 8.287059179970457,
+      "household_energy_expenditure_share": 3.5775260327268565,
+      "energy_expenditure_share_gdp": 2.6815755312957292,
+      "energy_CPI_YoY": 3.6066255154535876,
+      "real_disposable_income_YoY": 3.004064733349998
+    },
+    {
+      "date": "2024-06-01",
+      "real_WTI_YoY": 10.275468364658625,
+      "household_energy_expenditure_share": 3.4936907438400957,
+      "energy_expenditure_share_gdp": 2.6283968967830837,
+      "energy_CPI_YoY": 0.93285747446612,
+      "real_disposable_income_YoY": 3.1063585090873147
+    },
+    {
+      "date": "2024-07-01",
+      "real_WTI_YoY": 4.461140990585566,
+      "household_energy_expenditure_share": 3.4769418581345772,
+      "energy_expenditure_share_gdp": 2.5864349770314545,
+      "energy_CPI_YoY": 0.9940191908487828,
+      "real_disposable_income_YoY": 2.855552850335652
+    },
+    {
+      "date": "2024-08-01",
+      "real_WTI_YoY": -8.172585785005626,
+      "household_energy_expenditure_share": 3.4039341220978345,
+      "energy_expenditure_share_gdp": 2.536624163246098,
+      "energy_CPI_YoY": -4.038843061501507,
+      "real_disposable_income_YoY": 2.7646408456003746
+    },
+    {
+      "date": "2024-09-01",
+      "real_WTI_YoY": -23.31886004918736,
+      "household_energy_expenditure_share": 3.401730553931367,
+      "energy_expenditure_share_gdp": 2.543062295640124,
+      "energy_CPI_YoY": -6.814912019902741,
+      "real_disposable_income_YoY": 2.8219786832694993
+    },
+    {
+      "date": "2024-10-01",
+      "real_WTI_YoY": -18.05735761078403,
+      "household_energy_expenditure_share": 3.33491193649505,
+      "energy_expenditure_share_gdp": 2.479113119913233,
+      "energy_CPI_YoY": -4.799051488152317,
+      "real_disposable_income_YoY": 2.7056795049967386
+    },
+    {
+      "date": "2024-11-01",
+      "real_WTI_YoY": -12.340746393601298,
+      "household_energy_expenditure_share": 3.258314342606202,
+      "energy_expenditure_share_gdp": 2.430496484480799,
+      "energy_CPI_YoY": -3.141990317069887,
+      "real_disposable_income_YoY": 2.434713750423212
+    },
+    {
+      "date": "2024-12-01",
+      "real_WTI_YoY": -5.199732537075996,
+      "household_energy_expenditure_share": 3.478837222841737,
+      "energy_expenditure_share_gdp": 2.604510510614822,
+      "energy_CPI_YoY": -0.3326649166734863,
+      "real_disposable_income_YoY": 2.209167300662984
+    },
+    {
+      "date": "2025-01-01",
+      "real_WTI_YoY": -0.8219987207565671,
+      "household_energy_expenditure_share": 3.606370318203902,
+      "energy_expenditure_share_gdp": 2.6932193484526206,
+      "energy_CPI_YoY": 0.8283533307376745,
+      "real_disposable_income_YoY": 1.7888639803361306
+    },
+    {
+      "date": "2025-02-01",
+      "real_WTI_YoY": -9.922831190988646,
+      "household_energy_expenditure_share": 3.4942398254653813,
+      "energy_expenditure_share_gdp": 2.6229846083063464,
+      "energy_CPI_YoY": -0.4358859425901196,
+      "real_disposable_income_YoY": 1.7861811072845235
+    },
+    {
+      "date": "2025-03-01",
+      "real_WTI_YoY": -17.995739220126772,
+      "household_energy_expenditure_share": 3.2962773735487394,
+      "energy_expenditure_share_gdp": 2.491169645756941,
+      "energy_CPI_YoY": -3.3884331873856866,
+      "real_disposable_income_YoY": 2.3392178009876696
+    },
+    {
+      "date": "2025-04-01",
+      "real_WTI_YoY": -27.246921024438798,
+      "household_energy_expenditure_share": 3.3235547433448027,
+      "energy_expenditure_share_gdp": 2.493625787987553,
+      "energy_CPI_YoY": -3.5700998918678284,
+      "real_disposable_income_YoY": 2.8023766058530963
+    },
+    {
+      "date": "2025-05-01",
+      "real_WTI_YoY": -24.11822258938614,
+      "household_energy_expenditure_share": 3.2698722857419487,
+      "energy_expenditure_share_gdp": 2.437205946428245,
+      "energy_CPI_YoY": -3.0925694578853857,
+      "real_disposable_income_YoY": 1.510729226061791
+    },
+    {
+      "date": "2025-06-01",
+      "real_WTI_YoY": -16.771152870005313,
+      "household_energy_expenditure_share": 3.343422318475143,
+      "energy_expenditure_share_gdp": 2.4965779889993773,
+      "energy_CPI_YoY": -0.6202296934067375,
+      "real_disposable_income_YoY": 1.1886587310082186
+    },
+    {
+      "date": "2025-07-01",
+      "real_WTI_YoY": -18.624806993678078,
+      "household_energy_expenditure_share": 3.248468547925827,
+      "energy_expenditure_share_gdp": 2.392434735489811,
+      "energy_CPI_YoY": -1.2350558955322888,
+      "real_disposable_income_YoY": 1.677825871319727
+    },
+    {
+      "date": "2025-08-01",
+      "real_WTI_YoY": -17.827350034498956,
+      "household_energy_expenditure_share": 3.2317788691381635,
+      "energy_expenditure_share_gdp": 2.391148480255677,
+      "energy_CPI_YoY": 0.37286094608022236,
+      "real_disposable_income_YoY": 1.825053934850085
+    },
+    {
+      "date": "2025-09-01",
+      "real_WTI_YoY": -11.60863678750379,
+      "household_energy_expenditure_share": 3.323286389856052,
+      "energy_expenditure_share_gdp": 2.467680666686668,
+      "energy_CPI_YoY": 2.940798955556123,
+      "real_disposable_income_YoY": 1.8272471989150052
+    },
+    {
+      "date": "2025-10-01",
+      "real_WTI_YoY": null,
+      "household_energy_expenditure_share": 3.291014100629585,
+      "energy_expenditure_share_gdp": 2.415464625600119,
+      "energy_CPI_YoY": null,
+      "real_disposable_income_YoY": 1.2734061368294025
+    },
+    {
+      "date": "2025-11-01",
+      "real_WTI_YoY": -16.38999061810257,
+      "household_energy_expenditure_share": 3.346920054693044,
+      "energy_expenditure_share_gdp": 2.461609865483125,
+      "energy_CPI_YoY": 4.159454920027383,
+      "real_disposable_income_YoY": 1.0290509427831829
+    },
+    {
+      "date": "2025-12-01",
+      "real_WTI_YoY": -19.458950565487054,
+      "household_energy_expenditure_share": 3.4201131836017593,
+      "energy_expenditure_share_gdp": 2.521439555814195,
+      "energy_CPI_YoY": 2.0709075899924656,
+      "real_disposable_income_YoY": 0.8428522657950799
+    },
+    {
+      "date": "2026-01-01",
+      "real_WTI_YoY": -22.586499084452083,
+      "household_energy_expenditure_share": 3.326223825542082,
+      "energy_expenditure_share_gdp": 2.442122680983744,
+      "energy_CPI_YoY": -0.296168234894012,
+      "real_disposable_income_YoY": 1.368377511207508
+    },
+    {
+      "date": "2026-02-01",
+      "real_WTI_YoY": -11.963075033949,
+      "household_energy_expenditure_share": 3.3264335568632815,
+      "energy_expenditure_share_gdp": 2.4408674136072426,
+      "energy_CPI_YoY": 0.3995093868753852,
+      "real_disposable_income_YoY": 0.7894810306803279
+    },
+    {
+      "date": "2026-03-01",
+      "real_WTI_YoY": 29.656471270511673,
+      "household_energy_expenditure_share": 3.623928133932217,
+      "energy_expenditure_share_gdp": 2.673719511948278,
+      "energy_CPI_YoY": 12.589546298752975,
+      "real_disposable_income_YoY": 0.007765223998990045
+    },
+    {
+      "date": "2026-04-01",
+      "real_WTI_YoY": 52.13815876551675,
+      "household_energy_expenditure_share": 3.7437890909400555,
+      "energy_expenditure_share_gdp": 2.759391510394508,
+      "energy_CPI_YoY": 17.536047421424005,
+      "real_disposable_income_YoY": -1.0704299918931959
+    },
+    {
+      "date": "2026-05-01",
+      "real_WTI_YoY": 57.71665447640888,
+      "household_energy_expenditure_share": 3.8415843258624114,
+      "energy_expenditure_share_gdp": 2.851339845723246,
+      "energy_CPI_YoY": 22.972869920145843,
+      "real_disposable_income_YoY": 0.016128224949785164
+    },
+    {
+      "date": "2026-06-01",
+      "real_WTI_YoY": null,
+      "household_energy_expenditure_share": null,
+      "energy_expenditure_share_gdp": null,
+      "energy_CPI_YoY": 15.45137005619075,
+      "real_disposable_income_YoY": null
+    },
+    {
+      "date": "2026-07-01",
+      "real_WTI_YoY": null,
+      "household_energy_expenditure_share": null,
+      "energy_expenditure_share_gdp": null,
+      "energy_CPI_YoY": null,
+      "real_disposable_income_YoY": null
+    }
+  ],
+  "annotations": [
+    "oil_embargo_1973",
+    "gulf_war_1990",
+    "gfc_2008",
+    "shale_2014",
+    "covid_2020",
+    "reopening_2021"
+  ],
+  "availableTransformations": [
+    "raw",
+    "zscore"
+  ],
+  "evidenceLabel": "Experimental proxy",
+  "methodology": {
+    "formula": "Burden shares divide energy expenditure by household disposable income or nominal GDP; price and income series use year-over-year change.",
+    "notes": "Aggregate burden can hide household distribution, regional prices, substitution, and policy support."
+  },
+  "staticFigure": "energy_burden_dashboard.png",
+  "generatedAt": "2026-07-16T00:14:53+00:00"
+}

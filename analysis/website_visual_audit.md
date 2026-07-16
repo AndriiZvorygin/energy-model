@@ -1,0 +1,50 @@
+# Website visual audit
+
+Generated for the interactive-observatory conversion. A **publication figure** is intentionally retained as a collapsed PNG; it is not the primary website evidence display. Conceptual diagrams without observation-level data are marked separately.
+
+| Route | Section | Current / planned primary visual | Publication PNG | Machine-readable source | Interactive replacement possible | Required transformation | Missing data | Recommended component |
+|---|---|---|---|---|---|---|---|---|
+| `/` | Research framework | CSS timeline diagram | none | framework metadata | yes, conceptual only | none | no time series applies | `TimelineDiagram` |
+| `/overview` | Integrated lead-lag network | conceptual network; PNG moved to publication figure | `final_lead_lag_network.png` | lead-lag summaries and system hierarchy CSV | partly | graph nodes/edges | edge-level uncertainty is not standardized | interactive framework diagram plus `PublicationFigure` |
+| `/liquidity` | GM2 and oil lead | interactive time series with lag selector | `final_gm2_leads_oil_time_series.png` | `charts/gm2-oil-lead.json` | yes, implemented | raw YoY and fixed-reference z-score; visual lag shift | none | `ResearchTimeSeriesChart` |
+| `/liquidity` | Lag correlation | interactive lag curve | `final_gm2_oil_lead_chart.png` | `lag-results.json` | yes, implemented | correlation by lag | none | `LagRelationshipChart` |
+| `/physical-market` | Oil residual and CI | interactive synchronized time series | `final_oil_residual_ci_time_series.png` | `charts/oil-residual-ci.json` | yes, implemented | raw panels or fixed-reference z-score | none | `ResearchTimeSeriesChart` |
+| `/physical-market` | Residual scatter | interactive scatter | `final_residual_ci_diagnostic.png` | `charts/oil-residual-ci.json` | yes, implemented | paired non-null observations | none | `ResearchScatterChart` |
+| `/physical-market` | Physical tightness | interactive multi-series history | `physical_tightness_dashboard.png` | `charts/physical-tightness.json` | yes, implemented in this pass | raw panels or fixed-reference z-score | no reliable public spare-capacity history in the compact dataset | `ResearchTimeSeriesChart` |
+| `/oil-prices` | Benchmark, realised and tradable layers | interactive multi-series history | `final_oil_price_layers_time_series.png` | `charts/oil-price-layers.json` | yes, implemented | raw panels, YoY, indexed, fixed-reference z-score | none | `ResearchTimeSeriesChart` |
+| `/oil-prices` | Physical realised prices | interactive hidden-series controls for RAC, first purchase and landed imports | `physical_realised_prices_vs_benchmarks.png` | `charts/oil-price-layers.json` | yes, implemented in this pass | raw, YoY, indexed or z-score | API/sulphur grade histories remain outside the compact website dataset | `ResearchTimeSeriesChart` |
+| `/oil-prices` | USO tracking | interactive benchmark/tradable history | `uso_vs_wti_yoy.png` | `charts/uso-tracking.json` | yes, implemented | indexed, YoY, return or residual | futures-curve term structure is not consistently available | `ResearchTimeSeriesChart` |
+| `/equities` | Oil and S&P 500 | interactive return/YoY history and scatter | `sp500_vs_wti_yoy.png` | `charts/oil-equities.json` | yes, implemented | monthly log return, YoY or z-score | none | `ResearchTimeSeriesChart`, `ResearchScatterChart` |
+| `/equities` | Return lag robustness | interactive lag curve | `oil_equity_return_lag_correlation.png` | `lag-results.json` | yes, implemented | correlation by lag | none | `LagRelationshipChart` |
+| `/economy` | Energy throughput and activity | interactive quarterly synchronized history | `final_energy_gdp_time_series.png` | `charts/energy-gdp.json` | yes, implemented | quarterly growth or fixed-reference z-score | no false monthly GDP interpolation | `ResearchTimeSeriesChart` |
+| `/economy` | GDP per energy | publication trend remains secondary | `gdp_per_energy_trend.png` | energy-GDP analysis CSV | possible | quarterly ratio or index | chart-ready ratio observations are not yet exported | add `GDP_per_energy` to a future chart dataset |
+| `/energy-burden` | Affordability history | interactive multi-series history | `energy_burden_dashboard.png` | `charts/energy-burden.json` | yes, implemented in this pass | raw panels or fixed-reference z-score | household distribution is unavailable in aggregate burden | `ResearchTimeSeriesChart` |
+| `/energy-burden` | Industrial transmission | interactive multi-series history | `industrial_transmission.png` | `charts/industrial-transmission.json` | yes, implemented in this pass | raw panels or fixed-reference z-score | none | `ResearchTimeSeriesChart` |
+| `/labour` | Early-warning indicators | interactive multi-series history | `labour_early_warning_indicators.png` | `charts/labour-warning.json` | yes, implemented in this pass | raw panels or fixed-reference z-score | none | `ResearchTimeSeriesChart` |
+| `/labour` | Household stress | same interactive dataset with sentiment and delinquency toggles | `household_stress_indicators.png` | `charts/labour-warning.json` | yes, implemented in this pass | raw panels or fixed-reference z-score | insolvency series is not in the compact public dataset | `ResearchTimeSeriesChart` |
+| `/regimes` | Regime timeline | interactive overlays on observed demand-destruction history | `regime_timeline.png` | `regimes.json`, `events.json`, `charts/demand-destruction.json` | yes, implemented in this pass | event/regime shading | confidence per historical boundary remains qualitative | `ResearchTimeSeriesChart` |
+| `/regimes` | Demand destruction | interactive oil, demand, production and unemployment history | `demand_destruction_cycle.png` | `charts/demand-destruction.json` | yes, implemented in this pass | raw panels or fixed-reference z-score | none | `ResearchTimeSeriesChart` |
+| `/episodes` | Episode comparison | interactive normalized period comparison | `historical_episode_comparison.png` | `events.json`, `charts/oil-price-layers.json`, historical episode CSV | yes | indexed elapsed-time alignment | full cross-layer episode panel is not yet one normalized payload | `ComparablePeriodsChart` plus publication figure |
+| `/system-response` | Transmission chain | interactive semantic diagram; PNG secondary | `system_response_chain.png` | system-response framework Markdown | conceptual | none | arrows are hypotheses, not observation series | `TimelineDiagram` / concept diagram |
+| `/system-response` | Indicator lag map | PNG retained as publication figure | `indicator_lag_map.png` | multiple lag-summary CSVs | partly | heterogeneous monthly/quarterly lag normalization | no unified edge-level schema across frequencies | future interactive network |
+| `/current-state` | Five evidence layers | interactive layer histories | `current_state_layers.png` | `manifest.json` and 27 files under `indicators/` | yes, implemented in this pass | fixed 2000-2019 z-score | none | `LayerHistoryChart` |
+| `/current-state` | Indicator readings | sparkline, historical range and expandable history for every indicator | none | one JSON file per indicator | yes, implemented in this pass | raw history and metadata percentiles | none | `CurrentStateIndicatorCard`, `IndicatorHistoryChart` |
+| `/output-quality` | Headline output | interactive history | none | `charts/output-quality-headline.json` | yes, implemented | indexed, raw or z-score | none | `ResearchTimeSeriesChart` |
+| `/output-quality` | Net output per person | interactive history | none | `charts/output-quality-net-output.json` | yes, implemented | indexed, raw or z-score | none | `ResearchTimeSeriesChart` |
+| `/output-quality` | Productive capacity | interactive history | none | `charts/output-quality-capacity.json` | yes, implemented | fixed-reference z-score or indexed | electricity consumption is not yet in this module | `ResearchTimeSeriesChart` |
+| `/output-quality` | Household prosperity | interactive history | none | `charts/output-quality-household.json` | yes, implemented | indexed or raw panels | housing/food/energy components mix median and average concepts | `ResearchTimeSeriesChart` |
+| `/output-quality` | Financialization | interactive history | none | `charts/output-quality-financial.json` | yes, implemented | raw panels, indexed or z-score | housing price-to-income is not yet in the compact export | `ResearchTimeSeriesChart` |
+| `/output-quality` | Energy comparison | interactive correlation bars | none | `output-quality-correlations.json` | yes, implemented | correlations and validation metrics | date coverage differs by measure | `EnergyOutputCorrelationChart` |
+| `/methodology` | Z-score, YoY, lag, correlation, residual and indexing | interactive worked examples | none | pedagogical fixtures, formulas from metadata | yes, implemented in this pass | concept-specific | none | `ConceptExplainerChart` |
+
+## Search findings
+
+The source audit searched for `.png`, `<img`, `ChartViewer`, `Publication figure`, and `publication figure`. Direct `<img>` use remains only in `ChartViewer` and the interactive chart's load-error fallback. Research-page PNGs are placed in `PublicationFigure` disclosures. Conceptual diagrams without an observation-level equivalent are explicitly identified above rather than presented as empirical time-series evidence.
+
+## Exact remaining data gaps
+
+- A chart-ready quarterly `GDP_per_energy` observation series is required to replace the existing long-run publication trend completely.
+- Reliable public spare-capacity and consistent WTI futures-curve term-structure histories are required for those physical-tightness controls.
+- A normalized, cross-frequency edge schema with uncertainty and evidence labels is required for a fully interactive integrated lag network.
+- Electricity consumption, housing price-to-income, and insolvency histories are required for the named output-quality and household extensions.
+- API-gravity and sulphur-grade landed-cost histories are required for an interactive crude-quality decomposition.

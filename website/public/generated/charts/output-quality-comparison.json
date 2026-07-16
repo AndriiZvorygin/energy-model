@@ -1,0 +1,2700 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "output-quality-comparison",
+  "title": "Output, production, and household income",
+  "description": "Real GDP per capita, industrial production, and real median household income can follow different paths even when headline output grows.",
+  "plainLanguageSummary": "Real GDP per capita, industrial production, and real median household income can follow different paths even when headline output grows.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Official real GDP per capita, industrial-production index, and annual real median household income; no monthly or quarterly interpolation is applied to annual income.",
+    "explanation": "The measures differ in concept, population adjustment, frequency, and revisions. Indexed paths compare relative growth rather than levels.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "The measures differ in concept, population adjustment, frequency, and revisions. Indexed paths compare relative growth rather than levels."
+  ],
+  "sourceNotes": [
+    "BEA via FRED",
+    "Federal Reserve via FRED",
+    "Census via FRED"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "1990-01-01",
+    "referenceEnd": "2019-10-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "A939RX0Q048SBEA": {
+        "mean": 51220.40833333333,
+        "standardDeviation": 6668.218373368599,
+        "n": 120
+      },
+      "INDPRO": {
+        "mean": 88.47667249999999,
+        "standardDeviation": 13.272632988851647,
+        "n": 120
+      },
+      "MEHOINUSA672N": {
+        "mean": 69891.66666666667,
+        "standardDeviation": 4485.144429731952,
+        "n": 30
+      }
+    }
+  },
+  "frequency": "quarterly",
+  "dateRange": {
+    "start": "1919-01-01",
+    "end": "2026-01-01"
+  },
+  "series": [
+    {
+      "key": "A939RX0Q048SBEA",
+      "label": "Real GDP per capita",
+      "unit": "chained 2017 USD per person",
+      "source": "BEA via FRED",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "INDPRO",
+      "label": "Industrial production",
+      "unit": "index",
+      "source": "Federal Reserve via FRED",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#2563eb",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "MEHOINUSA672N",
+      "label": "Real median household income",
+      "unit": "2024 USD",
+      "source": "Census via FRED",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "annual",
+      "color": "#d97706",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2024-01-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1919-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 4.6854000000000005,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1919-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 4.721266666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1919-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.241866666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1919-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.116266666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1920-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.591966666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1920-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.3316333333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1920-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.2329,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1920-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 4.541766666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1921-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 3.8955333333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1921-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 3.8596333333333335,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1921-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 3.9493666666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1921-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 4.209666666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1922-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 4.541766666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1922-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 4.846966666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1922-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.107266666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1922-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.7625,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1923-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.933,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1923-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.256166666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1923-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.0766333333333336,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1923-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.8792,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1924-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.959966666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1924-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.493233333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1924-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.3586,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1924-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.807366666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1925-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.139500000000001,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1925-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.1574,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1925-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.175366666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1925-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.4446666666666665,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1926-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.462633333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1926-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.5075,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1926-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.660066666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1926-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.7319,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1927-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.740866666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1927-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.678033333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1927-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.5613,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1927-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.363866666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1928-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.570333333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1928-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.669033333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1928-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.920400000000001,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1928-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 7.270433333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1929-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 7.503800000000001,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1929-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 7.755133333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1929-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 7.8718,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1929-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 7.3153,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1930-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.920366666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1930-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.651066666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1930-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.067666666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1930-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.654766666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1931-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.547066666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1931-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.556066666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1931-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.152133333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1931-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 4.694366666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1932-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 4.434066666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1932-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 3.931433333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1932-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 3.841666666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1932-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 4.146866666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1933-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 3.9493666666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1933-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 4.7572,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1933-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.708633333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1933-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 4.9547,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1934-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.277766666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1934-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.556,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1934-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.008533333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1934-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.1521333333333335,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1935-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.879166666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1935-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.816333333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1935-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.067666666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1935-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.552366666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1936-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.462599999999999,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1936-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 7.001166666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1936-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 7.3871,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1936-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 7.8449,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1937-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 8.185933333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1937-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 8.329566666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1937-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 8.194933333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1937-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.7229,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1938-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.915066666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1938-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 5.7176,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1938-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.310033333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1938-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 6.9114,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1939-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 7.099900000000001,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1939-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 7.1447666666666665,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1939-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 7.6833,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1939-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 8.571900000000001,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1940-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 8.293666666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1940-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 8.491133333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1940-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 8.9579,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1940-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 9.487466666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1941-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 10.3222,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1941-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 11.013366666666665,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1941-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 11.4532,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1941-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 11.704500000000001,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1942-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 12.278966666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1942-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 12.117399999999998,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1942-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 12.790566666666669,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1942-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 13.867666666666665,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1943-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 14.612699999999998,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1943-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 15.0435,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1943-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 15.833366666666668,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1943-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 16.5245,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1944-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 16.721966666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1944-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 16.659166666666668,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1944-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 16.6681,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1944-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 16.614266666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1945-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 16.300133333333335,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1945-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 15.510266666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1945-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 13.365,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1945-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 11.884,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1946-01-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 11.390333333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1946-04-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 11.686566666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1946-07-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 12.799566666666665,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1946-10-01",
+      "A939RX0Q048SBEA": null,
+      "INDPRO": 13.4368,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1947-01-01",
+      "A939RX0Q048SBEA": 15248.0,
+      "INDPRO": 13.759966666666665,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1947-04-01",
+      "A939RX0Q048SBEA": 15139.0,
+      "INDPRO": 13.768933333333331,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1947-07-01",
+      "A939RX0Q048SBEA": 15039.0,
+      "INDPRO": 13.795866666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1947-10-01",
+      "A939RX0Q048SBEA": 15204.0,
+      "INDPRO": 14.172833333333335,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1948-01-01",
+      "A939RX0Q048SBEA": 15371.0,
+      "INDPRO": 14.316466666666665,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1948-04-01",
+      "A939RX0Q048SBEA": 15563.0,
+      "INDPRO": 14.469066666666668,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1948-07-01",
+      "A939RX0Q048SBEA": 15585.0,
+      "INDPRO": 14.603666666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1948-10-01",
+      "A939RX0Q048SBEA": 15530.0,
+      "INDPRO": 14.451133333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1949-01-01",
+      "A939RX0Q048SBEA": 15250.0,
+      "INDPRO": 13.984366666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1949-04-01",
+      "A939RX0Q048SBEA": 15137.0,
+      "INDPRO": 13.544566666666668,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1949-07-01",
+      "A939RX0Q048SBEA": 15228.0,
+      "INDPRO": 13.571466666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1949-10-01",
+      "A939RX0Q048SBEA": 15032.0,
+      "INDPRO": 13.508666666666665,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1950-01-01",
+      "A939RX0Q048SBEA": 15559.0,
+      "INDPRO": 14.217733333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1950-04-01",
+      "A939RX0Q048SBEA": 15977.0,
+      "INDPRO": 15.411499999999998,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1950-07-01",
+      "A939RX0Q048SBEA": 16524.0,
+      "INDPRO": 16.650166666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1950-10-01",
+      "A939RX0Q048SBEA": 16764.0,
+      "INDPRO": 16.9374,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1951-01-01",
+      "A939RX0Q048SBEA": 16922.0,
+      "INDPRO": 17.27846666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1951-04-01",
+      "A939RX0Q048SBEA": 17147.0,
+      "INDPRO": 17.332333333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1951-07-01",
+      "A939RX0Q048SBEA": 17420.0,
+      "INDPRO": 16.919466666666665,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1951-10-01",
+      "A939RX0Q048SBEA": 17375.0,
+      "INDPRO": 17.036133333333336,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1952-01-01",
+      "A939RX0Q048SBEA": 17490.0,
+      "INDPRO": 17.431066666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1952-04-01",
+      "A939RX0Q048SBEA": 17459.0,
+      "INDPRO": 17.179766666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1952-07-01",
+      "A939RX0Q048SBEA": 17509.0,
+      "INDPRO": 17.6824,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1952-10-01",
+      "A939RX0Q048SBEA": 18001.0,
+      "INDPRO": 18.94803333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1953-01-01",
+      "A939RX0Q048SBEA": 18268.0,
+      "INDPRO": 19.324966666666665,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1953-04-01",
+      "A939RX0Q048SBEA": 18341.0,
+      "INDPRO": 19.594266666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1953-07-01",
+      "A939RX0Q048SBEA": 18155.0,
+      "INDPRO": 19.612199999999998,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1953-10-01",
+      "A939RX0Q048SBEA": 17797.0,
+      "INDPRO": 18.6877,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1954-01-01",
+      "A939RX0Q048SBEA": 17636.0,
+      "INDPRO": 18.095299999999998,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1954-04-01",
+      "A939RX0Q048SBEA": 17584.0,
+      "INDPRO": 18.023466666666668,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1954-07-01",
+      "A939RX0Q048SBEA": 17701.0,
+      "INDPRO": 18.113233333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1954-10-01",
+      "A939RX0Q048SBEA": 17960.0,
+      "INDPRO": 18.6159,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1955-01-01",
+      "A939RX0Q048SBEA": 18396.0,
+      "INDPRO": 19.621166666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1955-04-01",
+      "A939RX0Q048SBEA": 18621.0,
+      "INDPRO": 20.4739,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1955-07-01",
+      "A939RX0Q048SBEA": 18787.0,
+      "INDPRO": 20.788033333333335,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1955-10-01",
+      "A939RX0Q048SBEA": 18808.0,
+      "INDPRO": 21.2817,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1956-01-01",
+      "A939RX0Q048SBEA": 18658.0,
+      "INDPRO": 21.362533333333335,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1956-04-01",
+      "A939RX0Q048SBEA": 18736.0,
+      "INDPRO": 21.272766666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1956-07-01",
+      "A939RX0Q048SBEA": 18632.0,
+      "INDPRO": 21.156033333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1956-10-01",
+      "A939RX0Q048SBEA": 18845.0,
+      "INDPRO": 21.927966666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1957-01-01",
+      "A939RX0Q048SBEA": 18881.0,
+      "INDPRO": 22.134433333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1957-04-01",
+      "A939RX0Q048SBEA": 18763.0,
+      "INDPRO": 21.8562,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1957-07-01",
+      "A939RX0Q048SBEA": 18862.0,
+      "INDPRO": 21.936966666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1957-10-01",
+      "A939RX0Q048SBEA": 18582.0,
+      "INDPRO": 21.012433333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1958-01-01",
+      "A939RX0Q048SBEA": 18032.0,
+      "INDPRO": 19.827633333333335,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1958-04-01",
+      "A939RX0Q048SBEA": 18081.0,
+      "INDPRO": 19.4955,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1958-07-01",
+      "A939RX0Q048SBEA": 18419.0,
+      "INDPRO": 20.527733333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1958-10-01",
+      "A939RX0Q048SBEA": 18764.0,
+      "INDPRO": 21.452266666666663,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1959-01-01",
+      "A939RX0Q048SBEA": 19041.0,
+      "INDPRO": 22.394733333333335,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1959-04-01",
+      "A939RX0Q048SBEA": 19395.0,
+      "INDPRO": 23.4808,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1959-07-01",
+      "A939RX0Q048SBEA": 19326.0,
+      "INDPRO": 22.5204,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1959-10-01",
+      "A939RX0Q048SBEA": 19296.0,
+      "INDPRO": 22.6281,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1960-01-01",
+      "A939RX0Q048SBEA": 19614.0,
+      "INDPRO": 23.9924,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1960-04-01",
+      "A939RX0Q048SBEA": 19392.0,
+      "INDPRO": 23.471833333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1960-07-01",
+      "A939RX0Q048SBEA": 19390.0,
+      "INDPRO": 23.085866666666664,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1960-10-01",
+      "A939RX0Q048SBEA": 19065.0,
+      "INDPRO": 22.529366666666665,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1961-01-01",
+      "A939RX0Q048SBEA": 19130.0,
+      "INDPRO": 22.188266666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1961-04-01",
+      "A939RX0Q048SBEA": 19380.0,
+      "INDPRO": 23.067899999999998,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1961-07-01",
+      "A939RX0Q048SBEA": 19670.0,
+      "INDPRO": 23.803933333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1961-10-01",
+      "A939RX0Q048SBEA": 19970.0,
+      "INDPRO": 24.638733333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1962-01-01",
+      "A939RX0Q048SBEA": 20254.0,
+      "INDPRO": 25.006666666666664,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1962-04-01",
+      "A939RX0Q048SBEA": 20366.0,
+      "INDPRO": 25.249066666666664,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1962-07-01",
+      "A939RX0Q048SBEA": 20536.0,
+      "INDPRO": 25.5183,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1962-10-01",
+      "A939RX0Q048SBEA": 20521.0,
+      "INDPRO": 25.7337,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1963-01-01",
+      "A939RX0Q048SBEA": 20677.0,
+      "INDPRO": 26.209466666666668,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1963-04-01",
+      "A939RX0Q048SBEA": 20842.0,
+      "INDPRO": 26.9006,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1963-07-01",
+      "A939RX0Q048SBEA": 21219.0,
+      "INDPRO": 27.080133333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1963-10-01",
+      "A939RX0Q048SBEA": 21276.0,
+      "INDPRO": 27.537899999999997,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1964-01-01",
+      "A939RX0Q048SBEA": 21657.0,
+      "INDPRO": 27.914866666666665,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1964-04-01",
+      "A939RX0Q048SBEA": 21824.0,
+      "INDPRO": 28.5701,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1964-07-01",
+      "A939RX0Q048SBEA": 22085.0,
+      "INDPRO": 29.027866666666668,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1964-10-01",
+      "A939RX0Q048SBEA": 22075.0,
+      "INDPRO": 29.467699999999997,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1965-01-01",
+      "A939RX0Q048SBEA": 22547.0,
+      "INDPRO": 30.580699999999997,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1965-04-01",
+      "A939RX0Q048SBEA": 22770.0,
+      "INDPRO": 31.289766666666665,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1965-07-01",
+      "A939RX0Q048SBEA": 23198.0,
+      "INDPRO": 31.94503333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1965-10-01",
+      "A939RX0Q048SBEA": 23656.0,
+      "INDPRO": 32.59126666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1966-01-01",
+      "A939RX0Q048SBEA": 24172.0,
+      "INDPRO": 33.5248,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1966-04-01",
+      "A939RX0Q048SBEA": 24191.0,
+      "INDPRO": 34.224866666666664,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1966-07-01",
+      "A939RX0Q048SBEA": 24321.0,
+      "INDPRO": 34.754466666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1966-10-01",
+      "A939RX0Q048SBEA": 24446.0,
+      "INDPRO": 35.086533333333335,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1967-01-01",
+      "A939RX0Q048SBEA": 24602.0,
+      "INDPRO": 34.893233333333335,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1967-04-01",
+      "A939RX0Q048SBEA": 24556.0,
+      "INDPRO": 34.75103333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1967-07-01",
+      "A939RX0Q048SBEA": 24719.0,
+      "INDPRO": 34.99006666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1967-10-01",
+      "A939RX0Q048SBEA": 24836.0,
+      "INDPRO": 35.92633333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1968-01-01",
+      "A939RX0Q048SBEA": 25288.0,
+      "INDPRO": 36.439166666666665,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1968-04-01",
+      "A939RX0Q048SBEA": 25652.0,
+      "INDPRO": 36.93043333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1968-07-01",
+      "A939RX0Q048SBEA": 25781.0,
+      "INDPRO": 37.21696666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1968-10-01",
+      "A939RX0Q048SBEA": 25813.0,
+      "INDPRO": 37.78216666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1969-01-01",
+      "A939RX0Q048SBEA": 26162.0,
+      "INDPRO": 38.517133333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1969-04-01",
+      "A939RX0Q048SBEA": 26181.0,
+      "INDPRO": 38.68526666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1969-07-01",
+      "A939RX0Q048SBEA": 26281.0,
+      "INDPRO": 39.149633333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1969-10-01",
+      "A939RX0Q048SBEA": 26076.0,
+      "INDPRO": 38.9042,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1970-01-01",
+      "A939RX0Q048SBEA": 25973.0,
+      "INDPRO": 37.9617,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1970-04-01",
+      "A939RX0Q048SBEA": 25929.0,
+      "INDPRO": 37.75286666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1970-07-01",
+      "A939RX0Q048SBEA": 26079.0,
+      "INDPRO": 37.61766666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1970-10-01",
+      "A939RX0Q048SBEA": 25710.0,
+      "INDPRO": 36.80446666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1971-01-01",
+      "A939RX0Q048SBEA": 26328.0,
+      "INDPRO": 37.51403333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1971-04-01",
+      "A939RX0Q048SBEA": 26394.0,
+      "INDPRO": 37.853833333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1971-07-01",
+      "A939RX0Q048SBEA": 26529.0,
+      "INDPRO": 37.97056666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1971-10-01",
+      "A939RX0Q048SBEA": 26510.0,
+      "INDPRO": 38.85066666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1972-01-01",
+      "A939RX0Q048SBEA": 26932.0,
+      "INDPRO": 40.504333333333335,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1972-04-01",
+      "A939RX0Q048SBEA": 27478.0,
+      "INDPRO": 41.275,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1972-07-01",
+      "A939RX0Q048SBEA": 27666.0,
+      "INDPRO": 41.798566666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1972-10-01",
+      "A939RX0Q048SBEA": 28055.0,
+      "INDPRO": 43.24696666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1973-01-01",
+      "A939RX0Q048SBEA": 28687.0,
+      "INDPRO": 44.48003333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1973-04-01",
+      "A939RX0Q048SBEA": 28935.0,
+      "INDPRO": 44.861700000000006,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1973-07-01",
+      "A939RX0Q048SBEA": 28711.0,
+      "INDPRO": 45.24263333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1973-10-01",
+      "A939RX0Q048SBEA": 28913.0,
+      "INDPRO": 45.941766666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1974-01-01",
+      "A939RX0Q048SBEA": 28606.0,
+      "INDPRO": 45.52466666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1974-04-01",
+      "A939RX0Q048SBEA": 28613.0,
+      "INDPRO": 45.55776666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1974-07-01",
+      "A939RX0Q048SBEA": 28270.0,
+      "INDPRO": 45.3984,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1974-10-01",
+      "A939RX0Q048SBEA": 28088.0,
+      "INDPRO": 43.59813333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1975-01-01",
+      "A939RX0Q048SBEA": 27690.0,
+      "INDPRO": 40.682633333333335,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1975-04-01",
+      "A939RX0Q048SBEA": 27821.0,
+      "INDPRO": 40.15326666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1975-07-01",
+      "A939RX0Q048SBEA": 28214.0,
+      "INDPRO": 41.1432,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1975-10-01",
+      "A939RX0Q048SBEA": 28520.0,
+      "INDPRO": 42.041533333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1976-01-01",
+      "A939RX0Q048SBEA": 29099.0,
+      "INDPRO": 43.313633333333335,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1976-04-01",
+      "A939RX0Q048SBEA": 29250.0,
+      "INDPRO": 43.87166666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1976-07-01",
+      "A939RX0Q048SBEA": 29335.0,
+      "INDPRO": 44.468133333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1976-10-01",
+      "A939RX0Q048SBEA": 29469.0,
+      "INDPRO": 45.2757,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1977-01-01",
+      "A939RX0Q048SBEA": 29749.0,
+      "INDPRO": 46.18496666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1977-04-01",
+      "A939RX0Q048SBEA": 30254.0,
+      "INDPRO": 47.640366666666665,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1977-07-01",
+      "A939RX0Q048SBEA": 30713.0,
+      "INDPRO": 48.17080000000001,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1977-10-01",
+      "A939RX0Q048SBEA": 30626.0,
+      "INDPRO": 48.475366666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1978-01-01",
+      "A939RX0Q048SBEA": 30653.0,
+      "INDPRO": 48.32633333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1978-04-01",
+      "A939RX0Q048SBEA": 31757.0,
+      "INDPRO": 50.2849,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1978-07-01",
+      "A939RX0Q048SBEA": 31982.0,
+      "INDPRO": 50.71953333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1978-10-01",
+      "A939RX0Q048SBEA": 32318.0,
+      "INDPRO": 51.60543333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1979-01-01",
+      "A939RX0Q048SBEA": 32294.0,
+      "INDPRO": 51.849199999999996,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1979-04-01",
+      "A939RX0Q048SBEA": 32244.0,
+      "INDPRO": 51.7338,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1979-07-01",
+      "A939RX0Q048SBEA": 32386.0,
+      "INDPRO": 51.57926666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1979-10-01",
+      "A939RX0Q048SBEA": 32366.0,
+      "INDPRO": 51.79143333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1980-01-01",
+      "A939RX0Q048SBEA": 32377.0,
+      "INDPRO": 52.00663333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1980-04-01",
+      "A939RX0Q048SBEA": 31621.0,
+      "INDPRO": 49.792300000000004,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1980-07-01",
+      "A939RX0Q048SBEA": 31489.0,
+      "INDPRO": 48.97366666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1980-10-01",
+      "A939RX0Q048SBEA": 31990.0,
+      "INDPRO": 50.86423333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1981-01-01",
+      "A939RX0Q048SBEA": 32550.0,
+      "INDPRO": 50.9827,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1981-04-01",
+      "A939RX0Q048SBEA": 32236.0,
+      "INDPRO": 51.139199999999995,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1981-07-01",
+      "A939RX0Q048SBEA": 32533.0,
+      "INDPRO": 51.62113333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1981-10-01",
+      "A939RX0Q048SBEA": 32095.0,
+      "INDPRO": 50.45393333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1982-01-01",
+      "A939RX0Q048SBEA": 31529.0,
+      "INDPRO": 49.42146666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1982-04-01",
+      "A939RX0Q048SBEA": 31603.0,
+      "INDPRO": 48.8149,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1982-07-01",
+      "A939RX0Q048SBEA": 31402.0,
+      "INDPRO": 48.127199999999995,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1982-10-01",
+      "A939RX0Q048SBEA": 31337.0,
+      "INDPRO": 47.22286666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1983-01-01",
+      "A939RX0Q048SBEA": 31686.0,
+      "INDPRO": 47.75703333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1983-04-01",
+      "A939RX0Q048SBEA": 32340.0,
+      "INDPRO": 48.826,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1983-07-01",
+      "A939RX0Q048SBEA": 32906.0,
+      "INDPRO": 50.4923,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1983-10-01",
+      "A939RX0Q048SBEA": 33513.0,
+      "INDPRO": 51.809333333333335,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1984-01-01",
+      "A939RX0Q048SBEA": 34103.0,
+      "INDPRO": 53.34106666666667,
+      "MEHOINUSA672N": 60420.0
+    },
+    {
+      "date": "1984-04-01",
+      "A939RX0Q048SBEA": 34622.0,
+      "INDPRO": 54.17133333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1984-07-01",
+      "A939RX0Q048SBEA": 34871.0,
+      "INDPRO": 54.535666666666664,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1984-10-01",
+      "A939RX0Q048SBEA": 35072.0,
+      "INDPRO": 54.568733333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1985-01-01",
+      "A939RX0Q048SBEA": 35346.0,
+      "INDPRO": 54.76,
+      "MEHOINUSA672N": 61570.0
+    },
+    {
+      "date": "1985-04-01",
+      "A939RX0Q048SBEA": 35582.0,
+      "INDPRO": 54.790099999999995,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1985-07-01",
+      "A939RX0Q048SBEA": 36033.0,
+      "INDPRO": 54.71189999999999,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1985-10-01",
+      "A939RX0Q048SBEA": 36210.0,
+      "INDPRO": 55.024499999999996,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1986-01-01",
+      "A939RX0Q048SBEA": 36476.0,
+      "INDPRO": 55.355799999999995,
+      "MEHOINUSA672N": 63850.0
+    },
+    {
+      "date": "1986-04-01",
+      "A939RX0Q048SBEA": 36563.0,
+      "INDPRO": 55.02146666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1986-07-01",
+      "A939RX0Q048SBEA": 36822.0,
+      "INDPRO": 55.2378,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1986-10-01",
+      "A939RX0Q048SBEA": 36931.0,
+      "INDPRO": 55.8578,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1987-01-01",
+      "A939RX0Q048SBEA": 37132.0,
+      "INDPRO": 56.6085,
+      "MEHOINUSA672N": 64650.0
+    },
+    {
+      "date": "1987-04-01",
+      "A939RX0Q048SBEA": 37454.0,
+      "INDPRO": 57.611,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1987-07-01",
+      "A939RX0Q048SBEA": 37685.0,
+      "INDPRO": 58.69483333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1987-10-01",
+      "A939RX0Q048SBEA": 38238.0,
+      "INDPRO": 60.087700000000005,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1988-01-01",
+      "A939RX0Q048SBEA": 38359.0,
+      "INDPRO": 60.649333333333324,
+      "MEHOINUSA672N": 65130.0
+    },
+    {
+      "date": "1988-04-01",
+      "A939RX0Q048SBEA": 38782.0,
+      "INDPRO": 61.1799,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1988-07-01",
+      "A939RX0Q048SBEA": 38908.0,
+      "INDPRO": 61.40656666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1988-10-01",
+      "A939RX0Q048SBEA": 39328.0,
+      "INDPRO": 61.838,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1989-01-01",
+      "A939RX0Q048SBEA": 39648.0,
+      "INDPRO": 62.12539999999999,
+      "MEHOINUSA672N": 66240.0
+    },
+    {
+      "date": "1989-04-01",
+      "A939RX0Q048SBEA": 39861.0,
+      "INDPRO": 61.890566666666665,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1989-07-01",
+      "A939RX0Q048SBEA": 40046.0,
+      "INDPRO": 61.50886666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1989-10-01",
+      "A939RX0Q048SBEA": 40015.0,
+      "INDPRO": 61.74793333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1990-01-01",
+      "A939RX0Q048SBEA": 40361.0,
+      "INDPRO": 62.20616666666666,
+      "MEHOINUSA672N": 65440.0
+    },
+    {
+      "date": "1990-04-01",
+      "A939RX0Q048SBEA": 40382.0,
+      "INDPRO": 62.6333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1990-07-01",
+      "A939RX0Q048SBEA": 40266.0,
+      "INDPRO": 62.87606666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1990-10-01",
+      "A939RX0Q048SBEA": 39759.0,
+      "INDPRO": 61.90279999999999,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1991-01-01",
+      "A939RX0Q048SBEA": 39451.0,
+      "INDPRO": 60.71796666666666,
+      "MEHOINUSA672N": 63530.0
+    },
+    {
+      "date": "1991-04-01",
+      "A939RX0Q048SBEA": 39632.0,
+      "INDPRO": 61.0384,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1991-07-01",
+      "A939RX0Q048SBEA": 39691.0,
+      "INDPRO": 61.89326666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1991-10-01",
+      "A939RX0Q048SBEA": 39694.0,
+      "INDPRO": 62.01926666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1992-01-01",
+      "A939RX0Q048SBEA": 40051.0,
+      "INDPRO": 61.92676666666667,
+      "MEHOINUSA672N": 63010.0
+    },
+    {
+      "date": "1992-04-01",
+      "A939RX0Q048SBEA": 40350.0,
+      "INDPRO": 63.04576666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1992-07-01",
+      "A939RX0Q048SBEA": 40599.0,
+      "INDPRO": 63.549733333333336,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1992-10-01",
+      "A939RX0Q048SBEA": 40881.0,
+      "INDPRO": 64.19746666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1993-01-01",
+      "A939RX0Q048SBEA": 40829.0,
+      "INDPRO": 64.7863,
+      "MEHOINUSA672N": 62700.0
+    },
+    {
+      "date": "1993-04-01",
+      "A939RX0Q048SBEA": 40942.0,
+      "INDPRO": 64.91473333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1993-07-01",
+      "A939RX0Q048SBEA": 40997.0,
+      "INDPRO": 65.16786666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1993-10-01",
+      "A939RX0Q048SBEA": 41423.0,
+      "INDPRO": 66.18209999999999,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1994-01-01",
+      "A939RX0Q048SBEA": 41713.0,
+      "INDPRO": 66.9881,
+      "MEHOINUSA672N": 63370.0
+    },
+    {
+      "date": "1994-04-01",
+      "A939RX0Q048SBEA": 42154.0,
+      "INDPRO": 68.21563333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1994-07-01",
+      "A939RX0Q048SBEA": 42264.0,
+      "INDPRO": 69.09746666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1994-10-01",
+      "A939RX0Q048SBEA": 42618.0,
+      "INDPRO": 70.5131,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1995-01-01",
+      "A939RX0Q048SBEA": 42654.0,
+      "INDPRO": 71.25923333333333,
+      "MEHOINUSA672N": 65380.0
+    },
+    {
+      "date": "1995-04-01",
+      "A939RX0Q048SBEA": 42660.0,
+      "INDPRO": 71.5003,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1995-07-01",
+      "A939RX0Q048SBEA": 42885.0,
+      "INDPRO": 72.20383333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1995-10-01",
+      "A939RX0Q048SBEA": 43044.0,
+      "INDPRO": 72.79833333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1996-01-01",
+      "A939RX0Q048SBEA": 43259.0,
+      "INDPRO": 73.29090000000001,
+      "MEHOINUSA672N": 66340.0
+    },
+    {
+      "date": "1996-04-01",
+      "A939RX0Q048SBEA": 43856.0,
+      "INDPRO": 74.8777,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1996-07-01",
+      "A939RX0Q048SBEA": 44105.0,
+      "INDPRO": 75.8706,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1996-10-01",
+      "A939RX0Q048SBEA": 44421.0,
+      "INDPRO": 76.97046666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1997-01-01",
+      "A939RX0Q048SBEA": 44590.0,
+      "INDPRO": 78.4405,
+      "MEHOINUSA672N": 67720.0
+    },
+    {
+      "date": "1997-04-01",
+      "A939RX0Q048SBEA": 45203.0,
+      "INDPRO": 79.58906666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1997-07-01",
+      "A939RX0Q048SBEA": 45616.0,
+      "INDPRO": 81.44913333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1997-10-01",
+      "A939RX0Q048SBEA": 45862.0,
+      "INDPRO": 83.49873333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1998-01-01",
+      "A939RX0Q048SBEA": 46204.0,
+      "INDPRO": 84.4227,
+      "MEHOINUSA672N": 70200.0
+    },
+    {
+      "date": "1998-04-01",
+      "A939RX0Q048SBEA": 46504.0,
+      "INDPRO": 84.9798,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1998-07-01",
+      "A939RX0Q048SBEA": 46943.0,
+      "INDPRO": 85.64956666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1998-10-01",
+      "A939RX0Q048SBEA": 47555.0,
+      "INDPRO": 86.87849999999999,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1999-01-01",
+      "A939RX0Q048SBEA": 47880.0,
+      "INDPRO": 87.9162,
+      "MEHOINUSA672N": 71980.0
+    },
+    {
+      "date": "1999-04-01",
+      "A939RX0Q048SBEA": 48148.0,
+      "INDPRO": 88.77896666666668,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1999-07-01",
+      "A939RX0Q048SBEA": 48632.0,
+      "INDPRO": 89.55186666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "1999-10-01",
+      "A939RX0Q048SBEA": 49281.0,
+      "INDPRO": 91.04939999999999,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2000-01-01",
+      "A939RX0Q048SBEA": 49335.0,
+      "INDPRO": 91.83743333333332,
+      "MEHOINUSA672N": 71790.0
+    },
+    {
+      "date": "2000-04-01",
+      "A939RX0Q048SBEA": 50109.0,
+      "INDPRO": 92.87833333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2000-07-01",
+      "A939RX0Q048SBEA": 50024.0,
+      "INDPRO": 92.7787,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2000-10-01",
+      "A939RX0Q048SBEA": 50190.0,
+      "INDPRO": 92.5344,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2001-01-01",
+      "A939RX0Q048SBEA": 49911.0,
+      "INDPRO": 91.44053333333333,
+      "MEHOINUSA672N": 70610.0
+    },
+    {
+      "date": "2001-04-01",
+      "A939RX0Q048SBEA": 50105.0,
+      "INDPRO": 90.34100000000001,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2001-07-01",
+      "A939RX0Q048SBEA": 49774.0,
+      "INDPRO": 89.08386666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2001-10-01",
+      "A939RX0Q048SBEA": 49783.0,
+      "INDPRO": 88.13586666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2002-01-01",
+      "A939RX0Q048SBEA": 50091.0,
+      "INDPRO": 88.738,
+      "MEHOINUSA672N": 70040.0
+    },
+    {
+      "date": "2002-04-01",
+      "A939RX0Q048SBEA": 50286.0,
+      "INDPRO": 90.09136666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2002-07-01",
+      "A939RX0Q048SBEA": 50362.0,
+      "INDPRO": 90.6354,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2002-10-01",
+      "A939RX0Q048SBEA": 50302.0,
+      "INDPRO": 90.63353333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2003-01-01",
+      "A939RX0Q048SBEA": 50462.0,
+      "INDPRO": 91.22833333333334,
+      "MEHOINUSA672N": 70080.0
+    },
+    {
+      "date": "2003-04-01",
+      "A939RX0Q048SBEA": 50796.0,
+      "INDPRO": 90.5838,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2003-07-01",
+      "A939RX0Q048SBEA": 51512.0,
+      "INDPRO": 91.18136666666668,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2003-10-01",
+      "A939RX0Q048SBEA": 51986.0,
+      "INDPRO": 92.03723333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2004-01-01",
+      "A939RX0Q048SBEA": 52179.0,
+      "INDPRO": 92.64823333333334,
+      "MEHOINUSA672N": 69970.0
+    },
+    {
+      "date": "2004-04-01",
+      "A939RX0Q048SBEA": 52469.0,
+      "INDPRO": 93.13409999999999,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2004-07-01",
+      "A939RX0Q048SBEA": 52835.0,
+      "INDPRO": 93.64643333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2004-10-01",
+      "A939RX0Q048SBEA": 53242.0,
+      "INDPRO": 94.95476666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2005-01-01",
+      "A939RX0Q048SBEA": 53719.0,
+      "INDPRO": 96.30059999999999,
+      "MEHOINUSA672N": 71060.0
+    },
+    {
+      "date": "2005-04-01",
+      "A939RX0Q048SBEA": 53868.0,
+      "INDPRO": 96.85623333333332,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2005-07-01",
+      "A939RX0Q048SBEA": 54153.0,
+      "INDPRO": 96.45046666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2005-10-01",
+      "A939RX0Q048SBEA": 54317.0,
+      "INDPRO": 97.34793333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2006-01-01",
+      "A939RX0Q048SBEA": 54927.0,
+      "INDPRO": 98.30133333333333,
+      "MEHOINUSA672N": 71850.0
+    },
+    {
+      "date": "2006-04-01",
+      "A939RX0Q048SBEA": 54945.0,
+      "INDPRO": 98.88279999999999,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2006-07-01",
+      "A939RX0Q048SBEA": 54886.0,
+      "INDPRO": 99.28359999999999,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2006-10-01",
+      "A939RX0Q048SBEA": 55216.0,
+      "INDPRO": 99.51353333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2007-01-01",
+      "A939RX0Q048SBEA": 55260.0,
+      "INDPRO": 100.52153333333332,
+      "MEHOINUSA672N": 73010.0
+    },
+    {
+      "date": "2007-04-01",
+      "A939RX0Q048SBEA": 55474.0,
+      "INDPRO": 101.71776666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2007-07-01",
+      "A939RX0Q048SBEA": 55649.0,
+      "INDPRO": 101.8732,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2007-10-01",
+      "A939RX0Q048SBEA": 55857.0,
+      "INDPRO": 102.17546666666668,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2008-01-01",
+      "A939RX0Q048SBEA": 55497.0,
+      "INDPRO": 101.87406666666668,
+      "MEHOINUSA672N": 70520.0
+    },
+    {
+      "date": "2008-04-01",
+      "A939RX0Q048SBEA": 55705.0,
+      "INDPRO": 100.39313333333332,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2008-07-01",
+      "A939RX0Q048SBEA": 55278.0,
+      "INDPRO": 97.1922,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2008-10-01",
+      "A939RX0Q048SBEA": 53941.0,
+      "INDPRO": 93.00970000000001,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2009-01-01",
+      "A939RX0Q048SBEA": 53221.0,
+      "INDPRO": 87.75126666666667,
+      "MEHOINUSA672N": 70070.0
+    },
+    {
+      "date": "2009-04-01",
+      "A939RX0Q048SBEA": 53017.0,
+      "INDPRO": 85.24893333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2009-07-01",
+      "A939RX0Q048SBEA": 53081.0,
+      "INDPRO": 86.58386666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2009-10-01",
+      "A939RX0Q048SBEA": 53531.0,
+      "INDPRO": 88.01443333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2010-01-01",
+      "A939RX0Q048SBEA": 53683.0,
+      "INDPRO": 89.7711,
+      "MEHOINUSA672N": 68420.0
+    },
+    {
+      "date": "2010-04-01",
+      "A939RX0Q048SBEA": 54100.0,
+      "INDPRO": 91.47163333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2010-07-01",
+      "A939RX0Q048SBEA": 54401.0,
+      "INDPRO": 92.65876666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2010-10-01",
+      "A939RX0Q048SBEA": 54569.0,
+      "INDPRO": 93.04663333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2011-01-01",
+      "A939RX0Q048SBEA": 54341.0,
+      "INDPRO": 93.5568,
+      "MEHOINUSA672N": 67410.0
+    },
+    {
+      "date": "2011-04-01",
+      "A939RX0Q048SBEA": 54610.0,
+      "INDPRO": 93.94496666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2011-07-01",
+      "A939RX0Q048SBEA": 54482.0,
+      "INDPRO": 95.03566666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2011-10-01",
+      "A939RX0Q048SBEA": 54979.0,
+      "INDPRO": 96.02080000000001,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2012-01-01",
+      "A939RX0Q048SBEA": 55342.0,
+      "INDPRO": 96.97176666666667,
+      "MEHOINUSA672N": 67400.0
+    },
+    {
+      "date": "2012-04-01",
+      "A939RX0Q048SBEA": 55490.0,
+      "INDPRO": 97.5877,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2012-07-01",
+      "A939RX0Q048SBEA": 55454.0,
+      "INDPRO": 97.56826666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2012-10-01",
+      "A939RX0Q048SBEA": 55403.0,
+      "INDPRO": 98.0357,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2013-01-01",
+      "A939RX0Q048SBEA": 55859.0,
+      "INDPRO": 98.77346666666666,
+      "MEHOINUSA672N": 69950.0
+    },
+    {
+      "date": "2013-04-01",
+      "A939RX0Q048SBEA": 55914.0,
+      "INDPRO": 99.2267,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2013-07-01",
+      "A939RX0Q048SBEA": 56272.0,
+      "INDPRO": 99.63223333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2013-10-01",
+      "A939RX0Q048SBEA": 56642.0,
+      "INDPRO": 100.3051,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2014-01-01",
+      "A939RX0Q048SBEA": 56345.0,
+      "INDPRO": 100.99029999999999,
+      "MEHOINUSA672N": 69060.0
+    },
+    {
+      "date": "2014-04-01",
+      "A939RX0Q048SBEA": 56968.0,
+      "INDPRO": 102.37046666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2014-07-01",
+      "A939RX0Q048SBEA": 57536.0,
+      "INDPRO": 102.93203333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2014-10-01",
+      "A939RX0Q048SBEA": 57702.0,
+      "INDPRO": 103.4978,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2015-01-01",
+      "A939RX0Q048SBEA": 58121.0,
+      "INDPRO": 102.33846666666666,
+      "MEHOINUSA672N": 72790.0
+    },
+    {
+      "date": "2015-04-01",
+      "A939RX0Q048SBEA": 58376.0,
+      "INDPRO": 100.9316,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2015-07-01",
+      "A939RX0Q048SBEA": 58486.0,
+      "INDPRO": 101.00473333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2015-10-01",
+      "A939RX0Q048SBEA": 58470.0,
+      "INDPRO": 99.613,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2016-01-01",
+      "A939RX0Q048SBEA": 58704.0,
+      "INDPRO": 98.97160000000001,
+      "MEHOINUSA672N": 75380.0
+    },
+    {
+      "date": "2016-04-01",
+      "A939RX0Q048SBEA": 58787.0,
+      "INDPRO": 98.64793333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2016-07-01",
+      "A939RX0Q048SBEA": 59084.0,
+      "INDPRO": 98.86496666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2016-10-01",
+      "A939RX0Q048SBEA": 59296.0,
+      "INDPRO": 98.71053333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2017-01-01",
+      "A939RX0Q048SBEA": 59494.0,
+      "INDPRO": 98.71313333333335,
+      "MEHOINUSA672N": 76710.0
+    },
+    {
+      "date": "2017-04-01",
+      "A939RX0Q048SBEA": 59736.0,
+      "INDPRO": 100.1701,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2017-07-01",
+      "A939RX0Q048SBEA": 60099.0,
+      "INDPRO": 99.86489999999999,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2017-10-01",
+      "A939RX0Q048SBEA": 60674.0,
+      "INDPRO": 101.25183333333332,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2018-01-01",
+      "A939RX0Q048SBEA": 61093.0,
+      "INDPRO": 101.79256666666667,
+      "MEHOINUSA672N": 77700.0
+    },
+    {
+      "date": "2018-04-01",
+      "A939RX0Q048SBEA": 61336.0,
+      "INDPRO": 102.97776666666665,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2018-07-01",
+      "A939RX0Q048SBEA": 61622.0,
+      "INDPRO": 103.83256666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2018-10-01",
+      "A939RX0Q048SBEA": 61619.0,
+      "INDPRO": 104.0491,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2019-01-01",
+      "A939RX0Q048SBEA": 61939.0,
+      "INDPRO": 103.0383,
+      "MEHOINUSA672N": 83260.0
+    },
+    {
+      "date": "2019-04-01",
+      "A939RX0Q048SBEA": 62385.0,
+      "INDPRO": 102.36783333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2019-07-01",
+      "A939RX0Q048SBEA": 63022.0,
+      "INDPRO": 102.2905,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2019-10-01",
+      "A939RX0Q048SBEA": 63360.0,
+      "INDPRO": 101.68853333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2020-01-01",
+      "A939RX0Q048SBEA": 62463.0,
+      "INDPRO": 99.93836666666668,
+      "MEHOINUSA672N": 81580.0
+    },
+    {
+      "date": "2020-04-01",
+      "A939RX0Q048SBEA": 57504.0,
+      "INDPRO": 87.3719,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2020-07-01",
+      "A939RX0Q048SBEA": 61936.0,
+      "INDPRO": 95.64913333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2020-10-01",
+      "A939RX0Q048SBEA": 62605.0,
+      "INDPRO": 97.39466666666665,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2021-01-01",
+      "A939RX0Q048SBEA": 63490.0,
+      "INDPRO": 97.62756666666667,
+      "MEHOINUSA672N": 81270.0
+    },
+    {
+      "date": "2021-04-01",
+      "A939RX0Q048SBEA": 64539.0,
+      "INDPRO": 99.26356666666668,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2021-07-01",
+      "A939RX0Q048SBEA": 64990.0,
+      "INDPRO": 99.71783333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2021-10-01",
+      "A939RX0Q048SBEA": 66011.0,
+      "INDPRO": 100.54136666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2022-01-01",
+      "A939RX0Q048SBEA": 65773.0,
+      "INDPRO": 100.79423333333334,
+      "MEHOINUSA672N": 79500.0
+    },
+    {
+      "date": "2022-04-01",
+      "A939RX0Q048SBEA": 65777.0,
+      "INDPRO": 101.26383333333332,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2022-07-01",
+      "A939RX0Q048SBEA": 66120.0,
+      "INDPRO": 101.20369999999998,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2022-10-01",
+      "A939RX0Q048SBEA": 66433.0,
+      "INDPRO": 100.65816666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2023-01-01",
+      "A939RX0Q048SBEA": 66789.0,
+      "INDPRO": 100.72236666666667,
+      "MEHOINUSA672N": 82690.0
+    },
+    {
+      "date": "2023-04-01",
+      "A939RX0Q048SBEA": 67077.0,
+      "INDPRO": 100.76706666666666,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2023-07-01",
+      "A939RX0Q048SBEA": 67689.0,
+      "INDPRO": 100.92236666666668,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2023-10-01",
+      "A939RX0Q048SBEA": 68089.0,
+      "INDPRO": 100.6453,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2024-01-01",
+      "A939RX0Q048SBEA": 68082.0,
+      "INDPRO": 99.98826666666666,
+      "MEHOINUSA672N": 83730.0
+    },
+    {
+      "date": "2024-04-01",
+      "A939RX0Q048SBEA": 68524.0,
+      "INDPRO": 100.66680000000001,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2024-07-01",
+      "A939RX0Q048SBEA": 68951.0,
+      "INDPRO": 100.07166666666667,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2024-10-01",
+      "A939RX0Q048SBEA": 69168.0,
+      "INDPRO": 99.69643333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2025-01-01",
+      "A939RX0Q048SBEA": 68979.0,
+      "INDPRO": 100.7348,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2025-04-01",
+      "A939RX0Q048SBEA": 69549.0,
+      "INDPRO": 101.19063333333334,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2025-07-01",
+      "A939RX0Q048SBEA": 70218.0,
+      "INDPRO": 101.72890000000001,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2025-10-01",
+      "A939RX0Q048SBEA": 70249.0,
+      "INDPRO": 101.24933333333333,
+      "MEHOINUSA672N": null
+    },
+    {
+      "date": "2026-01-01",
+      "A939RX0Q048SBEA": 70583.0,
+      "INDPRO": 101.56670000000001,
+      "MEHOINUSA672N": null
+    }
+  ],
+  "annotations": [
+    "oil_embargo_1973",
+    "gulf_war_1990",
+    "gfc_2008",
+    "shale_2014",
+    "covid_2020",
+    "reopening_2021"
+  ],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Official real GDP per capita, industrial-production index, and annual real median household income; no monthly or quarterly interpolation is applied to annual income.",
+    "notes": "The measures differ in concept, population adjustment, frequency, and revisions. Indexed paths compare relative growth rather than levels."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T00:14:53+00:00"
+}

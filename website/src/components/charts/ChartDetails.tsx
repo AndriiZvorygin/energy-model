@@ -1,4 +1,5 @@
 import type { ChartDataset } from './chartTypes'
+import { ConceptExplainerChart, type ConceptType } from './ConceptExplainerChart'
 
 export type ChartDetailsData = Pick<ChartDataset, 'plainLanguageSummary' | 'description' | 'howToRead' | 'calculation' | 'patternsToWatch' | 'limitations' | 'sourceNotes' | 'transformation'> & Partial<Pick<ChartDataset, 'series' | 'availableTransformations'>>
 
@@ -11,6 +12,8 @@ export function ChartDetails({ dataset }: { dataset: ChartDetailsData }) {
   const reference = dataset.transformation.referenceStart && dataset.transformation.referenceEnd
     ? `${dataset.transformation.referenceStart.slice(0, 7)} to ${dataset.transformation.referenceEnd.slice(0, 7)}`
     : 'not applicable'
+  const formula = dataset.calculation.formula.toLowerCase()
+  const explainer: ConceptType | null = formula.includes('residual') ? 'residual' : formula.includes('corr') || formula.includes('correlation') ? 'correlation' : formula.includes('lag') || formula.includes('t-') ? 'lag' : dataset.availableTransformations?.includes('zscore') ? 'zscore' : dataset.availableTransformations?.includes('indexed') ? 'indexed' : formula.includes('yoy') || formula.includes('year-over-year') ? 'yoy' : null
   return <div className="mt-5">
     <p className="max-w-4xl border-l-2 border-petroleum pl-4 text-sm leading-6 text-stone-700 dark:text-stone-200">{dataset.plainLanguageSummary}</p>
     <details className="mt-4 border-y border-stone-200 py-4 dark:border-stone-800">
@@ -23,6 +26,7 @@ export function ChartDetails({ dataset }: { dataset: ChartDetailsData }) {
         <section><h3 className="font-semibold text-ink dark:text-white">Limitations and alternative explanations</h3><ul className="mt-1 list-disc space-y-1 pl-5">{dataset.limitations.map((item) => <li key={item}>{item}</li>)}</ul></section>
         <section><h3 className="font-semibold text-ink dark:text-white">Data sources and observation dates</h3><ul className="mt-1 list-disc space-y-1 pl-5">{dataset.sourceNotes.map((item) => <li key={item}>{item}</li>)}</ul>{dataset.series?.length ? <p className="mt-2 text-xs">Latest observations: {observationRange(dataset)}.</p> : null}</section>
       </div>
+      {explainer && <div className="mt-6"><h3 className="mb-3 text-sm font-semibold">Visual calculation example</h3><ConceptExplainerChart concept={explainer} /></div>}
     </details>
   </div>
 }

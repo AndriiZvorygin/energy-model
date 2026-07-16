@@ -32,6 +32,26 @@ for (const entry of manifest.datasets ?? []) {
   if (dates.some((date) => !/^\d{4}-\d{2}-\d{2}$/.test(date))) failures.push(`${entry.file}: non-ISO observation date`)
   if (dates.some((date, index) => index > 0 && date <= dates[index - 1])) failures.push(`${entry.file}: dates must be strictly increasing and unique`)
 }
+const indicatorRequired = ['schemaVersion', 'id', 'label', 'description', 'unit', 'frequency', 'status', 'interpretationDirection', 'source', 'sourceUrl', 'startDate', 'endDate', 'latest', 'referenceRanges', 'observations', 'evidenceLabel']
+for (const entry of manifest.indicators ?? []) {
+  let indicator
+  try {
+    indicator = JSON.parse(await readFile(resolve(generatedRoot, entry.file), 'utf8'))
+  } catch (error) {
+    failures.push(`${entry.file}: ${error.message}`)
+    continue
+  }
+  const missing = indicatorRequired.filter((field) => !(field in indicator))
+  if (missing.length) failures.push(`${entry.file}: missing ${missing.join(', ')}`)
+  if (indicator.schemaVersion !== 1) failures.push(`${entry.file}: unsupported indicator schema version`)
+  const dates = (indicator.observations ?? []).map((row) => row.date)
+  if (dates.some((date, index) => index > 0 && date <= dates[index - 1])) failures.push(`${entry.file}: dates must be strictly increasing and unique`)
+  if ((indicator.observations ?? []).some((row) => row.value !== null && typeof row.value !== 'number')) failures.push(`${entry.file}: values must be numeric or null`)
+  const range = indicator.referenceRanges ?? {}
+  const ordered = ['minimum', 'p10', 'p25', 'historicalMedian', 'p75', 'p90', 'maximum'].map((key) => range[key]).filter((value) => value !== null && value !== undefined)
+  if (ordered.some((value, index) => index > 0 && value < ordered[index - 1])) failures.push(`${entry.file}: invalid historical range ordering`)
+  if (!indicator.interpretationDirection || !indicator.interpretationLabel) failures.push(`${entry.file}: missing interpretation metadata`)
+}
 for (const file of manifest.shared ?? []) {
   try {
     await readFile(resolve(generatedRoot, file), 'utf8')
@@ -43,4 +63,4 @@ for (const file of manifest.shared ?? []) {
 if (failures.length) {
   throw new Error(`Chart-data validation failed:\n- ${failures.join('\n- ')}`)
 }
-console.log(`Validated ${manifest.datasets.length} chart datasets and ${manifest.shared.length} shared files (schema ${manifest.schemaVersion}).`)
+console.log(`Validated ${manifest.datasets.length} chart datasets, ${manifest.indicators?.length ?? 0} indicators, and ${manifest.shared.length} shared files (schema ${manifest.schemaVersion}).`)

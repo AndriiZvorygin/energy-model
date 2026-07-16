@@ -1,0 +1,496 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "output-quality-household",
+  "title": "Household prosperity and essential costs",
+  "description": "The experimental household-command measure subtracts shelter, food, and utilities/fuels costs from real median household income while keeping every component visible.",
+  "plainLanguageSummary": "The experimental household-command measure subtracts shelter, food, and utilities/fuels costs from real median household income while keeping every component visible.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "HouseholdCommand = real median household income - real shelter - real food - real utilities/fuels/public-services expenditure.",
+    "explanation": "This combines median income with average consumer-unit costs and is not an official disposable-income statistic.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "This combines median income with average consumer-unit costs and is not an official disposable-income statistic."
+  ],
+  "sourceNotes": [
+    "Census via FRED",
+    "Census/BLS project derivation",
+    "BLS CE via FRED"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "1990-01-01",
+    "referenceEnd": "2019-01-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "MEHOINUSA672N": {
+        "mean": 69891.66666666667,
+        "standardDeviation": 4485.144429731952,
+        "n": 30
+      },
+      "HouseholdCommand": {
+        "mean": 42069.726442205625,
+        "standardDeviation": 3497.9836569347094,
+        "n": 30
+      },
+      "CXUSHELTERLB0101M": {
+        "mean": 13514.274672599486,
+        "standardDeviation": 1100.2590573043558,
+        "n": 30
+      },
+      "CXUFOODTOTLLB0101M": {
+        "mean": 9417.141854888303,
+        "standardDeviation": 330.67519090367904,
+        "n": 30
+      },
+      "CXUUTILSLB0101M": {
+        "mean": 4890.523696973251,
+        "standardDeviation": 284.6049606301145,
+        "n": 30
+      }
+    }
+  },
+  "frequency": "annual",
+  "dateRange": {
+    "start": "1984-01-01",
+    "end": "2024-01-01"
+  },
+  "series": [
+    {
+      "key": "MEHOINUSA672N",
+      "label": "Real median household income",
+      "unit": "2024 USD",
+      "source": "Census via FRED",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2024-01-01"
+    },
+    {
+      "key": "HouseholdCommand",
+      "label": "Experimental household command",
+      "unit": "2024 USD",
+      "source": "Census/BLS project derivation",
+      "status": "experimental",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#2563eb",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2024-01-01"
+    },
+    {
+      "key": "CXUSHELTERLB0101M",
+      "label": "Shelter expenditure",
+      "unit": "2024 USD per consumer unit",
+      "source": "BLS CE via FRED",
+      "status": "derived",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#d97706",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2024-01-01"
+    },
+    {
+      "key": "CXUFOODTOTLLB0101M",
+      "label": "Food expenditure",
+      "unit": "2024 USD per consumer unit",
+      "source": "BLS CE via FRED",
+      "status": "derived",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#7c3aed",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2024-01-01"
+    },
+    {
+      "key": "CXUUTILSLB0101M",
+      "label": "Utilities, fuels, public services",
+      "unit": "2024 USD per consumer unit",
+      "source": "BLS CE via FRED",
+      "status": "derived",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#be123c",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2024-01-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1984-01-01",
+      "MEHOINUSA672N": 60420.0,
+      "HouseholdCommand": 35015.2777212957,
+      "CXUSHELTERLB0101M": 10530.720687940988,
+      "CXUFOODTOTLLB0101M": 9930.086289288005,
+      "CXUUTILSLB0101M": 4943.915301475305
+    },
+    {
+      "date": "1985-01-01",
+      "MEHOINUSA672N": 61570.0,
+      "HouseholdCommand": 35453.75300185874,
+      "CXUSHELTERLB0101M": 11174.76833488228,
+      "CXUFOODTOTLLB0101M": 10136.88220724907,
+      "CXUUTILSLB0101M": 4804.596456009913
+    },
+    {
+      "date": "1986-01-01",
+      "MEHOINUSA672N": 63850.0,
+      "HouseholdCommand": 37905.73409101268,
+      "CXUSHELTERLB0101M": 11379.21451188939,
+      "CXUFOODTOTLLB0101M": 9860.651328724456,
+      "CXUUTILSLB0101M": 4704.400068373471
+    },
+    {
+      "date": "1987-01-01",
+      "MEHOINUSA672N": 64650.0,
+      "HouseholdCommand": 38450.65802992519,
+      "CXUSHELTERLB0101M": 11469.287231920198,
+      "CXUFOODTOTLLB0101M": 10116.386234413965,
+      "CXUUTILSLB0101M": 4613.668503740649
+    },
+    {
+      "date": "1988-01-01",
+      "MEHOINUSA672N": 65130.0,
+      "HouseholdCommand": 38639.04849996477,
+      "CXUSHELTERLB0101M": 11916.684530402314,
+      "CXUFOODTOTLLB0101M": 9940.737507221871,
+      "CXUUTILSLB0101M": 4633.529462411048
+    },
+    {
+      "date": "1989-01-01",
+      "MEHOINUSA672N": 66240.0,
+      "HouseholdCommand": 38849.36010488805,
+      "CXUSHELTERLB0101M": 12237.455543602502,
+      "CXUFOODTOTLLB0101M": 10508.772578497948,
+      "CXUUTILSLB0101M": 4644.411773011498
+    },
+    {
+      "date": "1990-01-01",
+      "MEHOINUSA672N": 65440.0,
+      "HouseholdCommand": 38977.23176478091,
+      "CXUSHELTERLB0101M": 11610.773651380829,
+      "CXUFOODTOTLLB0101M": 10314.285278397858,
+      "CXUUTILSLB0101M": 4537.709305440399
+    },
+    {
+      "date": "1991-01-01",
+      "MEHOINUSA672N": 63530.0,
+      "HouseholdCommand": 37147.10106731946,
+      "CXUSHELTERLB0101M": 11958.926681762547,
+      "CXUFOODTOTLLB0101M": 9839.448248470013,
+      "CXUUTILSLB0101M": 4584.524002447981
+    },
+    {
+      "date": "1992-01-01",
+      "MEHOINUSA672N": 63010.0,
+      "HouseholdCommand": 36922.952126863456,
+      "CXUSHELTERLB0101M": 12097.79019896656,
+      "CXUFOODTOTLLB0101M": 9553.475793787493,
+      "CXUUTILSLB0101M": 4435.781880382491
+    },
+    {
+      "date": "1993-01-01",
+      "MEHOINUSA672N": 62700.0,
+      "HouseholdCommand": 36805.10928765069,
+      "CXUSHELTERLB0101M": 11757.574476553038,
+      "CXUFOODTOTLLB0101M": 9551.536495356753,
+      "CXUUTILSLB0101M": 4585.779740439523
+    },
+    {
+      "date": "1994-01-01",
+      "MEHOINUSA672N": 63370.0,
+      "HouseholdCommand": 37368.34254905268,
+      "CXUSHELTERLB0101M": 12033.650029797043,
+      "CXUFOODTOTLLB0101M": 9335.284959802104,
+      "CXUUTILSLB0101M": 4632.722461348176
+    },
+    {
+      "date": "1995-01-01",
+      "MEHOINUSA672N": 65380.0,
+      "HouseholdCommand": 39392.08144372744,
+      "CXUSHELTERLB0101M": 12203.452249808597,
+      "CXUFOODTOTLLB0101M": 9274.047298479712,
+      "CXUUTILSLB0101M": 4510.41900798425
+    },
+    {
+      "date": "1996-01-01",
+      "MEHOINUSA672N": 66340.0,
+      "HouseholdCommand": 40123.54608617117,
+      "CXUSHELTERLB0101M": 12127.284806885196,
+      "CXUFOODTOTLLB0101M": 9395.445914041333,
+      "CXUUTILSLB0101M": 4693.723192902301
+    },
+    {
+      "date": "1997-01-01",
+      "MEHOINUSA672N": 67720.0,
+      "HouseholdCommand": 41226.892723874786,
+      "CXUSHELTERLB0101M": 12397.453165135234,
+      "CXUFOODTOTLLB0101M": 9382.120530550797,
+      "CXUUTILSLB0101M": 4713.533580439183
+    },
+    {
+      "date": "1998-01-01",
+      "MEHOINUSA672N": 70200.0,
+      "HouseholdCommand": 43460.041761668625,
+      "CXUSHELTERLB0101M": 12855.194028935128,
+      "CXUFOODTOTLLB0101M": 9256.509472930831,
+      "CXUUTILSLB0101M": 4628.254736465416
+    },
+    {
+      "date": "1999-01-01",
+      "MEHOINUSA672N": 71980.0,
+      "HouseholdCommand": 44817.72472636319,
+      "CXUSHELTERLB0101M": 13212.04404602301,
+      "CXUFOODTOTLLB0101M": 9474.029873936968,
+      "CXUUTILSLB0101M": 4476.201353676838
+    },
+    {
+      "date": "2000-01-01",
+      "MEHOINUSA672N": 71790.0,
+      "HouseholdCommand": 44898.46263466099,
+      "CXUSHELTERLB0101M": 12960.259929342303,
+      "CXUFOODTOTLLB0101M": 9396.826077529884,
+      "CXUUTILSLB0101M": 4534.451358466825
+    },
+    {
+      "date": "2001-01-01",
+      "MEHOINUSA672N": 70610.0,
+      "HouseholdCommand": 42809.062923040714,
+      "CXUSHELTERLB0101M": 13469.899532125206,
+      "CXUFOODTOTLLB0101M": 9428.22091692163,
+      "CXUUTILSLB0101M": 4902.816627912451
+    },
+    {
+      "date": "2002-01-01",
+      "MEHOINUSA672N": 70040.0,
+      "HouseholdCommand": 42330.382846553,
+      "CXUSHELTERLB0101M": 13654.241735544849,
+      "CXUFOODTOTLLB0101M": 9374.31975074129,
+      "CXUUTILSLB0101M": 4681.05566716086
+    },
+    {
+      "date": "2003-01-01",
+      "MEHOINUSA672N": 70080.0,
+      "HouseholdCommand": 42737.11305978261,
+      "CXUSHELTERLB0101M": 13446.399133152174,
+      "CXUFOODTOTLLB0101M": 9104.066358695653,
+      "CXUUTILSLB0101M": 4792.421448369566
+    },
+    {
+      "date": "2004-01-01",
+      "MEHOINUSA672N": 69970.0,
+      "HouseholdCommand": 42228.28273501257,
+      "CXUSHELTERLB0101M": 13281.351292072875,
+      "CXUFOODTOTLLB0101M": 9599.836436543297,
+      "CXUUTILSLB0101M": 4860.529536371257
+    },
+    {
+      "date": "2005-01-01",
+      "MEHOINUSA672N": 71060.0,
+      "HouseholdCommand": 42272.91849522021,
+      "CXUSHELTERLB0101M": 14145.334708945033,
+      "CXUFOODTOTLLB0101M": 9528.220347388187,
+      "CXUUTILSLB0101M": 5113.52644844657
+    },
+    {
+      "date": "2006-01-01",
+      "MEHOINUSA672N": 71850.0,
+      "HouseholdCommand": 41997.37899780874,
+      "CXUSHELTERLB0101M": 15054.710544507381,
+      "CXUFOODTOTLLB0101M": 9510.94139744491,
+      "CXUUTILSLB0101M": 5286.969060238972
+    },
+    {
+      "date": "2007-01-01",
+      "MEHOINUSA672N": 73010.0,
+      "HouseholdCommand": 43306.55473226881,
+      "CXUSHELTERLB0101M": 15164.14363156266,
+      "CXUFOODTOTLLB0101M": 9278.827984872174,
+      "CXUUTILSLB0101M": 5260.4736512963555
+    },
+    {
+      "date": "2008-01-01",
+      "MEHOINUSA672N": 70520.0,
+      "HouseholdCommand": 40972.4750188827,
+      "CXUSHELTERLB0101M": 14840.071362896051,
+      "CXUFOODTOTLLB0101M": 9389.627790546916,
+      "CXUUTILSLB0101M": 5317.825827674329
+    },
+    {
+      "date": "2009-01-01",
+      "MEHOINUSA672N": 70070.0,
+      "HouseholdCommand": 40695.06300509248,
+      "CXUSHELTERLB0101M": 14729.867122421525,
+      "CXUFOODTOTLLB0101M": 9316.001320503221,
+      "CXUUTILSLB0101M": 5329.068551982776
+    },
+    {
+      "date": "2010-01-01",
+      "MEHOINUSA672N": 68420.0,
+      "HouseholdCommand": 40224.35689594691,
+      "CXUSHELTERLB0101M": 14114.364070045862,
+      "CXUFOODTOTLLB0101M": 8816.44286438148,
+      "CXUUTILSLB0101M": 5264.83616962575
+    },
+    {
+      "date": "2011-01-01",
+      "MEHOINUSA672N": 67410.0,
+      "HouseholdCommand": 39502.225717245456,
+      "CXUSHELTERLB0101M": 13702.842695055642,
+      "CXUFOODTOTLLB0101M": 9006.916857472706,
+      "CXUUTILSLB0101M": 5198.014730226196
+    },
+    {
+      "date": "2012-01-01",
+      "MEHOINUSA672N": 67400.0,
+      "HouseholdCommand": 39884.16111022989,
+      "CXUSHELTERLB0101M": 13514.706647071016,
+      "CXUFOODTOTLLB0101M": 9016.636251543992,
+      "CXUUTILSLB0101M": 4984.495991155097
+    },
+    {
+      "date": "2013-01-01",
+      "MEHOINUSA672N": 69950.0,
+      "HouseholdCommand": 42453.30652091402,
+      "CXUSHELTERLB0101M": 13573.959070923487,
+      "CXUFOODTOTLLB0101M": 8890.404542285403,
+      "CXUUTILSLB0101M": 5032.329865877091
+    },
+    {
+      "date": "2014-01-01",
+      "MEHOINUSA672N": 69060.0,
+      "HouseholdCommand": 41003.88236275691,
+      "CXUSHELTERLB0101M": 13902.82604186469,
+      "CXUFOODTOTLLB0101M": 8957.12527089538,
+      "CXUUTILSLB0101M": 5196.166324483028
+    },
+    {
+      "date": "2015-01-01",
+      "MEHOINUSA672N": 72790.0,
+      "HouseholdCommand": 44133.81789023358,
+      "CXUSHELTERLB0101M": 14218.23132670258,
+      "CXUFOODTOTLLB0101M": 9295.721337500672,
+      "CXUUTILSLB0101M": 5142.229445563165
+    },
+    {
+      "date": "2016-01-01",
+      "MEHOINUSA672N": 75380.0,
+      "HouseholdCommand": 46343.96877501029,
+      "CXUSHELTERLB0101M": 14544.810059495185,
+      "CXUFOODTOTLLB0101M": 9414.653743578703,
+      "CXUUTILSLB0101M": 5076.567421915825
+    },
+    {
+      "date": "2017-01-01",
+      "MEHOINUSA672N": 76710.0,
+      "HouseholdCommand": 46686.627910297364,
+      "CXUSHELTERLB0101M": 15222.847869011632,
+      "CXUFOODTOTLLB0101M": 9891.331751121554,
+      "CXUUTILSLB0101M": 4909.192469569451
+    },
+    {
+      "date": "2018-01-01",
+      "MEHOINUSA672N": 77700.0,
+      "HouseholdCommand": 48067.8947382744,
+      "CXUSHELTERLB0101M": 14675.506577405902,
+      "CXUFOODTOTLLB0101M": 9898.19005812437,
+      "CXUUTILSLB0101M": 5058.408626195326
+    },
+    {
+      "date": "2019-01-01",
+      "MEHOINUSA672N": 83260.0,
+      "HouseholdCommand": 53302.83335946472,
+      "CXUSHELTERLB0101M": 14957.723492591345,
+      "CXUFOODTOTLLB0101M": 10023.76072280383,
+      "CXUUTILSLB0101M": 4975.682425140107
+    },
+    {
+      "date": "2020-01-01",
+      "MEHOINUSA672N": 81580.0,
+      "HouseholdCommand": 52398.29608446661,
+      "CXUSHELTERLB0101M": 15274.343693994308,
+      "CXUFOODTOTLLB0101M": 8858.731545786924,
+      "CXUUTILSLB0101M": 5048.628675752164
+    },
+    {
+      "date": "2021-01-01",
+      "MEHOINUSA672N": 81270.0,
+      "HouseholdCommand": 51436.80877982803,
+      "CXUSHELTERLB0101M": 15348.407031317034,
+      "CXUFOODTOTLLB0101M": 9595.937990842276,
+      "CXUUTILSLB0101M": 4888.8461980126585
+    },
+    {
+      "date": "2022-01-01",
+      "MEHOINUSA672N": 79500.0,
+      "HouseholdCommand": 49056.015015162964,
+      "CXUSHELTERLB0101M": 15551.635275010773,
+      "CXUFOODTOTLLB0101M": 10015.780545559084,
+      "CXUUTILSLB0101M": 4876.569164267181
+    },
+    {
+      "date": "2023-01-01",
+      "MEHOINUSA672N": 82690.0,
+      "HouseholdCommand": 51692.14930549858,
+      "CXUSHELTERLB0101M": 15956.547474644707,
+      "CXUFOODTOTLLB0101M": 10279.768148546837,
+      "CXUUTILSLB0101M": 4761.535071309877
+    },
+    {
+      "date": "2024-01-01",
+      "MEHOINUSA672N": 83730.0,
+      "HouseholdCommand": 52508.0,
+      "CXUSHELTERLB0101M": 16317.0,
+      "CXUFOODTOTLLB0101M": 10169.0,
+      "CXUUTILSLB0101M": 4736.0
+    }
+  ],
+  "annotations": [
+    "oil_embargo_1973",
+    "gulf_war_1990",
+    "gfc_2008",
+    "shale_2014",
+    "covid_2020",
+    "reopening_2021"
+  ],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "zscore"
+  ],
+  "evidenceLabel": "Experimental proxy",
+  "methodology": {
+    "formula": "HouseholdCommand = real median household income - real shelter - real food - real utilities/fuels/public-services expenditure.",
+    "notes": "This combines median income with average consumer-unit costs and is not an official disposable-income statistic."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T00:14:53+00:00"
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "recessions": [
+    {
+      "id": "recession_1990-08",
+      "label": "NBER recession",
+      "start": "1990-08-01",
+      "end": "1991-03-01",
+      "color": "#78716c"
+    },
+    {
+      "id": "recession_2001-04",
+      "label": "NBER recession",
+      "start": "2001-04-01",
+      "end": "2001-11-01",
+      "color": "#78716c"
+    },
+    {
+      "id": "recession_2008-01",
+      "label": "NBER recession",
+      "start": "2008-01-01",
+      "end": "2009-06-01",
+      "color": "#78716c"
+    },
+    {
+      "id": "recession_2020-03",
+      "label": "NBER recession",
+      "start": "2020-03-01",
+      "end": "2020-04-01",
+      "color": "#78716c"
+    }
+  ]
+}

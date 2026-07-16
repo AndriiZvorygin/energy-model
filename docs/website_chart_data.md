@@ -16,6 +16,8 @@ npm run build
 `oil_model.website_data.write_website_chart_data` generates:
 
 - `manifest.json`
+- `charts/`, containing versioned multi-series research datasets (legacy root copies remain for compatibility)
+- `indicators/`, containing one schema-version-1 history file for every Current State indicator
 - `oil-price-layers.json`
 - `gm2-oil-lead.json`
 - `oil-residual-ci.json`
@@ -24,9 +26,24 @@ npm run build
 - `uso-tracking.json`
 - `output-quality-headline.json`, `output-quality-net-output.json`, `output-quality-capacity.json`, `output-quality-household.json`, and `output-quality-financial.json`
 - `output-quality-correlations.json`
-- shared lag, regime, event, and cross-layer inspection files
+- shared lag, rolling-performance, recession, regime, event, and cross-layer inspection files
 
 The website build fails when a manifest dataset is missing required metadata, units, sources, final observation dates, ordered ISO dates, or unique dates.
+
+Each indicator file includes latest and previous values, 3- and 12-month context, full-history and post-2000 percentiles, momentum, a seven-point historical range, interpretation direction and label, source URL, confirming/conflicting indicators, calculation details, and full observations with explicit `null` values. The Current State page loads this manifest lazily and does not duplicate readings in React source.
+
+```json
+{
+  "schemaVersion": 1,
+  "id": "ci-zscore",
+  "label": "Comparative inventory z-score",
+  "unit": "standard deviations",
+  "interpretationDirection": "context-dependent",
+  "latest": { "date": "2026-06-01", "value": -1.38, "historicalPercentile": 14.2 },
+  "referenceRanges": { "p10": -1.63, "historicalMedian": 0.14, "p90": 2.45 },
+  "observations": [{ "date": "1987-08-01", "value": -1.18 }]
+}
+```
 
 ## Schema
 
@@ -97,7 +114,7 @@ The current datasets are small enough to render at full resolution, so no visual
 ## Adding An Indicator
 
 1. Add or derive the field in the Python pipeline without forward-filling unavailable future observations.
-2. Add series metadata and the observation mapping in `oil_model/website_data.py`.
+2. Add the indicator to the system-response catalogue/current-state generation. `oil_model/website_data.py` maps those rows to the indicator contract; add explicit interpretation-direction metadata there when the indicator is not context-dependent.
 3. Assign valid transformations, unit, source, status, evidence label, fixed transformation reference period, plain-language summary, calculation example, patterns, limitations, and final-observation behavior.
 4. Run the Python and website test suites.
 5. Regenerate the pipeline and run `npm run validate:chart-data`.
@@ -112,4 +129,4 @@ Set `staticFigure` in the dataset metadata and ensure the PNG remains in `charts
 
 ## GitHub Pages
 
-Vite uses `base: '/energy-model/'`. Dataset, chart, and route URLs use `import.meta.env.BASE_URL`, so development works at `http://localhost:5173/energy-model/` and production works at `https://andriizvorygin.github.io/energy-model/`. The post-build step copies `index.html` to `404.html`, preserving direct React Router navigation after a GitHub Pages refresh.
+Vite uses `base: '/energy-model/'`. Dataset, chart, and route URLs use `import.meta.env.BASE_URL`, so development works at `http://localhost:5173/energy-model/` and production works at `https://andriizvorygin.github.io/energy-model/`. The post-build step creates a static entry point for every known route and retains `404.html` as a fallback, preserving direct React Router navigation and refreshes under GitHub Pages.

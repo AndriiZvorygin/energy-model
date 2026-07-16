@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import type { ChartDataset, ChartEvent, ChartRegime } from './chartTypes'
+import type { ChartDataset, ChartEvent, ChartRegime, GeneratedManifest, IndicatorDataset } from './chartTypes'
 import { validateDataset } from './chartUtils'
 
 const base = import.meta.env.BASE_URL
@@ -53,4 +53,48 @@ export function useCrossLayerData(enabled: boolean) {
     void loadJson<{ observations: Record<string, string | number | null>[] }>('cross-layer.json').then((data) => setObservations(data.observations))
   }, [enabled])
   return observations
+}
+
+export function useGeneratedManifest() {
+  const [manifest, setManifest] = useState<GeneratedManifest | null>(null)
+  const [error, setError] = useState<string | null>(null)
+  useEffect(() => {
+    let active = true
+    loadJson<GeneratedManifest>('manifest.json').then((data) => {
+      if (active) setManifest(data)
+    }).catch((reason: unknown) => active && setError(reason instanceof Error ? reason.message : String(reason)))
+    return () => { active = false }
+  }, [])
+  return { manifest, error }
+}
+
+export function useIndicatorDataset(file: string | null) {
+  const [indicator, setIndicator] = useState<IndicatorDataset | null>(null)
+  const [error, setError] = useState<string | null>(null)
+  useEffect(() => {
+    if (!file) return
+    let active = true
+    loadJson<IndicatorDataset>(file).then((data) => {
+      if (active) setIndicator(data)
+    }).catch((reason: unknown) => active && setError(reason instanceof Error ? reason.message : String(reason)))
+    return () => { active = false }
+  }, [file])
+  return { indicator, error }
+}
+
+export function useIndicatorDatasets(files: string[]) {
+  const [indicators, setIndicators] = useState<IndicatorDataset[]>([])
+  const [error, setError] = useState<string | null>(null)
+  const key = files.join('|')
+  useEffect(() => {
+    if (!files.length) return
+    let active = true
+    Promise.all(files.map((file) => loadJson<IndicatorDataset>(file))).then((data) => {
+      if (active) setIndicators(data)
+    }).catch((reason: unknown) => active && setError(reason instanceof Error ? reason.message : String(reason)))
+    return () => { active = false }
+  // The stable joined key intentionally controls reloads for manifest-derived file lists.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key])
+  return { indicators, error }
 }

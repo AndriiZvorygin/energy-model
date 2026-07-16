@@ -1,0 +1,708 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "output-quality-net-output",
+  "title": "Gross and net output",
+  "description": "Official real net domestic product accounts for capital consumption; per-capita net output asks how much net production remains per resident.",
+  "plainLanguageSummary": "Official real net domestic product accounts for capital consumption; per-capita net output asks how much net production remains per resident.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Real NDP is the official BEA chained-dollar series; NDP per capita = real NDP / population.",
+    "explanation": "The project does not subtract chained-dollar GDP components because chained measures are not exactly additive.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "The project does not subtract chained-dollar GDP components because chained measures are not exactly additive."
+  ],
+  "sourceNotes": [
+    "BEA GDPC1 annual average",
+    "BEA via FRED A362RX1A020NBEA",
+    "BEA / Census project derivation"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "1990-01-01",
+    "referenceEnd": "2019-01-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "real_gdp_annual": {
+        "mean": 15188.474958333332,
+        "standardDeviation": 3143.717807529889,
+        "n": 30
+      },
+      "A362RX1A020NBEA": {
+        "mean": 12999.518866666667,
+        "standardDeviation": 2482.761001749299,
+        "n": 30
+      },
+      "real_ndp_per_capita": {
+        "mean": 43899.065968792886,
+        "standardDeviation": 5008.869926224913,
+        "n": 30
+      }
+    }
+  },
+  "frequency": "annual",
+  "dateRange": {
+    "start": "1929-01-01",
+    "end": "2025-01-01"
+  },
+  "series": [
+    {
+      "key": "real_gdp_annual",
+      "label": "Real GDP",
+      "unit": "billions chained 2017 USD",
+      "source": "BEA GDPC1 annual average",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2025-01-01"
+    },
+    {
+      "key": "A362RX1A020NBEA",
+      "label": "Official real NDP",
+      "unit": "billions chained 2017 USD",
+      "source": "BEA via FRED A362RX1A020NBEA",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#2563eb",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2025-01-01"
+    },
+    {
+      "key": "real_ndp_per_capita",
+      "label": "Real NDP per capita",
+      "unit": "chained 2017 USD per person",
+      "source": "BEA / Census project derivation",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#d97706",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2025-01-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1929-01-01",
+      "real_gdp_annual": null,
+      "A362RX1A020NBEA": 1093.257,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1930-01-01",
+      "real_gdp_annual": null,
+      "A362RX1A020NBEA": 987.113,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1931-01-01",
+      "real_gdp_annual": null,
+      "A362RX1A020NBEA": 915.75,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1932-01-01",
+      "real_gdp_annual": null,
+      "A362RX1A020NBEA": 783.788,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1933-01-01",
+      "real_gdp_annual": null,
+      "A362RX1A020NBEA": 775.531,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1934-01-01",
+      "real_gdp_annual": null,
+      "A362RX1A020NBEA": 875.162,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1935-01-01",
+      "real_gdp_annual": null,
+      "A362RX1A020NBEA": 963.653,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1936-01-01",
+      "real_gdp_annual": null,
+      "A362RX1A020NBEA": 1101.8,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1937-01-01",
+      "real_gdp_annual": null,
+      "A362RX1A020NBEA": 1160.798,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1938-01-01",
+      "real_gdp_annual": null,
+      "A362RX1A020NBEA": 1115.334,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1939-01-01",
+      "real_gdp_annual": null,
+      "A362RX1A020NBEA": 1214.441,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1940-01-01",
+      "real_gdp_annual": null,
+      "A362RX1A020NBEA": 1330.881,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1941-01-01",
+      "real_gdp_annual": null,
+      "A362RX1A020NBEA": 1584.577,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1942-01-01",
+      "real_gdp_annual": null,
+      "A362RX1A020NBEA": 1895.616,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1943-01-01",
+      "real_gdp_annual": null,
+      "A362RX1A020NBEA": 2219.681,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1944-01-01",
+      "real_gdp_annual": null,
+      "A362RX1A020NBEA": 2378.472,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1945-01-01",
+      "real_gdp_annual": null,
+      "A362RX1A020NBEA": 2330.986,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1946-01-01",
+      "real_gdp_annual": null,
+      "A362RX1A020NBEA": 2027.707,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1947-01-01",
+      "real_gdp_annual": 2184.61425,
+      "A362RX1A020NBEA": 2005.498,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1948-01-01",
+      "real_gdp_annual": 2274.6265,
+      "A362RX1A020NBEA": 2099.515,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1949-01-01",
+      "real_gdp_annual": 2261.92775,
+      "A362RX1A020NBEA": 2083.76,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1950-01-01",
+      "real_gdp_annual": 2458.53175,
+      "A362RX1A020NBEA": 2284.163,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1951-01-01",
+      "real_gdp_annual": 2656.32,
+      "A362RX1A020NBEA": 2480.581,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1952-01-01",
+      "real_gdp_annual": 2764.803,
+      "A362RX1A020NBEA": 2578.581,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1953-01-01",
+      "real_gdp_annual": 2894.41175,
+      "A362RX1A020NBEA": 2695.417,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1954-01-01",
+      "real_gdp_annual": 2877.70775,
+      "A362RX1A020NBEA": 2660.145,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1955-01-01",
+      "real_gdp_annual": 3083.02575,
+      "A362RX1A020NBEA": 2858.94,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1956-01-01",
+      "real_gdp_annual": 3148.765,
+      "A362RX1A020NBEA": 2910.875,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1957-01-01",
+      "real_gdp_annual": 3215.0652499999997,
+      "A362RX1A020NBEA": 2962.745,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1958-01-01",
+      "real_gdp_annual": 3191.2160000000003,
+      "A362RX1A020NBEA": 2917.751,
+      "real_ndp_per_capita": null
+    },
+    {
+      "date": "1959-01-01",
+      "real_gdp_annual": 3412.42125,
+      "A362RX1A020NBEA": 3135.739,
+      "real_ndp_per_capita": 17703.028988582308
+    },
+    {
+      "date": "1960-01-01",
+      "real_gdp_annual": 3500.2725,
+      "A362RX1A020NBEA": 3213.759,
+      "real_ndp_per_capita": 17779.1327550963
+    },
+    {
+      "date": "1961-01-01",
+      "real_gdp_annual": 3590.06625,
+      "A362RX1A020NBEA": 3289.908,
+      "real_ndp_per_capita": 17905.016402052333
+    },
+    {
+      "date": "1962-01-01",
+      "real_gdp_annual": 3810.1232499999996,
+      "A362RX1A020NBEA": 3499.836,
+      "real_ndp_per_capita": 18756.774862600185
+    },
+    {
+      "date": "1963-01-01",
+      "real_gdp_annual": 3976.14175,
+      "A362RX1A020NBEA": 3650.275,
+      "real_ndp_per_capita": 19283.058819904076
+    },
+    {
+      "date": "1964-01-01",
+      "real_gdp_annual": 4205.27725,
+      "A362RX1A020NBEA": 3865.463,
+      "real_ndp_per_capita": 20140.27729292908
+    },
+    {
+      "date": "1965-01-01",
+      "real_gdp_annual": 4478.555249999999,
+      "A362RX1A020NBEA": 4122.262,
+      "real_ndp_per_capita": 21210.88879912939
+    },
+    {
+      "date": "1966-01-01",
+      "real_gdp_annual": 4773.93125,
+      "A362RX1A020NBEA": 4397.263,
+      "real_ndp_per_capita": 22366.63161227726
+    },
+    {
+      "date": "1967-01-01",
+      "real_gdp_annual": 4904.86375,
+      "A362RX1A020NBEA": 4499.418,
+      "real_ndp_per_capita": 22638.40078422855
+    },
+    {
+      "date": "1968-01-01",
+      "real_gdp_annual": 5145.91425,
+      "A362RX1A020NBEA": 4717.318,
+      "real_ndp_per_capita": 23499.016996659117
+    },
+    {
+      "date": "1969-01-01",
+      "real_gdp_annual": 5306.5945,
+      "A362RX1A020NBEA": 4851.36,
+      "real_ndp_per_capita": 23929.46486190979
+    },
+    {
+      "date": "1970-01-01",
+      "real_gdp_annual": 5316.39125,
+      "A362RX1A020NBEA": 4832.439,
+      "real_ndp_per_capita": 23562.66268356883
+    },
+    {
+      "date": "1971-01-01",
+      "real_gdp_annual": 5491.4455,
+      "A362RX1A020NBEA": 4990.495,
+      "real_ndp_per_capita": 24028.373779892554
+    },
+    {
+      "date": "1972-01-01",
+      "real_gdp_annual": 5780.04825,
+      "A362RX1A020NBEA": 5264.128,
+      "real_ndp_per_capita": 25076.3414869423
+    },
+    {
+      "date": "1973-01-01",
+      "real_gdp_annual": 6106.3705,
+      "A362RX1A020NBEA": 5566.059,
+      "real_ndp_per_capita": 26262.59326597632
+    },
+    {
+      "date": "1974-01-01",
+      "real_gdp_annual": 6073.36275,
+      "A362RX1A020NBEA": 5497.404,
+      "real_ndp_per_capita": 25701.023734415783
+    },
+    {
+      "date": "1975-01-01",
+      "real_gdp_annual": 6060.87525,
+      "A362RX1A020NBEA": 5457.217,
+      "real_ndp_per_capita": 25267.116088915227
+    },
+    {
+      "date": "1976-01-01",
+      "real_gdp_annual": 6387.4365,
+      "A362RX1A020NBEA": 5772.844,
+      "real_ndp_per_capita": 26470.46294757235
+    },
+    {
+      "date": "1977-01-01",
+      "real_gdp_annual": 6682.8045,
+      "A362RX1A020NBEA": 6047.102,
+      "real_ndp_per_capita": 27450.75656268335
+    },
+    {
+      "date": "1978-01-01",
+      "real_gdp_annual": 7052.71125,
+      "A362RX1A020NBEA": 6392.288,
+      "real_ndp_per_capita": 28712.74808191658
+    },
+    {
+      "date": "1979-01-01",
+      "real_gdp_annual": 7275.99925,
+      "A362RX1A020NBEA": 6576.346,
+      "real_ndp_per_capita": 29214.419566471224
+    },
+    {
+      "date": "1980-01-01",
+      "real_gdp_annual": 7257.3165,
+      "A362RX1A020NBEA": 6508.285,
+      "real_ndp_per_capita": 28579.47605124583
+    },
+    {
+      "date": "1981-01-01",
+      "real_gdp_annual": 7441.485,
+      "A362RX1A020NBEA": 6658.745,
+      "real_ndp_per_capita": 28949.995326259683
+    },
+    {
+      "date": "1982-01-01",
+      "real_gdp_annual": 7307.314,
+      "A362RX1A020NBEA": 6471.215,
+      "real_ndp_per_capita": 27866.94274784506
+    },
+    {
+      "date": "1983-01-01",
+      "real_gdp_annual": 7642.2654999999995,
+      "A362RX1A020NBEA": 6782.919,
+      "real_ndp_per_capita": 28945.682633521006
+    },
+    {
+      "date": "1984-01-01",
+      "real_gdp_annual": 8195.29525,
+      "A362RX1A020NBEA": 7310.432,
+      "real_ndp_per_capita": 30924.745419992236
+    },
+    {
+      "date": "1985-01-01",
+      "real_gdp_annual": 8537.00375,
+      "A362RX1A020NBEA": 7598.825,
+      "real_ndp_per_capita": 31860.08882373021
+    },
+    {
+      "date": "1986-01-01",
+      "real_gdp_annual": 8832.61125,
+      "A362RX1A020NBEA": 7841.588,
+      "real_ndp_per_capita": 32580.666002582242
+    },
+    {
+      "date": "1987-01-01",
+      "real_gdp_annual": 9137.74475,
+      "A362RX1A020NBEA": 8093.293,
+      "real_ndp_per_capita": 33327.32212328219
+    },
+    {
+      "date": "1988-01-01",
+      "real_gdp_annual": 9519.42675,
+      "A362RX1A020NBEA": 8430.174,
+      "real_ndp_per_capita": 34400.28509889028
+    },
+    {
+      "date": "1989-01-01",
+      "real_gdp_annual": 9869.00325,
+      "A362RX1A020NBEA": 8733.248,
+      "real_ndp_per_capita": 35301.88493022588
+    },
+    {
+      "date": "1990-01-01",
+      "real_gdp_annual": 10055.128499999999,
+      "A362RX1A020NBEA": 8869.827,
+      "real_ndp_per_capita": 35453.651374288806
+    },
+    {
+      "date": "1991-01-01",
+      "real_gdp_annual": 10044.2375,
+      "A362RX1A020NBEA": 8813.531,
+      "real_ndp_per_capita": 34763.24382174114
+    },
+    {
+      "date": "1992-01-01",
+      "real_gdp_annual": 10398.04625,
+      "A362RX1A020NBEA": 9138.659,
+      "real_ndp_per_capita": 35569.82608187969
+    },
+    {
+      "date": "1993-01-01",
+      "real_gdp_annual": 10684.17875,
+      "A362RX1A020NBEA": 9386.524,
+      "real_ndp_per_capita": 36062.95873795655
+    },
+    {
+      "date": "1994-01-01",
+      "real_gdp_annual": 11114.64625,
+      "A362RX1A020NBEA": 9775.067,
+      "real_ndp_per_capita": 37103.41184568122
+    },
+    {
+      "date": "1995-01-01",
+      "real_gdp_annual": 11413.01225,
+      "A362RX1A020NBEA": 10016.275,
+      "real_ndp_per_capita": 37572.150258217036
+    },
+    {
+      "date": "1996-01-01",
+      "real_gdp_annual": 11843.599,
+      "A362RX1A020NBEA": 10385.04,
+      "real_ndp_per_capita": 38503.8015483029
+    },
+    {
+      "date": "1997-01-01",
+      "real_gdp_annual": 12370.299500000001,
+      "A362RX1A020NBEA": 10836.475,
+      "real_ndp_per_capita": 39700.131094569435
+    },
+    {
+      "date": "1998-01-01",
+      "real_gdp_annual": 12924.87575,
+      "A362RX1A020NBEA": 11298.399,
+      "real_ndp_per_capita": 40913.362731154775
+    },
+    {
+      "date": "1999-01-01",
+      "real_gdp_annual": 13543.774,
+      "A362RX1A020NBEA": 11811.506,
+      "real_ndp_per_capita": 42285.4981203372
+    },
+    {
+      "date": "2000-01-01",
+      "real_gdp_annual": 14096.033,
+      "A362RX1A020NBEA": 12251.367,
+      "real_ndp_per_capita": 43383.27085757385
+    },
+    {
+      "date": "2001-01-01",
+      "real_gdp_annual": 14230.726,
+      "A362RX1A020NBEA": 12285.002,
+      "real_ndp_per_capita": 43071.24137596554
+    },
+    {
+      "date": "2002-01-01",
+      "real_gdp_annual": 14472.7115,
+      "A362RX1A020NBEA": 12453.955,
+      "real_ndp_per_capita": 43249.71964618263
+    },
+    {
+      "date": "2003-01-01",
+      "real_gdp_annual": 14877.3125,
+      "A362RX1A020NBEA": 12793.315,
+      "real_ndp_per_capita": 44019.81926959454
+    },
+    {
+      "date": "2004-01-01",
+      "real_gdp_annual": 15449.75725,
+      "A362RX1A020NBEA": 13291.322,
+      "real_ndp_per_capita": 45322.295055507755
+    },
+    {
+      "date": "2005-01-01",
+      "real_gdp_annual": 15987.9575,
+      "A362RX1A020NBEA": 13742.192,
+      "real_ndp_per_capita": 46427.43534121734
+    },
+    {
+      "date": "2006-01-01",
+      "real_gdp_annual": 16433.1475,
+      "A362RX1A020NBEA": 14091.016,
+      "real_ndp_per_capita": 47155.89997467798
+    },
+    {
+      "date": "2007-01-01",
+      "real_gdp_annual": 16762.445499999998,
+      "A362RX1A020NBEA": 14324.264,
+      "real_ndp_per_capita": 47479.10508198921
+    },
+    {
+      "date": "2008-01-01",
+      "real_gdp_annual": 16781.48475,
+      "A362RX1A020NBEA": 14259.769,
+      "real_ndp_per_capita": 46823.48666048072
+    },
+    {
+      "date": "2009-01-01",
+      "real_gdp_annual": 16349.1105,
+      "A362RX1A020NBEA": 13777.746,
+      "real_ndp_per_capita": 44843.582421021994
+    },
+    {
+      "date": "2010-01-01",
+      "real_gdp_annual": 16789.750500000002,
+      "A362RX1A020NBEA": 14190.724,
+      "real_ndp_per_capita": 45800.34028443821
+    },
+    {
+      "date": "2011-01-01",
+      "real_gdp_annual": 17052.410499999998,
+      "A362RX1A020NBEA": 14403.106,
+      "real_ndp_per_capita": 46120.157126949576
+    },
+    {
+      "date": "2012-01-01",
+      "real_gdp_annual": 17442.75925,
+      "A362RX1A020NBEA": 14725.699,
+      "real_ndp_per_capita": 46789.036474916626
+    },
+    {
+      "date": "2013-01-01",
+      "real_gdp_annual": 17812.167,
+      "A362RX1A020NBEA": 15015.08,
+      "real_ndp_per_capita": 47351.39499020811
+    },
+    {
+      "date": "2014-01-01",
+      "real_gdp_annual": 18261.714249999997,
+      "A362RX1A020NBEA": 15380.596,
+      "real_ndp_per_capita": 48124.45540720769
+    },
+    {
+      "date": "2015-01-01",
+      "real_gdp_annual": 18799.622,
+      "A362RX1A020NBEA": 15832.486,
+      "real_ndp_per_capita": 49152.01306375202
+    },
+    {
+      "date": "2016-01-01",
+      "real_gdp_annual": 19141.67225,
+      "A362RX1A020NBEA": 16085.66,
+      "real_ndp_per_capita": 49553.90479632954
+    },
+    {
+      "date": "2017-01-01",
+      "real_gdp_annual": 19612.1025,
+      "A362RX1A020NBEA": 16463.149,
+      "real_ndp_per_capita": 50367.63687576422
+    },
+    {
+      "date": "2018-01-01",
+      "real_gdp_annual": 20193.89525,
+      "A362RX1A020NBEA": 16939.835,
+      "real_ndp_per_capita": 51521.04125829355
+    },
+    {
+      "date": "2019-01-01",
+      "real_gdp_annual": 20715.6715,
+      "A362RX1A020NBEA": 17347.98,
+      "real_ndp_per_capita": 52488.10748758683
+    },
+    {
+      "date": "2020-01-01",
+      "real_gdp_annual": 20284.5,
+      "A362RX1A020NBEA": 16817.379,
+      "real_ndp_per_capita": 50679.14154476439
+    },
+    {
+      "date": "2021-01-01",
+      "real_gdp_annual": 21532.407,
+      "A362RX1A020NBEA": 17960.389,
+      "real_ndp_per_capita": 54015.77430957947
+    },
+    {
+      "date": "2022-01-01",
+      "real_gdp_annual": 22075.93125,
+      "A362RX1A020NBEA": 18385.532,
+      "real_ndp_per_capita": 54988.87991625541
+    },
+    {
+      "date": "2023-01-01",
+      "real_gdp_annual": 22723.71875,
+      "A362RX1A020NBEA": 18914.372,
+      "real_ndp_per_capita": 56111.28885961848
+    },
+    {
+      "date": "2024-01-01",
+      "real_gdp_annual": 23358.43475,
+      "A362RX1A020NBEA": 19432.389,
+      "real_ndp_per_capita": 57138.0642290495
+    },
+    {
+      "date": "2025-01-01",
+      "real_gdp_annual": 23850.44225,
+      "A362RX1A020NBEA": 19793.272,
+      "real_ndp_per_capita": 57884.457857927235
+    }
+  ],
+  "annotations": [
+    "oil_embargo_1973",
+    "gulf_war_1990",
+    "gfc_2008",
+    "shale_2014",
+    "covid_2020",
+    "reopening_2021"
+  ],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Real NDP is the official BEA chained-dollar series; NDP per capita = real NDP / population.",
+    "notes": "The project does not subtract chained-dollar GDP components because chained measures are not exactly additive."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T00:14:53+00:00"
+}

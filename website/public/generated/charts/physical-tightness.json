@@ -1,0 +1,3555 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "physical-tightness",
+  "title": "Physical energy conditions",
+  "description": "Inventory, supply, consumption, and refinery utilization provide distinct evidence about physical oil-market tightness.",
+  "plainLanguageSummary": "Inventory, supply, consumption, and refinery utilization provide distinct evidence about physical oil-market tightness.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "CI_zscore uses the prior five-year same-month inventory history; growth rates are year-over-year; refinery utilization is the published rate.",
+    "explanation": "No single physical indicator defines tightness. Demand weakness can raise inventories even when supply is constrained.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "No single physical indicator defines tightness. Demand weakness can raise inventories even when supply is constrained."
+  ],
+  "sourceNotes": [
+    "EIA WCESTUS1, project derivation",
+    "EIA Monthly Energy Review",
+    "EIA WPULEUS3"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "CI_zscore": {
+        "mean": 1.1820179023762512,
+        "standardDeviation": 3.163241295443175,
+        "n": 240
+      },
+      "petroleum_production_YoY": {
+        "mean": 4.113332205276199,
+        "standardDeviation": 8.674362804792619,
+        "n": 240
+      },
+      "petroleum_consumption_YoY": {
+        "mean": -0.05918366006800368,
+        "standardDeviation": 3.3151150727180663,
+        "n": 240
+      },
+      "refinery_utilization_pct": {
+        "mean": 89.37791666666666,
+        "standardDeviation": 4.01210097098626,
+        "n": 240
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "1987-01-01",
+    "end": "2026-07-01"
+  },
+  "series": [
+    {
+      "key": "CI_zscore",
+      "label": "Comparative inventory",
+      "unit": "standard deviations",
+      "source": "EIA WCESTUS1, project derivation",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#be123c",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "petroleum_production_YoY",
+      "label": "Petroleum production growth",
+      "unit": "percent",
+      "source": "EIA Monthly Energy Review",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "petroleum_consumption_YoY",
+      "label": "Petroleum consumption growth",
+      "unit": "percent",
+      "source": "EIA Monthly Energy Review",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#d97706",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-03-01"
+    },
+    {
+      "key": "refinery_utilization_pct",
+      "label": "Refinery utilization",
+      "unit": "percent",
+      "source": "EIA WPULEUS3",
+      "status": "measured",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#2563eb",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-07-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1986-01-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1986-02-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1986-03-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1986-04-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1986-05-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1986-06-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1986-07-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1986-08-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1986-09-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1986-10-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1986-11-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1986-12-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1987-01-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": -7.188045308367085,
+      "petroleum_consumption_YoY": 3.6520161224133485,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1987-02-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": -8.555416736206546,
+      "petroleum_consumption_YoY": 4.459624690076436,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1987-03-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": -6.089552099708406,
+      "petroleum_consumption_YoY": -0.9942426041426478,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1987-04-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": -4.126095736639634,
+      "petroleum_consumption_YoY": 3.0808653446679823,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1987-05-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": -5.671539209744603,
+      "petroleum_consumption_YoY": -0.3276583481108597,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1987-06-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": -3.9984539620585346,
+      "petroleum_consumption_YoY": 4.283870318838634,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1987-07-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": -4.7182362537448235,
+      "petroleum_consumption_YoY": 4.493623536750535,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1987-08-01",
+      "CI_zscore": -1.1831901502263156,
+      "petroleum_production_YoY": -1.9539268181182123,
+      "petroleum_consumption_YoY": -2.1069647573795036,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1987-09-01",
+      "CI_zscore": -0.13286753009791988,
+      "petroleum_production_YoY": -1.4729289994116268,
+      "petroleum_consumption_YoY": 4.534163459501572,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1987-10-01",
+      "CI_zscore": -0.18623110301835014,
+      "petroleum_production_YoY": -0.6559811869546461,
+      "petroleum_consumption_YoY": 2.0370854857072684,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1987-11-01",
+      "CI_zscore": 1.02822544484637,
+      "petroleum_production_YoY": -0.18187292740644567,
+      "petroleum_consumption_YoY": 0.695056297263652,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1987-12-01",
+      "CI_zscore": 1.4849301473446348,
+      "petroleum_production_YoY": -0.4178892617401342,
+      "petroleum_consumption_YoY": 1.6711803279721105,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1988-01-01",
+      "CI_zscore": 0.24035159480903043,
+      "petroleum_production_YoY": -2.7178890076221762,
+      "petroleum_consumption_YoY": 4.218279402703162,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1988-02-01",
+      "CI_zscore": 0.19723131483403503,
+      "petroleum_production_YoY": -0.17287807422742274,
+      "petroleum_consumption_YoY": 8.780561208235316,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1988-03-01",
+      "CI_zscore": 0.8798016743719798,
+      "petroleum_production_YoY": -1.0712802199126403,
+      "petroleum_consumption_YoY": 9.224118486496424,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1988-04-01",
+      "CI_zscore": 1.391311771716338,
+      "petroleum_production_YoY": -2.477404833301111,
+      "petroleum_consumption_YoY": 0.5713540103017278,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1988-05-01",
+      "CI_zscore": 1.2051862576215149,
+      "petroleum_production_YoY": -1.2912887372526272,
+      "petroleum_consumption_YoY": 1.0755909256505047,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1988-06-01",
+      "CI_zscore": 1.4204807490903135,
+      "petroleum_production_YoY": -1.3102079800853539,
+      "petroleum_consumption_YoY": 1.3605419809456176,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1988-07-01",
+      "CI_zscore": 1.5958448089713189,
+      "petroleum_production_YoY": -2.56194619048864,
+      "petroleum_consumption_YoY": -2.437212842662395,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1988-08-01",
+      "CI_zscore": 1.1971461816246856,
+      "petroleum_production_YoY": -1.5909017550077897,
+      "petroleum_consumption_YoY": 7.23886420315909,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1988-09-01",
+      "CI_zscore": -0.34764880889757194,
+      "petroleum_production_YoY": -3.7844803558812923,
+      "petroleum_consumption_YoY": 2.282477217938994,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1988-10-01",
+      "CI_zscore": -0.3999356408620107,
+      "petroleum_production_YoY": -4.076025516723448,
+      "petroleum_consumption_YoY": 4.073785124995766,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1988-11-01",
+      "CI_zscore": 0.06822183772378622,
+      "petroleum_production_YoY": -4.451906220276436,
+      "petroleum_consumption_YoY": 8.336431134920463,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1988-12-01",
+      "CI_zscore": -0.2269997443779961,
+      "petroleum_production_YoY": -4.520166279773807,
+      "petroleum_consumption_YoY": 5.4568477688093475,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1989-01-01",
+      "CI_zscore": -1.1900876973386456,
+      "petroleum_production_YoY": -3.78784921865738,
+      "petroleum_consumption_YoY": -0.7852301988130805,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1989-02-01",
+      "CI_zscore": -0.5654310441729474,
+      "petroleum_production_YoY": -6.99330277789686,
+      "petroleum_consumption_YoY": -2.834049662873017,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1989-03-01",
+      "CI_zscore": 0.040490854718890225,
+      "petroleum_production_YoY": -9.54020254188851,
+      "petroleum_consumption_YoY": 1.8387697407662218,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1989-04-01",
+      "CI_zscore": -0.7892985434344372,
+      "petroleum_production_YoY": -6.227097652610825,
+      "petroleum_consumption_YoY": 0.14509396163022714,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1989-05-01",
+      "CI_zscore": 0.06997454655736021,
+      "petroleum_production_YoY": -5.012494718166716,
+      "petroleum_consumption_YoY": 2.2834718432676038,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1989-06-01",
+      "CI_zscore": -0.13385361173527538,
+      "petroleum_production_YoY": -6.679247550846279,
+      "petroleum_consumption_YoY": 2.6941108158383464,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1989-07-01",
+      "CI_zscore": -0.30441342674919525,
+      "petroleum_production_YoY": -7.4079887855744815,
+      "petroleum_consumption_YoY": -1.158763467411661,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1989-08-01",
+      "CI_zscore": 0.06668636415007492,
+      "petroleum_production_YoY": -6.620171021755173,
+      "petroleum_consumption_YoY": -0.6852054699633459,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1989-09-01",
+      "CI_zscore": 0.9173556213349159,
+      "petroleum_production_YoY": -4.395571824848954,
+      "petroleum_consumption_YoY": -1.6617533173242771,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1989-10-01",
+      "CI_zscore": 1.0389210333062064,
+      "petroleum_production_YoY": -7.10397110203409,
+      "petroleum_consumption_YoY": -1.5713568711777648,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1989-11-01",
+      "CI_zscore": 0.41415276301678405,
+      "petroleum_production_YoY": -6.072937518609778,
+      "petroleum_consumption_YoY": -1.7938258121036887,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1989-12-01",
+      "CI_zscore": 0.5683388066748218,
+      "petroleum_production_YoY": -7.615952037761753,
+      "petroleum_consumption_YoY": 3.05644503004161,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1990-01-01",
+      "CI_zscore": 1.594345340781004,
+      "petroleum_production_YoY": -4.927528745660514,
+      "petroleum_consumption_YoY": -0.81675077022898,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1990-02-01",
+      "CI_zscore": 3.606036826232335,
+      "petroleum_production_YoY": -3.7389106554646,
+      "petroleum_consumption_YoY": -3.7093966710970427,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1990-03-01",
+      "CI_zscore": 2.8329417977754767,
+      "petroleum_production_YoY": -1.8687773922794193,
+      "petroleum_consumption_YoY": -4.988241123071802,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1990-04-01",
+      "CI_zscore": 3.571170051166811,
+      "petroleum_production_YoY": -4.688650429502261,
+      "petroleum_consumption_YoY": 0.7529277429911607,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1990-05-01",
+      "CI_zscore": 2.5664555230861685,
+      "petroleum_production_YoY": -6.241806296270003,
+      "petroleum_consumption_YoY": 2.1205142621429474,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1990-06-01",
+      "CI_zscore": 3.1349268498901983,
+      "petroleum_production_YoY": -6.800957141628006,
+      "petroleum_consumption_YoY": -1.492731659276314,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1990-07-01",
+      "CI_zscore": 4.637532838721302,
+      "petroleum_production_YoY": -3.637876005716767,
+      "petroleum_consumption_YoY": 3.7565143483414998,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1990-08-01",
+      "CI_zscore": 6.012186211998478,
+      "petroleum_production_YoY": -3.4173959216155736,
+      "petroleum_consumption_YoY": 3.956789275064443,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1990-09-01",
+      "CI_zscore": 5.386508204595017,
+      "petroleum_production_YoY": -4.293314912252111,
+      "petroleum_consumption_YoY": -1.5915978515947393,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1990-10-01",
+      "CI_zscore": 1.9692245980686975,
+      "petroleum_production_YoY": 1.1956613767830637,
+      "petroleum_consumption_YoY": -2.6800710496743485,
+      "refinery_utilization_pct": null
+    },
+    {
+      "date": "1990-11-01",
+      "CI_zscore": 0.6726169084879424,
+      "petroleum_production_YoY": -1.9837366397733813,
+      "petroleum_consumption_YoY": -3.953530661539295,
+      "refinery_utilization_pct": 84.8
+    },
+    {
+      "date": "1990-12-01",
+      "CI_zscore": 0.009291175036547465,
+      "petroleum_production_YoY": 0.010399694469787057,
+      "petroleum_consumption_YoY": -13.1580147493354,
+      "refinery_utilization_pct": 83.25
+    },
+    {
+      "date": "1991-01-01",
+      "CI_zscore": -0.5840727983411012,
+      "petroleum_production_YoY": -0.6128006871827574,
+      "petroleum_consumption_YoY": -2.03563367929126,
+      "refinery_utilization_pct": 81.25
+    },
+    {
+      "date": "1991-02-01",
+      "CI_zscore": -0.047364142818184525,
+      "petroleum_production_YoY": 1.8640854863695155,
+      "petroleum_consumption_YoY": -5.955263141683154,
+      "refinery_utilization_pct": 84.0
+    },
+    {
+      "date": "1991-03-01",
+      "CI_zscore": -0.05365996959924986,
+      "petroleum_production_YoY": 1.5156710824917097,
+      "petroleum_consumption_YoY": -5.450764389671036,
+      "refinery_utilization_pct": 83.0
+    },
+    {
+      "date": "1991-04-01",
+      "CI_zscore": 0.08413463175499042,
+      "petroleum_production_YoY": 1.3682277975686663,
+      "petroleum_consumption_YoY": -3.9127290251484204,
+      "refinery_utilization_pct": 83.75
+    },
+    {
+      "date": "1991-05-01",
+      "CI_zscore": 0.04903938074851714,
+      "petroleum_production_YoY": 1.0966191261270408,
+      "petroleum_consumption_YoY": -4.685196816756232,
+      "refinery_utilization_pct": 87.32000000000001
+    },
+    {
+      "date": "1991-06-01",
+      "CI_zscore": 0.35637700201127337,
+      "petroleum_production_YoY": 3.0184757941287277,
+      "petroleum_consumption_YoY": -2.372736422991617,
+      "refinery_utilization_pct": 89.25
+    },
+    {
+      "date": "1991-07-01",
+      "CI_zscore": 0.27258444146623395,
+      "petroleum_production_YoY": 2.4213806185553244,
+      "petroleum_consumption_YoY": -1.3506545525222236,
+      "refinery_utilization_pct": 88.0
+    },
+    {
+      "date": "1991-08-01",
+      "CI_zscore": 0.38708904478919004,
+      "petroleum_production_YoY": 0.4052762908086205,
+      "petroleum_consumption_YoY": -5.415576578072812,
+      "refinery_utilization_pct": 88.6
+    },
+    {
+      "date": "1991-09-01",
+      "CI_zscore": 0.20735299470499108,
+      "petroleum_production_YoY": 1.9908026501213927,
+      "petroleum_consumption_YoY": 1.7527683548276274,
+      "refinery_utilization_pct": 89.0
+    },
+    {
+      "date": "1991-10-01",
+      "CI_zscore": 1.2076196857734254,
+      "petroleum_production_YoY": -1.3862707340296376,
+      "petroleum_consumption_YoY": 0.7832035857513464,
+      "refinery_utilization_pct": 84.5
+    },
+    {
+      "date": "1991-11-01",
+      "CI_zscore": 0.5568190134493729,
+      "petroleum_production_YoY": -0.7961595243268782,
+      "petroleum_consumption_YoY": -0.06494496788087556,
+      "refinery_utilization_pct": 83.0
+    },
+    {
+      "date": "1991-12-01",
+      "CI_zscore": -0.471715855578083,
+      "petroleum_production_YoY": -0.525668288059844,
+      "petroleum_consumption_YoY": 3.63065731176877,
+      "refinery_utilization_pct": 85.75
+    },
+    {
+      "date": "1992-01-01",
+      "CI_zscore": 0.5246397447724374,
+      "petroleum_production_YoY": -1.8580706753263065,
+      "petroleum_consumption_YoY": 1.0516303763729695,
+      "refinery_utilization_pct": 83.2
+    },
+    {
+      "date": "1992-02-01",
+      "CI_zscore": 0.6403001467236956,
+      "petroleum_production_YoY": -3.252574277559628,
+      "petroleum_consumption_YoY": 6.946605201100486,
+      "refinery_utilization_pct": 80.25
+    },
+    {
+      "date": "1992-03-01",
+      "CI_zscore": 0.9399222900073285,
+      "petroleum_production_YoY": -2.619544696889986,
+      "petroleum_consumption_YoY": 3.7092305992991514,
+      "refinery_utilization_pct": 82.5
+    },
+    {
+      "date": "1992-04-01",
+      "CI_zscore": 0.3055109853636877,
+      "petroleum_production_YoY": -2.8769051690612946,
+      "petroleum_consumption_YoY": 3.848895443159006,
+      "refinery_utilization_pct": 86.0
+    },
+    {
+      "date": "1992-05-01",
+      "CI_zscore": 0.09019697108716204,
+      "petroleum_production_YoY": -3.2408763419684905,
+      "petroleum_consumption_YoY": 1.987255295686463,
+      "refinery_utilization_pct": 86.4
+    },
+    {
+      "date": "1992-06-01",
+      "CI_zscore": -0.43386661913987895,
+      "petroleum_production_YoY": -2.0902757609428946,
+      "petroleum_consumption_YoY": 0.35571954103530423,
+      "refinery_utilization_pct": 90.0
+    },
+    {
+      "date": "1992-07-01",
+      "CI_zscore": -0.8457978793042698,
+      "petroleum_production_YoY": -2.9380199007616015,
+      "petroleum_consumption_YoY": 1.038790853508731,
+      "refinery_utilization_pct": 90.4
+    },
+    {
+      "date": "1992-08-01",
+      "CI_zscore": -0.8185988134125366,
+      "petroleum_production_YoY": -5.390488049408404,
+      "petroleum_consumption_YoY": -1.4540404577769173,
+      "refinery_utilization_pct": 88.5
+    },
+    {
+      "date": "1992-09-01",
+      "CI_zscore": -0.7987429933052566,
+      "petroleum_production_YoY": -4.581024133670086,
+      "petroleum_consumption_YoY": 0.1528493946972853,
+      "refinery_utilization_pct": 88.25
+    },
+    {
+      "date": "1992-10-01",
+      "CI_zscore": -1.5908065062538186,
+      "petroleum_production_YoY": -4.189496295583172,
+      "petroleum_consumption_YoY": 2.1080156972178576,
+      "refinery_utilization_pct": 89.2
+    },
+    {
+      "date": "1992-11-01",
+      "CI_zscore": -4.899432691822186,
+      "petroleum_production_YoY": -4.1437947884869875,
+      "petroleum_consumption_YoY": 1.6175329886209067,
+      "refinery_utilization_pct": 89.75
+    },
+    {
+      "date": "1992-12-01",
+      "CI_zscore": -2.099638133924014,
+      "petroleum_production_YoY": -2.681633759175639,
+      "petroleum_consumption_YoY": 4.241903204794117,
+      "refinery_utilization_pct": 88.0
+    },
+    {
+      "date": "1993-01-01",
+      "CI_zscore": -1.4086944273260509,
+      "petroleum_production_YoY": -5.428501791164175,
+      "petroleum_consumption_YoY": -6.040021483762215,
+      "refinery_utilization_pct": 87.0
+    },
+    {
+      "date": "1993-02-01",
+      "CI_zscore": -0.6027260388331289,
+      "petroleum_production_YoY": -6.0364090724654424,
+      "petroleum_consumption_YoY": -1.3197128129743274,
+      "refinery_utilization_pct": 86.0
+    },
+    {
+      "date": "1993-03-01",
+      "CI_zscore": -0.48895185624852644,
+      "petroleum_production_YoY": -5.092405286367596,
+      "petroleum_consumption_YoY": 3.7052312552939837,
+      "refinery_utilization_pct": 86.5
+    },
+    {
+      "date": "1993-04-01",
+      "CI_zscore": -0.15880358787806859,
+      "petroleum_production_YoY": -5.638650741096296,
+      "petroleum_consumption_YoY": -0.5524402892243763,
+      "refinery_utilization_pct": 90.4
+    },
+    {
+      "date": "1993-05-01",
+      "CI_zscore": -0.273351626897102,
+      "petroleum_production_YoY": -4.487334275497901,
+      "petroleum_consumption_YoY": -0.6791347540411885,
+      "refinery_utilization_pct": 92.25
+    },
+    {
+      "date": "1993-06-01",
+      "CI_zscore": -0.317936636905137,
+      "petroleum_production_YoY": -5.198393093309328,
+      "petroleum_consumption_YoY": 0.14237259289402449,
+      "refinery_utilization_pct": 94.5
+    },
+    {
+      "date": "1993-07-01",
+      "CI_zscore": 0.19594750404263397,
+      "petroleum_production_YoY": -6.2084811599893435,
+      "petroleum_consumption_YoY": 0.5474211937430917,
+      "refinery_utilization_pct": 95.5
+    },
+    {
+      "date": "1993-08-01",
+      "CI_zscore": 0.020888651478409275,
+      "petroleum_production_YoY": -2.3690555099347144,
+      "petroleum_consumption_YoY": 1.8426218911511194,
+      "refinery_utilization_pct": 94.1
+    },
+    {
+      "date": "1993-09-01",
+      "CI_zscore": -0.10746922063153658,
+      "petroleum_production_YoY": -4.531274648409223,
+      "petroleum_consumption_YoY": 4.331284398658397,
+      "refinery_utilization_pct": 92.475
+    },
+    {
+      "date": "1993-10-01",
+      "CI_zscore": -0.8035598760080968,
+      "petroleum_production_YoY": -4.026859765377722,
+      "petroleum_consumption_YoY": -1.2801190802033235,
+      "refinery_utilization_pct": 92.06
+    },
+    {
+      "date": "1993-11-01",
+      "CI_zscore": -0.6950353410144648,
+      "petroleum_production_YoY": -1.6015653473285263,
+      "petroleum_consumption_YoY": 3.741820022548281,
+      "refinery_utilization_pct": 91.7
+    },
+    {
+      "date": "1993-12-01",
+      "CI_zscore": 1.3780347124335712,
+      "petroleum_production_YoY": -3.458039774946986,
+      "petroleum_consumption_YoY": -0.006346657826361568,
+      "refinery_utilization_pct": 91.8
+    },
+    {
+      "date": "1994-01-01",
+      "CI_zscore": 0.2660590490699062,
+      "petroleum_production_YoY": -2.07194160270201,
+      "petroleum_consumption_YoY": 11.685196210932713,
+      "refinery_utilization_pct": 89.45
+    },
+    {
+      "date": "1994-02-01",
+      "CI_zscore": -0.33771856761600655,
+      "petroleum_production_YoY": -2.4812922896808476,
+      "petroleum_consumption_YoY": 6.201699847270548,
+      "refinery_utilization_pct": 88.65
+    },
+    {
+      "date": "1994-03-01",
+      "CI_zscore": -0.8624094400510505,
+      "petroleum_production_YoY": -3.2764813034690365,
+      "petroleum_consumption_YoY": -1.593983034550539,
+      "refinery_utilization_pct": 86.55
+    },
+    {
+      "date": "1994-04-01",
+      "CI_zscore": -0.5956439840602925,
+      "petroleum_production_YoY": -3.9121341465895743,
+      "petroleum_consumption_YoY": 4.270165609446841,
+      "refinery_utilization_pct": 91.96000000000001
+    },
+    {
+      "date": "1994-05-01",
+      "CI_zscore": -1.6368764133102227,
+      "petroleum_production_YoY": -2.3182248368609493,
+      "petroleum_consumption_YoY": 4.308169820943486,
+      "refinery_utilization_pct": 96.25
+    },
+    {
+      "date": "1994-06-01",
+      "CI_zscore": -1.6226179421770546,
+      "petroleum_production_YoY": -2.709984184792724,
+      "petroleum_consumption_YoY": 4.219422153564145,
+      "refinery_utilization_pct": 96.475
+    },
+    {
+      "date": "1994-07-01",
+      "CI_zscore": -0.9082147921138544,
+      "petroleum_production_YoY": -2.8031954586224206,
+      "petroleum_consumption_YoY": 0.40948415681754113,
+      "refinery_utilization_pct": 95.36
+    },
+    {
+      "date": "1994-08-01",
+      "CI_zscore": -1.1336220718500762,
+      "petroleum_production_YoY": -3.1616025731424413,
+      "petroleum_consumption_YoY": 4.083611679775889,
+      "refinery_utilization_pct": 96.2
+    },
+    {
+      "date": "1994-09-01",
+      "CI_zscore": -0.8315909305700483,
+      "petroleum_production_YoY": -1.5311034013676283,
+      "petroleum_consumption_YoY": -1.709262357927488,
+      "refinery_utilization_pct": 94.97999999999999
+    },
+    {
+      "date": "1994-10-01",
+      "CI_zscore": 0.20451753159596908,
+      "petroleum_production_YoY": -2.6440576550851635,
+      "petroleum_consumption_YoY": 1.817012347722402,
+      "refinery_utilization_pct": 89.75
+    },
+    {
+      "date": "1994-11-01",
+      "CI_zscore": 0.4712247385456563,
+      "petroleum_production_YoY": -4.098887209272705,
+      "petroleum_consumption_YoY": -2.7724474005039634,
+      "refinery_utilization_pct": 92.075
+    },
+    {
+      "date": "1994-12-01",
+      "CI_zscore": -0.22107332511318709,
+      "petroleum_production_YoY": -1.4274708742132547,
+      "petroleum_consumption_YoY": 1.309418869203638,
+      "refinery_utilization_pct": 93.28
+    },
+    {
+      "date": "1995-01-01",
+      "CI_zscore": -0.4998261672704176,
+      "petroleum_production_YoY": -1.9745249185869174,
+      "petroleum_consumption_YoY": -5.121683262039777,
+      "refinery_utilization_pct": 91.8
+    },
+    {
+      "date": "1995-02-01",
+      "CI_zscore": -1.8825209039192237,
+      "petroleum_production_YoY": 0.3563491625070858,
+      "petroleum_consumption_YoY": -0.8768911458321926,
+      "refinery_utilization_pct": 89.55
+    },
+    {
+      "date": "1995-03-01",
+      "CI_zscore": -1.9867090340826377,
+      "petroleum_production_YoY": -2.152655455642194,
+      "petroleum_consumption_YoY": 0.6971678322902797,
+      "refinery_utilization_pct": 89.67999999999999
+    },
+    {
+      "date": "1995-04-01",
+      "CI_zscore": -1.0383442189221999,
+      "petroleum_production_YoY": -0.1268280495370422,
+      "petroleum_consumption_YoY": -2.9740453361828845,
+      "refinery_utilization_pct": 91.25
+    },
+    {
+      "date": "1995-05-01",
+      "CI_zscore": -1.4426073131297263,
+      "petroleum_production_YoY": -0.8803125149050017,
+      "petroleum_consumption_YoY": -0.21769564608709047,
+      "refinery_utilization_pct": 93.2
+    },
+    {
+      "date": "1995-06-01",
+      "CI_zscore": -1.5312476103032753,
+      "petroleum_production_YoY": -0.4834969344642559,
+      "petroleum_consumption_YoY": 1.3571043794038395,
+      "refinery_utilization_pct": 95.82000000000001
+    },
+    {
+      "date": "1995-07-01",
+      "CI_zscore": -1.6116757374832003,
+      "petroleum_production_YoY": -0.801537761278126,
+      "petroleum_consumption_YoY": -1.8813078525746207,
+      "refinery_utilization_pct": 94.05
+    },
+    {
+      "date": "1995-08-01",
+      "CI_zscore": -2.127577792999884,
+      "petroleum_production_YoY": -1.4898798194173946,
+      "petroleum_consumption_YoY": -0.48574357745335695,
+      "refinery_utilization_pct": 93.55
+    },
+    {
+      "date": "1995-09-01",
+      "CI_zscore": -2.136244083915774,
+      "petroleum_production_YoY": -2.9153686506665943,
+      "petroleum_consumption_YoY": 2.8520746358403404,
+      "refinery_utilization_pct": 95.17999999999999
+    },
+    {
+      "date": "1995-10-01",
+      "CI_zscore": -5.280896446936439,
+      "petroleum_production_YoY": -3.5575327970849946,
+      "petroleum_consumption_YoY": -0.49588415125580987,
+      "refinery_utilization_pct": 90.15
+    },
+    {
+      "date": "1995-11-01",
+      "CI_zscore": -3.2355730443012023,
+      "petroleum_production_YoY": -0.6490773244309467,
+      "petroleum_consumption_YoY": 3.350891049559235,
+      "refinery_utilization_pct": 89.875
+    },
+    {
+      "date": "1995-12-01",
+      "CI_zscore": -4.157988957045783,
+      "petroleum_production_YoY": -3.3989265488832188,
+      "petroleum_consumption_YoY": 0.1879174322994004,
+      "refinery_utilization_pct": 93.32000000000001
+    },
+    {
+      "date": "1996-01-01",
+      "CI_zscore": -4.402725766926777,
+      "petroleum_production_YoY": -2.796736993017257,
+      "petroleum_consumption_YoY": 6.508057627373298,
+      "refinery_utilization_pct": 91.675
+    },
+    {
+      "date": "1996-02-01",
+      "CI_zscore": -6.946053564126944,
+      "petroleum_production_YoY": -3.2034077214762924,
+      "petroleum_consumption_YoY": 5.066184653709804,
+      "refinery_utilization_pct": 90.275
+    },
+    {
+      "date": "1996-03-01",
+      "CI_zscore": -6.690925473179622,
+      "petroleum_production_YoY": -0.4386544355109989,
+      "petroleum_consumption_YoY": 4.565166206021809,
+      "refinery_utilization_pct": 91.16
+    },
+    {
+      "date": "1996-04-01",
+      "CI_zscore": -10.972241013985279,
+      "petroleum_production_YoY": -2.4199708164312383,
+      "petroleum_consumption_YoY": 4.549604862463363,
+      "refinery_utilization_pct": 93.35
+    },
+    {
+      "date": "1996-05-01",
+      "CI_zscore": -4.710633423605468,
+      "petroleum_production_YoY": -3.5526742125431943,
+      "petroleum_consumption_YoY": 4.043451725371616,
+      "refinery_utilization_pct": 94.17999999999999
+    },
+    {
+      "date": "1996-06-01",
+      "CI_zscore": -2.4060946641178353,
+      "petroleum_production_YoY": -1.8304880592123318,
+      "petroleum_consumption_YoY": -0.3151726333347371,
+      "refinery_utilization_pct": 95.45
+    },
+    {
+      "date": "1996-07-01",
+      "CI_zscore": -1.7430179054682784,
+      "petroleum_production_YoY": -1.7212579387207327,
+      "petroleum_consumption_YoY": 6.25228672412923,
+      "refinery_utilization_pct": 94.125
+    },
+    {
+      "date": "1996-08-01",
+      "CI_zscore": -1.4187388007910053,
+      "petroleum_production_YoY": -1.3430382158056586,
+      "petroleum_consumption_YoY": 3.291269562797461,
+      "refinery_utilization_pct": 94.46000000000001
+    },
+    {
+      "date": "1996-09-01",
+      "CI_zscore": -1.874352961275167,
+      "petroleum_production_YoY": 1.024324152881495,
+      "petroleum_consumption_YoY": -1.9220783012552367,
+      "refinery_utilization_pct": 95.275
+    },
+    {
+      "date": "1996-10-01",
+      "CI_zscore": -1.6483376688829623,
+      "petroleum_production_YoY": 0.9305222994413054,
+      "petroleum_consumption_YoY": 9.11412404531282,
+      "refinery_utilization_pct": 93.8
+    },
+    {
+      "date": "1996-11-01",
+      "CI_zscore": -1.9671086486863145,
+      "petroleum_production_YoY": -1.6659354936875426,
+      "petroleum_consumption_YoY": 3.1059527745637805,
+      "refinery_utilization_pct": 93.66
+    },
+    {
+      "date": "1996-12-01",
+      "CI_zscore": -3.214928003023531,
+      "petroleum_production_YoY": -0.3670939500785231,
+      "petroleum_consumption_YoY": -0.24021886459831832,
+      "refinery_utilization_pct": 94.175
+    },
+    {
+      "date": "1997-01-01",
+      "CI_zscore": -3.36431723037764,
+      "petroleum_production_YoY": -1.434530245499166,
+      "petroleum_consumption_YoY": 1.5509323412786546,
+      "refinery_utilization_pct": 91.28
+    },
+    {
+      "date": "1997-02-01",
+      "CI_zscore": -1.8305383517580316,
+      "petroleum_production_YoY": -0.9504321099720547,
+      "petroleum_consumption_YoY": -4.7203935888537,
+      "refinery_utilization_pct": 88.475
+    },
+    {
+      "date": "1997-03-01",
+      "CI_zscore": -1.4562248107717408,
+      "petroleum_production_YoY": -1.817130716329518,
+      "petroleum_consumption_YoY": -2.267293735739606,
+      "refinery_utilization_pct": 91.975
+    },
+    {
+      "date": "1997-04-01",
+      "CI_zscore": -1.038842394364415,
+      "petroleum_production_YoY": -0.04056544568917797,
+      "petroleum_consumption_YoY": 3.848822944035235,
+      "refinery_utilization_pct": 92.875
+    },
+    {
+      "date": "1997-05-01",
+      "CI_zscore": -0.6681890071445171,
+      "petroleum_production_YoY": 1.2584538954780955,
+      "petroleum_consumption_YoY": 1.8003828392540333,
+      "refinery_utilization_pct": 97.16
+    },
+    {
+      "date": "1997-06-01",
+      "CI_zscore": -0.44579554443116526,
+      "petroleum_production_YoY": -0.2552875743995209,
+      "petroleum_consumption_YoY": 2.890836820458853,
+      "refinery_utilization_pct": 97.8
+    },
+    {
+      "date": "1997-07-01",
+      "CI_zscore": -0.7050023864405088,
+      "petroleum_production_YoY": 1.1300501185590228,
+      "petroleum_consumption_YoY": 4.854653696619282,
+      "refinery_utilization_pct": 96.725
+    },
+    {
+      "date": "1997-08-01",
+      "CI_zscore": -0.9759445730916559,
+      "petroleum_production_YoY": -0.1994474589984807,
+      "petroleum_consumption_YoY": -0.7100562973901048,
+      "refinery_utilization_pct": 98.03999999999999
+    },
+    {
+      "date": "1997-09-01",
+      "CI_zscore": -1.6668195609991208,
+      "petroleum_production_YoY": 0.061232471260153076,
+      "petroleum_consumption_YoY": 4.939641916361626,
+      "refinery_utilization_pct": 98.75
+    },
+    {
+      "date": "1997-10-01",
+      "CI_zscore": -0.8711535626638311,
+      "petroleum_production_YoY": -0.21174609909927478,
+      "petroleum_consumption_YoY": -0.6697885983684926,
+      "refinery_utilization_pct": 96.22
+    },
+    {
+      "date": "1997-11-01",
+      "CI_zscore": -0.4088085531365979,
+      "petroleum_production_YoY": -0.2520229007279884,
+      "petroleum_consumption_YoY": 0.34766334247531283,
+      "refinery_utilization_pct": 94.275
+    },
+    {
+      "date": "1997-12-01",
+      "CI_zscore": -0.3113959988932479,
+      "petroleum_production_YoY": 0.3864607325738678,
+      "petroleum_consumption_YoY": 4.4237419074334206,
+      "refinery_utilization_pct": 96.425
+    },
+    {
+      "date": "1998-01-01",
+      "CI_zscore": -0.04808290425573062,
+      "petroleum_production_YoY": 2.161877628035702,
+      "petroleum_consumption_YoY": -1.3751203654170485,
+      "refinery_utilization_pct": 94.58
+    },
+    {
+      "date": "1998-02-01",
+      "CI_zscore": 0.4588844118703618,
+      "petroleum_production_YoY": -0.5915456634567939,
+      "petroleum_consumption_YoY": -0.2908875124516208,
+      "refinery_utilization_pct": 90.6
+    },
+    {
+      "date": "1998-03-01",
+      "CI_zscore": 0.2886877930441622,
+      "petroleum_production_YoY": -0.6871617643206762,
+      "petroleum_consumption_YoY": 3.9436947575765435,
+      "refinery_utilization_pct": 93.95
+    },
+    {
+      "date": "1998-04-01",
+      "CI_zscore": 0.6875072840272614,
+      "petroleum_production_YoY": 0.6435973889718394,
+      "petroleum_consumption_YoY": 2.8918110983568557,
+      "refinery_utilization_pct": 96.125
+    },
+    {
+      "date": "1998-05-01",
+      "CI_zscore": 1.276566304565733,
+      "petroleum_production_YoY": -1.96711253994859,
+      "petroleum_consumption_YoY": 0.8302253695943618,
+      "refinery_utilization_pct": 97.5
+    },
+    {
+      "date": "1998-06-01",
+      "CI_zscore": 1.3453057533313026,
+      "petroleum_production_YoY": -2.708189738144484,
+      "petroleum_consumption_YoY": 3.2466466010175665,
+      "refinery_utilization_pct": 97.925
+    },
+    {
+      "date": "1998-07-01",
+      "CI_zscore": 0.9706650673475551,
+      "petroleum_production_YoY": -3.3546239643323372,
+      "petroleum_consumption_YoY": 2.2792908886838603,
+      "refinery_utilization_pct": 98.94
+    },
+    {
+      "date": "1998-08-01",
+      "CI_zscore": 1.437375826594349,
+      "petroleum_production_YoY": -2.2803875485121083,
+      "petroleum_consumption_YoY": 4.654552404360146,
+      "refinery_utilization_pct": 99.325
+    },
+    {
+      "date": "1998-09-01",
+      "CI_zscore": 0.5279944005843894,
+      "petroleum_production_YoY": -10.74053196633148,
+      "petroleum_consumption_YoY": 2.4857089885033767,
+      "refinery_utilization_pct": 97.025
+    },
+    {
+      "date": "1998-10-01",
+      "CI_zscore": 1.0698037920533625,
+      "petroleum_production_YoY": -5.018994450725767,
+      "petroleum_consumption_YoY": 0.5734009503999049,
+      "refinery_utilization_pct": 88.53999999999999
+    },
+    {
+      "date": "1998-11-01",
+      "CI_zscore": 1.2464923859846746,
+      "petroleum_production_YoY": -4.9440944055391896,
+      "petroleum_consumption_YoY": 0.7831151410184534,
+      "refinery_utilization_pct": 94.525
+    },
+    {
+      "date": "1998-12-01",
+      "CI_zscore": 1.0032790792118376,
+      "petroleum_production_YoY": -7.466711620754096,
+      "petroleum_consumption_YoY": 1.6379618631620518,
+      "refinery_utilization_pct": 94.45
+    },
+    {
+      "date": "1999-01-01",
+      "CI_zscore": 0.9516448925709251,
+      "petroleum_production_YoY": -8.824519618146919,
+      "petroleum_consumption_YoY": 3.834966590494737,
+      "refinery_utilization_pct": 93.9
+    },
+    {
+      "date": "1999-02-01",
+      "CI_zscore": 1.377049848329243,
+      "petroleum_production_YoY": -7.879204818588725,
+      "petroleum_consumption_YoY": 4.621370650355239,
+      "refinery_utilization_pct": 91.725
+    },
+    {
+      "date": "1999-03-01",
+      "CI_zscore": 1.5484980662022447,
+      "petroleum_production_YoY": -8.194470693200751,
+      "petroleum_consumption_YoY": 4.819313399430447,
+      "refinery_utilization_pct": 90.75
+    },
+    {
+      "date": "1999-04-01",
+      "CI_zscore": 1.0443226192496557,
+      "petroleum_production_YoY": -9.186641471597689,
+      "petroleum_consumption_YoY": 0.08886199485815816,
+      "refinery_utilization_pct": 94.47999999999999
+    },
+    {
+      "date": "1999-05-01",
+      "CI_zscore": 0.4018206025596452,
+      "petroleum_production_YoY": -7.436616744696822,
+      "petroleum_consumption_YoY": 1.3379831131278497,
+      "refinery_utilization_pct": 93.775
+    },
+    {
+      "date": "1999-06-01",
+      "CI_zscore": 0.7492083307593843,
+      "petroleum_production_YoY": -8.089667807302249,
+      "petroleum_consumption_YoY": 2.7665193375546515,
+      "refinery_utilization_pct": 93.275
+    },
+    {
+      "date": "1999-07-01",
+      "CI_zscore": 0.743629786365922,
+      "petroleum_production_YoY": -6.399057468373359,
+      "petroleum_consumption_YoY": 0.7758267166846355,
+      "refinery_utilization_pct": 94.42
+    },
+    {
+      "date": "1999-08-01",
+      "CI_zscore": 0.1243006740203363,
+      "petroleum_production_YoY": -6.810163606115527,
+      "petroleum_consumption_YoY": 3.559870146747146,
+      "refinery_utilization_pct": 95.35
+    },
+    {
+      "date": "1999-09-01",
+      "CI_zscore": -0.38062256057296073,
+      "petroleum_production_YoY": 0.2514850034857741,
+      "petroleum_consumption_YoY": 2.1297432524519433,
+      "refinery_utilization_pct": 94.55
+    },
+    {
+      "date": "1999-10-01",
+      "CI_zscore": -0.8279619109579096,
+      "petroleum_production_YoY": -3.181911272911031,
+      "petroleum_consumption_YoY": 2.877504029909539,
+      "refinery_utilization_pct": 91.2
+    },
+    {
+      "date": "1999-11-01",
+      "CI_zscore": -1.2074121484084948,
+      "petroleum_production_YoY": -2.9246755133487734,
+      "petroleum_consumption_YoY": 1.9337805917694073,
+      "refinery_utilization_pct": 91.05
+    },
+    {
+      "date": "1999-12-01",
+      "CI_zscore": -1.561216119363151,
+      "petroleum_production_YoY": -1.4044298214479722,
+      "petroleum_consumption_YoY": 4.535088978659374,
+      "refinery_utilization_pct": 89.92
+    },
+    {
+      "date": "2000-01-01",
+      "CI_zscore": -1.5941819187843915,
+      "petroleum_production_YoY": -3.0013301235076284,
+      "petroleum_consumption_YoY": -0.9792191192846467,
+      "refinery_utilization_pct": 86.125
+    },
+    {
+      "date": "2000-02-01",
+      "CI_zscore": -2.4679449545028818,
+      "petroleum_production_YoY": -1.9055850482028625,
+      "petroleum_consumption_YoY": 5.539936487816477,
+      "refinery_utilization_pct": 85.7
+    },
+    {
+      "date": "2000-03-01",
+      "CI_zscore": -1.8327804172211322,
+      "petroleum_production_YoY": 0.6047292088423806,
+      "petroleum_consumption_YoY": -2.0174668669900697,
+      "refinery_utilization_pct": 89.76
+    },
+    {
+      "date": "2000-04-01",
+      "CI_zscore": -1.3273100204158286,
+      "petroleum_production_YoY": -0.5611663127634725,
+      "petroleum_consumption_YoY": -2.0196268090172054,
+      "refinery_utilization_pct": 91.8
+    },
+    {
+      "date": "2000-05-01",
+      "CI_zscore": -1.2119357747524104,
+      "petroleum_production_YoY": -0.4834116607743688,
+      "petroleum_consumption_YoY": 4.777262459203935,
+      "refinery_utilization_pct": 94.075
+    },
+    {
+      "date": "2000-06-01",
+      "CI_zscore": -2.3880925682117966,
+      "petroleum_production_YoY": 1.0870506825640724,
+      "petroleum_consumption_YoY": 1.0990562685093686,
+      "refinery_utilization_pct": 95.64
+    },
+    {
+      "date": "2000-07-01",
+      "CI_zscore": -2.8314268066398,
+      "petroleum_production_YoY": -1.011331668046156,
+      "petroleum_consumption_YoY": -0.28892906733132273,
+      "refinery_utilization_pct": 96.075
+    },
+    {
+      "date": "2000-08-01",
+      "CI_zscore": -2.4015142272705905,
+      "petroleum_production_YoY": 0.14710484753983621,
+      "petroleum_consumption_YoY": 1.8128942873547604,
+      "refinery_utilization_pct": 95.45
+    },
+    {
+      "date": "2000-09-01",
+      "CI_zscore": -3.0749288853951495,
+      "petroleum_production_YoY": -0.7938976227697458,
+      "petroleum_consumption_YoY": 2.361000514944367,
+      "refinery_utilization_pct": 95.06
+    },
+    {
+      "date": "2000-10-01",
+      "CI_zscore": -1.8628396092337334,
+      "petroleum_production_YoY": -2.3218821226762887,
+      "petroleum_consumption_YoY": -0.09404949462227252,
+      "refinery_utilization_pct": 92.30000000000001
+    },
+    {
+      "date": "2000-11-01",
+      "CI_zscore": -2.166145923357194,
+      "petroleum_production_YoY": -2.1422713676834015,
+      "petroleum_consumption_YoY": 1.1616479328445006,
+      "refinery_utilization_pct": 92.0
+    },
+    {
+      "date": "2000-12-01",
+      "CI_zscore": -1.2362584738506184,
+      "petroleum_production_YoY": -1.7364728098489324,
+      "petroleum_consumption_YoY": 2.4232623569550915,
+      "refinery_utilization_pct": 92.96000000000001
+    },
+    {
+      "date": "2001-01-01",
+      "CI_zscore": -1.3538181697894645,
+      "petroleum_production_YoY": 0.2515223768302821,
+      "petroleum_consumption_YoY": 7.434154589042641,
+      "refinery_utilization_pct": 91.325
+    },
+    {
+      "date": "2001-02-01",
+      "CI_zscore": -1.5812836125979501,
+      "petroleum_production_YoY": -1.225990667207355,
+      "petroleum_consumption_YoY": -2.1530859706357264,
+      "refinery_utilization_pct": 89.94999999999999
+    },
+    {
+      "date": "2001-03-01",
+      "CI_zscore": -1.206049732901071,
+      "petroleum_production_YoY": -0.6402783816111923,
+      "petroleum_consumption_YoY": 4.2492893463963455,
+      "refinery_utilization_pct": 90.3
+    },
+    {
+      "date": "2001-04-01",
+      "CI_zscore": -0.346306919700298,
+      "petroleum_production_YoY": 0.14463204494030713,
+      "petroleum_consumption_YoY": 5.333479832963617,
+      "refinery_utilization_pct": 94.125
+    },
+    {
+      "date": "2001-05-01",
+      "CI_zscore": -0.038632652253132845,
+      "petroleum_production_YoY": -0.29219140991806336,
+      "petroleum_consumption_YoY": -0.05632764190094397,
+      "refinery_utilization_pct": 95.1
+    },
+    {
+      "date": "2001-06-01",
+      "CI_zscore": -0.27372599491816124,
+      "petroleum_production_YoY": -0.9804595044172193,
+      "petroleum_consumption_YoY": -1.8780677642944554,
+      "refinery_utilization_pct": 95.44
+    },
+    {
+      "date": "2001-07-01",
+      "CI_zscore": -0.31300219521194167,
+      "petroleum_production_YoY": 0.16153363387776398,
+      "petroleum_consumption_YoY": 1.210701485367438,
+      "refinery_utilization_pct": 94.025
+    },
+    {
+      "date": "2001-08-01",
+      "CI_zscore": -0.5327099248513173,
+      "petroleum_production_YoY": -1.0937797452776454,
+      "petroleum_consumption_YoY": -1.4852240161166819,
+      "refinery_utilization_pct": 92.66
+    },
+    {
+      "date": "2001-09-01",
+      "CI_zscore": -0.09746926573608872,
+      "petroleum_production_YoY": -0.8458940600361675,
+      "petroleum_consumption_YoY": -4.839150964211636,
+      "refinery_utilization_pct": 91.6
+    },
+    {
+      "date": "2001-10-01",
+      "CI_zscore": 0.018373915721150925,
+      "petroleum_production_YoY": -1.0831240327559,
+      "petroleum_consumption_YoY": 0.049499376412454055,
+      "refinery_utilization_pct": 91.875
+    },
+    {
+      "date": "2001-11-01",
+      "CI_zscore": 0.017214826237501486,
+      "petroleum_production_YoY": 0.835072245656332,
+      "petroleum_consumption_YoY": 0.3477178260528735,
+      "refinery_utilization_pct": 90.32000000000001
+    },
+    {
+      "date": "2001-12-01",
+      "CI_zscore": 0.19984546278431706,
+      "petroleum_production_YoY": 0.5526289541569307,
+      "petroleum_consumption_YoY": -9.161357372012102,
+      "refinery_utilization_pct": 89.125
+    },
+    {
+      "date": "2002-01-01",
+      "CI_zscore": 0.7226781729477257,
+      "petroleum_production_YoY": 1.2848243424427697,
+      "petroleum_consumption_YoY": -3.932159179228334,
+      "refinery_utilization_pct": 88.025
+    },
+    {
+      "date": "2002-02-01",
+      "CI_zscore": 0.6503945728762789,
+      "petroleum_production_YoY": 1.744209784750983,
+      "petroleum_consumption_YoY": -2.6240926085204896,
+      "refinery_utilization_pct": 86.475
+    },
+    {
+      "date": "2002-03-01",
+      "CI_zscore": 0.5455172102779111,
+      "petroleum_production_YoY": 0.09366846736416079,
+      "petroleum_consumption_YoY": -1.7665296616687032,
+      "refinery_utilization_pct": 86.44
+    },
+    {
+      "date": "2002-04-01",
+      "CI_zscore": 0.06732015084946041,
+      "petroleum_production_YoY": -0.3103383752658506,
+      "petroleum_consumption_YoY": -0.83773423134339,
+      "refinery_utilization_pct": 90.625
+    },
+    {
+      "date": "2002-05-01",
+      "CI_zscore": -0.5079247421463462,
+      "petroleum_production_YoY": 1.2973487788765725,
+      "petroleum_consumption_YoY": 0.4302626081304828,
+      "refinery_utilization_pct": 92.22
+    },
+    {
+      "date": "2002-06-01",
+      "CI_zscore": -0.04554057804322308,
+      "petroleum_production_YoY": 2.0569077165648153,
+      "petroleum_consumption_YoY": 0.9198770440252524,
+      "refinery_utilization_pct": 93.1
+    },
+    {
+      "date": "2002-07-01",
+      "CI_zscore": -0.3583851248596571,
+      "petroleum_production_YoY": 0.038026431675164396,
+      "petroleum_consumption_YoY": 0.43865713062447576,
+      "refinery_utilization_pct": 93.4
+    },
+    {
+      "date": "2002-08-01",
+      "CI_zscore": -0.573604852953042,
+      "petroleum_production_YoY": 1.2293250903252728,
+      "petroleum_consumption_YoY": -0.26414023314186297,
+      "refinery_utilization_pct": 92.16
+    },
+    {
+      "date": "2002-09-01",
+      "CI_zscore": -1.750890529619267,
+      "petroleum_production_YoY": -5.21594796698751,
+      "petroleum_consumption_YoY": 2.4311563767797084,
+      "refinery_utilization_pct": 91.375
+    },
+    {
+      "date": "2002-10-01",
+      "CI_zscore": -1.6897524117017402,
+      "petroleum_production_YoY": -6.750565730456648,
+      "petroleum_consumption_YoY": -1.0720276247595861,
+      "refinery_utilization_pct": 84.375
+    },
+    {
+      "date": "2002-11-01",
+      "CI_zscore": -1.454694838170023,
+      "petroleum_production_YoY": -4.38414411865522,
+      "petroleum_consumption_YoY": 2.8589841156332563,
+      "refinery_utilization_pct": 90.4
+    },
+    {
+      "date": "2002-12-01",
+      "CI_zscore": -1.4433738737938568,
+      "petroleum_production_YoY": -2.8157299046227324,
+      "petroleum_consumption_YoY": 4.845928811904887,
+      "refinery_utilization_pct": 89.725
+    },
+    {
+      "date": "2003-01-01",
+      "CI_zscore": -2.0343317850963194,
+      "petroleum_production_YoY": -2.0125034243187567,
+      "petroleum_consumption_YoY": 2.219335356935037,
+      "refinery_utilization_pct": 87.22
+    },
+    {
+      "date": "2003-02-01",
+      "CI_zscore": -1.790152141337329,
+      "petroleum_production_YoY": -1.6672581281171661,
+      "petroleum_consumption_YoY": 5.280720889165891,
+      "refinery_utilization_pct": 85.82499999999999
+    },
+    {
+      "date": "2003-03-01",
+      "CI_zscore": -2.1299330069894,
+      "petroleum_production_YoY": -1.3992947798964983,
+      "petroleum_consumption_YoY": 0.7499934628885097,
+      "refinery_utilization_pct": 89.075
+    },
+    {
+      "date": "2003-04-01",
+      "CI_zscore": -2.850761769247763,
+      "petroleum_production_YoY": -2.0296729934216162,
+      "petroleum_consumption_YoY": 1.1925241461765879,
+      "refinery_utilization_pct": 92.8
+    },
+    {
+      "date": "2003-05-01",
+      "CI_zscore": -2.966015762801834,
+      "petroleum_production_YoY": -4.091071124655066,
+      "petroleum_consumption_YoY": -1.5902238307377137,
+      "refinery_utilization_pct": 95.28
+    },
+    {
+      "date": "2003-06-01",
+      "CI_zscore": -2.39331302392324,
+      "petroleum_production_YoY": -3.8289453380708327,
+      "petroleum_consumption_YoY": 0.13290428682588562,
+      "refinery_utilization_pct": 94.625
+    },
+    {
+      "date": "2003-07-01",
+      "CI_zscore": -2.3849940882219296,
+      "petroleum_production_YoY": -4.388487970148269,
+      "petroleum_consumption_YoY": 0.571279204958941,
+      "refinery_utilization_pct": 93.775
+    },
+    {
+      "date": "2003-08-01",
+      "CI_zscore": -1.6902850803363592,
+      "petroleum_production_YoY": -3.8308934639244008,
+      "petroleum_consumption_YoY": 2.0595775197832733,
+      "refinery_utilization_pct": 93.34
+    },
+    {
+      "date": "2003-09-01",
+      "CI_zscore": -1.6347510178517948,
+      "petroleum_production_YoY": 3.6552987287693295,
+      "petroleum_consumption_YoY": 2.3897842881917652,
+      "refinery_utilization_pct": 93.25
+    },
+    {
+      "date": "2003-10-01",
+      "CI_zscore": -0.6779809319730493,
+      "petroleum_production_YoY": 4.765168108191231,
+      "petroleum_consumption_YoY": 2.9095596264061996,
+      "refinery_utilization_pct": 92.0
+    },
+    {
+      "date": "2003-11-01",
+      "CI_zscore": -0.8738803102572562,
+      "petroleum_production_YoY": -1.3687670800252127,
+      "petroleum_consumption_YoY": -0.571505095329472,
+      "refinery_utilization_pct": 92.175
+    },
+    {
+      "date": "2003-12-01",
+      "CI_zscore": -1.5636402161471255,
+      "petroleum_production_YoY": -2.625694594215755,
+      "petroleum_consumption_YoY": 3.6306603334723686,
+      "refinery_utilization_pct": 92.375
+    },
+    {
+      "date": "2004-01-01",
+      "CI_zscore": -1.6532612082925138,
+      "petroleum_production_YoY": -2.9592745934652775,
+      "petroleum_consumption_YoY": 2.420372796800696,
+      "refinery_utilization_pct": 89.92
+    },
+    {
+      "date": "2004-02-01",
+      "CI_zscore": -1.119728893207594,
+      "petroleum_production_YoY": -3.649524465649634,
+      "petroleum_consumption_YoY": 5.983858382018292,
+      "refinery_utilization_pct": 89.125
+    },
+    {
+      "date": "2004-03-01",
+      "CI_zscore": -0.7704566621064804,
+      "petroleum_production_YoY": -3.219474858282867,
+      "petroleum_consumption_YoY": 3.746708271010757,
+      "refinery_utilization_pct": 88.325
+    },
+    {
+      "date": "2004-04-01",
+      "CI_zscore": -0.8034793068451066,
+      "petroleum_production_YoY": -2.8901557437402747,
+      "petroleum_consumption_YoY": 3.562826199673186,
+      "refinery_utilization_pct": 90.82000000000001
+    },
+    {
+      "date": "2004-05-01",
+      "CI_zscore": -0.8926409221194496,
+      "petroleum_production_YoY": -1.898481056241974,
+      "petroleum_consumption_YoY": 4.629433040537356,
+      "refinery_utilization_pct": 95.2
+    },
+    {
+      "date": "2004-06-01",
+      "CI_zscore": -0.375199359950489,
+      "petroleum_production_YoY": -4.455496107316426,
+      "petroleum_consumption_YoY": 4.363854654772004,
+      "refinery_utilization_pct": 96.025
+    },
+    {
+      "date": "2004-07-01",
+      "CI_zscore": -0.22157456136166412,
+      "petroleum_production_YoY": -0.25847307738823266,
+      "petroleum_consumption_YoY": 3.6755716740386912,
+      "refinery_utilization_pct": 95.94
+    },
+    {
+      "date": "2004-08-01",
+      "CI_zscore": -0.47635859082767446,
+      "petroleum_production_YoY": -4.465235475228524,
+      "petroleum_consumption_YoY": 2.074901112375249,
+      "refinery_utilization_pct": 95.55
+    },
+    {
+      "date": "2004-09-01",
+      "CI_zscore": -1.3878841555136003,
+      "petroleum_production_YoY": -9.405101685520567,
+      "petroleum_consumption_YoY": 3.213072609642431,
+      "refinery_utilization_pct": 91.0
+    },
+    {
+      "date": "2004-10-01",
+      "CI_zscore": -1.196821699087242,
+      "petroleum_production_YoY": -7.901336481908761,
+      "petroleum_consumption_YoY": 3.090579600712795,
+      "refinery_utilization_pct": 88.52000000000001
+    },
+    {
+      "date": "2004-11-01",
+      "CI_zscore": -0.30992595714878024,
+      "petroleum_production_YoY": -2.2220279074128046,
+      "petroleum_consumption_YoY": 4.971685572139295,
+      "refinery_utilization_pct": 93.25
+    },
+    {
+      "date": "2004-12-01",
+      "CI_zscore": 0.26786974874651953,
+      "petroleum_production_YoY": -1.1001620403442436,
+      "petroleum_consumption_YoY": 3.0112526963424813,
+      "refinery_utilization_pct": 94.02000000000001
+    },
+    {
+      "date": "2005-01-01",
+      "CI_zscore": 0.4570194255216762,
+      "petroleum_production_YoY": -2.484460372270658,
+      "petroleum_consumption_YoY": 1.0412332075757424,
+      "refinery_utilization_pct": 92.025
+    },
+    {
+      "date": "2005-02-01",
+      "CI_zscore": 0.619598161511774,
+      "petroleum_production_YoY": -1.2645069399276676,
+      "petroleum_consumption_YoY": -3.673145382535037,
+      "refinery_utilization_pct": 90.3
+    },
+    {
+      "date": "2005-03-01",
+      "CI_zscore": 0.9583287093471345,
+      "petroleum_production_YoY": -0.28105866498736587,
+      "petroleum_consumption_YoY": 2.3377024847339722,
+      "refinery_utilization_pct": 90.375
+    },
+    {
+      "date": "2005-04-01",
+      "CI_zscore": 1.3572448689155854,
+      "petroleum_production_YoY": 0.04488941395754953,
+      "petroleum_consumption_YoY": -1.9418286846408117,
+      "refinery_utilization_pct": 91.9
+    },
+    {
+      "date": "2005-05-01",
+      "CI_zscore": 1.9515368179802568,
+      "petroleum_production_YoY": 0.7293615589039071,
+      "petroleum_consumption_YoY": 1.5774647550089949,
+      "refinery_utilization_pct": 94.15
+    },
+    {
+      "date": "2005-06-01",
+      "CI_zscore": 1.8422468847635531,
+      "petroleum_production_YoY": 0.6502756273513821,
+      "petroleum_consumption_YoY": 2.288238176776858,
+      "refinery_utilization_pct": 95.675
+    },
+    {
+      "date": "2005-07-01",
+      "CI_zscore": 1.6031173401062968,
+      "petroleum_production_YoY": -4.210032651785578,
+      "petroleum_consumption_YoY": -0.20676300131903247,
+      "refinery_utilization_pct": 95.28
+    },
+    {
+      "date": "2005-08-01",
+      "CI_zscore": 3.160131845939086,
+      "petroleum_production_YoY": -2.3740588770958415,
+      "petroleum_consumption_YoY": 2.898269083281746,
+      "refinery_utilization_pct": 94.75
+    },
+    {
+      "date": "2005-09-01",
+      "CI_zscore": 2.274825835058993,
+      "petroleum_production_YoY": -17.073326726329107,
+      "petroleum_consumption_YoY": -1.1465549344242154,
+      "refinery_utilization_pct": 84.28
+    },
+    {
+      "date": "2005-10-01",
+      "CI_zscore": 2.7645362813209546,
+      "petroleum_production_YoY": -11.898957814111755,
+      "petroleum_consumption_YoY": -1.9265351898760885,
+      "refinery_utilization_pct": 79.3
+    },
+    {
+      "date": "2005-11-01",
+      "CI_zscore": 3.1598361310362733,
+      "petroleum_production_YoY": -10.443126143098247,
+      "petroleum_consumption_YoY": -0.4642123632030981,
+      "refinery_utilization_pct": 86.9
+    },
+    {
+      "date": "2005-12-01",
+      "CI_zscore": 2.631581368724438,
+      "petroleum_production_YoY": -9.474811697742913,
+      "petroleum_consumption_YoY": 1.189111222763839,
+      "refinery_utilization_pct": 89.4
+    },
+    {
+      "date": "2006-01-01",
+      "CI_zscore": 2.0651570133395047,
+      "petroleum_production_YoY": -7.315833541431028,
+      "petroleum_consumption_YoY": -0.7242009184015519,
+      "refinery_utilization_pct": 87.375
+    },
+    {
+      "date": "2006-02-01",
+      "CI_zscore": 2.1111434435009175,
+      "petroleum_production_YoY": -8.532962758299767,
+      "petroleum_consumption_YoY": -1.3393626746767806,
+      "refinery_utilization_pct": 85.925
+    },
+    {
+      "date": "2006-03-01",
+      "CI_zscore": 2.575242960360452,
+      "petroleum_production_YoY": -10.242526337590741,
+      "petroleum_consumption_YoY": -2.1661221338546643,
+      "refinery_utilization_pct": 85.66
+    },
+    {
+      "date": "2006-04-01",
+      "CI_zscore": 2.4517248225482926,
+      "petroleum_production_YoY": -8.649828585357767,
+      "petroleum_consumption_YoY": -0.29929093950514796,
+      "refinery_utilization_pct": 87.2
+    },
+    {
+      "date": "2006-05-01",
+      "CI_zscore": 2.0320293638966893,
+      "petroleum_production_YoY": -7.9678147577816,
+      "petroleum_consumption_YoY": -1.4720276732598792,
+      "refinery_utilization_pct": 90.275
+    },
+    {
+      "date": "2006-06-01",
+      "CI_zscore": 2.1776041415726293,
+      "petroleum_production_YoY": -5.132230253846959,
+      "petroleum_consumption_YoY": -1.9323861159136535,
+      "refinery_utilization_pct": 92.78
+    },
+    {
+      "date": "2006-07-01",
+      "CI_zscore": 2.0231062169354797,
+      "petroleum_production_YoY": -3.029898093500427,
+      "petroleum_consumption_YoY": -1.5352981334747495,
+      "refinery_utilization_pct": 91.675
+    },
+    {
+      "date": "2006-08-01",
+      "CI_zscore": 2.2864420045831446,
+      "petroleum_production_YoY": -3.053646715102698,
+      "petroleum_consumption_YoY": -1.4598259523553536,
+      "refinery_utilization_pct": 92.2
+    },
+    {
+      "date": "2006-09-01",
+      "CI_zscore": 2.7723267987152003,
+      "petroleum_production_YoY": 19.387080706015958,
+      "petroleum_consumption_YoY": 0.6891639615289158,
+      "refinery_utilization_pct": 92.46000000000001
+    },
+    {
+      "date": "2006-10-01",
+      "CI_zscore": 2.928244588361988,
+      "petroleum_production_YoY": 12.14828765025555,
+      "petroleum_consumption_YoY": 1.0958428591870462,
+      "refinery_utilization_pct": 87.65
+    },
+    {
+      "date": "2006-11-01",
+      "CI_zscore": 2.8195025734396264,
+      "petroleum_production_YoY": 4.267372954115611,
+      "petroleum_consumption_YoY": -1.1020389381199869,
+      "refinery_utilization_pct": 87.64999999999999
+    },
+    {
+      "date": "2006-12-01",
+      "CI_zscore": 1.8563581310706656,
+      "petroleum_production_YoY": 3.9691825311542583,
+      "petroleum_consumption_YoY": -3.9696969437697183,
+      "refinery_utilization_pct": 90.44
+    },
+    {
+      "date": "2007-01-01",
+      "CI_zscore": 1.253066011598237,
+      "petroleum_production_YoY": 1.1902384597585192,
+      "petroleum_consumption_YoY": -0.9095859359228298,
+      "refinery_utilization_pct": 88.475
+    },
+    {
+      "date": "2007-02-01",
+      "CI_zscore": 1.2625995738671207,
+      "petroleum_production_YoY": 1.7084296267178667,
+      "petroleum_consumption_YoY": 2.621469876344329,
+      "refinery_utilization_pct": 86.275
+    },
+    {
+      "date": "2007-03-01",
+      "CI_zscore": 0.9005370496421576,
+      "petroleum_production_YoY": 1.831826587056562,
+      "petroleum_consumption_YoY": -1.1387497044033967,
+      "refinery_utilization_pct": 86.34
+    },
+    {
+      "date": "2007-04-01",
+      "CI_zscore": 0.8727051627658472,
+      "petroleum_production_YoY": 1.9399203251226238,
+      "petroleum_consumption_YoY": 0.7902274114535146,
+      "refinery_utilization_pct": 88.725
+    },
+    {
+      "date": "2007-05-01",
+      "CI_zscore": 1.1485893836552137,
+      "petroleum_production_YoY": 1.1776581230665828,
+      "petroleum_consumption_YoY": 0.17643904733679605,
+      "refinery_utilization_pct": 90.175
+    },
+    {
+      "date": "2007-06-01",
+      "CI_zscore": 1.4482243061791253,
+      "petroleum_production_YoY": -1.6977231527793846,
+      "petroleum_consumption_YoY": -2.074158979523899,
+      "refinery_utilization_pct": 89.16
+    },
+    {
+      "date": "2007-07-01",
+      "CI_zscore": 2.0658489449857216,
+      "petroleum_production_YoY": -1.1043007168581198,
+      "petroleum_consumption_YoY": -0.6650469153067773,
+      "refinery_utilization_pct": 91.625
+    },
+    {
+      "date": "2007-08-01",
+      "CI_zscore": 1.5214187919609323,
+      "petroleum_production_YoY": -1.3899157296124898,
+      "petroleum_consumption_YoY": -2.6929339886304637,
+      "refinery_utilization_pct": 91.41999999999999
+    },
+    {
+      "date": "2007-09-01",
+      "CI_zscore": 1.2620723903357118,
+      "petroleum_production_YoY": -2.560501195523379,
+      "petroleum_consumption_YoY": -1.6705991216919402,
+      "refinery_utilization_pct": 88.625
+    },
+    {
+      "date": "2007-10-01",
+      "CI_zscore": 0.8419909964639796,
+      "petroleum_production_YoY": -1.6879085133656768,
+      "petroleum_consumption_YoY": -2.2100662145199124,
+      "refinery_utilization_pct": 87.1
+    },
+    {
+      "date": "2007-11-01",
+      "CI_zscore": 0.25149111607599867,
+      "petroleum_production_YoY": -0.5961838075435266,
+      "petroleum_consumption_YoY": -1.409392043878832,
+      "refinery_utilization_pct": 87.94000000000001
+    },
+    {
+      "date": "2007-12-01",
+      "CI_zscore": -0.2878861117533163,
+      "petroleum_production_YoY": -1.4561133622286948,
+      "petroleum_consumption_YoY": -1.299091241989081,
+      "refinery_utilization_pct": 88.525
+    },
+    {
+      "date": "2008-01-01",
+      "CI_zscore": -0.3634494817804915,
+      "petroleum_production_YoY": 0.14152842080203953,
+      "petroleum_consumption_YoY": -2.2265856662074257,
+      "refinery_utilization_pct": 87.475
+    },
+    {
+      "date": "2008-02-01",
+      "CI_zscore": 0.17655282151172594,
+      "petroleum_production_YoY": 0.5915319140787689,
+      "petroleum_consumption_YoY": -3.8101021189019035,
+      "refinery_utilization_pct": 84.7
+    },
+    {
+      "date": "2008-03-01",
+      "CI_zscore": 0.23701674046647614,
+      "petroleum_production_YoY": 1.368089158250907,
+      "petroleum_consumption_YoY": -4.888520208138136,
+      "refinery_utilization_pct": 83.35
+    },
+    {
+      "date": "2008-04-01",
+      "CI_zscore": -0.02500335866608842,
+      "petroleum_production_YoY": -0.0023551068755289783,
+      "petroleum_consumption_YoY": -4.528377478147593,
+      "refinery_utilization_pct": 83.85
+    },
+    {
+      "date": "2008-05-01",
+      "CI_zscore": -0.18858692518163914,
+      "petroleum_production_YoY": -1.3063167394487651,
+      "petroleum_consumption_YoY": -5.434274146964436,
+      "refinery_utilization_pct": 87.42
+    },
+    {
+      "date": "2008-06-01",
+      "CI_zscore": -0.9171950877923424,
+      "petroleum_production_YoY": 1.2335406245375768,
+      "petroleum_consumption_YoY": -6.320339986462997,
+      "refinery_utilization_pct": 88.925
+    },
+    {
+      "date": "2008-07-01",
+      "CI_zscore": -0.9125993564054736,
+      "petroleum_production_YoY": 2.756614387805767,
+      "petroleum_consumption_YoY": -7.082894620283076,
+      "refinery_utilization_pct": 88.25
+    },
+    {
+      "date": "2008-08-01",
+      "CI_zscore": -0.5157381150632422,
+      "petroleum_production_YoY": 0.6699422618992479,
+      "petroleum_consumption_YoY": -10.143275062600154,
+      "refinery_utilization_pct": 86.92
+    },
+    {
+      "date": "2008-09-01",
+      "CI_zscore": -0.48963236546822725,
+      "petroleum_production_YoY": -18.94008938326851,
+      "petroleum_consumption_YoY": -13.351621055224905,
+      "refinery_utilization_pct": 73.675
+    },
+    {
+      "date": "2008-10-01",
+      "CI_zscore": 0.06637570233794658,
+      "petroleum_production_YoY": -5.660089188729045,
+      "petroleum_consumption_YoY": -4.748833611332703,
+      "refinery_utilization_pct": 83.7
+    },
+    {
+      "date": "2008-11-01",
+      "CI_zscore": 0.28239314275254884,
+      "petroleum_production_YoY": 0.8756424788310291,
+      "petroleum_consumption_YoY": -8.341613115049217,
+      "refinery_utilization_pct": 85.0
+    },
+    {
+      "date": "2008-12-01",
+      "CI_zscore": 0.7855720232797093,
+      "petroleum_production_YoY": -0.15379946311073756,
+      "petroleum_consumption_YoY": -8.260262666242602,
+      "refinery_utilization_pct": 84.675
+    },
+    {
+      "date": "2009-01-01",
+      "CI_zscore": 1.6868441744164555,
+      "petroleum_production_YoY": 0.5683047845010503,
+      "petroleum_consumption_YoY": -6.392350041673978,
+      "refinery_utilization_pct": 83.82000000000001
+    },
+    {
+      "date": "2009-02-01",
+      "CI_zscore": 2.2451689943913675,
+      "petroleum_production_YoY": 1.76872489885731,
+      "petroleum_consumption_YoY": -10.003580477946873,
+      "refinery_utilization_pct": 82.1
+    },
+    {
+      "date": "2009-03-01",
+      "CI_zscore": 2.108629455077502,
+      "petroleum_production_YoY": 0.5644314167652542,
+      "petroleum_consumption_YoY": -6.328357094659475,
+      "refinery_utilization_pct": 82.125
+    },
+    {
+      "date": "2009-04-01",
+      "CI_zscore": 2.607028908925932,
+      "petroleum_production_YoY": 1.8920254589188223,
+      "petroleum_consumption_YoY": -7.186981756528599,
+      "refinery_utilization_pct": 82.075
+    },
+    {
+      "date": "2009-05-01",
+      "CI_zscore": 2.318687259142004,
+      "petroleum_production_YoY": 4.545353793459328,
+      "petroleum_consumption_YoY": -9.449231515200495,
+      "refinery_utilization_pct": 84.44
+    },
+    {
+      "date": "2009-06-01",
+      "CI_zscore": 1.4482565633104332,
+      "petroleum_production_YoY": 2.5606729481440382,
+      "petroleum_consumption_YoY": -5.22333993725076,
+      "refinery_utilization_pct": 86.475
+    },
+    {
+      "date": "2009-07-01",
+      "CI_zscore": 1.1912050736164999,
+      "petroleum_production_YoY": 4.2719868180988385,
+      "petroleum_consumption_YoY": -6.181486158304428,
+      "refinery_utilization_pct": 85.92
+    },
+    {
+      "date": "2009-08-01",
+      "CI_zscore": 1.64149730122434,
+      "petroleum_production_YoY": 8.286907632577112,
+      "petroleum_consumption_YoY": -2.834836317588707,
+      "refinery_utilization_pct": 84.7
+    },
+    {
+      "date": "2009-09-01",
+      "CI_zscore": 1.593906328393278,
+      "petroleum_production_YoY": 39.894493286416875,
+      "petroleum_consumption_YoY": 2.268595042813315,
+      "refinery_utilization_pct": 86.075
+    },
+    {
+      "date": "2009-10-01",
+      "CI_zscore": 1.5172188589403328,
+      "petroleum_production_YoY": 16.606218770375158,
+      "petroleum_consumption_YoY": -6.802637138966883,
+      "refinery_utilization_pct": 81.88
+    },
+    {
+      "date": "2009-11-01",
+      "CI_zscore": 1.394638442057935,
+      "petroleum_production_YoY": 6.232668215540538,
+      "petroleum_consumption_YoY": -4.14523849630336,
+      "refinery_utilization_pct": 79.825
+    },
+    {
+      "date": "2009-12-01",
+      "CI_zscore": 1.190168448636268,
+      "petroleum_production_YoY": 6.840233907951698,
+      "petroleum_consumption_YoY": -1.711950790803518,
+      "refinery_utilization_pct": 80.35
+    },
+    {
+      "date": "2010-01-01",
+      "CI_zscore": 0.8092894737502443,
+      "petroleum_production_YoY": 5.055105785145164,
+      "petroleum_consumption_YoY": -4.47229613757294,
+      "refinery_utilization_pct": 79.16
+    },
+    {
+      "date": "2010-02-01",
+      "CI_zscore": 0.6404139737160006,
+      "petroleum_production_YoY": 5.996798383884339,
+      "petroleum_consumption_YoY": -1.4831710468918957,
+      "refinery_utilization_pct": 80.5
+    },
+    {
+      "date": "2010-03-01",
+      "CI_zscore": 0.9379408134396179,
+      "petroleum_production_YoY": 5.687003540999536,
+      "petroleum_consumption_YoY": 0.9436536572911658,
+      "refinery_utilization_pct": 81.25
+    },
+    {
+      "date": "2010-04-01",
+      "CI_zscore": 0.9002746269702671,
+      "petroleum_production_YoY": 2.1633464497484933,
+      "petroleum_consumption_YoY": 1.852442491672357,
+      "refinery_utilization_pct": 86.92
+    },
+    {
+      "date": "2010-05-01",
+      "CI_zscore": 1.1248275130128338,
+      "petroleum_production_YoY": 0.44538542168037765,
+      "petroleum_consumption_YoY": 3.2559282681299484,
+      "refinery_utilization_pct": 87.9
+    },
+    {
+      "date": "2010-06-01",
+      "CI_zscore": 1.2466545806405152,
+      "petroleum_production_YoY": 2.0911648427726526,
+      "petroleum_consumption_YoY": 2.9526795095716096,
+      "refinery_utilization_pct": 88.7
+    },
+    {
+      "date": "2010-07-01",
+      "CI_zscore": 1.1963670421022177,
+      "petroleum_production_YoY": -1.8539455833856855,
+      "petroleum_consumption_YoY": 3.1904982745215804,
+      "refinery_utilization_pct": 90.72
+    },
+    {
+      "date": "2010-08-01",
+      "CI_zscore": 1.793626703165532,
+      "petroleum_production_YoY": 0.5494162694404503,
+      "petroleum_consumption_YoY": 3.48342789873084,
+      "refinery_utilization_pct": 88.2
+    },
+    {
+      "date": "2010-09-01",
+      "CI_zscore": 2.5328265809512813,
+      "petroleum_production_YoY": 1.0242446789143322,
+      "petroleum_consumption_YoY": 4.148396584159042,
+      "refinery_utilization_pct": 87.35
+    },
+    {
+      "date": "2010-10-01",
+      "CI_zscore": 3.370754559286585,
+      "petroleum_production_YoY": 1.9208824785860612,
+      "petroleum_consumption_YoY": 0.638443227875829,
+      "refinery_utilization_pct": 82.6
+    },
+    {
+      "date": "2010-11-01",
+      "CI_zscore": 2.8202488029859256,
+      "petroleum_production_YoY": 3.357487739125742,
+      "petroleum_consumption_YoY": 2.022873608196063,
+      "refinery_utilization_pct": 83.625
+    },
+    {
+      "date": "2010-12-01",
+      "CI_zscore": 1.5837875509172834,
+      "petroleum_production_YoY": 2.8563242436754566,
+      "petroleum_consumption_YoY": 2.216796933658949,
+      "refinery_utilization_pct": 87.8
+    },
+    {
+      "date": "2011-01-01",
+      "CI_zscore": 1.0380869321224473,
+      "petroleum_production_YoY": 1.7099093917891883,
+      "petroleum_consumption_YoY": 1.694550774983683,
+      "refinery_utilization_pct": 83.925
+    },
+    {
+      "date": "2011-02-01",
+      "CI_zscore": 0.9375179887564083,
+      "petroleum_production_YoY": -2.663208134094075,
+      "petroleum_consumption_YoY": -0.2615860935115566,
+      "refinery_utilization_pct": 81.55000000000001
+    },
+    {
+      "date": "2011-03-01",
+      "CI_zscore": 0.8135995202029754,
+      "petroleum_production_YoY": 1.8610920330915715,
+      "petroleum_consumption_YoY": 0.11682891790059102,
+      "refinery_utilization_pct": 83.4
+    },
+    {
+      "date": "2011-04-01",
+      "CI_zscore": 0.7208756489348539,
+      "petroleum_production_YoY": 3.1454834789514052,
+      "petroleum_consumption_YoY": -3.2653075270001275,
+      "refinery_utilization_pct": 82.76
+    },
+    {
+      "date": "2011-05-01",
+      "CI_zscore": 1.1337919221121955,
+      "petroleum_production_YoY": 4.143003786060917,
+      "petroleum_consumption_YoY": -3.1149060301736586,
+      "refinery_utilization_pct": 84.3
+    },
+    {
+      "date": "2011-06-01",
+      "CI_zscore": 0.8429652357395417,
+      "petroleum_production_YoY": 3.896122726601825,
+      "petroleum_consumption_YoY": -2.4201833153259633,
+      "refinery_utilization_pct": 87.65
+    },
+    {
+      "date": "2011-07-01",
+      "CI_zscore": 0.6659340652217588,
+      "petroleum_production_YoY": 2.6799628228088457,
+      "petroleum_consumption_YoY": -3.4345401082984672,
+      "refinery_utilization_pct": 88.86
+    },
+    {
+      "date": "2011-08-01",
+      "CI_zscore": 0.8311741169418034,
+      "petroleum_production_YoY": 3.9974791333667437,
+      "petroleum_consumption_YoY": -1.881078692855509,
+      "refinery_utilization_pct": 89.65
+    },
+    {
+      "date": "2011-09-01",
+      "CI_zscore": 0.5862208861542328,
+      "petroleum_production_YoY": -0.036504383018942654,
+      "petroleum_consumption_YoY": -3.182794285584589,
+      "refinery_utilization_pct": 87.96000000000001
+    },
+    {
+      "date": "2011-10-01",
+      "CI_zscore": 0.029935305534835855,
+      "petroleum_production_YoY": 4.829663418794361,
+      "petroleum_consumption_YoY": -0.8954087008168576,
+      "refinery_utilization_pct": 84.35
+    },
+    {
+      "date": "2011-11-01",
+      "CI_zscore": -0.12182509945821322,
+      "petroleum_production_YoY": 8.30091600693148,
+      "petroleum_consumption_YoY": -0.23786901165110397,
+      "refinery_utilization_pct": 84.375
+    },
+    {
+      "date": "2011-12-01",
+      "CI_zscore": 0.14716569966403373,
+      "petroleum_production_YoY": 9.006685039855933,
+      "petroleum_consumption_YoY": -5.828906439758985,
+      "refinery_utilization_pct": 85.38
+    },
+    {
+      "date": "2012-01-01",
+      "CI_zscore": 0.37690307053860544,
+      "petroleum_production_YoY": 12.370973657667594,
+      "petroleum_consumption_YoY": -3.651925471075268,
+      "refinery_utilization_pct": 83.325
+    },
+    {
+      "date": "2012-02-01",
+      "CI_zscore": 0.11637075778532961,
+      "petroleum_production_YoY": 15.962860899865984,
+      "petroleum_consumption_YoY": 2.2767786397181355,
+      "refinery_utilization_pct": 83.975
+    },
+    {
+      "date": "2012-03-01",
+      "CI_zscore": 0.3564397029576083,
+      "petroleum_production_YoY": 12.620803451756046,
+      "petroleum_consumption_YoY": -6.19897623307507,
+      "refinery_utilization_pct": 83.8
+    },
+    {
+      "date": "2012-04-01",
+      "CI_zscore": 0.9434273866923117,
+      "petroleum_production_YoY": 13.6302105910606,
+      "petroleum_consumption_YoY": -2.9896322277815135,
+      "refinery_utilization_pct": 84.775
+    },
+    {
+      "date": "2012-05-01",
+      "CI_zscore": 1.2960907220599698,
+      "petroleum_production_YoY": 13.243858876205362,
+      "petroleum_consumption_YoY": 0.390612476460106,
+      "refinery_utilization_pct": 87.975
+    },
+    {
+      "date": "2012-06-01",
+      "CI_zscore": 1.4397895072820193,
+      "petroleum_production_YoY": 12.279593078949835,
+      "petroleum_consumption_YoY": -2.0773227211135725,
+      "refinery_utilization_pct": 91.9
+    },
+    {
+      "date": "2012-07-01",
+      "CI_zscore": 1.3546739498447562,
+      "petroleum_production_YoY": 18.224536582146623,
+      "petroleum_consumption_YoY": -1.2387796656571304,
+      "refinery_utilization_pct": 92.475
+    },
+    {
+      "date": "2012-08-01",
+      "CI_zscore": 0.9674465151531325,
+      "petroleum_production_YoY": 12.09988051379245,
+      "petroleum_consumption_YoY": -1.7307854196481287,
+      "refinery_utilization_pct": 90.74
+    },
+    {
+      "date": "2012-09-01",
+      "CI_zscore": 1.2601320169963,
+      "petroleum_production_YoY": 17.534505676634062,
+      "petroleum_consumption_YoY": -4.84928007837786,
+      "refinery_utilization_pct": 87.30000000000001
+    },
+    {
+      "date": "2012-10-01",
+      "CI_zscore": 1.7266026414102678,
+      "petroleum_production_YoY": 18.078456652652818,
+      "petroleum_consumption_YoY": -1.1784083160242265,
+      "refinery_utilization_pct": 87.25
+    },
+    {
+      "date": "2012-11-01",
+      "CI_zscore": 2.138527098879461,
+      "petroleum_production_YoY": 17.28603087028393,
+      "petroleum_consumption_YoY": -2.9035948220693664,
+      "refinery_utilization_pct": 87.62
+    },
+    {
+      "date": "2012-12-01",
+      "CI_zscore": 2.4997152537305087,
+      "petroleum_production_YoY": 16.251426791466848,
+      "petroleum_consumption_YoY": -3.302871053415246,
+      "refinery_utilization_pct": 90.65
+    },
+    {
+      "date": "2013-01-01",
+      "CI_zscore": 1.8295534692678619,
+      "petroleum_production_YoY": 14.674358365353735,
+      "petroleum_consumption_YoY": 1.9827864230664183,
+      "refinery_utilization_pct": 86.4
+    },
+    {
+      "date": "2013-02-01",
+      "CI_zscore": 2.003882952215859,
+      "petroleum_production_YoY": 13.990607797120514,
+      "petroleum_consumption_YoY": -4.032659530657334,
+      "refinery_utilization_pct": 84.0
+    },
+    {
+      "date": "2013-03-01",
+      "CI_zscore": 2.3420953722443745,
+      "petroleum_production_YoY": 14.023601527916352,
+      "petroleum_consumption_YoY": 1.720357324165711,
+      "refinery_utilization_pct": 83.74
+    },
+    {
+      "date": "2013-04-01",
+      "CI_zscore": 1.5330465600547993,
+      "petroleum_production_YoY": 16.66919303077934,
+      "petroleum_consumption_YoY": 1.744947788343043,
+      "refinery_utilization_pct": 85.25
+    },
+    {
+      "date": "2013-05-01",
+      "CI_zscore": 1.271642385792912,
+      "petroleum_production_YoY": 15.013802411760114,
+      "petroleum_consumption_YoY": 0.7212914445788643,
+      "refinery_utilization_pct": 87.42
+    },
+    {
+      "date": "2013-06-01",
+      "CI_zscore": 1.1502102597038915,
+      "petroleum_production_YoY": 15.962665080794691,
+      "petroleum_consumption_YoY": -0.8830799723529403,
+      "refinery_utilization_pct": 89.8
+    },
+    {
+      "date": "2013-07-01",
+      "CI_zscore": 0.5482891242467749,
+      "petroleum_production_YoY": 16.956556285171075,
+      "petroleum_consumption_YoY": 3.432525361657235,
+      "refinery_utilization_pct": 92.2
+    },
+    {
+      "date": "2013-08-01",
+      "CI_zscore": 0.4475391253883914,
+      "petroleum_production_YoY": 18.639558917499844,
+      "petroleum_consumption_YoY": -0.39382312796277796,
+      "refinery_utilization_pct": 90.84
+    },
+    {
+      "date": "2013-09-01",
+      "CI_zscore": 0.542964795239971,
+      "petroleum_production_YoY": 18.79388322400053,
+      "petroleum_consumption_YoY": 5.909221287361732,
+      "refinery_utilization_pct": 91.075
+    },
+    {
+      "date": "2013-10-01",
+      "CI_zscore": 1.3099319142038932,
+      "petroleum_production_YoY": 11.344436353723154,
+      "petroleum_consumption_YoY": 2.311600724704266,
+      "refinery_utilization_pct": 86.35
+    },
+    {
+      "date": "2013-11-01",
+      "CI_zscore": 1.986224604294825,
+      "petroleum_production_YoY": 11.810174115075633,
+      "petroleum_consumption_YoY": 4.041227227421085,
+      "refinery_utilization_pct": 89.17999999999999
+    },
+    {
+      "date": "2013-12-01",
+      "CI_zscore": 1.6047534680848463,
+      "petroleum_production_YoY": 11.631614366625387,
+      "petroleum_consumption_YoY": 3.536291470409192,
+      "refinery_utilization_pct": 92.3
+    },
+    {
+      "date": "2014-01-01",
+      "CI_zscore": 0.7026860051850761,
+      "petroleum_production_YoY": 13.968483226138462,
+      "petroleum_consumption_YoY": 1.527903440377676,
+      "refinery_utilization_pct": 88.62
+    },
+    {
+      "date": "2014-02-01",
+      "CI_zscore": 0.37610272583395626,
+      "petroleum_production_YoY": 14.042799981022691,
+      "petroleum_consumption_YoY": 1.302945058306726,
+      "refinery_utilization_pct": 87.325
+    },
+    {
+      "date": "2014-03-01",
+      "CI_zscore": 0.9285071467785543,
+      "petroleum_production_YoY": 14.92305312428266,
+      "petroleum_consumption_YoY": -0.7879478787433114,
+      "refinery_utilization_pct": 86.325
+    },
+    {
+      "date": "2014-04-01",
+      "CI_zscore": 1.7916418481656924,
+      "petroleum_production_YoY": 15.54744454272412,
+      "petroleum_consumption_YoY": 1.6256772453840274,
+      "refinery_utilization_pct": 89.575
+    },
+    {
+      "date": "2014-05-01",
+      "CI_zscore": 1.1456039591346288,
+      "petroleum_production_YoY": 17.89040423847119,
+      "petroleum_consumption_YoY": -0.687727806604943,
+      "refinery_utilization_pct": 89.67999999999999
+    },
+    {
+      "date": "2014-06-01",
+      "CI_zscore": 0.580454301807047,
+      "petroleum_production_YoY": 20.022371441508223,
+      "petroleum_consumption_YoY": 0.2708029536588663,
+      "refinery_utilization_pct": 88.725
+    },
+    {
+      "date": "2014-07-01",
+      "CI_zscore": 0.6134462385013787,
+      "petroleum_production_YoY": 17.488159018144422,
+      "petroleum_consumption_YoY": -0.07507507507508171,
+      "refinery_utilization_pct": 93.175
+    },
+    {
+      "date": "2014-08-01",
+      "CI_zscore": -0.41687777457960185,
+      "petroleum_production_YoY": 18.38908433646027,
+      "petroleum_consumption_YoY": 0.6015863775778341,
+      "refinery_utilization_pct": 92.84
+    },
+    {
+      "date": "2014-09-01",
+      "CI_zscore": -0.16147729392210267,
+      "petroleum_production_YoY": 15.721947757365594,
+      "petroleum_consumption_YoY": -0.21249608948169518,
+      "refinery_utilization_pct": 92.525
+    },
+    {
+      "date": "2014-10-01",
+      "CI_zscore": 0.6380561155306058,
+      "petroleum_production_YoY": 19.20144418325529,
+      "petroleum_consumption_YoY": 2.6428045080117757,
+      "refinery_utilization_pct": 87.82000000000001
+    },
+    {
+      "date": "2014-11-01",
+      "CI_zscore": 0.7471815202583668,
+      "petroleum_production_YoY": 17.525865888975733,
+      "petroleum_consumption_YoY": -0.43368675257365874,
+      "refinery_utilization_pct": 91.55
+    },
+    {
+      "date": "2014-12-01",
+      "CI_zscore": 1.9454283422844794,
+      "petroleum_production_YoY": 20.33739163409134,
+      "petroleum_consumption_YoY": 3.3406800407906667,
+      "refinery_utilization_pct": 94.2
+    },
+    {
+      "date": "2015-01-01",
+      "CI_zscore": 4.507990784121328,
+      "petroleum_production_YoY": 16.167129238028277,
+      "petroleum_consumption_YoY": 0.9207690171227911,
+      "refinery_utilization_pct": 89.66
+    },
+    {
+      "date": "2015-02-01",
+      "CI_zscore": 6.110459437923566,
+      "petroleum_production_YoY": 16.393223139441115,
+      "petroleum_consumption_YoY": 3.821690050840454,
+      "refinery_utilization_pct": 88.175
+    },
+    {
+      "date": "2015-03-01",
+      "CI_zscore": 7.665688745614558,
+      "petroleum_production_YoY": 15.542594397778963,
+      "petroleum_consumption_YoY": 5.175010863936214,
+      "refinery_utilization_pct": 88.575
+    },
+    {
+      "date": "2015-04-01",
+      "CI_zscore": 9.552415460219201,
+      "petroleum_production_YoY": 13.289476047097693,
+      "petroleum_consumption_YoY": 1.8652611599685898,
+      "refinery_utilization_pct": 91.225
+    },
+    {
+      "date": "2015-05-01",
+      "CI_zscore": 10.900486962111748,
+      "petroleum_production_YoY": 9.60265840002048,
+      "petroleum_consumption_YoY": 3.253229336600927,
+      "refinery_utilization_pct": 92.67999999999999
+    },
+    {
+      "date": "2015-06-01",
+      "CI_zscore": 9.686100745917695,
+      "petroleum_production_YoY": 7.053109675882929,
+      "petroleum_consumption_YoY": 4.792026815237316,
+      "refinery_utilization_pct": 94.175
+    },
+    {
+      "date": "2015-07-01",
+      "CI_zscore": 14.05422954138389,
+      "petroleum_production_YoY": 6.773691818935368,
+      "petroleum_consumption_YoY": 4.254801994521196,
+      "refinery_utilization_pct": 95.34
+    },
+    {
+      "date": "2015-08-01",
+      "CI_zscore": 32.64099042133056,
+      "petroleum_production_YoY": 5.386368105502415,
+      "petroleum_consumption_YoY": 3.149927032406463,
+      "refinery_utilization_pct": 94.625
+    },
+    {
+      "date": "2015-09-01",
+      "CI_zscore": 14.930152232106392,
+      "petroleum_production_YoY": 4.415878937817386,
+      "petroleum_consumption_YoY": 0.7958779832376139,
+      "refinery_utilization_pct": 91.175
+    },
+    {
+      "date": "2015-10-01",
+      "CI_zscore": 8.617103113867286,
+      "petroleum_production_YoY": 1.554996367149175,
+      "petroleum_consumption_YoY": -1.5714210075077006,
+      "refinery_utilization_pct": 87.24
+    },
+    {
+      "date": "2015-11-01",
+      "CI_zscore": 7.44358148544746,
+      "petroleum_production_YoY": 0.2286424682512722,
+      "petroleum_consumption_YoY": -1.7406699562165562,
+      "refinery_utilization_pct": 91.575
+    },
+    {
+      "date": "2015-12-01",
+      "CI_zscore": 8.002821833144752,
+      "petroleum_production_YoY": -2.88561544012208,
+      "petroleum_consumption_YoY": 0.29825180413691754,
+      "refinery_utilization_pct": 92.225
+    },
+    {
+      "date": "2016-01-01",
+      "CI_zscore": 6.725476208047175,
+      "petroleum_production_YoY": -1.7975387855935776,
+      "petroleum_consumption_YoY": -1.4652459939744955,
+      "refinery_utilization_pct": 89.66
+    },
+    {
+      "date": "2016-02-01",
+      "CI_zscore": 4.67313755134543,
+      "petroleum_production_YoY": -4.403763686475304,
+      "petroleum_consumption_YoY": 4.449225214161423,
+      "refinery_utilization_pct": 87.5
+    },
+    {
+      "date": "2016-03-01",
+      "CI_zscore": 3.7772005710231626,
+      "petroleum_production_YoY": -4.914718863128331,
+      "petroleum_consumption_YoY": 1.7538984004298763,
+      "refinery_utilization_pct": 89.225
+    },
+    {
+      "date": "2016-04-01",
+      "CI_zscore": 3.2129314705595995,
+      "petroleum_production_YoY": -8.003225807120007,
+      "petroleum_consumption_YoY": 0.5081880347950651,
+      "refinery_utilization_pct": 89.56
+    },
+    {
+      "date": "2016-05-01",
+      "CI_zscore": 3.5558708335817326,
+      "petroleum_production_YoY": -6.6207582578299835,
+      "petroleum_consumption_YoY": -0.31710288619082316,
+      "refinery_utilization_pct": 89.775
+    },
+    {
+      "date": "2016-06-01",
+      "CI_zscore": 3.950308458560456,
+      "petroleum_production_YoY": -7.174214687095137,
+      "petroleum_consumption_YoY": 0.13600748260793605,
+      "refinery_utilization_pct": 91.35
+    },
+    {
+      "date": "2016-07-01",
+      "CI_zscore": 3.714450713168644,
+      "petroleum_production_YoY": -8.130002634652922,
+      "petroleum_consumption_YoY": -2.416999551722654,
+      "refinery_utilization_pct": 92.74
+    },
+    {
+      "date": "2016-08-01",
+      "CI_zscore": 3.976613414503651,
+      "petroleum_production_YoY": -7.507194786839322,
+      "petroleum_consumption_YoY": 1.6836389117482309,
+      "refinery_utilization_pct": 92.75
+    },
+    {
+      "date": "2016-09-01",
+      "CI_zscore": 3.2990881744468035,
+      "petroleum_production_YoY": -9.754472560576765,
+      "petroleum_consumption_YoY": 1.5523994357923732,
+      "refinery_utilization_pct": 91.4
+    },
+    {
+      "date": "2016-10-01",
+      "CI_zscore": 2.651473207457258,
+      "petroleum_production_YoY": -6.233526322170812,
+      "petroleum_consumption_YoY": 1.073917262062296,
+      "refinery_utilization_pct": 85.325
+    },
+    {
+      "date": "2016-11-01",
+      "CI_zscore": 2.566784025438089,
+      "petroleum_production_YoY": -4.506478326586061,
+      "petroleum_consumption_YoY": 3.2421322293999966,
+      "refinery_utilization_pct": 89.225
+    },
+    {
+      "date": "2016-12-01",
+      "CI_zscore": 2.49306524549783,
+      "petroleum_production_YoY": -4.858732964451374,
+      "petroleum_consumption_YoY": 1.9764860895629344,
+      "refinery_utilization_pct": 91.08
+    },
+    {
+      "date": "2017-01-01",
+      "CI_zscore": 2.43634585168782,
+      "petroleum_production_YoY": -3.624765590072332,
+      "petroleum_consumption_YoY": 1.2884070099539846,
+      "refinery_utilization_pct": 90.2
+    },
+    {
+      "date": "2017-02-01",
+      "CI_zscore": 2.451001454182792,
+      "petroleum_production_YoY": 0.33108134637469533,
+      "petroleum_consumption_YoY": -6.944913251873352,
+      "refinery_utilization_pct": 85.85
+    },
+    {
+      "date": "2017-03-01",
+      "CI_zscore": 2.2248780332152536,
+      "petroleum_production_YoY": 0.645884948120723,
+      "petroleum_consumption_YoY": 1.4920415434926282,
+      "refinery_utilization_pct": 87.7
+    },
+    {
+      "date": "2017-04-01",
+      "CI_zscore": 1.9717385598531862,
+      "petroleum_production_YoY": 2.540690119930078,
+      "petroleum_consumption_YoY": 0.9094344602746274,
+      "refinery_utilization_pct": 92.825
+    },
+    {
+      "date": "2017-05-01",
+      "CI_zscore": 1.822164368564116,
+      "petroleum_production_YoY": 3.9566263337336816,
+      "petroleum_consumption_YoY": 3.8374006217253287,
+      "refinery_utilization_pct": 93.35
+    },
+    {
+      "date": "2017-06-01",
+      "CI_zscore": 1.8803037379329033,
+      "petroleum_production_YoY": 5.00062388983038,
+      "petroleum_consumption_YoY": 3.137050051275203,
+      "refinery_utilization_pct": 93.72
+    },
+    {
+      "date": "2017-07-01",
+      "CI_zscore": 1.61347165277184,
+      "petroleum_production_YoY": 6.81752139231846,
+      "petroleum_consumption_YoY": 1.820122516865097,
+      "refinery_utilization_pct": 94.55
+    },
+    {
+      "date": "2017-08-01",
+      "CI_zscore": 1.274584533663235,
+      "petroleum_production_YoY": 6.52465226072938,
+      "petroleum_consumption_YoY": 0.04391754752142152,
+      "refinery_utilization_pct": 96.1
+    },
+    {
+      "date": "2017-09-01",
+      "CI_zscore": 1.4784099422995736,
+      "petroleum_production_YoY": 11.30657619989237,
+      "petroleum_consumption_YoY": -0.4336156117936918,
+      "refinery_utilization_pct": 83.46000000000001
+    },
+    {
+      "date": "2017-10-01",
+      "CI_zscore": 1.2073515147869616,
+      "petroleum_production_YoY": 9.745366044824987,
+      "petroleum_consumption_YoY": 1.3901973812522561,
+      "refinery_utilization_pct": 87.4
+    },
+    {
+      "date": "2017-11-01",
+      "CI_zscore": 0.9514442197603844,
+      "petroleum_production_YoY": 13.230676276302432,
+      "petroleum_consumption_YoY": 3.0185809682518716,
+      "refinery_utilization_pct": 91.125
+    },
+    {
+      "date": "2017-12-01",
+      "CI_zscore": 0.6863901072913785,
+      "petroleum_production_YoY": 13.229780262753144,
+      "petroleum_consumption_YoY": 1.2740896341107755,
+      "refinery_utilization_pct": 94.74
+    },
+    {
+      "date": "2018-01-01",
+      "CI_zscore": 0.3243252862552732,
+      "petroleum_production_YoY": 12.672883780386734,
+      "petroleum_consumption_YoY": 5.761840670885077,
+      "refinery_utilization_pct": 91.825
+    },
+    {
+      "date": "2018-02-01",
+      "CI_zscore": 0.11424653499969167,
+      "petroleum_production_YoY": 12.82215241879856,
+      "petroleum_consumption_YoY": 2.431859126660263,
+      "refinery_utilization_pct": 89.55
+    },
+    {
+      "date": "2018-03-01",
+      "CI_zscore": -0.048146557135263626,
+      "petroleum_production_YoY": 14.17477359061694,
+      "petroleum_consumption_YoY": 2.675170165861118,
+      "refinery_utilization_pct": 91.0
+    },
+    {
+      "date": "2018-04-01",
+      "CI_zscore": -0.1743509592197715,
+      "petroleum_production_YoY": 15.243717408329838,
+      "petroleum_consumption_YoY": 1.6591640710226008,
+      "refinery_utilization_pct": 91.95
+    },
+    {
+      "date": "2018-05-01",
+      "CI_zscore": -0.08610391888207598,
+      "petroleum_production_YoY": 13.525471044940884,
+      "petroleum_consumption_YoY": 0.7907447183298721,
+      "refinery_utilization_pct": 91.8
+    },
+    {
+      "date": "2018-06-01",
+      "CI_zscore": -0.09526525796083564,
+      "petroleum_production_YoY": 16.76391861603992,
+      "petroleum_consumption_YoY": 1.0761733224053938,
+      "refinery_utilization_pct": 96.47999999999999
+    },
+    {
+      "date": "2018-07-01",
+      "CI_zscore": -0.15528098714612507,
+      "petroleum_production_YoY": 17.744423214908235,
+      "petroleum_consumption_YoY": 2.422491377142433,
+      "refinery_utilization_pct": 95.225
+    },
+    {
+      "date": "2018-08-01",
+      "CI_zscore": -0.02289554312839694,
+      "petroleum_production_YoY": 23.04322138538022,
+      "petroleum_consumption_YoY": 4.6950380259964675,
+      "refinery_utilization_pct": 97.14
+    },
+    {
+      "date": "2018-09-01",
+      "CI_zscore": -0.11734783855930946,
+      "petroleum_production_YoY": 20.288610002185337,
+      "petroleum_consumption_YoY": 1.5778997753514767,
+      "refinery_utilization_pct": 93.45
+    },
+    {
+      "date": "2018-10-01",
+      "CI_zscore": 0.1082497838921006,
+      "petroleum_production_YoY": 19.04645012156312,
+      "petroleum_consumption_YoY": 3.9109731625132538,
+      "refinery_utilization_pct": 89.05
+    },
+    {
+      "date": "2018-11-01",
+      "CI_zscore": 0.376444442318009,
+      "petroleum_production_YoY": 17.9036916174216,
+      "petroleum_consumption_YoY": 1.6612751616038368,
+      "refinery_utilization_pct": 92.78
+    },
+    {
+      "date": "2018-12-01",
+      "CI_zscore": 0.49292751158847387,
+      "petroleum_production_YoY": 19.67223866871155,
+      "petroleum_consumption_YoY": -0.382454886141792,
+      "refinery_utilization_pct": 95.7
+    },
+    {
+      "date": "2019-01-01",
+      "CI_zscore": 0.5335271976213066,
+      "petroleum_production_YoY": 18.73375135341846,
+      "petroleum_consumption_YoY": 0.1185892391222243,
+      "refinery_utilization_pct": 93.425
+    },
+    {
+      "date": "2019-02-01",
+      "CI_zscore": 0.33004402272695765,
+      "petroleum_production_YoY": 13.542223763404792,
+      "petroleum_consumption_YoY": 1.7072694791505638,
+      "refinery_utilization_pct": 87.4
+    },
+    {
+      "date": "2019-03-01",
+      "CI_zscore": 0.009116854057656066,
+      "petroleum_production_YoY": 13.801538120835865,
+      "petroleum_consumption_YoY": -2.9830062529240253,
+      "refinery_utilization_pct": 87.4
+    },
+    {
+      "date": "2019-04-01",
+      "CI_zscore": 0.06842287004050318,
+      "petroleum_production_YoY": 15.734363632586312,
+      "petroleum_consumption_YoY": 1.3309926663377825,
+      "refinery_utilization_pct": 88.625
+    },
+    {
+      "date": "2019-05-01",
+      "CI_zscore": 0.3738753084446434,
+      "petroleum_production_YoY": 16.480275714560435,
+      "petroleum_consumption_YoY": 0.39528263836181576,
+      "refinery_utilization_pct": 90.46000000000001
+    },
+    {
+      "date": "2019-06-01",
+      "CI_zscore": 0.5640763568078417,
+      "petroleum_production_YoY": 14.8545673180837,
+      "petroleum_consumption_YoY": -0.7963028242530479,
+      "refinery_utilization_pct": 93.875
+    },
+    {
+      "date": "2019-07-01",
+      "CI_zscore": 0.3168785804651879,
+      "petroleum_production_YoY": 9.208999051152912,
+      "petroleum_consumption_YoY": 0.4450164665256606,
+      "refinery_utilization_pct": 93.8
+    },
+    {
+      "date": "2019-08-01",
+      "CI_zscore": 0.17372826123906068,
+      "petroleum_production_YoY": 9.580562410286685,
+      "petroleum_consumption_YoY": -0.6800904630785642,
+      "refinery_utilization_pct": 95.42
+    },
+    {
+      "date": "2019-09-01",
+      "CI_zscore": 0.005021004161130896,
+      "petroleum_production_YoY": 10.067303936432648,
+      "petroleum_consumption_YoY": 0.6650898735125921,
+      "refinery_utilization_pct": 90.625
+    },
+    {
+      "date": "2019-10-01",
+      "CI_zscore": 0.1359484159078671,
+      "petroleum_production_YoY": 11.305526870725014,
+      "petroleum_consumption_YoY": -0.6850069388642521,
+      "refinery_utilization_pct": 85.425
+    },
+    {
+      "date": "2019-11-01",
+      "CI_zscore": 0.22542609738151637,
+      "petroleum_production_YoY": 9.304771841089622,
+      "petroleum_consumption_YoY": -0.36510555125280897,
+      "refinery_utilization_pct": 88.9
+    },
+    {
+      "date": "2019-12-01",
+      "CI_zscore": 0.1776467563198343,
+      "petroleum_production_YoY": 8.631212491683883,
+      "petroleum_consumption_YoY": 0.4261050903354491,
+      "refinery_utilization_pct": 92.25
+    },
+    {
+      "date": "2020-01-01",
+      "CI_zscore": -0.0640947593371718,
+      "petroleum_production_YoY": 8.359281576323529,
+      "petroleum_consumption_YoY": -3.866376237649072,
+      "refinery_utilization_pct": 90.06
+    },
+    {
+      "date": "2020-02-01",
+      "CI_zscore": -0.21280277369481496,
+      "petroleum_production_YoY": 10.385877094343087,
+      "petroleum_consumption_YoY": 3.1526682673127304,
+      "refinery_utilization_pct": 88.05000000000001
+    },
+    {
+      "date": "2020-03-01",
+      "CI_zscore": -0.21260565949685678,
+      "petroleum_production_YoY": 7.497544635417697,
+      "petroleum_consumption_YoY": -8.923255519549588,
+      "refinery_utilization_pct": 85.6
+    },
+    {
+      "date": "2020-04-01",
+      "CI_zscore": 0.8781575577067329,
+      "petroleum_production_YoY": -1.8606985493617945,
+      "petroleum_consumption_YoY": -29.2549368253633,
+      "refinery_utilization_pct": 70.475
+    },
+    {
+      "date": "2020-05-01",
+      "CI_zscore": 1.7138571205614028,
+      "petroleum_production_YoY": -19.981854728535286,
+      "petroleum_consumption_YoY": -22.798678465834378,
+      "refinery_utilization_pct": 70.17999999999999
+    },
+    {
+      "date": "2020-06-01",
+      "CI_zscore": 2.0449259390092838,
+      "petroleum_production_YoY": -14.498935437138416,
+      "petroleum_consumption_YoY": -16.613920488195,
+      "refinery_utilization_pct": 74.25
+    },
+    {
+      "date": "2020-07-01",
+      "CI_zscore": 2.3724124354416074,
+      "petroleum_production_YoY": -7.498336025787089,
+      "petroleum_consumption_YoY": -12.82149693977227,
+      "refinery_utilization_pct": 78.52000000000001
+    },
+    {
+      "date": "2020-08-01",
+      "CI_zscore": 2.063031374830737,
+      "petroleum_production_YoY": -15.116459431486273,
+      "petroleum_consumption_YoY": -13.497198299899427,
+      "refinery_utilization_pct": 80.15
+    },
+    {
+      "date": "2020-09-01",
+      "CI_zscore": 1.9778048644418056,
+      "petroleum_production_YoY": -12.96241177426567,
+      "petroleum_consumption_YoY": -9.94335606547525,
+      "refinery_utilization_pct": 74.55
+    },
+    {
+      "date": "2020-10-01",
+      "CI_zscore": 2.3393475713257126,
+      "petroleum_production_YoY": -18.09350505055867,
+      "petroleum_consumption_YoY": -11.214931717135467,
+      "refinery_utilization_pct": 75.0
+    },
+    {
+      "date": "2020-11-01",
+      "CI_zscore": 1.9338961601685392,
+      "petroleum_production_YoY": -13.64596200277819,
+      "petroleum_consumption_YoY": -11.053934449853898,
+      "refinery_utilization_pct": 77.2
+    },
+    {
+      "date": "2020-12-01",
+      "CI_zscore": 2.756607549176716,
+      "petroleum_production_YoY": -13.822339934289552,
+      "petroleum_consumption_YoY": -9.495887661172764,
+      "refinery_utilization_pct": 79.1
+    },
+    {
+      "date": "2021-01-01",
+      "CI_zscore": 1.3847753583508535,
+      "petroleum_production_YoY": -13.290693685923072,
+      "petroleum_consumption_YoY": -6.507069686434308,
+      "refinery_utilization_pct": 81.84
+    },
+    {
+      "date": "2021-02-01",
+      "CI_zscore": 0.24917076889953724,
+      "petroleum_production_YoY": -22.80086131456429,
+      "petroleum_consumption_YoY": -15.099400663679008,
+      "refinery_utilization_pct": 72.675
+    },
+    {
+      "date": "2021-03-01",
+      "CI_zscore": 0.7676238195035228,
+      "petroleum_production_YoY": -11.159775320982302,
+      "petroleum_consumption_YoY": 3.3803068173228645,
+      "refinery_utilization_pct": 77.65
+    },
+    {
+      "date": "2021-04-01",
+      "CI_zscore": 0.13818578341533136,
+      "petroleum_production_YoY": -4.723828593258073,
+      "petroleum_consumption_YoY": 35.65803877089226,
+      "refinery_utilization_pct": 85.17999999999999
+    },
+    {
+      "date": "2021-05-01",
+      "CI_zscore": -0.27518613736371883,
+      "petroleum_production_YoY": 17.506621505762098,
+      "petroleum_consumption_YoY": 25.109221762469947,
+      "refinery_utilization_pct": 87.025
+    },
+    {
+      "date": "2021-06-01",
+      "CI_zscore": -0.715222003840973,
+      "petroleum_production_YoY": 9.10106058735658,
+      "petroleum_consumption_YoY": 17.76002792393234,
+      "refinery_utilization_pct": 92.25
+    },
+    {
+      "date": "2021-07-01",
+      "CI_zscore": -0.8075545627020719,
+      "petroleum_production_YoY": 3.6913805864719818,
+      "petroleum_consumption_YoY": 9.709757391389084,
+      "refinery_utilization_pct": 91.56
+    },
+    {
+      "date": "2021-08-01",
+      "CI_zscore": -0.7680132584239886,
+      "petroleum_production_YoY": 6.772063077093171,
+      "petroleum_consumption_YoY": 10.495864275345102,
+      "refinery_utilization_pct": 91.925
+    },
+    {
+      "date": "2021-09-01",
+      "CI_zscore": -0.886304505466911,
+      "petroleum_production_YoY": -0.020560121937751585,
+      "petroleum_consumption_YoY": 9.359195526948326,
+      "refinery_utilization_pct": 84.9
+    },
+    {
+      "date": "2021-10-01",
+      "CI_zscore": -1.0333884078019537,
+      "petroleum_production_YoY": 10.947003558741919,
+      "petroleum_consumption_YoY": 8.989490104985087,
+      "refinery_utilization_pct": 86.47999999999999
+    },
+    {
+      "date": "2021-11-01",
+      "CI_zscore": -1.6012980699341564,
+      "petroleum_production_YoY": 5.757419553939425,
+      "petroleum_consumption_YoY": 10.378391864102522,
+      "refinery_utilization_pct": 88.0
+    },
+    {
+      "date": "2021-12-01",
+      "CI_zscore": -1.3994452578731553,
+      "petroleum_production_YoY": 5.106925153286501,
+      "petroleum_consumption_YoY": 9.88109911860433,
+      "refinery_utilization_pct": 89.74
+    },
+    {
+      "date": "2022-01-01",
+      "CI_zscore": -1.3005225490897458,
+      "petroleum_production_YoY": 2.6443363131879005,
+      "petroleum_consumption_YoY": 3.638982141581115,
+      "refinery_utilization_pct": 87.725
+    },
+    {
+      "date": "2022-02-01",
+      "CI_zscore": -1.4736153334116862,
+      "petroleum_production_YoY": 15.452677853858109,
+      "petroleum_consumption_YoY": 12.902322734488013,
+      "refinery_utilization_pct": 87.15
+    },
+    {
+      "date": "2022-03-01",
+      "CI_zscore": -1.5898652182524369,
+      "petroleum_production_YoY": 4.506102178190252,
+      "petroleum_consumption_YoY": 6.125632062186059,
+      "refinery_utilization_pct": 90.725
+    },
+    {
+      "date": "2022-04-01",
+      "CI_zscore": -1.9505642180034217,
+      "petroleum_production_YoY": 4.176370251914108,
+      "petroleum_consumption_YoY": -0.7711273584070422,
+      "refinery_utilization_pct": 90.44
+    },
+    {
+      "date": "2022-05-01",
+      "CI_zscore": -2.0162481646836548,
+      "petroleum_production_YoY": 2.9111399387081516,
+      "petroleum_consumption_YoY": -0.9177789649380208,
+      "refinery_utilization_pct": 91.9
+    },
+    {
+      "date": "2022-06-01",
+      "CI_zscore": -1.6956751270946262,
+      "petroleum_production_YoY": 4.544809063199207,
+      "petroleum_consumption_YoY": -1.417470876002791,
+      "refinery_utilization_pct": 94.225
+    },
+    {
+      "date": "2022-07-01",
+      "CI_zscore": -0.8882276597744694,
+      "petroleum_production_YoY": 5.152614238928721,
+      "petroleum_consumption_YoY": -1.7919544766791695,
+      "refinery_utilization_pct": 93.26
+    },
+    {
+      "date": "2022-08-01",
+      "CI_zscore": -0.7320562211840409,
+      "petroleum_production_YoY": 7.214183765016191,
+      "petroleum_consumption_YoY": -1.507212516739842,
+      "refinery_utilization_pct": 93.575
+    },
+    {
+      "date": "2022-09-01",
+      "CI_zscore": -0.28179675847820146,
+      "petroleum_production_YoY": 13.397801749447735,
+      "petroleum_consumption_YoY": -0.2222292286865879,
+      "refinery_utilization_pct": 91.58
+    },
+    {
+      "date": "2022-10-01",
+      "CI_zscore": -0.27738377931835906,
+      "petroleum_production_YoY": 6.888185614134801,
+      "petroleum_consumption_YoY": -2.0734354227447183,
+      "refinery_utilization_pct": 89.725
+    },
+    {
+      "date": "2022-11-01",
+      "CI_zscore": -1.1974627334304433,
+      "petroleum_production_YoY": 5.241634701284603,
+      "petroleum_consumption_YoY": -1.9966349937909134,
+      "refinery_utilization_pct": 93.525
+    },
+    {
+      "date": "2022-12-01",
+      "CI_zscore": -1.1372708514390413,
+      "petroleum_production_YoY": 3.7581721717276695,
+      "petroleum_consumption_YoY": -6.216633897342872,
+      "refinery_utilization_pct": 90.03999999999999
+    },
+    {
+      "date": "2023-01-01",
+      "CI_zscore": 0.4239612590557707,
+      "petroleum_production_YoY": 10.388444451974399,
+      "petroleum_consumption_YoY": -1.6087370841031512,
+      "refinery_utilization_pct": 85.3
+    },
+    {
+      "date": "2023-02-01",
+      "CI_zscore": 1.582370344775884,
+      "petroleum_production_YoY": 10.080998687846732,
+      "petroleum_consumption_YoY": -1.7721051892178652,
+      "refinery_utilization_pct": 86.525
+    },
+    {
+      "date": "2023-03-01",
+      "CI_zscore": 0.9135859980036327,
+      "petroleum_production_YoY": 8.233049117381697,
+      "petroleum_consumption_YoY": -1.8507688816400747,
+      "refinery_utilization_pct": 88.53999999999999
+    },
+    {
+      "date": "2023-04-01",
+      "CI_zscore": 0.07681698515957716,
+      "petroleum_production_YoY": 7.64678881245151,
+      "petroleum_consumption_YoY": 0.6959753101971389,
+      "refinery_utilization_pct": 90.575
+    },
+    {
+      "date": "2023-05-01",
+      "CI_zscore": -0.19478790141023436,
+      "petroleum_production_YoY": 8.28955245740055,
+      "petroleum_consumption_YoY": 1.0548696518427159,
+      "refinery_utilization_pct": 91.95
+    },
+    {
+      "date": "2023-06-01",
+      "CI_zscore": -0.11754260715052248,
+      "petroleum_production_YoY": 7.282145946130525,
+      "petroleum_consumption_YoY": 0.8304128772646635,
+      "refinery_utilization_pct": 93.17999999999999
+    },
+    {
+      "date": "2023-07-01",
+      "CI_zscore": 0.06328816582616845,
+      "petroleum_production_YoY": 7.52368983527949,
+      "petroleum_consumption_YoY": -0.35894177654240966,
+      "refinery_utilization_pct": 93.525
+    },
+    {
+      "date": "2023-08-01",
+      "CI_zscore": -0.16882367481539245,
+      "petroleum_production_YoY": 7.125966627912006,
+      "petroleum_consumption_YoY": 1.4299165620905052,
+      "refinery_utilization_pct": 94.075
+    },
+    {
+      "date": "2023-09-01",
+      "CI_zscore": -0.44215453164807333,
+      "petroleum_production_YoY": 6.0239463309457175,
+      "petroleum_consumption_YoY": -1.1004375655345955,
+      "refinery_utilization_pct": 91.1
+    },
+    {
+      "date": "2023-10-01",
+      "CI_zscore": -0.7959517605088727,
+      "petroleum_production_YoY": 6.20009270256261,
+      "petroleum_consumption_YoY": 2.246661696830188,
+      "refinery_utilization_pct": 85.7
+    },
+    {
+      "date": "2023-11-01",
+      "CI_zscore": -0.29098740870754297,
+      "petroleum_production_YoY": 6.58367448708872,
+      "petroleum_consumption_YoY": 1.6109833040322874,
+      "refinery_utilization_pct": 87.025
+    },
+    {
+      "date": "2023-12-01",
+      "CI_zscore": -0.20212281423378844,
+      "petroleum_production_YoY": 8.978079612717039,
+      "petroleum_consumption_YoY": 3.129065049106483,
+      "refinery_utilization_pct": 91.97999999999999
+    },
+    {
+      "date": "2024-01-01",
+      "CI_zscore": -0.7679541591371947,
+      "petroleum_production_YoY": -0.9713289565236982,
+      "petroleum_consumption_YoY": 1.5966207255287745,
+      "refinery_utilization_pct": 88.475
+    },
+    {
+      "date": "2024-02-01",
+      "CI_zscore": -0.4733767766400032,
+      "petroleum_production_YoY": 4.024872031942506,
+      "petroleum_consumption_YoY": 2.091348676238458,
+      "refinery_utilization_pct": 81.275
+    },
+    {
+      "date": "2024-03-01",
+      "CI_zscore": -0.36744148696817974,
+      "petroleum_production_YoY": 2.511472233875489,
+      "petroleum_consumption_YoY": -2.0639851704190804,
+      "refinery_utilization_pct": 87.36
+    },
+    {
+      "date": "2024-04-01",
+      "CI_zscore": -0.3261932596908286,
+      "petroleum_production_YoY": 4.552132715750523,
+      "petroleum_consumption_YoY": 0.3603162192685305,
+      "refinery_utilization_pct": 88.1
+    },
+    {
+      "date": "2024-05-01",
+      "CI_zscore": -0.47319954166480155,
+      "petroleum_production_YoY": 4.114061447064388,
+      "petroleum_consumption_YoY": 2.500581488138476,
+      "refinery_utilization_pct": 92.06
+    },
+    {
+      "date": "2024-06-01",
+      "CI_zscore": -0.36627066986099127,
+      "petroleum_production_YoY": 3.6335168604006984,
+      "petroleum_consumption_YoY": -1.647415066025304,
+      "refinery_utilization_pct": 93.55
+    },
+    {
+      "date": "2024-07-01",
+      "CI_zscore": -0.5644908482131825,
+      "petroleum_production_YoY": 2.3216018259566873,
+      "petroleum_consumption_YoY": 2.9197607801535685,
+      "refinery_utilization_pct": 92.7
+    },
+    {
+      "date": "2024-08-01",
+      "CI_zscore": -0.6800575794378805,
+      "petroleum_production_YoY": 3.1645225391292886,
+      "petroleum_consumption_YoY": 0.09328241145492022,
+      "refinery_utilization_pct": 92.17999999999999
+    },
+    {
+      "date": "2024-09-01",
+      "CI_zscore": -0.6379979339963966,
+      "petroleum_production_YoY": -0.0558053838460415,
+      "petroleum_consumption_YoY": -0.5090845376479636,
+      "refinery_utilization_pct": 90.85
+    },
+    {
+      "date": "2024-10-01",
+      "CI_zscore": -0.7567167142553485,
+      "petroleum_production_YoY": 2.395735223945783,
+      "petroleum_consumption_YoY": 1.9491557201852805,
+      "refinery_utilization_pct": 88.25
+    },
+    {
+      "date": "2024-11-01",
+      "CI_zscore": -1.0339419506616374,
+      "petroleum_production_YoY": 0.6021334440000858,
+      "petroleum_consumption_YoY": -3.1459033820123494,
+      "refinery_utilization_pct": 91.17999999999999
+    },
+    {
+      "date": "2024-12-01",
+      "CI_zscore": -0.9095926677237439,
+      "petroleum_production_YoY": 1.0550816802010754,
+      "petroleum_consumption_YoY": 0.8220609380026778,
+      "refinery_utilization_pct": 92.35
+    },
+    {
+      "date": "2025-01-01",
+      "CI_zscore": -1.057500634907245,
+      "petroleum_production_YoY": 4.97746004578612,
+      "petroleum_consumption_YoY": 4.888500890839875,
+      "refinery_utilization_pct": 87.78
+    },
+    {
+      "date": "2025-02-01",
+      "CI_zscore": -0.7470563441748014,
+      "petroleum_production_YoY": 0.8428048688621903,
+      "petroleum_consumption_YoY": -1.911269514861691,
+      "refinery_utilization_pct": 85.575
+    },
+    {
+      "date": "2025-03-01",
+      "CI_zscore": -0.7732543340948084,
+      "petroleum_production_YoY": 1.9912118813895985,
+      "petroleum_consumption_YoY": 0.21060905761618454,
+      "refinery_utilization_pct": 86.6
+    },
+    {
+      "date": "2025-04-01",
+      "CI_zscore": -0.8006901501250245,
+      "petroleum_production_YoY": 1.1399567021953771,
+      "petroleum_consumption_YoY": 0.5340153920250446,
+      "refinery_utilization_pct": 87.425
+    },
+    {
+      "date": "2025-05-01",
+      "CI_zscore": -0.8387244578302231,
+      "petroleum_production_YoY": 1.437016829946547,
+      "petroleum_consumption_YoY": -2.107127388415442,
+      "refinery_utilization_pct": 90.7
+    },
+    {
+      "date": "2025-06-01",
+      "CI_zscore": -1.1460734049465264,
+      "petroleum_production_YoY": 2.707828427731118,
+      "petroleum_consumption_YoY": 3.0981216305645543,
+      "refinery_utilization_pct": 94.275
+    },
+    {
+      "date": "2025-07-01",
+      "CI_zscore": -0.9028728421492592,
+      "petroleum_production_YoY": 3.746836266976694,
+      "petroleum_consumption_YoY": 1.9805236478266375,
+      "refinery_utilization_pct": 94.875
+    },
+    {
+      "date": "2025-08-01",
+      "CI_zscore": -0.7372098010742931,
+      "petroleum_production_YoY": 2.9798344731110094,
+      "petroleum_consumption_YoY": 0.7112946230807049,
+      "refinery_utilization_pct": 95.76
+    },
+    {
+      "date": "2025-09-01",
+      "CI_zscore": -0.5799316016670121,
+      "petroleum_production_YoY": 4.992716345347126,
+      "petroleum_consumption_YoY": 2.7800712525341886,
+      "refinery_utilization_pct": 93.15
+    },
+    {
+      "date": "2025-10-01",
+      "CI_zscore": -0.7683448791628439,
+      "petroleum_production_YoY": 2.467503114580505,
+      "petroleum_consumption_YoY": -1.4224753341657514,
+      "refinery_utilization_pct": 87.86
+    },
+    {
+      "date": "2025-11-01",
+      "CI_zscore": -0.8271452613044301,
+      "petroleum_production_YoY": 2.9368689407921034,
+      "petroleum_consumption_YoY": -0.07713395863262473,
+      "refinery_utilization_pct": 91.45
+    },
+    {
+      "date": "2025-12-01",
+      "CI_zscore": -0.5186096213307969,
+      "petroleum_production_YoY": 1.6326749011741581,
+      "petroleum_consumption_YoY": 1.8119071039162327,
+      "refinery_utilization_pct": 94.65
+    },
+    {
+      "date": "2026-01-01",
+      "CI_zscore": -0.5849309106551833,
+      "petroleum_production_YoY": 1.252993351101983,
+      "petroleum_consumption_YoY": -0.5545122621509302,
+      "refinery_utilization_pct": 92.94
+    },
+    {
+      "date": "2026-02-01",
+      "CI_zscore": -0.6139916702945033,
+      "petroleum_production_YoY": 3.452874153577734,
+      "petroleum_consumption_YoY": 5.090523174014594,
+      "refinery_utilization_pct": 89.55
+    },
+    {
+      "date": "2026-03-01",
+      "CI_zscore": -0.07797037710031304,
+      "petroleum_production_YoY": 1.8041685410998154,
+      "petroleum_consumption_YoY": 1.7632963316127848,
+      "refinery_utilization_pct": 91.8
+    },
+    {
+      "date": "2026-04-01",
+      "CI_zscore": 0.35370444235533294,
+      "petroleum_production_YoY": 0.8920649794502467,
+      "petroleum_consumption_YoY": null,
+      "refinery_utilization_pct": 90.07499999999999
+    },
+    {
+      "date": "2026-05-01",
+      "CI_zscore": -0.29392817729373444,
+      "petroleum_production_YoY": 2.0131014872571518,
+      "petroleum_consumption_YoY": null,
+      "refinery_utilization_pct": 92.52000000000001
+    },
+    {
+      "date": "2026-06-01",
+      "CI_zscore": -1.3818358591603184,
+      "petroleum_production_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "refinery_utilization_pct": 96.175
+    },
+    {
+      "date": "2026-07-01",
+      "CI_zscore": null,
+      "petroleum_production_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "refinery_utilization_pct": 96.0
+    }
+  ],
+  "annotations": [
+    "oil_embargo_1973",
+    "gulf_war_1990",
+    "gfc_2008",
+    "shale_2014",
+    "covid_2020",
+    "reopening_2021"
+  ],
+  "availableTransformations": [
+    "raw",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "CI_zscore uses the prior five-year same-month inventory history; growth rates are year-over-year; refinery utilization is the published rate.",
+    "notes": "No single physical indicator defines tightness. Demand weakness can raise inventories even when supply is constrained."
+  },
+  "staticFigure": "physical_tightness_dashboard.png",
+  "generatedAt": "2026-07-16T00:14:53+00:00"
+}

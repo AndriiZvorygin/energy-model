@@ -1,15 +1,48 @@
-import { EvidenceLabel } from '../components/EvidenceLabel'
+import { useEffect, useMemo, useState } from 'react'
+import { CurrentStateIndicatorCard } from '../components/CurrentStateIndicatorCard'
+import { ChartModal } from '../components/charts/ChartModal'
+import { IndicatorHistoryChart } from '../components/charts/IndicatorHistoryChart'
+import { LayerHistoryChart } from '../components/charts/LayerHistoryChart'
+import type { IndicatorDataset } from '../components/charts/chartTypes'
+import { useGeneratedManifest, useIndicatorDatasets } from '../components/charts/useChartData'
 import { PageBody, PageHeader } from '../components/PageHeader'
-import { researchData } from '../data/generated'
 
-const fmt = (value: number | null) => value === null ? 'Not available' : new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 }).format(value)
+const signalGroups = (rows: IndicatorDataset[]) => ({
+  supporting: rows.filter((row) => row.interpretationLabel === 'Supportive'),
+  conflicting: rows.filter((row) => row.interpretationLabel === 'Stressful'),
+  mixed: rows.filter((row) => !['Supportive', 'Stressful'].includes(row.interpretationLabel)),
+})
 
 export function CurrentState() {
-  const grouped = researchData.systemResponse.currentState.reduce<Record<string, typeof researchData.systemResponse.currentState[number][]>>((result, row) => {
-    (result[row.layer] ??= []).push(row)
-    return result
-  }, {})
-  return <><PageHeader eyebrow="Latest observations" title="Current state by evidence layer" description="Each reading retains its own date, frequency, interpretation, confirming evidence, conflicts, and confidence. There is no aggregate red or green verdict." /><PageBody>
-    <div className="space-y-12">{Object.entries(grouped).map(([layer, rows]) => <section key={layer}><div className="mb-4 flex items-end justify-between gap-4 border-b border-stone-300 pb-3 dark:border-stone-700"><h2 className="text-xl font-semibold">{layer}</h2><span className="text-xs text-stone-500">{rows?.length ?? 0} indicators</span></div><div className="grid gap-4 xl:grid-cols-2">{rows?.map((row) => <article key={row.indicator_id} className="border border-stone-200 bg-white p-5 dark:border-stone-800 dark:bg-[#18201d]"><div className="flex flex-wrap items-start justify-between gap-3"><div><h3 className="font-semibold text-ink dark:text-white">{row.indicator}</h3><p className="mt-1 text-xs text-stone-500">Through {row.source_date} · {row.update_frequency}</p></div><EvidenceLabel label={row.evidence_label} /></div><div className="mt-5 grid grid-cols-3 gap-3"><div><p className="text-xs text-stone-500">Latest</p><p className="mt-1 font-semibold">{fmt(row.latest_value)}</p></div><div><p className="text-xs text-stone-500">Change</p><p className="mt-1 font-semibold">{fmt(row.change)}</p></div><div><p className="text-xs text-stone-500">Percentile</p><p className="mt-1 font-semibold">{fmt(row.historical_percentile)}</p></div></div><p className="mt-4 text-sm leading-6 text-stone-600 dark:text-stone-300">{row.interpretation}</p><dl className="mt-4 grid gap-2 text-xs"><div><dt className="font-semibold">Confirm with</dt><dd className="text-stone-500">{row.confirming_indicators}</dd></div><div><dt className="font-semibold">Conflicts</dt><dd className="text-stone-500">{row.conflicting_indicators}</dd></div></dl><p className="mt-4 text-xs font-semibold uppercase text-stone-500">Confidence: {row.confidence_level}</p></article>)}</div></section>)}</div>
+  const { manifest, error: manifestError } = useGeneratedManifest()
+  const files = useMemo(() => manifest?.indicators.map((item) => item.file) ?? [], [manifest])
+  const { indicators, error } = useIndicatorDatasets(files)
+  const [selected, setSelected] = useState<IndicatorDataset | null>(null)
+  const fieldLookup = useMemo(() => new Map(indicators.map((item) => [item.field, item])), [indicators])
+  const overall = signalGroups(indicators)
+  useEffect(() => {
+    if (!indicators.length || selected) return
+    const requested = new URLSearchParams(window.location.search).get('indicator')
+    if (requested) setSelected(indicators.find((item) => item.id === requested) ?? null)
+  }, [indicators, selected])
+  const selectIndicator = (indicator: IndicatorDataset | null) => {
+    setSelected(indicator)
+    const query = indicator ? `?indicator=${encodeURIComponent(indicator.id)}` : ''
+    window.history.replaceState(null, '', `${window.location.pathname}${query}`)
+  }
+  if (manifestError || error) return <><PageHeader eyebrow="Latest observations" title="Current state by evidence layer" description="Historical indicator data could not be loaded." /><PageBody><p className="text-sm text-amber-700">{manifestError ?? error}</p></PageBody></>
+  return <><PageHeader eyebrow="Latest observations" title="Current state in historical context" description="Every reading is placed against its own history, source date, frequency, confirming evidence, and conflicts. There is no aggregate red or green verdict." /><PageBody>
+    {!manifest || !indicators.length ? <div className="flex h-64 items-center justify-center text-sm text-stone-500">Loading indicator histories…</div> : <>
+      <section className="border-y border-stone-300 py-6 dark:border-stone-700"><p className="text-xs font-semibold uppercase text-petroleum">System-state summary</p><h2 className="mt-2 text-2xl font-semibold">Evidence remains mixed across the transmission chain</h2><p className="mt-3 max-w-4xl text-sm leading-6 text-stone-600 dark:text-stone-300">{overall.supporting.length} indicators are currently supportive under their documented direction metadata, {overall.conflicting.length} show stressful evidence, and {overall.mixed.length} remain neutral, mixed, historically unusual, or context-dependent. This count is descriptive: direction metadata and layer evidence matter more than a mechanical total.</p></section>
+      <div className="mt-12 space-y-16">{manifest.layers.map((layer) => {
+        const rows = layer.indicatorFields.map((field) => fieldLookup.get(field)).filter((item): item is IndicatorDataset => Boolean(item))
+        const signals = signalGroups(rows)
+        return <section key={layer.id}><div className="grid gap-4 border-b border-stone-300 pb-5 md:grid-cols-[1fr_260px] dark:border-stone-700"><div><p className="text-xs font-semibold uppercase text-petroleum">Diagnostic layer</p><h2 className="mt-1 text-2xl font-semibold">{layer.label}</h2><p className="mt-2 max-w-3xl text-sm leading-6 text-stone-600 dark:text-stone-300">{layer.interpretation}</p></div><div className="text-sm"><p><strong>Supporting:</strong> {signals.supporting.map((item) => item.label).join(', ') || 'No clear signal'}</p><p className="mt-2"><strong>Conflicting:</strong> {signals.conflicting.map((item) => item.label).join(', ') || 'No clear signal'}</p><p className="mt-2 text-xs uppercase text-stone-500">Confidence: {layer.confidence}</p></div></div>
+          <div className="mt-6"><LayerHistoryChart indicators={rows} /></div>
+          <div className="mt-6 grid gap-4 xl:grid-cols-2">{rows.map((indicator) => <CurrentStateIndicatorCard key={indicator.id} indicator={indicator} onExpand={() => selectIndicator(indicator)} />)}</div>
+        </section>
+      })}</div>
+    </>}
+    <ChartModal open={Boolean(selected)} title={selected?.label ?? 'Indicator history'} onClose={() => selectIndicator(null)}>{selected && <IndicatorHistoryChart indicator={selected} />}</ChartModal>
   </PageBody></>
 }

@@ -1,0 +1,4570 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "industrial-transmission",
+  "title": "Energy stress and real activity",
+  "description": "Energy affordability is shown beside production, manufacturing, spending, investment, and GDP growth to inspect transmission rather than assume it.",
+  "plainLanguageSummary": "Energy affordability is shown beside production, manufacturing, spending, investment, and GDP growth to inspect transmission rather than assume it.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Growth rates are year-over-year; energy burden is the expenditure share of nominal GDP.",
+    "explanation": "Common recessions, monetary policy, credit, productivity, and supply shocks can drive several series together.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "Common recessions, monetary policy, credit, productivity, and supply shocks can drive several series together."
+  ],
+  "sourceNotes": [
+    "BEA via FRED",
+    "Federal Reserve via FRED"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "energy_expenditure_share_gdp": {
+        "mean": 3.3826395891220398,
+        "standardDeviation": 0.48572484057972004,
+        "n": 240
+      },
+      "Industrial_production_YoY": {
+        "mean": 0.7684584215383505,
+        "standardDeviation": 4.032855339024752,
+        "n": 240
+      },
+      "manufacturing_output_YoY": {
+        "mean": 0.6333610122889438,
+        "standardDeviation": 4.622262609815965,
+        "n": 240
+      },
+      "real_consumer_spending_YoY": {
+        "mean": 1.8140335757684447,
+        "standardDeviation": 1.394542482589082,
+        "n": 144
+      },
+      "business_investment_YoY": {
+        "mean": 3.53706369422837,
+        "standardDeviation": 6.490054374834573,
+        "n": 144
+      },
+      "Real_GDP_growth": {
+        "mean": 2.1603494983315525,
+        "standardDeviation": 1.5859551799821872,
+        "n": 240
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "1986-01-01",
+    "end": "2026-07-01"
+  },
+  "series": [
+    {
+      "key": "energy_expenditure_share_gdp",
+      "label": "Energy expenditure share of GDP",
+      "unit": "percent",
+      "source": "BEA via FRED",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#be123c",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "Industrial_production_YoY",
+      "label": "Industrial production growth",
+      "unit": "percent",
+      "source": "Federal Reserve via FRED",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "manufacturing_output_YoY",
+      "label": "Manufacturing output growth",
+      "unit": "percent",
+      "source": "Federal Reserve via FRED",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#2563eb",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "real_consumer_spending_YoY",
+      "label": "Real consumer spending growth",
+      "unit": "percent",
+      "source": "BEA via FRED",
+      "status": "derived",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#d97706",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "business_investment_YoY",
+      "label": "Business investment growth",
+      "unit": "percent",
+      "source": "BEA via FRED",
+      "status": "derived",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#7c3aed",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-07-01"
+    },
+    {
+      "key": "Real_GDP_growth",
+      "label": "Real GDP growth",
+      "unit": "percent",
+      "source": "BEA via FRED",
+      "status": "derived",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#475569",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-07-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1986-01-01",
+      "energy_expenditure_share_gdp": 4.403386592497516,
+      "Industrial_production_YoY": null,
+      "manufacturing_output_YoY": null,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": null
+    },
+    {
+      "date": "1986-02-01",
+      "energy_expenditure_share_gdp": 4.345709992293519,
+      "Industrial_production_YoY": null,
+      "manufacturing_output_YoY": null,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": null
+    },
+    {
+      "date": "1986-03-01",
+      "energy_expenditure_share_gdp": 4.126095245362912,
+      "Industrial_production_YoY": null,
+      "manufacturing_output_YoY": null,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": null
+    },
+    {
+      "date": "1986-04-01",
+      "energy_expenditure_share_gdp": 3.8258964125895973,
+      "Industrial_production_YoY": null,
+      "manufacturing_output_YoY": null,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": null
+    },
+    {
+      "date": "1986-05-01",
+      "energy_expenditure_share_gdp": 3.8698975214175397,
+      "Industrial_production_YoY": null,
+      "manufacturing_output_YoY": null,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": null
+    },
+    {
+      "date": "1986-06-01",
+      "energy_expenditure_share_gdp": 3.9909005706943814,
+      "Industrial_production_YoY": null,
+      "manufacturing_output_YoY": null,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": null
+    },
+    {
+      "date": "1986-07-01",
+      "energy_expenditure_share_gdp": 3.8566138322869983,
+      "Industrial_production_YoY": null,
+      "manufacturing_output_YoY": null,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": null
+    },
+    {
+      "date": "1986-08-01",
+      "energy_expenditure_share_gdp": 3.6439249433932863,
+      "Industrial_production_YoY": null,
+      "manufacturing_output_YoY": null,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": null
+    },
+    {
+      "date": "1986-09-01",
+      "energy_expenditure_share_gdp": 3.7480990930555125,
+      "Industrial_production_YoY": null,
+      "manufacturing_output_YoY": null,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": null
+    },
+    {
+      "date": "1986-10-01",
+      "energy_expenditure_share_gdp": 3.65207432883741,
+      "Industrial_production_YoY": null,
+      "manufacturing_output_YoY": null,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": null
+    },
+    {
+      "date": "1986-11-01",
+      "energy_expenditure_share_gdp": 3.707896746562144,
+      "Industrial_production_YoY": null,
+      "manufacturing_output_YoY": null,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": null
+    },
+    {
+      "date": "1986-12-01",
+      "energy_expenditure_share_gdp": 3.6563683609700814,
+      "Industrial_production_YoY": null,
+      "manufacturing_output_YoY": null,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": null
+    },
+    {
+      "date": "1987-01-01",
+      "energy_expenditure_share_gdp": 3.6572277578292627,
+      "Industrial_production_YoY": 0.6100656345238598,
+      "manufacturing_output_YoY": 1.5847301214439113,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.7115848244058993
+    },
+    {
+      "date": "1987-02-01",
+      "energy_expenditure_share_gdp": 3.786406039952937,
+      "Industrial_production_YoY": 2.6567648418983847,
+      "manufacturing_output_YoY": 3.6326062175764173,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.7115848244058993
+    },
+    {
+      "date": "1987-03-01",
+      "energy_expenditure_share_gdp": 3.8520540193928365,
+      "Industrial_production_YoY": 3.54296110984762,
+      "manufacturing_output_YoY": 4.0447527741895195,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.7115848244058993
+    },
+    {
+      "date": "1987-04-01",
+      "energy_expenditure_share_gdp": 3.8034522362967524,
+      "Industrial_production_YoY": 4.0493229629387395,
+      "manufacturing_output_YoY": 4.362374447647244,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.353600672877488
+    },
+    {
+      "date": "1987-05-01",
+      "energy_expenditure_share_gdp": 3.909566056893653,
+      "Industrial_production_YoY": 4.552760573702974,
+      "manufacturing_output_YoY": 5.034134654524736,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.353600672877488
+    },
+    {
+      "date": "1987-06-01",
+      "energy_expenditure_share_gdp": 3.911646720042612,
+      "Industrial_production_YoY": 5.519439713663821,
+      "manufacturing_output_YoY": 5.839242762732844,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.353600672877488
+    },
+    {
+      "date": "1987-07-01",
+      "energy_expenditure_share_gdp": 3.875480980355426,
+      "Industrial_production_YoY": 5.549483162984625,
+      "manufacturing_output_YoY": 6.0513429694105225,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.2619859723208355
+    },
+    {
+      "date": "1987-08-01",
+      "energy_expenditure_share_gdp": 3.877528249758678,
+      "Industrial_production_YoY": 6.539368743960372,
+      "manufacturing_output_YoY": 6.346400625223136,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.2619859723208355
+    },
+    {
+      "date": "1987-09-01",
+      "energy_expenditure_share_gdp": 3.814062898257876,
+      "Industrial_production_YoY": 6.686739906867412,
+      "manufacturing_output_YoY": 6.847944077048029,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.2619859723208355
+    },
+    {
+      "date": "1987-10-01",
+      "energy_expenditure_share_gdp": 3.8418576380083524,
+      "Industrial_production_YoY": 7.649118005085254,
+      "manufacturing_output_YoY": 8.090763192357908,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.474555651430423
+    },
+    {
+      "date": "1987-11-01",
+      "energy_expenditure_share_gdp": 3.728039610271099,
+      "Industrial_production_YoY": 7.742526773047431,
+      "manufacturing_output_YoY": 8.22696308974833,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.474555651430423
+    },
+    {
+      "date": "1987-12-01",
+      "energy_expenditure_share_gdp": 3.752001300321047,
+      "Industrial_production_YoY": 7.328838312501662,
+      "manufacturing_output_YoY": 7.938321391551728,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.474555651430423
+    },
+    {
+      "date": "1988-01-01",
+      "energy_expenditure_share_gdp": 3.8396553613651827,
+      "Industrial_production_YoY": 7.683256014634088,
+      "manufacturing_output_YoY": 8.055960571680254,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.241257896544837
+    },
+    {
+      "date": "1988-02-01",
+      "energy_expenditure_share_gdp": 3.7174486712190626,
+      "Industrial_production_YoY": 6.815010338304517,
+      "manufacturing_output_YoY": 6.858086747005987,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.241257896544837
+    },
+    {
+      "date": "1988-03-01",
+      "energy_expenditure_share_gdp": 3.754899108521906,
+      "Industrial_production_YoY": 6.92376356971911,
+      "manufacturing_output_YoY": 7.165281452464889,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.241257896544837
+    },
+    {
+      "date": "1988-04-01",
+      "energy_expenditure_share_gdp": 3.655080619864679,
+      "Industrial_production_YoY": 6.867457888147577,
+      "manufacturing_output_YoY": 7.512857543804863,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.484493225777175
+    },
+    {
+      "date": "1988-05-01",
+      "energy_expenditure_share_gdp": 3.6704947711345355,
+      "Industrial_production_YoY": 5.981899007846314,
+      "manufacturing_output_YoY": 6.502678691713304,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.484493225777175
+    },
+    {
+      "date": "1988-06-01",
+      "energy_expenditure_share_gdp": 3.7803205989322617,
+      "Industrial_production_YoY": 5.741687913317128,
+      "manufacturing_output_YoY": 6.3659965359623705,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.484493225777175
+    },
+    {
+      "date": "1988-07-01",
+      "energy_expenditure_share_gdp": 3.7347371250474413,
+      "Industrial_production_YoY": 5.040822414780433,
+      "manufacturing_output_YoY": 5.5019109558427814,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.193200105129624
+    },
+    {
+      "date": "1988-08-01",
+      "energy_expenditure_share_gdp": 3.7801672776075725,
+      "Industrial_production_YoY": 4.781020904097089,
+      "manufacturing_output_YoY": 5.091062832174731,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.193200105129624
+    },
+    {
+      "date": "1988-09-01",
+      "energy_expenditure_share_gdp": 3.628733435740469,
+      "Industrial_production_YoY": 4.043725665351872,
+      "manufacturing_output_YoY": 4.666829985301324,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.193200105129624
+    },
+    {
+      "date": "1988-10-01",
+      "energy_expenditure_share_gdp": 3.7133005982581007,
+      "Industrial_production_YoY": 3.118549371874013,
+      "manufacturing_output_YoY": 3.4961834498491218,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.799338836732069
+    },
+    {
+      "date": "1988-11-01",
+      "energy_expenditure_share_gdp": 3.6169955453356963,
+      "Industrial_production_YoY": 2.8661985664013345,
+      "manufacturing_output_YoY": 3.3725000132379668,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.799338836732069
+    },
+    {
+      "date": "1988-12-01",
+      "energy_expenditure_share_gdp": 3.5947713023536028,
+      "Industrial_production_YoY": 2.755857936251749,
+      "manufacturing_output_YoY": 3.11717988798621,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.799338836732069
+    },
+    {
+      "date": "1989-01-01",
+      "energy_expenditure_share_gdp": 3.411202497871174,
+      "Industrial_production_YoY": 3.0792614276063945,
+      "manufacturing_output_YoY": 4.274186038748251,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.3151632099998505
+    },
+    {
+      "date": "1989-02-01",
+      "energy_expenditure_share_gdp": 3.8376028101050705,
+      "Industrial_production_YoY": 2.111356945517584,
+      "manufacturing_output_YoY": 2.834950028622596,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.3151632099998505
+    },
+    {
+      "date": "1989-03-01",
+      "energy_expenditure_share_gdp": 3.6906307875904085,
+      "Industrial_production_YoY": 2.1147048238211674,
+      "manufacturing_output_YoY": 2.359125931716033,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.3151632099998505
+    },
+    {
+      "date": "1989-04-01",
+      "energy_expenditure_share_gdp": 3.7683990077083807,
+      "Industrial_production_YoY": 1.510544400528735,
+      "manufacturing_output_YoY": 1.6275061329700469,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.7479108262349126
+    },
+    {
+      "date": "1989-05-01",
+      "energy_expenditure_share_gdp": 3.8147244801435662,
+      "Industrial_production_YoY": 1.1373664245240223,
+      "manufacturing_output_YoY": 1.0076155985479174,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.7479108262349126
+    },
+    {
+      "date": "1989-06-01",
+      "energy_expenditure_share_gdp": 3.7487997693704176,
+      "Industrial_production_YoY": 0.8371301845179868,
+      "manufacturing_output_YoY": 0.950048141995552,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.7479108262349126
+    },
+    {
+      "date": "1989-07-01",
+      "energy_expenditure_share_gdp": 3.657359976050701,
+      "Industrial_production_YoY": -0.150328322933313,
+      "manufacturing_output_YoY": -0.2372413602299117,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.9075419072247097
+    },
+    {
+      "date": "1989-08-01",
+      "energy_expenditure_share_gdp": 3.673162299518995,
+      "Industrial_production_YoY": 0.32497957712054326,
+      "manufacturing_output_YoY": 0.6095034187443948,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.9075419072247097
+    },
+    {
+      "date": "1989-09-01",
+      "energy_expenditure_share_gdp": 3.636290211426309,
+      "Industrial_production_YoY": 0.3240432253134973,
+      "manufacturing_output_YoY": 0.08966371803256212,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.9075419072247097
+    },
+    {
+      "date": "1989-10-01",
+      "energy_expenditure_share_gdp": 3.64870980612075,
+      "Industrial_production_YoY": -0.24121871415987428,
+      "manufacturing_output_YoY": -0.5803530109454669,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.743211930028755
+    },
+    {
+      "date": "1989-11-01",
+      "energy_expenditure_share_gdp": 3.64870980612075,
+      "Industrial_production_YoY": -0.14564426549978915,
+      "manufacturing_output_YoY": -0.746849708021724,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.743211930028755
+    },
+    {
+      "date": "1989-12-01",
+      "energy_expenditure_share_gdp": 3.9862633122663986,
+      "Industrial_production_YoY": -0.05074563869427173,
+      "manufacturing_output_YoY": -1.1833142996981794,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.743211930028755
+    },
+    {
+      "date": "1990-01-01",
+      "energy_expenditure_share_gdp": 3.456671810807327,
+      "Industrial_production_YoY": -0.848734447631927,
+      "manufacturing_output_YoY": -2.101474671770953,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.821006526483294
+    },
+    {
+      "date": "1990-02-01",
+      "energy_expenditure_share_gdp": 3.6541959142820315,
+      "Industrial_production_YoY": 0.49643524964546604,
+      "manufacturing_output_YoY": 0.29621004356330527,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.821006526483294
+    },
+    {
+      "date": "1990-03-01",
+      "energy_expenditure_share_gdp": 3.6150316523861847,
+      "Industrial_production_YoY": 0.7451289008624462,
+      "manufacturing_output_YoY": 0.9803002435835539,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.821006526483294
+    },
+    {
+      "date": "1990-04-01",
+      "energy_expenditure_share_gdp": 3.5905871583153637,
+      "Industrial_production_YoY": 0.4962367772133325,
+      "manufacturing_output_YoY": 0.35111296345125,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.412704964193124
+    },
+    {
+      "date": "1990-05-01",
+      "energy_expenditure_share_gdp": 3.565419491317826,
+      "Industrial_production_YoY": 1.3782408246781896,
+      "manufacturing_output_YoY": 1.5113566184038918,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.412704964193124
+    },
+    {
+      "date": "1990-06-01",
+      "energy_expenditure_share_gdp": 3.5805200915163486,
+      "Industrial_production_YoY": 1.7298125132548803,
+      "manufacturing_output_YoY": 1.6606363432438487,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.412704964193124
+    },
+    {
+      "date": "1990-07-01",
+      "energy_expenditure_share_gdp": 3.552716190344459,
+      "Industrial_production_YoY": 2.5412840137444492,
+      "manufacturing_output_YoY": 2.6569395190504386,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.7273622503686914
+    },
+    {
+      "date": "1990-08-01",
+      "energy_expenditure_share_gdp": 3.8153877664204647,
+      "Industrial_production_YoY": 1.9009861881851498,
+      "manufacturing_output_YoY": 2.010331394051712,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.7273622503686914
+    },
+    {
+      "date": "1990-09-01",
+      "energy_expenditure_share_gdp": 3.930098771162518,
+      "Industrial_production_YoY": 2.229147315019908,
+      "manufacturing_output_YoY": 2.068499486743902,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.7273622503686914
+    },
+    {
+      "date": "1990-10-01",
+      "energy_expenditure_share_gdp": 4.055134508062223,
+      "Industrial_production_YoY": 1.7690408900654653,
+      "manufacturing_output_YoY": 1.6801941894864614,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 0.6030627340393391
+    },
+    {
+      "date": "1990-11-01",
+      "energy_expenditure_share_gdp": 3.99518180075617,
+      "Industrial_production_YoY": 0.1366191065791167,
+      "manufacturing_output_YoY": 0.21469638009516956,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 0.6030627340393391
+    },
+    {
+      "date": "1990-12-01",
+      "energy_expenditure_share_gdp": 4.041811684216434,
+      "Industrial_production_YoY": -1.1405030076012013,
+      "manufacturing_output_YoY": -0.6760463584473242,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 0.6030627340393391
+    },
+    {
+      "date": "1991-01-01",
+      "energy_expenditure_share_gdp": 3.9269761388976434,
+      "Industrial_production_YoY": -0.961460577686335,
+      "manufacturing_output_YoY": -1.2168339598221056,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": -0.9501973946258402
+    },
+    {
+      "date": "1991-02-01",
+      "energy_expenditure_share_gdp": 3.6651777296378003,
+      "Industrial_production_YoY": -2.577958439290029,
+      "manufacturing_output_YoY": -3.308942716846497,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": -0.9501973946258402
+    },
+    {
+      "date": "1991-03-01",
+      "energy_expenditure_share_gdp": 3.6585499218084374,
+      "Industrial_production_YoY": -3.61869587651098,
+      "manufacturing_output_YoY": -4.522221171895047,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": -0.9501973946258402
+    },
+    {
+      "date": "1991-04-01",
+      "energy_expenditure_share_gdp": 3.6201239721083973,
+      "Industrial_production_YoY": -3.1105501802648705,
+      "manufacturing_output_YoY": -3.696163306543898,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": -0.5389307958117096
+    },
+    {
+      "date": "1991-05-01",
+      "energy_expenditure_share_gdp": 3.822511425914277,
+      "Industrial_production_YoY": -2.494978108064083,
+      "manufacturing_output_YoY": -3.3721460801379055,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": -0.5389307958117096
+    },
+    {
+      "date": "1991-06-01",
+      "energy_expenditure_share_gdp": 3.704996130156024,
+      "Industrial_production_YoY": -2.037136646180182,
+      "manufacturing_output_YoY": -2.737956276918463,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": -0.5389307958117096
+    },
+    {
+      "date": "1991-07-01",
+      "energy_expenditure_share_gdp": 3.6690672174081045,
+      "Industrial_production_YoY": -1.5908264836979713,
+      "manufacturing_output_YoY": -1.9526534306086307,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": -0.10280887034219699
+    },
+    {
+      "date": "1991-08-01",
+      "energy_expenditure_share_gdp": 3.599778728014803,
+      "Industrial_production_YoY": -1.934469200524247,
+      "manufacturing_output_YoY": -2.2373671778790127,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": -0.10280887034219699
+    },
+    {
+      "date": "1991-09-01",
+      "energy_expenditure_share_gdp": 3.649730894786718,
+      "Industrial_production_YoY": -1.1640559598299127,
+      "manufacturing_output_YoY": -1.081347886073536,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": -0.10280887034219699
+    },
+    {
+      "date": "1991-10-01",
+      "energy_expenditure_share_gdp": 3.5373706608944953,
+      "Industrial_production_YoY": -0.6375380485583504,
+      "manufacturing_output_YoY": -0.5167871033811555,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.1664011655910578
+    },
+    {
+      "date": "1991-11-01",
+      "energy_expenditure_share_gdp": 3.650706995246259,
+      "Industrial_production_YoY": 0.4829362003084814,
+      "manufacturing_output_YoY": 0.4954217264571792,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.1664011655910578
+    },
+    {
+      "date": "1991-12-01",
+      "energy_expenditure_share_gdp": 3.5581223840856633,
+      "Industrial_production_YoY": 0.7336733229858172,
+      "manufacturing_output_YoY": 1.0968975201631759,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.1664011655910578
+    },
+    {
+      "date": "1992-01-01",
+      "energy_expenditure_share_gdp": 3.471577227584911,
+      "Industrial_production_YoY": 0.5334053046102349,
+      "manufacturing_output_YoY": 1.180424639251787,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.858936912248855
+    },
+    {
+      "date": "1992-02-01",
+      "energy_expenditure_share_gdp": 3.3709973531777426,
+      "Industrial_production_YoY": 1.996743776757559,
+      "manufacturing_output_YoY": 2.9246962255075726,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.858936912248855
+    },
+    {
+      "date": "1992-03-01",
+      "energy_expenditure_share_gdp": 3.6271617208084987,
+      "Industrial_production_YoY": 3.4616952793256273,
+      "manufacturing_output_YoY": 4.77849007634128,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.858936912248855
+    },
+    {
+      "date": "1992-04-01",
+      "energy_expenditure_share_gdp": 3.5838122953970033,
+      "Industrial_production_YoY": 3.972638518327498,
+      "manufacturing_output_YoY": 4.910711928252698,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.169835814511379
+    },
+    {
+      "date": "1992-05-01",
+      "energy_expenditure_share_gdp": 3.5482678008760327,
+      "Industrial_production_YoY": 3.341941886534139,
+      "manufacturing_output_YoY": 4.857146854712346,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.169835814511379
+    },
+    {
+      "date": "1992-06-01",
+      "energy_expenditure_share_gdp": 3.535904498433956,
+      "Industrial_production_YoY": 2.563756841098086,
+      "manufacturing_output_YoY": 4.16600281243289,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.169835814511379
+    },
+    {
+      "date": "1992-07-01",
+      "energy_expenditure_share_gdp": 3.539100127447199,
+      "Industrial_production_YoY": 3.218992232364881,
+      "manufacturing_output_YoY": 4.568749074402545,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.6653854414522735
+    },
+    {
+      "date": "1992-08-01",
+      "energy_expenditure_share_gdp": 3.4720947894060297,
+      "Industrial_production_YoY": 2.6429698460063156,
+      "manufacturing_output_YoY": 4.013044114230646,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.6653854414522735
+    },
+    {
+      "date": "1992-09-01",
+      "energy_expenditure_share_gdp": 3.645699528876331,
+      "Industrial_production_YoY": 2.1710235537090616,
+      "manufacturing_output_YoY": 3.1221474407008287,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.6653854414522735
+    },
+    {
+      "date": "1992-10-01",
+      "energy_expenditure_share_gdp": 3.5160444036442926,
+      "Industrial_production_YoY": 2.917078740220802,
+      "manufacturing_output_YoY": 3.835364294844501,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.382645388993267
+    },
+    {
+      "date": "1992-11-01",
+      "energy_expenditure_share_gdp": 3.6672238352186106,
+      "Industrial_production_YoY": 3.4710914183461616,
+      "manufacturing_output_YoY": 4.48771821939804,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.382645388993267
+    },
+    {
+      "date": "1992-12-01",
+      "energy_expenditure_share_gdp": 3.5983698366798125,
+      "Industrial_production_YoY": 4.152288897664813,
+      "manufacturing_output_YoY": 4.693315155864375,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.382645388993267
+    },
+    {
+      "date": "1993-01-01",
+      "energy_expenditure_share_gdp": 3.3806580885625426,
+      "Industrial_production_YoY": 5.1026982701394274,
+      "manufacturing_output_YoY": 6.2146882926569,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.3199058070509935
+    },
+    {
+      "date": "1993-02-01",
+      "energy_expenditure_share_gdp": 3.689746828088261,
+      "Industrial_production_YoY": 4.8685284067500945,
+      "manufacturing_output_YoY": 5.481241696186601,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.3199058070509935
+    },
+    {
+      "date": "1993-03-01",
+      "energy_expenditure_share_gdp": 3.6436807178704855,
+      "Industrial_production_YoY": 3.8911814838072933,
+      "manufacturing_output_YoY": 4.153069454615399,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.3199058070509935
+    },
+    {
+      "date": "1993-04-01",
+      "energy_expenditure_share_gdp": 3.498342399601465,
+      "Industrial_production_YoY": 3.3914177146763924,
+      "manufacturing_output_YoY": 4.089576730318467,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.806668207145946
+    },
+    {
+      "date": "1993-05-01",
+      "energy_expenditure_share_gdp": 3.4557513292452757,
+      "Industrial_production_YoY": 2.6622718052738525,
+      "manufacturing_output_YoY": 3.3812138477653075,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.806668207145946
+    },
+    {
+      "date": "1993-06-01",
+      "energy_expenditure_share_gdp": 3.5424021275561435,
+      "Industrial_production_YoY": 2.8411547715022856,
+      "manufacturing_output_YoY": 2.866206034327967,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.806668207145946
+    },
+    {
+      "date": "1993-07-01",
+      "energy_expenditure_share_gdp": 3.4785903949638612,
+      "Industrial_production_YoY": 2.1777342523886745,
+      "manufacturing_output_YoY": 2.1721337797268703,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.2865117406066116
+    },
+    {
+      "date": "1993-08-01",
+      "energy_expenditure_share_gdp": 3.5614139757963343,
+      "Industrial_production_YoY": 2.628418293185275,
+      "manufacturing_output_YoY": 2.4838482855606525,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.2865117406066116
+    },
+    {
+      "date": "1993-09-01",
+      "energy_expenditure_share_gdp": 3.5744913832961984,
+      "Industrial_production_YoY": 2.833713227717971,
+      "manufacturing_output_YoY": 3.068742000743141,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.2865117406066116
+    },
+    {
+      "date": "1993-10-01",
+      "energy_expenditure_share_gdp": 3.530214558912808,
+      "Industrial_production_YoY": 2.892835100274227,
+      "manufacturing_output_YoY": 3.3152018698276775,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.6077107599381977
+    },
+    {
+      "date": "1993-11-01",
+      "energy_expenditure_share_gdp": 3.4446681641087817,
+      "Industrial_production_YoY": 2.972500941748568,
+      "manufacturing_output_YoY": 3.3747376130470963,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.6077107599381977
+    },
+    {
+      "date": "1993-12-01",
+      "energy_expenditure_share_gdp": 3.535917651899743,
+      "Industrial_production_YoY": 3.407732938414032,
+      "manufacturing_output_YoY": 4.14902597190141,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.6077107599381977
+    },
+    {
+      "date": "1994-01-01",
+      "energy_expenditure_share_gdp": 3.5049493707674295,
+      "Industrial_production_YoY": 3.3086266095749384,
+      "manufacturing_output_YoY": 3.306037019443564,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.430706936043171
+    },
+    {
+      "date": "1994-02-01",
+      "energy_expenditure_share_gdp": 3.496517255200226,
+      "Industrial_production_YoY": 2.8734118125557373,
+      "manufacturing_output_YoY": 3.1917731803740024,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.430706936043171
+    },
+    {
+      "date": "1994-03-01",
+      "energy_expenditure_share_gdp": 3.372846226881247,
+      "Industrial_production_YoY": 4.013742016462052,
+      "manufacturing_output_YoY": 4.7989579738813015,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.430706936043171
+    },
+    {
+      "date": "1994-04-01",
+      "energy_expenditure_share_gdp": 3.3089869352971624,
+      "Industrial_production_YoY": 4.342604424720231,
+      "manufacturing_output_YoY": 5.219568101331928,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.225610689832271
+    },
+    {
+      "date": "1994-05-01",
+      "energy_expenditure_share_gdp": 3.350383769350088,
+      "Industrial_production_YoY": 5.220887873549018,
+      "manufacturing_output_YoY": 6.009647962311648,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.225610689832271
+    },
+    {
+      "date": "1994-06-01",
+      "energy_expenditure_share_gdp": 3.5035520553459114,
+      "Industrial_production_YoY": 5.692891278467149,
+      "manufacturing_output_YoY": 6.57813075774325,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.225610689832271
+    },
+    {
+      "date": "1994-07-01",
+      "energy_expenditure_share_gdp": 3.3555788202957957,
+      "Industrial_production_YoY": 5.548865528406344,
+      "manufacturing_output_YoY": 6.766307720328091,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.337048254936149
+    },
+    {
+      "date": "1994-08-01",
+      "energy_expenditure_share_gdp": 3.4415143754497124,
+      "Industrial_production_YoY": 6.384761951629092,
+      "manufacturing_output_YoY": 7.828709249351817,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.337048254936149
+    },
+    {
+      "date": "1994-09-01",
+      "energy_expenditure_share_gdp": 3.366491271743912,
+      "Industrial_production_YoY": 6.156180732641192,
+      "manufacturing_output_YoY": 7.451126169070377,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.337048254936149
+    },
+    {
+      "date": "1994-10-01",
+      "energy_expenditure_share_gdp": 3.323815257036348,
+      "Industrial_production_YoY": 6.231501771426062,
+      "manufacturing_output_YoY": 7.616466386634735,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.116167021429895
+    },
+    {
+      "date": "1994-11-01",
+      "energy_expenditure_share_gdp": 3.2473594581456813,
+      "Industrial_production_YoY": 6.4711768991924545,
+      "manufacturing_output_YoY": 8.026599824460124,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.116167021429895
+    },
+    {
+      "date": "1994-12-01",
+      "energy_expenditure_share_gdp": 3.311743288790453,
+      "Industrial_production_YoY": 6.925835091579047,
+      "manufacturing_output_YoY": 8.528865697617793,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.116167021429895
+    },
+    {
+      "date": "1995-01-01",
+      "energy_expenditure_share_gdp": 3.267622395257614,
+      "Industrial_production_YoY": 6.800469318244806,
+      "manufacturing_output_YoY": 8.610756697630094,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.481405627292
+    },
+    {
+      "date": "1995-02-01",
+      "energy_expenditure_share_gdp": 3.367326089173123,
+      "Industrial_production_YoY": 6.617845269116707,
+      "manufacturing_output_YoY": 8.168691878001578,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.481405627292
+    },
+    {
+      "date": "1995-03-01",
+      "energy_expenditure_share_gdp": 3.2171058570070894,
+      "Industrial_production_YoY": 5.7165348260771465,
+      "manufacturing_output_YoY": 7.028340606695815,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.481405627292
+    },
+    {
+      "date": "1995-04-01",
+      "energy_expenditure_share_gdp": 3.3043147227205076,
+      "Industrial_production_YoY": 4.913630863868201,
+      "manufacturing_output_YoY": 5.775800526381913,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.4023751008017014
+    },
+    {
+      "date": "1995-05-01",
+      "energy_expenditure_share_gdp": 3.3557591435532816,
+      "Industrial_production_YoY": 4.945992374531105,
+      "manufacturing_output_YoY": 5.463809736876946,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.4023751008017014
+    },
+    {
+      "date": "1995-06-01",
+      "energy_expenditure_share_gdp": 3.3689500206898906,
+      "Industrial_production_YoY": 4.587732144288292,
+      "manufacturing_output_YoY": 5.580400131628238,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.4023751008017014
+    },
+    {
+      "date": "1995-07-01",
+      "energy_expenditure_share_gdp": 3.35540551533393,
+      "Industrial_production_YoY": 4.012060921624383,
+      "manufacturing_output_YoY": 4.4167709580363645,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.6733258155179795
+    },
+    {
+      "date": "1995-08-01",
+      "energy_expenditure_share_gdp": 3.3970552346864067,
+      "Industrial_production_YoY": 4.689029105863818,
+      "manufacturing_output_YoY": 4.822646616721449,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.6733258155179795
+    },
+    {
+      "date": "1995-09-01",
+      "energy_expenditure_share_gdp": 3.2174408199788496,
+      "Industrial_production_YoY": 4.7816808149161005,
+      "manufacturing_output_YoY": 5.3677994661576856,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.6733258155179795
+    },
+    {
+      "date": "1995-10-01",
+      "energy_expenditure_share_gdp": 3.1495309283165214,
+      "Industrial_production_YoY": 3.7627368685886786,
+      "manufacturing_output_YoY": 4.22324378426735,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.1997916299495213
+    },
+    {
+      "date": "1995-11-01",
+      "energy_expenditure_share_gdp": 3.2601762141969224,
+      "Industrial_production_YoY": 3.3298500978240275,
+      "manufacturing_output_YoY": 3.4878273726741904,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.1997916299495213
+    },
+    {
+      "date": "1995-12-01",
+      "energy_expenditure_share_gdp": 3.275615091296513,
+      "Industrial_production_YoY": 2.6396897921781903,
+      "manufacturing_output_YoY": 2.7306436486157937,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.1997916299495213
+    },
+    {
+      "date": "1996-01-01",
+      "energy_expenditure_share_gdp": 3.324662437465591,
+      "Industrial_production_YoY": 1.8788215519394358,
+      "manufacturing_output_YoY": 1.8713397902816453,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.6013098466592277
+    },
+    {
+      "date": "1996-02-01",
+      "energy_expenditure_share_gdp": 3.3729564636978884,
+      "Industrial_production_YoY": 3.4865787366735512,
+      "manufacturing_output_YoY": 3.671389956803761,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.6013098466592277
+    },
+    {
+      "date": "1996-03-01",
+      "energy_expenditure_share_gdp": 3.453022875609331,
+      "Industrial_production_YoY": 3.188414739319012,
+      "manufacturing_output_YoY": 3.1347043241385153,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.6013098466592277
+    },
+    {
+      "date": "1996-04-01",
+      "energy_expenditure_share_gdp": 3.414732522993113,
+      "Industrial_production_YoY": 4.395391371041835,
+      "manufacturing_output_YoY": 4.7101932045303,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.002379484223728
+    },
+    {
+      "date": "1996-05-01",
+      "energy_expenditure_share_gdp": 3.4495894353678156,
+      "Industrial_production_YoY": 4.661591494286932,
+      "manufacturing_output_YoY": 5.169920775791148,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.002379484223728
+    },
+    {
+      "date": "1996-06-01",
+      "energy_expenditure_share_gdp": 3.3649369338863964,
+      "Industrial_production_YoY": 5.110978907668273,
+      "manufacturing_output_YoY": 5.741764239506386,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.002379484223728
+    },
+    {
+      "date": "1996-07-01",
+      "energy_expenditure_share_gdp": 3.240521198788697,
+      "Industrial_production_YoY": 5.568536043472649,
+      "manufacturing_output_YoY": 6.931978532929284,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.0501348871777365
+    },
+    {
+      "date": "1996-08-01",
+      "energy_expenditure_share_gdp": 3.306930361875827,
+      "Industrial_production_YoY": 4.720645436557502,
+      "manufacturing_output_YoY": 6.098459745423801,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.0501348871777365
+    },
+    {
+      "date": "1996-09-01",
+      "energy_expenditure_share_gdp": 3.209776215877988,
+      "Industrial_production_YoY": 4.952801645891314,
+      "manufacturing_output_YoY": 6.006167501878701,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.0501348871777365
+    },
+    {
+      "date": "1996-10-01",
+      "energy_expenditure_share_gdp": 3.2785412573786847,
+      "Industrial_production_YoY": 5.168722601692299,
+      "manufacturing_output_YoY": 5.9889348755385985,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.421452442981133
+    },
+    {
+      "date": "1996-11-01",
+      "energy_expenditure_share_gdp": 3.3378649359649315,
+      "Industrial_production_YoY": 5.855898562613082,
+      "manufacturing_output_YoY": 6.825856008148068,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.421452442981133
+    },
+    {
+      "date": "1996-12-01",
+      "energy_expenditure_share_gdp": 3.3402863106011043,
+      "Industrial_production_YoY": 6.165643121709419,
+      "manufacturing_output_YoY": 7.294981847075865,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.421452442981133
+    },
+    {
+      "date": "1997-01-01",
+      "energy_expenditure_share_gdp": 3.356589504170625,
+      "Industrial_production_YoY": 6.946049233947327,
+      "manufacturing_output_YoY": 8.113363838291576,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.314068944306992
+    },
+    {
+      "date": "1997-02-01",
+      "energy_expenditure_share_gdp": 3.3494147492632425,
+      "Industrial_production_YoY": 6.661807501031536,
+      "manufacturing_output_YoY": 7.9823050149298025,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.314068944306992
+    },
+    {
+      "date": "1997-03-01",
+      "energy_expenditure_share_gdp": 3.2382060481988075,
+      "Industrial_production_YoY": 7.470272474009643,
+      "manufacturing_output_YoY": 9.33955512856961,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.314068944306992
+    },
+    {
+      "date": "1997-04-01",
+      "energy_expenditure_share_gdp": 3.2574914967733224,
+      "Industrial_production_YoY": 6.536171976339267,
+      "manufacturing_output_YoY": 7.886780030484863,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.31127171595187
+    },
+    {
+      "date": "1997-05-01",
+      "energy_expenditure_share_gdp": 3.1342350617602777,
+      "Industrial_production_YoY": 6.331688761977006,
+      "manufacturing_output_YoY": 7.792029594015348,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.31127171595187
+    },
+    {
+      "date": "1997-06-01",
+      "energy_expenditure_share_gdp": 3.0966711958515405,
+      "Industrial_production_YoY": 6.012329789391524,
+      "manufacturing_output_YoY": 7.366939777888848,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.31127171595187
+    },
+    {
+      "date": "1997-07-01",
+      "energy_expenditure_share_gdp": 3.106377678500415,
+      "Industrial_production_YoY": 6.901473595485519,
+      "manufacturing_output_YoY": 7.667284109192685,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.674702492340366
+    },
+    {
+      "date": "1997-08-01",
+      "energy_expenditure_share_gdp": 3.0982971717187335,
+      "Industrial_production_YoY": 7.421174007233544,
+      "manufacturing_output_YoY": 8.56992469461877,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.674702492340366
+    },
+    {
+      "date": "1997-09-01",
+      "energy_expenditure_share_gdp": 3.174484807088867,
+      "Industrial_production_YoY": 7.7307713474798145,
+      "manufacturing_output_YoY": 8.622289389050364,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.674702492340366
+    },
+    {
+      "date": "1997-10-01",
+      "energy_expenditure_share_gdp": 3.2580770021858556,
+      "Industrial_production_YoY": 8.653836077256006,
+      "manufacturing_output_YoY": 9.700728600370967,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.483552816031211
+    },
+    {
+      "date": "1997-11-01",
+      "energy_expenditure_share_gdp": 3.1382947594584345,
+      "Industrial_production_YoY": 8.512624010737335,
+      "manufacturing_output_YoY": 9.837281240730533,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.483552816031211
+    },
+    {
+      "date": "1997-12-01",
+      "energy_expenditure_share_gdp": 3.1690959075883423,
+      "Industrial_production_YoY": 8.280957988374027,
+      "manufacturing_output_YoY": 9.485899764044103,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.483552816031211
+    },
+    {
+      "date": "1998-01-01",
+      "energy_expenditure_share_gdp": 2.9075800092032016,
+      "Industrial_production_YoY": 8.58347433946034,
+      "manufacturing_output_YoY": 10.296724187016126,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.855526883310857
+    },
+    {
+      "date": "1998-02-01",
+      "energy_expenditure_share_gdp": 2.9346482482337977,
+      "Industrial_production_YoY": 7.476143150007708,
+      "manufacturing_output_YoY": 8.911493237026914,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.855526883310857
+    },
+    {
+      "date": "1998-03-01",
+      "energy_expenditure_share_gdp": 2.9414153079914467,
+      "Industrial_production_YoY": 6.835942439493192,
+      "manufacturing_output_YoY": 7.57898296227415,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.855526883310857
+    },
+    {
+      "date": "1998-04-01",
+      "energy_expenditure_share_gdp": 2.8161480112097403,
+      "Industrial_production_YoY": 7.077008185695677,
+      "manufacturing_output_YoY": 8.151517560211374,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.09279008633523
+    },
+    {
+      "date": "1998-05-01",
+      "energy_expenditure_share_gdp": 2.917600690948492,
+      "Industrial_production_YoY": 7.188999827918208,
+      "manufacturing_output_YoY": 7.983614737571032,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.09279008633523
+    },
+    {
+      "date": "1998-06-01",
+      "energy_expenditure_share_gdp": 2.9934114845994273,
+      "Industrial_production_YoY": 6.058575229559682,
+      "manufacturing_output_YoY": 6.458775068189526,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.09279008633523
+    },
+    {
+      "date": "1998-07-01",
+      "energy_expenditure_share_gdp": 2.879039659374306,
+      "Industrial_production_YoY": 4.755871384932742,
+      "manufacturing_output_YoY": 5.139027373486482,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.103452727565782
+    },
+    {
+      "date": "1998-08-01",
+      "energy_expenditure_share_gdp": 2.8549197536217408,
+      "Industrial_production_YoY": 5.865515150473688,
+      "manufacturing_output_YoY": 6.499293864994926,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.103452727565782
+    },
+    {
+      "date": "1998-09-01",
+      "energy_expenditure_share_gdp": 2.8406670820406803,
+      "Industrial_production_YoY": 4.848836473856544,
+      "manufacturing_output_YoY": 5.521046369857618,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.103452727565782
+    },
+    {
+      "date": "1998-10-01",
+      "energy_expenditure_share_gdp": 2.7028216403480485,
+      "Industrial_production_YoY": 4.637794383238925,
+      "manufacturing_output_YoY": 5.493054345800141,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.883126568525764
+    },
+    {
+      "date": "1998-11-01",
+      "energy_expenditure_share_gdp": 2.649023438908,
+      "Industrial_production_YoY": 3.741486019967022,
+      "manufacturing_output_YoY": 4.556239270075801,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.883126568525764
+    },
+    {
+      "date": "1998-12-01",
+      "energy_expenditure_share_gdp": 2.6705427194840192,
+      "Industrial_production_YoY": 3.7695732652959,
+      "manufacturing_output_YoY": 4.674716307718896,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.883126568525764
+    },
+    {
+      "date": "1999-01-01",
+      "energy_expenditure_share_gdp": 2.663710907359598,
+      "Industrial_production_YoY": 3.763083805136991,
+      "manufacturing_output_YoY": 4.137470010360311,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.816336792733988
+    },
+    {
+      "date": "1999-02-01",
+      "energy_expenditure_share_gdp": 2.580835179089136,
+      "Industrial_production_YoY": 4.225398806274816,
+      "manufacturing_output_YoY": 5.017227449862172,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.816336792733988
+    },
+    {
+      "date": "1999-03-01",
+      "energy_expenditure_share_gdp": 2.695586187463622,
+      "Industrial_production_YoY": 4.425125461604007,
+      "manufacturing_output_YoY": 5.222940553154487,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.816336792733988
+    },
+    {
+      "date": "1999-04-01",
+      "energy_expenditure_share_gdp": 2.829036941238961,
+      "Industrial_production_YoY": 4.307254602909483,
+      "manufacturing_output_YoY": 5.182175100523478,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.721885912228041
+    },
+    {
+      "date": "1999-05-01",
+      "energy_expenditure_share_gdp": 2.809091968369373,
+      "Industrial_production_YoY": 4.27940147673862,
+      "manufacturing_output_YoY": 5.481892062025073,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.721885912228041
+    },
+    {
+      "date": "1999-06-01",
+      "energy_expenditure_share_gdp": 2.8531808557653044,
+      "Industrial_production_YoY": 4.826418688874012,
+      "manufacturing_output_YoY": 6.0748879675150524,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.721885912228041
+    },
+    {
+      "date": "1999-07-01",
+      "energy_expenditure_share_gdp": 2.9019392304399902,
+      "Industrial_production_YoY": 5.839978413843561,
+      "manufacturing_output_YoY": 7.105600418517466,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.791118246732284
+    },
+    {
+      "date": "1999-08-01",
+      "energy_expenditure_share_gdp": 2.9236186056940774,
+      "Industrial_production_YoY": 4.109544569149426,
+      "manufacturing_output_YoY": 4.917687328272713,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.791118246732284
+    },
+    {
+      "date": "1999-09-01",
+      "energy_expenditure_share_gdp": 2.9690420586074038,
+      "Industrial_production_YoY": 3.7444563415508503,
+      "manufacturing_output_YoY": 4.48324098803452,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.791118246732284
+    },
+    {
+      "date": "1999-10-01",
+      "energy_expenditure_share_gdp": 2.939343762717586,
+      "Industrial_production_YoY": 4.29950432876991,
+      "manufacturing_output_YoY": 5.088548715650987,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.8235742707329665
+    },
+    {
+      "date": "1999-11-01",
+      "energy_expenditure_share_gdp": 2.7767202761892245,
+      "Industrial_production_YoY": 4.884601547870515,
+      "manufacturing_output_YoY": 5.580525985646534,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.8235742707329665
+    },
+    {
+      "date": "1999-12-01",
+      "energy_expenditure_share_gdp": 2.971666443269807,
+      "Industrial_production_YoY": 5.216917187508963,
+      "manufacturing_output_YoY": 5.63264417596141,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.8235742707329665
+    },
+    {
+      "date": "2000-01-01",
+      "energy_expenditure_share_gdp": 2.908366266990422,
+      "Industrial_production_YoY": 4.620955049951481,
+      "manufacturing_output_YoY": 5.323412804928895,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.224744861233032
+    },
+    {
+      "date": "2000-02-01",
+      "energy_expenditure_share_gdp": 2.987349056640558,
+      "Industrial_production_YoY": 4.313335681097841,
+      "manufacturing_output_YoY": 4.55465438184246,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.224744861233032
+    },
+    {
+      "date": "2000-03-01",
+      "energy_expenditure_share_gdp": 3.0603331534058733,
+      "Industrial_production_YoY": 4.447293166354416,
+      "manufacturing_output_YoY": 5.245321788956048,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.224744861233032
+    },
+    {
+      "date": "2000-04-01",
+      "energy_expenditure_share_gdp": 3.0016432923616185,
+      "Industrial_production_YoY": 4.828026846244748,
+      "manufacturing_output_YoY": 5.4838273413726935,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 5.2444568111355006
+    },
+    {
+      "date": "2000-05-01",
+      "energy_expenditure_share_gdp": 3.0475071528105766,
+      "Industrial_production_YoY": 4.451469064576807,
+      "manufacturing_output_YoY": 4.62547705924754,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 5.2444568111355006
+    },
+    {
+      "date": "2000-06-01",
+      "energy_expenditure_share_gdp": 3.2270592873341584,
+      "Industrial_production_YoY": 4.574285752844154,
+      "manufacturing_output_YoY": 5.011219817682155,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 5.2444568111355006
+    },
+    {
+      "date": "2000-07-01",
+      "energy_expenditure_share_gdp": 3.161414844596883,
+      "Industrial_production_YoY": 3.7698485910728996,
+      "manufacturing_output_YoY": 4.6218937207549216,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.9731723525519014
+    },
+    {
+      "date": "2000-08-01",
+      "energy_expenditure_share_gdp": 3.133309071913465,
+      "Industrial_production_YoY": 3.0734226950164922,
+      "manufacturing_output_YoY": 3.454773242013909,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.9731723525519014
+    },
+    {
+      "date": "2000-09-01",
+      "energy_expenditure_share_gdp": 3.269961277029394,
+      "Industrial_production_YoY": 3.968806853188922,
+      "manufacturing_output_YoY": 4.48205439198075,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.9731723525519014
+    },
+    {
+      "date": "2000-10-01",
+      "energy_expenditure_share_gdp": 3.189039516492547,
+      "Industrial_production_YoY": 2.3142184859096693,
+      "manufacturing_output_YoY": 2.6535418102060504,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.9055943095086967
+    },
+    {
+      "date": "2000-11-01",
+      "energy_expenditure_share_gdp": 3.227369318373467,
+      "Industrial_production_YoY": 1.8491278756576968,
+      "manufacturing_output_YoY": 1.769463056097087,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.9055943095086967
+    },
+    {
+      "date": "2000-12-01",
+      "energy_expenditure_share_gdp": 3.4755547855524243,
+      "Industrial_production_YoY": 0.7397718173229428,
+      "manufacturing_output_YoY": 0.4807113486708259,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.9055943095086967
+    },
+    {
+      "date": "2001-01-01",
+      "energy_expenditure_share_gdp": 3.348541211745949,
+      "Industrial_production_YoY": 0.3976490637767949,
+      "manufacturing_output_YoY": 0.11994399721504401,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.1975051856706784
+    },
+    {
+      "date": "2001-02-01",
+      "energy_expenditure_share_gdp": 3.311292749892529,
+      "Industrial_production_YoY": -0.5668458865284554,
+      "manufacturing_output_YoY": -0.6561577548670705,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.1975051856706784
+    },
+    {
+      "date": "2001-03-01",
+      "energy_expenditure_share_gdp": 3.2931460633485545,
+      "Industrial_production_YoY": -1.122295725249156,
+      "manufacturing_output_YoY": -1.4560252006429075,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.1975051856706784
+    },
+    {
+      "date": "2001-04-01",
+      "energy_expenditure_share_gdp": 3.152184168317766,
+      "Industrial_production_YoY": -2.0602186217959284,
+      "manufacturing_output_YoY": -2.4942358524634556,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 0.9962983270431103
+    },
+    {
+      "date": "2001-05-01",
+      "energy_expenditure_share_gdp": 3.296537409189546,
+      "Industrial_production_YoY": -2.791181055600911,
+      "manufacturing_output_YoY": -3.0956190704063413,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 0.9962983270431103
+    },
+    {
+      "date": "2001-06-01",
+      "energy_expenditure_share_gdp": 3.188980092461553,
+      "Industrial_production_YoY": -3.3422163718917375,
+      "manufacturing_output_YoY": -3.8052036170131087,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 0.9962983270431103
+    },
+    {
+      "date": "2001-07-01",
+      "energy_expenditure_share_gdp": 3.1241684767532045,
+      "Industrial_production_YoY": -3.773511714911293,
+      "manufacturing_output_YoY": -4.47729535333381,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 0.48923629256110157
+    },
+    {
+      "date": "2001-08-01",
+      "energy_expenditure_share_gdp": 3.0043347719668385,
+      "Industrial_production_YoY": -3.6215277665228585,
+      "manufacturing_output_YoY": -4.217777262917632,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 0.48923629256110157
+    },
+    {
+      "date": "2001-09-01",
+      "energy_expenditure_share_gdp": 3.128886339146369,
+      "Industrial_production_YoY": -4.55015745457048,
+      "manufacturing_output_YoY": -5.106214990664171,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 0.48923629256110157
+    },
+    {
+      "date": "2001-10-01",
+      "energy_expenditure_share_gdp": 2.9585951457089346,
+      "Industrial_production_YoY": -4.440502321905382,
+      "manufacturing_output_YoY": -5.202119084498968,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 0.16731829373148877
+    },
+    {
+      "date": "2001-11-01",
+      "energy_expenditure_share_gdp": 2.6950043923975175,
+      "Industrial_production_YoY": -5.044913960783126,
+      "manufacturing_output_YoY": -5.293358244432844,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 0.16731829373148877
+    },
+    {
+      "date": "2001-12-01",
+      "energy_expenditure_share_gdp": 2.660296713135872,
+      "Industrial_production_YoY": -4.774776238202749,
+      "manufacturing_output_YoY": -4.5593745243680095,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 0.16731829373148877
+    },
+    {
+      "date": "2002-01-01",
+      "energy_expenditure_share_gdp": 2.545555710112672,
+      "Industrial_production_YoY": -3.682618441383212,
+      "manufacturing_output_YoY": -3.56855426163043,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.3372586567694578
+    },
+    {
+      "date": "2002-02-01",
+      "energy_expenditure_share_gdp": 2.580794732693467,
+      "Industrial_production_YoY": -3.0399744149724905,
+      "manufacturing_output_YoY": -2.9857183935589116,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.3372586567694578
+    },
+    {
+      "date": "2002-03-01",
+      "energy_expenditure_share_gdp": 2.75884453099643,
+      "Industrial_production_YoY": -2.1374903694403535,
+      "manufacturing_output_YoY": -2.0984254717475226,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.3372586567694578
+    },
+    {
+      "date": "2002-04-01",
+      "energy_expenditure_share_gdp": 2.821594752127677,
+      "Industrial_production_YoY": -1.3053329089064758,
+      "manufacturing_output_YoY": -1.3338622176103265,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.3253787532159889
+    },
+    {
+      "date": "2002-05-01",
+      "energy_expenditure_share_gdp": 2.921709930507208,
+      "Industrial_production_YoY": -0.43328851038398897,
+      "manufacturing_output_YoY": -0.22453381951096363,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.3253787532159889
+    },
+    {
+      "date": "2002-06-01",
+      "energy_expenditure_share_gdp": 2.898747733631169,
+      "Industrial_production_YoY": 0.920910919642548,
+      "manufacturing_output_YoY": 1.4146925738621308,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.3253787532159889
+    },
+    {
+      "date": "2002-07-01",
+      "energy_expenditure_share_gdp": 2.9297052814811306,
+      "Industrial_production_YoY": 1.5386975548359105,
+      "manufacturing_output_YoY": 1.9080021379800582,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.1465169830615416
+    },
+    {
+      "date": "2002-08-01",
+      "energy_expenditure_share_gdp": 2.9233323986438506,
+      "Industrial_production_YoY": 1.5424836015125454,
+      "manufacturing_output_YoY": 2.3754437439107656,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.1465169830615416
+    },
+    {
+      "date": "2002-09-01",
+      "energy_expenditure_share_gdp": 2.9351677524845132,
+      "Industrial_production_YoY": 2.146064440525741,
+      "manufacturing_output_YoY": 2.871849533164217,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.1465169830615416
+    },
+    {
+      "date": "2002-10-01",
+      "energy_expenditure_share_gdp": 3.0619902502686585,
+      "Industrial_production_YoY": 2.2135422551443185,
+      "manufacturing_output_YoY": 3.041622439531144,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.9925248221954739
+    },
+    {
+      "date": "2002-11-01",
+      "energy_expenditure_share_gdp": 3.0240204863149285,
+      "Industrial_production_YoY": 3.4115039217915255,
+      "manufacturing_output_YoY": 3.9654580457575417,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.9925248221954739
+    },
+    {
+      "date": "2002-12-01",
+      "energy_expenditure_share_gdp": 3.0086517723336565,
+      "Industrial_production_YoY": 2.880394484854265,
+      "manufacturing_output_YoY": 3.052837661919039,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.9925248221954739
+    },
+    {
+      "date": "2003-01-01",
+      "energy_expenditure_share_gdp": 3.1751915518426537,
+      "Industrial_production_YoY": 3.071140654513904,
+      "manufacturing_output_YoY": 3.262312722828664,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.6792570124718242
+    },
+    {
+      "date": "2003-02-01",
+      "energy_expenditure_share_gdp": 3.3165895972742034,
+      "Industrial_production_YoY": 3.1817124112425654,
+      "manufacturing_output_YoY": 3.0880483938331205,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.6792570124718242
+    },
+    {
+      "date": "2003-03-01",
+      "energy_expenditure_share_gdp": 3.2915317158053212,
+      "Industrial_production_YoY": 2.1709435832793167,
+      "manufacturing_output_YoY": 2.4735947080206655,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.6792570124718242
+    },
+    {
+      "date": "2003-04-01",
+      "energy_expenditure_share_gdp": 3.2105322429545526,
+      "Industrial_production_YoY": 1.0688138922369639,
+      "manufacturing_output_YoY": 1.4390742303762583,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.9550651524723905
+    },
+    {
+      "date": "2003-05-01",
+      "energy_expenditure_share_gdp": 2.977167564501909,
+      "Industrial_production_YoY": 0.636921435240767,
+      "manufacturing_output_YoY": 0.970419012435153,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.9550651524723905
+    },
+    {
+      "date": "2003-06-01",
+      "energy_expenditure_share_gdp": 2.905567038158484,
+      "Industrial_production_YoY": -0.05887145406980876,
+      "manufacturing_output_YoY": 0.4171970482351961,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.9550651524723905
+    },
+    {
+      "date": "2003-07-01",
+      "energy_expenditure_share_gdp": 2.941209781312148,
+      "Industrial_production_YoY": 0.48700385655000566,
+      "manufacturing_output_YoY": 0.9336758380854793,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.2311353875128956
+    },
+    {
+      "date": "2003-08-01",
+      "energy_expenditure_share_gdp": 3.134869684608421,
+      "Industrial_production_YoY": 0.37923869625795525,
+      "manufacturing_output_YoY": 0.4487071502173645,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.2311353875128956
+    },
+    {
+      "date": "2003-09-01",
+      "energy_expenditure_share_gdp": 3.176368235314765,
+      "Industrial_production_YoY": 0.9407289987876988,
+      "manufacturing_output_YoY": 1.2539702317325707,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.2311353875128956
+    },
+    {
+      "date": "2003-10-01",
+      "energy_expenditure_share_gdp": 3.0588926451852725,
+      "Industrial_production_YoY": 1.2759729528664998,
+      "manufacturing_output_YoY": 1.5978897904255884,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.300440651057458
+    },
+    {
+      "date": "2003-11-01",
+      "energy_expenditure_share_gdp": 3.0656882967158143,
+      "Industrial_production_YoY": 1.387033904173962,
+      "manufacturing_output_YoY": 1.9679199404479597,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.300440651057458
+    },
+    {
+      "date": "2003-12-01",
+      "energy_expenditure_share_gdp": 3.1276986169320113,
+      "Industrial_production_YoY": 1.9841883950955763,
+      "manufacturing_output_YoY": 2.566199090602783,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.300440651057458
+    },
+    {
+      "date": "2004-01-01",
+      "energy_expenditure_share_gdp": 3.234802821700805,
+      "Industrial_production_YoY": 1.2763588097255418,
+      "manufacturing_output_YoY": 1.5575964781937568,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.341952085996703
+    },
+    {
+      "date": "2004-02-01",
+      "energy_expenditure_share_gdp": 3.2591246474278788,
+      "Industrial_production_YoY": 1.7663898756903773,
+      "manufacturing_output_YoY": 2.4246430776837746,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.341952085996703
+    },
+    {
+      "date": "2004-03-01",
+      "energy_expenditure_share_gdp": 3.156805242645017,
+      "Industrial_production_YoY": 1.626375894029275,
+      "manufacturing_output_YoY": 2.2232492890582822,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.341952085996703
+    },
+    {
+      "date": "2004-04-01",
+      "energy_expenditure_share_gdp": 3.146254607207325,
+      "Industrial_production_YoY": 2.615123170170186,
+      "manufacturing_output_YoY": 3.20988222001799,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.227491217016888
+    },
+    {
+      "date": "2004-05-01",
+      "energy_expenditure_share_gdp": 3.246974382090373,
+      "Industrial_production_YoY": 3.38458309862264,
+      "manufacturing_output_YoY": 3.8857280406144667,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.227491217016888
+    },
+    {
+      "date": "2004-06-01",
+      "energy_expenditure_share_gdp": 3.299810985307709,
+      "Industrial_production_YoY": 2.447031362551799,
+      "manufacturing_output_YoY": 2.6050611434128568,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 4.227491217016888
+    },
+    {
+      "date": "2004-07-01",
+      "energy_expenditure_share_gdp": 3.218936349982979,
+      "Industrial_production_YoY": 2.6848554355043186,
+      "manufacturing_output_YoY": 3.1142364007771706,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.494860356231766
+    },
+    {
+      "date": "2004-08-01",
+      "energy_expenditure_share_gdp": 3.2116224325000586,
+      "Industrial_production_YoY": 2.9784524146032165,
+      "manufacturing_output_YoY": 3.9553122998984946,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.494860356231766
+    },
+    {
+      "date": "2004-09-01",
+      "energy_expenditure_share_gdp": 3.2815109773368514,
+      "Industrial_production_YoY": 2.448803847620762,
+      "manufacturing_output_YoY": 3.14883199284981,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.494860356231766
+    },
+    {
+      "date": "2004-10-01",
+      "energy_expenditure_share_gdp": 3.374253844470127,
+      "Industrial_production_YoY": 3.1957484615569243,
+      "manufacturing_output_YoY": 4.117907834886747,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.3511049439547858
+    },
+    {
+      "date": "2004-11-01",
+      "energy_expenditure_share_gdp": 3.479624440039102,
+      "Industrial_production_YoY": 2.763005391785356,
+      "manufacturing_output_YoY": 3.1649053574654307,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.3511049439547858
+    },
+    {
+      "date": "2004-12-01",
+      "energy_expenditure_share_gdp": 3.4452991702704208,
+      "Industrial_production_YoY": 3.551152067738861,
+      "manufacturing_output_YoY": 4.1480522398839925,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.3511049439547858
+    },
+    {
+      "date": "2005-01-01",
+      "energy_expenditure_share_gdp": 3.3092389408367606,
+      "Industrial_production_YoY": 3.7656681883018184,
+      "manufacturing_output_YoY": 4.914097812814644,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.9088432572524257
+    },
+    {
+      "date": "2005-02-01",
+      "energy_expenditure_share_gdp": 3.3233374736024555,
+      "Industrial_production_YoY": 3.8921878697906642,
+      "manufacturing_output_YoY": 5.115050081874806,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.9088432572524257
+    },
+    {
+      "date": "2005-03-01",
+      "energy_expenditure_share_gdp": 3.4682390603609883,
+      "Industrial_production_YoY": 4.168552298887196,
+      "manufacturing_output_YoY": 4.665536878230725,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.9088432572524257
+    },
+    {
+      "date": "2005-04-01",
+      "energy_expenditure_share_gdp": 3.4427907080402047,
+      "Industrial_production_YoY": 4.006456472613795,
+      "manufacturing_output_YoY": 4.815124793548864,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.6177355801611855
+    },
+    {
+      "date": "2005-05-01",
+      "energy_expenditure_share_gdp": 3.406420475790735,
+      "Industrial_production_YoY": 3.3534790649275337,
+      "manufacturing_output_YoY": 4.334715853198712,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.6177355801611855
+    },
+    {
+      "date": "2005-06-01",
+      "energy_expenditure_share_gdp": 3.406420475790735,
+      "Industrial_production_YoY": 4.6347083589064475,
+      "manufacturing_output_YoY": 5.442849076389433,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.6177355801611855
+    },
+    {
+      "date": "2005-07-01",
+      "energy_expenditure_share_gdp": 3.587558726776549,
+      "Industrial_production_YoY": 3.5298493345260917,
+      "manufacturing_output_YoY": 4.1497896909646,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.448598847170792
+    },
+    {
+      "date": "2005-08-01",
+      "energy_expenditure_share_gdp": 3.8112580408109724,
+      "Industrial_production_YoY": 3.797594088074363,
+      "manufacturing_output_YoY": 4.264172092121865,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.448598847170792
+    },
+    {
+      "date": "2005-09-01",
+      "energy_expenditure_share_gdp": 4.184090230868344,
+      "Industrial_production_YoY": 1.6574450087309733,
+      "manufacturing_output_YoY": 2.963128075363808,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.448598847170792
+    },
+    {
+      "date": "2005-10-01",
+      "energy_expenditure_share_gdp": 4.085797545579458,
+      "Industrial_production_YoY": 2.0209103457029087,
+      "manufacturing_output_YoY": 3.4667876685790855,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.9727366937913002
+    },
+    {
+      "date": "2005-11-01",
+      "energy_expenditure_share_gdp": 3.7548209258879557,
+      "Industrial_production_YoY": 2.9120723180627417,
+      "manufacturing_output_YoY": 4.479254193246263,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.9727366937913002
+    },
+    {
+      "date": "2005-12-01",
+      "energy_expenditure_share_gdp": 3.766829147917579,
+      "Industrial_production_YoY": 2.6259073757150198,
+      "manufacturing_output_YoY": 3.7664646049522243,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.9727366937913002
+    },
+    {
+      "date": "2006-01-01",
+      "energy_expenditure_share_gdp": 3.582574217819336,
+      "Industrial_production_YoY": 2.4194801632455576,
+      "manufacturing_output_YoY": 3.9219029320091137,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.2131067957182013
+    },
+    {
+      "date": "2006-02-01",
+      "energy_expenditure_share_gdp": 3.742878236596966,
+      "Industrial_production_YoY": 1.7242361205308532,
+      "manufacturing_output_YoY": 2.674685023240775,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.2131067957182013
+    },
+    {
+      "date": "2006-03-01",
+      "energy_expenditure_share_gdp": 3.7186120319196188,
+      "Industrial_production_YoY": 2.091541760329152,
+      "manufacturing_output_YoY": 3.100965081236584,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 3.2131067957182013
+    },
+    {
+      "date": "2006-04-01",
+      "energy_expenditure_share_gdp": 3.7896017748016786,
+      "Industrial_production_YoY": 2.1816142662632876,
+      "manufacturing_output_YoY": 3.0329619171954425,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.9729038556202125
+    },
+    {
+      "date": "2006-05-01",
+      "energy_expenditure_share_gdp": 3.897938433367574,
+      "Industrial_production_YoY": 2.1156664964513183,
+      "manufacturing_output_YoY": 2.551000322016961,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.9729038556202125
+    },
+    {
+      "date": "2006-06-01",
+      "energy_expenditure_share_gdp": 3.857948391615062,
+      "Industrial_production_YoY": 1.9803386251444621,
+      "manufacturing_output_YoY": 2.5984118020681457,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.9729038556202125
+    },
+    {
+      "date": "2006-07-01",
+      "energy_expenditure_share_gdp": 4.167931970352528,
+      "Industrial_production_YoY": 2.251836527383766,
+      "manufacturing_output_YoY": 2.6893277438254426,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.325277937424497
+    },
+    {
+      "date": "2006-08-01",
+      "energy_expenditure_share_gdp": 4.085020332817407,
+      "Industrial_production_YoY": 2.3669704568583194,
+      "manufacturing_output_YoY": 2.9532477788349665,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.325277937424497
+    },
+    {
+      "date": "2006-09-01",
+      "energy_expenditure_share_gdp": 3.814656297376791,
+      "Industrial_production_YoY": 4.2159275134967755,
+      "manufacturing_output_YoY": 4.276278009905532,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.325277937424497
+    },
+    {
+      "date": "2006-10-01",
+      "energy_expenditure_share_gdp": 3.5656388091934508,
+      "Industrial_production_YoY": 2.8481025781383007,
+      "manufacturing_output_YoY": 2.237323502259847,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.6345603763438197
+    },
+    {
+      "date": "2006-11-01",
+      "energy_expenditure_share_gdp": 3.4466892124824424,
+      "Industrial_production_YoY": 1.6621660136106442,
+      "manufacturing_output_YoY": 1.3702678259765788,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.6345603763438197
+    },
+    {
+      "date": "2006-12-01",
+      "energy_expenditure_share_gdp": 3.533586522654556,
+      "Industrial_production_YoY": 2.1707334984272686,
+      "manufacturing_output_YoY": 2.764270628807708,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.6345603763438197
+    },
+    {
+      "date": "2007-01-01",
+      "energy_expenditure_share_gdp": 3.5840778589738873,
+      "Industrial_production_YoY": 1.6646656462990128,
+      "manufacturing_output_YoY": 1.612709914590038,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.5767249700146868
+    },
+    {
+      "date": "2007-02-01",
+      "energy_expenditure_share_gdp": 3.735319613572393,
+      "Industrial_production_YoY": 2.5793632616832207,
+      "manufacturing_output_YoY": 2.2361444168802924,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.5767249700146868
+    },
+    {
+      "date": "2007-03-01",
+      "energy_expenditure_share_gdp": 3.6973333124174195,
+      "Industrial_production_YoY": 2.5308035115800154,
+      "manufacturing_output_YoY": 3.1989502782038715,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.5767249700146868
+    },
+    {
+      "date": "2007-04-01",
+      "energy_expenditure_share_gdp": 3.9001305505690085,
+      "Industrial_production_YoY": 2.9076019270608766,
+      "manufacturing_output_YoY": 3.486762815066413,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.9343747200181172
+    },
+    {
+      "date": "2007-05-01",
+      "energy_expenditure_share_gdp": 3.798756318704476,
+      "Industrial_production_YoY": 2.9798485426711263,
+      "manufacturing_output_YoY": 3.726146813373732,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.9343747200181172
+    },
+    {
+      "date": "2007-06-01",
+      "energy_expenditure_share_gdp": 3.8466660584212753,
+      "Industrial_production_YoY": 2.7140344521729087,
+      "manufacturing_output_YoY": 3.84266340419146,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 1.9343747200181172
+    },
+    {
+      "date": "2007-07-01",
+      "energy_expenditure_share_gdp": 3.8368271828631966,
+      "Industrial_production_YoY": 2.6434417747193573,
+      "manufacturing_output_YoY": 4.1956652399778305,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.3680360773066234
+    },
+    {
+      "date": "2007-08-01",
+      "energy_expenditure_share_gdp": 3.828587754410377,
+      "Industrial_production_YoY": 2.3917510021752353,
+      "manufacturing_output_YoY": 3.129388458141613,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.3680360773066234
+    },
+    {
+      "date": "2007-09-01",
+      "energy_expenditure_share_gdp": 3.9041158485612275,
+      "Industrial_production_YoY": 2.7901202497425004,
+      "manufacturing_output_YoY": 3.336462088936587,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.3680360773066234
+    },
+    {
+      "date": "2007-10-01",
+      "energy_expenditure_share_gdp": 3.7668896717906235,
+      "Industrial_production_YoY": 2.6179282370540014,
+      "manufacturing_output_YoY": 3.7077299298881705,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.133364682457861
+    },
+    {
+      "date": "2007-11-01",
+      "energy_expenditure_share_gdp": 4.068621408084154,
+      "Industrial_production_YoY": 3.2087670061424323,
+      "manufacturing_output_YoY": 4.145821798140159,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.133364682457861
+    },
+    {
+      "date": "2007-12-01",
+      "energy_expenditure_share_gdp": 4.089008687563447,
+      "Industrial_production_YoY": 2.2029778334589523,
+      "manufacturing_output_YoY": 2.7217097979818305,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": null,
+      "Real_GDP_growth": 2.133364682457861
+    },
+    {
+      "date": "2008-01-01",
+      "energy_expenditure_share_gdp": 4.072338438863041,
+      "Industrial_production_YoY": 2.4141930753466267,
+      "manufacturing_output_YoY": 2.8303346127444673,
+      "real_consumer_spending_YoY": 1.3612378141490078,
+      "business_investment_YoY": 5.842865130756758,
+      "Real_GDP_growth": 1.3924712055185307
+    },
+    {
+      "date": "2008-02-01",
+      "energy_expenditure_share_gdp": 4.1199363167592535,
+      "Industrial_production_YoY": 1.0602796518591306,
+      "manufacturing_output_YoY": 1.7146524583623535,
+      "real_consumer_spending_YoY": 1.0350503658907328,
+      "business_investment_YoY": 5.842865130756758,
+      "Real_GDP_growth": 1.3924712055185307
+    },
+    {
+      "date": "2008-03-01",
+      "energy_expenditure_share_gdp": 4.275649374448289,
+      "Industrial_production_YoY": 0.5734255066876637,
+      "manufacturing_output_YoY": 0.4392379536746205,
+      "real_consumer_spending_YoY": 1.1741892821717892,
+      "business_investment_YoY": 5.842865130756758,
+      "Real_GDP_growth": 1.3924712055185307
+    },
+    {
+      "date": "2008-04-01",
+      "energy_expenditure_share_gdp": 4.16394759991473,
+      "Industrial_production_YoY": -0.7427676334748168,
+      "manufacturing_output_YoY": -1.1762785254423758,
+      "real_consumer_spending_YoY": 1.240905235905898,
+      "business_investment_YoY": 3.754883420544619,
+      "Real_GDP_growth": 1.3760107660276244
+    },
+    {
+      "date": "2008-05-01",
+      "energy_expenditure_share_gdp": 4.2904132136116555,
+      "Industrial_production_YoY": -1.4383086308347726,
+      "manufacturing_output_YoY": -1.7309509981437987,
+      "real_consumer_spending_YoY": 1.280085576751655,
+      "business_investment_YoY": 3.754883420544619,
+      "Real_GDP_growth": 1.3760107660276244
+    },
+    {
+      "date": "2008-06-01",
+      "energy_expenditure_share_gdp": 4.595141527466482,
+      "Industrial_production_YoY": -1.724935725071297,
+      "manufacturing_output_YoY": -2.8187870004175997,
+      "real_consumer_spending_YoY": 1.0892721843383857,
+      "business_investment_YoY": 3.754883420544619,
+      "Real_GDP_growth": 1.3760107660276244
+    },
+    {
+      "date": "2008-07-01",
+      "energy_expenditure_share_gdp": 4.644607332344945,
+      "Industrial_production_YoY": -1.9585471027037116,
+      "manufacturing_output_YoY": -3.8402605678680146,
+      "real_consumer_spending_YoY": 0.29682029042177316,
+      "business_investment_YoY": 0.24491019628554156,
+      "Real_GDP_growth": 0.26596727212868654
+    },
+    {
+      "date": "2008-08-01",
+      "energy_expenditure_share_gdp": 4.451305755507468,
+      "Industrial_production_YoY": -3.6832804845724265,
+      "manufacturing_output_YoY": -4.8520399859193875,
+      "real_consumer_spending_YoY": -0.13628197980548595,
+      "business_investment_YoY": 0.24491019628554156,
+      "Real_GDP_growth": 0.26596727212868654
+    },
+    {
+      "date": "2008-09-01",
+      "energy_expenditure_share_gdp": 4.390899012745757,
+      "Industrial_production_YoY": -8.130031129578574,
+      "manufacturing_output_YoY": -8.559721863274595,
+      "real_consumer_spending_YoY": -0.8833203649996402,
+      "business_investment_YoY": 0.24491019628554156,
+      "Real_GDP_growth": 0.26596727212868654
+    },
+    {
+      "date": "2008-10-01",
+      "energy_expenditure_share_gdp": 4.266779041838736,
+      "Industrial_production_YoY": -6.954317961916079,
+      "manufacturing_output_YoY": -8.970462971531967,
+      "real_consumer_spending_YoY": -1.1140953828212008,
+      "business_investment_YoY": -7.027461163451532,
+      "Real_GDP_growth": -2.5411536884212604
+    },
+    {
+      "date": "2008-11-01",
+      "energy_expenditure_share_gdp": 3.5185695933019576,
+      "Industrial_production_YoY": -8.669827230747885,
+      "manufacturing_output_YoY": -11.744820188349948,
+      "real_consumer_spending_YoY": -1.6222602317010781,
+      "business_investment_YoY": -7.027461163451532,
+      "Real_GDP_growth": -2.5411536884212604
+    },
+    {
+      "date": "2008-12-01",
+      "energy_expenditure_share_gdp": 3.1208480108684094,
+      "Industrial_production_YoY": -11.276192783181926,
+      "manufacturing_output_YoY": -14.89065541095087,
+      "real_consumer_spending_YoY": -1.846476872722791,
+      "business_investment_YoY": -7.027461163451532,
+      "Real_GDP_growth": -2.5411536884212604
+    },
+    {
+      "date": "2009-01-01",
+      "energy_expenditure_share_gdp": 3.226409548065672,
+      "Industrial_production_YoY": -13.374567704176643,
+      "manufacturing_output_YoY": -17.48722505065321,
+      "real_consumer_spending_YoY": -1.3844280520947438,
+      "business_investment_YoY": -14.372250235172446,
+      "Real_GDP_growth": -3.234227293078318
+    },
+    {
+      "date": "2009-02-01",
+      "energy_expenditure_share_gdp": 3.2596715021694416,
+      "Industrial_production_YoY": -13.562730377303279,
+      "manufacturing_output_YoY": -16.852171869907593,
+      "real_consumer_spending_YoY": -1.446798714350217,
+      "business_investment_YoY": -14.372250235172446,
+      "Real_GDP_growth": -3.234227293078318
+    },
+    {
+      "date": "2009-03-01",
+      "energy_expenditure_share_gdp": 3.2589785447922797,
+      "Industrial_production_YoY": -14.656035046526473,
+      "manufacturing_output_YoY": -17.982216278886188,
+      "real_consumer_spending_YoY": -2.097667393858027,
+      "business_investment_YoY": -14.372250235172446,
+      "Real_GDP_growth": -3.234227293078318
+    },
+    {
+      "date": "2009-04-01",
+      "energy_expenditure_share_gdp": 3.1958310120214977,
+      "Industrial_production_YoY": -14.81395936696125,
+      "manufacturing_output_YoY": -17.75056089989858,
+      "real_consumer_spending_YoY": -2.4028922886997983,
+      "business_investment_YoY": -17.144717501427365,
+      "Real_GDP_growth": -3.9788374053187248
+    },
+    {
+      "date": "2009-05-01",
+      "energy_expenditure_share_gdp": 3.2118240740921014,
+      "Industrial_production_YoY": -15.160361194166793,
+      "manufacturing_output_YoY": -18.194407425863048,
+      "real_consumer_spending_YoY": -2.4952471482889704,
+      "business_investment_YoY": -17.144717501427365,
+      "Real_GDP_growth": -3.9788374053187248
+    },
+    {
+      "date": "2009-06-01",
+      "energy_expenditure_share_gdp": 3.5372481197026455,
+      "Industrial_production_YoY": -15.282480369076357,
+      "manufacturing_output_YoY": -17.913297601883727,
+      "real_consumer_spending_YoY": -2.2891003200860682,
+      "business_investment_YoY": -17.144717501427365,
+      "Real_GDP_growth": -3.9788374053187248
+    },
+    {
+      "date": "2009-07-01",
+      "energy_expenditure_share_gdp": 3.4521702094321207,
+      "Industrial_production_YoY": -14.018720654921957,
+      "manufacturing_output_YoY": -15.741231635622466,
+      "real_consumer_spending_YoY": -1.4876838561049044,
+      "business_investment_YoY": -16.059419177539546,
+      "Real_GDP_growth": -3.1328157006863644
+    },
+    {
+      "date": "2009-08-01",
+      "energy_expenditure_share_gdp": 3.6383437832767966,
+      "Industrial_production_YoY": -11.689299172061052,
+      "manufacturing_output_YoY": -13.654342081577564,
+      "real_consumer_spending_YoY": -0.591065779329536,
+      "business_investment_YoY": -16.059419177539546,
+      "Real_GDP_growth": -3.1328157006863644
+    },
+    {
+      "date": "2009-09-01",
+      "energy_expenditure_share_gdp": 3.6328070227163596,
+      "Industrial_production_YoY": -6.805879122929537,
+      "manufacturing_output_YoY": -9.476733151236584,
+      "real_consumer_spending_YoY": -0.8483723917678487,
+      "business_investment_YoY": -16.059419177539546,
+      "Real_GDP_growth": -3.1328157006863644
+    },
+    {
+      "date": "2009-10-01",
+      "energy_expenditure_share_gdp": 3.7020734546249265,
+      "Industrial_production_YoY": -7.474512230012276,
+      "manufacturing_output_YoY": -8.882929612531765,
+      "real_consumer_spending_YoY": -0.584319857047122,
+      "business_investment_YoY": -10.271939699116006,
+      "Real_GDP_growth": 0.10557252348297741
+    },
+    {
+      "date": "2009-11-01",
+      "energy_expenditure_share_gdp": 3.644740458646222,
+      "Industrial_production_YoY": -5.83001235670767,
+      "manufacturing_output_YoY": -5.493961644442136,
+      "real_consumer_spending_YoY": -0.4373465254252529,
+      "business_investment_YoY": -10.271939699116006,
+      "Real_GDP_growth": 0.10557252348297741
+    },
+    {
+      "date": "2009-12-01",
+      "energy_expenditure_share_gdp": 3.8522313012358196,
+      "Industrial_production_YoY": -2.704223119324234,
+      "manufacturing_output_YoY": -2.20394722341003,
+      "real_consumer_spending_YoY": 0.46288806198206967,
+      "business_investment_YoY": -10.271939699116006,
+      "Real_GDP_growth": 0.10557252348297741
+    },
+    {
+      "date": "2010-01-01",
+      "energy_expenditure_share_gdp": 3.811140287484736,
+      "Industrial_production_YoY": 0.87230439200634,
+      "manufacturing_output_YoY": 2.290880915212923,
+      "real_consumer_spending_YoY": -0.17447634727056904,
+      "business_investment_YoY": -2.268864510105295,
+      "Real_GDP_growth": 1.7452658449103264
+    },
+    {
+      "date": "2010-02-01",
+      "energy_expenditure_share_gdp": 3.732574040221855,
+      "Industrial_production_YoY": 1.8708182344855606,
+      "manufacturing_output_YoY": 2.3464543960839634,
+      "real_consumer_spending_YoY": 0.6118323525448055,
+      "business_investment_YoY": -2.268864510105295,
+      "Real_GDP_growth": 1.7452658449103264
+    },
+    {
+      "date": "2010-03-01",
+      "energy_expenditure_share_gdp": 3.6187884407376822,
+      "Industrial_production_YoY": 4.200672107537207,
+      "manufacturing_output_YoY": 5.52876810182481,
+      "real_consumer_spending_YoY": 1.5111054977175575,
+      "business_investment_YoY": -2.268864510105295,
+      "Real_GDP_growth": 1.7452658449103264
+    },
+    {
+      "date": "2010-04-01",
+      "energy_expenditure_share_gdp": 3.5613693361627585,
+      "Industrial_production_YoY": 5.4282103558062955,
+      "manufacturing_output_YoY": 7.197256319713019,
+      "real_consumer_spending_YoY": 1.871160101192637,
+      "business_investment_YoY": 4.116492419101991,
+      "Real_GDP_growth": 2.91359502911801
+    },
+    {
+      "date": "2010-05-01",
+      "energy_expenditure_share_gdp": 3.628124150336381,
+      "Industrial_production_YoY": 7.942609605426321,
+      "manufacturing_output_YoY": 9.773937269067767,
+      "real_consumer_spending_YoY": 2.031936884483798,
+      "business_investment_YoY": 4.116492419101991,
+      "Real_GDP_growth": 2.91359502911801
+    },
+    {
+      "date": "2010-06-01",
+      "energy_expenditure_share_gdp": 3.615440735643393,
+      "Industrial_production_YoY": 8.551328146848402,
+      "manufacturing_output_YoY": 10.064393261980031,
+      "real_consumer_spending_YoY": 2.2515815216900936,
+      "business_investment_YoY": 4.116492419101991,
+      "Real_GDP_growth": 2.91359502911801
+    },
+    {
+      "date": "2010-07-01",
+      "energy_expenditure_share_gdp": 3.636998371441024,
+      "Industrial_production_YoY": 7.747013804699288,
+      "manufacturing_output_YoY": 8.880514928642658,
+      "real_consumer_spending_YoY": 2.191021847258079,
+      "business_investment_YoY": 7.576175863692192,
+      "Real_GDP_growth": 3.344209253779229
+    },
+    {
+      "date": "2010-08-01",
+      "energy_expenditure_share_gdp": 3.6614343510566614,
+      "Industrial_production_YoY": 6.968742858593813,
+      "manufacturing_output_YoY": 7.840562633393344,
+      "real_consumer_spending_YoY": 1.5261187377429097,
+      "business_investment_YoY": 7.576175863692192,
+      "Real_GDP_growth": 3.344209253779229
+    },
+    {
+      "date": "2010-09-01",
+      "energy_expenditure_share_gdp": 3.6587926235306463,
+      "Industrial_production_YoY": 6.346682104150392,
+      "manufacturing_output_YoY": 6.8193523979689585,
+      "real_consumer_spending_YoY": 2.5668939952854686,
+      "business_investment_YoY": 7.576175863692192,
+      "Real_GDP_growth": 3.344209253779229
+    },
+    {
+      "date": "2010-10-01",
+      "energy_expenditure_share_gdp": 3.7114273161834306,
+      "Industrial_production_YoY": 5.760258506490601,
+      "manufacturing_output_YoY": 6.766189659157273,
+      "real_consumer_spending_YoY": 2.7122970046103534,
+      "business_investment_YoY": 8.957003663501627,
+      "Real_GDP_growth": 2.7759609093124693
+    },
+    {
+      "date": "2010-11-01",
+      "energy_expenditure_share_gdp": 3.801567578350504,
+      "Industrial_production_YoY": 5.39500875348351,
+      "manufacturing_output_YoY": 5.7535443720810875,
+      "real_consumer_spending_YoY": 3.1378832340180463,
+      "business_investment_YoY": 8.957003663501627,
+      "Real_GDP_growth": 2.7759609093124693
+    },
+    {
+      "date": "2010-12-01",
+      "energy_expenditure_share_gdp": 4.060230939351672,
+      "Industrial_production_YoY": 5.996200467756596,
+      "manufacturing_output_YoY": 6.368340744714174,
+      "real_consumer_spending_YoY": 2.6473298560475422,
+      "business_investment_YoY": 8.957003663501627,
+      "Real_GDP_growth": 2.7759609093124693
+    },
+    {
+      "date": "2011-01-01",
+      "energy_expenditure_share_gdp": 3.955978615176887,
+      "Industrial_production_YoY": 4.632504538708293,
+      "manufacturing_output_YoY": 5.246319823106438,
+      "real_consumer_spending_YoY": 2.950666857880413,
+      "business_investment_YoY": 8.062746257124441,
+      "Real_GDP_growth": 2.037797199613345
+    },
+    {
+      "date": "2011-02-01",
+      "energy_expenditure_share_gdp": 3.886929754118309,
+      "Industrial_production_YoY": 3.827364378514675,
+      "manufacturing_output_YoY": 5.4101746241155935,
+      "real_consumer_spending_YoY": 2.5378172271533828,
+      "business_investment_YoY": 8.062746257124441,
+      "Real_GDP_growth": 2.037797199613345
+    },
+    {
+      "date": "2011-03-01",
+      "energy_expenditure_share_gdp": 4.0960305503428724,
+      "Industrial_production_YoY": 4.193025357503588,
+      "manufacturing_output_YoY": 4.74967061199687,
+      "real_consumer_spending_YoY": 2.4039956985807187,
+      "business_investment_YoY": 8.062746257124441,
+      "Real_GDP_growth": 2.037797199613345
+    },
+    {
+      "date": "2011-04-01",
+      "energy_expenditure_share_gdp": 4.098977351109324,
+      "Industrial_production_YoY": 3.505332834432129,
+      "manufacturing_output_YoY": 3.2604468612847715,
+      "real_consumer_spending_YoY": 2.073595799593786,
+      "business_investment_YoY": 7.343861686793396,
+      "Real_GDP_growth": 1.7437088645501975
+    },
+    {
+      "date": "2011-05-01",
+      "energy_expenditure_share_gdp": 4.152327691417003,
+      "Industrial_production_YoY": 2.248891889831528,
+      "manufacturing_output_YoY": 1.9329910765174096,
+      "real_consumer_spending_YoY": 1.70217283601104,
+      "business_investment_YoY": 7.343861686793396,
+      "Real_GDP_growth": 1.7437088645501975
+    },
+    {
+      "date": "2011-06-01",
+      "energy_expenditure_share_gdp": 4.100905676662613,
+      "Industrial_production_YoY": 2.3688810428642126,
+      "manufacturing_output_YoY": 2.1551218577864795,
+      "real_consumer_spending_YoY": 1.691878629551824,
+      "business_investment_YoY": 7.343861686793396,
+      "Real_GDP_growth": 1.7437088645501975
+    },
+    {
+      "date": "2011-07-01",
+      "energy_expenditure_share_gdp": 4.163556514448148,
+      "Industrial_production_YoY": 2.484132372991299,
+      "manufacturing_output_YoY": 2.1955630705349893,
+      "real_consumer_spending_YoY": 1.5895508594664376,
+      "business_investment_YoY": 9.415048350702303,
+      "Real_GDP_growth": 0.9426534645672335
+    },
+    {
+      "date": "2011-08-01",
+      "energy_expenditure_share_gdp": 4.099649277081331,
+      "Industrial_production_YoY": 2.7992943499441703,
+      "manufacturing_output_YoY": 2.519879308963713,
+      "real_consumer_spending_YoY": 1.2827942261089298,
+      "business_investment_YoY": 9.415048350702303,
+      "Real_GDP_growth": 0.9426534645672335
+    },
+    {
+      "date": "2011-09-01",
+      "energy_expenditure_share_gdp": 4.12073866541238,
+      "Industrial_production_YoY": 2.4123837996766095,
+      "manufacturing_output_YoY": 2.6608108843305223,
+      "real_consumer_spending_YoY": 1.3543978455951233,
+      "business_investment_YoY": 9.415048350702303,
+      "Real_GDP_growth": 0.9426534645672335
+    },
+    {
+      "date": "2011-10-01",
+      "energy_expenditure_share_gdp": 4.060027045385384,
+      "Industrial_production_YoY": 3.4162150732061747,
+      "manufacturing_output_YoY": 3.1886895469164678,
+      "real_consumer_spending_YoY": 1.2792132226198571,
+      "business_investment_YoY": 10.068671914536843,
+      "Real_GDP_growth": 1.543075871606514
+    },
+    {
+      "date": "2011-11-01",
+      "energy_expenditure_share_gdp": 4.005741857900442,
+      "Industrial_production_YoY": 3.3174195787687877,
+      "manufacturing_output_YoY": 2.831171209930061,
+      "real_consumer_spending_YoY": 0.8526793506720365,
+      "business_investment_YoY": 10.068671914536843,
+      "Real_GDP_growth": 1.543075871606514
+    },
+    {
+      "date": "2011-12-01",
+      "energy_expenditure_share_gdp": 3.9262077460039,
+      "Industrial_production_YoY": 2.859134467066693,
+      "manufacturing_output_YoY": 2.9875461523384717,
+      "real_consumer_spending_YoY": 0.7643900568280682,
+      "business_investment_YoY": 10.068671914536843,
+      "Real_GDP_growth": 1.543075871606514
+    },
+    {
+      "date": "2012-01-01",
+      "energy_expenditure_share_gdp": 3.7924413171981364,
+      "Industrial_production_YoY": 3.6910016324102957,
+      "manufacturing_output_YoY": 3.824993755371442,
+      "real_consumer_spending_YoY": 1.0403970050496314,
+      "business_investment_YoY": 13.026749991519981,
+      "Real_GDP_growth": 2.6380693108862374
+    },
+    {
+      "date": "2012-02-01",
+      "energy_expenditure_share_gdp": 3.9536231847981225,
+      "Industrial_production_YoY": 4.439148449901298,
+      "manufacturing_output_YoY": 4.057202606647592,
+      "real_consumer_spending_YoY": 1.6807747239349302,
+      "business_investment_YoY": 13.026749991519981,
+      "Real_GDP_growth": 2.6380693108862374
+    },
+    {
+      "date": "2012-03-01",
+      "energy_expenditure_share_gdp": 3.845338841313962,
+      "Industrial_production_YoY": 2.8286925428470555,
+      "manufacturing_output_YoY": 2.814074885338913,
+      "real_consumer_spending_YoY": 1.1967785048513369,
+      "business_investment_YoY": 13.026749991519981,
+      "Real_GDP_growth": 2.6380693108862374
+    },
+    {
+      "date": "2012-04-01",
+      "energy_expenditure_share_gdp": 3.956287099832389,
+      "Industrial_production_YoY": 3.9040297563633697,
+      "manufacturing_output_YoY": 3.9487981230760916,
+      "real_consumer_spending_YoY": 1.4119507511578089,
+      "business_investment_YoY": 12.645831398359997,
+      "Real_GDP_growth": 2.403335839137921
+    },
+    {
+      "date": "2012-05-01",
+      "energy_expenditure_share_gdp": 3.894585803827517,
+      "Industrial_production_YoY": 4.0185114178595605,
+      "manufacturing_output_YoY": 3.683162759882319,
+      "real_consumer_spending_YoY": 1.534500156581653,
+      "business_investment_YoY": 12.645831398359997,
+      "Real_GDP_growth": 2.403335839137921
+    },
+    {
+      "date": "2012-06-01",
+      "energy_expenditure_share_gdp": 3.763162043337139,
+      "Industrial_production_YoY": 3.7105509068513065,
+      "manufacturing_output_YoY": 3.8899287827764084,
+      "real_consumer_spending_YoY": 1.194206017895727,
+      "business_investment_YoY": 12.645831398359997,
+      "Real_GDP_growth": 2.403335839137921
+    },
+    {
+      "date": "2012-07-01",
+      "energy_expenditure_share_gdp": 3.7617479560240086,
+      "Industrial_production_YoY": 3.418677881567289,
+      "manufacturing_output_YoY": 3.102269657132428,
+      "real_consumer_spending_YoY": 1.2311237794893515,
+      "business_investment_YoY": 7.230800765578804,
+      "Real_GDP_growth": 2.5737123144880414
+    },
+    {
+      "date": "2012-08-01",
+      "energy_expenditure_share_gdp": 3.933934171310333,
+      "Industrial_production_YoY": 2.285596731143258,
+      "manufacturing_output_YoY": 2.424187492446883,
+      "real_consumer_spending_YoY": 1.3124929564034105,
+      "business_investment_YoY": 7.230800765578804,
+      "Real_GDP_growth": 2.5737123144880414
+    },
+    {
+      "date": "2012-09-01",
+      "energy_expenditure_share_gdp": 3.959057426921505,
+      "Industrial_production_YoY": 2.2951570495009843,
+      "manufacturing_output_YoY": 1.9506132814610666,
+      "real_consumer_spending_YoY": 1.2886977142708922,
+      "business_investment_YoY": 7.230800765578804,
+      "Real_GDP_growth": 2.5737123144880414
+    },
+    {
+      "date": "2012-10-01",
+      "energy_expenditure_share_gdp": 4.028520831289383,
+      "Industrial_production_YoY": 1.9430024786973865,
+      "manufacturing_output_YoY": 1.2580943188370997,
+      "real_consumer_spending_YoY": 1.098910592565061,
+      "business_investment_YoY": 5.6811163663370134,
+      "Real_GDP_growth": 1.551852007332477
+    },
+    {
+      "date": "2012-11-01",
+      "energy_expenditure_share_gdp": 3.881143349630724,
+      "Industrial_production_YoY": 2.3257536633332743,
+      "manufacturing_output_YoY": 2.0584446248674393,
+      "real_consumer_spending_YoY": 1.7108439990653812,
+      "business_investment_YoY": 5.6811163663370134,
+      "Real_GDP_growth": 1.551852007332477
+    },
+    {
+      "date": "2012-12-01",
+      "energy_expenditure_share_gdp": 3.7087969557902265,
+      "Industrial_production_YoY": 2.0268355938483085,
+      "manufacturing_output_YoY": 2.090251459750392,
+      "real_consumer_spending_YoY": 1.7074795214905292,
+      "business_investment_YoY": 5.6811163663370134,
+      "Real_GDP_growth": 1.551852007332477
+    },
+    {
+      "date": "2013-01-01",
+      "energy_expenditure_share_gdp": 3.826242001457336,
+      "Industrial_production_YoY": 1.4467904237824847,
+      "manufacturing_output_YoY": 0.9700790355481548,
+      "real_consumer_spending_YoY": 1.767265520658312,
+      "business_investment_YoY": 4.621065749008224,
+      "Real_GDP_growth": 1.700868485709428
+    },
+    {
+      "date": "2013-02-01",
+      "energy_expenditure_share_gdp": 4.002237120205687,
+      "Industrial_production_YoY": 1.5945538776370727,
+      "manufacturing_output_YoY": 0.992160158502009,
+      "real_consumer_spending_YoY": 1.137395296253807,
+      "business_investment_YoY": 4.621065749008224,
+      "Real_GDP_growth": 1.700868485709428
+    },
+    {
+      "date": "2013-03-01",
+      "energy_expenditure_share_gdp": 4.019656432300234,
+      "Industrial_production_YoY": 2.534732272069462,
+      "manufacturing_output_YoY": 1.445816570057823,
+      "real_consumer_spending_YoY": 1.4004545259637124,
+      "business_investment_YoY": 4.621065749008224,
+      "Real_GDP_growth": 1.700868485709428
+    },
+    {
+      "date": "2013-04-01",
+      "energy_expenditure_share_gdp": 3.8072324504606962,
+      "Industrial_production_YoY": 1.7145631127746475,
+      "manufacturing_output_YoY": 0.5909479320374222,
+      "real_consumer_spending_YoY": 1.328032626762865,
+      "business_investment_YoY": 2.8369537672636724,
+      "Real_GDP_growth": 1.5199382041070075
+    },
+    {
+      "date": "2013-05-01",
+      "energy_expenditure_share_gdp": 3.7635948356257725,
+      "Industrial_production_YoY": 1.5594777439077445,
+      "manufacturing_output_YoY": 1.1282131639114068,
+      "real_consumer_spending_YoY": 1.6115490061686222,
+      "business_investment_YoY": 2.8369537672636724,
+      "Real_GDP_growth": 1.5199382041070075
+    },
+    {
+      "date": "2013-06-01",
+      "energy_expenditure_share_gdp": 3.7641926111714565,
+      "Industrial_production_YoY": 1.7645800035426706,
+      "manufacturing_output_YoY": 1.041592735516783,
+      "real_consumer_spending_YoY": 1.6964124906731604,
+      "business_investment_YoY": 2.8369537672636724,
+      "Real_GDP_growth": 1.5199382041070075
+    },
+    {
+      "date": "2013-07-01",
+      "energy_expenditure_share_gdp": 3.675863836849214,
+      "Industrial_production_YoY": 1.2364196654177428,
+      "manufacturing_output_YoY": 0.34289045685889086,
+      "real_consumer_spending_YoY": 1.6081270754167987,
+      "business_investment_YoY": 5.0746553264041205,
+      "Real_GDP_growth": 2.237022493295515
+    },
+    {
+      "date": "2013-08-01",
+      "energy_expenditure_share_gdp": 3.7136134012841224,
+      "Industrial_production_YoY": 2.2593571227008002,
+      "manufacturing_output_YoY": 1.328502538303411,
+      "real_consumer_spending_YoY": 1.7421513344228812,
+      "business_investment_YoY": 5.0746553264041205,
+      "Real_GDP_growth": 2.237022493295515
+    },
+    {
+      "date": "2013-09-01",
+      "energy_expenditure_share_gdp": 3.7360272051673493,
+      "Industrial_production_YoY": 2.854766330187619,
+      "manufacturing_output_YoY": 1.5598245299326408,
+      "real_consumer_spending_YoY": 1.9046072868958985,
+      "business_investment_YoY": 5.0746553264041205,
+      "Real_GDP_growth": 2.237022493295515
+    },
+    {
+      "date": "2013-10-01",
+      "energy_expenditure_share_gdp": 3.686594343573026,
+      "Industrial_production_YoY": 2.4178437626957816,
+      "manufacturing_output_YoY": 1.9332984972872724,
+      "real_consumer_spending_YoY": 2.2414397169787215,
+      "business_investment_YoY": 6.438819517391381,
+      "Real_GDP_growth": 3.0091449601746367
+    },
+    {
+      "date": "2013-11-01",
+      "energy_expenditure_share_gdp": 3.7872224315247673,
+      "Industrial_production_YoY": 2.281966236973343,
+      "manufacturing_output_YoY": 1.3406270262372066,
+      "real_consumer_spending_YoY": 2.214678305851936,
+      "business_investment_YoY": 6.438819517391381,
+      "Real_GDP_growth": 3.0091449601746367
+    },
+    {
+      "date": "2013-12-01",
+      "energy_expenditure_share_gdp": 3.8238673421661526,
+      "Industrial_production_YoY": 2.245344069429267,
+      "manufacturing_output_YoY": 0.44034530326892973,
+      "real_consumer_spending_YoY": 2.2656336375156405,
+      "business_investment_YoY": 6.438819517391381,
+      "Real_GDP_growth": 3.0091449601746367
+    },
+    {
+      "date": "2014-01-01",
+      "energy_expenditure_share_gdp": 3.9801746020319646,
+      "Industrial_production_YoY": 1.8566277042981971,
+      "manufacturing_output_YoY": -0.42797993269841905,
+      "real_consumer_spending_YoY": 1.4766396288080186,
+      "business_investment_YoY": 6.5169305693668855,
+      "Real_GDP_growth": 1.6508175559380112
+    },
+    {
+      "date": "2014-02-01",
+      "energy_expenditure_share_gdp": 3.9022573782668393,
+      "Industrial_production_YoY": 2.148610089064018,
+      "manufacturing_output_YoY": 0.044924668265999834,
+      "real_consumer_spending_YoY": 1.954507731653199,
+      "business_investment_YoY": 6.5169305693668855,
+      "Real_GDP_growth": 1.6508175559380112
+    },
+    {
+      "date": "2014-03-01",
+      "energy_expenditure_share_gdp": 3.8819058645968436,
+      "Industrial_production_YoY": 2.724108069090181,
+      "manufacturing_output_YoY": 1.0123320449107354,
+      "real_consumer_spending_YoY": 2.4061638390365125,
+      "business_investment_YoY": 6.5169305693668855,
+      "Real_GDP_growth": 1.6508175559380112
+    },
+    {
+      "date": "2014-04-01",
+      "energy_expenditure_share_gdp": 3.8039769140157365,
+      "Industrial_production_YoY": 2.9123215934373725,
+      "manufacturing_output_YoY": 1.3312294627967125,
+      "real_consumer_spending_YoY": 2.55107217750119,
+      "business_investment_YoY": 9.005732456666848,
+      "Real_GDP_growth": 2.6891521587272926
+    },
+    {
+      "date": "2014-05-01",
+      "energy_expenditure_share_gdp": 3.7337654553686876,
+      "Industrial_production_YoY": 3.226027611336124,
+      "manufacturing_output_YoY": 1.3225929462380437,
+      "real_consumer_spending_YoY": 2.482272493486559,
+      "business_investment_YoY": 9.005732456666848,
+      "Real_GDP_growth": 2.6891521587272926
+    },
+    {
+      "date": "2014-06-01",
+      "energy_expenditure_share_gdp": 3.6618415221204907,
+      "Industrial_production_YoY": 3.365841732090935,
+      "manufacturing_output_YoY": 1.3855788614932862,
+      "real_consumer_spending_YoY": 2.8622751461075957,
+      "business_investment_YoY": 9.005732456666848,
+      "Real_GDP_growth": 2.6891521587272926
+    },
+    {
+      "date": "2014-07-01",
+      "energy_expenditure_share_gdp": 3.5733085422181747,
+      "Industrial_production_YoY": 3.9177888079901857,
+      "manufacturing_output_YoY": 2.7544999883597043,
+      "real_consumer_spending_YoY": 2.9589885700327834,
+      "business_investment_YoY": 9.351431270716471,
+      "Real_GDP_growth": 3.059782928201682
+    },
+    {
+      "date": "2014-08-01",
+      "energy_expenditure_share_gdp": 3.5980217732552067,
+      "Industrial_production_YoY": 3.1253041765382905,
+      "manufacturing_output_YoY": 1.3109843625463968,
+      "real_consumer_spending_YoY": 3.5003322035608964,
+      "business_investment_YoY": 9.351431270716471,
+      "Real_GDP_growth": 3.059782928201682
+    },
+    {
+      "date": "2014-09-01",
+      "energy_expenditure_share_gdp": 3.519950429751855,
+      "Industrial_production_YoY": 2.89843352202952,
+      "manufacturing_output_YoY": 1.3283288507085267,
+      "real_consumer_spending_YoY": 3.2206672759745425,
+      "business_investment_YoY": 9.351431270716471,
+      "Real_GDP_growth": 3.059782928201682
+    },
+    {
+      "date": "2014-10-01",
+      "energy_expenditure_share_gdp": 3.512155121691904,
+      "Industrial_production_YoY": 2.9919466037849007,
+      "manufacturing_output_YoY": 1.005736049604966,
+      "real_consumer_spending_YoY": 3.547966501178479,
+      "business_investment_YoY": 7.721340400264443,
+      "Real_GDP_growth": 2.6858351011456394
+    },
+    {
+      "date": "2014-11-01",
+      "energy_expenditure_share_gdp": 3.46916737024217,
+      "Industrial_production_YoY": 3.3861066751199598,
+      "manufacturing_output_YoY": 1.723103849823926,
+      "real_consumer_spending_YoY": 3.386966546526038,
+      "business_investment_YoY": 7.721340400264443,
+      "Real_GDP_growth": 2.6858351011456394
+    },
+    {
+      "date": "2014-12-01",
+      "energy_expenditure_share_gdp": 3.2229647937573294,
+      "Industrial_production_YoY": 3.170492700276073,
+      "manufacturing_output_YoY": 1.7166395959762104,
+      "real_consumer_spending_YoY": 3.5792992756576103,
+      "business_investment_YoY": 7.721340400264443,
+      "Real_GDP_growth": 2.6858351011456394
+    },
+    {
+      "date": "2015-01-01",
+      "energy_expenditure_share_gdp": 2.9833594531832626,
+      "Industrial_production_YoY": 2.7262407410550527,
+      "manufacturing_output_YoY": 2.193103420304432,
+      "real_consumer_spending_YoY": 4.169378389653744,
+      "business_investment_YoY": 6.057853468827168,
+      "Real_GDP_growth": 3.9692994988184793
+    },
+    {
+      "date": "2015-02-01",
+      "energy_expenditure_share_gdp": 3.1787808462012053,
+      "Industrial_production_YoY": 1.30473816054415,
+      "manufacturing_output_YoY": 0.4965613403439262,
+      "real_consumer_spending_YoY": 3.9428875193115998,
+      "business_investment_YoY": 6.057853468827168,
+      "Real_GDP_growth": 3.9692994988184793
+    },
+    {
+      "date": "2015-03-01",
+      "energy_expenditure_share_gdp": 3.119545466447891,
+      "Industrial_production_YoY": -0.0027479483621140055,
+      "manufacturing_output_YoY": -0.06850515381797706,
+      "real_consumer_spending_YoY": 3.662776772957388,
+      "business_investment_YoY": 6.057853468827168,
+      "Real_GDP_growth": 3.9692994988184793
+    },
+    {
+      "date": "2015-04-01",
+      "energy_expenditure_share_gdp": 2.9721357757837836,
+      "Industrial_production_YoY": -0.6444572558062966,
+      "manufacturing_output_YoY": -0.09329101220250102,
+      "real_consumer_spending_YoY": 3.683182031810417,
+      "business_investment_YoY": 3.820411765879217,
+      "Real_GDP_growth": 3.2790878609270546
+    },
+    {
+      "date": "2015-05-01",
+      "energy_expenditure_share_gdp": 3.0607582671655202,
+      "Industrial_production_YoY": -1.460487812501221,
+      "manufacturing_output_YoY": -0.32809480589378603,
+      "real_consumer_spending_YoY": 3.769797194454738,
+      "business_investment_YoY": 3.820411765879217,
+      "Real_GDP_growth": 3.2790878609270546
+    },
+    {
+      "date": "2015-06-01",
+      "energy_expenditure_share_gdp": 3.1154635087591847,
+      "Industrial_production_YoY": -2.106390227283794,
+      "manufacturing_output_YoY": -1.0507156367192239,
+      "real_consumer_spending_YoY": 3.480335489583597,
+      "business_investment_YoY": 3.820411765879217,
+      "Real_GDP_growth": 3.2790878609270546
+    },
+    {
+      "date": "2015-07-01",
+      "energy_expenditure_share_gdp": 3.079619159741645,
+      "Industrial_production_YoY": -1.6903126553953207,
+      "manufacturing_output_YoY": -0.7937664998620919,
+      "real_consumer_spending_YoY": 3.638862528224096,
+      "business_investment_YoY": 2.242996812628406,
+      "Real_GDP_growth": 2.4473213664345517
+    },
+    {
+      "date": "2015-08-01",
+      "energy_expenditure_share_gdp": 3.0654899735490764,
+      "Industrial_production_YoY": -1.6854337113987983,
+      "manufacturing_output_YoY": -0.5111676102641738,
+      "real_consumer_spending_YoY": 3.1950595213911415,
+      "business_investment_YoY": 2.242996812628406,
+      "Real_GDP_growth": 2.4473213664345517
+    },
+    {
+      "date": "2015-09-01",
+      "energy_expenditure_share_gdp": 2.8861579949510983,
+      "Industrial_production_YoY": -2.2407414414912674,
+      "manufacturing_output_YoY": -0.7868860901913077,
+      "real_consumer_spending_YoY": 3.2249679127877684,
+      "business_investment_YoY": 2.242996812628406,
+      "Real_GDP_growth": 2.4473213664345517
+    },
+    {
+      "date": "2015-10-01",
+      "energy_expenditure_share_gdp": 2.839143533351556,
+      "Industrial_production_YoY": -2.72506606749946,
+      "manufacturing_output_YoY": -0.8627936115208401,
+      "real_consumer_spending_YoY": 2.637802584529947,
+      "business_investment_YoY": 0.9087327621629226,
+      "Real_GDP_growth": 2.119861312664817
+    },
+    {
+      "date": "2015-11-01",
+      "energy_expenditure_share_gdp": 2.7594045002215064,
+      "Industrial_production_YoY": -4.033068306068888,
+      "manufacturing_output_YoY": -1.8311300975460965,
+      "real_consumer_spending_YoY": 2.547380963882584,
+      "business_investment_YoY": 0.9087327621629226,
+      "Real_GDP_growth": 2.119861312664817
+    },
+    {
+      "date": "2015-12-01",
+      "energy_expenditure_share_gdp": 2.6568828861971574,
+      "Industrial_production_YoY": -4.496144811599123,
+      "manufacturing_output_YoY": -1.8894666450994357,
+      "real_consumer_spending_YoY": 2.5868921164823977,
+      "business_investment_YoY": 0.9087327621629226,
+      "Real_GDP_growth": 2.119861312664817
+    },
+    {
+      "date": "2016-01-01",
+      "energy_expenditure_share_gdp": 2.650878635909997,
+      "Industrial_production_YoY": -3.236256019749162,
+      "manufacturing_output_YoY": -0.8785968644361319,
+      "real_consumer_spending_YoY": 2.515078456030184,
+      "business_investment_YoY": 0.9455445345027069,
+      "Real_GDP_growth": 1.7950168913805964
+    },
+    {
+      "date": "2016-02-01",
+      "energy_expenditure_share_gdp": 2.5191713691288853,
+      "Industrial_production_YoY": -3.1193297695960798,
+      "manufacturing_output_YoY": -0.469717279978088,
+      "real_consumer_spending_YoY": 2.9558657833963276,
+      "business_investment_YoY": 0.9455445345027069,
+      "Real_GDP_growth": 1.7950168913805964
+    },
+    {
+      "date": "2016-03-01",
+      "energy_expenditure_share_gdp": 2.562354079548922,
+      "Industrial_production_YoY": -3.515311400177057,
+      "manufacturing_output_YoY": -0.8382688199470634,
+      "real_consumer_spending_YoY": 2.265013782883729,
+      "business_investment_YoY": 0.9455445345027069,
+      "Real_GDP_growth": 1.7950168913805964
+    },
+    {
+      "date": "2016-04-01",
+      "energy_expenditure_share_gdp": 2.6587640183666883,
+      "Industrial_production_YoY": -2.6579036961380753,
+      "manufacturing_output_YoY": -0.9286987753214682,
+      "real_consumer_spending_YoY": 2.3491427299042744,
+      "business_investment_YoY": 1.1043284150225263,
+      "Real_GDP_growth": 1.493250832714721
+    },
+    {
+      "date": "2016-05-01",
+      "energy_expenditure_share_gdp": 2.7175507604813287,
+      "Industrial_production_YoY": -2.448153056399993,
+      "manufacturing_output_YoY": -1.0343501487463658,
+      "real_consumer_spending_YoY": 2.2080918439350894,
+      "business_investment_YoY": 1.1043284150225263,
+      "Real_GDP_growth": 1.493250832714721
+    },
+    {
+      "date": "2016-06-01",
+      "energy_expenditure_share_gdp": 2.8089374232231785,
+      "Industrial_production_YoY": -1.678117946525337,
+      "manufacturing_output_YoY": -0.3835985848362977,
+      "real_consumer_spending_YoY": 2.590796729416245,
+      "business_investment_YoY": 1.1043284150225263,
+      "Real_GDP_growth": 1.493250832714721
+    },
+    {
+      "date": "2016-07-01",
+      "energy_expenditure_share_gdp": 2.725929395041106,
+      "Industrial_production_YoY": -2.196738284260069,
+      "manufacturing_output_YoY": -1.0801289243790646,
+      "real_consumer_spending_YoY": 2.398092892551551,
+      "business_investment_YoY": 2.0052952046769823,
+      "Real_GDP_growth": 1.8057615310855146
+    },
+    {
+      "date": "2016-08-01",
+      "energy_expenditure_share_gdp": 2.734398301899486,
+      "Industrial_production_YoY": -2.164263084601936,
+      "manufacturing_output_YoY": -1.2061559666925126,
+      "real_consumer_spending_YoY": 2.255171382001153,
+      "business_investment_YoY": 2.0052952046769823,
+      "Real_GDP_growth": 1.8057615310855146
+    },
+    {
+      "date": "2016-09-01",
+      "energy_expenditure_share_gdp": 2.748160275544354,
+      "Industrial_production_YoY": -1.9939516469206886,
+      "manufacturing_output_YoY": -0.7781530171273476,
+      "real_consumer_spending_YoY": 2.4686791740115677,
+      "business_investment_YoY": 2.0052952046769823,
+      "Real_GDP_growth": 1.8057615310855146
+    },
+    {
+      "date": "2016-10-01",
+      "energy_expenditure_share_gdp": 2.6962637181649547,
+      "Industrial_production_YoY": -1.5023811304759715,
+      "manufacturing_output_YoY": -0.5248412177836115,
+      "real_consumer_spending_YoY": 2.3513868463891585,
+      "business_investment_YoY": 3.2819135311350056,
+      "Real_GDP_growth": 2.1815663030564147
+    },
+    {
+      "date": "2016-11-01",
+      "energy_expenditure_share_gdp": 2.6884059455260436,
+      "Industrial_production_YoY": -1.1862778785850958,
+      "manufacturing_output_YoY": -0.36126566311750485,
+      "real_consumer_spending_YoY": 2.353772473894944,
+      "business_investment_YoY": 3.2819135311350056,
+      "Real_GDP_growth": 2.1815663030564147
+    },
+    {
+      "date": "2016-12-01",
+      "energy_expenditure_share_gdp": 2.8874695190451196,
+      "Industrial_production_YoY": -0.02049641716570516,
+      "manufacturing_output_YoY": -0.08886860414968334,
+      "real_consumer_spending_YoY": 2.7486245137861687,
+      "business_investment_YoY": 3.2819135311350056,
+      "Real_GDP_growth": 2.1815663030564147
+    },
+    {
+      "date": "2017-01-01",
+      "energy_expenditure_share_gdp": 2.7235358518147534,
+      "Industrial_production_YoY": -0.8031281419274894,
+      "manufacturing_output_YoY": -0.35645574283134085,
+      "real_consumer_spending_YoY": 2.637767898302168,
+      "business_investment_YoY": 4.226713567598428,
+      "Real_GDP_growth": 2.0874616941966906
+    },
+    {
+      "date": "2017-02-01",
+      "energy_expenditure_share_gdp": 2.7209425021177296,
+      "Industrial_production_YoY": -0.6864591168616152,
+      "manufacturing_output_YoY": -0.1431168335526145,
+      "real_consumer_spending_YoY": 2.013349891338101,
+      "business_investment_YoY": 4.226713567598428,
+      "Real_GDP_growth": 2.0874616941966906
+    },
+    {
+      "date": "2017-03-01",
+      "energy_expenditure_share_gdp": 2.817933780786432,
+      "Industrial_production_YoY": 0.7162067590550603,
+      "manufacturing_output_YoY": -0.42041673909745114,
+      "real_consumer_spending_YoY": 2.848217137604103,
+      "business_investment_YoY": 4.226713567598428,
+      "Real_GDP_growth": 2.0874616941966906
+    },
+    {
+      "date": "2017-04-01",
+      "energy_expenditure_share_gdp": 2.8093524841214483,
+      "Industrial_production_YoY": 1.3993011097695573,
+      "manufacturing_output_YoY": 0.911452046416561,
+      "real_consumer_spending_YoY": 2.6099050519805322,
+      "business_investment_YoY": 4.50742911255646,
+      "Real_GDP_growth": 2.3304137937582903
+    },
+    {
+      "date": "2017-05-01",
+      "energy_expenditure_share_gdp": 2.7681973479321575,
+      "Industrial_production_YoY": 1.7500792534729248,
+      "manufacturing_output_YoY": 0.8186522238105676,
+      "real_consumer_spending_YoY": 2.507912374332877,
+      "business_investment_YoY": 4.50742911255646,
+      "Real_GDP_growth": 2.3304137937582903
+    },
+    {
+      "date": "2017-06-01",
+      "energy_expenditure_share_gdp": 2.7414465094091187,
+      "Industrial_production_YoY": 1.4803308546539107,
+      "manufacturing_output_YoY": 0.6065821340927036,
+      "real_consumer_spending_YoY": 2.379407812427603,
+      "business_investment_YoY": 4.50742911255646,
+      "Real_GDP_growth": 2.3304137937582903
+    },
+    {
+      "date": "2017-07-01",
+      "energy_expenditure_share_gdp": 2.6614064829952575,
+      "Industrial_production_YoY": 1.1187969195710634,
+      "manufacturing_output_YoY": 0.18600234485417477,
+      "real_consumer_spending_YoY": 2.450625183083832,
+      "business_investment_YoY": 3.948751950078,
+      "Real_GDP_growth": 2.410821412174591
+    },
+    {
+      "date": "2017-08-01",
+      "energy_expenditure_share_gdp": 2.711679187024361,
+      "Industrial_production_YoY": 0.8523014668689877,
+      "manufacturing_output_YoY": 0.4459731367718156,
+      "real_consumer_spending_YoY": 2.353285435966157,
+      "business_investment_YoY": 3.948751950078,
+      "Real_GDP_growth": 2.410821412174591
+    },
+    {
+      "date": "2017-09-01",
+      "energy_expenditure_share_gdp": 2.92698854569446,
+      "Industrial_production_YoY": 1.0630336308315114,
+      "manufacturing_output_YoY": 0.2939827111604787,
+      "real_consumer_spending_YoY": 2.6380664930995446,
+      "business_investment_YoY": 3.948751950078,
+      "Real_GDP_growth": 2.410821412174591
+    },
+    {
+      "date": "2017-10-01",
+      "energy_expenditure_share_gdp": 2.825759910821373,
+      "Industrial_production_YoY": 2.2919955326540453,
+      "manufacturing_output_YoY": 1.2666065578878616,
+      "real_consumer_spending_YoY": 2.782195790978026,
+      "business_investment_YoY": 5.584031893498498,
+      "Real_GDP_growth": 2.9941434967617697
+    },
+    {
+      "date": "2017-11-01",
+      "energy_expenditure_share_gdp": 2.8826544056701255,
+      "Industrial_production_YoY": 2.9662701539719283,
+      "manufacturing_output_YoY": 1.462075988906375,
+      "real_consumer_spending_YoY": 3.1717906234658866,
+      "business_investment_YoY": 5.584031893498498,
+      "Real_GDP_growth": 2.9941434967617697
+    },
+    {
+      "date": "2017-12-01",
+      "energy_expenditure_share_gdp": 3.0458517724731253,
+      "Industrial_production_YoY": 2.467143465957866,
+      "manufacturing_output_YoY": 1.1830842497255745,
+      "real_consumer_spending_YoY": 3.251704307422787,
+      "business_investment_YoY": 5.584031893498498,
+      "Real_GDP_growth": 2.9941434967617697
+    },
+    {
+      "date": "2018-01-01",
+      "energy_expenditure_share_gdp": 3.01103575842314,
+      "Industrial_production_YoY": 2.7352874765469437,
+      "manufacturing_output_YoY": 0.7002926341189486,
+      "real_consumer_spending_YoY": 3.083059917937314,
+      "business_investment_YoY": 7.464131402055818,
+      "Real_GDP_growth": 3.328810094759116
+    },
+    {
+      "date": "2018-02-01",
+      "energy_expenditure_share_gdp": 2.854605539312119,
+      "Industrial_production_YoY": 3.3994953469032696,
+      "manufacturing_output_YoY": 1.6978370957440925,
+      "real_consumer_spending_YoY": 3.073025244609462,
+      "business_investment_YoY": 7.464131402055818,
+      "Real_GDP_growth": 3.328810094759116
+    },
+    {
+      "date": "2018-03-01",
+      "energy_expenditure_share_gdp": 2.9972620284385214,
+      "Industrial_production_YoY": 3.224806264183644,
+      "manufacturing_output_YoY": 1.9758450645245063,
+      "real_consumer_spending_YoY": 2.9147761273169204,
+      "business_investment_YoY": 7.464131402055818,
+      "Real_GDP_growth": 3.328810094759116
+    },
+    {
+      "date": "2018-04-01",
+      "energy_expenditure_share_gdp": 3.023189642907953,
+      "Industrial_production_YoY": 3.309758614070435,
+      "manufacturing_output_YoY": 1.4879549117863045,
+      "real_consumer_spending_YoY": 2.972868598602174,
+      "business_investment_YoY": 7.4725850027805185,
+      "Real_GDP_growth": 3.2989628465220244
+    },
+    {
+      "date": "2018-05-01",
+      "energy_expenditure_share_gdp": 2.9396170587581345,
+      "Industrial_production_YoY": 2.2584201444366236,
+      "manufacturing_output_YoY": 0.8402631326687171,
+      "real_consumer_spending_YoY": 3.2237315070566375,
+      "business_investment_YoY": 7.4725850027805185,
+      "Real_GDP_growth": 3.2989628465220244
+    },
+    {
+      "date": "2018-06-01",
+      "energy_expenditure_share_gdp": 2.9954940772303966,
+      "Industrial_production_YoY": 2.8410387544831828,
+      "manufacturing_output_YoY": 1.5124522306025456,
+      "real_consumer_spending_YoY": 2.9947121078398142,
+      "business_investment_YoY": 7.4725850027805185,
+      "Real_GDP_growth": 3.2989628465220244
+    },
+    {
+      "date": "2018-07-01",
+      "energy_expenditure_share_gdp": 2.926140201829631,
+      "Industrial_production_YoY": 3.2543243815604805,
+      "manufacturing_output_YoY": 1.9664815440091354,
+      "real_consumer_spending_YoY": 2.954078599860055,
+      "business_investment_YoY": 7.102683954876965,
+      "Real_GDP_growth": 3.130030640718684
+    },
+    {
+      "date": "2018-08-01",
+      "energy_expenditure_share_gdp": 2.980470442185653,
+      "Industrial_production_YoY": 4.353587280888749,
+      "manufacturing_output_YoY": 2.3702042930032974,
+      "real_consumer_spending_YoY": 3.158361985299085,
+      "business_investment_YoY": 7.102683954876965,
+      "Real_GDP_growth": 3.130030640718684
+    },
+    {
+      "date": "2018-09-01",
+      "energy_expenditure_share_gdp": 2.978547247836767,
+      "Industrial_production_YoY": 4.313826088176409,
+      "manufacturing_output_YoY": 2.3665356550280903,
+      "real_consumer_spending_YoY": 2.4146239262518465,
+      "business_investment_YoY": 7.102683954876965,
+      "Real_GDP_growth": 3.130030640718684
+    },
+    {
+      "date": "2018-10-01",
+      "energy_expenditure_share_gdp": 3.0285114634298043,
+      "Industrial_production_YoY": 2.930867401734427,
+      "manufacturing_output_YoY": 0.9093128885995005,
+      "real_consumer_spending_YoY": 2.6171787396277235,
+      "business_investment_YoY": 5.550313364923287,
+      "Real_GDP_growth": 2.125110751484538
+    },
+    {
+      "date": "2018-11-01",
+      "energy_expenditure_share_gdp": 2.973056478464081,
+      "Industrial_production_YoY": 2.7666629800210174,
+      "manufacturing_output_YoY": 0.5729712681241894,
+      "real_consumer_spending_YoY": 2.602172442250361,
+      "business_investment_YoY": 5.550313364923287,
+      "Real_GDP_growth": 2.125110751484538
+    },
+    {
+      "date": "2018-12-01",
+      "energy_expenditure_share_gdp": 2.847804702075982,
+      "Industrial_production_YoY": 2.5912536810940523,
+      "manufacturing_output_YoY": 1.202166664512072,
+      "real_consumer_spending_YoY": 0.9361582837835725,
+      "business_investment_YoY": 5.550313364923287,
+      "Real_GDP_growth": 2.125110751484538
+    },
+    {
+      "date": "2019-01-01",
+      "energy_expenditure_share_gdp": 2.6942533962371398,
+      "Industrial_production_YoY": 1.9116422323518512,
+      "manufacturing_output_YoY": 0.6349684560839286,
+      "real_consumer_spending_YoY": 1.3322206878217058,
+      "business_investment_YoY": 3.370897062928191,
+      "Real_GDP_growth": 1.9335587266003706
+    },
+    {
+      "date": "2019-02-01",
+      "energy_expenditure_share_gdp": 2.7700411148373405,
+      "Industrial_production_YoY": 1.1096417703535089,
+      "manufacturing_output_YoY": -0.8176860710520484,
+      "real_consumer_spending_YoY": 1.3375358927609327,
+      "business_investment_YoY": 3.370897062928191,
+      "Real_GDP_growth": 1.9335587266003706
+    },
+    {
+      "date": "2019-03-01",
+      "energy_expenditure_share_gdp": 2.8628810701225866,
+      "Industrial_production_YoY": 0.6545559146318158,
+      "manufacturing_output_YoY": -1.0028695824262912,
+      "real_consumer_spending_YoY": 1.7539469326169232,
+      "business_investment_YoY": 3.370897062928191,
+      "Real_GDP_growth": 1.9335587266003706
+    },
+    {
+      "date": "2019-04-01",
+      "energy_expenditure_share_gdp": 2.872706706599487,
+      "Industrial_production_YoY": -1.0247462328067725,
+      "manufacturing_output_YoY": -2.365938655320221,
+      "real_consumer_spending_YoY": 1.6707479391412372,
+      "business_investment_YoY": 4.156455087084976,
+      "Real_GDP_growth": 2.242125694698238
+    },
+    {
+      "date": "2019-05-01",
+      "energy_expenditure_share_gdp": 2.8189632103803652,
+      "Industrial_production_YoY": -0.010156011968476264,
+      "manufacturing_output_YoY": -1.574433575241574,
+      "real_consumer_spending_YoY": 1.7345405227081168,
+      "business_investment_YoY": 4.156455087084976,
+      "Real_GDP_growth": 2.242125694698238
+    },
+    {
+      "date": "2019-06-01",
+      "energy_expenditure_share_gdp": 2.7292349384319183,
+      "Industrial_production_YoY": -0.7369328862962377,
+      "manufacturing_output_YoY": -1.9060016537164937,
+      "real_consumer_spending_YoY": 1.9804155650116728,
+      "business_investment_YoY": 4.156455087084976,
+      "Real_GDP_growth": 2.242125694698238
+    },
+    {
+      "date": "2019-07-01",
+      "energy_expenditure_share_gdp": 2.7411489277309644,
+      "Industrial_production_YoY": -1.3774541767684445,
+      "manufacturing_output_YoY": -2.6614811379340075,
+      "real_consumer_spending_YoY": 2.2451709092503602,
+      "business_investment_YoY": 4.516964144961544,
+      "Real_GDP_growth": 2.797216868642849
+    },
+    {
+      "date": "2019-08-01",
+      "energy_expenditure_share_gdp": 2.729176834312352,
+      "Industrial_production_YoY": -1.3396749291328724,
+      "manufacturing_output_YoY": -2.2425832991022743,
+      "real_consumer_spending_YoY": 2.4220544798162047,
+      "business_investment_YoY": 4.516964144961544,
+      "Real_GDP_growth": 2.797216868642849
+    },
+    {
+      "date": "2019-09-01",
+      "energy_expenditure_share_gdp": 2.716283810630768,
+      "Industrial_production_YoY": -1.7374573008364869,
+      "manufacturing_output_YoY": -3.078840784791792,
+      "real_consumer_spending_YoY": 2.769761308093033,
+      "business_investment_YoY": 4.516964144961544,
+      "Real_GDP_growth": 2.797216868642849
+    },
+    {
+      "date": "2019-10-01",
+      "energy_expenditure_share_gdp": 2.7050295449135433,
+      "Industrial_production_YoY": -2.4594751580988228,
+      "manufacturing_output_YoY": -3.515160457395794,
+      "real_consumer_spending_YoY": 2.477580843732463,
+      "business_investment_YoY": 3.121590089678783,
+      "Real_GDP_growth": 3.3517765241980912
+    },
+    {
+      "date": "2019-11-01",
+      "energy_expenditure_share_gdp": 2.7620207286509766,
+      "Industrial_production_YoY": -2.047601522464615,
+      "manufacturing_output_YoY": -2.4619587191700543,
+      "real_consumer_spending_YoY": 2.481830105142646,
+      "business_investment_YoY": 3.121590089678783,
+      "Real_GDP_growth": 3.3517765241980912
+    },
+    {
+      "date": "2019-12-01",
+      "energy_expenditure_share_gdp": 2.689527942936962,
+      "Industrial_production_YoY": -2.2991807373363926,
+      "manufacturing_output_YoY": -2.763316923621151,
+      "real_consumer_spending_YoY": 3.533031727121916,
+      "business_investment_YoY": 3.121590089678783,
+      "Real_GDP_growth": 3.3517765241980912
+    },
+    {
+      "date": "2020-01-01",
+      "energy_expenditure_share_gdp": 2.6357120454477116,
+      "Industrial_production_YoY": -2.290379015513233,
+      "manufacturing_output_YoY": -2.2510425991076444,
+      "real_consumer_spending_YoY": 3.709452910353672,
+      "business_investment_YoY": 0.6285519201059353,
+      "Real_GDP_growth": 1.3585350290757248
+    },
+    {
+      "date": "2020-02-01",
+      "energy_expenditure_share_gdp": 2.6210002391588008,
+      "Industrial_production_YoY": -1.4232217750208775,
+      "manufacturing_output_YoY": -1.4527190745035834,
+      "real_consumer_spending_YoY": 3.298976581563906,
+      "business_investment_YoY": 0.6285519201059353,
+      "Real_GDP_growth": 1.3585350290757248
+    },
+    {
+      "date": "2020-03-01",
+      "energy_expenditure_share_gdp": 2.265158424545766,
+      "Industrial_production_YoY": -5.315054964389065,
+      "manufacturing_output_YoY": -5.679958819149089,
+      "real_consumer_spending_YoY": -4.164255540767314,
+      "business_investment_YoY": 0.6285519201059353,
+      "Real_GDP_growth": 1.3585350290757248
+    },
+    {
+      "date": "2020-04-01",
+      "energy_expenditure_share_gdp": 2.0833447112280306,
+      "Industrial_production_YoY": -17.318282261376304,
+      "manufacturing_output_YoY": -19.661518589013593,
+      "real_consumer_spending_YoY": -14.663059909300657,
+      "business_investment_YoY": -9.269070700357151,
+      "Real_GDP_growth": -7.39861495878491
+    },
+    {
+      "date": "2020-05-01",
+      "energy_expenditure_share_gdp": 2.1995871289781275,
+      "Industrial_production_YoY": -16.047738104539413,
+      "manufacturing_output_YoY": -16.074958726824395,
+      "real_consumer_spending_YoY": -7.902227410626139,
+      "business_investment_YoY": -9.269070700357151,
+      "Real_GDP_growth": -7.39861495878491
+    },
+    {
+      "date": "2020-06-01",
+      "energy_expenditure_share_gdp": 2.4125312132186068,
+      "Industrial_production_YoY": -10.586064673581452,
+      "manufacturing_output_YoY": -9.817713840698318,
+      "real_consumer_spending_YoY": -3.212415883252784,
+      "business_investment_YoY": -9.269070700357151,
+      "Real_GDP_growth": -7.39861495878491
+    },
+    {
+      "date": "2020-07-01",
+      "energy_expenditure_share_gdp": 2.2990690797462285,
+      "Industrial_production_YoY": -6.783544959427434,
+      "manufacturing_output_YoY": -5.830804608840134,
+      "real_consumer_spending_YoY": -2.190151466415058,
+      "business_investment_YoY": -6.262969295345144,
+      "Real_GDP_growth": -1.3646720997737227
+    },
+    {
+      "date": "2020-08-01",
+      "energy_expenditure_share_gdp": 2.2940009915944835,
+      "Industrial_production_YoY": -6.512241935326724,
+      "manufacturing_output_YoY": -5.105630624758062,
+      "real_consumer_spending_YoY": -1.784442735480929,
+      "business_investment_YoY": -6.262969295345144,
+      "Real_GDP_growth": -1.3646720997737227
+    },
+    {
+      "date": "2020-09-01",
+      "energy_expenditure_share_gdp": 2.3640327551458715,
+      "Industrial_production_YoY": -6.183101854793705,
+      "manufacturing_output_YoY": -4.351329735872778,
+      "real_consumer_spending_YoY": -0.7222988440374833,
+      "business_investment_YoY": -6.262969295345144,
+      "Real_GDP_growth": -1.3646720997737227
+    },
+    {
+      "date": "2020-10-01",
+      "energy_expenditure_share_gdp": 2.2768884727597394,
+      "Industrial_production_YoY": -4.622683457542831,
+      "manufacturing_output_YoY": -2.567262962475869,
+      "real_consumer_spending_YoY": -0.4272349863512326,
+      "business_investment_YoY": -3.1937124302049757,
+      "Real_GDP_growth": -0.9222152417236895
+    },
+    {
+      "date": "2020-11-01",
+      "energy_expenditure_share_gdp": 2.2103339677894307,
+      "Industrial_production_YoY": -4.763324870606622,
+      "manufacturing_output_YoY": -2.8431902857749547,
+      "real_consumer_spending_YoY": -1.2197018977854412,
+      "business_investment_YoY": -3.1937124302049757,
+      "Real_GDP_growth": -0.9222152417236895
+    },
+    {
+      "date": "2020-12-01",
+      "energy_expenditure_share_gdp": 2.4145250000452747,
+      "Industrial_production_YoY": -3.28150457766595,
+      "manufacturing_output_YoY": -2.123451849696023,
+      "real_consumer_spending_YoY": -0.981243426022016,
+      "business_investment_YoY": -3.1937124302049757,
+      "Real_GDP_growth": -0.9222152417236895
+    },
+    {
+      "date": "2021-01-01",
+      "energy_expenditure_share_gdp": 2.408656560890798,
+      "Industrial_production_YoY": -2.1295843569181794,
+      "manufacturing_output_YoY": -0.8185025591515349,
+      "real_consumer_spending_YoY": -0.18270359153098603,
+      "business_investment_YoY": 0.7487490862958301,
+      "Real_GDP_growth": 1.8007541764505586
+    },
+    {
+      "date": "2021-02-01",
+      "energy_expenditure_share_gdp": 2.5700272914941356,
+      "Industrial_production_YoY": -5.680577271180343,
+      "manufacturing_output_YoY": -5.150514666971562,
+      "real_consumer_spending_YoY": -0.7566248748360427,
+      "business_investment_YoY": 0.7487490862958301,
+      "Real_GDP_growth": 1.8007541764505586
+    },
+    {
+      "date": "2021-03-01",
+      "energy_expenditure_share_gdp": 2.6657033804037646,
+      "Industrial_production_YoY": 1.0038210492383515,
+      "manufacturing_output_YoY": 2.4525268667361155,
+      "real_consumer_spending_YoY": 10.799978866489045,
+      "business_investment_YoY": 0.7487490862958301,
+      "Real_GDP_growth": 1.8007541764505586
+    },
+    {
+      "date": "2021-04-01",
+      "energy_expenditure_share_gdp": 2.5621203189118376,
+      "Industrial_production_YoY": 16.55213518144698,
+      "manufacturing_output_YoY": 21.33167707463308,
+      "real_consumer_spending_YoY": 25.40470903327514,
+      "business_investment_YoY": 12.30027164436407,
+      "Real_GDP_growth": 12.385669309432568
+    },
+    {
+      "date": "2021-05-01",
+      "energy_expenditure_share_gdp": 2.654752792954468,
+      "Industrial_production_YoY": 15.673379835366053,
+      "manufacturing_output_YoY": 17.423435994073387,
+      "real_consumer_spending_YoY": 15.577637807597512,
+      "business_investment_YoY": 12.30027164436407,
+      "Real_GDP_growth": 12.385669309432568
+    },
+    {
+      "date": "2021-06-01",
+      "energy_expenditure_share_gdp": 2.7879386542507847,
+      "Industrial_production_YoY": 8.958396565691418,
+      "manufacturing_output_YoY": 8.884774229686897,
+      "real_consumer_spending_YoY": 10.50546123708893,
+      "business_investment_YoY": 12.30027164436407,
+      "Real_GDP_growth": 12.385669309432568
+    },
+    {
+      "date": "2021-07-01",
+      "energy_expenditure_share_gdp": 2.702400791848048,
+      "Industrial_production_YoY": 5.4998863464161385,
+      "manufacturing_output_YoY": 5.963400606952596,
+      "real_consumer_spending_YoY": 8.663719077721343,
+      "business_investment_YoY": 7.248249145222441,
+      "Real_GDP_growth": 5.1508109950936465
+    },
+    {
+      "date": "2021-08-01",
+      "energy_expenditure_share_gdp": 2.7941348103955823,
+      "Industrial_production_YoY": 4.261168528131454,
+      "manufacturing_output_YoY": 3.851019241357645,
+      "real_consumer_spending_YoY": 8.534764010730079,
+      "business_investment_YoY": 7.248249145222441,
+      "Real_GDP_growth": 5.1508109950936465
+    },
+    {
+      "date": "2021-09-01",
+      "energy_expenditure_share_gdp": 2.827909608133538,
+      "Industrial_production_YoY": 3.0124970172007215,
+      "manufacturing_output_YoY": 2.606673396793835,
+      "real_consumer_spending_YoY": 7.347149220171012,
+      "business_investment_YoY": 7.248249145222441,
+      "Real_GDP_growth": 5.1508109950936465
+    },
+    {
+      "date": "2021-10-01",
+      "energy_expenditure_share_gdp": 2.795241319276526,
+      "Industrial_production_YoY": 3.5628709708763973,
+      "manufacturing_output_YoY": 2.9952694706641303,
+      "real_consumer_spending_YoY": 7.698952674001047,
+      "business_investment_YoY": 5.0997029326274035,
+      "Real_GDP_growth": 5.756179192135091
+    },
+    {
+      "date": "2021-11-01",
+      "energy_expenditure_share_gdp": 2.9407260534545574,
+      "Industrial_production_YoY": 3.897545981936834,
+      "manufacturing_output_YoY": 3.038886761351356,
+      "real_consumer_spending_YoY": 8.20025339470163,
+      "business_investment_YoY": 5.0997029326274035,
+      "Real_GDP_growth": 5.756179192135091
+    },
+    {
+      "date": "2021-12-01",
+      "energy_expenditure_share_gdp": 2.9121127123835318,
+      "Industrial_production_YoY": 2.2463731281071153,
+      "manufacturing_output_YoY": 2.10777911424751,
+      "real_consumer_spending_YoY": 7.36096159467301,
+      "business_investment_YoY": 5.0997029326274035,
+      "Real_GDP_growth": 5.756179192135091
+    },
+    {
+      "date": "2022-01-01",
+      "energy_expenditure_share_gdp": 2.9860975771936915,
+      "Industrial_production_YoY": 1.3181341030033655,
+      "manufacturing_output_YoY": 0.15715778559874938,
+      "real_consumer_spending_YoY": 6.076157891402123,
+      "business_investment_YoY": 5.787614340001546,
+      "Real_GDP_growth": 4.034582077886428
+    },
+    {
+      "date": "2022-02-01",
+      "energy_expenditure_share_gdp": 3.08708628835873,
+      "Industrial_production_YoY": 5.429593086433182,
+      "manufacturing_output_YoY": 5.10099145941032,
+      "real_consumer_spending_YoY": 7.132250019539432,
+      "business_investment_YoY": 5.787614340001546,
+      "Real_GDP_growth": 4.034582077886428
+    },
+    {
+      "date": "2022-03-01",
+      "energy_expenditure_share_gdp": 3.3686665771365436,
+      "Industrial_production_YoY": 3.0544104015221674,
+      "manufacturing_output_YoY": 2.370958499434206,
+      "real_consumer_spending_YoY": 3.2479564032697583,
+      "business_investment_YoY": 5.787614340001546,
+      "Real_GDP_growth": 4.034582077886428
+    },
+    {
+      "date": "2022-04-01",
+      "energy_expenditure_share_gdp": 3.23997733755916,
+      "Industrial_production_YoY": 2.923435475508507,
+      "manufacturing_output_YoY": 2.091462930070942,
+      "real_consumer_spending_YoY": 2.9697215463638793,
+      "business_investment_YoY": 5.066560738978487,
+      "Real_GDP_growth": 2.4537929303342976
+    },
+    {
+      "date": "2022-05-01",
+      "energy_expenditure_share_gdp": 3.376474771639406,
+      "Industrial_production_YoY": 1.9110298059100916,
+      "manufacturing_output_YoY": 0.5357556676477193,
+      "real_consumer_spending_YoY": 2.997007731156165,
+      "business_investment_YoY": 5.066560738978487,
+      "Real_GDP_growth": 2.4537929303342976
+    },
+    {
+      "date": "2022-06-01",
+      "energy_expenditure_share_gdp": 3.537719615864513,
+      "Industrial_production_YoY": 1.2217594016755706,
+      "manufacturing_output_YoY": -0.03296907439579444,
+      "real_consumer_spending_YoY": 2.2225803419147816,
+      "business_investment_YoY": 5.066560738978487,
+      "Real_GDP_growth": 2.4537929303342976
+    },
+    {
+      "date": "2022-07-01",
+      "energy_expenditure_share_gdp": 3.244190984429706,
+      "Industrial_production_YoY": 0.968659945597028,
+      "manufacturing_output_YoY": -0.8369356400235839,
+      "real_consumer_spending_YoY": 2.4756204183199904,
+      "business_investment_YoY": 7.028910684046918,
+      "Real_GDP_growth": 2.3489732641040373
+    },
+    {
+      "date": "2022-08-01",
+      "energy_expenditure_share_gdp": 3.0983846480508426,
+      "Industrial_production_YoY": 1.0521402147261716,
+      "manufacturing_output_YoY": -0.2710945442222834,
+      "real_consumer_spending_YoY": 2.335306141534499,
+      "business_investment_YoY": 7.028910684046918,
+      "Real_GDP_growth": 2.3489732641040373
+    },
+    {
+      "date": "2022-09-01",
+      "energy_expenditure_share_gdp": 3.0277597038673307,
+      "Industrial_production_YoY": 2.462018715752601,
+      "manufacturing_output_YoY": 0.9562624786999319,
+      "real_consumer_spending_YoY": 2.267420917108054,
+      "business_investment_YoY": 7.028910684046918,
+      "Real_GDP_growth": 2.3489732641040373
+    },
+    {
+      "date": "2022-10-01",
+      "energy_expenditure_share_gdp": 3.0798810960447005,
+      "Industrial_production_YoY": 1.0648183730078253,
+      "manufacturing_output_YoY": -0.19739254906622206,
+      "real_consumer_spending_YoY": 1.8070332438434367,
+      "business_investment_YoY": 8.070531531087344,
+      "Real_GDP_growth": 1.3170742821654535
+    },
+    {
+      "date": "2022-11-01",
+      "energy_expenditure_share_gdp": 3.075772097614562,
+      "Industrial_production_YoY": 0.08902953837490735,
+      "manufacturing_output_YoY": -1.5746162687118925,
+      "real_consumer_spending_YoY": 1.3310487632228307,
+      "business_investment_YoY": 8.070531531087344,
+      "Real_GDP_growth": 1.3170742821654535
+    },
+    {
+      "date": "2022-12-01",
+      "energy_expenditure_share_gdp": 2.949513782215762,
+      "Industrial_production_YoY": -0.8016099812473643,
+      "manufacturing_output_YoY": -3.1775483583930897,
+      "real_consumer_spending_YoY": 1.6229281767955683,
+      "business_investment_YoY": 8.070531531087344,
+      "Real_GDP_growth": 1.3170742821654535
+    },
+    {
+      "date": "2023-01-01",
+      "energy_expenditure_share_gdp": 2.799777854896185,
+      "Industrial_production_YoY": 0.3188082918103907,
+      "manufacturing_output_YoY": -0.5311704022827213,
+      "real_consumer_spending_YoY": 2.878323311963271,
+      "business_investment_YoY": 7.177465951698148,
+      "Real_GDP_growth": 2.3111462286238282
+    },
+    {
+      "date": "2023-02-01",
+      "energy_expenditure_share_gdp": 2.86481206491149,
+      "Industrial_production_YoY": -0.1634816837026265,
+      "manufacturing_output_YoY": -1.055801579946869,
+      "real_consumer_spending_YoY": 2.745077232240556,
+      "business_investment_YoY": 7.177465951698148,
+      "Real_GDP_growth": 2.3111462286238282
+    },
+    {
+      "date": "2023-03-01",
+      "energy_expenditure_share_gdp": 2.894940907969428,
+      "Industrial_production_YoY": -0.36512224493961964,
+      "manufacturing_output_YoY": -2.1372046591708216,
+      "real_consumer_spending_YoY": 2.2247440092895587,
+      "business_investment_YoY": 7.177465951698148,
+      "Real_GDP_growth": 2.3111462286238282
+    },
+    {
+      "date": "2023-04-01",
+      "energy_expenditure_share_gdp": 2.79585347722698,
+      "Industrial_production_YoY": -0.1843454258675048,
+      "manufacturing_output_YoY": -1.1591137925038741,
+      "real_consumer_spending_YoY": 2.0111057143232136,
+      "business_investment_YoY": 8.166861920347879,
+      "Real_GDP_growth": 2.792610476283919
+    },
+    {
+      "date": "2023-05-01",
+      "energy_expenditure_share_gdp": 2.6716256106280936,
+      "Industrial_production_YoY": -0.39957171123073953,
+      "manufacturing_output_YoY": -0.8979497339050901,
+      "real_consumer_spending_YoY": 2.1105421944117575,
+      "business_investment_YoY": 8.166861920347879,
+      "Real_GDP_growth": 2.792610476283919
+    },
+    {
+      "date": "2023-06-01",
+      "energy_expenditure_share_gdp": 2.6861551856688988,
+      "Industrial_production_YoY": -0.8893464531073647,
+      "manufacturing_output_YoY": -1.0380004553887434,
+      "real_consumer_spending_YoY": 2.3680338421923963,
+      "business_investment_YoY": 8.166861920347879,
+      "Real_GDP_growth": 2.792610476283919
+    },
+    {
+      "date": "2023-07-01",
+      "energy_expenditure_share_gdp": 2.678554318695105,
+      "Industrial_production_YoY": -0.31247838929887584,
+      "manufacturing_output_YoY": -0.7283103485565379,
+      "real_consumer_spending_YoY": 2.764961836569957,
+      "business_investment_YoY": 7.048304727300381,
+      "Real_GDP_growth": 3.2331922827038895
+    },
+    {
+      "date": "2023-08-01",
+      "energy_expenditure_share_gdp": 2.7985905960089683,
+      "Industrial_production_YoY": -0.25421306219911566,
+      "manufacturing_output_YoY": -0.7515160420359268,
+      "real_consumer_spending_YoY": 2.276792125223581,
+      "business_investment_YoY": 7.048304727300381,
+      "Real_GDP_growth": 3.2331922827038895
+    },
+    {
+      "date": "2023-09-01",
+      "energy_expenditure_share_gdp": 2.8513068246215845,
+      "Industrial_production_YoY": -0.2672476942852109,
+      "manufacturing_output_YoY": -0.7040255690167418,
+      "real_consumer_spending_YoY": 2.3365187045432334,
+      "business_investment_YoY": 7.048304727300381,
+      "Real_GDP_growth": 3.2331922827038895
+    },
+    {
+      "date": "2023-10-01",
+      "energy_expenditure_share_gdp": 2.7820852566297742,
+      "Industrial_production_YoY": -0.7742988102069082,
+      "manufacturing_output_YoY": -1.4790460000610794,
+      "real_consumer_spending_YoY": 2.427383595627064,
+      "business_investment_YoY": 6.644684488173391,
+      "Real_GDP_growth": 3.390893713155063
+    },
+    {
+      "date": "2023-11-01",
+      "energy_expenditure_share_gdp": 2.696596293888116,
+      "Industrial_production_YoY": -0.09043615385835313,
+      "manufacturing_output_YoY": -0.21260985783254638,
+      "real_consumer_spending_YoY": 3.067160232681121,
+      "business_investment_YoY": 6.644684488173391,
+      "Real_GDP_growth": 3.390893713155063
+    },
+    {
+      "date": "2023-12-01",
+      "energy_expenditure_share_gdp": 2.634678362025845,
+      "Industrial_production_YoY": 0.8386591076755323,
+      "manufacturing_output_YoY": 1.5560626393537724,
+      "real_consumer_spending_YoY": 3.5788964688047153,
+      "business_investment_YoY": 6.644684488173391,
+      "Real_GDP_growth": 3.390893713155063
+    },
+    {
+      "date": "2024-01-01",
+      "energy_expenditure_share_gdp": 2.6079692112636543,
+      "Industrial_production_YoY": -1.2762549126908995,
+      "manufacturing_output_YoY": -1.7319558425670123,
+      "real_consumer_spending_YoY": 1.8849788730122885,
+      "business_investment_YoY": 4.8820820024414235,
+      "Real_GDP_growth": 2.8632943527041155
+    },
+    {
+      "date": "2024-02-01",
+      "energy_expenditure_share_gdp": 2.5856758989194746,
+      "Industrial_production_YoY": -0.3543266402759926,
+      "manufacturing_output_YoY": -0.5404069054729121,
+      "real_consumer_spending_YoY": 2.3967518300003876,
+      "business_investment_YoY": 4.8820820024414235,
+      "Real_GDP_growth": 2.8632943527041155
+    },
+    {
+      "date": "2024-03-01",
+      "energy_expenditure_share_gdp": 2.670320819226282,
+      "Industrial_production_YoY": -0.557312624665296,
+      "manufacturing_output_YoY": 0.24201075419802986,
+      "real_consumer_spending_YoY": 2.7255711888472867,
+      "business_investment_YoY": 4.8820820024414235,
+      "Real_GDP_growth": 2.8632943527041155
+    },
+    {
+      "date": "2024-04-01",
+      "energy_expenditure_share_gdp": 2.683290971118718,
+      "Industrial_production_YoY": -0.9971062585799939,
+      "manufacturing_output_YoY": -1.2373457920219932,
+      "real_consumer_spending_YoY": 2.595580949439591,
+      "business_investment_YoY": 2.7968964482282033,
+      "Real_GDP_growth": 3.1266315239534936
+    },
+    {
+      "date": "2024-05-01",
+      "energy_expenditure_share_gdp": 2.6815755312957292,
+      "Industrial_production_YoY": -0.06499644303002983,
+      "manufacturing_output_YoY": -0.503096451069518,
+      "real_consumer_spending_YoY": 3.1155054328235288,
+      "business_investment_YoY": 2.7968964482282033,
+      "Real_GDP_growth": 3.1266315239534936
+    },
+    {
+      "date": "2024-06-01",
+      "energy_expenditure_share_gdp": 2.6283968967830837,
+      "Industrial_production_YoY": 0.7734749239909133,
+      "manufacturing_output_YoY": 0.0048492752396933625,
+      "real_consumer_spending_YoY": 3.0819874102450573,
+      "business_investment_YoY": 2.7968964482282033,
+      "Real_GDP_growth": 3.1266315239534936
+    },
+    {
+      "date": "2024-07-01",
+      "energy_expenditure_share_gdp": 2.5864349770314545,
+      "Industrial_production_YoY": -0.9226344732312097,
+      "manufacturing_output_YoY": -1.1727770212984545,
+      "real_consumer_spending_YoY": 2.9722066111480094,
+      "business_investment_YoY": 3.2360092933817253,
+      "Real_GDP_growth": 2.7913896372876
+    },
+    {
+      "date": "2024-08-01",
+      "energy_expenditure_share_gdp": 2.536624163246098,
+      "Industrial_production_YoY": -0.4050008280501727,
+      "manufacturing_output_YoY": -0.659021604804999,
+      "real_consumer_spending_YoY": 3.0449433899646383,
+      "business_investment_YoY": 3.2360092933817253,
+      "Real_GDP_growth": 2.7913896372876
+    },
+    {
+      "date": "2024-09-01",
+      "energy_expenditure_share_gdp": 2.543062295640124,
+      "Industrial_production_YoY": -1.2004422838397089,
+      "manufacturing_output_YoY": -1.2510315640618108,
+      "real_consumer_spending_YoY": 3.436231172754911,
+      "business_investment_YoY": 3.2360092933817253,
+      "Real_GDP_growth": 2.7913896372876
+    },
+    {
+      "date": "2024-10-01",
+      "energy_expenditure_share_gdp": 2.479113119913233,
+      "Industrial_production_YoY": -0.9947356843759692,
+      "manufacturing_output_YoY": -1.3856342859504434,
+      "real_consumer_spending_YoY": 3.285253863415316,
+      "business_investment_YoY": 0.9024135276757717,
+      "Real_GDP_growth": 2.3997884845648576
+    },
+    {
+      "date": "2024-11-01",
+      "energy_expenditure_share_gdp": 2.430496484480799,
+      "Industrial_production_YoY": -1.5579409481489392,
+      "manufacturing_output_YoY": -1.5668140214276316,
+      "real_consumer_spending_YoY": 3.2469959270027715,
+      "business_investment_YoY": 0.9024135276757717,
+      "Real_GDP_growth": 2.3997884845648576
+    },
+    {
+      "date": "2024-12-01",
+      "energy_expenditure_share_gdp": 2.604510510614822,
+      "Industrial_production_YoY": -0.2741466217243804,
+      "manufacturing_output_YoY": -1.1230455192838718,
+      "real_consumer_spending_YoY": 3.55932951871456,
+      "business_investment_YoY": 0.9024135276757717,
+      "Real_GDP_growth": 2.3997884845648576
+    },
+    {
+      "date": "2025-01-01",
+      "energy_expenditure_share_gdp": 2.6932193484526206,
+      "Industrial_production_YoY": 0.849002693950851,
+      "manufacturing_output_YoY": 0.022559759863893802,
+      "real_consumer_spending_YoY": 3.3101806416482527,
+      "business_investment_YoY": 2.8421993549817337,
+      "Real_GDP_growth": 2.0192730138857806
+    },
+    {
+      "date": "2025-02-01",
+      "energy_expenditure_share_gdp": 2.6229846083063464,
+      "Industrial_production_YoY": 0.8119858403550007,
+      "manufacturing_output_YoY": 0.00010314031311242644,
+      "real_consumer_spending_YoY": 2.7352787286217595,
+      "business_investment_YoY": 2.8421993549817337,
+      "Real_GDP_growth": 2.0192730138857806
+    },
+    {
+      "date": "2025-03-01",
+      "energy_expenditure_share_gdp": 2.491169645756941,
+      "Industrial_production_YoY": 0.5802453773984029,
+      "manufacturing_output_YoY": 0.3091989255285643,
+      "real_consumer_spending_YoY": 3.1891834157436127,
+      "business_investment_YoY": 2.8421993549817337,
+      "Real_GDP_growth": 2.0192730138857806
+    },
+    {
+      "date": "2025-04-01",
+      "energy_expenditure_share_gdp": 2.493625787987553,
+      "Industrial_production_YoY": 0.8823523543694645,
+      "manufacturing_output_YoY": 0.7947061016527979,
+      "real_consumer_spending_YoY": 3.1464014248802297,
+      "business_investment_YoY": 4.033023829695304,
+      "Real_GDP_growth": 2.0804665087611918
+    },
+    {
+      "date": "2025-05-01",
+      "energy_expenditure_share_gdp": 2.437205946428245,
+      "Industrial_production_YoY": 0.10162299356553106,
+      "manufacturing_output_YoY": 0.1478817687318612,
+      "real_consumer_spending_YoY": 2.526343387934493,
+      "business_investment_YoY": 4.033023829695304,
+      "Real_GDP_growth": 2.0804665087611918
+    },
+    {
+      "date": "2025-06-01",
+      "energy_expenditure_share_gdp": 2.4965779889993773,
+      "Industrial_production_YoY": 0.5793208714095943,
+      "manufacturing_output_YoY": 0.6737070602023776,
+      "real_consumer_spending_YoY": 2.5018052339334185,
+      "business_investment_YoY": 4.033023829695304,
+      "Real_GDP_growth": 2.0804665087611918
+    },
+    {
+      "date": "2025-07-01",
+      "energy_expenditure_share_gdp": 2.392434735489811,
+      "Industrial_production_YoY": 1.9187662602012212,
+      "manufacturing_output_YoY": 1.9788636975738738,
+      "real_consumer_spending_YoY": 2.6277924558726795,
+      "business_investment_YoY": 3.952388455719835,
+      "Real_GDP_growth": 2.335167772142843
+    },
+    {
+      "date": "2025-08-01",
+      "energy_expenditure_share_gdp": 2.391148480255677,
+      "Industrial_production_YoY": 1.1886779865559305,
+      "manufacturing_output_YoY": 1.5105915276058646,
+      "real_consumer_spending_YoY": 2.787739150362012,
+      "business_investment_YoY": 3.952388455719835,
+      "Real_GDP_growth": 2.335167772142843
+    },
+    {
+      "date": "2025-09-01",
+      "energy_expenditure_share_gdp": 2.467680666686668,
+      "Industrial_production_YoY": 1.8631698334008018,
+      "manufacturing_output_YoY": 2.040767475938332,
+      "real_consumer_spending_YoY": 2.381715328017342,
+      "business_investment_YoY": 3.952388455719835,
+      "Real_GDP_growth": 2.335167772142843
+    },
+    {
+      "date": "2025-10-01",
+      "energy_expenditure_share_gdp": 2.415464625600119,
+      "Industrial_production_YoY": 1.7593332629600056,
+      "manufacturing_output_YoY": 1.8522728820502765,
+      "real_consumer_spending_YoY": 2.4717344608775393,
+      "business_investment_YoY": 5.556102507836269,
+      "Real_GDP_growth": 1.9892996607980828
+    },
+    {
+      "date": "2025-11-01",
+      "energy_expenditure_share_gdp": 2.461609865483125,
+      "Industrial_production_YoY": 1.7543117556713783,
+      "manufacturing_output_YoY": 1.4680656800864167,
+      "real_consumer_spending_YoY": 2.246694683886008,
+      "business_investment_YoY": 5.556102507836269,
+      "Real_GDP_growth": 1.9892996607980828
+    },
+    {
+      "date": "2025-12-01",
+      "energy_expenditure_share_gdp": 2.521439555814195,
+      "Industrial_production_YoY": 1.1629935222018384,
+      "manufacturing_output_YoY": 0.8666450343413068,
+      "real_consumer_spending_YoY": 1.6155462824769318,
+      "business_investment_YoY": 5.556102507836269,
+      "Real_GDP_growth": 1.9892996607980828
+    },
+    {
+      "date": "2026-01-01",
+      "energy_expenditure_share_gdp": 2.442122680983744,
+      "Industrial_production_YoY": 1.0581153993366232,
+      "manufacturing_output_YoY": 1.4117553695259133,
+      "real_consumer_spending_YoY": 2.0347500995924417,
+      "business_investment_YoY": 5.812806347240862,
+      "Real_GDP_growth": 2.684743341425966
+    },
+    {
+      "date": "2026-02-01",
+      "energy_expenditure_share_gdp": 2.4408674136072426,
+      "Industrial_production_YoY": 0.8407575522283439,
+      "manufacturing_output_YoY": 0.8139825115465626,
+      "real_consumer_spending_YoY": 2.3783518438976303,
+      "business_investment_YoY": 5.812806347240862,
+      "Real_GDP_growth": 2.684743341425966
+    },
+    {
+      "date": "2026-03-01",
+      "energy_expenditure_share_gdp": 2.673719511948278,
+      "Industrial_production_YoY": 0.5808567662044073,
+      "manufacturing_output_YoY": 0.4990255653056108,
+      "real_consumer_spending_YoY": 1.8643562125925994,
+      "business_investment_YoY": 5.812806347240862,
+      "Real_GDP_growth": 2.684743341425966
+    },
+    {
+      "date": "2026-04-01",
+      "energy_expenditure_share_gdp": 2.759391510394508,
+      "Industrial_production_YoY": 1.365696311304787,
+      "manufacturing_output_YoY": 1.2900256237966312,
+      "real_consumer_spending_YoY": 1.7188649532738465,
+      "business_investment_YoY": 3.9641791371074486,
+      "Real_GDP_growth": 1.7224492591301432
+    },
+    {
+      "date": "2026-05-01",
+      "energy_expenditure_share_gdp": 2.851339845723246,
+      "Industrial_production_YoY": 1.6659155850265561,
+      "manufacturing_output_YoY": 1.4263503077691864,
+      "real_consumer_spending_YoY": 2.1279963954968117,
+      "business_investment_YoY": 3.9641791371074486,
+      "Real_GDP_growth": 1.7224492591301432
+    },
+    {
+      "date": "2026-06-01",
+      "energy_expenditure_share_gdp": null,
+      "Industrial_production_YoY": null,
+      "manufacturing_output_YoY": null,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": 3.9641791371074486,
+      "Real_GDP_growth": 1.7224492591301432
+    },
+    {
+      "date": "2026-07-01",
+      "energy_expenditure_share_gdp": null,
+      "Industrial_production_YoY": null,
+      "manufacturing_output_YoY": null,
+      "real_consumer_spending_YoY": null,
+      "business_investment_YoY": 3.1600857194842735,
+      "Real_GDP_growth": 0.6392227956459218
+    }
+  ],
+  "annotations": [
+    "oil_embargo_1973",
+    "gulf_war_1990",
+    "gfc_2008",
+    "shale_2014",
+    "covid_2020",
+    "reopening_2021"
+  ],
+  "availableTransformations": [
+    "raw",
+    "zscore"
+  ],
+  "evidenceLabel": "Supported historical pattern",
+  "methodology": {
+    "formula": "Growth rates are year-over-year; energy burden is the expenditure share of nominal GDP.",
+    "notes": "Common recessions, monetary policy, credit, productivity, and supply shocks can drive several series together."
+  },
+  "staticFigure": "industrial_transmission.png",
+  "generatedAt": "2026-07-16T00:14:53+00:00"
+}

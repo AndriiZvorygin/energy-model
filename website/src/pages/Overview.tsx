@@ -1,8 +1,9 @@
 import { Activity, Droplets, Factory, TrendingUp } from 'lucide-react'
-import { ChartViewer } from '../components/ChartViewer'
+import { PublicationFigure } from '../components/charts/PublicationFigure'
 import { ExplanationCard } from '../components/ExplanationCard'
 import { PageBody, PageHeader } from '../components/PageHeader'
 import { ResearchText } from '../components/ResearchText'
+import { TimelineDiagram } from '../components/TimelineDiagram'
 import { researchData } from '../data/generated'
 
 export function Overview() {
@@ -14,6 +15,7 @@ export function Overview() {
       <ExplanationCard icon={Activity} eyebrow="Layer 3" title="Market pricing">Oil, USO, and equities express overlapping growth and risk expectations through different instruments.</ExplanationCard>
       <ExplanationCard icon={Factory} eyebrow="Layer 4" title="Physical economy">Energy throughput anchors activity, while GDP records the measured economic outcome.</ExplanationCard>
     </div>
-    <div className="mt-12"><ChartViewer src="/charts/final_lead_lag_network.png" alt="Network diagram connecting liquidity, oil prices, inventory, equities, energy consumption, industrial production and GDP" title="Integrated lead-lag network" description="The final hierarchy places each signal according to what the evidence supports, without promoting context variables into the locked forecast." source="Project synthesis from generated lead-lag, rolling validation, inventory, equity, and energy-GDP analyses." /></div>
+    <div className="mt-12"><TimelineDiagram /></div>
+    <div className="mt-12"><PublicationFigure src="/charts/final_lead_lag_network.png" alt="Network diagram connecting liquidity, oil prices, inventory, equities, energy consumption, industrial production and GDP" title="Integrated lead-lag network" description="The final hierarchy places each signal according to what the evidence supports, without promoting context variables into the locked forecast." source="Project synthesis from generated lead-lag, rolling validation, inventory, equity, and energy-GDP analyses." /></div>
   </PageBody></>
 }

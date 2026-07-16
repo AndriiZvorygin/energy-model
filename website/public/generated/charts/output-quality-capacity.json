@@ -1,0 +1,3600 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "output-quality-capacity",
+  "title": "Productive capacity and net investment",
+  "description": "Net investment, capital consumption, industrial production, manufacturing, and freight provide different views of productive capacity and material throughput.",
+  "plainLanguageSummary": "Net investment, capital consumption, industrial production, manufacturing, and freight provide different views of productive capacity and material throughput.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Official investment and output series; monthly physical-output indexes are averaged within genuine quarters.",
+    "explanation": "Net investment is nominal while capital consumption is real, so raw mode separates units.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "Net investment is nominal while capital consumption is real, so raw mode separates units."
+  ],
+  "sourceNotes": [
+    "BEA via FRED",
+    "Federal Reserve via FRED",
+    "BTS via FRED"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "1990-01-01",
+    "referenceEnd": "2019-10-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "W171RC1Q027SBEA": {
+        "mean": 734.7587166666667,
+        "standardDeviation": 272.2443817152212,
+        "n": 120
+      },
+      "A262RX1Q020SBEA": {
+        "mean": 2206.089275,
+        "standardDeviation": 651.5046444689651,
+        "n": 120
+      },
+      "INDPRO": {
+        "mean": 88.47667249999999,
+        "standardDeviation": 13.272632988851647,
+        "n": 120
+      },
+      "IPMAN": {
+        "mean": 88.19955388888889,
+        "standardDeviation": 14.672681253507209,
+        "n": 120
+      },
+      "TSIFRGHT": {
+        "mean": 113.38583333333334,
+        "standardDeviation": 11.159687837878302,
+        "n": 80
+      }
+    }
+  },
+  "frequency": "quarterly",
+  "dateRange": {
+    "start": "1919-01-01",
+    "end": "2026-01-01"
+  },
+  "series": [
+    {
+      "key": "W171RC1Q027SBEA",
+      "label": "Net domestic investment",
+      "unit": "billions USD SAAR",
+      "source": "BEA via FRED",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#d97706",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "A262RX1Q020SBEA",
+      "label": "Real capital consumption",
+      "unit": "billions chained 2017 USD SAAR",
+      "source": "BEA via FRED",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#be123c",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "INDPRO",
+      "label": "Industrial production",
+      "unit": "index",
+      "source": "Federal Reserve via FRED",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "IPMAN",
+      "label": "Manufacturing output",
+      "unit": "index",
+      "source": "Federal Reserve via FRED",
+      "status": "measured",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#2563eb",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "TSIFRGHT",
+      "label": "Freight activity",
+      "unit": "index",
+      "source": "BTS via FRED",
+      "status": "measured",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#7c3aed",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1919-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 4.6854000000000005,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1919-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 4.721266666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1919-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.241866666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1919-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.116266666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1920-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.591966666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1920-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.3316333333333334,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1920-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.2329,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1920-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 4.541766666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1921-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 3.8955333333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1921-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 3.8596333333333335,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1921-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 3.9493666666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1921-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 4.209666666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1922-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 4.541766666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1922-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 4.846966666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1922-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.107266666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1922-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.7625,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1923-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.933,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1923-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.256166666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1923-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.0766333333333336,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1923-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.8792,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1924-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.959966666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1924-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.493233333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1924-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.3586,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1924-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.807366666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1925-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.139500000000001,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1925-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.1574,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1925-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.175366666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1925-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.4446666666666665,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1926-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.462633333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1926-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.5075,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1926-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.660066666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1926-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.7319,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1927-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.740866666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1927-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.678033333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1927-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.5613,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1927-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.363866666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1928-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.570333333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1928-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.669033333333334,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1928-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.920400000000001,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1928-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 7.270433333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1929-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 7.503800000000001,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1929-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 7.755133333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1929-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 7.8718,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1929-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 7.3153,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1930-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.920366666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1930-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.651066666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1930-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.067666666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1930-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.654766666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1931-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.547066666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1931-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.556066666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1931-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.152133333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1931-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 4.694366666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1932-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 4.434066666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1932-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 3.931433333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1932-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 3.841666666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1932-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 4.146866666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1933-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 3.9493666666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1933-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 4.7572,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1933-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.708633333333334,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1933-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 4.9547,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1934-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.277766666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1934-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.556,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1934-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.008533333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1934-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.1521333333333335,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1935-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.879166666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1935-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.816333333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1935-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.067666666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1935-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.552366666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1936-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.462599999999999,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1936-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 7.001166666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1936-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 7.3871,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1936-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 7.8449,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1937-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 8.185933333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1937-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 8.329566666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1937-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 8.194933333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1937-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.7229,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1938-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.915066666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1938-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 5.7176,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1938-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.310033333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1938-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 6.9114,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1939-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 7.099900000000001,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1939-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 7.1447666666666665,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1939-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 7.6833,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1939-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 8.571900000000001,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1940-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 8.293666666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1940-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 8.491133333333334,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1940-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 8.9579,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1940-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 9.487466666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1941-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 10.3222,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1941-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 11.013366666666665,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1941-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 11.4532,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1941-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 11.704500000000001,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1942-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 12.278966666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1942-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 12.117399999999998,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1942-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 12.790566666666669,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1942-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 13.867666666666665,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1943-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 14.612699999999998,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1943-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 15.0435,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1943-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 15.833366666666668,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1943-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 16.5245,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1944-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 16.721966666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1944-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 16.659166666666668,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1944-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 16.6681,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1944-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 16.614266666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1945-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 16.300133333333335,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1945-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 15.510266666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1945-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 13.365,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1945-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 11.884,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1946-01-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 11.390333333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1946-04-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 11.686566666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1946-07-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 12.799566666666665,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1946-10-01",
+      "W171RC1Q027SBEA": null,
+      "A262RX1Q020SBEA": null,
+      "INDPRO": 13.4368,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1947-01-01",
+      "W171RC1Q027SBEA": 12.73,
+      "A262RX1Q020SBEA": 210.941,
+      "INDPRO": 13.759966666666665,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1947-04-01",
+      "W171RC1Q027SBEA": 10.916,
+      "A262RX1Q020SBEA": 209.711,
+      "INDPRO": 13.768933333333331,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1947-07-01",
+      "W171RC1Q027SBEA": 11.488,
+      "A262RX1Q020SBEA": 208.966,
+      "INDPRO": 13.795866666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1947-10-01",
+      "W171RC1Q027SBEA": 19.645,
+      "A262RX1Q020SBEA": 208.662,
+      "INDPRO": 14.172833333333335,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1948-01-01",
+      "W171RC1Q027SBEA": 24.124,
+      "A262RX1Q020SBEA": 208.818,
+      "INDPRO": 14.316466666666665,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1948-04-01",
+      "W171RC1Q027SBEA": 27.495,
+      "A262RX1Q020SBEA": 209.1,
+      "INDPRO": 14.469066666666668,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1948-07-01",
+      "W171RC1Q027SBEA": 29.645,
+      "A262RX1Q020SBEA": 209.449,
+      "INDPRO": 14.603666666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1948-10-01",
+      "W171RC1Q027SBEA": 28.741,
+      "A262RX1Q020SBEA": 209.844,
+      "INDPRO": 14.451133333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1949-01-01",
+      "W171RC1Q027SBEA": 21.143,
+      "A262RX1Q020SBEA": 210.296,
+      "INDPRO": 13.984366666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1949-04-01",
+      "W171RC1Q027SBEA": 15.279,
+      "A262RX1Q020SBEA": 210.838,
+      "INDPRO": 13.544566666666668,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1949-07-01",
+      "W171RC1Q027SBEA": 19.219,
+      "A262RX1Q020SBEA": 211.493,
+      "INDPRO": 13.571466666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1949-10-01",
+      "W171RC1Q027SBEA": 16.875,
+      "A262RX1Q020SBEA": 212.241,
+      "INDPRO": 13.508666666666665,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1950-01-01",
+      "W171RC1Q027SBEA": 25.024,
+      "A262RX1Q020SBEA": 213.075,
+      "INDPRO": 14.217733333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1950-04-01",
+      "W171RC1Q027SBEA": 30.612,
+      "A262RX1Q020SBEA": 214.208,
+      "INDPRO": 15.411499999999998,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1950-07-01",
+      "W171RC1Q027SBEA": 36.803,
+      "A262RX1Q020SBEA": 215.644,
+      "INDPRO": 16.650166666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1950-10-01",
+      "W171RC1Q027SBEA": 45.937,
+      "A262RX1Q020SBEA": 217.37,
+      "INDPRO": 16.9374,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1951-01-01",
+      "W171RC1Q027SBEA": 43.224,
+      "A262RX1Q020SBEA": 219.392,
+      "INDPRO": 17.27846666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1951-04-01",
+      "W171RC1Q027SBEA": 48.25,
+      "A262RX1Q020SBEA": 221.651,
+      "INDPRO": 17.332333333333334,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1951-07-01",
+      "W171RC1Q027SBEA": 44.854,
+      "A262RX1Q020SBEA": 224.13,
+      "INDPRO": 16.919466666666665,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1951-10-01",
+      "W171RC1Q027SBEA": 42.129,
+      "A262RX1Q020SBEA": 226.82,
+      "INDPRO": 17.036133333333336,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1952-01-01",
+      "W171RC1Q027SBEA": 42.678,
+      "A262RX1Q020SBEA": 229.71,
+      "INDPRO": 17.431066666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1952-04-01",
+      "W171RC1Q027SBEA": 37.093,
+      "A262RX1Q020SBEA": 232.787,
+      "INDPRO": 17.179766666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1952-07-01",
+      "W171RC1Q027SBEA": 41.062,
+      "A262RX1Q020SBEA": 236.062,
+      "INDPRO": 17.6824,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1952-10-01",
+      "W171RC1Q027SBEA": 44.326,
+      "A262RX1Q020SBEA": 239.542,
+      "INDPRO": 18.94803333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1953-01-01",
+      "W171RC1Q027SBEA": 45.714,
+      "A262RX1Q020SBEA": 243.23,
+      "INDPRO": 19.324966666666665,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1953-04-01",
+      "W171RC1Q027SBEA": 46.007,
+      "A262RX1Q020SBEA": 246.799,
+      "INDPRO": 19.594266666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1953-07-01",
+      "W171RC1Q027SBEA": 44.648,
+      "A262RX1Q020SBEA": 250.261,
+      "INDPRO": 19.612199999999998,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1953-10-01",
+      "W171RC1Q027SBEA": 37.994,
+      "A262RX1Q020SBEA": 253.621,
+      "INDPRO": 18.6877,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1954-01-01",
+      "W171RC1Q027SBEA": 37.19,
+      "A262RX1Q020SBEA": 256.877,
+      "INDPRO": 18.095299999999998,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1954-04-01",
+      "W171RC1Q027SBEA": 35.7,
+      "A262RX1Q020SBEA": 260.04,
+      "INDPRO": 18.023466666666668,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1954-07-01",
+      "W171RC1Q027SBEA": 37.404,
+      "A262RX1Q020SBEA": 263.124,
+      "INDPRO": 18.113233333333334,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1954-10-01",
+      "W171RC1Q027SBEA": 39.646,
+      "A262RX1Q020SBEA": 266.132,
+      "INDPRO": 18.6159,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1955-01-01",
+      "W171RC1Q027SBEA": 45.382,
+      "A262RX1Q020SBEA": 269.05,
+      "INDPRO": 19.621166666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1955-04-01",
+      "W171RC1Q027SBEA": 49.266,
+      "A262RX1Q020SBEA": 272.021,
+      "INDPRO": 20.4739,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1955-07-01",
+      "W171RC1Q027SBEA": 49.697,
+      "A262RX1Q020SBEA": 275.058,
+      "INDPRO": 20.788033333333335,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1955-10-01",
+      "W171RC1Q027SBEA": 52.547,
+      "A262RX1Q020SBEA": 278.157,
+      "INDPRO": 21.2817,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1956-01-01",
+      "W171RC1Q027SBEA": 51.733,
+      "A262RX1Q020SBEA": 281.308,
+      "INDPRO": 21.362533333333335,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1956-04-01",
+      "W171RC1Q027SBEA": 50.099,
+      "A262RX1Q020SBEA": 284.425,
+      "INDPRO": 21.272766666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1956-07-01",
+      "W171RC1Q027SBEA": 51.209,
+      "A262RX1Q020SBEA": 287.513,
+      "INDPRO": 21.156033333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1956-10-01",
+      "W171RC1Q027SBEA": 49.779,
+      "A262RX1Q020SBEA": 290.568,
+      "INDPRO": 21.927966666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1957-01-01",
+      "W171RC1Q027SBEA": 50.172,
+      "A262RX1Q020SBEA": 293.585,
+      "INDPRO": 22.134433333333334,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1957-04-01",
+      "W171RC1Q027SBEA": 49.224,
+      "A262RX1Q020SBEA": 296.828,
+      "INDPRO": 21.8562,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1957-07-01",
+      "W171RC1Q027SBEA": 50.45,
+      "A262RX1Q020SBEA": 300.311,
+      "INDPRO": 21.936966666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1957-10-01",
+      "W171RC1Q027SBEA": 41.424,
+      "A262RX1Q020SBEA": 304.043,
+      "INDPRO": 21.012433333333334,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1958-01-01",
+      "W171RC1Q027SBEA": 36.906,
+      "A262RX1Q020SBEA": 308.04,
+      "INDPRO": 19.827633333333335,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1958-04-01",
+      "W171RC1Q027SBEA": 35.043,
+      "A262RX1Q020SBEA": 311.604,
+      "INDPRO": 19.4955,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1958-07-01",
+      "W171RC1Q027SBEA": 41.98,
+      "A262RX1Q020SBEA": 314.717,
+      "INDPRO": 20.527733333333334,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1958-10-01",
+      "W171RC1Q027SBEA": 50.534,
+      "A262RX1Q020SBEA": 317.367,
+      "INDPRO": 21.452266666666663,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1959-01-01",
+      "W171RC1Q027SBEA": 54.919,
+      "A262RX1Q020SBEA": 319.768,
+      "INDPRO": 22.394733333333335,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1959-04-01",
+      "W171RC1Q027SBEA": 60.417,
+      "A262RX1Q020SBEA": 322.11,
+      "INDPRO": 23.4808,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1959-07-01",
+      "W171RC1Q027SBEA": 53.954,
+      "A262RX1Q020SBEA": 324.486,
+      "INDPRO": 22.5204,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1959-10-01",
+      "W171RC1Q027SBEA": 55.066,
+      "A262RX1Q020SBEA": 326.896,
+      "INDPRO": 22.6281,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1960-01-01",
+      "W171RC1Q027SBEA": 64.592,
+      "A262RX1Q020SBEA": 329.353,
+      "INDPRO": 23.9924,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1960-04-01",
+      "W171RC1Q027SBEA": 54.702,
+      "A262RX1Q020SBEA": 332.027,
+      "INDPRO": 23.471833333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1960-07-01",
+      "W171RC1Q027SBEA": 55.013,
+      "A262RX1Q020SBEA": 334.931,
+      "INDPRO": 23.085866666666664,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1960-10-01",
+      "W171RC1Q027SBEA": 44.017,
+      "A262RX1Q020SBEA": 338.07,
+      "INDPRO": 22.529366666666665,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1961-01-01",
+      "W171RC1Q027SBEA": 48.509,
+      "A262RX1Q020SBEA": 341.455,
+      "INDPRO": 22.188266666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1961-04-01",
+      "W171RC1Q027SBEA": 52.435,
+      "A262RX1Q020SBEA": 344.923,
+      "INDPRO": 23.067899999999998,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1961-07-01",
+      "W171RC1Q027SBEA": 59.807,
+      "A262RX1Q020SBEA": 348.479,
+      "INDPRO": 23.803933333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1961-10-01",
+      "W171RC1Q027SBEA": 62.756,
+      "A262RX1Q020SBEA": 352.124,
+      "INDPRO": 24.638733333333334,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1962-01-01",
+      "W171RC1Q027SBEA": 67.325,
+      "A262RX1Q020SBEA": 355.862,
+      "INDPRO": 25.006666666666664,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1962-04-01",
+      "W171RC1Q027SBEA": 65.03,
+      "A262RX1Q020SBEA": 359.774,
+      "INDPRO": 25.249066666666664,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1962-07-01",
+      "W171RC1Q027SBEA": 66.724,
+      "A262RX1Q020SBEA": 363.864,
+      "INDPRO": 25.5183,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1962-10-01",
+      "W171RC1Q027SBEA": 62.829,
+      "A262RX1Q020SBEA": 368.13,
+      "INDPRO": 25.7337,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1963-01-01",
+      "W171RC1Q027SBEA": 66.425,
+      "A262RX1Q020SBEA": 372.571,
+      "INDPRO": 26.209466666666668,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1963-04-01",
+      "W171RC1Q027SBEA": 67.675,
+      "A262RX1Q020SBEA": 377.002,
+      "INDPRO": 26.9006,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1963-07-01",
+      "W171RC1Q027SBEA": 71.925,
+      "A262RX1Q020SBEA": 381.42,
+      "INDPRO": 27.080133333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1963-10-01",
+      "W171RC1Q027SBEA": 72.797,
+      "A262RX1Q020SBEA": 385.829,
+      "INDPRO": 27.537899999999997,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1964-01-01",
+      "W171RC1Q027SBEA": 75.632,
+      "A262RX1Q020SBEA": 390.229,
+      "INDPRO": 27.914866666666665,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1964-04-01",
+      "W171RC1Q027SBEA": 75.265,
+      "A262RX1Q020SBEA": 394.873,
+      "INDPRO": 28.5701,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1964-07-01",
+      "W171RC1Q027SBEA": 76.253,
+      "A262RX1Q020SBEA": 399.764,
+      "INDPRO": 29.027866666666668,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1964-10-01",
+      "W171RC1Q027SBEA": 77.468,
+      "A262RX1Q020SBEA": 404.906,
+      "INDPRO": 29.467699999999997,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1965-01-01",
+      "W171RC1Q027SBEA": 87.123,
+      "A262RX1Q020SBEA": 410.303,
+      "INDPRO": 30.580699999999997,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1965-04-01",
+      "W171RC1Q027SBEA": 86.815,
+      "A262RX1Q020SBEA": 415.958,
+      "INDPRO": 31.289766666666665,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1965-07-01",
+      "W171RC1Q027SBEA": 91.331,
+      "A262RX1Q020SBEA": 421.875,
+      "INDPRO": 31.94503333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1965-10-01",
+      "W171RC1Q027SBEA": 92.741,
+      "A262RX1Q020SBEA": 428.058,
+      "INDPRO": 32.59126666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1966-01-01",
+      "W171RC1Q027SBEA": 103.809,
+      "A262RX1Q020SBEA": 434.514,
+      "INDPRO": 33.5248,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1966-04-01",
+      "W171RC1Q027SBEA": 101.106,
+      "A262RX1Q020SBEA": 441.019,
+      "INDPRO": 34.224866666666664,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1966-07-01",
+      "W171RC1Q027SBEA": 101.084,
+      "A262RX1Q020SBEA": 447.569,
+      "INDPRO": 34.754466666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1966-10-01",
+      "W171RC1Q027SBEA": 103.785,
+      "A262RX1Q020SBEA": 454.164,
+      "INDPRO": 35.086533333333335,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1967-01-01",
+      "W171RC1Q027SBEA": 100.432,
+      "A262RX1Q020SBEA": 460.817,
+      "INDPRO": 34.893233333333335,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1967-04-01",
+      "W171RC1Q027SBEA": 91.708,
+      "A262RX1Q020SBEA": 467.378,
+      "INDPRO": 34.75103333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1967-07-01",
+      "W171RC1Q027SBEA": 96.136,
+      "A262RX1Q020SBEA": 473.852,
+      "INDPRO": 34.99006666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1967-10-01",
+      "W171RC1Q027SBEA": 98.97,
+      "A262RX1Q020SBEA": 480.234,
+      "INDPRO": 35.92633333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1968-01-01",
+      "W171RC1Q027SBEA": 101.146,
+      "A262RX1Q020SBEA": 486.522,
+      "INDPRO": 36.439166666666665,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1968-04-01",
+      "W171RC1Q027SBEA": 106.527,
+      "A262RX1Q020SBEA": 492.895,
+      "INDPRO": 36.93043333333333,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1968-07-01",
+      "W171RC1Q027SBEA": 100.697,
+      "A262RX1Q020SBEA": 499.352,
+      "INDPRO": 37.21696666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1968-10-01",
+      "W171RC1Q027SBEA": 102.862,
+      "A262RX1Q020SBEA": 505.895,
+      "INDPRO": 37.78216666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1969-01-01",
+      "W171RC1Q027SBEA": 113.448,
+      "A262RX1Q020SBEA": 512.526,
+      "INDPRO": 38.517133333333334,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1969-04-01",
+      "W171RC1Q027SBEA": 108.924,
+      "A262RX1Q020SBEA": 518.906,
+      "INDPRO": 38.68526666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1969-07-01",
+      "W171RC1Q027SBEA": 111.168,
+      "A262RX1Q020SBEA": 525.032,
+      "INDPRO": 39.149633333333334,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1969-10-01",
+      "W171RC1Q027SBEA": 99.308,
+      "A262RX1Q020SBEA": 530.902,
+      "INDPRO": 38.9042,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1970-01-01",
+      "W171RC1Q027SBEA": 94.885,
+      "A262RX1Q020SBEA": 536.512,
+      "INDPRO": 37.9617,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1970-04-01",
+      "W171RC1Q027SBEA": 95.018,
+      "A262RX1Q020SBEA": 541.859,
+      "INDPRO": 37.75286666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1970-07-01",
+      "W171RC1Q027SBEA": 95.818,
+      "A262RX1Q020SBEA": 546.941,
+      "INDPRO": 37.61766666666667,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1970-10-01",
+      "W171RC1Q027SBEA": 86.34,
+      "A262RX1Q020SBEA": 551.753,
+      "INDPRO": 36.80446666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1971-01-01",
+      "W171RC1Q027SBEA": 102.899,
+      "A262RX1Q020SBEA": 556.292,
+      "INDPRO": 37.51403333333334,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1971-04-01",
+      "W171RC1Q027SBEA": 108.059,
+      "A262RX1Q020SBEA": 560.789,
+      "INDPRO": 37.853833333333334,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1971-07-01",
+      "W171RC1Q027SBEA": 110.869,
+      "A262RX1Q020SBEA": 565.252,
+      "INDPRO": 37.97056666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1971-10-01",
+      "W171RC1Q027SBEA": 103.8,
+      "A262RX1Q020SBEA": 569.692,
+      "INDPRO": 38.85066666666666,
+      "IPMAN": null,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1972-01-01",
+      "W171RC1Q027SBEA": 117.02,
+      "A262RX1Q020SBEA": 574.483,
+      "INDPRO": 40.504333333333335,
+      "IPMAN": 36.2995,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1972-04-01",
+      "W171RC1Q027SBEA": 128.768,
+      "A262RX1Q020SBEA": 580.157,
+      "INDPRO": 41.275,
+      "IPMAN": 37.05566666666667,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1972-07-01",
+      "W171RC1Q027SBEA": 129.598,
+      "A262RX1Q020SBEA": 586.702,
+      "INDPRO": 41.798566666666666,
+      "IPMAN": 37.56806666666667,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1972-10-01",
+      "W171RC1Q027SBEA": 135.914,
+      "A262RX1Q020SBEA": 594.057,
+      "INDPRO": 43.24696666666667,
+      "IPMAN": 39.000166666666665,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1973-01-01",
+      "W171RC1Q027SBEA": 149.999,
+      "A262RX1Q020SBEA": 602.148,
+      "INDPRO": 44.48003333333333,
+      "IPMAN": 40.2815,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1973-04-01",
+      "W171RC1Q027SBEA": 158.339,
+      "A262RX1Q020SBEA": 609.768,
+      "INDPRO": 44.861700000000006,
+      "IPMAN": 40.66936666666666,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1973-07-01",
+      "W171RC1Q027SBEA": 147.735,
+      "A262RX1Q020SBEA": 616.962,
+      "INDPRO": 45.24263333333334,
+      "IPMAN": 40.9933,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1973-10-01",
+      "W171RC1Q027SBEA": 159.457,
+      "A262RX1Q020SBEA": 623.797,
+      "INDPRO": 45.941766666666666,
+      "IPMAN": 41.80276666666666,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1974-01-01",
+      "W171RC1Q027SBEA": 145.012,
+      "A262RX1Q020SBEA": 630.375,
+      "INDPRO": 45.52466666666667,
+      "IPMAN": 41.42509999999999,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1974-04-01",
+      "W171RC1Q027SBEA": 151.302,
+      "A262RX1Q020SBEA": 636.551,
+      "INDPRO": 45.55776666666667,
+      "IPMAN": 41.375766666666664,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1974-07-01",
+      "W171RC1Q027SBEA": 138.028,
+      "A262RX1Q020SBEA": 642.265,
+      "INDPRO": 45.3984,
+      "IPMAN": 41.24113333333333,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1974-10-01",
+      "W171RC1Q027SBEA": 140.852,
+      "A262RX1Q020SBEA": 647.488,
+      "INDPRO": 43.59813333333333,
+      "IPMAN": 39.41986666666667,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1975-01-01",
+      "W171RC1Q027SBEA": 98.602,
+      "A262RX1Q020SBEA": 652.238,
+      "INDPRO": 40.682633333333335,
+      "IPMAN": 36.11023333333333,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1975-04-01",
+      "W171RC1Q027SBEA": 86.67,
+      "A262RX1Q020SBEA": 656.973,
+      "INDPRO": 40.15326666666667,
+      "IPMAN": 35.48963333333333,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1975-07-01",
+      "W171RC1Q027SBEA": 108.586,
+      "A262RX1Q020SBEA": 661.669,
+      "INDPRO": 41.1432,
+      "IPMAN": 36.6492,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1975-10-01",
+      "W171RC1Q027SBEA": 118.725,
+      "A262RX1Q020SBEA": 666.302,
+      "INDPRO": 42.041533333333334,
+      "IPMAN": 37.636599999999994,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1976-01-01",
+      "W171RC1Q027SBEA": 145.614,
+      "A262RX1Q020SBEA": 670.875,
+      "INDPRO": 43.313633333333335,
+      "IPMAN": 38.918866666666666,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1976-04-01",
+      "W171RC1Q027SBEA": 154.576,
+      "A262RX1Q020SBEA": 675.965,
+      "INDPRO": 43.87166666666667,
+      "IPMAN": 39.5552,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1976-07-01",
+      "W171RC1Q027SBEA": 154.328,
+      "A262RX1Q020SBEA": 681.584,
+      "INDPRO": 44.468133333333334,
+      "IPMAN": 40.13726666666667,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1976-10-01",
+      "W171RC1Q027SBEA": 156.056,
+      "A262RX1Q020SBEA": 687.73,
+      "INDPRO": 45.2757,
+      "IPMAN": 40.742533333333334,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1977-01-01",
+      "W171RC1Q027SBEA": 174.184,
+      "A262RX1Q020SBEA": 694.416,
+      "INDPRO": 46.18496666666667,
+      "IPMAN": 41.780833333333334,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1977-04-01",
+      "W171RC1Q027SBEA": 198.26,
+      "A262RX1Q020SBEA": 701.379,
+      "INDPRO": 47.640366666666665,
+      "IPMAN": 43.2439,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1977-07-01",
+      "W171RC1Q027SBEA": 214.006,
+      "A262RX1Q020SBEA": 708.618,
+      "INDPRO": 48.17080000000001,
+      "IPMAN": 43.78346666666667,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1977-10-01",
+      "W171RC1Q027SBEA": 213.331,
+      "A262RX1Q020SBEA": 716.134,
+      "INDPRO": 48.475366666666666,
+      "IPMAN": 44.20303333333334,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1978-01-01",
+      "W171RC1Q027SBEA": 216.704,
+      "A262RX1Q020SBEA": 723.922,
+      "INDPRO": 48.32633333333333,
+      "IPMAN": 44.24190000000001,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1978-04-01",
+      "W171RC1Q027SBEA": 253.536,
+      "A262RX1Q020SBEA": 732.127,
+      "INDPRO": 50.2849,
+      "IPMAN": 45.8008,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1978-07-01",
+      "W171RC1Q027SBEA": 270.07,
+      "A262RX1Q020SBEA": 740.76,
+      "INDPRO": 50.71953333333334,
+      "IPMAN": 46.3187,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1978-10-01",
+      "W171RC1Q027SBEA": 286.685,
+      "A262RX1Q020SBEA": 749.836,
+      "INDPRO": 51.60543333333334,
+      "IPMAN": 47.293533333333336,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1979-01-01",
+      "W171RC1Q027SBEA": 280.757,
+      "A262RX1Q020SBEA": 759.337,
+      "INDPRO": 51.849199999999996,
+      "IPMAN": 47.48993333333333,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1979-04-01",
+      "W171RC1Q027SBEA": 288.994,
+      "A262RX1Q020SBEA": 768.605,
+      "INDPRO": 51.7338,
+      "IPMAN": 47.3462,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1979-07-01",
+      "W171RC1Q027SBEA": 290.693,
+      "A262RX1Q020SBEA": 777.639,
+      "INDPRO": 51.57926666666666,
+      "IPMAN": 47.23593333333333,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1979-10-01",
+      "W171RC1Q027SBEA": 283.02,
+      "A262RX1Q020SBEA": 786.445,
+      "INDPRO": 51.79143333333334,
+      "IPMAN": 47.2619,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1980-01-01",
+      "W171RC1Q027SBEA": 283.524,
+      "A262RX1Q020SBEA": 795.027,
+      "INDPRO": 52.00663333333333,
+      "IPMAN": 47.37106666666667,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1980-04-01",
+      "W171RC1Q027SBEA": 233.018,
+      "A262RX1Q020SBEA": 803.309,
+      "INDPRO": 49.792300000000004,
+      "IPMAN": 44.90076666666667,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1980-07-01",
+      "W171RC1Q027SBEA": 194.079,
+      "A262RX1Q020SBEA": 811.273,
+      "INDPRO": 48.97366666666667,
+      "IPMAN": 43.9077,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1980-10-01",
+      "W171RC1Q027SBEA": 239.852,
+      "A262RX1Q020SBEA": 818.914,
+      "INDPRO": 50.86423333333334,
+      "IPMAN": 45.966833333333334,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1981-01-01",
+      "W171RC1Q027SBEA": 300.24,
+      "A262RX1Q020SBEA": 826.236,
+      "INDPRO": 50.9827,
+      "IPMAN": 46.0554,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1981-04-01",
+      "W171RC1Q027SBEA": 274.676,
+      "A262RX1Q020SBEA": 833.849,
+      "INDPRO": 51.139199999999995,
+      "IPMAN": 46.38303333333334,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1981-07-01",
+      "W171RC1Q027SBEA": 303.486,
+      "A262RX1Q020SBEA": 841.752,
+      "INDPRO": 51.62113333333334,
+      "IPMAN": 46.3268,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1981-10-01",
+      "W171RC1Q027SBEA": 286.955,
+      "A262RX1Q020SBEA": 849.952,
+      "INDPRO": 50.45393333333334,
+      "IPMAN": 45.0443,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1982-01-01",
+      "W171RC1Q027SBEA": 216.626,
+      "A262RX1Q020SBEA": 858.62,
+      "INDPRO": 49.42146666666667,
+      "IPMAN": 43.92803333333333,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1982-04-01",
+      "W171RC1Q027SBEA": 216.13,
+      "A262RX1Q020SBEA": 866.714,
+      "INDPRO": 48.8149,
+      "IPMAN": 43.72293333333334,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1982-07-01",
+      "W171RC1Q027SBEA": 207.607,
+      "A262RX1Q020SBEA": 874.293,
+      "INDPRO": 48.127199999999995,
+      "IPMAN": 43.3085,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1982-10-01",
+      "W171RC1Q027SBEA": 163.693,
+      "A262RX1Q020SBEA": 881.341,
+      "INDPRO": 47.22286666666667,
+      "IPMAN": 42.332699999999996,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1983-01-01",
+      "W171RC1Q027SBEA": 177.926,
+      "A262RX1Q020SBEA": 887.882,
+      "INDPRO": 47.75703333333333,
+      "IPMAN": 43.27973333333333,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1983-04-01",
+      "W171RC1Q027SBEA": 221.754,
+      "A262RX1Q020SBEA": 895.098,
+      "INDPRO": 48.826,
+      "IPMAN": 44.57316666666666,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1983-07-01",
+      "W171RC1Q027SBEA": 260.591,
+      "A262RX1Q020SBEA": 902.981,
+      "INDPRO": 50.4923,
+      "IPMAN": 46.2306,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1983-10-01",
+      "W171RC1Q027SBEA": 323.963,
+      "A262RX1Q020SBEA": 911.553,
+      "INDPRO": 51.809333333333335,
+      "IPMAN": 47.64716666666667,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1984-01-01",
+      "W171RC1Q027SBEA": 392.735,
+      "A262RX1Q020SBEA": 920.819,
+      "INDPRO": 53.34106666666667,
+      "IPMAN": 49.136066666666665,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1984-04-01",
+      "W171RC1Q027SBEA": 416.872,
+      "A262RX1Q020SBEA": 931.281,
+      "INDPRO": 54.17133333333334,
+      "IPMAN": 49.88563333333334,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1984-07-01",
+      "W171RC1Q027SBEA": 429.431,
+      "A262RX1Q020SBEA": 942.921,
+      "INDPRO": 54.535666666666664,
+      "IPMAN": 50.294666666666664,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1984-10-01",
+      "W171RC1Q027SBEA": 420.468,
+      "A262RX1Q020SBEA": 955.69,
+      "INDPRO": 54.568733333333334,
+      "IPMAN": 50.60536666666667,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1985-01-01",
+      "W171RC1Q027SBEA": 394.491,
+      "A262RX1Q020SBEA": 969.706,
+      "INDPRO": 54.76,
+      "IPMAN": 50.597033333333336,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1985-04-01",
+      "W171RC1Q027SBEA": 410.873,
+      "A262RX1Q020SBEA": 983.068,
+      "INDPRO": 54.790099999999995,
+      "IPMAN": 50.66536666666667,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1985-07-01",
+      "W171RC1Q027SBEA": 403.247,
+      "A262RX1Q020SBEA": 995.688,
+      "INDPRO": 54.71189999999999,
+      "IPMAN": 50.696,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1985-10-01",
+      "W171RC1Q027SBEA": 428.947,
+      "A262RX1Q020SBEA": 1007.528,
+      "INDPRO": 55.024499999999996,
+      "IPMAN": 51.0117,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1986-01-01",
+      "W171RC1Q027SBEA": 424.265,
+      "A262RX1Q020SBEA": 1018.532,
+      "INDPRO": 55.355799999999995,
+      "IPMAN": 51.6121,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1986-04-01",
+      "W171RC1Q027SBEA": 409.764,
+      "A262RX1Q020SBEA": 1030.912,
+      "INDPRO": 55.02146666666667,
+      "IPMAN": 51.5096,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1986-07-01",
+      "W171RC1Q027SBEA": 390.554,
+      "A262RX1Q020SBEA": 1044.734,
+      "INDPRO": 55.2378,
+      "IPMAN": 51.82213333333333,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1986-10-01",
+      "W171RC1Q027SBEA": 383.176,
+      "A262RX1Q020SBEA": 1060.034,
+      "INDPRO": 55.8578,
+      "IPMAN": 52.456500000000005,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1987-01-01",
+      "W171RC1Q027SBEA": 406.249,
+      "A262RX1Q020SBEA": 1076.849,
+      "INDPRO": 56.6085,
+      "IPMAN": 53.203633333333336,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1987-04-01",
+      "W171RC1Q027SBEA": 404.274,
+      "A262RX1Q020SBEA": 1088.495,
+      "INDPRO": 57.611,
+      "IPMAN": 54.12513333333334,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1987-07-01",
+      "W171RC1Q027SBEA": 398.736,
+      "A262RX1Q020SBEA": 1094.804,
+      "INDPRO": 58.69483333333333,
+      "IPMAN": 55.147,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1987-10-01",
+      "W171RC1Q027SBEA": 456.466,
+      "A262RX1Q020SBEA": 1095.628,
+      "INDPRO": 60.087700000000005,
+      "IPMAN": 56.69753333333333,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1988-01-01",
+      "W171RC1Q027SBEA": 398.292,
+      "A262RX1Q020SBEA": 1113.857,
+      "INDPRO": 60.649333333333324,
+      "IPMAN": 57.117466666666665,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1988-04-01",
+      "W171RC1Q027SBEA": 415.039,
+      "A262RX1Q020SBEA": 1129.433,
+      "INDPRO": 61.1799,
+      "IPMAN": 57.8011,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1988-07-01",
+      "W171RC1Q027SBEA": 408.736,
+      "A262RX1Q020SBEA": 1143.013,
+      "INDPRO": 61.40656666666666,
+      "IPMAN": 57.95113333333333,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1988-10-01",
+      "W171RC1Q027SBEA": 421.4,
+      "A262RX1Q020SBEA": 1154.986,
+      "INDPRO": 61.838,
+      "IPMAN": 58.58433333333334,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1989-01-01",
+      "W171RC1Q027SBEA": 450.865,
+      "A262RX1Q020SBEA": 1165.48,
+      "INDPRO": 62.12539999999999,
+      "IPMAN": 58.918866666666666,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1989-04-01",
+      "W171RC1Q027SBEA": 436.6,
+      "A262RX1Q020SBEA": 1176.286,
+      "INDPRO": 61.890566666666665,
+      "IPMAN": 58.49193333333333,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1989-07-01",
+      "W171RC1Q027SBEA": 426.616,
+      "A262RX1Q020SBEA": 1187.421,
+      "INDPRO": 61.50886666666667,
+      "IPMAN": 58.04043333333333,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1989-10-01",
+      "W171RC1Q027SBEA": 413.424,
+      "A262RX1Q020SBEA": 1198.877,
+      "INDPRO": 61.74793333333333,
+      "IPMAN": 58.09356666666667,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1990-01-01",
+      "W171RC1Q027SBEA": 427.66,
+      "A262RX1Q020SBEA": 1210.63,
+      "INDPRO": 62.20616666666666,
+      "IPMAN": 58.752833333333335,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1990-04-01",
+      "W171RC1Q027SBEA": 420.806,
+      "A262RX1Q020SBEA": 1221.603,
+      "INDPRO": 62.6333,
+      "IPMAN": 59.177666666666674,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1990-07-01",
+      "W171RC1Q027SBEA": 397.345,
+      "A262RX1Q020SBEA": 1231.795,
+      "INDPRO": 62.87606666666667,
+      "IPMAN": 59.34286666666666,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1990-10-01",
+      "W171RC1Q027SBEA": 335.333,
+      "A262RX1Q020SBEA": 1241.198,
+      "INDPRO": 61.90279999999999,
+      "IPMAN": 58.329,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1991-01-01",
+      "W171RC1Q027SBEA": 296.715,
+      "A262RX1Q020SBEA": 1249.81,
+      "INDPRO": 60.71796666666666,
+      "IPMAN": 56.974333333333334,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1991-04-01",
+      "W171RC1Q027SBEA": 293.606,
+      "A262RX1Q020SBEA": 1258.194,
+      "INDPRO": 61.0384,
+      "IPMAN": 57.2439,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1991-07-01",
+      "W171RC1Q027SBEA": 305.735,
+      "A262RX1Q020SBEA": 1266.343,
+      "INDPRO": 61.89326666666667,
+      "IPMAN": 58.30010000000001,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1991-10-01",
+      "W171RC1Q027SBEA": 328.124,
+      "A262RX1Q020SBEA": 1274.244,
+      "INDPRO": 62.01926666666666,
+      "IPMAN": 58.53476666666666,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1992-01-01",
+      "W171RC1Q027SBEA": 308.158,
+      "A262RX1Q020SBEA": 1281.893,
+      "INDPRO": 61.92676666666667,
+      "IPMAN": 58.65646666666667,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1992-04-01",
+      "W171RC1Q027SBEA": 355.027,
+      "A262RX1Q020SBEA": 1290.075,
+      "INDPRO": 63.04576666666666,
+      "IPMAN": 59.90143333333333,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1992-07-01",
+      "W171RC1Q027SBEA": 354.945,
+      "A262RX1Q020SBEA": 1298.791,
+      "INDPRO": 63.549733333333336,
+      "IPMAN": 60.572900000000004,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1992-10-01",
+      "W171RC1Q027SBEA": 377.386,
+      "A262RX1Q020SBEA": 1308.046,
+      "INDPRO": 64.19746666666667,
+      "IPMAN": 61.07406666666666,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1993-01-01",
+      "W171RC1Q027SBEA": 386.151,
+      "A262RX1Q020SBEA": 1317.85,
+      "INDPRO": 64.7863,
+      "IPMAN": 61.75116666666667,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1993-04-01",
+      "W171RC1Q027SBEA": 390.136,
+      "A262RX1Q020SBEA": 1327.954,
+      "INDPRO": 64.91473333333333,
+      "IPMAN": 61.9643,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1993-07-01",
+      "W171RC1Q027SBEA": 377.83,
+      "A262RX1Q020SBEA": 1338.354,
+      "INDPRO": 65.16786666666667,
+      "IPMAN": 62.1324,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1993-10-01",
+      "W171RC1Q027SBEA": 426.718,
+      "A262RX1Q020SBEA": 1349.063,
+      "INDPRO": 66.18209999999999,
+      "IPMAN": 63.280833333333334,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1994-01-01",
+      "W171RC1Q027SBEA": 452.081,
+      "A262RX1Q020SBEA": 1360.073,
+      "INDPRO": 66.9881,
+      "IPMAN": 64.0763,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1994-04-01",
+      "W171RC1Q027SBEA": 508.271,
+      "A262RX1Q020SBEA": 1371.813,
+      "INDPRO": 68.21563333333334,
+      "IPMAN": 65.642,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1994-07-01",
+      "W171RC1Q027SBEA": 491.543,
+      "A262RX1Q020SBEA": 1384.29,
+      "INDPRO": 69.09746666666666,
+      "IPMAN": 66.6983,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1994-10-01",
+      "W171RC1Q027SBEA": 528.303,
+      "A262RX1Q020SBEA": 1397.506,
+      "INDPRO": 70.5131,
+      "IPMAN": 68.38066666666667,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1995-01-01",
+      "W171RC1Q027SBEA": 535.404,
+      "A262RX1Q020SBEA": 1411.463,
+      "INDPRO": 71.25923333333333,
+      "IPMAN": 69.1585,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1995-04-01",
+      "W171RC1Q027SBEA": 498.63,
+      "A262RX1Q020SBEA": 1425.68,
+      "INDPRO": 71.5003,
+      "IPMAN": 69.32206666666667,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1995-07-01",
+      "W171RC1Q027SBEA": 479.604,
+      "A262RX1Q020SBEA": 1440.16,
+      "INDPRO": 72.20383333333334,
+      "IPMAN": 69.94716666666666,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1995-10-01",
+      "W171RC1Q027SBEA": 497.547,
+      "A262RX1Q020SBEA": 1454.898,
+      "INDPRO": 72.79833333333333,
+      "IPMAN": 70.75733333333334,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1996-01-01",
+      "W171RC1Q027SBEA": 516.593,
+      "A262RX1Q020SBEA": 1469.9,
+      "INDPRO": 73.29090000000001,
+      "IPMAN": 71.15846666666665,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1996-04-01",
+      "W171RC1Q027SBEA": 568.581,
+      "A262RX1Q020SBEA": 1485.83,
+      "INDPRO": 74.8777,
+      "IPMAN": 72.93286666666667,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1996-07-01",
+      "W171RC1Q027SBEA": 613.489,
+      "A262RX1Q020SBEA": 1502.697,
+      "INDPRO": 75.8706,
+      "IPMAN": 74.3833,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1996-10-01",
+      "W171RC1Q027SBEA": 608.166,
+      "A262RX1Q020SBEA": 1520.544,
+      "INDPRO": 76.97046666666667,
+      "IPMAN": 75.50116666666666,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1997-01-01",
+      "W171RC1Q027SBEA": 628.418,
+      "A262RX1Q020SBEA": 1539.39,
+      "INDPRO": 78.4405,
+      "IPMAN": 77.1924,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1997-04-01",
+      "W171RC1Q027SBEA": 682.966,
+      "A262RX1Q020SBEA": 1559.19,
+      "INDPRO": 79.58906666666667,
+      "IPMAN": 78.53433333333334,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1997-07-01",
+      "W171RC1Q027SBEA": 708.909,
+      "A262RX1Q020SBEA": 1579.95,
+      "INDPRO": 81.44913333333334,
+      "IPMAN": 80.54843333333334,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1997-10-01",
+      "W171RC1Q027SBEA": 711.225,
+      "A262RX1Q020SBEA": 1601.681,
+      "INDPRO": 83.49873333333333,
+      "IPMAN": 82.80516666666666,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1998-01-01",
+      "W171RC1Q027SBEA": 762.216,
+      "A262RX1Q020SBEA": 1624.393,
+      "INDPRO": 84.4227,
+      "IPMAN": 84.07656666666666,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1998-04-01",
+      "W171RC1Q027SBEA": 736.806,
+      "A262RX1Q020SBEA": 1648.132,
+      "INDPRO": 84.9798,
+      "IPMAN": 84.4461,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1998-07-01",
+      "W171RC1Q027SBEA": 777.034,
+      "A262RX1Q020SBEA": 1672.911,
+      "INDPRO": 85.64956666666667,
+      "IPMAN": 85.15713333333333,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1998-10-01",
+      "W171RC1Q027SBEA": 807.687,
+      "A262RX1Q020SBEA": 1698.761,
+      "INDPRO": 86.87849999999999,
+      "IPMAN": 86.86723333333333,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1999-01-01",
+      "W171RC1Q027SBEA": 851.445,
+      "A262RX1Q020SBEA": 1725.535,
+      "INDPRO": 87.9162,
+      "IPMAN": 88.10593333333333,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1999-04-01",
+      "W171RC1Q027SBEA": 827.646,
+      "A262RX1Q020SBEA": 1752.138,
+      "INDPRO": 88.77896666666668,
+      "IPMAN": 89.15740000000001,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1999-07-01",
+      "W171RC1Q027SBEA": 853.122,
+      "A262RX1Q020SBEA": 1778.307,
+      "INDPRO": 89.55186666666667,
+      "IPMAN": 89.83116666666666,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "1999-10-01",
+      "W171RC1Q027SBEA": 894.192,
+      "A262RX1Q020SBEA": 1803.943,
+      "INDPRO": 91.04939999999999,
+      "IPMAN": 91.58803333333333,
+      "TSIFRGHT": null
+    },
+    {
+      "date": "2000-01-01",
+      "W171RC1Q027SBEA": 860.836,
+      "A262RX1Q020SBEA": 1828.941,
+      "INDPRO": 91.83743333333332,
+      "IPMAN": 92.54666666666667,
+      "TSIFRGHT": 102.56666666666666
+    },
+    {
+      "date": "2000-04-01",
+      "W171RC1Q027SBEA": 955.47,
+      "A262RX1Q020SBEA": 1858.51,
+      "INDPRO": 92.87833333333333,
+      "IPMAN": 93.64999999999999,
+      "TSIFRGHT": 98.90000000000002
+    },
+    {
+      "date": "2000-07-01",
+      "W171RC1Q027SBEA": 921.211,
+      "A262RX1Q020SBEA": 1888.708,
+      "INDPRO": 92.7787,
+      "IPMAN": 93.59066666666666,
+      "TSIFRGHT": 99.03333333333335
+    },
+    {
+      "date": "2000-10-01",
+      "W171RC1Q027SBEA": 926.606,
+      "A262RX1Q020SBEA": 1918.916,
+      "INDPRO": 92.5344,
+      "IPMAN": 93.08076666666666,
+      "TSIFRGHT": 99.5
+    },
+    {
+      "date": "2001-01-01",
+      "W171RC1Q027SBEA": 805.766,
+      "A262RX1Q020SBEA": 1949.564,
+      "INDPRO": 91.44053333333333,
+      "IPMAN": 91.92996666666666,
+      "TSIFRGHT": 99.33333333333333
+    },
+    {
+      "date": "2001-04-01",
+      "W171RC1Q027SBEA": 797.931,
+      "A262RX1Q020SBEA": 1968.776,
+      "INDPRO": 90.34100000000001,
+      "IPMAN": 90.71686666666666,
+      "TSIFRGHT": 98.63333333333333
+    },
+    {
+      "date": "2001-07-01",
+      "W171RC1Q027SBEA": 736.811,
+      "A262RX1Q020SBEA": 1975.491,
+      "INDPRO": 89.08386666666667,
+      "IPMAN": 89.2845,
+      "TSIFRGHT": 98.3
+    },
+    {
+      "date": "2001-10-01",
+      "W171RC1Q027SBEA": 648.356,
+      "A262RX1Q020SBEA": 1970.181,
+      "INDPRO": 88.13586666666667,
+      "IPMAN": 88.40873333333333,
+      "TSIFRGHT": 98.13333333333333
+    },
+    {
+      "date": "2002-01-01",
+      "W171RC1Q027SBEA": 709.847,
+      "A262RX1Q020SBEA": 2036.3,
+      "INDPRO": 88.738,
+      "IPMAN": 89.27693333333333,
+      "TSIFRGHT": 99.10000000000001
+    },
+    {
+      "date": "2002-04-01",
+      "W171RC1Q027SBEA": 722.481,
+      "A262RX1Q020SBEA": 2028.495,
+      "INDPRO": 90.09136666666666,
+      "IPMAN": 90.6684,
+      "TSIFRGHT": 100.63333333333333
+    },
+    {
+      "date": "2002-07-01",
+      "W171RC1Q027SBEA": 715.86,
+      "A262RX1Q020SBEA": 2032.03,
+      "INDPRO": 90.6354,
+      "IPMAN": 91.41293333333333,
+      "TSIFRGHT": 102.66666666666667
+    },
+    {
+      "date": "2002-10-01",
+      "W171RC1Q027SBEA": 716.261,
+      "A262RX1Q020SBEA": 2045.709,
+      "INDPRO": 90.63353333333333,
+      "IPMAN": 91.37286666666667,
+      "TSIFRGHT": 104.60000000000001
+    },
+    {
+      "date": "2003-01-01",
+      "W171RC1Q027SBEA": 722.304,
+      "A262RX1Q020SBEA": 2069.344,
+      "INDPRO": 91.22833333333334,
+      "IPMAN": 91.90176666666666,
+      "TSIFRGHT": 103.56666666666666
+    },
+    {
+      "date": "2003-04-01",
+      "W171RC1Q027SBEA": 721.882,
+      "A262RX1Q020SBEA": 2090.783,
+      "INDPRO": 90.5838,
+      "IPMAN": 91.5203,
+      "TSIFRGHT": 103.10000000000001
+    },
+    {
+      "date": "2003-07-01",
+      "W171RC1Q027SBEA": 787.663,
+      "A262RX1Q020SBEA": 2111.331,
+      "INDPRO": 91.18136666666668,
+      "IPMAN": 92.21633333333334,
+      "TSIFRGHT": 104.13333333333333
+    },
+    {
+      "date": "2003-10-01",
+      "W171RC1Q027SBEA": 856.869,
+      "A262RX1Q020SBEA": 2131.174,
+      "INDPRO": 92.03723333333333,
+      "IPMAN": 93.24016666666667,
+      "TSIFRGHT": 107.03333333333335
+    },
+    {
+      "date": "2004-01-01",
+      "W171RC1Q027SBEA": 854.386,
+      "A262RX1Q020SBEA": 2147.933,
+      "INDPRO": 92.64823333333334,
+      "IPMAN": 93.80263333333333,
+      "TSIFRGHT": 108.53333333333335
+    },
+    {
+      "date": "2004-04-01",
+      "W171RC1Q027SBEA": 942.27,
+      "A262RX1Q020SBEA": 2165.349,
+      "INDPRO": 93.13409999999999,
+      "IPMAN": 94.47876666666667,
+      "TSIFRGHT": 110.60000000000001
+    },
+    {
+      "date": "2004-07-01",
+      "W171RC1Q027SBEA": 973.221,
+      "A262RX1Q020SBEA": 2184.906,
+      "INDPRO": 93.64643333333333,
+      "IPMAN": 95.35629999999999,
+      "TSIFRGHT": 110.53333333333335
+    },
+    {
+      "date": "2004-10-01",
+      "W171RC1Q027SBEA": 1012.597,
+      "A262RX1Q020SBEA": 2206.321,
+      "INDPRO": 94.95476666666667,
+      "IPMAN": 96.7919,
+      "TSIFRGHT": 111.60000000000001
+    },
+    {
+      "date": "2005-01-01",
+      "W171RC1Q027SBEA": 1076.028,
+      "A262RX1Q020SBEA": 2228.525,
+      "INDPRO": 96.30059999999999,
+      "IPMAN": 98.39729999999999,
+      "TSIFRGHT": 113.0
+    },
+    {
+      "date": "2005-04-01",
+      "W171RC1Q027SBEA": 1037.737,
+      "A262RX1Q020SBEA": 2251.135,
+      "INDPRO": 96.85623333333332,
+      "IPMAN": 99.07313333333333,
+      "TSIFRGHT": 112.26666666666667
+    },
+    {
+      "date": "2005-07-01",
+      "W171RC1Q027SBEA": 1058.732,
+      "A262RX1Q020SBEA": 2274.849,
+      "INDPRO": 96.45046666666667,
+      "IPMAN": 98.97179999999999,
+      "TSIFRGHT": 111.86666666666667
+    },
+    {
+      "date": "2005-10-01",
+      "W171RC1Q027SBEA": 1135.324,
+      "A262RX1Q020SBEA": 2298.359,
+      "INDPRO": 97.34793333333333,
+      "IPMAN": 100.57043333333333,
+      "TSIFRGHT": 112.36666666666667
+    },
+    {
+      "date": "2006-01-01",
+      "W171RC1Q027SBEA": 1178.996,
+      "A262RX1Q020SBEA": 2321.821,
+      "INDPRO": 98.30133333333333,
+      "IPMAN": 101.57613333333335,
+      "TSIFRGHT": 111.96666666666665
+    },
+    {
+      "date": "2006-04-01",
+      "W171RC1Q027SBEA": 1153.97,
+      "A262RX1Q020SBEA": 2345.643,
+      "INDPRO": 98.88279999999999,
+      "IPMAN": 101.77493333333332,
+      "TSIFRGHT": 112.60000000000001
+    },
+    {
+      "date": "2006-07-01",
+      "W171RC1Q027SBEA": 1118.39,
+      "A262RX1Q020SBEA": 2369.175,
+      "INDPRO": 99.28359999999999,
+      "IPMAN": 102.24150000000002,
+      "TSIFRGHT": 111.36666666666667
+    },
+    {
+      "date": "2006-10-01",
+      "W171RC1Q027SBEA": 1059.373,
+      "A262RX1Q020SBEA": 2393.158,
+      "INDPRO": 99.51353333333334,
+      "IPMAN": 102.70646666666666,
+      "TSIFRGHT": 109.96666666666665
+    },
+    {
+      "date": "2007-01-01",
+      "W171RC1Q027SBEA": 1023.904,
+      "A262RX1Q020SBEA": 2417.403,
+      "INDPRO": 100.52153333333332,
+      "IPMAN": 103.96153333333332,
+      "TSIFRGHT": 110.73333333333333
+    },
+    {
+      "date": "2007-04-01",
+      "W171RC1Q027SBEA": 1047.933,
+      "A262RX1Q020SBEA": 2440.289,
+      "INDPRO": 101.71776666666666,
+      "IPMAN": 105.52556666666668,
+      "TSIFRGHT": 110.13333333333333
+    },
+    {
+      "date": "2007-07-01",
+      "W171RC1Q027SBEA": 1016.342,
+      "A262RX1Q020SBEA": 2461.32,
+      "INDPRO": 101.8732,
+      "IPMAN": 105.87316666666668,
+      "TSIFRGHT": 109.2
+    },
+    {
+      "date": "2007-10-01",
+      "W171RC1Q027SBEA": 960.958,
+      "A262RX1Q020SBEA": 2481.309,
+      "INDPRO": 102.17546666666668,
+      "IPMAN": 106.3227,
+      "TSIFRGHT": 110.76666666666667
+    },
+    {
+      "date": "2008-01-01",
+      "W171RC1Q027SBEA": 855.552,
+      "A262RX1Q020SBEA": 2500.692,
+      "INDPRO": 101.87406666666668,
+      "IPMAN": 105.68373333333334,
+      "TSIFRGHT": 111.33333333333333
+    },
+    {
+      "date": "2008-04-01",
+      "W171RC1Q027SBEA": 820.982,
+      "A262RX1Q020SBEA": 2520.043,
+      "INDPRO": 100.39313333333332,
+      "IPMAN": 103.50996666666667,
+      "TSIFRGHT": 110.96666666666665
+    },
+    {
+      "date": "2008-07-01",
+      "W171RC1Q027SBEA": 759.942,
+      "A262RX1Q020SBEA": 2538.2,
+      "INDPRO": 97.1922,
+      "IPMAN": 99.78309999999999,
+      "TSIFRGHT": 109.16666666666667
+    },
+    {
+      "date": "2008-10-01",
+      "W171RC1Q027SBEA": 556.508,
+      "A262RX1Q020SBEA": 2552.892,
+      "INDPRO": 93.00970000000001,
+      "IPMAN": 93.69663333333334,
+      "TSIFRGHT": 104.0
+    },
+    {
+      "date": "2009-01-01",
+      "W171RC1Q027SBEA": 267.485,
+      "A262RX1Q020SBEA": 2562.492,
+      "INDPRO": 87.75126666666667,
+      "IPMAN": 87.25253333333335,
+      "TSIFRGHT": 98.5
+    },
+    {
+      "date": "2009-04-01",
+      "W171RC1Q027SBEA": 141.125,
+      "A262RX1Q020SBEA": 2568.106,
+      "INDPRO": 85.24893333333334,
+      "IPMAN": 84.92736666666666,
+      "TSIFRGHT": 95.39999999999999
+    },
+    {
+      "date": "2009-07-01",
+      "W171RC1Q027SBEA": 127.379,
+      "A262RX1Q020SBEA": 2573.405,
+      "INDPRO": 86.58386666666667,
+      "IPMAN": 86.79983333333332,
+      "TSIFRGHT": 99.10000000000001
+    },
+    {
+      "date": "2009-10-01",
+      "W171RC1Q027SBEA": 269.195,
+      "A262RX1Q020SBEA": 2580.041,
+      "INDPRO": 88.01443333333333,
+      "IPMAN": 88.45513333333334,
+      "TSIFRGHT": 100.53333333333335
+    },
+    {
+      "date": "2010-01-01",
+      "W171RC1Q027SBEA": 296.788,
+      "A262RX1Q020SBEA": 2587.015,
+      "INDPRO": 89.7711,
+      "IPMAN": 90.19836666666667,
+      "TSIFRGHT": 104.56666666666666
+    },
+    {
+      "date": "2010-04-01",
+      "W171RC1Q027SBEA": 414.096,
+      "A262RX1Q020SBEA": 2594.696,
+      "INDPRO": 91.47163333333333,
+      "IPMAN": 92.57433333333334,
+      "TSIFRGHT": 106.33333333333333
+    },
+    {
+      "date": "2010-07-01",
+      "W171RC1Q027SBEA": 494.137,
+      "A262RX1Q020SBEA": 2604.087,
+      "INDPRO": 92.65876666666666,
+      "IPMAN": 93.60419999999999,
+      "TSIFRGHT": 106.93333333333334
+    },
+    {
+      "date": "2010-10-01",
+      "W171RC1Q027SBEA": 473.32,
+      "A262RX1Q020SBEA": 2615.273,
+      "INDPRO": 93.04663333333333,
+      "IPMAN": 94.02276666666667,
+      "TSIFRGHT": 107.89999999999999
+    },
+    {
+      "date": "2011-01-01",
+      "W171RC1Q027SBEA": 408.08,
+      "A262RX1Q020SBEA": 2628.5,
+      "INDPRO": 93.5568,
+      "IPMAN": 94.82886666666667,
+      "TSIFRGHT": 110.10000000000001
+    },
+    {
+      "date": "2011-04-01",
+      "W171RC1Q027SBEA": 470.044,
+      "A262RX1Q020SBEA": 2642.05,
+      "INDPRO": 93.94496666666667,
+      "IPMAN": 94.83879999999999,
+      "TSIFRGHT": 109.7
+    },
+    {
+      "date": "2011-07-01",
+      "W171RC1Q027SBEA": 470.376,
+      "A262RX1Q020SBEA": 2657.082,
+      "INDPRO": 95.03566666666666,
+      "IPMAN": 95.90593333333334,
+      "TSIFRGHT": 110.63333333333333
+    },
+    {
+      "date": "2011-10-01",
+      "W171RC1Q027SBEA": 630.768,
+      "A262RX1Q020SBEA": 2673.589,
+      "INDPRO": 96.02080000000001,
+      "IPMAN": 96.84566666666666,
+      "TSIFRGHT": 112.7
+    },
+    {
+      "date": "2012-01-01",
+      "W171RC1Q027SBEA": 656.321,
+      "A262RX1Q020SBEA": 2690.419,
+      "INDPRO": 96.97176666666667,
+      "IPMAN": 98.20813333333335,
+      "TSIFRGHT": 111.5
+    },
+    {
+      "date": "2012-04-01",
+      "W171RC1Q027SBEA": 700.068,
+      "A262RX1Q020SBEA": 2708.592,
+      "INDPRO": 97.5877,
+      "IPMAN": 98.48123333333335,
+      "TSIFRGHT": 112.66666666666667
+    },
+    {
+      "date": "2012-07-01",
+      "W171RC1Q027SBEA": 673.399,
+      "A262RX1Q020SBEA": 2726.999,
+      "INDPRO": 97.56826666666666,
+      "IPMAN": 98.29480000000001,
+      "TSIFRGHT": 112.5
+    },
+    {
+      "date": "2012-10-01",
+      "W171RC1Q027SBEA": 639.131,
+      "A262RX1Q020SBEA": 2745.705,
+      "INDPRO": 98.0357,
+      "IPMAN": 98.59133333333334,
+      "TSIFRGHT": 111.3
+    },
+    {
+      "date": "2013-01-01",
+      "W171RC1Q027SBEA": 712.493,
+      "A262RX1Q020SBEA": 2766.893,
+      "INDPRO": 98.77346666666666,
+      "IPMAN": 99.32350000000001,
+      "TSIFRGHT": 115.06666666666666
+    },
+    {
+      "date": "2013-04-01",
+      "W171RC1Q027SBEA": 715.419,
+      "A262RX1Q020SBEA": 2787.891,
+      "INDPRO": 99.2267,
+      "IPMAN": 99.38736666666667,
+      "TSIFRGHT": 115.5
+    },
+    {
+      "date": "2013-07-01",
+      "W171RC1Q027SBEA": 802.039,
+      "A262RX1Q020SBEA": 2807.582,
+      "INDPRO": 99.63223333333333,
+      "IPMAN": 99.35283333333332,
+      "TSIFRGHT": 116.16666666666667
+    },
+    {
+      "date": "2013-10-01",
+      "W171RC1Q027SBEA": 804.271,
+      "A262RX1Q020SBEA": 2828.044,
+      "INDPRO": 100.3051,
+      "IPMAN": 99.80883333333334,
+      "TSIFRGHT": 117.46666666666665
+    },
+    {
+      "date": "2014-01-01",
+      "W171RC1Q027SBEA": 739.706,
+      "A262RX1Q020SBEA": 2848.782,
+      "INDPRO": 100.99029999999999,
+      "IPMAN": 99.5326,
+      "TSIFRGHT": 117.83333333333333
+    },
+    {
+      "date": "2014-04-01",
+      "W171RC1Q027SBEA": 863.241,
+      "A262RX1Q020SBEA": 2869.936,
+      "INDPRO": 102.37046666666667,
+      "IPMAN": 100.72563333333333,
+      "TSIFRGHT": 120.10000000000001
+    },
+    {
+      "date": "2014-07-01",
+      "W171RC1Q027SBEA": 914.369,
+      "A262RX1Q020SBEA": 2892.364,
+      "INDPRO": 102.93203333333334,
+      "IPMAN": 101.13646666666666,
+      "TSIFRGHT": 120.7
+    },
+    {
+      "date": "2014-10-01",
+      "W171RC1Q027SBEA": 925.188,
+      "A262RX1Q020SBEA": 2914.681,
+      "INDPRO": 103.4978,
+      "IPMAN": 101.28766666666667,
+      "TSIFRGHT": 122.66666666666667
+    },
+    {
+      "date": "2015-01-01",
+      "W171RC1Q027SBEA": 1004.665,
+      "A262RX1Q020SBEA": 2935.701,
+      "INDPRO": 102.33846666666666,
+      "IPMAN": 100.3954,
+      "TSIFRGHT": 122.33333333333333
+    },
+    {
+      "date": "2015-04-01",
+      "W171RC1Q027SBEA": 1010.933,
+      "A262RX1Q020SBEA": 2956.479,
+      "INDPRO": 100.9316,
+      "IPMAN": 100.23039999999999,
+      "TSIFRGHT": 121.56666666666666
+    },
+    {
+      "date": "2015-07-01",
+      "W171RC1Q027SBEA": 1004.494,
+      "A262RX1Q020SBEA": 2977.888,
+      "INDPRO": 101.00473333333333,
+      "IPMAN": 100.43106666666667,
+      "TSIFRGHT": 122.8
+    },
+    {
+      "date": "2015-10-01",
+      "W171RC1Q027SBEA": 959.806,
+      "A262RX1Q020SBEA": 2999.742,
+      "INDPRO": 99.613,
+      "IPMAN": 99.73886666666665,
+      "TSIFRGHT": 121.2
+    },
+    {
+      "date": "2016-01-01",
+      "W171RC1Q027SBEA": 931.73,
+      "A262RX1Q020SBEA": 3022.11,
+      "INDPRO": 98.97160000000001,
+      "IPMAN": 99.66316666666667,
+      "TSIFRGHT": 121.3
+    },
+    {
+      "date": "2016-04-01",
+      "W171RC1Q027SBEA": 898.106,
+      "A262RX1Q020SBEA": 3044.738,
+      "INDPRO": 98.64793333333334,
+      "IPMAN": 99.44586666666667,
+      "TSIFRGHT": 122.56666666666666
+    },
+    {
+      "date": "2016-07-01",
+      "W171RC1Q027SBEA": 888.216,
+      "A262RX1Q020SBEA": 3067.414,
+      "INDPRO": 98.86496666666666,
+      "IPMAN": 99.40493333333335,
+      "TSIFRGHT": 123.46666666666665
+    },
+    {
+      "date": "2016-10-01",
+      "W171RC1Q027SBEA": 961.361,
+      "A262RX1Q020SBEA": 3089.875,
+      "INDPRO": 98.71053333333333,
+      "IPMAN": 99.41433333333333,
+      "TSIFRGHT": 123.39999999999999
+    },
+    {
+      "date": "2017-01-01",
+      "W171RC1Q027SBEA": 936.883,
+      "A262RX1Q020SBEA": 3112.777,
+      "INDPRO": 98.71313333333335,
+      "IPMAN": 99.3575,
+      "TSIFRGHT": 124.43333333333334
+    },
+    {
+      "date": "2017-04-01",
+      "W171RC1Q027SBEA": 978.714,
+      "A262RX1Q020SBEA": 3136.628,
+      "INDPRO": 100.1701,
+      "IPMAN": 100.22033333333333,
+      "TSIFRGHT": 125.66666666666667
+    },
+    {
+      "date": "2017-07-01",
+      "W171RC1Q027SBEA": 1012.717,
+      "A262RX1Q020SBEA": 3161.008,
+      "INDPRO": 99.86489999999999,
+      "IPMAN": 99.71156666666667,
+      "TSIFRGHT": 128.63333333333333
+    },
+    {
+      "date": "2017-10-01",
+      "W171RC1Q027SBEA": 1072.237,
+      "A262RX1Q020SBEA": 3185.401,
+      "INDPRO": 101.25183333333332,
+      "IPMAN": 100.7106,
+      "TSIFRGHT": 131.70000000000002
+    },
+    {
+      "date": "2018-01-01",
+      "W171RC1Q027SBEA": 1108.738,
+      "A262RX1Q020SBEA": 3212.056,
+      "INDPRO": 101.79256666666667,
+      "IPMAN": 100.80526666666667,
+      "TSIFRGHT": 133.43333333333334
+    },
+    {
+      "date": "2018-04-01",
+      "W171RC1Q027SBEA": 1099.103,
+      "A262RX1Q020SBEA": 3240.014,
+      "INDPRO": 102.97776666666665,
+      "IPMAN": 101.50353333333334,
+      "TSIFRGHT": 136.1
+    },
+    {
+      "date": "2018-07-01",
+      "W171RC1Q027SBEA": 1194.818,
+      "A262RX1Q020SBEA": 3268.208,
+      "INDPRO": 103.83256666666666,
+      "IPMAN": 101.93939999999999,
+      "TSIFRGHT": 136.6
+    },
+    {
+      "date": "2018-10-01",
+      "W171RC1Q027SBEA": 1168.605,
+      "A262RX1Q020SBEA": 3296.095,
+      "INDPRO": 104.0491,
+      "IPMAN": 101.61149999999999,
+      "TSIFRGHT": 138.5
+    },
+    {
+      "date": "2019-01-01",
+      "W171RC1Q027SBEA": 1196.462,
+      "A262RX1Q020SBEA": 3324.685,
+      "INDPRO": 103.0383,
+      "IPMAN": 100.404,
+      "TSIFRGHT": 136.73333333333335
+    },
+    {
+      "date": "2019-04-01",
+      "W171RC1Q027SBEA": 1208.226,
+      "A262RX1Q020SBEA": 3353.292,
+      "INDPRO": 102.36783333333334,
+      "IPMAN": 99.5244,
+      "TSIFRGHT": 137.20000000000002
+    },
+    {
+      "date": "2019-07-01",
+      "W171RC1Q027SBEA": 1220.5,
+      "A262RX1Q020SBEA": 3382.432,
+      "INDPRO": 102.2905,
+      "IPMAN": 99.22676666666666,
+      "TSIFRGHT": 138.79999999999998
+    },
+    {
+      "date": "2019-10-01",
+      "W171RC1Q027SBEA": 1135.442,
+      "A262RX1Q020SBEA": 3411.343,
+      "INDPRO": 101.68853333333334,
+      "IPMAN": 98.65073333333333,
+      "TSIFRGHT": 136.36666666666667
+    },
+    {
+      "date": "2020-01-01",
+      "W171RC1Q027SBEA": 1044.878,
+      "A262RX1Q020SBEA": 3438.996,
+      "INDPRO": 99.93836666666668,
+      "IPMAN": 97.26723333333332,
+      "TSIFRGHT": 134.86666666666667
+    },
+    {
+      "date": "2020-04-01",
+      "W171RC1Q027SBEA": 486.229,
+      "A262RX1Q020SBEA": 3458.696,
+      "INDPRO": 87.3719,
+      "IPMAN": 84.4185,
+      "TSIFRGHT": 125.93333333333334
+    },
+    {
+      "date": "2020-07-01",
+      "W171RC1Q027SBEA": 1094.926,
+      "A262RX1Q020SBEA": 3476.845,
+      "INDPRO": 95.64913333333334,
+      "IPMAN": 94.16983333333333,
+      "TSIFRGHT": 131.5
+    },
+    {
+      "date": "2020-10-01",
+      "W171RC1Q027SBEA": 1212.063,
+      "A262RX1Q020SBEA": 3501.422,
+      "INDPRO": 97.39466666666665,
+      "IPMAN": 96.17353333333334,
+      "TSIFRGHT": 132.73333333333335
+    },
+    {
+      "date": "2021-01-01",
+      "W171RC1Q027SBEA": 1151.028,
+      "A262RX1Q020SBEA": 3528.631,
+      "INDPRO": 97.62756666666667,
+      "IPMAN": 96.07286666666668,
+      "TSIFRGHT": 134.16666666666666
+    },
+    {
+      "date": "2021-04-01",
+      "W171RC1Q027SBEA": 1059.072,
+      "A262RX1Q020SBEA": 3558.405,
+      "INDPRO": 99.26356666666668,
+      "IPMAN": 97.60653333333335,
+      "TSIFRGHT": 135.1
+    },
+    {
+      "date": "2021-07-01",
+      "W171RC1Q027SBEA": 1174.012,
+      "A262RX1Q020SBEA": 3587.186,
+      "INDPRO": 99.71783333333333,
+      "IPMAN": 98.06079999999999,
+      "TSIFRGHT": 132.46666666666667
+    },
+    {
+      "date": "2021-10-01",
+      "W171RC1Q027SBEA": 1447.963,
+      "A262RX1Q020SBEA": 3614.873,
+      "INDPRO": 100.54136666666666,
+      "IPMAN": 98.78163333333333,
+      "TSIFRGHT": 135.33333333333334
+    },
+    {
+      "date": "2022-01-01",
+      "W171RC1Q027SBEA": 1531.596,
+      "A262RX1Q020SBEA": 3644.84,
+      "INDPRO": 100.79423333333334,
+      "IPMAN": 98.48206666666665,
+      "TSIFRGHT": 137.96666666666667
+    },
+    {
+      "date": "2022-04-01",
+      "W171RC1Q027SBEA": 1426.399,
+      "A262RX1Q020SBEA": 3676.024,
+      "INDPRO": 101.26383333333332,
+      "IPMAN": 98.44619999999999,
+      "TSIFRGHT": 138.20000000000002
+    },
+    {
+      "date": "2022-07-01",
+      "W171RC1Q027SBEA": 1340.181,
+      "A262RX1Q020SBEA": 3706.691,
+      "INDPRO": 101.20369999999998,
+      "IPMAN": 98.00563333333334,
+      "TSIFRGHT": 137.73333333333335
+    },
+    {
+      "date": "2022-10-01",
+      "W171RC1Q027SBEA": 1428.334,
+      "A262RX1Q020SBEA": 3736.993,
+      "INDPRO": 100.65816666666667,
+      "IPMAN": 97.14966666666668,
+      "TSIFRGHT": 135.6
+    },
+    {
+      "date": "2023-01-01",
+      "W171RC1Q027SBEA": 1325.657,
+      "A262RX1Q020SBEA": 3766.704,
+      "INDPRO": 100.72236666666667,
+      "IPMAN": 97.25683333333332,
+      "TSIFRGHT": 138.23333333333332
+    },
+    {
+      "date": "2023-04-01",
+      "W171RC1Q027SBEA": 1385.483,
+      "A262RX1Q020SBEA": 3796.147,
+      "INDPRO": 100.76706666666666,
+      "IPMAN": 97.43036666666667,
+      "TSIFRGHT": 136.93333333333334
+    },
+    {
+      "date": "2023-07-01",
+      "W171RC1Q027SBEA": 1477.402,
+      "A262RX1Q020SBEA": 3825.139,
+      "INDPRO": 100.92236666666668,
+      "IPMAN": 97.2922,
+      "TSIFRGHT": 137.4333333333333
+    },
+    {
+      "date": "2023-10-01",
+      "W171RC1Q027SBEA": 1524.505,
+      "A262RX1Q020SBEA": 3853.304,
+      "INDPRO": 100.6453,
+      "IPMAN": 97.09293333333333,
+      "TSIFRGHT": 137.86666666666667
+    },
+    {
+      "date": "2024-01-01",
+      "W171RC1Q027SBEA": 1477.499,
+      "A262RX1Q020SBEA": 3882.228,
+      "INDPRO": 99.98826666666666,
+      "IPMAN": 96.59686666666666,
+      "TSIFRGHT": 136.16666666666666
+    },
+    {
+      "date": "2024-04-01",
+      "W171RC1Q027SBEA": 1563.701,
+      "A262RX1Q020SBEA": 3912.455,
+      "INDPRO": 100.66680000000001,
+      "IPMAN": 96.86500000000001,
+      "TSIFRGHT": 137.29999999999998
+    },
+    {
+      "date": "2024-07-01",
+      "W171RC1Q027SBEA": 1561.161,
+      "A262RX1Q020SBEA": 3942.61,
+      "INDPRO": 100.07166666666667,
+      "IPMAN": 96.29236666666667,
+      "TSIFRGHT": 137.86666666666667
+    },
+    {
+      "date": "2024-10-01",
+      "W171RC1Q027SBEA": 1445.336,
+      "A262RX1Q020SBEA": 3972.086,
+      "INDPRO": 99.69643333333333,
+      "IPMAN": 95.77396666666668,
+      "TSIFRGHT": 137.53333333333333
+    },
+    {
+      "date": "2025-01-01",
+      "W171RC1Q027SBEA": 1703.682,
+      "A262RX1Q020SBEA": 4003.184,
+      "INDPRO": 100.7348,
+      "IPMAN": 96.70416666666667,
+      "TSIFRGHT": 137.4
+    },
+    {
+      "date": "2025-04-01",
+      "W171RC1Q027SBEA": 1468.83,
+      "A262RX1Q020SBEA": 4039.925,
+      "INDPRO": 101.19063333333334,
+      "IPMAN": 97.38633333333333,
+      "TSIFRGHT": 137.16666666666666
+    },
+    {
+      "date": "2025-07-01",
+      "W171RC1Q027SBEA": 1422.863,
+      "A262RX1Q020SBEA": 4079.155,
+      "INDPRO": 101.72890000000001,
+      "IPMAN": 98.06686666666667,
+      "TSIFRGHT": 138.56666666666666
+    },
+    {
+      "date": "2025-10-01",
+      "W171RC1Q027SBEA": 1418.124,
+      "A262RX1Q020SBEA": 4118.471,
+      "INDPRO": 101.24933333333333,
+      "IPMAN": 97.10946666666666,
+      "TSIFRGHT": 136.86666666666667
+    },
+    {
+      "date": "2026-01-01",
+      "W171RC1Q027SBEA": 1498.465,
+      "A262RX1Q020SBEA": 4160.668,
+      "INDPRO": 101.56670000000001,
+      "IPMAN": 97.5799,
+      "TSIFRGHT": 137.96666666666667
+    }
+  ],
+  "annotations": [
+    "oil_embargo_1973",
+    "gulf_war_1990",
+    "gfc_2008",
+    "shale_2014",
+    "covid_2020",
+    "reopening_2021"
+  ],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "zscore"
+  ],
+  "evidenceLabel": "Supported historical pattern",
+  "methodology": {
+    "formula": "Official investment and output series; monthly physical-output indexes are averaged within genuine quarters.",
+    "notes": "Net investment is nominal while capital consumption is real, so raw mode separates units."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T00:14:53+00:00"
+}

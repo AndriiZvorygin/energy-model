@@ -308,6 +308,8 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
         oil_equity_return_lag_rows,
         energy_gdp_lead_lag_rows,
         system_response_core,
+        system_response_current,
+        system_response_catalogue,
         output_quality_rows,
         output_quality_correlation_rows,
     )

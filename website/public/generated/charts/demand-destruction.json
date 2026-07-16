@@ -1,0 +1,3556 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "demand-destruction",
+  "title": "Demand destruction sequence",
+  "description": "Oil prices can fall while activity, petroleum demand, and employment conditions worsen when falling demand drives the decline.",
+  "plainLanguageSummary": "Oil prices can fall while activity, petroleum demand, and employment conditions worsen when falling demand drives the decline.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "WTI, petroleum consumption, and industrial production use year-over-year change; unemployment is a published level.",
+    "explanation": "A falling oil price can also reflect supply growth, efficiency, currency moves, or policy rather than demand destruction.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "A falling oil price can also reflect supply growth, efficiency, currency moves, or policy rather than demand destruction."
+  ],
+  "sourceNotes": [
+    "FRED DCOILWTICO",
+    "EIA Monthly Energy Review",
+    "Federal Reserve via FRED",
+    "BLS via FRED"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "WTI_YoY": {
+        "mean": 11.647034578574276,
+        "standardDeviation": 35.56999748992162,
+        "n": 240
+      },
+      "petroleum_consumption_YoY": {
+        "mean": -0.05918366006800368,
+        "standardDeviation": 3.3151150727180663,
+        "n": 240
+      },
+      "Industrial_production_YoY": {
+        "mean": 0.7684584215383505,
+        "standardDeviation": 4.032855339024752,
+        "n": 240
+      },
+      "unemployment_rate": {
+        "mean": 5.88125,
+        "standardDeviation": 1.805738105087963,
+        "n": 240
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "1986-01-01",
+    "end": "2026-06-01"
+  },
+  "series": [
+    {
+      "key": "WTI_YoY",
+      "label": "WTI growth",
+      "unit": "percent",
+      "source": "FRED DCOILWTICO",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#be123c",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "petroleum_consumption_YoY",
+      "label": "Petroleum consumption growth",
+      "unit": "percent",
+      "source": "EIA Monthly Energy Review",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#d97706",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-03-01"
+    },
+    {
+      "key": "Industrial_production_YoY",
+      "label": "Industrial production growth",
+      "unit": "percent",
+      "source": "Federal Reserve via FRED",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "unemployment_rate",
+      "label": "Unemployment rate",
+      "unit": "percent",
+      "source": "BLS via FRED",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#475569",
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1986-01-01",
+      "WTI_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "Industrial_production_YoY": null,
+      "unemployment_rate": 6.7
+    },
+    {
+      "date": "1986-02-01",
+      "WTI_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "Industrial_production_YoY": null,
+      "unemployment_rate": 7.2
+    },
+    {
+      "date": "1986-03-01",
+      "WTI_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "Industrial_production_YoY": null,
+      "unemployment_rate": 7.2
+    },
+    {
+      "date": "1986-04-01",
+      "WTI_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "Industrial_production_YoY": null,
+      "unemployment_rate": 7.1
+    },
+    {
+      "date": "1986-05-01",
+      "WTI_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "Industrial_production_YoY": null,
+      "unemployment_rate": 7.2
+    },
+    {
+      "date": "1986-06-01",
+      "WTI_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "Industrial_production_YoY": null,
+      "unemployment_rate": 7.2
+    },
+    {
+      "date": "1986-07-01",
+      "WTI_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "Industrial_production_YoY": null,
+      "unemployment_rate": 7.0
+    },
+    {
+      "date": "1986-08-01",
+      "WTI_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "Industrial_production_YoY": null,
+      "unemployment_rate": 6.9
+    },
+    {
+      "date": "1986-09-01",
+      "WTI_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "Industrial_production_YoY": null,
+      "unemployment_rate": 7.0
+    },
+    {
+      "date": "1986-10-01",
+      "WTI_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "Industrial_production_YoY": null,
+      "unemployment_rate": 7.0
+    },
+    {
+      "date": "1986-11-01",
+      "WTI_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "Industrial_production_YoY": null,
+      "unemployment_rate": 6.9
+    },
+    {
+      "date": "1986-12-01",
+      "WTI_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "Industrial_production_YoY": null,
+      "unemployment_rate": 6.6
+    },
+    {
+      "date": "1987-01-01",
+      "WTI_YoY": -18.643146052139624,
+      "petroleum_consumption_YoY": 3.6520161224133485,
+      "Industrial_production_YoY": 0.6100656345238598,
+      "unemployment_rate": 6.6
+    },
+    {
+      "date": "1987-02-01",
+      "WTI_YoY": 14.844707805476109,
+      "petroleum_consumption_YoY": 4.459624690076436,
+      "Industrial_production_YoY": 2.6567648418983847,
+      "unemployment_rate": 6.6
+    },
+    {
+      "date": "1987-03-01",
+      "WTI_YoY": 45.1168058898485,
+      "petroleum_consumption_YoY": -0.9942426041426478,
+      "Industrial_production_YoY": 3.54296110984762,
+      "unemployment_rate": 6.6
+    },
+    {
+      "date": "1987-04-01",
+      "WTI_YoY": 45.41943051286199,
+      "petroleum_consumption_YoY": 3.0808653446679823,
+      "Industrial_production_YoY": 4.0493229629387395,
+      "unemployment_rate": 6.3
+    },
+    {
+      "date": "1987-05-01",
+      "WTI_YoY": 26.401232465240156,
+      "petroleum_consumption_YoY": -0.3276583481108597,
+      "Industrial_production_YoY": 4.552760573702974,
+      "unemployment_rate": 6.3
+    },
+    {
+      "date": "1987-06-01",
+      "WTI_YoY": 49.512952465708395,
+      "petroleum_consumption_YoY": 4.283870318838634,
+      "Industrial_production_YoY": 5.519439713663821,
+      "unemployment_rate": 6.2
+    },
+    {
+      "date": "1987-07-01",
+      "WTI_YoY": 84.22970497016263,
+      "petroleum_consumption_YoY": 4.493623536750535,
+      "Industrial_production_YoY": 5.549483162984625,
+      "unemployment_rate": 6.1
+    },
+    {
+      "date": "1987-08-01",
+      "WTI_YoY": 34.539318045610855,
+      "petroleum_consumption_YoY": -2.1069647573795036,
+      "Industrial_production_YoY": 6.539368743960372,
+      "unemployment_rate": 6.0
+    },
+    {
+      "date": "1987-09-01",
+      "WTI_YoY": 31.367713004484308,
+      "petroleum_consumption_YoY": 4.534163459501572,
+      "Industrial_production_YoY": 6.686739906867412,
+      "unemployment_rate": 5.9
+    },
+    {
+      "date": "1987-10-01",
+      "WTI_YoY": 33.31095719037012,
+      "petroleum_consumption_YoY": 2.0370854857072684,
+      "Industrial_production_YoY": 7.649118005085254,
+      "unemployment_rate": 6.0
+    },
+    {
+      "date": "1987-11-01",
+      "WTI_YoY": 23.86362850523842,
+      "petroleum_consumption_YoY": 0.695056297263652,
+      "Industrial_production_YoY": 7.742526773047431,
+      "unemployment_rate": 5.8
+    },
+    {
+      "date": "1987-12-01",
+      "WTI_YoY": 7.244561741102884,
+      "petroleum_consumption_YoY": 1.6711803279721105,
+      "Industrial_production_YoY": 7.328838312501662,
+      "unemployment_rate": 5.7
+    },
+    {
+      "date": "1988-01-01",
+      "WTI_YoY": -8.159849877450975,
+      "petroleum_consumption_YoY": 4.218279402703162,
+      "Industrial_production_YoY": 7.683256014634088,
+      "unemployment_rate": 5.7
+    },
+    {
+      "date": "1988-02-01",
+      "WTI_YoY": -5.370645722927547,
+      "petroleum_consumption_YoY": 8.780561208235316,
+      "Industrial_production_YoY": 6.815010338304517,
+      "unemployment_rate": 5.7
+    },
+    {
+      "date": "1988-03-01",
+      "WTI_YoY": -11.503481790169523,
+      "petroleum_consumption_YoY": 9.224118486496424,
+      "Industrial_production_YoY": 6.92376356971911,
+      "unemployment_rate": 5.7
+    },
+    {
+      "date": "1988-04-01",
+      "WTI_YoY": -4.361710264647389,
+      "petroleum_consumption_YoY": 0.5713540103017278,
+      "Industrial_production_YoY": 6.867457888147577,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "1988-05-01",
+      "WTI_YoY": -10.360713241742193,
+      "petroleum_consumption_YoY": 1.0755909256505047,
+      "Industrial_production_YoY": 5.981899007846314,
+      "unemployment_rate": 5.6
+    },
+    {
+      "date": "1988-06-01",
+      "WTI_YoY": -17.662643508978515,
+      "petroleum_consumption_YoY": 1.3605419809456176,
+      "Industrial_production_YoY": 5.741687913317128,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "1988-07-01",
+      "WTI_YoY": -27.385560331656045,
+      "petroleum_consumption_YoY": -2.437212842662395,
+      "Industrial_production_YoY": 5.040822414780433,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "1988-08-01",
+      "WTI_YoY": -23.57089923844492,
+      "petroleum_consumption_YoY": 7.23886420315909,
+      "Industrial_production_YoY": 4.781020904097089,
+      "unemployment_rate": 5.6
+    },
+    {
+      "date": "1988-09-01",
+      "WTI_YoY": -25.573709444677185,
+      "petroleum_consumption_YoY": 2.282477217938994,
+      "Industrial_production_YoY": 4.043725665351872,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "1988-10-01",
+      "WTI_YoY": -30.659080752923728,
+      "petroleum_consumption_YoY": 4.073785124995766,
+      "Industrial_production_YoY": 3.118549371874013,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "1988-11-01",
+      "WTI_YoY": -24.995419346750623,
+      "petroleum_consumption_YoY": 8.336431134920463,
+      "Industrial_production_YoY": 2.8661985664013345,
+      "unemployment_rate": 5.3
+    },
+    {
+      "date": "1988-12-01",
+      "WTI_YoY": -5.164619263135228,
+      "petroleum_consumption_YoY": 5.4568477688093475,
+      "Industrial_production_YoY": 2.755857936251749,
+      "unemployment_rate": 5.3
+    },
+    {
+      "date": "1989-01-01",
+      "WTI_YoY": 5.223653429964181,
+      "petroleum_consumption_YoY": -0.7852301988130805,
+      "Industrial_production_YoY": 3.0792614276063945,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "1989-02-01",
+      "WTI_YoY": 6.792123841115938,
+      "petroleum_consumption_YoY": -2.834049662873017,
+      "Industrial_production_YoY": 2.111356945517584,
+      "unemployment_rate": 5.2
+    },
+    {
+      "date": "1989-03-01",
+      "WTI_YoY": 20.291536723329262,
+      "petroleum_consumption_YoY": 1.8387697407662218,
+      "Industrial_production_YoY": 2.1147048238211674,
+      "unemployment_rate": 5.0
+    },
+    {
+      "date": "1989-04-01",
+      "WTI_YoY": 17.951014695591304,
+      "petroleum_consumption_YoY": 0.14509396163022714,
+      "Industrial_production_YoY": 1.510544400528735,
+      "unemployment_rate": 5.2
+    },
+    {
+      "date": "1989-05-01",
+      "WTI_YoY": 15.495283767904212,
+      "petroleum_consumption_YoY": 2.2834718432676038,
+      "Industrial_production_YoY": 1.1373664245240223,
+      "unemployment_rate": 5.2
+    },
+    {
+      "date": "1989-06-01",
+      "WTI_YoY": 21.314045268281955,
+      "petroleum_consumption_YoY": 2.6941108158383464,
+      "Industrial_production_YoY": 0.8371301845179868,
+      "unemployment_rate": 5.3
+    },
+    {
+      "date": "1989-07-01",
+      "WTI_YoY": 27.642707349111628,
+      "petroleum_consumption_YoY": -1.158763467411661,
+      "Industrial_production_YoY": -0.150328322933313,
+      "unemployment_rate": 5.2
+    },
+    {
+      "date": "1989-08-01",
+      "WTI_YoY": 19.67566659197848,
+      "petroleum_consumption_YoY": -0.6852054699633459,
+      "Industrial_production_YoY": 0.32497957712054326,
+      "unemployment_rate": 5.2
+    },
+    {
+      "date": "1989-09-01",
+      "WTI_YoY": 34.78373524655347,
+      "petroleum_consumption_YoY": -1.6617533173242771,
+      "Industrial_production_YoY": 0.3240432253134973,
+      "unemployment_rate": 5.3
+    },
+    {
+      "date": "1989-10-01",
+      "WTI_YoY": 45.947946859144025,
+      "petroleum_consumption_YoY": -1.5713568711777648,
+      "Industrial_production_YoY": -0.24121871415987428,
+      "unemployment_rate": 5.3
+    },
+    {
+      "date": "1989-11-01",
+      "WTI_YoY": 40.41014432194399,
+      "petroleum_consumption_YoY": -1.7938258121036887,
+      "Industrial_production_YoY": -0.14564426549978915,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "1989-12-01",
+      "WTI_YoY": 28.796907246461068,
+      "petroleum_consumption_YoY": 3.05644503004161,
+      "Industrial_production_YoY": -0.05074563869427173,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "1990-01-01",
+      "WTI_YoY": 26.846534617795626,
+      "petroleum_consumption_YoY": -0.81675077022898,
+      "Industrial_production_YoY": -0.848734447631927,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "1990-02-01",
+      "WTI_YoY": 23.284921807487514,
+      "petroleum_consumption_YoY": -3.7093966710970427,
+      "Industrial_production_YoY": 0.49643524964546604,
+      "unemployment_rate": 5.3
+    },
+    {
+      "date": "1990-03-01",
+      "WTI_YoY": 4.637816400326611,
+      "petroleum_consumption_YoY": -4.988241123071802,
+      "Industrial_production_YoY": 0.7451289008624462,
+      "unemployment_rate": 5.2
+    },
+    {
+      "date": "1990-04-01",
+      "WTI_YoY": -12.546869808723715,
+      "petroleum_consumption_YoY": 0.7529277429911607,
+      "Industrial_production_YoY": 0.4962367772133325,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "1990-05-01",
+      "WTI_YoY": -9.560637487134759,
+      "petroleum_consumption_YoY": 2.1205142621429474,
+      "Industrial_production_YoY": 1.3782408246781896,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "1990-06-01",
+      "WTI_YoY": -16.733867267747705,
+      "petroleum_consumption_YoY": -1.492731659276314,
+      "Industrial_production_YoY": 1.7298125132548803,
+      "unemployment_rate": 5.2
+    },
+    {
+      "date": "1990-07-01",
+      "WTI_YoY": -6.710019236198206,
+      "petroleum_consumption_YoY": 3.7565143483414998,
+      "Industrial_production_YoY": 2.5412840137444492,
+      "unemployment_rate": 5.5
+    },
+    {
+      "date": "1990-08-01",
+      "WTI_YoY": 46.98916426782746,
+      "petroleum_consumption_YoY": 3.956789275064443,
+      "Industrial_production_YoY": 1.9009861881851498,
+      "unemployment_rate": 5.7
+    },
+    {
+      "date": "1990-09-01",
+      "WTI_YoY": 71.03142773807787,
+      "petroleum_consumption_YoY": -1.5915978515947393,
+      "Industrial_production_YoY": 2.229147315019908,
+      "unemployment_rate": 5.9
+    },
+    {
+      "date": "1990-10-01",
+      "WTI_YoY": 79.3215955631819,
+      "petroleum_consumption_YoY": -2.6800710496743485,
+      "Industrial_production_YoY": 1.7690408900654653,
+      "unemployment_rate": 5.9
+    },
+    {
+      "date": "1990-11-01",
+      "WTI_YoY": 62.83451228166561,
+      "petroleum_consumption_YoY": -3.953530661539295,
+      "Industrial_production_YoY": 0.1366191065791167,
+      "unemployment_rate": 6.2
+    },
+    {
+      "date": "1990-12-01",
+      "WTI_YoY": 29.29383886255923,
+      "petroleum_consumption_YoY": -13.1580147493354,
+      "Industrial_production_YoY": -1.1405030076012013,
+      "unemployment_rate": 6.3
+    },
+    {
+      "date": "1991-01-01",
+      "WTI_YoY": 10.3699874749001,
+      "petroleum_consumption_YoY": -2.03563367929126,
+      "Industrial_production_YoY": -0.961460577686335,
+      "unemployment_rate": 6.4
+    },
+    {
+      "date": "1991-02-01",
+      "WTI_YoY": -7.3961018405462875,
+      "petroleum_consumption_YoY": -5.955263141683154,
+      "Industrial_production_YoY": -2.577958439290029,
+      "unemployment_rate": 6.6
+    },
+    {
+      "date": "1991-03-01",
+      "WTI_YoY": -2.3849017902927483,
+      "petroleum_consumption_YoY": -5.450764389671036,
+      "Industrial_production_YoY": -3.61869587651098,
+      "unemployment_rate": 6.8
+    },
+    {
+      "date": "1991-04-01",
+      "WTI_YoY": 13.049849393503553,
+      "petroleum_consumption_YoY": -3.9127290251484204,
+      "Industrial_production_YoY": -3.1105501802648705,
+      "unemployment_rate": 6.7
+    },
+    {
+      "date": "1991-05-01",
+      "WTI_YoY": 16.663752840980052,
+      "petroleum_consumption_YoY": -4.685196816756232,
+      "Industrial_production_YoY": -2.494978108064083,
+      "unemployment_rate": 6.9
+    },
+    {
+      "date": "1991-06-01",
+      "WTI_YoY": 20.92669709070165,
+      "petroleum_consumption_YoY": -2.372736422991617,
+      "Industrial_production_YoY": -2.037136646180182,
+      "unemployment_rate": 6.9
+    },
+    {
+      "date": "1991-07-01",
+      "WTI_YoY": 15.979939535884903,
+      "petroleum_consumption_YoY": -1.3506545525222236,
+      "Industrial_production_YoY": -1.5908264836979713,
+      "unemployment_rate": 6.8
+    },
+    {
+      "date": "1991-08-01",
+      "WTI_YoY": -20.557639058761556,
+      "petroleum_consumption_YoY": -5.415576578072812,
+      "Industrial_production_YoY": -1.934469200524247,
+      "unemployment_rate": 6.9
+    },
+    {
+      "date": "1991-09-01",
+      "WTI_YoY": -34.68178765947921,
+      "petroleum_consumption_YoY": 1.7527683548276274,
+      "Industrial_production_YoY": -1.1640559598299127,
+      "unemployment_rate": 6.9
+    },
+    {
+      "date": "1991-10-01",
+      "WTI_YoY": -35.54064976897372,
+      "petroleum_consumption_YoY": 0.7832035857513464,
+      "Industrial_production_YoY": -0.6375380485583504,
+      "unemployment_rate": 7.0
+    },
+    {
+      "date": "1991-11-01",
+      "WTI_YoY": -30.530858222019585,
+      "petroleum_consumption_YoY": -0.06494496788087556,
+      "Industrial_production_YoY": 0.4829362003084814,
+      "unemployment_rate": 7.0
+    },
+    {
+      "date": "1991-12-01",
+      "WTI_YoY": -28.52866376564188,
+      "petroleum_consumption_YoY": 3.63065731176877,
+      "Industrial_production_YoY": 0.7336733229858172,
+      "unemployment_rate": 7.3
+    },
+    {
+      "date": "1992-01-01",
+      "WTI_YoY": -25.555255336395565,
+      "petroleum_consumption_YoY": 1.0516303763729695,
+      "Industrial_production_YoY": 0.5334053046102349,
+      "unemployment_rate": 7.3
+    },
+    {
+      "date": "1992-02-01",
+      "WTI_YoY": -7.15419362715175,
+      "petroleum_consumption_YoY": 6.946605201100486,
+      "Industrial_production_YoY": 1.996743776757559,
+      "unemployment_rate": 7.4
+    },
+    {
+      "date": "1992-03-01",
+      "WTI_YoY": -4.92265315771081,
+      "petroleum_consumption_YoY": 3.7092305992991514,
+      "Industrial_production_YoY": 3.4616952793256273,
+      "unemployment_rate": 7.4
+    },
+    {
+      "date": "1992-04-01",
+      "WTI_YoY": -2.8804608737397874,
+      "petroleum_consumption_YoY": 3.848895443159006,
+      "Industrial_production_YoY": 3.972638518327498,
+      "unemployment_rate": 7.4
+    },
+    {
+      "date": "1992-05-01",
+      "WTI_YoY": -1.2093511164393944,
+      "petroleum_consumption_YoY": 1.987255295686463,
+      "Industrial_production_YoY": 3.341941886534139,
+      "unemployment_rate": 7.6
+    },
+    {
+      "date": "1992-06-01",
+      "WTI_YoY": 10.874958911018151,
+      "petroleum_consumption_YoY": 0.35571954103530423,
+      "Industrial_production_YoY": 2.563756841098086,
+      "unemployment_rate": 7.8
+    },
+    {
+      "date": "1992-07-01",
+      "WTI_YoY": 1.738883133239888,
+      "petroleum_consumption_YoY": 1.038790853508731,
+      "Industrial_production_YoY": 3.218992232364881,
+      "unemployment_rate": 7.7
+    },
+    {
+      "date": "1992-08-01",
+      "WTI_YoY": -1.6345288482069176,
+      "petroleum_consumption_YoY": -1.4540404577769173,
+      "Industrial_production_YoY": 2.6429698460063156,
+      "unemployment_rate": 7.6
+    },
+    {
+      "date": "1992-09-01",
+      "WTI_YoY": -0.023468181922037257,
+      "petroleum_consumption_YoY": 0.1528493946972853,
+      "Industrial_production_YoY": 2.1710235537090616,
+      "unemployment_rate": 7.6
+    },
+    {
+      "date": "1992-10-01",
+      "WTI_YoY": -6.650463384381899,
+      "petroleum_consumption_YoY": 2.1080156972178576,
+      "Industrial_production_YoY": 2.917078740220802,
+      "unemployment_rate": 7.3
+    },
+    {
+      "date": "1992-11-01",
+      "WTI_YoY": -9.44952086160109,
+      "petroleum_consumption_YoY": 1.6175329886209067,
+      "Industrial_production_YoY": 3.4710914183461616,
+      "unemployment_rate": 7.4
+    },
+    {
+      "date": "1992-12-01",
+      "WTI_YoY": -0.4308335146512299,
+      "petroleum_consumption_YoY": 4.241903204794117,
+      "Industrial_production_YoY": 4.152288897664813,
+      "unemployment_rate": 7.4
+    },
+    {
+      "date": "1993-01-01",
+      "WTI_YoY": 1.3124274099883815,
+      "petroleum_consumption_YoY": -6.040021483762215,
+      "Industrial_production_YoY": 5.1026982701394274,
+      "unemployment_rate": 7.3
+    },
+    {
+      "date": "1993-02-01",
+      "WTI_YoY": 5.646869749433869,
+      "petroleum_consumption_YoY": -1.3197128129743274,
+      "Industrial_production_YoY": 4.8685284067500945,
+      "unemployment_rate": 7.1
+    },
+    {
+      "date": "1993-03-01",
+      "WTI_YoY": 7.40074615329982,
+      "petroleum_consumption_YoY": 3.7052312552939837,
+      "Industrial_production_YoY": 3.8911814838072933,
+      "unemployment_rate": 7.0
+    },
+    {
+      "date": "1993-04-01",
+      "WTI_YoY": 0.11122095897182493,
+      "petroleum_consumption_YoY": -0.5524402892243763,
+      "Industrial_production_YoY": 3.3914177146763924,
+      "unemployment_rate": 7.1
+    },
+    {
+      "date": "1993-05-01",
+      "WTI_YoY": -4.891420943481684,
+      "petroleum_consumption_YoY": -0.6791347540411885,
+      "Industrial_production_YoY": 2.6622718052738525,
+      "unemployment_rate": 7.1
+    },
+    {
+      "date": "1993-06-01",
+      "WTI_YoY": -14.699671039272221,
+      "petroleum_consumption_YoY": 0.14237259289402449,
+      "Industrial_production_YoY": 2.8411547715022856,
+      "unemployment_rate": 7.0
+    },
+    {
+      "date": "1993-07-01",
+      "WTI_YoY": -17.842381646466865,
+      "petroleum_consumption_YoY": 0.5474211937430917,
+      "Industrial_production_YoY": 2.1777342523886745,
+      "unemployment_rate": 6.9
+    },
+    {
+      "date": "1993-08-01",
+      "WTI_YoY": -15.596471724294625,
+      "petroleum_consumption_YoY": 1.8426218911511194,
+      "Industrial_production_YoY": 2.628418293185275,
+      "unemployment_rate": 6.8
+    },
+    {
+      "date": "1993-09-01",
+      "WTI_YoY": -20.003679820044916,
+      "petroleum_consumption_YoY": 4.331284398658397,
+      "Industrial_production_YoY": 2.833713227717971,
+      "unemployment_rate": 6.7
+    },
+    {
+      "date": "1993-10-01",
+      "WTI_YoY": -16.28972870248101,
+      "petroleum_consumption_YoY": -1.2801190802033235,
+      "Industrial_production_YoY": 2.892835100274227,
+      "unemployment_rate": 6.8
+    },
+    {
+      "date": "1993-11-01",
+      "WTI_YoY": -18.336909707954774,
+      "petroleum_consumption_YoY": 3.741820022548281,
+      "Industrial_production_YoY": 2.972500941748568,
+      "unemployment_rate": 6.6
+    },
+    {
+      "date": "1993-12-01",
+      "WTI_YoY": -25.235943456074107,
+      "petroleum_consumption_YoY": -0.006346657826361568,
+      "Industrial_production_YoY": 3.407732938414032,
+      "unemployment_rate": 6.5
+    },
+    {
+      "date": "1994-01-01",
+      "WTI_YoY": -21.045257110830875,
+      "petroleum_consumption_YoY": 11.685196210932713,
+      "Industrial_production_YoY": 3.3086266095749384,
+      "unemployment_rate": 6.6
+    },
+    {
+      "date": "1994-02-01",
+      "WTI_YoY": -26.41157589035511,
+      "petroleum_consumption_YoY": 6.201699847270548,
+      "Industrial_production_YoY": 2.8734118125557373,
+      "unemployment_rate": 6.6
+    },
+    {
+      "date": "1994-03-01",
+      "WTI_YoY": -27.759354742089382,
+      "petroleum_consumption_YoY": -1.593983034550539,
+      "Industrial_production_YoY": 4.013742016462052,
+      "unemployment_rate": 6.5
+    },
+    {
+      "date": "1994-04-01",
+      "WTI_YoY": -18.9235896802864,
+      "petroleum_consumption_YoY": 4.270165609446841,
+      "Industrial_production_YoY": 4.342604424720231,
+      "unemployment_rate": 6.4
+    },
+    {
+      "date": "1994-05-01",
+      "WTI_YoY": -10.3283409657003,
+      "petroleum_consumption_YoY": 4.308169820943486,
+      "Industrial_production_YoY": 5.220887873549018,
+      "unemployment_rate": 6.1
+    },
+    {
+      "date": "1994-06-01",
+      "WTI_YoY": -0.17854167162616452,
+      "petroleum_consumption_YoY": 4.219422153564145,
+      "Industrial_production_YoY": 5.692891278467149,
+      "unemployment_rate": 6.1
+    },
+    {
+      "date": "1994-07-01",
+      "WTI_YoY": 9.863051984348804,
+      "petroleum_consumption_YoY": 0.40948415681754113,
+      "Industrial_production_YoY": 5.548865528406344,
+      "unemployment_rate": 6.1
+    },
+    {
+      "date": "1994-08-01",
+      "WTI_YoY": 2.0685750401601144,
+      "petroleum_consumption_YoY": 4.083611679775889,
+      "Industrial_production_YoY": 6.384761951629092,
+      "unemployment_rate": 6.0
+    },
+    {
+      "date": "1994-09-01",
+      "WTI_YoY": -0.33461193177182214,
+      "petroleum_consumption_YoY": -1.709262357927488,
+      "Industrial_production_YoY": 6.156180732641192,
+      "unemployment_rate": 5.9
+    },
+    {
+      "date": "1994-10-01",
+      "WTI_YoY": -2.4080583390168386,
+      "petroleum_consumption_YoY": 1.817012347722402,
+      "Industrial_production_YoY": 6.231501771426062,
+      "unemployment_rate": 5.8
+    },
+    {
+      "date": "1994-11-01",
+      "WTI_YoY": 8.793113334671276,
+      "petroleum_consumption_YoY": -2.7724474005039634,
+      "Industrial_production_YoY": 6.4711768991924545,
+      "unemployment_rate": 5.6
+    },
+    {
+      "date": "1994-12-01",
+      "WTI_YoY": 18.22118696893149,
+      "petroleum_consumption_YoY": 1.309418869203638,
+      "Industrial_production_YoY": 6.925835091579047,
+      "unemployment_rate": 5.5
+    },
+    {
+      "date": "1995-01-01",
+      "WTI_YoY": 20.0500697173279,
+      "petroleum_consumption_YoY": -5.121683262039777,
+      "Industrial_production_YoY": 6.800469318244806,
+      "unemployment_rate": 5.6
+    },
+    {
+      "date": "1995-02-01",
+      "WTI_YoY": 25.63381284717274,
+      "petroleum_consumption_YoY": -0.8768911458321926,
+      "Industrial_production_YoY": 6.617845269116707,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "1995-03-01",
+      "WTI_YoY": 26.28087425220633,
+      "petroleum_consumption_YoY": 0.6971678322902797,
+      "Industrial_production_YoY": 5.7165348260771465,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "1995-04-01",
+      "WTI_YoY": 21.171228924931086,
+      "petroleum_consumption_YoY": -2.9740453361828845,
+      "Industrial_production_YoY": 4.913630863868201,
+      "unemployment_rate": 5.8
+    },
+    {
+      "date": "1995-05-01",
+      "WTI_YoY": 10.357010625863605,
+      "petroleum_consumption_YoY": -0.21769564608709047,
+      "Industrial_production_YoY": 4.945992374531105,
+      "unemployment_rate": 5.6
+    },
+    {
+      "date": "1995-06-01",
+      "WTI_YoY": -3.2218830487455885,
+      "petroleum_consumption_YoY": 1.3571043794038395,
+      "Industrial_production_YoY": 4.587732144288292,
+      "unemployment_rate": 5.6
+    },
+    {
+      "date": "1995-07-01",
+      "WTI_YoY": -11.849703630211927,
+      "petroleum_consumption_YoY": -1.8813078525746207,
+      "Industrial_production_YoY": 4.012060921624383,
+      "unemployment_rate": 5.7
+    },
+    {
+      "date": "1995-08-01",
+      "WTI_YoY": -1.9724705548460286,
+      "petroleum_consumption_YoY": -0.48574357745335695,
+      "Industrial_production_YoY": 4.689029105863818,
+      "unemployment_rate": 5.7
+    },
+    {
+      "date": "1995-09-01",
+      "WTI_YoY": 4.469783819194251,
+      "petroleum_consumption_YoY": 2.8520746358403404,
+      "Industrial_production_YoY": 4.7816808149161005,
+      "unemployment_rate": 5.6
+    },
+    {
+      "date": "1995-10-01",
+      "WTI_YoY": -1.5974577513659383,
+      "petroleum_consumption_YoY": -0.49588415125580987,
+      "Industrial_production_YoY": 3.7627368685886786,
+      "unemployment_rate": 5.5
+    },
+    {
+      "date": "1995-11-01",
+      "WTI_YoY": -0.4261324331054972,
+      "petroleum_consumption_YoY": 3.350891049559235,
+      "Industrial_production_YoY": 3.3298500978240275,
+      "unemployment_rate": 5.6
+    },
+    {
+      "date": "1995-12-01",
+      "WTI_YoY": 10.880116553350906,
+      "petroleum_consumption_YoY": 0.1879174322994004,
+      "Industrial_production_YoY": 2.6396897921781903,
+      "unemployment_rate": 5.6
+    },
+    {
+      "date": "1996-01-01",
+      "WTI_YoY": 4.51797760089081,
+      "petroleum_consumption_YoY": 6.508057627373298,
+      "Industrial_production_YoY": 1.8788215519394358,
+      "unemployment_rate": 5.6
+    },
+    {
+      "date": "1996-02-01",
+      "WTI_YoY": 2.8190630048465115,
+      "petroleum_consumption_YoY": 5.066184653709804,
+      "Industrial_production_YoY": 3.4865787366735512,
+      "unemployment_rate": 5.5
+    },
+    {
+      "date": "1996-03-01",
+      "WTI_YoY": 15.066782810685254,
+      "petroleum_consumption_YoY": 4.565166206021809,
+      "Industrial_production_YoY": 3.188414739319012,
+      "unemployment_rate": 5.5
+    },
+    {
+      "date": "1996-04-01",
+      "WTI_YoY": 18.09795896773123,
+      "petroleum_consumption_YoY": 4.549604862463363,
+      "Industrial_production_YoY": 4.395391371041835,
+      "unemployment_rate": 5.6
+    },
+    {
+      "date": "1996-05-01",
+      "WTI_YoY": 7.211272794253087,
+      "petroleum_consumption_YoY": 4.043451725371616,
+      "Industrial_production_YoY": 4.661591494286932,
+      "unemployment_rate": 5.6
+    },
+    {
+      "date": "1996-06-01",
+      "WTI_YoY": 10.7210270816392,
+      "petroleum_consumption_YoY": -0.3151726333347371,
+      "Industrial_production_YoY": 5.110978907668273,
+      "unemployment_rate": 5.3
+    },
+    {
+      "date": "1996-07-01",
+      "WTI_YoY": 22.953292703083484,
+      "petroleum_consumption_YoY": 6.25228672412923,
+      "Industrial_production_YoY": 5.568536043472649,
+      "unemployment_rate": 5.5
+    },
+    {
+      "date": "1996-08-01",
+      "WTI_YoY": 21.543423523012393,
+      "petroleum_consumption_YoY": 3.291269562797461,
+      "Industrial_production_YoY": 4.720645436557502,
+      "unemployment_rate": 5.1
+    },
+    {
+      "date": "1996-09-01",
+      "WTI_YoY": 31.527255768017337,
+      "petroleum_consumption_YoY": -1.9220783012552367,
+      "Industrial_production_YoY": 4.952801645891314,
+      "unemployment_rate": 5.2
+    },
+    {
+      "date": "1996-10-01",
+      "WTI_YoY": 42.71135753792856,
+      "petroleum_consumption_YoY": 9.11412404531282,
+      "Industrial_production_YoY": 5.168722601692299,
+      "unemployment_rate": 5.2
+    },
+    {
+      "date": "1996-11-01",
+      "WTI_YoY": 31.749340002778958,
+      "petroleum_consumption_YoY": 3.1059527745637805,
+      "Industrial_production_YoY": 5.855898562613082,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "1996-12-01",
+      "WTI_YoY": 32.59701694253501,
+      "petroleum_consumption_YoY": -0.24021886459831832,
+      "Industrial_production_YoY": 6.165643121709419,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "1997-01-01",
+      "WTI_YoY": 33.29315332690452,
+      "petroleum_consumption_YoY": 1.5509323412786546,
+      "Industrial_production_YoY": 6.946049233947327,
+      "unemployment_rate": 5.3
+    },
+    {
+      "date": "1997-02-01",
+      "WTI_YoY": 16.145891478637697,
+      "petroleum_consumption_YoY": -4.7203935888537,
+      "Industrial_production_YoY": 6.661807501031536,
+      "unemployment_rate": 5.2
+    },
+    {
+      "date": "1997-03-01",
+      "WTI_YoY": -1.7221750971025407,
+      "petroleum_consumption_YoY": -2.267293735739606,
+      "Industrial_production_YoY": 7.470272474009643,
+      "unemployment_rate": 5.2
+    },
+    {
+      "date": "1997-04-01",
+      "WTI_YoY": -16.179364166961452,
+      "petroleum_consumption_YoY": 3.848822944035235,
+      "Industrial_production_YoY": 6.536171976339267,
+      "unemployment_rate": 5.1
+    },
+    {
+      "date": "1997-05-01",
+      "WTI_YoY": -1.636661880627166,
+      "petroleum_consumption_YoY": 1.8003828392540333,
+      "Industrial_production_YoY": 6.331688761977006,
+      "unemployment_rate": 4.9
+    },
+    {
+      "date": "1997-06-01",
+      "WTI_YoY": -5.696868803094468,
+      "petroleum_consumption_YoY": 2.890836820458853,
+      "Industrial_production_YoY": 6.012329789391524,
+      "unemployment_rate": 5.0
+    },
+    {
+      "date": "1997-07-01",
+      "WTI_YoY": -7.692307692307687,
+      "petroleum_consumption_YoY": 4.854653696619282,
+      "Industrial_production_YoY": 6.901473595485519,
+      "unemployment_rate": 4.9
+    },
+    {
+      "date": "1997-08-01",
+      "WTI_YoY": -8.904298432594448,
+      "petroleum_consumption_YoY": -0.7100562973901048,
+      "Industrial_production_YoY": 7.421174007233544,
+      "unemployment_rate": 4.8
+    },
+    {
+      "date": "1997-09-01",
+      "WTI_YoY": -17.388009372240642,
+      "petroleum_consumption_YoY": 4.939641916361626,
+      "Industrial_production_YoY": 7.7307713474798145,
+      "unemployment_rate": 4.9
+    },
+    {
+      "date": "1997-10-01",
+      "WTI_YoY": -14.28471566879871,
+      "petroleum_consumption_YoY": -0.6697885983684926,
+      "Industrial_production_YoY": 8.653836077256006,
+      "unemployment_rate": 4.7
+    },
+    {
+      "date": "1997-11-01",
+      "WTI_YoY": -14.811689985703913,
+      "petroleum_consumption_YoY": 0.34766334247531283,
+      "Industrial_production_YoY": 8.512624010737335,
+      "unemployment_rate": 4.6
+    },
+    {
+      "date": "1997-12-01",
+      "WTI_YoY": -27.333470606403786,
+      "petroleum_consumption_YoY": 4.4237419074334206,
+      "Industrial_production_YoY": 8.280957988374027,
+      "unemployment_rate": 4.7
+    },
+    {
+      "date": "1998-01-01",
+      "WTI_YoY": -33.45487429914993,
+      "petroleum_consumption_YoY": -1.3751203654170485,
+      "Industrial_production_YoY": 8.58347433946034,
+      "unemployment_rate": 4.6
+    },
+    {
+      "date": "1998-02-01",
+      "WTI_YoY": -27.580396345081304,
+      "petroleum_consumption_YoY": -0.2908875124516208,
+      "Industrial_production_YoY": 7.476143150007708,
+      "unemployment_rate": 4.6
+    },
+    {
+      "date": "1998-03-01",
+      "WTI_YoY": -27.901480823016712,
+      "petroleum_consumption_YoY": 3.9436947575765435,
+      "Industrial_production_YoY": 6.835942439493192,
+      "unemployment_rate": 4.7
+    },
+    {
+      "date": "1998-04-01",
+      "WTI_YoY": -22.04389348631214,
+      "petroleum_consumption_YoY": 2.8918110983568557,
+      "Industrial_production_YoY": 7.077008185695677,
+      "unemployment_rate": 4.3
+    },
+    {
+      "date": "1998-05-01",
+      "WTI_YoY": -28.363677950594692,
+      "petroleum_consumption_YoY": 0.8302253695943618,
+      "Industrial_production_YoY": 7.188999827918208,
+      "unemployment_rate": 4.4
+    },
+    {
+      "date": "1998-06-01",
+      "WTI_YoY": -28.754838100632508,
+      "petroleum_consumption_YoY": 3.2466466010175665,
+      "Industrial_production_YoY": 6.058575229559682,
+      "unemployment_rate": 4.5
+    },
+    {
+      "date": "1998-07-01",
+      "WTI_YoY": -27.924179380490056,
+      "petroleum_consumption_YoY": 2.2792908886838603,
+      "Industrial_production_YoY": 4.755871384932742,
+      "unemployment_rate": 4.5
+    },
+    {
+      "date": "1998-08-01",
+      "WTI_YoY": -32.4813250280423,
+      "petroleum_consumption_YoY": 4.654552404360146,
+      "Industrial_production_YoY": 5.865515150473688,
+      "unemployment_rate": 4.5
+    },
+    {
+      "date": "1998-09-01",
+      "WTI_YoY": -24.096472455334606,
+      "petroleum_consumption_YoY": 2.4857089885033767,
+      "Industrial_production_YoY": 4.848836473856544,
+      "unemployment_rate": 4.6
+    },
+    {
+      "date": "1998-10-01",
+      "WTI_YoY": -32.188690855710924,
+      "petroleum_consumption_YoY": 0.5734009503999049,
+      "Industrial_production_YoY": 4.637794383238925,
+      "unemployment_rate": 4.5
+    },
+    {
+      "date": "1998-11-01",
+      "WTI_YoY": -35.61366344690581,
+      "petroleum_consumption_YoY": 0.7831151410184534,
+      "Industrial_production_YoY": 3.741486019967022,
+      "unemployment_rate": 4.4
+    },
+    {
+      "date": "1998-12-01",
+      "WTI_YoY": -38.10373896657742,
+      "petroleum_consumption_YoY": 1.6379618631620518,
+      "Industrial_production_YoY": 3.7695732652959,
+      "unemployment_rate": 4.4
+    },
+    {
+      "date": "1999-01-01",
+      "WTI_YoY": -25.168997595639418,
+      "petroleum_consumption_YoY": 3.834966590494737,
+      "Industrial_production_YoY": 3.763083805136991,
+      "unemployment_rate": 4.3
+    },
+    {
+      "date": "1999-02-01",
+      "WTI_YoY": -25.19499246247623,
+      "petroleum_consumption_YoY": 4.621370650355239,
+      "Industrial_production_YoY": 4.225398806274816,
+      "unemployment_rate": 4.4
+    },
+    {
+      "date": "1999-03-01",
+      "WTI_YoY": -2.9038677269292323,
+      "petroleum_consumption_YoY": 4.819313399430447,
+      "Industrial_production_YoY": 4.425125461604007,
+      "unemployment_rate": 4.2
+    },
+    {
+      "date": "1999-04-01",
+      "WTI_YoY": 12.75625717209936,
+      "petroleum_consumption_YoY": 0.08886199485815816,
+      "Industrial_production_YoY": 4.307254602909483,
+      "unemployment_rate": 4.3
+    },
+    {
+      "date": "1999-05-01",
+      "WTI_YoY": 18.804479013007903,
+      "petroleum_consumption_YoY": 1.3379831131278497,
+      "Industrial_production_YoY": 4.27940147673862,
+      "unemployment_rate": 4.2
+    },
+    {
+      "date": "1999-06-01",
+      "WTI_YoY": 30.61812640784418,
+      "petroleum_consumption_YoY": 2.7665193375546515,
+      "Industrial_production_YoY": 4.826418688874012,
+      "unemployment_rate": 4.3
+    },
+    {
+      "date": "1999-07-01",
+      "WTI_YoY": 41.84519991447508,
+      "petroleum_consumption_YoY": 0.7758267166846355,
+      "Industrial_production_YoY": 5.839978413843561,
+      "unemployment_rate": 4.3
+    },
+    {
+      "date": "1999-08-01",
+      "WTI_YoY": 57.94823924087649,
+      "petroleum_consumption_YoY": 3.559870146747146,
+      "Industrial_production_YoY": 4.109544569149426,
+      "unemployment_rate": 4.2
+    },
+    {
+      "date": "1999-09-01",
+      "WTI_YoY": 58.31274155737185,
+      "petroleum_consumption_YoY": 2.1297432524519433,
+      "Industrial_production_YoY": 3.7444563415508503,
+      "unemployment_rate": 4.2
+    },
+    {
+      "date": "1999-10-01",
+      "WTI_YoY": 56.91564360703734,
+      "petroleum_consumption_YoY": 2.877504029909539,
+      "Industrial_production_YoY": 4.29950432876991,
+      "unemployment_rate": 4.1
+    },
+    {
+      "date": "1999-11-01",
+      "WTI_YoY": 92.29486645694547,
+      "petroleum_consumption_YoY": 1.9337805917694073,
+      "Industrial_production_YoY": 4.884601547870515,
+      "unemployment_rate": 4.1
+    },
+    {
+      "date": "1999-12-01",
+      "WTI_YoY": 130.0321987471483,
+      "petroleum_consumption_YoY": 4.535088978659374,
+      "Industrial_production_YoY": 5.216917187508963,
+      "unemployment_rate": 4.0
+    },
+    {
+      "date": "2000-01-01",
+      "WTI_YoY": 117.81899234586591,
+      "petroleum_consumption_YoY": -0.9792191192846467,
+      "Industrial_production_YoY": 4.620955049951481,
+      "unemployment_rate": 4.0
+    },
+    {
+      "date": "2000-02-01",
+      "WTI_YoY": 144.43792166827305,
+      "petroleum_consumption_YoY": 5.539936487816477,
+      "Industrial_production_YoY": 4.313335681097841,
+      "unemployment_rate": 4.1
+    },
+    {
+      "date": "2000-03-01",
+      "WTI_YoY": 103.3297784097642,
+      "petroleum_consumption_YoY": -2.0174668669900697,
+      "Industrial_production_YoY": 4.447293166354416,
+      "unemployment_rate": 4.0
+    },
+    {
+      "date": "2000-04-01",
+      "WTI_YoY": 48.576358930112185,
+      "petroleum_consumption_YoY": -2.0196268090172054,
+      "Industrial_production_YoY": 4.828026846244748,
+      "unemployment_rate": 3.8
+    },
+    {
+      "date": "2000-05-01",
+      "WTI_YoY": 62.47527622644029,
+      "petroleum_consumption_YoY": 4.777262459203935,
+      "Industrial_production_YoY": 4.451469064576807,
+      "unemployment_rate": 4.0
+    },
+    {
+      "date": "2000-06-01",
+      "WTI_YoY": 77.54812203596157,
+      "petroleum_consumption_YoY": 1.0990562685093686,
+      "Industrial_production_YoY": 4.574285752844154,
+      "unemployment_rate": 4.0
+    },
+    {
+      "date": "2000-07-01",
+      "WTI_YoY": 47.720985434902104,
+      "petroleum_consumption_YoY": -0.28892906733132273,
+      "Industrial_production_YoY": 3.7698485910728996,
+      "unemployment_rate": 4.0
+    },
+    {
+      "date": "2000-08-01",
+      "WTI_YoY": 46.92629973650948,
+      "petroleum_consumption_YoY": 1.8128942873547604,
+      "Industrial_production_YoY": 3.0734226950164922,
+      "unemployment_rate": 4.1
+    },
+    {
+      "date": "2000-09-01",
+      "WTI_YoY": 42.38969043283374,
+      "petroleum_consumption_YoY": 2.361000514944367,
+      "Industrial_production_YoY": 3.968806853188922,
+      "unemployment_rate": 3.9
+    },
+    {
+      "date": "2000-10-01",
+      "WTI_YoY": 45.908117946017725,
+      "petroleum_consumption_YoY": -0.09404949462227252,
+      "Industrial_production_YoY": 2.3142184859096693,
+      "unemployment_rate": 3.9
+    },
+    {
+      "date": "2000-11-01",
+      "WTI_YoY": 37.65546138463005,
+      "petroleum_consumption_YoY": 1.1616479328445006,
+      "Industrial_production_YoY": 1.8491278756576968,
+      "unemployment_rate": 3.9
+    },
+    {
+      "date": "2000-12-01",
+      "WTI_YoY": 8.942169114293552,
+      "petroleum_consumption_YoY": 2.4232623569550915,
+      "Industrial_production_YoY": 0.7397718173229428,
+      "unemployment_rate": 3.9
+    },
+    {
+      "date": "2001-01-01",
+      "WTI_YoY": 8.533695948983722,
+      "petroleum_consumption_YoY": 7.434154589042641,
+      "Industrial_production_YoY": 0.3976490637767949,
+      "unemployment_rate": 4.2
+    },
+    {
+      "date": "2001-02-01",
+      "WTI_YoY": 0.8291006068600559,
+      "petroleum_consumption_YoY": -2.1530859706357264,
+      "Industrial_production_YoY": -0.5668458865284554,
+      "unemployment_rate": 4.2
+    },
+    {
+      "date": "2001-03-01",
+      "WTI_YoY": -8.703224917747898,
+      "petroleum_consumption_YoY": 4.2492893463963455,
+      "Industrial_production_YoY": -1.122295725249156,
+      "unemployment_rate": 4.3
+    },
+    {
+      "date": "2001-04-01",
+      "WTI_YoY": 6.873056146668843,
+      "petroleum_consumption_YoY": 5.333479832963617,
+      "Industrial_production_YoY": -2.0602186217959284,
+      "unemployment_rate": 4.4
+    },
+    {
+      "date": "2001-05-01",
+      "WTI_YoY": -0.5526257618340913,
+      "petroleum_consumption_YoY": -0.05632764190094397,
+      "Industrial_production_YoY": -2.791181055600911,
+      "unemployment_rate": 4.3
+    },
+    {
+      "date": "2001-06-01",
+      "WTI_YoY": -13.271286888964617,
+      "petroleum_consumption_YoY": -1.8780677642944554,
+      "Industrial_production_YoY": -3.3422163718917375,
+      "unemployment_rate": 4.5
+    },
+    {
+      "date": "2001-07-01",
+      "WTI_YoY": -11.018276586120068,
+      "petroleum_consumption_YoY": 1.210701485367438,
+      "Industrial_production_YoY": -3.773511714911293,
+      "unemployment_rate": 4.6
+    },
+    {
+      "date": "2001-08-01",
+      "WTI_YoY": -12.442460400239197,
+      "petroleum_consumption_YoY": -1.4852240161166819,
+      "Industrial_production_YoY": -3.6215277665228585,
+      "unemployment_rate": 4.9
+    },
+    {
+      "date": "2001-09-01",
+      "WTI_YoY": -22.678923137142814,
+      "petroleum_consumption_YoY": -4.839150964211636,
+      "Industrial_production_YoY": -4.55015745457048,
+      "unemployment_rate": 5.0
+    },
+    {
+      "date": "2001-10-01",
+      "WTI_YoY": -33.039932620902455,
+      "petroleum_consumption_YoY": 0.049499376412454055,
+      "Industrial_production_YoY": -4.440502321905382,
+      "unemployment_rate": 5.3
+    },
+    {
+      "date": "2001-11-01",
+      "WTI_YoY": -42.94994188942388,
+      "petroleum_consumption_YoY": 0.3477178260528735,
+      "Industrial_production_YoY": -5.044913960783126,
+      "unemployment_rate": 5.5
+    },
+    {
+      "date": "2001-12-01",
+      "WTI_YoY": -31.8166885220718,
+      "petroleum_consumption_YoY": -9.161357372012102,
+      "Industrial_production_YoY": -4.774776238202749,
+      "unemployment_rate": 5.7
+    },
+    {
+      "date": "2002-01-01",
+      "WTI_YoY": -33.363914373088676,
+      "petroleum_consumption_YoY": -3.932159179228334,
+      "Industrial_production_YoY": -3.682618441383212,
+      "unemployment_rate": 5.7
+    },
+    {
+      "date": "2002-02-01",
+      "WTI_YoY": -30.009954139855665,
+      "petroleum_consumption_YoY": -2.6240926085204896,
+      "Industrial_production_YoY": -3.0399744149724905,
+      "unemployment_rate": 5.7
+    },
+    {
+      "date": "2002-03-01",
+      "WTI_YoY": -9.95995862391138,
+      "petroleum_consumption_YoY": -1.7665296616687032,
+      "Industrial_production_YoY": -2.1374903694403535,
+      "unemployment_rate": 5.7
+    },
+    {
+      "date": "2002-04-01",
+      "WTI_YoY": -4.768676212837708,
+      "petroleum_consumption_YoY": -0.83773423134339,
+      "Industrial_production_YoY": -1.3053329089064758,
+      "unemployment_rate": 5.9
+    },
+    {
+      "date": "2002-05-01",
+      "WTI_YoY": -5.5458529150260505,
+      "petroleum_consumption_YoY": 0.4302626081304828,
+      "Industrial_production_YoY": -0.43328851038398897,
+      "unemployment_rate": 5.8
+    },
+    {
+      "date": "2002-06-01",
+      "WTI_YoY": -7.538476137892969,
+      "petroleum_consumption_YoY": 0.9198770440252524,
+      "Industrial_production_YoY": 0.920910919642548,
+      "unemployment_rate": 5.8
+    },
+    {
+      "date": "2002-07-01",
+      "WTI_YoY": 2.048943991926766,
+      "petroleum_consumption_YoY": 0.43865713062447576,
+      "Industrial_production_YoY": 1.5386975548359105,
+      "unemployment_rate": 5.8
+    },
+    {
+      "date": "2002-08-01",
+      "WTI_YoY": 3.6936149936467544,
+      "petroleum_consumption_YoY": -0.26414023314186297,
+      "Industrial_production_YoY": 1.5424836015125454,
+      "unemployment_rate": 5.7
+    },
+    {
+      "date": "2002-09-01",
+      "WTI_YoY": 13.221740091203117,
+      "petroleum_consumption_YoY": 2.4311563767797084,
+      "Industrial_production_YoY": 2.146064440525741,
+      "unemployment_rate": 5.7
+    },
+    {
+      "date": "2002-10-01",
+      "WTI_YoY": 30.072563247695648,
+      "petroleum_consumption_YoY": -1.0720276247595861,
+      "Industrial_production_YoY": 2.2135422551443185,
+      "unemployment_rate": 5.7
+    },
+    {
+      "date": "2002-11-01",
+      "WTI_YoY": 34.209856191280366,
+      "petroleum_consumption_YoY": 2.8589841156332563,
+      "Industrial_production_YoY": 3.4115039217915255,
+      "unemployment_rate": 5.9
+    },
+    {
+      "date": "2002-12-01",
+      "WTI_YoY": 51.94714710988224,
+      "petroleum_consumption_YoY": 4.845928811904887,
+      "Industrial_production_YoY": 2.880394484854265,
+      "unemployment_rate": 6.0
+    },
+    {
+      "date": "2003-01-01",
+      "WTI_YoY": 67.11915171131133,
+      "petroleum_consumption_YoY": 2.219335356935037,
+      "Industrial_production_YoY": 3.071140654513904,
+      "unemployment_rate": 5.8
+    },
+    {
+      "date": "2003-02-01",
+      "WTI_YoY": 72.8863492063492,
+      "petroleum_consumption_YoY": 5.280720889165891,
+      "Industrial_production_YoY": 3.1817124112425654,
+      "unemployment_rate": 5.9
+    },
+    {
+      "date": "2003-03-01",
+      "WTI_YoY": 36.616254263313095,
+      "petroleum_consumption_YoY": 0.7499934628885097,
+      "Industrial_production_YoY": 2.1709435832793167,
+      "unemployment_rate": 5.9
+    },
+    {
+      "date": "2003-04-01",
+      "WTI_YoY": 7.606777822425292,
+      "petroleum_consumption_YoY": 1.1925241461765879,
+      "Industrial_production_YoY": 1.0688138922369639,
+      "unemployment_rate": 6.0
+    },
+    {
+      "date": "2003-05-01",
+      "WTI_YoY": 3.946575352334203,
+      "petroleum_consumption_YoY": -1.5902238307377137,
+      "Industrial_production_YoY": 0.636921435240767,
+      "unemployment_rate": 6.1
+    },
+    {
+      "date": "2003-06-01",
+      "WTI_YoY": 20.15745812795011,
+      "petroleum_consumption_YoY": 0.13290428682588562,
+      "Industrial_production_YoY": -0.05887145406980876,
+      "unemployment_rate": 6.3
+    },
+    {
+      "date": "2003-07-01",
+      "WTI_YoY": 14.04853600548388,
+      "petroleum_consumption_YoY": 0.571279204958941,
+      "Industrial_production_YoY": 0.48700385655000566,
+      "unemployment_rate": 6.2
+    },
+    {
+      "date": "2003-08-01",
+      "WTI_YoY": 11.234136071197899,
+      "petroleum_consumption_YoY": 2.0595775197832733,
+      "Industrial_production_YoY": 0.37923869625795525,
+      "unemployment_rate": 6.1
+    },
+    {
+      "date": "2003-09-01",
+      "WTI_YoY": -4.558030672615931,
+      "petroleum_consumption_YoY": 2.3897842881917652,
+      "Industrial_production_YoY": 0.9407289987876988,
+      "unemployment_rate": 6.1
+    },
+    {
+      "date": "2003-10-01",
+      "WTI_YoY": 5.2077679271455235,
+      "petroleum_consumption_YoY": 2.9095596264061996,
+      "Industrial_production_YoY": 1.2759729528664998,
+      "unemployment_rate": 6.0
+    },
+    {
+      "date": "2003-11-01",
+      "WTI_YoY": 18.048759378724032,
+      "petroleum_consumption_YoY": -0.571505095329472,
+      "Industrial_production_YoY": 1.387033904173962,
+      "unemployment_rate": 5.8
+    },
+    {
+      "date": "2003-12-01",
+      "WTI_YoY": 9.056378095299689,
+      "petroleum_consumption_YoY": 3.6306603334723686,
+      "Industrial_production_YoY": 1.9841883950955763,
+      "unemployment_rate": 5.7
+    },
+    {
+      "date": "2004-01-01",
+      "WTI_YoY": 4.136495685730401,
+      "petroleum_consumption_YoY": 2.420372796800696,
+      "Industrial_production_YoY": 1.2763588097255418,
+      "unemployment_rate": 5.7
+    },
+    {
+      "date": "2004-02-01",
+      "WTI_YoY": -3.1921144636718912,
+      "petroleum_consumption_YoY": 5.983858382018292,
+      "Industrial_production_YoY": 1.7663898756903773,
+      "unemployment_rate": 5.6
+    },
+    {
+      "date": "2004-03-01",
+      "WTI_YoY": 9.631900779270186,
+      "petroleum_consumption_YoY": 3.746708271010757,
+      "Industrial_production_YoY": 1.626375894029275,
+      "unemployment_rate": 5.8
+    },
+    {
+      "date": "2004-04-01",
+      "WTI_YoY": 30.455728726461317,
+      "petroleum_consumption_YoY": 3.562826199673186,
+      "Industrial_production_YoY": 2.615123170170186,
+      "unemployment_rate": 5.6
+    },
+    {
+      "date": "2004-05-01",
+      "WTI_YoY": 43.28369587314496,
+      "petroleum_consumption_YoY": 4.629433040537356,
+      "Industrial_production_YoY": 3.38458309862264,
+      "unemployment_rate": 5.6
+    },
+    {
+      "date": "2004-06-01",
+      "WTI_YoY": 24.01267257846593,
+      "petroleum_consumption_YoY": 4.363854654772004,
+      "Industrial_production_YoY": 2.447031362551799,
+      "unemployment_rate": 5.6
+    },
+    {
+      "date": "2004-07-01",
+      "WTI_YoY": 32.5920921132272,
+      "petroleum_consumption_YoY": 3.6755716740386912,
+      "Industrial_production_YoY": 2.6848554355043186,
+      "unemployment_rate": 5.5
+    },
+    {
+      "date": "2004-08-01",
+      "WTI_YoY": 42.216547497446385,
+      "petroleum_consumption_YoY": 2.074901112375249,
+      "Industrial_production_YoY": 2.9784524146032165,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "2004-09-01",
+      "WTI_YoY": 62.25148854576648,
+      "petroleum_consumption_YoY": 3.213072609642431,
+      "Industrial_production_YoY": 2.448803847620762,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "2004-10-01",
+      "WTI_YoY": 75.62139247054265,
+      "petroleum_consumption_YoY": 3.090579600712795,
+      "Industrial_production_YoY": 3.1957484615569243,
+      "unemployment_rate": 5.5
+    },
+    {
+      "date": "2004-11-01",
+      "WTI_YoY": 55.80712563621753,
+      "petroleum_consumption_YoY": 4.971685572139295,
+      "Industrial_production_YoY": 2.763005391785356,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "2004-12-01",
+      "WTI_YoY": 34.30066250685479,
+      "petroleum_consumption_YoY": 3.0112526963424813,
+      "Industrial_production_YoY": 3.551152067738861,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "2005-01-01",
+      "WTI_YoY": 36.5112212183037,
+      "petroleum_consumption_YoY": 1.0412332075757424,
+      "Industrial_production_YoY": 3.7656681883018184,
+      "unemployment_rate": 5.3
+    },
+    {
+      "date": "2005-02-01",
+      "WTI_YoY": 38.8188343120742,
+      "petroleum_consumption_YoY": -3.673145382535037,
+      "Industrial_production_YoY": 3.8921878697906642,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "2005-03-01",
+      "WTI_YoY": 47.48202096702183,
+      "petroleum_consumption_YoY": 2.3377024847339722,
+      "Industrial_production_YoY": 4.168552298887196,
+      "unemployment_rate": 5.2
+    },
+    {
+      "date": "2005-04-01",
+      "WTI_YoY": 44.160673793326865,
+      "petroleum_consumption_YoY": -1.9418286846408117,
+      "Industrial_production_YoY": 4.006456472613795,
+      "unemployment_rate": 5.2
+    },
+    {
+      "date": "2005-05-01",
+      "WTI_YoY": 23.733853566255792,
+      "petroleum_consumption_YoY": 1.5774647550089949,
+      "Industrial_production_YoY": 3.3534790649275337,
+      "unemployment_rate": 5.1
+    },
+    {
+      "date": "2005-06-01",
+      "WTI_YoY": 48.19702794794527,
+      "petroleum_consumption_YoY": 2.288238176776858,
+      "Industrial_production_YoY": 4.6347083589064475,
+      "unemployment_rate": 5.0
+    },
+    {
+      "date": "2005-07-01",
+      "WTI_YoY": 44.674486769273905,
+      "petroleum_consumption_YoY": -0.20676300131903247,
+      "Industrial_production_YoY": 3.5298493345260917,
+      "unemployment_rate": 5.0
+    },
+    {
+      "date": "2005-08-01",
+      "WTI_YoY": 44.72296786102377,
+      "petroleum_consumption_YoY": 2.898269083281746,
+      "Industrial_production_YoY": 3.797594088074363,
+      "unemployment_rate": 4.9
+    },
+    {
+      "date": "2005-09-01",
+      "WTI_YoY": 42.77924635878296,
+      "petroleum_consumption_YoY": -1.1465549344242154,
+      "Industrial_production_YoY": 1.6574450087309733,
+      "unemployment_rate": 5.0
+    },
+    {
+      "date": "2005-10-01",
+      "WTI_YoY": 16.85330997685206,
+      "petroleum_consumption_YoY": -1.9265351898760885,
+      "Industrial_production_YoY": 2.0209103457029087,
+      "unemployment_rate": 5.0
+    },
+    {
+      "date": "2005-11-01",
+      "WTI_YoY": 20.3294889517011,
+      "petroleum_consumption_YoY": -0.4642123632030981,
+      "Industrial_production_YoY": 2.9120723180627417,
+      "unemployment_rate": 5.0
+    },
+    {
+      "date": "2005-12-01",
+      "WTI_YoY": 37.68843666541595,
+      "petroleum_consumption_YoY": 1.189111222763839,
+      "Industrial_production_YoY": 2.6259073757150198,
+      "unemployment_rate": 4.9
+    },
+    {
+      "date": "2006-01-01",
+      "WTI_YoY": 39.81467643102674,
+      "petroleum_consumption_YoY": -0.7242009184015519,
+      "Industrial_production_YoY": 2.4194801632455576,
+      "unemployment_rate": 4.7
+    },
+    {
+      "date": "2006-02-01",
+      "WTI_YoY": 28.000830755440887,
+      "petroleum_consumption_YoY": -1.3393626746767806,
+      "Industrial_production_YoY": 1.7242361205308532,
+      "unemployment_rate": 4.8
+    },
+    {
+      "date": "2006-03-01",
+      "WTI_YoY": 15.68351767946714,
+      "petroleum_consumption_YoY": -2.1661221338546643,
+      "Industrial_production_YoY": 2.091541760329152,
+      "unemployment_rate": 4.7
+    },
+    {
+      "date": "2006-04-01",
+      "WTI_YoY": 31.077637918049604,
+      "petroleum_consumption_YoY": -0.29929093950514796,
+      "Industrial_production_YoY": 2.1816142662632876,
+      "unemployment_rate": 4.7
+    },
+    {
+      "date": "2006-05-01",
+      "WTI_YoY": 42.1606968964376,
+      "petroleum_consumption_YoY": -1.4720276732598792,
+      "Industrial_production_YoY": 2.1156664964513183,
+      "unemployment_rate": 4.6
+    },
+    {
+      "date": "2006-06-01",
+      "WTI_YoY": 25.90602944141964,
+      "petroleum_consumption_YoY": -1.9323861159136535,
+      "Industrial_production_YoY": 1.9803386251444621,
+      "unemployment_rate": 4.6
+    },
+    {
+      "date": "2006-07-01",
+      "WTI_YoY": 26.13004827754477,
+      "petroleum_consumption_YoY": -1.5352981334747495,
+      "Industrial_production_YoY": 2.251836527383766,
+      "unemployment_rate": 4.7
+    },
+    {
+      "date": "2006-08-01",
+      "WTI_YoY": 12.399475465992271,
+      "petroleum_consumption_YoY": -1.4598259523553536,
+      "Industrial_production_YoY": 2.3669704568583194,
+      "unemployment_rate": 4.7
+    },
+    {
+      "date": "2006-09-01",
+      "WTI_YoY": -2.7271803212034817,
+      "petroleum_consumption_YoY": 0.6891639615289158,
+      "Industrial_production_YoY": 4.2159275134967755,
+      "unemployment_rate": 4.5
+    },
+    {
+      "date": "2006-10-01",
+      "WTI_YoY": -5.407674561224196,
+      "petroleum_consumption_YoY": 1.0958428591870462,
+      "Industrial_production_YoY": 2.8481025781383007,
+      "unemployment_rate": 4.4
+    },
+    {
+      "date": "2006-11-01",
+      "WTI_YoY": 1.3030991469844322,
+      "petroleum_consumption_YoY": -1.1020389381199869,
+      "Industrial_production_YoY": 1.6621660136106442,
+      "unemployment_rate": 4.5
+    },
+    {
+      "date": "2006-12-01",
+      "WTI_YoY": 4.287179898208637,
+      "petroleum_consumption_YoY": -3.9696969437697183,
+      "Industrial_production_YoY": 2.1707334984272686,
+      "unemployment_rate": 4.4
+    },
+    {
+      "date": "2007-01-01",
+      "WTI_YoY": -16.765380657875106,
+      "petroleum_consumption_YoY": -0.9095859359228298,
+      "Industrial_production_YoY": 1.6646656462990128,
+      "unemployment_rate": 4.6
+    },
+    {
+      "date": "2007-02-01",
+      "WTI_YoY": -3.8164288337218966,
+      "petroleum_consumption_YoY": 2.621469876344329,
+      "Industrial_production_YoY": 2.5793632616832207,
+      "unemployment_rate": 4.5
+    },
+    {
+      "date": "2007-03-01",
+      "WTI_YoY": -3.578832941556276,
+      "petroleum_consumption_YoY": -1.1387497044033967,
+      "Industrial_production_YoY": 2.5308035115800154,
+      "unemployment_rate": 4.4
+    },
+    {
+      "date": "2007-04-01",
+      "WTI_YoY": -7.872111442062102,
+      "petroleum_consumption_YoY": 0.7902274114535146,
+      "Industrial_production_YoY": 2.9076019270608766,
+      "unemployment_rate": 4.5
+    },
+    {
+      "date": "2007-05-01",
+      "WTI_YoY": -10.430715335211127,
+      "petroleum_consumption_YoY": 0.17643904733679605,
+      "Industrial_production_YoY": 2.9798485426711263,
+      "unemployment_rate": 4.4
+    },
+    {
+      "date": "2007-06-01",
+      "WTI_YoY": -4.87923483464574,
+      "petroleum_consumption_YoY": -2.074158979523899,
+      "Industrial_production_YoY": 2.7140344521729087,
+      "unemployment_rate": 4.6
+    },
+    {
+      "date": "2007-07-01",
+      "WTI_YoY": -0.39434139631477905,
+      "petroleum_consumption_YoY": -0.6650469153067773,
+      "Industrial_production_YoY": 2.6434417747193573,
+      "unemployment_rate": 4.7
+    },
+    {
+      "date": "2007-08-01",
+      "WTI_YoY": -0.9404817885820815,
+      "petroleum_consumption_YoY": -2.6929339886304637,
+      "Industrial_production_YoY": 2.3917510021752353,
+      "unemployment_rate": 4.6
+    },
+    {
+      "date": "2007-09-01",
+      "WTI_YoY": 25.26213492915963,
+      "petroleum_consumption_YoY": -1.6705991216919402,
+      "Industrial_production_YoY": 2.7901202497425004,
+      "unemployment_rate": 4.7
+    },
+    {
+      "date": "2007-10-01",
+      "WTI_YoY": 45.68527799543285,
+      "petroleum_consumption_YoY": -2.2100662145199124,
+      "Industrial_production_YoY": 2.6179282370540014,
+      "unemployment_rate": 4.7
+    },
+    {
+      "date": "2007-11-01",
+      "WTI_YoY": 60.40685643359871,
+      "petroleum_consumption_YoY": -1.409392043878832,
+      "Industrial_production_YoY": 3.2087670061424323,
+      "unemployment_rate": 4.7
+    },
+    {
+      "date": "2007-12-01",
+      "WTI_YoY": 47.980115883083975,
+      "petroleum_consumption_YoY": -1.299091241989081,
+      "Industrial_production_YoY": 2.2029778334589523,
+      "unemployment_rate": 5.0
+    },
+    {
+      "date": "2008-01-01",
+      "WTI_YoY": 70.56865537335206,
+      "petroleum_consumption_YoY": -2.2265856662074257,
+      "Industrial_production_YoY": 2.4141930753466267,
+      "unemployment_rate": 5.0
+    },
+    {
+      "date": "2008-02-01",
+      "WTI_YoY": 60.910414631980814,
+      "petroleum_consumption_YoY": -3.8101021189019035,
+      "Industrial_production_YoY": 1.0602796518591306,
+      "unemployment_rate": 4.9
+    },
+    {
+      "date": "2008-03-01",
+      "WTI_YoY": 74.47191890021958,
+      "petroleum_consumption_YoY": -4.888520208138136,
+      "Industrial_production_YoY": 0.5734255066876637,
+      "unemployment_rate": 5.1
+    },
+    {
+      "date": "2008-04-01",
+      "WTI_YoY": 75.97019951772441,
+      "petroleum_consumption_YoY": -4.528377478147593,
+      "Industrial_production_YoY": -0.7427676334748168,
+      "unemployment_rate": 5.0
+    },
+    {
+      "date": "2008-05-01",
+      "WTI_YoY": 97.61802428707873,
+      "petroleum_consumption_YoY": -5.434274146964436,
+      "Industrial_production_YoY": -1.4383086308347726,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "2008-06-01",
+      "WTI_YoY": 98.3729282352692,
+      "petroleum_consumption_YoY": -6.320339986462997,
+      "Industrial_production_YoY": -1.724935725071297,
+      "unemployment_rate": 5.6
+    },
+    {
+      "date": "2008-07-01",
+      "WTI_YoY": 79.94494535128149,
+      "petroleum_consumption_YoY": -7.082894620283076,
+      "Industrial_production_YoY": -1.9585471027037116,
+      "unemployment_rate": 5.8
+    },
+    {
+      "date": "2008-08-01",
+      "WTI_YoY": 61.23894392781959,
+      "petroleum_consumption_YoY": -10.143275062600154,
+      "Industrial_production_YoY": -3.6832804845724265,
+      "unemployment_rate": 6.1
+    },
+    {
+      "date": "2008-09-01",
+      "WTI_YoY": 30.281710018007924,
+      "petroleum_consumption_YoY": -13.351621055224905,
+      "Industrial_production_YoY": -8.130031129578574,
+      "unemployment_rate": 6.1
+    },
+    {
+      "date": "2008-10-01",
+      "WTI_YoY": -10.71111854340544,
+      "petroleum_consumption_YoY": -4.748833611332703,
+      "Industrial_production_YoY": -6.954317961916079,
+      "unemployment_rate": 6.5
+    },
+    {
+      "date": "2008-11-01",
+      "WTI_YoY": -39.52935115874521,
+      "petroleum_consumption_YoY": -8.341613115049217,
+      "Industrial_production_YoY": -8.669827230747885,
+      "unemployment_rate": 6.8
+    },
+    {
+      "date": "2008-12-01",
+      "WTI_YoY": -55.1497833042654,
+      "petroleum_consumption_YoY": -8.260262666242602,
+      "Industrial_production_YoY": -11.276192783181926,
+      "unemployment_rate": 7.3
+    },
+    {
+      "date": "2009-01-01",
+      "WTI_YoY": -55.13629518843668,
+      "petroleum_consumption_YoY": -6.392350041673978,
+      "Industrial_production_YoY": -13.374567704176643,
+      "unemployment_rate": 7.8
+    },
+    {
+      "date": "2009-02-01",
+      "WTI_YoY": -59.02190214386531,
+      "petroleum_consumption_YoY": -10.003580477946873,
+      "Industrial_production_YoY": -13.562730377303279,
+      "unemployment_rate": 8.3
+    },
+    {
+      "date": "2009-03-01",
+      "WTI_YoY": -54.54028210490743,
+      "petroleum_consumption_YoY": -6.328357094659475,
+      "Industrial_production_YoY": -14.656035046526473,
+      "unemployment_rate": 8.7
+    },
+    {
+      "date": "2009-04-01",
+      "WTI_YoY": -55.901166976882536,
+      "petroleum_consumption_YoY": -7.186981756528599,
+      "Industrial_production_YoY": -14.81395936696125,
+      "unemployment_rate": 9.0
+    },
+    {
+      "date": "2009-05-01",
+      "WTI_YoY": -52.926937171283726,
+      "petroleum_consumption_YoY": -9.449231515200495,
+      "Industrial_production_YoY": -15.160361194166793,
+      "unemployment_rate": 9.4
+    },
+    {
+      "date": "2009-06-01",
+      "WTI_YoY": -47.98258956460331,
+      "petroleum_consumption_YoY": -5.22333993725076,
+      "Industrial_production_YoY": -15.282480369076357,
+      "unemployment_rate": 9.5
+    },
+    {
+      "date": "2009-07-01",
+      "WTI_YoY": -51.899351091964995,
+      "petroleum_consumption_YoY": -6.181486158304428,
+      "Industrial_production_YoY": -14.018720654921957,
+      "unemployment_rate": 9.5
+    },
+    {
+      "date": "2009-08-01",
+      "WTI_YoY": -39.10424124180098,
+      "petroleum_consumption_YoY": -2.834836317588707,
+      "Industrial_production_YoY": -11.689299172061052,
+      "unemployment_rate": 9.6
+    },
+    {
+      "date": "2009-09-01",
+      "WTI_YoY": -33.33470545188438,
+      "petroleum_consumption_YoY": 2.268595042813315,
+      "Industrial_production_YoY": -6.805879122929537,
+      "unemployment_rate": 9.8
+    },
+    {
+      "date": "2009-10-01",
+      "WTI_YoY": -1.1659787431637536,
+      "petroleum_consumption_YoY": -6.802637138966883,
+      "Industrial_production_YoY": -7.474512230012276,
+      "unemployment_rate": 10.0
+    },
+    {
+      "date": "2009-11-01",
+      "WTI_YoY": 36.08570274043053,
+      "petroleum_consumption_YoY": -4.14523849630336,
+      "Industrial_production_YoY": -5.83001235670767,
+      "unemployment_rate": 9.9
+    },
+    {
+      "date": "2009-12-01",
+      "WTI_YoY": 81.09607817128708,
+      "petroleum_consumption_YoY": -1.711950790803518,
+      "Industrial_production_YoY": -2.704223119324234,
+      "unemployment_rate": 9.9
+    },
+    {
+      "date": "2010-01-01",
+      "WTI_YoY": 87.78659667629876,
+      "petroleum_consumption_YoY": -4.47229613757294,
+      "Industrial_production_YoY": 0.87230439200634,
+      "unemployment_rate": 9.8
+    },
+    {
+      "date": "2010-02-01",
+      "WTI_YoY": 95.42724800043088,
+      "petroleum_consumption_YoY": -1.4831710468918957,
+      "Industrial_production_YoY": 1.8708182344855606,
+      "unemployment_rate": 9.8
+    },
+    {
+      "date": "2010-03-01",
+      "WTI_YoY": 69.38885723732106,
+      "petroleum_consumption_YoY": 0.9436536572911658,
+      "Industrial_production_YoY": 4.200672107537207,
+      "unemployment_rate": 9.9
+    },
+    {
+      "date": "2010-04-01",
+      "WTI_YoY": 69.78553204550253,
+      "petroleum_consumption_YoY": 1.852442491672357,
+      "Industrial_production_YoY": 5.4282103558062955,
+      "unemployment_rate": 9.9
+    },
+    {
+      "date": "2010-05-01",
+      "WTI_YoY": 24.928636167275144,
+      "petroleum_consumption_YoY": 3.2559282681299484,
+      "Industrial_production_YoY": 7.942609605426321,
+      "unemployment_rate": 9.6
+    },
+    {
+      "date": "2010-06-01",
+      "WTI_YoY": 8.177664643300053,
+      "petroleum_consumption_YoY": 2.9526795095716096,
+      "Industrial_production_YoY": 8.551328146848402,
+      "unemployment_rate": 9.4
+    },
+    {
+      "date": "2010-07-01",
+      "WTI_YoY": 18.966204259009057,
+      "petroleum_consumption_YoY": 3.1904982745215804,
+      "Industrial_production_YoY": 7.747013804699288,
+      "unemployment_rate": 9.4
+    },
+    {
+      "date": "2010-08-01",
+      "WTI_YoY": 7.818069700585095,
+      "petroleum_consumption_YoY": 3.48342789873084,
+      "Industrial_production_YoY": 6.968742858593813,
+      "unemployment_rate": 9.5
+    },
+    {
+      "date": "2010-09-01",
+      "WTI_YoY": 8.40508517601215,
+      "petroleum_consumption_YoY": 4.148396584159042,
+      "Industrial_production_YoY": 6.346682104150392,
+      "unemployment_rate": 9.5
+    },
+    {
+      "date": "2010-10-01",
+      "WTI_YoY": 8.15870767003597,
+      "petroleum_consumption_YoY": 0.638443227875829,
+      "Industrial_production_YoY": 5.760258506490601,
+      "unemployment_rate": 9.4
+    },
+    {
+      "date": "2010-11-01",
+      "WTI_YoY": 8.030333559247516,
+      "petroleum_consumption_YoY": 2.022873608196063,
+      "Industrial_production_YoY": 5.39500875348351,
+      "unemployment_rate": 9.8
+    },
+    {
+      "date": "2010-12-01",
+      "WTI_YoY": 19.70714259555404,
+      "petroleum_consumption_YoY": 2.216796933658949,
+      "Industrial_production_YoY": 5.996200467756596,
+      "unemployment_rate": 9.3
+    },
+    {
+      "date": "2011-01-01",
+      "WTI_YoY": 13.845644709344906,
+      "petroleum_consumption_YoY": 1.694550774983683,
+      "Industrial_production_YoY": 4.632504538708293,
+      "unemployment_rate": 9.1
+    },
+    {
+      "date": "2011-02-01",
+      "WTI_YoY": 15.959513835299322,
+      "petroleum_consumption_YoY": -0.2615860935115566,
+      "Industrial_production_YoY": 3.827364378514675,
+      "unemployment_rate": 9.0
+    },
+    {
+      "date": "2011-03-01",
+      "WTI_YoY": 26.665167480510554,
+      "petroleum_consumption_YoY": 0.11682891790059102,
+      "Industrial_production_YoY": 4.193025357503588,
+      "unemployment_rate": 9.0
+    },
+    {
+      "date": "2011-04-01",
+      "WTI_YoY": 29.942801457503588,
+      "petroleum_consumption_YoY": -3.2653075270001275,
+      "Industrial_production_YoY": 3.505332834432129,
+      "unemployment_rate": 9.1
+    },
+    {
+      "date": "2011-05-01",
+      "WTI_YoY": 36.826264268004884,
+      "petroleum_consumption_YoY": -3.1149060301736586,
+      "Industrial_production_YoY": 2.248891889831528,
+      "unemployment_rate": 9.0
+    },
+    {
+      "date": "2011-06-01",
+      "WTI_YoY": 27.7798224919904,
+      "petroleum_consumption_YoY": -2.4201833153259633,
+      "Industrial_production_YoY": 2.3688810428642126,
+      "unemployment_rate": 9.1
+    },
+    {
+      "date": "2011-07-01",
+      "WTI_YoY": 27.494899264370964,
+      "petroleum_consumption_YoY": -3.4345401082984672,
+      "Industrial_production_YoY": 2.484132372991299,
+      "unemployment_rate": 9.0
+    },
+    {
+      "date": "2011-08-01",
+      "WTI_YoY": 12.707660696289945,
+      "petroleum_consumption_YoY": -1.881078692855509,
+      "Industrial_production_YoY": 2.7992943499441703,
+      "unemployment_rate": 9.0
+    },
+    {
+      "date": "2011-09-01",
+      "WTI_YoY": 13.653739051187275,
+      "petroleum_consumption_YoY": -3.182794285584589,
+      "Industrial_production_YoY": 2.4123837996766095,
+      "unemployment_rate": 9.0
+    },
+    {
+      "date": "2011-10-01",
+      "WTI_YoY": 5.408925715947088,
+      "petroleum_consumption_YoY": -0.8954087008168576,
+      "Industrial_production_YoY": 3.4162150732061747,
+      "unemployment_rate": 8.8
+    },
+    {
+      "date": "2011-11-01",
+      "WTI_YoY": 15.320096534807348,
+      "petroleum_consumption_YoY": -0.23786901165110397,
+      "Industrial_production_YoY": 3.3174195787687877,
+      "unemployment_rate": 8.6
+    },
+    {
+      "date": "2011-12-01",
+      "WTI_YoY": 10.563522373578426,
+      "petroleum_consumption_YoY": -5.828906439758985,
+      "Industrial_production_YoY": 2.859134467066693,
+      "unemployment_rate": 8.5
+    },
+    {
+      "date": "2012-01-01",
+      "WTI_YoY": 12.451427321816055,
+      "petroleum_consumption_YoY": -3.651925471075268,
+      "Industrial_production_YoY": 3.6910016324102957,
+      "unemployment_rate": 8.3
+    },
+    {
+      "date": "2012-02-01",
+      "WTI_YoY": 15.382503758192257,
+      "petroleum_consumption_YoY": 2.2767786397181355,
+      "Industrial_production_YoY": 4.439148449901298,
+      "unemployment_rate": 8.3
+    },
+    {
+      "date": "2012-03-01",
+      "WTI_YoY": 3.209524761074012,
+      "petroleum_consumption_YoY": -6.19897623307507,
+      "Industrial_production_YoY": 2.8286925428470555,
+      "unemployment_rate": 8.2
+    },
+    {
+      "date": "2012-04-01",
+      "WTI_YoY": -5.670919590076007,
+      "petroleum_consumption_YoY": -2.9896322277815135,
+      "Industrial_production_YoY": 3.9040297563633697,
+      "unemployment_rate": 8.2
+    },
+    {
+      "date": "2012-05-01",
+      "WTI_YoY": -6.190189552861858,
+      "petroleum_consumption_YoY": 0.390612476460106,
+      "Industrial_production_YoY": 4.0185114178595605,
+      "unemployment_rate": 8.2
+    },
+    {
+      "date": "2012-06-01",
+      "WTI_YoY": -14.502560034501055,
+      "petroleum_consumption_YoY": -2.0773227211135725,
+      "Industrial_production_YoY": 3.7105509068513065,
+      "unemployment_rate": 8.2
+    },
+    {
+      "date": "2012-07-01",
+      "WTI_YoY": -9.668986115362655,
+      "petroleum_consumption_YoY": -1.2387796656571304,
+      "Industrial_production_YoY": 3.418677881567289,
+      "unemployment_rate": 8.2
+    },
+    {
+      "date": "2012-08-01",
+      "WTI_YoY": 9.03276492450873,
+      "petroleum_consumption_YoY": -1.7307854196481287,
+      "Industrial_production_YoY": 2.285596731143258,
+      "unemployment_rate": 8.1
+    },
+    {
+      "date": "2012-09-01",
+      "WTI_YoY": 10.522623003477683,
+      "petroleum_consumption_YoY": -4.84928007837786,
+      "Industrial_production_YoY": 2.2951570495009843,
+      "unemployment_rate": 7.8
+    },
+    {
+      "date": "2012-10-01",
+      "WTI_YoY": 3.671033352512909,
+      "petroleum_consumption_YoY": -1.1784083160242265,
+      "Industrial_production_YoY": 1.9430024786973865,
+      "unemployment_rate": 7.8
+    },
+    {
+      "date": "2012-11-01",
+      "WTI_YoY": -10.93968250856462,
+      "petroleum_consumption_YoY": -2.9035948220693664,
+      "Industrial_production_YoY": 2.3257536633332743,
+      "unemployment_rate": 7.7
+    },
+    {
+      "date": "2012-12-01",
+      "WTI_YoY": -10.859422558483356,
+      "petroleum_consumption_YoY": -3.302871053415246,
+      "Industrial_production_YoY": 2.0268355938483085,
+      "unemployment_rate": 7.9
+    },
+    {
+      "date": "2013-01-01",
+      "WTI_YoY": -5.501785948763461,
+      "petroleum_consumption_YoY": 1.9827864230664183,
+      "Industrial_production_YoY": 1.4467904237824847,
+      "unemployment_rate": 8.0
+    },
+    {
+      "date": "2013-02-01",
+      "WTI_YoY": -6.746362795564709,
+      "petroleum_consumption_YoY": -4.032659530657334,
+      "Industrial_production_YoY": 1.5945538776370727,
+      "unemployment_rate": 7.7
+    },
+    {
+      "date": "2013-03-01",
+      "WTI_YoY": -12.452439979961216,
+      "petroleum_consumption_YoY": 1.720357324165711,
+      "Industrial_production_YoY": 2.534732272069462,
+      "unemployment_rate": 7.5
+    },
+    {
+      "date": "2013-04-01",
+      "WTI_YoY": -10.936437281517186,
+      "petroleum_consumption_YoY": 1.744947788343043,
+      "Industrial_production_YoY": 1.7145631127746475,
+      "unemployment_rate": 7.6
+    },
+    {
+      "date": "2013-05-01",
+      "WTI_YoY": -0.1531886285055628,
+      "petroleum_consumption_YoY": 0.7212914445788643,
+      "Industrial_production_YoY": 1.5594777439077445,
+      "unemployment_rate": 7.5
+    },
+    {
+      "date": "2013-06-01",
+      "WTI_YoY": 16.365274796484574,
+      "petroleum_consumption_YoY": -0.8830799723529403,
+      "Industrial_production_YoY": 1.7645800035426706,
+      "unemployment_rate": 7.5
+    },
+    {
+      "date": "2013-07-01",
+      "WTI_YoY": 19.085983904490767,
+      "petroleum_consumption_YoY": 3.432525361657235,
+      "Industrial_production_YoY": 1.2364196654177428,
+      "unemployment_rate": 7.3
+    },
+    {
+      "date": "2013-08-01",
+      "WTI_YoY": 13.21709394244519,
+      "petroleum_consumption_YoY": -0.39382312796277796,
+      "Industrial_production_YoY": 2.2593571227008002,
+      "unemployment_rate": 7.2
+    },
+    {
+      "date": "2013-09-01",
+      "WTI_YoY": 12.459376531385047,
+      "petroleum_consumption_YoY": 5.909221287361732,
+      "Industrial_production_YoY": 2.854766330187619,
+      "unemployment_rate": 7.2
+    },
+    {
+      "date": "2013-10-01",
+      "WTI_YoY": 12.344167516882854,
+      "petroleum_consumption_YoY": 2.311600724704266,
+      "Industrial_production_YoY": 2.4178437626957816,
+      "unemployment_rate": 7.2
+    },
+    {
+      "date": "2013-11-01",
+      "WTI_YoY": 8.473882321864878,
+      "petroleum_consumption_YoY": 4.041227227421085,
+      "Industrial_production_YoY": 2.281966236973343,
+      "unemployment_rate": 6.9
+    },
+    {
+      "date": "2013-12-01",
+      "WTI_YoY": 11.11517604270238,
+      "petroleum_consumption_YoY": 3.536291470409192,
+      "Industrial_production_YoY": 2.245344069429267,
+      "unemployment_rate": 6.7
+    },
+    {
+      "date": "2014-01-01",
+      "WTI_YoY": -0.1472443200378093,
+      "petroleum_consumption_YoY": 1.527903440377676,
+      "Industrial_production_YoY": 1.8566277042981971,
+      "unemployment_rate": 6.6
+    },
+    {
+      "date": "2014-02-01",
+      "WTI_YoY": 5.77954242988179,
+      "petroleum_consumption_YoY": 1.302945058306726,
+      "Industrial_production_YoY": 2.148610089064018,
+      "unemployment_rate": 6.7
+    },
+    {
+      "date": "2014-03-01",
+      "WTI_YoY": 8.46291851472698,
+      "petroleum_consumption_YoY": -0.7879478787433114,
+      "Industrial_production_YoY": 2.724108069090181,
+      "unemployment_rate": 6.7
+    },
+    {
+      "date": "2014-04-01",
+      "WTI_YoY": 10.918860127294927,
+      "petroleum_consumption_YoY": 1.6256772453840274,
+      "Industrial_production_YoY": 2.9123215934373725,
+      "unemployment_rate": 6.2
+    },
+    {
+      "date": "2014-05-01",
+      "WTI_YoY": 8.113040186279541,
+      "petroleum_consumption_YoY": -0.687727806604943,
+      "Industrial_production_YoY": 3.226027611336124,
+      "unemployment_rate": 6.3
+    },
+    {
+      "date": "2014-06-01",
+      "WTI_YoY": 10.464157993459189,
+      "petroleum_consumption_YoY": 0.2708029536588663,
+      "Industrial_production_YoY": 3.365841732090935,
+      "unemployment_rate": 6.1
+    },
+    {
+      "date": "2014-07-01",
+      "WTI_YoY": -1.0339766193610878,
+      "petroleum_consumption_YoY": -0.07507507507508171,
+      "Industrial_production_YoY": 3.9177888079901857,
+      "unemployment_rate": 6.2
+    },
+    {
+      "date": "2014-08-01",
+      "WTI_YoY": -9.417547109264246,
+      "petroleum_consumption_YoY": 0.6015863775778341,
+      "Industrial_production_YoY": 3.1253041765382905,
+      "unemployment_rate": 6.1
+    },
+    {
+      "date": "2014-09-01",
+      "WTI_YoY": -12.303750829663551,
+      "petroleum_consumption_YoY": -0.21249608948169518,
+      "Industrial_production_YoY": 2.89843352202952,
+      "unemployment_rate": 5.9
+    },
+    {
+      "date": "2014-10-01",
+      "WTI_YoY": -16.054887172523536,
+      "petroleum_consumption_YoY": 2.6428045080117757,
+      "Industrial_production_YoY": 2.9919466037849007,
+      "unemployment_rate": 5.7
+    },
+    {
+      "date": "2014-11-01",
+      "WTI_YoY": -19.256079344359378,
+      "petroleum_consumption_YoY": -0.43368675257365874,
+      "Industrial_production_YoY": 3.3861066751199598,
+      "unemployment_rate": 5.8
+    },
+    {
+      "date": "2014-12-01",
+      "WTI_YoY": -39.26728814979804,
+      "petroleum_consumption_YoY": 3.3406800407906667,
+      "Industrial_production_YoY": 3.170492700276073,
+      "unemployment_rate": 5.6
+    },
+    {
+      "date": "2015-01-01",
+      "WTI_YoY": -50.09466723034183,
+      "petroleum_consumption_YoY": 0.9207690171227911,
+      "Industrial_production_YoY": 2.7262407410550527,
+      "unemployment_rate": 5.7
+    },
+    {
+      "date": "2015-02-01",
+      "WTI_YoY": -49.82589674920257,
+      "petroleum_consumption_YoY": 3.821690050840454,
+      "Industrial_production_YoY": 1.30473816054415,
+      "unemployment_rate": 5.5
+    },
+    {
+      "date": "2015-03-01",
+      "WTI_YoY": -52.55770928742473,
+      "petroleum_consumption_YoY": 5.175010863936214,
+      "Industrial_production_YoY": -0.0027479483621140055,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "2015-04-01",
+      "WTI_YoY": -46.650959901094026,
+      "petroleum_consumption_YoY": 1.8652611599685898,
+      "Industrial_production_YoY": -0.6444572558062966,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "2015-05-01",
+      "WTI_YoY": -41.99779095128907,
+      "petroleum_consumption_YoY": 3.253229336600927,
+      "Industrial_production_YoY": -1.460487812501221,
+      "unemployment_rate": 5.6
+    },
+    {
+      "date": "2015-06-01",
+      "WTI_YoY": -43.456732988303685,
+      "petroleum_consumption_YoY": 4.792026815237316,
+      "Industrial_production_YoY": -2.106390227283794,
+      "unemployment_rate": 5.3
+    },
+    {
+      "date": "2015-07-01",
+      "WTI_YoY": -50.86245858838501,
+      "petroleum_consumption_YoY": 4.254801994521196,
+      "Industrial_production_YoY": -1.6903126553953207,
+      "unemployment_rate": 5.2
+    },
+    {
+      "date": "2015-08-01",
+      "WTI_YoY": -55.594250367491085,
+      "petroleum_consumption_YoY": 3.149927032406463,
+      "Industrial_production_YoY": -1.6854337113987983,
+      "unemployment_rate": 5.1
+    },
+    {
+      "date": "2015-09-01",
+      "WTI_YoY": -51.208459986206535,
+      "petroleum_consumption_YoY": 0.7958779832376139,
+      "Industrial_production_YoY": -2.2407414414912674,
+      "unemployment_rate": 5.0
+    },
+    {
+      "date": "2015-10-01",
+      "WTI_YoY": -45.230683346110965,
+      "petroleum_consumption_YoY": -1.5714210075077006,
+      "Industrial_production_YoY": -2.72506606749946,
+      "unemployment_rate": 5.0
+    },
+    {
+      "date": "2015-11-01",
+      "WTI_YoY": -43.99815972222222,
+      "petroleum_consumption_YoY": -1.7406699562165562,
+      "Industrial_production_YoY": -4.033068306068888,
+      "unemployment_rate": 5.1
+    },
+    {
+      "date": "2015-12-01",
+      "WTI_YoY": -37.27719470403791,
+      "petroleum_consumption_YoY": 0.29825180413691754,
+      "Industrial_production_YoY": -4.496144811599123,
+      "unemployment_rate": 5.0
+    },
+    {
+      "date": "2016-01-01",
+      "WTI_YoY": -32.901675396054884,
+      "petroleum_consumption_YoY": -1.4652459939744955,
+      "Industrial_production_YoY": -3.236256019749162,
+      "unemployment_rate": 4.8
+    },
+    {
+      "date": "2016-02-01",
+      "WTI_YoY": -40.05441681406722,
+      "petroleum_consumption_YoY": 4.449225214161423,
+      "Industrial_production_YoY": -3.1193297695960798,
+      "unemployment_rate": 4.9
+    },
+    {
+      "date": "2016-03-01",
+      "WTI_YoY": -21.48994411283883,
+      "petroleum_consumption_YoY": 1.7538984004298763,
+      "Industrial_production_YoY": -3.515311400177057,
+      "unemployment_rate": 5.0
+    },
+    {
+      "date": "2016-04-01",
+      "WTI_YoY": -25.155005203277614,
+      "petroleum_consumption_YoY": 0.5081880347950651,
+      "Industrial_production_YoY": -2.6579036961380753,
+      "unemployment_rate": 5.1
+    },
+    {
+      "date": "2016-05-01",
+      "WTI_YoY": -21.18049278261882,
+      "petroleum_consumption_YoY": -0.31710288619082316,
+      "Industrial_production_YoY": -2.448153056399993,
+      "unemployment_rate": 4.8
+    },
+    {
+      "date": "2016-06-01",
+      "WTI_YoY": -18.49273952721443,
+      "petroleum_consumption_YoY": 0.13600748260793605,
+      "Industrial_production_YoY": -1.678117946525337,
+      "unemployment_rate": 4.9
+    },
+    {
+      "date": "2016-07-01",
+      "WTI_YoY": -12.277598185422656,
+      "petroleum_consumption_YoY": -2.416999551722654,
+      "Industrial_production_YoY": -2.196738284260069,
+      "unemployment_rate": 4.8
+    },
+    {
+      "date": "2016-08-01",
+      "WTI_YoY": 4.331308385486454,
+      "petroleum_consumption_YoY": 1.6836389117482309,
+      "Industrial_production_YoY": -2.164263084601936,
+      "unemployment_rate": 4.9
+    },
+    {
+      "date": "2016-09-01",
+      "WTI_YoY": -0.6533552514475405,
+      "petroleum_consumption_YoY": 1.5523994357923732,
+      "Industrial_production_YoY": -1.9939516469206886,
+      "unemployment_rate": 5.0
+    },
+    {
+      "date": "2016-10-01",
+      "WTI_YoY": 7.683518673567069,
+      "petroleum_consumption_YoY": 1.073917262062296,
+      "Industrial_production_YoY": -1.5023811304759715,
+      "unemployment_rate": 4.9
+    },
+    {
+      "date": "2016-11-01",
+      "WTI_YoY": 7.580553867971251,
+      "petroleum_consumption_YoY": 3.2421322293999966,
+      "Industrial_production_YoY": -1.1862778785850958,
+      "unemployment_rate": 4.7
+    },
+    {
+      "date": "2016-12-01",
+      "WTI_YoY": 39.748270633805106,
+      "petroleum_consumption_YoY": 1.9764860895629344,
+      "Industrial_production_YoY": -0.02049641716570516,
+      "unemployment_rate": 4.7
+    },
+    {
+      "date": "2017-01-01",
+      "WTI_YoY": 65.71580451177779,
+      "petroleum_consumption_YoY": 1.2884070099539846,
+      "Industrial_production_YoY": -0.8031281419274894,
+      "unemployment_rate": 4.7
+    },
+    {
+      "date": "2017-02-01",
+      "WTI_YoY": 76.32958827501098,
+      "petroleum_consumption_YoY": -6.944913251873352,
+      "Industrial_production_YoY": -0.6864591168616152,
+      "unemployment_rate": 4.6
+    },
+    {
+      "date": "2017-03-01",
+      "WTI_YoY": 31.37843804182023,
+      "petroleum_consumption_YoY": 1.4920415434926282,
+      "Industrial_production_YoY": 0.7162067590550603,
+      "unemployment_rate": 4.4
+    },
+    {
+      "date": "2017-04-01",
+      "WTI_YoY": 25.285800555181794,
+      "petroleum_consumption_YoY": 0.9094344602746274,
+      "Industrial_production_YoY": 1.3993011097695573,
+      "unemployment_rate": 4.4
+    },
+    {
+      "date": "2017-05-01",
+      "WTI_YoY": 3.7762636971575114,
+      "petroleum_consumption_YoY": 3.8374006217253287,
+      "Industrial_production_YoY": 1.7500792534729248,
+      "unemployment_rate": 4.4
+    },
+    {
+      "date": "2017-06-01",
+      "WTI_YoY": -7.341562097962074,
+      "petroleum_consumption_YoY": 3.137050051275203,
+      "Industrial_production_YoY": 1.4803308546539107,
+      "unemployment_rate": 4.3
+    },
+    {
+      "date": "2017-07-01",
+      "WTI_YoY": 4.432160881021852,
+      "petroleum_consumption_YoY": 1.820122516865097,
+      "Industrial_production_YoY": 1.1187969195710634,
+      "unemployment_rate": 4.3
+    },
+    {
+      "date": "2017-08-01",
+      "WTI_YoY": 7.406723309937191,
+      "petroleum_consumption_YoY": 0.04391754752142152,
+      "Industrial_production_YoY": 0.8523014668689877,
+      "unemployment_rate": 4.4
+    },
+    {
+      "date": "2017-09-01",
+      "WTI_YoY": 10.26864664903091,
+      "petroleum_consumption_YoY": -0.4336156117936918,
+      "Industrial_production_YoY": 1.0630336308315114,
+      "unemployment_rate": 4.3
+    },
+    {
+      "date": "2017-10-01",
+      "WTI_YoY": 3.6212567663470807,
+      "petroleum_consumption_YoY": 1.3901973812522561,
+      "Industrial_production_YoY": 2.2919955326540453,
+      "unemployment_rate": 4.2
+    },
+    {
+      "date": "2017-11-01",
+      "WTI_YoY": 24.041590188553318,
+      "petroleum_consumption_YoY": 3.0185809682518716,
+      "Industrial_production_YoY": 2.9662701539719283,
+      "unemployment_rate": 4.2
+    },
+    {
+      "date": "2017-12-01",
+      "WTI_YoY": 11.373811138192004,
+      "petroleum_consumption_YoY": 1.2740896341107755,
+      "Industrial_production_YoY": 2.467143465957866,
+      "unemployment_rate": 4.1
+    },
+    {
+      "date": "2018-01-01",
+      "WTI_YoY": 21.321368712043732,
+      "petroleum_consumption_YoY": 5.761840670885077,
+      "Industrial_production_YoY": 2.7352874765469437,
+      "unemployment_rate": 4.0
+    },
+    {
+      "date": "2018-02-01",
+      "WTI_YoY": 16.385471010926267,
+      "petroleum_consumption_YoY": 2.431859126660263,
+      "Industrial_production_YoY": 3.3994953469032696,
+      "unemployment_rate": 4.1
+    },
+    {
+      "date": "2018-03-01",
+      "WTI_YoY": 27.158982830885115,
+      "petroleum_consumption_YoY": 2.675170165861118,
+      "Industrial_production_YoY": 3.224806264183644,
+      "unemployment_rate": 4.0
+    },
+    {
+      "date": "2018-04-01",
+      "WTI_YoY": 29.75543791706241,
+      "petroleum_consumption_YoY": 1.6591640710226008,
+      "Industrial_production_YoY": 3.309758614070435,
+      "unemployment_rate": 4.0
+    },
+    {
+      "date": "2018-05-01",
+      "WTI_YoY": 44.355262170879904,
+      "petroleum_consumption_YoY": 0.7907447183298721,
+      "Industrial_production_YoY": 2.2584201444366236,
+      "unemployment_rate": 3.8
+    },
+    {
+      "date": "2018-06-01",
+      "WTI_YoY": 50.23627223122147,
+      "petroleum_consumption_YoY": 1.0761733224053938,
+      "Industrial_production_YoY": 2.8410387544831828,
+      "unemployment_rate": 4.0
+    },
+    {
+      "date": "2018-07-01",
+      "WTI_YoY": 52.22094661924002,
+      "petroleum_consumption_YoY": 2.422491377142433,
+      "Industrial_production_YoY": 3.2543243815604805,
+      "unemployment_rate": 3.8
+    },
+    {
+      "date": "2018-08-01",
+      "WTI_YoY": 41.67353034348555,
+      "petroleum_consumption_YoY": 4.6950380259964675,
+      "Industrial_production_YoY": 4.353587280888749,
+      "unemployment_rate": 3.8
+    },
+    {
+      "date": "2018-09-01",
+      "WTI_YoY": 40.9660496631165,
+      "petroleum_consumption_YoY": 1.5778997753514767,
+      "Industrial_production_YoY": 4.313826088176409,
+      "unemployment_rate": 3.7
+    },
+    {
+      "date": "2018-10-01",
+      "WTI_YoY": 37.169083232528656,
+      "petroleum_consumption_YoY": 3.9109731625132538,
+      "Industrial_production_YoY": 2.930867401734427,
+      "unemployment_rate": 3.8
+    },
+    {
+      "date": "2018-11-01",
+      "WTI_YoY": 0.5736877947889907,
+      "petroleum_consumption_YoY": 1.6612751616038368,
+      "Industrial_production_YoY": 2.7666629800210174,
+      "unemployment_rate": 3.8
+    },
+    {
+      "date": "2018-12-01",
+      "WTI_YoY": -14.441094688669487,
+      "petroleum_consumption_YoY": -0.382454886141792,
+      "Industrial_production_YoY": 2.5912536810940523,
+      "unemployment_rate": 3.9
+    },
+    {
+      "date": "2019-01-01",
+      "WTI_YoY": -19.345578505909533,
+      "petroleum_consumption_YoY": 0.1185892391222243,
+      "Industrial_production_YoY": 1.9116422323518512,
+      "unemployment_rate": 4.0
+    },
+    {
+      "date": "2019-02-01",
+      "WTI_YoY": -11.69017896410567,
+      "petroleum_consumption_YoY": 1.7072694791505638,
+      "Industrial_production_YoY": 1.1096417703535089,
+      "unemployment_rate": 3.8
+    },
+    {
+      "date": "2019-03-01",
+      "WTI_YoY": -7.291113101835678,
+      "petroleum_consumption_YoY": -2.9830062529240253,
+      "Industrial_production_YoY": 0.6545559146318158,
+      "unemployment_rate": 3.8
+    },
+    {
+      "date": "2019-04-01",
+      "WTI_YoY": -3.6094959499184287,
+      "petroleum_consumption_YoY": 1.3309926663377825,
+      "Industrial_production_YoY": -1.0247462328067725,
+      "unemployment_rate": 3.7
+    },
+    {
+      "date": "2019-05-01",
+      "WTI_YoY": -13.077452712533777,
+      "petroleum_consumption_YoY": 0.39528263836181576,
+      "Industrial_production_YoY": -0.010156011968476264,
+      "unemployment_rate": 3.6
+    },
+    {
+      "date": "2019-06-01",
+      "WTI_YoY": -19.471319123858155,
+      "petroleum_consumption_YoY": -0.7963028242530479,
+      "Industrial_production_YoY": -0.7369328862962377,
+      "unemployment_rate": 3.6
+    },
+    {
+      "date": "2019-07-01",
+      "WTI_YoY": -19.192813680305377,
+      "petroleum_consumption_YoY": 0.4450164665256606,
+      "Industrial_production_YoY": -1.3774541767684445,
+      "unemployment_rate": 3.7
+    },
+    {
+      "date": "2019-08-01",
+      "WTI_YoY": -19.468982604332197,
+      "petroleum_consumption_YoY": -0.6800904630785642,
+      "Industrial_production_YoY": -1.3396749291328724,
+      "unemployment_rate": 3.6
+    },
+    {
+      "date": "2019-09-01",
+      "WTI_YoY": -18.916000329733752,
+      "petroleum_consumption_YoY": 0.6650898735125921,
+      "Industrial_production_YoY": -1.7374573008364869,
+      "unemployment_rate": 3.5
+    },
+    {
+      "date": "2019-10-01",
+      "WTI_YoY": -23.725740834060538,
+      "petroleum_consumption_YoY": -0.6850069388642521,
+      "Industrial_production_YoY": -2.4594751580988228,
+      "unemployment_rate": 3.6
+    },
+    {
+      "date": "2019-11-01",
+      "WTI_YoY": 0.15000371890958597,
+      "petroleum_consumption_YoY": -0.36510555125280897,
+      "Industrial_production_YoY": -2.047601522464615,
+      "unemployment_rate": 3.6
+    },
+    {
+      "date": "2019-12-01",
+      "WTI_YoY": 20.786170224700196,
+      "petroleum_consumption_YoY": 0.4261050903354491,
+      "Industrial_production_YoY": -2.2991807373363926,
+      "unemployment_rate": 3.6
+    },
+    {
+      "date": "2020-01-01",
+      "WTI_YoY": 11.957660187785613,
+      "petroleum_consumption_YoY": -3.866376237649072,
+      "Industrial_production_YoY": -2.290379015513233,
+      "unemployment_rate": 3.6
+    },
+    {
+      "date": "2020-02-01",
+      "WTI_YoY": -8.028616852146264,
+      "petroleum_consumption_YoY": 3.1526682673127304,
+      "Industrial_production_YoY": -1.4232217750208775,
+      "unemployment_rate": 3.5
+    },
+    {
+      "date": "2020-03-01",
+      "WTI_YoY": -49.772984103303955,
+      "petroleum_consumption_YoY": -8.923255519549588,
+      "Industrial_production_YoY": -5.315054964389065,
+      "unemployment_rate": 4.4
+    },
+    {
+      "date": "2020-04-01",
+      "WTI_YoY": -74.0886280767424,
+      "petroleum_consumption_YoY": -29.2549368253633,
+      "Industrial_production_YoY": -17.318282261376304,
+      "unemployment_rate": 14.8
+    },
+    {
+      "date": "2020-05-01",
+      "WTI_YoY": -53.042916177822285,
+      "petroleum_consumption_YoY": -22.798678465834378,
+      "Industrial_production_YoY": -16.047738104539413,
+      "unemployment_rate": 13.2
+    },
+    {
+      "date": "2020-06-01",
+      "WTI_YoY": -29.913968389932354,
+      "petroleum_consumption_YoY": -16.613920488195,
+      "Industrial_production_YoY": -10.586064673581452,
+      "unemployment_rate": 11.0
+    },
+    {
+      "date": "2020-07-01",
+      "WTI_YoY": -29.0240473006222,
+      "petroleum_consumption_YoY": -12.82149693977227,
+      "Industrial_production_YoY": -6.783544959427434,
+      "unemployment_rate": 10.2
+    },
+    {
+      "date": "2020-08-01",
+      "WTI_YoY": -22.747294367806425,
+      "petroleum_consumption_YoY": -13.497198299899427,
+      "Industrial_production_YoY": -6.512241935326724,
+      "unemployment_rate": 8.4
+    },
+    {
+      "date": "2020-09-01",
+      "WTI_YoY": -30.401450973210686,
+      "petroleum_consumption_YoY": -9.94335606547525,
+      "Industrial_production_YoY": -6.183101854793705,
+      "unemployment_rate": 7.8
+    },
+    {
+      "date": "2020-10-01",
+      "WTI_YoY": -26.994649390411386,
+      "petroleum_consumption_YoY": -11.214931717135467,
+      "Industrial_production_YoY": -4.622683457542831,
+      "unemployment_rate": 6.9
+    },
+    {
+      "date": "2020-11-01",
+      "WTI_YoY": -28.24167612299687,
+      "petroleum_consumption_YoY": -11.053934449853898,
+      "Industrial_production_YoY": -4.763324870606622,
+      "unemployment_rate": 6.7
+    },
+    {
+      "date": "2020-12-01",
+      "WTI_YoY": -21.384786848704383,
+      "petroleum_consumption_YoY": -9.495887661172764,
+      "Industrial_production_YoY": -3.28150457766595,
+      "unemployment_rate": 6.7
+    },
+    {
+      "date": "2021-01-01",
+      "WTI_YoY": -9.580524703596083,
+      "petroleum_consumption_YoY": -6.507069686434308,
+      "Industrial_production_YoY": -2.1295843569181794,
+      "unemployment_rate": 6.4
+    },
+    {
+      "date": "2021-02-01",
+      "WTI_YoY": 16.8247753329654,
+      "petroleum_consumption_YoY": -15.099400663679008,
+      "Industrial_production_YoY": -5.680577271180343,
+      "unemployment_rate": 6.2
+    },
+    {
+      "date": "2021-03-01",
+      "WTI_YoY": 113.41285097681796,
+      "petroleum_consumption_YoY": 3.3803068173228645,
+      "Industrial_production_YoY": 1.0038210492383515,
+      "unemployment_rate": 6.1
+    },
+    {
+      "date": "2021-04-01",
+      "WTI_YoY": 272.9640287769784,
+      "petroleum_consumption_YoY": 35.65803877089226,
+      "Industrial_production_YoY": 16.55213518144698,
+      "unemployment_rate": 6.1
+    },
+    {
+      "date": "2021-05-01",
+      "WTI_YoY": 128.16455142231948,
+      "petroleum_consumption_YoY": 25.109221762469947,
+      "Industrial_production_YoY": 15.673379835366053,
+      "unemployment_rate": 5.8
+    },
+    {
+      "date": "2021-06-01",
+      "WTI_YoY": 86.33062793677915,
+      "petroleum_consumption_YoY": 17.76002792393234,
+      "Industrial_production_YoY": 8.958396565691418,
+      "unemployment_rate": 5.9
+    },
+    {
+      "date": "2021-07-01",
+      "WTI_YoY": 78.0506724981564,
+      "petroleum_consumption_YoY": 9.709757391389084,
+      "Industrial_production_YoY": 5.4998863464161385,
+      "unemployment_rate": 5.4
+    },
+    {
+      "date": "2021-08-01",
+      "WTI_YoY": 59.97160624601241,
+      "petroleum_consumption_YoY": 10.495864275345102,
+      "Industrial_production_YoY": 4.261168528131454,
+      "unemployment_rate": 5.1
+    },
+    {
+      "date": "2021-09-01",
+      "WTI_YoY": 80.76821414840447,
+      "petroleum_consumption_YoY": 9.359195526948326,
+      "Industrial_production_YoY": 3.0124970172007215,
+      "unemployment_rate": 4.7
+    },
+    {
+      "date": "2021-10-01",
+      "WTI_YoY": 106.8150438631914,
+      "petroleum_consumption_YoY": 8.989490104985087,
+      "Industrial_production_YoY": 3.5628709708763973,
+      "unemployment_rate": 4.5
+    },
+    {
+      "date": "2021-11-01",
+      "WTI_YoY": 93.33802599606588,
+      "petroleum_consumption_YoY": 10.378391864102522,
+      "Industrial_production_YoY": 3.897545981936834,
+      "unemployment_rate": 4.1
+    },
+    {
+      "date": "2021-12-01",
+      "WTI_YoY": 52.497221013967454,
+      "petroleum_consumption_YoY": 9.88109911860433,
+      "Industrial_production_YoY": 2.2463731281071153,
+      "unemployment_rate": 3.9
+    },
+    {
+      "date": "2022-01-01",
+      "WTI_YoY": 60.01639410621764,
+      "petroleum_consumption_YoY": 3.638982141581115,
+      "Industrial_production_YoY": 1.3181341030033655,
+      "unemployment_rate": 4.0
+    },
+    {
+      "date": "2022-02-01",
+      "WTI_YoY": 55.20198238670802,
+      "petroleum_consumption_YoY": 12.902322734488013,
+      "Industrial_production_YoY": 5.429593086433182,
+      "unemployment_rate": 3.9
+    },
+    {
+      "date": "2022-03-01",
+      "WTI_YoY": 74.06916563201872,
+      "petroleum_consumption_YoY": 6.125632062186059,
+      "Industrial_production_YoY": 3.0544104015221674,
+      "unemployment_rate": 3.7
+    },
+    {
+      "date": "2022-04-01",
+      "WTI_YoY": 64.9108830677829,
+      "petroleum_consumption_YoY": -0.7711273584070422,
+      "Industrial_production_YoY": 2.923435475508507,
+      "unemployment_rate": 3.7
+    },
+    {
+      "date": "2022-05-01",
+      "WTI_YoY": 68.10376165596014,
+      "petroleum_consumption_YoY": -0.9177789649380208,
+      "Industrial_production_YoY": 1.9110298059100916,
+      "unemployment_rate": 3.6
+    },
+    {
+      "date": "2022-06-01",
+      "WTI_YoY": 60.88549740544238,
+      "petroleum_consumption_YoY": -1.417470876002791,
+      "Industrial_production_YoY": 1.2217594016755706,
+      "unemployment_rate": 3.6
+    },
+    {
+      "date": "2022-07-01",
+      "WTI_YoY": 40.192682910806134,
+      "petroleum_consumption_YoY": -1.7919544766791695,
+      "Industrial_production_YoY": 0.968659945597028,
+      "unemployment_rate": 3.5
+    },
+    {
+      "date": "2022-08-01",
+      "WTI_YoY": 38.291139517519014,
+      "petroleum_consumption_YoY": -1.507212516739842,
+      "Industrial_production_YoY": 1.0521402147261716,
+      "unemployment_rate": 3.6
+    },
+    {
+      "date": "2022-09-01",
+      "WTI_YoY": 17.60303608339926,
+      "petroleum_consumption_YoY": -0.2222292286865879,
+      "Industrial_production_YoY": 2.462018715752601,
+      "unemployment_rate": 3.5
+    },
+    {
+      "date": "2022-10-01",
+      "WTI_YoY": 7.4599213330138525,
+      "petroleum_consumption_YoY": -2.0734354227447183,
+      "Industrial_production_YoY": 1.0648183730078253,
+      "unemployment_rate": 3.6
+    },
+    {
+      "date": "2022-11-01",
+      "WTI_YoY": 6.599041271646189,
+      "petroleum_consumption_YoY": -1.9966349937909134,
+      "Industrial_production_YoY": 0.08902953837490735,
+      "unemployment_rate": 3.6
+    },
+    {
+      "date": "2022-12-01",
+      "WTI_YoY": 6.589324877168901,
+      "petroleum_consumption_YoY": -6.216633897342872,
+      "Industrial_production_YoY": -0.8016099812473643,
+      "unemployment_rate": 3.5
+    },
+    {
+      "date": "2023-01-01",
+      "WTI_YoY": -6.126985652832184,
+      "petroleum_consumption_YoY": -1.6087370841031512,
+      "Industrial_production_YoY": 0.3188082918103907,
+      "unemployment_rate": 3.5
+    },
+    {
+      "date": "2023-02-01",
+      "WTI_YoY": -16.159156434142353,
+      "petroleum_consumption_YoY": -1.7721051892178652,
+      "Industrial_production_YoY": -0.1634816837026265,
+      "unemployment_rate": 3.6
+    },
+    {
+      "date": "2023-03-01",
+      "WTI_YoY": -32.46445687541073,
+      "petroleum_consumption_YoY": -1.8507688816400747,
+      "Industrial_production_YoY": -0.36512224493961964,
+      "unemployment_rate": 3.5
+    },
+    {
+      "date": "2023-04-01",
+      "WTI_YoY": -21.941179740636507,
+      "petroleum_consumption_YoY": 0.6959753101971389,
+      "Industrial_production_YoY": -0.1843454258675048,
+      "unemployment_rate": 3.4
+    },
+    {
+      "date": "2023-05-01",
+      "WTI_YoY": -34.663052326270616,
+      "petroleum_consumption_YoY": 1.0548696518427159,
+      "Industrial_production_YoY": -0.39957171123073953,
+      "unemployment_rate": 3.6
+    },
+    {
+      "date": "2023-06-01",
+      "WTI_YoY": -38.828071223015606,
+      "petroleum_consumption_YoY": 0.8304128772646635,
+      "Industrial_production_YoY": -0.8893464531073647,
+      "unemployment_rate": 3.6
+    },
+    {
+      "date": "2023-07-01",
+      "WTI_YoY": -25.142443834322314,
+      "petroleum_consumption_YoY": -0.35894177654240966,
+      "Industrial_production_YoY": -0.31247838929887584,
+      "unemployment_rate": 3.5
+    },
+    {
+      "date": "2023-08-01",
+      "WTI_YoY": -13.109594763960452,
+      "petroleum_consumption_YoY": 1.4299165620905052,
+      "Industrial_production_YoY": -0.25421306219911566,
+      "unemployment_rate": 3.7
+    },
+    {
+      "date": "2023-09-01",
+      "WTI_YoY": 6.132235421776633,
+      "petroleum_consumption_YoY": -1.1004375655345955,
+      "Industrial_production_YoY": -0.2672476942852109,
+      "unemployment_rate": 3.7
+    },
+    {
+      "date": "2023-10-01",
+      "WTI_YoY": -2.1874745057515077,
+      "petroleum_consumption_YoY": 2.246661696830188,
+      "Industrial_production_YoY": -0.7742988102069082,
+      "unemployment_rate": 3.9
+    },
+    {
+      "date": "2023-11-01",
+      "WTI_YoY": -7.923952183679683,
+      "petroleum_consumption_YoY": 1.6109833040322874,
+      "Industrial_production_YoY": -0.09043615385835313,
+      "unemployment_rate": 3.7
+    },
+    {
+      "date": "2023-12-01",
+      "WTI_YoY": -5.935782902852016,
+      "petroleum_consumption_YoY": 3.129065049106483,
+      "Industrial_production_YoY": 0.8386591076755323,
+      "unemployment_rate": 3.8
+    },
+    {
+      "date": "2024-01-01",
+      "WTI_YoY": -5.082522493528218,
+      "petroleum_consumption_YoY": 1.5966207255287745,
+      "Industrial_production_YoY": -1.2762549126908995,
+      "unemployment_rate": 3.7
+    },
+    {
+      "date": "2024-02-01",
+      "WTI_YoY": 0.5419161266457362,
+      "petroleum_consumption_YoY": 2.091348676238458,
+      "Industrial_production_YoY": -0.3543266402759926,
+      "unemployment_rate": 3.9
+    },
+    {
+      "date": "2024-03-01",
+      "WTI_YoY": 10.917591774010749,
+      "petroleum_consumption_YoY": -2.0639851704190804,
+      "Industrial_production_YoY": -0.557312624665296,
+      "unemployment_rate": 3.9
+    },
+    {
+      "date": "2024-04-01",
+      "WTI_YoY": 7.427603003562955,
+      "petroleum_consumption_YoY": 0.3603162192685305,
+      "Industrial_production_YoY": -0.9971062585799939,
+      "unemployment_rate": 3.9
+    },
+    {
+      "date": "2024-05-01",
+      "WTI_YoY": 11.800193050193041,
+      "petroleum_consumption_YoY": 2.500581488138476,
+      "Industrial_production_YoY": -0.06499644303002983,
+      "unemployment_rate": 3.9
+    },
+    {
+      "date": "2024-06-01",
+      "WTI_YoY": 13.55093422916771,
+      "petroleum_consumption_YoY": -1.647415066025304,
+      "Industrial_production_YoY": 0.7734749239909133,
+      "unemployment_rate": 4.1
+    },
+    {
+      "date": "2024-07-01",
+      "WTI_YoY": 7.533840166498451,
+      "petroleum_consumption_YoY": 2.9197607801535685,
+      "Industrial_production_YoY": -0.9226344732312097,
+      "unemployment_rate": 4.2
+    },
+    {
+      "date": "2024-08-01",
+      "WTI_YoY": -5.778512414354453,
+      "petroleum_consumption_YoY": 0.09328241145492022,
+      "Industrial_production_YoY": -0.4050008280501727,
+      "unemployment_rate": 4.2
+    },
+    {
+      "date": "2024-09-01",
+      "WTI_YoY": -21.45820519988817,
+      "petroleum_consumption_YoY": -0.5090845376479636,
+      "Industrial_production_YoY": -1.2004422838397089,
+      "unemployment_rate": 4.1
+    },
+    {
+      "date": "2024-10-01",
+      "WTI_YoY": -15.94418464994467,
+      "petroleum_consumption_YoY": 1.9491557201852805,
+      "Industrial_production_YoY": -0.9947356843759692,
+      "unemployment_rate": 4.1
+    },
+    {
+      "date": "2024-11-01",
+      "WTI_YoY": -9.956877132007468,
+      "petroleum_consumption_YoY": -3.1459033820123494,
+      "Industrial_production_YoY": -1.5579409481489392,
+      "unemployment_rate": 4.2
+    },
+    {
+      "date": "2024-12-01",
+      "WTI_YoY": -2.478309821842517,
+      "petroleum_consumption_YoY": 0.8220609380026778,
+      "Industrial_production_YoY": -0.2741466217243804,
+      "unemployment_rate": 4.1
+    },
+    {
+      "date": "2025-01-01",
+      "WTI_YoY": 2.14439378371436,
+      "petroleum_consumption_YoY": 4.888500890839875,
+      "Industrial_production_YoY": 0.849002693950851,
+      "unemployment_rate": 4.0
+    },
+    {
+      "date": "2025-02-01",
+      "WTI_YoY": -7.399244139423356,
+      "petroleum_consumption_YoY": -1.911269514861691,
+      "Industrial_production_YoY": 0.8119858403550007,
+      "unemployment_rate": 4.2
+    },
+    {
+      "date": "2025-03-01",
+      "WTI_YoY": -16.04241292963947,
+      "petroleum_consumption_YoY": 0.21060905761618454,
+      "Industrial_production_YoY": 0.5802453773984029,
+      "unemployment_rate": 4.2
+    },
+    {
+      "date": "2025-04-01",
+      "WTI_YoY": -25.555129488790897,
+      "petroleum_consumption_YoY": 0.5340153920250446,
+      "Industrial_production_YoY": 0.8823523543694645,
+      "unemployment_rate": 4.2
+    },
+    {
+      "date": "2025-05-01",
+      "WTI_YoY": -22.31431157215291,
+      "petroleum_consumption_YoY": -2.107127388415442,
+      "Industrial_production_YoY": 0.10162299356553106,
+      "unemployment_rate": 4.3
+    },
+    {
+      "date": "2025-06-01",
+      "WTI_YoY": -14.540242019556848,
+      "petroleum_consumption_YoY": 3.0981216305645543,
+      "Industrial_production_YoY": 0.5793208714095943,
+      "unemployment_rate": 4.1
+    },
+    {
+      "date": "2025-07-01",
+      "WTI_YoY": -16.39299626030084,
+      "petroleum_consumption_YoY": 1.9805236478266375,
+      "Industrial_production_YoY": 1.9187662602012212,
+      "unemployment_rate": 4.3
+    },
+    {
+      "date": "2025-08-01",
+      "WTI_YoY": -15.41263132758246,
+      "petroleum_consumption_YoY": 0.7112946230807049,
+      "Industrial_production_YoY": 1.1886779865559305,
+      "unemployment_rate": 4.3
+    },
+    {
+      "date": "2025-09-01",
+      "WTI_YoY": -8.93694455970212,
+      "petroleum_consumption_YoY": 2.7800712525341886,
+      "Industrial_production_YoY": 1.8631698334008018,
+      "unemployment_rate": 4.4
+    },
+    {
+      "date": "2025-10-01",
+      "WTI_YoY": -15.406618803159745,
+      "petroleum_consumption_YoY": -1.4224753341657514,
+      "Industrial_production_YoY": 1.7593332629600056,
+      "unemployment_rate": null
+    },
+    {
+      "date": "2025-11-01",
+      "WTI_YoY": -14.135493606544369,
+      "petroleum_consumption_YoY": -0.07713395863262473,
+      "Industrial_production_YoY": 1.7543117556713783,
+      "unemployment_rate": 4.5
+    },
+    {
+      "date": "2025-12-01",
+      "WTI_YoY": -17.321951586933114,
+      "petroleum_consumption_YoY": 1.8119071039162327,
+      "Industrial_production_YoY": 1.1629935222018384,
+      "unemployment_rate": 4.4
+    },
+    {
+      "date": "2026-01-01",
+      "WTI_YoY": -20.735386341882023,
+      "petroleum_consumption_YoY": -0.5545122621509302,
+      "Industrial_production_YoY": 1.0581153993366232,
+      "unemployment_rate": 4.3
+    },
+    {
+      "date": "2026-02-01",
+      "WTI_YoY": -9.820252661629114,
+      "petroleum_consumption_YoY": 5.090523174014594,
+      "Industrial_production_YoY": 0.8407575522283439,
+      "unemployment_rate": 4.4
+    },
+    {
+      "date": "2026-03-01",
+      "WTI_YoY": 33.91692814031651,
+      "petroleum_consumption_YoY": 1.7632963316127848,
+      "Industrial_production_YoY": 0.5808567662044073,
+      "unemployment_rate": 4.3
+    },
+    {
+      "date": "2026-04-01",
+      "WTI_YoY": 57.88783379675779,
+      "petroleum_consumption_YoY": null,
+      "Industrial_production_YoY": 1.365696311304787,
+      "unemployment_rate": 4.3
+    },
+    {
+      "date": "2026-05-01",
+      "WTI_YoY": 64.28809976101478,
+      "petroleum_consumption_YoY": null,
+      "Industrial_production_YoY": 1.6659155850265561,
+      "unemployment_rate": 4.3
+    },
+    {
+      "date": "2026-06-01",
+      "WTI_YoY": 25.452185010782014,
+      "petroleum_consumption_YoY": null,
+      "Industrial_production_YoY": null,
+      "unemployment_rate": 4.2
+    },
+    {
+      "date": "2026-07-01",
+      "WTI_YoY": null,
+      "petroleum_consumption_YoY": null,
+      "Industrial_production_YoY": null,
+      "unemployment_rate": null
+    }
+  ],
+  "annotations": [
+    "oil_embargo_1973",
+    "gulf_war_1990",
+    "gfc_2008",
+    "shale_2014",
+    "covid_2020",
+    "reopening_2021"
+  ],
+  "availableTransformations": [
+    "raw",
+    "zscore"
+  ],
+  "evidenceLabel": "Supported historical pattern",
+  "methodology": {
+    "formula": "WTI, petroleum consumption, and industrial production use year-over-year change; unemployment is a published level.",
+    "notes": "A falling oil price can also reflect supply growth, efficiency, currency moves, or policy rather than demand destruction."
+  },
+  "staticFigure": "demand_destruction_cycle.png",
+  "generatedAt": "2026-07-16T00:14:53+00:00"
+}

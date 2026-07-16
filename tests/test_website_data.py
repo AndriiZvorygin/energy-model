@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from oil_model.website_data import validate_chart_dataset
+from oil_model.website_data import _indicator_payload, _percentile, _quantile, validate_chart_dataset, validate_indicator_dataset
 
 
 def dataset() -> dict:
@@ -51,6 +51,25 @@ class WebsiteDataTests(unittest.TestCase):
         invalid_value["observations"][1]["value"] = "1.0"
         with self.assertRaisesRegex(ValueError, "non-numeric"):
             validate_chart_dataset(invalid_value)
+
+    def test_percentile_and_historical_ranges_are_stable(self) -> None:
+        self.assertEqual(_quantile([1.0, 2.0, 3.0, 4.0], 0.5), 2.5)
+        self.assertEqual(_percentile([1.0, 2.0, 3.0, 4.0], 4.0), 87.5)
+
+    def test_indicator_schema_preserves_nulls_and_latest_context(self) -> None:
+        current = {"indicator_id": "Industrial_production_YoY", "indicator": "Industrial production growth", "layer": "Production", "update_frequency": "monthly", "interpretation": "Rising is generally supportive.", "confirming_indicators": "Manufacturing; GDP", "conflicting_indicators": "Energy burden", "confidence_level": "medium", "evidence_label": "Contextual indicator"}
+        catalogue = {"indicator": "Industrial production growth", "unit": "percent", "source": "FRED INDPRO", "status": "derived", "exact_definition": "Year-over-year industrial production growth.", "data_quality_limitations": "Latest data may be revised.", "alternative_explanations": "Sector mix."}
+        rows = [
+            {"month": "2024-01", "Industrial_production_YoY": 1.0},
+            {"month": "2024-02", "Industrial_production_YoY": None},
+            {"month": "2025-01", "Industrial_production_YoY": 2.0},
+        ]
+        payload = _indicator_payload(current, catalogue, rows, "2026-01-01T00:00:00+00:00")
+        validate_indicator_dataset(payload)
+        self.assertIsNone(payload["observations"][1]["value"])
+        self.assertEqual(payload["latest"]["date"], "2025-01-01")
+        self.assertEqual(payload["latest"]["oneYearChange"], 1.0)
+        self.assertEqual(payload["interpretationDirection"], "higher-generally-supportive")
 
 
 if __name__ == "__main__":

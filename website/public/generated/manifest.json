@@ -1,10 +1,12 @@
 {
   "schemaVersion": "1.1.0",
-  "generatedAt": "2026-07-15T23:37:40+00:00",
+  "indicatorSchemaVersion": 1,
+  "generatedAt": "2026-07-16T00:14:53+00:00",
   "datasets": [
     {
       "id": "oil-price-layers",
-      "file": "oil-price-layers.json",
+      "file": "charts/oil-price-layers.json",
+      "legacyFile": "oil-price-layers.json",
       "title": "Oil price layers",
       "frequency": "monthly",
       "dateRange": {
@@ -15,7 +17,8 @@
     },
     {
       "id": "gm2-oil-lead",
-      "file": "gm2-oil-lead.json",
+      "file": "charts/gm2-oil-lead.json",
+      "legacyFile": "gm2-oil-lead.json",
       "title": "GM2 leading oil momentum",
       "frequency": "monthly",
       "dateRange": {
@@ -26,7 +29,8 @@
     },
     {
       "id": "oil-residual-ci",
-      "file": "oil-residual-ci.json",
+      "file": "charts/oil-residual-ci.json",
+      "legacyFile": "oil-residual-ci.json",
       "title": "Oil residual and physical state",
       "frequency": "monthly",
       "dateRange": {
@@ -37,7 +41,8 @@
     },
     {
       "id": "energy-gdp",
-      "file": "energy-gdp.json",
+      "file": "charts/energy-gdp.json",
+      "legacyFile": "energy-gdp.json",
       "title": "Energy throughput and real activity",
       "frequency": "quarterly",
       "dateRange": {
@@ -48,7 +53,8 @@
     },
     {
       "id": "oil-equities",
-      "file": "oil-equities.json",
+      "file": "charts/oil-equities.json",
+      "legacyFile": "oil-equities.json",
       "title": "Oil and S&P 500",
       "frequency": "monthly",
       "dateRange": {
@@ -59,7 +65,8 @@
     },
     {
       "id": "uso-tracking",
-      "file": "uso-tracking.json",
+      "file": "charts/uso-tracking.json",
+      "legacyFile": "uso-tracking.json",
       "title": "USO and benchmark oil",
       "frequency": "monthly",
       "dateRange": {
@@ -70,7 +77,8 @@
     },
     {
       "id": "output-quality-headline",
-      "file": "output-quality-headline.json",
+      "file": "charts/output-quality-headline.json",
+      "legacyFile": "output-quality-headline.json",
       "title": "Headline measured output",
       "frequency": "quarterly",
       "dateRange": {
@@ -81,7 +89,8 @@
     },
     {
       "id": "output-quality-net-output",
-      "file": "output-quality-net-output.json",
+      "file": "charts/output-quality-net-output.json",
+      "legacyFile": "output-quality-net-output.json",
       "title": "Gross and net output",
       "frequency": "annual",
       "dateRange": {
@@ -92,7 +101,8 @@
     },
     {
       "id": "output-quality-capacity",
-      "file": "output-quality-capacity.json",
+      "file": "charts/output-quality-capacity.json",
+      "legacyFile": "output-quality-capacity.json",
       "title": "Productive capacity and net investment",
       "frequency": "quarterly",
       "dateRange": {
@@ -103,7 +113,8 @@
     },
     {
       "id": "output-quality-household",
-      "file": "output-quality-household.json",
+      "file": "charts/output-quality-household.json",
+      "legacyFile": "output-quality-household.json",
       "title": "Household prosperity and essential costs",
       "frequency": "annual",
       "dateRange": {
@@ -114,7 +125,8 @@
     },
     {
       "id": "output-quality-financial",
-      "file": "output-quality-financial.json",
+      "file": "charts/output-quality-financial.json",
+      "legacyFile": "output-quality-financial.json",
       "title": "Financialization and asset valuation",
       "frequency": "quarterly",
       "dateRange": {
@@ -122,11 +134,372 @@
         "end": "2026-01-01"
       },
       "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "output-quality-comparison",
+      "file": "charts/output-quality-comparison.json",
+      "legacyFile": "output-quality-comparison.json",
+      "title": "Output, production, and household income",
+      "frequency": "quarterly",
+      "dateRange": {
+        "start": "1919-01-01",
+        "end": "2026-01-01"
+      },
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "physical-tightness",
+      "file": "charts/physical-tightness.json",
+      "legacyFile": "physical-tightness.json",
+      "title": "Physical energy conditions",
+      "frequency": "monthly",
+      "dateRange": {
+        "start": "1987-01-01",
+        "end": "2026-07-01"
+      },
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "energy-burden",
+      "file": "charts/energy-burden.json",
+      "legacyFile": "energy-burden.json",
+      "title": "Energy affordability",
+      "frequency": "monthly",
+      "dateRange": {
+        "start": "1986-01-01",
+        "end": "2026-06-01"
+      },
+      "evidenceLabel": "Experimental proxy"
+    },
+    {
+      "id": "industrial-transmission",
+      "file": "charts/industrial-transmission.json",
+      "legacyFile": "industrial-transmission.json",
+      "title": "Energy stress and real activity",
+      "frequency": "monthly",
+      "dateRange": {
+        "start": "1986-01-01",
+        "end": "2026-07-01"
+      },
+      "evidenceLabel": "Supported historical pattern"
+    },
+    {
+      "id": "labour-warning",
+      "file": "charts/labour-warning.json",
+      "legacyFile": "labour-warning.json",
+      "title": "Labour and household early warnings",
+      "frequency": "monthly",
+      "dateRange": {
+        "start": "1986-01-01",
+        "end": "2026-07-01"
+      },
+      "evidenceLabel": "Supported historical pattern"
+    },
+    {
+      "id": "demand-destruction",
+      "file": "charts/demand-destruction.json",
+      "legacyFile": "demand-destruction.json",
+      "title": "Demand destruction sequence",
+      "frequency": "monthly",
+      "dateRange": {
+        "start": "1986-01-01",
+        "end": "2026-06-01"
+      },
+      "evidenceLabel": "Supported historical pattern"
+    }
+  ],
+  "indicators": [
+    {
+      "id": "petroleum-production-yoy",
+      "file": "indicators/petroleum-production-yoy.json",
+      "label": "Petroleum production growth",
+      "layer": "Physical energy conditions",
+      "latestDate": "2026-05-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "petroleum-consumption-yoy",
+      "file": "indicators/petroleum-consumption-yoy.json",
+      "label": "Petroleum consumption growth",
+      "layer": "Physical energy conditions",
+      "latestDate": "2026-03-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "oil-consumption-per-person-mmbtu",
+      "file": "indicators/oil-consumption-per-person-mmbtu.json",
+      "label": "Oil consumption per person",
+      "layer": "Physical energy conditions",
+      "latestDate": "2026-03-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "ci-zscore",
+      "file": "indicators/ci-zscore.json",
+      "label": "Comparative inventory z-score",
+      "layer": "Physical energy conditions",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "refinery-utilization-pct",
+      "file": "indicators/refinery-utilization-pct.json",
+      "label": "Refinery utilization",
+      "layer": "Physical energy conditions",
+      "latestDate": "2026-07-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "real-wti-yoy",
+      "file": "indicators/real-wti-yoy.json",
+      "label": "Real WTI growth",
+      "layer": "Energy affordability and financial conditions",
+      "latestDate": "2026-05-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "household-energy-expenditure-share",
+      "file": "indicators/household-energy-expenditure-share.json",
+      "label": "Household energy expenditure share",
+      "layer": "Energy affordability and financial conditions",
+      "latestDate": "2026-05-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "energy-expenditure-share-gdp",
+      "file": "indicators/energy-expenditure-share-gdp.json",
+      "label": "Energy expenditure share of GDP",
+      "layer": "Energy affordability and financial conditions",
+      "latestDate": "2026-05-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "energy-cpi-yoy",
+      "file": "indicators/energy-cpi-yoy.json",
+      "label": "Energy CPI growth",
+      "layer": "Energy affordability and financial conditions",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "real-disposable-income-yoy",
+      "file": "indicators/real-disposable-income-yoy.json",
+      "label": "Real disposable income growth",
+      "layer": "Energy affordability and financial conditions",
+      "latestDate": "2026-05-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "fed-funds-rate",
+      "file": "indicators/fed-funds-rate.json",
+      "label": "Federal funds rate",
+      "layer": "Energy affordability and financial conditions",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "credit-tightening-pct",
+      "file": "indicators/credit-tightening-pct.json",
+      "label": "Credit tightening",
+      "layer": "Energy affordability and financial conditions",
+      "latestDate": "2026-07-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "gm2-yoy",
+      "file": "indicators/gm2-yoy.json",
+      "label": "Global M2 growth",
+      "layer": "Energy affordability and financial conditions",
+      "latestDate": "2026-05-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "industrial-production-yoy",
+      "file": "indicators/industrial-production-yoy.json",
+      "label": "Industrial production growth",
+      "layer": "Production, consumption, and investment response",
+      "latestDate": "2026-05-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "manufacturing-output-yoy",
+      "file": "indicators/manufacturing-output-yoy.json",
+      "label": "Manufacturing output growth",
+      "layer": "Production, consumption, and investment response",
+      "latestDate": "2026-05-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "real-consumer-spending-yoy",
+      "file": "indicators/real-consumer-spending-yoy.json",
+      "label": "Real consumer spending growth",
+      "layer": "Production, consumption, and investment response",
+      "latestDate": "2026-05-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "business-investment-yoy",
+      "file": "indicators/business-investment-yoy.json",
+      "label": "Business investment growth",
+      "layer": "Production, consumption, and investment response",
+      "latestDate": "2026-07-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "real-gdp-growth",
+      "file": "indicators/real-gdp-growth.json",
+      "label": "Real GDP growth",
+      "layer": "Production, consumption, and investment response",
+      "latestDate": "2026-07-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "average-weekly-hours-yoy",
+      "file": "indicators/average-weekly-hours-yoy.json",
+      "label": "Average weekly hours growth",
+      "layer": "Labour and household consequences",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "temporary-help-yoy",
+      "file": "indicators/temporary-help-yoy.json",
+      "label": "Temporary-help employment growth",
+      "layer": "Labour and household consequences",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "full-time-employment-share",
+      "file": "indicators/full-time-employment-share.json",
+      "label": "Full-time employment share",
+      "layer": "Labour and household consequences",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "involuntary-part-time-share",
+      "file": "indicators/involuntary-part-time-share.json",
+      "label": "Involuntary part-time share",
+      "layer": "Labour and household consequences",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "prime-age-employment-rate",
+      "file": "indicators/prime-age-employment-rate.json",
+      "label": "Prime-age employment rate",
+      "layer": "Labour and household consequences",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "real-wage-growth",
+      "file": "indicators/real-wage-growth.json",
+      "label": "Real wage growth",
+      "layer": "Labour and household consequences",
+      "latestDate": "2026-05-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "consumer-sentiment",
+      "file": "indicators/consumer-sentiment.json",
+      "label": "Consumer sentiment",
+      "layer": "Labour and household consequences",
+      "latestDate": "2026-05-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "credit-card-delinquency-rate",
+      "file": "indicators/credit-card-delinquency-rate.json",
+      "label": "Credit-card delinquency",
+      "layer": "Labour and household consequences",
+      "latestDate": "2026-07-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "unemployment-rate",
+      "file": "indicators/unemployment-rate.json",
+      "label": "Unemployment rate",
+      "layer": "Labour and household consequences",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    }
+  ],
+  "layers": [
+    {
+      "id": "liquidity-financial",
+      "label": "Liquidity and financial conditions",
+      "indicatorFields": [
+        "GM2_YoY",
+        "fed_funds_rate",
+        "credit_tightening_pct",
+        "credit_card_delinquency_rate"
+      ],
+      "interpretation": "Liquidity support is mixed with the cost and availability of credit; higher GM2 does not automatically mean lower stress.",
+      "confidence": "Moderate"
+    },
+    {
+      "id": "physical-energy",
+      "label": "Physical energy conditions",
+      "indicatorFields": [
+        "petroleum_production_YoY",
+        "petroleum_consumption_YoY",
+        "oil_consumption_per_person_mmbtu",
+        "CI_zscore",
+        "refinery_utilization_pct"
+      ],
+      "interpretation": "Supply, demand, inventories, and refinery utilization must confirm one another before physical tightness is inferred.",
+      "confidence": "Moderate"
+    },
+    {
+      "id": "energy-affordability",
+      "label": "Energy affordability",
+      "indicatorFields": [
+        "real_WTI_YoY",
+        "household_energy_expenditure_share",
+        "energy_expenditure_share_gdp",
+        "energy_CPI_YoY",
+        "real_disposable_income_YoY"
+      ],
+      "interpretation": "Energy stress depends on costs relative to real household income and economic capacity, not on nominal oil alone.",
+      "confidence": "Moderate"
+    },
+    {
+      "id": "production-activity",
+      "label": "Production and economic activity",
+      "indicatorFields": [
+        "Industrial_production_YoY",
+        "manufacturing_output_YoY",
+        "real_consumer_spending_YoY",
+        "business_investment_YoY",
+        "Real_GDP_growth"
+      ],
+      "interpretation": "Production, spending, investment, and GDP indicate whether energy and financial conditions are transmitting into measured activity.",
+      "confidence": "Moderate"
+    },
+    {
+      "id": "labour-households",
+      "label": "Labour and household conditions",
+      "indicatorFields": [
+        "average_weekly_hours_YoY",
+        "temporary_help_YoY",
+        "full_time_employment_share",
+        "involuntary_part_time_share",
+        "prime_age_employment_rate",
+        "real_wage_growth",
+        "consumer_sentiment",
+        "unemployment_rate"
+      ],
+      "interpretation": "Hours, job composition, wages, sentiment, and unemployment often move at different stages of household stress.",
+      "confidence": "Moderate"
     }
   ],
   "shared": [
     "lag-results.json",
+    "rolling-performance.json",
     "regimes.json",
+    "recessions.json",
     "events.json",
     "cross-layer.json",
     "output-quality-correlations.json"
