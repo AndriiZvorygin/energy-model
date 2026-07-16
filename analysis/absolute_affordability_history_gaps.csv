@@ -1,0 +1,7 @@
+geography,series,missing_period,reason,treatment
+Canada,National MBM-matched income deciles,Before 2015,Statistics Canada Table 11-10-0103-01 begins in 2015.,No backcast.
+Canada,Matched family-type budgets,Before 2002,Current MBM threshold Table 11-10-0066-01 begins in 2002.,Income observations are retained at source but are not assigned an affordability status without a matched threshold.
+Canada,After-tax income by tenure,Not integrated,"CMHC publishes real average after-tax income by tenure for 2006-2024, but its workbook is not yet available through the project clean-cache adapter.",Declared gap; no owner/renter income interpolation.
+Owen Sound city CSD,Household-type after-tax income,All years except 2015 and 2020,City-CSD household-type income is Census/NHS frequency.,City anchors remain separate from annual census-agglomeration tax-file data.
+Owen Sound rental market,CMHC observed rents,2004-2025 in this release,A stable machine-readable HMIP centre-level historical export is not yet integrated.,Verified 2002-2003 archived report values only; MBM shelter remains the matched budget component.
+Grey Bruce,Nutritious food basket,Before 2023,Earlier annual local reports were not found in a reproducible official archive.,Verified 2023-2024 observations only; MBM food remains the continuous matched component.

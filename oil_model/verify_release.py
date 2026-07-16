@@ -56,6 +56,11 @@ REQUIRED_ANALYSIS = [
     "analysis/canadian_income_indicator_catalogue.csv",
     "analysis/refinery_presentation_audit.md",
     "analysis/evidence_topic_audit.md",
+    "analysis/canada_absolute_affordability_history.csv",
+    "analysis/owen_sound_absolute_affordability_history.csv",
+    "analysis/absolute_affordability_validation_history.csv",
+    "analysis/absolute_affordability_history_gaps.csv",
+    "analysis/historical_absolute_affordability.md",
 ]
 
 REQUIRED_CHARTS = [
@@ -183,6 +188,8 @@ REQUIRED_DATA = [
     "website/public/generated/affordability-canada-housing-ratios.json",
     "website/public/generated/canada/indicators/canada-unemployment-rate.json",
     "website/public/generated/canada/indicators/ontario-unemployment-rate.json",
+    "website/public/generated/canada/absolute-affordability-history.json",
+    "website/public/generated/owen-sound/absolute-affordability-history.json",
 ]
 
 
