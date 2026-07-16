@@ -1,0 +1,7694 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "affordability-us-housing",
+  "title": "U.S. property prices and shelter costs",
+  "description": "FHFA measures purchase prices; BLS shelter, rent, and owners' equivalent rent measure housing-service costs.",
+  "plainLanguageSummary": "FHFA measures purchase prices; BLS shelter, rent, and owners' equivalent rent measure housing-service costs.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "explanation": "FHFA measures purchase prices; BLS shelter, rent, and owners' equivalent rent measure housing-service costs.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "FHFA measures purchase prices; BLS shelter, rent, and owners' equivalent rent measure housing-service costs."
+  ],
+  "sourceNotes": [
+    "Official U.S. source distributed through Federal Reserve Economic Data"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "FHFA": {
+        "mean": 200.665625,
+        "standardDeviation": 32.6314266279616,
+        "n": 240
+      },
+      "Shelter": {
+        "mean": 250.41568333333333,
+        "standardDeviation": 34.697246225861434,
+        "n": 240
+      },
+      "Rent": {
+        "mean": 250.50646666666668,
+        "standardDeviation": 41.95316851471279,
+        "n": 240
+      },
+      "Owners_equivalent_rent": {
+        "mean": 257.2388041666667,
+        "standardDeviation": 35.2637159129723,
+        "n": 240
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "1914-12-01",
+    "end": "2026-06-01"
+  },
+  "series": [
+    {
+      "key": "FHFA",
+      "label": "FHFA U.S. purchase-only house price index",
+      "unit": "index",
+      "source": "Official U.S. source distributed through Federal Reserve Economic Data",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-04-01"
+    },
+    {
+      "key": "Shelter",
+      "label": "U.S. shelter CPI",
+      "unit": "index",
+      "source": "Official U.S. source distributed through Federal Reserve Economic Data",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "Rent",
+      "label": "U.S. rent of primary residence CPI",
+      "unit": "index",
+      "source": "Official U.S. source distributed through Federal Reserve Economic Data",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "Owners_equivalent_rent",
+      "label": "U.S. owners' equivalent rent CPI",
+      "unit": "index",
+      "source": "Official U.S. source distributed through Federal Reserve Economic Data",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1914-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 21.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1915-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 21.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1916-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 21.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1917-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 21.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1918-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 22.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1919-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 22.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1919-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1920-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 27.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1920-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 29.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1921-05-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 31.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1921-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 31.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1921-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 32.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1922-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 32.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1922-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 32.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1922-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 32.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1922-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 32.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1923-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 32.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1923-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 33.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1923-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 33.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1923-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 34.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1924-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 34.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1924-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 34.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1924-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 34.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1924-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 34.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1925-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 34.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1925-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 34.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1926-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 34.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1926-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 34.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1927-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 33.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1927-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 33.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1928-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 32.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1928-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 32.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1929-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 32.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1929-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 31.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1930-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 31.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1930-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 30.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1931-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 29.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1931-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 28.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1932-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 26.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1932-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1933-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 22.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1933-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 21.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1934-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 21.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1934-11-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 21.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1935-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 21.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1935-07-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 21.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1935-10-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 21.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1936-01-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 21.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1936-04-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 21.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1936-07-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 21.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1936-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 22.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1936-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 22.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1937-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 22.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1937-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 22.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1937-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 23.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1937-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 23.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1938-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 23.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1938-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 23.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1938-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 23.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1938-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 23.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1939-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 23.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1939-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 23.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1939-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 23.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1939-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 23.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1940-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 23.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1940-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 23.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1940-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 23.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1940-10-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 23.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1940-11-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 23.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1940-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 23.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1941-01-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 23.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1941-02-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 23.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1941-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 23.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1941-04-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1941-05-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1941-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1941-07-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1941-08-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1941-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1941-10-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1941-11-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1941-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1942-01-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1942-02-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1942-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1942-04-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1942-05-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 25.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1942-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1942-07-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1942-08-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1942-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1942-10-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1942-11-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1942-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1943-01-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1943-02-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1943-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1943-04-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1943-05-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1943-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1943-07-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1943-08-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1943-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1943-10-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1943-11-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1943-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1944-01-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1944-02-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1944-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1944-04-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1944-05-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1944-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1944-07-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1944-08-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1944-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1944-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1945-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1945-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1945-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1945-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1946-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 24.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1946-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 25.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1946-08-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 25.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1946-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 25.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1947-01-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 25.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1947-02-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 25.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1947-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 25.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1947-04-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 25.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1947-05-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 25.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1947-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 25.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1947-07-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 25.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1947-08-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 25.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1947-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 26.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1947-10-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 26.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1947-11-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 26.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1947-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 26.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1948-01-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 27.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1948-02-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 27.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1948-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 27.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1948-04-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 27.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1948-05-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 27.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1948-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 27.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1948-07-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 27.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1948-08-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 27.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1948-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 27.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1948-10-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 27.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1948-11-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 28.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1948-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 28.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1949-01-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 28.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1949-02-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 28.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1949-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 28.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1949-04-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 28.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1949-05-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 28.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1949-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 28.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1949-07-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 28.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1949-08-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 28.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1949-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 28.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1949-10-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 29.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1949-11-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 29.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1949-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 29.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1950-01-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 29.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1950-02-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 29.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1950-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 29.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1950-04-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 29.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1950-05-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 29.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1950-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 29.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1950-07-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 29.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1950-08-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 29.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1950-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 29.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1950-10-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 30.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1950-11-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 30.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1950-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 30.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1951-01-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 30.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1951-02-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 30.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1951-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 30.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1951-04-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 30.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1951-05-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 30.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1951-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 30.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1951-07-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 30.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1951-08-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 31.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1951-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 31.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1951-10-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 31.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1951-11-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 31.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1951-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 31.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1952-01-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 31.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1952-02-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 31.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1952-03-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 31.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1952-04-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 31.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1952-05-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 32.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1952-06-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 32.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1952-07-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 32.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1952-08-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 32.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1952-09-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 32.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1952-10-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 32.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1952-11-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 32.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1952-12-01",
+      "FHFA": null,
+      "Shelter": null,
+      "Rent": 33.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1953-01-01",
+      "FHFA": null,
+      "Shelter": 21.7,
+      "Rent": 33.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1953-02-01",
+      "FHFA": null,
+      "Shelter": 21.8,
+      "Rent": 33.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1953-03-01",
+      "FHFA": null,
+      "Shelter": 21.8,
+      "Rent": 33.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1953-04-01",
+      "FHFA": null,
+      "Shelter": 21.9,
+      "Rent": 33.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1953-05-01",
+      "FHFA": null,
+      "Shelter": 21.9,
+      "Rent": 33.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1953-06-01",
+      "FHFA": null,
+      "Shelter": 21.9,
+      "Rent": 33.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1953-07-01",
+      "FHFA": null,
+      "Shelter": 22.0,
+      "Rent": 33.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1953-08-01",
+      "FHFA": null,
+      "Shelter": 22.0,
+      "Rent": 34.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1953-09-01",
+      "FHFA": null,
+      "Shelter": 22.1,
+      "Rent": 34.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1953-10-01",
+      "FHFA": null,
+      "Shelter": 22.2,
+      "Rent": 34.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1953-11-01",
+      "FHFA": null,
+      "Shelter": 22.2,
+      "Rent": 34.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1953-12-01",
+      "FHFA": null,
+      "Shelter": 22.3,
+      "Rent": 34.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1954-01-01",
+      "FHFA": null,
+      "Shelter": 22.3,
+      "Rent": 34.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1954-02-01",
+      "FHFA": null,
+      "Shelter": 22.3,
+      "Rent": 34.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1954-03-01",
+      "FHFA": null,
+      "Shelter": 22.4,
+      "Rent": 35.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1954-04-01",
+      "FHFA": null,
+      "Shelter": 22.4,
+      "Rent": 35.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1954-05-01",
+      "FHFA": null,
+      "Shelter": 22.5,
+      "Rent": 35.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1954-06-01",
+      "FHFA": null,
+      "Shelter": 22.5,
+      "Rent": 35.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1954-07-01",
+      "FHFA": null,
+      "Shelter": 22.5,
+      "Rent": 35.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1954-08-01",
+      "FHFA": null,
+      "Shelter": 22.5,
+      "Rent": 35.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1954-09-01",
+      "FHFA": null,
+      "Shelter": 22.6,
+      "Rent": 35.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1954-10-01",
+      "FHFA": null,
+      "Shelter": 22.6,
+      "Rent": 35.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1954-11-01",
+      "FHFA": null,
+      "Shelter": 22.6,
+      "Rent": 35.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1954-12-01",
+      "FHFA": null,
+      "Shelter": 22.7,
+      "Rent": 35.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1955-01-01",
+      "FHFA": null,
+      "Shelter": 22.7,
+      "Rent": 35.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1955-02-01",
+      "FHFA": null,
+      "Shelter": 22.7,
+      "Rent": 35.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1955-03-01",
+      "FHFA": null,
+      "Shelter": 22.7,
+      "Rent": 35.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1955-04-01",
+      "FHFA": null,
+      "Shelter": 22.7,
+      "Rent": 35.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1955-05-01",
+      "FHFA": null,
+      "Shelter": 22.7,
+      "Rent": 35.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1955-06-01",
+      "FHFA": null,
+      "Shelter": 22.7,
+      "Rent": 35.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1955-07-01",
+      "FHFA": null,
+      "Shelter": 22.7,
+      "Rent": 35.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1955-08-01",
+      "FHFA": null,
+      "Shelter": 22.8,
+      "Rent": 35.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1955-09-01",
+      "FHFA": null,
+      "Shelter": 22.8,
+      "Rent": 35.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1955-10-01",
+      "FHFA": null,
+      "Shelter": 22.9,
+      "Rent": 35.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1955-11-01",
+      "FHFA": null,
+      "Shelter": 22.9,
+      "Rent": 35.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1955-12-01",
+      "FHFA": null,
+      "Shelter": 22.9,
+      "Rent": 35.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1956-01-01",
+      "FHFA": null,
+      "Shelter": 22.9,
+      "Rent": 35.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1956-02-01",
+      "FHFA": null,
+      "Shelter": 22.9,
+      "Rent": 35.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1956-03-01",
+      "FHFA": null,
+      "Shelter": 22.9,
+      "Rent": 35.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1956-04-01",
+      "FHFA": null,
+      "Shelter": 22.9,
+      "Rent": 36.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1956-05-01",
+      "FHFA": null,
+      "Shelter": 22.9,
+      "Rent": 36.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1956-06-01",
+      "FHFA": null,
+      "Shelter": 23.1,
+      "Rent": 36.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1956-07-01",
+      "FHFA": null,
+      "Shelter": 23.2,
+      "Rent": 36.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1956-08-01",
+      "FHFA": null,
+      "Shelter": 23.3,
+      "Rent": 36.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1956-09-01",
+      "FHFA": null,
+      "Shelter": 23.3,
+      "Rent": 36.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1956-10-01",
+      "FHFA": null,
+      "Shelter": 23.3,
+      "Rent": 36.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1956-11-01",
+      "FHFA": null,
+      "Shelter": 23.3,
+      "Rent": 36.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1956-12-01",
+      "FHFA": null,
+      "Shelter": 23.5,
+      "Rent": 36.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1957-01-01",
+      "FHFA": null,
+      "Shelter": 23.5,
+      "Rent": 36.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1957-02-01",
+      "FHFA": null,
+      "Shelter": 23.7,
+      "Rent": 36.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1957-03-01",
+      "FHFA": null,
+      "Shelter": 23.8,
+      "Rent": 36.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1957-04-01",
+      "FHFA": null,
+      "Shelter": 23.9,
+      "Rent": 36.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1957-05-01",
+      "FHFA": null,
+      "Shelter": 23.9,
+      "Rent": 36.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1957-06-01",
+      "FHFA": null,
+      "Shelter": 23.9,
+      "Rent": 36.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1957-07-01",
+      "FHFA": null,
+      "Shelter": 24.0,
+      "Rent": 37.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1957-08-01",
+      "FHFA": null,
+      "Shelter": 24.0,
+      "Rent": 37.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1957-09-01",
+      "FHFA": null,
+      "Shelter": 24.1,
+      "Rent": 37.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1957-10-01",
+      "FHFA": null,
+      "Shelter": 24.2,
+      "Rent": 37.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1957-11-01",
+      "FHFA": null,
+      "Shelter": 24.2,
+      "Rent": 37.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1957-12-01",
+      "FHFA": null,
+      "Shelter": 24.3,
+      "Rent": 37.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1958-01-01",
+      "FHFA": null,
+      "Shelter": 24.3,
+      "Rent": 37.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1958-02-01",
+      "FHFA": null,
+      "Shelter": 24.4,
+      "Rent": 37.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1958-03-01",
+      "FHFA": null,
+      "Shelter": 24.4,
+      "Rent": 37.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1958-04-01",
+      "FHFA": null,
+      "Shelter": 24.5,
+      "Rent": 37.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1958-05-01",
+      "FHFA": null,
+      "Shelter": 24.6,
+      "Rent": 37.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1958-06-01",
+      "FHFA": null,
+      "Shelter": 24.5,
+      "Rent": 37.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1958-07-01",
+      "FHFA": null,
+      "Shelter": 24.5,
+      "Rent": 37.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1958-08-01",
+      "FHFA": null,
+      "Shelter": 24.5,
+      "Rent": 37.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1958-09-01",
+      "FHFA": null,
+      "Shelter": 24.5,
+      "Rent": 37.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1958-10-01",
+      "FHFA": null,
+      "Shelter": 24.4,
+      "Rent": 37.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1958-11-01",
+      "FHFA": null,
+      "Shelter": 24.5,
+      "Rent": 37.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1958-12-01",
+      "FHFA": null,
+      "Shelter": 24.5,
+      "Rent": 37.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1959-01-01",
+      "FHFA": null,
+      "Shelter": 24.5,
+      "Rent": 37.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1959-02-01",
+      "FHFA": null,
+      "Shelter": 24.5,
+      "Rent": 38.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1959-03-01",
+      "FHFA": null,
+      "Shelter": 24.6,
+      "Rent": 38.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1959-04-01",
+      "FHFA": null,
+      "Shelter": 24.6,
+      "Rent": 38.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1959-05-01",
+      "FHFA": null,
+      "Shelter": 24.7,
+      "Rent": 38.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1959-06-01",
+      "FHFA": null,
+      "Shelter": 24.7,
+      "Rent": 38.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1959-07-01",
+      "FHFA": null,
+      "Shelter": 24.7,
+      "Rent": 38.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1959-08-01",
+      "FHFA": null,
+      "Shelter": 24.8,
+      "Rent": 38.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1959-09-01",
+      "FHFA": null,
+      "Shelter": 24.8,
+      "Rent": 38.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1959-10-01",
+      "FHFA": null,
+      "Shelter": 24.9,
+      "Rent": 38.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1959-11-01",
+      "FHFA": null,
+      "Shelter": 25.0,
+      "Rent": 38.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1959-12-01",
+      "FHFA": null,
+      "Shelter": 25.0,
+      "Rent": 38.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1960-01-01",
+      "FHFA": null,
+      "Shelter": 25.0,
+      "Rent": 38.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1960-02-01",
+      "FHFA": null,
+      "Shelter": 25.1,
+      "Rent": 38.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1960-03-01",
+      "FHFA": null,
+      "Shelter": 25.1,
+      "Rent": 38.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1960-04-01",
+      "FHFA": null,
+      "Shelter": 25.2,
+      "Rent": 38.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1960-05-01",
+      "FHFA": null,
+      "Shelter": 25.2,
+      "Rent": 38.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1960-06-01",
+      "FHFA": null,
+      "Shelter": 25.2,
+      "Rent": 38.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1960-07-01",
+      "FHFA": null,
+      "Shelter": 25.2,
+      "Rent": 38.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1960-08-01",
+      "FHFA": null,
+      "Shelter": 25.3,
+      "Rent": 38.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1960-09-01",
+      "FHFA": null,
+      "Shelter": 25.3,
+      "Rent": 38.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1960-10-01",
+      "FHFA": null,
+      "Shelter": 25.4,
+      "Rent": 38.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1960-11-01",
+      "FHFA": null,
+      "Shelter": 25.4,
+      "Rent": 39.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1960-12-01",
+      "FHFA": null,
+      "Shelter": 25.4,
+      "Rent": 39.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1961-01-01",
+      "FHFA": null,
+      "Shelter": 25.4,
+      "Rent": 39.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1961-02-01",
+      "FHFA": null,
+      "Shelter": 25.4,
+      "Rent": 39.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1961-03-01",
+      "FHFA": null,
+      "Shelter": 25.4,
+      "Rent": 39.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1961-04-01",
+      "FHFA": null,
+      "Shelter": 25.4,
+      "Rent": 39.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1961-05-01",
+      "FHFA": null,
+      "Shelter": 25.4,
+      "Rent": 39.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1961-06-01",
+      "FHFA": null,
+      "Shelter": 25.4,
+      "Rent": 39.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1961-07-01",
+      "FHFA": null,
+      "Shelter": 25.5,
+      "Rent": 39.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1961-08-01",
+      "FHFA": null,
+      "Shelter": 25.4,
+      "Rent": 39.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1961-09-01",
+      "FHFA": null,
+      "Shelter": 25.5,
+      "Rent": 39.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1961-10-01",
+      "FHFA": null,
+      "Shelter": 25.5,
+      "Rent": 39.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1961-11-01",
+      "FHFA": null,
+      "Shelter": 25.6,
+      "Rent": 39.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1961-12-01",
+      "FHFA": null,
+      "Shelter": 25.6,
+      "Rent": 39.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1962-01-01",
+      "FHFA": null,
+      "Shelter": 25.6,
+      "Rent": 39.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1962-02-01",
+      "FHFA": null,
+      "Shelter": 25.6,
+      "Rent": 39.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1962-03-01",
+      "FHFA": null,
+      "Shelter": 25.6,
+      "Rent": 39.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1962-04-01",
+      "FHFA": null,
+      "Shelter": 25.6,
+      "Rent": 39.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1962-05-01",
+      "FHFA": null,
+      "Shelter": 25.7,
+      "Rent": 39.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1962-06-01",
+      "FHFA": null,
+      "Shelter": 25.8,
+      "Rent": 39.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1962-07-01",
+      "FHFA": null,
+      "Shelter": 25.8,
+      "Rent": 39.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1962-08-01",
+      "FHFA": null,
+      "Shelter": 25.8,
+      "Rent": 39.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1962-09-01",
+      "FHFA": null,
+      "Shelter": 25.8,
+      "Rent": 39.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1962-10-01",
+      "FHFA": null,
+      "Shelter": 25.8,
+      "Rent": 39.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1962-11-01",
+      "FHFA": null,
+      "Shelter": 25.8,
+      "Rent": 39.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1962-12-01",
+      "FHFA": null,
+      "Shelter": 25.8,
+      "Rent": 39.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1963-01-01",
+      "FHFA": null,
+      "Shelter": 25.9,
+      "Rent": 40.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1963-02-01",
+      "FHFA": null,
+      "Shelter": 25.9,
+      "Rent": 40.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1963-03-01",
+      "FHFA": null,
+      "Shelter": 26.0,
+      "Rent": 40.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1963-04-01",
+      "FHFA": null,
+      "Shelter": 26.0,
+      "Rent": 40.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1963-05-01",
+      "FHFA": null,
+      "Shelter": 26.0,
+      "Rent": 40.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1963-06-01",
+      "FHFA": null,
+      "Shelter": 26.0,
+      "Rent": 40.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1963-07-01",
+      "FHFA": null,
+      "Shelter": 26.1,
+      "Rent": 40.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1963-08-01",
+      "FHFA": null,
+      "Shelter": 26.1,
+      "Rent": 40.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1963-09-01",
+      "FHFA": null,
+      "Shelter": 26.1,
+      "Rent": 40.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1963-10-01",
+      "FHFA": null,
+      "Shelter": 26.2,
+      "Rent": 40.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1963-11-01",
+      "FHFA": null,
+      "Shelter": 26.2,
+      "Rent": 40.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1963-12-01",
+      "FHFA": null,
+      "Shelter": 26.3,
+      "Rent": 40.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1964-01-01",
+      "FHFA": null,
+      "Shelter": 26.3,
+      "Rent": 40.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1964-02-01",
+      "FHFA": null,
+      "Shelter": 26.4,
+      "Rent": 40.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1964-03-01",
+      "FHFA": null,
+      "Shelter": 26.4,
+      "Rent": 40.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1964-04-01",
+      "FHFA": null,
+      "Shelter": 26.4,
+      "Rent": 40.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1964-05-01",
+      "FHFA": null,
+      "Shelter": 26.4,
+      "Rent": 40.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1964-06-01",
+      "FHFA": null,
+      "Shelter": 26.4,
+      "Rent": 40.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1964-07-01",
+      "FHFA": null,
+      "Shelter": 26.5,
+      "Rent": 40.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1964-08-01",
+      "FHFA": null,
+      "Shelter": 26.5,
+      "Rent": 40.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1964-09-01",
+      "FHFA": null,
+      "Shelter": 26.6,
+      "Rent": 40.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1964-10-01",
+      "FHFA": null,
+      "Shelter": 26.6,
+      "Rent": 40.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1964-11-01",
+      "FHFA": null,
+      "Shelter": 26.7,
+      "Rent": 40.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1964-12-01",
+      "FHFA": null,
+      "Shelter": 26.7,
+      "Rent": 40.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1965-01-01",
+      "FHFA": null,
+      "Shelter": 26.8,
+      "Rent": 40.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1965-02-01",
+      "FHFA": null,
+      "Shelter": 26.9,
+      "Rent": 40.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1965-03-01",
+      "FHFA": null,
+      "Shelter": 26.9,
+      "Rent": 40.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1965-04-01",
+      "FHFA": null,
+      "Shelter": 26.9,
+      "Rent": 40.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1965-05-01",
+      "FHFA": null,
+      "Shelter": 26.9,
+      "Rent": 40.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1965-06-01",
+      "FHFA": null,
+      "Shelter": 26.9,
+      "Rent": 40.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1965-07-01",
+      "FHFA": null,
+      "Shelter": 27.0,
+      "Rent": 40.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1965-08-01",
+      "FHFA": null,
+      "Shelter": 27.0,
+      "Rent": 41.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1965-09-01",
+      "FHFA": null,
+      "Shelter": 27.0,
+      "Rent": 41.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1965-10-01",
+      "FHFA": null,
+      "Shelter": 27.1,
+      "Rent": 41.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1965-11-01",
+      "FHFA": null,
+      "Shelter": 27.2,
+      "Rent": 41.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1965-12-01",
+      "FHFA": null,
+      "Shelter": 27.2,
+      "Rent": 41.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1966-01-01",
+      "FHFA": null,
+      "Shelter": 27.3,
+      "Rent": 41.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1966-02-01",
+      "FHFA": null,
+      "Shelter": 27.3,
+      "Rent": 41.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1966-03-01",
+      "FHFA": null,
+      "Shelter": 27.4,
+      "Rent": 41.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1966-04-01",
+      "FHFA": null,
+      "Shelter": 27.6,
+      "Rent": 41.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1966-05-01",
+      "FHFA": null,
+      "Shelter": 27.7,
+      "Rent": 41.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1966-06-01",
+      "FHFA": null,
+      "Shelter": 27.9,
+      "Rent": 41.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1966-07-01",
+      "FHFA": null,
+      "Shelter": 27.9,
+      "Rent": 41.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1966-08-01",
+      "FHFA": null,
+      "Shelter": 27.9,
+      "Rent": 41.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1966-09-01",
+      "FHFA": null,
+      "Shelter": 28.0,
+      "Rent": 41.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1966-10-01",
+      "FHFA": null,
+      "Shelter": 28.2,
+      "Rent": 41.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1966-11-01",
+      "FHFA": null,
+      "Shelter": 28.2,
+      "Rent": 41.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1966-12-01",
+      "FHFA": null,
+      "Shelter": 28.3,
+      "Rent": 41.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1967-01-01",
+      "FHFA": null,
+      "Shelter": 28.4,
+      "Rent": 41.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1967-02-01",
+      "FHFA": null,
+      "Shelter": 28.5,
+      "Rent": 42.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1967-03-01",
+      "FHFA": null,
+      "Shelter": 28.4,
+      "Rent": 42.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1967-04-01",
+      "FHFA": null,
+      "Shelter": 28.5,
+      "Rent": 42.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1967-05-01",
+      "FHFA": null,
+      "Shelter": 28.6,
+      "Rent": 42.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1967-06-01",
+      "FHFA": null,
+      "Shelter": 28.7,
+      "Rent": 42.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1967-07-01",
+      "FHFA": null,
+      "Shelter": 28.8,
+      "Rent": 42.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1967-08-01",
+      "FHFA": null,
+      "Shelter": 28.9,
+      "Rent": 42.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1967-09-01",
+      "FHFA": null,
+      "Shelter": 28.9,
+      "Rent": 42.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1967-10-01",
+      "FHFA": null,
+      "Shelter": 29.0,
+      "Rent": 42.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1967-11-01",
+      "FHFA": null,
+      "Shelter": 29.1,
+      "Rent": 42.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1967-12-01",
+      "FHFA": null,
+      "Shelter": 29.2,
+      "Rent": 42.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1968-01-01",
+      "FHFA": null,
+      "Shelter": 29.3,
+      "Rent": 42.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1968-02-01",
+      "FHFA": null,
+      "Shelter": 29.4,
+      "Rent": 42.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1968-03-01",
+      "FHFA": null,
+      "Shelter": 29.5,
+      "Rent": 42.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1968-04-01",
+      "FHFA": null,
+      "Shelter": 29.6,
+      "Rent": 43.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1968-05-01",
+      "FHFA": null,
+      "Shelter": 29.6,
+      "Rent": 43.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1968-06-01",
+      "FHFA": null,
+      "Shelter": 30.0,
+      "Rent": 43.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1968-07-01",
+      "FHFA": null,
+      "Shelter": 30.3,
+      "Rent": 43.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1968-08-01",
+      "FHFA": null,
+      "Shelter": 30.5,
+      "Rent": 43.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1968-09-01",
+      "FHFA": null,
+      "Shelter": 30.5,
+      "Rent": 43.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1968-10-01",
+      "FHFA": null,
+      "Shelter": 30.7,
+      "Rent": 43.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1968-11-01",
+      "FHFA": null,
+      "Shelter": 30.9,
+      "Rent": 43.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1968-12-01",
+      "FHFA": null,
+      "Shelter": 31.1,
+      "Rent": 43.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1969-01-01",
+      "FHFA": null,
+      "Shelter": 31.3,
+      "Rent": 43.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1969-02-01",
+      "FHFA": null,
+      "Shelter": 31.4,
+      "Rent": 44.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1969-03-01",
+      "FHFA": null,
+      "Shelter": 31.8,
+      "Rent": 44.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1969-04-01",
+      "FHFA": null,
+      "Shelter": 32.1,
+      "Rent": 44.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1969-05-01",
+      "FHFA": null,
+      "Shelter": 32.3,
+      "Rent": 44.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1969-06-01",
+      "FHFA": null,
+      "Shelter": 32.4,
+      "Rent": 44.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1969-07-01",
+      "FHFA": null,
+      "Shelter": 32.7,
+      "Rent": 44.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1969-08-01",
+      "FHFA": null,
+      "Shelter": 32.9,
+      "Rent": 44.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1969-09-01",
+      "FHFA": null,
+      "Shelter": 33.2,
+      "Rent": 45.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1969-10-01",
+      "FHFA": null,
+      "Shelter": 33.4,
+      "Rent": 45.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1969-11-01",
+      "FHFA": null,
+      "Shelter": 33.6,
+      "Rent": 45.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1969-12-01",
+      "FHFA": null,
+      "Shelter": 33.8,
+      "Rent": 45.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1970-01-01",
+      "FHFA": null,
+      "Shelter": 34.0,
+      "Rent": 45.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1970-02-01",
+      "FHFA": null,
+      "Shelter": 34.4,
+      "Rent": 45.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1970-03-01",
+      "FHFA": null,
+      "Shelter": 34.8,
+      "Rent": 46.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1970-04-01",
+      "FHFA": null,
+      "Shelter": 35.0,
+      "Rent": 46.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1970-05-01",
+      "FHFA": null,
+      "Shelter": 35.3,
+      "Rent": 46.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1970-06-01",
+      "FHFA": null,
+      "Shelter": 35.5,
+      "Rent": 46.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1970-07-01",
+      "FHFA": null,
+      "Shelter": 35.6,
+      "Rent": 46.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1970-08-01",
+      "FHFA": null,
+      "Shelter": 35.9,
+      "Rent": 46.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1970-09-01",
+      "FHFA": null,
+      "Shelter": 36.2,
+      "Rent": 46.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1970-10-01",
+      "FHFA": null,
+      "Shelter": 36.3,
+      "Rent": 47.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1970-11-01",
+      "FHFA": null,
+      "Shelter": 36.5,
+      "Rent": 47.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1970-12-01",
+      "FHFA": null,
+      "Shelter": 36.8,
+      "Rent": 47.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1971-01-01",
+      "FHFA": null,
+      "Shelter": 36.8,
+      "Rent": 47.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1971-02-01",
+      "FHFA": null,
+      "Shelter": 36.6,
+      "Rent": 48.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1971-03-01",
+      "FHFA": null,
+      "Shelter": 36.4,
+      "Rent": 48.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1971-04-01",
+      "FHFA": null,
+      "Shelter": 36.4,
+      "Rent": 48.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1971-05-01",
+      "FHFA": null,
+      "Shelter": 36.5,
+      "Rent": 48.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1971-06-01",
+      "FHFA": null,
+      "Shelter": 36.9,
+      "Rent": 48.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1971-07-01",
+      "FHFA": null,
+      "Shelter": 37.0,
+      "Rent": 48.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1971-08-01",
+      "FHFA": null,
+      "Shelter": 37.2,
+      "Rent": 48.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1971-09-01",
+      "FHFA": null,
+      "Shelter": 37.4,
+      "Rent": 49.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1971-10-01",
+      "FHFA": null,
+      "Shelter": 37.5,
+      "Rent": 49.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1971-11-01",
+      "FHFA": null,
+      "Shelter": 37.7,
+      "Rent": 49.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1971-12-01",
+      "FHFA": null,
+      "Shelter": 37.8,
+      "Rent": 49.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1972-01-01",
+      "FHFA": null,
+      "Shelter": 38.0,
+      "Rent": 49.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1972-02-01",
+      "FHFA": null,
+      "Shelter": 38.1,
+      "Rent": 49.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1972-03-01",
+      "FHFA": null,
+      "Shelter": 38.2,
+      "Rent": 49.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1972-04-01",
+      "FHFA": null,
+      "Shelter": 38.3,
+      "Rent": 50.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1972-05-01",
+      "FHFA": null,
+      "Shelter": 38.4,
+      "Rent": 50.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1972-06-01",
+      "FHFA": null,
+      "Shelter": 38.6,
+      "Rent": 50.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1972-07-01",
+      "FHFA": null,
+      "Shelter": 38.8,
+      "Rent": 50.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1972-08-01",
+      "FHFA": null,
+      "Shelter": 39.0,
+      "Rent": 50.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1972-09-01",
+      "FHFA": null,
+      "Shelter": 39.0,
+      "Rent": 50.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1972-10-01",
+      "FHFA": null,
+      "Shelter": 39.1,
+      "Rent": 50.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1972-11-01",
+      "FHFA": null,
+      "Shelter": 39.2,
+      "Rent": 50.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1972-12-01",
+      "FHFA": null,
+      "Shelter": 39.3,
+      "Rent": 51.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1973-01-01",
+      "FHFA": null,
+      "Shelter": 39.4,
+      "Rent": 51.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1973-02-01",
+      "FHFA": null,
+      "Shelter": 39.5,
+      "Rent": 51.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1973-03-01",
+      "FHFA": null,
+      "Shelter": 39.6,
+      "Rent": 51.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1973-04-01",
+      "FHFA": null,
+      "Shelter": 39.7,
+      "Rent": 52.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1973-05-01",
+      "FHFA": null,
+      "Shelter": 39.9,
+      "Rent": 52.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1973-06-01",
+      "FHFA": null,
+      "Shelter": 40.0,
+      "Rent": 52.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1973-07-01",
+      "FHFA": null,
+      "Shelter": 40.1,
+      "Rent": 52.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1973-08-01",
+      "FHFA": null,
+      "Shelter": 40.5,
+      "Rent": 52.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1973-09-01",
+      "FHFA": null,
+      "Shelter": 41.0,
+      "Rent": 53.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1973-10-01",
+      "FHFA": null,
+      "Shelter": 41.6,
+      "Rent": 53.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1973-11-01",
+      "FHFA": null,
+      "Shelter": 41.8,
+      "Rent": 53.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1973-12-01",
+      "FHFA": null,
+      "Shelter": 42.1,
+      "Rent": 53.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1974-01-01",
+      "FHFA": null,
+      "Shelter": 42.4,
+      "Rent": 53.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1974-02-01",
+      "FHFA": null,
+      "Shelter": 42.7,
+      "Rent": 54.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1974-03-01",
+      "FHFA": null,
+      "Shelter": 43.0,
+      "Rent": 54.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1974-04-01",
+      "FHFA": null,
+      "Shelter": 43.2,
+      "Rent": 54.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1974-05-01",
+      "FHFA": null,
+      "Shelter": 43.5,
+      "Rent": 54.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1974-06-01",
+      "FHFA": null,
+      "Shelter": 43.9,
+      "Rent": 55.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1974-07-01",
+      "FHFA": null,
+      "Shelter": 44.4,
+      "Rent": 55.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1974-08-01",
+      "FHFA": null,
+      "Shelter": 44.9,
+      "Rent": 55.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1974-09-01",
+      "FHFA": null,
+      "Shelter": 45.5,
+      "Rent": 55.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1974-10-01",
+      "FHFA": null,
+      "Shelter": 46.0,
+      "Rent": 56.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1974-11-01",
+      "FHFA": null,
+      "Shelter": 46.3,
+      "Rent": 56.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1974-12-01",
+      "FHFA": null,
+      "Shelter": 46.9,
+      "Rent": 56.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1975-01-01",
+      "FHFA": null,
+      "Shelter": 47.3,
+      "Rent": 56.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1975-02-01",
+      "FHFA": null,
+      "Shelter": 47.7,
+      "Rent": 57.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1975-03-01",
+      "FHFA": null,
+      "Shelter": 47.9,
+      "Rent": 57.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1975-04-01",
+      "FHFA": null,
+      "Shelter": 48.2,
+      "Rent": 57.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1975-05-01",
+      "FHFA": null,
+      "Shelter": 48.3,
+      "Rent": 57.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1975-06-01",
+      "FHFA": null,
+      "Shelter": 48.7,
+      "Rent": 57.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1975-07-01",
+      "FHFA": null,
+      "Shelter": 48.9,
+      "Rent": 58.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1975-08-01",
+      "FHFA": null,
+      "Shelter": 49.0,
+      "Rent": 58.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1975-09-01",
+      "FHFA": null,
+      "Shelter": 49.3,
+      "Rent": 58.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1975-10-01",
+      "FHFA": null,
+      "Shelter": 49.6,
+      "Rent": 58.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1975-11-01",
+      "FHFA": null,
+      "Shelter": 50.0,
+      "Rent": 59.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1975-12-01",
+      "FHFA": null,
+      "Shelter": 50.3,
+      "Rent": 59.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1976-01-01",
+      "FHFA": null,
+      "Shelter": 50.5,
+      "Rent": 59.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1976-02-01",
+      "FHFA": null,
+      "Shelter": 50.6,
+      "Rent": 60.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1976-03-01",
+      "FHFA": null,
+      "Shelter": 50.7,
+      "Rent": 60.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1976-04-01",
+      "FHFA": null,
+      "Shelter": 50.7,
+      "Rent": 60.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1976-05-01",
+      "FHFA": null,
+      "Shelter": 50.9,
+      "Rent": 60.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1976-06-01",
+      "FHFA": null,
+      "Shelter": 51.2,
+      "Rent": 61.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1976-07-01",
+      "FHFA": null,
+      "Shelter": 51.6,
+      "Rent": 61.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1976-08-01",
+      "FHFA": null,
+      "Shelter": 51.9,
+      "Rent": 61.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1976-09-01",
+      "FHFA": null,
+      "Shelter": 52.2,
+      "Rent": 61.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1976-10-01",
+      "FHFA": null,
+      "Shelter": 52.3,
+      "Rent": 62.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1976-11-01",
+      "FHFA": null,
+      "Shelter": 52.4,
+      "Rent": 62.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1976-12-01",
+      "FHFA": null,
+      "Shelter": 52.4,
+      "Rent": 62.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1977-01-01",
+      "FHFA": null,
+      "Shelter": 52.9,
+      "Rent": 63.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1977-02-01",
+      "FHFA": null,
+      "Shelter": 53.2,
+      "Rent": 63.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1977-03-01",
+      "FHFA": null,
+      "Shelter": 53.5,
+      "Rent": 63.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1977-04-01",
+      "FHFA": null,
+      "Shelter": 54.0,
+      "Rent": 64.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1977-05-01",
+      "FHFA": null,
+      "Shelter": 54.3,
+      "Rent": 64.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1977-06-01",
+      "FHFA": null,
+      "Shelter": 54.7,
+      "Rent": 64.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1977-07-01",
+      "FHFA": null,
+      "Shelter": 55.2,
+      "Rent": 64.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1977-08-01",
+      "FHFA": null,
+      "Shelter": 55.5,
+      "Rent": 65.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1977-09-01",
+      "FHFA": null,
+      "Shelter": 55.9,
+      "Rent": 65.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1977-10-01",
+      "FHFA": null,
+      "Shelter": 56.2,
+      "Rent": 65.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1977-11-01",
+      "FHFA": null,
+      "Shelter": 56.6,
+      "Rent": 66.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1977-12-01",
+      "FHFA": null,
+      "Shelter": 57.0,
+      "Rent": 66.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1978-01-01",
+      "FHFA": null,
+      "Shelter": 57.5,
+      "Rent": 67.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1978-02-01",
+      "FHFA": null,
+      "Shelter": 57.8,
+      "Rent": 67.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1978-03-01",
+      "FHFA": null,
+      "Shelter": 58.3,
+      "Rent": 67.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1978-04-01",
+      "FHFA": null,
+      "Shelter": 58.8,
+      "Rent": 68.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1978-05-01",
+      "FHFA": null,
+      "Shelter": 59.4,
+      "Rent": 68.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1978-06-01",
+      "FHFA": null,
+      "Shelter": 60.0,
+      "Rent": 69.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1978-07-01",
+      "FHFA": null,
+      "Shelter": 60.7,
+      "Rent": 69.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1978-08-01",
+      "FHFA": null,
+      "Shelter": 61.3,
+      "Rent": 69.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1978-09-01",
+      "FHFA": null,
+      "Shelter": 62.1,
+      "Rent": 70.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1978-10-01",
+      "FHFA": null,
+      "Shelter": 62.8,
+      "Rent": 70.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1978-11-01",
+      "FHFA": null,
+      "Shelter": 63.3,
+      "Rent": 71.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1978-12-01",
+      "FHFA": null,
+      "Shelter": 63.5,
+      "Rent": 71.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1979-01-01",
+      "FHFA": null,
+      "Shelter": 64.0,
+      "Rent": 71.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1979-02-01",
+      "FHFA": null,
+      "Shelter": 64.9,
+      "Rent": 72.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1979-03-01",
+      "FHFA": null,
+      "Shelter": 65.5,
+      "Rent": 72.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1979-04-01",
+      "FHFA": null,
+      "Shelter": 66.3,
+      "Rent": 72.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1979-05-01",
+      "FHFA": null,
+      "Shelter": 67.1,
+      "Rent": 73.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1979-06-01",
+      "FHFA": null,
+      "Shelter": 68.0,
+      "Rent": 73.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1979-07-01",
+      "FHFA": null,
+      "Shelter": 69.0,
+      "Rent": 74.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1979-08-01",
+      "FHFA": null,
+      "Shelter": 70.1,
+      "Rent": 75.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1979-09-01",
+      "FHFA": null,
+      "Shelter": 71.1,
+      "Rent": 75.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1979-10-01",
+      "FHFA": null,
+      "Shelter": 72.3,
+      "Rent": 76.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1979-11-01",
+      "FHFA": null,
+      "Shelter": 73.5,
+      "Rent": 76.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1979-12-01",
+      "FHFA": null,
+      "Shelter": 74.6,
+      "Rent": 77.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1980-01-01",
+      "FHFA": null,
+      "Shelter": 75.9,
+      "Rent": 77.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1980-02-01",
+      "FHFA": null,
+      "Shelter": 76.8,
+      "Rent": 78.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1980-03-01",
+      "FHFA": null,
+      "Shelter": 78.1,
+      "Rent": 78.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1980-04-01",
+      "FHFA": null,
+      "Shelter": 79.3,
+      "Rent": 79.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1980-05-01",
+      "FHFA": null,
+      "Shelter": 80.5,
+      "Rent": 79.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1980-06-01",
+      "FHFA": null,
+      "Shelter": 82.3,
+      "Rent": 80.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1980-07-01",
+      "FHFA": null,
+      "Shelter": 81.3,
+      "Rent": 81.1,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1980-08-01",
+      "FHFA": null,
+      "Shelter": 81.4,
+      "Rent": 81.6,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1980-09-01",
+      "FHFA": null,
+      "Shelter": 82.0,
+      "Rent": 82.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1980-10-01",
+      "FHFA": null,
+      "Shelter": 83.4,
+      "Rent": 83.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1980-11-01",
+      "FHFA": null,
+      "Shelter": 84.7,
+      "Rent": 83.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1980-12-01",
+      "FHFA": null,
+      "Shelter": 85.8,
+      "Rent": 84.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1981-01-01",
+      "FHFA": null,
+      "Shelter": 86.3,
+      "Rent": 84.9,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1981-02-01",
+      "FHFA": null,
+      "Shelter": 86.3,
+      "Rent": 85.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1981-03-01",
+      "FHFA": null,
+      "Shelter": 86.7,
+      "Rent": 85.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1981-04-01",
+      "FHFA": null,
+      "Shelter": 87.3,
+      "Rent": 86.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1981-05-01",
+      "FHFA": null,
+      "Shelter": 88.6,
+      "Rent": 87.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1981-06-01",
+      "FHFA": null,
+      "Shelter": 89.9,
+      "Rent": 87.4,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1981-07-01",
+      "FHFA": null,
+      "Shelter": 91.5,
+      "Rent": 87.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1981-08-01",
+      "FHFA": null,
+      "Shelter": 92.5,
+      "Rent": 88.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1981-09-01",
+      "FHFA": null,
+      "Shelter": 93.9,
+      "Rent": 89.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1981-10-01",
+      "FHFA": null,
+      "Shelter": 93.8,
+      "Rent": 90.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1981-11-01",
+      "FHFA": null,
+      "Shelter": 94.0,
+      "Rent": 90.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1981-12-01",
+      "FHFA": null,
+      "Shelter": 94.3,
+      "Rent": 91.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1982-01-01",
+      "FHFA": null,
+      "Shelter": 94.4,
+      "Rent": 92.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1982-02-01",
+      "FHFA": null,
+      "Shelter": 94.7,
+      "Rent": 92.3,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1982-03-01",
+      "FHFA": null,
+      "Shelter": 94.2,
+      "Rent": 92.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1982-04-01",
+      "FHFA": null,
+      "Shelter": 95.3,
+      "Rent": 93.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1982-05-01",
+      "FHFA": null,
+      "Shelter": 96.8,
+      "Rent": 93.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1982-06-01",
+      "FHFA": null,
+      "Shelter": 98.0,
+      "Rent": 94.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1982-07-01",
+      "FHFA": null,
+      "Shelter": 98.5,
+      "Rent": 95.0,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1982-08-01",
+      "FHFA": null,
+      "Shelter": 98.9,
+      "Rent": 95.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1982-09-01",
+      "FHFA": null,
+      "Shelter": 98.4,
+      "Rent": 95.8,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1982-10-01",
+      "FHFA": null,
+      "Shelter": 98.4,
+      "Rent": 96.7,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1982-11-01",
+      "FHFA": null,
+      "Shelter": 97.9,
+      "Rent": 97.2,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1982-12-01",
+      "FHFA": null,
+      "Shelter": 96.5,
+      "Rent": 97.5,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "1983-01-01",
+      "FHFA": null,
+      "Shelter": 97.2,
+      "Rent": 98.1,
+      "Owners_equivalent_rent": 100.6
+    },
+    {
+      "date": "1983-02-01",
+      "FHFA": null,
+      "Shelter": 97.5,
+      "Rent": 98.5,
+      "Owners_equivalent_rent": 100.9
+    },
+    {
+      "date": "1983-03-01",
+      "FHFA": null,
+      "Shelter": 97.6,
+      "Rent": 98.7,
+      "Owners_equivalent_rent": 100.9
+    },
+    {
+      "date": "1983-04-01",
+      "FHFA": null,
+      "Shelter": 98.4,
+      "Rent": 99.1,
+      "Owners_equivalent_rent": 101.9
+    },
+    {
+      "date": "1983-05-01",
+      "FHFA": null,
+      "Shelter": 98.7,
+      "Rent": 99.3,
+      "Owners_equivalent_rent": 102.1
+    },
+    {
+      "date": "1983-06-01",
+      "FHFA": null,
+      "Shelter": 99.0,
+      "Rent": 99.7,
+      "Owners_equivalent_rent": 102.4
+    },
+    {
+      "date": "1983-07-01",
+      "FHFA": null,
+      "Shelter": 99.4,
+      "Rent": 100.2,
+      "Owners_equivalent_rent": 102.8
+    },
+    {
+      "date": "1983-08-01",
+      "FHFA": null,
+      "Shelter": 99.6,
+      "Rent": 100.6,
+      "Owners_equivalent_rent": 103.0
+    },
+    {
+      "date": "1983-09-01",
+      "FHFA": null,
+      "Shelter": 100.1,
+      "Rent": 101.2,
+      "Owners_equivalent_rent": 103.4
+    },
+    {
+      "date": "1983-10-01",
+      "FHFA": null,
+      "Shelter": 100.3,
+      "Rent": 101.6,
+      "Owners_equivalent_rent": 103.6
+    },
+    {
+      "date": "1983-11-01",
+      "FHFA": null,
+      "Shelter": 100.7,
+      "Rent": 101.9,
+      "Owners_equivalent_rent": 104.0
+    },
+    {
+      "date": "1983-12-01",
+      "FHFA": null,
+      "Shelter": 101.1,
+      "Rent": 102.2,
+      "Owners_equivalent_rent": 104.4
+    },
+    {
+      "date": "1984-01-01",
+      "FHFA": null,
+      "Shelter": 101.4,
+      "Rent": 102.6,
+      "Owners_equivalent_rent": 104.7
+    },
+    {
+      "date": "1984-02-01",
+      "FHFA": null,
+      "Shelter": 101.8,
+      "Rent": 102.9,
+      "Owners_equivalent_rent": 105.1
+    },
+    {
+      "date": "1984-03-01",
+      "FHFA": null,
+      "Shelter": 102.3,
+      "Rent": 103.4,
+      "Owners_equivalent_rent": 105.6
+    },
+    {
+      "date": "1984-04-01",
+      "FHFA": null,
+      "Shelter": 103.0,
+      "Rent": 104.1,
+      "Owners_equivalent_rent": 106.4
+    },
+    {
+      "date": "1984-05-01",
+      "FHFA": null,
+      "Shelter": 103.2,
+      "Rent": 104.4,
+      "Owners_equivalent_rent": 106.6
+    },
+    {
+      "date": "1984-06-01",
+      "FHFA": null,
+      "Shelter": 103.6,
+      "Rent": 104.9,
+      "Owners_equivalent_rent": 107.0
+    },
+    {
+      "date": "1984-07-01",
+      "FHFA": null,
+      "Shelter": 104.3,
+      "Rent": 105.5,
+      "Owners_equivalent_rent": 107.8
+    },
+    {
+      "date": "1984-08-01",
+      "FHFA": null,
+      "Shelter": 104.7,
+      "Rent": 106.1,
+      "Owners_equivalent_rent": 108.1
+    },
+    {
+      "date": "1984-09-01",
+      "FHFA": null,
+      "Shelter": 105.1,
+      "Rent": 106.6,
+      "Owners_equivalent_rent": 108.6
+    },
+    {
+      "date": "1984-10-01",
+      "FHFA": null,
+      "Shelter": 105.5,
+      "Rent": 107.2,
+      "Owners_equivalent_rent": 108.9
+    },
+    {
+      "date": "1984-11-01",
+      "FHFA": null,
+      "Shelter": 105.8,
+      "Rent": 107.6,
+      "Owners_equivalent_rent": 109.2
+    },
+    {
+      "date": "1984-12-01",
+      "FHFA": null,
+      "Shelter": 106.4,
+      "Rent": 108.2,
+      "Owners_equivalent_rent": 109.7
+    },
+    {
+      "date": "1985-01-01",
+      "FHFA": null,
+      "Shelter": 106.7,
+      "Rent": 108.6,
+      "Owners_equivalent_rent": 110.0
+    },
+    {
+      "date": "1985-02-01",
+      "FHFA": null,
+      "Shelter": 107.4,
+      "Rent": 109.2,
+      "Owners_equivalent_rent": 110.8
+    },
+    {
+      "date": "1985-03-01",
+      "FHFA": null,
+      "Shelter": 107.8,
+      "Rent": 109.5,
+      "Owners_equivalent_rent": 111.1
+    },
+    {
+      "date": "1985-04-01",
+      "FHFA": null,
+      "Shelter": 108.1,
+      "Rent": 110.0,
+      "Owners_equivalent_rent": 111.3
+    },
+    {
+      "date": "1985-05-01",
+      "FHFA": null,
+      "Shelter": 109.2,
+      "Rent": 110.9,
+      "Owners_equivalent_rent": 112.6
+    },
+    {
+      "date": "1985-06-01",
+      "FHFA": null,
+      "Shelter": 109.6,
+      "Rent": 111.4,
+      "Owners_equivalent_rent": 113.0
+    },
+    {
+      "date": "1985-07-01",
+      "FHFA": null,
+      "Shelter": 110.1,
+      "Rent": 111.9,
+      "Owners_equivalent_rent": 113.5
+    },
+    {
+      "date": "1985-08-01",
+      "FHFA": null,
+      "Shelter": 110.8,
+      "Rent": 112.6,
+      "Owners_equivalent_rent": 114.3
+    },
+    {
+      "date": "1985-09-01",
+      "FHFA": null,
+      "Shelter": 111.0,
+      "Rent": 113.1,
+      "Owners_equivalent_rent": 114.5
+    },
+    {
+      "date": "1985-10-01",
+      "FHFA": null,
+      "Shelter": 111.5,
+      "Rent": 114.0,
+      "Owners_equivalent_rent": 114.8
+    },
+    {
+      "date": "1985-11-01",
+      "FHFA": null,
+      "Shelter": 112.3,
+      "Rent": 114.8,
+      "Owners_equivalent_rent": 115.7
+    },
+    {
+      "date": "1985-12-01",
+      "FHFA": null,
+      "Shelter": 112.7,
+      "Rent": 115.1,
+      "Owners_equivalent_rent": 116.2
+    },
+    {
+      "date": "1986-01-01",
+      "FHFA": null,
+      "Shelter": 113.2,
+      "Rent": 115.5,
+      "Owners_equivalent_rent": 116.8
+    },
+    {
+      "date": "1986-02-01",
+      "FHFA": null,
+      "Shelter": 113.5,
+      "Rent": 115.6,
+      "Owners_equivalent_rent": 117.1
+    },
+    {
+      "date": "1986-03-01",
+      "FHFA": null,
+      "Shelter": 114.3,
+      "Rent": 116.2,
+      "Owners_equivalent_rent": 118.1
+    },
+    {
+      "date": "1986-04-01",
+      "FHFA": null,
+      "Shelter": 115.0,
+      "Rent": 117.4,
+      "Owners_equivalent_rent": 118.7
+    },
+    {
+      "date": "1986-05-01",
+      "FHFA": null,
+      "Shelter": 115.2,
+      "Rent": 117.6,
+      "Owners_equivalent_rent": 118.9
+    },
+    {
+      "date": "1986-06-01",
+      "FHFA": null,
+      "Shelter": 115.6,
+      "Rent": 118.0,
+      "Owners_equivalent_rent": 119.3
+    },
+    {
+      "date": "1986-07-01",
+      "FHFA": null,
+      "Shelter": 115.9,
+      "Rent": 118.8,
+      "Owners_equivalent_rent": 119.5
+    },
+    {
+      "date": "1986-08-01",
+      "FHFA": null,
+      "Shelter": 116.3,
+      "Rent": 119.0,
+      "Owners_equivalent_rent": 119.9
+    },
+    {
+      "date": "1986-09-01",
+      "FHFA": null,
+      "Shelter": 116.9,
+      "Rent": 119.6,
+      "Owners_equivalent_rent": 120.5
+    },
+    {
+      "date": "1986-10-01",
+      "FHFA": null,
+      "Shelter": 117.5,
+      "Rent": 120.2,
+      "Owners_equivalent_rent": 121.0
+    },
+    {
+      "date": "1986-11-01",
+      "FHFA": null,
+      "Shelter": 117.8,
+      "Rent": 120.6,
+      "Owners_equivalent_rent": 121.3
+    },
+    {
+      "date": "1986-12-01",
+      "FHFA": null,
+      "Shelter": 118.1,
+      "Rent": 120.8,
+      "Owners_equivalent_rent": 121.5
+    },
+    {
+      "date": "1987-01-01",
+      "FHFA": null,
+      "Shelter": 118.6,
+      "Rent": 121.3,
+      "Owners_equivalent_rent": 121.9
+    },
+    {
+      "date": "1987-02-01",
+      "FHFA": null,
+      "Shelter": 119.1,
+      "Rent": 121.7,
+      "Owners_equivalent_rent": 122.5
+    },
+    {
+      "date": "1987-03-01",
+      "FHFA": null,
+      "Shelter": 119.5,
+      "Rent": 121.8,
+      "Owners_equivalent_rent": 123.1
+    },
+    {
+      "date": "1987-04-01",
+      "FHFA": null,
+      "Shelter": 120.3,
+      "Rent": 122.0,
+      "Owners_equivalent_rent": 123.9
+    },
+    {
+      "date": "1987-05-01",
+      "FHFA": null,
+      "Shelter": 120.7,
+      "Rent": 122.3,
+      "Owners_equivalent_rent": 124.4
+    },
+    {
+      "date": "1987-06-01",
+      "FHFA": null,
+      "Shelter": 121.0,
+      "Rent": 122.3,
+      "Owners_equivalent_rent": 124.6
+    },
+    {
+      "date": "1987-07-01",
+      "FHFA": null,
+      "Shelter": 121.1,
+      "Rent": 123.0,
+      "Owners_equivalent_rent": 124.6
+    },
+    {
+      "date": "1987-08-01",
+      "FHFA": null,
+      "Shelter": 121.9,
+      "Rent": 123.8,
+      "Owners_equivalent_rent": 125.4
+    },
+    {
+      "date": "1987-09-01",
+      "FHFA": null,
+      "Shelter": 122.4,
+      "Rent": 124.4,
+      "Owners_equivalent_rent": 125.8
+    },
+    {
+      "date": "1987-10-01",
+      "FHFA": null,
+      "Shelter": 123.1,
+      "Rent": 124.8,
+      "Owners_equivalent_rent": 126.8
+    },
+    {
+      "date": "1987-11-01",
+      "FHFA": null,
+      "Shelter": 123.4,
+      "Rent": 124.8,
+      "Owners_equivalent_rent": 127.1
+    },
+    {
+      "date": "1987-12-01",
+      "FHFA": null,
+      "Shelter": 124.1,
+      "Rent": 125.6,
+      "Owners_equivalent_rent": 127.8
+    },
+    {
+      "date": "1988-01-01",
+      "FHFA": null,
+      "Shelter": 124.6,
+      "Rent": 126.0,
+      "Owners_equivalent_rent": 128.5
+    },
+    {
+      "date": "1988-02-01",
+      "FHFA": null,
+      "Shelter": 125.1,
+      "Rent": 126.3,
+      "Owners_equivalent_rent": 129.0
+    },
+    {
+      "date": "1988-03-01",
+      "FHFA": null,
+      "Shelter": 125.5,
+      "Rent": 126.4,
+      "Owners_equivalent_rent": 129.4
+    },
+    {
+      "date": "1988-04-01",
+      "FHFA": null,
+      "Shelter": 126.0,
+      "Rent": 126.6,
+      "Owners_equivalent_rent": 129.8
+    },
+    {
+      "date": "1988-05-01",
+      "FHFA": null,
+      "Shelter": 126.3,
+      "Rent": 126.9,
+      "Owners_equivalent_rent": 130.2
+    },
+    {
+      "date": "1988-06-01",
+      "FHFA": null,
+      "Shelter": 126.8,
+      "Rent": 127.3,
+      "Owners_equivalent_rent": 130.8
+    },
+    {
+      "date": "1988-07-01",
+      "FHFA": null,
+      "Shelter": 127.2,
+      "Rent": 127.8,
+      "Owners_equivalent_rent": 131.3
+    },
+    {
+      "date": "1988-08-01",
+      "FHFA": null,
+      "Shelter": 127.8,
+      "Rent": 128.4,
+      "Owners_equivalent_rent": 131.9
+    },
+    {
+      "date": "1988-09-01",
+      "FHFA": null,
+      "Shelter": 128.3,
+      "Rent": 129.1,
+      "Owners_equivalent_rent": 132.5
+    },
+    {
+      "date": "1988-10-01",
+      "FHFA": null,
+      "Shelter": 128.6,
+      "Rent": 129.4,
+      "Owners_equivalent_rent": 132.7
+    },
+    {
+      "date": "1988-11-01",
+      "FHFA": null,
+      "Shelter": 129.2,
+      "Rent": 129.8,
+      "Owners_equivalent_rent": 133.5
+    },
+    {
+      "date": "1988-12-01",
+      "FHFA": null,
+      "Shelter": 129.6,
+      "Rent": 130.1,
+      "Owners_equivalent_rent": 133.9
+    },
+    {
+      "date": "1989-01-01",
+      "FHFA": null,
+      "Shelter": 129.8,
+      "Rent": 130.5,
+      "Owners_equivalent_rent": 134.4
+    },
+    {
+      "date": "1989-02-01",
+      "FHFA": null,
+      "Shelter": 130.4,
+      "Rent": 130.9,
+      "Owners_equivalent_rent": 134.8
+    },
+    {
+      "date": "1989-03-01",
+      "FHFA": null,
+      "Shelter": 131.0,
+      "Rent": 131.1,
+      "Owners_equivalent_rent": 135.3
+    },
+    {
+      "date": "1989-04-01",
+      "FHFA": null,
+      "Shelter": 131.4,
+      "Rent": 131.4,
+      "Owners_equivalent_rent": 135.8
+    },
+    {
+      "date": "1989-05-01",
+      "FHFA": null,
+      "Shelter": 132.0,
+      "Rent": 131.7,
+      "Owners_equivalent_rent": 136.5
+    },
+    {
+      "date": "1989-06-01",
+      "FHFA": null,
+      "Shelter": 132.4,
+      "Rent": 132.3,
+      "Owners_equivalent_rent": 136.9
+    },
+    {
+      "date": "1989-07-01",
+      "FHFA": null,
+      "Shelter": 133.2,
+      "Rent": 133.0,
+      "Owners_equivalent_rent": 137.5
+    },
+    {
+      "date": "1989-08-01",
+      "FHFA": null,
+      "Shelter": 133.7,
+      "Rent": 133.5,
+      "Owners_equivalent_rent": 138.2
+    },
+    {
+      "date": "1989-09-01",
+      "FHFA": null,
+      "Shelter": 133.9,
+      "Rent": 133.9,
+      "Owners_equivalent_rent": 138.7
+    },
+    {
+      "date": "1989-10-01",
+      "FHFA": null,
+      "Shelter": 134.8,
+      "Rent": 134.7,
+      "Owners_equivalent_rent": 139.6
+    },
+    {
+      "date": "1989-11-01",
+      "FHFA": null,
+      "Shelter": 135.4,
+      "Rent": 135.2,
+      "Owners_equivalent_rent": 140.1
+    },
+    {
+      "date": "1989-12-01",
+      "FHFA": null,
+      "Shelter": 136.0,
+      "Rent": 135.5,
+      "Owners_equivalent_rent": 140.8
+    },
+    {
+      "date": "1990-01-01",
+      "FHFA": null,
+      "Shelter": 136.3,
+      "Rent": 135.8,
+      "Owners_equivalent_rent": 141.1
+    },
+    {
+      "date": "1990-02-01",
+      "FHFA": null,
+      "Shelter": 136.6,
+      "Rent": 136.0,
+      "Owners_equivalent_rent": 141.2
+    },
+    {
+      "date": "1990-03-01",
+      "FHFA": null,
+      "Shelter": 137.6,
+      "Rent": 136.5,
+      "Owners_equivalent_rent": 142.6
+    },
+    {
+      "date": "1990-04-01",
+      "FHFA": null,
+      "Shelter": 138.2,
+      "Rent": 137.0,
+      "Owners_equivalent_rent": 143.1
+    },
+    {
+      "date": "1990-05-01",
+      "FHFA": null,
+      "Shelter": 138.6,
+      "Rent": 137.3,
+      "Owners_equivalent_rent": 143.5
+    },
+    {
+      "date": "1990-06-01",
+      "FHFA": null,
+      "Shelter": 139.6,
+      "Rent": 137.9,
+      "Owners_equivalent_rent": 144.9
+    },
+    {
+      "date": "1990-07-01",
+      "FHFA": null,
+      "Shelter": 140.7,
+      "Rent": 138.7,
+      "Owners_equivalent_rent": 145.7
+    },
+    {
+      "date": "1990-08-01",
+      "FHFA": null,
+      "Shelter": 141.8,
+      "Rent": 139.4,
+      "Owners_equivalent_rent": 146.7
+    },
+    {
+      "date": "1990-09-01",
+      "FHFA": null,
+      "Shelter": 142.1,
+      "Rent": 140.0,
+      "Owners_equivalent_rent": 147.0
+    },
+    {
+      "date": "1990-10-01",
+      "FHFA": null,
+      "Shelter": 142.4,
+      "Rent": 140.5,
+      "Owners_equivalent_rent": 147.2
+    },
+    {
+      "date": "1990-11-01",
+      "FHFA": null,
+      "Shelter": 142.6,
+      "Rent": 140.7,
+      "Owners_equivalent_rent": 147.1
+    },
+    {
+      "date": "1990-12-01",
+      "FHFA": null,
+      "Shelter": 143.2,
+      "Rent": 141.1,
+      "Owners_equivalent_rent": 147.6
+    },
+    {
+      "date": "1991-01-01",
+      "FHFA": 100.0,
+      "Shelter": 144.2,
+      "Rent": 141.2,
+      "Owners_equivalent_rent": 148.1
+    },
+    {
+      "date": "1991-02-01",
+      "FHFA": 100.4,
+      "Shelter": 144.5,
+      "Rent": 141.5,
+      "Owners_equivalent_rent": 148.6
+    },
+    {
+      "date": "1991-03-01",
+      "FHFA": 100.46,
+      "Shelter": 144.8,
+      "Rent": 142.0,
+      "Owners_equivalent_rent": 148.8
+    },
+    {
+      "date": "1991-04-01",
+      "FHFA": 100.3,
+      "Shelter": 145.2,
+      "Rent": 142.5,
+      "Owners_equivalent_rent": 149.3
+    },
+    {
+      "date": "1991-05-01",
+      "FHFA": 100.35,
+      "Shelter": 145.6,
+      "Rent": 142.8,
+      "Owners_equivalent_rent": 149.7
+    },
+    {
+      "date": "1991-06-01",
+      "FHFA": 100.48,
+      "Shelter": 145.9,
+      "Rent": 143.0,
+      "Owners_equivalent_rent": 150.1
+    },
+    {
+      "date": "1991-07-01",
+      "FHFA": 100.5,
+      "Shelter": 146.4,
+      "Rent": 143.7,
+      "Owners_equivalent_rent": 150.5
+    },
+    {
+      "date": "1991-08-01",
+      "FHFA": 100.33,
+      "Shelter": 146.7,
+      "Rent": 143.7,
+      "Owners_equivalent_rent": 150.8
+    },
+    {
+      "date": "1991-09-01",
+      "FHFA": 100.59,
+      "Shelter": 147.2,
+      "Rent": 144.6,
+      "Owners_equivalent_rent": 151.4
+    },
+    {
+      "date": "1991-10-01",
+      "FHFA": 100.88,
+      "Shelter": 147.7,
+      "Rent": 144.6,
+      "Owners_equivalent_rent": 152.0
+    },
+    {
+      "date": "1991-11-01",
+      "FHFA": 101.35,
+      "Shelter": 148.2,
+      "Rent": 145.0,
+      "Owners_equivalent_rent": 152.6
+    },
+    {
+      "date": "1991-12-01",
+      "FHFA": 101.83,
+      "Shelter": 148.9,
+      "Rent": 145.2,
+      "Owners_equivalent_rent": 153.2
+    },
+    {
+      "date": "1992-01-01",
+      "FHFA": 102.2,
+      "Shelter": 149.4,
+      "Rent": 145.4,
+      "Owners_equivalent_rent": 153.5
+    },
+    {
+      "date": "1992-02-01",
+      "FHFA": 102.94,
+      "Shelter": 149.6,
+      "Rent": 145.6,
+      "Owners_equivalent_rent": 153.8
+    },
+    {
+      "date": "1992-03-01",
+      "FHFA": 102.78,
+      "Shelter": 150.0,
+      "Rent": 146.4,
+      "Owners_equivalent_rent": 154.4
+    },
+    {
+      "date": "1992-04-01",
+      "FHFA": 102.51,
+      "Shelter": 150.2,
+      "Rent": 146.2,
+      "Owners_equivalent_rent": 154.6
+    },
+    {
+      "date": "1992-05-01",
+      "FHFA": 102.54,
+      "Shelter": 150.6,
+      "Rent": 146.3,
+      "Owners_equivalent_rent": 154.9
+    },
+    {
+      "date": "1992-06-01",
+      "FHFA": 102.46,
+      "Shelter": 151.1,
+      "Rent": 146.6,
+      "Owners_equivalent_rent": 155.4
+    },
+    {
+      "date": "1992-07-01",
+      "FHFA": 102.83,
+      "Shelter": 151.4,
+      "Rent": 147.0,
+      "Owners_equivalent_rent": 155.7
+    },
+    {
+      "date": "1992-08-01",
+      "FHFA": 103.26,
+      "Shelter": 151.7,
+      "Rent": 147.0,
+      "Owners_equivalent_rent": 156.1
+    },
+    {
+      "date": "1992-09-01",
+      "FHFA": 103.67,
+      "Shelter": 151.8,
+      "Rent": 147.2,
+      "Owners_equivalent_rent": 156.0
+    },
+    {
+      "date": "1992-10-01",
+      "FHFA": 103.97,
+      "Shelter": 152.5,
+      "Rent": 148.0,
+      "Owners_equivalent_rent": 156.8
+    },
+    {
+      "date": "1992-11-01",
+      "FHFA": 104.24,
+      "Shelter": 152.9,
+      "Rent": 148.6,
+      "Owners_equivalent_rent": 157.3
+    },
+    {
+      "date": "1992-12-01",
+      "FHFA": 104.16,
+      "Shelter": 153.2,
+      "Rent": 148.6,
+      "Owners_equivalent_rent": 157.7
+    },
+    {
+      "date": "1993-01-01",
+      "FHFA": 104.22,
+      "Shelter": 153.8,
+      "Rent": 148.9,
+      "Owners_equivalent_rent": 158.5
+    },
+    {
+      "date": "1993-02-01",
+      "FHFA": 104.0,
+      "Shelter": 154.1,
+      "Rent": 149.1,
+      "Owners_equivalent_rent": 158.8
+    },
+    {
+      "date": "1993-03-01",
+      "FHFA": 104.32,
+      "Shelter": 154.3,
+      "Rent": 149.1,
+      "Owners_equivalent_rent": 159.0
+    },
+    {
+      "date": "1993-04-01",
+      "FHFA": 104.97,
+      "Shelter": 155.0,
+      "Rent": 149.7,
+      "Owners_equivalent_rent": 159.7
+    },
+    {
+      "date": "1993-05-01",
+      "FHFA": 105.2,
+      "Shelter": 155.3,
+      "Rent": 149.9,
+      "Owners_equivalent_rent": 160.0
+    },
+    {
+      "date": "1993-06-01",
+      "FHFA": 105.56,
+      "Shelter": 155.8,
+      "Rent": 150.3,
+      "Owners_equivalent_rent": 160.6
+    },
+    {
+      "date": "1993-07-01",
+      "FHFA": 105.62,
+      "Shelter": 155.9,
+      "Rent": 150.4,
+      "Owners_equivalent_rent": 160.7
+    },
+    {
+      "date": "1993-08-01",
+      "FHFA": 106.01,
+      "Shelter": 156.2,
+      "Rent": 150.8,
+      "Owners_equivalent_rent": 161.1
+    },
+    {
+      "date": "1993-09-01",
+      "FHFA": 106.4,
+      "Shelter": 156.5,
+      "Rent": 151.0,
+      "Owners_equivalent_rent": 161.4
+    },
+    {
+      "date": "1993-10-01",
+      "FHFA": 106.61,
+      "Shelter": 156.9,
+      "Rent": 151.4,
+      "Owners_equivalent_rent": 161.7
+    },
+    {
+      "date": "1993-11-01",
+      "FHFA": 106.95,
+      "Shelter": 157.3,
+      "Rent": 151.6,
+      "Owners_equivalent_rent": 162.1
+    },
+    {
+      "date": "1993-12-01",
+      "FHFA": 107.47,
+      "Shelter": 157.8,
+      "Rent": 151.9,
+      "Owners_equivalent_rent": 162.7
+    },
+    {
+      "date": "1994-01-01",
+      "FHFA": 107.74,
+      "Shelter": 158.2,
+      "Rent": 152.2,
+      "Owners_equivalent_rent": 163.1
+    },
+    {
+      "date": "1994-02-01",
+      "FHFA": 107.93,
+      "Shelter": 158.8,
+      "Rent": 152.8,
+      "Owners_equivalent_rent": 163.9
+    },
+    {
+      "date": "1994-03-01",
+      "FHFA": 108.31,
+      "Shelter": 159.4,
+      "Rent": 153.2,
+      "Owners_equivalent_rent": 164.5
+    },
+    {
+      "date": "1994-04-01",
+      "FHFA": 108.6,
+      "Shelter": 159.5,
+      "Rent": 153.3,
+      "Owners_equivalent_rent": 164.7
+    },
+    {
+      "date": "1994-05-01",
+      "FHFA": 108.99,
+      "Shelter": 159.9,
+      "Rent": 153.3,
+      "Owners_equivalent_rent": 165.1
+    },
+    {
+      "date": "1994-06-01",
+      "FHFA": 109.17,
+      "Shelter": 160.1,
+      "Rent": 153.4,
+      "Owners_equivalent_rent": 165.3
+    },
+    {
+      "date": "1994-07-01",
+      "FHFA": 109.3,
+      "Shelter": 160.4,
+      "Rent": 153.9,
+      "Owners_equivalent_rent": 165.6
+    },
+    {
+      "date": "1994-08-01",
+      "FHFA": 109.59,
+      "Shelter": 161.2,
+      "Rent": 154.5,
+      "Owners_equivalent_rent": 166.5
+    },
+    {
+      "date": "1994-09-01",
+      "FHFA": 109.63,
+      "Shelter": 161.6,
+      "Rent": 155.0,
+      "Owners_equivalent_rent": 167.1
+    },
+    {
+      "date": "1994-10-01",
+      "FHFA": 109.9,
+      "Shelter": 162.1,
+      "Rent": 155.2,
+      "Owners_equivalent_rent": 167.6
+    },
+    {
+      "date": "1994-11-01",
+      "FHFA": 110.1,
+      "Shelter": 162.6,
+      "Rent": 155.6,
+      "Owners_equivalent_rent": 168.0
+    },
+    {
+      "date": "1994-12-01",
+      "FHFA": 110.13,
+      "Shelter": 162.5,
+      "Rent": 155.7,
+      "Owners_equivalent_rent": 168.0
+    },
+    {
+      "date": "1995-01-01",
+      "FHFA": 110.44,
+      "Shelter": 163.1,
+      "Rent": 156.1,
+      "Owners_equivalent_rent": 168.6
+    },
+    {
+      "date": "1995-02-01",
+      "FHFA": 111.04,
+      "Shelter": 163.5,
+      "Rent": 156.4,
+      "Owners_equivalent_rent": 169.0
+    },
+    {
+      "date": "1995-03-01",
+      "FHFA": 110.88,
+      "Shelter": 164.0,
+      "Rent": 156.7,
+      "Owners_equivalent_rent": 169.5
+    },
+    {
+      "date": "1995-04-01",
+      "FHFA": 111.15,
+      "Shelter": 164.5,
+      "Rent": 157.0,
+      "Owners_equivalent_rent": 170.0
+    },
+    {
+      "date": "1995-05-01",
+      "FHFA": 111.3,
+      "Shelter": 165.1,
+      "Rent": 157.2,
+      "Owners_equivalent_rent": 170.6
+    },
+    {
+      "date": "1995-06-01",
+      "FHFA": 111.66,
+      "Shelter": 165.5,
+      "Rent": 157.5,
+      "Owners_equivalent_rent": 171.1
+    },
+    {
+      "date": "1995-07-01",
+      "FHFA": 112.18,
+      "Shelter": 166.0,
+      "Rent": 157.9,
+      "Owners_equivalent_rent": 171.5
+    },
+    {
+      "date": "1995-08-01",
+      "FHFA": 112.47,
+      "Shelter": 166.3,
+      "Rent": 158.2,
+      "Owners_equivalent_rent": 172.0
+    },
+    {
+      "date": "1995-09-01",
+      "FHFA": 112.7,
+      "Shelter": 166.9,
+      "Rent": 158.5,
+      "Owners_equivalent_rent": 172.5
+    },
+    {
+      "date": "1995-10-01",
+      "FHFA": 112.78,
+      "Shelter": 167.4,
+      "Rent": 158.9,
+      "Owners_equivalent_rent": 173.2
+    },
+    {
+      "date": "1995-11-01",
+      "FHFA": 113.0,
+      "Shelter": 167.9,
+      "Rent": 159.3,
+      "Owners_equivalent_rent": 173.7
+    },
+    {
+      "date": "1995-12-01",
+      "FHFA": 113.47,
+      "Shelter": 168.2,
+      "Rent": 159.6,
+      "Owners_equivalent_rent": 174.2
+    },
+    {
+      "date": "1996-01-01",
+      "FHFA": 113.88,
+      "Shelter": 168.7,
+      "Rent": 160.0,
+      "Owners_equivalent_rent": 174.6
+    },
+    {
+      "date": "1996-02-01",
+      "FHFA": 114.05,
+      "Shelter": 169.1,
+      "Rent": 160.4,
+      "Owners_equivalent_rent": 174.9
+    },
+    {
+      "date": "1996-03-01",
+      "FHFA": 114.47,
+      "Shelter": 169.6,
+      "Rent": 160.6,
+      "Owners_equivalent_rent": 175.4
+    },
+    {
+      "date": "1996-04-01",
+      "FHFA": 114.7,
+      "Shelter": 169.9,
+      "Rent": 160.9,
+      "Owners_equivalent_rent": 175.7
+    },
+    {
+      "date": "1996-05-01",
+      "FHFA": 114.96,
+      "Shelter": 170.4,
+      "Rent": 161.2,
+      "Owners_equivalent_rent": 176.2
+    },
+    {
+      "date": "1996-06-01",
+      "FHFA": 115.07,
+      "Shelter": 170.7,
+      "Rent": 161.7,
+      "Owners_equivalent_rent": 176.5
+    },
+    {
+      "date": "1996-07-01",
+      "FHFA": 115.47,
+      "Shelter": 171.4,
+      "Rent": 162.2,
+      "Owners_equivalent_rent": 177.0
+    },
+    {
+      "date": "1996-08-01",
+      "FHFA": 115.49,
+      "Shelter": 171.8,
+      "Rent": 162.5,
+      "Owners_equivalent_rent": 177.4
+    },
+    {
+      "date": "1996-09-01",
+      "FHFA": 115.77,
+      "Shelter": 172.1,
+      "Rent": 162.9,
+      "Owners_equivalent_rent": 177.8
+    },
+    {
+      "date": "1996-10-01",
+      "FHFA": 115.88,
+      "Shelter": 172.5,
+      "Rent": 163.3,
+      "Owners_equivalent_rent": 178.2
+    },
+    {
+      "date": "1996-11-01",
+      "FHFA": 116.18,
+      "Shelter": 173.0,
+      "Rent": 163.7,
+      "Owners_equivalent_rent": 178.6
+    },
+    {
+      "date": "1996-12-01",
+      "FHFA": 116.58,
+      "Shelter": 173.1,
+      "Rent": 164.0,
+      "Owners_equivalent_rent": 178.9
+    },
+    {
+      "date": "1997-01-01",
+      "FHFA": 116.72,
+      "Shelter": 173.8,
+      "Rent": 164.4,
+      "Owners_equivalent_rent": 179.4
+    },
+    {
+      "date": "1997-02-01",
+      "FHFA": 117.0,
+      "Shelter": 174.3,
+      "Rent": 164.8,
+      "Owners_equivalent_rent": 179.9
+    },
+    {
+      "date": "1997-03-01",
+      "FHFA": 117.44,
+      "Shelter": 174.6,
+      "Rent": 165.1,
+      "Owners_equivalent_rent": 180.2
+    },
+    {
+      "date": "1997-04-01",
+      "FHFA": 117.66,
+      "Shelter": 175.1,
+      "Rent": 165.5,
+      "Owners_equivalent_rent": 180.7
+    },
+    {
+      "date": "1997-05-01",
+      "FHFA": 118.13,
+      "Shelter": 175.6,
+      "Rent": 165.9,
+      "Owners_equivalent_rent": 181.2
+    },
+    {
+      "date": "1997-06-01",
+      "FHFA": 118.18,
+      "Shelter": 176.0,
+      "Rent": 166.4,
+      "Owners_equivalent_rent": 181.6
+    },
+    {
+      "date": "1997-07-01",
+      "FHFA": 118.47,
+      "Shelter": 176.5,
+      "Rent": 166.8,
+      "Owners_equivalent_rent": 182.2
+    },
+    {
+      "date": "1997-08-01",
+      "FHFA": 118.95,
+      "Shelter": 177.0,
+      "Rent": 167.3,
+      "Owners_equivalent_rent": 182.7
+    },
+    {
+      "date": "1997-09-01",
+      "FHFA": 119.1,
+      "Shelter": 177.4,
+      "Rent": 167.8,
+      "Owners_equivalent_rent": 183.1
+    },
+    {
+      "date": "1997-10-01",
+      "FHFA": 119.7,
+      "Shelter": 177.9,
+      "Rent": 168.2,
+      "Owners_equivalent_rent": 183.4
+    },
+    {
+      "date": "1997-11-01",
+      "FHFA": 120.05,
+      "Shelter": 178.4,
+      "Rent": 168.7,
+      "Owners_equivalent_rent": 184.0
+    },
+    {
+      "date": "1997-12-01",
+      "FHFA": 120.47,
+      "Shelter": 178.9,
+      "Rent": 169.1,
+      "Owners_equivalent_rent": 184.5
+    },
+    {
+      "date": "1998-01-01",
+      "FHFA": 120.93,
+      "Shelter": 179.4,
+      "Rent": 169.5,
+      "Owners_equivalent_rent": 185.0
+    },
+    {
+      "date": "1998-02-01",
+      "FHFA": 121.79,
+      "Shelter": 179.8,
+      "Rent": 169.9,
+      "Owners_equivalent_rent": 185.4
+    },
+    {
+      "date": "1998-03-01",
+      "FHFA": 122.18,
+      "Shelter": 180.3,
+      "Rent": 170.3,
+      "Owners_equivalent_rent": 186.0
+    },
+    {
+      "date": "1998-04-01",
+      "FHFA": 122.71,
+      "Shelter": 180.8,
+      "Rent": 170.7,
+      "Owners_equivalent_rent": 186.5
+    },
+    {
+      "date": "1998-05-01",
+      "FHFA": 123.22,
+      "Shelter": 181.4,
+      "Rent": 171.1,
+      "Owners_equivalent_rent": 187.0
+    },
+    {
+      "date": "1998-06-01",
+      "FHFA": 123.99,
+      "Shelter": 181.8,
+      "Rent": 171.7,
+      "Owners_equivalent_rent": 187.6
+    },
+    {
+      "date": "1998-07-01",
+      "FHFA": 124.33,
+      "Shelter": 182.1,
+      "Rent": 172.2,
+      "Owners_equivalent_rent": 188.1
+    },
+    {
+      "date": "1998-08-01",
+      "FHFA": 124.86,
+      "Shelter": 182.8,
+      "Rent": 172.8,
+      "Owners_equivalent_rent": 188.6
+    },
+    {
+      "date": "1998-09-01",
+      "FHFA": 125.66,
+      "Shelter": 183.4,
+      "Rent": 173.4,
+      "Owners_equivalent_rent": 189.1
+    },
+    {
+      "date": "1998-10-01",
+      "FHFA": 126.18,
+      "Shelter": 184.0,
+      "Rent": 173.9,
+      "Owners_equivalent_rent": 189.7
+    },
+    {
+      "date": "1998-11-01",
+      "FHFA": 127.02,
+      "Shelter": 184.5,
+      "Rent": 174.5,
+      "Owners_equivalent_rent": 190.1
+    },
+    {
+      "date": "1998-12-01",
+      "FHFA": 127.59,
+      "Shelter": 185.0,
+      "Rent": 174.9,
+      "Owners_equivalent_rent": 190.5
+    },
+    {
+      "date": "1999-01-01",
+      "FHFA": 128.29,
+      "Shelter": 185.1,
+      "Rent": 175.3,
+      "Owners_equivalent_rent": 190.9
+    },
+    {
+      "date": "1999-02-01",
+      "FHFA": 128.85,
+      "Shelter": 185.3,
+      "Rent": 175.6,
+      "Owners_equivalent_rent": 191.2
+    },
+    {
+      "date": "1999-03-01",
+      "FHFA": 129.39,
+      "Shelter": 185.7,
+      "Rent": 176.0,
+      "Owners_equivalent_rent": 191.6
+    },
+    {
+      "date": "1999-04-01",
+      "FHFA": 130.01,
+      "Shelter": 186.3,
+      "Rent": 176.4,
+      "Owners_equivalent_rent": 192.0
+    },
+    {
+      "date": "1999-05-01",
+      "FHFA": 130.79,
+      "Shelter": 186.6,
+      "Rent": 176.7,
+      "Owners_equivalent_rent": 192.4
+    },
+    {
+      "date": "1999-06-01",
+      "FHFA": 131.36,
+      "Shelter": 187.0,
+      "Rent": 177.1,
+      "Owners_equivalent_rent": 192.7
+    },
+    {
+      "date": "1999-07-01",
+      "FHFA": 132.11,
+      "Shelter": 187.5,
+      "Rent": 177.5,
+      "Owners_equivalent_rent": 193.1
+    },
+    {
+      "date": "1999-08-01",
+      "FHFA": 132.93,
+      "Shelter": 187.8,
+      "Rent": 177.9,
+      "Owners_equivalent_rent": 193.5
+    },
+    {
+      "date": "1999-09-01",
+      "FHFA": 133.33,
+      "Shelter": 188.4,
+      "Rent": 178.4,
+      "Owners_equivalent_rent": 193.9
+    },
+    {
+      "date": "1999-10-01",
+      "FHFA": 134.09,
+      "Shelter": 188.6,
+      "Rent": 178.8,
+      "Owners_equivalent_rent": 194.2
+    },
+    {
+      "date": "1999-11-01",
+      "FHFA": 134.64,
+      "Shelter": 189.2,
+      "Rent": 179.8,
+      "Owners_equivalent_rent": 194.7
+    },
+    {
+      "date": "1999-12-01",
+      "FHFA": 135.31,
+      "Shelter": 189.5,
+      "Rent": 180.3,
+      "Owners_equivalent_rent": 195.0
+    },
+    {
+      "date": "2000-01-01",
+      "FHFA": 136.88,
+      "Shelter": 190.6,
+      "Rent": 181.1,
+      "Owners_equivalent_rent": 196.0
+    },
+    {
+      "date": "2000-02-01",
+      "FHFA": 136.75,
+      "Shelter": 190.9,
+      "Rent": 181.5,
+      "Owners_equivalent_rent": 196.5
+    },
+    {
+      "date": "2000-03-01",
+      "FHFA": 137.76,
+      "Shelter": 191.6,
+      "Rent": 182.0,
+      "Owners_equivalent_rent": 196.9
+    },
+    {
+      "date": "2000-04-01",
+      "FHFA": 138.73,
+      "Shelter": 191.9,
+      "Rent": 182.3,
+      "Owners_equivalent_rent": 197.3
+    },
+    {
+      "date": "2000-05-01",
+      "FHFA": 139.27,
+      "Shelter": 192.4,
+      "Rent": 182.7,
+      "Owners_equivalent_rent": 197.8
+    },
+    {
+      "date": "2000-06-01",
+      "FHFA": 140.22,
+      "Shelter": 193.1,
+      "Rent": 183.2,
+      "Owners_equivalent_rent": 198.4
+    },
+    {
+      "date": "2000-07-01",
+      "FHFA": 140.96,
+      "Shelter": 193.6,
+      "Rent": 183.9,
+      "Owners_equivalent_rent": 198.8
+    },
+    {
+      "date": "2000-08-01",
+      "FHFA": 141.53,
+      "Shelter": 194.1,
+      "Rent": 184.6,
+      "Owners_equivalent_rent": 199.3
+    },
+    {
+      "date": "2000-09-01",
+      "FHFA": 142.38,
+      "Shelter": 194.7,
+      "Rent": 185.3,
+      "Owners_equivalent_rent": 199.9
+    },
+    {
+      "date": "2000-10-01",
+      "FHFA": 143.17,
+      "Shelter": 195.3,
+      "Rent": 186.1,
+      "Owners_equivalent_rent": 200.5
+    },
+    {
+      "date": "2000-11-01",
+      "FHFA": 144.05,
+      "Shelter": 195.8,
+      "Rent": 186.8,
+      "Owners_equivalent_rent": 201.0
+    },
+    {
+      "date": "2000-12-01",
+      "FHFA": 144.92,
+      "Shelter": 196.1,
+      "Rent": 187.6,
+      "Owners_equivalent_rent": 201.6
+    },
+    {
+      "date": "2001-01-01",
+      "FHFA": 145.84,
+      "Shelter": 196.8,
+      "Rent": 188.2,
+      "Owners_equivalent_rent": 202.2
+    },
+    {
+      "date": "2001-02-01",
+      "FHFA": 146.83,
+      "Shelter": 197.5,
+      "Rent": 188.9,
+      "Owners_equivalent_rent": 202.8
+    },
+    {
+      "date": "2001-03-01",
+      "FHFA": 147.6,
+      "Shelter": 198.3,
+      "Rent": 189.6,
+      "Owners_equivalent_rent": 203.6
+    },
+    {
+      "date": "2001-04-01",
+      "FHFA": 148.47,
+      "Shelter": 198.8,
+      "Rent": 190.2,
+      "Owners_equivalent_rent": 204.3
+    },
+    {
+      "date": "2001-05-01",
+      "FHFA": 149.09,
+      "Shelter": 199.6,
+      "Rent": 191.0,
+      "Owners_equivalent_rent": 205.1
+    },
+    {
+      "date": "2001-06-01",
+      "FHFA": 149.82,
+      "Shelter": 200.5,
+      "Rent": 191.6,
+      "Owners_equivalent_rent": 205.9
+    },
+    {
+      "date": "2001-07-01",
+      "FHFA": 150.65,
+      "Shelter": 200.9,
+      "Rent": 192.3,
+      "Owners_equivalent_rent": 206.5
+    },
+    {
+      "date": "2001-08-01",
+      "FHFA": 151.38,
+      "Shelter": 201.8,
+      "Rent": 193.1,
+      "Owners_equivalent_rent": 207.4
+    },
+    {
+      "date": "2001-09-01",
+      "FHFA": 152.21,
+      "Shelter": 202.0,
+      "Rent": 193.9,
+      "Owners_equivalent_rent": 208.1
+    },
+    {
+      "date": "2001-10-01",
+      "FHFA": 153.1,
+      "Shelter": 202.5,
+      "Rent": 194.7,
+      "Owners_equivalent_rent": 209.0
+    },
+    {
+      "date": "2001-11-01",
+      "FHFA": 153.62,
+      "Shelter": 203.5,
+      "Rent": 195.5,
+      "Owners_equivalent_rent": 209.9
+    },
+    {
+      "date": "2001-12-01",
+      "FHFA": 154.57,
+      "Shelter": 204.3,
+      "Rent": 196.4,
+      "Owners_equivalent_rent": 210.7
+    },
+    {
+      "date": "2002-01-01",
+      "FHFA": 155.43,
+      "Shelter": 205.1,
+      "Rent": 197.0,
+      "Owners_equivalent_rent": 211.4
+    },
+    {
+      "date": "2002-02-01",
+      "FHFA": 156.37,
+      "Shelter": 206.0,
+      "Rent": 197.7,
+      "Owners_equivalent_rent": 212.0
+    },
+    {
+      "date": "2002-03-01",
+      "FHFA": 157.32,
+      "Shelter": 206.3,
+      "Rent": 198.2,
+      "Owners_equivalent_rent": 212.7
+    },
+    {
+      "date": "2002-04-01",
+      "FHFA": 158.18,
+      "Shelter": 207.0,
+      "Rent": 198.5,
+      "Owners_equivalent_rent": 213.4
+    },
+    {
+      "date": "2002-05-01",
+      "FHFA": 159.23,
+      "Shelter": 207.4,
+      "Rent": 198.8,
+      "Owners_equivalent_rent": 213.9
+    },
+    {
+      "date": "2002-06-01",
+      "FHFA": 160.22,
+      "Shelter": 207.8,
+      "Rent": 199.3,
+      "Owners_equivalent_rent": 214.5
+    },
+    {
+      "date": "2002-07-01",
+      "FHFA": 161.27,
+      "Shelter": 208.2,
+      "Rent": 199.8,
+      "Owners_equivalent_rent": 215.1
+    },
+    {
+      "date": "2002-08-01",
+      "FHFA": 162.27,
+      "Shelter": 208.9,
+      "Rent": 200.2,
+      "Owners_equivalent_rent": 215.5
+    },
+    {
+      "date": "2002-09-01",
+      "FHFA": 163.27,
+      "Shelter": 209.4,
+      "Rent": 200.7,
+      "Owners_equivalent_rent": 216.2
+    },
+    {
+      "date": "2002-10-01",
+      "FHFA": 164.45,
+      "Shelter": 209.7,
+      "Rent": 201.3,
+      "Owners_equivalent_rent": 216.7
+    },
+    {
+      "date": "2002-11-01",
+      "FHFA": 165.37,
+      "Shelter": 210.4,
+      "Rent": 202.0,
+      "Owners_equivalent_rent": 217.2
+    },
+    {
+      "date": "2002-12-01",
+      "FHFA": 166.56,
+      "Shelter": 210.8,
+      "Rent": 202.5,
+      "Owners_equivalent_rent": 217.7
+    },
+    {
+      "date": "2003-01-01",
+      "FHFA": 167.56,
+      "Shelter": 211.5,
+      "Rent": 203.3,
+      "Owners_equivalent_rent": 218.3
+    },
+    {
+      "date": "2003-02-01",
+      "FHFA": 168.65,
+      "Shelter": 211.6,
+      "Rent": 203.7,
+      "Owners_equivalent_rent": 218.6
+    },
+    {
+      "date": "2003-03-01",
+      "FHFA": 169.2,
+      "Shelter": 211.5,
+      "Rent": 204.1,
+      "Owners_equivalent_rent": 218.9
+    },
+    {
+      "date": "2003-04-01",
+      "FHFA": 170.22,
+      "Shelter": 211.6,
+      "Rent": 204.5,
+      "Owners_equivalent_rent": 219.0
+    },
+    {
+      "date": "2003-05-01",
+      "FHFA": 171.15,
+      "Shelter": 212.6,
+      "Rent": 204.9,
+      "Owners_equivalent_rent": 219.3
+    },
+    {
+      "date": "2003-06-01",
+      "FHFA": 171.91,
+      "Shelter": 212.6,
+      "Rent": 205.1,
+      "Owners_equivalent_rent": 219.3
+    },
+    {
+      "date": "2003-07-01",
+      "FHFA": 173.24,
+      "Shelter": 213.2,
+      "Rent": 205.6,
+      "Owners_equivalent_rent": 219.8
+    },
+    {
+      "date": "2003-08-01",
+      "FHFA": 174.5,
+      "Shelter": 213.6,
+      "Rent": 206.1,
+      "Owners_equivalent_rent": 220.2
+    },
+    {
+      "date": "2003-09-01",
+      "FHFA": 175.88,
+      "Shelter": 214.0,
+      "Rent": 206.6,
+      "Owners_equivalent_rent": 220.7
+    },
+    {
+      "date": "2003-10-01",
+      "FHFA": 176.93,
+      "Shelter": 214.7,
+      "Rent": 206.9,
+      "Owners_equivalent_rent": 221.3
+    },
+    {
+      "date": "2003-11-01",
+      "FHFA": 178.34,
+      "Shelter": 215.1,
+      "Rent": 207.5,
+      "Owners_equivalent_rent": 221.8
+    },
+    {
+      "date": "2003-12-01",
+      "FHFA": 179.76,
+      "Shelter": 215.5,
+      "Rent": 207.9,
+      "Owners_equivalent_rent": 222.0
+    },
+    {
+      "date": "2004-01-01",
+      "FHFA": 180.92,
+      "Shelter": 215.9,
+      "Rent": 208.3,
+      "Owners_equivalent_rent": 222.4
+    },
+    {
+      "date": "2004-02-01",
+      "FHFA": 182.36,
+      "Shelter": 215.8,
+      "Rent": 208.8,
+      "Owners_equivalent_rent": 222.8
+    },
+    {
+      "date": "2004-03-01",
+      "FHFA": 183.62,
+      "Shelter": 217.0,
+      "Rent": 209.2,
+      "Owners_equivalent_rent": 223.3
+    },
+    {
+      "date": "2004-04-01",
+      "FHFA": 185.16,
+      "Shelter": 217.8,
+      "Rent": 209.7,
+      "Owners_equivalent_rent": 224.0
+    },
+    {
+      "date": "2004-05-01",
+      "FHFA": 186.91,
+      "Shelter": 218.5,
+      "Rent": 210.2,
+      "Owners_equivalent_rent": 224.4
+    },
+    {
+      "date": "2004-06-01",
+      "FHFA": 188.85,
+      "Shelter": 218.9,
+      "Rent": 210.7,
+      "Owners_equivalent_rent": 224.9
+    },
+    {
+      "date": "2004-07-01",
+      "FHFA": 190.39,
+      "Shelter": 219.3,
+      "Rent": 211.2,
+      "Owners_equivalent_rent": 225.3
+    },
+    {
+      "date": "2004-08-01",
+      "FHFA": 191.75,
+      "Shelter": 219.6,
+      "Rent": 211.9,
+      "Owners_equivalent_rent": 225.8
+    },
+    {
+      "date": "2004-09-01",
+      "FHFA": 193.24,
+      "Shelter": 220.4,
+      "Rent": 212.4,
+      "Owners_equivalent_rent": 226.1
+    },
+    {
+      "date": "2004-10-01",
+      "FHFA": 194.66,
+      "Shelter": 220.7,
+      "Rent": 212.8,
+      "Owners_equivalent_rent": 226.4
+    },
+    {
+      "date": "2004-11-01",
+      "FHFA": 196.46,
+      "Shelter": 220.9,
+      "Rent": 213.2,
+      "Owners_equivalent_rent": 226.7
+    },
+    {
+      "date": "2004-12-01",
+      "FHFA": 198.14,
+      "Shelter": 221.3,
+      "Rent": 213.9,
+      "Owners_equivalent_rent": 227.1
+    },
+    {
+      "date": "2005-01-01",
+      "FHFA": 199.55,
+      "Shelter": 221.7,
+      "Rent": 214.5,
+      "Owners_equivalent_rent": 227.7
+    },
+    {
+      "date": "2005-02-01",
+      "FHFA": 201.07,
+      "Shelter": 222.5,
+      "Rent": 215.0,
+      "Owners_equivalent_rent": 228.3
+    },
+    {
+      "date": "2005-03-01",
+      "FHFA": 203.08,
+      "Shelter": 223.7,
+      "Rent": 215.5,
+      "Owners_equivalent_rent": 228.7
+    },
+    {
+      "date": "2005-04-01",
+      "FHFA": 204.85,
+      "Shelter": 223.7,
+      "Rent": 216.0,
+      "Owners_equivalent_rent": 229.0
+    },
+    {
+      "date": "2005-05-01",
+      "FHFA": 206.54,
+      "Shelter": 223.8,
+      "Rent": 216.4,
+      "Owners_equivalent_rent": 229.5
+    },
+    {
+      "date": "2005-06-01",
+      "FHFA": 208.32,
+      "Shelter": 224.0,
+      "Rent": 216.8,
+      "Owners_equivalent_rent": 229.8
+    },
+    {
+      "date": "2005-07-01",
+      "FHFA": 210.41,
+      "Shelter": 224.6,
+      "Rent": 217.5,
+      "Owners_equivalent_rent": 230.3
+    },
+    {
+      "date": "2005-08-01",
+      "FHFA": 211.95,
+      "Shelter": 224.9,
+      "Rent": 218.0,
+      "Owners_equivalent_rent": 230.7
+    },
+    {
+      "date": "2005-09-01",
+      "FHFA": 213.87,
+      "Shelter": 224.6,
+      "Rent": 218.6,
+      "Owners_equivalent_rent": 231.2
+    },
+    {
+      "date": "2005-10-01",
+      "FHFA": 215.1,
+      "Shelter": 225.8,
+      "Rent": 219.3,
+      "Owners_equivalent_rent": 231.6
+    },
+    {
+      "date": "2005-11-01",
+      "FHFA": 216.55,
+      "Shelter": 226.5,
+      "Rent": 220.0,
+      "Owners_equivalent_rent": 232.2
+    },
+    {
+      "date": "2005-12-01",
+      "FHFA": 217.8,
+      "Shelter": 227.1,
+      "Rent": 220.5,
+      "Owners_equivalent_rent": 232.7
+    },
+    {
+      "date": "2006-01-01",
+      "FHFA": 219.1,
+      "Shelter": 227.5,
+      "Rent": 220.9,
+      "Owners_equivalent_rent": 233.4
+    },
+    {
+      "date": "2006-02-01",
+      "FHFA": 219.58,
+      "Shelter": 228.3,
+      "Rent": 221.6,
+      "Owners_equivalent_rent": 234.1
+    },
+    {
+      "date": "2006-03-01",
+      "FHFA": 220.43,
+      "Shelter": 229.3,
+      "Rent": 222.3,
+      "Owners_equivalent_rent": 234.9
+    },
+    {
+      "date": "2006-04-01",
+      "FHFA": 220.83,
+      "Shelter": 230.1,
+      "Rent": 222.9,
+      "Owners_equivalent_rent": 235.8
+    },
+    {
+      "date": "2006-05-01",
+      "FHFA": 221.41,
+      "Shelter": 231.0,
+      "Rent": 223.6,
+      "Owners_equivalent_rent": 236.9
+    },
+    {
+      "date": "2006-06-01",
+      "FHFA": 221.34,
+      "Shelter": 231.9,
+      "Rent": 224.4,
+      "Owners_equivalent_rent": 238.0
+    },
+    {
+      "date": "2006-07-01",
+      "FHFA": 221.23,
+      "Shelter": 232.7,
+      "Rent": 225.2,
+      "Owners_equivalent_rent": 238.9
+    },
+    {
+      "date": "2006-08-01",
+      "FHFA": 221.78,
+      "Shelter": 233.5,
+      "Rent": 226.2,
+      "Owners_equivalent_rent": 239.7
+    },
+    {
+      "date": "2006-09-01",
+      "FHFA": 221.75,
+      "Shelter": 234.0,
+      "Rent": 227.1,
+      "Owners_equivalent_rent": 240.4
+    },
+    {
+      "date": "2006-10-01",
+      "FHFA": 222.0,
+      "Shelter": 235.0,
+      "Rent": 228.0,
+      "Owners_equivalent_rent": 241.3
+    },
+    {
+      "date": "2006-11-01",
+      "FHFA": 222.7,
+      "Shelter": 235.8,
+      "Rent": 228.9,
+      "Owners_equivalent_rent": 242.0
+    },
+    {
+      "date": "2006-12-01",
+      "FHFA": 222.7,
+      "Shelter": 236.5,
+      "Rent": 230.0,
+      "Owners_equivalent_rent": 242.7
+    },
+    {
+      "date": "2007-01-01",
+      "FHFA": 223.52,
+      "Shelter": 237.255,
+      "Rent": 230.806,
+      "Owners_equivalent_rent": 243.345
+    },
+    {
+      "date": "2007-02-01",
+      "FHFA": 223.59,
+      "Shelter": 238.107,
+      "Rent": 231.739,
+      "Owners_equivalent_rent": 244.02
+    },
+    {
+      "date": "2007-03-01",
+      "FHFA": 224.42,
+      "Shelter": 238.538,
+      "Rent": 232.495,
+      "Owners_equivalent_rent": 244.602
+    },
+    {
+      "date": "2007-04-01",
+      "FHFA": 224.48,
+      "Shelter": 239.14,
+      "Rent": 232.98,
+      "Owners_equivalent_rent": 244.993
+    },
+    {
+      "date": "2007-05-01",
+      "FHFA": 223.34,
+      "Shelter": 239.637,
+      "Rent": 233.549,
+      "Owners_equivalent_rent": 245.236
+    },
+    {
+      "date": "2007-06-01",
+      "FHFA": 222.5,
+      "Shelter": 240.345,
+      "Rent": 234.071,
+      "Owners_equivalent_rent": 245.69
+    },
+    {
+      "date": "2007-07-01",
+      "FHFA": 221.37,
+      "Shelter": 240.843,
+      "Rent": 234.732,
+      "Owners_equivalent_rent": 246.149
+    },
+    {
+      "date": "2007-08-01",
+      "FHFA": 220.37,
+      "Shelter": 241.45,
+      "Rent": 235.311,
+      "Owners_equivalent_rent": 246.815
+    },
+    {
+      "date": "2007-09-01",
+      "FHFA": 219.46,
+      "Shelter": 242.037,
+      "Rent": 236.058,
+      "Owners_equivalent_rent": 247.487
+    },
+    {
+      "date": "2007-10-01",
+      "FHFA": 217.62,
+      "Shelter": 242.581,
+      "Rent": 237.135,
+      "Owners_equivalent_rent": 248.075
+    },
+    {
+      "date": "2007-11-01",
+      "FHFA": 216.16,
+      "Shelter": 243.305,
+      "Rent": 238.169,
+      "Owners_equivalent_rent": 248.876
+    },
+    {
+      "date": "2007-12-01",
+      "FHFA": 215.06,
+      "Shelter": 243.979,
+      "Rent": 239.102,
+      "Owners_equivalent_rent": 249.532
+    },
+    {
+      "date": "2008-01-01",
+      "FHFA": 213.33,
+      "Shelter": 244.564,
+      "Rent": 239.85,
+      "Owners_equivalent_rent": 250.013
+    },
+    {
+      "date": "2008-02-01",
+      "FHFA": 211.9,
+      "Shelter": 244.926,
+      "Rent": 240.325,
+      "Owners_equivalent_rent": 250.419
+    },
+    {
+      "date": "2008-03-01",
+      "FHFA": 210.08,
+      "Shelter": 245.659,
+      "Rent": 240.874,
+      "Owners_equivalent_rent": 250.899
+    },
+    {
+      "date": "2008-04-01",
+      "FHFA": 207.78,
+      "Shelter": 245.608,
+      "Rent": 241.474,
+      "Owners_equivalent_rent": 251.408
+    },
+    {
+      "date": "2008-05-01",
+      "FHFA": 205.38,
+      "Shelter": 245.902,
+      "Rent": 241.803,
+      "Owners_equivalent_rent": 251.677
+    },
+    {
+      "date": "2008-06-01",
+      "FHFA": 204.07,
+      "Shelter": 246.406,
+      "Rent": 242.64,
+      "Owners_equivalent_rent": 252.229
+    },
+    {
+      "date": "2008-07-01",
+      "FHFA": 202.23,
+      "Shelter": 246.863,
+      "Rent": 243.367,
+      "Owners_equivalent_rent": 252.62
+    },
+    {
+      "date": "2008-08-01",
+      "FHFA": 200.19,
+      "Shelter": 247.208,
+      "Rent": 244.181,
+      "Owners_equivalent_rent": 252.992
+    },
+    {
+      "date": "2008-09-01",
+      "FHFA": 198.33,
+      "Shelter": 247.723,
+      "Rent": 244.926,
+      "Owners_equivalent_rent": 253.572
+    },
+    {
+      "date": "2008-10-01",
+      "FHFA": 196.63,
+      "Shelter": 247.995,
+      "Rent": 245.855,
+      "Owners_equivalent_rent": 253.936
+    },
+    {
+      "date": "2008-11-01",
+      "FHFA": 193.08,
+      "Shelter": 248.486,
+      "Rent": 246.681,
+      "Owners_equivalent_rent": 254.6
+    },
+    {
+      "date": "2008-12-01",
+      "FHFA": 192.65,
+      "Shelter": 248.508,
+      "Rent": 247.278,
+      "Owners_equivalent_rent": 254.772
+    },
+    {
+      "date": "2009-01-01",
+      "FHFA": 194.23,
+      "Shelter": 248.963,
+      "Rent": 247.974,
+      "Owners_equivalent_rent": 255.33
+    },
+    {
+      "date": "2009-02-01",
+      "FHFA": 194.43,
+      "Shelter": 249.087,
+      "Rent": 248.305,
+      "Owners_equivalent_rent": 255.657
+    },
+    {
+      "date": "2009-03-01",
+      "FHFA": 192.05,
+      "Shelter": 249.36,
+      "Rent": 248.639,
+      "Owners_equivalent_rent": 256.229
+    },
+    {
+      "date": "2009-04-01",
+      "FHFA": 190.85,
+      "Shelter": 249.579,
+      "Rent": 248.899,
+      "Owners_equivalent_rent": 256.603
+    },
+    {
+      "date": "2009-05-01",
+      "FHFA": 190.81,
+      "Shelter": 249.643,
+      "Rent": 249.069,
+      "Owners_equivalent_rent": 257.03
+    },
+    {
+      "date": "2009-06-01",
+      "FHFA": 190.75,
+      "Shelter": 249.492,
+      "Rent": 249.092,
+      "Owners_equivalent_rent": 257.073
+    },
+    {
+      "date": "2009-07-01",
+      "FHFA": 190.16,
+      "Shelter": 249.149,
+      "Rent": 248.994,
+      "Owners_equivalent_rent": 257.045
+    },
+    {
+      "date": "2009-08-01",
+      "FHFA": 189.82,
+      "Shelter": 249.519,
+      "Rent": 249.029,
+      "Owners_equivalent_rent": 257.248
+    },
+    {
+      "date": "2009-09-01",
+      "FHFA": 189.6,
+      "Shelter": 249.415,
+      "Rent": 248.965,
+      "Owners_equivalent_rent": 256.958
+    },
+    {
+      "date": "2009-10-01",
+      "FHFA": 189.98,
+      "Shelter": 249.643,
+      "Rent": 248.888,
+      "Owners_equivalent_rent": 256.92
+    },
+    {
+      "date": "2009-11-01",
+      "FHFA": 190.52,
+      "Shelter": 249.211,
+      "Rent": 248.886,
+      "Owners_equivalent_rent": 256.616
+    },
+    {
+      "date": "2009-12-01",
+      "FHFA": 188.85,
+      "Shelter": 249.219,
+      "Rent": 248.999,
+      "Owners_equivalent_rent": 256.598
+    },
+    {
+      "date": "2010-01-01",
+      "FHFA": 188.98,
+      "Shelter": 248.034,
+      "Rent": 249.144,
+      "Owners_equivalent_rent": 256.425
+    },
+    {
+      "date": "2010-02-01",
+      "FHFA": 188.07,
+      "Shelter": 247.997,
+      "Rent": 249.017,
+      "Owners_equivalent_rent": 256.373
+    },
+    {
+      "date": "2010-03-01",
+      "FHFA": 187.81,
+      "Shelter": 247.914,
+      "Rent": 249.089,
+      "Owners_equivalent_rent": 256.185
+    },
+    {
+      "date": "2010-04-01",
+      "FHFA": 188.11,
+      "Shelter": 247.959,
+      "Rent": 249.012,
+      "Owners_equivalent_rent": 256.152
+    },
+    {
+      "date": "2010-05-01",
+      "FHFA": 188.05,
+      "Shelter": 248.128,
+      "Rent": 248.925,
+      "Owners_equivalent_rent": 256.302
+    },
+    {
+      "date": "2010-06-01",
+      "FHFA": 186.07,
+      "Shelter": 248.295,
+      "Rent": 248.999,
+      "Owners_equivalent_rent": 256.447
+    },
+    {
+      "date": "2010-07-01",
+      "FHFA": 184.91,
+      "Shelter": 248.43,
+      "Rent": 249.126,
+      "Owners_equivalent_rent": 256.552
+    },
+    {
+      "date": "2010-08-01",
+      "FHFA": 184.78,
+      "Shelter": 248.43,
+      "Rent": 249.024,
+      "Owners_equivalent_rent": 256.574
+    },
+    {
+      "date": "2010-09-01",
+      "FHFA": 183.06,
+      "Shelter": 248.568,
+      "Rent": 249.368,
+      "Owners_equivalent_rent": 256.686
+    },
+    {
+      "date": "2010-10-01",
+      "FHFA": 183.32,
+      "Shelter": 248.692,
+      "Rent": 249.618,
+      "Owners_equivalent_rent": 256.833
+    },
+    {
+      "date": "2010-11-01",
+      "FHFA": 182.63,
+      "Shelter": 248.993,
+      "Rent": 250.317,
+      "Owners_equivalent_rent": 257.11
+    },
+    {
+      "date": "2010-12-01",
+      "FHFA": 181.37,
+      "Shelter": 249.284,
+      "Rent": 250.986,
+      "Owners_equivalent_rent": 257.334
+    },
+    {
+      "date": "2011-01-01",
+      "FHFA": 180.26,
+      "Shelter": 249.621,
+      "Rent": 251.555,
+      "Owners_equivalent_rent": 257.62
+    },
+    {
+      "date": "2011-02-01",
+      "FHFA": 178.62,
+      "Shelter": 249.924,
+      "Rent": 251.829,
+      "Owners_equivalent_rent": 257.985
+    },
+    {
+      "date": "2011-03-01",
+      "FHFA": 176.73,
+      "Shelter": 250.158,
+      "Rent": 252.145,
+      "Owners_equivalent_rent": 258.207
+    },
+    {
+      "date": "2011-04-01",
+      "FHFA": 177.14,
+      "Shelter": 250.412,
+      "Rent": 252.221,
+      "Owners_equivalent_rent": 258.436
+    },
+    {
+      "date": "2011-05-01",
+      "FHFA": 176.68,
+      "Shelter": 250.66,
+      "Rent": 252.393,
+      "Owners_equivalent_rent": 258.73
+    },
+    {
+      "date": "2011-06-01",
+      "FHFA": 177.12,
+      "Shelter": 251.178,
+      "Rent": 252.592,
+      "Owners_equivalent_rent": 259.128
+    },
+    {
+      "date": "2011-07-01",
+      "FHFA": 177.44,
+      "Shelter": 251.834,
+      "Rent": 253.085,
+      "Owners_equivalent_rent": 259.712
+    },
+    {
+      "date": "2011-08-01",
+      "FHFA": 177.07,
+      "Shelter": 252.329,
+      "Rent": 254.003,
+      "Owners_equivalent_rent": 260.211
+    },
+    {
+      "date": "2011-09-01",
+      "FHFA": 178.02,
+      "Shelter": 252.668,
+      "Rent": 254.628,
+      "Owners_equivalent_rent": 260.52
+    },
+    {
+      "date": "2011-10-01",
+      "FHFA": 177.22,
+      "Shelter": 253.184,
+      "Rent": 255.651,
+      "Owners_equivalent_rent": 261.005
+    },
+    {
+      "date": "2011-11-01",
+      "FHFA": 177.77,
+      "Shelter": 253.619,
+      "Rent": 256.367,
+      "Owners_equivalent_rent": 261.386
+    },
+    {
+      "date": "2011-12-01",
+      "FHFA": 178.19,
+      "Shelter": 254.15,
+      "Rent": 257.189,
+      "Owners_equivalent_rent": 261.874
+    },
+    {
+      "date": "2012-01-01",
+      "FHFA": 177.64,
+      "Shelter": 254.512,
+      "Rent": 257.714,
+      "Owners_equivalent_rent": 262.366
+    },
+    {
+      "date": "2012-02-01",
+      "FHFA": 178.18,
+      "Shelter": 254.951,
+      "Rent": 258.184,
+      "Owners_equivalent_rent": 262.722
+    },
+    {
+      "date": "2012-03-01",
+      "FHFA": 179.62,
+      "Shelter": 255.474,
+      "Rent": 258.569,
+      "Owners_equivalent_rent": 263.286
+    },
+    {
+      "date": "2012-04-01",
+      "FHFA": 180.51,
+      "Shelter": 256.056,
+      "Rent": 258.922,
+      "Owners_equivalent_rent": 263.871
+    },
+    {
+      "date": "2012-05-01",
+      "FHFA": 181.6,
+      "Shelter": 256.451,
+      "Rent": 259.231,
+      "Owners_equivalent_rent": 264.202
+    },
+    {
+      "date": "2012-06-01",
+      "FHFA": 182.28,
+      "Shelter": 256.813,
+      "Rent": 259.407,
+      "Owners_equivalent_rent": 264.477
+    },
+    {
+      "date": "2012-07-01",
+      "FHFA": 182.61,
+      "Shelter": 257.153,
+      "Rent": 260.107,
+      "Owners_equivalent_rent": 264.9
+    },
+    {
+      "date": "2012-08-01",
+      "FHFA": 183.96,
+      "Shelter": 257.647,
+      "Rent": 260.677,
+      "Owners_equivalent_rent": 265.44
+    },
+    {
+      "date": "2012-09-01",
+      "FHFA": 184.58,
+      "Shelter": 258.233,
+      "Rent": 261.421,
+      "Owners_equivalent_rent": 266.029
+    },
+    {
+      "date": "2012-10-01",
+      "FHFA": 185.48,
+      "Shelter": 258.816,
+      "Rent": 262.707,
+      "Owners_equivalent_rent": 266.495
+    },
+    {
+      "date": "2012-11-01",
+      "FHFA": 186.41,
+      "Shelter": 259.216,
+      "Rent": 263.365,
+      "Owners_equivalent_rent": 266.921
+    },
+    {
+      "date": "2012-12-01",
+      "FHFA": 187.3,
+      "Shelter": 259.644,
+      "Rent": 264.098,
+      "Owners_equivalent_rent": 267.333
+    },
+    {
+      "date": "2013-01-01",
+      "FHFA": 188.77,
+      "Shelter": 260.142,
+      "Rent": 264.7,
+      "Owners_equivalent_rent": 267.787
+    },
+    {
+      "date": "2013-02-01",
+      "FHFA": 189.9,
+      "Shelter": 260.719,
+      "Rent": 265.256,
+      "Owners_equivalent_rent": 268.325
+    },
+    {
+      "date": "2013-03-01",
+      "FHFA": 191.84,
+      "Shelter": 261.176,
+      "Rent": 265.821,
+      "Owners_equivalent_rent": 268.758
+    },
+    {
+      "date": "2013-04-01",
+      "FHFA": 192.7,
+      "Shelter": 261.679,
+      "Rent": 265.984,
+      "Owners_equivalent_rent": 269.314
+    },
+    {
+      "date": "2013-05-01",
+      "FHFA": 194.24,
+      "Shelter": 262.263,
+      "Rent": 266.559,
+      "Owners_equivalent_rent": 269.825
+    },
+    {
+      "date": "2013-06-01",
+      "FHFA": 195.47,
+      "Shelter": 262.797,
+      "Rent": 266.905,
+      "Owners_equivalent_rent": 270.366
+    },
+    {
+      "date": "2013-07-01",
+      "FHFA": 196.48,
+      "Shelter": 263.239,
+      "Rent": 267.482,
+      "Owners_equivalent_rent": 270.758
+    },
+    {
+      "date": "2013-08-01",
+      "FHFA": 197.08,
+      "Shelter": 263.86,
+      "Rent": 268.505,
+      "Owners_equivalent_rent": 271.415
+    },
+    {
+      "date": "2013-09-01",
+      "FHFA": 198.05,
+      "Shelter": 264.321,
+      "Rent": 269.137,
+      "Owners_equivalent_rent": 271.927
+    },
+    {
+      "date": "2013-10-01",
+      "FHFA": 198.64,
+      "Shelter": 264.684,
+      "Rent": 269.96,
+      "Owners_equivalent_rent": 272.52
+    },
+    {
+      "date": "2013-11-01",
+      "FHFA": 198.69,
+      "Shelter": 265.496,
+      "Rent": 270.698,
+      "Owners_equivalent_rent": 273.211
+    },
+    {
+      "date": "2013-12-01",
+      "FHFA": 199.89,
+      "Shelter": 266.228,
+      "Rent": 271.688,
+      "Owners_equivalent_rent": 273.957
+    },
+    {
+      "date": "2014-01-01",
+      "FHFA": 200.8,
+      "Shelter": 266.892,
+      "Rent": 272.317,
+      "Owners_equivalent_rent": 274.535
+    },
+    {
+      "date": "2014-02-01",
+      "FHFA": 201.52,
+      "Shelter": 267.481,
+      "Rent": 272.733,
+      "Owners_equivalent_rent": 275.131
+    },
+    {
+      "date": "2014-03-01",
+      "FHFA": 202.08,
+      "Shelter": 268.287,
+      "Rent": 273.486,
+      "Owners_equivalent_rent": 275.799
+    },
+    {
+      "date": "2014-04-01",
+      "FHFA": 202.72,
+      "Shelter": 268.923,
+      "Rent": 274.1,
+      "Owners_equivalent_rent": 276.381
+    },
+    {
+      "date": "2014-05-01",
+      "FHFA": 203.09,
+      "Shelter": 269.715,
+      "Rent": 274.71,
+      "Owners_equivalent_rent": 276.957
+    },
+    {
+      "date": "2014-06-01",
+      "FHFA": 204.13,
+      "Shelter": 270.149,
+      "Rent": 275.321,
+      "Owners_equivalent_rent": 277.49
+    },
+    {
+      "date": "2014-07-01",
+      "FHFA": 204.94,
+      "Shelter": 270.891,
+      "Rent": 276.248,
+      "Owners_equivalent_rent": 278.129
+    },
+    {
+      "date": "2014-08-01",
+      "FHFA": 205.76,
+      "Shelter": 271.493,
+      "Rent": 277.048,
+      "Owners_equivalent_rent": 278.694
+    },
+    {
+      "date": "2014-09-01",
+      "FHFA": 205.97,
+      "Shelter": 272.118,
+      "Rent": 277.998,
+      "Owners_equivalent_rent": 279.278
+    },
+    {
+      "date": "2014-10-01",
+      "FHFA": 207.05,
+      "Shelter": 272.73,
+      "Rent": 278.985,
+      "Owners_equivalent_rent": 279.905
+    },
+    {
+      "date": "2014-11-01",
+      "FHFA": 208.12,
+      "Shelter": 273.436,
+      "Rent": 280.123,
+      "Owners_equivalent_rent": 280.565
+    },
+    {
+      "date": "2014-12-01",
+      "FHFA": 209.35,
+      "Shelter": 273.997,
+      "Rent": 280.874,
+      "Owners_equivalent_rent": 281.063
+    },
+    {
+      "date": "2015-01-01",
+      "FHFA": 209.74,
+      "Shelter": 274.762,
+      "Rent": 281.572,
+      "Owners_equivalent_rent": 281.777
+    },
+    {
+      "date": "2015-02-01",
+      "FHFA": 211.21,
+      "Shelter": 275.47,
+      "Rent": 282.389,
+      "Owners_equivalent_rent": 282.535
+    },
+    {
+      "date": "2015-03-01",
+      "FHFA": 211.86,
+      "Shelter": 276.258,
+      "Rent": 283.13,
+      "Owners_equivalent_rent": 283.27
+    },
+    {
+      "date": "2015-04-01",
+      "FHFA": 212.73,
+      "Shelter": 277.003,
+      "Rent": 283.598,
+      "Owners_equivalent_rent": 284.061
+    },
+    {
+      "date": "2015-05-01",
+      "FHFA": 213.88,
+      "Shelter": 277.524,
+      "Rent": 284.245,
+      "Owners_equivalent_rent": 284.712
+    },
+    {
+      "date": "2015-06-01",
+      "FHFA": 214.76,
+      "Shelter": 278.284,
+      "Rent": 285.031,
+      "Owners_equivalent_rent": 285.668
+    },
+    {
+      "date": "2015-07-01",
+      "FHFA": 215.69,
+      "Shelter": 279.329,
+      "Rent": 286.09,
+      "Owners_equivalent_rent": 286.463
+    },
+    {
+      "date": "2015-08-01",
+      "FHFA": 216.22,
+      "Shelter": 279.921,
+      "Rent": 287.068,
+      "Owners_equivalent_rent": 287.106
+    },
+    {
+      "date": "2015-09-01",
+      "FHFA": 217.26,
+      "Shelter": 280.737,
+      "Rent": 288.306,
+      "Owners_equivalent_rent": 287.882
+    },
+    {
+      "date": "2015-10-01",
+      "FHFA": 218.46,
+      "Shelter": 281.429,
+      "Rent": 289.428,
+      "Owners_equivalent_rent": 288.538
+    },
+    {
+      "date": "2015-11-01",
+      "FHFA": 219.49,
+      "Shelter": 282.129,
+      "Rent": 290.322,
+      "Owners_equivalent_rent": 289.169
+    },
+    {
+      "date": "2015-12-01",
+      "FHFA": 220.48,
+      "Shelter": 282.779,
+      "Rent": 291.204,
+      "Owners_equivalent_rent": 289.883
+    },
+    {
+      "date": "2016-01-01",
+      "FHFA": 221.57,
+      "Shelter": 283.714,
+      "Rent": 292.004,
+      "Owners_equivalent_rent": 290.694
+    },
+    {
+      "date": "2016-02-01",
+      "FHFA": 221.64,
+      "Shelter": 284.502,
+      "Rent": 292.777,
+      "Owners_equivalent_rent": 291.45
+    },
+    {
+      "date": "2016-03-01",
+      "FHFA": 223.24,
+      "Shelter": 285.122,
+      "Rent": 293.489,
+      "Owners_equivalent_rent": 292.144
+    },
+    {
+      "date": "2016-04-01",
+      "FHFA": 224.37,
+      "Shelter": 285.853,
+      "Rent": 294.175,
+      "Owners_equivalent_rent": 293.006
+    },
+    {
+      "date": "2016-05-01",
+      "FHFA": 225.4,
+      "Shelter": 286.855,
+      "Rent": 295.036,
+      "Owners_equivalent_rent": 294.009
+    },
+    {
+      "date": "2016-06-01",
+      "FHFA": 226.62,
+      "Shelter": 287.819,
+      "Rent": 295.902,
+      "Owners_equivalent_rent": 294.913
+    },
+    {
+      "date": "2016-07-01",
+      "FHFA": 227.78,
+      "Shelter": 288.524,
+      "Rent": 296.862,
+      "Owners_equivalent_rent": 295.753
+    },
+    {
+      "date": "2016-08-01",
+      "FHFA": 228.86,
+      "Shelter": 289.367,
+      "Rent": 297.916,
+      "Owners_equivalent_rent": 296.567
+    },
+    {
+      "date": "2016-09-01",
+      "FHFA": 230.14,
+      "Shelter": 290.369,
+      "Rent": 298.962,
+      "Owners_equivalent_rent": 297.625
+    },
+    {
+      "date": "2016-10-01",
+      "FHFA": 231.36,
+      "Shelter": 291.378,
+      "Rent": 300.4,
+      "Owners_equivalent_rent": 298.494
+    },
+    {
+      "date": "2016-11-01",
+      "FHFA": 232.29,
+      "Shelter": 292.227,
+      "Rent": 301.587,
+      "Owners_equivalent_rent": 299.459
+    },
+    {
+      "date": "2016-12-01",
+      "FHFA": 233.7,
+      "Shelter": 293.066,
+      "Rent": 302.735,
+      "Owners_equivalent_rent": 300.275
+    },
+    {
+      "date": "2017-01-01",
+      "FHFA": 233.97,
+      "Shelter": 293.769,
+      "Rent": 303.467,
+      "Owners_equivalent_rent": 300.984
+    },
+    {
+      "date": "2017-02-01",
+      "FHFA": 235.23,
+      "Shelter": 294.543,
+      "Rent": 304.211,
+      "Owners_equivalent_rent": 301.751
+    },
+    {
+      "date": "2017-03-01",
+      "FHFA": 236.67,
+      "Shelter": 295.012,
+      "Rent": 304.868,
+      "Owners_equivalent_rent": 302.365
+    },
+    {
+      "date": "2017-04-01",
+      "FHFA": 238.38,
+      "Shelter": 295.741,
+      "Rent": 305.477,
+      "Owners_equivalent_rent": 302.962
+    },
+    {
+      "date": "2017-05-01",
+      "FHFA": 239.56,
+      "Shelter": 296.461,
+      "Rent": 306.379,
+      "Owners_equivalent_rent": 303.615
+    },
+    {
+      "date": "2017-06-01",
+      "FHFA": 240.47,
+      "Shelter": 297.215,
+      "Rent": 307.314,
+      "Owners_equivalent_rent": 304.437
+    },
+    {
+      "date": "2017-07-01",
+      "FHFA": 241.7,
+      "Shelter": 297.676,
+      "Rent": 308.173,
+      "Owners_equivalent_rent": 305.221
+    },
+    {
+      "date": "2017-08-01",
+      "FHFA": 243.28,
+      "Shelter": 298.904,
+      "Rent": 309.479,
+      "Owners_equivalent_rent": 306.229
+    },
+    {
+      "date": "2017-09-01",
+      "FHFA": 244.38,
+      "Shelter": 299.711,
+      "Rent": 310.268,
+      "Owners_equivalent_rent": 307.061
+    },
+    {
+      "date": "2017-10-01",
+      "FHFA": 245.36,
+      "Shelter": 300.814,
+      "Rent": 311.501,
+      "Owners_equivalent_rent": 308.001
+    },
+    {
+      "date": "2017-11-01",
+      "FHFA": 247.01,
+      "Shelter": 301.43,
+      "Rent": 312.67,
+      "Owners_equivalent_rent": 308.79
+    },
+    {
+      "date": "2017-12-01",
+      "FHFA": 248.15,
+      "Shelter": 302.428,
+      "Rent": 313.904,
+      "Owners_equivalent_rent": 309.822
+    },
+    {
+      "date": "2018-01-01",
+      "FHFA": 250.02,
+      "Shelter": 303.213,
+      "Rent": 314.788,
+      "Owners_equivalent_rent": 310.637
+    },
+    {
+      "date": "2018-02-01",
+      "FHFA": 251.67,
+      "Shelter": 303.784,
+      "Rent": 315.277,
+      "Owners_equivalent_rent": 311.213
+    },
+    {
+      "date": "2018-03-01",
+      "FHFA": 252.54,
+      "Shelter": 304.812,
+      "Rent": 315.883,
+      "Owners_equivalent_rent": 312.207
+    },
+    {
+      "date": "2018-04-01",
+      "FHFA": 253.2,
+      "Shelter": 305.72,
+      "Rent": 316.763,
+      "Owners_equivalent_rent": 313.169
+    },
+    {
+      "date": "2018-05-01",
+      "FHFA": 254.4,
+      "Shelter": 306.808,
+      "Rent": 317.49,
+      "Owners_equivalent_rent": 313.968
+    },
+    {
+      "date": "2018-06-01",
+      "FHFA": 255.49,
+      "Shelter": 307.183,
+      "Rent": 318.318,
+      "Owners_equivalent_rent": 314.67
+    },
+    {
+      "date": "2018-07-01",
+      "FHFA": 256.5,
+      "Shelter": 308.05,
+      "Rent": 319.351,
+      "Owners_equivalent_rent": 315.576
+    },
+    {
+      "date": "2018-08-01",
+      "FHFA": 257.75,
+      "Shelter": 309.004,
+      "Rent": 320.651,
+      "Owners_equivalent_rent": 316.436
+    },
+    {
+      "date": "2018-09-01",
+      "FHFA": 258.23,
+      "Shelter": 309.522,
+      "Rent": 321.533,
+      "Owners_equivalent_rent": 317.115
+    },
+    {
+      "date": "2018-10-01",
+      "FHFA": 259.08,
+      "Shelter": 310.401,
+      "Rent": 322.628,
+      "Owners_equivalent_rent": 318.018
+    },
+    {
+      "date": "2018-11-01",
+      "FHFA": 260.58,
+      "Shelter": 311.247,
+      "Rent": 323.968,
+      "Owners_equivalent_rent": 319.011
+    },
+    {
+      "date": "2018-12-01",
+      "FHFA": 261.41,
+      "Shelter": 312.132,
+      "Rent": 324.815,
+      "Owners_equivalent_rent": 319.777
+    },
+    {
+      "date": "2019-01-01",
+      "FHFA": 262.87,
+      "Shelter": 312.998,
+      "Rent": 325.597,
+      "Owners_equivalent_rent": 320.571
+    },
+    {
+      "date": "2019-02-01",
+      "FHFA": 263.54,
+      "Shelter": 314.072,
+      "Rent": 326.351,
+      "Owners_equivalent_rent": 321.56
+    },
+    {
+      "date": "2019-03-01",
+      "FHFA": 264.46,
+      "Shelter": 315.051,
+      "Rent": 327.513,
+      "Owners_equivalent_rent": 322.538
+    },
+    {
+      "date": "2019-04-01",
+      "FHFA": 265.68,
+      "Shelter": 316.172,
+      "Rent": 328.678,
+      "Owners_equivalent_rent": 323.616
+    },
+    {
+      "date": "2019-05-01",
+      "FHFA": 266.85,
+      "Shelter": 317.03,
+      "Rent": 329.333,
+      "Owners_equivalent_rent": 324.449
+    },
+    {
+      "date": "2019-06-01",
+      "FHFA": 267.86,
+      "Shelter": 317.949,
+      "Rent": 330.648,
+      "Owners_equivalent_rent": 325.418
+    },
+    {
+      "date": "2019-07-01",
+      "FHFA": 268.87,
+      "Shelter": 318.777,
+      "Rent": 331.605,
+      "Owners_equivalent_rent": 326.218
+    },
+    {
+      "date": "2019-08-01",
+      "FHFA": 269.98,
+      "Shelter": 319.37,
+      "Rent": 332.638,
+      "Owners_equivalent_rent": 327.043
+    },
+    {
+      "date": "2019-09-01",
+      "FHFA": 271.52,
+      "Shelter": 320.436,
+      "Rent": 333.834,
+      "Owners_equivalent_rent": 327.953
+    },
+    {
+      "date": "2019-10-01",
+      "FHFA": 272.95,
+      "Shelter": 320.862,
+      "Rent": 334.68,
+      "Owners_equivalent_rent": 328.581
+    },
+    {
+      "date": "2019-11-01",
+      "FHFA": 274.57,
+      "Shelter": 321.611,
+      "Rent": 335.819,
+      "Owners_equivalent_rent": 329.44
+    },
+    {
+      "date": "2019-12-01",
+      "FHFA": 276.88,
+      "Shelter": 322.247,
+      "Rent": 336.789,
+      "Owners_equivalent_rent": 330.255
+    },
+    {
+      "date": "2020-01-01",
+      "FHFA": 278.52,
+      "Shelter": 323.487,
+      "Rent": 337.825,
+      "Owners_equivalent_rent": 331.327
+    },
+    {
+      "date": "2020-02-01",
+      "FHFA": 280.51,
+      "Shelter": 324.483,
+      "Rent": 338.616,
+      "Owners_equivalent_rent": 332.056
+    },
+    {
+      "date": "2020-03-01",
+      "FHFA": 280.99,
+      "Shelter": 324.54,
+      "Rent": 339.519,
+      "Owners_equivalent_rent": 332.877
+    },
+    {
+      "date": "2020-04-01",
+      "FHFA": 281.29,
+      "Shelter": 324.391,
+      "Rent": 340.135,
+      "Owners_equivalent_rent": 333.532
+    },
+    {
+      "date": "2020-05-01",
+      "FHFA": 280.3,
+      "Shelter": 324.973,
+      "Rent": 340.811,
+      "Owners_equivalent_rent": 334.293
+    },
+    {
+      "date": "2020-06-01",
+      "FHFA": 283.36,
+      "Shelter": 325.425,
+      "Rent": 341.294,
+      "Owners_equivalent_rent": 334.617
+    },
+    {
+      "date": "2020-07-01",
+      "FHFA": 287.36,
+      "Shelter": 326.249,
+      "Rent": 341.95,
+      "Owners_equivalent_rent": 335.334
+    },
+    {
+      "date": "2020-08-01",
+      "FHFA": 292.42,
+      "Shelter": 326.782,
+      "Rent": 342.444,
+      "Owners_equivalent_rent": 335.891
+    },
+    {
+      "date": "2020-09-01",
+      "FHFA": 297.16,
+      "Shelter": 327.043,
+      "Rent": 342.91,
+      "Owners_equivalent_rent": 336.126
+    },
+    {
+      "date": "2020-10-01",
+      "FHFA": 301.69,
+      "Shelter": 327.421,
+      "Rent": 343.615,
+      "Owners_equivalent_rent": 336.841
+    },
+    {
+      "date": "2020-11-01",
+      "FHFA": 305.35,
+      "Shelter": 327.801,
+      "Rent": 344.039,
+      "Owners_equivalent_rent": 336.982
+    },
+    {
+      "date": "2020-12-01",
+      "FHFA": 309.39,
+      "Shelter": 328.217,
+      "Rent": 344.455,
+      "Owners_equivalent_rent": 337.456
+    },
+    {
+      "date": "2021-01-01",
+      "FHFA": 313.05,
+      "Shelter": 328.535,
+      "Rent": 344.758,
+      "Owners_equivalent_rent": 337.954
+    },
+    {
+      "date": "2021-02-01",
+      "FHFA": 315.76,
+      "Shelter": 329.124,
+      "Rent": 345.242,
+      "Owners_equivalent_rent": 338.78
+    },
+    {
+      "date": "2021-03-01",
+      "FHFA": 320.36,
+      "Shelter": 329.947,
+      "Rent": 345.717,
+      "Owners_equivalent_rent": 339.559
+    },
+    {
+      "date": "2021-04-01",
+      "FHFA": 325.14,
+      "Shelter": 331.208,
+      "Rent": 346.267,
+      "Owners_equivalent_rent": 340.371
+    },
+    {
+      "date": "2021-05-01",
+      "FHFA": 330.52,
+      "Shelter": 332.111,
+      "Rent": 347.016,
+      "Owners_equivalent_rent": 341.339
+    },
+    {
+      "date": "2021-06-01",
+      "FHFA": 336.53,
+      "Shelter": 333.835,
+      "Rent": 347.833,
+      "Owners_equivalent_rent": 342.479
+    },
+    {
+      "date": "2021-07-01",
+      "FHFA": 341.55,
+      "Shelter": 335.446,
+      "Rent": 348.469,
+      "Owners_equivalent_rent": 343.51
+    },
+    {
+      "date": "2021-08-01",
+      "FHFA": 345.65,
+      "Shelter": 336.022,
+      "Rent": 349.71,
+      "Owners_equivalent_rent": 344.4
+    },
+    {
+      "date": "2021-09-01",
+      "FHFA": 349.26,
+      "Shelter": 337.357,
+      "Rent": 351.255,
+      "Owners_equivalent_rent": 345.833
+    },
+    {
+      "date": "2021-10-01",
+      "FHFA": 353.63,
+      "Shelter": 338.948,
+      "Rent": 352.892,
+      "Owners_equivalent_rent": 347.414
+    },
+    {
+      "date": "2021-11-01",
+      "FHFA": 358.57,
+      "Shelter": 340.544,
+      "Rent": 354.526,
+      "Owners_equivalent_rent": 348.902
+    },
+    {
+      "date": "2021-12-01",
+      "FHFA": 363.57,
+      "Shelter": 341.931,
+      "Rent": 355.931,
+      "Owners_equivalent_rent": 350.281
+    },
+    {
+      "date": "2022-01-01",
+      "FHFA": 368.94,
+      "Shelter": 342.858,
+      "Rent": 357.737,
+      "Owners_equivalent_rent": 351.723
+    },
+    {
+      "date": "2022-02-01",
+      "FHFA": 374.0,
+      "Shelter": 344.705,
+      "Rent": 359.627,
+      "Owners_equivalent_rent": 353.327
+    },
+    {
+      "date": "2022-03-01",
+      "FHFA": 378.67,
+      "Shelter": 346.396,
+      "Rent": 361.083,
+      "Owners_equivalent_rent": 354.948
+    },
+    {
+      "date": "2022-04-01",
+      "FHFA": 383.32,
+      "Shelter": 348.23,
+      "Rent": 362.951,
+      "Owners_equivalent_rent": 356.68
+    },
+    {
+      "date": "2022-05-01",
+      "FHFA": 386.87,
+      "Shelter": 350.204,
+      "Rent": 365.116,
+      "Owners_equivalent_rent": 358.746
+    },
+    {
+      "date": "2022-06-01",
+      "FHFA": 387.78,
+      "Shelter": 352.616,
+      "Rent": 367.927,
+      "Owners_equivalent_rent": 361.281
+    },
+    {
+      "date": "2022-07-01",
+      "FHFA": 385.93,
+      "Shelter": 354.68,
+      "Rent": 370.448,
+      "Owners_equivalent_rent": 363.586
+    },
+    {
+      "date": "2022-08-01",
+      "FHFA": 384.44,
+      "Shelter": 357.048,
+      "Rent": 373.283,
+      "Owners_equivalent_rent": 366.085
+    },
+    {
+      "date": "2022-09-01",
+      "FHFA": 385.33,
+      "Shelter": 359.601,
+      "Rent": 376.569,
+      "Owners_equivalent_rent": 368.911
+    },
+    {
+      "date": "2022-10-01",
+      "FHFA": 385.82,
+      "Shelter": 362.353,
+      "Rent": 379.436,
+      "Owners_equivalent_rent": 371.331
+    },
+    {
+      "date": "2022-11-01",
+      "FHFA": 385.81,
+      "Shelter": 364.695,
+      "Rent": 382.562,
+      "Owners_equivalent_rent": 373.785
+    },
+    {
+      "date": "2022-12-01",
+      "FHFA": 385.94,
+      "Shelter": 367.466,
+      "Rent": 385.649,
+      "Owners_equivalent_rent": 376.638
+    },
+    {
+      "date": "2023-01-01",
+      "FHFA": 387.11,
+      "Shelter": 369.911,
+      "Rent": 388.372,
+      "Owners_equivalent_rent": 378.987
+    },
+    {
+      "date": "2023-02-01",
+      "FHFA": 389.53,
+      "Shelter": 372.636,
+      "Rent": 391.141,
+      "Owners_equivalent_rent": 381.63
+    },
+    {
+      "date": "2023-03-01",
+      "FHFA": 391.42,
+      "Shelter": 374.678,
+      "Rent": 392.91,
+      "Owners_equivalent_rent": 383.473
+    },
+    {
+      "date": "2023-04-01",
+      "FHFA": 393.93,
+      "Shelter": 376.404,
+      "Rent": 394.898,
+      "Owners_equivalent_rent": 385.629
+    },
+    {
+      "date": "2023-05-01",
+      "FHFA": 396.87,
+      "Shelter": 378.304,
+      "Rent": 396.726,
+      "Owners_equivalent_rent": 387.629
+    },
+    {
+      "date": "2023-06-01",
+      "FHFA": 399.3,
+      "Shelter": 380.155,
+      "Rent": 398.593,
+      "Owners_equivalent_rent": 389.533
+    },
+    {
+      "date": "2023-07-01",
+      "FHFA": 402.78,
+      "Shelter": 381.895,
+      "Rent": 400.21,
+      "Owners_equivalent_rent": 391.463
+    },
+    {
+      "date": "2023-08-01",
+      "FHFA": 405.35,
+      "Shelter": 382.947,
+      "Rent": 402.247,
+      "Owners_equivalent_rent": 392.889
+    },
+    {
+      "date": "2023-09-01",
+      "FHFA": 407.52,
+      "Shelter": 385.285,
+      "Rent": 404.487,
+      "Owners_equivalent_rent": 394.979
+    },
+    {
+      "date": "2023-10-01",
+      "FHFA": 409.24,
+      "Shelter": 386.771,
+      "Rent": 406.683,
+      "Owners_equivalent_rent": 396.753
+    },
+    {
+      "date": "2023-11-01",
+      "FHFA": 410.32,
+      "Shelter": 388.525,
+      "Rent": 408.838,
+      "Owners_equivalent_rent": 398.791
+    },
+    {
+      "date": "2023-12-01",
+      "FHFA": 411.58,
+      "Shelter": 390.139,
+      "Rent": 410.606,
+      "Owners_equivalent_rent": 400.545
+    },
+    {
+      "date": "2024-01-01",
+      "FHFA": 412.01,
+      "Shelter": 392.322,
+      "Rent": 412.019,
+      "Owners_equivalent_rent": 402.591
+    },
+    {
+      "date": "2024-02-01",
+      "FHFA": 416.14,
+      "Shelter": 394.078,
+      "Rent": 413.695,
+      "Owners_equivalent_rent": 404.441
+    },
+    {
+      "date": "2024-03-01",
+      "FHFA": 417.07,
+      "Shelter": 395.827,
+      "Rent": 415.219,
+      "Owners_equivalent_rent": 406.121
+    },
+    {
+      "date": "2024-04-01",
+      "FHFA": 419.1,
+      "Shelter": 397.196,
+      "Rent": 416.386,
+      "Owners_equivalent_rent": 407.788
+    },
+    {
+      "date": "2024-05-01",
+      "FHFA": 419.66,
+      "Shelter": 398.689,
+      "Rent": 417.772,
+      "Owners_equivalent_rent": 409.53
+    },
+    {
+      "date": "2024-06-01",
+      "FHFA": 420.63,
+      "Shelter": 399.699,
+      "Rent": 418.82,
+      "Owners_equivalent_rent": 410.765
+    },
+    {
+      "date": "2024-07-01",
+      "FHFA": 421.79,
+      "Shelter": 401.139,
+      "Rent": 420.577,
+      "Owners_equivalent_rent": 412.24
+    },
+    {
+      "date": "2024-08-01",
+      "FHFA": 423.46,
+      "Shelter": 402.895,
+      "Rent": 422.223,
+      "Owners_equivalent_rent": 414.013
+    },
+    {
+      "date": "2024-09-01",
+      "FHFA": 426.14,
+      "Shelter": 403.956,
+      "Rent": 423.821,
+      "Owners_equivalent_rent": 415.507
+    },
+    {
+      "date": "2024-10-01",
+      "FHFA": 428.24,
+      "Shelter": 405.721,
+      "Rent": 425.381,
+      "Owners_equivalent_rent": 417.356
+    },
+    {
+      "date": "2024-11-01",
+      "FHFA": 429.53,
+      "Shelter": 407.114,
+      "Rent": 426.651,
+      "Owners_equivalent_rent": 418.447
+    },
+    {
+      "date": "2024-12-01",
+      "FHFA": 431.73,
+      "Shelter": 408.165,
+      "Rent": 428.151,
+      "Owners_equivalent_rent": 419.793
+    },
+    {
+      "date": "2025-01-01",
+      "FHFA": 433.18,
+      "Shelter": 409.579,
+      "Rent": 429.506,
+      "Owners_equivalent_rent": 421.094
+    },
+    {
+      "date": "2025-02-01",
+      "FHFA": 433.35,
+      "Shelter": 410.793,
+      "Rent": 430.603,
+      "Owners_equivalent_rent": 422.36
+    },
+    {
+      "date": "2025-03-01",
+      "FHFA": 433.76,
+      "Shelter": 411.639,
+      "Rent": 431.798,
+      "Owners_equivalent_rent": 423.921
+    },
+    {
+      "date": "2025-04-01",
+      "FHFA": 432.75,
+      "Shelter": 413.04,
+      "Rent": 432.956,
+      "Owners_equivalent_rent": 425.341
+    },
+    {
+      "date": "2025-05-01",
+      "FHFA": 432.84,
+      "Shelter": 414.109,
+      "Rent": 433.698,
+      "Owners_equivalent_rent": 426.53
+    },
+    {
+      "date": "2025-06-01",
+      "FHFA": 432.55,
+      "Shelter": 414.981,
+      "Rent": 434.594,
+      "Owners_equivalent_rent": 427.833
+    },
+    {
+      "date": "2025-07-01",
+      "FHFA": 432.58,
+      "Shelter": 415.931,
+      "Rent": 435.489,
+      "Owners_equivalent_rent": 429.015
+    },
+    {
+      "date": "2025-08-01",
+      "FHFA": 434.68,
+      "Shelter": 417.555,
+      "Rent": 436.981,
+      "Owners_equivalent_rent": 430.456
+    },
+    {
+      "date": "2025-09-01",
+      "FHFA": 434.6,
+      "Shelter": 418.422,
+      "Rent": 438.212,
+      "Owners_equivalent_rent": 431.132
+    },
+    {
+      "date": "2025-10-01",
+      "FHFA": 436.42,
+      "Shelter": null,
+      "Rent": null,
+      "Owners_equivalent_rent": null
+    },
+    {
+      "date": "2025-11-01",
+      "FHFA": 439.13,
+      "Shelter": 419.431,
+      "Rent": 439.275,
+      "Owners_equivalent_rent": 432.524
+    },
+    {
+      "date": "2025-12-01",
+      "FHFA": 440.59,
+      "Shelter": 421.039,
+      "Rent": 440.667,
+      "Owners_equivalent_rent": 433.884
+    },
+    {
+      "date": "2026-01-01",
+      "FHFA": 441.31,
+      "Shelter": 421.965,
+      "Rent": 441.718,
+      "Owners_equivalent_rent": 434.837
+    },
+    {
+      "date": "2026-02-01",
+      "FHFA": 441.14,
+      "Shelter": 422.942,
+      "Rent": 442.157,
+      "Owners_equivalent_rent": 435.813
+    },
+    {
+      "date": "2026-03-01",
+      "FHFA": 441.83,
+      "Shelter": 424.069,
+      "Rent": 442.864,
+      "Owners_equivalent_rent": 437.051
+    },
+    {
+      "date": "2026-04-01",
+      "FHFA": 441.4,
+      "Shelter": 426.642,
+      "Rent": 445.029,
+      "Owners_equivalent_rent": 439.379
+    },
+    {
+      "date": "2026-05-01",
+      "FHFA": null,
+      "Shelter": 427.998,
+      "Rent": 446.38,
+      "Owners_equivalent_rent": 440.683
+    },
+    {
+      "date": "2026-06-01",
+      "FHFA": null,
+      "Shelter": 428.501,
+      "Rent": 446.945,
+      "Owners_equivalent_rent": 441.741
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "yoy",
+    "pct_change",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "notes": "FHFA measures purchase prices; BLS shelter, rent, and owners' equivalent rent measure housing-service costs."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T14:12:52+00:00"
+}

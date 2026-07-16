@@ -68,6 +68,29 @@
         "canada-prime-age-employment-rate",
         "canada-unemployment-rate"
       ]
+    },
+    {
+      "id": "food-affordability",
+      "label": "Food affordability",
+      "indicatorIds": [
+        "canada-food-cpi-yoy",
+        "food-cpi",
+        "grocery-cpi",
+        "canada-food-inflation-gap",
+        "canada-grocery-inflation-gap"
+      ]
+    },
+    {
+      "id": "housing-purchase-prices-and-shelter-costs",
+      "label": "Housing purchase prices and shelter costs",
+      "indicatorIds": [
+        "shelter-cpi",
+        "rent-cpi",
+        "mortgage-interest-cost",
+        "new-housing-price-index",
+        "canada-nhpi-yoy",
+        "bis-canada-real-house-price-index"
+      ]
     }
   ],
   "notes": [

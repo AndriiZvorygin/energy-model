@@ -1,0 +1,5643 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "affordability-canada-food",
+  "title": "Canadian food prices and all-items inflation",
+  "description": "Food, groceries, restaurants, and the all-items basket use distinct Statistics Canada classifications.",
+  "plainLanguageSummary": "Food, groceries, restaurants, and the all-items basket use distinct Statistics Canada classifications.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "explanation": "Food, groceries, restaurants, and the all-items basket use distinct Statistics Canada classifications.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "Food, groceries, restaurants, and the all-items basket use distinct Statistics Canada classifications."
+  ],
+  "sourceNotes": [
+    "Statistics Canada"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "Food": {
+        "mean": 121.56166666666667,
+        "standardDeviation": 17.559888872718478,
+        "n": 240
+      },
+      "Groceries": {
+        "mean": 121.0325,
+        "standardDeviation": 17.294005042692298,
+        "n": 240
+      },
+      "Restaurants": {
+        "mean": 122.81750000000001,
+        "standardDeviation": 18.395022707696413,
+        "n": 240
+      },
+      "All_items": {
+        "mean": 115.86666666666666,
+        "standardDeviation": 11.91253424852253,
+        "n": 240
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "1961-01-01",
+    "end": "2026-05-01"
+  },
+  "series": [
+    {
+      "key": "Food",
+      "label": "Canada food CPI",
+      "unit": "index, 2002=100",
+      "source": "Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "Groceries",
+      "label": "Canada food purchased from stores CPI",
+      "unit": "index, 2002=100",
+      "source": "Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "Restaurants",
+      "label": "Canada food purchased from restaurants CPI",
+      "unit": "index, 2002=100",
+      "source": "Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "All_items",
+      "label": "Canada all-items CPI",
+      "unit": "index, 2002=100",
+      "source": "Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1961-01-01",
+      "Food": null,
+      "Groceries": 15.4,
+      "Restaurants": 10.6,
+      "All_items": null
+    },
+    {
+      "date": "1961-02-01",
+      "Food": null,
+      "Groceries": 15.4,
+      "Restaurants": 10.6,
+      "All_items": null
+    },
+    {
+      "date": "1961-03-01",
+      "Food": null,
+      "Groceries": 15.4,
+      "Restaurants": 10.6,
+      "All_items": null
+    },
+    {
+      "date": "1961-04-01",
+      "Food": null,
+      "Groceries": 15.4,
+      "Restaurants": 10.6,
+      "All_items": null
+    },
+    {
+      "date": "1961-05-01",
+      "Food": null,
+      "Groceries": 15.2,
+      "Restaurants": 10.6,
+      "All_items": null
+    },
+    {
+      "date": "1961-06-01",
+      "Food": null,
+      "Groceries": 15.3,
+      "Restaurants": 10.6,
+      "All_items": null
+    },
+    {
+      "date": "1961-07-01",
+      "Food": null,
+      "Groceries": 15.5,
+      "Restaurants": 10.6,
+      "All_items": null
+    },
+    {
+      "date": "1961-08-01",
+      "Food": null,
+      "Groceries": 15.5,
+      "Restaurants": 10.6,
+      "All_items": null
+    },
+    {
+      "date": "1961-09-01",
+      "Food": null,
+      "Groceries": 15.2,
+      "Restaurants": 10.6,
+      "All_items": null
+    },
+    {
+      "date": "1961-10-01",
+      "Food": null,
+      "Groceries": 15.3,
+      "Restaurants": 10.6,
+      "All_items": null
+    },
+    {
+      "date": "1961-11-01",
+      "Food": null,
+      "Groceries": 15.3,
+      "Restaurants": 10.6,
+      "All_items": null
+    },
+    {
+      "date": "1961-12-01",
+      "Food": null,
+      "Groceries": 15.4,
+      "Restaurants": 10.6,
+      "All_items": null
+    },
+    {
+      "date": "1962-01-01",
+      "Food": null,
+      "Groceries": 15.5,
+      "Restaurants": 10.6,
+      "All_items": null
+    },
+    {
+      "date": "1962-02-01",
+      "Food": null,
+      "Groceries": 15.5,
+      "Restaurants": 10.6,
+      "All_items": null
+    },
+    {
+      "date": "1962-03-01",
+      "Food": null,
+      "Groceries": 15.4,
+      "Restaurants": 10.6,
+      "All_items": null
+    },
+    {
+      "date": "1962-04-01",
+      "Food": null,
+      "Groceries": 15.6,
+      "Restaurants": 10.6,
+      "All_items": null
+    },
+    {
+      "date": "1962-05-01",
+      "Food": null,
+      "Groceries": 15.4,
+      "Restaurants": 10.6,
+      "All_items": null
+    },
+    {
+      "date": "1962-06-01",
+      "Food": null,
+      "Groceries": 15.6,
+      "Restaurants": 10.6,
+      "All_items": null
+    },
+    {
+      "date": "1962-07-01",
+      "Food": null,
+      "Groceries": 15.8,
+      "Restaurants": 10.7,
+      "All_items": null
+    },
+    {
+      "date": "1962-08-01",
+      "Food": null,
+      "Groceries": 15.9,
+      "Restaurants": 10.7,
+      "All_items": null
+    },
+    {
+      "date": "1962-09-01",
+      "Food": null,
+      "Groceries": 15.7,
+      "Restaurants": 10.7,
+      "All_items": null
+    },
+    {
+      "date": "1962-10-01",
+      "Food": null,
+      "Groceries": 15.8,
+      "Restaurants": 10.9,
+      "All_items": null
+    },
+    {
+      "date": "1962-11-01",
+      "Food": null,
+      "Groceries": 15.8,
+      "Restaurants": 10.9,
+      "All_items": null
+    },
+    {
+      "date": "1962-12-01",
+      "Food": null,
+      "Groceries": 15.8,
+      "Restaurants": 10.9,
+      "All_items": null
+    },
+    {
+      "date": "1963-01-01",
+      "Food": null,
+      "Groceries": 16.0,
+      "Restaurants": 10.9,
+      "All_items": null
+    },
+    {
+      "date": "1963-02-01",
+      "Food": null,
+      "Groceries": 16.1,
+      "Restaurants": 10.9,
+      "All_items": null
+    },
+    {
+      "date": "1963-03-01",
+      "Food": null,
+      "Groceries": 16.0,
+      "Restaurants": 10.9,
+      "All_items": null
+    },
+    {
+      "date": "1963-04-01",
+      "Food": null,
+      "Groceries": 16.0,
+      "Restaurants": 11.1,
+      "All_items": null
+    },
+    {
+      "date": "1963-05-01",
+      "Food": null,
+      "Groceries": 15.9,
+      "Restaurants": 11.1,
+      "All_items": null
+    },
+    {
+      "date": "1963-06-01",
+      "Food": null,
+      "Groceries": 16.1,
+      "Restaurants": 11.1,
+      "All_items": null
+    },
+    {
+      "date": "1963-07-01",
+      "Food": null,
+      "Groceries": 16.4,
+      "Restaurants": 11.2,
+      "All_items": null
+    },
+    {
+      "date": "1963-08-01",
+      "Food": null,
+      "Groceries": 16.5,
+      "Restaurants": 11.2,
+      "All_items": null
+    },
+    {
+      "date": "1963-09-01",
+      "Food": null,
+      "Groceries": 16.3,
+      "Restaurants": 11.2,
+      "All_items": null
+    },
+    {
+      "date": "1963-10-01",
+      "Food": null,
+      "Groceries": 16.1,
+      "Restaurants": 11.4,
+      "All_items": null
+    },
+    {
+      "date": "1963-11-01",
+      "Food": null,
+      "Groceries": 16.2,
+      "Restaurants": 11.4,
+      "All_items": null
+    },
+    {
+      "date": "1963-12-01",
+      "Food": null,
+      "Groceries": 16.2,
+      "Restaurants": 11.4,
+      "All_items": null
+    },
+    {
+      "date": "1964-01-01",
+      "Food": null,
+      "Groceries": 16.2,
+      "Restaurants": 11.5,
+      "All_items": null
+    },
+    {
+      "date": "1964-02-01",
+      "Food": null,
+      "Groceries": 16.2,
+      "Restaurants": 11.5,
+      "All_items": null
+    },
+    {
+      "date": "1964-03-01",
+      "Food": null,
+      "Groceries": 16.2,
+      "Restaurants": 11.5,
+      "All_items": null
+    },
+    {
+      "date": "1964-04-01",
+      "Food": null,
+      "Groceries": 16.2,
+      "Restaurants": 11.6,
+      "All_items": null
+    },
+    {
+      "date": "1964-05-01",
+      "Food": null,
+      "Groceries": 16.2,
+      "Restaurants": 11.6,
+      "All_items": null
+    },
+    {
+      "date": "1964-06-01",
+      "Food": null,
+      "Groceries": 16.4,
+      "Restaurants": 11.6,
+      "All_items": null
+    },
+    {
+      "date": "1964-07-01",
+      "Food": null,
+      "Groceries": 16.8,
+      "Restaurants": 11.8,
+      "All_items": null
+    },
+    {
+      "date": "1964-08-01",
+      "Food": null,
+      "Groceries": 16.7,
+      "Restaurants": 11.8,
+      "All_items": null
+    },
+    {
+      "date": "1964-09-01",
+      "Food": null,
+      "Groceries": 16.4,
+      "Restaurants": 11.8,
+      "All_items": null
+    },
+    {
+      "date": "1964-10-01",
+      "Food": null,
+      "Groceries": 16.1,
+      "Restaurants": 11.8,
+      "All_items": null
+    },
+    {
+      "date": "1964-11-01",
+      "Food": null,
+      "Groceries": 16.2,
+      "Restaurants": 11.8,
+      "All_items": null
+    },
+    {
+      "date": "1964-12-01",
+      "Food": null,
+      "Groceries": 16.4,
+      "Restaurants": 11.8,
+      "All_items": null
+    },
+    {
+      "date": "1965-01-01",
+      "Food": null,
+      "Groceries": 16.3,
+      "Restaurants": 11.8,
+      "All_items": null
+    },
+    {
+      "date": "1965-02-01",
+      "Food": null,
+      "Groceries": 16.4,
+      "Restaurants": 11.8,
+      "All_items": null
+    },
+    {
+      "date": "1965-03-01",
+      "Food": null,
+      "Groceries": 16.4,
+      "Restaurants": 11.8,
+      "All_items": null
+    },
+    {
+      "date": "1965-04-01",
+      "Food": null,
+      "Groceries": 16.4,
+      "Restaurants": 11.9,
+      "All_items": null
+    },
+    {
+      "date": "1965-05-01",
+      "Food": null,
+      "Groceries": 16.6,
+      "Restaurants": 11.9,
+      "All_items": null
+    },
+    {
+      "date": "1965-06-01",
+      "Food": null,
+      "Groceries": 17.0,
+      "Restaurants": 11.9,
+      "All_items": null
+    },
+    {
+      "date": "1965-07-01",
+      "Food": null,
+      "Groceries": 17.3,
+      "Restaurants": 12.0,
+      "All_items": null
+    },
+    {
+      "date": "1965-08-01",
+      "Food": null,
+      "Groceries": 17.0,
+      "Restaurants": 12.0,
+      "All_items": null
+    },
+    {
+      "date": "1965-09-01",
+      "Food": null,
+      "Groceries": 16.8,
+      "Restaurants": 12.0,
+      "All_items": null
+    },
+    {
+      "date": "1965-10-01",
+      "Food": null,
+      "Groceries": 16.7,
+      "Restaurants": 12.2,
+      "All_items": null
+    },
+    {
+      "date": "1965-11-01",
+      "Food": null,
+      "Groceries": 17.0,
+      "Restaurants": 12.2,
+      "All_items": null
+    },
+    {
+      "date": "1965-12-01",
+      "Food": null,
+      "Groceries": 17.3,
+      "Restaurants": 12.2,
+      "All_items": null
+    },
+    {
+      "date": "1966-01-01",
+      "Food": null,
+      "Groceries": 17.3,
+      "Restaurants": 12.5,
+      "All_items": null
+    },
+    {
+      "date": "1966-02-01",
+      "Food": null,
+      "Groceries": 17.5,
+      "Restaurants": 12.5,
+      "All_items": null
+    },
+    {
+      "date": "1966-03-01",
+      "Food": null,
+      "Groceries": 17.8,
+      "Restaurants": 12.5,
+      "All_items": null
+    },
+    {
+      "date": "1966-04-01",
+      "Food": null,
+      "Groceries": 17.8,
+      "Restaurants": 12.7,
+      "All_items": null
+    },
+    {
+      "date": "1966-05-01",
+      "Food": null,
+      "Groceries": 17.8,
+      "Restaurants": 12.7,
+      "All_items": null
+    },
+    {
+      "date": "1966-06-01",
+      "Food": null,
+      "Groceries": 17.9,
+      "Restaurants": 12.7,
+      "All_items": null
+    },
+    {
+      "date": "1966-07-01",
+      "Food": null,
+      "Groceries": 17.9,
+      "Restaurants": 13.0,
+      "All_items": null
+    },
+    {
+      "date": "1966-08-01",
+      "Food": null,
+      "Groceries": 18.4,
+      "Restaurants": 13.0,
+      "All_items": null
+    },
+    {
+      "date": "1966-09-01",
+      "Food": null,
+      "Groceries": 18.1,
+      "Restaurants": 13.0,
+      "All_items": null
+    },
+    {
+      "date": "1966-10-01",
+      "Food": null,
+      "Groceries": 17.9,
+      "Restaurants": 13.3,
+      "All_items": null
+    },
+    {
+      "date": "1966-11-01",
+      "Food": null,
+      "Groceries": 17.8,
+      "Restaurants": 13.3,
+      "All_items": null
+    },
+    {
+      "date": "1966-12-01",
+      "Food": null,
+      "Groceries": 17.8,
+      "Restaurants": 13.3,
+      "All_items": null
+    },
+    {
+      "date": "1967-01-01",
+      "Food": null,
+      "Groceries": 17.8,
+      "Restaurants": 13.4,
+      "All_items": null
+    },
+    {
+      "date": "1967-02-01",
+      "Food": null,
+      "Groceries": 17.6,
+      "Restaurants": 13.4,
+      "All_items": null
+    },
+    {
+      "date": "1967-03-01",
+      "Food": null,
+      "Groceries": 17.5,
+      "Restaurants": 13.4,
+      "All_items": null
+    },
+    {
+      "date": "1967-04-01",
+      "Food": null,
+      "Groceries": 17.5,
+      "Restaurants": 13.7,
+      "All_items": null
+    },
+    {
+      "date": "1967-05-01",
+      "Food": null,
+      "Groceries": 17.5,
+      "Restaurants": 13.7,
+      "All_items": null
+    },
+    {
+      "date": "1967-06-01",
+      "Food": null,
+      "Groceries": 17.7,
+      "Restaurants": 13.7,
+      "All_items": null
+    },
+    {
+      "date": "1967-07-01",
+      "Food": null,
+      "Groceries": 18.2,
+      "Restaurants": 14.0,
+      "All_items": null
+    },
+    {
+      "date": "1967-08-01",
+      "Food": null,
+      "Groceries": 18.5,
+      "Restaurants": 14.0,
+      "All_items": null
+    },
+    {
+      "date": "1967-09-01",
+      "Food": null,
+      "Groceries": 18.1,
+      "Restaurants": 14.0,
+      "All_items": null
+    },
+    {
+      "date": "1967-10-01",
+      "Food": null,
+      "Groceries": 17.9,
+      "Restaurants": 14.3,
+      "All_items": null
+    },
+    {
+      "date": "1967-11-01",
+      "Food": null,
+      "Groceries": 18.0,
+      "Restaurants": 14.3,
+      "All_items": null
+    },
+    {
+      "date": "1967-12-01",
+      "Food": null,
+      "Groceries": 18.1,
+      "Restaurants": 14.3,
+      "All_items": null
+    },
+    {
+      "date": "1968-01-01",
+      "Food": null,
+      "Groceries": 18.4,
+      "Restaurants": 14.3,
+      "All_items": null
+    },
+    {
+      "date": "1968-02-01",
+      "Food": null,
+      "Groceries": 18.3,
+      "Restaurants": 14.3,
+      "All_items": null
+    },
+    {
+      "date": "1968-03-01",
+      "Food": null,
+      "Groceries": 18.1,
+      "Restaurants": 14.3,
+      "All_items": null
+    },
+    {
+      "date": "1968-04-01",
+      "Food": null,
+      "Groceries": 18.3,
+      "Restaurants": 14.4,
+      "All_items": null
+    },
+    {
+      "date": "1968-05-01",
+      "Food": null,
+      "Groceries": 18.1,
+      "Restaurants": 14.4,
+      "All_items": null
+    },
+    {
+      "date": "1968-06-01",
+      "Food": null,
+      "Groceries": 18.2,
+      "Restaurants": 14.4,
+      "All_items": null
+    },
+    {
+      "date": "1968-07-01",
+      "Food": null,
+      "Groceries": 18.5,
+      "Restaurants": 14.6,
+      "All_items": null
+    },
+    {
+      "date": "1968-08-01",
+      "Food": null,
+      "Groceries": 18.8,
+      "Restaurants": 14.6,
+      "All_items": null
+    },
+    {
+      "date": "1968-09-01",
+      "Food": null,
+      "Groceries": 18.7,
+      "Restaurants": 14.6,
+      "All_items": null
+    },
+    {
+      "date": "1968-10-01",
+      "Food": null,
+      "Groceries": 18.5,
+      "Restaurants": 14.7,
+      "All_items": null
+    },
+    {
+      "date": "1968-11-01",
+      "Food": null,
+      "Groceries": 18.7,
+      "Restaurants": 14.7,
+      "All_items": null
+    },
+    {
+      "date": "1968-12-01",
+      "Food": null,
+      "Groceries": 18.9,
+      "Restaurants": 14.7,
+      "All_items": null
+    },
+    {
+      "date": "1969-01-01",
+      "Food": null,
+      "Groceries": 18.9,
+      "Restaurants": 14.9,
+      "All_items": null
+    },
+    {
+      "date": "1969-02-01",
+      "Food": null,
+      "Groceries": 18.7,
+      "Restaurants": 14.9,
+      "All_items": null
+    },
+    {
+      "date": "1969-03-01",
+      "Food": null,
+      "Groceries": 18.7,
+      "Restaurants": 14.9,
+      "All_items": null
+    },
+    {
+      "date": "1969-04-01",
+      "Food": null,
+      "Groceries": 18.9,
+      "Restaurants": 15.1,
+      "All_items": null
+    },
+    {
+      "date": "1969-05-01",
+      "Food": null,
+      "Groceries": 18.9,
+      "Restaurants": 15.1,
+      "All_items": null
+    },
+    {
+      "date": "1969-06-01",
+      "Food": null,
+      "Groceries": 19.4,
+      "Restaurants": 15.1,
+      "All_items": null
+    },
+    {
+      "date": "1969-07-01",
+      "Food": null,
+      "Groceries": 19.4,
+      "Restaurants": 15.6,
+      "All_items": null
+    },
+    {
+      "date": "1969-08-01",
+      "Food": null,
+      "Groceries": 19.8,
+      "Restaurants": 15.6,
+      "All_items": null
+    },
+    {
+      "date": "1969-09-01",
+      "Food": null,
+      "Groceries": 19.4,
+      "Restaurants": 15.6,
+      "All_items": null
+    },
+    {
+      "date": "1969-10-01",
+      "Food": null,
+      "Groceries": 19.2,
+      "Restaurants": 15.9,
+      "All_items": null
+    },
+    {
+      "date": "1969-11-01",
+      "Food": null,
+      "Groceries": 19.4,
+      "Restaurants": 15.9,
+      "All_items": null
+    },
+    {
+      "date": "1969-12-01",
+      "Food": null,
+      "Groceries": 19.5,
+      "Restaurants": 15.9,
+      "All_items": null
+    },
+    {
+      "date": "1970-01-01",
+      "Food": null,
+      "Groceries": 19.5,
+      "Restaurants": 16.0,
+      "All_items": null
+    },
+    {
+      "date": "1970-02-01",
+      "Food": null,
+      "Groceries": 19.8,
+      "Restaurants": 16.0,
+      "All_items": null
+    },
+    {
+      "date": "1970-03-01",
+      "Food": null,
+      "Groceries": 19.6,
+      "Restaurants": 16.0,
+      "All_items": null
+    },
+    {
+      "date": "1970-04-01",
+      "Food": null,
+      "Groceries": 19.9,
+      "Restaurants": 16.1,
+      "All_items": null
+    },
+    {
+      "date": "1970-05-01",
+      "Food": null,
+      "Groceries": 19.5,
+      "Restaurants": 16.1,
+      "All_items": null
+    },
+    {
+      "date": "1970-06-01",
+      "Food": null,
+      "Groceries": 19.7,
+      "Restaurants": 16.1,
+      "All_items": null
+    },
+    {
+      "date": "1970-07-01",
+      "Food": null,
+      "Groceries": 19.8,
+      "Restaurants": 16.4,
+      "All_items": null
+    },
+    {
+      "date": "1970-08-01",
+      "Food": null,
+      "Groceries": 19.9,
+      "Restaurants": 16.5,
+      "All_items": null
+    },
+    {
+      "date": "1970-09-01",
+      "Food": null,
+      "Groceries": 19.4,
+      "Restaurants": 16.5,
+      "All_items": null
+    },
+    {
+      "date": "1970-10-01",
+      "Food": null,
+      "Groceries": 19.2,
+      "Restaurants": 16.6,
+      "All_items": null
+    },
+    {
+      "date": "1970-11-01",
+      "Food": null,
+      "Groceries": 18.9,
+      "Restaurants": 16.6,
+      "All_items": null
+    },
+    {
+      "date": "1970-12-01",
+      "Food": null,
+      "Groceries": 18.7,
+      "Restaurants": 16.7,
+      "All_items": null
+    },
+    {
+      "date": "1971-01-01",
+      "Food": null,
+      "Groceries": 18.8,
+      "Restaurants": 16.8,
+      "All_items": null
+    },
+    {
+      "date": "1971-02-01",
+      "Food": null,
+      "Groceries": 18.9,
+      "Restaurants": 16.8,
+      "All_items": null
+    },
+    {
+      "date": "1971-03-01",
+      "Food": null,
+      "Groceries": 19.0,
+      "Restaurants": 16.9,
+      "All_items": null
+    },
+    {
+      "date": "1971-04-01",
+      "Food": null,
+      "Groceries": 19.3,
+      "Restaurants": 16.9,
+      "All_items": null
+    },
+    {
+      "date": "1971-05-01",
+      "Food": null,
+      "Groceries": 19.4,
+      "Restaurants": 16.9,
+      "All_items": null
+    },
+    {
+      "date": "1971-06-01",
+      "Food": null,
+      "Groceries": 19.4,
+      "Restaurants": 16.9,
+      "All_items": null
+    },
+    {
+      "date": "1971-07-01",
+      "Food": null,
+      "Groceries": 19.9,
+      "Restaurants": 17.0,
+      "All_items": null
+    },
+    {
+      "date": "1971-08-01",
+      "Food": null,
+      "Groceries": 20.4,
+      "Restaurants": 17.2,
+      "All_items": null
+    },
+    {
+      "date": "1971-09-01",
+      "Food": null,
+      "Groceries": 20.0,
+      "Restaurants": 17.2,
+      "All_items": null
+    },
+    {
+      "date": "1971-10-01",
+      "Food": null,
+      "Groceries": 19.9,
+      "Restaurants": 17.3,
+      "All_items": null
+    },
+    {
+      "date": "1971-11-01",
+      "Food": null,
+      "Groceries": 19.9,
+      "Restaurants": 17.4,
+      "All_items": null
+    },
+    {
+      "date": "1971-12-01",
+      "Food": null,
+      "Groceries": 20.2,
+      "Restaurants": 17.5,
+      "All_items": null
+    },
+    {
+      "date": "1972-01-01",
+      "Food": null,
+      "Groceries": 20.4,
+      "Restaurants": 17.6,
+      "All_items": null
+    },
+    {
+      "date": "1972-02-01",
+      "Food": null,
+      "Groceries": 20.6,
+      "Restaurants": 17.6,
+      "All_items": null
+    },
+    {
+      "date": "1972-03-01",
+      "Food": null,
+      "Groceries": 20.4,
+      "Restaurants": 17.6,
+      "All_items": null
+    },
+    {
+      "date": "1972-04-01",
+      "Food": null,
+      "Groceries": 20.6,
+      "Restaurants": 17.8,
+      "All_items": null
+    },
+    {
+      "date": "1972-05-01",
+      "Food": null,
+      "Groceries": 20.4,
+      "Restaurants": 17.9,
+      "All_items": null
+    },
+    {
+      "date": "1972-06-01",
+      "Food": null,
+      "Groceries": 20.4,
+      "Restaurants": 18.0,
+      "All_items": null
+    },
+    {
+      "date": "1972-07-01",
+      "Food": null,
+      "Groceries": 21.3,
+      "Restaurants": 18.2,
+      "All_items": null
+    },
+    {
+      "date": "1972-08-01",
+      "Food": null,
+      "Groceries": 21.9,
+      "Restaurants": 18.3,
+      "All_items": null
+    },
+    {
+      "date": "1972-09-01",
+      "Food": null,
+      "Groceries": 21.9,
+      "Restaurants": 18.4,
+      "All_items": null
+    },
+    {
+      "date": "1972-10-01",
+      "Food": null,
+      "Groceries": 21.7,
+      "Restaurants": 18.5,
+      "All_items": null
+    },
+    {
+      "date": "1972-11-01",
+      "Food": null,
+      "Groceries": 21.7,
+      "Restaurants": 18.6,
+      "All_items": null
+    },
+    {
+      "date": "1972-12-01",
+      "Food": null,
+      "Groceries": 21.9,
+      "Restaurants": 18.8,
+      "All_items": null
+    },
+    {
+      "date": "1973-01-01",
+      "Food": null,
+      "Groceries": 22.4,
+      "Restaurants": 18.9,
+      "All_items": null
+    },
+    {
+      "date": "1973-02-01",
+      "Food": null,
+      "Groceries": 22.8,
+      "Restaurants": 19.2,
+      "All_items": null
+    },
+    {
+      "date": "1973-03-01",
+      "Food": null,
+      "Groceries": 22.8,
+      "Restaurants": 19.3,
+      "All_items": null
+    },
+    {
+      "date": "1973-04-01",
+      "Food": null,
+      "Groceries": 23.4,
+      "Restaurants": 19.6,
+      "All_items": null
+    },
+    {
+      "date": "1973-05-01",
+      "Food": null,
+      "Groceries": 23.6,
+      "Restaurants": 19.8,
+      "All_items": null
+    },
+    {
+      "date": "1973-06-01",
+      "Food": null,
+      "Groceries": 24.1,
+      "Restaurants": 20.0,
+      "All_items": null
+    },
+    {
+      "date": "1973-07-01",
+      "Food": null,
+      "Groceries": 24.6,
+      "Restaurants": 20.1,
+      "All_items": null
+    },
+    {
+      "date": "1973-08-01",
+      "Food": null,
+      "Groceries": 25.4,
+      "Restaurants": 20.6,
+      "All_items": null
+    },
+    {
+      "date": "1973-09-01",
+      "Food": null,
+      "Groceries": 25.5,
+      "Restaurants": 21.3,
+      "All_items": null
+    },
+    {
+      "date": "1973-10-01",
+      "Food": null,
+      "Groceries": 25.4,
+      "Restaurants": 21.7,
+      "All_items": null
+    },
+    {
+      "date": "1973-11-01",
+      "Food": null,
+      "Groceries": 25.6,
+      "Restaurants": 22.0,
+      "All_items": null
+    },
+    {
+      "date": "1973-12-01",
+      "Food": null,
+      "Groceries": 25.6,
+      "Restaurants": 22.3,
+      "All_items": null
+    },
+    {
+      "date": "1974-01-01",
+      "Food": null,
+      "Groceries": 26.0,
+      "Restaurants": 22.4,
+      "All_items": null
+    },
+    {
+      "date": "1974-02-01",
+      "Food": null,
+      "Groceries": 26.6,
+      "Restaurants": 22.6,
+      "All_items": null
+    },
+    {
+      "date": "1974-03-01",
+      "Food": null,
+      "Groceries": 27.0,
+      "Restaurants": 22.9,
+      "All_items": null
+    },
+    {
+      "date": "1974-04-01",
+      "Food": null,
+      "Groceries": 27.0,
+      "Restaurants": 23.3,
+      "All_items": null
+    },
+    {
+      "date": "1974-05-01",
+      "Food": null,
+      "Groceries": 27.8,
+      "Restaurants": 23.6,
+      "All_items": null
+    },
+    {
+      "date": "1974-06-01",
+      "Food": null,
+      "Groceries": 28.1,
+      "Restaurants": 24.2,
+      "All_items": null
+    },
+    {
+      "date": "1974-07-01",
+      "Food": null,
+      "Groceries": 28.4,
+      "Restaurants": 24.4,
+      "All_items": null
+    },
+    {
+      "date": "1974-08-01",
+      "Food": null,
+      "Groceries": 28.8,
+      "Restaurants": 24.8,
+      "All_items": null
+    },
+    {
+      "date": "1974-09-01",
+      "Food": null,
+      "Groceries": 28.8,
+      "Restaurants": 25.1,
+      "All_items": null
+    },
+    {
+      "date": "1974-10-01",
+      "Food": null,
+      "Groceries": 29.2,
+      "Restaurants": 25.4,
+      "All_items": null
+    },
+    {
+      "date": "1974-11-01",
+      "Food": null,
+      "Groceries": 29.5,
+      "Restaurants": 26.0,
+      "All_items": null
+    },
+    {
+      "date": "1974-12-01",
+      "Food": null,
+      "Groceries": 30.0,
+      "Restaurants": 26.2,
+      "All_items": null
+    },
+    {
+      "date": "1975-01-01",
+      "Food": null,
+      "Groceries": 30.0,
+      "Restaurants": 26.5,
+      "All_items": null
+    },
+    {
+      "date": "1975-02-01",
+      "Food": null,
+      "Groceries": 30.3,
+      "Restaurants": 26.7,
+      "All_items": null
+    },
+    {
+      "date": "1975-03-01",
+      "Food": null,
+      "Groceries": 30.2,
+      "Restaurants": 26.8,
+      "All_items": null
+    },
+    {
+      "date": "1975-04-01",
+      "Food": null,
+      "Groceries": 30.3,
+      "Restaurants": 26.9,
+      "All_items": null
+    },
+    {
+      "date": "1975-05-01",
+      "Food": null,
+      "Groceries": 30.6,
+      "Restaurants": 27.2,
+      "All_items": null
+    },
+    {
+      "date": "1975-06-01",
+      "Food": null,
+      "Groceries": 31.8,
+      "Restaurants": 27.4,
+      "All_items": null
+    },
+    {
+      "date": "1975-07-01",
+      "Food": null,
+      "Groceries": 32.6,
+      "Restaurants": 27.7,
+      "All_items": null
+    },
+    {
+      "date": "1975-08-01",
+      "Food": null,
+      "Groceries": 32.9,
+      "Restaurants": 28.3,
+      "All_items": null
+    },
+    {
+      "date": "1975-09-01",
+      "Food": null,
+      "Groceries": 32.6,
+      "Restaurants": 28.4,
+      "All_items": null
+    },
+    {
+      "date": "1975-10-01",
+      "Food": null,
+      "Groceries": 32.7,
+      "Restaurants": 28.6,
+      "All_items": null
+    },
+    {
+      "date": "1975-11-01",
+      "Food": null,
+      "Groceries": 32.9,
+      "Restaurants": 28.9,
+      "All_items": null
+    },
+    {
+      "date": "1975-12-01",
+      "Food": null,
+      "Groceries": 32.6,
+      "Restaurants": 29.1,
+      "All_items": null
+    },
+    {
+      "date": "1976-01-01",
+      "Food": 31.2,
+      "Groceries": 32.5,
+      "Restaurants": 29.2,
+      "All_items": 30.3
+    },
+    {
+      "date": "1976-02-01",
+      "Food": 31.1,
+      "Groceries": 32.3,
+      "Restaurants": 29.3,
+      "All_items": 30.5
+    },
+    {
+      "date": "1976-03-01",
+      "Food": 30.9,
+      "Groceries": 32.0,
+      "Restaurants": 29.5,
+      "All_items": 30.6
+    },
+    {
+      "date": "1976-04-01",
+      "Food": 30.8,
+      "Groceries": 31.8,
+      "Restaurants": 29.7,
+      "All_items": 30.7
+    },
+    {
+      "date": "1976-05-01",
+      "Food": 31.2,
+      "Groceries": 32.3,
+      "Restaurants": 29.7,
+      "All_items": 30.9
+    },
+    {
+      "date": "1976-06-01",
+      "Food": 31.3,
+      "Groceries": 32.4,
+      "Restaurants": 29.9,
+      "All_items": 31.1
+    },
+    {
+      "date": "1976-07-01",
+      "Food": 31.3,
+      "Groceries": 32.5,
+      "Restaurants": 30.1,
+      "All_items": 31.3
+    },
+    {
+      "date": "1976-08-01",
+      "Food": 31.2,
+      "Groceries": 32.2,
+      "Restaurants": 30.3,
+      "All_items": 31.3
+    },
+    {
+      "date": "1976-09-01",
+      "Food": 31.0,
+      "Groceries": 32.0,
+      "Restaurants": 30.5,
+      "All_items": 31.5
+    },
+    {
+      "date": "1976-10-01",
+      "Food": 31.0,
+      "Groceries": 32.0,
+      "Restaurants": 30.6,
+      "All_items": 31.7
+    },
+    {
+      "date": "1976-11-01",
+      "Food": 31.0,
+      "Groceries": 31.7,
+      "Restaurants": 30.7,
+      "All_items": 31.8
+    },
+    {
+      "date": "1976-12-01",
+      "Food": 31.0,
+      "Groceries": 31.8,
+      "Restaurants": 31.0,
+      "All_items": 31.9
+    },
+    {
+      "date": "1977-01-01",
+      "Food": 31.4,
+      "Groceries": 32.3,
+      "Restaurants": 31.1,
+      "All_items": 32.2
+    },
+    {
+      "date": "1977-02-01",
+      "Food": 32.0,
+      "Groceries": 33.0,
+      "Restaurants": 31.3,
+      "All_items": 32.4
+    },
+    {
+      "date": "1977-03-01",
+      "Food": 32.3,
+      "Groceries": 33.3,
+      "Restaurants": 31.7,
+      "All_items": 32.8
+    },
+    {
+      "date": "1977-04-01",
+      "Food": 32.7,
+      "Groceries": 33.8,
+      "Restaurants": 31.6,
+      "All_items": 33.0
+    },
+    {
+      "date": "1977-05-01",
+      "Food": 33.1,
+      "Groceries": 34.3,
+      "Restaurants": 31.5,
+      "All_items": 33.4
+    },
+    {
+      "date": "1977-06-01",
+      "Food": 33.5,
+      "Groceries": 34.8,
+      "Restaurants": 31.8,
+      "All_items": 33.5
+    },
+    {
+      "date": "1977-07-01",
+      "Food": 34.2,
+      "Groceries": 35.5,
+      "Restaurants": 32.0,
+      "All_items": 33.9
+    },
+    {
+      "date": "1977-08-01",
+      "Food": 34.3,
+      "Groceries": 35.8,
+      "Restaurants": 32.1,
+      "All_items": 33.9
+    },
+    {
+      "date": "1977-09-01",
+      "Food": 34.5,
+      "Groceries": 35.9,
+      "Restaurants": 32.2,
+      "All_items": 34.2
+    },
+    {
+      "date": "1977-10-01",
+      "Food": 35.0,
+      "Groceries": 36.5,
+      "Restaurants": 32.3,
+      "All_items": 34.5
+    },
+    {
+      "date": "1977-11-01",
+      "Food": 35.2,
+      "Groceries": 36.8,
+      "Restaurants": 32.4,
+      "All_items": 34.7
+    },
+    {
+      "date": "1977-12-01",
+      "Food": 35.8,
+      "Groceries": 37.5,
+      "Restaurants": 32.5,
+      "All_items": 34.9
+    },
+    {
+      "date": "1978-01-01",
+      "Food": 36.1,
+      "Groceries": 37.8,
+      "Restaurants": 32.7,
+      "All_items": 35.1
+    },
+    {
+      "date": "1978-02-01",
+      "Food": 36.3,
+      "Groceries": 38.1,
+      "Restaurants": 32.8,
+      "All_items": 35.4
+    },
+    {
+      "date": "1978-03-01",
+      "Food": 36.8,
+      "Groceries": 38.7,
+      "Restaurants": 33.0,
+      "All_items": 35.7
+    },
+    {
+      "date": "1978-04-01",
+      "Food": 37.4,
+      "Groceries": 39.5,
+      "Restaurants": 33.0,
+      "All_items": 35.8
+    },
+    {
+      "date": "1978-05-01",
+      "Food": 38.7,
+      "Groceries": 41.0,
+      "Restaurants": 33.2,
+      "All_items": 36.3
+    },
+    {
+      "date": "1978-06-01",
+      "Food": 39.4,
+      "Groceries": 41.9,
+      "Restaurants": 33.5,
+      "All_items": 36.6
+    },
+    {
+      "date": "1978-07-01",
+      "Food": 41.1,
+      "Groceries": 43.8,
+      "Restaurants": 34.0,
+      "All_items": 37.1
+    },
+    {
+      "date": "1978-08-01",
+      "Food": 40.5,
+      "Groceries": 43.0,
+      "Restaurants": 34.6,
+      "All_items": 37.2
+    },
+    {
+      "date": "1978-09-01",
+      "Food": 39.6,
+      "Groceries": 41.7,
+      "Restaurants": 34.8,
+      "All_items": 37.1
+    },
+    {
+      "date": "1978-10-01",
+      "Food": 40.0,
+      "Groceries": 42.2,
+      "Restaurants": 35.0,
+      "All_items": 37.6
+    },
+    {
+      "date": "1978-11-01",
+      "Food": 40.1,
+      "Groceries": 42.3,
+      "Restaurants": 35.5,
+      "All_items": 37.8
+    },
+    {
+      "date": "1978-12-01",
+      "Food": 40.4,
+      "Groceries": 42.6,
+      "Restaurants": 35.7,
+      "All_items": 37.9
+    },
+    {
+      "date": "1979-01-01",
+      "Food": 41.1,
+      "Groceries": 43.6,
+      "Restaurants": 35.9,
+      "All_items": 38.1
+    },
+    {
+      "date": "1979-02-01",
+      "Food": 42.1,
+      "Groceries": 44.7,
+      "Restaurants": 36.4,
+      "All_items": 38.6
+    },
+    {
+      "date": "1979-03-01",
+      "Food": 43.3,
+      "Groceries": 46.0,
+      "Restaurants": 36.8,
+      "All_items": 39.0
+    },
+    {
+      "date": "1979-04-01",
+      "Food": 43.6,
+      "Groceries": 46.5,
+      "Restaurants": 37.0,
+      "All_items": 39.3
+    },
+    {
+      "date": "1979-05-01",
+      "Food": 43.9,
+      "Groceries": 46.6,
+      "Restaurants": 37.6,
+      "All_items": 39.7
+    },
+    {
+      "date": "1979-06-01",
+      "Food": 44.1,
+      "Groceries": 46.6,
+      "Restaurants": 38.2,
+      "All_items": 39.9
+    },
+    {
+      "date": "1979-07-01",
+      "Food": 44.9,
+      "Groceries": 47.6,
+      "Restaurants": 38.4,
+      "All_items": 40.2
+    },
+    {
+      "date": "1979-08-01",
+      "Food": 44.6,
+      "Groceries": 47.1,
+      "Restaurants": 38.7,
+      "All_items": 40.3
+    },
+    {
+      "date": "1979-09-01",
+      "Food": 44.6,
+      "Groceries": 47.1,
+      "Restaurants": 39.0,
+      "All_items": 40.7
+    },
+    {
+      "date": "1979-10-01",
+      "Food": 45.0,
+      "Groceries": 47.5,
+      "Restaurants": 39.3,
+      "All_items": 41.0
+    },
+    {
+      "date": "1979-11-01",
+      "Food": 45.1,
+      "Groceries": 47.5,
+      "Restaurants": 39.6,
+      "All_items": 41.4
+    },
+    {
+      "date": "1979-12-01",
+      "Food": 45.6,
+      "Groceries": 48.2,
+      "Restaurants": 39.8,
+      "All_items": 41.6
+    },
+    {
+      "date": "1980-01-01",
+      "Food": 45.8,
+      "Groceries": 48.3,
+      "Restaurants": 40.1,
+      "All_items": 41.8
+    },
+    {
+      "date": "1980-02-01",
+      "Food": 46.4,
+      "Groceries": 49.1,
+      "Restaurants": 40.4,
+      "All_items": 42.3
+    },
+    {
+      "date": "1980-03-01",
+      "Food": 46.9,
+      "Groceries": 49.6,
+      "Restaurants": 40.8,
+      "All_items": 42.6
+    },
+    {
+      "date": "1980-04-01",
+      "Food": 47.0,
+      "Groceries": 49.6,
+      "Restaurants": 40.9,
+      "All_items": 42.9
+    },
+    {
+      "date": "1980-05-01",
+      "Food": 47.4,
+      "Groceries": 50.2,
+      "Restaurants": 41.0,
+      "All_items": 43.4
+    },
+    {
+      "date": "1980-06-01",
+      "Food": 48.5,
+      "Groceries": 51.6,
+      "Restaurants": 41.3,
+      "All_items": 43.9
+    },
+    {
+      "date": "1980-07-01",
+      "Food": 49.0,
+      "Groceries": 52.0,
+      "Restaurants": 41.8,
+      "All_items": 44.2
+    },
+    {
+      "date": "1980-08-01",
+      "Food": 49.6,
+      "Groceries": 52.9,
+      "Restaurants": 42.1,
+      "All_items": 44.7
+    },
+    {
+      "date": "1980-09-01",
+      "Food": 50.5,
+      "Groceries": 53.8,
+      "Restaurants": 42.3,
+      "All_items": 45.0
+    },
+    {
+      "date": "1980-10-01",
+      "Food": 50.6,
+      "Groceries": 54.1,
+      "Restaurants": 42.8,
+      "All_items": 45.4
+    },
+    {
+      "date": "1980-11-01",
+      "Food": 51.2,
+      "Groceries": 54.7,
+      "Restaurants": 42.9,
+      "All_items": 46.0
+    },
+    {
+      "date": "1980-12-01",
+      "Food": 51.8,
+      "Groceries": 55.4,
+      "Restaurants": 43.2,
+      "All_items": 46.2
+    },
+    {
+      "date": "1981-01-01",
+      "Food": 52.0,
+      "Groceries": 55.7,
+      "Restaurants": 43.5,
+      "All_items": 46.9
+    },
+    {
+      "date": "1981-02-01",
+      "Food": 52.9,
+      "Groceries": 56.7,
+      "Restaurants": 43.9,
+      "All_items": 47.4
+    },
+    {
+      "date": "1981-03-01",
+      "Food": 53.3,
+      "Groceries": 57.1,
+      "Restaurants": 44.1,
+      "All_items": 48.0
+    },
+    {
+      "date": "1981-04-01",
+      "Food": 53.8,
+      "Groceries": 57.6,
+      "Restaurants": 44.8,
+      "All_items": 48.3
+    },
+    {
+      "date": "1981-05-01",
+      "Food": 53.5,
+      "Groceries": 57.2,
+      "Restaurants": 45.0,
+      "All_items": 48.7
+    },
+    {
+      "date": "1981-06-01",
+      "Food": 54.5,
+      "Groceries": 58.4,
+      "Restaurants": 45.4,
+      "All_items": 49.5
+    },
+    {
+      "date": "1981-07-01",
+      "Food": 55.3,
+      "Groceries": 59.2,
+      "Restaurants": 45.9,
+      "All_items": 49.9
+    },
+    {
+      "date": "1981-08-01",
+      "Food": 55.4,
+      "Groceries": 59.2,
+      "Restaurants": 46.3,
+      "All_items": 50.3
+    },
+    {
+      "date": "1981-09-01",
+      "Food": 55.4,
+      "Groceries": 59.0,
+      "Restaurants": 46.4,
+      "All_items": 50.7
+    },
+    {
+      "date": "1981-10-01",
+      "Food": 55.3,
+      "Groceries": 58.9,
+      "Restaurants": 46.8,
+      "All_items": 51.2
+    },
+    {
+      "date": "1981-11-01",
+      "Food": 55.1,
+      "Groceries": 58.6,
+      "Restaurants": 47.2,
+      "All_items": 51.6
+    },
+    {
+      "date": "1981-12-01",
+      "Food": 54.7,
+      "Groceries": 57.9,
+      "Restaurants": 47.5,
+      "All_items": 51.8
+    },
+    {
+      "date": "1982-01-01",
+      "Food": 55.2,
+      "Groceries": 58.5,
+      "Restaurants": 47.8,
+      "All_items": 52.2
+    },
+    {
+      "date": "1982-02-01",
+      "Food": 56.3,
+      "Groceries": 59.7,
+      "Restaurants": 48.3,
+      "All_items": 52.8
+    },
+    {
+      "date": "1982-03-01",
+      "Food": 56.8,
+      "Groceries": 60.2,
+      "Restaurants": 48.7,
+      "All_items": 53.5
+    },
+    {
+      "date": "1982-04-01",
+      "Food": 57.1,
+      "Groceries": 60.7,
+      "Restaurants": 49.1,
+      "All_items": 53.8
+    },
+    {
+      "date": "1982-05-01",
+      "Food": 58.4,
+      "Groceries": 62.2,
+      "Restaurants": 49.4,
+      "All_items": 54.5
+    },
+    {
+      "date": "1982-06-01",
+      "Food": 59.7,
+      "Groceries": 63.6,
+      "Restaurants": 50.5,
+      "All_items": 55.1
+    },
+    {
+      "date": "1982-07-01",
+      "Food": 59.9,
+      "Groceries": 63.9,
+      "Restaurants": 51.0,
+      "All_items": 55.4
+    },
+    {
+      "date": "1982-08-01",
+      "Food": 59.4,
+      "Groceries": 63.0,
+      "Restaurants": 51.3,
+      "All_items": 55.6
+    },
+    {
+      "date": "1982-09-01",
+      "Food": 58.9,
+      "Groceries": 62.3,
+      "Restaurants": 51.4,
+      "All_items": 55.9
+    },
+    {
+      "date": "1982-10-01",
+      "Food": 58.8,
+      "Groceries": 61.9,
+      "Restaurants": 51.7,
+      "All_items": 56.3
+    },
+    {
+      "date": "1982-11-01",
+      "Food": 58.9,
+      "Groceries": 62.2,
+      "Restaurants": 51.8,
+      "All_items": 56.6
+    },
+    {
+      "date": "1982-12-01",
+      "Food": 58.8,
+      "Groceries": 61.7,
+      "Restaurants": 51.9,
+      "All_items": 56.6
+    },
+    {
+      "date": "1983-01-01",
+      "Food": 58.9,
+      "Groceries": 61.7,
+      "Restaurants": 52.4,
+      "All_items": 56.5
+    },
+    {
+      "date": "1983-02-01",
+      "Food": 59.3,
+      "Groceries": 62.2,
+      "Restaurants": 52.4,
+      "All_items": 56.8
+    },
+    {
+      "date": "1983-03-01",
+      "Food": 59.1,
+      "Groceries": 62.0,
+      "Restaurants": 52.4,
+      "All_items": 57.4
+    },
+    {
+      "date": "1983-04-01",
+      "Food": 59.8,
+      "Groceries": 62.7,
+      "Restaurants": 52.6,
+      "All_items": 57.4
+    },
+    {
+      "date": "1983-05-01",
+      "Food": 60.7,
+      "Groceries": 64.1,
+      "Restaurants": 52.8,
+      "All_items": 57.5
+    },
+    {
+      "date": "1983-06-01",
+      "Food": 60.8,
+      "Groceries": 64.2,
+      "Restaurants": 52.9,
+      "All_items": 58.1
+    },
+    {
+      "date": "1983-07-01",
+      "Food": 61.2,
+      "Groceries": 64.5,
+      "Restaurants": 53.2,
+      "All_items": 58.4
+    },
+    {
+      "date": "1983-08-01",
+      "Food": 61.1,
+      "Groceries": 64.5,
+      "Restaurants": 53.3,
+      "All_items": 58.7
+    },
+    {
+      "date": "1983-09-01",
+      "Food": 60.5,
+      "Groceries": 63.5,
+      "Restaurants": 53.6,
+      "All_items": 58.7
+    },
+    {
+      "date": "1983-10-01",
+      "Food": 61.2,
+      "Groceries": 64.3,
+      "Restaurants": 53.8,
+      "All_items": 59.1
+    },
+    {
+      "date": "1983-11-01",
+      "Food": 60.8,
+      "Groceries": 63.8,
+      "Restaurants": 54.0,
+      "All_items": 59.1
+    },
+    {
+      "date": "1983-12-01",
+      "Food": 61.0,
+      "Groceries": 64.0,
+      "Restaurants": 54.1,
+      "All_items": 59.2
+    },
+    {
+      "date": "1984-01-01",
+      "Food": 62.2,
+      "Groceries": 65.5,
+      "Restaurants": 54.5,
+      "All_items": 59.6
+    },
+    {
+      "date": "1984-02-01",
+      "Food": 62.9,
+      "Groceries": 66.5,
+      "Restaurants": 54.5,
+      "All_items": 59.9
+    },
+    {
+      "date": "1984-03-01",
+      "Food": 63.3,
+      "Groceries": 67.2,
+      "Restaurants": 54.7,
+      "All_items": 60.0
+    },
+    {
+      "date": "1984-04-01",
+      "Food": 63.6,
+      "Groceries": 67.3,
+      "Restaurants": 54.9,
+      "All_items": 60.2
+    },
+    {
+      "date": "1984-05-01",
+      "Food": 63.3,
+      "Groceries": 67.1,
+      "Restaurants": 55.0,
+      "All_items": 60.2
+    },
+    {
+      "date": "1984-06-01",
+      "Food": 64.2,
+      "Groceries": 68.1,
+      "Restaurants": 55.1,
+      "All_items": 60.6
+    },
+    {
+      "date": "1984-07-01",
+      "Food": 64.8,
+      "Groceries": 68.8,
+      "Restaurants": 55.4,
+      "All_items": 60.8
+    },
+    {
+      "date": "1984-08-01",
+      "Food": 64.3,
+      "Groceries": 68.1,
+      "Restaurants": 55.6,
+      "All_items": 60.8
+    },
+    {
+      "date": "1984-09-01",
+      "Food": 63.8,
+      "Groceries": 67.3,
+      "Restaurants": 55.7,
+      "All_items": 60.9
+    },
+    {
+      "date": "1984-10-01",
+      "Food": 63.8,
+      "Groceries": 67.3,
+      "Restaurants": 55.9,
+      "All_items": 61.1
+    },
+    {
+      "date": "1984-11-01",
+      "Food": 63.8,
+      "Groceries": 67.3,
+      "Restaurants": 56.0,
+      "All_items": 61.4
+    },
+    {
+      "date": "1984-12-01",
+      "Food": 63.8,
+      "Groceries": 67.2,
+      "Restaurants": 56.3,
+      "All_items": 61.4
+    },
+    {
+      "date": "1985-01-01",
+      "Food": 64.6,
+      "Groceries": 68.1,
+      "Restaurants": 56.8,
+      "All_items": 61.7
+    },
+    {
+      "date": "1985-02-01",
+      "Food": 65.3,
+      "Groceries": 69.0,
+      "Restaurants": 56.8,
+      "All_items": 62.1
+    },
+    {
+      "date": "1985-03-01",
+      "Food": 65.2,
+      "Groceries": 68.8,
+      "Restaurants": 56.8,
+      "All_items": 62.2
+    },
+    {
+      "date": "1985-04-01",
+      "Food": 66.0,
+      "Groceries": 69.8,
+      "Restaurants": 57.1,
+      "All_items": 62.5
+    },
+    {
+      "date": "1985-05-01",
+      "Food": 65.5,
+      "Groceries": 69.1,
+      "Restaurants": 57.3,
+      "All_items": 62.7
+    },
+    {
+      "date": "1985-06-01",
+      "Food": 65.8,
+      "Groceries": 69.5,
+      "Restaurants": 57.3,
+      "All_items": 63.0
+    },
+    {
+      "date": "1985-07-01",
+      "Food": 66.2,
+      "Groceries": 70.0,
+      "Restaurants": 57.7,
+      "All_items": 63.3
+    },
+    {
+      "date": "1985-08-01",
+      "Food": 65.8,
+      "Groceries": 69.3,
+      "Restaurants": 58.0,
+      "All_items": 63.3
+    },
+    {
+      "date": "1985-09-01",
+      "Food": 65.2,
+      "Groceries": 68.2,
+      "Restaurants": 58.2,
+      "All_items": 63.4
+    },
+    {
+      "date": "1985-10-01",
+      "Food": 65.0,
+      "Groceries": 67.9,
+      "Restaurants": 58.3,
+      "All_items": 63.6
+    },
+    {
+      "date": "1985-11-01",
+      "Food": 65.3,
+      "Groceries": 68.3,
+      "Restaurants": 58.4,
+      "All_items": 63.8
+    },
+    {
+      "date": "1985-12-01",
+      "Food": 66.2,
+      "Groceries": 69.5,
+      "Restaurants": 58.6,
+      "All_items": 64.1
+    },
+    {
+      "date": "1986-01-01",
+      "Food": 67.3,
+      "Groceries": 70.8,
+      "Restaurants": 59.1,
+      "All_items": 64.4
+    },
+    {
+      "date": "1986-02-01",
+      "Food": 66.9,
+      "Groceries": 70.3,
+      "Restaurants": 59.1,
+      "All_items": 64.7
+    },
+    {
+      "date": "1986-03-01",
+      "Food": 67.0,
+      "Groceries": 70.3,
+      "Restaurants": 59.3,
+      "All_items": 64.9
+    },
+    {
+      "date": "1986-04-01",
+      "Food": 67.7,
+      "Groceries": 71.1,
+      "Restaurants": 59.7,
+      "All_items": 64.9
+    },
+    {
+      "date": "1986-05-01",
+      "Food": 68.2,
+      "Groceries": 71.9,
+      "Restaurants": 59.9,
+      "All_items": 65.3
+    },
+    {
+      "date": "1986-06-01",
+      "Food": 68.4,
+      "Groceries": 72.0,
+      "Restaurants": 60.0,
+      "All_items": 65.4
+    },
+    {
+      "date": "1986-07-01",
+      "Food": 69.2,
+      "Groceries": 72.9,
+      "Restaurants": 60.6,
+      "All_items": 65.9
+    },
+    {
+      "date": "1986-08-01",
+      "Food": 69.5,
+      "Groceries": 73.3,
+      "Restaurants": 60.9,
+      "All_items": 66.0
+    },
+    {
+      "date": "1986-09-01",
+      "Food": 69.9,
+      "Groceries": 73.8,
+      "Restaurants": 60.9,
+      "All_items": 66.0
+    },
+    {
+      "date": "1986-10-01",
+      "Food": 70.2,
+      "Groceries": 74.0,
+      "Restaurants": 61.3,
+      "All_items": 66.4
+    },
+    {
+      "date": "1986-11-01",
+      "Food": 70.6,
+      "Groceries": 74.5,
+      "Restaurants": 61.6,
+      "All_items": 66.7
+    },
+    {
+      "date": "1986-12-01",
+      "Food": 70.5,
+      "Groceries": 74.3,
+      "Restaurants": 61.7,
+      "All_items": 66.8
+    },
+    {
+      "date": "1987-01-01",
+      "Food": 71.2,
+      "Groceries": 75.2,
+      "Restaurants": 62.1,
+      "All_items": 67.0
+    },
+    {
+      "date": "1987-02-01",
+      "Food": 71.2,
+      "Groceries": 75.2,
+      "Restaurants": 62.1,
+      "All_items": 67.3
+    },
+    {
+      "date": "1987-03-01",
+      "Food": 71.2,
+      "Groceries": 75.0,
+      "Restaurants": 62.3,
+      "All_items": 67.5
+    },
+    {
+      "date": "1987-04-01",
+      "Food": 71.2,
+      "Groceries": 75.0,
+      "Restaurants": 62.3,
+      "All_items": 67.9
+    },
+    {
+      "date": "1987-05-01",
+      "Food": 71.8,
+      "Groceries": 75.8,
+      "Restaurants": 62.7,
+      "All_items": 68.3
+    },
+    {
+      "date": "1987-06-01",
+      "Food": 72.6,
+      "Groceries": 77.1,
+      "Restaurants": 62.3,
+      "All_items": 68.5
+    },
+    {
+      "date": "1987-07-01",
+      "Food": 72.8,
+      "Groceries": 77.2,
+      "Restaurants": 62.7,
+      "All_items": 68.9
+    },
+    {
+      "date": "1987-08-01",
+      "Food": 72.1,
+      "Groceries": 76.0,
+      "Restaurants": 62.9,
+      "All_items": 69.0
+    },
+    {
+      "date": "1987-09-01",
+      "Food": 71.7,
+      "Groceries": 75.4,
+      "Restaurants": 63.1,
+      "All_items": 69.0
+    },
+    {
+      "date": "1987-10-01",
+      "Food": 71.8,
+      "Groceries": 75.5,
+      "Restaurants": 63.4,
+      "All_items": 69.2
+    },
+    {
+      "date": "1987-11-01",
+      "Food": 72.1,
+      "Groceries": 75.8,
+      "Restaurants": 63.6,
+      "All_items": 69.5
+    },
+    {
+      "date": "1987-12-01",
+      "Food": 72.1,
+      "Groceries": 75.5,
+      "Restaurants": 63.7,
+      "All_items": 69.6
+    },
+    {
+      "date": "1988-01-01",
+      "Food": 72.8,
+      "Groceries": 76.5,
+      "Restaurants": 64.1,
+      "All_items": 69.7
+    },
+    {
+      "date": "1988-02-01",
+      "Food": 72.6,
+      "Groceries": 76.2,
+      "Restaurants": 64.4,
+      "All_items": 70.0
+    },
+    {
+      "date": "1988-03-01",
+      "Food": 72.5,
+      "Groceries": 75.8,
+      "Restaurants": 64.5,
+      "All_items": 70.4
+    },
+    {
+      "date": "1988-04-01",
+      "Food": 72.8,
+      "Groceries": 76.3,
+      "Restaurants": 64.8,
+      "All_items": 70.6
+    },
+    {
+      "date": "1988-05-01",
+      "Food": 73.3,
+      "Groceries": 76.8,
+      "Restaurants": 65.3,
+      "All_items": 71.0
+    },
+    {
+      "date": "1988-06-01",
+      "Food": 73.9,
+      "Groceries": 77.6,
+      "Restaurants": 65.4,
+      "All_items": 71.2
+    },
+    {
+      "date": "1988-07-01",
+      "Food": 74.6,
+      "Groceries": 78.3,
+      "Restaurants": 65.9,
+      "All_items": 71.6
+    },
+    {
+      "date": "1988-08-01",
+      "Food": 74.8,
+      "Groceries": 78.5,
+      "Restaurants": 66.2,
+      "All_items": 71.7
+    },
+    {
+      "date": "1988-09-01",
+      "Food": 74.6,
+      "Groceries": 78.2,
+      "Restaurants": 66.4,
+      "All_items": 71.8
+    },
+    {
+      "date": "1988-10-01",
+      "Food": 74.6,
+      "Groceries": 78.1,
+      "Restaurants": 66.7,
+      "All_items": 72.2
+    },
+    {
+      "date": "1988-11-01",
+      "Food": 74.3,
+      "Groceries": 77.5,
+      "Restaurants": 67.0,
+      "All_items": 72.3
+    },
+    {
+      "date": "1988-12-01",
+      "Food": 74.1,
+      "Groceries": 77.0,
+      "Restaurants": 67.2,
+      "All_items": 72.3
+    },
+    {
+      "date": "1989-01-01",
+      "Food": 74.9,
+      "Groceries": 78.2,
+      "Restaurants": 67.6,
+      "All_items": 72.7
+    },
+    {
+      "date": "1989-02-01",
+      "Food": 75.6,
+      "Groceries": 78.9,
+      "Restaurants": 67.8,
+      "All_items": 73.2
+    },
+    {
+      "date": "1989-03-01",
+      "Food": 75.6,
+      "Groceries": 78.8,
+      "Restaurants": 68.1,
+      "All_items": 73.6
+    },
+    {
+      "date": "1989-04-01",
+      "Food": 75.9,
+      "Groceries": 79.2,
+      "Restaurants": 68.3,
+      "All_items": 73.8
+    },
+    {
+      "date": "1989-05-01",
+      "Food": 76.4,
+      "Groceries": 79.8,
+      "Restaurants": 68.6,
+      "All_items": 74.6
+    },
+    {
+      "date": "1989-06-01",
+      "Food": 76.9,
+      "Groceries": 80.4,
+      "Restaurants": 68.7,
+      "All_items": 74.9
+    },
+    {
+      "date": "1989-07-01",
+      "Food": 77.6,
+      "Groceries": 81.1,
+      "Restaurants": 69.5,
+      "All_items": 75.4
+    },
+    {
+      "date": "1989-08-01",
+      "Food": 77.1,
+      "Groceries": 80.4,
+      "Restaurants": 69.6,
+      "All_items": 75.5
+    },
+    {
+      "date": "1989-09-01",
+      "Food": 76.8,
+      "Groceries": 79.8,
+      "Restaurants": 69.9,
+      "All_items": 75.6
+    },
+    {
+      "date": "1989-10-01",
+      "Food": 77.1,
+      "Groceries": 80.0,
+      "Restaurants": 70.1,
+      "All_items": 75.9
+    },
+    {
+      "date": "1989-11-01",
+      "Food": 77.0,
+      "Groceries": 79.9,
+      "Restaurants": 70.4,
+      "All_items": 76.1
+    },
+    {
+      "date": "1989-12-01",
+      "Food": 76.6,
+      "Groceries": 79.2,
+      "Restaurants": 70.5,
+      "All_items": 76.1
+    },
+    {
+      "date": "1990-01-01",
+      "Food": 78.5,
+      "Groceries": 81.8,
+      "Restaurants": 70.9,
+      "All_items": 76.7
+    },
+    {
+      "date": "1990-02-01",
+      "Food": 79.2,
+      "Groceries": 82.7,
+      "Restaurants": 71.0,
+      "All_items": 77.2
+    },
+    {
+      "date": "1990-03-01",
+      "Food": 79.4,
+      "Groceries": 82.9,
+      "Restaurants": 71.3,
+      "All_items": 77.5
+    },
+    {
+      "date": "1990-04-01",
+      "Food": 78.8,
+      "Groceries": 81.9,
+      "Restaurants": 71.7,
+      "All_items": 77.5
+    },
+    {
+      "date": "1990-05-01",
+      "Food": 79.0,
+      "Groceries": 82.0,
+      "Restaurants": 72.2,
+      "All_items": 77.9
+    },
+    {
+      "date": "1990-06-01",
+      "Food": 80.1,
+      "Groceries": 83.6,
+      "Restaurants": 72.2,
+      "All_items": 78.2
+    },
+    {
+      "date": "1990-07-01",
+      "Food": 80.6,
+      "Groceries": 84.1,
+      "Restaurants": 72.8,
+      "All_items": 78.5
+    },
+    {
+      "date": "1990-08-01",
+      "Food": 79.9,
+      "Groceries": 82.9,
+      "Restaurants": 73.0,
+      "All_items": 78.6
+    },
+    {
+      "date": "1990-09-01",
+      "Food": 79.7,
+      "Groceries": 82.6,
+      "Restaurants": 73.1,
+      "All_items": 78.8
+    },
+    {
+      "date": "1990-10-01",
+      "Food": 80.1,
+      "Groceries": 83.0,
+      "Restaurants": 73.6,
+      "All_items": 79.5
+    },
+    {
+      "date": "1990-11-01",
+      "Food": 80.2,
+      "Groceries": 83.1,
+      "Restaurants": 73.9,
+      "All_items": 80.0
+    },
+    {
+      "date": "1990-12-01",
+      "Food": 79.9,
+      "Groceries": 82.4,
+      "Restaurants": 74.2,
+      "All_items": 79.9
+    },
+    {
+      "date": "1991-01-01",
+      "Food": 83.2,
+      "Groceries": 84.8,
+      "Restaurants": 79.5,
+      "All_items": 82.0
+    },
+    {
+      "date": "1991-02-01",
+      "Food": 83.2,
+      "Groceries": 84.7,
+      "Restaurants": 79.6,
+      "All_items": 82.0
+    },
+    {
+      "date": "1991-03-01",
+      "Food": 83.5,
+      "Groceries": 84.9,
+      "Restaurants": 79.8,
+      "All_items": 82.3
+    },
+    {
+      "date": "1991-04-01",
+      "Food": 83.8,
+      "Groceries": 85.4,
+      "Restaurants": 80.0,
+      "All_items": 82.3
+    },
+    {
+      "date": "1991-05-01",
+      "Food": 84.0,
+      "Groceries": 85.4,
+      "Restaurants": 80.3,
+      "All_items": 82.7
+    },
+    {
+      "date": "1991-06-01",
+      "Food": 85.5,
+      "Groceries": 87.7,
+      "Restaurants": 80.3,
+      "All_items": 83.1
+    },
+    {
+      "date": "1991-07-01",
+      "Food": 84.9,
+      "Groceries": 86.9,
+      "Restaurants": 80.4,
+      "All_items": 83.2
+    },
+    {
+      "date": "1991-08-01",
+      "Food": 84.0,
+      "Groceries": 85.4,
+      "Restaurants": 80.6,
+      "All_items": 83.3
+    },
+    {
+      "date": "1991-09-01",
+      "Food": 82.9,
+      "Groceries": 83.7,
+      "Restaurants": 80.7,
+      "All_items": 83.1
+    },
+    {
+      "date": "1991-10-01",
+      "Food": 82.1,
+      "Groceries": 82.5,
+      "Restaurants": 80.9,
+      "All_items": 83.0
+    },
+    {
+      "date": "1991-11-01",
+      "Food": 82.3,
+      "Groceries": 82.7,
+      "Restaurants": 81.1,
+      "All_items": 83.3
+    },
+    {
+      "date": "1991-12-01",
+      "Food": 81.7,
+      "Groceries": 81.7,
+      "Restaurants": 81.2,
+      "All_items": 82.9
+    },
+    {
+      "date": "1992-01-01",
+      "Food": 82.4,
+      "Groceries": 82.6,
+      "Restaurants": 81.4,
+      "All_items": 83.3
+    },
+    {
+      "date": "1992-02-01",
+      "Food": 82.5,
+      "Groceries": 82.7,
+      "Restaurants": 81.5,
+      "All_items": 83.3
+    },
+    {
+      "date": "1992-03-01",
+      "Food": 82.9,
+      "Groceries": 83.3,
+      "Restaurants": 81.6,
+      "All_items": 83.6
+    },
+    {
+      "date": "1992-04-01",
+      "Food": 83.2,
+      "Groceries": 83.7,
+      "Restaurants": 81.6,
+      "All_items": 83.7
+    },
+    {
+      "date": "1992-05-01",
+      "Food": 83.0,
+      "Groceries": 83.4,
+      "Restaurants": 81.7,
+      "All_items": 83.8
+    },
+    {
+      "date": "1992-06-01",
+      "Food": 83.7,
+      "Groceries": 84.3,
+      "Restaurants": 81.7,
+      "All_items": 84.0
+    },
+    {
+      "date": "1992-07-01",
+      "Food": 83.5,
+      "Groceries": 84.1,
+      "Restaurants": 82.0,
+      "All_items": 84.2
+    },
+    {
+      "date": "1992-08-01",
+      "Food": 83.4,
+      "Groceries": 83.9,
+      "Restaurants": 82.1,
+      "All_items": 84.2
+    },
+    {
+      "date": "1992-09-01",
+      "Food": 83.0,
+      "Groceries": 83.3,
+      "Restaurants": 82.1,
+      "All_items": 84.2
+    },
+    {
+      "date": "1992-10-01",
+      "Food": 83.0,
+      "Groceries": 83.0,
+      "Restaurants": 82.4,
+      "All_items": 84.3
+    },
+    {
+      "date": "1992-11-01",
+      "Food": 83.1,
+      "Groceries": 83.3,
+      "Restaurants": 82.4,
+      "All_items": 84.7
+    },
+    {
+      "date": "1992-12-01",
+      "Food": 83.4,
+      "Groceries": 83.7,
+      "Restaurants": 82.5,
+      "All_items": 84.7
+    },
+    {
+      "date": "1993-01-01",
+      "Food": 84.1,
+      "Groceries": 84.6,
+      "Restaurants": 82.7,
+      "All_items": 85.0
+    },
+    {
+      "date": "1993-02-01",
+      "Food": 84.5,
+      "Groceries": 85.2,
+      "Restaurants": 82.7,
+      "All_items": 85.3
+    },
+    {
+      "date": "1993-03-01",
+      "Food": 84.2,
+      "Groceries": 84.7,
+      "Restaurants": 82.7,
+      "All_items": 85.2
+    },
+    {
+      "date": "1993-04-01",
+      "Food": 84.0,
+      "Groceries": 84.4,
+      "Restaurants": 82.7,
+      "All_items": 85.2
+    },
+    {
+      "date": "1993-05-01",
+      "Food": 84.9,
+      "Groceries": 85.5,
+      "Restaurants": 83.0,
+      "All_items": 85.4
+    },
+    {
+      "date": "1993-06-01",
+      "Food": 84.9,
+      "Groceries": 85.6,
+      "Restaurants": 83.0,
+      "All_items": 85.4
+    },
+    {
+      "date": "1993-07-01",
+      "Food": 84.9,
+      "Groceries": 85.5,
+      "Restaurants": 83.0,
+      "All_items": 85.6
+    },
+    {
+      "date": "1993-08-01",
+      "Food": 84.5,
+      "Groceries": 84.9,
+      "Restaurants": 83.1,
+      "All_items": 85.7
+    },
+    {
+      "date": "1993-09-01",
+      "Food": 84.1,
+      "Groceries": 84.4,
+      "Restaurants": 83.0,
+      "All_items": 85.7
+    },
+    {
+      "date": "1993-10-01",
+      "Food": 84.2,
+      "Groceries": 84.4,
+      "Restaurants": 83.2,
+      "All_items": 85.9
+    },
+    {
+      "date": "1993-11-01",
+      "Food": 84.5,
+      "Groceries": 84.9,
+      "Restaurants": 83.2,
+      "All_items": 86.3
+    },
+    {
+      "date": "1993-12-01",
+      "Food": 84.9,
+      "Groceries": 85.4,
+      "Restaurants": 83.3,
+      "All_items": 86.1
+    },
+    {
+      "date": "1994-01-01",
+      "Food": 85.2,
+      "Groceries": 85.8,
+      "Restaurants": 83.5,
+      "All_items": 86.1
+    },
+    {
+      "date": "1994-02-01",
+      "Food": 84.9,
+      "Groceries": 85.2,
+      "Restaurants": 83.6,
+      "All_items": 85.4
+    },
+    {
+      "date": "1994-03-01",
+      "Food": 84.3,
+      "Groceries": 84.3,
+      "Restaurants": 83.8,
+      "All_items": 85.4
+    },
+    {
+      "date": "1994-04-01",
+      "Food": 84.6,
+      "Groceries": 84.8,
+      "Restaurants": 83.9,
+      "All_items": 85.4
+    },
+    {
+      "date": "1994-05-01",
+      "Food": 84.6,
+      "Groceries": 84.8,
+      "Restaurants": 83.7,
+      "All_items": 85.2
+    },
+    {
+      "date": "1994-06-01",
+      "Food": 84.9,
+      "Groceries": 85.2,
+      "Restaurants": 83.7,
+      "All_items": 85.4
+    },
+    {
+      "date": "1994-07-01",
+      "Food": 85.3,
+      "Groceries": 85.8,
+      "Restaurants": 84.0,
+      "All_items": 85.7
+    },
+    {
+      "date": "1994-08-01",
+      "Food": 85.1,
+      "Groceries": 85.4,
+      "Restaurants": 84.2,
+      "All_items": 85.8
+    },
+    {
+      "date": "1994-09-01",
+      "Food": 84.5,
+      "Groceries": 84.4,
+      "Restaurants": 84.4,
+      "All_items": 85.9
+    },
+    {
+      "date": "1994-10-01",
+      "Food": 84.8,
+      "Groceries": 84.7,
+      "Restaurants": 84.5,
+      "All_items": 85.7
+    },
+    {
+      "date": "1994-11-01",
+      "Food": 84.9,
+      "Groceries": 84.9,
+      "Restaurants": 84.6,
+      "All_items": 86.2
+    },
+    {
+      "date": "1994-12-01",
+      "Food": 85.1,
+      "Groceries": 85.2,
+      "Restaurants": 84.7,
+      "All_items": 86.3
+    },
+    {
+      "date": "1995-01-01",
+      "Food": 86.4,
+      "Groceries": 87.0,
+      "Restaurants": 84.9,
+      "All_items": 86.6
+    },
+    {
+      "date": "1995-02-01",
+      "Food": 86.9,
+      "Groceries": 87.6,
+      "Restaurants": 85.0,
+      "All_items": 87.0
+    },
+    {
+      "date": "1995-03-01",
+      "Food": 86.9,
+      "Groceries": 87.4,
+      "Restaurants": 85.1,
+      "All_items": 87.2
+    },
+    {
+      "date": "1995-04-01",
+      "Food": 87.8,
+      "Groceries": 88.8,
+      "Restaurants": 85.3,
+      "All_items": 87.5
+    },
+    {
+      "date": "1995-05-01",
+      "Food": 87.3,
+      "Groceries": 87.9,
+      "Restaurants": 85.6,
+      "All_items": 87.7
+    },
+    {
+      "date": "1995-06-01",
+      "Food": 87.4,
+      "Groceries": 88.1,
+      "Restaurants": 85.7,
+      "All_items": 87.7
+    },
+    {
+      "date": "1995-07-01",
+      "Food": 87.4,
+      "Groceries": 88.0,
+      "Restaurants": 85.9,
+      "All_items": 87.9
+    },
+    {
+      "date": "1995-08-01",
+      "Food": 86.6,
+      "Groceries": 86.8,
+      "Restaurants": 86.1,
+      "All_items": 87.7
+    },
+    {
+      "date": "1995-09-01",
+      "Food": 86.4,
+      "Groceries": 86.4,
+      "Restaurants": 86.2,
+      "All_items": 87.8
+    },
+    {
+      "date": "1995-10-01",
+      "Food": 86.4,
+      "Groceries": 86.4,
+      "Restaurants": 86.2,
+      "All_items": 87.7
+    },
+    {
+      "date": "1995-11-01",
+      "Food": 86.4,
+      "Groceries": 86.4,
+      "Restaurants": 86.2,
+      "All_items": 88.0
+    },
+    {
+      "date": "1995-12-01",
+      "Food": 86.8,
+      "Groceries": 86.9,
+      "Restaurants": 86.2,
+      "All_items": 87.8
+    },
+    {
+      "date": "1996-01-01",
+      "Food": 87.2,
+      "Groceries": 87.4,
+      "Restaurants": 86.4,
+      "All_items": 88.0
+    },
+    {
+      "date": "1996-02-01",
+      "Food": 87.3,
+      "Groceries": 87.4,
+      "Restaurants": 86.6,
+      "All_items": 88.1
+    },
+    {
+      "date": "1996-03-01",
+      "Food": 87.4,
+      "Groceries": 87.7,
+      "Restaurants": 86.7,
+      "All_items": 88.5
+    },
+    {
+      "date": "1996-04-01",
+      "Food": 88.3,
+      "Groceries": 88.8,
+      "Restaurants": 86.8,
+      "All_items": 88.7
+    },
+    {
+      "date": "1996-05-01",
+      "Food": 87.9,
+      "Groceries": 88.2,
+      "Restaurants": 86.8,
+      "All_items": 89.0
+    },
+    {
+      "date": "1996-06-01",
+      "Food": 88.5,
+      "Groceries": 88.9,
+      "Restaurants": 87.1,
+      "All_items": 89.0
+    },
+    {
+      "date": "1996-07-01",
+      "Food": 88.3,
+      "Groceries": 88.6,
+      "Restaurants": 87.2,
+      "All_items": 89.0
+    },
+    {
+      "date": "1996-08-01",
+      "Food": 88.0,
+      "Groceries": 88.2,
+      "Restaurants": 87.2,
+      "All_items": 89.0
+    },
+    {
+      "date": "1996-09-01",
+      "Food": 87.7,
+      "Groceries": 87.8,
+      "Restaurants": 87.3,
+      "All_items": 89.1
+    },
+    {
+      "date": "1996-10-01",
+      "Food": 88.3,
+      "Groceries": 88.5,
+      "Restaurants": 87.6,
+      "All_items": 89.3
+    },
+    {
+      "date": "1996-11-01",
+      "Food": 88.9,
+      "Groceries": 89.3,
+      "Restaurants": 87.7,
+      "All_items": 89.7
+    },
+    {
+      "date": "1996-12-01",
+      "Food": 88.7,
+      "Groceries": 89.0,
+      "Restaurants": 87.7,
+      "All_items": 89.7
+    },
+    {
+      "date": "1997-01-01",
+      "Food": 89.1,
+      "Groceries": 89.6,
+      "Restaurants": 87.7,
+      "All_items": 89.9
+    },
+    {
+      "date": "1997-02-01",
+      "Food": 89.4,
+      "Groceries": 89.8,
+      "Restaurants": 88.0,
+      "All_items": 90.1
+    },
+    {
+      "date": "1997-03-01",
+      "Food": 89.4,
+      "Groceries": 89.7,
+      "Restaurants": 88.1,
+      "All_items": 90.2
+    },
+    {
+      "date": "1997-04-01",
+      "Food": 89.0,
+      "Groceries": 89.4,
+      "Restaurants": 88.0,
+      "All_items": 90.2
+    },
+    {
+      "date": "1997-05-01",
+      "Food": 89.4,
+      "Groceries": 89.8,
+      "Restaurants": 88.2,
+      "All_items": 90.3
+    },
+    {
+      "date": "1997-06-01",
+      "Food": 89.7,
+      "Groceries": 90.1,
+      "Restaurants": 88.6,
+      "All_items": 90.5
+    },
+    {
+      "date": "1997-07-01",
+      "Food": 90.1,
+      "Groceries": 90.6,
+      "Restaurants": 88.7,
+      "All_items": 90.5
+    },
+    {
+      "date": "1997-08-01",
+      "Food": 89.5,
+      "Groceries": 89.8,
+      "Restaurants": 88.8,
+      "All_items": 90.6
+    },
+    {
+      "date": "1997-09-01",
+      "Food": 88.9,
+      "Groceries": 88.7,
+      "Restaurants": 88.9,
+      "All_items": 90.6
+    },
+    {
+      "date": "1997-10-01",
+      "Food": 88.9,
+      "Groceries": 88.9,
+      "Restaurants": 88.9,
+      "All_items": 90.6
+    },
+    {
+      "date": "1997-11-01",
+      "Food": 89.8,
+      "Groceries": 89.9,
+      "Restaurants": 89.1,
+      "All_items": 90.5
+    },
+    {
+      "date": "1997-12-01",
+      "Food": 89.7,
+      "Groceries": 89.8,
+      "Restaurants": 89.4,
+      "All_items": 90.4
+    },
+    {
+      "date": "1998-01-01",
+      "Food": 91.2,
+      "Groceries": 91.8,
+      "Restaurants": 89.7,
+      "All_items": 90.9
+    },
+    {
+      "date": "1998-02-01",
+      "Food": 90.5,
+      "Groceries": 90.8,
+      "Restaurants": 89.8,
+      "All_items": 91.0
+    },
+    {
+      "date": "1998-03-01",
+      "Food": 90.7,
+      "Groceries": 91.1,
+      "Restaurants": 89.8,
+      "All_items": 91.1
+    },
+    {
+      "date": "1998-04-01",
+      "Food": 90.5,
+      "Groceries": 90.8,
+      "Restaurants": 90.0,
+      "All_items": 91.0
+    },
+    {
+      "date": "1998-05-01",
+      "Food": 90.9,
+      "Groceries": 91.3,
+      "Restaurants": 90.1,
+      "All_items": 91.3
+    },
+    {
+      "date": "1998-06-01",
+      "Food": 91.6,
+      "Groceries": 92.2,
+      "Restaurants": 90.2,
+      "All_items": 91.4
+    },
+    {
+      "date": "1998-07-01",
+      "Food": 91.3,
+      "Groceries": 91.7,
+      "Restaurants": 90.4,
+      "All_items": 91.4
+    },
+    {
+      "date": "1998-08-01",
+      "Food": 90.8,
+      "Groceries": 90.9,
+      "Restaurants": 90.5,
+      "All_items": 91.4
+    },
+    {
+      "date": "1998-09-01",
+      "Food": 90.1,
+      "Groceries": 89.8,
+      "Restaurants": 90.8,
+      "All_items": 91.2
+    },
+    {
+      "date": "1998-10-01",
+      "Food": 90.2,
+      "Groceries": 89.9,
+      "Restaurants": 90.8,
+      "All_items": 91.6
+    },
+    {
+      "date": "1998-11-01",
+      "Food": 91.2,
+      "Groceries": 91.4,
+      "Restaurants": 90.8,
+      "All_items": 91.6
+    },
+    {
+      "date": "1998-12-01",
+      "Food": 91.2,
+      "Groceries": 91.3,
+      "Restaurants": 90.9,
+      "All_items": 91.3
+    },
+    {
+      "date": "1999-01-01",
+      "Food": 92.3,
+      "Groceries": 92.8,
+      "Restaurants": 91.1,
+      "All_items": 91.5
+    },
+    {
+      "date": "1999-02-01",
+      "Food": 91.8,
+      "Groceries": 92.1,
+      "Restaurants": 91.3,
+      "All_items": 91.6
+    },
+    {
+      "date": "1999-03-01",
+      "Food": 92.0,
+      "Groceries": 92.2,
+      "Restaurants": 91.4,
+      "All_items": 92.0
+    },
+    {
+      "date": "1999-04-01",
+      "Food": 92.2,
+      "Groceries": 92.4,
+      "Restaurants": 91.7,
+      "All_items": 92.5
+    },
+    {
+      "date": "1999-05-01",
+      "Food": 92.4,
+      "Groceries": 92.6,
+      "Restaurants": 91.8,
+      "All_items": 92.7
+    },
+    {
+      "date": "1999-06-01",
+      "Food": 92.7,
+      "Groceries": 93.0,
+      "Restaurants": 91.9,
+      "All_items": 92.9
+    },
+    {
+      "date": "1999-07-01",
+      "Food": 92.5,
+      "Groceries": 92.7,
+      "Restaurants": 92.0,
+      "All_items": 93.1
+    },
+    {
+      "date": "1999-08-01",
+      "Food": 91.8,
+      "Groceries": 91.6,
+      "Restaurants": 92.3,
+      "All_items": 93.3
+    },
+    {
+      "date": "1999-09-01",
+      "Food": 91.2,
+      "Groceries": 90.8,
+      "Restaurants": 92.3,
+      "All_items": 93.6
+    },
+    {
+      "date": "1999-10-01",
+      "Food": 91.4,
+      "Groceries": 90.9,
+      "Restaurants": 92.7,
+      "All_items": 93.7
+    },
+    {
+      "date": "1999-11-01",
+      "Food": 92.0,
+      "Groceries": 91.5,
+      "Restaurants": 93.0,
+      "All_items": 93.6
+    },
+    {
+      "date": "1999-12-01",
+      "Food": 92.2,
+      "Groceries": 91.9,
+      "Restaurants": 93.0,
+      "All_items": 93.7
+    },
+    {
+      "date": "2000-01-01",
+      "Food": 92.1,
+      "Groceries": 91.7,
+      "Restaurants": 93.1,
+      "All_items": 93.5
+    },
+    {
+      "date": "2000-02-01",
+      "Food": 91.9,
+      "Groceries": 91.4,
+      "Restaurants": 93.2,
+      "All_items": 94.1
+    },
+    {
+      "date": "2000-03-01",
+      "Food": 92.3,
+      "Groceries": 91.9,
+      "Restaurants": 93.4,
+      "All_items": 94.8
+    },
+    {
+      "date": "2000-04-01",
+      "Food": 92.5,
+      "Groceries": 92.1,
+      "Restaurants": 93.6,
+      "All_items": 94.5
+    },
+    {
+      "date": "2000-05-01",
+      "Food": 93.2,
+      "Groceries": 93.0,
+      "Restaurants": 93.6,
+      "All_items": 94.9
+    },
+    {
+      "date": "2000-06-01",
+      "Food": 93.8,
+      "Groceries": 93.8,
+      "Restaurants": 93.9,
+      "All_items": 95.5
+    },
+    {
+      "date": "2000-07-01",
+      "Food": 94.3,
+      "Groceries": 94.4,
+      "Restaurants": 94.0,
+      "All_items": 95.8
+    },
+    {
+      "date": "2000-08-01",
+      "Food": 94.0,
+      "Groceries": 93.9,
+      "Restaurants": 94.4,
+      "All_items": 95.7
+    },
+    {
+      "date": "2000-09-01",
+      "Food": 93.3,
+      "Groceries": 92.8,
+      "Restaurants": 94.5,
+      "All_items": 96.1
+    },
+    {
+      "date": "2000-10-01",
+      "Food": 93.1,
+      "Groceries": 92.5,
+      "Restaurants": 94.6,
+      "All_items": 96.3
+    },
+    {
+      "date": "2000-11-01",
+      "Food": 93.9,
+      "Groceries": 93.6,
+      "Restaurants": 94.7,
+      "All_items": 96.6
+    },
+    {
+      "date": "2000-12-01",
+      "Food": 95.1,
+      "Groceries": 95.2,
+      "Restaurants": 94.9,
+      "All_items": 96.7
+    },
+    {
+      "date": "2001-01-01",
+      "Food": 95.3,
+      "Groceries": 95.3,
+      "Restaurants": 95.3,
+      "All_items": 96.3
+    },
+    {
+      "date": "2001-02-01",
+      "Food": 96.1,
+      "Groceries": 96.3,
+      "Restaurants": 95.5,
+      "All_items": 96.8
+    },
+    {
+      "date": "2001-03-01",
+      "Food": 96.9,
+      "Groceries": 97.3,
+      "Restaurants": 95.7,
+      "All_items": 97.1
+    },
+    {
+      "date": "2001-04-01",
+      "Food": 97.2,
+      "Groceries": 97.7,
+      "Restaurants": 95.9,
+      "All_items": 97.8
+    },
+    {
+      "date": "2001-05-01",
+      "Food": 98.0,
+      "Groceries": 98.7,
+      "Restaurants": 96.2,
+      "All_items": 98.6
+    },
+    {
+      "date": "2001-06-01",
+      "Food": 98.2,
+      "Groceries": 98.8,
+      "Restaurants": 96.7,
+      "All_items": 98.7
+    },
+    {
+      "date": "2001-07-01",
+      "Food": 98.6,
+      "Groceries": 99.1,
+      "Restaurants": 97.3,
+      "All_items": 98.4
+    },
+    {
+      "date": "2001-08-01",
+      "Food": 97.9,
+      "Groceries": 97.9,
+      "Restaurants": 97.7,
+      "All_items": 98.4
+    },
+    {
+      "date": "2001-09-01",
+      "Food": 97.2,
+      "Groceries": 96.9,
+      "Restaurants": 97.9,
+      "All_items": 98.6
+    },
+    {
+      "date": "2001-10-01",
+      "Food": 97.0,
+      "Groceries": 96.6,
+      "Restaurants": 98.1,
+      "All_items": 98.1
+    },
+    {
+      "date": "2001-11-01",
+      "Food": 97.5,
+      "Groceries": 97.2,
+      "Restaurants": 98.3,
+      "All_items": 97.2
+    },
+    {
+      "date": "2001-12-01",
+      "Food": 98.6,
+      "Groceries": 98.6,
+      "Restaurants": 98.6,
+      "All_items": 97.4
+    },
+    {
+      "date": "2002-01-01",
+      "Food": 99.7,
+      "Groceries": 100.0,
+      "Restaurants": 99.1,
+      "All_items": 97.6
+    },
+    {
+      "date": "2002-02-01",
+      "Food": 100.3,
+      "Groceries": 100.7,
+      "Restaurants": 99.2,
+      "All_items": 98.2
+    },
+    {
+      "date": "2002-03-01",
+      "Food": 100.1,
+      "Groceries": 100.4,
+      "Restaurants": 99.3,
+      "All_items": 98.9
+    },
+    {
+      "date": "2002-04-01",
+      "Food": 100.5,
+      "Groceries": 100.9,
+      "Restaurants": 99.4,
+      "All_items": 99.5
+    },
+    {
+      "date": "2002-05-01",
+      "Food": 100.1,
+      "Groceries": 100.3,
+      "Restaurants": 99.6,
+      "All_items": 99.7
+    },
+    {
+      "date": "2002-06-01",
+      "Food": 100.5,
+      "Groceries": 100.7,
+      "Restaurants": 99.9,
+      "All_items": 99.9
+    },
+    {
+      "date": "2002-07-01",
+      "Food": 100.5,
+      "Groceries": 100.6,
+      "Restaurants": 100.2,
+      "All_items": 100.5
+    },
+    {
+      "date": "2002-08-01",
+      "Food": 99.9,
+      "Groceries": 99.7,
+      "Restaurants": 100.5,
+      "All_items": 100.9
+    },
+    {
+      "date": "2002-09-01",
+      "Food": 99.0,
+      "Groceries": 98.4,
+      "Restaurants": 100.6,
+      "All_items": 100.9
+    },
+    {
+      "date": "2002-10-01",
+      "Food": 98.5,
+      "Groceries": 97.7,
+      "Restaurants": 100.6,
+      "All_items": 101.2
+    },
+    {
+      "date": "2002-11-01",
+      "Food": 100.1,
+      "Groceries": 99.9,
+      "Restaurants": 100.7,
+      "All_items": 101.5
+    },
+    {
+      "date": "2002-12-01",
+      "Food": 100.8,
+      "Groceries": 100.7,
+      "Restaurants": 101.0,
+      "All_items": 101.1
+    },
+    {
+      "date": "2003-01-01",
+      "Food": 101.6,
+      "Groceries": 101.8,
+      "Restaurants": 101.3,
+      "All_items": 102.0
+    },
+    {
+      "date": "2003-02-01",
+      "Food": 101.5,
+      "Groceries": 101.5,
+      "Restaurants": 101.6,
+      "All_items": 102.8
+    },
+    {
+      "date": "2003-03-01",
+      "Food": 101.7,
+      "Groceries": 101.7,
+      "Restaurants": 101.8,
+      "All_items": 103.1
+    },
+    {
+      "date": "2003-04-01",
+      "Food": 101.8,
+      "Groceries": 101.7,
+      "Restaurants": 102.0,
+      "All_items": 102.4
+    },
+    {
+      "date": "2003-05-01",
+      "Food": 102.1,
+      "Groceries": 102.1,
+      "Restaurants": 102.2,
+      "All_items": 102.5
+    },
+    {
+      "date": "2003-06-01",
+      "Food": 102.4,
+      "Groceries": 102.4,
+      "Restaurants": 102.3,
+      "All_items": 102.5
+    },
+    {
+      "date": "2003-07-01",
+      "Food": 102.4,
+      "Groceries": 102.3,
+      "Restaurants": 102.6,
+      "All_items": 102.6
+    },
+    {
+      "date": "2003-08-01",
+      "Food": 101.5,
+      "Groceries": 101.0,
+      "Restaurants": 102.7,
+      "All_items": 102.9
+    },
+    {
+      "date": "2003-09-01",
+      "Food": 100.8,
+      "Groceries": 100.0,
+      "Restaurants": 102.9,
+      "All_items": 103.1
+    },
+    {
+      "date": "2003-10-01",
+      "Food": 100.7,
+      "Groceries": 99.6,
+      "Restaurants": 103.2,
+      "All_items": 102.8
+    },
+    {
+      "date": "2003-11-01",
+      "Food": 101.7,
+      "Groceries": 101.0,
+      "Restaurants": 103.4,
+      "All_items": 103.1
+    },
+    {
+      "date": "2003-12-01",
+      "Food": 102.6,
+      "Groceries": 102.2,
+      "Restaurants": 103.6,
+      "All_items": 103.2
+    },
+    {
+      "date": "2004-01-01",
+      "Food": 102.8,
+      "Groceries": 102.2,
+      "Restaurants": 104.1,
+      "All_items": 103.3
+    },
+    {
+      "date": "2004-02-01",
+      "Food": 102.6,
+      "Groceries": 101.9,
+      "Restaurants": 104.3,
+      "All_items": 103.5
+    },
+    {
+      "date": "2004-03-01",
+      "Food": 102.7,
+      "Groceries": 102.1,
+      "Restaurants": 104.1,
+      "All_items": 103.9
+    },
+    {
+      "date": "2004-04-01",
+      "Food": 102.5,
+      "Groceries": 101.7,
+      "Restaurants": 104.5,
+      "All_items": 104.1
+    },
+    {
+      "date": "2004-05-01",
+      "Food": 103.4,
+      "Groceries": 102.8,
+      "Restaurants": 104.8,
+      "All_items": 105.0
+    },
+    {
+      "date": "2004-06-01",
+      "Food": 104.4,
+      "Groceries": 104.2,
+      "Restaurants": 104.9,
+      "All_items": 105.1
+    },
+    {
+      "date": "2004-07-01",
+      "Food": 104.4,
+      "Groceries": 104.0,
+      "Restaurants": 105.2,
+      "All_items": 105.0
+    },
+    {
+      "date": "2004-08-01",
+      "Food": 104.1,
+      "Groceries": 103.6,
+      "Restaurants": 105.5,
+      "All_items": 104.8
+    },
+    {
+      "date": "2004-09-01",
+      "Food": 103.7,
+      "Groceries": 102.8,
+      "Restaurants": 105.6,
+      "All_items": 105.0
+    },
+    {
+      "date": "2004-10-01",
+      "Food": 104.2,
+      "Groceries": 103.4,
+      "Restaurants": 105.9,
+      "All_items": 105.2
+    },
+    {
+      "date": "2004-11-01",
+      "Food": 105.2,
+      "Groceries": 104.8,
+      "Restaurants": 106.3,
+      "All_items": 105.6
+    },
+    {
+      "date": "2004-12-01",
+      "Food": 105.7,
+      "Groceries": 105.4,
+      "Restaurants": 106.6,
+      "All_items": 105.4
+    },
+    {
+      "date": "2005-01-01",
+      "Food": 105.4,
+      "Groceries": 104.8,
+      "Restaurants": 106.8,
+      "All_items": 105.3
+    },
+    {
+      "date": "2005-02-01",
+      "Food": 105.2,
+      "Groceries": 104.4,
+      "Restaurants": 107.0,
+      "All_items": 105.7
+    },
+    {
+      "date": "2005-03-01",
+      "Food": 105.6,
+      "Groceries": 105.0,
+      "Restaurants": 107.2,
+      "All_items": 106.3
+    },
+    {
+      "date": "2005-04-01",
+      "Food": 106.6,
+      "Groceries": 106.2,
+      "Restaurants": 107.7,
+      "All_items": 106.6
+    },
+    {
+      "date": "2005-05-01",
+      "Food": 106.8,
+      "Groceries": 106.4,
+      "Restaurants": 107.8,
+      "All_items": 106.7
+    },
+    {
+      "date": "2005-06-01",
+      "Food": 107.2,
+      "Groceries": 106.7,
+      "Restaurants": 108.1,
+      "All_items": 106.9
+    },
+    {
+      "date": "2005-07-01",
+      "Food": 106.9,
+      "Groceries": 106.3,
+      "Restaurants": 108.5,
+      "All_items": 107.1
+    },
+    {
+      "date": "2005-08-01",
+      "Food": 106.8,
+      "Groceries": 106.0,
+      "Restaurants": 108.5,
+      "All_items": 107.5
+    },
+    {
+      "date": "2005-09-01",
+      "Food": 105.8,
+      "Groceries": 104.5,
+      "Restaurants": 108.8,
+      "All_items": 108.4
+    },
+    {
+      "date": "2005-10-01",
+      "Food": 106.2,
+      "Groceries": 104.9,
+      "Restaurants": 109.1,
+      "All_items": 107.9
+    },
+    {
+      "date": "2005-11-01",
+      "Food": 106.7,
+      "Groceries": 105.6,
+      "Restaurants": 109.3,
+      "All_items": 107.7
+    },
+    {
+      "date": "2005-12-01",
+      "Food": 107.5,
+      "Groceries": 106.5,
+      "Restaurants": 109.6,
+      "All_items": 107.6
+    },
+    {
+      "date": "2006-01-01",
+      "Food": 108.4,
+      "Groceries": 107.8,
+      "Restaurants": 110.0,
+      "All_items": 108.2
+    },
+    {
+      "date": "2006-02-01",
+      "Food": 108.2,
+      "Groceries": 107.4,
+      "Restaurants": 110.2,
+      "All_items": 108.0
+    },
+    {
+      "date": "2006-03-01",
+      "Food": 108.2,
+      "Groceries": 107.2,
+      "Restaurants": 110.5,
+      "All_items": 108.6
+    },
+    {
+      "date": "2006-04-01",
+      "Food": 108.1,
+      "Groceries": 106.9,
+      "Restaurants": 110.7,
+      "All_items": 109.2
+    },
+    {
+      "date": "2006-05-01",
+      "Food": 108.7,
+      "Groceries": 107.7,
+      "Restaurants": 111.0,
+      "All_items": 109.7
+    },
+    {
+      "date": "2006-06-01",
+      "Food": 109.2,
+      "Groceries": 108.2,
+      "Restaurants": 111.5,
+      "All_items": 109.5
+    },
+    {
+      "date": "2006-07-01",
+      "Food": 109.2,
+      "Groceries": 108.5,
+      "Restaurants": 110.7,
+      "All_items": 109.6
+    },
+    {
+      "date": "2006-08-01",
+      "Food": 109.2,
+      "Groceries": 108.4,
+      "Restaurants": 110.9,
+      "All_items": 109.8
+    },
+    {
+      "date": "2006-09-01",
+      "Food": 108.8,
+      "Groceries": 107.8,
+      "Restaurants": 111.1,
+      "All_items": 109.2
+    },
+    {
+      "date": "2006-10-01",
+      "Food": 109.2,
+      "Groceries": 108.2,
+      "Restaurants": 111.5,
+      "All_items": 109.0
+    },
+    {
+      "date": "2006-11-01",
+      "Food": 110.1,
+      "Groceries": 109.1,
+      "Restaurants": 112.3,
+      "All_items": 109.2
+    },
+    {
+      "date": "2006-12-01",
+      "Food": 109.9,
+      "Groceries": 108.9,
+      "Restaurants": 112.4,
+      "All_items": 109.4
+    },
+    {
+      "date": "2007-01-01",
+      "Food": 110.9,
+      "Groceries": 110.2,
+      "Restaurants": 112.6,
+      "All_items": 109.4
+    },
+    {
+      "date": "2007-02-01",
+      "Food": 112.6,
+      "Groceries": 112.5,
+      "Restaurants": 113.0,
+      "All_items": 110.2
+    },
+    {
+      "date": "2007-03-01",
+      "Food": 112.2,
+      "Groceries": 111.9,
+      "Restaurants": 113.1,
+      "All_items": 111.1
+    },
+    {
+      "date": "2007-04-01",
+      "Food": 112.2,
+      "Groceries": 111.7,
+      "Restaurants": 113.3,
+      "All_items": 111.6
+    },
+    {
+      "date": "2007-05-01",
+      "Food": 112.5,
+      "Groceries": 112.0,
+      "Restaurants": 113.6,
+      "All_items": 112.1
+    },
+    {
+      "date": "2007-06-01",
+      "Food": 112.6,
+      "Groceries": 111.9,
+      "Restaurants": 114.1,
+      "All_items": 111.9
+    },
+    {
+      "date": "2007-07-01",
+      "Food": 112.3,
+      "Groceries": 111.4,
+      "Restaurants": 114.7,
+      "All_items": 112.0
+    },
+    {
+      "date": "2007-08-01",
+      "Food": 111.8,
+      "Groceries": 110.6,
+      "Restaurants": 114.8,
+      "All_items": 111.7
+    },
+    {
+      "date": "2007-09-01",
+      "Food": 110.9,
+      "Groceries": 109.2,
+      "Restaurants": 114.8,
+      "All_items": 111.9
+    },
+    {
+      "date": "2007-10-01",
+      "Food": 110.7,
+      "Groceries": 108.9,
+      "Restaurants": 114.9,
+      "All_items": 111.6
+    },
+    {
+      "date": "2007-11-01",
+      "Food": 111.3,
+      "Groceries": 109.8,
+      "Restaurants": 115.0,
+      "All_items": 111.9
+    },
+    {
+      "date": "2007-12-01",
+      "Food": 111.7,
+      "Groceries": 110.1,
+      "Restaurants": 115.4,
+      "All_items": 112.0
+    },
+    {
+      "date": "2008-01-01",
+      "Food": 112.4,
+      "Groceries": 111.4,
+      "Restaurants": 114.6,
+      "All_items": 111.8
+    },
+    {
+      "date": "2008-02-01",
+      "Food": 112.8,
+      "Groceries": 111.8,
+      "Restaurants": 115.2,
+      "All_items": 112.2
+    },
+    {
+      "date": "2008-03-01",
+      "Food": 112.6,
+      "Groceries": 111.6,
+      "Restaurants": 115.2,
+      "All_items": 112.6
+    },
+    {
+      "date": "2008-04-01",
+      "Food": 113.5,
+      "Groceries": 112.7,
+      "Restaurants": 115.5,
+      "All_items": 113.5
+    },
+    {
+      "date": "2008-05-01",
+      "Food": 114.6,
+      "Groceries": 114.1,
+      "Restaurants": 115.9,
+      "All_items": 114.6
+    },
+    {
+      "date": "2008-06-01",
+      "Food": 115.8,
+      "Groceries": 115.3,
+      "Restaurants": 116.9,
+      "All_items": 115.4
+    },
+    {
+      "date": "2008-07-01",
+      "Food": 116.5,
+      "Groceries": 116.2,
+      "Restaurants": 117.3,
+      "All_items": 115.8
+    },
+    {
+      "date": "2008-08-01",
+      "Food": 116.8,
+      "Groceries": 116.4,
+      "Restaurants": 117.9,
+      "All_items": 115.6
+    },
+    {
+      "date": "2008-09-01",
+      "Food": 117.1,
+      "Groceries": 116.5,
+      "Restaurants": 118.5,
+      "All_items": 115.7
+    },
+    {
+      "date": "2008-10-01",
+      "Food": 117.4,
+      "Groceries": 116.8,
+      "Restaurants": 118.8,
+      "All_items": 114.5
+    },
+    {
+      "date": "2008-11-01",
+      "Food": 119.5,
+      "Groceries": 119.7,
+      "Restaurants": 119.0,
+      "All_items": 114.1
+    },
+    {
+      "date": "2008-12-01",
+      "Food": 119.8,
+      "Groceries": 120.0,
+      "Restaurants": 119.1,
+      "All_items": 113.3
+    },
+    {
+      "date": "2009-01-01",
+      "Food": 120.6,
+      "Groceries": 121.0,
+      "Restaurants": 119.6,
+      "All_items": 113.0
+    },
+    {
+      "date": "2009-02-01",
+      "Food": 121.2,
+      "Groceries": 121.8,
+      "Restaurants": 119.9,
+      "All_items": 113.8
+    },
+    {
+      "date": "2009-03-01",
+      "Food": 121.5,
+      "Groceries": 122.2,
+      "Restaurants": 120.0,
+      "All_items": 114.0
+    },
+    {
+      "date": "2009-04-01",
+      "Food": 121.6,
+      "Groceries": 122.1,
+      "Restaurants": 120.4,
+      "All_items": 113.9
+    },
+    {
+      "date": "2009-05-01",
+      "Food": 121.9,
+      "Groceries": 122.5,
+      "Restaurants": 120.5,
+      "All_items": 114.7
+    },
+    {
+      "date": "2009-06-01",
+      "Food": 122.2,
+      "Groceries": 122.7,
+      "Restaurants": 121.1,
+      "All_items": 115.1
+    },
+    {
+      "date": "2009-07-01",
+      "Food": 122.3,
+      "Groceries": 122.7,
+      "Restaurants": 121.3,
+      "All_items": 114.7
+    },
+    {
+      "date": "2009-08-01",
+      "Food": 121.5,
+      "Groceries": 121.5,
+      "Restaurants": 121.6,
+      "All_items": 114.7
+    },
+    {
+      "date": "2009-09-01",
+      "Food": 120.4,
+      "Groceries": 119.7,
+      "Restaurants": 121.8,
+      "All_items": 114.7
+    },
+    {
+      "date": "2009-10-01",
+      "Food": 120.1,
+      "Groceries": 119.3,
+      "Restaurants": 122.0,
+      "All_items": 114.6
+    },
+    {
+      "date": "2009-11-01",
+      "Food": 121.5,
+      "Groceries": 121.2,
+      "Restaurants": 122.2,
+      "All_items": 115.2
+    },
+    {
+      "date": "2009-12-01",
+      "Food": 121.8,
+      "Groceries": 121.5,
+      "Restaurants": 122.5,
+      "All_items": 114.8
+    },
+    {
+      "date": "2010-01-01",
+      "Food": 122.3,
+      "Groceries": 122.1,
+      "Restaurants": 122.7,
+      "All_items": 115.1
+    },
+    {
+      "date": "2010-02-01",
+      "Food": 122.7,
+      "Groceries": 122.5,
+      "Restaurants": 123.0,
+      "All_items": 115.6
+    },
+    {
+      "date": "2010-03-01",
+      "Food": 123.1,
+      "Groceries": 123.1,
+      "Restaurants": 123.1,
+      "All_items": 115.6
+    },
+    {
+      "date": "2010-04-01",
+      "Food": 122.8,
+      "Groceries": 122.6,
+      "Restaurants": 123.2,
+      "All_items": 116.0
+    },
+    {
+      "date": "2010-05-01",
+      "Food": 122.9,
+      "Groceries": 122.8,
+      "Restaurants": 123.1,
+      "All_items": 116.3
+    },
+    {
+      "date": "2010-06-01",
+      "Food": 123.0,
+      "Groceries": 122.8,
+      "Restaurants": 123.3,
+      "All_items": 116.2
+    },
+    {
+      "date": "2010-07-01",
+      "Food": 123.7,
+      "Groceries": 123.4,
+      "Restaurants": 124.7,
+      "All_items": 116.8
+    },
+    {
+      "date": "2010-08-01",
+      "Food": 123.5,
+      "Groceries": 123.0,
+      "Restaurants": 124.7,
+      "All_items": 116.7
+    },
+    {
+      "date": "2010-09-01",
+      "Food": 122.9,
+      "Groceries": 122.3,
+      "Restaurants": 124.3,
+      "All_items": 116.9
+    },
+    {
+      "date": "2010-10-01",
+      "Food": 122.7,
+      "Groceries": 121.8,
+      "Restaurants": 124.7,
+      "All_items": 117.4
+    },
+    {
+      "date": "2010-11-01",
+      "Food": 123.3,
+      "Groceries": 122.4,
+      "Restaurants": 125.2,
+      "All_items": 117.5
+    },
+    {
+      "date": "2010-12-01",
+      "Food": 123.9,
+      "Groceries": 123.2,
+      "Restaurants": 125.4,
+      "All_items": 117.5
+    },
+    {
+      "date": "2011-01-01",
+      "Food": 124.9,
+      "Groceries": 124.4,
+      "Restaurants": 126.0,
+      "All_items": 117.8
+    },
+    {
+      "date": "2011-02-01",
+      "Food": 125.3,
+      "Groceries": 124.9,
+      "Restaurants": 126.2,
+      "All_items": 118.1
+    },
+    {
+      "date": "2011-03-01",
+      "Food": 127.2,
+      "Groceries": 127.6,
+      "Restaurants": 126.4,
+      "All_items": 119.4
+    },
+    {
+      "date": "2011-04-01",
+      "Food": 126.9,
+      "Groceries": 127.1,
+      "Restaurants": 126.6,
+      "All_items": 119.8
+    },
+    {
+      "date": "2011-05-01",
+      "Food": 127.7,
+      "Groceries": 128.0,
+      "Restaurants": 127.1,
+      "All_items": 120.6
+    },
+    {
+      "date": "2011-06-01",
+      "Food": 128.3,
+      "Groceries": 128.7,
+      "Restaurants": 127.4,
+      "All_items": 119.8
+    },
+    {
+      "date": "2011-07-01",
+      "Food": 129.0,
+      "Groceries": 129.7,
+      "Restaurants": 127.5,
+      "All_items": 120.0
+    },
+    {
+      "date": "2011-08-01",
+      "Food": 128.9,
+      "Groceries": 129.2,
+      "Restaurants": 128.1,
+      "All_items": 120.3
+    },
+    {
+      "date": "2011-09-01",
+      "Food": 128.2,
+      "Groceries": 128.2,
+      "Restaurants": 128.1,
+      "All_items": 120.6
+    },
+    {
+      "date": "2011-10-01",
+      "Food": 128.0,
+      "Groceries": 127.8,
+      "Restaurants": 128.6,
+      "All_items": 120.8
+    },
+    {
+      "date": "2011-11-01",
+      "Food": 129.2,
+      "Groceries": 129.4,
+      "Restaurants": 128.9,
+      "All_items": 120.9
+    },
+    {
+      "date": "2011-12-01",
+      "Food": 129.3,
+      "Groceries": 129.4,
+      "Restaurants": 129.0,
+      "All_items": 120.2
+    },
+    {
+      "date": "2012-01-01",
+      "Food": 130.2,
+      "Groceries": 130.5,
+      "Restaurants": 129.5,
+      "All_items": 120.7
+    },
+    {
+      "date": "2012-02-01",
+      "Food": 130.4,
+      "Groceries": 130.8,
+      "Restaurants": 129.7,
+      "All_items": 121.2
+    },
+    {
+      "date": "2012-03-01",
+      "Food": 130.0,
+      "Groceries": 130.1,
+      "Restaurants": 129.8,
+      "All_items": 121.7
+    },
+    {
+      "date": "2012-04-01",
+      "Food": 130.1,
+      "Groceries": 130.1,
+      "Restaurants": 130.1,
+      "All_items": 122.2
+    },
+    {
+      "date": "2012-05-01",
+      "Food": 130.9,
+      "Groceries": 131.2,
+      "Restaurants": 130.3,
+      "All_items": 122.1
+    },
+    {
+      "date": "2012-06-01",
+      "Food": 130.9,
+      "Groceries": 131.0,
+      "Restaurants": 130.6,
+      "All_items": 121.6
+    },
+    {
+      "date": "2012-07-01",
+      "Food": 131.7,
+      "Groceries": 132.2,
+      "Restaurants": 130.6,
+      "All_items": 121.5
+    },
+    {
+      "date": "2012-08-01",
+      "Food": 131.7,
+      "Groceries": 132.1,
+      "Restaurants": 130.9,
+      "All_items": 121.8
+    },
+    {
+      "date": "2012-09-01",
+      "Food": 130.3,
+      "Groceries": 130.0,
+      "Restaurants": 131.0,
+      "All_items": 122.0
+    },
+    {
+      "date": "2012-10-01",
+      "Food": 130.5,
+      "Groceries": 130.2,
+      "Restaurants": 131.3,
+      "All_items": 122.2
+    },
+    {
+      "date": "2012-11-01",
+      "Food": 131.4,
+      "Groceries": 131.3,
+      "Restaurants": 131.6,
+      "All_items": 121.9
+    },
+    {
+      "date": "2012-12-01",
+      "Food": 131.2,
+      "Groceries": 131.0,
+      "Restaurants": 131.8,
+      "All_items": 121.2
+    },
+    {
+      "date": "2013-01-01",
+      "Food": 131.6,
+      "Groceries": 131.3,
+      "Restaurants": 132.1,
+      "All_items": 121.3
+    },
+    {
+      "date": "2013-02-01",
+      "Food": 132.9,
+      "Groceries": 133.1,
+      "Restaurants": 132.6,
+      "All_items": 122.7
+    },
+    {
+      "date": "2013-03-01",
+      "Food": 132.4,
+      "Groceries": 132.3,
+      "Restaurants": 132.7,
+      "All_items": 122.9
+    },
+    {
+      "date": "2013-04-01",
+      "Food": 132.1,
+      "Groceries": 132.3,
+      "Restaurants": 131.7,
+      "All_items": 122.7
+    },
+    {
+      "date": "2013-05-01",
+      "Food": 132.6,
+      "Groceries": 132.9,
+      "Restaurants": 131.8,
+      "All_items": 123.0
+    },
+    {
+      "date": "2013-06-01",
+      "Food": 132.5,
+      "Groceries": 132.7,
+      "Restaurants": 132.1,
+      "All_items": 123.0
+    },
+    {
+      "date": "2013-07-01",
+      "Food": 132.7,
+      "Groceries": 132.8,
+      "Restaurants": 132.5,
+      "All_items": 123.1
+    },
+    {
+      "date": "2013-08-01",
+      "Food": 133.0,
+      "Groceries": 133.0,
+      "Restaurants": 132.8,
+      "All_items": 123.1
+    },
+    {
+      "date": "2013-09-01",
+      "Food": 131.9,
+      "Groceries": 131.4,
+      "Restaurants": 132.9,
+      "All_items": 123.3
+    },
+    {
+      "date": "2013-10-01",
+      "Food": 131.7,
+      "Groceries": 131.1,
+      "Restaurants": 133.2,
+      "All_items": 123.0
+    },
+    {
+      "date": "2013-11-01",
+      "Food": 132.8,
+      "Groceries": 132.7,
+      "Restaurants": 133.2,
+      "All_items": 123.0
+    },
+    {
+      "date": "2013-12-01",
+      "Food": 132.5,
+      "Groceries": 132.0,
+      "Restaurants": 133.6,
+      "All_items": 122.7
+    },
+    {
+      "date": "2014-01-01",
+      "Food": 133.0,
+      "Groceries": 132.6,
+      "Restaurants": 133.8,
+      "All_items": 123.1
+    },
+    {
+      "date": "2014-02-01",
+      "Food": 134.3,
+      "Groceries": 134.4,
+      "Restaurants": 134.0,
+      "All_items": 124.1
+    },
+    {
+      "date": "2014-03-01",
+      "Food": 134.4,
+      "Groceries": 134.6,
+      "Restaurants": 134.0,
+      "All_items": 124.8
+    },
+    {
+      "date": "2014-04-01",
+      "Food": 134.6,
+      "Groceries": 134.6,
+      "Restaurants": 134.5,
+      "All_items": 125.2
+    },
+    {
+      "date": "2014-05-01",
+      "Food": 135.7,
+      "Groceries": 136.2,
+      "Restaurants": 134.6,
+      "All_items": 125.8
+    },
+    {
+      "date": "2014-06-01",
+      "Food": 136.4,
+      "Groceries": 137.0,
+      "Restaurants": 135.1,
+      "All_items": 125.9
+    },
+    {
+      "date": "2014-07-01",
+      "Food": 136.5,
+      "Groceries": 137.0,
+      "Restaurants": 135.3,
+      "All_items": 125.7
+    },
+    {
+      "date": "2014-08-01",
+      "Food": 135.9,
+      "Groceries": 136.0,
+      "Restaurants": 135.6,
+      "All_items": 125.7
+    },
+    {
+      "date": "2014-09-01",
+      "Food": 135.5,
+      "Groceries": 135.3,
+      "Restaurants": 135.9,
+      "All_items": 125.8
+    },
+    {
+      "date": "2014-10-01",
+      "Food": 135.4,
+      "Groceries": 135.1,
+      "Restaurants": 136.1,
+      "All_items": 125.9
+    },
+    {
+      "date": "2014-11-01",
+      "Food": 136.9,
+      "Groceries": 137.1,
+      "Restaurants": 136.5,
+      "All_items": 125.4
+    },
+    {
+      "date": "2014-12-01",
+      "Food": 137.4,
+      "Groceries": 137.6,
+      "Restaurants": 136.9,
+      "All_items": 124.5
+    },
+    {
+      "date": "2015-01-01",
+      "Food": 139.1,
+      "Groceries": 139.7,
+      "Restaurants": 137.5,
+      "All_items": 124.3
+    },
+    {
+      "date": "2015-02-01",
+      "Food": 139.5,
+      "Groceries": 140.2,
+      "Restaurants": 137.7,
+      "All_items": 125.4
+    },
+    {
+      "date": "2015-03-01",
+      "Food": 139.5,
+      "Groceries": 140.2,
+      "Restaurants": 137.8,
+      "All_items": 126.3
+    },
+    {
+      "date": "2015-04-01",
+      "Food": 139.4,
+      "Groceries": 140.0,
+      "Restaurants": 138.1,
+      "All_items": 126.2
+    },
+    {
+      "date": "2015-05-01",
+      "Food": 140.8,
+      "Groceries": 141.8,
+      "Restaurants": 138.5,
+      "All_items": 126.9
+    },
+    {
+      "date": "2015-06-01",
+      "Food": 141.0,
+      "Groceries": 141.9,
+      "Restaurants": 138.7,
+      "All_items": 127.2
+    },
+    {
+      "date": "2015-07-01",
+      "Food": 140.9,
+      "Groceries": 141.8,
+      "Restaurants": 139.0,
+      "All_items": 127.3
+    },
+    {
+      "date": "2015-08-01",
+      "Food": 140.8,
+      "Groceries": 141.4,
+      "Restaurants": 139.4,
+      "All_items": 127.3
+    },
+    {
+      "date": "2015-09-01",
+      "Food": 140.3,
+      "Groceries": 140.6,
+      "Restaurants": 139.6,
+      "All_items": 127.1
+    },
+    {
+      "date": "2015-10-01",
+      "Food": 140.9,
+      "Groceries": 141.3,
+      "Restaurants": 139.8,
+      "All_items": 127.2
+    },
+    {
+      "date": "2015-11-01",
+      "Food": 141.6,
+      "Groceries": 142.2,
+      "Restaurants": 140.3,
+      "All_items": 127.1
+    },
+    {
+      "date": "2015-12-01",
+      "Food": 142.5,
+      "Groceries": 143.2,
+      "Restaurants": 140.7,
+      "All_items": 126.5
+    },
+    {
+      "date": "2016-01-01",
+      "Food": 144.6,
+      "Groceries": 146.1,
+      "Restaurants": 141.0,
+      "All_items": 126.8
+    },
+    {
+      "date": "2016-02-01",
+      "Food": 145.0,
+      "Groceries": 146.4,
+      "Restaurants": 141.4,
+      "All_items": 127.1
+    },
+    {
+      "date": "2016-03-01",
+      "Food": 144.5,
+      "Groceries": 145.8,
+      "Restaurants": 141.4,
+      "All_items": 127.9
+    },
+    {
+      "date": "2016-04-01",
+      "Food": 143.8,
+      "Groceries": 144.6,
+      "Restaurants": 141.8,
+      "All_items": 128.3
+    },
+    {
+      "date": "2016-05-01",
+      "Food": 143.3,
+      "Groceries": 143.8,
+      "Restaurants": 142.1,
+      "All_items": 128.8
+    },
+    {
+      "date": "2016-06-01",
+      "Food": 142.8,
+      "Groceries": 143.1,
+      "Restaurants": 142.3,
+      "All_items": 129.1
+    },
+    {
+      "date": "2016-07-01",
+      "Food": 143.2,
+      "Groceries": 143.4,
+      "Restaurants": 142.7,
+      "All_items": 128.9
+    },
+    {
+      "date": "2016-08-01",
+      "Food": 142.3,
+      "Groceries": 142.0,
+      "Restaurants": 142.9,
+      "All_items": 128.7
+    },
+    {
+      "date": "2016-09-01",
+      "Food": 140.4,
+      "Groceries": 139.3,
+      "Restaurants": 143.1,
+      "All_items": 128.8
+    },
+    {
+      "date": "2016-10-01",
+      "Food": 139.9,
+      "Groceries": 138.4,
+      "Restaurants": 143.5,
+      "All_items": 129.1
+    },
+    {
+      "date": "2016-11-01",
+      "Food": 140.6,
+      "Groceries": 139.4,
+      "Restaurants": 143.8,
+      "All_items": 128.6
+    },
+    {
+      "date": "2016-12-01",
+      "Food": 140.6,
+      "Groceries": 139.2,
+      "Restaurants": 144.0,
+      "All_items": 128.4
+    },
+    {
+      "date": "2017-01-01",
+      "Food": 141.5,
+      "Groceries": 140.3,
+      "Restaurants": 144.3,
+      "All_items": 129.5
+    },
+    {
+      "date": "2017-02-01",
+      "Food": 141.7,
+      "Groceries": 140.4,
+      "Restaurants": 144.7,
+      "All_items": 129.7
+    },
+    {
+      "date": "2017-03-01",
+      "Food": 141.8,
+      "Groceries": 140.6,
+      "Restaurants": 144.8,
+      "All_items": 129.9
+    },
+    {
+      "date": "2017-04-01",
+      "Food": 142.2,
+      "Groceries": 140.9,
+      "Restaurants": 145.3,
+      "All_items": 130.4
+    },
+    {
+      "date": "2017-05-01",
+      "Food": 143.1,
+      "Groceries": 142.1,
+      "Restaurants": 145.5,
+      "All_items": 130.5
+    },
+    {
+      "date": "2017-06-01",
+      "Food": 143.6,
+      "Groceries": 142.6,
+      "Restaurants": 145.9,
+      "All_items": 130.4
+    },
+    {
+      "date": "2017-07-01",
+      "Food": 144.1,
+      "Groceries": 143.2,
+      "Restaurants": 146.4,
+      "All_items": 130.4
+    },
+    {
+      "date": "2017-08-01",
+      "Food": 143.6,
+      "Groceries": 142.4,
+      "Restaurants": 146.6,
+      "All_items": 130.5
+    },
+    {
+      "date": "2017-09-01",
+      "Food": 142.4,
+      "Groceries": 140.5,
+      "Restaurants": 146.9,
+      "All_items": 130.8
+    },
+    {
+      "date": "2017-10-01",
+      "Food": 141.7,
+      "Groceries": 139.2,
+      "Restaurants": 147.6,
+      "All_items": 130.9
+    },
+    {
+      "date": "2017-11-01",
+      "Food": 142.9,
+      "Groceries": 140.7,
+      "Restaurants": 148.0,
+      "All_items": 131.3
+    },
+    {
+      "date": "2017-12-01",
+      "Food": 143.4,
+      "Groceries": 141.3,
+      "Restaurants": 148.2,
+      "All_items": 130.8
+    },
+    {
+      "date": "2018-01-01",
+      "Food": 144.7,
+      "Groceries": 142.6,
+      "Restaurants": 149.6,
+      "All_items": 131.7
+    },
+    {
+      "date": "2018-02-01",
+      "Food": 144.7,
+      "Groceries": 142.3,
+      "Restaurants": 150.5,
+      "All_items": 132.5
+    },
+    {
+      "date": "2018-03-01",
+      "Food": 144.2,
+      "Groceries": 141.3,
+      "Restaurants": 151.1,
+      "All_items": 132.9
+    },
+    {
+      "date": "2018-04-01",
+      "Food": 144.8,
+      "Groceries": 141.9,
+      "Restaurants": 151.8,
+      "All_items": 133.3
+    },
+    {
+      "date": "2018-05-01",
+      "Food": 144.6,
+      "Groceries": 141.4,
+      "Restaurants": 152.1,
+      "All_items": 133.4
+    },
+    {
+      "date": "2018-06-01",
+      "Food": 145.6,
+      "Groceries": 142.7,
+      "Restaurants": 152.4,
+      "All_items": 133.6
+    },
+    {
+      "date": "2018-07-01",
+      "Food": 146.1,
+      "Groceries": 143.3,
+      "Restaurants": 152.9,
+      "All_items": 134.3
+    },
+    {
+      "date": "2018-08-01",
+      "Food": 145.9,
+      "Groceries": 142.8,
+      "Restaurants": 153.2,
+      "All_items": 134.2
+    },
+    {
+      "date": "2018-09-01",
+      "Food": 144.9,
+      "Groceries": 141.4,
+      "Restaurants": 153.2,
+      "All_items": 133.7
+    },
+    {
+      "date": "2018-10-01",
+      "Food": 144.6,
+      "Groceries": 140.7,
+      "Restaurants": 153.8,
+      "All_items": 134.1
+    },
+    {
+      "date": "2018-11-01",
+      "Food": 146.1,
+      "Groceries": 142.7,
+      "Restaurants": 154.1,
+      "All_items": 133.5
+    },
+    {
+      "date": "2018-12-01",
+      "Food": 147.5,
+      "Groceries": 144.8,
+      "Restaurants": 153.9,
+      "All_items": 133.4
+    },
+    {
+      "date": "2019-01-01",
+      "Food": 148.7,
+      "Groceries": 146.1,
+      "Restaurants": 154.9,
+      "All_items": 133.6
+    },
+    {
+      "date": "2019-02-01",
+      "Food": 149.3,
+      "Groceries": 147.1,
+      "Restaurants": 154.5,
+      "All_items": 134.5
+    },
+    {
+      "date": "2019-03-01",
+      "Food": 149.4,
+      "Groceries": 147.0,
+      "Restaurants": 155.3,
+      "All_items": 135.4
+    },
+    {
+      "date": "2019-04-01",
+      "Food": 149.0,
+      "Groceries": 146.1,
+      "Restaurants": 155.7,
+      "All_items": 136.0
+    },
+    {
+      "date": "2019-05-01",
+      "Food": 149.7,
+      "Groceries": 147.1,
+      "Restaurants": 155.9,
+      "All_items": 136.6
+    },
+    {
+      "date": "2019-06-01",
+      "Food": 150.7,
+      "Groceries": 148.3,
+      "Restaurants": 156.4,
+      "All_items": 136.3
+    },
+    {
+      "date": "2019-07-01",
+      "Food": 151.6,
+      "Groceries": 149.3,
+      "Restaurants": 156.9,
+      "All_items": 137.0
+    },
+    {
+      "date": "2019-08-01",
+      "Food": 151.1,
+      "Groceries": 148.4,
+      "Restaurants": 157.4,
+      "All_items": 136.8
+    },
+    {
+      "date": "2019-09-01",
+      "Food": 150.2,
+      "Groceries": 147.2,
+      "Restaurants": 157.4,
+      "All_items": 136.2
+    },
+    {
+      "date": "2019-10-01",
+      "Food": 149.9,
+      "Groceries": 146.5,
+      "Restaurants": 158.0,
+      "All_items": 136.6
+    },
+    {
+      "date": "2019-11-01",
+      "Food": 151.1,
+      "Groceries": 148.2,
+      "Restaurants": 158.1,
+      "All_items": 136.4
+    },
+    {
+      "date": "2019-12-01",
+      "Food": 151.9,
+      "Groceries": 149.4,
+      "Restaurants": 157.9,
+      "All_items": 136.4
+    },
+    {
+      "date": "2020-01-01",
+      "Food": 153.5,
+      "Groceries": 151.6,
+      "Restaurants": 158.2,
+      "All_items": 136.8
+    },
+    {
+      "date": "2020-02-01",
+      "Food": 152.9,
+      "Groceries": 150.6,
+      "Restaurants": 158.3,
+      "All_items": 137.4
+    },
+    {
+      "date": "2020-03-01",
+      "Food": 152.8,
+      "Groceries": 150.5,
+      "Restaurants": 158.1,
+      "All_items": 136.6
+    },
+    {
+      "date": "2020-04-01",
+      "Food": 154.0,
+      "Groceries": 151.9,
+      "Restaurants": 159.2,
+      "All_items": 135.7
+    },
+    {
+      "date": "2020-05-01",
+      "Food": 154.3,
+      "Groceries": 152.3,
+      "Restaurants": 159.3,
+      "All_items": 136.1
+    },
+    {
+      "date": "2020-06-01",
+      "Food": 154.8,
+      "Groceries": 152.8,
+      "Restaurants": 159.5,
+      "All_items": 137.2
+    },
+    {
+      "date": "2020-07-01",
+      "Food": 155.0,
+      "Groceries": 152.9,
+      "Restaurants": 160.2,
+      "All_items": 137.2
+    },
+    {
+      "date": "2020-08-01",
+      "Food": 153.8,
+      "Groceries": 150.8,
+      "Restaurants": 160.7,
+      "All_items": 137.0
+    },
+    {
+      "date": "2020-09-01",
+      "Food": 152.6,
+      "Groceries": 149.1,
+      "Restaurants": 160.9,
+      "All_items": 136.9
+    },
+    {
+      "date": "2020-10-01",
+      "Food": 153.3,
+      "Groceries": 149.9,
+      "Restaurants": 161.5,
+      "All_items": 137.5
+    },
+    {
+      "date": "2020-11-01",
+      "Food": 153.9,
+      "Groceries": 150.6,
+      "Restaurants": 161.6,
+      "All_items": 137.7
+    },
+    {
+      "date": "2020-12-01",
+      "Food": 153.6,
+      "Groceries": 150.2,
+      "Restaurants": 161.6,
+      "All_items": 137.4
+    },
+    {
+      "date": "2021-01-01",
+      "Food": 155.0,
+      "Groceries": 151.7,
+      "Restaurants": 162.6,
+      "All_items": 138.2
+    },
+    {
+      "date": "2021-02-01",
+      "Food": 155.6,
+      "Groceries": 152.6,
+      "Restaurants": 162.9,
+      "All_items": 138.9
+    },
+    {
+      "date": "2021-03-01",
+      "Food": 155.5,
+      "Groceries": 152.5,
+      "Restaurants": 162.6,
+      "All_items": 139.6
+    },
+    {
+      "date": "2021-04-01",
+      "Food": 155.4,
+      "Groceries": 152.0,
+      "Restaurants": 163.2,
+      "All_items": 140.3
+    },
+    {
+      "date": "2021-05-01",
+      "Food": 156.6,
+      "Groceries": 153.6,
+      "Restaurants": 163.5,
+      "All_items": 141.0
+    },
+    {
+      "date": "2021-06-01",
+      "Food": 156.8,
+      "Groceries": 153.8,
+      "Restaurants": 163.9,
+      "All_items": 141.4
+    },
+    {
+      "date": "2021-07-01",
+      "Food": 157.6,
+      "Groceries": 154.4,
+      "Restaurants": 165.2,
+      "All_items": 142.3
+    },
+    {
+      "date": "2021-08-01",
+      "Food": 158.0,
+      "Groceries": 154.7,
+      "Restaurants": 165.9,
+      "All_items": 142.6
+    },
+    {
+      "date": "2021-09-01",
+      "Food": 158.5,
+      "Groceries": 155.4,
+      "Restaurants": 165.9,
+      "All_items": 142.9
+    },
+    {
+      "date": "2021-10-01",
+      "Food": 159.2,
+      "Groceries": 155.8,
+      "Restaurants": 167.1,
+      "All_items": 143.9
+    },
+    {
+      "date": "2021-11-01",
+      "Food": 160.7,
+      "Groceries": 157.7,
+      "Restaurants": 167.8,
+      "All_items": 144.2
+    },
+    {
+      "date": "2021-12-01",
+      "Food": 161.6,
+      "Groceries": 158.8,
+      "Restaurants": 168.2,
+      "All_items": 144.0
+    },
+    {
+      "date": "2022-01-01",
+      "Food": 163.9,
+      "Groceries": 161.5,
+      "Restaurants": 169.2,
+      "All_items": 145.3
+    },
+    {
+      "date": "2022-02-01",
+      "Food": 166.0,
+      "Groceries": 163.9,
+      "Restaurants": 170.5,
+      "All_items": 146.8
+    },
+    {
+      "date": "2022-03-01",
+      "Food": 167.5,
+      "Groceries": 165.7,
+      "Restaurants": 171.4,
+      "All_items": 148.9
+    },
+    {
+      "date": "2022-04-01",
+      "Food": 169.0,
+      "Groceries": 166.8,
+      "Restaurants": 174.0,
+      "All_items": 149.8
+    },
+    {
+      "date": "2022-05-01",
+      "Food": 170.4,
+      "Groceries": 168.5,
+      "Restaurants": 174.6,
+      "All_items": 151.9
+    },
+    {
+      "date": "2022-06-01",
+      "Food": 170.6,
+      "Groceries": 168.3,
+      "Restaurants": 175.5,
+      "All_items": 152.9
+    },
+    {
+      "date": "2022-07-01",
+      "Food": 172.1,
+      "Groceries": 169.7,
+      "Restaurants": 177.3,
+      "All_items": 153.1
+    },
+    {
+      "date": "2022-08-01",
+      "Food": 173.5,
+      "Groceries": 171.4,
+      "Restaurants": 178.1,
+      "All_items": 152.6
+    },
+    {
+      "date": "2022-09-01",
+      "Food": 174.8,
+      "Groceries": 173.1,
+      "Restaurants": 178.4,
+      "All_items": 152.7
+    },
+    {
+      "date": "2022-10-01",
+      "Food": 175.2,
+      "Groceries": 173.0,
+      "Restaurants": 180.0,
+      "All_items": 153.8
+    },
+    {
+      "date": "2022-11-01",
+      "Food": 177.3,
+      "Groceries": 175.7,
+      "Restaurants": 180.7,
+      "All_items": 154.0
+    },
+    {
+      "date": "2022-12-01",
+      "Food": 177.9,
+      "Groceries": 176.3,
+      "Restaurants": 181.2,
+      "All_items": 153.1
+    },
+    {
+      "date": "2023-01-01",
+      "Food": 181.0,
+      "Groceries": 179.9,
+      "Restaurants": 183.0,
+      "All_items": 153.9
+    },
+    {
+      "date": "2023-02-01",
+      "Food": 182.1,
+      "Groceries": 181.2,
+      "Restaurants": 183.7,
+      "All_items": 154.5
+    },
+    {
+      "date": "2023-03-01",
+      "Food": 182.4,
+      "Groceries": 181.7,
+      "Restaurants": 183.7,
+      "All_items": 155.3
+    },
+    {
+      "date": "2023-04-01",
+      "Food": 183.1,
+      "Groceries": 182.0,
+      "Restaurants": 185.2,
+      "All_items": 156.4
+    },
+    {
+      "date": "2023-05-01",
+      "Food": 184.6,
+      "Groceries": 183.7,
+      "Restaurants": 186.4,
+      "All_items": 157.0
+    },
+    {
+      "date": "2023-06-01",
+      "Food": 184.8,
+      "Groceries": 183.6,
+      "Restaurants": 187.0,
+      "All_items": 157.2
+    },
+    {
+      "date": "2023-07-01",
+      "Food": 185.5,
+      "Groceries": 184.1,
+      "Restaurants": 188.1,
+      "All_items": 158.1
+    },
+    {
+      "date": "2023-08-01",
+      "Food": 185.3,
+      "Groceries": 183.3,
+      "Restaurants": 189.0,
+      "All_items": 158.7
+    },
+    {
+      "date": "2023-09-01",
+      "Food": 185.2,
+      "Groceries": 183.1,
+      "Restaurants": 189.3,
+      "All_items": 158.5
+    },
+    {
+      "date": "2023-10-01",
+      "Food": 185.0,
+      "Groceries": 182.4,
+      "Restaurants": 190.2,
+      "All_items": 158.6
+    },
+    {
+      "date": "2023-11-01",
+      "Food": 186.2,
+      "Groceries": 183.9,
+      "Restaurants": 190.7,
+      "All_items": 158.8
+    },
+    {
+      "date": "2023-12-01",
+      "Food": 186.8,
+      "Groceries": 184.5,
+      "Restaurants": 191.4,
+      "All_items": 158.3
+    },
+    {
+      "date": "2024-01-01",
+      "Food": 188.1,
+      "Groceries": 186.0,
+      "Restaurants": 192.4,
+      "All_items": 158.3
+    },
+    {
+      "date": "2024-02-01",
+      "Food": 188.1,
+      "Groceries": 185.6,
+      "Restaurants": 193.1,
+      "All_items": 158.8
+    },
+    {
+      "date": "2024-03-01",
+      "Food": 187.8,
+      "Groceries": 185.1,
+      "Restaurants": 193.1,
+      "All_items": 159.8
+    },
+    {
+      "date": "2024-04-01",
+      "Food": 187.4,
+      "Groceries": 184.5,
+      "Restaurants": 193.1,
+      "All_items": 160.6
+    },
+    {
+      "date": "2024-05-01",
+      "Food": 189.0,
+      "Groceries": 186.5,
+      "Restaurants": 194.2,
+      "All_items": 161.5
+    },
+    {
+      "date": "2024-06-01",
+      "Food": 190.0,
+      "Groceries": 187.5,
+      "Restaurants": 195.0,
+      "All_items": 161.4
+    },
+    {
+      "date": "2024-07-01",
+      "Food": 190.5,
+      "Groceries": 188.0,
+      "Restaurants": 195.3,
+      "All_items": 162.1
+    },
+    {
+      "date": "2024-08-01",
+      "Food": 190.3,
+      "Groceries": 187.7,
+      "Restaurants": 195.5,
+      "All_items": 161.8
+    },
+    {
+      "date": "2024-09-01",
+      "Food": 190.3,
+      "Groceries": 187.5,
+      "Restaurants": 196.0,
+      "All_items": 161.1
+    },
+    {
+      "date": "2024-10-01",
+      "Food": 190.5,
+      "Groceries": 187.4,
+      "Restaurants": 196.6,
+      "All_items": 161.8
+    },
+    {
+      "date": "2024-11-01",
+      "Food": 191.5,
+      "Groceries": 188.6,
+      "Restaurants": 197.1,
+      "All_items": 161.8
+    },
+    {
+      "date": "2024-12-01",
+      "Food": 188.0,
+      "Groceries": 188.0,
+      "Restaurants": 188.3,
+      "All_items": 161.2
+    },
+    {
+      "date": "2025-01-01",
+      "Food": 187.0,
+      "Groceries": 189.5,
+      "Restaurants": 182.5,
+      "All_items": 161.3
+    },
+    {
+      "date": "2025-02-01",
+      "Food": 190.5,
+      "Groceries": 190.8,
+      "Restaurants": 190.4,
+      "All_items": 163.0
+    },
+    {
+      "date": "2025-03-01",
+      "Food": 193.8,
+      "Groceries": 191.0,
+      "Restaurants": 199.3,
+      "All_items": 163.5
+    },
+    {
+      "date": "2025-04-01",
+      "Food": 194.5,
+      "Groceries": 191.6,
+      "Restaurants": 200.1,
+      "All_items": 163.4
+    },
+    {
+      "date": "2025-05-01",
+      "Food": 195.4,
+      "Groceries": 192.7,
+      "Restaurants": 200.6,
+      "All_items": 164.3
+    },
+    {
+      "date": "2025-06-01",
+      "Food": 195.6,
+      "Groceries": 192.8,
+      "Restaurants": 201.2,
+      "All_items": 164.4
+    },
+    {
+      "date": "2025-07-01",
+      "Food": 196.8,
+      "Groceries": 194.4,
+      "Restaurants": 201.6,
+      "All_items": 164.9
+    },
+    {
+      "date": "2025-08-01",
+      "Food": 196.8,
+      "Groceries": 194.2,
+      "Restaurants": 201.9,
+      "All_items": 164.8
+    },
+    {
+      "date": "2025-09-01",
+      "Food": 197.5,
+      "Groceries": 195.0,
+      "Restaurants": 202.4,
+      "All_items": 164.9
+    },
+    {
+      "date": "2025-10-01",
+      "Food": 196.9,
+      "Groceries": 193.8,
+      "Restaurants": 202.9,
+      "All_items": 165.3
+    },
+    {
+      "date": "2025-11-01",
+      "Food": 199.5,
+      "Groceries": 197.4,
+      "Restaurants": 203.7,
+      "All_items": 165.4
+    },
+    {
+      "date": "2025-12-01",
+      "Food": 199.7,
+      "Groceries": 197.4,
+      "Restaurants": 204.3,
+      "All_items": 165.0
+    },
+    {
+      "date": "2026-01-01",
+      "Food": 200.7,
+      "Groceries": 198.6,
+      "Restaurants": 204.9,
+      "All_items": 165.0
+    },
+    {
+      "date": "2026-02-01",
+      "Food": 200.8,
+      "Groceries": 198.6,
+      "Restaurants": 205.2,
+      "All_items": 165.9
+    },
+    {
+      "date": "2026-03-01",
+      "Food": 201.5,
+      "Groceries": 199.4,
+      "Restaurants": 205.6,
+      "All_items": 167.4
+    },
+    {
+      "date": "2026-04-01",
+      "Food": 201.3,
+      "Groceries": 198.9,
+      "Restaurants": 206.2,
+      "All_items": 168.0
+    },
+    {
+      "date": "2026-05-01",
+      "Food": 202.8,
+      "Groceries": 200.9,
+      "Restaurants": 206.9,
+      "All_items": 169.6
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "yoy",
+    "pct_change",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "notes": "Food, groceries, restaurants, and the all-items basket use distinct Statistics Canada classifications."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T14:12:52+00:00"
+}

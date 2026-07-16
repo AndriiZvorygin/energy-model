@@ -44,6 +44,12 @@ See [the Canadian data audit](analysis/canadian_data_audit.md), [indicator catal
 
 The project prioritizes interpretable specifications, chronological validation, explicit lag conventions, HAC/Newey-West standard errors, shock-period checks, and reproducible source caching.
 
+## Food And Housing Affordability
+
+The affordability layer keeps four concepts separate: international food commodity prices, domestic consumer food prices, residential property purchase prices, and current shelter costs. FAO food indices describe international commodity quotations rather than grocery bills. Statistics Canada and BLS food CPIs describe domestic consumer baskets. Statistics Canada NHPI, FHFA, and BIS series describe property purchase prices, while rent, mortgage-interest cost, replacement cost, and shelter CPI describe distinct current housing-service costs.
+
+Interactive pages at `/affordability/food` and `/affordability/housing` compare these histories across global, Canadian, Ontario, and U.S. evidence. Derived measures include food and grocery inflation gaps, real food-price indices, real house-price indices, U.S. food-to-wage and rent-to-wage pressure, and a U.S. house-price-to-income index. Canadian income-relative measures remain unpublished until a suitable Canadian wage or disposable-income-per-person history is integrated. The new metadata identifies candidate future symptoms but does not alter either live classifier.
+
 ## System-Response Diagnostic Framework
 
 The first diagnostic release extends the project from oil-price interpretation into a five-layer system-response framework:
@@ -121,6 +127,9 @@ Create a production build with `npm run build`. See [website/README.md](website/
 Primary public sources include:
 
 - **Statistics Canada:** Canadian and Ontario CPI, labour-force rates, monthly real GDP by industry, crude production/trade/refinery/inventory balances, electricity generation, and household debt service.
+- **Food and Agriculture Organization:** monthly nominal and real international Food Price Indices and commodity components.
+- **Bank for International Settlements:** quarterly selected nominal and real residential-property price statistics and documented country-group aggregates.
+- **Federal Housing Finance Agency:** U.S. monthly purchase-only House Price Index, distributed through FRED.
 - **Bank of Canada:** policy rate, CAD/USD exchange rate, and Canadian M2++ through the official Valet API.
 - **Canada Energy Regulator:** documented public commodity-data adapter and physical-market source audit; some confidential or unstable series remain proposed.
 

@@ -79,6 +79,8 @@ const canadaCurrentState = JSON.parse(await readFile(resolve(generatedRoot, 'can
 const canadaClassification = JSON.parse(await readFile(resolve(generatedRoot, 'canada/current-classification.json'), 'utf8'))
 const canadaSymptoms = JSON.parse(await readFile(resolve(generatedRoot, 'canada/symptom-evaluations.json'), 'utf8'))
 const canadaRegimes = JSON.parse(await readFile(resolve(generatedRoot, 'canada/regime-scores.json'), 'utf8'))
+const globalAffordabilityManifest = JSON.parse(await readFile(resolve(generatedRoot, 'global/manifest.json'), 'utf8'))
+const usAffordabilityManifest = JSON.parse(await readFile(resolve(generatedRoot, 'us/manifest.json'), 'utf8'))
 const requiredCurrent = ['scope', 'classificationDate', 'asOfDate', 'provisionalClassification', 'confirmedClassification', 'primaryRegime', 'secondaryRegime', 'confidence', 'evidenceCoverage', 'allRegimeScores', 'activeSymptoms', 'emergingSymptoms', 'fadingSymptoms', 'supportingIndicators', 'conflictingIndicators', 'staleIndicators', 'missingIndicators', 'historicalAnalogues', 'ruleVersion', 'dataVintageWarning']
 const missingCurrent = requiredCurrent.filter((field) => !(field in currentClassification))
 if (missingCurrent.length) failures.push(`current-classification.json: missing ${missingCurrent.join(', ')}`)
@@ -119,6 +121,24 @@ for (const entry of canadaManifest.indicators ?? []) {
   const dates = (indicator.observations ?? []).map((row) => row.date)
   if (dates.some((date, index) => index > 0 && date <= dates[index - 1])) failures.push(`canada/${entry.file}: dates must be chronological and unique`)
   if ((indicator.observations ?? []).some((row) => !row.sourceDate)) failures.push(`canada/${entry.file}: missing source dates`)
+}
+for (const [namespace, namespaceManifest] of [['global', globalAffordabilityManifest], ['us', usAffordabilityManifest]]) {
+  if (!Array.isArray(namespaceManifest.indicators) || !namespaceManifest.indicators.length) failures.push(`${namespace}/manifest.json: no indicators`)
+  for (const entry of namespaceManifest.indicators ?? []) {
+    let indicator
+    try {
+      indicator = JSON.parse(await readFile(resolve(generatedRoot, namespace, entry.file), 'utf8'))
+    } catch (error) {
+      failures.push(`${namespace}/${entry.file}: ${error.message}`)
+      continue
+    }
+    const required = ['id', 'definition', 'geography', 'source', 'sourceDate', 'retrievalDate', 'revisionStatus', 'frequency', 'unit', 'seasonalAdjustment', 'nominalOrReal', 'latest', 'observations', 'transformations', 'futureClassifierMetadata']
+    const missing = required.filter((field) => !(field in indicator))
+    if (missing.length) failures.push(`${namespace}/${entry.file}: missing ${missing.join(', ')}`)
+    const dates = (indicator.observations ?? []).map((row) => row.date)
+    if (dates.some((date, index) => index > 0 && date <= dates[index - 1])) failures.push(`${namespace}/${entry.file}: dates must be chronological and unique`)
+    if (indicator.futureClassifierMetadata?.status !== 'metadata_only_not_scored') failures.push(`${namespace}/${entry.file}: classifier metadata must remain inactive`)
+  }
 }
 
 if (failures.length) {

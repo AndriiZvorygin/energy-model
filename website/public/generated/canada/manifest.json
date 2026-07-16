@@ -433,6 +433,456 @@
       "layer": "Labour and households",
       "core": false,
       "latestDate": "2026-06-01"
+    },
+    {
+      "id": "canada-all-items-cpi",
+      "file": "indicators/canada-all-items-cpi.json",
+      "label": "Canada all-items CPI",
+      "geography": "Canada",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "food-cpi",
+      "file": "indicators/food-cpi.json",
+      "label": "Canada food CPI",
+      "geography": "Canada",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "grocery-cpi",
+      "file": "indicators/grocery-cpi.json",
+      "label": "Canada food purchased from stores CPI",
+      "geography": "Canada",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "restaurant-food-cpi",
+      "file": "indicators/restaurant-food-cpi.json",
+      "label": "Canada food purchased from restaurants CPI",
+      "geography": "Canada",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "meat-cpi",
+      "file": "indicators/meat-cpi.json",
+      "label": "Canada meat CPI",
+      "geography": "Canada",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "dairy-eggs-cpi",
+      "file": "indicators/dairy-eggs-cpi.json",
+      "label": "Canada dairy products and eggs CPI",
+      "geography": "Canada",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "bakery-cereals-cpi",
+      "file": "indicators/bakery-cereals-cpi.json",
+      "label": "Canada bakery and cereal products CPI",
+      "geography": "Canada",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "fresh-fruit-cpi",
+      "file": "indicators/fresh-fruit-cpi.json",
+      "label": "Canada fresh fruit CPI",
+      "geography": "Canada",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "fresh-vegetables-cpi",
+      "file": "indicators/fresh-vegetables-cpi.json",
+      "label": "Canada fresh vegetables CPI",
+      "geography": "Canada",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "shelter-cpi",
+      "file": "indicators/shelter-cpi.json",
+      "label": "Canada shelter CPI",
+      "geography": "Canada",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "rent-cpi",
+      "file": "indicators/rent-cpi.json",
+      "label": "Canada rent CPI",
+      "geography": "Canada",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "mortgage-interest-cost",
+      "file": "indicators/mortgage-interest-cost.json",
+      "label": "Canada mortgage interest cost index",
+      "geography": "Canada",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "homeowners-replacement-cost",
+      "file": "indicators/homeowners-replacement-cost.json",
+      "label": "Canada homeowners' replacement cost index",
+      "geography": "Canada",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "property-taxes-cpi",
+      "file": "indicators/property-taxes-cpi.json",
+      "label": "Canada property taxes and special charges CPI",
+      "geography": "Canada",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-all-items-cpi",
+      "file": "indicators/ontario-all-items-cpi.json",
+      "label": "Ontario all-items CPI",
+      "geography": "Ontario",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-food-cpi",
+      "file": "indicators/ontario-food-cpi.json",
+      "label": "Ontario food CPI",
+      "geography": "Ontario",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-grocery-cpi",
+      "file": "indicators/ontario-grocery-cpi.json",
+      "label": "Ontario food purchased from stores CPI",
+      "geography": "Ontario",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-restaurant-food-cpi",
+      "file": "indicators/ontario-restaurant-food-cpi.json",
+      "label": "Ontario food purchased from restaurants CPI",
+      "geography": "Ontario",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-meat-cpi",
+      "file": "indicators/ontario-meat-cpi.json",
+      "label": "Ontario meat CPI",
+      "geography": "Ontario",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-dairy-eggs-cpi",
+      "file": "indicators/ontario-dairy-eggs-cpi.json",
+      "label": "Ontario dairy products and eggs CPI",
+      "geography": "Ontario",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-bakery-cereals-cpi",
+      "file": "indicators/ontario-bakery-cereals-cpi.json",
+      "label": "Ontario bakery and cereal products CPI",
+      "geography": "Ontario",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-fresh-fruit-cpi",
+      "file": "indicators/ontario-fresh-fruit-cpi.json",
+      "label": "Ontario fresh fruit CPI",
+      "geography": "Ontario",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-fresh-vegetables-cpi",
+      "file": "indicators/ontario-fresh-vegetables-cpi.json",
+      "label": "Ontario fresh vegetables CPI",
+      "geography": "Ontario",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-shelter-cpi",
+      "file": "indicators/ontario-shelter-cpi.json",
+      "label": "Ontario shelter CPI",
+      "geography": "Ontario",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-rent-cpi",
+      "file": "indicators/ontario-rent-cpi.json",
+      "label": "Ontario rent CPI",
+      "geography": "Ontario",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-homeowners-replacement-cost",
+      "file": "indicators/ontario-homeowners-replacement-cost.json",
+      "label": "Ontario homeowners' replacement cost index",
+      "geography": "Ontario",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-property-taxes-cpi",
+      "file": "indicators/ontario-property-taxes-cpi.json",
+      "label": "Ontario property taxes and special charges CPI",
+      "geography": "Ontario",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "new-housing-price-index",
+      "file": "indicators/new-housing-price-index.json",
+      "label": "Canada new housing price index",
+      "geography": "Canada",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "new-housing-house-component",
+      "file": "indicators/new-housing-house-component.json",
+      "label": "Canada new housing house component",
+      "geography": "Canada",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "new-housing-land-component",
+      "file": "indicators/new-housing-land-component.json",
+      "label": "Canada new housing land component",
+      "geography": "Canada",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-new-housing-price-index",
+      "file": "indicators/ontario-new-housing-price-index.json",
+      "label": "Ontario new housing price index",
+      "geography": "Ontario",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-new-housing-house-component",
+      "file": "indicators/ontario-new-housing-house-component.json",
+      "label": "Ontario new housing house component",
+      "geography": "Ontario",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ontario-new-housing-land-component",
+      "file": "indicators/ontario-new-housing-land-component.json",
+      "label": "Ontario new housing land component",
+      "geography": "Ontario",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "alberta-new-housing-price-index",
+      "file": "indicators/alberta-new-housing-price-index.json",
+      "label": "Alberta new housing price index",
+      "geography": "Alberta",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "alberta-new-housing-house-component",
+      "file": "indicators/alberta-new-housing-house-component.json",
+      "label": "Alberta new housing house component",
+      "geography": "Alberta",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "alberta-new-housing-land-component",
+      "file": "indicators/alberta-new-housing-land-component.json",
+      "label": "Alberta new housing land component",
+      "geography": "Alberta",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "toronto-new-housing-price-index",
+      "file": "indicators/toronto-new-housing-price-index.json",
+      "label": "Toronto new housing price index",
+      "geography": "Toronto",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "ottawa-new-housing-price-index",
+      "file": "indicators/ottawa-new-housing-price-index.json",
+      "label": "Ottawa-Gatineau Ontario-part new housing price index",
+      "geography": "Ottawa-Gatineau, Ontario part",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "calgary-new-housing-price-index",
+      "file": "indicators/calgary-new-housing-price-index.json",
+      "label": "Calgary new housing price index",
+      "geography": "Calgary",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "edmonton-new-housing-price-index",
+      "file": "indicators/edmonton-new-housing-price-index.json",
+      "label": "Edmonton new housing price index",
+      "geography": "Edmonton",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "canada-grocery-cpi-yoy",
+      "file": "indicators/canada-grocery-cpi-yoy.json",
+      "label": "Canada grocery CPI growth",
+      "geography": "Canada",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "canada-food-inflation-gap",
+      "file": "indicators/canada-food-inflation-gap.json",
+      "label": "Canada food inflation gap",
+      "geography": "Canada",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "canada-grocery-inflation-gap",
+      "file": "indicators/canada-grocery-inflation-gap.json",
+      "label": "Canada grocery inflation gap",
+      "geography": "Canada",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "canada-real-food-price-index",
+      "file": "indicators/canada-real-food-price-index.json",
+      "label": "Canada real food-price index",
+      "geography": "Canada",
+      "layer": "Food affordability",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "canada-nhpi-yoy",
+      "file": "indicators/canada-nhpi-yoy.json",
+      "label": "Canada new housing price growth",
+      "geography": "Canada",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "canada-rent-cpi-yoy",
+      "file": "indicators/canada-rent-cpi-yoy.json",
+      "label": "Canada rent CPI growth",
+      "geography": "Canada",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "canada-shelter-cpi-yoy-affordability",
+      "file": "indicators/canada-shelter-cpi-yoy-affordability.json",
+      "label": "Canada shelter CPI growth",
+      "geography": "Canada",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "canada-mortgage-interest-cost-yoy",
+      "file": "indicators/canada-mortgage-interest-cost-yoy.json",
+      "label": "Canada mortgage-interest-cost growth",
+      "geography": "Canada",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "bis-canada-nominal-house-price-index",
+      "file": "indicators/bis-canada-nominal-house-price-index.json",
+      "label": "BIS Canada residential property prices (nominal)",
+      "geography": "Canada",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-03-01"
+    },
+    {
+      "id": "bis-canada-real-house-price-index",
+      "file": "indicators/bis-canada-real-house-price-index.json",
+      "label": "BIS Canada residential property prices (real)",
+      "geography": "Canada",
+      "layer": "Housing purchase prices and shelter costs",
+      "core": false,
+      "latestDate": "2026-03-01"
     }
   ],
   "currentStateFile": "current-state.json",

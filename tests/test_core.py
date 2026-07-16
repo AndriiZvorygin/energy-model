@@ -174,6 +174,9 @@ class CoreTests(unittest.TestCase):
             "energy_output_quality_correlations.csv",
             "canadian_data_audit.md",
             "canadian_indicator_catalogue.csv",
+            "food_housing_affordability_findings.md",
+            "food_housing_indicator_catalogue.csv",
+            "food_price_transmission_summary.csv",
         ]
         required_charts = [
             "residual_vs_ci_zscore.png",
@@ -240,6 +243,7 @@ class CoreTests(unittest.TestCase):
                 patch("oil_model.pipeline.make_charts", fake_make_charts),
                 patch("oil_model.pipeline.make_system_response_charts", fake_make_system_response_charts),
                 patch("oil_model.pipeline.build_canadian_outputs", fake_build_canadian_outputs),
+                patch("oil_model.pipeline.build_affordability_outputs", fake_build_affordability_outputs),
             ):
                 build(root)
             self.assertTrue((root / "data" / "raw").exists())
@@ -251,6 +255,8 @@ class CoreTests(unittest.TestCase):
                 self.assertTrue((root / "website" / "public" / "generated" / filename).exists(), filename)
             for filename in ["manifest.json", "current-state.json", "canada-us-comparison.json", "indicators/canada-unemployment-rate.json", "indicators/ontario-unemployment-rate.json"]:
                 self.assertTrue((root / "website" / "public" / "generated" / "canada" / filename).exists(), filename)
+            for filename in ["affordability-fao-food.json", "affordability-canada-housing.json", "food-transmission-analysis.json"]:
+                self.assertTrue((root / "website" / "public" / "generated" / filename).exists(), filename)
 
 
 def fake_series(name: str, observations: list[tuple[str, float]]):
@@ -449,6 +455,25 @@ def fake_build_canadian_outputs(root, global_rows, us_rows, cache):
     write_csv(root / "analysis" / "canadian_historical_episodes.csv", [{"episode": "Fake"}])
     (root / "analysis" / "canadian_historical_episodes.md").write_text("# Canadian Historical Episodes\n", encoding="utf-8")
     return [{"indicator_name": "Fake Canada"}], [payload, ontario]
+
+
+def fake_build_affordability_outputs(root, cache):
+    from oil_model.storage import write_csv
+
+    generated = root / "website" / "public" / "generated"
+    generated.mkdir(parents=True, exist_ok=True)
+    fake_chart = {"schemaVersion": "1.1.0", "id": "fake", "title": "Fake affordability", "description": "fake", "plainLanguageSummary": "fake", "howToRead": "fake", "calculation": {"formula": "fake", "explanation": "fake", "example": "fake"}, "patternsToWatch": [], "limitations": [], "sourceNotes": [], "transformation": {"type": "raw", "referenceStart": "2000-01-01", "referenceEnd": "2019-12-01", "mean": None, "standardDeviation": None, "statistics": {}}, "frequency": "monthly", "dateRange": {"start": "2020-01-01", "end": "2020-01-01"}, "series": [{"key": "value", "label": "Value", "unit": "index", "source": "fake", "status": "measured", "defaultVisible": True, "frequency": "monthly", "color": None, "transformations": ["raw"], "finalObservationDate": "2020-01-01"}], "observations": [{"date": "2020-01-01", "value": 100}], "annotations": [], "availableTransformations": ["raw"], "evidenceLabel": "Contextual indicator", "methodology": {"formula": "fake"}, "staticFigure": "", "generatedAt": "2020-01-01"}
+    for filename in ["affordability-fao-food.json", "affordability-canada-housing.json"]:
+        (generated / filename).write_text(json.dumps({**fake_chart, "id": filename.removesuffix(".json")}), encoding="utf-8")
+    (generated / "food-transmission-analysis.json").write_text(json.dumps({"schemaVersion": 1, "rows": []}), encoding="utf-8")
+    for geography in ["global", "us"]:
+        directory = generated / geography / "indicators"
+        directory.mkdir(parents=True, exist_ok=True)
+        (generated / geography / "manifest.json").write_text(json.dumps({"schemaVersion": 1, "indicators": []}), encoding="utf-8")
+    write_csv(root / "analysis" / "food_price_transmission_summary.csv", [{"relationship": "fake"}])
+    write_csv(root / "analysis" / "food_housing_indicator_catalogue.csv", [{"id": "fake"}])
+    (root / "analysis" / "food_housing_affordability_findings.md").write_text("# Food And Housing\n", encoding="utf-8")
+    return [], []
 
 
 def fake_make_charts(rows, lag_rows, out_dir, residual_rows=None, rolling_rows=None, target_rows=None, oil_equity_rows=None, oil_equity_return_rows=None, uso_lead_lag_rows=None, uso_tracking_rows=None, uso_model_rows=None, physical_price_rows=None, energy_gdp_rows=None, energy_gdp_model_rows=None, system_signal_rows=None):

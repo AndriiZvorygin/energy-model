@@ -1,0 +1,6557 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "affordability-canada-housing-costs",
+  "title": "Canadian property prices and current shelter costs",
+  "description": "Purchase prices, rent, mortgage interest, and shelter services are shown separately.",
+  "plainLanguageSummary": "Purchase prices, rent, mortgage interest, and shelter services are shown separately.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "explanation": "Purchase prices, rent, mortgage interest, and shelter services are shown separately.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "Purchase prices, rent, mortgage interest, and shelter services are shown separately."
+  ],
+  "sourceNotes": [
+    "Derived from Statistics Canada"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "NHPI_YoY": {
+        "mean": 3.0808400296999463,
+        "standardDeviation": 2.722371693571614,
+        "n": 240
+      },
+      "Rent_YoY": {
+        "mean": 1.3410333737800144,
+        "standardDeviation": 0.5047504747875972,
+        "n": 240
+      },
+      "Mortgage_interest_YoY": {
+        "mean": 1.050941528883263,
+        "standardDeviation": 3.6759232763540606,
+        "n": 240
+      },
+      "Shelter_YoY": {
+        "mean": 2.2751073262822654,
+        "standardDeviation": 1.4081197448112008,
+        "n": 240
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "1950-01-01",
+    "end": "2026-05-01"
+  },
+  "series": [
+    {
+      "key": "NHPI_YoY",
+      "label": "Canada new housing price growth",
+      "unit": "percent",
+      "source": "Derived from Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "Rent_YoY",
+      "label": "Canada rent CPI growth",
+      "unit": "percent",
+      "source": "Derived from Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "Mortgage_interest_YoY",
+      "label": "Canada mortgage-interest-cost growth",
+      "unit": "percent",
+      "source": "Derived from Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "Shelter_YoY",
+      "label": "Canada shelter CPI growth",
+      "unit": "percent",
+      "source": "Derived from Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1950-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.0942408376963373,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1950-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.0942408376963373,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1950-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 8.900523560209429,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1950-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 8.333333333333348,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1950-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 8.333333333333348,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1950-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 8.333333333333348,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1950-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 10.416666666666675,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1950-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 10.416666666666675,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1950-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 9.278350515463929,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1950-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 9.278350515463929,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1950-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 10.309278350515472,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1950-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 9.74358974358973,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1951-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 9.74358974358973,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1951-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 9.74358974358973,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1951-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.3653846153846034,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1951-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.3653846153846034,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1951-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.3653846153846034,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1951-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.28846153846152,
+      "Mortgage_interest_YoY": 1.0101010101010166,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1951-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.301886792452824,
+      "Mortgage_interest_YoY": 1.0101010101010166,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1951-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.301886792452824,
+      "Mortgage_interest_YoY": 1.0101010101010166,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1951-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.132075471698117,
+      "Mortgage_interest_YoY": 1.0101010101010166,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1951-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.132075471698117,
+      "Mortgage_interest_YoY": 1.0101010101010166,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1951-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.542056074766367,
+      "Mortgage_interest_YoY": 1.0101010101010166,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1951-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.542056074766367,
+      "Mortgage_interest_YoY": 1.0101010101010166,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1952-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.542056074766367,
+      "Mortgage_interest_YoY": 1.0101010101010166,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1952-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.542056074766367,
+      "Mortgage_interest_YoY": 1.0101010101010166,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1952-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 7.441860465116279,
+      "Mortgage_interest_YoY": 1.0101010101010166,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1952-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 7.441860465116279,
+      "Mortgage_interest_YoY": 1.0101010101010166,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1952-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 7.441860465116279,
+      "Mortgage_interest_YoY": 1.0101010101010166,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1952-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.936073059360725,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1952-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.936073059360725,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1952-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.936073059360725,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1952-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.444444444444451,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1952-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.444444444444451,
+      "Mortgage_interest_YoY": 1.0000000000000009,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1952-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.0701754385964897,
+      "Mortgage_interest_YoY": 1.0000000000000009,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1952-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.9473684210526327,
+      "Mortgage_interest_YoY": 1.0000000000000009,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1953-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.385964912280693,
+      "Mortgage_interest_YoY": 1.0000000000000009,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1953-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.385964912280693,
+      "Mortgage_interest_YoY": 1.0000000000000009,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1953-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.0303030303030276,
+      "Mortgage_interest_YoY": 1.0000000000000009,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1953-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.0303030303030276,
+      "Mortgage_interest_YoY": 1.0000000000000009,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1953-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.0303030303030276,
+      "Mortgage_interest_YoY": 1.0000000000000009,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1953-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.8793103448276023,
+      "Mortgage_interest_YoY": 1.0000000000000009,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1953-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.31034482758621,
+      "Mortgage_interest_YoY": 1.0000000000000009,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1953-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.31034482758621,
+      "Mortgage_interest_YoY": 1.0000000000000009,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1953-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.9787234042553123,
+      "Mortgage_interest_YoY": 1.0000000000000009,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1953-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.8297872340425476,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1953-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.8297872340425476,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1953-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.3755274261603407,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1954-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.3613445378151363,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1954-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.3613445378151363,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1954-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.3613445378151363,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1954-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.3613445378151363,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1954-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.201680672268915,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1954-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.734439834024883,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1954-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.7190082644628086,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1954-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.7190082644628086,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1954-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.7190082644628086,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1954-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.2786885245901676,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1954-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.2786885245901676,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1954-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.2653061224489743,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1955-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.2520325203251987,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1955-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.658536585365857,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1955-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.658536585365857,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1955-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.658536585365857,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1955-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.8225806451612767,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1955-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.8000000000000025,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1955-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.39043824701195,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1955-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.39043824701195,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1955-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.39043824701195,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1955-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.3809523809523947,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1955-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.3809523809523947,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1955-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.976284584980248,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1956-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.9685039370078705,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1956-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.5686274509803866,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1956-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.5686274509803866,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1956-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.5686274509803866,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1956-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.5686274509803866,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1956-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.5564202334630517,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1956-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.5564202334630517,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1956-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.9455252918287869,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1956-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.9455252918287869,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1956-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.9379844961240345,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1956-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.9379844961240345,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1956-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.9379844961240345,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1957-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.5444015444015635,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1957-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.5444015444015635,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1957-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.9305019305019266,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1957-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.9305019305019266,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1957-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.9305019305019266,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1957-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.5325670498084198,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1957-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.9157088122605304,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1957-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.526717557251911,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1957-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.9083969465648831,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1957-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.520912547528508,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1957-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.520912547528508,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1957-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.9011406844106515,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1958-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.9011406844106515,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1958-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.281368821292773,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1958-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.2727272727272707,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1958-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.2727272727272707,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1958-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.2727272727272707,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1958-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.8867924528301883,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1958-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.5037593984962294,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1958-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.8796992481203034,
+      "Mortgage_interest_YoY": 7.920792079207928,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1958-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.4981273408239737,
+      "Mortgage_interest_YoY": 7.920792079207928,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1958-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.4981273408239737,
+      "Mortgage_interest_YoY": 7.920792079207928,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1958-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.8726591760299671,
+      "Mortgage_interest_YoY": 7.920792079207928,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1958-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.4925373134328401,
+      "Mortgage_interest_YoY": 7.920792079207928,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1959-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.4925373134328401,
+      "Mortgage_interest_YoY": 7.920792079207928,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1959-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.1152416356877248,
+      "Mortgage_interest_YoY": 7.920792079207928,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1959-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7407407407407307,
+      "Mortgage_interest_YoY": 7.920792079207928,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1959-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7407407407407307,
+      "Mortgage_interest_YoY": 7.920792079207928,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1959-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7407407407407307,
+      "Mortgage_interest_YoY": 7.920792079207928,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1959-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.1111111111111072,
+      "Mortgage_interest_YoY": 7.920792079207928,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1959-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.1111111111111072,
+      "Mortgage_interest_YoY": 7.920792079207928,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1959-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7380073800737907,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1959-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7380073800737907,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1959-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7380073800737907,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1959-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.3676470588235281,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1959-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.3676470588235281,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1960-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.3676470588235281,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1960-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.3676470588235281,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1960-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7352941176470562,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1960-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7352941176470562,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1960-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7352941176470562,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1960-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.73260073260073,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1960-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.73260073260073,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1960-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.73260073260073,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1960-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.098901098901095,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1960-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.098901098901095,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1960-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.098901098901095,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1960-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.098901098901095,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1961-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.098901098901095,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1961-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.098901098901095,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1961-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7299270072992803,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1961-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7299270072992803,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1961-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7299270072992803,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1961-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.363636363636366,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1961-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.363636363636366,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1961-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.363636363636366,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1961-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1961-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1961-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1961-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1962-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1962-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1962-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1962-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1962-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 3.669724770642202,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1962-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 3.669724770642202,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1962-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 5.504587155963292,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1962-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 5.504587155963292,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1962-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 5.504587155963292,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1962-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 5.504587155963292,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1962-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 5.504587155963292,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1962-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 5.504587155963292,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1963-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 6.422018348623837,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1963-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 6.422018348623837,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1963-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 6.422018348623837,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1963-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 6.422018348623837,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1963-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 2.65486725663715,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1963-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.36231884057971175,
+      "Mortgage_interest_YoY": 2.65486725663715,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1963-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.36231884057971175,
+      "Mortgage_interest_YoY": 1.7391304347825987,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1963-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.36231884057971175,
+      "Mortgage_interest_YoY": 1.7391304347825987,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1963-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.36231884057971175,
+      "Mortgage_interest_YoY": 1.7391304347825987,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1963-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.36231884057971175,
+      "Mortgage_interest_YoY": 1.7391304347825987,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1963-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.36231884057971175,
+      "Mortgage_interest_YoY": 1.7391304347825987,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1963-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.36231884057971175,
+      "Mortgage_interest_YoY": 1.7391304347825987,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1964-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.36231884057971175,
+      "Mortgage_interest_YoY": 2.586206896551735,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1964-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.36231884057971175,
+      "Mortgage_interest_YoY": 2.586206896551735,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1964-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.36231884057971175,
+      "Mortgage_interest_YoY": 2.586206896551735,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1964-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.36231884057971175,
+      "Mortgage_interest_YoY": 2.586206896551735,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1964-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.36231884057971175,
+      "Mortgage_interest_YoY": 2.586206896551735,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1964-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.3610108303249149,
+      "Mortgage_interest_YoY": 2.586206896551735,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1964-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.3610108303249149,
+      "Mortgage_interest_YoY": 2.564102564102577,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1964-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.3610108303249149,
+      "Mortgage_interest_YoY": 2.564102564102577,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1964-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7220216606498076,
+      "Mortgage_interest_YoY": 2.564102564102577,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1964-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7220216606498076,
+      "Mortgage_interest_YoY": 2.564102564102577,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1964-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7220216606498076,
+      "Mortgage_interest_YoY": 2.564102564102577,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1964-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7220216606498076,
+      "Mortgage_interest_YoY": 2.564102564102577,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1965-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7220216606498076,
+      "Mortgage_interest_YoY": 3.3613445378151363,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1965-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7220216606498076,
+      "Mortgage_interest_YoY": 3.3613445378151363,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1965-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7220216606498076,
+      "Mortgage_interest_YoY": 3.3613445378151363,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1965-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7220216606498076,
+      "Mortgage_interest_YoY": 3.3613445378151363,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1965-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7220216606498076,
+      "Mortgage_interest_YoY": 3.3613445378151363,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1965-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.3597122302158251,
+      "Mortgage_interest_YoY": 3.3613445378151363,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1965-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.3597122302158251,
+      "Mortgage_interest_YoY": 5.000000000000004,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1965-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.3597122302158251,
+      "Mortgage_interest_YoY": 5.000000000000004,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1965-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.0,
+      "Mortgage_interest_YoY": 5.000000000000004,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1965-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7168458781362075,
+      "Mortgage_interest_YoY": 5.000000000000004,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1965-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7168458781362075,
+      "Mortgage_interest_YoY": 5.000000000000004,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1965-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.7168458781362075,
+      "Mortgage_interest_YoY": 5.000000000000004,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1966-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.0752688172043001,
+      "Mortgage_interest_YoY": 3.2520325203251987,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1966-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.0752688172043001,
+      "Mortgage_interest_YoY": 3.2520325203251987,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1966-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.0752688172043001,
+      "Mortgage_interest_YoY": 3.2520325203251987,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1966-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.0752688172043001,
+      "Mortgage_interest_YoY": 3.2520325203251987,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1966-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.433691756272415,
+      "Mortgage_interest_YoY": 3.2520325203251987,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1966-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.433691756272415,
+      "Mortgage_interest_YoY": 3.2520325203251987,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1966-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.7921146953405076,
+      "Mortgage_interest_YoY": 3.9682539682539764,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1966-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.1505376344086002,
+      "Mortgage_interest_YoY": 3.9682539682539764,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1966-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.1505376344086002,
+      "Mortgage_interest_YoY": 3.9682539682539764,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1966-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.7793594306049876,
+      "Mortgage_interest_YoY": 3.9682539682539764,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1966-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.1352313167259718,
+      "Mortgage_interest_YoY": 3.9682539682539764,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1966-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.491103202846978,
+      "Mortgage_interest_YoY": 3.9682539682539764,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1967-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.482269503546086,
+      "Mortgage_interest_YoY": 4.7244094488189115,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1967-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.482269503546086,
+      "Mortgage_interest_YoY": 4.7244094488189115,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1967-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.8368794326241176,
+      "Mortgage_interest_YoY": 4.7244094488189115,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1967-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.8368794326241176,
+      "Mortgage_interest_YoY": 4.7244094488189115,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1967-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.473498233215543,
+      "Mortgage_interest_YoY": 4.7244094488189115,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1967-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.5335689045936425,
+      "Mortgage_interest_YoY": 4.7244094488189115,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1967-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.8732394366197243,
+      "Mortgage_interest_YoY": 4.580152671755733,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1967-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.8596491228070295,
+      "Mortgage_interest_YoY": 4.580152671755733,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1967-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.8596491228070295,
+      "Mortgage_interest_YoY": 4.580152671755733,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1967-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.8461538461538325,
+      "Mortgage_interest_YoY": 4.580152671755733,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1967-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.181184668989535,
+      "Mortgage_interest_YoY": 4.580152671755733,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1967-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.166666666666674,
+      "Mortgage_interest_YoY": 4.580152671755733,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1968-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.806228373702436,
+      "Mortgage_interest_YoY": 8.270676691729317,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1968-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.152249134948116,
+      "Mortgage_interest_YoY": 8.270676691729317,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1968-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.137931034482767,
+      "Mortgage_interest_YoY": 8.270676691729317,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1968-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.482758620689653,
+      "Mortgage_interest_YoY": 8.270676691729317,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1968-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.482758620689653,
+      "Mortgage_interest_YoY": 8.270676691729317,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1968-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.436860068259385,
+      "Mortgage_interest_YoY": 8.270676691729317,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1968-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.067796610169494,
+      "Mortgage_interest_YoY": 5.109489051094895,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1968-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.054054054054057,
+      "Mortgage_interest_YoY": 5.109489051094895,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1968-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.391891891891886,
+      "Mortgage_interest_YoY": 10.21897810218979,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1968-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.3771043771043905,
+      "Mortgage_interest_YoY": 14.598540145985407,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1968-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.013377926421424,
+      "Mortgage_interest_YoY": 14.598540145985407,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1968-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.0000000000000036,
+      "Mortgage_interest_YoY": 14.598540145985407,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1969-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.333333333333345,
+      "Mortgage_interest_YoY": 11.805555555555557,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1969-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.9867109634551534,
+      "Mortgage_interest_YoY": 11.805555555555557,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1969-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.9735099337748325,
+      "Mortgage_interest_YoY": 11.805555555555557,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1969-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.630363036303619,
+      "Mortgage_interest_YoY": 14.583333333333325,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1969-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.960396039603964,
+      "Mortgage_interest_YoY": 14.583333333333325,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1969-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.9215686274509887,
+      "Mortgage_interest_YoY": 14.583333333333325,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1969-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.234527687296419,
+      "Mortgage_interest_YoY": 18.75,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1969-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.8961038961038863,
+      "Mortgage_interest_YoY": 18.75,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1969-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.207119741100329,
+      "Mortgage_interest_YoY": 13.245033112582782,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1969-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.8709677419354938,
+      "Mortgage_interest_YoY": 12.101910828025497,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1969-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.858520900321527,
+      "Mortgage_interest_YoY": 12.101910828025497,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1969-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.8461538461538547,
+      "Mortgage_interest_YoY": 12.101910828025497,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1970-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.833865814696491,
+      "Mortgage_interest_YoY": 13.043478260869556,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1970-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.833865814696491,
+      "Mortgage_interest_YoY": 13.043478260869556,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1970-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.140127388535042,
+      "Mortgage_interest_YoY": 13.043478260869556,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1970-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.140127388535042,
+      "Mortgage_interest_YoY": 13.939393939393941,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1970-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.809523809523818,
+      "Mortgage_interest_YoY": 13.939393939393941,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1970-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.459119496855334,
+      "Mortgage_interest_YoY": 13.939393939393941,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1970-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.125,
+      "Mortgage_interest_YoY": 14.035087719298245,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1970-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.125,
+      "Mortgage_interest_YoY": 14.035087719298245,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1970-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.4844720496894235,
+      "Mortgage_interest_YoY": 14.035087719298245,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1970-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.795031055900621,
+      "Mortgage_interest_YoY": 13.636363636363624,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1970-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.786377708978338,
+      "Mortgage_interest_YoY": 13.636363636363624,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1970-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.4691358024691468,
+      "Mortgage_interest_YoY": 13.636363636363624,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1971-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.153846153846173,
+      "Mortgage_interest_YoY": 13.186813186813207,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1971-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.4615384615384484,
+      "Mortgage_interest_YoY": 13.186813186813207,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1971-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.83486238532109,
+      "Mortgage_interest_YoY": 13.186813186813207,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1971-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.83486238532109,
+      "Mortgage_interest_YoY": 13.29787234042552,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1971-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.1406727828745975,
+      "Mortgage_interest_YoY": 13.29787234042552,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1971-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.5197568389057725,
+      "Mortgage_interest_YoY": 13.29787234042552,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1971-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.2121212121211977,
+      "Mortgage_interest_YoY": 11.794871794871797,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1971-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.5151515151515138,
+      "Mortgage_interest_YoY": 11.794871794871797,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1971-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.5151515151515138,
+      "Mortgage_interest_YoY": 11.794871794871797,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1971-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.2084592145015005,
+      "Mortgage_interest_YoY": 10.499999999999998,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1971-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.9036144578313143,
+      "Mortgage_interest_YoY": 10.499999999999998,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1971-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.2048192771084265,
+      "Mortgage_interest_YoY": 10.499999999999998,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1972-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.5060240963855387,
+      "Mortgage_interest_YoY": 9.708737864077666,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1972-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.2012012012012185,
+      "Mortgage_interest_YoY": 9.708737864077666,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1972-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.2012012012012185,
+      "Mortgage_interest_YoY": 9.708737864077666,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1972-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.2012012012012185,
+      "Mortgage_interest_YoY": 7.9812206572769995,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1972-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.8982035928143839,
+      "Mortgage_interest_YoY": 7.9812206572769995,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1972-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.8982035928143839,
+      "Mortgage_interest_YoY": 7.9812206572769995,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1972-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.197604790419149,
+      "Mortgage_interest_YoY": 7.339449541284404,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1972-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 0.8955223880596996,
+      "Mortgage_interest_YoY": 7.339449541284404,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1972-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.1940298507462588,
+      "Mortgage_interest_YoY": 7.339449541284404,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1972-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.1940298507462588,
+      "Mortgage_interest_YoY": 8.14479638009049,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1972-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.1940298507462588,
+      "Mortgage_interest_YoY": 10.40723981900451,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1972-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.4880952380952328,
+      "Mortgage_interest_YoY": 11.76470588235292,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1973-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.1869436201780381,
+      "Mortgage_interest_YoY": 10.619469026548668,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1973-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.1869436201780381,
+      "Mortgage_interest_YoY": 11.061946902654874,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1973-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.1869436201780381,
+      "Mortgage_interest_YoY": 11.504424778761058,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1973-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.1869436201780381,
+      "Mortgage_interest_YoY": 10.434782608695636,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1973-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.1869436201780381,
+      "Mortgage_interest_YoY": 10.869565217391308,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1973-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.780415430267035,
+      "Mortgage_interest_YoY": 12.173913043478258,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1973-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.4792899408283988,
+      "Mortgage_interest_YoY": 11.111111111111116,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1973-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.4792899408283988,
+      "Mortgage_interest_YoY": 11.965811965811968,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1973-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.179941002949847,
+      "Mortgage_interest_YoY": 13.247863247863245,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1973-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.7699115044247815,
+      "Mortgage_interest_YoY": 11.715481171548126,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1973-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.7699115044247815,
+      "Mortgage_interest_YoY": 10.655737704918034,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1973-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.4662756598240456,
+      "Mortgage_interest_YoY": 10.526315789473696,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1974-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.4662756598240456,
+      "Mortgage_interest_YoY": 10.40000000000001,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1974-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.7595307917888547,
+      "Mortgage_interest_YoY": 10.756972111553775,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1974-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 1.7595307917888547,
+      "Mortgage_interest_YoY": 11.507936507936511,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1974-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.052785923753664,
+      "Mortgage_interest_YoY": 11.41732283464567,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1974-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.052785923753664,
+      "Mortgage_interest_YoY": 12.15686274509804,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1974-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 2.6239067055393805,
+      "Mortgage_interest_YoY": 12.4031007751938,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1974-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.206997084548102,
+      "Mortgage_interest_YoY": 13.076923076923075,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1974-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.206997084548102,
+      "Mortgage_interest_YoY": 13.740458015267176,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1974-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.498542274052485,
+      "Mortgage_interest_YoY": 13.962264150943394,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1974-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 3.4782608695652195,
+      "Mortgage_interest_YoY": 14.981273408239693,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1974-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.057971014492745,
+      "Mortgage_interest_YoY": 15.555555555555545,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1974-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.046242774566466,
+      "Mortgage_interest_YoY": 15.384615384615374,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1975-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.335260115606943,
+      "Mortgage_interest_YoY": 15.217391304347828,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1975-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.034582132564846,
+      "Mortgage_interest_YoY": 15.827338129496415,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1975-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.610951008645525,
+      "Mortgage_interest_YoY": 15.658362989323837,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1975-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.597701149425282,
+      "Mortgage_interest_YoY": 16.254416961130723,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1975-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.17241379310347,
+      "Mortgage_interest_YoY": 15.73426573426573,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1975-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.829545454545436,
+      "Mortgage_interest_YoY": 14.827586206896548,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1975-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.8022598870056665,
+      "Mortgage_interest_YoY": 14.62585034013606,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1975-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.649717514124286,
+      "Mortgage_interest_YoY": 14.093959731543615,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1975-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.197183098591563,
+      "Mortgage_interest_YoY": 13.907284768211925,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1975-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.72268907563025,
+      "Mortgage_interest_YoY": 13.355048859934836,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1975-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.4066852367688165,
+      "Mortgage_interest_YoY": 12.820512820512842,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1975-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.666666666666665,
+      "Mortgage_interest_YoY": 13.333333333333353,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1976-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 7.202216066481992,
+      "Mortgage_interest_YoY": 13.52201257861636,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1976-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 7.756232686980602,
+      "Mortgage_interest_YoY": 13.043478260869556,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1976-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 7.713498622589543,
+      "Mortgage_interest_YoY": 13.538461538461544,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1976-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 7.417582417582436,
+      "Mortgage_interest_YoY": 13.373860182370812,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1976-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 7.10382513661203,
+      "Mortgage_interest_YoY": 14.19939577039273,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1976-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.77506775067751,
+      "Mortgage_interest_YoY": 15.01501501501501,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1976-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 7.008086253369283,
+      "Mortgage_interest_YoY": 14.54005934718101,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1976-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 7.219251336898402,
+      "Mortgage_interest_YoY": 15.000000000000014,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1976-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.896551724137923,
+      "Mortgage_interest_YoY": 14.825581395348841,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1976-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.299212598425186,
+      "Mortgage_interest_YoY": 14.942528735632198,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1976-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.806282722513068,
+      "Mortgage_interest_YoY": 14.488636363636353,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1976-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.510416666666674,
+      "Mortgage_interest_YoY": 14.28571428571428,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1977-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.943152454780365,
+      "Mortgage_interest_YoY": 13.850415512465375,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1977-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.169665809768632,
+      "Mortgage_interest_YoY": 14.010989010989006,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1977-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.13810741687979,
+      "Mortgage_interest_YoY": 13.008130081300816,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1977-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.39386189258313,
+      "Mortgage_interest_YoY": 12.33243967828419,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1977-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.3775510204081565,
+      "Mortgage_interest_YoY": 11.375661375661394,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1977-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.345177664974622,
+      "Mortgage_interest_YoY": 10.966057441253273,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1977-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.045340050377823,
+      "Mortgage_interest_YoY": 10.880829015544036,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1977-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.234413965087282,
+      "Mortgage_interest_YoY": 10.23017902813299,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1977-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.203473945409432,
+      "Mortgage_interest_YoY": 9.620253164556946,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1977-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.419753086419755,
+      "Mortgage_interest_YoY": 9.000000000000007,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1977-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.127450980392157,
+      "Mortgage_interest_YoY": 9.181141439205964,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1977-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.867970660146704,
+      "Mortgage_interest_YoY": 8.578431372549012,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1978-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.0975609756097615,
+      "Mortgage_interest_YoY": 8.515815085158152,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1978-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.0532687651331685,
+      "Mortgage_interest_YoY": 8.192771084337336,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1978-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.783132530120483,
+      "Mortgage_interest_YoY": 8.153477218225413,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1978-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.528846153846145,
+      "Mortgage_interest_YoY": 8.591885441527447,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1978-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.515587529976007,
+      "Mortgage_interest_YoY": 8.551068883610458,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1978-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.489260143198105,
+      "Mortgage_interest_YoY": 8.23529411764705,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1978-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.2256532066508266,
+      "Mortgage_interest_YoY": 8.41121495327104,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1978-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.164319248826277,
+      "Mortgage_interest_YoY": 8.352668213457083,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1978-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.140186915887868,
+      "Mortgage_interest_YoY": 8.083140877598161,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1978-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.872389791183296,
+      "Mortgage_interest_YoY": 8.027522935779817,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1978-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.387990762124727,
+      "Mortgage_interest_YoY": 7.727272727272716,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1978-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.618937644341803,
+      "Mortgage_interest_YoY": 7.223476297968401,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1979-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.367816091954024,
+      "Mortgage_interest_YoY": 7.399103139013441,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1979-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.337899543378998,
+      "Mortgage_interest_YoY": 7.126948775055686,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1979-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.555808656036442,
+      "Mortgage_interest_YoY": 7.0953436807095205,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1979-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.555808656036442,
+      "Mortgage_interest_YoY": 6.813186813186811,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1979-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.545454545454541,
+      "Mortgage_interest_YoY": 6.345733041575485,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1979-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.2986425339366585,
+      "Mortgage_interest_YoY": 6.0869565217391175,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1979-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.288939051918739,
+      "Mortgage_interest_YoY": 5.3879310344827624,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1979-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.241071428571441,
+      "Mortgage_interest_YoY": 4.925053533190571,
+      "Shelter_YoY": null
+    },
+    {
+      "date": "1979-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.222222222222216,
+      "Mortgage_interest_YoY": 5.341880341880345,
+      "Shelter_YoY": 6.13810741687979
+    },
+    {
+      "date": "1979-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.2035398230088505,
+      "Mortgage_interest_YoY": 5.307855626326963,
+      "Shelter_YoY": 5.569620253164564
+    },
+    {
+      "date": "1979-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.424778761061954,
+      "Mortgage_interest_YoY": 5.2742616033755185,
+      "Shelter_YoY": 6.060606060606055
+    },
+    {
+      "date": "1979-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.415011037527594,
+      "Mortgage_interest_YoY": 6.315789473684208,
+      "Shelter_YoY": 6.045340050377823
+    },
+    {
+      "date": "1980-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.405286343612325,
+      "Mortgage_interest_YoY": 6.263048016701456,
+      "Shelter_YoY": 5.735660847880286
+    },
+    {
+      "date": "1980-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.37636761487965,
+      "Mortgage_interest_YoY": 6.652806652806653,
+      "Shelter_YoY": 6.218905472636815
+    },
+    {
+      "date": "1980-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.139433551198257,
+      "Mortgage_interest_YoY": 7.246376811594213,
+      "Shelter_YoY": 6.947890818858582
+    },
+    {
+      "date": "1980-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.357298474945526,
+      "Mortgage_interest_YoY": 8.024691358024683,
+      "Shelter_YoY": 7.178217821782185
+    },
+    {
+      "date": "1980-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.347826086956519,
+      "Mortgage_interest_YoY": 9.876543209876543,
+      "Shelter_YoY": 7.407407407407418
+    },
+    {
+      "date": "1980-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.5553145336225676,
+      "Mortgage_interest_YoY": 10.245901639344268,
+      "Shelter_YoY": 7.6167076167076075
+    },
+    {
+      "date": "1980-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 4.545454545454541,
+      "Mortgage_interest_YoY": 11.042944785276077,
+      "Shelter_YoY": 7.823960880195613
+    },
+    {
+      "date": "1980-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.139186295503206,
+      "Mortgage_interest_YoY": 11.428571428571432,
+      "Shelter_YoY": 8.536585365853666
+    },
+    {
+      "date": "1980-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.117270788912576,
+      "Mortgage_interest_YoY": 11.967545638945243,
+      "Shelter_YoY": 7.710843373493992
+    },
+    {
+      "date": "1980-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.307855626326963,
+      "Mortgage_interest_YoY": 12.2983870967742,
+      "Shelter_YoY": 8.633093525179847
+    },
+    {
+      "date": "1980-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.508474576271172,
+      "Mortgage_interest_YoY": 13.026052104208418,
+      "Shelter_YoY": 9.285714285714274
+    },
+    {
+      "date": "1980-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.496828752642702,
+      "Mortgage_interest_YoY": 12.871287128712861,
+      "Shelter_YoY": 9.501187648456067
+    },
+    {
+      "date": "1981-01-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.485232067510548,
+      "Mortgage_interest_YoY": 13.555992141453821,
+      "Shelter_YoY": 10.61320754716981
+    },
+    {
+      "date": "1981-02-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.660377358490565,
+      "Mortgage_interest_YoY": 14.035087719298245,
+      "Shelter_YoY": 10.772833723653385
+    },
+    {
+      "date": "1981-03-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.648535564853563,
+      "Mortgage_interest_YoY": 14.478764478764482,
+      "Shelter_YoY": 11.1368909512761
+    },
+    {
+      "date": "1981-04-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 5.845511482254717,
+      "Mortgage_interest_YoY": 14.666666666666671,
+      "Shelter_YoY": 11.31639722863742
+    },
+    {
+      "date": "1981-05-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.25,
+      "Mortgage_interest_YoY": 14.606741573033721,
+      "Shelter_YoY": 12.413793103448278
+    },
+    {
+      "date": "1981-06-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.224066390041494,
+      "Mortgage_interest_YoY": 15.79925650557621,
+      "Shelter_YoY": 13.47031963470322
+    },
+    {
+      "date": "1981-07-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.418219461697716,
+      "Mortgage_interest_YoY": 17.12707182320443,
+      "Shelter_YoY": 13.832199546485269
+    },
+    {
+      "date": "1981-08-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.720977596741329,
+      "Mortgage_interest_YoY": 18.864468864468865,
+      "Shelter_YoY": 14.382022471910116
+    },
+    {
+      "date": "1981-09-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.693711967545646,
+      "Mortgage_interest_YoY": 20.28985507246377,
+      "Shelter_YoY": 15.212527964205801
+    },
+    {
+      "date": "1981-10-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 6.854838709677424,
+      "Mortgage_interest_YoY": 22.26211849192099,
+      "Shelter_YoY": 15.894039735099351
+    },
+    {
+      "date": "1981-11-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 7.429718875502012,
+      "Mortgage_interest_YoY": 23.226950354609933,
+      "Shelter_YoY": 15.032679738562083
+    },
+    {
+      "date": "1981-12-01",
+      "NHPI_YoY": null,
+      "Rent_YoY": 7.615230460921851,
+      "Mortgage_interest_YoY": 24.21052631578946,
+      "Shelter_YoY": 15.61822125813448
+    },
+    {
+      "date": "1982-01-01",
+      "NHPI_YoY": 5.49738219895286,
+      "Rent_YoY": 7.800000000000007,
+      "Mortgage_interest_YoY": 24.221453287197225,
+      "Shelter_YoY": 14.925373134328357
+    },
+    {
+      "date": "1982-02-01",
+      "NHPI_YoY": 4.134366925064592,
+      "Rent_YoY": 7.738095238095233,
+      "Mortgage_interest_YoY": 24.786324786324787,
+      "Shelter_YoY": 15.221987315010587
+    },
+    {
+      "date": "1982-03-01",
+      "NHPI_YoY": 2.0356234096692294,
+      "Rent_YoY": 8.118811881188126,
+      "Mortgage_interest_YoY": 25.12647554806071,
+      "Shelter_YoY": 15.657620041753662
+    },
+    {
+      "date": "1982-04-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 8.481262327416172,
+      "Mortgage_interest_YoY": 25.415282392026572,
+      "Shelter_YoY": 15.352697095435675
+    },
+    {
+      "date": "1982-05-01",
+      "NHPI_YoY": -2.463054187192115,
+      "Rent_YoY": 8.4313725490196,
+      "Mortgage_interest_YoY": 25.326797385620914,
+      "Shelter_YoY": 14.519427402862984
+    },
+    {
+      "date": "1982-06-01",
+      "NHPI_YoY": -3.676470588235292,
+      "Rent_YoY": 8.59375,
+      "Mortgage_interest_YoY": 25.040128410914942,
+      "Shelter_YoY": 13.078470824949706
+    },
+    {
+      "date": "1982-07-01",
+      "NHPI_YoY": -4.411764705882348,
+      "Rent_YoY": 8.754863813229562,
+      "Mortgage_interest_YoY": 24.371069182389917,
+      "Shelter_YoY": 13.147410358565725
+    },
+    {
+      "date": "1982-08-01",
+      "NHPI_YoY": -4.4334975369458185,
+      "Rent_YoY": 9.541984732824439,
+      "Mortgage_interest_YoY": 23.728813559322013,
+      "Shelter_YoY": 12.770137524557956
+    },
+    {
+      "date": "1982-09-01",
+      "NHPI_YoY": -4.950495049504955,
+      "Rent_YoY": 10.266159695817478,
+      "Mortgage_interest_YoY": 22.740963855421683,
+      "Shelter_YoY": 12.815533980582527
+    },
+    {
+      "date": "1982-10-01",
+      "NHPI_YoY": -4.962779156327546,
+      "Rent_YoY": 10.188679245283016,
+      "Mortgage_interest_YoY": 20.998531571218805,
+      "Shelter_YoY": 12.380952380952381
+    },
+    {
+      "date": "1982-11-01",
+      "NHPI_YoY": -5.472636815920406,
+      "Rent_YoY": 9.906542056074752,
+      "Mortgage_interest_YoY": 19.424460431654666,
+      "Shelter_YoY": 11.931818181818187
+    },
+    {
+      "date": "1982-12-01",
+      "NHPI_YoY": -5.955334987593053,
+      "Rent_YoY": 9.683426443202968,
+      "Mortgage_interest_YoY": 17.937853107344637,
+      "Shelter_YoY": 11.63227016885553
+    },
+    {
+      "date": "1983-01-01",
+      "NHPI_YoY": -5.955334987593053,
+      "Rent_YoY": 9.64749536178109,
+      "Mortgage_interest_YoY": 16.713091922005564,
+      "Shelter_YoY": 10.575139146567714
+    },
+    {
+      "date": "1983-02-01",
+      "NHPI_YoY": -5.955334987593053,
+      "Rent_YoY": 9.392265193370175,
+      "Mortgage_interest_YoY": 15.205479452054792,
+      "Shelter_YoY": 9.541284403669724
+    },
+    {
+      "date": "1983-03-01",
+      "NHPI_YoY": -5.735660847880308,
+      "Rent_YoY": 8.974358974358964,
+      "Mortgage_interest_YoY": 13.74663072776281,
+      "Shelter_YoY": 8.844765342960281
+    },
+    {
+      "date": "1983-04-01",
+      "NHPI_YoY": -5.263157894736848,
+      "Rent_YoY": 8.545454545454545,
+      "Mortgage_interest_YoY": 11.920529801324498,
+      "Shelter_YoY": 8.633093525179847
+    },
+    {
+      "date": "1983-05-01",
+      "NHPI_YoY": -4.7979797979797905,
+      "Rent_YoY": 8.137432188065109,
+      "Mortgage_interest_YoY": 10.2998696219035,
+      "Shelter_YoY": 7.857142857142851
+    },
+    {
+      "date": "1983-06-01",
+      "NHPI_YoY": -3.8167938931297662,
+      "Rent_YoY": 8.093525179856108,
+      "Mortgage_interest_YoY": 8.857509627727843,
+      "Shelter_YoY": 7.829181494661919
+    },
+    {
+      "date": "1983-07-01",
+      "NHPI_YoY": -3.076923076923088,
+      "Rent_YoY": 7.692307692307709,
+      "Mortgage_interest_YoY": 7.332490518331247,
+      "Shelter_YoY": 7.2183098591549255
+    },
+    {
+      "date": "1983-08-01",
+      "NHPI_YoY": -2.0618556701030855,
+      "Rent_YoY": 6.794425087108014,
+      "Mortgage_interest_YoY": 5.728518057285181,
+      "Shelter_YoY": 6.794425087108014
+    },
+    {
+      "date": "1983-09-01",
+      "NHPI_YoY": -1.041666666666663,
+      "Rent_YoY": 6.034482758620685,
+      "Mortgage_interest_YoY": 4.417177914110426,
+      "Shelter_YoY": 5.851979345955249
+    },
+    {
+      "date": "1983-10-01",
+      "NHPI_YoY": -1.0443864229764954,
+      "Rent_YoY": 5.821917808219168,
+      "Mortgage_interest_YoY": 3.5194174757281482,
+      "Shelter_YoY": 4.915254237288136
+    },
+    {
+      "date": "1983-11-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 5.7823129251700855,
+      "Mortgage_interest_YoY": 2.771084337349383,
+      "Shelter_YoY": 4.737732656514382
+    },
+    {
+      "date": "1983-12-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 5.602716468590829,
+      "Mortgage_interest_YoY": 2.1556886227544814,
+      "Shelter_YoY": 4.3697478991596705
+    },
+    {
+      "date": "1984-01-01",
+      "NHPI_YoY": 0.26385224274407815,
+      "Rent_YoY": 5.583756345177671,
+      "Mortgage_interest_YoY": 1.7899761336515496,
+      "Shelter_YoY": 4.865771812080544
+    },
+    {
+      "date": "1984-02-01",
+      "NHPI_YoY": 0.26385224274407815,
+      "Rent_YoY": 5.555555555555558,
+      "Mortgage_interest_YoY": 1.3079667063020217,
+      "Shelter_YoY": 5.025125628140703
+    },
+    {
+      "date": "1984-03-01",
+      "NHPI_YoY": 0.793650793650813,
+      "Rent_YoY": 5.5462184873949605,
+      "Mortgage_interest_YoY": 0.9478672985781866,
+      "Shelter_YoY": 3.9800995024875663
+    },
+    {
+      "date": "1984-04-01",
+      "NHPI_YoY": 1.0582010582010692,
+      "Rent_YoY": 5.36013400335007,
+      "Mortgage_interest_YoY": 0.8284023668639007,
+      "Shelter_YoY": 4.139072847682113
+    },
+    {
+      "date": "1984-05-01",
+      "NHPI_YoY": 1.3262599469495928,
+      "Rent_YoY": 5.518394648829439,
+      "Mortgage_interest_YoY": 0.8274231678486954,
+      "Shelter_YoY": 4.304635761589415
+    },
+    {
+      "date": "1984-06-01",
+      "NHPI_YoY": 0.793650793650813,
+      "Rent_YoY": 5.15806988352745,
+      "Mortgage_interest_YoY": 0.943396226415083,
+      "Shelter_YoY": 3.960396039603964
+    },
+    {
+      "date": "1984-07-01",
+      "NHPI_YoY": 0.793650793650813,
+      "Rent_YoY": 5.481727574750828,
+      "Mortgage_interest_YoY": 1.0600706713780772,
+      "Shelter_YoY": 3.776683087027921
+    },
+    {
+      "date": "1984-08-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 4.567699836867867,
+      "Mortgage_interest_YoY": 1.4134275618374437,
+      "Shelter_YoY": 3.262642740619892
+    },
+    {
+      "date": "1984-09-01",
+      "NHPI_YoY": -0.2631578947368429,
+      "Rent_YoY": 4.715447154471564,
+      "Mortgage_interest_YoY": 1.5276145710928501,
+      "Shelter_YoY": 3.4146341463414664
+    },
+    {
+      "date": "1984-10-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 4.53074433656957,
+      "Mortgage_interest_YoY": 1.5240328253223856,
+      "Shelter_YoY": 3.554119547657497
+    },
+    {
+      "date": "1984-11-01",
+      "NHPI_YoY": -0.526315789473697,
+      "Rent_YoY": 4.1800643086816525,
+      "Mortgage_interest_YoY": 1.5240328253223856,
+      "Shelter_YoY": 4.038772213247177
+    },
+    {
+      "date": "1984-12-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 4.5016077170418,
+      "Mortgage_interest_YoY": 1.6412661195779776,
+      "Shelter_YoY": 3.864734299516903
+    },
+    {
+      "date": "1985-01-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 4.487179487179493,
+      "Mortgage_interest_YoY": 1.8757327080891173,
+      "Shelter_YoY": 3.6799999999999944
+    },
+    {
+      "date": "1985-02-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 4.306220095693791,
+      "Mortgage_interest_YoY": 2.1126760563380254,
+      "Shelter_YoY": 3.6682615629983983
+    },
+    {
+      "date": "1985-03-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 4.140127388535042,
+      "Mortgage_interest_YoY": 2.464788732394352,
+      "Shelter_YoY": 3.6682615629983983
+    },
+    {
+      "date": "1985-04-01",
+      "NHPI_YoY": -0.2617801047120505,
+      "Rent_YoY": 4.292527821939585,
+      "Mortgage_interest_YoY": 2.699530516431925,
+      "Shelter_YoY": 3.8155802861685295
+    },
+    {
+      "date": "1985-05-01",
+      "NHPI_YoY": -0.2617801047120505,
+      "Rent_YoY": 4.278922345483349,
+      "Mortgage_interest_YoY": 2.696365767878084,
+      "Shelter_YoY": 3.809523809523818
+    },
+    {
+      "date": "1985-06-01",
+      "NHPI_YoY": 0.5249343832020914,
+      "Rent_YoY": 4.272151898734178,
+      "Mortgage_interest_YoY": 2.219626168224309,
+      "Shelter_YoY": 3.9682539682539764
+    },
+    {
+      "date": "1985-07-01",
+      "NHPI_YoY": 0.7874015748031482,
+      "Rent_YoY": 4.094488188976375,
+      "Mortgage_interest_YoY": 1.7482517482517501,
+      "Shelter_YoY": 3.639240506329111
+    },
+    {
+      "date": "1985-08-01",
+      "NHPI_YoY": 1.3157894736842035,
+      "Rent_YoY": 4.212168486739465,
+      "Mortgage_interest_YoY": 1.2775842044134844,
+      "Shelter_YoY": 3.949447077409163
+    },
+    {
+      "date": "1985-09-01",
+      "NHPI_YoY": 2.37467018469657,
+      "Rent_YoY": 4.0372670807453215,
+      "Mortgage_interest_YoY": 0.694444444444442,
+      "Shelter_YoY": 3.6163522012578664
+    },
+    {
+      "date": "1985-10-01",
+      "NHPI_YoY": 2.638522427440626,
+      "Rent_YoY": 4.179566563467496,
+      "Mortgage_interest_YoY": 0.346420323325658,
+      "Shelter_YoY": 3.4321372854914323
+    },
+    {
+      "date": "1985-11-01",
+      "NHPI_YoY": 3.70370370370372,
+      "Rent_YoY": 4.166666666666674,
+      "Mortgage_interest_YoY": 0.11547344110856006,
+      "Shelter_YoY": 3.105590062111796
+    },
+    {
+      "date": "1985-12-01",
+      "NHPI_YoY": 3.693931398416872,
+      "Rent_YoY": 4.153846153846152,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": 3.2558139534883734
+    },
+    {
+      "date": "1986-01-01",
+      "NHPI_YoY": 4.73684210526315,
+      "Rent_YoY": 4.141104294478537,
+      "Mortgage_interest_YoY": -0.34522439585732423,
+      "Shelter_YoY": 3.0864197530864113
+    },
+    {
+      "date": "1986-02-01",
+      "NHPI_YoY": 6.052631578947354,
+      "Rent_YoY": 4.128440366972463,
+      "Mortgage_interest_YoY": -0.45977011494253706,
+      "Shelter_YoY": 3.076923076923066
+    },
+    {
+      "date": "1986-03-01",
+      "NHPI_YoY": 6.5616797900262425,
+      "Rent_YoY": 4.281345565749239,
+      "Mortgage_interest_YoY": -0.6872852233676952,
+      "Shelter_YoY": 3.076923076923066
+    },
+    {
+      "date": "1986-04-01",
+      "NHPI_YoY": 7.086614173228334,
+      "Rent_YoY": 4.115853658536595,
+      "Mortgage_interest_YoY": -0.9142857142857119,
+      "Shelter_YoY": 2.6033690658499253
+    },
+    {
+      "date": "1986-05-01",
+      "NHPI_YoY": 7.874015748031504,
+      "Rent_YoY": 4.255319148936176,
+      "Mortgage_interest_YoY": -1.0273972602739656,
+      "Shelter_YoY": 2.599388379204881
+    },
+    {
+      "date": "1986-06-01",
+      "NHPI_YoY": 7.8328981723237545,
+      "Rent_YoY": 4.248861911987856,
+      "Mortgage_interest_YoY": -1.0285714285714342,
+      "Shelter_YoY": 2.442748091603053
+    },
+    {
+      "date": "1986-07-01",
+      "NHPI_YoY": 8.333333333333348,
+      "Rent_YoY": 4.2360060514372355,
+      "Mortgage_interest_YoY": -0.8018327605956554,
+      "Shelter_YoY": 2.595419847328251
+    },
+    {
+      "date": "1986-08-01",
+      "NHPI_YoY": 9.090909090909083,
+      "Rent_YoY": 4.041916167664672,
+      "Mortgage_interest_YoY": -0.6880733944954254,
+      "Shelter_YoY": 2.583586626139822
+    },
+    {
+      "date": "1986-09-01",
+      "NHPI_YoY": 10.309278350515472,
+      "Rent_YoY": 4.029850746268671,
+      "Mortgage_interest_YoY": -0.45977011494253706,
+      "Shelter_YoY": 2.5796661608497473
+    },
+    {
+      "date": "1986-10-01",
+      "NHPI_YoY": 11.053984575835486,
+      "Rent_YoY": 4.011887072808329,
+      "Mortgage_interest_YoY": -0.34522439585732423,
+      "Shelter_YoY": 3.016591251885359
+    },
+    {
+      "date": "1986-11-01",
+      "NHPI_YoY": 11.734693877550995,
+      "Rent_YoY": 4.0000000000000036,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": 3.1626506024096335
+    },
+    {
+      "date": "1986-12-01",
+      "NHPI_YoY": 11.959287531806616,
+      "Rent_YoY": 3.840472673559825,
+      "Mortgage_interest_YoY": 0.11534025374855261,
+      "Shelter_YoY": 3.3033033033033066
+    },
+    {
+      "date": "1987-01-01",
+      "NHPI_YoY": 11.557788944723612,
+      "Rent_YoY": 3.8291605301914444,
+      "Mortgage_interest_YoY": 0.346420323325658,
+      "Shelter_YoY": 3.293413173652704
+    },
+    {
+      "date": "1987-02-01",
+      "NHPI_YoY": 12.158808933002497,
+      "Rent_YoY": 3.6710719530102853,
+      "Mortgage_interest_YoY": 0.6928406466512715,
+      "Shelter_YoY": 3.432835820895508
+    },
+    {
+      "date": "1987-03-01",
+      "NHPI_YoY": 14.778325123152714,
+      "Rent_YoY": 3.8123167155425186,
+      "Mortgage_interest_YoY": 0.34602076124568004,
+      "Shelter_YoY": 3.8805970149253577
+    },
+    {
+      "date": "1987-04-01",
+      "NHPI_YoY": 15.441176470588246,
+      "Rent_YoY": 3.8067349926793614,
+      "Mortgage_interest_YoY": 0.6920415224913379,
+      "Shelter_YoY": 4.32835820895523
+    },
+    {
+      "date": "1987-05-01",
+      "NHPI_YoY": 15.571776155717764,
+      "Rent_YoY": 3.6443148688046545,
+      "Mortgage_interest_YoY": 0.6920415224913379,
+      "Shelter_YoY": 4.470938897168408
+    },
+    {
+      "date": "1987-06-01",
+      "NHPI_YoY": 15.496368038740925,
+      "Rent_YoY": 3.784570596797665,
+      "Mortgage_interest_YoY": 0.8083140877598094,
+      "Shelter_YoY": 4.769001490312963
+    },
+    {
+      "date": "1987-07-01",
+      "NHPI_YoY": 15.384615384615374,
+      "Rent_YoY": 3.6284470246734424,
+      "Mortgage_interest_YoY": 1.0392609699769073,
+      "Shelter_YoY": 4.910714285714279
+    },
+    {
+      "date": "1987-08-01",
+      "NHPI_YoY": 14.761904761904777,
+      "Rent_YoY": 3.597122302158273,
+      "Mortgage_interest_YoY": 1.2702078521940052,
+      "Shelter_YoY": 4.888888888888876
+    },
+    {
+      "date": "1987-09-01",
+      "NHPI_YoY": 13.785046728971984,
+      "Rent_YoY": 3.5868005738880937,
+      "Mortgage_interest_YoY": 1.616628175519641,
+      "Shelter_YoY": 5.029585798816583
+    },
+    {
+      "date": "1987-10-01",
+      "NHPI_YoY": 13.194444444444443,
+      "Rent_YoY": 3.7142857142857144,
+      "Mortgage_interest_YoY": 1.847575057736739,
+      "Shelter_YoY": 4.9780380673499325
+    },
+    {
+      "date": "1987-11-01",
+      "NHPI_YoY": 12.100456621004586,
+      "Rent_YoY": 3.4188034188034067,
+      "Mortgage_interest_YoY": 2.3068050749711633,
+      "Shelter_YoY": 5.109489051094895
+    },
+    {
+      "date": "1987-12-01",
+      "NHPI_YoY": 11.590909090909097,
+      "Rent_YoY": 3.5561877667140918,
+      "Mortgage_interest_YoY": 2.4193548387096975,
+      "Shelter_YoY": 4.796511627906974
+    },
+    {
+      "date": "1988-01-01",
+      "NHPI_YoY": 11.036036036036023,
+      "Rent_YoY": 3.546099290780136,
+      "Mortgage_interest_YoY": 2.7617951668584384,
+      "Shelter_YoY": 5.072463768115942
+    },
+    {
+      "date": "1988-02-01",
+      "NHPI_YoY": 10.176991150442461,
+      "Rent_YoY": 3.682719546742219,
+      "Mortgage_interest_YoY": 1.83486238532109,
+      "Shelter_YoY": 4.6176046176046315
+    },
+    {
+      "date": "1988-03-01",
+      "NHPI_YoY": 7.939914163090123,
+      "Rent_YoY": 3.5310734463276816,
+      "Mortgage_interest_YoY": 3.218390804597693,
+      "Shelter_YoY": 4.597701149425282
+    },
+    {
+      "date": "1988-04-01",
+      "NHPI_YoY": 8.704883227176218,
+      "Rent_YoY": 3.667136812411842,
+      "Mortgage_interest_YoY": 2.86368843069873,
+      "Shelter_YoY": 4.4349070100142995
+    },
+    {
+      "date": "1988-05-01",
+      "NHPI_YoY": 9.263157894736839,
+      "Rent_YoY": 3.6568213783403802,
+      "Mortgage_interest_YoY": 3.2073310423825774,
+      "Shelter_YoY": 4.422253922967201
+    },
+    {
+      "date": "1988-06-01",
+      "NHPI_YoY": 9.643605870020956,
+      "Rent_YoY": 3.6465638148667656,
+      "Mortgage_interest_YoY": 3.550973654066447,
+      "Shelter_YoY": 4.409672830725464
+    },
+    {
+      "date": "1988-07-01",
+      "NHPI_YoY": 9.375,
+      "Rent_YoY": 3.6414565826330403,
+      "Mortgage_interest_YoY": 3.771428571428559,
+      "Shelter_YoY": 4.255319148936176
+    },
+    {
+      "date": "1988-08-01",
+      "NHPI_YoY": 9.958506224066376,
+      "Rent_YoY": 4.166666666666674,
+      "Mortgage_interest_YoY": 3.8768529076396607,
+      "Shelter_YoY": 4.519774011299438
+    },
+    {
+      "date": "1988-09-01",
+      "NHPI_YoY": 10.677618069815175,
+      "Rent_YoY": 4.432132963988922,
+      "Mortgage_interest_YoY": 3.86363636363638,
+      "Shelter_YoY": 4.647887323943656
+    },
+    {
+      "date": "1988-10-01",
+      "NHPI_YoY": 11.042944785276077,
+      "Rent_YoY": 4.40771349862259,
+      "Mortgage_interest_YoY": 4.308390022675734,
+      "Shelter_YoY": 4.7419804741980265
+    },
+    {
+      "date": "1988-11-01",
+      "NHPI_YoY": 12.016293279022406,
+      "Rent_YoY": 4.683195592286515,
+      "Mortgage_interest_YoY": 4.0586245772266105,
+      "Shelter_YoY": 4.583333333333339
+    },
+    {
+      "date": "1988-12-01",
+      "NHPI_YoY": 13.645621181262712,
+      "Rent_YoY": 4.94505494505495,
+      "Mortgage_interest_YoY": 4.49943757030371,
+      "Shelter_YoY": 4.715672676837723
+    },
+    {
+      "date": "1989-01-01",
+      "NHPI_YoY": 14.198782961460443,
+      "Rent_YoY": 4.93150684931507,
+      "Mortgage_interest_YoY": 4.927211646136631,
+      "Shelter_YoY": 4.9655172413793025
+    },
+    {
+      "date": "1989-02-01",
+      "NHPI_YoY": 15.863453815261064,
+      "Rent_YoY": 5.191256830601088,
+      "Mortgage_interest_YoY": 6.53153153153152,
+      "Shelter_YoY": 5.3793103448275925
+    },
+    {
+      "date": "1989-03-01",
+      "NHPI_YoY": 16.50099403578529,
+      "Rent_YoY": 5.184174624829474,
+      "Mortgage_interest_YoY": 6.458797327394206,
+      "Shelter_YoY": 5.494505494505497
+    },
+    {
+      "date": "1989-04-01",
+      "NHPI_YoY": 15.4296875,
+      "Rent_YoY": 5.306122448979589,
+      "Mortgage_interest_YoY": 7.795100222717144,
+      "Shelter_YoY": 5.890410958904102
+    },
+    {
+      "date": "1989-05-01",
+      "NHPI_YoY": 14.25818882466281,
+      "Rent_YoY": 5.563093622795101,
+      "Mortgage_interest_YoY": 8.768035516093242,
+      "Shelter_YoY": 6.010928961748618
+    },
+    {
+      "date": "1989-06-01",
+      "NHPI_YoY": 13.95793499043978,
+      "Rent_YoY": 5.683355886332864,
+      "Mortgage_interest_YoY": 9.734513274336276,
+      "Shelter_YoY": 6.130790190735702
+    },
+    {
+      "date": "1989-07-01",
+      "NHPI_YoY": 13.904761904761909,
+      "Rent_YoY": 5.945945945945952,
+      "Mortgage_interest_YoY": 10.35242290748899,
+      "Shelter_YoY": 6.394557823129254
+    },
+    {
+      "date": "1989-08-01",
+      "NHPI_YoY": 12.83018867924528,
+      "Rent_YoY": 5.466666666666664,
+      "Mortgage_interest_YoY": 11.086717892425924,
+      "Shelter_YoY": 6.216216216216219
+    },
+    {
+      "date": "1989-09-01",
+      "NHPI_YoY": 11.50278293135436,
+      "Rent_YoY": 5.305039787798416,
+      "Mortgage_interest_YoY": 11.816192560175054,
+      "Shelter_YoY": 5.921938088829082
+    },
+    {
+      "date": "1989-10-01",
+      "NHPI_YoY": 11.233885819521184,
+      "Rent_YoY": 5.145118733509246,
+      "Mortgage_interest_YoY": 11.956521739130444,
+      "Shelter_YoY": 5.992010652463375
+    },
+    {
+      "date": "1989-11-01",
+      "NHPI_YoY": 10.545454545454547,
+      "Rent_YoY": 5.000000000000004,
+      "Mortgage_interest_YoY": 12.676056338028175,
+      "Shelter_YoY": 6.108897742363895
+    },
+    {
+      "date": "1989-12-01",
+      "NHPI_YoY": 9.498207885304666,
+      "Rent_YoY": 4.712041884816753,
+      "Mortgage_interest_YoY": 12.80947255113023,
+      "Shelter_YoY": 6.092715231788071
+    },
+    {
+      "date": "1990-01-01",
+      "NHPI_YoY": 9.59147424511546,
+      "Rent_YoY": 4.569190600522188,
+      "Mortgage_interest_YoY": 12.913553895410889,
+      "Shelter_YoY": 6.307490144546657
+    },
+    {
+      "date": "1990-02-01",
+      "NHPI_YoY": 7.105719237434993,
+      "Rent_YoY": 4.415584415584428,
+      "Mortgage_interest_YoY": 12.579281183932345,
+      "Shelter_YoY": 6.413612565445015
+    },
+    {
+      "date": "1990-03-01",
+      "NHPI_YoY": 5.631399317406149,
+      "Rent_YoY": 4.5395590142671916,
+      "Mortgage_interest_YoY": 12.447698744769875,
+      "Shelter_YoY": 6.119791666666674
+    },
+    {
+      "date": "1990-04-01",
+      "NHPI_YoY": 4.5685279187817285,
+      "Rent_YoY": 4.392764857881115,
+      "Mortgage_interest_YoY": 12.190082644628086,
+      "Shelter_YoY": 5.950840879689534
+    },
+    {
+      "date": "1990-05-01",
+      "NHPI_YoY": 3.7099494097807773,
+      "Rent_YoY": 4.113110539845755,
+      "Mortgage_interest_YoY": 11.938775510204081,
+      "Shelter_YoY": 5.927835051546393
+    },
+    {
+      "date": "1990-06-01",
+      "NHPI_YoY": 2.0134228187919323,
+      "Rent_YoY": 3.969270166453276,
+      "Mortgage_interest_YoY": 11.995967741935477,
+      "Shelter_YoY": 5.519897304236188
+    },
+    {
+      "date": "1990-07-01",
+      "NHPI_YoY": 1.0033444816053505,
+      "Rent_YoY": 3.9540816326530503,
+      "Mortgage_interest_YoY": 12.27544910179641,
+      "Shelter_YoY": 5.115089514066495
+    },
+    {
+      "date": "1990-08-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 3.792667509481662,
+      "Mortgage_interest_YoY": 12.648221343873512,
+      "Shelter_YoY": 4.961832061068705
+    },
+    {
+      "date": "1990-09-01",
+      "NHPI_YoY": -1.830282861896837,
+      "Rent_YoY": 3.652392947103267,
+      "Mortgage_interest_YoY": 12.62230919765166,
+      "Shelter_YoY": 5.209656925031769
+    },
+    {
+      "date": "1990-10-01",
+      "NHPI_YoY": -2.980132450331119,
+      "Rent_YoY": 3.638644918444145,
+      "Mortgage_interest_YoY": 12.718446601941746,
+      "Shelter_YoY": 5.276381909547734
+    },
+    {
+      "date": "1990-11-01",
+      "NHPI_YoY": -4.6052631578947345,
+      "Rent_YoY": 3.884711779448624,
+      "Mortgage_interest_YoY": 12.596153846153847,
+      "Shelter_YoY": 5.38172715894869
+    },
+    {
+      "date": "1990-12-01",
+      "NHPI_YoY": -5.400981996726683,
+      "Rent_YoY": 3.750000000000009,
+      "Mortgage_interest_YoY": 12.5,
+      "Shelter_YoY": 5.243445692883908
+    },
+    {
+      "date": "1991-01-01",
+      "NHPI_YoY": -7.779578606158843,
+      "Rent_YoY": 3.7453183520599342,
+      "Mortgage_interest_YoY": 12.003780718336476,
+      "Shelter_YoY": 6.056860321384416
+    },
+    {
+      "date": "1991-02-01",
+      "NHPI_YoY": -9.708737864077666,
+      "Rent_YoY": 3.8557213930348277,
+      "Mortgage_interest_YoY": 11.737089201877925,
+      "Shelter_YoY": 5.535055350553497
+    },
+    {
+      "date": "1991-03-01",
+      "NHPI_YoY": -9.531502423263326,
+      "Rent_YoY": 3.7220843672456594,
+      "Mortgage_interest_YoY": 10.976744186046506,
+      "Shelter_YoY": 5.03067484662576
+    },
+    {
+      "date": "1991-04-01",
+      "NHPI_YoY": -9.708737864077666,
+      "Rent_YoY": 3.5891089108911034,
+      "Mortgage_interest_YoY": 9.852670349907932,
+      "Shelter_YoY": 4.6398046398046455
+    },
+    {
+      "date": "1991-05-01",
+      "NHPI_YoY": -8.617886178861788,
+      "Rent_YoY": 3.580246913580254,
+      "Mortgage_interest_YoY": 8.933454876937109,
+      "Shelter_YoY": 4.379562043795615
+    },
+    {
+      "date": "1991-06-01",
+      "NHPI_YoY": -7.5657894736842035,
+      "Rent_YoY": 3.5714285714285587,
+      "Mortgage_interest_YoY": 7.380738073807391,
+      "Shelter_YoY": 4.622871046228716
+    },
+    {
+      "date": "1991-07-01",
+      "NHPI_YoY": -6.788079470198682,
+      "Rent_YoY": 3.435582822085892,
+      "Mortgage_interest_YoY": 5.777777777777771,
+      "Shelter_YoY": 4.987834549878345
+    },
+    {
+      "date": "1991-08-01",
+      "NHPI_YoY": -6.020066889632103,
+      "Rent_YoY": 3.410475030450688,
+      "Mortgage_interest_YoY": 4.210526315789465,
+      "Shelter_YoY": 4.8484848484848575
+    },
+    {
+      "date": "1991-09-01",
+      "NHPI_YoY": -4.745762711864399,
+      "Rent_YoY": 3.1591737545565213,
+      "Mortgage_interest_YoY": 3.12771503040834,
+      "Shelter_YoY": 4.468599033816423
+    },
+    {
+      "date": "1991-10-01",
+      "NHPI_YoY": -4.095563139931735,
+      "Rent_YoY": 3.14769975786926,
+      "Mortgage_interest_YoY": 1.8949181739879473,
+      "Shelter_YoY": 4.057279236276856
+    },
+    {
+      "date": "1991-11-01",
+      "NHPI_YoY": -3.6206896551724155,
+      "Rent_YoY": 3.0156815440289586,
+      "Mortgage_interest_YoY": 0.853970964987183,
+      "Shelter_YoY": 3.562945368171011
+    },
+    {
+      "date": "1991-12-01",
+      "NHPI_YoY": -3.287197231833905,
+      "Rent_YoY": 3.0120481927710774,
+      "Mortgage_interest_YoY": -0.2544529262086592,
+      "Shelter_YoY": 3.4400948991696323
+    },
+    {
+      "date": "1992-01-01",
+      "NHPI_YoY": -1.9332161687170446,
+      "Rent_YoY": 3.0084235860409203,
+      "Mortgage_interest_YoY": -1.4345991561181437,
+      "Shelter_YoY": 2.0979020979021046
+    },
+    {
+      "date": "1992-02-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 2.754491017964078,
+      "Mortgage_interest_YoY": -2.1008403361344574,
+      "Shelter_YoY": 2.0979020979021046
+    },
+    {
+      "date": "1992-03-01",
+      "NHPI_YoY": -0.17857142857142794,
+      "Rent_YoY": 2.8708133971292016,
+      "Mortgage_interest_YoY": -2.849958088851623,
+      "Shelter_YoY": 2.219626168224309
+    },
+    {
+      "date": "1992-04-01",
+      "NHPI_YoY": 0.35842293906811484,
+      "Rent_YoY": 2.9868578255675127,
+      "Mortgage_interest_YoY": -2.933780385582563,
+      "Shelter_YoY": 1.9836639439906767
+    },
+    {
+      "date": "1992-05-01",
+      "NHPI_YoY": -0.3558718861210064,
+      "Rent_YoY": 2.741358760429069,
+      "Mortgage_interest_YoY": -3.1799163179916268,
+      "Shelter_YoY": 2.0979020979021046
+    },
+    {
+      "date": "1992-06-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 2.853745541022601,
+      "Mortgage_interest_YoY": -3.185247275775349,
+      "Shelter_YoY": 1.744186046511631
+    },
+    {
+      "date": "1992-07-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 2.7283511269276417,
+      "Mortgage_interest_YoY": -3.445378151260503,
+      "Shelter_YoY": 1.6222479721900385
+    },
+    {
+      "date": "1992-08-01",
+      "NHPI_YoY": 0.177935943060481,
+      "Rent_YoY": 2.355712603062421,
+      "Mortgage_interest_YoY": -3.872053872053871,
+      "Shelter_YoY": 1.6184971098266
+    },
+    {
+      "date": "1992-09-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 2.7090694935217874,
+      "Mortgage_interest_YoY": -4.549283909014323,
+      "Shelter_YoY": 1.387283236994219
+    },
+    {
+      "date": "1992-10-01",
+      "NHPI_YoY": 0.177935943060481,
+      "Rent_YoY": 2.5821596244131495,
+      "Mortgage_interest_YoY": -5.156382079458998,
+      "Shelter_YoY": 1.3761467889908285
+    },
+    {
+      "date": "1992-11-01",
+      "NHPI_YoY": 0.7155635062611854,
+      "Rent_YoY": 2.4590163934426146,
+      "Mortgage_interest_YoY": -5.249788314987292,
+      "Shelter_YoY": 1.6055045871559592
+    },
+    {
+      "date": "1992-12-01",
+      "NHPI_YoY": 0.7155635062611854,
+      "Rent_YoY": 2.5730994152046716,
+      "Mortgage_interest_YoY": -5.102040816326536,
+      "Shelter_YoY": 1.7201834862385246
+    },
+    {
+      "date": "1993-01-01",
+      "NHPI_YoY": 0.7168458781362075,
+      "Rent_YoY": 2.5700934579439227,
+      "Mortgage_interest_YoY": -4.623287671232868,
+      "Shelter_YoY": 1.4840182648401923
+    },
+    {
+      "date": "1993-02-01",
+      "NHPI_YoY": 1.0752688172043001,
+      "Rent_YoY": 2.447552447552459,
+      "Mortgage_interest_YoY": -4.635193133047211,
+      "Shelter_YoY": 1.4840182648401923
+    },
+    {
+      "date": "1993-03-01",
+      "NHPI_YoY": 1.4311270125223707,
+      "Rent_YoY": 2.4418604651162745,
+      "Mortgage_interest_YoY": -4.314063848144956,
+      "Shelter_YoY": 1.6000000000000014
+    },
+    {
+      "date": "1993-04-01",
+      "NHPI_YoY": 1.7857142857142794,
+      "Rent_YoY": 2.3201856148491906,
+      "Mortgage_interest_YoY": -4.663212435233155,
+      "Shelter_YoY": 1.8306636155606348
+    },
+    {
+      "date": "1993-05-01",
+      "NHPI_YoY": 1.4285714285714235,
+      "Rent_YoY": 2.3201856148491906,
+      "Mortgage_interest_YoY": -5.099394987035444,
+      "Shelter_YoY": 1.4840182648401923
+    },
+    {
+      "date": "1993-06-01",
+      "NHPI_YoY": 1.245551601423478,
+      "Rent_YoY": 2.19653179190753,
+      "Mortgage_interest_YoY": -5.3679653679653665,
+      "Shelter_YoY": 1.6000000000000014
+    },
+    {
+      "date": "1993-07-01",
+      "NHPI_YoY": 1.243339253996445,
+      "Rent_YoY": 2.1939953810623525,
+      "Mortgage_interest_YoY": -5.395996518711921,
+      "Shelter_YoY": 1.3683010262257822
+    },
+    {
+      "date": "1993-08-01",
+      "NHPI_YoY": 1.4209591474245276,
+      "Rent_YoY": 2.1864211737629313,
+      "Mortgage_interest_YoY": -5.429071803852892,
+      "Shelter_YoY": 1.2514220705347023
+    },
+    {
+      "date": "1993-09-01",
+      "NHPI_YoY": 1.6014234875444844,
+      "Rent_YoY": 1.9495412844036775,
+      "Mortgage_interest_YoY": -5.119152691968221,
+      "Shelter_YoY": 1.4823261117445696
+    },
+    {
+      "date": "1993-10-01",
+      "NHPI_YoY": 1.243339253996445,
+      "Rent_YoY": 1.9450800915331579,
+      "Mortgage_interest_YoY": -4.456327985739749,
+      "Shelter_YoY": 1.1312217194570096
+    },
+    {
+      "date": "1993-11-01",
+      "NHPI_YoY": 1.243339253996445,
+      "Rent_YoY": 1.942857142857135,
+      "Mortgage_interest_YoY": -4.825737265415553,
+      "Shelter_YoY": 1.0158013544018019
+    },
+    {
+      "date": "1993-12-01",
+      "NHPI_YoY": 1.0657193605683846,
+      "Rent_YoY": 1.9384264538198526,
+      "Mortgage_interest_YoY": -5.376344086021501,
+      "Shelter_YoY": 1.014656144306647
+    },
+    {
+      "date": "1994-01-01",
+      "NHPI_YoY": 1.4234875444839812,
+      "Rent_YoY": 1.9362186788154823,
+      "Mortgage_interest_YoY": -6.014362657091565,
+      "Shelter_YoY": 0.6749156355455588
+    },
+    {
+      "date": "1994-02-01",
+      "NHPI_YoY": 0.8865248226950451,
+      "Rent_YoY": 1.8202502844141044,
+      "Mortgage_interest_YoY": -6.660666066606657,
+      "Shelter_YoY": 0.6749156355455588
+    },
+    {
+      "date": "1994-03-01",
+      "NHPI_YoY": 0.3527336860670083,
+      "Rent_YoY": 1.7026106696935273,
+      "Mortgage_interest_YoY": -7.213706041478806,
+      "Shelter_YoY": 0.5624296962879693
+    },
+    {
+      "date": "1994-04-01",
+      "NHPI_YoY": -0.17543859649122862,
+      "Rent_YoY": 1.814058956916087,
+      "Mortgage_interest_YoY": -7.336956521739135,
+      "Shelter_YoY": -0.11235955056179137
+    },
+    {
+      "date": "1994-05-01",
+      "NHPI_YoY": 0.17605633802817433,
+      "Rent_YoY": 1.9274376417233618,
+      "Mortgage_interest_YoY": -6.830601092896171,
+      "Shelter_YoY": 0.11248593925758943
+    },
+    {
+      "date": "1994-06-01",
+      "NHPI_YoY": 0.17574692442883233,
+      "Rent_YoY": 1.6968325791855143,
+      "Mortgage_interest_YoY": -6.404391582799629,
+      "Shelter_YoY": 0.3374578177727683
+    },
+    {
+      "date": "1994-07-01",
+      "NHPI_YoY": -0.17543859649122862,
+      "Rent_YoY": 1.6949152542372836,
+      "Mortgage_interest_YoY": -5.7037718491260385,
+      "Shelter_YoY": 0.3374578177727683
+    },
+    {
+      "date": "1994-08-01",
+      "NHPI_YoY": -0.17513134851138146,
+      "Rent_YoY": 1.5765765765765938,
+      "Mortgage_interest_YoY": -4.351851851851851,
+      "Shelter_YoY": 0.44943820224718767
+    },
+    {
+      "date": "1994-09-01",
+      "NHPI_YoY": -0.17513134851138146,
+      "Rent_YoY": 1.6872890888638858,
+      "Mortgage_interest_YoY": -3.5348837209302264,
+      "Shelter_YoY": 0.44943820224718767
+    },
+    {
+      "date": "1994-10-01",
+      "NHPI_YoY": -0.17543859649122862,
+      "Rent_YoY": 1.5712682379349197,
+      "Mortgage_interest_YoY": -2.8917910447761264,
+      "Shelter_YoY": 0.3355704697986628
+    },
+    {
+      "date": "1994-11-01",
+      "NHPI_YoY": -0.35087719298245723,
+      "Rent_YoY": 1.681614349775784,
+      "Mortgage_interest_YoY": -1.8779342723004744,
+      "Shelter_YoY": 0.3351955307262511
+    },
+    {
+      "date": "1994-12-01",
+      "NHPI_YoY": -0.17574692442882123,
+      "Rent_YoY": 1.5659955257270708,
+      "Mortgage_interest_YoY": -0.7575757575757569,
+      "Shelter_YoY": 0.5580357142857206
+    },
+    {
+      "date": "1995-01-01",
+      "NHPI_YoY": -0.35087719298245723,
+      "Rent_YoY": 1.5642458100558754,
+      "Mortgage_interest_YoY": 0.764087870105068,
+      "Shelter_YoY": 0.7821229050279266
+    },
+    {
+      "date": "1995-02-01",
+      "NHPI_YoY": -0.35149384885764245,
+      "Rent_YoY": 1.6759776536312776,
+      "Mortgage_interest_YoY": 2.4108003857280513,
+      "Shelter_YoY": 0.7821229050279266
+    },
+    {
+      "date": "1995-03-01",
+      "NHPI_YoY": -0.5272407732864637,
+      "Rent_YoY": 1.6741071428571397,
+      "Mortgage_interest_YoY": 3.6929057337220517,
+      "Shelter_YoY": 1.0067114093959662
+    },
+    {
+      "date": "1995-04-01",
+      "NHPI_YoY": -0.7029876977152849,
+      "Rent_YoY": 1.5590200445434466,
+      "Mortgage_interest_YoY": 4.789833822091882,
+      "Shelter_YoY": 1.3498312710910954
+    },
+    {
+      "date": "1995-05-01",
+      "NHPI_YoY": -0.8787346221441172,
+      "Rent_YoY": 1.5572858731924155,
+      "Mortgage_interest_YoY": 5.0830889540566915,
+      "Shelter_YoY": 1.4606741573033766
+    },
+    {
+      "date": "1995-06-01",
+      "NHPI_YoY": -1.2280701754386003,
+      "Rent_YoY": 1.5572858731924155,
+      "Mortgage_interest_YoY": 5.278592375366564,
+      "Shelter_YoY": 1.457399103139001
+    },
+    {
+      "date": "1995-07-01",
+      "NHPI_YoY": -1.2302284710017486,
+      "Rent_YoY": 1.5555555555555545,
+      "Mortgage_interest_YoY": 4.878048780487809,
+      "Shelter_YoY": 1.457399103139001
+    },
+    {
+      "date": "1995-08-01",
+      "NHPI_YoY": -1.4035087719298178,
+      "Rent_YoY": 1.552106430155198,
+      "Mortgage_interest_YoY": 3.9690222652468687,
+      "Shelter_YoY": 1.230425055928408
+    },
+    {
+      "date": "1995-09-01",
+      "NHPI_YoY": -1.4035087719298178,
+      "Rent_YoY": 1.4380530973451267,
+      "Mortgage_interest_YoY": 3.567984570877525,
+      "Shelter_YoY": 1.230425055928408
+    },
+    {
+      "date": "1995-10-01",
+      "NHPI_YoY": -1.7574692442882234,
+      "Rent_YoY": 1.5469613259668558,
+      "Mortgage_interest_YoY": 3.2660902977905915,
+      "Shelter_YoY": 0.7803790412486133
+    },
+    {
+      "date": "1995-11-01",
+      "NHPI_YoY": -2.1126760563380254,
+      "Rent_YoY": 1.4332965821389099,
+      "Mortgage_interest_YoY": 2.8708133971291794,
+      "Shelter_YoY": 0.8908685968819663
+    },
+    {
+      "date": "1995-12-01",
+      "NHPI_YoY": -1.936619718309851,
+      "Rent_YoY": 1.3215859030837107,
+      "Mortgage_interest_YoY": 2.57633587786259,
+      "Shelter_YoY": 0.5549389567147678
+    },
+    {
+      "date": "1996-01-01",
+      "NHPI_YoY": -2.1126760563380254,
+      "Rent_YoY": 1.320132013201314,
+      "Mortgage_interest_YoY": 1.611374407582944,
+      "Shelter_YoY": 0.44345898004434225
+    },
+    {
+      "date": "1996-02-01",
+      "NHPI_YoY": -2.2927689594356315,
+      "Rent_YoY": 1.318681318681314,
+      "Mortgage_interest_YoY": 0.6591337099811634,
+      "Shelter_YoY": 0.44345898004434225
+    },
+    {
+      "date": "1996-03-01",
+      "NHPI_YoY": -2.296819787985871,
+      "Rent_YoY": 1.207464324917673,
+      "Mortgage_interest_YoY": -0.18744142455482393,
+      "Shelter_YoY": 0.33222591362125353
+    },
+    {
+      "date": "1996-04-01",
+      "NHPI_YoY": -2.4778761061946875,
+      "Rent_YoY": 1.2061403508771829,
+      "Mortgage_interest_YoY": -0.9328358208955279,
+      "Shelter_YoY": 0.4439511653718142
+    },
+    {
+      "date": "1996-05-01",
+      "NHPI_YoY": -2.4822695035460973,
+      "Rent_YoY": 1.3143483023001057,
+      "Mortgage_interest_YoY": -1.4883720930232491,
+      "Shelter_YoY": 0.33222591362125353
+    },
+    {
+      "date": "1996-06-01",
+      "NHPI_YoY": -2.131438721136758,
+      "Rent_YoY": 1.4238773274917849,
+      "Mortgage_interest_YoY": -1.8570102135561761,
+      "Shelter_YoY": -0.11049723756905161
+    },
+    {
+      "date": "1996-07-01",
+      "NHPI_YoY": -2.135231316725983,
+      "Rent_YoY": 1.422319474835887,
+      "Mortgage_interest_YoY": -2.0465116279069773,
+      "Shelter_YoY": 0.0
+    },
+    {
+      "date": "1996-08-01",
+      "NHPI_YoY": -2.135231316725983,
+      "Rent_YoY": 1.310043668122285,
+      "Mortgage_interest_YoY": -2.420856610800748,
+      "Shelter_YoY": -0.22099447513812542
+    },
+    {
+      "date": "1996-09-01",
+      "NHPI_YoY": -2.135231316725983,
+      "Rent_YoY": 1.3086150490730697,
+      "Mortgage_interest_YoY": -2.886405959031668,
+      "Shelter_YoY": 0.0
+    },
+    {
+      "date": "1996-10-01",
+      "NHPI_YoY": -1.610017889087656,
+      "Rent_YoY": 1.196953210010876,
+      "Mortgage_interest_YoY": -3.3488372093023244,
+      "Shelter_YoY": 0.5530973451327359
+    },
+    {
+      "date": "1996-11-01",
+      "NHPI_YoY": -0.7194244604316502,
+      "Rent_YoY": 1.1956521739130421,
+      "Mortgage_interest_YoY": -3.9069767441860526,
+      "Shelter_YoY": 0.0
+    },
+    {
+      "date": "1996-12-01",
+      "NHPI_YoY": -0.8976660682226245,
+      "Rent_YoY": 1.304347826086949,
+      "Mortgage_interest_YoY": -4.558139534883732,
+      "Shelter_YoY": 0.22075055187638082
+    },
+    {
+      "date": "1997-01-01",
+      "NHPI_YoY": -0.5395683453237488,
+      "Rent_YoY": 1.3029315960912058,
+      "Mortgage_interest_YoY": -5.1305970149253755,
+      "Shelter_YoY": 0.33112582781458233
+    },
+    {
+      "date": "1997-02-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 1.193058568329719,
+      "Mortgage_interest_YoY": -5.144995322731527,
+      "Shelter_YoY": 0.33112582781458233
+    },
+    {
+      "date": "1997-03-01",
+      "NHPI_YoY": 0.3616636528029016,
+      "Rent_YoY": 1.3015184381778733,
+      "Mortgage_interest_YoY": -5.258215962441303,
+      "Shelter_YoY": 0.33112582781458233
+    },
+    {
+      "date": "1997-04-01",
+      "NHPI_YoY": 0.7259528130671544,
+      "Rent_YoY": 1.1917659804983938,
+      "Mortgage_interest_YoY": -5.555555555555558,
+      "Shelter_YoY": 0.44198895027625085
+    },
+    {
+      "date": "1997-05-01",
+      "NHPI_YoY": 1.090909090909098,
+      "Rent_YoY": 1.08108108108107,
+      "Mortgage_interest_YoY": -5.760151085930132,
+      "Shelter_YoY": 0.11037527593820151
+    },
+    {
+      "date": "1997-06-01",
+      "NHPI_YoY": 0.9074410163339319,
+      "Rent_YoY": 1.0799136069114423,
+      "Mortgage_interest_YoY": -6.149479659413437,
+      "Shelter_YoY": 0.4424778761061843
+    },
+    {
+      "date": "1997-07-01",
+      "NHPI_YoY": 1.090909090909098,
+      "Rent_YoY": 0.9708737864077666,
+      "Mortgage_interest_YoY": -6.457739791073125,
+      "Shelter_YoY": 0.33149171270718814
+    },
+    {
+      "date": "1997-08-01",
+      "NHPI_YoY": 1.090909090909098,
+      "Rent_YoY": 1.0775862068965525,
+      "Mortgage_interest_YoY": -6.583969465648842,
+      "Shelter_YoY": 0.33222591362125353
+    },
+    {
+      "date": "1997-09-01",
+      "NHPI_YoY": 1.090909090909098,
+      "Rent_YoY": 1.0764262648008671,
+      "Mortgage_interest_YoY": -6.6155321188878125,
+      "Shelter_YoY": 0.11049723756906271
+    },
+    {
+      "date": "1997-10-01",
+      "NHPI_YoY": 1.090909090909098,
+      "Rent_YoY": 1.0752688172043001,
+      "Mortgage_interest_YoY": -6.737247353224252,
+      "Shelter_YoY": -0.22002200220022639
+    },
+    {
+      "date": "1997-11-01",
+      "NHPI_YoY": 1.086956521739113,
+      "Rent_YoY": 0.9667024704618665,
+      "Mortgage_interest_YoY": -6.776379477250726,
+      "Shelter_YoY": 0.11037527593820151
+    },
+    {
+      "date": "1997-12-01",
+      "NHPI_YoY": 1.26811594202898,
+      "Rent_YoY": 0.9656652360514828,
+      "Mortgage_interest_YoY": -6.627680311890838,
+      "Shelter_YoY": 0.0
+    },
+    {
+      "date": "1998-01-01",
+      "NHPI_YoY": 1.2658227848101333,
+      "Rent_YoY": 0.9646302250803984,
+      "Mortgage_interest_YoY": -6.194690265486724,
+      "Shelter_YoY": -0.11001100110011874
+    },
+    {
+      "date": "1998-02-01",
+      "NHPI_YoY": 1.0830324909747224,
+      "Rent_YoY": 1.0718113612004254,
+      "Mortgage_interest_YoY": -5.818540433925056,
+      "Shelter_YoY": -0.22002200220022639
+    },
+    {
+      "date": "1998-03-01",
+      "NHPI_YoY": 0.9009009009008917,
+      "Rent_YoY": 0.9635974304068373,
+      "Mortgage_interest_YoY": -5.252725470763142,
+      "Shelter_YoY": -0.11001100110011874
+    },
+    {
+      "date": "1998-04-01",
+      "NHPI_YoY": 0.9009009009008917,
+      "Rent_YoY": 1.0706638115631772,
+      "Mortgage_interest_YoY": -4.586241276171476,
+      "Shelter_YoY": 0.0
+    },
+    {
+      "date": "1998-05-01",
+      "NHPI_YoY": 0.8992805755395628,
+      "Rent_YoY": 1.0695187165775444,
+      "Mortgage_interest_YoY": -4.208416833667339,
+      "Shelter_YoY": 0.330760749724357
+    },
+    {
+      "date": "1998-06-01",
+      "NHPI_YoY": 1.0791366906474753,
+      "Rent_YoY": 0.9615384615384581,
+      "Mortgage_interest_YoY": -3.629032258064524,
+      "Shelter_YoY": 0.11013215859032588
+    },
+    {
+      "date": "1998-07-01",
+      "NHPI_YoY": 1.0791366906474753,
+      "Rent_YoY": 1.0683760683760646,
+      "Mortgage_interest_YoY": -2.9441624365482255,
+      "Shelter_YoY": 0.22026431718062955
+    },
+    {
+      "date": "1998-08-01",
+      "NHPI_YoY": 1.0791366906474753,
+      "Rent_YoY": 0.9594882729211163,
+      "Mortgage_interest_YoY": -2.2471910112359605,
+      "Shelter_YoY": 0.5518763796909409
+    },
+    {
+      "date": "1998-09-01",
+      "NHPI_YoY": 1.0791366906474753,
+      "Rent_YoY": 0.9584664536741228,
+      "Mortgage_interest_YoY": -1.8480492813141791,
+      "Shelter_YoY": 0.44150110375276164
+    },
+    {
+      "date": "1998-10-01",
+      "NHPI_YoY": 1.0791366906474753,
+      "Rent_YoY": 0.9574468085106425,
+      "Mortgage_interest_YoY": -1.1351909184726616,
+      "Shelter_YoY": 0.9922822491730932
+    },
+    {
+      "date": "1998-11-01",
+      "NHPI_YoY": 0.7168458781362075,
+      "Rent_YoY": 1.0638297872340496,
+      "Mortgage_interest_YoY": -0.6230529595015466,
+      "Shelter_YoY": 0.8820286659316334
+    },
+    {
+      "date": "1998-12-01",
+      "NHPI_YoY": 0.7155635062611854,
+      "Rent_YoY": 1.0626992561105109,
+      "Mortgage_interest_YoY": -0.10438413361169019,
+      "Shelter_YoY": 1.1013215859030812
+    },
+    {
+      "date": "1999-01-01",
+      "NHPI_YoY": 0.5357142857142838,
+      "Rent_YoY": 0.9554140127388422,
+      "Mortgage_interest_YoY": 0.10482180293500676,
+      "Shelter_YoY": 1.1013215859030812
+    },
+    {
+      "date": "1999-02-01",
+      "NHPI_YoY": 0.5357142857142838,
+      "Rent_YoY": 0.9544008483563182,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": 1.2127894156560126
+    },
+    {
+      "date": "1999-03-01",
+      "NHPI_YoY": 0.7142857142857117,
+      "Rent_YoY": 1.0604453870625585,
+      "Mortgage_interest_YoY": -0.10460251046024993,
+      "Shelter_YoY": 1.1013215859030812
+    },
+    {
+      "date": "1999-04-01",
+      "NHPI_YoY": 0.7142857142857117,
+      "Rent_YoY": 0.9533898305084554,
+      "Mortgage_interest_YoY": -0.10449320794149175,
+      "Shelter_YoY": 1.2101210121012063
+    },
+    {
+      "date": "1999-05-01",
+      "NHPI_YoY": 0.5347593582887722,
+      "Rent_YoY": 0.952380952380949,
+      "Mortgage_interest_YoY": -0.10460251046024993,
+      "Shelter_YoY": 0.9890109890109855
+    },
+    {
+      "date": "1999-06-01",
+      "NHPI_YoY": 0.3558718861209842,
+      "Rent_YoY": 1.0582010582010692,
+      "Mortgage_interest_YoY": -0.20920502092048876,
+      "Shelter_YoY": 1.2101210121012063
+    },
+    {
+      "date": "1999-07-01",
+      "NHPI_YoY": 0.5338078291814874,
+      "Rent_YoY": 0.9513742071881603,
+      "Mortgage_interest_YoY": -0.10460251046024993,
+      "Shelter_YoY": 1.2087912087912045
+    },
+    {
+      "date": "1999-08-01",
+      "NHPI_YoY": 0.8896797153024938,
+      "Rent_YoY": 0.9503695881731611,
+      "Mortgage_interest_YoY": -0.10449320794149175,
+      "Shelter_YoY": 1.317233809001106
+    },
+    {
+      "date": "1999-09-01",
+      "NHPI_YoY": 1.0676156583629748,
+      "Rent_YoY": 0.9493670886076,
+      "Mortgage_interest_YoY": 0.313807531380772,
+      "Shelter_YoY": 1.978021978021971
+    },
+    {
+      "date": "1999-10-01",
+      "NHPI_YoY": 1.245551601423478,
+      "Rent_YoY": 0.9483667017913477,
+      "Mortgage_interest_YoY": 0.20876826722338038,
+      "Shelter_YoY": 1.4192139737991383
+    },
+    {
+      "date": "1999-11-01",
+      "NHPI_YoY": 1.6014234875444844,
+      "Rent_YoY": 0.9473684210526301,
+      "Mortgage_interest_YoY": 0.7314524555903867,
+      "Shelter_YoY": 1.7486338797814138
+    },
+    {
+      "date": "1999-12-01",
+      "NHPI_YoY": 1.598579040852588,
+      "Rent_YoY": 0.8412197686645806,
+      "Mortgage_interest_YoY": 1.1494252873563093,
+      "Shelter_YoY": 1.7429193899782147
+    },
+    {
+      "date": "2000-01-01",
+      "NHPI_YoY": 1.598579040852588,
+      "Rent_YoY": 0.9463722397476504,
+      "Mortgage_interest_YoY": 1.7801047120418856,
+      "Shelter_YoY": 2.0697167755991286
+    },
+    {
+      "date": "2000-02-01",
+      "NHPI_YoY": 1.9538188277087087,
+      "Rent_YoY": 0.9453781512605008,
+      "Mortgage_interest_YoY": 2.3036649214659644,
+      "Shelter_YoY": 2.8322440087146017
+    },
+    {
+      "date": "2000-03-01",
+      "NHPI_YoY": 1.9503546099290725,
+      "Rent_YoY": 0.9443861490031624,
+      "Mortgage_interest_YoY": 2.8272251308900653,
+      "Shelter_YoY": 2.941176470588247
+    },
+    {
+      "date": "2000-04-01",
+      "NHPI_YoY": 2.1276595744680993,
+      "Rent_YoY": 1.049317943336825,
+      "Mortgage_interest_YoY": 3.2426778242677923,
+      "Shelter_YoY": 2.717391304347827
+    },
+    {
+      "date": "2000-05-01",
+      "NHPI_YoY": 2.482269503546086,
+      "Rent_YoY": 1.048218029350112,
+      "Mortgage_interest_YoY": 3.874345549738223,
+      "Shelter_YoY": 3.0467899891186034
+    },
+    {
+      "date": "2000-06-01",
+      "NHPI_YoY": 2.482269503546086,
+      "Rent_YoY": 1.0471204188481575,
+      "Mortgage_interest_YoY": 4.612159329140453,
+      "Shelter_YoY": 3.2608695652173836
+    },
+    {
+      "date": "2000-07-01",
+      "NHPI_YoY": 2.4778761061946986,
+      "Rent_YoY": 1.1518324607329822,
+      "Mortgage_interest_YoY": 5.13089005235603,
+      "Shelter_YoY": 3.6916395222584164
+    },
+    {
+      "date": "2000-08-01",
+      "NHPI_YoY": 2.4691358024691246,
+      "Rent_YoY": 1.1506276150627714,
+      "Mortgage_interest_YoY": 5.543933054393313,
+      "Shelter_YoY": 3.683640303358615
+    },
+    {
+      "date": "2000-09-01",
+      "NHPI_YoY": 2.464788732394374,
+      "Rent_YoY": 1.1494252873563093,
+      "Mortgage_interest_YoY": 5.6308654848800765,
+      "Shelter_YoY": 3.7715517241379226
+    },
+    {
+      "date": "2000-10-01",
+      "NHPI_YoY": 2.4604569420035194,
+      "Rent_YoY": 1.1482254697286143,
+      "Mortgage_interest_YoY": 6.041666666666656,
+      "Shelter_YoY": 4.628632938643706
+    },
+    {
+      "date": "2000-11-01",
+      "NHPI_YoY": 2.4518388791593626,
+      "Rent_YoY": 1.2513034410844615,
+      "Mortgage_interest_YoY": 6.016597510373445,
+      "Shelter_YoY": 4.940923737916236
+    },
+    {
+      "date": "2000-12-01",
+      "NHPI_YoY": 2.447552447552437,
+      "Rent_YoY": 1.3555787278414888,
+      "Mortgage_interest_YoY": 5.991735537190079,
+      "Shelter_YoY": 5.032119914346889
+    },
+    {
+      "date": "2001-01-01",
+      "NHPI_YoY": 2.622377622377625,
+      "Rent_YoY": 1.3541666666666563,
+      "Mortgage_interest_YoY": 5.864197530864201,
+      "Shelter_YoY": 4.055496264674496
+    },
+    {
+      "date": "2001-02-01",
+      "NHPI_YoY": 2.4390243902439046,
+      "Rent_YoY": 1.3527575442247697,
+      "Mortgage_interest_YoY": 5.527123848515858,
+      "Shelter_YoY": 3.072033898305082
+    },
+    {
+      "date": "2001-03-01",
+      "NHPI_YoY": 2.60869565217392,
+      "Rent_YoY": 1.4553014553014387,
+      "Mortgage_interest_YoY": 5.0916496945010215,
+      "Shelter_YoY": 4.1269841269841345
+    },
+    {
+      "date": "2001-04-01",
+      "NHPI_YoY": 2.77777777777779,
+      "Rent_YoY": 1.4537902388369828,
+      "Mortgage_interest_YoY": 4.5592705167173175,
+      "Shelter_YoY": 4.656084656084669
+    },
+    {
+      "date": "2001-05-01",
+      "NHPI_YoY": 2.595155709342567,
+      "Rent_YoY": 1.4522821576763434,
+      "Mortgage_interest_YoY": 4.0322580645161255,
+      "Shelter_YoY": 5.596620908130934
+    },
+    {
+      "date": "2001-06-01",
+      "NHPI_YoY": 2.941176470588247,
+      "Rent_YoY": 1.5544041450777257,
+      "Mortgage_interest_YoY": 3.3066132264528925,
+      "Shelter_YoY": 5.578947368421039
+    },
+    {
+      "date": "2001-07-01",
+      "NHPI_YoY": 2.936096718480141,
+      "Rent_YoY": 1.552795031055898,
+      "Mortgage_interest_YoY": 2.689243027888444,
+      "Shelter_YoY": 4.607329842931951
+    },
+    {
+      "date": "2001-08-01",
+      "NHPI_YoY": 2.753872633390708,
+      "Rent_YoY": 1.7580144777662898,
+      "Mortgage_interest_YoY": 2.18037661050543,
+      "Shelter_YoY": 4.3887147335423204
+    },
+    {
+      "date": "2001-09-01",
+      "NHPI_YoY": 2.9209621993127044,
+      "Rent_YoY": 1.7561983471074516,
+      "Mortgage_interest_YoY": 1.6781836130306038,
+      "Shelter_YoY": 3.4267912772585563
+    },
+    {
+      "date": "2001-10-01",
+      "NHPI_YoY": 2.7444253859348233,
+      "Rent_YoY": 1.8575851393188847,
+      "Mortgage_interest_YoY": 0.982318271119853,
+      "Shelter_YoY": 2.6748971193415683
+    },
+    {
+      "date": "2001-11-01",
+      "NHPI_YoY": 2.7350427350427475,
+      "Rent_YoY": 1.8537590113285374,
+      "Mortgage_interest_YoY": 0.1956947162426559,
+      "Shelter_YoY": 0.7164790174002178
+    },
+    {
+      "date": "2001-12-01",
+      "NHPI_YoY": 2.7303754266211566,
+      "Rent_YoY": 1.8518518518518379,
+      "Mortgage_interest_YoY": -0.6822612085769841,
+      "Shelter_YoY": 0.8154943934760572
+    },
+    {
+      "date": "2002-01-01",
+      "NHPI_YoY": 2.8960817717206044,
+      "Rent_YoY": 1.8499486125385323,
+      "Mortgage_interest_YoY": -1.4577259475218707,
+      "Shelter_YoY": 1.846153846153853
+    },
+    {
+      "date": "2002-02-01",
+      "NHPI_YoY": 3.401360544217691,
+      "Rent_YoY": 1.9507186858316095,
+      "Mortgage_interest_YoY": -2.133850630455858,
+      "Shelter_YoY": 2.158273381294973
+    },
+    {
+      "date": "2002-03-01",
+      "NHPI_YoY": 3.3898305084745672,
+      "Rent_YoY": 1.8442622950819887,
+      "Mortgage_interest_YoY": -2.6162790697674465,
+      "Shelter_YoY": 1.0162601626016343
+    },
+    {
+      "date": "2002-04-01",
+      "NHPI_YoY": 3.716216216216206,
+      "Rent_YoY": 1.84237461617196,
+      "Mortgage_interest_YoY": -2.9069767441860517,
+      "Shelter_YoY": 0.2022244691607611
+    },
+    {
+      "date": "2002-05-01",
+      "NHPI_YoY": 4.215851602023601,
+      "Rent_YoY": 1.942740286298572,
+      "Mortgage_interest_YoY": -3.0038759689922534,
+      "Shelter_YoY": -0.5999999999999894
+    },
+    {
+      "date": "2002-06-01",
+      "NHPI_YoY": 4.033613445378159,
+      "Rent_YoY": 1.9387755102040938,
+      "Mortgage_interest_YoY": -3.1037827352085268,
+      "Shelter_YoY": -0.9970089730807596
+    },
+    {
+      "date": "2002-07-01",
+      "NHPI_YoY": 4.026845637583887,
+      "Rent_YoY": 1.936799184505622,
+      "Mortgage_interest_YoY": -3.200775945683798,
+      "Shelter_YoY": -0.4004004004004025
+    },
+    {
+      "date": "2002-08-01",
+      "NHPI_YoY": 4.355108877721925,
+      "Rent_YoY": 1.9308943089430874,
+      "Mortgage_interest_YoY": -3.2977691561590583,
+      "Shelter_YoY": 0.4004004004003914
+    },
+    {
+      "date": "2002-09-01",
+      "NHPI_YoY": 4.173622704507518,
+      "Rent_YoY": 2.0304568527918843,
+      "Mortgage_interest_YoY": -3.398058252427183,
+      "Shelter_YoY": 1.1044176706827447
+    },
+    {
+      "date": "2002-10-01",
+      "NHPI_YoY": 4.6744574290484175,
+      "Rent_YoY": 2.0263424518743633,
+      "Mortgage_interest_YoY": -3.404669260700388,
+      "Shelter_YoY": 1.9038076152304573
+    },
+    {
+      "date": "2002-11-01",
+      "NHPI_YoY": 4.991680532445919,
+      "Rent_YoY": 1.921132457027297,
+      "Mortgage_interest_YoY": -3.027343750000011,
+      "Shelter_YoY": 3.3536585365853577
+    },
+    {
+      "date": "2002-12-01",
+      "NHPI_YoY": 5.149501661129552,
+      "Rent_YoY": 1.9191919191919204,
+      "Mortgage_interest_YoY": -2.5515210991167936,
+      "Shelter_YoY": 1.2133468149645887
+    },
+    {
+      "date": "2003-01-01",
+      "NHPI_YoY": 4.966887417218535,
+      "Rent_YoY": 1.9172552976791213,
+      "Mortgage_interest_YoY": -1.9723865877712021,
+      "Shelter_YoY": 2.8197381671701827
+    },
+    {
+      "date": "2003-02-01",
+      "NHPI_YoY": 4.9342105263157965,
+      "Rent_YoY": 1.7119838872104776,
+      "Mortgage_interest_YoY": -1.288404360753237,
+      "Shelter_YoY": 3.118712273641844
+    },
+    {
+      "date": "2003-03-01",
+      "NHPI_YoY": 4.754098360655745,
+      "Rent_YoY": 1.7102615694164935,
+      "Mortgage_interest_YoY": -0.5970149253731294,
+      "Shelter_YoY": 3.822937625754519
+    },
+    {
+      "date": "2003-04-01",
+      "NHPI_YoY": 4.3973941368078195,
+      "Rent_YoY": 1.70854271356784,
+      "Mortgage_interest_YoY": -0.1996007984031989,
+      "Shelter_YoY": 3.229061553985879
+    },
+    {
+      "date": "2003-05-01",
+      "NHPI_YoY": 4.3689320388349495,
+      "Rent_YoY": 1.6048144433299827,
+      "Mortgage_interest_YoY": 0.09990009990010762,
+      "Shelter_YoY": 3.5211267605633756
+    },
+    {
+      "date": "2003-06-01",
+      "NHPI_YoY": 4.523424878836835,
+      "Rent_YoY": 1.401401401401392,
+      "Mortgage_interest_YoY": 0.30030030030030463,
+      "Shelter_YoY": 4.128902316213501
+    },
+    {
+      "date": "2003-07-01",
+      "NHPI_YoY": 4.677419354838719,
+      "Rent_YoY": 1.4000000000000012,
+      "Mortgage_interest_YoY": 0.10020040080160886,
+      "Shelter_YoY": 3.8190954773869246
+    },
+    {
+      "date": "2003-08-01",
+      "NHPI_YoY": 4.65489566613162,
+      "Rent_YoY": 1.3958125623130702,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": 3.090727816550354
+    },
+    {
+      "date": "2003-09-01",
+      "NHPI_YoY": 4.9679487179487225,
+      "Rent_YoY": 1.2935323383084452,
+      "Mortgage_interest_YoY": 0.20100502512563345,
+      "Shelter_YoY": 2.8798411122144874
+    },
+    {
+      "date": "2003-10-01",
+      "NHPI_YoY": 4.94417862838914,
+      "Rent_YoY": 1.1916583912611856,
+      "Mortgage_interest_YoY": 0.40281973816718164,
+      "Shelter_YoY": 2.0648967551622377
+    },
+    {
+      "date": "2003-11-01",
+      "NHPI_YoY": 5.071315372424712,
+      "Rent_YoY": 1.1904761904761862,
+      "Mortgage_interest_YoY": 0.40281973816718164,
+      "Shelter_YoY": 2.2615535889872085
+    },
+    {
+      "date": "2003-12-01",
+      "NHPI_YoY": 5.0552922590837435,
+      "Rent_YoY": 1.1892963330029538,
+      "Mortgage_interest_YoY": 0.5035246727089548,
+      "Shelter_YoY": 4.295704295704317
+    },
+    {
+      "date": "2004-01-01",
+      "NHPI_YoY": 5.205047318611999,
+      "Rent_YoY": 1.08910891089109,
+      "Mortgage_interest_YoY": 0.4024144869215096,
+      "Shelter_YoY": 2.1547502448579836
+    },
+    {
+      "date": "2004-02-01",
+      "NHPI_YoY": 4.858934169279006,
+      "Rent_YoY": 1.1881188118811892,
+      "Mortgage_interest_YoY": 0.3012048192771122,
+      "Shelter_YoY": 1.9512195121951237
+    },
+    {
+      "date": "2004-03-01",
+      "NHPI_YoY": 5.164319248826299,
+      "Rent_YoY": 1.0880316518298905,
+      "Mortgage_interest_YoY": -0.10010010010010895,
+      "Shelter_YoY": 1.3565891472868241
+    },
+    {
+      "date": "2004-04-01",
+      "NHPI_YoY": 5.616224648985968,
+      "Rent_YoY": 1.0869565217391353,
+      "Mortgage_interest_YoY": -0.40000000000000036,
+      "Shelter_YoY": 2.7370478983382185
+    },
+    {
+      "date": "2004-05-01",
+      "NHPI_YoY": 5.736434108527133,
+      "Rent_YoY": 0.9871668311944637,
+      "Mortgage_interest_YoY": -0.698602794411185,
+      "Shelter_YoY": 2.3323615160349753
+    },
+    {
+      "date": "2004-06-01",
+      "NHPI_YoY": 6.18238021638331,
+      "Rent_YoY": 1.0858835143139345,
+      "Mortgage_interest_YoY": -0.698602794411185,
+      "Shelter_YoY": 2.224371373307532
+    },
+    {
+      "date": "2004-07-01",
+      "NHPI_YoY": 6.009244992295826,
+      "Rent_YoY": 1.0848126232741562,
+      "Mortgage_interest_YoY": -0.30030030030031574,
+      "Shelter_YoY": 2.613746369796721
+    },
+    {
+      "date": "2004-08-01",
+      "NHPI_YoY": 5.9815950920245164,
+      "Rent_YoY": 0.9832841691248762,
+      "Mortgage_interest_YoY": 0.20060180541625616,
+      "Shelter_YoY": 2.7079303675048294
+    },
+    {
+      "date": "2004-09-01",
+      "NHPI_YoY": 5.801526717557248,
+      "Rent_YoY": 0.8840864440078589,
+      "Mortgage_interest_YoY": 0.30090270812437314,
+      "Shelter_YoY": 2.7992277992278103
+    },
+    {
+      "date": "2004-10-01",
+      "NHPI_YoY": 5.623100303951367,
+      "Rent_YoY": 0.8832188420019538,
+      "Mortgage_interest_YoY": 0.5015045135406293,
+      "Shelter_YoY": 3.0828516377649384
+    },
+    {
+      "date": "2004-11-01",
+      "NHPI_YoY": 5.2790346907994,
+      "Rent_YoY": 0.8823529411764675,
+      "Mortgage_interest_YoY": 0.6018054162487463,
+      "Shelter_YoY": 3.26923076923078
+    },
+    {
+      "date": "2004-12-01",
+      "NHPI_YoY": 5.112781954887224,
+      "Rent_YoY": 0.8814887365328206,
+      "Mortgage_interest_YoY": 0.7014028056112176,
+      "Shelter_YoY": 2.8735632183908066
+    },
+    {
+      "date": "2005-01-01",
+      "NHPI_YoY": 5.0974512743628075,
+      "Rent_YoY": 0.8814887365328206,
+      "Mortgage_interest_YoY": 0.7014028056112176,
+      "Shelter_YoY": 3.0680728667305868
+    },
+    {
+      "date": "2005-02-01",
+      "NHPI_YoY": 5.082212257100127,
+      "Rent_YoY": 0.8806262230919737,
+      "Mortgage_interest_YoY": 0.6006006006005871,
+      "Shelter_YoY": 3.0622009569378106
+    },
+    {
+      "date": "2005-03-01",
+      "NHPI_YoY": 5.0595238095237915,
+      "Rent_YoY": 0.8806262230919737,
+      "Mortgage_interest_YoY": 0.8016032064128265,
+      "Shelter_YoY": 3.3460803059273347
+    },
+    {
+      "date": "2005-04-01",
+      "NHPI_YoY": 4.874446085672068,
+      "Rent_YoY": 0.782013685239491,
+      "Mortgage_interest_YoY": 1.1044176706827447,
+      "Shelter_YoY": 3.1398667935299773
+    },
+    {
+      "date": "2005-05-01",
+      "NHPI_YoY": 4.545454545454541,
+      "Rent_YoY": 0.8797653958944274,
+      "Mortgage_interest_YoY": 1.306532663316573,
+      "Shelter_YoY": 3.1339031339031376
+    },
+    {
+      "date": "2005-06-01",
+      "NHPI_YoY": 4.657933042212514,
+      "Rent_YoY": 0.78125,
+      "Mortgage_interest_YoY": 1.306532663316573,
+      "Shelter_YoY": 2.9328287606433356
+    },
+    {
+      "date": "2005-07-01",
+      "NHPI_YoY": 4.651162790697683,
+      "Rent_YoY": 0.7804878048780495,
+      "Mortgage_interest_YoY": 1.2048192771084265,
+      "Shelter_YoY": 3.207547169811331
+    },
+    {
+      "date": "2005-08-01",
+      "NHPI_YoY": 4.630969609261948,
+      "Rent_YoY": 0.778967867575453,
+      "Mortgage_interest_YoY": 0.700700700700696,
+      "Shelter_YoY": 2.9190207156308823
+    },
+    {
+      "date": "2005-09-01",
+      "NHPI_YoY": 4.906204906204925,
+      "Rent_YoY": 0.8763388510223846,
+      "Mortgage_interest_YoY": 0.6000000000000005,
+      "Shelter_YoY": 3.2863849765258246
+    },
+    {
+      "date": "2005-10-01",
+      "NHPI_YoY": 5.323741007194238,
+      "Rent_YoY": 0.7782101167315147,
+      "Mortgage_interest_YoY": 0.29940119760478723,
+      "Shelter_YoY": 3.457943925233642
+    },
+    {
+      "date": "2005-11-01",
+      "NHPI_YoY": 5.4441260744985565,
+      "Rent_YoY": 0.7774538386783325,
+      "Mortgage_interest_YoY": 0.09970089730808596,
+      "Shelter_YoY": 3.165735567970196
+    },
+    {
+      "date": "2005-12-01",
+      "NHPI_YoY": 6.008583690987113,
+      "Rent_YoY": 0.6796116504854455,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": 2.886405959031646
+    },
+    {
+      "date": "2006-01-01",
+      "NHPI_YoY": 6.562054208273915,
+      "Rent_YoY": 0.7766990291262044,
+      "Mortgage_interest_YoY": 0.29850746268655914,
+      "Shelter_YoY": 4.0000000000000036
+    },
+    {
+      "date": "2006-02-01",
+      "NHPI_YoY": 6.970128022759603,
+      "Rent_YoY": 0.7759456838021483,
+      "Mortgage_interest_YoY": 0.4975124378109541,
+      "Shelter_YoY": 3.7140204271123523
+    },
+    {
+      "date": "2006-03-01",
+      "NHPI_YoY": 7.648725212464602,
+      "Rent_YoY": 0.7759456838021483,
+      "Mortgage_interest_YoY": 0.5964214711729809,
+      "Shelter_YoY": 3.51526364477337
+    },
+    {
+      "date": "2006-04-01",
+      "NHPI_YoY": 8.309859154929589,
+      "Rent_YoY": 0.8729388942773975,
+      "Mortgage_interest_YoY": 0.5958291956305706,
+      "Shelter_YoY": 3.5055350553505615
+    },
+    {
+      "date": "2006-05-01",
+      "NHPI_YoY": 9.116409537166902,
+      "Rent_YoY": 0.8720930232558155,
+      "Mortgage_interest_YoY": 0.8928571428571397,
+      "Shelter_YoY": 4.05156537753224
+    },
+    {
+      "date": "2006-06-01",
+      "NHPI_YoY": 9.874826147426962,
+      "Rent_YoY": 0.9689922480620172,
+      "Mortgage_interest_YoY": 1.289682539682535,
+      "Shelter_YoY": 3.6764705882353033
+    },
+    {
+      "date": "2006-07-01",
+      "NHPI_YoY": 10.83333333333334,
+      "Rent_YoY": 0.968054211035807,
+      "Mortgage_interest_YoY": 1.7857142857142794,
+      "Shelter_YoY": 3.4734917733089565
+    },
+    {
+      "date": "2006-08-01",
+      "NHPI_YoY": 12.03319502074689,
+      "Rent_YoY": 0.9661835748792313,
+      "Mortgage_interest_YoY": 2.6838966202783254,
+      "Shelter_YoY": 3.8426349496797796
+    },
+    {
+      "date": "2006-09-01",
+      "NHPI_YoY": 11.966987620357639,
+      "Rent_YoY": 0.9652509652509744,
+      "Mortgage_interest_YoY": 3.2803180914513064,
+      "Shelter_YoY": 3.6363636363636376
+    },
+    {
+      "date": "2006-10-01",
+      "NHPI_YoY": 11.475409836065564,
+      "Rent_YoY": 1.158301158301156,
+      "Mortgage_interest_YoY": 3.88059701492538,
+      "Shelter_YoY": 3.07136404697379
+    },
+    {
+      "date": "2006-11-01",
+      "NHPI_YoY": 11.413043478260887,
+      "Rent_YoY": 1.1571841851494735,
+      "Mortgage_interest_YoY": 4.581673306772904,
+      "Shelter_YoY": 2.9783393501805033
+    },
+    {
+      "date": "2006-12-01",
+      "NHPI_YoY": 10.6612685560054,
+      "Rent_YoY": 1.2536162005786,
+      "Mortgage_interest_YoY": 4.975124378109452,
+      "Shelter_YoY": 3.7104072398189913
+    },
+    {
+      "date": "2007-01-01",
+      "NHPI_YoY": 10.174029451137878,
+      "Rent_YoY": 1.2524084778420042,
+      "Mortgage_interest_YoY": 5.059523809523814,
+      "Shelter_YoY": 2.683363148479434
+    },
+    {
+      "date": "2007-02-01",
+      "NHPI_YoY": 9.97340425531914,
+      "Rent_YoY": 1.2512030798845108,
+      "Mortgage_interest_YoY": 5.247524752475252,
+      "Shelter_YoY": 2.86481647269472
+    },
+    {
+      "date": "2007-03-01",
+      "NHPI_YoY": 9.210526315789469,
+      "Rent_YoY": 1.4436958614052031,
+      "Mortgage_interest_YoY": 5.434782608695654,
+      "Shelter_YoY": 3.1277926720286064
+    },
+    {
+      "date": "2007-04-01",
+      "NHPI_YoY": 8.842652795838756,
+      "Rent_YoY": 1.4423076923076872,
+      "Mortgage_interest_YoY": 5.725567620927929,
+      "Shelter_YoY": 3.5650623885918
+    },
+    {
+      "date": "2007-05-01",
+      "NHPI_YoY": 8.740359897172233,
+      "Rent_YoY": 1.4409221902017322,
+      "Mortgage_interest_YoY": 5.703048180924286,
+      "Shelter_YoY": 2.6548672566371723
+    },
+    {
+      "date": "2007-06-01",
+      "NHPI_YoY": 7.721518987341769,
+      "Rent_YoY": 1.5355086372360827,
+      "Mortgage_interest_YoY": 5.680705190989244,
+      "Shelter_YoY": 3.546099290780136
+    },
+    {
+      "date": "2007-07-01",
+      "NHPI_YoY": 7.644110275689231,
+      "Rent_YoY": 1.6299137104506256,
+      "Mortgage_interest_YoY": 6.042884990253405,
+      "Shelter_YoY": 3.3568904593639592
+    },
+    {
+      "date": "2007-08-01",
+      "NHPI_YoY": 6.543209876543199,
+      "Rent_YoY": 1.7224880382775032,
+      "Mortgage_interest_YoY": 6.098741529525653,
+      "Shelter_YoY": 3.612334801762107
+    },
+    {
+      "date": "2007-09-01",
+      "NHPI_YoY": 6.265356265356248,
+      "Rent_YoY": 1.7208413001912115,
+      "Mortgage_interest_YoY": 6.352261790182867,
+      "Shelter_YoY": 3.3333333333333215
+    },
+    {
+      "date": "2007-10-01",
+      "NHPI_YoY": 6.127450980392157,
+      "Rent_YoY": 1.717557251908386,
+      "Mortgage_interest_YoY": 6.704980842911867,
+      "Shelter_YoY": 4.0315512708150925
+    },
+    {
+      "date": "2007-11-01",
+      "NHPI_YoY": 6.0975609756097615,
+      "Rent_YoY": 1.7159199237368972,
+      "Mortgage_interest_YoY": 6.952380952380954,
+      "Shelter_YoY": 4.119193689745848
+    },
+    {
+      "date": "2007-12-01",
+      "NHPI_YoY": 6.2195121951219345,
+      "Rent_YoY": 1.8095238095238164,
+      "Mortgage_interest_YoY": 7.29857819905213,
+      "Shelter_YoY": 4.013961605584648
+    },
+    {
+      "date": "2008-01-01",
+      "NHPI_YoY": 6.439854191980565,
+      "Rent_YoY": 1.8078020932445371,
+      "Mortgage_interest_YoY": 7.64872521246458,
+      "Shelter_YoY": 3.832752613240431
+    },
+    {
+      "date": "2008-02-01",
+      "NHPI_YoY": 6.2877871825876674,
+      "Rent_YoY": 1.9011406844106515,
+      "Mortgage_interest_YoY": 8.090310442144876,
+      "Shelter_YoY": 4.0905134899912765
+    },
+    {
+      "date": "2008-03-01",
+      "NHPI_YoY": 6.144578313253013,
+      "Rent_YoY": 1.802656546489545,
+      "Mortgage_interest_YoY": 8.341143392689787,
+      "Shelter_YoY": 4.072790294627371
+    },
+    {
+      "date": "2008-04-01",
+      "NHPI_YoY": 5.256869772998796,
+      "Rent_YoY": 1.8009478672985857,
+      "Mortgage_interest_YoY": 8.683473389355756,
+      "Shelter_YoY": 4.302925989672968
+    },
+    {
+      "date": "2008-05-01",
+      "NHPI_YoY": 4.137115839243499,
+      "Rent_YoY": 1.8939393939394034,
+      "Mortgage_interest_YoY": 8.93023255813954,
+      "Shelter_YoY": 4.827586206896539
+    },
+    {
+      "date": "2008-06-01",
+      "NHPI_YoY": 3.6427732079906017,
+      "Rent_YoY": 1.7958412098298737,
+      "Mortgage_interest_YoY": 8.989805375347526,
+      "Shelter_YoY": 4.7089041095890405
+    },
+    {
+      "date": "2008-07-01",
+      "NHPI_YoY": 2.677532013969719,
+      "Rent_YoY": 1.7924528301886955,
+      "Mortgage_interest_YoY": 8.455882352941169,
+      "Shelter_YoY": 5.384615384615388
+    },
+    {
+      "date": "2008-08-01",
+      "NHPI_YoY": 2.2016222479722014,
+      "Rent_YoY": 1.6933207902163572,
+      "Mortgage_interest_YoY": 8.120437956204384,
+      "Shelter_YoY": 5.272108843537415
+    },
+    {
+      "date": "2008-09-01",
+      "NHPI_YoY": 2.0809248554913173,
+      "Rent_YoY": 1.6917293233082775,
+      "Mortgage_interest_YoY": 7.692307692307687,
+      "Shelter_YoY": 4.4991511035653575
+    },
+    {
+      "date": "2008-10-01",
+      "NHPI_YoY": 1.5011547344111031,
+      "Rent_YoY": 1.6885553470919357,
+      "Mortgage_interest_YoY": 7.181328545780974,
+      "Shelter_YoY": 3.7910699241785917
+    },
+    {
+      "date": "2008-11-01",
+      "NHPI_YoY": 0.8045977011494232,
+      "Rent_YoY": 1.7806935332708385,
+      "Mortgage_interest_YoY": 6.767586821015148,
+      "Shelter_YoY": 3.872053872053871
+    },
+    {
+      "date": "2008-12-01",
+      "NHPI_YoY": 0.4592422502870397,
+      "Rent_YoY": 1.6838166510757757,
+      "Mortgage_interest_YoY": 6.360424028268552,
+      "Shelter_YoY": 3.523489932885915
+    },
+    {
+      "date": "2009-01-01",
+      "NHPI_YoY": -0.6849315068493067,
+      "Rent_YoY": 1.6822429906542036,
+      "Mortgage_interest_YoY": 5.789473684210522,
+      "Shelter_YoY": 3.2718120805369066
+    },
+    {
+      "date": "2009-02-01",
+      "NHPI_YoY": -1.7064846416382284,
+      "Rent_YoY": 1.585820895522394,
+      "Mortgage_interest_YoY": 4.960835509138373,
+      "Shelter_YoY": 3.0100334448160515
+    },
+    {
+      "date": "2009-03-01",
+      "NHPI_YoY": -2.3836549375709337,
+      "Rent_YoY": 1.5843429636533068,
+      "Mortgage_interest_YoY": 4.152249134948116,
+      "Shelter_YoY": 2.0815986677768628
+    },
+    {
+      "date": "2009-04-01",
+      "NHPI_YoY": -2.95119182746878,
+      "Rent_YoY": 1.5828677839850869,
+      "Mortgage_interest_YoY": 3.17869415807559,
+      "Shelter_YoY": 0.16501650165017256
+    },
+    {
+      "date": "2009-05-01",
+      "NHPI_YoY": -3.06469920544834,
+      "Rent_YoY": 1.486988847583648,
+      "Mortgage_interest_YoY": 1.8787361229718247,
+      "Shelter_YoY": -0.1644736842105199
+    },
+    {
+      "date": "2009-06-01",
+      "NHPI_YoY": -3.401360544217691,
+      "Rent_YoY": 1.485608170844932,
+      "Mortgage_interest_YoY": 0.9353741496598733,
+      "Shelter_YoY": -0.8176614881439059
+    },
+    {
+      "date": "2009-07-01",
+      "NHPI_YoY": -3.1746031746031744,
+      "Rent_YoY": 1.3901760889712733,
+      "Mortgage_interest_YoY": -0.08474576271185752,
+      "Shelter_YoY": -2.0275750202757514
+    },
+    {
+      "date": "2009-08-01",
+      "NHPI_YoY": -3.0612244897959218,
+      "Rent_YoY": 1.4801110083256352,
+      "Mortgage_interest_YoY": -1.0970464135021119,
+      "Shelter_YoY": -2.1809369951534707
+    },
+    {
+      "date": "2009-09-01",
+      "NHPI_YoY": -2.7180067950169806,
+      "Rent_YoY": 1.4787430683918634,
+      "Mortgage_interest_YoY": -2.184873949579824,
+      "Shelter_YoY": -1.7871649065800077
+    },
+    {
+      "date": "2009-10-01",
+      "NHPI_YoY": -2.0477815699658786,
+      "Rent_YoY": 1.4760147601476037,
+      "Mortgage_interest_YoY": -3.0988274706867713,
+      "Shelter_YoY": -1.6233766233766267
+    },
+    {
+      "date": "2009-11-01",
+      "NHPI_YoY": -1.4823261117445807,
+      "Rent_YoY": 1.3812154696132506,
+      "Mortgage_interest_YoY": -4.003336113427869,
+      "Shelter_YoY": -1.701782820097253
+    },
+    {
+      "date": "2009-12-01",
+      "NHPI_YoY": -0.9142857142857119,
+      "Rent_YoY": 1.3799448022079108,
+      "Mortgage_interest_YoY": -4.900332225913628,
+      "Shelter_YoY": -1.701782820097253
+    },
+    {
+      "date": "2010-01-01",
+      "NHPI_YoY": 0.11494252873562871,
+      "Rent_YoY": 1.3786764705882248,
+      "Mortgage_interest_YoY": -5.472636815920396,
+      "Shelter_YoY": -1.0560519902518273
+    },
+    {
+      "date": "2010-02-01",
+      "NHPI_YoY": 0.8101851851851638,
+      "Rent_YoY": 1.2855831037649201,
+      "Mortgage_interest_YoY": -5.8043117744610235,
+      "Shelter_YoY": -1.1363636363636465
+    },
+    {
+      "date": "2010-03-01",
+      "NHPI_YoY": 1.6279069767441978,
+      "Rent_YoY": 1.2844036697247763,
+      "Mortgage_interest_YoY": -5.980066445182731,
+      "Shelter_YoY": -0.7340946166394691
+    },
+    {
+      "date": "2010-04-01",
+      "NHPI_YoY": 2.4561403508771784,
+      "Rent_YoY": 1.2832263978001857,
+      "Mortgage_interest_YoY": -6.078268109908402,
+      "Shelter_YoY": 0.8237232289950658
+    },
+    {
+      "date": "2010-05-01",
+      "NHPI_YoY": 2.927400468384067,
+      "Rent_YoY": 1.2820512820512775,
+      "Mortgage_interest_YoY": -5.448449287510481,
+      "Shelter_YoY": 1.317957166392092
+    },
+    {
+      "date": "2010-06-01",
+      "NHPI_YoY": 3.2863849765258246,
+      "Rent_YoY": 1.2808783165599413,
+      "Mortgage_interest_YoY": -4.970513900589724,
+      "Shelter_YoY": 1.6488046166529324
+    },
+    {
+      "date": "2010-07-01",
+      "NHPI_YoY": 2.927400468384067,
+      "Rent_YoY": 1.279707495429605,
+      "Mortgage_interest_YoY": -4.240882103477528,
+      "Shelter_YoY": 2.89735099337749
+    },
+    {
+      "date": "2010-08-01",
+      "NHPI_YoY": 2.923976608187129,
+      "Rent_YoY": 1.185050136736554,
+      "Mortgage_interest_YoY": -3.839590443686003,
+      "Shelter_YoY": 2.3947151114781295
+    },
+    {
+      "date": "2010-09-01",
+      "NHPI_YoY": 2.56111757857973,
+      "Rent_YoY": 1.1839708561020013,
+      "Mortgage_interest_YoY": -3.264604810996574,
+      "Shelter_YoY": 2.481389578163773
+    },
+    {
+      "date": "2010-10-01",
+      "NHPI_YoY": 2.4390243902439046,
+      "Rent_YoY": 1.1818181818181728,
+      "Mortgage_interest_YoY": -3.025064822817636,
+      "Shelter_YoY": 2.8052805280528004
+    },
+    {
+      "date": "2010-11-01",
+      "NHPI_YoY": 2.314814814814814,
+      "Rent_YoY": 1.180744777475029,
+      "Mortgage_interest_YoY": -2.693310165073848,
+      "Shelter_YoY": 2.5556471558120464
+    },
+    {
+      "date": "2010-12-01",
+      "NHPI_YoY": 1.9607843137254832,
+      "Rent_YoY": 1.1796733212341204,
+      "Mortgage_interest_YoY": -2.532751091703067,
+      "Shelter_YoY": 2.7205276174773196
+    },
+    {
+      "date": "2011-01-01",
+      "NHPI_YoY": 1.7221584385763489,
+      "Rent_YoY": 1.0879419764279197,
+      "Mortgage_interest_YoY": -2.3684210526315863,
+      "Shelter_YoY": 2.2167487684729092
+    },
+    {
+      "date": "2011-02-01",
+      "NHPI_YoY": 2.1814006888633886,
+      "Rent_YoY": 1.1786038077969074,
+      "Mortgage_interest_YoY": -2.3767605633802757,
+      "Shelter_YoY": 2.2167487684729092
+    },
+    {
+      "date": "2011-03-01",
+      "NHPI_YoY": 1.8306636155606348,
+      "Rent_YoY": 1.1775362318840576,
+      "Mortgage_interest_YoY": -2.2084805653710293,
+      "Shelter_YoY": 2.3829087921117376
+    },
+    {
+      "date": "2011-04-01",
+      "NHPI_YoY": 1.82648401826484,
+      "Rent_YoY": 1.17647058823529,
+      "Mortgage_interest_YoY": -2.127659574468077,
+      "Shelter_YoY": 2.287581699346397
+    },
+    {
+      "date": "2011-05-01",
+      "NHPI_YoY": 1.9340159271899804,
+      "Rent_YoY": 1.175406871609419,
+      "Mortgage_interest_YoY": -1.8617021276595702,
+      "Shelter_YoY": 1.788617886178856
+    },
+    {
+      "date": "2011-06-01",
+      "NHPI_YoY": 2.0454545454545503,
+      "Rent_YoY": 1.084010840108407,
+      "Mortgage_interest_YoY": -1.8617021276595702,
+      "Shelter_YoY": 1.7031630170316392
+    },
+    {
+      "date": "2011-07-01",
+      "NHPI_YoY": 2.2753128555176305,
+      "Rent_YoY": 1.0830324909747224,
+      "Mortgage_interest_YoY": -1.860053144375562,
+      "Shelter_YoY": 1.2872083668543866
+    },
+    {
+      "date": "2011-08-01",
+      "NHPI_YoY": 2.2727272727272707,
+      "Rent_YoY": 1.0810810810810922,
+      "Mortgage_interest_YoY": -1.685891748003554,
+      "Shelter_YoY": 1.774193548387104
+    },
+    {
+      "date": "2011-09-01",
+      "NHPI_YoY": 2.2701475595913845,
+      "Rent_YoY": 1.080108010801073,
+      "Mortgage_interest_YoY": -1.7761989342806372,
+      "Shelter_YoY": 1.4527845036319542
+    },
+    {
+      "date": "2011-10-01",
+      "NHPI_YoY": 2.3809523809523725,
+      "Rent_YoY": 1.0781671159029615,
+      "Mortgage_interest_YoY": -1.3368983957219305,
+      "Shelter_YoY": 1.5248796147672605
+    },
+    {
+      "date": "2011-11-01",
+      "NHPI_YoY": 2.488687782805421,
+      "Rent_YoY": 1.077199281867136,
+      "Mortgage_interest_YoY": -1.0714285714285787,
+      "Shelter_YoY": 1.5273311897106012
+    },
+    {
+      "date": "2011-12-01",
+      "NHPI_YoY": 2.601809954751122,
+      "Rent_YoY": 1.076233183856501,
+      "Mortgage_interest_YoY": -0.7168458781361964,
+      "Shelter_YoY": 1.7656500802568198
+    },
+    {
+      "date": "2012-01-01",
+      "NHPI_YoY": 2.483069977426644,
+      "Rent_YoY": 1.1659192825112186,
+      "Mortgage_interest_YoY": -0.4492362982928988,
+      "Shelter_YoY": 2.088353413654609
+    },
+    {
+      "date": "2012-02-01",
+      "NHPI_YoY": 2.2471910112359605,
+      "Rent_YoY": 1.2544802867383575,
+      "Mortgage_interest_YoY": -0.0901713255184955,
+      "Shelter_YoY": 1.927710843373509
+    },
+    {
+      "date": "2012-03-01",
+      "NHPI_YoY": 2.5842696629213346,
+      "Rent_YoY": 1.253357206803929,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": 1.605136436597121
+    },
+    {
+      "date": "2012-04-01",
+      "NHPI_YoY": 2.578475336322872,
+      "Rent_YoY": 1.2522361359570633,
+      "Mortgage_interest_YoY": -0.09057971014493349,
+      "Shelter_YoY": 1.1182108626198062
+    },
+    {
+      "date": "2012-05-01",
+      "NHPI_YoY": 2.34375,
+      "Rent_YoY": 1.2511170688114248,
+      "Mortgage_interest_YoY": -0.6323396567299078,
+      "Shelter_YoY": 1.198083067092659
+    },
+    {
+      "date": "2012-06-01",
+      "NHPI_YoY": 2.3385300668151476,
+      "Rent_YoY": 1.3404825737265424,
+      "Mortgage_interest_YoY": -0.9936766034327138,
+      "Shelter_YoY": 1.2759170653907415
+    },
+    {
+      "date": "2012-07-01",
+      "NHPI_YoY": 2.3359288097886566,
+      "Rent_YoY": 1.3392857142857206,
+      "Mortgage_interest_YoY": -1.4440433212996373,
+      "Shelter_YoY": 1.0325655281969714
+    },
+    {
+      "date": "2012-08-01",
+      "NHPI_YoY": 2.3333333333333206,
+      "Rent_YoY": 1.426024955436711,
+      "Mortgage_interest_YoY": -1.8050541516245522,
+      "Shelter_YoY": 0.9508716323296307
+    },
+    {
+      "date": "2012-09-01",
+      "NHPI_YoY": 2.441731409544956,
+      "Rent_YoY": 1.513802315227064,
+      "Mortgage_interest_YoY": -2.169981916817354,
+      "Shelter_YoY": 1.193317422434359
+    },
+    {
+      "date": "2012-10-01",
+      "NHPI_YoY": 2.436323366555926,
+      "Rent_YoY": 1.5111111111111075,
+      "Mortgage_interest_YoY": -2.619692863595313,
+      "Shelter_YoY": 0.8695652173912993
+    },
+    {
+      "date": "2012-11-01",
+      "NHPI_YoY": 2.207505518763786,
+      "Rent_YoY": 1.5097690941385356,
+      "Mortgage_interest_YoY": -2.9783393501805033,
+      "Shelter_YoY": 0.9501187648456089
+    },
+    {
+      "date": "2012-12-01",
+      "NHPI_YoY": 2.2050716648291058,
+      "Rent_YoY": 1.5971606033717833,
+      "Mortgage_interest_YoY": -3.6101083032490933,
+      "Shelter_YoY": 0.5520504731861164
+    },
+    {
+      "date": "2013-01-01",
+      "NHPI_YoY": 2.2026431718061623,
+      "Rent_YoY": 1.5957446808510634,
+      "Mortgage_interest_YoY": -4.1516245487364545,
+      "Shelter_YoY": 0.5507474429583104
+    },
+    {
+      "date": "2013-02-01",
+      "NHPI_YoY": 2.19780219780219,
+      "Rent_YoY": 1.5929203539823078,
+      "Mortgage_interest_YoY": -4.241877256317695,
+      "Shelter_YoY": 0.7880220646178104
+    },
+    {
+      "date": "2013-03-01",
+      "NHPI_YoY": 1.8619934282585016,
+      "Rent_YoY": 1.5915119363395291,
+      "Mortgage_interest_YoY": -3.974706413730811,
+      "Shelter_YoY": 1.1058451816745807
+    },
+    {
+      "date": "2013-04-01",
+      "NHPI_YoY": 1.857923497267766,
+      "Rent_YoY": 1.590106007067127,
+      "Mortgage_interest_YoY": -4.2611060743427025,
+      "Shelter_YoY": 1.2638230647709303
+    },
+    {
+      "date": "2013-05-01",
+      "NHPI_YoY": 1.8538713195201728,
+      "Rent_YoY": 1.5887025595763493,
+      "Mortgage_interest_YoY": -4.09090909090909,
+      "Shelter_YoY": 1.2628255722178405
+    },
+    {
+      "date": "2013-06-01",
+      "NHPI_YoY": 1.7410228509249226,
+      "Rent_YoY": 1.6754850088183337,
+      "Mortgage_interest_YoY": -3.8321167883211604,
+      "Shelter_YoY": 1.1811023622047223
+    },
+    {
+      "date": "2013-07-01",
+      "NHPI_YoY": 1.7391304347825987,
+      "Rent_YoY": 1.6740088105726914,
+      "Mortgage_interest_YoY": -3.8461538461538436,
+      "Shelter_YoY": 1.2578616352201255
+    },
+    {
+      "date": "2013-08-01",
+      "NHPI_YoY": 1.7372421281216077,
+      "Rent_YoY": 1.6695957820738183,
+      "Mortgage_interest_YoY": -3.5845588235294046,
+      "Shelter_YoY": 1.098901098901095
+    },
+    {
+      "date": "2013-09-01",
+      "NHPI_YoY": 1.625135427952329,
+      "Rent_YoY": 1.5789473684210575,
+      "Mortgage_interest_YoY": -2.957486136783738,
+      "Shelter_YoY": 1.4150943396226356
+    },
+    {
+      "date": "2013-10-01",
+      "NHPI_YoY": 1.4054054054054133,
+      "Rent_YoY": 1.5761821366024442,
+      "Mortgage_interest_YoY": -2.5974025974025983,
+      "Shelter_YoY": 1.2539184952978122
+    },
+    {
+      "date": "2013-11-01",
+      "NHPI_YoY": 1.403887688984895,
+      "Rent_YoY": 1.6622922134733153,
+      "Mortgage_interest_YoY": -2.1395348837209283,
+      "Shelter_YoY": 1.8039215686274535
+    },
+    {
+      "date": "2013-12-01",
+      "NHPI_YoY": 1.2944983818770295,
+      "Rent_YoY": 1.5720524017467152,
+      "Mortgage_interest_YoY": -1.3108614232209659,
+      "Shelter_YoY": 1.8823529411764683
+    },
+    {
+      "date": "2014-01-01",
+      "NHPI_YoY": 1.400862068965525,
+      "Rent_YoY": 1.5706806282722585,
+      "Mortgage_interest_YoY": -0.5649717514124353,
+      "Shelter_YoY": 2.1126760563380254
+    },
+    {
+      "date": "2014-02-01",
+      "NHPI_YoY": 1.505376344086029,
+      "Rent_YoY": 1.4808362369338024,
+      "Mortgage_interest_YoY": -0.47125353440150564,
+      "Shelter_YoY": 2.1892103205629176
+    },
+    {
+      "date": "2014-03-01",
+      "NHPI_YoY": 1.6129032258064502,
+      "Rent_YoY": 1.4795474325500324,
+      "Mortgage_interest_YoY": -0.5644402634054524,
+      "Shelter_YoY": 2.6562500000000044
+    },
+    {
+      "date": "2014-04-01",
+      "NHPI_YoY": 1.6094420600858417,
+      "Rent_YoY": 1.4782608695652177,
+      "Mortgage_interest_YoY": 0.18939393939394478,
+      "Shelter_YoY": 3.2761310452418257
+    },
+    {
+      "date": "2014-05-01",
+      "NHPI_YoY": 1.498929336188426,
+      "Rent_YoY": 1.476976542137276,
+      "Mortgage_interest_YoY": 0.18957345971564177,
+      "Shelter_YoY": 3.351519875292275
+    },
+    {
+      "date": "2014-06-01",
+      "NHPI_YoY": 1.497326203208571,
+      "Rent_YoY": 1.4744145706851786,
+      "Mortgage_interest_YoY": 0.0948766603415585,
+      "Shelter_YoY": 2.8793774319066046
+    },
+    {
+      "date": "2014-07-01",
+      "NHPI_YoY": 1.3888888888889062,
+      "Rent_YoY": 1.4731369150779772,
+      "Mortgage_interest_YoY": 0.28571428571428914,
+      "Shelter_YoY": 2.9503105590062084
+    },
+    {
+      "date": "2014-08-01",
+      "NHPI_YoY": 1.6008537886873064,
+      "Rent_YoY": 1.382886776145198,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": 2.795031055900621
+    },
+    {
+      "date": "2014-09-01",
+      "NHPI_YoY": 1.5991471215351716,
+      "Rent_YoY": 1.4680483592400817,
+      "Mortgage_interest_YoY": -0.19047619047619646,
+      "Shelter_YoY": 2.7131782945736482
+    },
+    {
+      "date": "2014-10-01",
+      "NHPI_YoY": 1.7057569296375252,
+      "Rent_YoY": 1.4655172413793105,
+      "Mortgage_interest_YoY": -0.19047619047619646,
+      "Shelter_YoY": 2.786377708978338
+    },
+    {
+      "date": "2014-11-01",
+      "NHPI_YoY": 1.7039403620873195,
+      "Rent_YoY": 1.376936316695354,
+      "Mortgage_interest_YoY": -0.47528517110265733,
+      "Shelter_YoY": 2.3112480739599484
+    },
+    {
+      "date": "2014-12-01",
+      "NHPI_YoY": 1.7039403620873195,
+      "Rent_YoY": 1.3757523645743897,
+      "Mortgage_interest_YoY": -0.6641366223908984,
+      "Shelter_YoY": 2.386451116243249
+    },
+    {
+      "date": "2015-01-01",
+      "NHPI_YoY": 1.4877789585547418,
+      "Rent_YoY": 1.2886597938144284,
+      "Mortgage_interest_YoY": -0.7575757575757569,
+      "Shelter_YoY": 1.992337164750957
+    },
+    {
+      "date": "2015-02-01",
+      "NHPI_YoY": 1.2711864406779627,
+      "Rent_YoY": 1.373390557939902,
+      "Mortgage_interest_YoY": -0.6628787878787734,
+      "Shelter_YoY": 1.8362662586075107
+    },
+    {
+      "date": "2015-03-01",
+      "NHPI_YoY": 1.2698412698412653,
+      "Rent_YoY": 1.3722126929674117,
+      "Mortgage_interest_YoY": -0.6622516556291425,
+      "Shelter_YoY": 1.4459665144596734
+    },
+    {
+      "date": "2015-04-01",
+      "NHPI_YoY": 1.055966209081305,
+      "Rent_YoY": 1.371036846615259,
+      "Mortgage_interest_YoY": -0.8506616257088817,
+      "Shelter_YoY": 0.5287009063444037
+    },
+    {
+      "date": "2015-05-01",
+      "NHPI_YoY": 1.1603375527426296,
+      "Rent_YoY": 1.2842465753424737,
+      "Mortgage_interest_YoY": -0.9460737937559083,
+      "Shelter_YoY": 0.4524886877828038
+    },
+    {
+      "date": "2015-06-01",
+      "NHPI_YoY": 1.264488935721797,
+      "Rent_YoY": 1.1965811965811923,
+      "Mortgage_interest_YoY": -0.758293838862556,
+      "Shelter_YoY": 0.9833585476550777
+    },
+    {
+      "date": "2015-07-01",
+      "NHPI_YoY": 1.3698630136986356,
+      "Rent_YoY": 1.1955593509820783,
+      "Mortgage_interest_YoY": -1.3295346628679927,
+      "Shelter_YoY": 0.9049773755656298
+    },
+    {
+      "date": "2015-08-01",
+      "NHPI_YoY": 1.36554621848739,
+      "Rent_YoY": 1.1082693947144007,
+      "Mortgage_interest_YoY": -1.2392755004766554,
+      "Shelter_YoY": 1.1329305135951762
+    },
+    {
+      "date": "2015-09-01",
+      "NHPI_YoY": 1.364113326337879,
+      "Rent_YoY": 1.0212765957446912,
+      "Mortgage_interest_YoY": -1.049618320610679,
+      "Shelter_YoY": 1.0566037735849187
+    },
+    {
+      "date": "2015-10-01",
+      "NHPI_YoY": 1.467505241090139,
+      "Rent_YoY": 0.9345794392523255,
+      "Mortgage_interest_YoY": -1.1450381679389388,
+      "Shelter_YoY": 1.1295180722891596
+    },
+    {
+      "date": "2015-11-01",
+      "NHPI_YoY": 1.4659685863874339,
+      "Rent_YoY": 0.8488964346349714,
+      "Mortgage_interest_YoY": -1.241642788920727,
+      "Shelter_YoY": 1.2048192771084265
+    },
+    {
+      "date": "2015-12-01",
+      "NHPI_YoY": 1.5706806282722585,
+      "Rent_YoY": 0.8481764206955011,
+      "Mortgage_interest_YoY": -1.3371537726838634,
+      "Shelter_YoY": 1.1278195488721776
+    },
+    {
+      "date": "2016-01-01",
+      "NHPI_YoY": 1.675392670157061,
+      "Rent_YoY": 0.8481764206955011,
+      "Mortgage_interest_YoY": -1.3358778625954137,
+      "Shelter_YoY": 1.1269722013523609
+    },
+    {
+      "date": "2016-02-01",
+      "NHPI_YoY": 1.778242677824271,
+      "Rent_YoY": 0.7620660457239747,
+      "Mortgage_interest_YoY": -1.4299332697807476,
+      "Shelter_YoY": 1.2021036814425123
+    },
+    {
+      "date": "2016-03-01",
+      "NHPI_YoY": 1.880877742946696,
+      "Rent_YoY": 0.6768189509306133,
+      "Mortgage_interest_YoY": -1.5238095238095162,
+      "Shelter_YoY": 1.1252813203300738
+    },
+    {
+      "date": "2016-04-01",
+      "NHPI_YoY": 2.0898641588296796,
+      "Rent_YoY": 0.591715976331364,
+      "Mortgage_interest_YoY": -1.5252621544328049,
+      "Shelter_YoY": 1.3523666416228375
+    },
+    {
+      "date": "2016-05-01",
+      "NHPI_YoY": 2.711157455683,
+      "Rent_YoY": 0.6762468300929747,
+      "Mortgage_interest_YoY": -1.3371537726838634,
+      "Shelter_YoY": 1.4264264264264304
+    },
+    {
+      "date": "2016-06-01",
+      "NHPI_YoY": 2.6014568158168494,
+      "Rent_YoY": 0.591216216216206,
+      "Mortgage_interest_YoY": -1.3371537726838634,
+      "Shelter_YoY": 1.573033707865168
+    },
+    {
+      "date": "2016-07-01",
+      "NHPI_YoY": 2.9106029106028997,
+      "Rent_YoY": 0.5063291139240533,
+      "Mortgage_interest_YoY": -0.6737247353224229,
+      "Shelter_YoY": 1.6442451420029869
+    },
+    {
+      "date": "2016-08-01",
+      "NHPI_YoY": 2.694300518134707,
+      "Rent_YoY": 0.590219224283306,
+      "Mortgage_interest_YoY": -0.579150579150578,
+      "Shelter_YoY": 1.7176997759521972
+    },
+    {
+      "date": "2016-09-01",
+      "NHPI_YoY": 2.795031055900621,
+      "Rent_YoY": 0.5054759898904804,
+      "Mortgage_interest_YoY": -0.7714561234329786,
+      "Shelter_YoY": 1.7176997759521972
+    },
+    {
+      "date": "2016-10-01",
+      "NHPI_YoY": 2.9958677685950397,
+      "Rent_YoY": 0.5050505050505194,
+      "Mortgage_interest_YoY": -0.7722007722007707,
+      "Shelter_YoY": 1.93596425912137
+    },
+    {
+      "date": "2016-11-01",
+      "NHPI_YoY": 3.0959752321981338,
+      "Rent_YoY": 0.5050505050505194,
+      "Mortgage_interest_YoY": -0.4835589941972973,
+      "Shelter_YoY": 2.083333333333326
+    },
+    {
+      "date": "2016-12-01",
+      "NHPI_YoY": 3.092783505154628,
+      "Rent_YoY": 0.5046257359125228,
+      "Mortgage_interest_YoY": -0.2904162633107443,
+      "Shelter_YoY": 2.0817843866171026
+    },
+    {
+      "date": "2017-01-01",
+      "NHPI_YoY": 3.0895983522142068,
+      "Rent_YoY": 0.5046257359125228,
+      "Mortgage_interest_YoY": -0.3868471953578423,
+      "Shelter_YoY": 2.377414561664204
+    },
+    {
+      "date": "2017-02-01",
+      "NHPI_YoY": 3.288797533401855,
+      "Rent_YoY": 0.5042016806722671,
+      "Mortgage_interest_YoY": -0.3868471953578423,
+      "Shelter_YoY": 2.15293244246475
+    },
+    {
+      "date": "2017-03-01",
+      "NHPI_YoY": 3.2820512820512793,
+      "Rent_YoY": 0.588235294117645,
+      "Mortgage_interest_YoY": -0.29013539651838727,
+      "Shelter_YoY": 2.1513353115726774
+    },
+    {
+      "date": "2017-04-01",
+      "NHPI_YoY": 3.8894575230296713,
+      "Rent_YoY": 0.588235294117645,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": 2.223869532987388
+    },
+    {
+      "date": "2017-05-01",
+      "NHPI_YoY": 3.756345177664988,
+      "Rent_YoY": 0.5877413937867448,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": 1.924500370096216
+    },
+    {
+      "date": "2017-06-01",
+      "NHPI_YoY": 3.8539553752535705,
+      "Rent_YoY": 0.6717044500419878,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": 1.6224188790560534
+    },
+    {
+      "date": "2017-07-01",
+      "NHPI_YoY": 3.838383838383841,
+      "Rent_YoY": 0.6717044500419878,
+      "Mortgage_interest_YoY": 0.0,
+      "Shelter_YoY": 1.2499999999999956
+    },
+    {
+      "date": "2017-08-01",
+      "NHPI_YoY": 3.8345105953582426,
+      "Rent_YoY": 0.5867560771165126,
+      "Mortgage_interest_YoY": 0.1941747572815622,
+      "Shelter_YoY": 1.3215859030837107
+    },
+    {
+      "date": "2017-09-01",
+      "NHPI_YoY": 3.8267875125881146,
+      "Rent_YoY": 0.6705783738474302,
+      "Mortgage_interest_YoY": 0.38872691933915515,
+      "Shelter_YoY": 1.3950073421439058
+    },
+    {
+      "date": "2017-10-01",
+      "NHPI_YoY": 3.5105315947843607,
+      "Rent_YoY": 0.670016750418756,
+      "Mortgage_interest_YoY": 0.5836575875486361,
+      "Shelter_YoY": 1.241782322863405
+    },
+    {
+      "date": "2017-11-01",
+      "NHPI_YoY": 3.4034034034033933,
+      "Rent_YoY": 0.7537688442210921,
+      "Mortgage_interest_YoY": 0.8746355685131046,
+      "Shelter_YoY": 1.2390670553936056
+    },
+    {
+      "date": "2017-12-01",
+      "NHPI_YoY": 3.299999999999992,
+      "Rent_YoY": 0.7531380753138084,
+      "Mortgage_interest_YoY": 1.2621359223300876,
+      "Shelter_YoY": 1.383831026948279
+    },
+    {
+      "date": "2018-01-01",
+      "NHPI_YoY": 3.1968031968031996,
+      "Rent_YoY": 0.8368200836819994,
+      "Mortgage_interest_YoY": 1.747572815533971,
+      "Shelter_YoY": 1.3788098693758855
+    },
+    {
+      "date": "2018-02-01",
+      "NHPI_YoY": 2.5870646766169125,
+      "Rent_YoY": 0.919732441471588,
+      "Mortgage_interest_YoY": 2.3300970873786353,
+      "Shelter_YoY": 1.744186046511631
+    },
+    {
+      "date": "2018-03-01",
+      "NHPI_YoY": 2.3833167825223267,
+      "Rent_YoY": 0.9189640768588081,
+      "Mortgage_interest_YoY": 2.812803103782735,
+      "Shelter_YoY": 1.6702977487291326
+    },
+    {
+      "date": "2018-04-01",
+      "NHPI_YoY": 1.5763546798029493,
+      "Rent_YoY": 1.0025062656641603,
+      "Mortgage_interest_YoY": 3.1945788964181876,
+      "Shelter_YoY": 1.7403915881073262
+    },
+    {
+      "date": "2018-05-01",
+      "NHPI_YoY": 0.8806262230919737,
+      "Rent_YoY": 1.085141903171949,
+      "Mortgage_interest_YoY": 3.7754114230396985,
+      "Shelter_YoY": 1.9607843137255054
+    },
+    {
+      "date": "2018-06-01",
+      "NHPI_YoY": 0.78125,
+      "Rent_YoY": 1.0842368640533673,
+      "Mortgage_interest_YoY": 4.453049370764761,
+      "Shelter_YoY": 1.9593613933236442
+    },
+    {
+      "date": "2018-07-01",
+      "NHPI_YoY": 0.4863813229571967,
+      "Rent_YoY": 1.1676396997497784,
+      "Mortgage_interest_YoY": 5.232558139534871,
+      "Shelter_YoY": 2.3965141612200425
+    },
+    {
+      "date": "2018-08-01",
+      "NHPI_YoY": 0.38872691933915515,
+      "Rent_YoY": 1.3333333333333197,
+      "Mortgage_interest_YoY": 5.813953488372103,
+      "Shelter_YoY": 2.3188405797101463
+    },
+    {
+      "date": "2018-09-01",
+      "NHPI_YoY": 0.19398642095054264,
+      "Rent_YoY": 1.3322231473771984,
+      "Mortgage_interest_YoY": 6.389157792836397,
+      "Shelter_YoY": 2.4619840695148554
+    },
+    {
+      "date": "2018-10-01",
+      "NHPI_YoY": 0.09689922480620172,
+      "Rent_YoY": 1.331114808652245,
+      "Mortgage_interest_YoY": 6.9632495164409836,
+      "Shelter_YoY": 2.4531024531024626
+    },
+    {
+      "date": "2018-11-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 1.413133832086455,
+      "Mortgage_interest_YoY": 7.225433526011571,
+      "Shelter_YoY": 2.4478041756659463
+    },
+    {
+      "date": "2018-12-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 1.4119601328903553,
+      "Mortgage_interest_YoY": 7.4784276126558025,
+      "Shelter_YoY": 2.227011494252884
+    },
+    {
+      "date": "2019-01-01",
+      "NHPI_YoY": -0.09680542110357404,
+      "Rent_YoY": 2.24066390041493,
+      "Mortgage_interest_YoY": 7.82442748091603,
+      "Shelter_YoY": 2.362204724409467
+    },
+    {
+      "date": "2019-02-01",
+      "NHPI_YoY": 0.09699321047527132,
+      "Rent_YoY": 2.4855012427506207,
+      "Mortgage_interest_YoY": 8.064516129032251,
+      "Shelter_YoY": 2.4285714285714244
+    },
+    {
+      "date": "2019-03-01",
+      "NHPI_YoY": 0.09699321047527132,
+      "Rent_YoY": 2.7317880794701876,
+      "Mortgage_interest_YoY": 8.113207547169798,
+      "Shelter_YoY": 2.7142857142857135
+    },
+    {
+      "date": "2019-04-01",
+      "NHPI_YoY": 0.09699321047527132,
+      "Rent_YoY": 2.2332506203473823,
+      "Mortgage_interest_YoY": 8.16135084427767,
+      "Shelter_YoY": 2.708481824661435
+    },
+    {
+      "date": "2019-05-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 2.14698596201488,
+      "Mortgage_interest_YoY": 8.208955223880587,
+      "Shelter_YoY": 2.7065527065526895
+    },
+    {
+      "date": "2019-06-01",
+      "NHPI_YoY": -0.19379844961240345,
+      "Rent_YoY": 2.39273927392738,
+      "Mortgage_interest_YoY": 8.063021316033359,
+      "Shelter_YoY": 2.491103202846978
+    },
+    {
+      "date": "2019-07-01",
+      "NHPI_YoY": -0.38722168441431837,
+      "Rent_YoY": 2.5556471558120464,
+      "Mortgage_interest_YoY": 8.011049723756901,
+      "Shelter_YoY": 2.3404255319148914
+    },
+    {
+      "date": "2019-08-01",
+      "NHPI_YoY": -0.2904162633107443,
+      "Rent_YoY": 3.0427631578947345,
+      "Mortgage_interest_YoY": 7.783882783882778,
+      "Shelter_YoY": 2.4079320113314484
+    },
+    {
+      "date": "2019-09-01",
+      "NHPI_YoY": -0.09680542110357404,
+      "Rent_YoY": 2.958093672966311,
+      "Mortgage_interest_YoY": 7.461328480436746,
+      "Shelter_YoY": 2.3321554770318054
+    },
+    {
+      "date": "2019-10-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 3.6945812807881673,
+      "Mortgage_interest_YoY": 6.962025316455689,
+      "Shelter_YoY": 2.605633802816887
+    },
+    {
+      "date": "2019-11-01",
+      "NHPI_YoY": -0.09680542110357404,
+      "Rent_YoY": 3.1147540983606614,
+      "Mortgage_interest_YoY": 6.558849955076362,
+      "Shelter_YoY": 2.5298664792691383
+    },
+    {
+      "date": "2019-12-01",
+      "NHPI_YoY": 0.09680542110359625,
+      "Rent_YoY": 3.439803439803435,
+      "Mortgage_interest_YoY": 5.976806422836756,
+      "Shelter_YoY": 2.8109627547435068
+    },
+    {
+      "date": "2020-01-01",
+      "NHPI_YoY": 0.19379844961240345,
+      "Rent_YoY": 2.4350649350649345,
+      "Mortgage_interest_YoY": 5.3097345132743445,
+      "Shelter_YoY": 2.3776223776223793
+    },
+    {
+      "date": "2020-02-01",
+      "NHPI_YoY": 0.5813953488372103,
+      "Rent_YoY": 2.7485852869846283,
+      "Mortgage_interest_YoY": 4.74100087796312,
+      "Shelter_YoY": 2.3012552301255207
+    },
+    {
+      "date": "2020-03-01",
+      "NHPI_YoY": 0.8720930232558155,
+      "Rent_YoY": 2.5785656728444906,
+      "Mortgage_interest_YoY": 4.363001745200701,
+      "Shelter_YoY": 1.8776077885952702
+    },
+    {
+      "date": "2020-04-01",
+      "NHPI_YoY": 0.8720930232558155,
+      "Rent_YoY": 2.346278317152106,
+      "Mortgage_interest_YoY": 3.98959236773635,
+      "Shelter_YoY": 1.3185287994448291
+    },
+    {
+      "date": "2020-05-01",
+      "NHPI_YoY": 1.06692531522794,
+      "Rent_YoY": 1.4551333872271588,
+      "Mortgage_interest_YoY": 3.275862068965507,
+      "Shelter_YoY": 0.9708737864077666
+    },
+    {
+      "date": "2020-06-01",
+      "NHPI_YoY": 1.2621359223300876,
+      "Rent_YoY": 1.7727639000805873,
+      "Mortgage_interest_YoY": 2.487135506003435,
+      "Shelter_YoY": 1.6666666666666607
+    },
+    {
+      "date": "2020-07-01",
+      "NHPI_YoY": 1.7492711370262315,
+      "Rent_YoY": 1.2057877813504758,
+      "Mortgage_interest_YoY": 1.619778346121059,
+      "Shelter_YoY": 1.455301455301461
+    },
+    {
+      "date": "2020-08-01",
+      "NHPI_YoY": 2.1359223300970953,
+      "Rent_YoY": 1.3567438148443856,
+      "Mortgage_interest_YoY": 0.9345794392523255,
+      "Shelter_YoY": 1.5214384508990486
+    },
+    {
+      "date": "2020-09-01",
+      "NHPI_YoY": 3.197674418604657,
+      "Rent_YoY": 1.596169193934549,
+      "Mortgage_interest_YoY": 0.08467400508045397,
+      "Shelter_YoY": 1.7265193370165743
+    },
+    {
+      "date": "2020-10-01",
+      "NHPI_YoY": 3.8722168441432725,
+      "Rent_YoY": 0.9501187648456089,
+      "Mortgage_interest_YoY": -0.7607776838545965,
+      "Shelter_YoY": 1.7844886753603406
+    },
+    {
+      "date": "2020-11-01",
+      "NHPI_YoY": 4.554263565891481,
+      "Rent_YoY": 1.5103338632750374,
+      "Mortgage_interest_YoY": -1.9392917369308593,
+      "Shelter_YoY": 1.919122686771746
+    },
+    {
+      "date": "2020-12-01",
+      "NHPI_YoY": 4.642166344293996,
+      "Rent_YoY": 0.5542359461599311,
+      "Mortgage_interest_YoY": -3.114478114478114,
+      "Shelter_YoY": 1.6404647983595089
+    },
+    {
+      "date": "2021-01-01",
+      "NHPI_YoY": 5.415860735009659,
+      "Rent_YoY": 0.8716323296354966,
+      "Mortgage_interest_YoY": -4.285714285714281,
+      "Shelter_YoY": 1.3661202185792254
+    },
+    {
+      "date": "2021-02-01",
+      "NHPI_YoY": 7.032755298651261,
+      "Rent_YoY": 0.07867820613691734,
+      "Mortgage_interest_YoY": -5.364626990779541,
+      "Shelter_YoY": 1.4314928425358087
+    },
+    {
+      "date": "2021-03-01",
+      "NHPI_YoY": 7.877041306436117,
+      "Rent_YoY": 0.54988216810683,
+      "Mortgage_interest_YoY": -6.270903010033447,
+      "Shelter_YoY": 2.3890784982935065
+    },
+    {
+      "date": "2021-04-01",
+      "NHPI_YoY": 9.894332372718551,
+      "Rent_YoY": 0.9486166007905084,
+      "Mortgage_interest_YoY": -7.256046705587993,
+      "Shelter_YoY": 3.219178082191765
+    },
+    {
+      "date": "2021-05-01",
+      "NHPI_YoY": 11.324376199616125,
+      "Rent_YoY": 2.4701195219123395,
+      "Mortgage_interest_YoY": -8.180300500834726,
+      "Shelter_YoY": 4.189560439560447
+    },
+    {
+      "date": "2021-06-01",
+      "NHPI_YoY": 11.888782358581018,
+      "Rent_YoY": 2.13776722090262,
+      "Mortgage_interest_YoY": -8.61924686192468,
+      "Shelter_YoY": 4.371584699453557
+    },
+    {
+      "date": "2021-07-01",
+      "NHPI_YoY": 11.9388729703916,
+      "Rent_YoY": 2.621127879269247,
+      "Mortgage_interest_YoY": -8.976510067114097,
+      "Shelter_YoY": 4.849726775956276
+    },
+    {
+      "date": "2021-08-01",
+      "NHPI_YoY": 12.16730038022813,
+      "Rent_YoY": 1.5748031496062964,
+      "Mortgage_interest_YoY": -9.259259259259256,
+      "Shelter_YoY": 4.836512261580372
+    },
+    {
+      "date": "2021-09-01",
+      "NHPI_YoY": 11.267605633802823,
+      "Rent_YoY": 1.885310290651998,
+      "Mortgage_interest_YoY": -9.221658206429783,
+      "Shelter_YoY": 4.820095044127637
+    },
+    {
+      "date": "2021-10-01",
+      "NHPI_YoY": 11.463187325256285,
+      "Rent_YoY": 1.8039215686274535,
+      "Mortgage_interest_YoY": -8.85860306643953,
+      "Shelter_YoY": 4.787592717464584
+    },
+    {
+      "date": "2021-11-01",
+      "NHPI_YoY": 11.67747914735866,
+      "Rent_YoY": 1.7227877838684513,
+      "Mortgage_interest_YoY": -8.25451418744626,
+      "Shelter_YoY": 4.841963685272366
+    },
+    {
+      "date": "2021-12-01",
+      "NHPI_YoY": 11.645101663585944,
+      "Rent_YoY": 2.7559055118110187,
+      "Mortgage_interest_YoY": -7.558644656820146,
+      "Shelter_YoY": 5.44720914593142
+    },
+    {
+      "date": "2022-01-01",
+      "NHPI_YoY": 11.834862385321099,
+      "Rent_YoY": 3.1421838177533523,
+      "Mortgage_interest_YoY": -6.760316066725203,
+      "Shelter_YoY": 6.1994609164420345
+    },
+    {
+      "date": "2022-02-01",
+      "NHPI_YoY": 10.8910891089109,
+      "Rent_YoY": 4.245283018867907,
+      "Mortgage_interest_YoY": -6.023029229406562,
+      "Shelter_YoY": 6.586021505376327
+    },
+    {
+      "date": "2022-03-01",
+      "NHPI_YoY": 11.041852181656274,
+      "Rent_YoY": 4.140625000000009,
+      "Mortgage_interest_YoY": -5.352363960749329,
+      "Shelter_YoY": 6.799999999999984
+    },
+    {
+      "date": "2022-04-01",
+      "NHPI_YoY": 9.353146853146832,
+      "Rent_YoY": 4.541895066562263,
+      "Mortgage_interest_YoY": -4.406474820143891,
+      "Shelter_YoY": 7.431984074319842
+    },
+    {
+      "date": "2022-05-01",
+      "NHPI_YoY": 8.362068965517233,
+      "Rent_YoY": 4.4323483670295705,
+      "Mortgage_interest_YoY": -2.7272727272727226,
+      "Shelter_YoY": 7.448912326961121
+    },
+    {
+      "date": "2022-06-01",
+      "NHPI_YoY": 7.8834618680377,
+      "Rent_YoY": 4.263565891472876,
+      "Mortgage_interest_YoY": -0.6410256410256387,
+      "Shelter_YoY": 7.068062827225119
+    },
+    {
+      "date": "2022-07-01",
+      "NHPI_YoY": 7.508532423208192,
+      "Rent_YoY": 4.876160990712086,
+      "Mortgage_interest_YoY": 1.6589861751151957,
+      "Shelter_YoY": 6.970684039087938
+    },
+    {
+      "date": "2022-08-01",
+      "NHPI_YoY": 6.864406779661003,
+      "Rent_YoY": 4.728682170542631,
+      "Mortgage_interest_YoY": 4.823747680890533,
+      "Shelter_YoY": 6.627680311890827
+    },
+    {
+      "date": "2022-09-01",
+      "NHPI_YoY": 6.329113924050622,
+      "Rent_YoY": 4.240555127216661,
+      "Mortgage_interest_YoY": 8.294501397949672,
+      "Shelter_YoY": 6.800518134715028
+    },
+    {
+      "date": "2022-10-01",
+      "NHPI_YoY": 5.100334448160537,
+      "Rent_YoY": 4.699537750385208,
+      "Mortgage_interest_YoY": 11.401869158878508,
+      "Shelter_YoY": 6.949806949806936
+    },
+    {
+      "date": "2022-11-01",
+      "NHPI_YoY": 4.149377593361003,
+      "Rent_YoY": 5.850654349499607,
+      "Mortgage_interest_YoY": 14.526710402999065,
+      "Shelter_YoY": 7.248236048749179
+    },
+    {
+      "date": "2022-12-01",
+      "NHPI_YoY": 3.8907284768211925,
+      "Rent_YoY": 5.823754789272018,
+      "Mortgage_interest_YoY": 17.951127819548862,
+      "Shelter_YoY": 7.015306122448983
+    },
+    {
+      "date": "2023-01-01",
+      "NHPI_YoY": 2.7071369975389725,
+      "Rent_YoY": 5.788271134805778,
+      "Mortgage_interest_YoY": 21.18644067796609,
+      "Shelter_YoY": 6.598984771573613
+    },
+    {
+      "date": "2023-02-01",
+      "NHPI_YoY": 1.379870129870131,
+      "Rent_YoY": 5.354449472096534,
+      "Mortgage_interest_YoY": 23.939679547596615,
+      "Shelter_YoY": 6.116015132408581
+    },
+    {
+      "date": "2023-03-01",
+      "NHPI_YoY": 0.1603849238171584,
+      "Rent_YoY": 5.326331582895727,
+      "Mortgage_interest_YoY": 26.390197926484447,
+      "Shelter_YoY": 5.4307116104868935
+    },
+    {
+      "date": "2023-04-01",
+      "NHPI_YoY": -0.23980815347721673,
+      "Rent_YoY": 6.067415730337067,
+      "Mortgage_interest_YoY": 28.504233301975535,
+      "Shelter_YoY": 4.941321803582466
+    },
+    {
+      "date": "2023-05-01",
+      "NHPI_YoY": -0.6364359586316648,
+      "Rent_YoY": 5.658972449739386,
+      "Mortgage_interest_YoY": 29.90654205607477,
+      "Shelter_YoY": 4.66257668711656
+    },
+    {
+      "date": "2023-06-01",
+      "NHPI_YoY": -0.7148530579825341,
+      "Rent_YoY": 5.799256505576222,
+      "Mortgage_interest_YoY": 30.138248847926263,
+      "Shelter_YoY": 4.767726161369201
+    },
+    {
+      "date": "2023-07-01",
+      "NHPI_YoY": -0.8730158730158699,
+      "Rent_YoY": 5.46125461254614,
+      "Mortgage_interest_YoY": 30.553037171350873,
+      "Shelter_YoY": 5.115712545675999
+    },
+    {
+      "date": "2023-08-01",
+      "NHPI_YoY": -0.8723235527359208,
+      "Rent_YoY": 6.513693560325695,
+      "Mortgage_interest_YoY": 30.884955752212395,
+      "Shelter_YoY": 6.032906764168189
+    },
+    {
+      "date": "2023-09-01",
+      "NHPI_YoY": -1.031746031746028,
+      "Rent_YoY": 7.322485207100593,
+      "Mortgage_interest_YoY": 30.6368330464716,
+      "Shelter_YoY": 6.003638568829595
+    },
+    {
+      "date": "2023-10-01",
+      "NHPI_YoY": -0.7955449482895838,
+      "Rent_YoY": 8.241353936718166,
+      "Mortgage_interest_YoY": 30.536912751677846,
+      "Shelter_YoY": 6.077015643802652
+    },
+    {
+      "date": "2023-11-01",
+      "NHPI_YoY": -0.8764940239043728,
+      "Rent_YoY": 7.418181818181813,
+      "Mortgage_interest_YoY": 29.78723404255319,
+      "Shelter_YoY": 5.92105263157896
+    },
+    {
+      "date": "2023-12-01",
+      "NHPI_YoY": -0.8764940239043728,
+      "Rent_YoY": 7.7480086893555455,
+      "Mortgage_interest_YoY": 28.605577689243034,
+      "Shelter_YoY": 5.959475566150174
+    },
+    {
+      "date": "2024-01-01",
+      "NHPI_YoY": -0.7188498402555976,
+      "Rent_YoY": 7.91936645068394,
+      "Mortgage_interest_YoY": 27.428127428127436,
+      "Shelter_YoY": 6.190476190476191
+    },
+    {
+      "date": "2024-02-01",
+      "NHPI_YoY": -0.4003202562049668,
+      "Rent_YoY": 8.160343593414465,
+      "Mortgage_interest_YoY": 26.31178707224333,
+      "Shelter_YoY": 6.47653000594175
+    },
+    {
+      "date": "2024-03-01",
+      "NHPI_YoY": -0.4003202562049668,
+      "Rent_YoY": 8.547008547008538,
+      "Mortgage_interest_YoY": 25.35421327367635,
+      "Shelter_YoY": 6.512729425695674
+    },
+    {
+      "date": "2024-04-01",
+      "NHPI_YoY": -0.08012820512820484,
+      "Rent_YoY": 8.19209039548021,
+      "Mortgage_interest_YoY": 24.524158125915086,
+      "Shelter_YoY": 6.4155385520894725
+    },
+    {
+      "date": "2024-05-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 8.94996476391825,
+      "Mortgage_interest_YoY": 23.309352517985626,
+      "Shelter_YoY": 6.389214536928489
+    },
+    {
+      "date": "2024-06-01",
+      "NHPI_YoY": -0.23999999999999577,
+      "Rent_YoY": 8.784258608573436,
+      "Mortgage_interest_YoY": 22.30878186968839,
+      "Shelter_YoY": 6.242707117852975
+    },
+    {
+      "date": "2024-07-01",
+      "NHPI_YoY": 0.08006405124099114,
+      "Rent_YoY": 8.537438768369476,
+      "Mortgage_interest_YoY": 21.04166666666667,
+      "Shelter_YoY": 5.735805330243338
+    },
+    {
+      "date": "2024-08-01",
+      "NHPI_YoY": 0.0,
+      "Rent_YoY": 8.895066018068087,
+      "Mortgage_interest_YoY": 18.796484110885725,
+      "Shelter_YoY": 5.344827586206913
+    },
+    {
+      "date": "2024-09-01",
+      "NHPI_YoY": 0.2405773857257376,
+      "Rent_YoY": 8.20124052377671,
+      "Mortgage_interest_YoY": 16.73254281949932,
+      "Shelter_YoY": 4.977116704805495
+    },
+    {
+      "date": "2024-10-01",
+      "NHPI_YoY": -0.1603849238171584,
+      "Rent_YoY": 7.341944255608435,
+      "Mortgage_interest_YoY": 14.717223650385613,
+      "Shelter_YoY": 4.821327283040278
+    },
+    {
+      "date": "2024-11-01",
+      "NHPI_YoY": 0.1607717041800516,
+      "Rent_YoY": 7.650643195666906,
+      "Mortgage_interest_YoY": 13.240857503152581,
+      "Shelter_YoY": 4.630152456239434
+    },
+    {
+      "date": "2024-12-01",
+      "NHPI_YoY": 0.0803858520900258,
+      "Rent_YoY": 7.123655913978499,
+      "Mortgage_interest_YoY": 11.710037174721188,
+      "Shelter_YoY": 4.49943757030371
+    },
+    {
+      "date": "2025-01-01",
+      "NHPI_YoY": 0.08045052292839916,
+      "Rent_YoY": 6.270847231487653,
+      "Mortgage_interest_YoY": 10.18292682926829,
+      "Shelter_YoY": 4.484304932735417
+    },
+    {
+      "date": "2025-02-01",
+      "NHPI_YoY": 0.0803858520900258,
+      "Rent_YoY": 5.757776307081408,
+      "Mortgage_interest_YoY": 9.030704394942802,
+      "Shelter_YoY": 4.18526785714286
+    },
+    {
+      "date": "2025-03-01",
+      "NHPI_YoY": 0.0803858520900258,
+      "Rent_YoY": 5.052493438320194,
+      "Mortgage_interest_YoY": 7.911957168352179,
+      "Shelter_YoY": 3.9466370205669676
+    },
+    {
+      "date": "2025-04-01",
+      "NHPI_YoY": -0.5613472333600655,
+      "Rent_YoY": 5.22193211488251,
+      "Mortgage_interest_YoY": 6.819517930629049,
+      "Shelter_YoY": 3.3738938053097245
+    },
+    {
+      "date": "2025-05-01",
+      "NHPI_YoY": -0.9607686148919159,
+      "Rent_YoY": 4.463130659767134,
+      "Mortgage_interest_YoY": 6.1843640606767725,
+      "Shelter_YoY": 2.975206611570247
+    },
+    {
+      "date": "2025-06-01",
+      "NHPI_YoY": -1.0425020048115408,
+      "Rent_YoY": 4.715762273901802,
+      "Mortgage_interest_YoY": 5.558772437753334,
+      "Shelter_YoY": 2.855573860516203
+    },
+    {
+      "date": "2025-07-01",
+      "NHPI_YoY": -1.3600000000000056,
+      "Rent_YoY": 5.093488072211483,
+      "Mortgage_interest_YoY": 4.761904761904745,
+      "Shelter_YoY": 2.9589041095890334
+    },
+    {
+      "date": "2025-08-01",
+      "NHPI_YoY": -1.6799999999999926,
+      "Rent_YoY": 4.467134652201654,
+      "Mortgage_interest_YoY": 4.211724530449623,
+      "Shelter_YoY": 2.564102564102555
+    },
+    {
+      "date": "2025-09-01",
+      "NHPI_YoY": -1.8399999999999972,
+      "Rent_YoY": 4.777070063694278,
+      "Mortgage_interest_YoY": 3.5553047404063287,
+      "Shelter_YoY": 2.5613079019073615
+    },
+    {
+      "date": "2025-10-01",
+      "NHPI_YoY": -1.8473895582329258,
+      "Rent_YoY": 5.193160227992388,
+      "Mortgage_interest_YoY": 2.9131652661064322,
+      "Shelter_YoY": 2.4891774891774965
+    },
+    {
+      "date": "2025-11-01",
+      "NHPI_YoY": -1.9261637239165297,
+      "Rent_YoY": 4.654088050314464,
+      "Mortgage_interest_YoY": 2.3385300668151476,
+      "Shelter_YoY": 2.320561252023734
+    },
+    {
+      "date": "2025-12-01",
+      "NHPI_YoY": -2.008032128514059,
+      "Rent_YoY": 4.8933500627352355,
+      "Mortgage_interest_YoY": 1.7193566278424832,
+      "Shelter_YoY": 2.0990312163616576
+    },
+    {
+      "date": "2026-01-01",
+      "NHPI_YoY": -2.331189710610937,
+      "Rent_YoY": 4.331450094161937,
+      "Mortgage_interest_YoY": 1.2174875484228131,
+      "Shelter_YoY": 1.716738197424883
+    },
+    {
+      "date": "2026-02-01",
+      "NHPI_YoY": -2.088353413654609,
+      "Rent_YoY": 3.8798498122653235,
+      "Mortgage_interest_YoY": 0.662617338487026,
+      "Shelter_YoY": 1.4997321906802474
+    },
+    {
+      "date": "2026-03-01",
+      "NHPI_YoY": -2.329317269076314,
+      "Rent_YoY": 4.2473454091193075,
+      "Mortgage_interest_YoY": 0.2756339581036382,
+      "Shelter_YoY": 1.6577540106951894
+    },
+    {
+      "date": "2026-04-01",
+      "NHPI_YoY": -2.3387096774193594,
+      "Rent_YoY": 3.5980148883374863,
+      "Mortgage_interest_YoY": -0.11007154650521933,
+      "Shelter_YoY": 1.7656500802568198
+    },
+    {
+      "date": "2026-05-01",
+      "NHPI_YoY": -2.425222312045272,
+      "Rent_YoY": 3.52941176470587,
+      "Mortgage_interest_YoY": -0.219780219780219,
+      "Shelter_YoY": 1.7121455323702461
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "notes": "Purchase prices, rent, mortgage interest, and shelter services are shown separately."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T14:12:52+00:00"
+}

@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-16T14:12:52+00:00",
+  "geography": "Us",
+  "indicators": [
+    {
+      "id": "us-food-cpi",
+      "file": "indicators/us-food-cpi.json",
+      "label": "U.S. food CPI",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "us-food-at-home-cpi",
+      "file": "indicators/us-food-at-home-cpi.json",
+      "label": "U.S. food at home CPI",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "us-food-away-from-home-cpi",
+      "file": "indicators/us-food-away-from-home-cpi.json",
+      "label": "U.S. food away from home CPI",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "us-cereals-bakery-cpi",
+      "file": "indicators/us-cereals-bakery-cpi.json",
+      "label": "U.S. cereals and bakery products CPI",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "us-meat-poultry-fish-eggs-cpi",
+      "file": "indicators/us-meat-poultry-fish-eggs-cpi.json",
+      "label": "U.S. meats, poultry, fish and eggs CPI",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "us-dairy-cpi",
+      "file": "indicators/us-dairy-cpi.json",
+      "label": "U.S. dairy and related products CPI",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "us-fruit-vegetables-cpi",
+      "file": "indicators/us-fruit-vegetables-cpi.json",
+      "label": "U.S. fruits and vegetables CPI",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "us-shelter-cpi",
+      "file": "indicators/us-shelter-cpi.json",
+      "label": "U.S. shelter CPI",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "us-rent-cpi",
+      "file": "indicators/us-rent-cpi.json",
+      "label": "U.S. rent of primary residence CPI",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "us-owners-equivalent-rent-cpi",
+      "file": "indicators/us-owners-equivalent-rent-cpi.json",
+      "label": "U.S. owners' equivalent rent CPI",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "us-fhfa-house-price-index",
+      "file": "indicators/us-fhfa-house-price-index.json",
+      "label": "FHFA U.S. purchase-only house price index",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-04-01"
+    },
+    {
+      "id": "us-food-cpi-yoy",
+      "file": "indicators/us-food-cpi-yoy.json",
+      "label": "U.S. food CPI growth",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "us-food-at-home-cpi-yoy",
+      "file": "indicators/us-food-at-home-cpi-yoy.json",
+      "label": "U.S. food-at-home CPI growth",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "us-food-inflation-gap",
+      "file": "indicators/us-food-inflation-gap.json",
+      "label": "U.S. food inflation gap",
+      "layer": "Food affordability",
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "us-grocery-inflation-gap",
+      "file": "indicators/us-grocery-inflation-gap.json",
+      "label": "U.S. grocery inflation gap",
+      "layer": "Food affordability",
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "us-real-food-price-index",
+      "file": "indicators/us-real-food-price-index.json",
+      "label": "U.S. real food-price index",
+      "layer": "Food affordability",
+      "latestDate": "2026-05-01"
+    },
+    {
+      "id": "us-food-affordability-pressure",
+      "file": "indicators/us-food-affordability-pressure.json",
+      "label": "U.S. food affordability pressure",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "us-real-fhfa-house-price-index",
+      "file": "indicators/us-real-fhfa-house-price-index.json",
+      "label": "Real FHFA house price index",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-04-01"
+    },
+    {
+      "id": "us-fhfa-house-price-yoy",
+      "file": "indicators/us-fhfa-house-price-yoy.json",
+      "label": "FHFA U.S. house price growth",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-04-01"
+    },
+    {
+      "id": "us-rent-cpi-yoy",
+      "file": "indicators/us-rent-cpi-yoy.json",
+      "label": "U.S. rent CPI growth",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "us-shelter-cpi-yoy",
+      "file": "indicators/us-shelter-cpi-yoy.json",
+      "label": "U.S. shelter CPI growth",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "us-rent-pressure",
+      "file": "indicators/us-rent-pressure.json",
+      "label": "U.S. rent pressure",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "us-house-price-to-income-index",
+      "file": "indicators/us-house-price-to-income-index.json",
+      "label": "U.S. house-price-to-income index",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-01-01"
+    }
+  ]
+}

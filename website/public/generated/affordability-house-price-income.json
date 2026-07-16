@@ -1,0 +1,1933 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "affordability-house-price-income",
+  "title": "U.S. house prices relative to income",
+  "description": "The U.S. ratio uses real disposable income per person. A comparable Canadian income series is not yet implemented.",
+  "plainLanguageSummary": "The U.S. ratio uses real disposable income per person. A comparable Canadian income series is not yet implemented.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "explanation": "The U.S. ratio uses real disposable income per person. A comparable Canadian income series is not yet implemented.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "The U.S. ratio uses real disposable income per person. A comparable Canadian income series is not yet implemented."
+  ],
+  "sourceNotes": [
+    "Official U.S. source distributed through Federal Reserve Economic Data; Official U.S. source distributed through Federal Reserve Economic Data",
+    "Bank for International Settlements"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "House_price_to_income": {
+        "mean": 140.2074114598085,
+        "standardDeviation": 14.582855200081957,
+        "n": 80
+      },
+      "BIS_US_real_house": {
+        "mean": 116.7026675,
+        "standardDeviation": 16.507173706852235,
+        "n": 80
+      }
+    }
+  },
+  "frequency": "quarterly",
+  "dateRange": {
+    "start": "1970-03-01",
+    "end": "2026-03-01"
+  },
+  "series": [
+    {
+      "key": "House_price_to_income",
+      "label": "U.S. house-price-to-income index",
+      "unit": "index",
+      "source": "Official U.S. source distributed through Federal Reserve Economic Data; Official U.S. source distributed through Federal Reserve Economic Data",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-01-01"
+    },
+    {
+      "key": "BIS_US_real_house",
+      "label": "BIS United States residential property prices (real)",
+      "unit": "index, 2010=100",
+      "source": "Bank for International Settlements",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "quarterly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-03-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1970-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 60.6277
+    },
+    {
+      "date": "1970-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 60.0725
+    },
+    {
+      "date": "1970-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 60.3407
+    },
+    {
+      "date": "1970-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 60.2853
+    },
+    {
+      "date": "1971-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 61.4658
+    },
+    {
+      "date": "1971-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 62.4541
+    },
+    {
+      "date": "1971-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 62.4619
+    },
+    {
+      "date": "1971-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 63.6528
+    },
+    {
+      "date": "1972-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 63.3796
+    },
+    {
+      "date": "1972-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 64.6582
+    },
+    {
+      "date": "1972-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 65.3152
+    },
+    {
+      "date": "1972-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 66.1136
+    },
+    {
+      "date": "1973-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 68.1773
+    },
+    {
+      "date": "1973-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 68.2798
+    },
+    {
+      "date": "1973-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 68.5233
+    },
+    {
+      "date": "1973-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 68.4009
+    },
+    {
+      "date": "1974-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 68.1467
+    },
+    {
+      "date": "1974-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 67.5641
+    },
+    {
+      "date": "1974-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 67.3293
+    },
+    {
+      "date": "1974-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 65.7733
+    },
+    {
+      "date": "1975-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 66.3183
+    },
+    {
+      "date": "1975-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 67.1831
+    },
+    {
+      "date": "1975-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 66.9577
+    },
+    {
+      "date": "1975-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 67.1346
+    },
+    {
+      "date": "1976-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 64.6934
+    },
+    {
+      "date": "1976-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 65.9831
+    },
+    {
+      "date": "1976-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 66.5686
+    },
+    {
+      "date": "1976-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 68.493
+    },
+    {
+      "date": "1977-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 70.1371
+    },
+    {
+      "date": "1977-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 71.8336
+    },
+    {
+      "date": "1977-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 73.3638
+    },
+    {
+      "date": "1977-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 74.6536
+    },
+    {
+      "date": "1978-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 76.5213
+    },
+    {
+      "date": "1978-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 77.1624
+    },
+    {
+      "date": "1978-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 78.4661
+    },
+    {
+      "date": "1978-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 79.1331
+    },
+    {
+      "date": "1979-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 80.6552
+    },
+    {
+      "date": "1979-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 81.4401
+    },
+    {
+      "date": "1979-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 81.7249
+    },
+    {
+      "date": "1979-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 82.2821
+    },
+    {
+      "date": "1980-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 80.9297
+    },
+    {
+      "date": "1980-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 79.0625
+    },
+    {
+      "date": "1980-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 80.1193
+    },
+    {
+      "date": "1980-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 79.7186
+    },
+    {
+      "date": "1981-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 79.0959
+    },
+    {
+      "date": "1981-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 78.2543
+    },
+    {
+      "date": "1981-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 76.815
+    },
+    {
+      "date": "1981-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 76.645
+    },
+    {
+      "date": "1982-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 76.3024
+    },
+    {
+      "date": "1982-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 75.3351
+    },
+    {
+      "date": "1982-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 74.0087
+    },
+    {
+      "date": "1982-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 74.3377
+    },
+    {
+      "date": "1983-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 75.1751
+    },
+    {
+      "date": "1983-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 75.2017
+    },
+    {
+      "date": "1983-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 75.3548
+    },
+    {
+      "date": "1983-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 75.6316
+    },
+    {
+      "date": "1984-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 75.6639
+    },
+    {
+      "date": "1984-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 75.8453
+    },
+    {
+      "date": "1984-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 76.1529
+    },
+    {
+      "date": "1984-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 76.1164
+    },
+    {
+      "date": "1985-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 76.5388
+    },
+    {
+      "date": "1985-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 77.2857
+    },
+    {
+      "date": "1985-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 77.3974
+    },
+    {
+      "date": "1985-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 78.1891
+    },
+    {
+      "date": "1986-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 79.5984
+    },
+    {
+      "date": "1986-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 81.3239
+    },
+    {
+      "date": "1986-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 82.5962
+    },
+    {
+      "date": "1986-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 83.4306
+    },
+    {
+      "date": "1987-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 85.2297
+    },
+    {
+      "date": "1987-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 85.9936
+    },
+    {
+      "date": "1987-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 86.8823
+    },
+    {
+      "date": "1987-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 87.8935
+    },
+    {
+      "date": "1988-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 88.7271
+    },
+    {
+      "date": "1988-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 89.8141
+    },
+    {
+      "date": "1988-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 91.0966
+    },
+    {
+      "date": "1988-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 92.4572
+    },
+    {
+      "date": "1989-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 93.3868
+    },
+    {
+      "date": "1989-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 93.2599
+    },
+    {
+      "date": "1989-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 93.7726
+    },
+    {
+      "date": "1989-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 94.0594
+    },
+    {
+      "date": "1990-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 93.7397
+    },
+    {
+      "date": "1990-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 92.916
+    },
+    {
+      "date": "1990-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 91.108
+    },
+    {
+      "date": "1990-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 89.2404
+    },
+    {
+      "date": "1991-01-01",
+      "House_price_to_income": 100.0,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1991-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 87.86
+    },
+    {
+      "date": "1991-04-01",
+      "House_price_to_income": 99.86716085473655,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1991-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 87.9585
+    },
+    {
+      "date": "1991-07-01",
+      "House_price_to_income": 100.03844548048153,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1991-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 86.9931
+    },
+    {
+      "date": "1991-10-01",
+      "House_price_to_income": 99.97841208258279,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1991-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 86.1187
+    },
+    {
+      "date": "1992-01-01",
+      "House_price_to_income": 99.66058829544292,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1992-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 85.702
+    },
+    {
+      "date": "1992-04-01",
+      "House_price_to_income": 99.36343339205855,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1992-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 84.8477
+    },
+    {
+      "date": "1992-07-01",
+      "House_price_to_income": 99.6128631407869,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1992-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 84.0731
+    },
+    {
+      "date": "1992-10-01",
+      "House_price_to_income": 100.61839799749688,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1992-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 83.7257
+    },
+    {
+      "date": "1993-01-01",
+      "House_price_to_income": 100.77511829119914,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1993-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 83.2756
+    },
+    {
+      "date": "1993-04-01",
+      "House_price_to_income": 101.49346738763096,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1993-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 83.046
+    },
+    {
+      "date": "1993-07-01",
+      "House_price_to_income": 102.38490885681371,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1993-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 83.2987
+    },
+    {
+      "date": "1993-10-01",
+      "House_price_to_income": 102.95737046413502,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1993-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 83.4888
+    },
+    {
+      "date": "1994-01-01",
+      "House_price_to_income": 103.65677102599456,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1994-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 83.2109
+    },
+    {
+      "date": "1994-04-01",
+      "House_price_to_income": 103.7549589260669,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1994-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 83.1636
+    },
+    {
+      "date": "1994-07-01",
+      "House_price_to_income": 104.14897585345547,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1994-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 82.8336
+    },
+    {
+      "date": "1994-10-01",
+      "House_price_to_income": 103.55836242671762,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1994-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 82.8075
+    },
+    {
+      "date": "1995-01-01",
+      "House_price_to_income": 103.4708190064512,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1995-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 82.4156
+    },
+    {
+      "date": "1995-04-01",
+      "House_price_to_income": 104.14624680683829,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1995-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 82.2204
+    },
+    {
+      "date": "1995-07-01",
+      "House_price_to_income": 104.50214248502216,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1995-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 82.5962
+    },
+    {
+      "date": "1995-10-01",
+      "House_price_to_income": 104.78812029098468,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1995-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 82.6259
+    },
+    {
+      "date": "1996-01-01",
+      "House_price_to_income": 105.09682913454405,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1996-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 82.5754
+    },
+    {
+      "date": "1996-04-01",
+      "House_price_to_income": 105.20203250729331,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1996-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 82.3463
+    },
+    {
+      "date": "1996-07-01",
+      "House_price_to_income": 105.4316940065105,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1996-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 82.3684
+    },
+    {
+      "date": "1996-10-01",
+      "House_price_to_income": 105.61056320081549,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1996-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 82.2982
+    },
+    {
+      "date": "1997-01-01",
+      "House_price_to_income": 105.68930244334726,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1997-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 82.4139
+    },
+    {
+      "date": "1997-04-01",
+      "House_price_to_income": 105.93361865500205,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1997-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 82.9191
+    },
+    {
+      "date": "1997-07-01",
+      "House_price_to_income": 105.76754353117394,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1997-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 83.6121
+    },
+    {
+      "date": "1997-10-01",
+      "House_price_to_income": 105.63936701832316,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1997-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 84.5376
+    },
+    {
+      "date": "1998-01-01",
+      "House_price_to_income": 104.7727969232633,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1998-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 85.996
+    },
+    {
+      "date": "1998-04-01",
+      "House_price_to_income": 105.13065520752231,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1998-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 86.6805
+    },
+    {
+      "date": "1998-07-01",
+      "House_price_to_income": 105.7993902620386,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1998-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 87.8734
+    },
+    {
+      "date": "1998-10-01",
+      "House_price_to_income": 106.89673980634274,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1998-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 89.2255
+    },
+    {
+      "date": "1999-01-01",
+      "House_price_to_income": 107.8095726244676,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1999-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 90.252
+    },
+    {
+      "date": "1999-04-01",
+      "House_price_to_income": 109.48009124356145,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1999-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 91.1517
+    },
+    {
+      "date": "1999-07-01",
+      "House_price_to_income": 110.81792887090629,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1999-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 92.3707
+    },
+    {
+      "date": "1999-10-01",
+      "House_price_to_income": 111.37185449689369,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "1999-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 93.7749
+    },
+    {
+      "date": "2000-01-01",
+      "House_price_to_income": 112.02405171920591,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2000-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 95.1413
+    },
+    {
+      "date": "2000-04-01",
+      "House_price_to_income": 112.4890970411518,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2000-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 96.5656
+    },
+    {
+      "date": "2000-07-01",
+      "House_price_to_income": 113.11434100917177,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2000-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 97.8749
+    },
+    {
+      "date": "2000-10-01",
+      "House_price_to_income": 114.42561387825796,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2000-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 99.5595
+    },
+    {
+      "date": "2001-01-01",
+      "House_price_to_income": 115.90550848634686,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2001-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 100.9738
+    },
+    {
+      "date": "2001-04-01",
+      "House_price_to_income": 118.36393958815171,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2001-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 101.6945
+    },
+    {
+      "date": "2001-07-01",
+      "House_price_to_income": 117.72681707683486,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2001-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 103.4983
+    },
+    {
+      "date": "2001-10-01",
+      "House_price_to_income": 121.97012140788594,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2001-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 105.5072
+    },
+    {
+      "date": "2002-01-01",
+      "House_price_to_income": 121.1907530046603,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2002-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 107.0363
+    },
+    {
+      "date": "2002-04-01",
+      "House_price_to_income": 122.62646795827123,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2002-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 108.6438
+    },
+    {
+      "date": "2002-07-01",
+      "House_price_to_income": 125.18476001844971,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2002-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 110.9544
+    },
+    {
+      "date": "2002-10-01",
+      "House_price_to_income": 127.18735131920415,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2002-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 112.8416
+    },
+    {
+      "date": "2003-01-01",
+      "House_price_to_income": 129.8313183837071,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2003-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 113.9818
+    },
+    {
+      "date": "2003-04-01",
+      "House_price_to_income": 130.69950350232145,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2003-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 116.007
+    },
+    {
+      "date": "2003-07-01",
+      "House_price_to_income": 131.11466059996826,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2003-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 118.8029
+    },
+    {
+      "date": "2003-10-01",
+      "House_price_to_income": 133.86489924366637,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2003-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 122.6607
+    },
+    {
+      "date": "2004-01-01",
+      "House_price_to_income": 136.52989027220931,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2004-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 125.6861
+    },
+    {
+      "date": "2004-04-01",
+      "House_price_to_income": 138.61442813407646,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2004-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 128.823
+    },
+    {
+      "date": "2004-07-01",
+      "House_price_to_income": 141.96877345704752,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2004-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 132.7458
+    },
+    {
+      "date": "2004-10-01",
+      "House_price_to_income": 143.84065809184358,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2004-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 136.9177
+    },
+    {
+      "date": "2005-01-01",
+      "House_price_to_income": 149.79863297649035,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2005-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 141.6701
+    },
+    {
+      "date": "2005-04-01",
+      "House_price_to_income": 152.7114101829173,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2005-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 145.3278
+    },
+    {
+      "date": "2005-07-01",
+      "House_price_to_income": 156.67664619228566,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2005-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 148.5619
+    },
+    {
+      "date": "2005-10-01",
+      "House_price_to_income": 159.14585326747522,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2005-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 151.9089
+    },
+    {
+      "date": "2006-01-01",
+      "House_price_to_income": 159.50662866739611,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2006-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 153.9192
+    },
+    {
+      "date": "2006-04-01",
+      "House_price_to_income": 160.5291638082171,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2006-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 150.279
+    },
+    {
+      "date": "2006-07-01",
+      "House_price_to_income": 161.00402676027676,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2006-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 148.3436
+    },
+    {
+      "date": "2006-10-01",
+      "House_price_to_income": 160.02569916855632,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2006-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 149.5847
+    },
+    {
+      "date": "2007-01-01",
+      "House_price_to_income": 160.25328154366622,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2007-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 146.6493
+    },
+    {
+      "date": "2007-04-01",
+      "House_price_to_income": 160.50715517456828,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2007-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 139.6044
+    },
+    {
+      "date": "2007-07-01",
+      "House_price_to_income": 158.4259874427796,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2007-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 135.3987
+    },
+    {
+      "date": "2007-10-01",
+      "House_price_to_income": 155.94510206637446,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2007-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 130.1367
+    },
+    {
+      "date": "2008-01-01",
+      "House_price_to_income": 152.56139829025648,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2008-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 123.6688
+    },
+    {
+      "date": "2008-04-01",
+      "House_price_to_income": 145.91521354933727,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2008-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 115.5397
+    },
+    {
+      "date": "2008-07-01",
+      "House_price_to_income": 145.16032665964175,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2008-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 109.1537
+    },
+    {
+      "date": "2008-10-01",
+      "House_price_to_income": 139.8772763439256,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2008-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 106.5593
+    },
+    {
+      "date": "2009-01-01",
+      "House_price_to_income": 138.55583453847305,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2009-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 103.9838
+    },
+    {
+      "date": "2009-04-01",
+      "House_price_to_income": 135.51619428174328,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2009-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 102.8869
+    },
+    {
+      "date": "2009-07-01",
+      "House_price_to_income": 136.9948782514542,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2009-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 102.4854
+    },
+    {
+      "date": "2009-10-01",
+      "House_price_to_income": 136.97902721774193,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2009-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 102.8795
+    },
+    {
+      "date": "2010-01-01",
+      "House_price_to_income": 135.71760128520506,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2010-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 101.5312
+    },
+    {
+      "date": "2010-04-01",
+      "House_price_to_income": 133.13774583776564,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2010-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 101.3745
+    },
+    {
+      "date": "2010-07-01",
+      "House_price_to_income": 130.44370993194596,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2010-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 99.127
+    },
+    {
+      "date": "2010-10-01",
+      "House_price_to_income": 129.11193934321304,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2010-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 97.9832
+    },
+    {
+      "date": "2011-01-01",
+      "House_price_to_income": 125.91836804453452,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2011-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 95.1116
+    },
+    {
+      "date": "2011-04-01",
+      "House_price_to_income": 124.20899465712465,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2011-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 93.993
+    },
+    {
+      "date": "2011-07-01",
+      "House_price_to_income": 124.02419622789016,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2011-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 93.9632
+    },
+    {
+      "date": "2011-10-01",
+      "House_price_to_income": 123.84924399716651,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2011-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 94.0126
+    },
+    {
+      "date": "2012-01-01",
+      "House_price_to_income": 122.48524811413974,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2012-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 94.1093
+    },
+    {
+      "date": "2012-04-01",
+      "House_price_to_income": 123.8522495083697,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2012-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 95.7197
+    },
+    {
+      "date": "2012-07-01",
+      "House_price_to_income": 126.55875826651487,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2012-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 97.4251
+    },
+    {
+      "date": "2012-10-01",
+      "House_price_to_income": 125.32669217325586,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2012-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 99.5402
+    },
+    {
+      "date": "2013-01-01",
+      "House_price_to_income": 133.02568289859354,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2013-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 101.4458
+    },
+    {
+      "date": "2013-04-01",
+      "House_price_to_income": 135.00372211474888,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2013-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 103.5161
+    },
+    {
+      "date": "2013-07-01",
+      "House_price_to_income": 137.4600870543356,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2013-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 105.7122
+    },
+    {
+      "date": "2013-10-01",
+      "House_price_to_income": 139.0732772122161,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2013-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 108.0494
+    },
+    {
+      "date": "2014-01-01",
+      "House_price_to_income": 139.21601318276547,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2014-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 108.6448
+    },
+    {
+      "date": "2014-04-01",
+      "House_price_to_income": 139.0577155461782,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2014-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 108.0744
+    },
+    {
+      "date": "2014-07-01",
+      "House_price_to_income": 139.5699452511307,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2014-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 109.368
+    },
+    {
+      "date": "2014-10-01",
+      "House_price_to_income": 139.32545805207332,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2014-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 111.9405
+    },
+    {
+      "date": "2015-01-01",
+      "House_price_to_income": 139.46269551676855,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2015-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 113.9893
+    },
+    {
+      "date": "2015-04-01",
+      "House_price_to_income": 141.27681754874652,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2015-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 113.9327
+    },
+    {
+      "date": "2015-07-01",
+      "House_price_to_income": 142.75217220320164,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2015-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 115.2478
+    },
+    {
+      "date": "2015-10-01",
+      "House_price_to_income": 144.07553076231534,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2015-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 117.4922
+    },
+    {
+      "date": "2016-01-01",
+      "House_price_to_income": 145.2094307639446,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2016-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 118.837
+    },
+    {
+      "date": "2016-04-01",
+      "House_price_to_income": 147.60233846861348,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2016-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 118.7786
+    },
+    {
+      "date": "2016-07-01",
+      "House_price_to_income": 149.30661442939953,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2016-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 120.0298
+    },
+    {
+      "date": "2016-10-01",
+      "House_price_to_income": 150.968402326377,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2016-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 121.6285
+    },
+    {
+      "date": "2017-01-01",
+      "House_price_to_income": 151.33230167521987,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2017-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 122.3015
+    },
+    {
+      "date": "2017-04-01",
+      "House_price_to_income": 152.75498465742382,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2017-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 123.3783
+    },
+    {
+      "date": "2017-07-01",
+      "House_price_to_income": 154.08523107090332,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2017-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 124.7751
+    },
+    {
+      "date": "2017-10-01",
+      "House_price_to_income": 155.71760425909494,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2017-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 126.2929
+    },
+    {
+      "date": "2018-01-01",
+      "House_price_to_income": 157.21728867202955,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2018-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 127.1149
+    },
+    {
+      "date": "2018-04-01",
+      "House_price_to_income": 158.0083758670331,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2018-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 127.2813
+    },
+    {
+      "date": "2018-07-01",
+      "House_price_to_income": 158.64550230235426,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2018-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 128.132
+    },
+    {
+      "date": "2018-10-01",
+      "House_price_to_income": 158.9628514443801,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2018-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 129.296
+    },
+    {
+      "date": "2019-01-01",
+      "House_price_to_income": 159.49591118274554,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2019-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 129.8488
+    },
+    {
+      "date": "2019-04-01",
+      "House_price_to_income": 161.5022798257729,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2019-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 129.593
+    },
+    {
+      "date": "2019-07-01",
+      "House_price_to_income": 162.58471667406423,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2019-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 130.7562
+    },
+    {
+      "date": "2019-10-01",
+      "House_price_to_income": 164.502527859114,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2019-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 132.4081
+    },
+    {
+      "date": "2020-01-01",
+      "House_price_to_income": 167.05361006289306,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2020-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 133.8173
+    },
+    {
+      "date": "2020-04-01",
+      "House_price_to_income": 153.53531173687426,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2020-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 135.6717
+    },
+    {
+      "date": "2020-07-01",
+      "House_price_to_income": 162.51620147070452,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2020-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 138.4316
+    },
+    {
+      "date": "2020-10-01",
+      "House_price_to_income": 174.25103767109462,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2020-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 143.2407
+    },
+    {
+      "date": "2021-01-01",
+      "House_price_to_income": 160.99006884403144,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2021-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 146.1986
+    },
+    {
+      "date": "2021-04-01",
+      "House_price_to_income": 181.15395131450828,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2021-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 149.5667
+    },
+    {
+      "date": "2021-07-01",
+      "House_price_to_income": 192.7365976331361,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2021-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 153.3917
+    },
+    {
+      "date": "2021-10-01",
+      "House_price_to_income": 202.08841283157557,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2021-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 156.9494
+    },
+    {
+      "date": "2022-01-01",
+      "House_price_to_income": 217.54237134436636,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2022-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 159.8687
+    },
+    {
+      "date": "2022-04-01",
+      "House_price_to_income": 227.52666390041497,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2022-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 159.5628
+    },
+    {
+      "date": "2022-07-01",
+      "House_price_to_income": 225.9260374038304,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2022-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 156.6506
+    },
+    {
+      "date": "2022-10-01",
+      "House_price_to_income": 224.0826268777913,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2022-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 156.618
+    },
+    {
+      "date": "2023-01-01",
+      "House_price_to_income": 218.86483212457762,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2023-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 156.6211
+    },
+    {
+      "date": "2023-04-01",
+      "House_price_to_income": 220.80516633360764,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2023-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 156.822
+    },
+    {
+      "date": "2023-07-01",
+      "House_price_to_income": 225.17020927369717,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2023-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 158.3349
+    },
+    {
+      "date": "2023-10-01",
+      "House_price_to_income": 227.4129629989317,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2023-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 159.944
+    },
+    {
+      "date": "2024-01-01",
+      "House_price_to_income": 227.11712876437832,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2024-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 159.7915
+    },
+    {
+      "date": "2024-04-01",
+      "House_price_to_income": 230.19603363538633,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2024-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 159.189
+    },
+    {
+      "date": "2024-07-01",
+      "House_price_to_income": 231.42918320771724,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2024-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 160.0458
+    },
+    {
+      "date": "2024-10-01",
+      "House_price_to_income": 234.15091065456284,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2024-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 161.0769
+    },
+    {
+      "date": "2025-01-01",
+      "House_price_to_income": 235.78850859001923,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2025-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 159.7398
+    },
+    {
+      "date": "2025-04-01",
+      "House_price_to_income": 234.76387993477192,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2025-06-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 158.417
+    },
+    {
+      "date": "2025-07-01",
+      "House_price_to_income": 234.34727234856376,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2025-09-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 157.6839
+    },
+    {
+      "date": "2025-10-01",
+      "House_price_to_income": 237.13703302755778,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2025-12-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 158.3161
+    },
+    {
+      "date": "2026-01-01",
+      "House_price_to_income": 239.34408363663937,
+      "BIS_US_real_house": null
+    },
+    {
+      "date": "2026-03-01",
+      "House_price_to_income": null,
+      "BIS_US_real_house": 156.4275
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "yoy",
+    "pct_change",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "notes": "The U.S. ratio uses real disposable income per person. A comparable Canadian income series is not yet implemented."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T14:12:52+00:00"
+}

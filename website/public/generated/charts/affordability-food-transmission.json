@@ -1,0 +1,5411 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "affordability-food-transmission",
+  "title": "International commodities and domestic grocery prices",
+  "description": "Compare timing and persistence; exchange rates, processing, transport, labour, margins, taxes, and domestic supply separate commodity and retail prices.",
+  "plainLanguageSummary": "Compare timing and persistence; exchange rates, processing, transport, labour, margins, taxes, and domestic supply separate commodity and retail prices.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "explanation": "Compare timing and persistence; exchange rates, processing, transport, labour, margins, taxes, and domestic supply separate commodity and retail prices.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "Compare timing and persistence; exchange rates, processing, transport, labour, margins, taxes, and domestic supply separate commodity and retail prices."
+  ],
+  "sourceNotes": [
+    "Derived from Food and Agriculture Organization of the United Nations",
+    "Derived from Statistics Canada",
+    "Derived from Official U.S. source distributed through Federal Reserve Economic Data"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "FAO_food_YoY": {
+        "mean": 3.989646014616497,
+        "standardDeviation": 16.53115260320817,
+        "n": 240
+      },
+      "Canada_grocery_YoY": {
+        "mean": 2.4109264722801913,
+        "standardDeviation": 2.1726850079768982,
+        "n": 240
+      },
+      "US_food_home_YoY": {
+        "mean": 1.9737964541480246,
+        "standardDeviation": 2.0994606817328876,
+        "n": 240
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "1953-01-01",
+    "end": "2026-06-01"
+  },
+  "series": [
+    {
+      "key": "FAO_food_YoY",
+      "label": "FAO Food Price Index growth",
+      "unit": "percent",
+      "source": "Derived from Food and Agriculture Organization of the United Nations",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    },
+    {
+      "key": "Canada_grocery_YoY",
+      "label": "Canada grocery CPI growth",
+      "unit": "percent",
+      "source": "Derived from Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "US_food_home_YoY",
+      "label": "U.S. food-at-home CPI growth",
+      "unit": "percent",
+      "source": "Derived from Official U.S. source distributed through Federal Reserve Economic Data",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-06-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1953-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.9230769230769162
+    },
+    {
+      "date": "1953-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.6286644951140072
+    },
+    {
+      "date": "1953-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.3029315960912058
+    },
+    {
+      "date": "1953-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -2.2727272727272707
+    },
+    {
+      "date": "1953-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -2.2727272727272707
+    },
+    {
+      "date": "1953-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -0.6535947712418388
+    },
+    {
+      "date": "1953-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -2.2727272727272707
+    },
+    {
+      "date": "1953-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.941747572815522
+    },
+    {
+      "date": "1953-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.2987012987013102
+    },
+    {
+      "date": "1953-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.2987012987013102
+    },
+    {
+      "date": "1953-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -3.205128205128205
+    },
+    {
+      "date": "1953-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.941747572815522
+    },
+    {
+      "date": "1954-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -0.326797385620925
+    },
+    {
+      "date": "1954-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 0.6622516556291425
+    },
+    {
+      "date": "1954-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 0.0
+    },
+    {
+      "date": "1954-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 0.6644518272425293
+    },
+    {
+      "date": "1954-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 0.9966777408637828
+    },
+    {
+      "date": "1954-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -0.6578947368421018
+    },
+    {
+      "date": "1954-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 0.33222591362125353
+    },
+    {
+      "date": "1954-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -0.660066006600657
+    },
+    {
+      "date": "1954-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.9736842105263053
+    },
+    {
+      "date": "1954-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.9736842105263053
+    },
+    {
+      "date": "1954-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -0.9933774834437137
+    },
+    {
+      "date": "1954-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -2.310231023102305
+    },
+    {
+      "date": "1955-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -2.950819672131144
+    },
+    {
+      "date": "1955-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.9736842105263053
+    },
+    {
+      "date": "1955-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.650165016501648
+    },
+    {
+      "date": "1955-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.650165016501648
+    },
+    {
+      "date": "1955-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -2.631578947368407
+    },
+    {
+      "date": "1955-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -2.6490066225165587
+    },
+    {
+      "date": "1955-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -2.6490066225165587
+    },
+    {
+      "date": "1955-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -2.657807308970106
+    },
+    {
+      "date": "1955-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.0067114093959773
+    },
+    {
+      "date": "1955-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.34228187919464
+    },
+    {
+      "date": "1955-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -2.00668896321069
+    },
+    {
+      "date": "1955-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.0135135135135198
+    },
+    {
+      "date": "1956-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.6891891891891886
+    },
+    {
+      "date": "1956-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -2.348993288590606
+    },
+    {
+      "date": "1956-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -2.348993288590606
+    },
+    {
+      "date": "1956-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -2.0134228187919545
+    },
+    {
+      "date": "1956-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -0.6756756756756799
+    },
+    {
+      "date": "1956-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 1.7006802721088343
+    },
+    {
+      "date": "1956-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 2.3809523809523947
+    },
+    {
+      "date": "1956-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 2.0477815699658564
+    },
+    {
+      "date": "1956-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 1.3559322033898313
+    },
+    {
+      "date": "1956-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 2.0408163265306145
+    },
+    {
+      "date": "1956-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 2.7303754266211566
+    },
+    {
+      "date": "1956-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 2.7303754266211566
+    },
+    {
+      "date": "1957-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 3.436426116838498
+    },
+    {
+      "date": "1957-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 4.4673539518900185
+    },
+    {
+      "date": "1957-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 3.7800687285223233
+    },
+    {
+      "date": "1957-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 3.767123287671237
+    },
+    {
+      "date": "1957-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 3.401360544217691
+    },
+    {
+      "date": "1957-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 2.34113712374584
+    },
+    {
+      "date": "1957-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 2.3255813953488413
+    },
+    {
+      "date": "1957-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 4.347826086956519
+    },
+    {
+      "date": "1957-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 3.3444816053511683
+    },
+    {
+      "date": "1957-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 2.6666666666666616
+    },
+    {
+      "date": "1957-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 2.3255813953488413
+    },
+    {
+      "date": "1957-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 2.657807308970095
+    },
+    {
+      "date": "1958-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 4.983388704318936
+    },
+    {
+      "date": "1958-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 4.6052631578947345
+    },
+    {
+      "date": "1958-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 7.284768211920523
+    },
+    {
+      "date": "1958-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 7.26072607260726
+    },
+    {
+      "date": "1958-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 6.578947368421062
+    },
+    {
+      "date": "1958-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 5.228758169934644
+    },
+    {
+      "date": "1958-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 3.8961038961038863
+    },
+    {
+      "date": "1958-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 2.564102564102577
+    },
+    {
+      "date": "1958-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 2.9126213592232997
+    },
+    {
+      "date": "1958-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 2.922077922077926
+    },
+    {
+      "date": "1958-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 3.2467532467532534
+    },
+    {
+      "date": "1958-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 2.265372168284796
+    },
+    {
+      "date": "1959-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 0.31645569620253333
+    },
+    {
+      "date": "1959-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.2578616352201366
+    },
+    {
+      "date": "1959-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -3.703703703703698
+    },
+    {
+      "date": "1959-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -4.307692307692301
+    },
+    {
+      "date": "1959-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -4.320987654320985
+    },
+    {
+      "date": "1959-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -3.105590062111807
+    },
+    {
+      "date": "1959-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -2.500000000000002
+    },
+    {
+      "date": "1959-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -2.8124999999999956
+    },
+    {
+      "date": "1959-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -2.2012578616352196
+    },
+    {
+      "date": "1959-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.577287066246058
+    },
+    {
+      "date": "1959-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -2.2012578616352196
+    },
+    {
+      "date": "1959-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.5822784810126556
+    },
+    {
+      "date": "1960-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -2.208201892744477
+    },
+    {
+      "date": "1960-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.5923566878980888
+    },
+    {
+      "date": "1960-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -0.6410256410256387
+    },
+    {
+      "date": "1960-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 0.9646302250803762
+    },
+    {
+      "date": "1960-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 1.6129032258064502
+    },
+    {
+      "date": "1960-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 0.9615384615384581
+    },
+    {
+      "date": "1960-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 0.6410256410256387
+    },
+    {
+      "date": "1960-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 1.2861736334405016
+    },
+    {
+      "date": "1960-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 1.2861736334405016
+    },
+    {
+      "date": "1960-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 1.9230769230769384
+    },
+    {
+      "date": "1960-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 2.893890675241151
+    },
+    {
+      "date": "1960-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 3.2154340836012762
+    },
+    {
+      "date": "1961-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 3.2258064516129004
+    },
+    {
+      "date": "1961-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 3.5598705501618255
+    },
+    {
+      "date": "1961-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 3.2258064516129004
+    },
+    {
+      "date": "1961-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 1.5923566878981
+    },
+    {
+      "date": "1961-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 0.952380952380949
+    },
+    {
+      "date": "1961-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 0.31746031746031633
+    },
+    {
+      "date": "1961-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 0.9554140127388644
+    },
+    {
+      "date": "1961-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 0.6349206349206327
+    },
+    {
+      "date": "1961-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 0.6349206349206327
+    },
+    {
+      "date": "1961-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -0.3144654088050314
+    },
+    {
+      "date": "1961-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.5625
+    },
+    {
+      "date": "1961-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": -1.5576323987538943
+    },
+    {
+      "date": "1962-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.6493506493506551,
+      "US_food_home_YoY": -0.9375000000000022
+    },
+    {
+      "date": "1962-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.6493506493506551,
+      "US_food_home_YoY": -0.31250000000000444
+    },
+    {
+      "date": "1962-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.0,
+      "US_food_home_YoY": 0.0
+    },
+    {
+      "date": "1962-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.298701298701288,
+      "US_food_home_YoY": 0.31347962382446415
+    },
+    {
+      "date": "1962-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.3157894736842257,
+      "US_food_home_YoY": 0.6289308176100628
+    },
+    {
+      "date": "1962-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.9607843137254832,
+      "US_food_home_YoY": 0.9493670886075778
+    },
+    {
+      "date": "1962-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.9354838709677358,
+      "US_food_home_YoY": 0.0
+    },
+    {
+      "date": "1962-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.580645161290329,
+      "US_food_home_YoY": 0.3154574132492094
+    },
+    {
+      "date": "1962-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.289473684210531,
+      "US_food_home_YoY": 1.8927444794952564
+    },
+    {
+      "date": "1962-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.267973856209161,
+      "US_food_home_YoY": 1.5772870662460692
+    },
+    {
+      "date": "1962-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.267973856209161,
+      "US_food_home_YoY": 2.2222222222222365
+    },
+    {
+      "date": "1962-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.5974025974025983,
+      "US_food_home_YoY": 1.2658227848101111
+    },
+    {
+      "date": "1963-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.2258064516129004,
+      "US_food_home_YoY": 2.208201892744488
+    },
+    {
+      "date": "1963-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.8709677419354938,
+      "US_food_home_YoY": 1.5673981191222541
+    },
+    {
+      "date": "1963-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.8961038961038863,
+      "US_food_home_YoY": 0.9374999999999911
+    },
+    {
+      "date": "1963-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.564102564102577,
+      "US_food_home_YoY": 0.6250000000000089
+    },
+    {
+      "date": "1963-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.2467532467532534,
+      "US_food_home_YoY": 0.6250000000000089
+    },
+    {
+      "date": "1963-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.205128205128216,
+      "US_food_home_YoY": 1.2539184952978122
+    },
+    {
+      "date": "1963-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.7974683544303556,
+      "US_food_home_YoY": 2.5236593059936974
+    },
+    {
+      "date": "1963-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.7735849056603765,
+      "US_food_home_YoY": 2.2012578616352085
+    },
+    {
+      "date": "1963-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.821656050955413,
+      "US_food_home_YoY": 0.3095975232198178
+    },
+    {
+      "date": "1963-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.8987341772152,
+      "US_food_home_YoY": 0.31055900621115295
+    },
+    {
+      "date": "1963-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.5316455696202445,
+      "US_food_home_YoY": 0.9316770186335255
+    },
+    {
+      "date": "1963-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.5316455696202445,
+      "US_food_home_YoY": 1.5625
+    },
+    {
+      "date": "1964-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.2499999999999956,
+      "US_food_home_YoY": 0.92592592592593
+    },
+    {
+      "date": "1964-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.6211180124223503,
+      "US_food_home_YoY": 0.6172839506172867
+    },
+    {
+      "date": "1964-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.2499999999999956,
+      "US_food_home_YoY": 0.9287925696594534
+    },
+    {
+      "date": "1964-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.2499999999999956,
+      "US_food_home_YoY": 1.2422360248447228
+    },
+    {
+      "date": "1964-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.8867924528301883,
+      "US_food_home_YoY": 1.2422360248447228
+    },
+    {
+      "date": "1964-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.8633540372670732,
+      "US_food_home_YoY": 1.2383900928792713
+    },
+    {
+      "date": "1964-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.4390243902439046,
+      "US_food_home_YoY": 0.6153846153846176
+    },
+    {
+      "date": "1964-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.2121212121211977,
+      "US_food_home_YoY": 0.6153846153846176
+    },
+    {
+      "date": "1964-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.6134969325153339,
+      "US_food_home_YoY": 1.5432098765432167
+    },
+    {
+      "date": "1964-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.0,
+      "US_food_home_YoY": 2.1671826625387025
+    },
+    {
+      "date": "1964-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.0,
+      "US_food_home_YoY": 1.846153846153853
+    },
+    {
+      "date": "1964-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.2345679012345734,
+      "US_food_home_YoY": 1.538461538461533
+    },
+    {
+      "date": "1965-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.6172839506172867,
+      "US_food_home_YoY": 0.3058103975535076
+    },
+    {
+      "date": "1965-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.2345679012345734,
+      "US_food_home_YoY": 0.6134969325153339
+    },
+    {
+      "date": "1965-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.2345679012345734,
+      "US_food_home_YoY": 0.9202453987730008
+    },
+    {
+      "date": "1965-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.2345679012345734,
+      "US_food_home_YoY": 1.5337423312883347
+    },
+    {
+      "date": "1965-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.4691358024691468,
+      "US_food_home_YoY": 2.4539877300613355
+    },
+    {
+      "date": "1965-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.658536585365857,
+      "US_food_home_YoY": 3.9755351681957096
+    },
+    {
+      "date": "1965-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.9761904761904656,
+      "US_food_home_YoY": 3.9755351681957096
+    },
+    {
+      "date": "1965-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.7964071856287456,
+      "US_food_home_YoY": 3.0581039755351647
+    },
+    {
+      "date": "1965-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.4390243902439046,
+      "US_food_home_YoY": 2.4316109422492627
+    },
+    {
+      "date": "1965-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.7267080745341463,
+      "US_food_home_YoY": 2.4242424242424176
+    },
+    {
+      "date": "1965-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 4.938271604938271,
+      "US_food_home_YoY": 2.4169184290030232
+    },
+    {
+      "date": "1965-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.487804878048785,
+      "US_food_home_YoY": 3.6363636363636376
+    },
+    {
+      "date": "1966-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 6.134969325153383,
+      "US_food_home_YoY": 4.878048780487809
+    },
+    {
+      "date": "1966-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 6.707317073170738,
+      "US_food_home_YoY": 6.707317073170738
+    },
+    {
+      "date": "1966-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 8.536585365853666,
+      "US_food_home_YoY": 7.294832826747721
+    },
+    {
+      "date": "1966-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 8.536585365853666,
+      "US_food_home_YoY": 6.9486404833836835
+    },
+    {
+      "date": "1966-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 7.2289156626506035,
+      "US_food_home_YoY": 5.389221556886237
+    },
+    {
+      "date": "1966-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.294117647058805,
+      "US_food_home_YoY": 3.2352941176470695
+    },
+    {
+      "date": "1966-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.4682080924855363,
+      "US_food_home_YoY": 2.6470588235294024
+    },
+    {
+      "date": "1966-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 8.23529411764705,
+      "US_food_home_YoY": 5.3412462908011715
+    },
+    {
+      "date": "1966-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 7.738095238095233,
+      "US_food_home_YoY": 5.637982195845703
+    },
+    {
+      "date": "1966-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 7.18562874251496,
+      "US_food_home_YoY": 5.3254437869822535
+    },
+    {
+      "date": "1966-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 4.705882352941182,
+      "US_food_home_YoY": 4.71976401179941
+    },
+    {
+      "date": "1966-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.8901734104046284,
+      "US_food_home_YoY": 3.2163742690058283
+    },
+    {
+      "date": "1967-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.8901734104046284,
+      "US_food_home_YoY": 2.034883720930236
+    },
+    {
+      "date": "1967-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.5714285714285783,
+      "US_food_home_YoY": 0.0
+    },
+    {
+      "date": "1967-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": -1.6853932584269704,
+      "US_food_home_YoY": -1.1331444759206777
+    },
+    {
+      "date": "1967-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": -1.6853932584269704,
+      "US_food_home_YoY": -1.9774011299434902
+    },
+    {
+      "date": "1967-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": -1.6853932584269704,
+      "US_food_home_YoY": -1.4204545454545414
+    },
+    {
+      "date": "1967-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": -1.1173184357541888,
+      "US_food_home_YoY": -0.2849002849002913
+    },
+    {
+      "date": "1967-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.6759776536312998,
+      "US_food_home_YoY": 0.8595988538682153
+    },
+    {
+      "date": "1967-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.5434782608695787,
+      "US_food_home_YoY": -0.5633802816901512
+    },
+    {
+      "date": "1967-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.0,
+      "US_food_home_YoY": -0.8426966292134908
+    },
+    {
+      "date": "1967-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.0,
+      "US_food_home_YoY": -0.5617977528090012
+    },
+    {
+      "date": "1967-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.1235955056179803,
+      "US_food_home_YoY": -0.28169014084507005
+    },
+    {
+      "date": "1967-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.6853932584269593,
+      "US_food_home_YoY": 0.8498583569405138
+    },
+    {
+      "date": "1968-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.3707865168539186,
+      "US_food_home_YoY": 1.4245014245014342
+    },
+    {
+      "date": "1968-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.9772727272727293,
+      "US_food_home_YoY": 2.2857142857142687
+    },
+    {
+      "date": "1968-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.4285714285714475,
+      "US_food_home_YoY": 2.865329512893977
+    },
+    {
+      "date": "1968-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 4.571428571428582,
+      "US_food_home_YoY": 3.746397694524495
+    },
+    {
+      "date": "1968-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.4285714285714475,
+      "US_food_home_YoY": 4.034582132564846
+    },
+    {
+      "date": "1968-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.824858757062154,
+      "US_food_home_YoY": 3.142857142857136
+    },
+    {
+      "date": "1968-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.6483516483516425,
+      "US_food_home_YoY": 2.840909090909083
+    },
+    {
+      "date": "1968-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.6216216216216273,
+      "US_food_home_YoY": 2.8328611898017053
+    },
+    {
+      "date": "1968-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.3149171270718147,
+      "US_food_home_YoY": 3.3994334277620553
+    },
+    {
+      "date": "1968-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.3519553072625774,
+      "US_food_home_YoY": 4.237288135593231
+    },
+    {
+      "date": "1968-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.888888888888875,
+      "US_food_home_YoY": 3.9548022598870025
+    },
+    {
+      "date": "1968-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 4.41988950276242,
+      "US_food_home_YoY": 3.93258426966292
+    },
+    {
+      "date": "1969-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.717391304347827,
+      "US_food_home_YoY": 3.93258426966292
+    },
+    {
+      "date": "1969-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.1857923497267784,
+      "US_food_home_YoY": 3.3519553072625774
+    },
+    {
+      "date": "1969-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.3149171270718147,
+      "US_food_home_YoY": 3.3426183844011303
+    },
+    {
+      "date": "1969-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.2786885245901454,
+      "US_food_home_YoY": 3.6111111111110983
+    },
+    {
+      "date": "1969-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 4.41988950276242,
+      "US_food_home_YoY": 3.87811634349029
+    },
+    {
+      "date": "1969-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 6.593406593406592,
+      "US_food_home_YoY": 5.263157894736836
+    },
+    {
+      "date": "1969-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 4.86486486486486,
+      "US_food_home_YoY": 5.524861878453047
+    },
+    {
+      "date": "1969-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.319148936170204,
+      "US_food_home_YoY": 5.785123966942152
+    },
+    {
+      "date": "1969-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.743315508021383,
+      "US_food_home_YoY": 5.753424657534256
+    },
+    {
+      "date": "1969-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.7837837837837895,
+      "US_food_home_YoY": 4.878048780487809
+    },
+    {
+      "date": "1969-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.743315508021383,
+      "US_food_home_YoY": 6.250000000000022
+    },
+    {
+      "date": "1969-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.1746031746031855,
+      "US_food_home_YoY": 7.027027027027022
+    },
+    {
+      "date": "1970-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.1746031746031855,
+      "US_food_home_YoY": 7.027027027027022
+    },
+    {
+      "date": "1970-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.882352941176472,
+      "US_food_home_YoY": 7.837837837837824
+    },
+    {
+      "date": "1970-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 4.81283422459895,
+      "US_food_home_YoY": 7.277628032344996
+    },
+    {
+      "date": "1970-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.291005291005302,
+      "US_food_home_YoY": 6.702412868632712
+    },
+    {
+      "date": "1970-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.1746031746031855,
+      "US_food_home_YoY": 6.666666666666665
+    },
+    {
+      "date": "1970-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.546391752577314,
+      "US_food_home_YoY": 5.000000000000004
+    },
+    {
+      "date": "1970-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.0618556701031077,
+      "US_food_home_YoY": 4.450261780104703
+    },
+    {
+      "date": "1970-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.5050505050504972,
+      "US_food_home_YoY": 3.90625
+    },
+    {
+      "date": "1970-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.0,
+      "US_food_home_YoY": 3.886010362694292
+    },
+    {
+      "date": "1970-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.0,
+      "US_food_home_YoY": 3.875968992248069
+    },
+    {
+      "date": "1970-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": -2.577319587628868,
+      "US_food_home_YoY": 2.5575447570332477
+    },
+    {
+      "date": "1970-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": -4.10256410256411,
+      "US_food_home_YoY": 1.262626262626254
+    },
+    {
+      "date": "1971-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": -3.589743589743588,
+      "US_food_home_YoY": 0.7575757575757569
+    },
+    {
+      "date": "1971-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": -4.545454545454552,
+      "US_food_home_YoY": 0.25062656641603454
+    },
+    {
+      "date": "1971-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": -3.0612244897959218,
+      "US_food_home_YoY": 1.2562814070351758
+    },
+    {
+      "date": "1971-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": -3.015075376884413,
+      "US_food_home_YoY": 2.261306532663321
+    },
+    {
+      "date": "1971-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": -0.5128205128205221,
+      "US_food_home_YoY": 2.2499999999999964
+    },
+    {
+      "date": "1971-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": -1.5228426395939132,
+      "US_food_home_YoY": 3.007518796992481
+    },
+    {
+      "date": "1971-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.5050505050504972,
+      "US_food_home_YoY": 3.007518796992481
+    },
+    {
+      "date": "1971-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.5125628140703515,
+      "US_food_home_YoY": 3.007518796992481
+    },
+    {
+      "date": "1971-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.0927835051546504,
+      "US_food_home_YoY": 2.493765586034913
+    },
+    {
+      "date": "1971-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.645833333333326,
+      "US_food_home_YoY": 2.487562189054726
+    },
+    {
+      "date": "1971-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.291005291005302,
+      "US_food_home_YoY": 2.9925187032418865
+    },
+    {
+      "date": "1971-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 8.02139037433156,
+      "US_food_home_YoY": 4.48877805486283
+    },
+    {
+      "date": "1972-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 8.51063829787233,
+      "US_food_home_YoY": 4.511278195488733
+    },
+    {
+      "date": "1972-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 8.994708994709,
+      "US_food_home_YoY": 5.7499999999999885
+    },
+    {
+      "date": "1972-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 7.36842105263158,
+      "US_food_home_YoY": 4.962779156327546
+    },
+    {
+      "date": "1972-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 6.735751295336789,
+      "US_food_home_YoY": 3.6855036855036882
+    },
+    {
+      "date": "1972-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.154639175257736,
+      "US_food_home_YoY": 3.4229828850855792
+    },
+    {
+      "date": "1972-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.154639175257736,
+      "US_food_home_YoY": 3.1630170316301554
+    },
+    {
+      "date": "1972-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 7.035175879396993,
+      "US_food_home_YoY": 3.649635036496357
+    },
+    {
+      "date": "1972-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 7.352941176470584,
+      "US_food_home_YoY": 3.8929440389294356
+    },
+    {
+      "date": "1972-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 9.499999999999996,
+      "US_food_home_YoY": 4.8661800486617945
+    },
+    {
+      "date": "1972-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 9.045226130653262,
+      "US_food_home_YoY": 5.339805825242716
+    },
+    {
+      "date": "1972-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 9.045226130653262,
+      "US_food_home_YoY": 5.811138014527861
+    },
+    {
+      "date": "1972-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 8.415841584158423,
+      "US_food_home_YoY": 4.7732696897374804
+    },
+    {
+      "date": "1973-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 9.80392156862746,
+      "US_food_home_YoY": 7.434052757793741
+    },
+    {
+      "date": "1973-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 10.679611650485432,
+      "US_food_home_YoY": 7.801418439716312
+    },
+    {
+      "date": "1973-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 11.764705882352944,
+      "US_food_home_YoY": 11.111111111111116
+    },
+    {
+      "date": "1973-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 13.592233009708732,
+      "US_food_home_YoY": 13.27014218009477
+    },
+    {
+      "date": "1973-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 15.686274509803933,
+      "US_food_home_YoY": 14.657210401891252
+    },
+    {
+      "date": "1973-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 18.13725490196081,
+      "US_food_home_YoY": 15.801886792452846
+    },
+    {
+      "date": "1973-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 15.492957746478876,
+      "US_food_home_YoY": 15.258215962441323
+    },
+    {
+      "date": "1973-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 15.981735159817356,
+      "US_food_home_YoY": 23.185011709601877
+    },
+    {
+      "date": "1973-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 16.43835616438356,
+      "US_food_home_YoY": 21.34570765661252
+    },
+    {
+      "date": "1973-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 17.050691244239637,
+      "US_food_home_YoY": 20.737327188940103
+    },
+    {
+      "date": "1973-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 17.972350230414747,
+      "US_food_home_YoY": 21.510297482837526
+    },
+    {
+      "date": "1973-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 16.894977168949787,
+      "US_food_home_YoY": 22.095671981776775
+    },
+    {
+      "date": "1974-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 16.07142857142858,
+      "US_food_home_YoY": 21.20535714285714
+    },
+    {
+      "date": "1974-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 16.666666666666675,
+      "US_food_home_YoY": 22.36842105263157
+    },
+    {
+      "date": "1974-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 18.421052631578938,
+      "US_food_home_YoY": 19.78723404255318
+    },
+    {
+      "date": "1974-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 15.384615384615397,
+      "US_food_home_YoY": 17.154811715481188
+    },
+    {
+      "date": "1974-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 17.796610169491522,
+      "US_food_home_YoY": 16.49484536082475
+    },
+    {
+      "date": "1974-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 16.597510373443992,
+      "US_food_home_YoY": 14.66395112016292
+    },
+    {
+      "date": "1974-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 15.4471544715447,
+      "US_food_home_YoY": 13.849287169042768
+    },
+    {
+      "date": "1974-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 13.38582677165354,
+      "US_food_home_YoY": 7.794676806083656
+    },
+    {
+      "date": "1974-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 12.941176470588234,
+      "US_food_home_YoY": 11.089866156787775
+    },
+    {
+      "date": "1974-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 14.960629921259837,
+      "US_food_home_YoY": 12.213740458015266
+    },
+    {
+      "date": "1974-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 15.234375,
+      "US_food_home_YoY": 12.052730696798486
+    },
+    {
+      "date": "1974-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 17.1875,
+      "US_food_home_YoY": 12.313432835820892
+    },
+    {
+      "date": "1975-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 15.384615384615374,
+      "US_food_home_YoY": 11.233885819521184
+    },
+    {
+      "date": "1975-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 13.909774436090228,
+      "US_food_home_YoY": 8.24372759856631
+    },
+    {
+      "date": "1975-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 11.851851851851848,
+      "US_food_home_YoY": 7.104795737122549
+    },
+    {
+      "date": "1975-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 12.222222222222223,
+      "US_food_home_YoY": 7.321428571428568
+    },
+    {
+      "date": "1975-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 10.07194244604317,
+      "US_food_home_YoY": 6.725663716814156
+    },
+    {
+      "date": "1975-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 13.167259786476858,
+      "US_food_home_YoY": 8.525754884547077
+    },
+    {
+      "date": "1975-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 14.7887323943662,
+      "US_food_home_YoY": 11.806797853309492
+    },
+    {
+      "date": "1975-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 14.236111111111093,
+      "US_food_home_YoY": 9.876543209876543
+    },
+    {
+      "date": "1975-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 13.194444444444443,
+      "US_food_home_YoY": 7.917383820998292
+    },
+    {
+      "date": "1975-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 11.986301369863028,
+      "US_food_home_YoY": 7.653061224489788
+    },
+    {
+      "date": "1975-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 11.525423728813555,
+      "US_food_home_YoY": 7.058823529411762
+    },
+    {
+      "date": "1975-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 8.666666666666668,
+      "US_food_home_YoY": 6.47840531561461
+    },
+    {
+      "date": "1976-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 8.333333333333325,
+      "US_food_home_YoY": 5.4635761589403975
+    },
+    {
+      "date": "1976-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 6.600660066006592,
+      "US_food_home_YoY": 4.304635761589415
+    },
+    {
+      "date": "1976-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.96026490066226,
+      "US_food_home_YoY": 3.482587064676612
+    },
+    {
+      "date": "1976-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 4.950495049504955,
+      "US_food_home_YoY": 3.8269550748752046
+    },
+    {
+      "date": "1976-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.555555555555536,
+      "US_food_home_YoY": 3.814262023217263
+    },
+    {
+      "date": "1976-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.8867924528301883,
+      "US_food_home_YoY": 2.6186579378068675
+    },
+    {
+      "date": "1976-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": -0.30674846625767804,
+      "US_food_home_YoY": 0.6399999999999961
+    },
+    {
+      "date": "1976-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": -2.127659574468077,
+      "US_food_home_YoY": 1.2841091492777013
+    },
+    {
+      "date": "1976-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": -1.8404907975460127,
+      "US_food_home_YoY": 1.1164274322168932
+    },
+    {
+      "date": "1976-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": -2.140672782874631,
+      "US_food_home_YoY": 0.6319115323854652
+    },
+    {
+      "date": "1976-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": -3.6474164133738607,
+      "US_food_home_YoY": -0.31397174254317317
+    },
+    {
+      "date": "1976-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": -2.4539877300613466,
+      "US_food_home_YoY": -0.9360374414976502
+    },
+    {
+      "date": "1977-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": -0.6153846153846287,
+      "US_food_home_YoY": 0.15698587127157548
+    },
+    {
+      "date": "1977-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.1671826625387025,
+      "US_food_home_YoY": 3.650793650793638
+    },
+    {
+      "date": "1977-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 4.062499999999991,
+      "US_food_home_YoY": 5.288461538461542
+    },
+    {
+      "date": "1977-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 6.2893081761006275,
+      "US_food_home_YoY": 6.570512820512819
+    },
+    {
+      "date": "1977-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 6.19195046439629,
+      "US_food_home_YoY": 6.38977635782747
+    },
+    {
+      "date": "1977-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 7.407407407407396,
+      "US_food_home_YoY": 7.0175438596491
+    },
+    {
+      "date": "1977-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 9.23076923076922,
+      "US_food_home_YoY": 6.836248012718604
+    },
+    {
+      "date": "1977-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 11.180124223602462,
+      "US_food_home_YoY": 6.814580031695727
+    },
+    {
+      "date": "1977-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 12.187499999999996,
+      "US_food_home_YoY": 6.624605678233442
+    },
+    {
+      "date": "1977-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 14.0625,
+      "US_food_home_YoY": 6.279434850863419
+    },
+    {
+      "date": "1977-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 16.088328075709768,
+      "US_food_home_YoY": 7.71653543307087
+    },
+    {
+      "date": "1977-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 17.9245283018868,
+      "US_food_home_YoY": 7.874015748031504
+    },
+    {
+      "date": "1978-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 17.02786377708978,
+      "US_food_home_YoY": 8.463949843260199
+    },
+    {
+      "date": "1978-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 15.454545454545453,
+      "US_food_home_YoY": 7.197549770290967
+    },
+    {
+      "date": "1978-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 16.216216216216228,
+      "US_food_home_YoY": 8.066971080669717
+    },
+    {
+      "date": "1978-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 16.863905325443795,
+      "US_food_home_YoY": 8.872180451127832
+    },
+    {
+      "date": "1978-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 19.53352769679302,
+      "US_food_home_YoY": 10.660660660660671
+    },
+    {
+      "date": "1978-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 20.402298850574716,
+      "US_food_home_YoY": 11.624441132637875
+    },
+    {
+      "date": "1978-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 23.380281690140837,
+      "US_food_home_YoY": 11.755952380952372
+    },
+    {
+      "date": "1978-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 20.11173184357542,
+      "US_food_home_YoY": 11.424332344213628
+    },
+    {
+      "date": "1978-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 16.15598885793874,
+      "US_food_home_YoY": 11.538461538461565
+    },
+    {
+      "date": "1978-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 15.616438356164398,
+      "US_food_home_YoY": 12.259970457902503
+    },
+    {
+      "date": "1978-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 14.945652173913038,
+      "US_food_home_YoY": 11.842105263157876
+    },
+    {
+      "date": "1978-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 13.600000000000012,
+      "US_food_home_YoY": 12.26277372262774
+    },
+    {
+      "date": "1979-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 15.343915343915349,
+      "US_food_home_YoY": 13.439306358381508
+    },
+    {
+      "date": "1979-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 17.322834645669303,
+      "US_food_home_YoY": 14.28571428571428
+    },
+    {
+      "date": "1979-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 18.86304909560723,
+      "US_food_home_YoY": 13.521126760563362
+    },
+    {
+      "date": "1979-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 17.721518987341778,
+      "US_food_home_YoY": 12.016574585635343
+    },
+    {
+      "date": "1979-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 13.658536585365866,
+      "US_food_home_YoY": 10.990502035278137
+    },
+    {
+      "date": "1979-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 11.217183770883054,
+      "US_food_home_YoY": 9.479305740987986
+    },
+    {
+      "date": "1979-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 8.675799086757996,
+      "US_food_home_YoY": 9.58721704394141
+    },
+    {
+      "date": "1979-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 9.534883720930232,
+      "US_food_home_YoY": 9.05459387483356
+    },
+    {
+      "date": "1979-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 12.949640287769771,
+      "US_food_home_YoY": 9.416445623342163
+    },
+    {
+      "date": "1979-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 12.559241706161139,
+      "US_food_home_YoY": 9.210526315789469
+    },
+    {
+      "date": "1979-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 12.293144208037843,
+      "US_food_home_YoY": 9.15032679738561
+    },
+    {
+      "date": "1979-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 13.145539906103298,
+      "US_food_home_YoY": 9.62288686605981
+    },
+    {
+      "date": "1980-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 10.779816513761453,
+      "US_food_home_YoY": 8.025477707006367
+    },
+    {
+      "date": "1980-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 9.843400447427285,
+      "US_food_home_YoY": 5.875000000000008
+    },
+    {
+      "date": "1980-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 7.826086956521738,
+      "US_food_home_YoY": 5.955334987593064
+    },
+    {
+      "date": "1980-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 6.666666666666665,
+      "US_food_home_YoY": 5.918618988902602
+    },
+    {
+      "date": "1980-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 7.725321888412018,
+      "US_food_home_YoY": 5.623471882640607
+    },
+    {
+      "date": "1980-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 10.729613733905573,
+      "US_food_home_YoY": 5.853658536585371
+    },
+    {
+      "date": "1980-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 9.243697478991585,
+      "US_food_home_YoY": 6.804374240583244
+    },
+    {
+      "date": "1980-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 12.314225053078554,
+      "US_food_home_YoY": 9.645909645909633
+    },
+    {
+      "date": "1980-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 14.225053078556261,
+      "US_food_home_YoY": 10.303030303030303
+    },
+    {
+      "date": "1980-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 13.89473684210527,
+      "US_food_home_YoY": 10.481927710843376
+    },
+    {
+      "date": "1980-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 15.157894736842103,
+      "US_food_home_YoY": 11.13772455089821
+    },
+    {
+      "date": "1980-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 14.937759336099576,
+      "US_food_home_YoY": 10.676156583629904
+    },
+    {
+      "date": "1981-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 15.3209109730849,
+      "US_food_home_YoY": 10.14150943396228
+    },
+    {
+      "date": "1981-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 15.478615071283098,
+      "US_food_home_YoY": 10.507674144037772
+    },
+    {
+      "date": "1981-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 15.120967741935477,
+      "US_food_home_YoY": 10.18735362997656
+    },
+    {
+      "date": "1981-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 16.129032258064523,
+      "US_food_home_YoY": 9.545983701979033
+    },
+    {
+      "date": "1981-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 13.94422310756973,
+      "US_food_home_YoY": 8.680555555555557
+    },
+    {
+      "date": "1981-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 13.178294573643413,
+      "US_food_home_YoY": 8.640552995391705
+    },
+    {
+      "date": "1981-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 13.846153846153841,
+      "US_food_home_YoY": 8.19112627986347
+    },
+    {
+      "date": "1981-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 11.909262759924388,
+      "US_food_home_YoY": 6.458797327394206
+    },
+    {
+      "date": "1981-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 9.66542750929369,
+      "US_food_home_YoY": 5.494505494505497
+    },
+    {
+      "date": "1981-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 8.872458410351204,
+      "US_food_home_YoY": 4.689203925845153
+    },
+    {
+      "date": "1981-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 7.1297989031078535,
+      "US_food_home_YoY": 3.4482758620689724
+    },
+    {
+      "date": "1981-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 4.512635379061369,
+      "US_food_home_YoY": 3.1082529474812493
+    },
+    {
+      "date": "1982-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.0269299820466795,
+      "US_food_home_YoY": 3.2119914346895095
+    },
+    {
+      "date": "1982-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.291005291005302,
+      "US_food_home_YoY": 4.059829059829068
+    },
+    {
+      "date": "1982-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.429071803852903,
+      "US_food_home_YoY": 3.081827842720508
+    },
+    {
+      "date": "1982-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.381944444444442,
+      "US_food_home_YoY": 3.188097768331555
+    },
+    {
+      "date": "1982-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 8.74125874125875,
+      "US_food_home_YoY": 4.472843450479225
+    },
+    {
+      "date": "1982-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 8.90410958904111,
+      "US_food_home_YoY": 5.302226935312837
+    },
+    {
+      "date": "1982-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 7.939189189189189,
+      "US_food_home_YoY": 4.311251314405906
+    },
+    {
+      "date": "1982-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 6.418918918918903,
+      "US_food_home_YoY": 3.1380753138075423
+    },
+    {
+      "date": "1982-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.59322033898304,
+      "US_food_home_YoY": 2.8124999999999956
+    },
+    {
+      "date": "1982-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.093378607809851,
+      "US_food_home_YoY": 2.708333333333335
+    },
+    {
+      "date": "1982-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 6.1433447098976135,
+      "US_food_home_YoY": 2.604166666666674
+    },
+    {
+      "date": "1982-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 6.563039723661501,
+      "US_food_home_YoY": 2.079002079002068
+    },
+    {
+      "date": "1983-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.470085470085473,
+      "US_food_home_YoY": 1.556016597510368
+    },
+    {
+      "date": "1983-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 4.187604690117253,
+      "US_food_home_YoY": 0.6160164271047153
+    },
+    {
+      "date": "1983-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.9900332225913484,
+      "US_food_home_YoY": 1.7525773195876226
+    },
+    {
+      "date": "1983-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.294892915980241,
+      "US_food_home_YoY": 1.9567456230690006
+    },
+    {
+      "date": "1983-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.0546623794212024,
+      "US_food_home_YoY": 1.3251783893985847
+    },
+    {
+      "date": "1983-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.9433962264151052,
+      "US_food_home_YoY": 0.10070493454179541
+    },
+    {
+      "date": "1983-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.9389671361502261,
+      "US_food_home_YoY": 0.10080645161290036
+    },
+    {
+      "date": "1983-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.3809523809523725,
+      "US_food_home_YoY": 0.6085192697768749
+    },
+    {
+      "date": "1983-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.9261637239165408,
+      "US_food_home_YoY": 0.9118541033434457
+    },
+    {
+      "date": "1983-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.8772213247172838,
+      "US_food_home_YoY": 1.1156186612576224
+    },
+    {
+      "date": "1983-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.5723472668810254,
+      "US_food_home_YoY": 1.1167512690355208
+    },
+    {
+      "date": "1983-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.7277147487844386,
+      "US_food_home_YoY": 1.8329938900203624
+    },
+    {
+      "date": "1984-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 6.158833063209079,
+      "US_food_home_YoY": 3.8815117466802773
+    },
+    {
+      "date": "1984-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 6.913183279742752,
+      "US_food_home_YoY": 4.591836734693877
+    },
+    {
+      "date": "1984-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 8.387096774193559,
+      "US_food_home_YoY": 4.052684903748727
+    },
+    {
+      "date": "1984-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 7.336523125996797,
+      "US_food_home_YoY": 3.535353535353525
+    },
+    {
+      "date": "1984-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 4.680187207488307,
+      "US_food_home_YoY": 2.6156941649899235
+    },
+    {
+      "date": "1984-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 6.074766355140171,
+      "US_food_home_YoY": 3.118712273641844
+    },
+    {
+      "date": "1984-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 6.666666666666665,
+      "US_food_home_YoY": 3.3232628398791597
+    },
+    {
+      "date": "1984-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.581395348837193,
+      "US_food_home_YoY": 4.133064516129026
+    },
+    {
+      "date": "1984-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.98425196850394,
+      "US_food_home_YoY": 3.5140562248995977
+    },
+    {
+      "date": "1984-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 4.665629860031095,
+      "US_food_home_YoY": 3.6108324974924777
+    },
+    {
+      "date": "1984-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.4858934169278895,
+      "US_food_home_YoY": 3.81526104417671
+    },
+    {
+      "date": "1984-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.000000000000004,
+      "US_food_home_YoY": 3.699999999999992
+    },
+    {
+      "date": "1985-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.969465648854964,
+      "US_food_home_YoY": 2.0648967551622377
+    },
+    {
+      "date": "1985-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.759398496240607,
+      "US_food_home_YoY": 1.7560975609756113
+    },
+    {
+      "date": "1985-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.3809523809523725,
+      "US_food_home_YoY": 1.850048685491723
+    },
+    {
+      "date": "1985-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.714710252600306,
+      "US_food_home_YoY": 1.6585365853658551
+    },
+    {
+      "date": "1985-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.980625931445613,
+      "US_food_home_YoY": 1.764705882352935
+    },
+    {
+      "date": "1985-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.055800293685772,
+      "US_food_home_YoY": 1.4634146341463428
+    },
+    {
+      "date": "1985-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.744186046511631,
+      "US_food_home_YoY": 1.3645224171540127
+    },
+    {
+      "date": "1985-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.7621145374449476,
+      "US_food_home_YoY": 0.4840271055179146
+    },
+    {
+      "date": "1985-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.3372956909361244,
+      "US_food_home_YoY": 0.8729388942773975
+    },
+    {
+      "date": "1985-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.8915304606240904,
+      "US_food_home_YoY": 0.5808325266214887
+    },
+    {
+      "date": "1985-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.4858841010401136,
+      "US_food_home_YoY": 1.3539651837524147
+    },
+    {
+      "date": "1985-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.4226190476190466,
+      "US_food_home_YoY": 2.121504339440694
+    },
+    {
+      "date": "1986-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.96475770925111,
+      "US_food_home_YoY": 2.0231213872832443
+    },
+    {
+      "date": "1986-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.8840579710144967,
+      "US_food_home_YoY": 1.2464046021092967
+    },
+    {
+      "date": "1986-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.1802325581395277,
+      "US_food_home_YoY": 1.051625239005749
+    },
+    {
+      "date": "1986-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.862464183381074,
+      "US_food_home_YoY": 1.5355086372360827
+    },
+    {
+      "date": "1986-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 4.05209840810421,
+      "US_food_home_YoY": 2.3121387283236983
+    },
+    {
+      "date": "1986-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.597122302158273,
+      "US_food_home_YoY": 2.019230769230762
+    },
+    {
+      "date": "1986-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 4.142857142857159,
+      "US_food_home_YoY": 3.076923076923088
+    },
+    {
+      "date": "1986-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.772005772005762,
+      "US_food_home_YoY": 4.527938342967253
+    },
+    {
+      "date": "1986-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 8.211143695014655,
+      "US_food_home_YoY": 4.230769230769238
+    },
+    {
+      "date": "1986-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 8.98379970544918,
+      "US_food_home_YoY": 4.716073147256972
+    },
+    {
+      "date": "1986-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 9.077598828696921,
+      "US_food_home_YoY": 4.389312977099236
+    },
+    {
+      "date": "1986-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 6.906474820143882,
+      "US_food_home_YoY": 3.5882908404154756
+    },
+    {
+      "date": "1987-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 6.214689265536721,
+      "US_food_home_YoY": 4.060434372049104
+    },
+    {
+      "date": "1987-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 6.970128022759603,
+      "US_food_home_YoY": 4.734848484848486
+    },
+    {
+      "date": "1987-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 6.685633001422486,
+      "US_food_home_YoY": 4.730368968779564
+    },
+    {
+      "date": "1987-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.485232067510548,
+      "US_food_home_YoY": 4.820415879017026
+    },
+    {
+      "date": "1987-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.424200278164104,
+      "US_food_home_YoY": 5.178907721280601
+    },
+    {
+      "date": "1987-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 7.08333333333333,
+      "US_food_home_YoY": 6.032045240339312
+    },
+    {
+      "date": "1987-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.8984910836762605,
+      "US_food_home_YoY": 4.570895522388052
+    },
+    {
+      "date": "1987-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.683492496589369,
+      "US_food_home_YoY": 3.5023041474654404
+    },
+    {
+      "date": "1987-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.168021680216814,
+      "US_food_home_YoY": 3.8745387453874347
+    },
+    {
+      "date": "1987-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.0270270270270174,
+      "US_food_home_YoY": 3.6764705882353033
+    },
+    {
+      "date": "1987-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.744966442953011,
+      "US_food_home_YoY": 3.0164533820840944
+    },
+    {
+      "date": "1987-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.6150740242261152,
+      "US_food_home_YoY": 3.3728350045578948
+    },
+    {
+      "date": "1988-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.7287234042553168,
+      "US_food_home_YoY": 3.3575317604355837
+    },
+    {
+      "date": "1988-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.3297872340425565,
+      "US_food_home_YoY": 2.8028933092224317
+    },
+    {
+      "date": "1988-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.0666666666666602,
+      "US_food_home_YoY": 2.7100271002709952
+    },
+    {
+      "date": "1988-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.73333333333332,
+      "US_food_home_YoY": 3.155996393146987
+    },
+    {
+      "date": "1988-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.3192612137203241,
+      "US_food_home_YoY": 2.86481647269472
+    },
+    {
+      "date": "1988-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 0.6485084306095956,
+      "US_food_home_YoY": 2.8444444444444494
+    },
+    {
+      "date": "1988-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.4248704663212264,
+      "US_food_home_YoY": 4.638715432649421
+    },
+    {
+      "date": "1988-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.289473684210531,
+      "US_food_home_YoY": 5.164737310774714
+    },
+    {
+      "date": "1988-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.7135278514588865,
+      "US_food_home_YoY": 5.595026642984036
+    },
+    {
+      "date": "1988-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.443708609271523,
+      "US_food_home_YoY": 5.585106382978711
+    },
+    {
+      "date": "1988-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.242744063324542,
+      "US_food_home_YoY": 5.767524401064783
+    },
+    {
+      "date": "1988-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 1.9867549668874274,
+      "US_food_home_YoY": 5.64373897707231
+    },
+    {
+      "date": "1989-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.2222222222222365,
+      "US_food_home_YoY": 5.61896400351185
+    },
+    {
+      "date": "1989-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.543307086614167,
+      "US_food_home_YoY": 6.684256816182943
+    },
+    {
+      "date": "1989-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.95778364116095,
+      "US_food_home_YoY": 7.563764291996478
+    },
+    {
+      "date": "1989-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.8007863695937116,
+      "US_food_home_YoY": 7.604895104895104
+    },
+    {
+      "date": "1989-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.90625,
+      "US_food_home_YoY": 8.006962576153164
+    },
+    {
+      "date": "1989-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.6082474226804218,
+      "US_food_home_YoY": 7.605877268798622
+    },
+    {
+      "date": "1989-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.575989782886335,
+      "US_food_home_YoY": 6.479113384484236
+    },
+    {
+      "date": "1989-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.420382165605095,
+      "US_food_home_YoY": 6.011854360711277
+    },
+    {
+      "date": "1989-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.0460358056265893,
+      "US_food_home_YoY": 5.466778805719086
+    },
+    {
+      "date": "1989-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.432778489116516,
+      "US_food_home_YoY": 5.793450881612094
+    },
+    {
+      "date": "1989-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.0967741935483906,
+      "US_food_home_YoY": 6.2080536912751505
+    },
+    {
+      "date": "1989-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.857142857142869,
+      "US_food_home_YoY": 6.093489148580966
+    },
+    {
+      "date": "1990-01-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 4.603580562659837,
+      "US_food_home_YoY": 7.896924355777246
+    },
+    {
+      "date": "1990-02-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 4.816223067173642,
+      "US_food_home_YoY": 8.24402308326464
+    },
+    {
+      "date": "1990-03-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 5.203045685279206,
+      "US_food_home_YoY": 7.195421095666399
+    },
+    {
+      "date": "1990-04-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.409090909090917,
+      "US_food_home_YoY": 6.011372867587328
+    },
+    {
+      "date": "1990-05-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 2.7568922305764465,
+      "US_food_home_YoY": 5.237711522965349
+    },
+    {
+      "date": "1990-06-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.980099502487544,
+      "US_food_home_YoY": 5.943775100401605
+    },
+    {
+      "date": "1990-07-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.6991368680641123,
+      "US_food_home_YoY": 6.325060048038433
+    },
+    {
+      "date": "1990-08-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.109452736318419,
+      "US_food_home_YoY": 6.38977635782747
+    },
+    {
+      "date": "1990-09-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.50877192982455,
+      "US_food_home_YoY": 6.539074960127578
+    },
+    {
+      "date": "1990-10-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 3.750000000000009,
+      "US_food_home_YoY": 6.507936507936507
+    },
+    {
+      "date": "1990-11-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 4.005006257822252,
+      "US_food_home_YoY": 6.319115323854652
+    },
+    {
+      "date": "1990-12-01",
+      "FAO_food_YoY": null,
+      "Canada_grocery_YoY": 4.040404040404044,
+      "US_food_home_YoY": 5.743509047993722
+    },
+    {
+      "date": "1991-01-01",
+      "FAO_food_YoY": -5.296575213999255,
+      "Canada_grocery_YoY": 3.667481662591676,
+      "US_food_home_YoY": 4.00616332819721
+    },
+    {
+      "date": "1991-02-01",
+      "FAO_food_YoY": -4.595918820267631,
+      "Canada_grocery_YoY": 2.41837968561065,
+      "US_food_home_YoY": 2.817974105102805
+    },
+    {
+      "date": "1991-03-01",
+      "FAO_food_YoY": -2.6999848249181113,
+      "Canada_grocery_YoY": 2.4125452352231624,
+      "US_food_home_YoY": 3.1273836765827623
+    },
+    {
+      "date": "1991-04-01",
+      "FAO_food_YoY": -7.540007511523939,
+      "Canada_grocery_YoY": 4.2735042735042805,
+      "US_food_home_YoY": 4.367816091954024
+    },
+    {
+      "date": "1991-05-01",
+      "FAO_food_YoY": -5.870547503235901,
+      "Canada_grocery_YoY": 4.146341463414638,
+      "US_food_home_YoY": 4.670750382848388
+    },
+    {
+      "date": "1991-06-01",
+      "FAO_food_YoY": -4.278939038849616,
+      "Canada_grocery_YoY": 4.9043062200957,
+      "US_food_home_YoY": 4.397270659590591
+    },
+    {
+      "date": "1991-07-01",
+      "FAO_food_YoY": -1.18919114679511,
+      "Canada_grocery_YoY": 3.3293697978596937,
+      "US_food_home_YoY": 2.6355421686746983
+    },
+    {
+      "date": "1991-08-01",
+      "FAO_food_YoY": -0.005204974711825461,
+      "Canada_grocery_YoY": 3.0156815440289586,
+      "US_food_home_YoY": 1.5765765765765938
+    },
+    {
+      "date": "1991-09-01",
+      "FAO_food_YoY": 1.7543044693241416,
+      "Canada_grocery_YoY": 1.3317191283293006,
+      "US_food_home_YoY": 1.3473053892215647
+    },
+    {
+      "date": "1991-10-01",
+      "FAO_food_YoY": 5.186957283140514,
+      "Canada_grocery_YoY": -0.6024096385542133,
+      "US_food_home_YoY": 0.5961251862891315
+    },
+    {
+      "date": "1991-11-01",
+      "FAO_food_YoY": 3.6482598851308667,
+      "Canada_grocery_YoY": -0.48134777376653837,
+      "US_food_home_YoY": 0.8915304606240904
+    },
+    {
+      "date": "1991-12-01",
+      "FAO_food_YoY": 3.5092543645951046,
+      "Canada_grocery_YoY": -0.8495145631068013,
+      "US_food_home_YoY": 1.1904761904761862
+    },
+    {
+      "date": "1992-01-01",
+      "FAO_food_YoY": 6.623279894030087,
+      "Canada_grocery_YoY": -2.594339622641517,
+      "US_food_home_YoY": 0.1481481481481417
+    },
+    {
+      "date": "1992-02-01",
+      "FAO_food_YoY": 6.721280332386392,
+      "Canada_grocery_YoY": -2.3612750885478206,
+      "US_food_home_YoY": 0.7407407407407307
+    },
+    {
+      "date": "1992-03-01",
+      "FAO_food_YoY": 6.669564762676705,
+      "Canada_grocery_YoY": -1.8845700824499545,
+      "US_food_home_YoY": 1.0355029585798814
+    },
+    {
+      "date": "1992-04-01",
+      "FAO_food_YoY": 6.10220081216073,
+      "Canada_grocery_YoY": -1.9906323185011732,
+      "US_food_home_YoY": 0.1468428781204345
+    },
+    {
+      "date": "1992-05-01",
+      "FAO_food_YoY": 6.958558239780266,
+      "Canada_grocery_YoY": -2.3419203747072626,
+      "US_food_home_YoY": -0.5852231163130828
+    },
+    {
+      "date": "1992-06-01",
+      "FAO_food_YoY": 7.487005340226038,
+      "Canada_grocery_YoY": -3.876852907639683,
+      "US_food_home_YoY": -1.0167029774872716
+    },
+    {
+      "date": "1992-07-01",
+      "FAO_food_YoY": 4.140733879272518,
+      "Canada_grocery_YoY": -3.222094361334882,
+      "US_food_home_YoY": -0.14673514306677848
+    },
+    {
+      "date": "1992-08-01",
+      "FAO_food_YoY": 2.2356365220292274,
+      "Canada_grocery_YoY": -1.756440281030447,
+      "US_food_home_YoY": 1.552106430155198
+    },
+    {
+      "date": "1992-09-01",
+      "FAO_food_YoY": 2.2573818162765713,
+      "Canada_grocery_YoY": -0.4778972520908087,
+      "US_food_home_YoY": 2.067946824224509
+    },
+    {
+      "date": "1992-10-01",
+      "FAO_food_YoY": -4.20852016383887,
+      "Canada_grocery_YoY": 0.60606060606061,
+      "US_food_home_YoY": 2.296296296296285
+    },
+    {
+      "date": "1992-11-01",
+      "FAO_food_YoY": -3.0478214900046763,
+      "Canada_grocery_YoY": 0.7255139056831839,
+      "US_food_home_YoY": 1.3991163475699286
+    },
+    {
+      "date": "1992-12-01",
+      "FAO_food_YoY": -4.683217812833085,
+      "Canada_grocery_YoY": 2.447980416156681,
+      "US_food_home_YoY": 1.2499999999999956
+    },
+    {
+      "date": "1993-01-01",
+      "FAO_food_YoY": -5.340260314102352,
+      "Canada_grocery_YoY": 2.421307506053272,
+      "US_food_home_YoY": 2.144970414201186
+    },
+    {
+      "date": "1993-02-01",
+      "FAO_food_YoY": -6.782766546650576,
+      "Canada_grocery_YoY": 3.022974607013307,
+      "US_food_home_YoY": 1.9117647058823461
+    },
+    {
+      "date": "1993-03-01",
+      "FAO_food_YoY": -4.960823674476067,
+      "Canada_grocery_YoY": 1.6806722689075793,
+      "US_food_home_YoY": 1.3909224011713128
+    },
+    {
+      "date": "1993-04-01",
+      "FAO_food_YoY": -2.988383032075226,
+      "Canada_grocery_YoY": 0.8363201911589124,
+      "US_food_home_YoY": 1.9061583577712593
+    },
+    {
+      "date": "1993-05-01",
+      "FAO_food_YoY": -4.095282707771397,
+      "Canada_grocery_YoY": 2.5179856115107757,
+      "US_food_home_YoY": 3.3848417954378096
+    },
+    {
+      "date": "1993-06-01",
+      "FAO_food_YoY": -6.251783303628134,
+      "Canada_grocery_YoY": 1.542111506524324,
+      "US_food_home_YoY": 2.49449743213499
+    },
+    {
+      "date": "1993-07-01",
+      "FAO_food_YoY": -3.8640432750843945,
+      "Canada_grocery_YoY": 1.664684898929858,
+      "US_food_home_YoY": 2.571638501102136
+    },
+    {
+      "date": "1993-08-01",
+      "FAO_food_YoY": -3.634351998723062,
+      "Canada_grocery_YoY": 1.1918951132300348,
+      "US_food_home_YoY": 2.1106259097525504
+    },
+    {
+      "date": "1993-09-01",
+      "FAO_food_YoY": -4.100282765075036,
+      "Canada_grocery_YoY": 1.3205282112845218,
+      "US_food_home_YoY": 1.736613603473236
+    },
+    {
+      "date": "1993-10-01",
+      "FAO_food_YoY": -0.47662425255279306,
+      "Canada_grocery_YoY": 1.6867469879518149,
+      "US_food_home_YoY": 2.389572773352655
+    },
+    {
+      "date": "1993-11-01",
+      "FAO_food_YoY": 1.2022975447374185,
+      "Canada_grocery_YoY": 1.9207683073229287,
+      "US_food_home_YoY": 2.977487291212788
+    },
+    {
+      "date": "1993-12-01",
+      "FAO_food_YoY": 5.420689846387572,
+      "Canada_grocery_YoY": 2.0310633213858953,
+      "US_food_home_YoY": 3.4858387799564294
+    },
+    {
+      "date": "1994-01-01",
+      "FAO_food_YoY": 5.14145558224306,
+      "Canada_grocery_YoY": 1.4184397163120588,
+      "US_food_home_YoY": 3.3309196234612592
+    },
+    {
+      "date": "1994-02-01",
+      "FAO_food_YoY": 4.999728883800536,
+      "Canada_grocery_YoY": 0.0,
+      "US_food_home_YoY": 2.6695526695526883
+    },
+    {
+      "date": "1994-03-01",
+      "FAO_food_YoY": 2.6341686006734033,
+      "Canada_grocery_YoY": -0.47225501770956635,
+      "US_food_home_YoY": 2.5992779783393427
+    },
+    {
+      "date": "1994-04-01",
+      "FAO_food_YoY": 1.9633623046116488,
+      "Canada_grocery_YoY": 0.4739336492890933,
+      "US_food_home_YoY": 2.3741007194244768
+    },
+    {
+      "date": "1994-05-01",
+      "FAO_food_YoY": 5.55552174385574,
+      "Canada_grocery_YoY": -0.8187134502923965,
+      "US_food_home_YoY": 1.6370106761566028
+    },
+    {
+      "date": "1994-06-01",
+      "FAO_food_YoY": 5.9968047659898716,
+      "Canada_grocery_YoY": -0.4672897196261627,
+      "US_food_home_YoY": 2.648532569792428
+    },
+    {
+      "date": "1994-07-01",
+      "FAO_food_YoY": 3.1924275436845173,
+      "Canada_grocery_YoY": 0.35087719298245723,
+      "US_food_home_YoY": 3.5816618911174825
+    },
+    {
+      "date": "1994-08-01",
+      "FAO_food_YoY": 9.382546566699101,
+      "Canada_grocery_YoY": 0.5889281507656108,
+      "US_food_home_YoY": 3.563791874554534
+    },
+    {
+      "date": "1994-09-01",
+      "FAO_food_YoY": 13.74653832849486,
+      "Canada_grocery_YoY": 0.0,
+      "US_food_home_YoY": 3.4139402560455334
+    },
+    {
+      "date": "1994-10-01",
+      "FAO_food_YoY": 14.197609447744108,
+      "Canada_grocery_YoY": 0.35545023696681444,
+      "US_food_home_YoY": 2.75813295615277
+    },
+    {
+      "date": "1994-11-01",
+      "FAO_food_YoY": 16.086719763240964,
+      "Canada_grocery_YoY": 0.0,
+      "US_food_home_YoY": 2.6093088857545688
+    },
+    {
+      "date": "1994-12-01",
+      "FAO_food_YoY": 13.395062523415824,
+      "Canada_grocery_YoY": -0.23419203747072626,
+      "US_food_home_YoY": 3.368421052631576
+    },
+    {
+      "date": "1995-01-01",
+      "FAO_food_YoY": 12.75764934386061,
+      "Canada_grocery_YoY": 1.3986013986013957,
+      "US_food_home_YoY": 3.0133146461107208
+    },
+    {
+      "date": "1995-02-01",
+      "FAO_food_YoY": 15.87133108204888,
+      "Canada_grocery_YoY": 2.8169014084507005,
+      "US_food_home_YoY": 3.7947997189037075
+    },
+    {
+      "date": "1995-03-01",
+      "FAO_food_YoY": 16.421741810269385,
+      "Canada_grocery_YoY": 3.677342823250296,
+      "US_food_home_YoY": 3.5186488388458725
+    },
+    {
+      "date": "1995-04-01",
+      "FAO_food_YoY": 15.970846887187129,
+      "Canada_grocery_YoY": 4.716981132075482,
+      "US_food_home_YoY": 4.497540407589584
+    },
+    {
+      "date": "1995-05-01",
+      "FAO_food_YoY": 12.481341533361467,
+      "Canada_grocery_YoY": 3.655660377358494,
+      "US_food_home_YoY": 4.131652661064411
+    },
+    {
+      "date": "1995-06-01",
+      "FAO_food_YoY": 14.978636471074669,
+      "Canada_grocery_YoY": 3.4037558685446,
+      "US_food_home_YoY": 3.695955369595527
+    },
+    {
+      "date": "1995-07-01",
+      "FAO_food_YoY": 24.001569889815364,
+      "Canada_grocery_YoY": 2.564102564102577,
+      "US_food_home_YoY": 2.904564315352709
+    },
+    {
+      "date": "1995-08-01",
+      "FAO_food_YoY": 17.39392301874254,
+      "Canada_grocery_YoY": 1.6393442622950616,
+      "US_food_home_YoY": 2.408809359944941
+    },
+    {
+      "date": "1995-09-01",
+      "FAO_food_YoY": 12.728792153862134,
+      "Canada_grocery_YoY": 2.369668246445489,
+      "US_food_home_YoY": 2.8198074277854257
+    },
+    {
+      "date": "1995-10-01",
+      "FAO_food_YoY": 14.577903710977003,
+      "Canada_grocery_YoY": 2.007083825265643,
+      "US_food_home_YoY": 3.1658637302133474
+    },
+    {
+      "date": "1995-11-01",
+      "FAO_food_YoY": 8.741927609501342,
+      "Canada_grocery_YoY": 1.7667844522968101,
+      "US_food_home_YoY": 2.9553264604811114
+    },
+    {
+      "date": "1995-12-01",
+      "FAO_food_YoY": 6.650072835348264,
+      "Canada_grocery_YoY": 1.9953051643192499,
+      "US_food_home_YoY": 2.0366598778004175
+    },
+    {
+      "date": "1996-01-01",
+      "FAO_food_YoY": 5.637704357652851,
+      "Canada_grocery_YoY": 0.45977011494253706,
+      "US_food_home_YoY": 2.6530612244898055
+    },
+    {
+      "date": "1996-02-01",
+      "FAO_food_YoY": 3.809047775162866,
+      "Canada_grocery_YoY": -0.22831050228309113,
+      "US_food_home_YoY": 2.437373053486813
+    },
+    {
+      "date": "1996-03-01",
+      "FAO_food_YoY": 4.256827299037824,
+      "Canada_grocery_YoY": 0.3432494279176135,
+      "US_food_home_YoY": 3.4670292318150775
+    },
+    {
+      "date": "1996-04-01",
+      "FAO_food_YoY": 8.905492056353005,
+      "Canada_grocery_YoY": 0.0,
+      "US_food_home_YoY": 2.824478816408882
+    },
+    {
+      "date": "1996-05-01",
+      "FAO_food_YoY": 11.359054169062134,
+      "Canada_grocery_YoY": 0.34129692832765013,
+      "US_food_home_YoY": 2.555480833893764
+    },
+    {
+      "date": "1996-06-01",
+      "FAO_food_YoY": 7.088266584186309,
+      "Canada_grocery_YoY": 0.9080590238365716,
+      "US_food_home_YoY": 3.49697377269671
+    },
+    {
+      "date": "1996-07-01",
+      "FAO_food_YoY": 1.1205671826025831,
+      "Canada_grocery_YoY": 0.6818181818181834,
+      "US_food_home_YoY": 3.7634408602150504
+    },
+    {
+      "date": "1996-08-01",
+      "FAO_food_YoY": 2.56139186599027,
+      "Canada_grocery_YoY": 1.6129032258064502,
+      "US_food_home_YoY": 4.166666666666652
+    },
+    {
+      "date": "1996-09-01",
+      "FAO_food_YoY": -1.7849348399713416,
+      "Canada_grocery_YoY": 1.6203703703703498,
+      "US_food_home_YoY": 4.280936454849504
+    },
+    {
+      "date": "1996-10-01",
+      "FAO_food_YoY": -7.630517299083717,
+      "Canada_grocery_YoY": 2.430555555555558,
+      "US_food_home_YoY": 4.6697798532354895
+    },
+    {
+      "date": "1996-11-01",
+      "FAO_food_YoY": -9.139840072071303,
+      "Canada_grocery_YoY": 3.356481481481466,
+      "US_food_home_YoY": 5.206942590120156
+    },
+    {
+      "date": "1996-12-01",
+      "FAO_food_YoY": -8.54130776494153,
+      "Canada_grocery_YoY": 2.4165707710011475,
+      "US_food_home_YoY": 4.923486360612084
+    },
+    {
+      "date": "1997-01-01",
+      "FAO_food_YoY": -8.002191792057921,
+      "Canada_grocery_YoY": 2.517162471395862,
+      "US_food_home_YoY": 3.976143141153088
+    },
+    {
+      "date": "1997-02-01",
+      "FAO_food_YoY": -8.215606229055128,
+      "Canada_grocery_YoY": 2.7459954233409523,
+      "US_food_home_YoY": 4.230006609385306
+    },
+    {
+      "date": "1997-03-01",
+      "FAO_food_YoY": -7.226253943516592,
+      "Canada_grocery_YoY": 2.2805017103762815,
+      "US_food_home_YoY": 3.547963206307503
+    },
+    {
+      "date": "1997-04-01",
+      "FAO_food_YoY": -9.136177902821574,
+      "Canada_grocery_YoY": 0.6756756756756799,
+      "US_food_home_YoY": 2.877697841726623
+    },
+    {
+      "date": "1997-05-01",
+      "FAO_food_YoY": -11.667249989546669,
+      "Canada_grocery_YoY": 1.814058956916087,
+      "US_food_home_YoY": 3.2786885245901676
+    },
+    {
+      "date": "1997-06-01",
+      "FAO_food_YoY": -12.797444388368307,
+      "Canada_grocery_YoY": 1.3498312710910954,
+      "US_food_home_YoY": 2.4691358024691246
+    },
+    {
+      "date": "1997-07-01",
+      "FAO_food_YoY": -14.835929147521554,
+      "Canada_grocery_YoY": 2.257336343115135,
+      "US_food_home_YoY": 2.26683937823835
+    },
+    {
+      "date": "1997-08-01",
+      "FAO_food_YoY": -12.688365936509383,
+      "Canada_grocery_YoY": 1.814058956916087,
+      "US_food_home_YoY": 2.3225806451612874
+    },
+    {
+      "date": "1997-09-01",
+      "FAO_food_YoY": -9.02461472237711,
+      "Canada_grocery_YoY": 1.025056947608216,
+      "US_food_home_YoY": 1.8601667735728133
+    },
+    {
+      "date": "1997-10-01",
+      "FAO_food_YoY": -6.042487134861729,
+      "Canada_grocery_YoY": 0.4519774011299438,
+      "US_food_home_YoY": 1.338432122370925
+    },
+    {
+      "date": "1997-11-01",
+      "FAO_food_YoY": -3.1084142649530078,
+      "Canada_grocery_YoY": 0.6718924972004547,
+      "US_food_home_YoY": 1.07868020304569
+    },
+    {
+      "date": "1997-12-01",
+      "FAO_food_YoY": -4.707950402060767,
+      "Canada_grocery_YoY": 0.8988764044943753,
+      "US_food_home_YoY": 1.0145846544071135
+    },
+    {
+      "date": "1998-01-01",
+      "FAO_food_YoY": -4.871096533687935,
+      "Canada_grocery_YoY": 2.4553571428571397,
+      "US_food_home_YoY": 2.16698534098152
+    },
+    {
+      "date": "1998-02-01",
+      "FAO_food_YoY": -4.872782592794522,
+      "Canada_grocery_YoY": 1.1135857461024523,
+      "US_food_home_YoY": 1.4584654407102216
+    },
+    {
+      "date": "1998-03-01",
+      "FAO_food_YoY": -7.42569244571285,
+      "Canada_grocery_YoY": 1.5607580824972045,
+      "US_food_home_YoY": 1.6497461928933976
+    },
+    {
+      "date": "1998-04-01",
+      "FAO_food_YoY": -8.806478512811989,
+      "Canada_grocery_YoY": 1.5659955257270708,
+      "US_food_home_YoY": 1.8436109345200125
+    },
+    {
+      "date": "1998-05-01",
+      "FAO_food_YoY": -8.586758242885683,
+      "Canada_grocery_YoY": 1.6703786191536674,
+      "US_food_home_YoY": 2.0952380952381056
+    },
+    {
+      "date": "1998-06-01",
+      "FAO_food_YoY": -8.436495130163879,
+      "Canada_grocery_YoY": 2.3307436182020025,
+      "US_food_home_YoY": 1.775523145212432
+    },
+    {
+      "date": "1998-07-01",
+      "FAO_food_YoY": -6.060380458725046,
+      "Canada_grocery_YoY": 1.2141280353201056,
+      "US_food_home_YoY": 1.899936668777702
+    },
+    {
+      "date": "1998-08-01",
+      "FAO_food_YoY": -10.568455042861814,
+      "Canada_grocery_YoY": 1.2249443207126953,
+      "US_food_home_YoY": 1.7654476670870167
+    },
+    {
+      "date": "1998-09-01",
+      "FAO_food_YoY": -11.447432398388768,
+      "Canada_grocery_YoY": 1.2401352874858995,
+      "US_food_home_YoY": 1.5113350125944391
+    },
+    {
+      "date": "1998-10-01",
+      "FAO_food_YoY": -10.005909231803866,
+      "Canada_grocery_YoY": 1.1248593925759387,
+      "US_food_home_YoY": 2.2012578616352307
+    },
+    {
+      "date": "1998-11-01",
+      "FAO_food_YoY": -10.916254051549323,
+      "Canada_grocery_YoY": 1.6685205784204626,
+      "US_food_home_YoY": 2.1343377275580444
+    },
+    {
+      "date": "1998-12-01",
+      "FAO_food_YoY": -8.68880491009797,
+      "Canada_grocery_YoY": 1.6703786191536674,
+      "US_food_home_YoY": 2.1971123666038928
+    },
+    {
+      "date": "1999-01-01",
+      "FAO_food_YoY": -9.350624954870245,
+      "Canada_grocery_YoY": 1.089324618736387,
+      "US_food_home_YoY": 1.933873986275736
+    },
+    {
+      "date": "1999-02-01",
+      "FAO_food_YoY": -13.539502399866388,
+      "Canada_grocery_YoY": 1.4317180616740144,
+      "US_food_home_YoY": 2.375000000000016
+    },
+    {
+      "date": "1999-03-01",
+      "FAO_food_YoY": -15.366371051608251,
+      "Canada_grocery_YoY": 1.207464324917673,
+      "US_food_home_YoY": 1.9975031210986316
+    },
+    {
+      "date": "1999-04-01",
+      "FAO_food_YoY": -16.46755549494532,
+      "Canada_grocery_YoY": 1.7621145374449476,
+      "US_food_home_YoY": 2.122347066167296
+    },
+    {
+      "date": "1999-05-01",
+      "FAO_food_YoY": -16.622436063708392,
+      "Canada_grocery_YoY": 1.4238773274917849,
+      "US_food_home_YoY": 1.990049751243772
+    },
+    {
+      "date": "1999-06-01",
+      "FAO_food_YoY": -14.973666559988896,
+      "Canada_grocery_YoY": 0.8676789587852562,
+      "US_food_home_YoY": 2.1183800623052917
+    },
+    {
+      "date": "1999-07-01",
+      "FAO_food_YoY": -18.062382517910645,
+      "Canada_grocery_YoY": 1.0905125408942284,
+      "US_food_home_YoY": 1.864512119328765
+    },
+    {
+      "date": "1999-08-01",
+      "FAO_food_YoY": -12.703299434833914,
+      "Canada_grocery_YoY": 0.7700770077007535,
+      "US_food_home_YoY": 1.6728624535315983
+    },
+    {
+      "date": "1999-09-01",
+      "FAO_food_YoY": -11.680349714652127,
+      "Canada_grocery_YoY": 1.1135857461024523,
+      "US_food_home_YoY": 2.171215880893307
+    },
+    {
+      "date": "1999-10-01",
+      "FAO_food_YoY": -14.918415478182201,
+      "Canada_grocery_YoY": 1.1123470522803158,
+      "US_food_home_YoY": 1.6000000000000014
+    },
+    {
+      "date": "1999-11-01",
+      "FAO_food_YoY": -14.771577613572905,
+      "Canada_grocery_YoY": 0.1094091903719896,
+      "US_food_home_YoY": 1.6594960049170382
+    },
+    {
+      "date": "1999-12-01",
+      "FAO_food_YoY": -16.302730328669625,
+      "Canada_grocery_YoY": 0.657174151150075,
+      "US_food_home_YoY": 1.6584766584766486
+    },
+    {
+      "date": "2000-01-01",
+      "FAO_food_YoY": -13.65350441031018,
+      "Canada_grocery_YoY": -1.1853448275861989,
+      "US_food_home_YoY": 1.1627906976744207
+    },
+    {
+      "date": "2000-02-01",
+      "FAO_food_YoY": -10.36716211370421,
+      "Canada_grocery_YoY": -0.7600434310531923,
+      "US_food_home_YoY": 1.4041514041513992
+    },
+    {
+      "date": "2000-03-01",
+      "FAO_food_YoY": -7.129835745178714,
+      "Canada_grocery_YoY": -0.32537960954446277,
+      "US_food_home_YoY": 1.8359853121175052
+    },
+    {
+      "date": "2000-04-01",
+      "FAO_food_YoY": -4.110656265382273,
+      "Canada_grocery_YoY": -0.32467532467533866,
+      "US_food_home_YoY": 1.833740831295838
+    },
+    {
+      "date": "2000-05-01",
+      "FAO_food_YoY": -2.8539600248540076,
+      "Canada_grocery_YoY": 0.4319654427645814,
+      "US_food_home_YoY": 2.073170731707319
+    },
+    {
+      "date": "2000-06-01",
+      "FAO_food_YoY": -0.9710864290912724,
+      "Canada_grocery_YoY": 0.8602150537634357,
+      "US_food_home_YoY": 2.1964612568639463
+    },
+    {
+      "date": "2000-07-01",
+      "FAO_food_YoY": 3.1016060285511626,
+      "Canada_grocery_YoY": 1.8338727076591121,
+      "US_food_home_YoY": 2.8065893837705858
+    },
+    {
+      "date": "2000-08-01",
+      "FAO_food_YoY": -2.036987634474674,
+      "Canada_grocery_YoY": 2.510917030567694,
+      "US_food_home_YoY": 2.9859841560024414
+    },
+    {
+      "date": "2000-09-01",
+      "FAO_food_YoY": -3.4637510550636907,
+      "Canada_grocery_YoY": 2.2026431718061623,
+      "US_food_home_YoY": 2.671523982999391
+    },
+    {
+      "date": "2000-10-01",
+      "FAO_food_YoY": 0.3582771925171757,
+      "Canada_grocery_YoY": 1.7601760176017445,
+      "US_food_home_YoY": 2.3622047244094446
+    },
+    {
+      "date": "2000-11-01",
+      "FAO_food_YoY": 1.2488479538434127,
+      "Canada_grocery_YoY": 2.2950819672131084,
+      "US_food_home_YoY": 2.2974607013301007
+    },
+    {
+      "date": "2000-12-01",
+      "FAO_food_YoY": 5.22233793872191,
+      "Canada_grocery_YoY": 3.59085963003265,
+      "US_food_home_YoY": 2.8398791540785506
+    },
+    {
+      "date": "2001-01-01",
+      "FAO_food_YoY": 2.43645858207564,
+      "Canada_grocery_YoY": 3.925845147219187,
+      "US_food_home_YoY": 3.085299455535395
+    },
+    {
+      "date": "2001-02-01",
+      "FAO_food_YoY": 4.029570820886974,
+      "Canada_grocery_YoY": 5.361050328227557,
+      "US_food_home_YoY": 3.31125827814569
+    },
+    {
+      "date": "2001-03-01",
+      "FAO_food_YoY": 4.497593264100086,
+      "Canada_grocery_YoY": 5.875952121871597,
+      "US_food_home_YoY": 3.425480769230771
+    },
+    {
+      "date": "2001-04-01",
+      "FAO_food_YoY": 2.4268889049819276,
+      "Canada_grocery_YoY": 6.080347448425627,
+      "US_food_home_YoY": 3.541416566626654
+    },
+    {
+      "date": "2001-05-01",
+      "FAO_food_YoY": 3.364073907059728,
+      "Canada_grocery_YoY": 6.129032258064515,
+      "US_food_home_YoY": 3.2258064516129004
+    },
+    {
+      "date": "2001-06-01",
+      "FAO_food_YoY": 1.8038802534471987,
+      "Canada_grocery_YoY": 5.330490405117261,
+      "US_food_home_YoY": 3.5820895522387985
+    },
+    {
+      "date": "2001-07-01",
+      "FAO_food_YoY": 4.545543709140842,
+      "Canada_grocery_YoY": 4.978813559322015,
+      "US_food_home_YoY": 3.264094955489605
+    },
+    {
+      "date": "2001-08-01",
+      "FAO_food_YoY": 6.547851847555064,
+      "Canada_grocery_YoY": 4.259850905218321,
+      "US_food_home_YoY": 3.1952662721893565
+    },
+    {
+      "date": "2001-09-01",
+      "FAO_food_YoY": 5.468292107355133,
+      "Canada_grocery_YoY": 4.418103448275867,
+      "US_food_home_YoY": 3.134240094618579
+    },
+    {
+      "date": "2001-10-01",
+      "FAO_food_YoY": 1.5666176621511818,
+      "Canada_grocery_YoY": 4.432432432432432,
+      "US_food_home_YoY": 3.609467455621296
+    },
+    {
+      "date": "2001-11-01",
+      "FAO_food_YoY": 1.7405427678053975,
+      "Canada_grocery_YoY": 3.8461538461538547,
+      "US_food_home_YoY": 3.4869976359338084
+    },
+    {
+      "date": "2001-12-01",
+      "FAO_food_YoY": -0.3644215272963325,
+      "Canada_grocery_YoY": 3.5714285714285587,
+      "US_food_home_YoY": 2.6439482961222005
+    },
+    {
+      "date": "2002-01-01",
+      "FAO_food_YoY": -0.6559469879586777,
+      "Canada_grocery_YoY": 4.931794333683115,
+      "US_food_home_YoY": 2.934272300469476
+    },
+    {
+      "date": "2002-02-01",
+      "FAO_food_YoY": -4.792984920739585,
+      "Canada_grocery_YoY": 4.569055036344771,
+      "US_food_home_YoY": 2.389277389277389
+    },
+    {
+      "date": "2002-03-01",
+      "FAO_food_YoY": -5.699521396008834,
+      "Canada_grocery_YoY": 3.1860226104830414,
+      "US_food_home_YoY": 2.382335851249273
+    },
+    {
+      "date": "2002-04-01",
+      "FAO_food_YoY": -6.639257204966508,
+      "Canada_grocery_YoY": 3.2753326509723735,
+      "US_food_home_YoY": 2.4347826086956514
+    },
+    {
+      "date": "2002-05-01",
+      "FAO_food_YoY": -8.92443915933756,
+      "Canada_grocery_YoY": 1.6210739614994862,
+      "US_food_home_YoY": 1.5625
+    },
+    {
+      "date": "2002-06-01",
+      "FAO_food_YoY": -6.49375485698368,
+      "Canada_grocery_YoY": 1.9230769230769384,
+      "US_food_home_YoY": 0.9798270893371708
+    },
+    {
+      "date": "2002-07-01",
+      "FAO_food_YoY": -8.158745302533465,
+      "Canada_grocery_YoY": 1.5136226034308864,
+      "US_food_home_YoY": 0.7471264367816088
+    },
+    {
+      "date": "2002-08-01",
+      "FAO_food_YoY": -5.8117379053188145,
+      "Canada_grocery_YoY": 1.8386108273748647,
+      "US_food_home_YoY": 0.4013761467889898
+    },
+    {
+      "date": "2002-09-01",
+      "FAO_food_YoY": -1.2281790416545757,
+      "Canada_grocery_YoY": 1.5479876160990669,
+      "US_food_home_YoY": 0.5733944954128489
+    },
+    {
+      "date": "2002-10-01",
+      "FAO_food_YoY": 1.810988772440747,
+      "Canada_grocery_YoY": 1.1387163561076719,
+      "US_food_home_YoY": -0.05711022272986144
+    },
+    {
+      "date": "2002-11-01",
+      "FAO_food_YoY": 2.7802431311514386,
+      "Canada_grocery_YoY": 2.77777777777779,
+      "US_food_home_YoY": 0.34266133637921303
+    },
+    {
+      "date": "2002-12-01",
+      "FAO_food_YoY": 2.6033973189246273,
+      "Canada_grocery_YoY": 2.129817444219073,
+      "US_food_home_YoY": 0.6868918145392255
+    },
+    {
+      "date": "2003-01-01",
+      "FAO_food_YoY": 4.576974933446865,
+      "Canada_grocery_YoY": 1.8000000000000016,
+      "US_food_home_YoY": 0.3420752565564289
+    },
+    {
+      "date": "2003-02-01",
+      "FAO_food_YoY": 9.354347254113371,
+      "Canada_grocery_YoY": 0.7944389275074348,
+      "US_food_home_YoY": 0.8537279453614044
+    },
+    {
+      "date": "2003-03-01",
+      "FAO_food_YoY": 6.8359639773005965,
+      "Canada_grocery_YoY": 1.294820717131473,
+      "US_food_home_YoY": 0.7377979568671922
+    },
+    {
+      "date": "2003-04-01",
+      "FAO_food_YoY": 8.91428073372329,
+      "Canada_grocery_YoY": 0.7928642220019766,
+      "US_food_home_YoY": 0.5093378607809784
+    },
+    {
+      "date": "2003-05-01",
+      "FAO_food_YoY": 11.544340317485524,
+      "Canada_grocery_YoY": 1.7946161515453696,
+      "US_food_home_YoY": 1.3675213675213627
+    },
+    {
+      "date": "2003-06-01",
+      "FAO_food_YoY": 9.287564299042206,
+      "Canada_grocery_YoY": 1.688182720953324,
+      "US_food_home_YoY": 2.2831050228310446
+    },
+    {
+      "date": "2003-07-01",
+      "FAO_food_YoY": 9.17387599738657,
+      "Canada_grocery_YoY": 1.6898608349900535,
+      "US_food_home_YoY": 2.110667427267532
+    },
+    {
+      "date": "2003-08-01",
+      "FAO_food_YoY": 7.653306606704335,
+      "Canada_grocery_YoY": 1.3039117352056095,
+      "US_food_home_YoY": 2.798400913763577
+    },
+    {
+      "date": "2003-09-01",
+      "FAO_food_YoY": 6.932368427072966,
+      "Canada_grocery_YoY": 1.6260162601625883,
+      "US_food_home_YoY": 2.9076396807297566
+    },
+    {
+      "date": "2003-10-01",
+      "FAO_food_YoY": 9.179247999963657,
+      "Canada_grocery_YoY": 1.9447287615148356,
+      "US_food_home_YoY": 3.65714285714287
+    },
+    {
+      "date": "2003-11-01",
+      "FAO_food_YoY": 9.491301927027695,
+      "Canada_grocery_YoY": 1.1011011011010874,
+      "US_food_home_YoY": 3.984063745019917
+    },
+    {
+      "date": "2003-12-01",
+      "FAO_food_YoY": 12.23441404645611,
+      "Canada_grocery_YoY": 1.4895729890764597,
+      "US_food_home_YoY": 4.548038658328601
+    },
+    {
+      "date": "2004-01-01",
+      "FAO_food_YoY": 15.028943407556806,
+      "Canada_grocery_YoY": 0.39292730844793233,
+      "US_food_home_YoY": 4.147727272727275
+    },
+    {
+      "date": "2004-02-01",
+      "FAO_food_YoY": 15.140837293438647,
+      "Canada_grocery_YoY": 0.3940886699507429,
+      "US_food_home_YoY": 3.668171557562072
+    },
+    {
+      "date": "2004-03-01",
+      "FAO_food_YoY": 19.967820911594636,
+      "Canada_grocery_YoY": 0.3933136676499416,
+      "US_food_home_YoY": 3.7183098591549335
+    },
+    {
+      "date": "2004-04-01",
+      "FAO_food_YoY": 20.98195417120319,
+      "Canada_grocery_YoY": 0.0,
+      "US_food_home_YoY": 3.7725225225225367
+    },
+    {
+      "date": "2004-05-01",
+      "FAO_food_YoY": 17.834876242992024,
+      "Canada_grocery_YoY": 0.6856023506366382,
+      "US_food_home_YoY": 4.890387858347389
+    },
+    {
+      "date": "2004-06-01",
+      "FAO_food_YoY": 17.7602810636561,
+      "Canada_grocery_YoY": 1.7578125,
+      "US_food_home_YoY": 4.352678571428581
+    },
+    {
+      "date": "2004-07-01",
+      "FAO_food_YoY": 15.389389296192913,
+      "Canada_grocery_YoY": 1.6617790811339184,
+      "US_food_home_YoY": 4.5810055865921795
+    },
+    {
+      "date": "2004-08-01",
+      "FAO_food_YoY": 12.041492576743273,
+      "Canada_grocery_YoY": 2.5742574257425765,
+      "US_food_home_YoY": 3.8888888888888973
+    },
+    {
+      "date": "2004-09-01",
+      "FAO_food_YoY": 10.938562813137477,
+      "Canada_grocery_YoY": 2.8000000000000025,
+      "US_food_home_YoY": 3.2686980609418326
+    },
+    {
+      "date": "2004-10-01",
+      "FAO_food_YoY": 7.069217000896666,
+      "Canada_grocery_YoY": 3.81526104417671,
+      "US_food_home_YoY": 3.472987872105837
+    },
+    {
+      "date": "2004-11-01",
+      "FAO_food_YoY": 5.9233862073457155,
+      "Canada_grocery_YoY": 3.7623762376237657,
+      "US_food_home_YoY": 3.229337712096325
+    },
+    {
+      "date": "2004-12-01",
+      "FAO_food_YoY": 5.034344434550819,
+      "Canada_grocery_YoY": 3.131115459882583,
+      "US_food_home_YoY": 2.446982055464919
+    },
+    {
+      "date": "2005-01-01",
+      "FAO_food_YoY": 1.741455878974052,
+      "Canada_grocery_YoY": 2.544031311154593,
+      "US_food_home_YoY": 2.6186579378068675
+    },
+    {
+      "date": "2005-02-01",
+      "FAO_food_YoY": 1.1716956951227875,
+      "Canada_grocery_YoY": 2.4533856722276814,
+      "US_food_home_YoY": 2.1774632553075657
+    },
+    {
+      "date": "2005-03-01",
+      "FAO_food_YoY": 0.6269223843355487,
+      "Canada_grocery_YoY": 2.840352595494622,
+      "US_food_home_YoY": 2.172732210755024
+    },
+    {
+      "date": "2005-04-01",
+      "FAO_food_YoY": -2.5085369522606316,
+      "Canada_grocery_YoY": 4.424778761061954,
+      "US_food_home_YoY": 3.092783505154628
+    },
+    {
+      "date": "2005-05-01",
+      "FAO_food_YoY": -0.3416731718611121,
+      "Canada_grocery_YoY": 3.5019455252918386,
+      "US_food_home_YoY": 1.9292604501607746
+    },
+    {
+      "date": "2005-06-01",
+      "FAO_food_YoY": 1.4210614481221073,
+      "Canada_grocery_YoY": 2.399232245681371,
+      "US_food_home_YoY": 1.3903743315508033
+    },
+    {
+      "date": "2005-07-01",
+      "FAO_food_YoY": 2.776582040073028,
+      "Canada_grocery_YoY": 2.2115384615384537,
+      "US_food_home_YoY": 1.4957264957265126
+    },
+    {
+      "date": "2005-08-01",
+      "FAO_food_YoY": 4.413954941998055,
+      "Canada_grocery_YoY": 2.316602316602312,
+      "US_food_home_YoY": 1.497326203208571
+    },
+    {
+      "date": "2005-09-01",
+      "FAO_food_YoY": 4.927107570920253,
+      "Canada_grocery_YoY": 1.6536964980544688,
+      "US_food_home_YoY": 2.0386266094420513
+    },
+    {
+      "date": "2005-10-01",
+      "FAO_food_YoY": 7.154188260793526,
+      "Canada_grocery_YoY": 1.4506769825918697,
+      "US_food_home_YoY": 1.5450186467767635
+    },
+    {
+      "date": "2005-11-01",
+      "FAO_food_YoY": 5.0981273456349285,
+      "Canada_grocery_YoY": 0.7633587786259444,
+      "US_food_home_YoY": 1.4846235418876086
+    },
+    {
+      "date": "2005-12-01",
+      "FAO_food_YoY": 5.652222840552867,
+      "Canada_grocery_YoY": 1.0436432637571214,
+      "US_food_home_YoY": 1.7515923566878921
+    },
+    {
+      "date": "2006-01-01",
+      "FAO_food_YoY": 6.052159530212076,
+      "Canada_grocery_YoY": 2.8625954198473247,
+      "US_food_home_YoY": 2.3391812865497075
+    },
+    {
+      "date": "2006-02-01",
+      "FAO_food_YoY": 6.895845860978134,
+      "Canada_grocery_YoY": 2.8735632183908066,
+      "US_food_home_YoY": 2.39744272775706
+    },
+    {
+      "date": "2006-03-01",
+      "FAO_food_YoY": 3.375743104352291,
+      "Canada_grocery_YoY": 2.0952380952381056,
+      "US_food_home_YoY": 2.232854864433831
+    },
+    {
+      "date": "2006-04-01",
+      "FAO_food_YoY": 6.268171809279521,
+      "Canada_grocery_YoY": 0.6591337099811634,
+      "US_food_home_YoY": 0.9473684210526301
+    },
+    {
+      "date": "2006-05-01",
+      "FAO_food_YoY": 7.183849362330541,
+      "Canada_grocery_YoY": 1.2218045112782017,
+      "US_food_home_YoY": 0.8412197686645806
+    },
+    {
+      "date": "2006-06-01",
+      "FAO_food_YoY": 5.953328364014321,
+      "Canada_grocery_YoY": 1.4058106841611906,
+      "US_food_home_YoY": 1.476793248945163
+    },
+    {
+      "date": "2006-07-01",
+      "FAO_food_YoY": 8.132698968919838,
+      "Canada_grocery_YoY": 2.069614299153333,
+      "US_food_home_YoY": 1.473684210526316
+    },
+    {
+      "date": "2006-08-01",
+      "FAO_food_YoY": 8.022447036274173,
+      "Canada_grocery_YoY": 2.264150943396226,
+      "US_food_home_YoY": 1.8967334035827177
+    },
+    {
+      "date": "2006-09-01",
+      "FAO_food_YoY": 6.630391647151868,
+      "Canada_grocery_YoY": 3.157894736842093,
+      "US_food_home_YoY": 2.155625657202953
+    },
+    {
+      "date": "2006-10-01",
+      "FAO_food_YoY": 8.02932106398966,
+      "Canada_grocery_YoY": 3.1458531935176337,
+      "US_food_home_YoY": 2.203567681007357
+    },
+    {
+      "date": "2006-11-01",
+      "FAO_food_YoY": 12.480065494958259,
+      "Canada_grocery_YoY": 3.3143939393939448,
+      "US_food_home_YoY": 1.6718913270637348
+    },
+    {
+      "date": "2006-12-01",
+      "FAO_food_YoY": 12.933718586271192,
+      "Canada_grocery_YoY": 2.2535211267605604,
+      "US_food_home_YoY": 1.4084507042253502
+    },
+    {
+      "date": "2007-01-01",
+      "FAO_food_YoY": 12.43816122786907,
+      "Canada_grocery_YoY": 2.226345083487935,
+      "US_food_home_YoY": 1.775584415584408
+    },
+    {
+      "date": "2007-02-01",
+      "FAO_food_YoY": 13.043815411182024,
+      "Canada_grocery_YoY": 4.748603351955305,
+      "US_food_home_YoY": 2.879812695109285
+    },
+    {
+      "date": "2007-03-01",
+      "FAO_food_YoY": 16.23226596052232,
+      "Canada_grocery_YoY": 4.3843283582089665,
+      "US_food_home_YoY": 3.388455538221513
+    },
+    {
+      "date": "2007-04-01",
+      "FAO_food_YoY": 19.63664879205984,
+      "Canada_grocery_YoY": 4.490177736202061,
+      "US_food_home_YoY": 3.884254431699685
+    },
+    {
+      "date": "2007-05-01",
+      "FAO_food_YoY": 21.23050012053853,
+      "Canada_grocery_YoY": 3.9925719591457742,
+      "US_food_home_YoY": 4.398852971845657
+    },
+    {
+      "date": "2007-06-01",
+      "FAO_food_YoY": 27.997189411092883,
+      "Canada_grocery_YoY": 3.419593345656202,
+      "US_food_home_YoY": 4.548336798336794
+    },
+    {
+      "date": "2007-07-01",
+      "FAO_food_YoY": 30.570526488472694,
+      "Canada_grocery_YoY": 2.6728110599078425,
+      "US_food_home_YoY": 4.562240663900408
+    },
+    {
+      "date": "2007-08-01",
+      "FAO_food_YoY": 35.65145830886838,
+      "Canada_grocery_YoY": 2.0295202952029356,
+      "US_food_home_YoY": 4.621509824198555
+    },
+    {
+      "date": "2007-09-01",
+      "FAO_food_YoY": 43.89453279693769,
+      "Canada_grocery_YoY": 1.2987012987013102,
+      "US_food_home_YoY": 4.632012352032944
+    },
+    {
+      "date": "2007-10-01",
+      "FAO_food_YoY": 43.57287450959815,
+      "Canada_grocery_YoY": 0.6469500924214389,
+      "US_food_home_YoY": 4.764373716632431
+    },
+    {
+      "date": "2007-11-01",
+      "FAO_food_YoY": 42.62646926768241,
+      "Canada_grocery_YoY": 0.6416131989001039,
+      "US_food_home_YoY": 5.405447070914704
+    },
+    {
+      "date": "2007-12-01",
+      "FAO_food_YoY": 45.50317965806174,
+      "Canada_grocery_YoY": 1.1019283746556363,
+      "US_food_home_YoY": 5.7114197530864
+    },
+    {
+      "date": "2008-01-01",
+      "FAO_food_YoY": 53.41030062779204,
+      "Canada_grocery_YoY": 1.0889292196007316,
+      "US_food_home_YoY": 5.707489868210169
+    },
+    {
+      "date": "2008-02-01",
+      "FAO_food_YoY": 60.3932321510269,
+      "Canada_grocery_YoY": -0.622222222222224,
+      "US_food_home_YoY": 5.117455179912511
+    },
+    {
+      "date": "2008-03-01",
+      "FAO_food_YoY": 63.179298131505824,
+      "Canada_grocery_YoY": -0.2680965147453196,
+      "US_food_home_YoY": 4.666123450828907
+    },
+    {
+      "date": "2008-04-01",
+      "FAO_food_YoY": 55.79638013444041,
+      "Canada_grocery_YoY": 0.8952551477170889,
+      "US_food_home_YoY": 5.845420326223327
+    },
+    {
+      "date": "2008-05-01",
+      "FAO_food_YoY": 50.6877429893871,
+      "Canada_grocery_YoY": 1.8750000000000044,
+      "US_food_home_YoY": 5.774657031417774
+    },
+    {
+      "date": "2008-06-01",
+      "FAO_food_YoY": 45.24144150498017,
+      "Canada_grocery_YoY": 3.038427167113489,
+      "US_food_home_YoY": 6.05515259680538
+    },
+    {
+      "date": "2008-07-01",
+      "FAO_food_YoY": 36.28343284043001,
+      "Canada_grocery_YoY": 4.308797127468589,
+      "US_food_home_YoY": 7.158872199845234
+    },
+    {
+      "date": "2008-08-01",
+      "FAO_food_YoY": 22.297015205017257,
+      "Canada_grocery_YoY": 5.244122965641962,
+      "US_food_home_YoY": 7.468196779645941
+    },
+    {
+      "date": "2008-09-01",
+      "FAO_food_YoY": 7.0988526439667465,
+      "Canada_grocery_YoY": 6.684981684981683,
+      "US_food_home_YoY": 7.603049680275453
+    },
+    {
+      "date": "2008-10-01",
+      "FAO_food_YoY": -9.339665779383054,
+      "Canada_grocery_YoY": 7.2543617998163334,
+      "US_food_home_YoY": 7.571013470141774
+    },
+    {
+      "date": "2008-11-01",
+      "FAO_food_YoY": -18.988170165611486,
+      "Canada_grocery_YoY": 9.016393442622949,
+      "US_food_home_YoY": 7.090030665126101
+    },
+    {
+      "date": "2008-12-01",
+      "FAO_food_YoY": -24.731820186275076,
+      "Canada_grocery_YoY": 8.99182561307903,
+      "US_food_home_YoY": 6.647104908444179
+    },
+    {
+      "date": "2009-01-01",
+      "FAO_food_YoY": -28.016337576618277,
+      "Canada_grocery_YoY": 8.617594254937156,
+      "US_food_home_YoY": 5.723322066634484
+    },
+    {
+      "date": "2009-02-01",
+      "FAO_food_YoY": -34.19037937809119,
+      "Canada_grocery_YoY": 8.94454382826475,
+      "US_food_home_YoY": 4.84763343500727
+    },
+    {
+      "date": "2009-03-01",
+      "FAO_food_YoY": -36.34468213434258,
+      "Canada_grocery_YoY": 9.498207885304666,
+      "US_food_home_YoY": 4.2557894787427
+    },
+    {
+      "date": "2009-04-01",
+      "FAO_food_YoY": -33.1132087533431,
+      "Canada_grocery_YoY": 8.340727595385978,
+      "US_food_home_YoY": 2.3281507086397646
+    },
+    {
+      "date": "2009-05-01",
+      "FAO_food_YoY": -28.281027174211516,
+      "Canada_grocery_YoY": 7.361963190184051,
+      "US_food_home_YoY": 1.5410764872521243
+    },
+    {
+      "date": "2009-06-01",
+      "FAO_food_YoY": -29.62268460918781,
+      "Canada_grocery_YoY": 6.418039895923688,
+      "US_food_home_YoY": 0.7603208160089414
+    },
+    {
+      "date": "2009-07-01",
+      "FAO_food_YoY": -30.34805175997016,
+      "Canada_grocery_YoY": 5.59380378657488,
+      "US_food_home_YoY": -0.9170107578647224
+    },
+    {
+      "date": "2009-08-01",
+      "FAO_food_YoY": -22.87663805811533,
+      "Canada_grocery_YoY": 4.381443298969057,
+      "US_food_home_YoY": -1.6923508500843898
+    },
+    {
+      "date": "2009-09-01",
+      "FAO_food_YoY": -17.472675551681217,
+      "Canada_grocery_YoY": 2.746781115879826,
+      "US_food_home_YoY": -2.4950058740977443
+    },
+    {
+      "date": "2009-10-01",
+      "FAO_food_YoY": -3.027916837964162,
+      "Canada_grocery_YoY": 2.1404109589041154,
+      "US_food_home_YoY": -2.7604176156551197
+    },
+    {
+      "date": "2009-11-01",
+      "FAO_food_YoY": 10.189611642677288,
+      "Canada_grocery_YoY": 1.2531328320801949,
+      "US_food_home_YoY": -2.858482577778587
+    },
+    {
+      "date": "2009-12-01",
+      "FAO_food_YoY": 16.842194427631153,
+      "Canada_grocery_YoY": 1.2499999999999956,
+      "US_food_home_YoY": -2.429242162226297
+    },
+    {
+      "date": "2010-01-01",
+      "FAO_food_YoY": 17.46560920053055,
+      "Canada_grocery_YoY": 0.9090909090909038,
+      "US_food_home_YoY": -1.9250706772686366
+    },
+    {
+      "date": "2010-02-01",
+      "FAO_food_YoY": 17.484910800926023,
+      "Canada_grocery_YoY": 0.5747126436781658,
+      "US_food_home_YoY": -1.4692791263249627
+    },
+    {
+      "date": "2010-03-01",
+      "FAO_food_YoY": 14.549350786153203,
+      "Canada_grocery_YoY": 0.7364975450081745,
+      "US_food_home_YoY": -0.6448520159115789
+    },
+    {
+      "date": "2010-04-01",
+      "FAO_food_YoY": 11.063162945576854,
+      "Canada_grocery_YoY": 0.40950040950040734,
+      "US_food_home_YoY": -0.03985042190475241
+    },
+    {
+      "date": "2010-05-01",
+      "FAO_food_YoY": 3.1612491605097937,
+      "Canada_grocery_YoY": 0.2448979591836764,
+      "US_food_home_YoY": 0.3036305471859624
+    },
+    {
+      "date": "2010-06-01",
+      "FAO_food_YoY": 2.6486723599114415,
+      "Canada_grocery_YoY": 0.08149959250203231,
+      "US_food_home_YoY": 0.24330900243307862
+    },
+    {
+      "date": "2010-07-01",
+      "FAO_food_YoY": 10.299610363165934,
+      "Canada_grocery_YoY": 0.5704971475142706,
+      "US_food_home_YoY": 0.6559307068073839
+    },
+    {
+      "date": "2010-08-01",
+      "FAO_food_YoY": 15.271447255837046,
+      "Canada_grocery_YoY": 1.2345679012345734,
+      "US_food_home_YoY": 0.7447291234931042
+    },
+    {
+      "date": "2010-09-01",
+      "FAO_food_YoY": 22.60836792640688,
+      "Canada_grocery_YoY": 2.172096908939003,
+      "US_food_home_YoY": 1.3441225697260695
+    },
+    {
+      "date": "2010-10-01",
+      "FAO_food_YoY": 26.602465855844535,
+      "Canada_grocery_YoY": 2.095557418273253,
+      "US_food_home_YoY": 1.434380152900605
+    },
+    {
+      "date": "2010-11-01",
+      "FAO_food_YoY": 25.644500100496657,
+      "Canada_grocery_YoY": 0.990099009900991,
+      "US_food_home_YoY": 1.7442814094843495
+    },
+    {
+      "date": "2010-12-01",
+      "FAO_food_YoY": 28.290294759759192,
+      "Canada_grocery_YoY": 1.3991769547325061,
+      "US_food_home_YoY": 1.674156725386866
+    },
+    {
+      "date": "2011-01-01",
+      "FAO_food_YoY": 31.41357647599674,
+      "Canada_grocery_YoY": 1.8837018837018826,
+      "US_food_home_YoY": 2.1016308245396687
+    },
+    {
+      "date": "2011-02-01",
+      "FAO_food_YoY": 38.70012078783145,
+      "Canada_grocery_YoY": 1.959183673469389,
+      "US_food_home_YoY": 2.796095525502018
+    },
+    {
+      "date": "2011-03-01",
+      "FAO_food_YoY": 39.17726437410525,
+      "Canada_grocery_YoY": 3.6555645816409355,
+      "US_food_home_YoY": 3.545813036418455
+    },
+    {
+      "date": "2011-04-01",
+      "FAO_food_YoY": 40.45782878899187,
+      "Canada_grocery_YoY": 3.6704730831973897,
+      "US_food_home_YoY": 3.883256613866992
+    },
+    {
+      "date": "2011-05-01",
+      "FAO_food_YoY": 40.154397370851825,
+      "Canada_grocery_YoY": 4.234527687296419,
+      "US_food_home_YoY": 4.440076581817842
+    },
+    {
+      "date": "2011-06-01",
+      "FAO_food_YoY": 40.53591676371895,
+      "Canada_grocery_YoY": 4.80456026058631,
+      "US_food_home_YoY": 4.817705916204118
+    },
+    {
+      "date": "2011-07-01",
+      "FAO_food_YoY": 32.93334345766004,
+      "Canada_grocery_YoY": 5.105348460291714,
+      "US_food_home_YoY": 5.443000960775302
+    },
+    {
+      "date": "2011-08-01",
+      "FAO_food_YoY": 23.168618012851173,
+      "Canada_grocery_YoY": 5.040650406504055,
+      "US_food_home_YoY": 6.097204229177988
+    },
+    {
+      "date": "2011-09-01",
+      "FAO_food_YoY": 14.035146277690957,
+      "Canada_grocery_YoY": 4.824202780049047,
+      "US_food_home_YoY": 6.365940989794883
+    },
+    {
+      "date": "2011-10-01",
+      "FAO_food_YoY": 4.62774582869252,
+      "Canada_grocery_YoY": 4.92610837438423,
+      "US_food_home_YoY": 6.215190224168032
+    },
+    {
+      "date": "2011-11-01",
+      "FAO_food_YoY": 1.3802674562750639,
+      "Canada_grocery_YoY": 5.718954248366015,
+      "US_food_home_YoY": 5.915110200133578
+    },
+    {
+      "date": "2011-12-01",
+      "FAO_food_YoY": -5.743031205747718,
+      "Canada_grocery_YoY": 5.032467532467533,
+      "US_food_home_YoY": 5.981537952064908
+    },
+    {
+      "date": "2012-01-01",
+      "FAO_food_YoY": -8.635821271542877,
+      "Canada_grocery_YoY": 4.903536977491951,
+      "US_food_home_YoY": 5.334981368386016
+    },
+    {
+      "date": "2012-02-01",
+      "FAO_food_YoY": -8.959543057105579,
+      "Canada_grocery_YoY": 4.723779023218588,
+      "US_food_home_YoY": 4.476016164398455
+    },
+    {
+      "date": "2012-03-01",
+      "FAO_food_YoY": -6.453992030905498,
+      "Canada_grocery_YoY": 1.9592476489028288,
+      "US_food_home_YoY": 3.520719735833988
+    },
+    {
+      "date": "2012-04-01",
+      "FAO_food_YoY": -8.755317643246874,
+      "Canada_grocery_YoY": 2.3603461841070095,
+      "US_food_home_YoY": 3.2570571803407278
+    },
+    {
+      "date": "2012-05-01",
+      "FAO_food_YoY": -11.9208184356411,
+      "Canada_grocery_YoY": 2.499999999999991,
+      "US_food_home_YoY": 2.6742715106859993
+    },
+    {
+      "date": "2012-06-01",
+      "FAO_food_YoY": -14.074694284041566,
+      "Canada_grocery_YoY": 1.787101787101797,
+      "US_food_home_YoY": 2.5927910137830468
+    },
+    {
+      "date": "2012-07-01",
+      "FAO_food_YoY": -8.291006979087612,
+      "Canada_grocery_YoY": 1.927525057825763,
+      "US_food_home_YoY": 1.9720219387440618
+    },
+    {
+      "date": "2012-08-01",
+      "FAO_food_YoY": -7.192814959407945,
+      "Canada_grocery_YoY": 2.244582043343657,
+      "US_food_home_YoY": 1.4709486546575112
+    },
+    {
+      "date": "2012-09-01",
+      "FAO_food_YoY": -3.8527071567956095,
+      "Canada_grocery_YoY": 1.404056162246503,
+      "US_food_home_YoY": 0.8098222479308692
+    },
+    {
+      "date": "2012-10-01",
+      "FAO_food_YoY": -1.271204558340211,
+      "Canada_grocery_YoY": 1.8779342723004522,
+      "US_food_home_YoY": 1.0461233434206463
+    },
+    {
+      "date": "2012-11-01",
+      "FAO_food_YoY": -1.9161068955366178,
+      "Canada_grocery_YoY": 1.4683153013910433,
+      "US_food_home_YoY": 1.2768159619390484
+    },
+    {
+      "date": "2012-12-01",
+      "FAO_food_YoY": 0.7004660082952308,
+      "Canada_grocery_YoY": 1.2364760432766575,
+      "US_food_home_YoY": 1.2802485852168033
+    },
+    {
+      "date": "2013-01-01",
+      "FAO_food_YoY": 0.9766674208360859,
+      "Canada_grocery_YoY": 0.6130268199233901,
+      "US_food_home_YoY": 1.189878240989306
+    },
+    {
+      "date": "2013-02-01",
+      "FAO_food_YoY": -1.6055557529365716,
+      "Canada_grocery_YoY": 1.758409785932713,
+      "US_food_home_YoY": 1.2635942622239993
+    },
+    {
+      "date": "2013-03-01",
+      "FAO_food_YoY": -2.155343688083633,
+      "Canada_grocery_YoY": 1.6910069177555886,
+      "US_food_home_YoY": 1.0945635379202123
+    },
+    {
+      "date": "2013-04-01",
+      "FAO_food_YoY": -1.214237211759961,
+      "Canada_grocery_YoY": 1.6910069177555886,
+      "US_food_home_YoY": 1.0281032165499138
+    },
+    {
+      "date": "2013-05-01",
+      "FAO_food_YoY": 2.642761453616105,
+      "Canada_grocery_YoY": 1.2957317073170938,
+      "US_food_home_YoY": 0.8058101331488876
+    },
+    {
+      "date": "2013-06-01",
+      "FAO_food_YoY": 4.428393690252119,
+      "Canada_grocery_YoY": 1.2977099236641143,
+      "US_food_home_YoY": 0.9045672879812505
+    },
+    {
+      "date": "2013-07-01",
+      "FAO_food_YoY": -3.2653594678313413,
+      "Canada_grocery_YoY": 0.4538577912254427,
+      "US_food_home_YoY": 0.9647842940887053
+    },
+    {
+      "date": "2013-08-01",
+      "FAO_food_YoY": -5.682897492688954,
+      "Canada_grocery_YoY": 0.681302043906129,
+      "US_food_home_YoY": 0.9575032455909627
+    },
+    {
+      "date": "2013-09-01",
+      "FAO_food_YoY": -6.989292266973102,
+      "Canada_grocery_YoY": 1.0769230769230864,
+      "US_food_home_YoY": 0.9711418574652075
+    },
+    {
+      "date": "2013-10-01",
+      "FAO_food_YoY": -4.280618950411452,
+      "Canada_grocery_YoY": 0.691244239631339,
+      "US_food_home_YoY": 0.7835695660031394
+    },
+    {
+      "date": "2013-11-01",
+      "FAO_food_YoY": -3.9785885301772295,
+      "Canada_grocery_YoY": 1.0662604722010416,
+      "US_food_home_YoY": 0.5414736155064936
+    },
+    {
+      "date": "2013-12-01",
+      "FAO_food_YoY": -3.713944497026511,
+      "Canada_grocery_YoY": 0.7633587786259444,
+      "US_food_home_YoY": 0.4045009298379476
+    },
+    {
+      "date": "2014-01-01",
+      "FAO_food_YoY": -5.830081825182987,
+      "Canada_grocery_YoY": 0.9900990099009688,
+      "US_food_home_YoY": 0.4390319046966962
+    },
+    {
+      "date": "2014-02-01",
+      "FAO_food_YoY": -3.8191107199899377,
+      "Canada_grocery_YoY": 0.9767092411720579,
+      "US_food_home_YoY": 0.9656312359223262
+    },
+    {
+      "date": "2014-03-01",
+      "FAO_food_YoY": -0.652938046995144,
+      "Canada_grocery_YoY": 1.7384731670445852,
+      "US_food_home_YoY": 1.4877129891257779
+    },
+    {
+      "date": "2014-04-01",
+      "FAO_food_YoY": -1.1582816120801365,
+      "Canada_grocery_YoY": 1.7384731670445852,
+      "US_food_home_YoY": 1.7820477722264139
+    },
+    {
+      "date": "2014-05-01",
+      "FAO_food_YoY": -0.784454060078843,
+      "Canada_grocery_YoY": 2.483069977426622,
+      "US_food_home_YoY": 2.7561925346507365
+    },
+    {
+      "date": "2014-06-01",
+      "FAO_food_YoY": -1.3797231703086776,
+      "Canada_grocery_YoY": 3.240391861341374,
+      "US_food_home_YoY": 2.511879354515867
+    },
+    {
+      "date": "2014-07-01",
+      "FAO_food_YoY": -1.454152114928331,
+      "Canada_grocery_YoY": 3.1626506024096335,
+      "US_food_home_YoY": 2.6768650622293055
+    },
+    {
+      "date": "2014-08-01",
+      "FAO_food_YoY": -2.91785310776278,
+      "Canada_grocery_YoY": 2.2556390977443552,
+      "US_food_home_YoY": 2.8277503172087437
+    },
+    {
+      "date": "2014-09-01",
+      "FAO_food_YoY": -6.1609729175965855,
+      "Canada_grocery_YoY": 2.9680365296803624,
+      "US_food_home_YoY": 3.1139976072466213
+    },
+    {
+      "date": "2014-10-01",
+      "FAO_food_YoY": -7.89083276842365,
+      "Canada_grocery_YoY": 3.0511060259343914,
+      "US_food_home_YoY": 3.1598632049492092
+    },
+    {
+      "date": "2014-11-01",
+      "FAO_food_YoY": -8.829920466181607,
+      "Canada_grocery_YoY": 3.31574981160514,
+      "US_food_home_YoY": 3.3176165094984222
+    },
+    {
+      "date": "2014-12-01",
+      "FAO_food_YoY": -11.042031303444755,
+      "Canada_grocery_YoY": 4.2424242424242475,
+      "US_food_home_YoY": 3.659556670849007
+    },
+    {
+      "date": "2015-01-01",
+      "FAO_food_YoY": -13.13808935327263,
+      "Canada_grocery_YoY": 5.354449472096534,
+      "US_food_home_YoY": 3.336287182283715
+    },
+    {
+      "date": "2015-02-01",
+      "FAO_food_YoY": -16.782269821997687,
+      "Canada_grocery_YoY": 4.315476190476186,
+      "US_food_home_YoY": 2.8912422968771834
+    },
+    {
+      "date": "2015-03-01",
+      "FAO_food_YoY": -21.63460781217712,
+      "Canada_grocery_YoY": 4.160475482912318,
+      "US_food_home_YoY": 1.9311974014469158
+    },
+    {
+      "date": "2015-04-01",
+      "FAO_food_YoY": -22.12420308710279,
+      "Canada_grocery_YoY": 4.011887072808329,
+      "US_food_home_YoY": 1.329735817972444
+    },
+    {
+      "date": "2015-05-01",
+      "FAO_food_YoY": -21.577657985239863,
+      "Canada_grocery_YoY": 4.111600587371522,
+      "US_food_home_YoY": 0.6243452929957316
+    },
+    {
+      "date": "2015-06-01",
+      "FAO_food_YoY": -20.69028956046922,
+      "Canada_grocery_YoY": 3.5766423357664223,
+      "US_food_home_YoY": 0.9345716407573423
+    },
+    {
+      "date": "2015-07-01",
+      "FAO_food_YoY": -19.340576653825526,
+      "Canada_grocery_YoY": 3.50364963503651,
+      "US_food_home_YoY": 0.8727733037967367
+    },
+    {
+      "date": "2015-08-01",
+      "FAO_food_YoY": -20.633731342009852,
+      "Canada_grocery_YoY": 3.9705882352941257,
+      "US_food_home_YoY": 0.9023980855200842
+    },
+    {
+      "date": "2015-09-01",
+      "FAO_food_YoY": -18.609208399476007,
+      "Canada_grocery_YoY": 3.917220990391712,
+      "US_food_home_YoY": 0.7748790028508923
+    },
+    {
+      "date": "2015-10-01",
+      "FAO_food_YoY": -17.449674994468147,
+      "Canada_grocery_YoY": 4.589193190229479,
+      "US_food_home_YoY": 0.6886847115304962
+    },
+    {
+      "date": "2015-11-01",
+      "FAO_food_YoY": -18.86936805886956,
+      "Canada_grocery_YoY": 3.7199124726476906,
+      "US_food_home_YoY": 0.28688117993318496
+    },
+    {
+      "date": "2015-12-01",
+      "FAO_food_YoY": -17.27593426583921,
+      "Canada_grocery_YoY": 4.06976744186045,
+      "US_food_home_YoY": -0.41705606995673383
+    },
+    {
+      "date": "2016-01-01",
+      "FAO_food_YoY": -15.87427100585117,
+      "Canada_grocery_YoY": 4.58124552612742,
+      "US_food_home_YoY": -0.41021962210321394
+    },
+    {
+      "date": "2016-02-01",
+      "FAO_food_YoY": -12.795799247369288,
+      "Canada_grocery_YoY": 4.422253922967201,
+      "US_food_home_YoY": -0.35325930139572526
+    },
+    {
+      "date": "2016-03-01",
+      "FAO_food_YoY": -8.65309065095139,
+      "Canada_grocery_YoY": 3.9942938659058624,
+      "US_food_home_YoY": -0.504484072953626
+    },
+    {
+      "date": "2016-04-01",
+      "FAO_food_YoY": -5.802178704974192,
+      "Canada_grocery_YoY": 3.285714285714292,
+      "US_food_home_YoY": -0.31728783190795307
+    },
+    {
+      "date": "2016-05-01",
+      "FAO_food_YoY": -4.688187281353462,
+      "Canada_grocery_YoY": 1.4104372355430161,
+      "US_food_home_YoY": -0.7295516098661525
+    },
+    {
+      "date": "2016-06-01",
+      "FAO_food_YoY": -0.8541437923560546,
+      "Canada_grocery_YoY": 0.8456659619450191,
+      "US_food_home_YoY": -1.305792776184056
+    },
+    {
+      "date": "2016-07-01",
+      "FAO_food_YoY": -0.8372927623707338,
+      "Canada_grocery_YoY": 1.128349788434413,
+      "US_food_home_YoY": -1.5975232198142453
+    },
+    {
+      "date": "2016-08-01",
+      "FAO_food_YoY": 6.468492540105264,
+      "Canada_grocery_YoY": 0.4243281471004279,
+      "US_food_home_YoY": -1.948003821068578
+    },
+    {
+      "date": "2016-09-01",
+      "FAO_food_YoY": 8.122144457207181,
+      "Canada_grocery_YoY": -0.9246088193456514,
+      "US_food_home_YoY": -2.1866956142731486
+    },
+    {
+      "date": "2016-10-01",
+      "FAO_food_YoY": 6.262947115035344,
+      "Canada_grocery_YoY": -2.0523708421797626,
+      "US_food_home_YoY": -2.289505269561498
+    },
+    {
+      "date": "2016-11-01",
+      "FAO_food_YoY": 9.367022289120651,
+      "Canada_grocery_YoY": -1.9690576652601877,
+      "US_food_home_YoY": -2.1302028803904305
+    },
+    {
+      "date": "2016-12-01",
+      "FAO_food_YoY": 9.502414084881972,
+      "Canada_grocery_YoY": -2.7932960893854775,
+      "US_food_home_YoY": -1.9567554159087175
+    },
+    {
+      "date": "2017-01-01",
+      "FAO_food_YoY": 15.143111341169346,
+      "Canada_grocery_YoY": -3.9698836413415317,
+      "US_food_home_YoY": -1.857110921600602
+    },
+    {
+      "date": "2017-02-01",
+      "FAO_food_YoY": 13.991434414423898,
+      "Canada_grocery_YoY": -4.098360655737709,
+      "US_food_home_YoY": -1.6203291952957888
+    },
+    {
+      "date": "2017-03-01",
+      "FAO_food_YoY": 9.977565170943748,
+      "Canada_grocery_YoY": -3.566529492455428,
+      "US_food_home_YoY": -0.8431289359188687
+    },
+    {
+      "date": "2017-04-01",
+      "FAO_food_YoY": 6.658497578713685,
+      "Canada_grocery_YoY": -2.5587828492392717,
+      "US_food_home_YoY": -0.7377018486234177
+    },
+    {
+      "date": "2017-05-01",
+      "FAO_food_YoY": 7.452929372153894,
+      "Canada_grocery_YoY": -1.1821974965229631,
+      "US_food_home_YoY": -0.19009977104467168
+    },
+    {
+      "date": "2017-06-01",
+      "FAO_food_YoY": 4.2636245456056265,
+      "Canada_grocery_YoY": -0.34940600978337066,
+      "US_food_home_YoY": -0.11266402248254481
+    },
+    {
+      "date": "2017-07-01",
+      "FAO_food_YoY": 7.568884053850744,
+      "Canada_grocery_YoY": -0.1394700139470184,
+      "US_food_home_YoY": 0.21981709874989708
+    },
+    {
+      "date": "2017-08-01",
+      "FAO_food_YoY": 4.124926647346827,
+      "Canada_grocery_YoY": 0.28169014084507005,
+      "US_food_home_YoY": 0.2817753104357612
+    },
+    {
+      "date": "2017-09-01",
+      "FAO_food_YoY": 3.727998221681439,
+      "Canada_grocery_YoY": 0.8614501076812608,
+      "US_food_home_YoY": 0.4086093828821191
+    },
+    {
+      "date": "2017-10-01",
+      "FAO_food_YoY": 3.062885062616405,
+      "Canada_grocery_YoY": 0.5780346820809079,
+      "US_food_home_YoY": 0.5493996987977257
+    },
+    {
+      "date": "2017-11-01",
+      "FAO_food_YoY": 2.9705854699565215,
+      "Canada_grocery_YoY": 0.9325681492108995,
+      "US_food_home_YoY": 0.6325861909214137
+    },
+    {
+      "date": "2017-12-01",
+      "FAO_food_YoY": 1.1571514713254905,
+      "Canada_grocery_YoY": 1.5086206896551824,
+      "US_food_home_YoY": 0.937814941787174
+    },
+    {
+      "date": "2018-01-01",
+      "FAO_food_YoY": -1.1374547778373434,
+      "Canada_grocery_YoY": 1.6393442622950616,
+      "US_food_home_YoY": 1.1734831612337127
+    },
+    {
+      "date": "2018-02-01",
+      "FAO_food_YoY": -0.38102734282829953,
+      "Canada_grocery_YoY": 1.3532763532763559,
+      "US_food_home_YoY": 0.573112890204519
+    },
+    {
+      "date": "2018-03-01",
+      "FAO_food_YoY": 2.7959316970097126,
+      "Canada_grocery_YoY": 0.4978662873399875,
+      "US_food_home_YoY": 0.31964830296953295
+    },
+    {
+      "date": "2018-04-01",
+      "FAO_food_YoY": 3.523790745960298,
+      "Canada_grocery_YoY": 0.7097232079489091,
+      "US_food_home_YoY": 0.40785017269708845
+    },
+    {
+      "date": "2018-05-01",
+      "FAO_food_YoY": 1.2137525824337914,
+      "Canada_grocery_YoY": -0.49261083743841194,
+      "US_food_home_YoY": -0.0037673770265422846
+    },
+    {
+      "date": "2018-06-01",
+      "FAO_food_YoY": -0.9515347595082435,
+      "Canada_grocery_YoY": 0.07012622720896644,
+      "US_food_home_YoY": 0.23229095910168862
+    },
+    {
+      "date": "2018-07-01",
+      "FAO_food_YoY": -5.012713831041127,
+      "Canada_grocery_YoY": 0.0698324022346597,
+      "US_food_home_YoY": 0.27668017278907886
+    },
+    {
+      "date": "2018-08-01",
+      "FAO_food_YoY": -3.419152562135408,
+      "Canada_grocery_YoY": 0.2808988764045006,
+      "US_food_home_YoY": 0.41498467362355296
+    },
+    {
+      "date": "2018-09-01",
+      "FAO_food_YoY": -5.691103418930588,
+      "Canada_grocery_YoY": 0.6405693950177982,
+      "US_food_home_YoY": 0.46681627116373914
+    },
+    {
+      "date": "2018-10-01",
+      "FAO_food_YoY": -5.75173910011344,
+      "Canada_grocery_YoY": 1.0775862068965525,
+      "US_food_home_YoY": 0.22508576688142767
+    },
+    {
+      "date": "2018-11-01",
+      "FAO_food_YoY": -6.956859210312993,
+      "Canada_grocery_YoY": 1.4214641080312784,
+      "US_food_home_YoY": 0.5386289445048931
+    },
+    {
+      "date": "2018-12-01",
+      "FAO_food_YoY": -4.495264213451467,
+      "Canada_grocery_YoY": 2.4769992922859085,
+      "US_food_home_YoY": 0.7377668974102969
+    },
+    {
+      "date": "2019-01-01",
+      "FAO_food_YoY": -3.7240514359561105,
+      "Canada_grocery_YoY": 2.4544179523141585,
+      "US_food_home_YoY": 0.7200213463190108
+    },
+    {
+      "date": "2019-02-01",
+      "FAO_food_YoY": -4.013824151583611,
+      "Canada_grocery_YoY": 3.373155305692177,
+      "US_food_home_YoY": 1.222474465585499
+    },
+    {
+      "date": "2019-03-01",
+      "FAO_food_YoY": -5.934999888899939,
+      "Canada_grocery_YoY": 4.033970276008492,
+      "US_food_home_YoY": 1.3936917988367048
+    },
+    {
+      "date": "2019-04-01",
+      "FAO_food_YoY": -4.996263465923567,
+      "Canada_grocery_YoY": 2.9598308668076,
+      "US_food_home_YoY": 0.700506385128219
+    },
+    {
+      "date": "2019-05-01",
+      "FAO_food_YoY": -4.430029170530014,
+      "Canada_grocery_YoY": 4.0311173974540315,
+      "US_food_home_YoY": 1.1545352556052269
+    },
+    {
+      "date": "2019-06-01",
+      "FAO_food_YoY": -1.4773056757104608,
+      "Canada_grocery_YoY": 3.9243167484232844,
+      "US_food_home_YoY": 0.9060941735550943
+    },
+    {
+      "date": "2019-07-01",
+      "FAO_food_YoY": 0.08408679677409658,
+      "Canada_grocery_YoY": 4.187020237264472,
+      "US_food_home_YoY": 0.5939932794857272
+    },
+    {
+      "date": "2019-08-01",
+      "FAO_food_YoY": -2.082705777989491,
+      "Canada_grocery_YoY": 3.9215686274509665,
+      "US_food_home_YoY": 0.4787422590129209
+    },
+    {
+      "date": "2019-09-01",
+      "FAO_food_YoY": -0.8263203065265401,
+      "Canada_grocery_YoY": 4.101838755304099,
+      "US_food_home_YoY": 0.6009159592777147
+    },
+    {
+      "date": "2019-10-01",
+      "FAO_food_YoY": 2.0158649777482163,
+      "Canada_grocery_YoY": 4.12224591329069,
+      "US_food_home_YoY": 1.0189599178487052
+    },
+    {
+      "date": "2019-11-01",
+      "FAO_food_YoY": 6.876435356563415,
+      "Canada_grocery_YoY": 3.854239663629988,
+      "US_food_home_YoY": 1.0402660816644316
+    },
+    {
+      "date": "2019-12-01",
+      "FAO_food_YoY": 9.505696631095173,
+      "Canada_grocery_YoY": 3.176795580110503,
+      "US_food_home_YoY": 0.7257285277663783
+    },
+    {
+      "date": "2020-01-01",
+      "FAO_food_YoY": 10.0815586409847,
+      "Canada_grocery_YoY": 3.7645448323066377,
+      "US_food_home_YoY": 0.7989038873090104
+    },
+    {
+      "date": "2020-02-01",
+      "FAO_food_YoY": 6.138480772119537,
+      "Canada_grocery_YoY": 2.3793337865397612,
+      "US_food_home_YoY": 0.8628273808294562
+    },
+    {
+      "date": "2020-03-01",
+      "FAO_food_YoY": 2.4031098232979,
+      "Canada_grocery_YoY": 2.3809523809523725,
+      "US_food_home_YoY": 1.0454384242954085
+    },
+    {
+      "date": "2020-04-01",
+      "FAO_food_YoY": -1.1212817264673713,
+      "Canada_grocery_YoY": 3.969883641341565,
+      "US_food_home_YoY": 4.080938897848019
+    },
+    {
+      "date": "2020-05-01",
+      "FAO_food_YoY": -3.1920673469974292,
+      "Canada_grocery_YoY": 3.5350101971448167,
+      "US_food_home_YoY": 4.795523956928016
+    },
+    {
+      "date": "2020-06-01",
+      "FAO_food_YoY": -2.374690789809164,
+      "Canada_grocery_YoY": 3.0343897505057393,
+      "US_food_home_YoY": 5.5801072906216165
+    },
+    {
+      "date": "2020-07-01",
+      "FAO_food_YoY": -1.3815856465648535,
+      "Canada_grocery_YoY": 2.4112525117213623,
+      "US_food_home_YoY": 4.570767009145671
+    },
+    {
+      "date": "2020-08-01",
+      "FAO_food_YoY": 1.9407699792440614,
+      "Canada_grocery_YoY": 1.6172506738544534,
+      "US_food_home_YoY": 4.650477498827521
+    },
+    {
+      "date": "2020-09-01",
+      "FAO_food_YoY": 5.013670242959978,
+      "Canada_grocery_YoY": 1.2907608695652106,
+      "US_food_home_YoY": 4.041688586589576
+    },
+    {
+      "date": "2020-10-01",
+      "FAO_food_YoY": 6.604807747169117,
+      "Canada_grocery_YoY": 2.320819112627981,
+      "US_food_home_YoY": 3.9843139847685283
+    },
+    {
+      "date": "2020-11-01",
+      "FAO_food_YoY": 7.3918374839811785,
+      "Canada_grocery_YoY": 1.6194331983805599,
+      "US_food_home_YoY": 3.5591572390267334
+    },
+    {
+      "date": "2020-12-01",
+      "FAO_food_YoY": 7.613127658376384,
+      "Canada_grocery_YoY": 0.5354752342703994,
+      "US_food_home_YoY": 3.9726292473454716
+    },
+    {
+      "date": "2021-01-01",
+      "FAO_food_YoY": 10.760884838839523,
+      "Canada_grocery_YoY": 0.06596306068600288,
+      "US_food_home_YoY": 3.7082513726279354
+    },
+    {
+      "date": "2021-02-01",
+      "FAO_food_YoY": 16.98098736921323,
+      "Canada_grocery_YoY": 1.3280212483399723,
+      "US_food_home_YoY": 3.530712530712532
+    },
+    {
+      "date": "2021-03-01",
+      "FAO_food_YoY": 25.08834931530344,
+      "Canada_grocery_YoY": 1.3289036544850585,
+      "US_food_home_YoY": 3.230796230465649
+    },
+    {
+      "date": "2021-04-01",
+      "FAO_food_YoY": 32.071069652417414,
+      "Canada_grocery_YoY": 0.06583278472678256,
+      "US_food_home_YoY": 1.2196142004198274
+    },
+    {
+      "date": "2021-05-01",
+      "FAO_food_YoY": 40.81007388790494,
+      "Canada_grocery_YoY": 0.8535784635587573,
+      "US_food_home_YoY": 0.7159499269438818
+    },
+    {
+      "date": "2021-06-01",
+      "FAO_food_YoY": 34.601046487678964,
+      "Canada_grocery_YoY": 0.654450261780104,
+      "US_food_home_YoY": 0.9360986987285713
+    },
+    {
+      "date": "2021-07-01",
+      "FAO_food_YoY": 32.62879018678664,
+      "Canada_grocery_YoY": 0.9810333551340644,
+      "US_food_home_YoY": 2.574572524930252
+    },
+    {
+      "date": "2021-08-01",
+      "FAO_food_YoY": 33.781855064878144,
+      "Canada_grocery_YoY": 2.5862068965517127,
+      "US_food_home_YoY": 2.960562844043979
+    },
+    {
+      "date": "2021-09-01",
+      "FAO_food_YoY": 31.895404970713926,
+      "Canada_grocery_YoY": 4.225352112676073,
+      "US_food_home_YoY": 4.496229585214562
+    },
+    {
+      "date": "2021-10-01",
+      "FAO_food_YoY": 31.53990680866301,
+      "Canada_grocery_YoY": 3.935957304869908,
+      "US_food_home_YoY": 5.342134230908324
+    },
+    {
+      "date": "2021-11-01",
+      "FAO_food_YoY": 28.364847237927382,
+      "Canada_grocery_YoY": 4.7144754316069015,
+      "US_food_home_YoY": 6.408211167028033
+    },
+    {
+      "date": "2021-12-01",
+      "FAO_food_YoY": 23.286694095423364,
+      "Canada_grocery_YoY": 5.725699067909473,
+      "US_food_home_YoY": 6.513526784300061
+    },
+    {
+      "date": "2022-01-01",
+      "FAO_food_YoY": 19.56423533560063,
+      "Canada_grocery_YoY": 6.46011865524061,
+      "US_food_home_YoY": 7.378999845569623
+    },
+    {
+      "date": "2022-02-01",
+      "FAO_food_YoY": 21.607543176488186,
+      "Canada_grocery_YoY": 7.404980340760159,
+      "US_food_home_YoY": 8.664594062225595
+    },
+    {
+      "date": "2022-03-01",
+      "FAO_food_YoY": 34.52626840520092,
+      "Canada_grocery_YoY": 8.655737704918032,
+      "US_food_home_YoY": 10.04218508458763
+    },
+    {
+      "date": "2022-04-01",
+      "FAO_food_YoY": 30.097991031623472,
+      "Canada_grocery_YoY": 9.736842105263154,
+      "US_food_home_YoY": 10.808853910477145
+    },
+    {
+      "date": "2022-05-01",
+      "FAO_food_YoY": 23.638749180699282,
+      "Canada_grocery_YoY": 9.700520833333348,
+      "US_food_home_YoY": 11.950533831549958
+    },
+    {
+      "date": "2022-06-01",
+      "FAO_food_YoY": 24.171411549403764,
+      "Canada_grocery_YoY": 9.427828348504551,
+      "US_food_home_YoY": 12.257934007111238
+    },
+    {
+      "date": "2022-07-01",
+      "FAO_food_YoY": 13.855352759172778,
+      "Canada_grocery_YoY": 9.909326424870457,
+      "US_food_home_YoY": 13.139335605494962
+    },
+    {
+      "date": "2022-08-01",
+      "FAO_food_YoY": 8.364565879221676,
+      "Canada_grocery_YoY": 10.795087265675507,
+      "US_food_home_YoY": 13.585991456514135
+    },
+    {
+      "date": "2022-09-01",
+      "FAO_food_YoY": 6.339188953217989,
+      "Canada_grocery_YoY": 11.389961389961378,
+      "US_food_home_YoY": 12.933067641041074
+    },
+    {
+      "date": "2022-10-01",
+      "FAO_food_YoY": 2.5446940656278727,
+      "Canada_grocery_YoY": 11.039794608472398,
+      "US_food_home_YoY": 12.404369935567594
+    },
+    {
+      "date": "2022-11-01",
+      "FAO_food_YoY": 0.39724429661067706,
+      "Canada_grocery_YoY": 11.414077362079889,
+      "US_food_home_YoY": 11.954851517723286
+    },
+    {
+      "date": "2022-12-01",
+      "FAO_food_YoY": -0.46583181851690414,
+      "Canada_grocery_YoY": 11.020151133501255,
+      "US_food_home_YoY": 11.744521069948144
+    },
+    {
+      "date": "2023-01-01",
+      "FAO_food_YoY": -3.145171974174521,
+      "Canada_grocery_YoY": 11.393188854489168,
+      "US_food_home_YoY": 11.247308021358826
+    },
+    {
+      "date": "2023-02-01",
+      "FAO_food_YoY": -7.719789256207266,
+      "Canada_grocery_YoY": 10.555216595485039,
+      "US_food_home_YoY": 10.088523921842697
+    },
+    {
+      "date": "2023-03-01",
+      "FAO_food_YoY": -20.12077781973026,
+      "Canada_grocery_YoY": 9.656004828002418,
+      "US_food_home_YoY": 8.311626720511022
+    },
+    {
+      "date": "2023-04-01",
+      "FAO_food_YoY": -19.15053912707566,
+      "Canada_grocery_YoY": 9.11270983213428,
+      "US_food_home_YoY": 7.179865976782085
+    },
+    {
+      "date": "2023-05-01",
+      "FAO_food_YoY": -21.5698136135113,
+      "Canada_grocery_YoY": 9.020771513353099,
+      "US_food_home_YoY": 5.8356273772248946
+    },
+    {
+      "date": "2023-06-01",
+      "FAO_food_YoY": -20.978433879902713,
+      "Canada_grocery_YoY": 9.090909090909083,
+      "US_food_home_YoY": 4.674461478750258
+    },
+    {
+      "date": "2023-07-01",
+      "FAO_food_YoY": -12.178351689563115,
+      "Canada_grocery_YoY": 8.485562757807896,
+      "US_food_home_YoY": 3.6002119984271053
+    },
+    {
+      "date": "2023-08-01",
+      "FAO_food_YoY": -12.180233132139984,
+      "Canada_grocery_YoY": 6.942823803967335,
+      "US_food_home_YoY": 2.9662511360399213
+    },
+    {
+      "date": "2023-09-01",
+      "FAO_food_YoY": -11.404481347734773,
+      "Canada_grocery_YoY": 5.777007510109766,
+      "US_food_home_YoY": 2.377168922041939
+    },
+    {
+      "date": "2023-10-01",
+      "FAO_food_YoY": -11.664401451716111,
+      "Canada_grocery_YoY": 5.433526011560708,
+      "US_food_home_YoY": 2.1478960686789783
+    },
+    {
+      "date": "2023-11-01",
+      "FAO_food_YoY": -11.304992019914762,
+      "Canada_grocery_YoY": 4.667046101309058,
+      "US_food_home_YoY": 1.6306616485611825
+    },
+    {
+      "date": "2023-12-01",
+      "FAO_food_YoY": -10.540658075248288,
+      "Canada_grocery_YoY": 4.6511627906976605,
+      "US_food_home_YoY": 1.3071569253699566
+    },
+    {
+      "date": "2024-01-01",
+      "FAO_food_YoY": -10.485925828402076,
+      "Canada_grocery_YoY": 3.3907726514730285,
+      "US_food_home_YoY": 1.1638313952717638
+    },
+    {
+      "date": "2024-02-01",
+      "FAO_food_YoY": -10.16150245113867,
+      "Canada_grocery_YoY": 2.428256070640189,
+      "US_food_home_YoY": 0.9879514885400287
+    },
+    {
+      "date": "2024-03-01",
+      "FAO_food_YoY": -7.062725889762134,
+      "Canada_grocery_YoY": 1.871216290588884,
+      "US_food_home_YoY": 1.1752530127675742
+    },
+    {
+      "date": "2024-04-01",
+      "FAO_food_YoY": -7.117974355250533,
+      "Canada_grocery_YoY": 1.3736263736263687,
+      "US_food_home_YoY": 1.1739134756519887
+    },
+    {
+      "date": "2024-05-01",
+      "FAO_food_YoY": -3.192527424248026,
+      "Canada_grocery_YoY": 1.5242242787153026,
+      "US_food_home_YoY": 1.068885182537782
+    },
+    {
+      "date": "2024-06-01",
+      "FAO_food_YoY": -1.6395529124448194,
+      "Canada_grocery_YoY": 2.12418300653594,
+      "US_food_home_YoY": 1.1669982817812397
+    },
+    {
+      "date": "2024-07-01",
+      "FAO_food_YoY": -2.8017658013582025,
+      "Canada_grocery_YoY": 2.1184139054861495,
+      "US_food_home_YoY": 1.0894964750614022
+    },
+    {
+      "date": "2024-08-01",
+      "FAO_food_YoY": -0.10191032915773945,
+      "Canada_grocery_YoY": 2.4004364429896174,
+      "US_food_home_YoY": 0.911632870161494
+    },
+    {
+      "date": "2024-09-01",
+      "FAO_food_YoY": 2.3999624846299694,
+      "Canada_grocery_YoY": 2.403058438012029,
+      "US_food_home_YoY": 1.2552356409149423
+    },
+    {
+      "date": "2024-10-01",
+      "FAO_food_YoY": 5.097864342351555,
+      "Canada_grocery_YoY": 2.7412280701754277,
+      "US_food_home_YoY": 1.1502598844811862
+    },
+    {
+      "date": "2024-11-01",
+      "FAO_food_YoY": 5.872258108244055,
+      "Canada_grocery_YoY": 2.5557368134855762,
+      "US_food_home_YoY": 1.5644099207444473
+    },
+    {
+      "date": "2024-12-01",
+      "FAO_food_YoY": 6.915276350054245,
+      "Canada_grocery_YoY": 1.8970189701897011,
+      "US_food_home_YoY": 1.7280504425214671
+    },
+    {
+      "date": "2025-01-01",
+      "FAO_food_YoY": 5.925870180815207,
+      "Canada_grocery_YoY": 1.8817204301075252,
+      "US_food_home_YoY": 1.8447705832817185
+    },
+    {
+      "date": "2025-02-01",
+      "FAO_food_YoY": 7.792874117097681,
+      "Canada_grocery_YoY": 2.80172413793105,
+      "US_food_home_YoY": 1.8082584666963442
+    },
+    {
+      "date": "2025-03-01",
+      "FAO_food_YoY": 6.968016209653838,
+      "Canada_grocery_YoY": 3.1874662344678617,
+      "US_food_home_YoY": 2.3422182879249798
+    },
+    {
+      "date": "2025-04-01",
+      "FAO_food_YoY": 7.47591018876983,
+      "Canada_grocery_YoY": 3.848238482384825,
+      "US_food_home_YoY": 1.9930965371339537
+    },
+    {
+      "date": "2025-05-01",
+      "FAO_food_YoY": 5.471052010249466,
+      "Canada_grocery_YoY": 3.324396782841821,
+      "US_food_home_YoY": 2.2533348176573487
+    },
+    {
+      "date": "2025-06-01",
+      "FAO_food_YoY": 5.865055988608403,
+      "Canada_grocery_YoY": 2.826666666666666,
+      "US_food_home_YoY": 2.4216086026009442
+    },
+    {
+      "date": "2025-07-01",
+      "FAO_food_YoY": 7.360655320431242,
+      "Canada_grocery_YoY": 3.404255319148941,
+      "US_food_home_YoY": 2.2038297663940387
+    },
+    {
+      "date": "2025-08-01",
+      "FAO_food_YoY": 6.857778643107171,
+      "Canada_grocery_YoY": 3.4629728289824246,
+      "US_food_home_YoY": 2.6919147908446073
+    },
+    {
+      "date": "2025-09-01",
+      "FAO_food_YoY": 3.1938249430581322,
+      "Canada_grocery_YoY": 4.0000000000000036,
+      "US_food_home_YoY": 2.69545463421621
+    },
+    {
+      "date": "2025-10-01",
+      "FAO_food_YoY": -0.3594374286054247,
+      "Canada_grocery_YoY": 3.415154749199578,
+      "US_food_home_YoY": null
+    },
+    {
+      "date": "2025-11-01",
+      "FAO_food_YoY": -1.9319112548289774,
+      "Canada_grocery_YoY": 4.665959703075306,
+      "US_food_home_YoY": 1.911075307431731
+    },
+    {
+      "date": "2025-12-01",
+      "FAO_food_YoY": -2.1978986918333443,
+      "Canada_grocery_YoY": 5.000000000000004,
+      "US_food_home_YoY": 2.329169989056301
+    },
+    {
+      "date": "2026-01-01",
+      "FAO_food_YoY": -0.41908455075394535,
+      "Canada_grocery_YoY": 4.802110817941951,
+      "US_food_home_YoY": 2.1787740052828575
+    },
+    {
+      "date": "2026-02-01",
+      "FAO_food_YoY": -0.8902369848674541,
+      "Canada_grocery_YoY": 4.088050314465397,
+      "US_food_home_YoY": 2.58236722355325
+    },
+    {
+      "date": "2026-03-01",
+      "FAO_food_YoY": 1.127207544823139,
+      "Canada_grocery_YoY": 4.397905759162302,
+      "US_food_home_YoY": 2.0207974269110807
+    },
+    {
+      "date": "2026-04-01",
+      "FAO_food_YoY": 2.2165350561338615,
+      "Canada_grocery_YoY": 3.8100208768267363,
+      "US_food_home_YoY": 2.9517724120215805
+    },
+    {
+      "date": "2026-05-01",
+      "FAO_food_YoY": 2.898194764820272,
+      "Canada_grocery_YoY": 4.255319148936176,
+      "US_food_home_YoY": 2.7345851371775476
+    },
+    {
+      "date": "2026-06-01",
+      "FAO_food_YoY": 1.7443940935433666,
+      "Canada_grocery_YoY": null,
+      "US_food_home_YoY": 2.7043088739927557
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "notes": "Compare timing and persistence; exchange rates, processing, transport, labour, margins, taxes, and domestic supply separate commodity and retail prices."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T14:12:52+00:00"
+}

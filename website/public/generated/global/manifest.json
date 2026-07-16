@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-16T14:12:52+00:00",
+  "geography": "Global",
+  "indicators": [
+    {
+      "id": "fao-food-price-index",
+      "file": "indicators/fao-food-price-index.json",
+      "label": "FAO Food Price Index (nominal)",
+      "layer": "International food commodity prices",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "fao-food-price-index-real",
+      "file": "indicators/fao-food-price-index-real.json",
+      "label": "FAO Food Price Index (real)",
+      "layer": "International food commodity prices",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "fao-cereals-price-index",
+      "file": "indicators/fao-cereals-price-index.json",
+      "label": "FAO Cereal Price Index (nominal)",
+      "layer": "International food commodity prices",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "fao-cereals-price-index-real",
+      "file": "indicators/fao-cereals-price-index-real.json",
+      "label": "FAO Cereal Price Index (real)",
+      "layer": "International food commodity prices",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "fao-vegetable-oils-price-index",
+      "file": "indicators/fao-vegetable-oils-price-index.json",
+      "label": "FAO Vegetable Oil Price Index (nominal)",
+      "layer": "International food commodity prices",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "fao-vegetable-oils-price-index-real",
+      "file": "indicators/fao-vegetable-oils-price-index-real.json",
+      "label": "FAO Vegetable Oil Price Index (real)",
+      "layer": "International food commodity prices",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "fao-dairy-price-index",
+      "file": "indicators/fao-dairy-price-index.json",
+      "label": "FAO Dairy Price Index (nominal)",
+      "layer": "International food commodity prices",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "fao-dairy-price-index-real",
+      "file": "indicators/fao-dairy-price-index-real.json",
+      "label": "FAO Dairy Price Index (real)",
+      "layer": "International food commodity prices",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "fao-meat-price-index",
+      "file": "indicators/fao-meat-price-index.json",
+      "label": "FAO Meat Price Index (nominal)",
+      "layer": "International food commodity prices",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "fao-meat-price-index-real",
+      "file": "indicators/fao-meat-price-index-real.json",
+      "label": "FAO Meat Price Index (real)",
+      "layer": "International food commodity prices",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "fao-sugar-price-index",
+      "file": "indicators/fao-sugar-price-index.json",
+      "label": "FAO Sugar Price Index (nominal)",
+      "layer": "International food commodity prices",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "fao-sugar-price-index-real",
+      "file": "indicators/fao-sugar-price-index-real.json",
+      "label": "FAO Sugar Price Index (real)",
+      "layer": "International food commodity prices",
+      "latestDate": "2026-06-01"
+    },
+    {
+      "id": "bis-real-house-prices",
+      "file": "indicators/bis-real-house-prices.json",
+      "label": "BIS World residential property prices (real)",
+      "layer": "International residential property prices",
+      "latestDate": "2025-12-01"
+    },
+    {
+      "id": "bis-nominal-house-prices",
+      "file": "indicators/bis-nominal-house-prices.json",
+      "label": "BIS World residential property prices (nominal)",
+      "layer": "International residential property prices",
+      "latestDate": "2025-12-01"
+    },
+    {
+      "id": "bis-advanced-real-house-prices",
+      "file": "indicators/bis-advanced-real-house-prices.json",
+      "label": "BIS Advanced economies residential property prices (real)",
+      "layer": "International residential property prices",
+      "latestDate": "2025-12-01"
+    },
+    {
+      "id": "bis-emerging-real-house-prices",
+      "file": "indicators/bis-emerging-real-house-prices.json",
+      "label": "BIS Emerging market economies residential property prices (real)",
+      "layer": "International residential property prices",
+      "latestDate": "2025-12-01"
+    },
+    {
+      "id": "bis-canada-real-house-prices",
+      "file": "indicators/bis-canada-real-house-prices.json",
+      "label": "BIS Canada residential property prices (real)",
+      "layer": "International residential property prices",
+      "latestDate": "2026-03-01"
+    },
+    {
+      "id": "bis-us-real-house-prices",
+      "file": "indicators/bis-us-real-house-prices.json",
+      "label": "BIS United States residential property prices (real)",
+      "layer": "International residential property prices",
+      "latestDate": "2026-03-01"
+    },
+    {
+      "id": "bis-united-kingdom-real-house-prices",
+      "file": "indicators/bis-united-kingdom-real-house-prices.json",
+      "label": "BIS United Kingdom residential property prices (real)",
+      "layer": "International residential property prices",
+      "latestDate": "2026-03-01"
+    },
+    {
+      "id": "bis-germany-real-house-prices",
+      "file": "indicators/bis-germany-real-house-prices.json",
+      "label": "BIS Germany residential property prices (real)",
+      "layer": "International residential property prices",
+      "latestDate": "2025-12-01"
+    },
+    {
+      "id": "bis-china-real-house-prices",
+      "file": "indicators/bis-china-real-house-prices.json",
+      "label": "BIS China residential property prices (real)",
+      "layer": "International residential property prices",
+      "latestDate": "2026-03-01"
+    },
+    {
+      "id": "bis-india-real-house-prices",
+      "file": "indicators/bis-india-real-house-prices.json",
+      "label": "BIS India residential property prices (real)",
+      "layer": "International residential property prices",
+      "latestDate": "2025-12-01"
+    },
+    {
+      "id": "bis-brazil-real-house-prices",
+      "file": "indicators/bis-brazil-real-house-prices.json",
+      "label": "BIS Brazil residential property prices (real)",
+      "layer": "International residential property prices",
+      "latestDate": "2026-03-01"
+    }
+  ],
+  "currentState": {
+    "asOf": "2026-07-16T14:12:52+00:00",
+    "indicators": [
+      {
+        "id": "fao-food-price-index",
+        "label": "FAO Food Price Index (nominal)",
+        "latestDate": "2026-06-01",
+        "value": 130.32118009277124,
+        "unit": "index, 2014-2016=100",
+        "historicalPercentile": 93.03652968036529,
+        "interpretationLabel": "Elevated"
+      },
+      {
+        "id": "fao-food-price-index-real",
+        "label": "FAO Food Price Index (real)",
+        "latestDate": "2026-06-01",
+        "value": 112.30421898697993,
+        "unit": "index, 2014-2016=100",
+        "historicalPercentile": 86.41552511415524,
+        "interpretationLabel": "Elevated"
+      },
+      {
+        "id": "bis-real-house-prices",
+        "label": "BIS World residential property prices (real)",
+        "latestDate": "2025-12-01",
+        "value": 119.7309,
+        "unit": "index, 2010=100",
+        "historicalPercentile": 71.91780821917808,
+        "interpretationLabel": "Declining"
+      },
+      {
+        "id": "bis-advanced-real-house-prices",
+        "label": "BIS Advanced economies residential property prices (real)",
+        "latestDate": "2025-12-01",
+        "value": 132.3277,
+        "unit": "index, 2010=100",
+        "historicalPercentile": 91.0958904109589,
+        "interpretationLabel": "Elevated"
+      },
+      {
+        "id": "bis-emerging-real-house-prices",
+        "label": "BIS Emerging market economies residential property prices (real)",
+        "latestDate": "2025-12-01",
+        "value": 109.2961,
+        "unit": "index, 2010=100",
+        "historicalPercentile": 52.73972602739726,
+        "interpretationLabel": "Declining"
+      }
+    ]
+  }
+}

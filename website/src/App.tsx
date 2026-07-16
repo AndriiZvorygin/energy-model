@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
-import { Activity, AlertTriangle, BarChart3, BookOpen, BriefcaseBusiness, CircleHelp, Clock3, Droplets, Factory, Fuel, History, Home as HomeIcon, Landmark, ListFilter, Map, Menu, Moon, Network, Route as RouteIcon, Scale, Sun, TrendingUp, X } from 'lucide-react'
+import { Activity, AlertTriangle, BarChart3, BookOpen, BriefcaseBusiness, CircleHelp, Clock3, Droplets, Factory, Fuel, History, Home as HomeIcon, House, Landmark, ListFilter, Map, Menu, Moon, Network, Route as RouteIcon, Scale, Sun, TrendingUp, X } from 'lucide-react'
 import { NavLink, Route, Routes, useLocation } from 'react-router-dom'
 import { readThemePreference, resolveTheme, type ThemePreference } from './lib/theme'
 const Home = lazy(() => import('./pages/Home').then((module) => ({ default: module.Home })))
@@ -30,6 +30,9 @@ const CanadaOntario = lazy(() => import('./pages/CanadaCurrentState').then((modu
 const CanadaUsComparison = lazy(() => import('./pages/CanadaUsComparison').then((module) => ({ default: module.CanadaUsComparison })))
 const CanadaSymptoms = lazy(() => import('./pages/CanadaSymptoms').then((module) => ({ default: module.CanadaSymptoms })))
 const CanadaRegimes = lazy(() => import('./pages/CanadaRegimes').then((module) => ({ default: module.CanadaRegimes })))
+const Affordability = lazy(() => import('./pages/Affordability').then((module) => ({ default: module.Affordability })))
+const FoodAffordability = lazy(() => import('./pages/FoodAffordability').then((module) => ({ default: module.FoodAffordability })))
+const HousingAffordability = lazy(() => import('./pages/HousingAffordability').then((module) => ({ default: module.HousingAffordability })))
 
 const navItems = [
   { to: '/', label: 'Home', icon: HomeIcon },
@@ -37,6 +40,7 @@ const navItems = [
   { to: '/canada/current-state', label: 'Canada current state', icon: Activity },
   { to: '/canada/regimes', label: 'Canada regimes', icon: BarChart3 },
   { to: '/canada/symptoms', label: 'Canada symptoms', icon: AlertTriangle },
+  { to: '/affordability', label: 'Food and housing', icon: House },
   { to: '/canada/ontario', label: 'Ontario context', icon: Map },
   { to: '/compare/canada-us', label: 'Canada–U.S. comparison', icon: Scale },
   { to: '/overview', label: 'System overview', icon: Network },
@@ -138,6 +142,13 @@ export default function App() {
             <Route path="/canada/ontario" element={<CanadaOntario />} />
             <Route path="/canada/regimes" element={<CanadaRegimes />} />
             <Route path="/canada/symptoms" element={<CanadaSymptoms />} />
+            <Route path="/affordability" element={<Affordability />} />
+            <Route path="/affordability/food" element={<FoodAffordability />} />
+            <Route path="/affordability/housing" element={<HousingAffordability />} />
+            <Route path="/canada/food" element={<FoodAffordability />} />
+            <Route path="/canada/housing" element={<HousingAffordability />} />
+            <Route path="/compare/food" element={<FoodAffordability />} />
+            <Route path="/compare/housing" element={<HousingAffordability />} />
             <Route path="/compare/canada-us" element={<CanadaUsComparison />} />
             <Route path="/regimes" element={<Regimes />} />
             <Route path="/symptoms" element={<Symptoms />} />

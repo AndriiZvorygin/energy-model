@@ -32,7 +32,9 @@ The live diagnostic contract consists of `current-classification.json`, `symptom
 
 ## Canadian Namespace
 
-`website/public/generated/canada/` contains `manifest.json`, `current-state.json`, `canada-us-comparison.json`, and `indicators/`. Canada is the domestic website default, but this namespace deliberately contains no classifier output. Each Canadian or provincial indicator adds geography, national/provincial level, domestic/external input status, cross-country comparability, seasonal adjustment, nominal/real status, source identifier, per-observation source date and revision limitations.
+`website/public/generated/canada/` contains `manifest.json`, `current-state.json`, `canada-us-comparison.json`, classifier outputs, and `indicators/`. Canada is the domestic website default. Each Canadian or provincial indicator adds geography, national/provincial level, domestic/external input status, cross-country comparability, seasonal adjustment, nominal/real status, source identifier, per-observation source date and revision limitations.
+
+Food and housing data use three namespaces: `global/` for FAO and BIS evidence, `canada/` for Statistics Canada and Canadian BIS histories, and `us/` for BLS, FHFA, and U.S. BIS histories. Their manifests preserve native geography and frequency. International food commodities are not relabelled as retail groceries; property purchase prices are not combined with shelter-service costs. `futureClassifierMetadata.status` is `metadata_only_not_scored`, so these fields can support later rule design without changing current symptom or regime scores.
 
 Statistics Canada WDS release timestamps are preserved. Bank of Canada Valet observations retain their native observation dates and the pipeline retrieval timestamp. These are latest-vintage histories; they do not yet constitute a complete real-time vintage archive.
 

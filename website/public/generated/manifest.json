@@ -5,7 +5,7 @@
   "currentState": {
     "asOf": "2026-07-16T02:21:32+00:00",
     "latestObservationDate": "2026-07-01",
-    "oldestLatestObservationDate": "2026-03-01",
+    "oldestLatestObservationDate": "2026-01-01",
     "classificationMethod": "Interpretation labels are generated from each indicator's documented direction, full-history percentile, and recent change.",
     "anomalyMethod": "anomalyScore = abs(historicalPercentile - 50); larger values are farther from the indicator's historical midpoint.",
     "groups": {
@@ -81,6 +81,26 @@
           "latestDate": "2026-05-01",
           "historicalPercentile": 19.782608695652176,
           "anomalyScore": 30.217391304347824
+        },
+        {
+          "id": "us-food-cpi-yoy",
+          "field": "us_food_cpi_yoy",
+          "label": "U.S. food CPI growth",
+          "layer": "Food affordability",
+          "interpretationLabel": "Stressful",
+          "latestDate": "2026-06-01",
+          "historicalPercentile": 54.07709414381023,
+          "anomalyScore": 4.077094143810228
+        },
+        {
+          "id": "us-shelter-cpi-yoy",
+          "field": "us_shelter_cpi_yoy",
+          "label": "U.S. shelter CPI growth",
+          "layer": "Housing purchase prices and shelter costs",
+          "interpretationLabel": "Stressful",
+          "latestDate": "2026-06-01",
+          "historicalPercentile": 47.12313003452244,
+          "anomalyScore": 2.8768699654775602
         }
       ],
       "other": [
@@ -123,6 +143,16 @@
           "latestDate": "2026-06-01",
           "historicalPercentile": 14.23982869379015,
           "anomalyScore": 35.76017130620985
+        },
+        {
+          "id": "us-fhfa-house-price-yoy",
+          "field": "us_fhfa_house_price_yoy",
+          "label": "FHFA U.S. house price growth",
+          "layer": "Housing purchase prices and shelter costs",
+          "interpretationLabel": "Recovering",
+          "latestDate": "2026-04-01",
+          "historicalPercentile": 17.597087378640776,
+          "anomalyScore": 32.40291262135922
         },
         {
           "id": "involuntary-part-time-share",
@@ -235,6 +265,16 @@
           "anomalyScore": 14.01273885350318
         },
         {
+          "id": "us-rent-cpi-yoy",
+          "field": "us_rent_cpi_yoy",
+          "label": "U.S. rent CPI growth",
+          "layer": "Housing purchase prices and shelter costs",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-06-01",
+          "historicalPercentile": 38.17049808429119,
+          "anomalyScore": 11.82950191570881
+        },
+        {
           "id": "industrial-production-yoy",
           "field": "Industrial_production_YoY",
           "label": "Industrial production growth",
@@ -275,6 +315,16 @@
           "anomalyScore": 7.399577167019025
         },
         {
+          "id": "us-food-at-home-cpi-yoy",
+          "field": "us_food_at_home_cpi_yoy",
+          "label": "U.S. food-at-home CPI growth",
+          "layer": "Food affordability",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-06-01",
+          "historicalPercentile": 52.04313280363223,
+          "anomalyScore": 2.0431328036322327
+        },
+        {
           "id": "fed-funds-rate",
           "field": "fed_funds_rate",
           "label": "Federal funds rate",
@@ -313,7 +363,12 @@
       "real_consumer_spending_YoY",
       "full_time_employment_share",
       "manufacturing_output_YoY",
-      "fed_funds_rate"
+      "fed_funds_rate",
+      "us_food_cpi_yoy",
+      "us_food_at_home_cpi_yoy",
+      "us_fhfa_house_price_yoy",
+      "us_rent_cpi_yoy",
+      "us_shelter_cpi_yoy"
     ]
   },
   "datasets": [
@@ -738,6 +793,190 @@
       "layer": "Labour and household consequences",
       "latestDate": "2026-06-01",
       "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-food-cpi",
+      "file": "us/indicators/us-food-cpi.json",
+      "label": "U.S. food CPI",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-food-at-home-cpi",
+      "file": "us/indicators/us-food-at-home-cpi.json",
+      "label": "U.S. food at home CPI",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-food-away-from-home-cpi",
+      "file": "us/indicators/us-food-away-from-home-cpi.json",
+      "label": "U.S. food away from home CPI",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-cereals-bakery-cpi",
+      "file": "us/indicators/us-cereals-bakery-cpi.json",
+      "label": "U.S. cereals and bakery products CPI",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-meat-poultry-fish-eggs-cpi",
+      "file": "us/indicators/us-meat-poultry-fish-eggs-cpi.json",
+      "label": "U.S. meats, poultry, fish and eggs CPI",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-dairy-cpi",
+      "file": "us/indicators/us-dairy-cpi.json",
+      "label": "U.S. dairy and related products CPI",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-fruit-vegetables-cpi",
+      "file": "us/indicators/us-fruit-vegetables-cpi.json",
+      "label": "U.S. fruits and vegetables CPI",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-shelter-cpi",
+      "file": "us/indicators/us-shelter-cpi.json",
+      "label": "U.S. shelter CPI",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-rent-cpi",
+      "file": "us/indicators/us-rent-cpi.json",
+      "label": "U.S. rent of primary residence CPI",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-owners-equivalent-rent-cpi",
+      "file": "us/indicators/us-owners-equivalent-rent-cpi.json",
+      "label": "U.S. owners' equivalent rent CPI",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-fhfa-house-price-index",
+      "file": "us/indicators/us-fhfa-house-price-index.json",
+      "label": "FHFA U.S. purchase-only house price index",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-04-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-food-cpi-yoy",
+      "file": "us/indicators/us-food-cpi-yoy.json",
+      "label": "U.S. food CPI growth",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-food-at-home-cpi-yoy",
+      "file": "us/indicators/us-food-at-home-cpi-yoy.json",
+      "label": "U.S. food-at-home CPI growth",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-food-inflation-gap",
+      "file": "us/indicators/us-food-inflation-gap.json",
+      "label": "U.S. food inflation gap",
+      "layer": "Food affordability",
+      "latestDate": "2026-05-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-grocery-inflation-gap",
+      "file": "us/indicators/us-grocery-inflation-gap.json",
+      "label": "U.S. grocery inflation gap",
+      "layer": "Food affordability",
+      "latestDate": "2026-05-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-real-food-price-index",
+      "file": "us/indicators/us-real-food-price-index.json",
+      "label": "U.S. real food-price index",
+      "layer": "Food affordability",
+      "latestDate": "2026-05-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-food-affordability-pressure",
+      "file": "us/indicators/us-food-affordability-pressure.json",
+      "label": "U.S. food affordability pressure",
+      "layer": "Food affordability",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-real-fhfa-house-price-index",
+      "file": "us/indicators/us-real-fhfa-house-price-index.json",
+      "label": "Real FHFA house price index",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-04-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-fhfa-house-price-yoy",
+      "file": "us/indicators/us-fhfa-house-price-yoy.json",
+      "label": "FHFA U.S. house price growth",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-04-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-rent-cpi-yoy",
+      "file": "us/indicators/us-rent-cpi-yoy.json",
+      "label": "U.S. rent CPI growth",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-shelter-cpi-yoy",
+      "file": "us/indicators/us-shelter-cpi-yoy.json",
+      "label": "U.S. shelter CPI growth",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-rent-pressure",
+      "file": "us/indicators/us-rent-pressure.json",
+      "label": "U.S. rent pressure",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-06-01",
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "us-house-price-to-income-index",
+      "file": "us/indicators/us-house-price-to-income-index.json",
+      "label": "U.S. house-price-to-income index",
+      "layer": "Housing purchase prices and shelter costs",
+      "latestDate": "2026-01-01",
+      "evidenceLabel": "Contextual indicator"
     }
   ],
   "layers": [
@@ -806,6 +1045,28 @@
         "full_time_employment_share"
       ],
       "interpretation": "Hours, job composition, wages, sentiment, and unemployment often move at different stages of household stress.",
+      "confidence": "Moderate"
+    },
+    {
+      "id": "food-affordability",
+      "label": "Food affordability",
+      "indicatorFields": [
+        "us_food_cpi_yoy",
+        "us_food_at_home_cpi_yoy",
+        "us_food_inflation_gap"
+      ],
+      "interpretation": "Food and grocery prices are consumer prices; compare them with income and international commodity pressure.",
+      "confidence": "Moderate"
+    },
+    {
+      "id": "housing-purchase-prices-and-shelter-costs",
+      "label": "Housing purchase prices and shelter costs",
+      "indicatorFields": [
+        "us_fhfa_house_price_yoy",
+        "us_rent_cpi_yoy",
+        "us_shelter_cpi_yoy"
+      ],
+      "interpretation": "Property purchase prices, rent, and shelter-service inflation answer different questions and remain separate.",
       "confidence": "Moderate"
     }
   ],

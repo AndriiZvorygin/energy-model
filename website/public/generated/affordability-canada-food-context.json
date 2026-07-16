@@ -1,0 +1,5565 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "affordability-canada-food-context",
+  "title": "Canadian food inflation, energy, and the exchange rate",
+  "description": "Food prices may respond to international commodities, energy, currency, domestic supply, processing, and margins; co-movement is not causal proof.",
+  "plainLanguageSummary": "Food prices may respond to international commodities, energy, currency, domestic supply, processing, and margins; co-movement is not causal proof.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "explanation": "Food prices may respond to international commodities, energy, currency, domestic supply, processing, and margins; co-movement is not causal proof.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "Food prices may respond to international commodities, energy, currency, domestic supply, processing, and margins; co-movement is not causal proof."
+  ],
+  "sourceNotes": [
+    "Derived from Statistics Canada",
+    "Statistics Canada, StatCan 18-10-0004-01",
+    "Bank of Canada Valet API"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "Food_YoY": {
+        "mean": 2.491839748381186,
+        "standardDeviation": 1.6024906879504142,
+        "n": 240
+      },
+      "Grocery_YoY": {
+        "mean": 2.4109264722801913,
+        "standardDeviation": 2.1726850079768982,
+        "n": 240
+      },
+      "Energy_CPI_YoY": {
+        "mean": 3.571718774676504,
+        "standardDeviation": 8.718970080953328,
+        "n": 240
+      },
+      "CAD_per_USD": {
+        "mean": 1.3069431428387064,
+        "standardDeviation": 0.03132225130307353,
+        "n": 36
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "1962-01-01",
+    "end": "2026-07-01"
+  },
+  "series": [
+    {
+      "key": "Food_YoY",
+      "label": "Canada food CPI growth",
+      "unit": "percent",
+      "source": "Derived from Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "Grocery_YoY",
+      "label": "Canada grocery CPI growth",
+      "unit": "percent",
+      "source": "Derived from Statistics Canada",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "Energy_CPI_YoY",
+      "label": "Canada energy CPI growth",
+      "unit": "percent",
+      "source": "Statistics Canada, StatCan 18-10-0004-01",
+      "status": "derived",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "CAD_per_USD",
+      "label": "Canadian dollars per U.S. dollar",
+      "unit": "CAD per USD",
+      "source": "Bank of Canada Valet API",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-07-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1962-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.6493506493506551,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1962-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.6493506493506551,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1962-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.0,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1962-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.298701298701288,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1962-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.3157894736842257,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1962-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.9607843137254832,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1962-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.9354838709677358,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1962-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.580645161290329,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1962-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.289473684210531,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1962-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.267973856209161,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1962-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.267973856209161,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1962-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.5974025974025983,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1963-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.2258064516129004,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1963-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.8709677419354938,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1963-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.8961038961038863,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1963-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.564102564102577,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1963-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.2467532467532534,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1963-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.205128205128216,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1963-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.7974683544303556,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1963-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.7735849056603765,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1963-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.821656050955413,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1963-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.8987341772152,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1963-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.5316455696202445,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1963-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.5316455696202445,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1964-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.2499999999999956,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1964-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.6211180124223503,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1964-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.2499999999999956,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1964-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.2499999999999956,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1964-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.8867924528301883,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1964-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.8633540372670732,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1964-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.4390243902439046,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1964-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.2121212121211977,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1964-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.6134969325153339,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1964-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.0,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1964-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.0,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1964-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.2345679012345734,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1965-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.6172839506172867,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1965-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.2345679012345734,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1965-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.2345679012345734,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1965-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.2345679012345734,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1965-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.4691358024691468,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1965-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.658536585365857,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1965-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.9761904761904656,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1965-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.7964071856287456,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1965-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.4390243902439046,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1965-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.7267080745341463,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1965-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 4.938271604938271,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1965-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.487804878048785,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1966-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 6.134969325153383,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1966-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 6.707317073170738,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1966-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 8.536585365853666,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1966-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 8.536585365853666,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1966-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 7.2289156626506035,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1966-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.294117647058805,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1966-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.4682080924855363,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1966-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 8.23529411764705,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1966-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 7.738095238095233,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1966-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 7.18562874251496,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1966-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 4.705882352941182,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1966-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.8901734104046284,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1967-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.8901734104046284,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1967-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.5714285714285783,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1967-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -1.6853932584269704,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1967-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -1.6853932584269704,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1967-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -1.6853932584269704,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1967-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -1.1173184357541888,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1967-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.6759776536312998,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1967-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.5434782608695787,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1967-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.0,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1967-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.0,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1967-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.1235955056179803,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1967-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.6853932584269593,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1968-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.3707865168539186,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1968-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.9772727272727293,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1968-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.4285714285714475,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1968-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 4.571428571428582,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1968-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.4285714285714475,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1968-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.824858757062154,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1968-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.6483516483516425,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1968-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.6216216216216273,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1968-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.3149171270718147,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1968-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.3519553072625774,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1968-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.888888888888875,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1968-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 4.41988950276242,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1969-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.717391304347827,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1969-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.1857923497267784,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1969-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.3149171270718147,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1969-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.2786885245901454,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1969-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 4.41988950276242,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1969-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 6.593406593406592,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1969-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 4.86486486486486,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1969-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.319148936170204,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1969-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.743315508021383,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1969-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.7837837837837895,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1969-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.743315508021383,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1969-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.1746031746031855,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1970-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.1746031746031855,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1970-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.882352941176472,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1970-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 4.81283422459895,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1970-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.291005291005302,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1970-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.1746031746031855,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1970-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.546391752577314,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1970-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.0618556701031077,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1970-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.5050505050504972,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1970-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.0,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1970-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.0,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1970-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -2.577319587628868,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1970-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -4.10256410256411,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1971-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -3.589743589743588,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1971-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -4.545454545454552,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1971-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -3.0612244897959218,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1971-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -3.015075376884413,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1971-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -0.5128205128205221,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1971-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -1.5228426395939132,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1971-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 0.5050505050504972,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1971-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 2.5125628140703515,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1971-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.0927835051546504,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1971-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 3.645833333333326,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1971-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.291005291005302,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1971-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 8.02139037433156,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1972-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 8.51063829787233,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1972-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 8.994708994709,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1972-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 7.36842105263158,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1972-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 6.735751295336789,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1972-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.154639175257736,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1972-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.154639175257736,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1972-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 7.035175879396993,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1972-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 7.352941176470584,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1972-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 9.499999999999996,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1972-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 9.045226130653262,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1972-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 9.045226130653262,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1972-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 8.415841584158423,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1973-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 9.80392156862746,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1973-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 10.679611650485432,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1973-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 11.764705882352944,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1973-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 13.592233009708732,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1973-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 15.686274509803933,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1973-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 18.13725490196081,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1973-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 15.492957746478876,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1973-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 15.981735159817356,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1973-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 16.43835616438356,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1973-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 17.050691244239637,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1973-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 17.972350230414747,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1973-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 16.894977168949787,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1974-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 16.07142857142858,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1974-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 16.666666666666675,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1974-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 18.421052631578938,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1974-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 15.384615384615397,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1974-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 17.796610169491522,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1974-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 16.597510373443992,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1974-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 15.4471544715447,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1974-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 13.38582677165354,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1974-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 12.941176470588234,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1974-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 14.960629921259837,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1974-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 15.234375,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1974-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 17.1875,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1975-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 15.384615384615374,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1975-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 13.909774436090228,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1975-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 11.851851851851848,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1975-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 12.222222222222223,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1975-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 10.07194244604317,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1975-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 13.167259786476858,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1975-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 14.7887323943662,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1975-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 14.236111111111093,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1975-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 13.194444444444443,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1975-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 11.986301369863028,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1975-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 11.525423728813555,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1975-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 8.666666666666668,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1976-01-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 8.333333333333325,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1976-02-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 6.600660066006592,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1976-03-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.96026490066226,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1976-04-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 4.950495049504955,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1976-05-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 5.555555555555536,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1976-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": 1.8867924528301883,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1976-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -0.30674846625767804,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1976-08-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -2.127659574468077,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1976-09-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -1.8404907975460127,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1976-10-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -2.140672782874631,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1976-11-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -3.6474164133738607,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1976-12-01",
+      "Food_YoY": null,
+      "Grocery_YoY": -2.4539877300613466,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1977-01-01",
+      "Food_YoY": 0.6410256410256387,
+      "Grocery_YoY": -0.6153846153846287,
+      "Energy_CPI_YoY": 10.360360360360366,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1977-02-01",
+      "Food_YoY": 2.893890675241151,
+      "Grocery_YoY": 2.1671826625387025,
+      "Energy_CPI_YoY": 9.375,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1977-03-01",
+      "Food_YoY": 4.53074433656957,
+      "Grocery_YoY": 4.062499999999991,
+      "Energy_CPI_YoY": 13.33333333333333,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1977-04-01",
+      "Food_YoY": 6.168831168831179,
+      "Grocery_YoY": 6.2893081761006275,
+      "Energy_CPI_YoY": 14.222222222222225,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1977-05-01",
+      "Food_YoY": 6.08974358974359,
+      "Grocery_YoY": 6.19195046439629,
+      "Energy_CPI_YoY": 14.15929203539823,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1977-06-01",
+      "Food_YoY": 7.028753993610226,
+      "Grocery_YoY": 7.407407407407396,
+      "Energy_CPI_YoY": 13.157894736842103,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1977-07-01",
+      "Food_YoY": 9.26517571884984,
+      "Grocery_YoY": 9.23076923076922,
+      "Energy_CPI_YoY": 13.157894736842103,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1977-08-01",
+      "Food_YoY": 9.935897435897424,
+      "Grocery_YoY": 11.180124223602462,
+      "Energy_CPI_YoY": 13.157894736842103,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1977-09-01",
+      "Food_YoY": 11.290322580645151,
+      "Grocery_YoY": 12.187499999999996,
+      "Energy_CPI_YoY": 11.344537815126055,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1977-10-01",
+      "Food_YoY": 12.903225806451623,
+      "Grocery_YoY": 14.0625,
+      "Energy_CPI_YoY": 10.788381742738572,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1977-11-01",
+      "Food_YoY": 13.548387096774196,
+      "Grocery_YoY": 16.088328075709768,
+      "Energy_CPI_YoY": 11.66666666666667,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1977-12-01",
+      "Food_YoY": 15.48387096774193,
+      "Grocery_YoY": 17.9245283018868,
+      "Energy_CPI_YoY": 11.250000000000004,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1978-01-01",
+      "Food_YoY": 14.968152866242047,
+      "Grocery_YoY": 17.02786377708978,
+      "Energy_CPI_YoY": 9.387755102040817,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1978-02-01",
+      "Food_YoY": 13.437499999999991,
+      "Grocery_YoY": 15.454545454545453,
+      "Energy_CPI_YoY": 10.6122448979592,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1978-03-01",
+      "Food_YoY": 13.931888544891645,
+      "Grocery_YoY": 16.216216216216228,
+      "Energy_CPI_YoY": 10.196078431372557,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1978-04-01",
+      "Food_YoY": 14.37308868501528,
+      "Grocery_YoY": 16.863905325443795,
+      "Energy_CPI_YoY": 8.949416342412464,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1978-05-01",
+      "Food_YoY": 16.918429003021163,
+      "Grocery_YoY": 19.53352769679302,
+      "Energy_CPI_YoY": 8.52713178294573,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1978-06-01",
+      "Food_YoY": 17.611940298507456,
+      "Grocery_YoY": 20.402298850574716,
+      "Energy_CPI_YoY": 8.139534883720923,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1978-07-01",
+      "Food_YoY": 20.175438596491226,
+      "Grocery_YoY": 23.380281690140837,
+      "Energy_CPI_YoY": 8.52713178294573,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1978-08-01",
+      "Food_YoY": 18.075801749271147,
+      "Grocery_YoY": 20.11173184357542,
+      "Energy_CPI_YoY": 10.077519379844958,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1978-09-01",
+      "Food_YoY": 14.782608695652177,
+      "Grocery_YoY": 16.15598885793874,
+      "Energy_CPI_YoY": 9.811320754716979,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1978-10-01",
+      "Food_YoY": 14.28571428571428,
+      "Grocery_YoY": 15.616438356164398,
+      "Energy_CPI_YoY": 8.98876404494382,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1978-11-01",
+      "Food_YoY": 13.920454545454541,
+      "Grocery_YoY": 14.945652173913038,
+      "Energy_CPI_YoY": 8.582089552238802,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1978-12-01",
+      "Food_YoY": 12.849162011173188,
+      "Grocery_YoY": 13.600000000000012,
+      "Energy_CPI_YoY": 9.737827715355806,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1979-01-01",
+      "Food_YoY": 13.850415512465375,
+      "Grocery_YoY": 15.343915343915349,
+      "Energy_CPI_YoY": 11.567164179104461,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1979-02-01",
+      "Food_YoY": 15.977961432506893,
+      "Grocery_YoY": 17.322834645669303,
+      "Energy_CPI_YoY": 10.7011070110701,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1979-03-01",
+      "Food_YoY": 17.663043478260864,
+      "Grocery_YoY": 18.86304909560723,
+      "Energy_CPI_YoY": 6.761565836298922,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1979-04-01",
+      "Food_YoY": 16.577540106951872,
+      "Grocery_YoY": 17.721518987341778,
+      "Energy_CPI_YoY": 7.857142857142851,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1979-05-01",
+      "Food_YoY": 13.436692506459934,
+      "Grocery_YoY": 13.658536585365866,
+      "Energy_CPI_YoY": 8.214285714285708,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1979-06-01",
+      "Food_YoY": 11.928934010152293,
+      "Grocery_YoY": 11.217183770883054,
+      "Energy_CPI_YoY": 8.602150537634422,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1979-07-01",
+      "Food_YoY": 9.245742092457409,
+      "Grocery_YoY": 8.675799086757996,
+      "Energy_CPI_YoY": 9.285714285714297,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1979-08-01",
+      "Food_YoY": 10.123456790123452,
+      "Grocery_YoY": 9.534883720930232,
+      "Energy_CPI_YoY": 8.098591549295776,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1979-09-01",
+      "Food_YoY": 12.62626262626263,
+      "Grocery_YoY": 12.949640287769771,
+      "Energy_CPI_YoY": 9.965635738831601,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1979-10-01",
+      "Food_YoY": 12.5,
+      "Grocery_YoY": 12.559241706161139,
+      "Energy_CPI_YoY": 10.996563573883144,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1979-11-01",
+      "Food_YoY": 12.468827930174564,
+      "Grocery_YoY": 12.293144208037843,
+      "Energy_CPI_YoY": 12.02749140893471,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1979-12-01",
+      "Food_YoY": 12.871287128712883,
+      "Grocery_YoY": 13.145539906103298,
+      "Energy_CPI_YoY": 12.627986348122855,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1980-01-01",
+      "Food_YoY": 11.435523114355227,
+      "Grocery_YoY": 10.779816513761453,
+      "Energy_CPI_YoY": 12.374581939799345,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1980-02-01",
+      "Food_YoY": 10.213776722090252,
+      "Grocery_YoY": 9.843400447427285,
+      "Energy_CPI_YoY": 12.333333333333352,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1980-03-01",
+      "Food_YoY": 8.314087759815237,
+      "Grocery_YoY": 7.826086956521738,
+      "Energy_CPI_YoY": 15.333333333333332,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1980-04-01",
+      "Food_YoY": 7.7981651376146655,
+      "Grocery_YoY": 6.666666666666665,
+      "Energy_CPI_YoY": 15.56291390728477,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1980-05-01",
+      "Food_YoY": 7.9726651480637845,
+      "Grocery_YoY": 7.725321888412018,
+      "Energy_CPI_YoY": 15.51155115511551,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1980-06-01",
+      "Food_YoY": 9.977324263038545,
+      "Grocery_YoY": 10.729613733905573,
+      "Energy_CPI_YoY": 16.171617161716178,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1980-07-01",
+      "Food_YoY": 9.131403118040083,
+      "Grocery_YoY": 9.243697478991585,
+      "Energy_CPI_YoY": 16.33986928104576,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1980-08-01",
+      "Food_YoY": 11.210762331838575,
+      "Grocery_YoY": 12.314225053078554,
+      "Energy_CPI_YoY": 17.26384364820848,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1980-09-01",
+      "Food_YoY": 13.228699551569512,
+      "Grocery_YoY": 14.225053078556261,
+      "Energy_CPI_YoY": 12.5,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1980-10-01",
+      "Food_YoY": 12.444444444444457,
+      "Grocery_YoY": 13.89473684210527,
+      "Energy_CPI_YoY": 18.57585139318885,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1980-11-01",
+      "Food_YoY": 13.52549889135255,
+      "Grocery_YoY": 15.157894736842103,
+      "Energy_CPI_YoY": 20.552147239263796,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1980-12-01",
+      "Food_YoY": 13.596491228070162,
+      "Grocery_YoY": 14.937759336099576,
+      "Energy_CPI_YoY": 19.393939393939384,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1981-01-01",
+      "Food_YoY": 13.53711790393013,
+      "Grocery_YoY": 15.3209109730849,
+      "Energy_CPI_YoY": 24.702380952380953,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1981-02-01",
+      "Food_YoY": 14.008620689655181,
+      "Grocery_YoY": 15.478615071283098,
+      "Energy_CPI_YoY": 24.925816023738868,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1981-03-01",
+      "Food_YoY": 13.646055437100202,
+      "Grocery_YoY": 15.120967741935477,
+      "Energy_CPI_YoY": 27.456647398843927,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1981-04-01",
+      "Food_YoY": 14.468085106382977,
+      "Grocery_YoY": 16.129032258064523,
+      "Energy_CPI_YoY": 26.361031518624657,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1981-05-01",
+      "Food_YoY": 12.869198312236296,
+      "Grocery_YoY": 13.94422310756973,
+      "Energy_CPI_YoY": 28.85714285714287,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1981-06-01",
+      "Food_YoY": 12.371134020618557,
+      "Grocery_YoY": 13.178294573643413,
+      "Energy_CPI_YoY": 34.37499999999998,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1981-07-01",
+      "Food_YoY": 12.857142857142856,
+      "Grocery_YoY": 13.846153846153841,
+      "Energy_CPI_YoY": 34.2696629213483,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1981-08-01",
+      "Food_YoY": 11.693548387096776,
+      "Grocery_YoY": 11.909262759924388,
+      "Energy_CPI_YoY": 33.33333333333333,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1981-09-01",
+      "Food_YoY": 9.70297029702969,
+      "Grocery_YoY": 9.66542750929369,
+      "Energy_CPI_YoY": 37.5,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1981-10-01",
+      "Food_YoY": 9.288537549407106,
+      "Grocery_YoY": 8.872458410351204,
+      "Energy_CPI_YoY": 30.54830287206267,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1981-11-01",
+      "Food_YoY": 7.6171875,
+      "Grocery_YoY": 7.1297989031078535,
+      "Energy_CPI_YoY": 27.226463104325703,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1981-12-01",
+      "Food_YoY": 5.598455598455621,
+      "Grocery_YoY": 4.512635379061369,
+      "Energy_CPI_YoY": 30.456852791878177,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1982-01-01",
+      "Food_YoY": 6.153846153846154,
+      "Grocery_YoY": 5.0269299820466795,
+      "Energy_CPI_YoY": 24.105011933174225,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1982-02-01",
+      "Food_YoY": 6.427221172022679,
+      "Grocery_YoY": 5.291005291005302,
+      "Energy_CPI_YoY": 23.752969121140133,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1982-03-01",
+      "Food_YoY": 6.566604127579745,
+      "Grocery_YoY": 5.429071803852903,
+      "Energy_CPI_YoY": 24.489795918367328,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1982-04-01",
+      "Food_YoY": 6.133828996282542,
+      "Grocery_YoY": 5.381944444444442,
+      "Energy_CPI_YoY": 24.943310657596363,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1982-05-01",
+      "Food_YoY": 9.158878504672895,
+      "Grocery_YoY": 8.74125874125875,
+      "Energy_CPI_YoY": 23.72505543237249,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1982-06-01",
+      "Food_YoY": 9.541284403669724,
+      "Grocery_YoY": 8.90410958904111,
+      "Energy_CPI_YoY": 18.181818181818187,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1982-07-01",
+      "Food_YoY": 8.318264014466559,
+      "Grocery_YoY": 7.939189189189189,
+      "Energy_CPI_YoY": 16.945606694560666,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1982-08-01",
+      "Food_YoY": 7.2202166064981865,
+      "Grocery_YoY": 6.418918918918903,
+      "Energy_CPI_YoY": 17.500000000000004,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1982-09-01",
+      "Food_YoY": 6.3176895306859215,
+      "Grocery_YoY": 5.59322033898304,
+      "Energy_CPI_YoY": 18.98989898989898,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1982-10-01",
+      "Food_YoY": 6.329113924050622,
+      "Grocery_YoY": 5.093378607809851,
+      "Energy_CPI_YoY": 16.400000000000013,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1982-11-01",
+      "Food_YoY": 6.896551724137923,
+      "Grocery_YoY": 6.1433447098976135,
+      "Energy_CPI_YoY": 17.199999999999992,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1982-12-01",
+      "Food_YoY": 7.495429616087734,
+      "Grocery_YoY": 6.563039723661501,
+      "Energy_CPI_YoY": 14.007782101167333,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1983-01-01",
+      "Food_YoY": 6.702898550724634,
+      "Grocery_YoY": 5.470085470085473,
+      "Energy_CPI_YoY": 10.961538461538467,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1983-02-01",
+      "Food_YoY": 5.328596802841923,
+      "Grocery_YoY": 4.187604690117253,
+      "Energy_CPI_YoY": 8.63723608445297,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1983-03-01",
+      "Food_YoY": 4.049295774647899,
+      "Grocery_YoY": 2.9900332225913484,
+      "Energy_CPI_YoY": 11.65755919854281,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1983-04-01",
+      "Food_YoY": 4.728546409807355,
+      "Grocery_YoY": 3.294892915980241,
+      "Energy_CPI_YoY": 6.170598911070768,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1983-05-01",
+      "Food_YoY": 3.9383561643835607,
+      "Grocery_YoY": 3.0546623794212024,
+      "Energy_CPI_YoY": 1.2544802867383575,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1983-06-01",
+      "Food_YoY": 1.8425460636515734,
+      "Grocery_YoY": 0.9433962264151052,
+      "Energy_CPI_YoY": 10.196779964221836,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1983-07-01",
+      "Food_YoY": 2.17028380634392,
+      "Grocery_YoY": 0.9389671361502261,
+      "Energy_CPI_YoY": 11.270125223613615,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1983-08-01",
+      "Food_YoY": 2.8619528619528767,
+      "Grocery_YoY": 2.3809523809523725,
+      "Energy_CPI_YoY": 10.99290780141844,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1983-09-01",
+      "Food_YoY": 2.716468590831922,
+      "Grocery_YoY": 1.9261637239165408,
+      "Energy_CPI_YoY": 5.942275042444822,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1983-10-01",
+      "Food_YoY": 4.081632653061229,
+      "Grocery_YoY": 3.8772213247172838,
+      "Energy_CPI_YoY": 6.185567010309279,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1983-11-01",
+      "Food_YoY": 3.2258064516129004,
+      "Grocery_YoY": 2.5723472668810254,
+      "Energy_CPI_YoY": 4.607508532423199,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1983-12-01",
+      "Food_YoY": 3.741496598639471,
+      "Grocery_YoY": 3.7277147487844386,
+      "Energy_CPI_YoY": 6.1433447098976135,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1984-01-01",
+      "Food_YoY": 5.602716468590829,
+      "Grocery_YoY": 6.158833063209079,
+      "Energy_CPI_YoY": 10.398613518197575,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1984-02-01",
+      "Food_YoY": 6.070826306914001,
+      "Grocery_YoY": 6.913183279742752,
+      "Energy_CPI_YoY": 13.07420494699647,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1984-03-01",
+      "Food_YoY": 7.106598984771573,
+      "Grocery_YoY": 8.387096774193559,
+      "Energy_CPI_YoY": 2.1207177814029476,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1984-04-01",
+      "Food_YoY": 6.354515050167242,
+      "Grocery_YoY": 7.336523125996797,
+      "Energy_CPI_YoY": 7.3504273504273465,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1984-05-01",
+      "Food_YoY": 4.283360790774293,
+      "Grocery_YoY": 4.680187207488307,
+      "Energy_CPI_YoY": 10.442477876106192,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1984-06-01",
+      "Food_YoY": 5.592105263157898,
+      "Grocery_YoY": 6.074766355140171,
+      "Energy_CPI_YoY": 2.2727272727272707,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1984-07-01",
+      "Food_YoY": 5.882352941176472,
+      "Grocery_YoY": 6.666666666666665,
+      "Energy_CPI_YoY": 3.0546623794212024,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1984-08-01",
+      "Food_YoY": 5.237315875613735,
+      "Grocery_YoY": 5.581395348837193,
+      "Energy_CPI_YoY": 1.1182108626198062,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1984-09-01",
+      "Food_YoY": 5.454545454545445,
+      "Grocery_YoY": 5.98425196850394,
+      "Energy_CPI_YoY": 1.9230769230769384,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1984-10-01",
+      "Food_YoY": 4.24836601307188,
+      "Grocery_YoY": 4.665629860031095,
+      "Energy_CPI_YoY": 2.9126213592232997,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1984-11-01",
+      "Food_YoY": 4.9342105263157965,
+      "Grocery_YoY": 5.4858934169278895,
+      "Energy_CPI_YoY": 6.688417618270814,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1984-12-01",
+      "Food_YoY": 4.590163934426217,
+      "Grocery_YoY": 5.000000000000004,
+      "Energy_CPI_YoY": 6.270096463022501,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1985-01-01",
+      "Food_YoY": 3.858520900321527,
+      "Grocery_YoY": 3.969465648854964,
+      "Energy_CPI_YoY": 5.494505494505497,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1985-02-01",
+      "Food_YoY": 3.8155802861685295,
+      "Grocery_YoY": 3.759398496240607,
+      "Energy_CPI_YoY": 4.6875,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1985-03-01",
+      "Food_YoY": 3.001579778830976,
+      "Grocery_YoY": 2.3809523809523725,
+      "Energy_CPI_YoY": 7.028753993610226,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1985-04-01",
+      "Food_YoY": 3.7735849056603765,
+      "Grocery_YoY": 3.714710252600306,
+      "Energy_CPI_YoY": 6.687898089171984,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1985-05-01",
+      "Food_YoY": 3.4755134281200695,
+      "Grocery_YoY": 2.980625931445613,
+      "Energy_CPI_YoY": 7.371794871794868,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1985-06-01",
+      "Food_YoY": 2.492211838006231,
+      "Grocery_YoY": 2.055800293685772,
+      "Energy_CPI_YoY": 6.0317460317460325,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1985-07-01",
+      "Food_YoY": 2.1604938271605034,
+      "Grocery_YoY": 1.744186046511631,
+      "Energy_CPI_YoY": 2.9641185647425905,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1985-08-01",
+      "Food_YoY": 2.3328149300155587,
+      "Grocery_YoY": 1.7621145374449476,
+      "Energy_CPI_YoY": 4.581358609794628,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1985-09-01",
+      "Food_YoY": 2.1943573667711602,
+      "Grocery_YoY": 1.3372956909361244,
+      "Energy_CPI_YoY": 6.446540880503138,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1985-10-01",
+      "Food_YoY": 1.8808777429467183,
+      "Grocery_YoY": 0.8915304606240904,
+      "Energy_CPI_YoY": 7.0754716981132,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1985-11-01",
+      "Food_YoY": 2.351097178683381,
+      "Grocery_YoY": 1.4858841010401136,
+      "Energy_CPI_YoY": 4.740061162079501,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1985-12-01",
+      "Food_YoY": 3.7617554858934366,
+      "Grocery_YoY": 3.4226190476190466,
+      "Energy_CPI_YoY": 4.08472012102874,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1986-01-01",
+      "Food_YoY": 4.179566563467496,
+      "Grocery_YoY": 3.96475770925111,
+      "Energy_CPI_YoY": 3.2738095238095344,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1986-02-01",
+      "Food_YoY": 2.4502297090352343,
+      "Grocery_YoY": 1.8840579710144967,
+      "Energy_CPI_YoY": 3.5820895522388208,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1986-03-01",
+      "Food_YoY": 2.7607361963190247,
+      "Grocery_YoY": 2.1802325581395277,
+      "Energy_CPI_YoY": 0.14925373134326847,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1986-04-01",
+      "Food_YoY": 2.575757575757587,
+      "Grocery_YoY": 1.862464183381074,
+      "Energy_CPI_YoY": -6.567164179104479,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1986-05-01",
+      "Food_YoY": 4.122137404580162,
+      "Grocery_YoY": 4.05209840810421,
+      "Energy_CPI_YoY": -8.955223880597018,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1986-06-01",
+      "Food_YoY": 3.951367781155035,
+      "Grocery_YoY": 3.597122302158273,
+      "Energy_CPI_YoY": -8.982035928143716,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1986-07-01",
+      "Food_YoY": 4.53172205438066,
+      "Grocery_YoY": 4.142857142857159,
+      "Energy_CPI_YoY": -8.18181818181818,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1986-08-01",
+      "Food_YoY": 5.623100303951367,
+      "Grocery_YoY": 5.772005772005762,
+      "Energy_CPI_YoY": -8.761329305135956,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1986-09-01",
+      "Food_YoY": 7.208588957055229,
+      "Grocery_YoY": 8.211143695014655,
+      "Energy_CPI_YoY": -11.964549483013299,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1986-10-01",
+      "Food_YoY": 8.000000000000007,
+      "Grocery_YoY": 8.98379970544918,
+      "Energy_CPI_YoY": -13.215859030836995,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1986-11-01",
+      "Food_YoY": 8.116385911179158,
+      "Grocery_YoY": 9.077598828696921,
+      "Energy_CPI_YoY": -12.846715328467152,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1986-12-01",
+      "Food_YoY": 6.495468277945604,
+      "Grocery_YoY": 6.906474820143882,
+      "Energy_CPI_YoY": -12.936046511627907,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1987-01-01",
+      "Food_YoY": 5.794947994056465,
+      "Grocery_YoY": 6.214689265536721,
+      "Energy_CPI_YoY": -12.536023054755042,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1987-02-01",
+      "Food_YoY": 6.427503736920781,
+      "Grocery_YoY": 6.970128022759603,
+      "Energy_CPI_YoY": -10.662824207492804,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1987-03-01",
+      "Food_YoY": 6.26865671641792,
+      "Grocery_YoY": 6.685633001422486,
+      "Energy_CPI_YoY": -5.812220566318915,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1987-04-01",
+      "Food_YoY": 5.169867060561306,
+      "Grocery_YoY": 5.485232067510548,
+      "Energy_CPI_YoY": 1.5974440894568787,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1987-05-01",
+      "Food_YoY": 5.278592375366564,
+      "Grocery_YoY": 5.424200278164104,
+      "Energy_CPI_YoY": 4.426229508196733,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1987-06-01",
+      "Food_YoY": 6.140350877192957,
+      "Grocery_YoY": 7.08333333333333,
+      "Energy_CPI_YoY": 5.92105263157896,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1987-07-01",
+      "Food_YoY": 5.2023121387283044,
+      "Grocery_YoY": 5.8984910836762605,
+      "Energy_CPI_YoY": 6.765676567656764,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1987-08-01",
+      "Food_YoY": 3.7410071942445944,
+      "Grocery_YoY": 3.683492496589369,
+      "Energy_CPI_YoY": 7.615894039735105,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1987-09-01",
+      "Food_YoY": 2.5751072961373245,
+      "Grocery_YoY": 2.168021680216814,
+      "Energy_CPI_YoY": 9.899328859060397,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1987-10-01",
+      "Food_YoY": 2.2792022792022637,
+      "Grocery_YoY": 2.0270270270270174,
+      "Energy_CPI_YoY": 10.490693739424707,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1987-11-01",
+      "Food_YoY": 2.1246458923512845,
+      "Grocery_YoY": 1.744966442953011,
+      "Energy_CPI_YoY": 9.715242881072017,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1987-12-01",
+      "Food_YoY": 2.269503546099272,
+      "Grocery_YoY": 1.6150740242261152,
+      "Energy_CPI_YoY": 9.348914858096835,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1988-01-01",
+      "Food_YoY": 2.2471910112359383,
+      "Grocery_YoY": 1.7287234042553168,
+      "Energy_CPI_YoY": 7.907742998352552,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1988-02-01",
+      "Food_YoY": 1.9662921348314377,
+      "Grocery_YoY": 1.3297872340425565,
+      "Energy_CPI_YoY": 4.193548387096757,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1988-03-01",
+      "Food_YoY": 1.8258426966291985,
+      "Grocery_YoY": 1.0666666666666602,
+      "Energy_CPI_YoY": 1.4240506329113778,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1988-04-01",
+      "Food_YoY": 2.2471910112359383,
+      "Grocery_YoY": 1.73333333333332,
+      "Energy_CPI_YoY": 1.8867924528301883,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1988-05-01",
+      "Food_YoY": 2.089136490250687,
+      "Grocery_YoY": 1.3192612137203241,
+      "Energy_CPI_YoY": 2.668759811616961,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1988-06-01",
+      "Food_YoY": 1.7906336088154395,
+      "Grocery_YoY": 0.6485084306095956,
+      "Energy_CPI_YoY": 1.2422360248447228,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1988-07-01",
+      "Food_YoY": 2.4725274725274637,
+      "Grocery_YoY": 1.4248704663212264,
+      "Energy_CPI_YoY": 0.9273570324574765,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1988-08-01",
+      "Food_YoY": 3.7447988904299567,
+      "Grocery_YoY": 3.289473684210531,
+      "Energy_CPI_YoY": -1.2307692307692242,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1988-09-01",
+      "Food_YoY": 4.044630404463034,
+      "Grocery_YoY": 3.7135278514588865,
+      "Energy_CPI_YoY": -1.8320610687022953,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1988-10-01",
+      "Food_YoY": 3.899721448467952,
+      "Grocery_YoY": 3.443708609271523,
+      "Energy_CPI_YoY": -2.143950995405819,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1988-11-01",
+      "Food_YoY": 3.051317614424409,
+      "Grocery_YoY": 2.242744063324542,
+      "Energy_CPI_YoY": -3.3587786259542063,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1988-12-01",
+      "Food_YoY": 2.77392510402219,
+      "Grocery_YoY": 1.9867549668874274,
+      "Energy_CPI_YoY": -3.6641221374045796,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1989-01-01",
+      "Food_YoY": 2.8846153846153966,
+      "Grocery_YoY": 2.2222222222222365,
+      "Energy_CPI_YoY": -2.900763358778624,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1989-02-01",
+      "Food_YoY": 4.132231404958686,
+      "Grocery_YoY": 3.543307086614167,
+      "Energy_CPI_YoY": -0.9287925696594312,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1989-03-01",
+      "Food_YoY": 4.275862068965508,
+      "Grocery_YoY": 3.95778364116095,
+      "Energy_CPI_YoY": 0.46801872074884177,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1989-04-01",
+      "Food_YoY": 4.258241758241765,
+      "Grocery_YoY": 3.8007863695937116,
+      "Energy_CPI_YoY": 0.30864197530864335,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1989-05-01",
+      "Food_YoY": 4.229195088676674,
+      "Grocery_YoY": 3.90625,
+      "Energy_CPI_YoY": 3.2110091743119185,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1989-06-01",
+      "Food_YoY": 4.059539918809207,
+      "Grocery_YoY": 3.6082474226804218,
+      "Energy_CPI_YoY": 4.141104294478537,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1989-07-01",
+      "Food_YoY": 4.021447721179627,
+      "Grocery_YoY": 3.575989782886335,
+      "Energy_CPI_YoY": 4.287901990811638,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1989-08-01",
+      "Food_YoY": 3.074866310160429,
+      "Grocery_YoY": 2.420382165605095,
+      "Energy_CPI_YoY": 6.074766355140171,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1989-09-01",
+      "Food_YoY": 2.9490616621983934,
+      "Grocery_YoY": 2.0460358056265893,
+      "Energy_CPI_YoY": 5.754276827371707,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1989-10-01",
+      "Food_YoY": 3.351206434316345,
+      "Grocery_YoY": 2.432778489116516,
+      "Energy_CPI_YoY": 6.103286384976525,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1989-11-01",
+      "Food_YoY": 3.6339165545087537,
+      "Grocery_YoY": 3.0967741935483906,
+      "Energy_CPI_YoY": 7.582938388625582,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1989-12-01",
+      "Food_YoY": 3.373819163292846,
+      "Grocery_YoY": 2.857142857142869,
+      "Energy_CPI_YoY": 7.4484944532487996,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1990-01-01",
+      "Food_YoY": 4.806408544726293,
+      "Grocery_YoY": 4.603580562659837,
+      "Energy_CPI_YoY": 9.119496855345922,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1990-02-01",
+      "Food_YoY": 4.761904761904767,
+      "Grocery_YoY": 4.816223067173642,
+      "Energy_CPI_YoY": 9.687500000000004,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1990-03-01",
+      "Food_YoY": 5.026455026455046,
+      "Grocery_YoY": 5.203045685279206,
+      "Energy_CPI_YoY": 9.937888198757761,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1990-04-01",
+      "Food_YoY": 3.820816864295118,
+      "Grocery_YoY": 3.409090909090917,
+      "Energy_CPI_YoY": 9.846153846153861,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1990-05-01",
+      "Food_YoY": 3.4031413612565453,
+      "Grocery_YoY": 2.7568922305764465,
+      "Energy_CPI_YoY": 6.962962962962971,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1990-06-01",
+      "Food_YoY": 4.16124837451235,
+      "Grocery_YoY": 3.980099502487544,
+      "Energy_CPI_YoY": 6.921944035346073,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1990-07-01",
+      "Food_YoY": 3.8659793814433074,
+      "Grocery_YoY": 3.6991368680641123,
+      "Energy_CPI_YoY": 6.314243759177707,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1990-08-01",
+      "Food_YoY": 3.6316472114137577,
+      "Grocery_YoY": 3.109452736318419,
+      "Energy_CPI_YoY": 6.607929515418509,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1990-09-01",
+      "Food_YoY": 3.776041666666674,
+      "Grocery_YoY": 3.50877192982455,
+      "Energy_CPI_YoY": 7.9411764705882515,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1990-10-01",
+      "Food_YoY": 3.891050583657596,
+      "Grocery_YoY": 3.750000000000009,
+      "Energy_CPI_YoY": 13.126843657817112,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1990-11-01",
+      "Food_YoY": 4.155844155844157,
+      "Grocery_YoY": 4.005006257822252,
+      "Energy_CPI_YoY": 16.446402349486043,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1990-12-01",
+      "Food_YoY": 4.308093994778073,
+      "Grocery_YoY": 4.040404040404044,
+      "Energy_CPI_YoY": 16.814159292035402,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1991-01-01",
+      "Food_YoY": 5.987261146496814,
+      "Grocery_YoY": 3.667481662591676,
+      "Energy_CPI_YoY": 19.0201729106628,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1991-02-01",
+      "Food_YoY": 5.050505050505061,
+      "Grocery_YoY": 2.41837968561065,
+      "Energy_CPI_YoY": 10.96866096866098,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1991-03-01",
+      "Food_YoY": 5.163727959697728,
+      "Grocery_YoY": 2.4125452352231624,
+      "Energy_CPI_YoY": 6.49717514124295,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1991-04-01",
+      "Food_YoY": 6.345177664974622,
+      "Grocery_YoY": 4.2735042735042805,
+      "Energy_CPI_YoY": 3.7815126050420034,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1991-05-01",
+      "Food_YoY": 6.329113924050622,
+      "Grocery_YoY": 4.146341463414638,
+      "Energy_CPI_YoY": 5.678670360110805,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1991-06-01",
+      "Food_YoY": 6.741573033707882,
+      "Grocery_YoY": 4.9043062200957,
+      "Energy_CPI_YoY": 5.371900826446296,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1991-07-01",
+      "Food_YoY": 5.334987593052132,
+      "Grocery_YoY": 3.3293697978596937,
+      "Energy_CPI_YoY": 7.044198895027609,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1991-08-01",
+      "Food_YoY": 5.1314142678347885,
+      "Grocery_YoY": 3.0156815440289586,
+      "Energy_CPI_YoY": 6.473829201101933,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1991-09-01",
+      "Food_YoY": 4.015056461731503,
+      "Grocery_YoY": 1.3317191283293006,
+      "Energy_CPI_YoY": 5.9945504087193235,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1991-10-01",
+      "Food_YoY": 2.4968789013732895,
+      "Grocery_YoY": -0.6024096385542133,
+      "Energy_CPI_YoY": -0.5215123859191761,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1991-11-01",
+      "Food_YoY": 2.6184538653366562,
+      "Grocery_YoY": -0.48134777376653837,
+      "Energy_CPI_YoY": -3.783102143757877,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1991-12-01",
+      "Food_YoY": 2.252816020025028,
+      "Grocery_YoY": -0.8495145631068013,
+      "Energy_CPI_YoY": -4.7979797979797905,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1992-01-01",
+      "Food_YoY": -0.9615384615384581,
+      "Grocery_YoY": -2.594339622641517,
+      "Energy_CPI_YoY": -6.0532687651331685,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1992-02-01",
+      "Food_YoY": -0.8413461538461564,
+      "Grocery_YoY": -2.3612750885478206,
+      "Energy_CPI_YoY": -2.9525032092426295,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1992-03-01",
+      "Food_YoY": -0.7185628742514938,
+      "Grocery_YoY": -1.8845700824499545,
+      "Energy_CPI_YoY": -0.3978779840848934,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1992-04-01",
+      "Food_YoY": -0.7159904534606132,
+      "Grocery_YoY": -1.9906323185011732,
+      "Energy_CPI_YoY": 1.4844804318488558,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1992-05-01",
+      "Food_YoY": -1.1904761904761862,
+      "Grocery_YoY": -2.3419203747072626,
+      "Energy_CPI_YoY": 0.0,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1992-06-01",
+      "Food_YoY": -2.1052631578947323,
+      "Grocery_YoY": -3.876852907639683,
+      "Energy_CPI_YoY": 1.3071895424836555,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1992-07-01",
+      "Food_YoY": -1.6489988221437102,
+      "Grocery_YoY": -3.222094361334882,
+      "Energy_CPI_YoY": 1.9354838709677358,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1992-08-01",
+      "Food_YoY": -0.7142857142857117,
+      "Grocery_YoY": -1.756440281030447,
+      "Energy_CPI_YoY": 1.0349288486416475,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1992-09-01",
+      "Food_YoY": 0.12062726176114147,
+      "Grocery_YoY": -0.4778972520908087,
+      "Energy_CPI_YoY": -0.25706940874036244,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1992-10-01",
+      "Food_YoY": 1.0962241169305775,
+      "Grocery_YoY": 0.60606060606061,
+      "Energy_CPI_YoY": 1.572739187418093,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1992-11-01",
+      "Food_YoY": 0.9720534629404476,
+      "Grocery_YoY": 0.7255139056831839,
+      "Energy_CPI_YoY": 2.6212319790301475,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1992-12-01",
+      "Food_YoY": 2.0807833537331843,
+      "Grocery_YoY": 2.447980416156681,
+      "Energy_CPI_YoY": 3.7135278514588865,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1993-01-01",
+      "Food_YoY": 2.0631067961164984,
+      "Grocery_YoY": 2.421307506053272,
+      "Energy_CPI_YoY": 1.2886597938144284,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1993-02-01",
+      "Food_YoY": 2.4242424242424176,
+      "Grocery_YoY": 3.022974607013307,
+      "Energy_CPI_YoY": 3.4391534391534417,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1993-03-01",
+      "Food_YoY": 1.5681544028950611,
+      "Grocery_YoY": 1.6806722689075793,
+      "Energy_CPI_YoY": 3.3288948069241098,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1993-04-01",
+      "Food_YoY": 0.9615384615384581,
+      "Grocery_YoY": 0.8363201911589124,
+      "Energy_CPI_YoY": 3.32446808510638,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1993-05-01",
+      "Food_YoY": 2.2891566265060392,
+      "Grocery_YoY": 2.5179856115107757,
+      "Energy_CPI_YoY": 2.490170380078638,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1993-06-01",
+      "Food_YoY": 1.433691756272415,
+      "Grocery_YoY": 1.542111506524324,
+      "Energy_CPI_YoY": 1.806451612903226,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1993-07-01",
+      "Food_YoY": 1.6766467065868262,
+      "Grocery_YoY": 1.664684898929858,
+      "Energy_CPI_YoY": -0.5063291139240533,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1993-08-01",
+      "Food_YoY": 1.318944844124692,
+      "Grocery_YoY": 1.1918951132300348,
+      "Energy_CPI_YoY": 0.0,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1993-09-01",
+      "Food_YoY": 1.3253012048192625,
+      "Grocery_YoY": 1.3205282112845218,
+      "Energy_CPI_YoY": 1.030927835051565,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1993-10-01",
+      "Food_YoY": 1.4457831325301207,
+      "Grocery_YoY": 1.6867469879518149,
+      "Energy_CPI_YoY": 0.6451612903225712,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1993-11-01",
+      "Food_YoY": 1.6847172081829287,
+      "Grocery_YoY": 1.9207683073229287,
+      "Energy_CPI_YoY": -0.3831417624520994,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1993-12-01",
+      "Food_YoY": 1.7985611510791255,
+      "Grocery_YoY": 2.0310633213858953,
+      "Energy_CPI_YoY": -1.406649616368294,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1994-01-01",
+      "Food_YoY": 1.3079667063020217,
+      "Grocery_YoY": 1.4184397163120588,
+      "Energy_CPI_YoY": -2.7989821882951516,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1994-02-01",
+      "Food_YoY": 0.4733727810650956,
+      "Grocery_YoY": 0.0,
+      "Energy_CPI_YoY": -1.1508951406649648,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1994-03-01",
+      "Food_YoY": 0.11876484560569,
+      "Grocery_YoY": -0.47225501770956635,
+      "Energy_CPI_YoY": -0.12886597938143174,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1994-04-01",
+      "Food_YoY": 0.7142857142857117,
+      "Grocery_YoY": 0.4739336492890933,
+      "Energy_CPI_YoY": -0.38610038610038533,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1994-05-01",
+      "Food_YoY": -0.35335689045937757,
+      "Grocery_YoY": -0.8187134502923965,
+      "Energy_CPI_YoY": -0.12787723785167016,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1994-06-01",
+      "Food_YoY": 0.0,
+      "Grocery_YoY": -0.4672897196261627,
+      "Energy_CPI_YoY": 0.3802281368821214,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1994-07-01",
+      "Food_YoY": 0.4711425206124664,
+      "Grocery_YoY": 0.35087719298245723,
+      "Energy_CPI_YoY": 1.6539440203562572,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1994-08-01",
+      "Food_YoY": 0.7100591715976323,
+      "Grocery_YoY": 0.5889281507656108,
+      "Energy_CPI_YoY": 3.201024327784885,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1994-09-01",
+      "Food_YoY": 0.47562425683711496,
+      "Grocery_YoY": 0.0,
+      "Energy_CPI_YoY": 1.7857142857142794,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1994-10-01",
+      "Food_YoY": 0.7125890736342066,
+      "Grocery_YoY": 0.35545023696681444,
+      "Energy_CPI_YoY": 0.2564102564102555,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1994-11-01",
+      "Food_YoY": 0.4733727810650956,
+      "Grocery_YoY": 0.0,
+      "Energy_CPI_YoY": 1.9230769230769162,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1994-12-01",
+      "Food_YoY": 0.2355712603062221,
+      "Grocery_YoY": -0.23419203747072626,
+      "Energy_CPI_YoY": 2.2049286640726473,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1995-01-01",
+      "Food_YoY": 1.4084507042253502,
+      "Grocery_YoY": 1.3986013986013957,
+      "Energy_CPI_YoY": 2.7486910994764413,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1995-02-01",
+      "Food_YoY": 2.355712603062421,
+      "Grocery_YoY": 2.8169014084507005,
+      "Energy_CPI_YoY": 1.8111254851228997,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1995-03-01",
+      "Food_YoY": 3.084223013048648,
+      "Grocery_YoY": 3.677342823250296,
+      "Energy_CPI_YoY": 2.1935483870967776,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1995-04-01",
+      "Food_YoY": 3.78250591016549,
+      "Grocery_YoY": 4.716981132075482,
+      "Energy_CPI_YoY": 2.713178294573626,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1995-05-01",
+      "Food_YoY": 3.1914893617021267,
+      "Grocery_YoY": 3.655660377358494,
+      "Energy_CPI_YoY": 4.097311139564663,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1995-06-01",
+      "Food_YoY": 2.9446407538280317,
+      "Grocery_YoY": 3.4037558685446,
+      "Energy_CPI_YoY": 2.5252525252525304,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1995-07-01",
+      "Food_YoY": 2.4618991793669442,
+      "Grocery_YoY": 2.564102564102577,
+      "Energy_CPI_YoY": 0.8760951188986121,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1995-08-01",
+      "Food_YoY": 1.7626321974148151,
+      "Grocery_YoY": 1.6393442622950616,
+      "Energy_CPI_YoY": -1.3647642679900707,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1995-09-01",
+      "Food_YoY": 2.2485207100591875,
+      "Grocery_YoY": 2.369668246445489,
+      "Energy_CPI_YoY": -0.12531328320801727,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1995-10-01",
+      "Food_YoY": 1.8867924528301883,
+      "Grocery_YoY": 2.007083825265643,
+      "Energy_CPI_YoY": 0.7672634271099765,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1995-11-01",
+      "Food_YoY": 1.7667844522968101,
+      "Grocery_YoY": 1.7667844522968101,
+      "Energy_CPI_YoY": -1.2578616352201255,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1995-12-01",
+      "Food_YoY": 1.9976498237367801,
+      "Grocery_YoY": 1.9953051643192499,
+      "Energy_CPI_YoY": 0.8883248730964466,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1996-01-01",
+      "Food_YoY": 0.92592592592593,
+      "Grocery_YoY": 0.45977011494253706,
+      "Energy_CPI_YoY": 1.273885350318471,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1996-02-01",
+      "Food_YoY": 0.4602991944764101,
+      "Grocery_YoY": -0.22831050228309113,
+      "Energy_CPI_YoY": 0.7623888182973326,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1996-03-01",
+      "Food_YoY": 0.5753739930955071,
+      "Grocery_YoY": 0.3432494279176135,
+      "Energy_CPI_YoY": 1.7676767676767513,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1996-04-01",
+      "Food_YoY": 0.5694760820045497,
+      "Grocery_YoY": 0.0,
+      "Energy_CPI_YoY": 2.767295597484276,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1996-05-01",
+      "Food_YoY": 0.6872852233677174,
+      "Grocery_YoY": 0.34129692832765013,
+      "Energy_CPI_YoY": 3.690036900368998,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1996-06-01",
+      "Food_YoY": 1.258581235697931,
+      "Grocery_YoY": 0.9080590238365716,
+      "Energy_CPI_YoY": 2.3399014778324956,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1996-07-01",
+      "Food_YoY": 1.0297482837528404,
+      "Grocery_YoY": 0.6818181818181834,
+      "Energy_CPI_YoY": 0.496277915632759,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1996-08-01",
+      "Food_YoY": 1.616628175519641,
+      "Grocery_YoY": 1.6129032258064502,
+      "Energy_CPI_YoY": 2.012578616352201,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1996-09-01",
+      "Food_YoY": 1.504629629629628,
+      "Grocery_YoY": 1.6203703703703498,
+      "Energy_CPI_YoY": 2.509410288582181,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1996-10-01",
+      "Food_YoY": 2.19907407407407,
+      "Grocery_YoY": 2.430555555555558,
+      "Energy_CPI_YoY": 5.837563451776662,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1996-11-01",
+      "Food_YoY": 2.893518518518512,
+      "Grocery_YoY": 3.356481481481466,
+      "Energy_CPI_YoY": 6.114649681528661,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1996-12-01",
+      "Food_YoY": 2.188940092165903,
+      "Grocery_YoY": 2.4165707710011475,
+      "Energy_CPI_YoY": 5.40880503144654,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1997-01-01",
+      "Food_YoY": 2.178899082568808,
+      "Grocery_YoY": 2.517162471395862,
+      "Energy_CPI_YoY": 6.163522012578615,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1997-02-01",
+      "Food_YoY": 2.4054982817869552,
+      "Grocery_YoY": 2.7459954233409523,
+      "Energy_CPI_YoY": 7.061790668348067,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1997-03-01",
+      "Food_YoY": 2.2883295194507935,
+      "Grocery_YoY": 2.2805017103762815,
+      "Energy_CPI_YoY": 4.838709677419373,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1997-04-01",
+      "Food_YoY": 0.7927519818799578,
+      "Grocery_YoY": 0.6756756756756799,
+      "Energy_CPI_YoY": 1.7135862913096656,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1997-05-01",
+      "Food_YoY": 1.7064846416382284,
+      "Grocery_YoY": 1.814058956916087,
+      "Energy_CPI_YoY": -1.3048635824436494,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1997-06-01",
+      "Food_YoY": 1.3559322033898313,
+      "Grocery_YoY": 1.3498312710910954,
+      "Energy_CPI_YoY": 0.6016847172081841,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1997-07-01",
+      "Food_YoY": 2.0385050962627327,
+      "Grocery_YoY": 2.257336343115135,
+      "Energy_CPI_YoY": 2.3456790123456805,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1997-08-01",
+      "Food_YoY": 1.7045454545454586,
+      "Grocery_YoY": 1.814058956916087,
+      "Energy_CPI_YoY": 4.315659679408146,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1997-09-01",
+      "Food_YoY": 1.3683010262257822,
+      "Grocery_YoY": 1.025056947608216,
+      "Energy_CPI_YoY": 3.9167686658506673,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1997-10-01",
+      "Food_YoY": 0.679501698754259,
+      "Grocery_YoY": 0.4519774011299438,
+      "Energy_CPI_YoY": 0.9592326139088669,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1997-11-01",
+      "Food_YoY": 1.012373453318327,
+      "Grocery_YoY": 0.6718924972004547,
+      "Energy_CPI_YoY": -0.12004801920767472,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1997-12-01",
+      "Food_YoY": 1.1273957158962844,
+      "Grocery_YoY": 0.8988764044943753,
+      "Energy_CPI_YoY": -1.0739856801909253,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1998-01-01",
+      "Food_YoY": 2.3569023569023573,
+      "Grocery_YoY": 2.4553571428571397,
+      "Energy_CPI_YoY": -2.4881516587677788,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1998-02-01",
+      "Food_YoY": 1.230425055928408,
+      "Grocery_YoY": 1.1135857461024523,
+      "Energy_CPI_YoY": -4.829210836277986,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1998-03-01",
+      "Food_YoY": 1.4541387024608499,
+      "Grocery_YoY": 1.5607580824972045,
+      "Energy_CPI_YoY": -5.443786982248511,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1998-04-01",
+      "Food_YoY": 1.6853932584269593,
+      "Grocery_YoY": 1.5659955257270708,
+      "Energy_CPI_YoY": -3.730445246690728,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1998-05-01",
+      "Food_YoY": 1.6778523489932917,
+      "Grocery_YoY": 1.6703786191536674,
+      "Energy_CPI_YoY": -2.4038461538461564,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1998-06-01",
+      "Food_YoY": 2.1181716833890585,
+      "Grocery_YoY": 2.3307436182020025,
+      "Energy_CPI_YoY": -2.9904306220095656,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1998-07-01",
+      "Food_YoY": 1.3318534961154205,
+      "Grocery_YoY": 1.2141280353201056,
+      "Energy_CPI_YoY": -3.0156815440289475,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1998-08-01",
+      "Food_YoY": 1.452513966480451,
+      "Grocery_YoY": 1.2249443207126953,
+      "Energy_CPI_YoY": -5.082742316784872,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1998-09-01",
+      "Food_YoY": 1.3498312710910954,
+      "Grocery_YoY": 1.2401352874858995,
+      "Energy_CPI_YoY": -6.831566548881051,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1998-10-01",
+      "Food_YoY": 1.462317210348707,
+      "Grocery_YoY": 1.1248593925759387,
+      "Energy_CPI_YoY": -4.038004750593826,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1998-11-01",
+      "Food_YoY": 1.5590200445434466,
+      "Grocery_YoY": 1.6685205784204626,
+      "Energy_CPI_YoY": -3.4855769230769273,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1998-12-01",
+      "Food_YoY": 1.6722408026755842,
+      "Grocery_YoY": 1.6703786191536674,
+      "Energy_CPI_YoY": -4.221954161640529,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1999-01-01",
+      "Food_YoY": 1.2061403508771829,
+      "Grocery_YoY": 1.089324618736387,
+      "Energy_CPI_YoY": -3.402187120291611,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1999-02-01",
+      "Food_YoY": 1.436464088397793,
+      "Grocery_YoY": 1.4317180616740144,
+      "Energy_CPI_YoY": -2.3514851485148425,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1999-03-01",
+      "Food_YoY": 1.4332965821389099,
+      "Grocery_YoY": 1.207464324917673,
+      "Energy_CPI_YoY": 0.12515644555692873,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1999-04-01",
+      "Food_YoY": 1.878453038674044,
+      "Grocery_YoY": 1.7621145374449476,
+      "Energy_CPI_YoY": 3.750000000000009,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1999-05-01",
+      "Food_YoY": 1.650165016501659,
+      "Grocery_YoY": 1.4238773274917849,
+      "Energy_CPI_YoY": 2.9556650246305383,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1999-06-01",
+      "Food_YoY": 1.2008733624454315,
+      "Grocery_YoY": 0.8676789587852562,
+      "Energy_CPI_YoY": 2.3427866831072786,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1999-07-01",
+      "Food_YoY": 1.3143483023001057,
+      "Grocery_YoY": 1.0905125408942284,
+      "Energy_CPI_YoY": 5.472636815920384,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1999-08-01",
+      "Food_YoY": 1.1013215859030812,
+      "Grocery_YoY": 0.7700770077007535,
+      "Energy_CPI_YoY": 9.339975093399744,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1999-09-01",
+      "Food_YoY": 1.2208657047724891,
+      "Grocery_YoY": 1.1135857461024523,
+      "Energy_CPI_YoY": 12.51580278128952,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1999-10-01",
+      "Food_YoY": 1.330376940133049,
+      "Grocery_YoY": 1.1123470522803158,
+      "Energy_CPI_YoY": 11.509900990099009,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1999-11-01",
+      "Food_YoY": 0.8771929824561431,
+      "Grocery_YoY": 0.1094091903719896,
+      "Energy_CPI_YoY": 11.207970112079702,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "1999-12-01",
+      "Food_YoY": 1.0964912280701844,
+      "Grocery_YoY": 0.657174151150075,
+      "Energy_CPI_YoY": 14.987405541561705,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2000-01-01",
+      "Food_YoY": -0.21668472372697867,
+      "Grocery_YoY": -1.1853448275861989,
+      "Energy_CPI_YoY": 15.094339622641506,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2000-02-01",
+      "Food_YoY": 0.10893246187364536,
+      "Grocery_YoY": -0.7600434310531923,
+      "Energy_CPI_YoY": 19.39163498098859,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2000-03-01",
+      "Food_YoY": 0.3260869565217428,
+      "Grocery_YoY": -0.32537960954446277,
+      "Energy_CPI_YoY": 22.37500000000001,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2000-04-01",
+      "Food_YoY": 0.32537960954446277,
+      "Grocery_YoY": -0.32467532467533866,
+      "Energy_CPI_YoY": 13.61445783132529,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2000-05-01",
+      "Food_YoY": 0.8658008658008587,
+      "Grocery_YoY": 0.4319654427645814,
+      "Energy_CPI_YoY": 14.114832535885192,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2000-06-01",
+      "Food_YoY": 1.1866235167206085,
+      "Grocery_YoY": 0.8602150537634357,
+      "Energy_CPI_YoY": 19.397590361445772,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2000-07-01",
+      "Food_YoY": 1.9459459459459483,
+      "Grocery_YoY": 1.8338727076591121,
+      "Energy_CPI_YoY": 17.806603773584918,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2000-08-01",
+      "Food_YoY": 2.3965141612200425,
+      "Grocery_YoY": 2.510917030567694,
+      "Energy_CPI_YoY": 11.845102505694772,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2000-09-01",
+      "Food_YoY": 2.3026315789473673,
+      "Grocery_YoY": 2.2026431718061623,
+      "Energy_CPI_YoY": 15.168539325842701,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2000-10-01",
+      "Food_YoY": 1.8599562363238453,
+      "Grocery_YoY": 1.7601760176017445,
+      "Energy_CPI_YoY": 15.20532741398446,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2000-11-01",
+      "Food_YoY": 2.0652173913043637,
+      "Grocery_YoY": 2.2950819672131084,
+      "Energy_CPI_YoY": 18.029115341545364,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2000-12-01",
+      "Food_YoY": 3.145336225596518,
+      "Grocery_YoY": 3.59085963003265,
+      "Energy_CPI_YoY": 13.581599123767795,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2001-01-01",
+      "Food_YoY": 3.4744842562432154,
+      "Grocery_YoY": 3.925845147219187,
+      "Energy_CPI_YoY": 10.382513661202175,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2001-02-01",
+      "Food_YoY": 4.570184983677894,
+      "Grocery_YoY": 5.361050328227557,
+      "Energy_CPI_YoY": 6.369426751592355,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2001-03-01",
+      "Food_YoY": 4.983748645720487,
+      "Grocery_YoY": 5.875952121871597,
+      "Energy_CPI_YoY": 3.6772216547497294,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2001-04-01",
+      "Food_YoY": 5.081081081081074,
+      "Grocery_YoY": 6.080347448425627,
+      "Energy_CPI_YoY": 11.55885471898197,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2001-05-01",
+      "Food_YoY": 5.150214592274671,
+      "Grocery_YoY": 6.129032258064515,
+      "Energy_CPI_YoY": 16.037735849056588,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2001-06-01",
+      "Food_YoY": 4.6908315565032055,
+      "Grocery_YoY": 5.330490405117261,
+      "Energy_CPI_YoY": 10.29263370332998,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2001-07-01",
+      "Food_YoY": 4.559915164369022,
+      "Grocery_YoY": 4.978813559322015,
+      "Energy_CPI_YoY": 2.8028028028028062,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2001-08-01",
+      "Food_YoY": 4.148936170212769,
+      "Grocery_YoY": 4.259850905218321,
+      "Energy_CPI_YoY": 4.78615071283095,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2001-09-01",
+      "Food_YoY": 4.180064308681675,
+      "Grocery_YoY": 4.418103448275867,
+      "Energy_CPI_YoY": 3.121951219512198,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2001-10-01",
+      "Food_YoY": 4.1890440386681105,
+      "Grocery_YoY": 4.432432432432432,
+      "Energy_CPI_YoY": -2.6974951830443183,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2001-11-01",
+      "Food_YoY": 3.833865814696469,
+      "Grocery_YoY": 3.8461538461538547,
+      "Energy_CPI_YoY": -12.523719165085389,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2001-12-01",
+      "Food_YoY": 3.680336487907465,
+      "Grocery_YoY": 3.5714285714285587,
+      "Energy_CPI_YoY": -11.378977820636448,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2002-01-01",
+      "Food_YoY": 4.616998950682061,
+      "Grocery_YoY": 4.931794333683115,
+      "Energy_CPI_YoY": -6.930693069306926,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2002-02-01",
+      "Food_YoY": 4.3704474505723345,
+      "Grocery_YoY": 4.569055036344771,
+      "Energy_CPI_YoY": -5.788423153692612,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2002-03-01",
+      "Food_YoY": 3.302373581011331,
+      "Grocery_YoY": 3.1860226104830414,
+      "Energy_CPI_YoY": -3.349753694581281,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2002-04-01",
+      "Food_YoY": 3.3950617283950546,
+      "Grocery_YoY": 3.2753326509723735,
+      "Energy_CPI_YoY": -5.038022813688214,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2002-05-01",
+      "Food_YoY": 2.1428571428571352,
+      "Grocery_YoY": 1.6210739614994862,
+      "Energy_CPI_YoY": -10.478771454381219,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2002-06-01",
+      "Food_YoY": 2.3421588594704668,
+      "Grocery_YoY": 1.9230769230769384,
+      "Energy_CPI_YoY": -10.338517840805117,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2002-07-01",
+      "Food_YoY": 1.9269776876267741,
+      "Grocery_YoY": 1.5136226034308864,
+      "Energy_CPI_YoY": -3.1158714703018564,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2002-08-01",
+      "Food_YoY": 2.0429009193054126,
+      "Grocery_YoY": 1.8386108273748647,
+      "Energy_CPI_YoY": 0.0,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2002-09-01",
+      "Food_YoY": 1.8518518518518379,
+      "Grocery_YoY": 1.5479876160990669,
+      "Energy_CPI_YoY": -1.7029328287606393,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2002-10-01",
+      "Food_YoY": 1.546391752577314,
+      "Grocery_YoY": 1.1387163561076719,
+      "Energy_CPI_YoY": 5.742574257425748,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2002-11-01",
+      "Food_YoY": 2.6666666666666616,
+      "Grocery_YoY": 2.77777777777779,
+      "Energy_CPI_YoY": 13.991323210412144,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2002-12-01",
+      "Food_YoY": 2.2312373225152227,
+      "Grocery_YoY": 2.129817444219073,
+      "Energy_CPI_YoY": 7.072905331882473,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2003-01-01",
+      "Food_YoY": 1.9057171514543558,
+      "Grocery_YoY": 1.8000000000000016,
+      "Energy_CPI_YoY": 15.212765957446805,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2003-02-01",
+      "Food_YoY": 1.1964107676969205,
+      "Grocery_YoY": 0.7944389275074348,
+      "Energy_CPI_YoY": 19.703389830508478,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2003-03-01",
+      "Food_YoY": 1.598401598401611,
+      "Grocery_YoY": 1.294820717131473,
+      "Energy_CPI_YoY": 17.533129459734976,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2003-04-01",
+      "Food_YoY": 1.2935323383084452,
+      "Grocery_YoY": 0.7928642220019766,
+      "Energy_CPI_YoY": 6.106106106106091,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2003-05-01",
+      "Food_YoY": 1.998001998001997,
+      "Grocery_YoY": 1.7946161515453696,
+      "Energy_CPI_YoY": 4.64177598385469,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2003-06-01",
+      "Food_YoY": 1.8905472636816079,
+      "Grocery_YoY": 1.688182720953324,
+      "Energy_CPI_YoY": 7.857142857142851,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2003-07-01",
+      "Food_YoY": 1.8905472636816079,
+      "Grocery_YoY": 1.6898608349900535,
+      "Energy_CPI_YoY": 6.733668341708543,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2003-08-01",
+      "Food_YoY": 1.6016016016015877,
+      "Grocery_YoY": 1.3039117352056095,
+      "Energy_CPI_YoY": 7.580174927113692,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2003-09-01",
+      "Food_YoY": 1.8181818181818077,
+      "Grocery_YoY": 1.6260162601625883,
+      "Energy_CPI_YoY": 6.448508180943202,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2003-10-01",
+      "Food_YoY": 2.233502538071064,
+      "Grocery_YoY": 1.9447287615148356,
+      "Energy_CPI_YoY": -1.0299625468164764,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2003-11-01",
+      "Food_YoY": 1.598401598401611,
+      "Grocery_YoY": 1.1011011011010874,
+      "Energy_CPI_YoY": -0.666032350142709,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2003-12-01",
+      "Food_YoY": 1.7857142857142794,
+      "Grocery_YoY": 1.4895729890764597,
+      "Energy_CPI_YoY": 6.8089430894308745,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2004-01-01",
+      "Food_YoY": 1.1811023622047223,
+      "Grocery_YoY": 0.39292730844793233,
+      "Energy_CPI_YoY": -1.1080332409972304,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2004-02-01",
+      "Food_YoY": 1.0837438423645374,
+      "Grocery_YoY": 0.3940886699507429,
+      "Energy_CPI_YoY": -3.0973451327433676,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2004-03-01",
+      "Food_YoY": 0.9832841691248762,
+      "Grocery_YoY": 0.3933136676499416,
+      "Energy_CPI_YoY": -4.076322636600171,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2004-04-01",
+      "Food_YoY": 0.6876227897838927,
+      "Grocery_YoY": 0.0,
+      "Energy_CPI_YoY": 6.41509433962264,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2004-05-01",
+      "Food_YoY": 1.2732615083251853,
+      "Grocery_YoY": 0.6856023506366382,
+      "Energy_CPI_YoY": 16.200578592092562,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2004-06-01",
+      "Food_YoY": 1.953125,
+      "Grocery_YoY": 1.7578125,
+      "Energy_CPI_YoY": 12.961210974456016,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2004-07-01",
+      "Food_YoY": 1.953125,
+      "Grocery_YoY": 1.6617790811339184,
+      "Energy_CPI_YoY": 10.640301318267408,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2004-08-01",
+      "Food_YoY": 2.5615763546797954,
+      "Grocery_YoY": 2.5742574257425765,
+      "Energy_CPI_YoY": 6.233062330623307,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2004-09-01",
+      "Food_YoY": 2.876984126984139,
+      "Grocery_YoY": 2.8000000000000025,
+      "Energy_CPI_YoY": 5.786618444846292,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2004-10-01",
+      "Food_YoY": 3.47567030784508,
+      "Grocery_YoY": 3.81526104417671,
+      "Energy_CPI_YoY": 13.055818353831604,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2004-11-01",
+      "Food_YoY": 3.4414945919370776,
+      "Grocery_YoY": 3.7623762376237657,
+      "Energy_CPI_YoY": 12.164750957854388,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2004-12-01",
+      "Food_YoY": 3.021442495126725,
+      "Grocery_YoY": 3.131115459882583,
+      "Energy_CPI_YoY": 8.08753568030447,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2005-01-01",
+      "Food_YoY": 2.529182879377445,
+      "Grocery_YoY": 2.544031311154593,
+      "Energy_CPI_YoY": 7.376283846872078,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2005-02-01",
+      "Food_YoY": 2.5341130604288553,
+      "Grocery_YoY": 2.4533856722276814,
+      "Energy_CPI_YoY": 7.30593607305936,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2005-03-01",
+      "Food_YoY": 2.8237585199610393,
+      "Grocery_YoY": 2.840352595494622,
+      "Energy_CPI_YoY": 9.403254972875242,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2005-04-01",
+      "Food_YoY": 4.0000000000000036,
+      "Grocery_YoY": 4.424778761061954,
+      "Energy_CPI_YoY": 10.726950354609933,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2005-05-01",
+      "Food_YoY": 3.2882011605415817,
+      "Grocery_YoY": 3.5019455252918386,
+      "Energy_CPI_YoY": 1.6597510373443924,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2005-06-01",
+      "Food_YoY": 2.6819923371647514,
+      "Grocery_YoY": 2.399232245681371,
+      "Energy_CPI_YoY": 3.9363484087101996,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2005-07-01",
+      "Food_YoY": 2.3946360153256796,
+      "Grocery_YoY": 2.2115384615384537,
+      "Energy_CPI_YoY": 9.191489361702132,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2005-08-01",
+      "Food_YoY": 2.5936599423631135,
+      "Grocery_YoY": 2.316602316602312,
+      "Energy_CPI_YoY": 12.414965986394556,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2005-09-01",
+      "Food_YoY": 2.0250723240115676,
+      "Grocery_YoY": 1.6536964980544688,
+      "Energy_CPI_YoY": 21.452991452991444,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2005-10-01",
+      "Food_YoY": 1.9193857965451144,
+      "Grocery_YoY": 1.4506769825918697,
+      "Energy_CPI_YoY": 13.472803347280337,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2005-11-01",
+      "Food_YoY": 1.425855513307983,
+      "Grocery_YoY": 0.7633587786259444,
+      "Energy_CPI_YoY": 8.795900939368062,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2005-12-01",
+      "Food_YoY": 1.7029328287606393,
+      "Grocery_YoY": 1.0436432637571214,
+      "Energy_CPI_YoY": 10.2112676056338,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2006-01-01",
+      "Food_YoY": 2.8462998102466885,
+      "Grocery_YoY": 2.8625954198473247,
+      "Energy_CPI_YoY": 15.391304347826074,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2006-02-01",
+      "Food_YoY": 2.851711026615966,
+      "Grocery_YoY": 2.8735632183908066,
+      "Energy_CPI_YoY": 8.17021276595744,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2006-03-01",
+      "Food_YoY": 2.4621212121212155,
+      "Grocery_YoY": 2.0952380952381056,
+      "Energy_CPI_YoY": 7.438016528925617,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2006-04-01",
+      "Food_YoY": 1.40712945590995,
+      "Grocery_YoY": 0.6591337099811634,
+      "Energy_CPI_YoY": 11.208967173738982,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2006-05-01",
+      "Food_YoY": 1.7790262172284743,
+      "Grocery_YoY": 1.2218045112782017,
+      "Energy_CPI_YoY": 14.122448979591852,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2006-06-01",
+      "Food_YoY": 1.8656716417910557,
+      "Grocery_YoY": 1.4058106841611906,
+      "Energy_CPI_YoY": 11.522965350523773,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2006-07-01",
+      "Food_YoY": 2.1515434985968085,
+      "Grocery_YoY": 2.069614299153333,
+      "Energy_CPI_YoY": 10.67809820732657,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2006-08-01",
+      "Food_YoY": 2.2471910112359605,
+      "Grocery_YoY": 2.264150943396226,
+      "Energy_CPI_YoY": 7.186081694402424,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2006-09-01",
+      "Food_YoY": 2.835538752362954,
+      "Grocery_YoY": 3.157894736842093,
+      "Energy_CPI_YoY": -9.359605911330037,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2006-10-01",
+      "Food_YoY": 2.824858757062154,
+      "Grocery_YoY": 3.1458531935176337,
+      "Energy_CPI_YoY": -8.702064896755157,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2006-11-01",
+      "Food_YoY": 3.1865042174320513,
+      "Grocery_YoY": 3.3143939393939448,
+      "Energy_CPI_YoY": -2.8257456828885474,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2006-12-01",
+      "Food_YoY": 2.2325581395348904,
+      "Grocery_YoY": 2.2535211267605604,
+      "Energy_CPI_YoY": 1.5175718849840258,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2007-01-01",
+      "Food_YoY": 2.306273062730635,
+      "Grocery_YoY": 2.226345083487935,
+      "Energy_CPI_YoY": -5.651846269781446,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2007-02-01",
+      "Food_YoY": 4.066543438077619,
+      "Grocery_YoY": 4.748603351955305,
+      "Energy_CPI_YoY": 0.0,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2007-03-01",
+      "Food_YoY": 3.6968576709796697,
+      "Grocery_YoY": 4.3843283582089665,
+      "Energy_CPI_YoY": 4.538461538461536,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2007-04-01",
+      "Food_YoY": 3.7927844588344195,
+      "Grocery_YoY": 4.490177736202061,
+      "Energy_CPI_YoY": 0.14398848092151972,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2007-05-01",
+      "Food_YoY": 3.4958601655933785,
+      "Grocery_YoY": 3.9925719591457742,
+      "Energy_CPI_YoY": 1.573676680972813,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2007-06-01",
+      "Food_YoY": 3.1135531135531025,
+      "Grocery_YoY": 3.419593345656202,
+      "Energy_CPI_YoY": 1.2283236994219626,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2007-07-01",
+      "Food_YoY": 2.8388278388278287,
+      "Grocery_YoY": 2.6728110599078425,
+      "Energy_CPI_YoY": -1.6901408450704314,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2007-08-01",
+      "Food_YoY": 2.3809523809523725,
+      "Grocery_YoY": 2.0295202952029356,
+      "Energy_CPI_YoY": -3.740296400846843,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2007-09-01",
+      "Food_YoY": 1.930147058823528,
+      "Grocery_YoY": 1.2987012987013102,
+      "Energy_CPI_YoY": 6.055900621118004,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2007-10-01",
+      "Food_YoY": 1.3736263736263687,
+      "Grocery_YoY": 0.6469500924214389,
+      "Energy_CPI_YoY": 8.642972536348958,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2007-11-01",
+      "Food_YoY": 1.089918256130784,
+      "Grocery_YoY": 0.6416131989001039,
+      "Energy_CPI_YoY": 10.258481421647826,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2007-12-01",
+      "Food_YoY": 1.6378525932666088,
+      "Grocery_YoY": 1.1019283746556363,
+      "Energy_CPI_YoY": 8.733280881195915,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2008-01-01",
+      "Food_YoY": 1.352569882777277,
+      "Grocery_YoY": 1.0889292196007316,
+      "Energy_CPI_YoY": 11.0223642172524,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2008-02-01",
+      "Food_YoY": 0.1776198934280604,
+      "Grocery_YoY": -0.622222222222224,
+      "Energy_CPI_YoY": 9.677419354838722,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2008-03-01",
+      "Food_YoY": 0.35650623885916666,
+      "Grocery_YoY": -0.2680965147453196,
+      "Energy_CPI_YoY": 5.371596762325237,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2008-04-01",
+      "Food_YoY": 1.158645276292325,
+      "Grocery_YoY": 0.8952551477170889,
+      "Energy_CPI_YoY": 7.979870596693028,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2008-05-01",
+      "Food_YoY": 1.866666666666661,
+      "Grocery_YoY": 1.8750000000000044,
+      "Energy_CPI_YoY": 11.549295774647895,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2008-06-01",
+      "Food_YoY": 2.841918294849033,
+      "Grocery_YoY": 3.038427167113489,
+      "Energy_CPI_YoY": 17.987152034261243,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2008-07-01",
+      "Food_YoY": 3.7399821905609976,
+      "Grocery_YoY": 4.308797127468589,
+      "Energy_CPI_YoY": 21.13180515759312,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2008-08-01",
+      "Food_YoY": 4.472271914132375,
+      "Grocery_YoY": 5.244122965641962,
+      "Energy_CPI_YoY": 20.23460410557185,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2008-09-01",
+      "Food_YoY": 5.590622182146077,
+      "Grocery_YoY": 6.684981684981683,
+      "Energy_CPI_YoY": 18.22840409956077,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2008-10-01",
+      "Food_YoY": 6.052393857271898,
+      "Grocery_YoY": 7.2543617998163334,
+      "Energy_CPI_YoY": 9.66542750929369,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2008-11-01",
+      "Food_YoY": 7.367475292003589,
+      "Grocery_YoY": 9.016393442622949,
+      "Energy_CPI_YoY": -4.249084249084256,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2008-12-01",
+      "Food_YoY": 7.251566696508505,
+      "Grocery_YoY": 8.99182561307903,
+      "Energy_CPI_YoY": -10.998552821997098,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2009-01-01",
+      "Food_YoY": 7.295373665480409,
+      "Grocery_YoY": 8.617594254937156,
+      "Energy_CPI_YoY": -10.935251798561152,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2009-02-01",
+      "Food_YoY": 7.446808510638303,
+      "Grocery_YoY": 8.94454382826475,
+      "Energy_CPI_YoY": -8.751793400286944,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2009-03-01",
+      "Food_YoY": 7.904085257548843,
+      "Grocery_YoY": 9.498207885304666,
+      "Energy_CPI_YoY": -11.243016759776536,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2009-04-01",
+      "Food_YoY": 7.13656387665198,
+      "Grocery_YoY": 8.340727595385978,
+      "Energy_CPI_YoY": -17.509986684420763,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2009-05-01",
+      "Food_YoY": 6.369982547993036,
+      "Grocery_YoY": 7.361963190184051,
+      "Energy_CPI_YoY": -18.308080808080806,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2009-06-01",
+      "Food_YoY": 5.526770293609684,
+      "Grocery_YoY": 6.418039895923688,
+      "Energy_CPI_YoY": -18.995765275257114,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2009-07-01",
+      "Food_YoY": 4.978540772532192,
+      "Grocery_YoY": 5.59380378657488,
+      "Energy_CPI_YoY": -23.35895919574217,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2009-08-01",
+      "Food_YoY": 4.023972602739723,
+      "Grocery_YoY": 4.381443298969057,
+      "Energy_CPI_YoY": -19.14634146341464,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2009-09-01",
+      "Food_YoY": 2.818104184457737,
+      "Grocery_YoY": 2.746781115879826,
+      "Energy_CPI_YoY": -18.699690402476776,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2009-10-01",
+      "Food_YoY": 2.2998296422487075,
+      "Grocery_YoY": 2.1404109589041154,
+      "Energy_CPI_YoY": -12.677966101694905,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2009-11-01",
+      "Food_YoY": 1.673640167364021,
+      "Grocery_YoY": 1.2531328320801949,
+      "Energy_CPI_YoY": 1.3006885998469997,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2009-12-01",
+      "Food_YoY": 1.6694490818029983,
+      "Grocery_YoY": 1.2499999999999956,
+      "Energy_CPI_YoY": 5.934959349593516,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2010-01-01",
+      "Food_YoY": 1.4096185737976885,
+      "Grocery_YoY": 0.9090909090909038,
+      "Energy_CPI_YoY": 8.1583198707593,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2010-02-01",
+      "Food_YoY": 1.2376237623762387,
+      "Grocery_YoY": 0.5747126436781658,
+      "Energy_CPI_YoY": 4.009433962264164,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2010-03-01",
+      "Food_YoY": 1.3168724279835287,
+      "Grocery_YoY": 0.7364975450081745,
+      "Energy_CPI_YoY": 5.822187254130617,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2010-04-01",
+      "Food_YoY": 0.9868421052631637,
+      "Grocery_YoY": 0.40950040950040734,
+      "Energy_CPI_YoY": 9.765940274414842,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2010-05-01",
+      "Food_YoY": 0.8203445447087843,
+      "Grocery_YoY": 0.2448979591836764,
+      "Energy_CPI_YoY": 6.18238021638331,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2010-06-01",
+      "Food_YoY": 0.6546644844517058,
+      "Grocery_YoY": 0.08149959250203231,
+      "Energy_CPI_YoY": 1.3442867811799708,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2010-07-01",
+      "Food_YoY": 1.1447260834014816,
+      "Grocery_YoY": 0.5704971475142706,
+      "Energy_CPI_YoY": 7.870370370370394,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2010-08-01",
+      "Food_YoY": 1.6460905349794164,
+      "Grocery_YoY": 1.2345679012345734,
+      "Energy_CPI_YoY": 4.977375565610864,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2010-09-01",
+      "Food_YoY": 2.0764119601328845,
+      "Grocery_YoY": 2.172096908939003,
+      "Energy_CPI_YoY": 5.63594821020561,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2010-10-01",
+      "Food_YoY": 2.164862614487939,
+      "Grocery_YoY": 2.095557418273253,
+      "Energy_CPI_YoY": 9.083850931677006,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2010-11-01",
+      "Food_YoY": 1.4814814814814836,
+      "Grocery_YoY": 0.990099009900991,
+      "Energy_CPI_YoY": 6.722054380664666,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2010-12-01",
+      "Food_YoY": 1.7241379310344973,
+      "Grocery_YoY": 1.3991769547325061,
+      "Energy_CPI_YoY": 10.514198004604758,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2011-01-01",
+      "Food_YoY": 2.1259198691741643,
+      "Grocery_YoY": 1.8837018837018826,
+      "Energy_CPI_YoY": 9.03659447348768,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2011-02-01",
+      "Food_YoY": 2.1189894050529734,
+      "Grocery_YoY": 1.959183673469389,
+      "Energy_CPI_YoY": 10.582010582010582,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2011-03-01",
+      "Food_YoY": 3.3306255077172997,
+      "Grocery_YoY": 3.6555645816409355,
+      "Energy_CPI_YoY": 12.788104089219331,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2011-04-01",
+      "Food_YoY": 3.338762214983726,
+      "Grocery_YoY": 3.6704730831973897,
+      "Energy_CPI_YoY": 17.058823529411747,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2011-05-01",
+      "Food_YoY": 3.9056143205858485,
+      "Grocery_YoY": 4.234527687296419,
+      "Energy_CPI_YoY": 16.59388646288209,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2011-06-01",
+      "Food_YoY": 4.3089430894309055,
+      "Grocery_YoY": 4.80456026058631,
+      "Energy_CPI_YoY": 15.696389093588813,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2011-07-01",
+      "Food_YoY": 4.284559417946632,
+      "Grocery_YoY": 5.105348460291714,
+      "Energy_CPI_YoY": 12.947067238912723,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2011-08-01",
+      "Food_YoY": 4.3724696356275405,
+      "Grocery_YoY": 5.040650406504055,
+      "Energy_CPI_YoY": 13.433908045977017,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2011-09-01",
+      "Food_YoY": 4.312449145646857,
+      "Grocery_YoY": 4.824202780049047,
+      "Energy_CPI_YoY": 12.472963229992807,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2011-10-01",
+      "Food_YoY": 4.319478402607979,
+      "Grocery_YoY": 4.92610837438423,
+      "Energy_CPI_YoY": 11.672597864768687,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2011-11-01",
+      "Food_YoY": 4.785077047850761,
+      "Grocery_YoY": 5.718954248366015,
+      "Energy_CPI_YoY": 9.058740268931341,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2011-12-01",
+      "Food_YoY": 4.358353510895885,
+      "Grocery_YoY": 5.032467532467533,
+      "Energy_CPI_YoY": 6.041666666666656,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2012-01-01",
+      "Food_YoY": 4.243394715772597,
+      "Grocery_YoY": 4.903536977491951,
+      "Energy_CPI_YoY": 6.506849315068486,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2012-02-01",
+      "Food_YoY": 4.0702314445331345,
+      "Grocery_YoY": 4.723779023218588,
+      "Energy_CPI_YoY": 7.24538619275461,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2012-03-01",
+      "Food_YoY": 2.2012578616352085,
+      "Grocery_YoY": 1.9592476489028288,
+      "Energy_CPI_YoY": 5.141727092946624,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2012-04-01",
+      "Food_YoY": 2.521670606776971,
+      "Grocery_YoY": 2.3603461841070095,
+      "Energy_CPI_YoY": 1.1306532663316604,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2012-05-01",
+      "Food_YoY": 2.5058731401722767,
+      "Grocery_YoY": 2.499999999999991,
+      "Energy_CPI_YoY": -1.560549313358306,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2012-06-01",
+      "Food_YoY": 2.0265003897116163,
+      "Grocery_YoY": 1.787101787101797,
+      "Energy_CPI_YoY": -0.8280254777070173,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2012-07-01",
+      "Food_YoY": 2.0930232558139528,
+      "Grocery_YoY": 1.927525057825763,
+      "Energy_CPI_YoY": -1.2032932235592209,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2012-08-01",
+      "Food_YoY": 2.172226532195487,
+      "Grocery_YoY": 2.244582043343657,
+      "Energy_CPI_YoY": 0.8233058898036605,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2012-09-01",
+      "Food_YoY": 1.6380655226209129,
+      "Grocery_YoY": 1.404056162246503,
+      "Energy_CPI_YoY": 2.9487179487179382,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2012-10-01",
+      "Food_YoY": 1.953125,
+      "Grocery_YoY": 1.8779342723004522,
+      "Energy_CPI_YoY": 1.6571064372211453,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2012-11-01",
+      "Food_YoY": 1.702786377708998,
+      "Grocery_YoY": 1.4683153013910433,
+      "Energy_CPI_YoY": -0.194678780012969,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2012-12-01",
+      "Food_YoY": 1.4694508894044667,
+      "Grocery_YoY": 1.2364760432766575,
+      "Energy_CPI_YoY": -0.5239030779305764,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2013-01-01",
+      "Food_YoY": 1.0752688172043001,
+      "Grocery_YoY": 0.6130268199233901,
+      "Energy_CPI_YoY": -1.7363344051446905,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2013-02-01",
+      "Food_YoY": 1.917177914110435,
+      "Grocery_YoY": 1.758409785932713,
+      "Energy_CPI_YoY": 2.0395156150414095,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2013-03-01",
+      "Food_YoY": 1.846153846153853,
+      "Grocery_YoY": 1.6910069177555886,
+      "Energy_CPI_YoY": 0.25078369905957576,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2013-04-01",
+      "Food_YoY": 1.537279016141424,
+      "Grocery_YoY": 1.6910069177555886,
+      "Energy_CPI_YoY": -1.8633540372670843,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2013-05-01",
+      "Food_YoY": 1.298701298701288,
+      "Grocery_YoY": 1.2957317073170938,
+      "Energy_CPI_YoY": 1.0145846544071135,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2013-06-01",
+      "Food_YoY": 1.2223071046600475,
+      "Grocery_YoY": 1.2977099236641143,
+      "Energy_CPI_YoY": 4.110468850353244,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2013-07-01",
+      "Food_YoY": 0.7593014426727329,
+      "Grocery_YoY": 0.4538577912254427,
+      "Energy_CPI_YoY": 5.25641025641026,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2013-08-01",
+      "Food_YoY": 0.9870918754745661,
+      "Grocery_YoY": 0.681302043906129,
+      "Energy_CPI_YoY": 2.386934673366836,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2013-09-01",
+      "Food_YoY": 1.2279355333844943,
+      "Grocery_YoY": 1.0769230769230864,
+      "Energy_CPI_YoY": 1.4943960149439661,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2013-10-01",
+      "Food_YoY": 0.9195402298850519,
+      "Grocery_YoY": 0.691244239631339,
+      "Energy_CPI_YoY": -1.5673981191222541,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2013-11-01",
+      "Food_YoY": 1.0654490106544845,
+      "Grocery_YoY": 1.0662604722010416,
+      "Energy_CPI_YoY": 2.3407022106632036,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2013-12-01",
+      "Food_YoY": 0.9908536585365946,
+      "Grocery_YoY": 0.7633587786259444,
+      "Energy_CPI_YoY": 4.608294930875578,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2014-01-01",
+      "Food_YoY": 1.0638297872340496,
+      "Grocery_YoY": 0.9900990099009688,
+      "Energy_CPI_YoY": 4.842931937172756,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2014-02-01",
+      "Food_YoY": 1.0534236267870645,
+      "Grocery_YoY": 0.9767092411720579,
+      "Energy_CPI_YoY": 1.5615240474703418,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2014-03-01",
+      "Food_YoY": 1.5105740181268867,
+      "Grocery_YoY": 1.7384731670445852,
+      "Energy_CPI_YoY": 4.565353345841139,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2014-04-01",
+      "Food_YoY": 1.8925056775170424,
+      "Grocery_YoY": 1.7384731670445852,
+      "Energy_CPI_YoY": 8.354430379746836,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2014-05-01",
+      "Food_YoY": 2.337858220211153,
+      "Grocery_YoY": 2.483069977426622,
+      "Energy_CPI_YoY": 8.411801632140591,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2014-06-01",
+      "Food_YoY": 2.943396226415107,
+      "Grocery_YoY": 3.240391861341374,
+      "Energy_CPI_YoY": 6.724244293645909,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2014-07-01",
+      "Food_YoY": 2.8636021100226117,
+      "Grocery_YoY": 3.1626506024096335,
+      "Energy_CPI_YoY": 4.689403166869677,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2014-08-01",
+      "Food_YoY": 2.1804511278195493,
+      "Grocery_YoY": 2.2556390977443552,
+      "Energy_CPI_YoY": 3.2515337423312918,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2014-09-01",
+      "Food_YoY": 2.7293404094010487,
+      "Grocery_YoY": 2.9680365296803624,
+      "Energy_CPI_YoY": 2.6993865030674913,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2014-10-01",
+      "Food_YoY": 2.809415337889165,
+      "Grocery_YoY": 3.0511060259343914,
+      "Energy_CPI_YoY": 4.2038216560509545,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2014-11-01",
+      "Food_YoY": 3.0873493975903665,
+      "Grocery_YoY": 3.31574981160514,
+      "Energy_CPI_YoY": -0.571791613723005,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2014-12-01",
+      "Food_YoY": 3.6981132075471823,
+      "Grocery_YoY": 4.2424242424242475,
+      "Energy_CPI_YoY": -6.4191315292637,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2015-01-01",
+      "Food_YoY": 4.586466165413539,
+      "Grocery_YoY": 5.354449472096534,
+      "Energy_CPI_YoY": -12.921348314606739,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2015-02-01",
+      "Food_YoY": 3.87192851824274,
+      "Grocery_YoY": 4.315476190476186,
+      "Energy_CPI_YoY": -10.76260762607626,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2015-03-01",
+      "Food_YoY": 3.7946428571428603,
+      "Grocery_YoY": 4.160475482912318,
+      "Energy_CPI_YoY": -10.406698564593286,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2015-04-01",
+      "Food_YoY": 3.566121842496295,
+      "Grocery_YoY": 4.011887072808329,
+      "Energy_CPI_YoY": -13.492990654205606,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2015-05-01",
+      "Food_YoY": 3.7582903463522666,
+      "Grocery_YoY": 4.111600587371522,
+      "Energy_CPI_YoY": -11.754487550665882,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2015-06-01",
+      "Food_YoY": 3.372434017595305,
+      "Grocery_YoY": 3.5766423357664223,
+      "Energy_CPI_YoY": -8.959537572254339,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2015-07-01",
+      "Food_YoY": 3.223443223443234,
+      "Grocery_YoY": 3.50364963503651,
+      "Energy_CPI_YoY": -7.3880162885398555,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2015-08-01",
+      "Food_YoY": 3.6055923473142126,
+      "Grocery_YoY": 3.9705882352941257,
+      "Energy_CPI_YoY": -7.248960190136666,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2015-09-01",
+      "Food_YoY": 3.542435424354262,
+      "Grocery_YoY": 3.917220990391712,
+      "Energy_CPI_YoY": -10.812425328554355,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2015-10-01",
+      "Food_YoY": 4.062038404726742,
+      "Grocery_YoY": 4.589193190229479,
+      "Energy_CPI_YoY": -10.391198044009775,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2015-11-01",
+      "Food_YoY": 3.4331628926223434,
+      "Grocery_YoY": 3.7199124726476906,
+      "Energy_CPI_YoY": -6.389776357827481,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2015-12-01",
+      "Food_YoY": 3.7117903930131035,
+      "Grocery_YoY": 4.06976744186045,
+      "Energy_CPI_YoY": -3.5642232683254726,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2016-01-01",
+      "Food_YoY": 3.953989935298341,
+      "Grocery_YoY": 4.58124552612742,
+      "Energy_CPI_YoY": -0.35842293906810374,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2016-02-01",
+      "Food_YoY": 3.942652329749108,
+      "Grocery_YoY": 4.422253922967201,
+      "Energy_CPI_YoY": -7.236388697450035,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2016-03-01",
+      "Food_YoY": 3.584229390680993,
+      "Grocery_YoY": 3.9942938659058624,
+      "Energy_CPI_YoY": -7.810413885180257,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2016-04-01",
+      "Food_YoY": 3.1563845050215145,
+      "Grocery_YoY": 3.285714285714292,
+      "Energy_CPI_YoY": -3.1735313977042434,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2016-05-01",
+      "Food_YoY": 1.7755681818181879,
+      "Grocery_YoY": 1.4104372355430161,
+      "Energy_CPI_YoY": -3.6089238845144367,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2016-06-01",
+      "Food_YoY": 1.276595744680864,
+      "Grocery_YoY": 0.8456659619450191,
+      "Energy_CPI_YoY": -4.380952380952385,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2016-07-01",
+      "Food_YoY": 1.6323633782824531,
+      "Grocery_YoY": 1.128349788434413,
+      "Energy_CPI_YoY": -7.412060301507529,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2016-08-01",
+      "Food_YoY": 1.0653409090909172,
+      "Grocery_YoY": 0.4243281471004279,
+      "Energy_CPI_YoY": -5.829596412556048,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2016-09-01",
+      "Food_YoY": 0.07127583749109156,
+      "Grocery_YoY": -0.9246088193456514,
+      "Energy_CPI_YoY": -1.339584728734089,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2016-10-01",
+      "Food_YoY": -0.709723207948898,
+      "Grocery_YoY": -2.0523708421797626,
+      "Energy_CPI_YoY": 2.4556616643929052,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2016-11-01",
+      "Food_YoY": -0.7062146892655385,
+      "Grocery_YoY": -1.9690576652601877,
+      "Energy_CPI_YoY": 0.20477815699659896,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2016-12-01",
+      "Food_YoY": -1.333333333333342,
+      "Grocery_YoY": -2.7932960893854775,
+      "Energy_CPI_YoY": 3.974895397489542,
+      "CAD_per_USD": null
+    },
+    {
+      "date": "2017-01-01",
+      "Food_YoY": -2.1438450899031736,
+      "Grocery_YoY": -3.9698836413415317,
+      "Energy_CPI_YoY": 12.086330935251798,
+      "CAD_per_USD": 1.3192761904761905
+    },
+    {
+      "date": "2017-02-01",
+      "Food_YoY": -2.2758620689655285,
+      "Grocery_YoY": -4.098360655737709,
+      "Energy_CPI_YoY": 12.258543833580982,
+      "CAD_per_USD": 1.3107263157894737
+    },
+    {
+      "date": "2017-03-01",
+      "Food_YoY": -1.868512110726639,
+      "Grocery_YoY": -3.566529492455428,
+      "Energy_CPI_YoY": 8.47212165097757,
+      "CAD_per_USD": 1.3386434782608696
+    },
+    {
+      "date": "2017-04-01",
+      "Food_YoY": -1.1126564673157313,
+      "Grocery_YoY": -2.5587828492392717,
+      "Energy_CPI_YoY": 9.623430962343082,
+      "CAD_per_USD": 1.344021052631579
+    },
+    {
+      "date": "2017-05-01",
+      "Food_YoY": -0.13956734124216386,
+      "Grocery_YoY": -1.1821974965229631,
+      "Energy_CPI_YoY": 3.335602450646702,
+      "CAD_per_USD": 1.3607045454545454
+    },
+    {
+      "date": "2017-06-01",
+      "Food_YoY": 0.5602240896358524,
+      "Grocery_YoY": -0.34940600978337066,
+      "Energy_CPI_YoY": -1.2616201859229736,
+      "CAD_per_USD": 1.3298045454545455
+    },
+    {
+      "date": "2017-07-01",
+      "Food_YoY": 0.6284916201117374,
+      "Grocery_YoY": -0.1394700139470184,
+      "Energy_CPI_YoY": 0.27137042062415073,
+      "CAD_per_USD": 1.268875
+    },
+    {
+      "date": "2017-08-01",
+      "Food_YoY": 0.9135628952916308,
+      "Grocery_YoY": 0.28169014084507005,
+      "Energy_CPI_YoY": 2.3129251700680253,
+      "CAD_per_USD": 1.2604772727272726
+    },
+    {
+      "date": "2017-09-01",
+      "Food_YoY": 1.4245014245014342,
+      "Grocery_YoY": 0.8614501076812608,
+      "Energy_CPI_YoY": 4.887983706720966,
+      "CAD_per_USD": 1.22828
+    },
+    {
+      "date": "2017-10-01",
+      "Food_YoY": 1.2866333095067795,
+      "Grocery_YoY": 0.5780346820809079,
+      "Energy_CPI_YoY": 0.9986684420772329,
+      "CAD_per_USD": 1.2604619047619048
+    },
+    {
+      "date": "2017-11-01",
+      "Food_YoY": 1.6358463726884764,
+      "Grocery_YoY": 0.9325681492108995,
+      "Energy_CPI_YoY": 7.561307901907344,
+      "CAD_per_USD": 1.2768857142857142
+    },
+    {
+      "date": "2017-12-01",
+      "Food_YoY": 1.9914651493598834,
+      "Grocery_YoY": 1.5086206896551824,
+      "Energy_CPI_YoY": 4.49362843729042,
+      "CAD_per_USD": 1.2770526315789474
+    },
+    {
+      "date": "2018-01-01",
+      "Food_YoY": 2.2614840989399143,
+      "Grocery_YoY": 1.6393442622950616,
+      "Energy_CPI_YoY": 2.3748395378690557,
+      "CAD_per_USD": 1.242740909090909
+    },
+    {
+      "date": "2018-02-01",
+      "Food_YoY": 2.117148906139743,
+      "Grocery_YoY": 1.3532763532763559,
+      "Energy_CPI_YoY": 5.294506949040367,
+      "CAD_per_USD": 1.2586210526315789
+    },
+    {
+      "date": "2018-03-01",
+      "Food_YoY": 1.6925246826515972,
+      "Grocery_YoY": 0.4978662873399875,
+      "Energy_CPI_YoY": 7.476635514018692,
+      "CAD_per_USD": 1.2931714285714286
+    },
+    {
+      "date": "2018-04-01",
+      "Food_YoY": 1.8284106891701901,
+      "Grocery_YoY": 0.7097232079489091,
+      "Energy_CPI_YoY": 6.297709923664119,
+      "CAD_per_USD": 1.2732571428571429
+    },
+    {
+      "date": "2018-05-01",
+      "Food_YoY": 1.048218029350112,
+      "Grocery_YoY": -0.49261083743841194,
+      "Energy_CPI_YoY": 11.594202898550709,
+      "CAD_per_USD": 1.2873272727272729
+    },
+    {
+      "date": "2018-06-01",
+      "Food_YoY": 1.392757660167132,
+      "Grocery_YoY": 0.07012622720896644,
+      "Energy_CPI_YoY": 12.441156691324817,
+      "CAD_per_USD": 1.312857142857143
+    },
+    {
+      "date": "2018-07-01",
+      "Food_YoY": 1.3879250520471897,
+      "Grocery_YoY": 0.0698324022346597,
+      "Energy_CPI_YoY": 14.208389715832205,
+      "CAD_per_USD": 1.3130095238095238
+    },
+    {
+      "date": "2018-08-01",
+      "Food_YoY": 1.6016713091921986,
+      "Grocery_YoY": 0.2808988764045006,
+      "Energy_CPI_YoY": 11.170212765957444,
+      "CAD_per_USD": 1.3041181818181817
+    },
+    {
+      "date": "2018-09-01",
+      "Food_YoY": 1.755617977528079,
+      "Grocery_YoY": 0.6405693950177982,
+      "Energy_CPI_YoY": 7.637540453074432,
+      "CAD_per_USD": 1.3036526315789474
+    },
+    {
+      "date": "2018-10-01",
+      "Food_YoY": 2.0465772759350687,
+      "Grocery_YoY": 1.0775862068965525,
+      "Energy_CPI_YoY": 7.910349373764003,
+      "CAD_per_USD": 1.3009545454545455
+    },
+    {
+      "date": "2018-11-01",
+      "Food_YoY": 2.2393282015395366,
+      "Grocery_YoY": 1.4214641080312784,
+      "Energy_CPI_YoY": -1.3299556681443891,
+      "CAD_per_USD": 1.3200380952380952
+    },
+    {
+      "date": "2018-12-01",
+      "Food_YoY": 2.8591352859135277,
+      "Grocery_YoY": 2.4769992922859085,
+      "Energy_CPI_YoY": -3.658536585365868,
+      "CAD_per_USD": 1.3431842105263159
+    },
+    {
+      "date": "2019-01-01",
+      "Food_YoY": 2.764340013821709,
+      "Grocery_YoY": 2.4544179523141585,
+      "Energy_CPI_YoY": -6.896551724137934,
+      "CAD_per_USD": 1.3301
+    },
+    {
+      "date": "2019-02-01",
+      "Food_YoY": 3.178991015894961,
+      "Grocery_YoY": 3.373155305692177,
+      "Energy_CPI_YoY": -5.656819610307984,
+      "CAD_per_USD": 1.320557894736842
+    },
+    {
+      "date": "2019-03-01",
+      "Food_YoY": 3.6061026352288694,
+      "Grocery_YoY": 4.033970276008492,
+      "Energy_CPI_YoY": -1.1801242236024856,
+      "CAD_per_USD": 1.3368190476190476
+    },
+    {
+      "date": "2019-04-01",
+      "Food_YoY": 2.900552486187835,
+      "Grocery_YoY": 2.9598308668076,
+      "Energy_CPI_YoY": 0.6582884500299091,
+      "CAD_per_USD": 1.3377714285714286
+    },
+    {
+      "date": "2019-05-01",
+      "Food_YoY": 3.526970954356834,
+      "Grocery_YoY": 4.0311173974540315,
+      "Energy_CPI_YoY": -0.11806375442739991,
+      "CAD_per_USD": 1.3459045454545455
+    },
+    {
+      "date": "2019-06-01",
+      "Food_YoY": 3.5027472527472403,
+      "Grocery_YoY": 3.9243167484232844,
+      "Energy_CPI_YoY": -4.12679425837319,
+      "CAD_per_USD": 1.32873
+    },
+    {
+      "date": "2019-07-01",
+      "Food_YoY": 3.7645448323066377,
+      "Grocery_YoY": 4.187020237264472,
+      "Energy_CPI_YoY": -3.19905213270143,
+      "CAD_per_USD": 1.3101045454545455
+    },
+    {
+      "date": "2019-08-01",
+      "Food_YoY": 3.5640849897189852,
+      "Grocery_YoY": 3.9215686274509665,
+      "Energy_CPI_YoY": -4.72488038277511,
+      "CAD_per_USD": 1.327747619047619
+    },
+    {
+      "date": "2019-09-01",
+      "Food_YoY": 3.657694962042779,
+      "Grocery_YoY": 4.101838755304099,
+      "Energy_CPI_YoY": -4.57005411906195,
+      "CAD_per_USD": 1.3240500000000002
+    },
+    {
+      "date": "2019-10-01",
+      "Food_YoY": 3.665283540802222,
+      "Grocery_YoY": 4.12224591329069,
+      "Energy_CPI_YoY": -2.9321930360415305,
+      "CAD_per_USD": 1.3189772727272728
+    },
+    {
+      "date": "2019-11-01",
+      "Food_YoY": 3.4223134839151292,
+      "Grocery_YoY": 3.854239663629988,
+      "Energy_CPI_YoY": 1.4762516046213037,
+      "CAD_per_USD": 1.32388
+    },
+    {
+      "date": "2019-12-01",
+      "Food_YoY": 2.9830508474576245,
+      "Grocery_YoY": 3.176795580110503,
+      "Energy_CPI_YoY": 5.463024650233184,
+      "CAD_per_USD": 1.31717
+    },
+    {
+      "date": "2020-01-01",
+      "Food_YoY": 3.227975790181592,
+      "Grocery_YoY": 3.7645448323066377,
+      "Energy_CPI_YoY": 6.801346801346808,
+      "CAD_per_USD": 1.3086727272727272
+    },
+    {
+      "date": "2020-02-01",
+      "Food_YoY": 2.4112525117213623,
+      "Grocery_YoY": 2.3793337865397612,
+      "Energy_CPI_YoY": 4.330446369087282,
+      "CAD_per_USD": 1.3285842105263157
+    },
+    {
+      "date": "2020-03-01",
+      "Food_YoY": 2.27576974564927,
+      "Grocery_YoY": 2.3809523809523725,
+      "Energy_CPI_YoY": -11.627906976744185,
+      "CAD_per_USD": 1.3952499999999999
+    },
+    {
+      "date": "2020-04-01",
+      "Food_YoY": 3.3557046979865834,
+      "Grocery_YoY": 3.969883641341565,
+      "Energy_CPI_YoY": -23.72175980975029,
+      "CAD_per_USD": 1.4057857142857142
+    },
+    {
+      "date": "2020-05-01",
+      "Food_YoY": 3.072812291249183,
+      "Grocery_YoY": 3.5350101971448167,
+      "Energy_CPI_YoY": -19.030732860520093,
+      "CAD_per_USD": 1.39697
+    },
+    {
+      "date": "2020-06-01",
+      "Food_YoY": 2.720637027206396,
+      "Grocery_YoY": 3.0343897505057393,
+      "Energy_CPI_YoY": -8.79600748596383,
+      "CAD_per_USD": 1.3550318181818182
+    },
+    {
+      "date": "2020-07-01",
+      "Food_YoY": 2.242744063324542,
+      "Grocery_YoY": 2.4112525117213623,
+      "Energy_CPI_YoY": -8.384332925336613,
+      "CAD_per_USD": 1.34985
+    },
+    {
+      "date": "2020-08-01",
+      "Food_YoY": 1.7868960953011381,
+      "Grocery_YoY": 1.6172506738544534,
+      "Energy_CPI_YoY": -6.2774639045825475,
+      "CAD_per_USD": 1.3222049999999999
+    },
+    {
+      "date": "2020-09-01",
+      "Food_YoY": 1.5978695073235683,
+      "Grocery_YoY": 1.2907608695652106,
+      "Energy_CPI_YoY": -5.608065532451157,
+      "CAD_per_USD": 1.3228095238095239
+    },
+    {
+      "date": "2020-10-01",
+      "Food_YoY": 2.2681787858572333,
+      "Grocery_YoY": 2.320819112627981,
+      "Energy_CPI_YoY": -5.978602894902451,
+      "CAD_per_USD": 1.3214714285714286
+    },
+    {
+      "date": "2020-11-01",
+      "Food_YoY": 1.8530774321641408,
+      "Grocery_YoY": 1.6194331983805599,
+      "Energy_CPI_YoY": -5.692599620493355,
+      "CAD_per_USD": 1.3068199999999999
+    },
+    {
+      "date": "2020-12-01",
+      "Food_YoY": 1.119157340355481,
+      "Grocery_YoY": 0.5354752342703994,
+      "Energy_CPI_YoY": -3.9797852179406235,
+      "CAD_per_USD": 1.2807714285714287
+    },
+    {
+      "date": "2021-01-01",
+      "Food_YoY": 0.9771986970684043,
+      "Grocery_YoY": 0.06596306068600288,
+      "Energy_CPI_YoY": -2.7112232030264694,
+      "CAD_per_USD": 1.272405
+    },
+    {
+      "date": "2021-02-01",
+      "Food_YoY": 1.7658600392413293,
+      "Grocery_YoY": 1.3280212483399723,
+      "Energy_CPI_YoY": 2.426564495530026,
+      "CAD_per_USD": 1.269857894736842
+    },
+    {
+      "date": "2021-03-01",
+      "Food_YoY": 1.7670157068062853,
+      "Grocery_YoY": 1.3289036544850585,
+      "Energy_CPI_YoY": 19.061166429587484,
+      "CAD_per_USD": 1.2573739130434782
+    },
+    {
+      "date": "2021-04-01",
+      "Food_YoY": 0.9090909090909038,
+      "Grocery_YoY": 0.06583278472678256,
+      "Energy_CPI_YoY": 32.65783320342943,
+      "CAD_per_USD": 1.2495904761904761
+    },
+    {
+      "date": "2021-05-01",
+      "Food_YoY": 1.490602721970169,
+      "Grocery_YoY": 0.8535784635587573,
+      "Energy_CPI_YoY": 26.42335766423356,
+      "CAD_per_USD": 1.212645
+    },
+    {
+      "date": "2021-06-01",
+      "Food_YoY": 1.2919896640826822,
+      "Grocery_YoY": 0.654450261780104,
+      "Energy_CPI_YoY": 19.49384404924761,
+      "CAD_per_USD": 1.2218636363636364
+    },
+    {
+      "date": "2021-07-01",
+      "Food_YoY": 1.6774193548387162,
+      "Grocery_YoY": 0.9810333551340644,
+      "Energy_CPI_YoY": 19.7060788243153,
+      "CAD_per_USD": 1.2528809523809525
+    },
+    {
+      "date": "2021-08-01",
+      "Food_YoY": 2.730819245773719,
+      "Grocery_YoY": 2.5862068965517127,
+      "Energy_CPI_YoY": 20.696584058941703,
+      "CAD_per_USD": 1.2603190476190476
+    },
+    {
+      "date": "2021-09-01",
+      "Food_YoY": 3.8663171690694664,
+      "Grocery_YoY": 4.225352112676073,
+      "Energy_CPI_YoY": 20.09345794392523,
+      "CAD_per_USD": 1.267125
+    },
+    {
+      "date": "2021-10-01",
+      "Food_YoY": 3.848662752772336,
+      "Grocery_YoY": 3.935957304869908,
+      "Energy_CPI_YoY": 25.502008032128522,
+      "CAD_per_USD": 1.243685
+    },
+    {
+      "date": "2021-11-01",
+      "Food_YoY": 4.418453541260559,
+      "Grocery_YoY": 4.7144754316069015,
+      "Energy_CPI_YoY": 26.358148893360166,
+      "CAD_per_USD": 1.2569809523809523
+    },
+    {
+      "date": "2021-12-01",
+      "Food_YoY": 5.208333333333326,
+      "Grocery_YoY": 5.725699067909473,
+      "Energy_CPI_YoY": 21.184210526315784,
+      "CAD_per_USD": 1.2794142857142856
+    },
+    {
+      "date": "2022-01-01",
+      "Food_YoY": 5.7419354838709635,
+      "Grocery_YoY": 6.46011865524061,
+      "Energy_CPI_YoY": 23.13674659753726,
+      "CAD_per_USD": 1.26155
+    },
+    {
+      "date": "2022-02-01",
+      "Food_YoY": 6.683804627249357,
+      "Grocery_YoY": 7.404980340760159,
+      "Energy_CPI_YoY": 24.064837905236903,
+      "CAD_per_USD": 1.2715842105263158
+    },
+    {
+      "date": "2022-03-01",
+      "Food_YoY": 7.717041800643076,
+      "Grocery_YoY": 8.655737704918032,
+      "Energy_CPI_YoY": 27.777777777777768,
+      "CAD_per_USD": 1.265786956521739
+    },
+    {
+      "date": "2022-04-01",
+      "Food_YoY": 8.751608751608742,
+      "Grocery_YoY": 9.736842105263154,
+      "Energy_CPI_YoY": 26.380728554641596,
+      "CAD_per_USD": 1.2628
+    },
+    {
+      "date": "2022-05-01",
+      "Food_YoY": 8.812260536398476,
+      "Grocery_YoY": 9.700520833333348,
+      "Energy_CPI_YoY": 34.75750577367207,
+      "CAD_per_USD": 1.2852285714285714
+    },
+    {
+      "date": "2022-06-01",
+      "Food_YoY": 8.801020408163263,
+      "Grocery_YoY": 9.427828348504551,
+      "Energy_CPI_YoY": 38.80938752146539,
+      "CAD_per_USD": 1.2813636363636365
+    },
+    {
+      "date": "2022-07-01",
+      "Food_YoY": 9.200507614213205,
+      "Grocery_YoY": 9.909326424870457,
+      "Energy_CPI_YoY": 28.01339285714286,
+      "CAD_per_USD": 1.29423
+    },
+    {
+      "date": "2022-08-01",
+      "Food_YoY": 9.810126582278489,
+      "Grocery_YoY": 10.795087265675507,
+      "Energy_CPI_YoY": 19.034406215316313,
+      "CAD_per_USD": 1.2921681818181818
+    },
+    {
+      "date": "2022-09-01",
+      "Food_YoY": 10.283911671924306,
+      "Grocery_YoY": 11.389961389961378,
+      "Energy_CPI_YoY": 14.00778210116731,
+      "CAD_per_USD": 1.331855
+    },
+    {
+      "date": "2022-10-01",
+      "Food_YoY": 10.050251256281406,
+      "Grocery_YoY": 11.039794608472398,
+      "Energy_CPI_YoY": 16.213333333333345,
+      "CAD_per_USD": 1.36995
+    },
+    {
+      "date": "2022-11-01",
+      "Food_YoY": 10.329807093963916,
+      "Grocery_YoY": 11.414077362079889,
+      "Energy_CPI_YoY": 13.90658174097663,
+      "CAD_per_USD": 1.344857142857143
+    },
+    {
+      "date": "2022-12-01",
+      "Food_YoY": 10.086633663366351,
+      "Grocery_YoY": 11.020151133501255,
+      "Energy_CPI_YoY": 7.328990228013033,
+      "CAD_per_USD": 1.3591900000000001
+    },
+    {
+      "date": "2023-01-01",
+      "Food_YoY": 10.433190970103713,
+      "Grocery_YoY": 11.393188854489168,
+      "Energy_CPI_YoY": 5.421052631578949,
+      "CAD_per_USD": 1.3421666666666667
+    },
+    {
+      "date": "2023-02-01",
+      "Food_YoY": 9.698795180722897,
+      "Grocery_YoY": 10.555216595485039,
+      "Energy_CPI_YoY": -0.5527638190954698,
+      "CAD_per_USD": 1.3450263157894735
+    },
+    {
+      "date": "2023-03-01",
+      "Food_YoY": 8.895522388059707,
+      "Grocery_YoY": 9.656004828002418,
+      "Energy_CPI_YoY": -6.872370266479666,
+      "CAD_per_USD": 1.3682130434782607
+    },
+    {
+      "date": "2023-04-01",
+      "Food_YoY": 8.343195266272186,
+      "Grocery_YoY": 9.11270983213428,
+      "Energy_CPI_YoY": -4.230590423059044,
+      "CAD_per_USD": 1.3485052631578949
+    },
+    {
+      "date": "2023-05-01",
+      "Food_YoY": 8.333333333333325,
+      "Grocery_YoY": 9.020771513353099,
+      "Energy_CPI_YoY": -12.425021422450733,
+      "CAD_per_USD": 1.3520136363636364
+    },
+    {
+      "date": "2023-06-01",
+      "Food_YoY": 8.32356389214537,
+      "Grocery_YoY": 9.090909090909083,
+      "Energy_CPI_YoY": -14.556701030927844,
+      "CAD_per_USD": 1.3287818181818183
+    },
+    {
+      "date": "2023-07-01",
+      "Food_YoY": 7.786170830912265,
+      "Grocery_YoY": 8.485562757807896,
+      "Energy_CPI_YoY": -8.151700087183967,
+      "CAD_per_USD": 1.32146
+    },
+    {
+      "date": "2023-08-01",
+      "Food_YoY": 6.80115273775217,
+      "Grocery_YoY": 6.942823803967335,
+      "Energy_CPI_YoY": 1.81818181818183,
+      "CAD_per_USD": 1.3485363636363636
+    },
+    {
+      "date": "2023-09-01",
+      "Food_YoY": 5.949656750572063,
+      "Grocery_YoY": 5.777007510109766,
+      "Energy_CPI_YoY": 5.411994149195509,
+      "CAD_per_USD": 1.35349
+    },
+    {
+      "date": "2023-10-01",
+      "Food_YoY": 5.593607305936077,
+      "Grocery_YoY": 5.433526011560708,
+      "Energy_CPI_YoY": -5.369435520881149,
+      "CAD_per_USD": 1.371675
+    },
+    {
+      "date": "2023-11-01",
+      "Food_YoY": 5.019740552735463,
+      "Grocery_YoY": 4.667046101309058,
+      "Energy_CPI_YoY": -5.731593662628143,
+      "CAD_per_USD": 1.370942857142857
+    },
+    {
+      "date": "2023-12-01",
+      "Food_YoY": 5.0028105677346835,
+      "Grocery_YoY": 4.6511627906976605,
+      "Energy_CPI_YoY": -0.35407182599898057,
+      "CAD_per_USD": 1.3430894736842105
+    },
+    {
+      "date": "2024-01-01",
+      "Food_YoY": 3.9226519337016486,
+      "Grocery_YoY": 3.3907726514730285,
+      "Energy_CPI_YoY": -2.6959560659011506,
+      "CAD_per_USD": 1.34245
+    },
+    {
+      "date": "2024-02-01",
+      "Food_YoY": 3.294892915980241,
+      "Grocery_YoY": 2.428256070640189,
+      "Energy_CPI_YoY": 1.2632642748862999,
+      "CAD_per_USD": 1.35008
+    },
+    {
+      "date": "2024-03-01",
+      "Food_YoY": 2.960526315789469,
+      "Grocery_YoY": 1.871216290588884,
+      "Energy_CPI_YoY": 2.7610441767068172,
+      "CAD_per_USD": 1.353945
+    },
+    {
+      "date": "2024-04-01",
+      "Food_YoY": 2.348443473511752,
+      "Grocery_YoY": 1.3736263736263687,
+      "Energy_CPI_YoY": 4.466019417475731,
+      "CAD_per_USD": 1.3673772727272728
+    },
+    {
+      "date": "2024-05-01",
+      "Food_YoY": 2.383531960996743,
+      "Grocery_YoY": 1.5242242787153026,
+      "Energy_CPI_YoY": 4.109589041095885,
+      "CAD_per_USD": 1.3670363636363636
+    },
+    {
+      "date": "2024-06-01",
+      "Food_YoY": 2.813852813852802,
+      "Grocery_YoY": 2.12418300653594,
+      "Energy_CPI_YoY": 0.5308880308880326,
+      "CAD_per_USD": 1.370685
+    },
+    {
+      "date": "2024-07-01",
+      "Food_YoY": 2.695417789757415,
+      "Grocery_YoY": 2.1184139054861495,
+      "Energy_CPI_YoY": 0.42714760322732914,
+      "CAD_per_USD": 1.3711818181818183
+    },
+    {
+      "date": "2024-08-01",
+      "Food_YoY": 2.698327037236914,
+      "Grocery_YoY": 2.4004364429896174,
+      "Energy_CPI_YoY": -4.670329670329676,
+      "CAD_per_USD": 1.3651619047619046
+    },
+    {
+      "date": "2024-09-01",
+      "Food_YoY": 2.7537796976242035,
+      "Grocery_YoY": 2.403058438012029,
+      "Energy_CPI_YoY": -8.279370952821452,
+      "CAD_per_USD": 1.354621052631579
+    },
+    {
+      "date": "2024-10-01",
+      "Food_YoY": 2.972972972972965,
+      "Grocery_YoY": 2.7412280701754277,
+      "Energy_CPI_YoY": -3.5402521823472255,
+      "CAD_per_USD": 1.3754863636363637
+    },
+    {
+      "date": "2024-11-01",
+      "Food_YoY": 2.84640171858217,
+      "Grocery_YoY": 2.5557368134855762,
+      "Energy_CPI_YoY": -1.384083044982709,
+      "CAD_per_USD": 1.397485
+    },
+    {
+      "date": "2024-12-01",
+      "Food_YoY": 0.6423982869379063,
+      "Grocery_YoY": 1.8970189701897011,
+      "Energy_CPI_YoY": 1.0152284263959421,
+      "CAD_per_USD": 1.424045
+    },
+    {
+      "date": "2025-01-01",
+      "Food_YoY": -0.5847953216374213,
+      "Grocery_YoY": 1.8817204301075252,
+      "Energy_CPI_YoY": 5.336069779374042,
+      "CAD_per_USD": 1.4389727272727273
+    },
+    {
+      "date": "2025-02-01",
+      "Food_YoY": 1.2759170653907637,
+      "Grocery_YoY": 2.80172413793105,
+      "Energy_CPI_YoY": 2.9940119760478945,
+      "CAD_per_USD": 1.4301105263157894
+    },
+    {
+      "date": "2025-03-01",
+      "Food_YoY": 3.194888178913735,
+      "Grocery_YoY": 3.1874662344678617,
+      "Energy_CPI_YoY": -0.34196384953589787,
+      "CAD_per_USD": 1.4358904761904763
+    },
+    {
+      "date": "2025-04-01",
+      "Food_YoY": 3.7886872998932786,
+      "Grocery_YoY": 3.848238482384825,
+      "Energy_CPI_YoY": -12.732342007434937,
+      "CAD_per_USD": 1.3988285714285713
+    },
+    {
+      "date": "2025-05-01",
+      "Food_YoY": 3.3862433862433816,
+      "Grocery_YoY": 3.324396782841821,
+      "Energy_CPI_YoY": -10.996240601503759,
+      "CAD_per_USD": 1.3860095238095238
+    },
+    {
+      "date": "2025-06-01",
+      "Food_YoY": 2.947368421052632,
+      "Grocery_YoY": 2.826666666666666,
+      "Energy_CPI_YoY": -9.457513202112345,
+      "CAD_per_USD": 1.3673714285714287
+    },
+    {
+      "date": "2025-07-01",
+      "Food_YoY": 3.307086614173227,
+      "Grocery_YoY": 3.404255319148941,
+      "Energy_CPI_YoY": -10.444234404536857,
+      "CAD_per_USD": 1.3691045454545454
+    },
+    {
+      "date": "2025-08-01",
+      "Food_YoY": 3.4156594850236477,
+      "Grocery_YoY": 3.4629728289824246,
+      "Energy_CPI_YoY": -8.261287223823244,
+      "CAD_per_USD": 1.3801999999999999
+    },
+    {
+      "date": "2025-09-01",
+      "Food_YoY": 3.7834997372569568,
+      "Grocery_YoY": 4.0000000000000036,
+      "Energy_CPI_YoY": -2.6222894604135183,
+      "CAD_per_USD": 1.383315
+    },
+    {
+      "date": "2025-10-01",
+      "Food_YoY": 3.3595800524934383,
+      "Grocery_YoY": 3.415154749199578,
+      "Energy_CPI_YoY": -6.485671191553544,
+      "CAD_per_USD": 1.3992
+    },
+    {
+      "date": "2025-11-01",
+      "Food_YoY": 4.177545691906004,
+      "Grocery_YoY": 4.665959703075306,
+      "Energy_CPI_YoY": -5.062656641604002,
+      "CAD_per_USD": 1.4055263157894735
+    },
+    {
+      "date": "2025-12-01",
+      "Food_YoY": 6.223404255319154,
+      "Grocery_YoY": 5.000000000000004,
+      "Energy_CPI_YoY": -8.793969849246231,
+      "CAD_per_USD": 1.380247619047619
+    },
+    {
+      "date": "2026-01-01",
+      "Food_YoY": 7.326203208556148,
+      "Grocery_YoY": 4.802110817941951,
+      "Energy_CPI_YoY": -10.862152946906967,
+      "CAD_per_USD": 1.3778190476190477
+    },
+    {
+      "date": "2026-02-01",
+      "Food_YoY": 5.406824146981637,
+      "Grocery_YoY": 4.088050314465397,
+      "Energy_CPI_YoY": -9.253875968992242,
+      "CAD_per_USD": 1.3650736842105262
+    },
+    {
+      "date": "2026-03-01",
+      "Food_YoY": 3.973168214654277,
+      "Grocery_YoY": 4.397905759162302,
+      "Energy_CPI_YoY": 3.8725490196078516,
+      "CAD_per_USD": 1.3717090909090908
+    },
+    {
+      "date": "2026-04-01",
+      "Food_YoY": 3.4961439588689025,
+      "Grocery_YoY": 3.8100208768267363,
+      "Energy_CPI_YoY": 19.222577209797652,
+      "CAD_per_USD": 1.375057142857143
+    },
+    {
+      "date": "2026-05-01",
+      "Food_YoY": 3.7871033776867957,
+      "Grocery_YoY": 4.255319148936176,
+      "Energy_CPI_YoY": 22.17529039070749,
+      "CAD_per_USD": 1.372305
+    },
+    {
+      "date": "2026-06-01",
+      "Food_YoY": null,
+      "Grocery_YoY": null,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": 1.4040227272727273
+    },
+    {
+      "date": "2026-07-01",
+      "Food_YoY": null,
+      "Grocery_YoY": null,
+      "Energy_CPI_YoY": null,
+      "CAD_per_USD": 1.4155
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "notes": "Food prices may respond to international commodities, energy, currency, domestic supply, processing, and margins; co-movement is not causal proof."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T14:12:52+00:00"
+}

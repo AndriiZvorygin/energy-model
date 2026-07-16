@@ -1,0 +1,3395 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "affordability-canada-housing",
+  "title": "Canadian new housing purchase prices",
+  "description": "The NHPI measures transaction prices for new residential properties; it is not rent or shelter CPI.",
+  "plainLanguageSummary": "The NHPI measures transaction prices for new residential properties; it is not rent or shelter CPI.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "explanation": "The NHPI measures transaction prices for new residential properties; it is not rent or shelter CPI.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "The NHPI measures transaction prices for new residential properties; it is not rent or shelter CPI."
+  ],
+  "sourceNotes": [
+    "Statistics Canada"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-12-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "Total": {
+        "mean": 84.19083333333333,
+        "standardDeviation": 14.720529858179548,
+        "n": 240
+      },
+      "House": {
+        "mean": 82.81541666666666,
+        "standardDeviation": 15.428706059152278,
+        "n": 240
+      },
+      "Land": {
+        "mean": 87.5725,
+        "standardDeviation": 12.724611732779904,
+        "n": 240
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "1981-01-01",
+    "end": "2026-05-01"
+  },
+  "series": [
+    {
+      "key": "Total",
+      "label": "Canada new housing price index",
+      "unit": "index, December 2016=100",
+      "source": "Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "House",
+      "label": "Canada new housing house component",
+      "unit": "index, December 2016=100",
+      "source": "Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    },
+    {
+      "key": "Land",
+      "label": "Canada new housing land component",
+      "unit": "index, December 2016=100",
+      "source": "Statistics Canada",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": "monthly",
+      "color": null,
+      "transformations": [
+        "raw",
+        "indexed",
+        "yoy",
+        "pct_change",
+        "zscore"
+      ],
+      "finalObservationDate": "2026-05-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1981-01-01",
+      "Total": 38.2,
+      "House": 36.1,
+      "Land": 40.6
+    },
+    {
+      "date": "1981-02-01",
+      "Total": 38.7,
+      "House": 36.5,
+      "Land": 41.0
+    },
+    {
+      "date": "1981-03-01",
+      "Total": 39.3,
+      "House": 37.3,
+      "Land": 41.1
+    },
+    {
+      "date": "1981-04-01",
+      "Total": 39.9,
+      "House": 38.1,
+      "Land": 41.2
+    },
+    {
+      "date": "1981-05-01",
+      "Total": 40.6,
+      "House": 38.9,
+      "Land": 41.5
+    },
+    {
+      "date": "1981-06-01",
+      "Total": 40.8,
+      "House": 39.1,
+      "Land": 41.6
+    },
+    {
+      "date": "1981-07-01",
+      "Total": 40.8,
+      "House": 39.2,
+      "Land": 41.6
+    },
+    {
+      "date": "1981-08-01",
+      "Total": 40.6,
+      "House": 39.0,
+      "Land": 41.5
+    },
+    {
+      "date": "1981-09-01",
+      "Total": 40.4,
+      "House": 39.0,
+      "Land": 40.9
+    },
+    {
+      "date": "1981-10-01",
+      "Total": 40.3,
+      "House": 38.8,
+      "Land": 40.9
+    },
+    {
+      "date": "1981-11-01",
+      "Total": 40.2,
+      "House": 38.8,
+      "Land": 40.4
+    },
+    {
+      "date": "1981-12-01",
+      "Total": 40.3,
+      "House": 38.9,
+      "Land": 40.5
+    },
+    {
+      "date": "1982-01-01",
+      "Total": 40.3,
+      "House": 39.1,
+      "Land": 40.5
+    },
+    {
+      "date": "1982-02-01",
+      "Total": 40.3,
+      "House": 38.9,
+      "Land": 40.6
+    },
+    {
+      "date": "1982-03-01",
+      "Total": 40.1,
+      "House": 38.6,
+      "Land": 40.7
+    },
+    {
+      "date": "1982-04-01",
+      "Total": 39.9,
+      "House": 38.5,
+      "Land": 40.6
+    },
+    {
+      "date": "1982-05-01",
+      "Total": 39.6,
+      "House": 38.1,
+      "Land": 40.1
+    },
+    {
+      "date": "1982-06-01",
+      "Total": 39.3,
+      "House": 38.1,
+      "Land": 39.5
+    },
+    {
+      "date": "1982-07-01",
+      "Total": 39.0,
+      "House": 38.0,
+      "Land": 38.5
+    },
+    {
+      "date": "1982-08-01",
+      "Total": 38.8,
+      "House": 37.8,
+      "Land": 38.2
+    },
+    {
+      "date": "1982-09-01",
+      "Total": 38.4,
+      "House": 37.6,
+      "Land": 37.5
+    },
+    {
+      "date": "1982-10-01",
+      "Total": 38.3,
+      "House": 37.4,
+      "Land": 37.5
+    },
+    {
+      "date": "1982-11-01",
+      "Total": 38.0,
+      "House": 37.3,
+      "Land": 37.0
+    },
+    {
+      "date": "1982-12-01",
+      "Total": 37.9,
+      "House": 37.2,
+      "Land": 37.0
+    },
+    {
+      "date": "1983-01-01",
+      "Total": 37.9,
+      "House": 37.3,
+      "Land": 36.8
+    },
+    {
+      "date": "1983-02-01",
+      "Total": 37.9,
+      "House": 37.2,
+      "Land": 36.8
+    },
+    {
+      "date": "1983-03-01",
+      "Total": 37.8,
+      "House": 37.2,
+      "Land": 37.0
+    },
+    {
+      "date": "1983-04-01",
+      "Total": 37.8,
+      "House": 37.0,
+      "Land": 37.2
+    },
+    {
+      "date": "1983-05-01",
+      "Total": 37.7,
+      "House": 36.9,
+      "Land": 37.2
+    },
+    {
+      "date": "1983-06-01",
+      "Total": 37.8,
+      "House": 37.0,
+      "Land": 37.4
+    },
+    {
+      "date": "1983-07-01",
+      "Total": 37.8,
+      "House": 37.0,
+      "Land": 37.4
+    },
+    {
+      "date": "1983-08-01",
+      "Total": 38.0,
+      "House": 37.2,
+      "Land": 37.2
+    },
+    {
+      "date": "1983-09-01",
+      "Total": 38.0,
+      "House": 37.2,
+      "Land": 37.3
+    },
+    {
+      "date": "1983-10-01",
+      "Total": 37.9,
+      "House": 37.2,
+      "Land": 37.2
+    },
+    {
+      "date": "1983-11-01",
+      "Total": 38.0,
+      "House": 37.3,
+      "Land": 37.4
+    },
+    {
+      "date": "1983-12-01",
+      "Total": 37.9,
+      "House": 37.2,
+      "Land": 37.2
+    },
+    {
+      "date": "1984-01-01",
+      "Total": 38.0,
+      "House": 37.2,
+      "Land": 37.3
+    },
+    {
+      "date": "1984-02-01",
+      "Total": 38.0,
+      "House": 37.4,
+      "Land": 37.3
+    },
+    {
+      "date": "1984-03-01",
+      "Total": 38.1,
+      "House": 37.5,
+      "Land": 37.3
+    },
+    {
+      "date": "1984-04-01",
+      "Total": 38.2,
+      "House": 37.6,
+      "Land": 37.4
+    },
+    {
+      "date": "1984-05-01",
+      "Total": 38.2,
+      "House": 37.6,
+      "Land": 37.4
+    },
+    {
+      "date": "1984-06-01",
+      "Total": 38.1,
+      "House": 37.4,
+      "Land": 37.4
+    },
+    {
+      "date": "1984-07-01",
+      "Total": 38.1,
+      "House": 37.4,
+      "Land": 37.4
+    },
+    {
+      "date": "1984-08-01",
+      "Total": 38.0,
+      "House": 37.3,
+      "Land": 37.4
+    },
+    {
+      "date": "1984-09-01",
+      "Total": 37.9,
+      "House": 37.2,
+      "Land": 37.3
+    },
+    {
+      "date": "1984-10-01",
+      "Total": 37.9,
+      "House": 37.2,
+      "Land": 37.2
+    },
+    {
+      "date": "1984-11-01",
+      "Total": 37.8,
+      "House": 37.2,
+      "Land": 37.0
+    },
+    {
+      "date": "1984-12-01",
+      "Total": 37.9,
+      "House": 37.3,
+      "Land": 37.0
+    },
+    {
+      "date": "1985-01-01",
+      "Total": 38.0,
+      "House": 37.4,
+      "Land": 37.1
+    },
+    {
+      "date": "1985-02-01",
+      "Total": 38.0,
+      "House": 37.4,
+      "Land": 37.2
+    },
+    {
+      "date": "1985-03-01",
+      "Total": 38.1,
+      "House": 37.5,
+      "Land": 37.3
+    },
+    {
+      "date": "1985-04-01",
+      "Total": 38.1,
+      "House": 37.5,
+      "Land": 37.3
+    },
+    {
+      "date": "1985-05-01",
+      "Total": 38.1,
+      "House": 37.4,
+      "Land": 37.5
+    },
+    {
+      "date": "1985-06-01",
+      "Total": 38.3,
+      "House": 37.6,
+      "Land": 37.8
+    },
+    {
+      "date": "1985-07-01",
+      "Total": 38.4,
+      "House": 37.7,
+      "Land": 37.8
+    },
+    {
+      "date": "1985-08-01",
+      "Total": 38.5,
+      "House": 38.0,
+      "Land": 38.0
+    },
+    {
+      "date": "1985-09-01",
+      "Total": 38.8,
+      "House": 38.1,
+      "Land": 38.2
+    },
+    {
+      "date": "1985-10-01",
+      "Total": 38.9,
+      "House": 38.4,
+      "Land": 38.2
+    },
+    {
+      "date": "1985-11-01",
+      "Total": 39.2,
+      "House": 38.6,
+      "Land": 38.3
+    },
+    {
+      "date": "1985-12-01",
+      "Total": 39.3,
+      "House": 38.7,
+      "Land": 38.4
+    },
+    {
+      "date": "1986-01-01",
+      "Total": 39.8,
+      "House": 39.4,
+      "Land": 38.8
+    },
+    {
+      "date": "1986-02-01",
+      "Total": 40.3,
+      "House": 39.9,
+      "Land": 39.2
+    },
+    {
+      "date": "1986-03-01",
+      "Total": 40.6,
+      "House": 40.2,
+      "Land": 39.3
+    },
+    {
+      "date": "1986-04-01",
+      "Total": 40.8,
+      "House": 40.6,
+      "Land": 39.3
+    },
+    {
+      "date": "1986-05-01",
+      "Total": 41.1,
+      "House": 40.9,
+      "Land": 39.5
+    },
+    {
+      "date": "1986-06-01",
+      "Total": 41.3,
+      "House": 41.2,
+      "Land": 39.7
+    },
+    {
+      "date": "1986-07-01",
+      "Total": 41.6,
+      "House": 41.4,
+      "Land": 39.8
+    },
+    {
+      "date": "1986-08-01",
+      "Total": 42.0,
+      "House": 41.9,
+      "Land": 40.1
+    },
+    {
+      "date": "1986-09-01",
+      "Total": 42.8,
+      "House": 42.9,
+      "Land": 40.6
+    },
+    {
+      "date": "1986-10-01",
+      "Total": 43.2,
+      "House": 43.4,
+      "Land": 40.6
+    },
+    {
+      "date": "1986-11-01",
+      "Total": 43.8,
+      "House": 44.1,
+      "Land": 41.0
+    },
+    {
+      "date": "1986-12-01",
+      "Total": 44.0,
+      "House": 44.4,
+      "Land": 41.0
+    },
+    {
+      "date": "1987-01-01",
+      "Total": 44.4,
+      "House": 44.8,
+      "Land": 41.1
+    },
+    {
+      "date": "1987-02-01",
+      "Total": 45.2,
+      "House": 45.9,
+      "Land": 41.3
+    },
+    {
+      "date": "1987-03-01",
+      "Total": 46.6,
+      "House": 47.3,
+      "Land": 42.7
+    },
+    {
+      "date": "1987-04-01",
+      "Total": 47.1,
+      "House": 48.0,
+      "Land": 43.1
+    },
+    {
+      "date": "1987-05-01",
+      "Total": 47.5,
+      "House": 48.3,
+      "Land": 43.5
+    },
+    {
+      "date": "1987-06-01",
+      "Total": 47.7,
+      "House": 48.6,
+      "Land": 43.6
+    },
+    {
+      "date": "1987-07-01",
+      "Total": 48.0,
+      "House": 48.8,
+      "Land": 43.9
+    },
+    {
+      "date": "1987-08-01",
+      "Total": 48.2,
+      "House": 49.0,
+      "Land": 44.2
+    },
+    {
+      "date": "1987-09-01",
+      "Total": 48.7,
+      "House": 49.2,
+      "Land": 45.4
+    },
+    {
+      "date": "1987-10-01",
+      "Total": 48.9,
+      "House": 49.3,
+      "Land": 45.6
+    },
+    {
+      "date": "1987-11-01",
+      "Total": 49.1,
+      "House": 49.5,
+      "Land": 45.9
+    },
+    {
+      "date": "1987-12-01",
+      "Total": 49.1,
+      "House": 49.5,
+      "Land": 46.1
+    },
+    {
+      "date": "1988-01-01",
+      "Total": 49.3,
+      "House": 49.7,
+      "Land": 46.4
+    },
+    {
+      "date": "1988-02-01",
+      "Total": 49.8,
+      "House": 50.1,
+      "Land": 46.9
+    },
+    {
+      "date": "1988-03-01",
+      "Total": 50.3,
+      "House": 50.6,
+      "Land": 47.4
+    },
+    {
+      "date": "1988-04-01",
+      "Total": 51.2,
+      "House": 51.5,
+      "Land": 48.3
+    },
+    {
+      "date": "1988-05-01",
+      "Total": 51.9,
+      "House": 52.1,
+      "Land": 49.3
+    },
+    {
+      "date": "1988-06-01",
+      "Total": 52.3,
+      "House": 52.4,
+      "Land": 50.3
+    },
+    {
+      "date": "1988-07-01",
+      "Total": 52.5,
+      "House": 52.5,
+      "Land": 50.6
+    },
+    {
+      "date": "1988-08-01",
+      "Total": 53.0,
+      "House": 53.0,
+      "Land": 50.9
+    },
+    {
+      "date": "1988-09-01",
+      "Total": 53.9,
+      "House": 53.8,
+      "Land": 52.3
+    },
+    {
+      "date": "1988-10-01",
+      "Total": 54.3,
+      "House": 54.1,
+      "Land": 52.8
+    },
+    {
+      "date": "1988-11-01",
+      "Total": 55.0,
+      "House": 54.4,
+      "Land": 54.3
+    },
+    {
+      "date": "1988-12-01",
+      "Total": 55.8,
+      "House": 54.6,
+      "Land": 56.2
+    },
+    {
+      "date": "1989-01-01",
+      "Total": 56.3,
+      "House": 54.7,
+      "Land": 57.6
+    },
+    {
+      "date": "1989-02-01",
+      "Total": 57.7,
+      "House": 55.6,
+      "Land": 60.3
+    },
+    {
+      "date": "1989-03-01",
+      "Total": 58.6,
+      "House": 56.1,
+      "Land": 62.5
+    },
+    {
+      "date": "1989-04-01",
+      "Total": 59.1,
+      "House": 56.4,
+      "Land": 63.4
+    },
+    {
+      "date": "1989-05-01",
+      "Total": 59.3,
+      "House": 56.5,
+      "Land": 63.6
+    },
+    {
+      "date": "1989-06-01",
+      "Total": 59.6,
+      "House": 56.9,
+      "Land": 64.0
+    },
+    {
+      "date": "1989-07-01",
+      "Total": 59.8,
+      "House": 56.9,
+      "Land": 64.5
+    },
+    {
+      "date": "1989-08-01",
+      "Total": 59.8,
+      "House": 56.9,
+      "Land": 64.7
+    },
+    {
+      "date": "1989-09-01",
+      "Total": 60.1,
+      "House": 57.1,
+      "Land": 65.2
+    },
+    {
+      "date": "1989-10-01",
+      "Total": 60.4,
+      "House": 57.4,
+      "Land": 65.5
+    },
+    {
+      "date": "1989-11-01",
+      "Total": 60.8,
+      "House": 57.6,
+      "Land": 66.6
+    },
+    {
+      "date": "1989-12-01",
+      "Total": 61.1,
+      "House": 57.9,
+      "Land": 67.0
+    },
+    {
+      "date": "1990-01-01",
+      "Total": 61.7,
+      "House": 58.4,
+      "Land": 67.6
+    },
+    {
+      "date": "1990-02-01",
+      "Total": 61.8,
+      "House": 58.4,
+      "Land": 68.0
+    },
+    {
+      "date": "1990-03-01",
+      "Total": 61.9,
+      "House": 58.5,
+      "Land": 68.4
+    },
+    {
+      "date": "1990-04-01",
+      "Total": 61.8,
+      "House": 58.3,
+      "Land": 68.5
+    },
+    {
+      "date": "1990-05-01",
+      "Total": 61.5,
+      "House": 57.9,
+      "Land": 68.6
+    },
+    {
+      "date": "1990-06-01",
+      "Total": 60.8,
+      "House": 56.8,
+      "Land": 68.3
+    },
+    {
+      "date": "1990-07-01",
+      "Total": 60.4,
+      "House": 56.3,
+      "Land": 68.3
+    },
+    {
+      "date": "1990-08-01",
+      "Total": 59.8,
+      "House": 55.7,
+      "Land": 67.6
+    },
+    {
+      "date": "1990-09-01",
+      "Total": 59.0,
+      "House": 55.0,
+      "Land": 66.6
+    },
+    {
+      "date": "1990-10-01",
+      "Total": 58.6,
+      "House": 54.3,
+      "Land": 66.5
+    },
+    {
+      "date": "1990-11-01",
+      "Total": 58.0,
+      "House": 53.6,
+      "Land": 66.1
+    },
+    {
+      "date": "1990-12-01",
+      "Total": 57.8,
+      "House": 53.4,
+      "Land": 66.1
+    },
+    {
+      "date": "1991-01-01",
+      "Total": 56.9,
+      "House": 52.6,
+      "Land": 65.1
+    },
+    {
+      "date": "1991-02-01",
+      "Total": 55.8,
+      "House": 51.7,
+      "Land": 63.6
+    },
+    {
+      "date": "1991-03-01",
+      "Total": 56.0,
+      "House": 52.0,
+      "Land": 63.8
+    },
+    {
+      "date": "1991-04-01",
+      "Total": 55.8,
+      "House": 51.7,
+      "Land": 63.9
+    },
+    {
+      "date": "1991-05-01",
+      "Total": 56.2,
+      "House": 52.4,
+      "Land": 64.0
+    },
+    {
+      "date": "1991-06-01",
+      "Total": 56.2,
+      "House": 52.4,
+      "Land": 64.0
+    },
+    {
+      "date": "1991-07-01",
+      "Total": 56.3,
+      "House": 52.4,
+      "Land": 64.3
+    },
+    {
+      "date": "1991-08-01",
+      "Total": 56.2,
+      "House": 52.3,
+      "Land": 64.2
+    },
+    {
+      "date": "1991-09-01",
+      "Total": 56.2,
+      "House": 52.3,
+      "Land": 64.2
+    },
+    {
+      "date": "1991-10-01",
+      "Total": 56.2,
+      "House": 52.4,
+      "Land": 64.1
+    },
+    {
+      "date": "1991-11-01",
+      "Total": 55.9,
+      "House": 52.1,
+      "Land": 63.9
+    },
+    {
+      "date": "1991-12-01",
+      "Total": 55.9,
+      "House": 52.1,
+      "Land": 64.0
+    },
+    {
+      "date": "1992-01-01",
+      "Total": 55.8,
+      "House": 52.0,
+      "Land": 63.9
+    },
+    {
+      "date": "1992-02-01",
+      "Total": 55.8,
+      "House": 51.8,
+      "Land": 64.0
+    },
+    {
+      "date": "1992-03-01",
+      "Total": 55.9,
+      "House": 51.9,
+      "Land": 64.3
+    },
+    {
+      "date": "1992-04-01",
+      "Total": 56.0,
+      "House": 52.0,
+      "Land": 64.7
+    },
+    {
+      "date": "1992-05-01",
+      "Total": 56.0,
+      "House": 51.9,
+      "Land": 64.9
+    },
+    {
+      "date": "1992-06-01",
+      "Total": 56.2,
+      "House": 52.0,
+      "Land": 65.1
+    },
+    {
+      "date": "1992-07-01",
+      "Total": 56.3,
+      "House": 52.0,
+      "Land": 66.0
+    },
+    {
+      "date": "1992-08-01",
+      "Total": 56.3,
+      "House": 51.9,
+      "Land": 65.9
+    },
+    {
+      "date": "1992-09-01",
+      "Total": 56.2,
+      "House": 51.7,
+      "Land": 66.0
+    },
+    {
+      "date": "1992-10-01",
+      "Total": 56.3,
+      "House": 51.7,
+      "Land": 66.4
+    },
+    {
+      "date": "1992-11-01",
+      "Total": 56.3,
+      "House": 52.0,
+      "Land": 66.3
+    },
+    {
+      "date": "1992-12-01",
+      "Total": 56.3,
+      "House": 51.9,
+      "Land": 66.4
+    },
+    {
+      "date": "1993-01-01",
+      "Total": 56.2,
+      "House": 51.8,
+      "Land": 66.4
+    },
+    {
+      "date": "1993-02-01",
+      "Total": 56.4,
+      "House": 52.0,
+      "Land": 66.6
+    },
+    {
+      "date": "1993-03-01",
+      "Total": 56.7,
+      "House": 52.3,
+      "Land": 67.0
+    },
+    {
+      "date": "1993-04-01",
+      "Total": 57.0,
+      "House": 52.6,
+      "Land": 67.2
+    },
+    {
+      "date": "1993-05-01",
+      "Total": 56.8,
+      "House": 52.2,
+      "Land": 67.4
+    },
+    {
+      "date": "1993-06-01",
+      "Total": 56.9,
+      "House": 52.4,
+      "Land": 67.6
+    },
+    {
+      "date": "1993-07-01",
+      "Total": 57.0,
+      "House": 52.3,
+      "Land": 67.8
+    },
+    {
+      "date": "1993-08-01",
+      "Total": 57.1,
+      "House": 52.5,
+      "Land": 67.8
+    },
+    {
+      "date": "1993-09-01",
+      "Total": 57.1,
+      "House": 52.6,
+      "Land": 67.8
+    },
+    {
+      "date": "1993-10-01",
+      "Total": 57.0,
+      "House": 52.5,
+      "Land": 67.7
+    },
+    {
+      "date": "1993-11-01",
+      "Total": 57.0,
+      "House": 52.5,
+      "Land": 67.7
+    },
+    {
+      "date": "1993-12-01",
+      "Total": 56.9,
+      "House": 52.4,
+      "Land": 67.7
+    },
+    {
+      "date": "1994-01-01",
+      "Total": 57.0,
+      "House": 52.4,
+      "Land": 67.8
+    },
+    {
+      "date": "1994-02-01",
+      "Total": 56.9,
+      "House": 52.4,
+      "Land": 67.6
+    },
+    {
+      "date": "1994-03-01",
+      "Total": 56.9,
+      "House": 52.3,
+      "Land": 67.7
+    },
+    {
+      "date": "1994-04-01",
+      "Total": 56.9,
+      "House": 52.4,
+      "Land": 67.7
+    },
+    {
+      "date": "1994-05-01",
+      "Total": 56.9,
+      "House": 52.3,
+      "Land": 67.8
+    },
+    {
+      "date": "1994-06-01",
+      "Total": 57.0,
+      "House": 52.4,
+      "Land": 67.8
+    },
+    {
+      "date": "1994-07-01",
+      "Total": 56.9,
+      "House": 52.3,
+      "Land": 67.8
+    },
+    {
+      "date": "1994-08-01",
+      "Total": 57.0,
+      "House": 52.4,
+      "Land": 67.8
+    },
+    {
+      "date": "1994-09-01",
+      "Total": 57.0,
+      "House": 52.4,
+      "Land": 67.8
+    },
+    {
+      "date": "1994-10-01",
+      "Total": 56.9,
+      "House": 52.4,
+      "Land": 67.8
+    },
+    {
+      "date": "1994-11-01",
+      "Total": 56.8,
+      "House": 52.3,
+      "Land": 67.7
+    },
+    {
+      "date": "1994-12-01",
+      "Total": 56.8,
+      "House": 52.3,
+      "Land": 67.6
+    },
+    {
+      "date": "1995-01-01",
+      "Total": 56.8,
+      "House": 52.3,
+      "Land": 67.6
+    },
+    {
+      "date": "1995-02-01",
+      "Total": 56.7,
+      "House": 52.2,
+      "Land": 67.4
+    },
+    {
+      "date": "1995-03-01",
+      "Total": 56.6,
+      "House": 52.2,
+      "Land": 67.4
+    },
+    {
+      "date": "1995-04-01",
+      "Total": 56.5,
+      "House": 52.1,
+      "Land": 67.4
+    },
+    {
+      "date": "1995-05-01",
+      "Total": 56.4,
+      "House": 52.0,
+      "Land": 67.2
+    },
+    {
+      "date": "1995-06-01",
+      "Total": 56.3,
+      "House": 51.8,
+      "Land": 67.0
+    },
+    {
+      "date": "1995-07-01",
+      "Total": 56.2,
+      "House": 51.8,
+      "Land": 66.9
+    },
+    {
+      "date": "1995-08-01",
+      "Total": 56.2,
+      "House": 51.8,
+      "Land": 67.0
+    },
+    {
+      "date": "1995-09-01",
+      "Total": 56.2,
+      "House": 51.7,
+      "Land": 66.9
+    },
+    {
+      "date": "1995-10-01",
+      "Total": 55.9,
+      "House": 51.4,
+      "Land": 66.6
+    },
+    {
+      "date": "1995-11-01",
+      "Total": 55.6,
+      "House": 51.3,
+      "Land": 66.4
+    },
+    {
+      "date": "1995-12-01",
+      "Total": 55.7,
+      "House": 51.3,
+      "Land": 66.4
+    },
+    {
+      "date": "1996-01-01",
+      "Total": 55.6,
+      "House": 51.3,
+      "Land": 66.4
+    },
+    {
+      "date": "1996-02-01",
+      "Total": 55.4,
+      "House": 51.0,
+      "Land": 66.4
+    },
+    {
+      "date": "1996-03-01",
+      "Total": 55.3,
+      "House": 50.9,
+      "Land": 66.3
+    },
+    {
+      "date": "1996-04-01",
+      "Total": 55.1,
+      "House": 50.6,
+      "Land": 66.3
+    },
+    {
+      "date": "1996-05-01",
+      "Total": 55.0,
+      "House": 50.5,
+      "Land": 66.3
+    },
+    {
+      "date": "1996-06-01",
+      "Total": 55.1,
+      "House": 50.6,
+      "Land": 66.3
+    },
+    {
+      "date": "1996-07-01",
+      "Total": 55.0,
+      "House": 50.6,
+      "Land": 66.3
+    },
+    {
+      "date": "1996-08-01",
+      "Total": 55.0,
+      "House": 50.6,
+      "Land": 66.2
+    },
+    {
+      "date": "1996-09-01",
+      "Total": 55.0,
+      "House": 50.6,
+      "Land": 66.1
+    },
+    {
+      "date": "1996-10-01",
+      "Total": 55.0,
+      "House": 50.6,
+      "Land": 66.1
+    },
+    {
+      "date": "1996-11-01",
+      "Total": 55.2,
+      "House": 50.8,
+      "Land": 66.1
+    },
+    {
+      "date": "1996-12-01",
+      "Total": 55.2,
+      "House": 50.8,
+      "Land": 66.2
+    },
+    {
+      "date": "1997-01-01",
+      "Total": 55.3,
+      "House": 51.0,
+      "Land": 66.2
+    },
+    {
+      "date": "1997-02-01",
+      "Total": 55.4,
+      "House": 51.1,
+      "Land": 66.3
+    },
+    {
+      "date": "1997-03-01",
+      "Total": 55.5,
+      "House": 51.2,
+      "Land": 66.2
+    },
+    {
+      "date": "1997-04-01",
+      "Total": 55.5,
+      "House": 51.3,
+      "Land": 66.1
+    },
+    {
+      "date": "1997-05-01",
+      "Total": 55.6,
+      "House": 51.3,
+      "Land": 66.2
+    },
+    {
+      "date": "1997-06-01",
+      "Total": 55.6,
+      "House": 51.4,
+      "Land": 66.3
+    },
+    {
+      "date": "1997-07-01",
+      "Total": 55.6,
+      "House": 51.4,
+      "Land": 66.3
+    },
+    {
+      "date": "1997-08-01",
+      "Total": 55.6,
+      "House": 51.4,
+      "Land": 66.3
+    },
+    {
+      "date": "1997-09-01",
+      "Total": 55.6,
+      "House": 51.4,
+      "Land": 66.3
+    },
+    {
+      "date": "1997-10-01",
+      "Total": 55.6,
+      "House": 51.4,
+      "Land": 66.3
+    },
+    {
+      "date": "1997-11-01",
+      "Total": 55.8,
+      "House": 51.7,
+      "Land": 66.3
+    },
+    {
+      "date": "1997-12-01",
+      "Total": 55.9,
+      "House": 51.8,
+      "Land": 66.4
+    },
+    {
+      "date": "1998-01-01",
+      "Total": 56.0,
+      "House": 51.9,
+      "Land": 66.4
+    },
+    {
+      "date": "1998-02-01",
+      "Total": 56.0,
+      "House": 52.0,
+      "Land": 66.4
+    },
+    {
+      "date": "1998-03-01",
+      "Total": 56.0,
+      "House": 52.0,
+      "Land": 66.4
+    },
+    {
+      "date": "1998-04-01",
+      "Total": 56.0,
+      "House": 52.0,
+      "Land": 66.4
+    },
+    {
+      "date": "1998-05-01",
+      "Total": 56.1,
+      "House": 52.1,
+      "Land": 66.4
+    },
+    {
+      "date": "1998-06-01",
+      "Total": 56.2,
+      "House": 52.2,
+      "Land": 66.5
+    },
+    {
+      "date": "1998-07-01",
+      "Total": 56.2,
+      "House": 52.3,
+      "Land": 66.5
+    },
+    {
+      "date": "1998-08-01",
+      "Total": 56.2,
+      "House": 52.2,
+      "Land": 66.6
+    },
+    {
+      "date": "1998-09-01",
+      "Total": 56.2,
+      "House": 52.2,
+      "Land": 66.6
+    },
+    {
+      "date": "1998-10-01",
+      "Total": 56.2,
+      "House": 52.3,
+      "Land": 66.4
+    },
+    {
+      "date": "1998-11-01",
+      "Total": 56.2,
+      "House": 52.3,
+      "Land": 66.4
+    },
+    {
+      "date": "1998-12-01",
+      "Total": 56.3,
+      "House": 52.3,
+      "Land": 66.6
+    },
+    {
+      "date": "1999-01-01",
+      "Total": 56.3,
+      "House": 52.3,
+      "Land": 66.6
+    },
+    {
+      "date": "1999-02-01",
+      "Total": 56.3,
+      "House": 52.4,
+      "Land": 66.6
+    },
+    {
+      "date": "1999-03-01",
+      "Total": 56.4,
+      "House": 52.5,
+      "Land": 66.6
+    },
+    {
+      "date": "1999-04-01",
+      "Total": 56.4,
+      "House": 52.6,
+      "Land": 66.6
+    },
+    {
+      "date": "1999-05-01",
+      "Total": 56.4,
+      "House": 52.6,
+      "Land": 66.5
+    },
+    {
+      "date": "1999-06-01",
+      "Total": 56.4,
+      "House": 52.7,
+      "Land": 66.6
+    },
+    {
+      "date": "1999-07-01",
+      "Total": 56.5,
+      "House": 52.8,
+      "Land": 66.6
+    },
+    {
+      "date": "1999-08-01",
+      "Total": 56.7,
+      "House": 53.0,
+      "Land": 66.6
+    },
+    {
+      "date": "1999-09-01",
+      "Total": 56.8,
+      "House": 53.2,
+      "Land": 66.7
+    },
+    {
+      "date": "1999-10-01",
+      "Total": 56.9,
+      "House": 53.3,
+      "Land": 66.8
+    },
+    {
+      "date": "1999-11-01",
+      "Total": 57.1,
+      "House": 53.6,
+      "Land": 66.8
+    },
+    {
+      "date": "1999-12-01",
+      "Total": 57.2,
+      "House": 53.7,
+      "Land": 66.8
+    },
+    {
+      "date": "2000-01-01",
+      "Total": 57.2,
+      "House": 53.7,
+      "Land": 66.8
+    },
+    {
+      "date": "2000-02-01",
+      "Total": 57.4,
+      "House": 54.0,
+      "Land": 66.8
+    },
+    {
+      "date": "2000-03-01",
+      "Total": 57.5,
+      "House": 54.1,
+      "Land": 66.9
+    },
+    {
+      "date": "2000-04-01",
+      "Total": 57.6,
+      "House": 54.2,
+      "Land": 66.9
+    },
+    {
+      "date": "2000-05-01",
+      "Total": 57.8,
+      "House": 54.4,
+      "Land": 67.0
+    },
+    {
+      "date": "2000-06-01",
+      "Total": 57.8,
+      "House": 54.4,
+      "Land": 67.0
+    },
+    {
+      "date": "2000-07-01",
+      "Total": 57.9,
+      "House": 54.5,
+      "Land": 67.1
+    },
+    {
+      "date": "2000-08-01",
+      "Total": 58.1,
+      "House": 54.7,
+      "Land": 67.2
+    },
+    {
+      "date": "2000-09-01",
+      "Total": 58.2,
+      "House": 54.9,
+      "Land": 67.3
+    },
+    {
+      "date": "2000-10-01",
+      "Total": 58.3,
+      "House": 55.0,
+      "Land": 67.4
+    },
+    {
+      "date": "2000-11-01",
+      "Total": 58.5,
+      "House": 55.3,
+      "Land": 67.4
+    },
+    {
+      "date": "2000-12-01",
+      "Total": 58.6,
+      "House": 55.3,
+      "Land": 67.4
+    },
+    {
+      "date": "2001-01-01",
+      "Total": 58.7,
+      "House": 55.5,
+      "Land": 67.4
+    },
+    {
+      "date": "2001-02-01",
+      "Total": 58.8,
+      "House": 55.7,
+      "Land": 67.5
+    },
+    {
+      "date": "2001-03-01",
+      "Total": 59.0,
+      "House": 55.9,
+      "Land": 67.5
+    },
+    {
+      "date": "2001-04-01",
+      "Total": 59.2,
+      "House": 56.1,
+      "Land": 67.6
+    },
+    {
+      "date": "2001-05-01",
+      "Total": 59.3,
+      "House": 56.2,
+      "Land": 67.7
+    },
+    {
+      "date": "2001-06-01",
+      "Total": 59.5,
+      "House": 56.5,
+      "Land": 67.8
+    },
+    {
+      "date": "2001-07-01",
+      "Total": 59.6,
+      "House": 56.7,
+      "Land": 67.8
+    },
+    {
+      "date": "2001-08-01",
+      "Total": 59.7,
+      "House": 56.8,
+      "Land": 67.8
+    },
+    {
+      "date": "2001-09-01",
+      "Total": 59.9,
+      "House": 56.9,
+      "Land": 67.8
+    },
+    {
+      "date": "2001-10-01",
+      "Total": 59.9,
+      "House": 57.0,
+      "Land": 67.9
+    },
+    {
+      "date": "2001-11-01",
+      "Total": 60.1,
+      "House": 57.2,
+      "Land": 68.0
+    },
+    {
+      "date": "2001-12-01",
+      "Total": 60.2,
+      "House": 57.3,
+      "Land": 67.9
+    },
+    {
+      "date": "2002-01-01",
+      "Total": 60.4,
+      "House": 57.6,
+      "Land": 68.0
+    },
+    {
+      "date": "2002-02-01",
+      "Total": 60.8,
+      "House": 58.1,
+      "Land": 68.1
+    },
+    {
+      "date": "2002-03-01",
+      "Total": 61.0,
+      "House": 58.3,
+      "Land": 68.2
+    },
+    {
+      "date": "2002-04-01",
+      "Total": 61.4,
+      "House": 58.9,
+      "Land": 68.3
+    },
+    {
+      "date": "2002-05-01",
+      "Total": 61.8,
+      "House": 59.3,
+      "Land": 68.5
+    },
+    {
+      "date": "2002-06-01",
+      "Total": 61.9,
+      "House": 59.5,
+      "Land": 68.5
+    },
+    {
+      "date": "2002-07-01",
+      "Total": 62.0,
+      "House": 59.6,
+      "Land": 68.5
+    },
+    {
+      "date": "2002-08-01",
+      "Total": 62.3,
+      "House": 59.9,
+      "Land": 68.7
+    },
+    {
+      "date": "2002-09-01",
+      "Total": 62.4,
+      "House": 60.1,
+      "Land": 68.7
+    },
+    {
+      "date": "2002-10-01",
+      "Total": 62.7,
+      "House": 60.6,
+      "Land": 68.8
+    },
+    {
+      "date": "2002-11-01",
+      "Total": 63.1,
+      "House": 61.1,
+      "Land": 68.9
+    },
+    {
+      "date": "2002-12-01",
+      "Total": 63.3,
+      "House": 61.2,
+      "Land": 69.0
+    },
+    {
+      "date": "2003-01-01",
+      "Total": 63.4,
+      "House": 61.5,
+      "Land": 69.1
+    },
+    {
+      "date": "2003-02-01",
+      "Total": 63.8,
+      "House": 62.0,
+      "Land": 69.1
+    },
+    {
+      "date": "2003-03-01",
+      "Total": 63.9,
+      "House": 62.0,
+      "Land": 69.1
+    },
+    {
+      "date": "2003-04-01",
+      "Total": 64.1,
+      "House": 62.3,
+      "Land": 69.2
+    },
+    {
+      "date": "2003-05-01",
+      "Total": 64.5,
+      "House": 62.7,
+      "Land": 69.4
+    },
+    {
+      "date": "2003-06-01",
+      "Total": 64.7,
+      "House": 62.9,
+      "Land": 69.5
+    },
+    {
+      "date": "2003-07-01",
+      "Total": 64.9,
+      "House": 63.2,
+      "Land": 69.5
+    },
+    {
+      "date": "2003-08-01",
+      "Total": 65.2,
+      "House": 63.6,
+      "Land": 69.7
+    },
+    {
+      "date": "2003-09-01",
+      "Total": 65.5,
+      "House": 63.9,
+      "Land": 69.9
+    },
+    {
+      "date": "2003-10-01",
+      "Total": 65.8,
+      "House": 64.3,
+      "Land": 70.0
+    },
+    {
+      "date": "2003-11-01",
+      "Total": 66.3,
+      "House": 64.9,
+      "Land": 70.0
+    },
+    {
+      "date": "2003-12-01",
+      "Total": 66.5,
+      "House": 65.1,
+      "Land": 70.1
+    },
+    {
+      "date": "2004-01-01",
+      "Total": 66.7,
+      "House": 65.3,
+      "Land": 70.2
+    },
+    {
+      "date": "2004-02-01",
+      "Total": 66.9,
+      "House": 65.7,
+      "Land": 70.3
+    },
+    {
+      "date": "2004-03-01",
+      "Total": 67.2,
+      "House": 65.9,
+      "Land": 70.5
+    },
+    {
+      "date": "2004-04-01",
+      "Total": 67.7,
+      "House": 66.5,
+      "Land": 70.9
+    },
+    {
+      "date": "2004-05-01",
+      "Total": 68.2,
+      "House": 67.1,
+      "Land": 71.2
+    },
+    {
+      "date": "2004-06-01",
+      "Total": 68.7,
+      "House": 67.6,
+      "Land": 71.7
+    },
+    {
+      "date": "2004-07-01",
+      "Total": 68.8,
+      "House": 67.7,
+      "Land": 71.8
+    },
+    {
+      "date": "2004-08-01",
+      "Total": 69.1,
+      "House": 68.0,
+      "Land": 72.1
+    },
+    {
+      "date": "2004-09-01",
+      "Total": 69.3,
+      "House": 68.2,
+      "Land": 72.3
+    },
+    {
+      "date": "2004-10-01",
+      "Total": 69.5,
+      "House": 68.5,
+      "Land": 72.4
+    },
+    {
+      "date": "2004-11-01",
+      "Total": 69.8,
+      "House": 68.8,
+      "Land": 72.6
+    },
+    {
+      "date": "2004-12-01",
+      "Total": 69.9,
+      "House": 68.9,
+      "Land": 72.9
+    },
+    {
+      "date": "2005-01-01",
+      "Total": 70.1,
+      "House": 69.1,
+      "Land": 73.0
+    },
+    {
+      "date": "2005-02-01",
+      "Total": 70.3,
+      "House": 69.3,
+      "Land": 73.1
+    },
+    {
+      "date": "2005-03-01",
+      "Total": 70.6,
+      "House": 69.6,
+      "Land": 73.5
+    },
+    {
+      "date": "2005-04-01",
+      "Total": 71.0,
+      "House": 69.9,
+      "Land": 73.8
+    },
+    {
+      "date": "2005-05-01",
+      "Total": 71.3,
+      "House": 70.3,
+      "Land": 74.2
+    },
+    {
+      "date": "2005-06-01",
+      "Total": 71.9,
+      "House": 70.4,
+      "Land": 75.5
+    },
+    {
+      "date": "2005-07-01",
+      "Total": 72.0,
+      "House": 70.6,
+      "Land": 75.6
+    },
+    {
+      "date": "2005-08-01",
+      "Total": 72.3,
+      "House": 70.9,
+      "Land": 75.9
+    },
+    {
+      "date": "2005-09-01",
+      "Total": 72.7,
+      "House": 71.3,
+      "Land": 76.2
+    },
+    {
+      "date": "2005-10-01",
+      "Total": 73.2,
+      "House": 71.9,
+      "Land": 76.4
+    },
+    {
+      "date": "2005-11-01",
+      "Total": 73.6,
+      "House": 72.3,
+      "Land": 76.8
+    },
+    {
+      "date": "2005-12-01",
+      "Total": 74.1,
+      "House": 72.8,
+      "Land": 77.1
+    },
+    {
+      "date": "2006-01-01",
+      "Total": 74.7,
+      "House": 73.6,
+      "Land": 77.4
+    },
+    {
+      "date": "2006-02-01",
+      "Total": 75.2,
+      "House": 74.2,
+      "Land": 77.7
+    },
+    {
+      "date": "2006-03-01",
+      "Total": 76.0,
+      "House": 75.0,
+      "Land": 78.3
+    },
+    {
+      "date": "2006-04-01",
+      "Total": 76.9,
+      "House": 76.1,
+      "Land": 78.8
+    },
+    {
+      "date": "2006-05-01",
+      "Total": 77.8,
+      "House": 76.9,
+      "Land": 80.0
+    },
+    {
+      "date": "2006-06-01",
+      "Total": 79.0,
+      "House": 78.0,
+      "Land": 81.1
+    },
+    {
+      "date": "2006-07-01",
+      "Total": 79.8,
+      "House": 78.7,
+      "Land": 82.3
+    },
+    {
+      "date": "2006-08-01",
+      "Total": 81.0,
+      "House": 80.0,
+      "Land": 83.3
+    },
+    {
+      "date": "2006-09-01",
+      "Total": 81.4,
+      "House": 80.4,
+      "Land": 83.9
+    },
+    {
+      "date": "2006-10-01",
+      "Total": 81.6,
+      "House": 80.5,
+      "Land": 84.1
+    },
+    {
+      "date": "2006-11-01",
+      "Total": 82.0,
+      "House": 80.8,
+      "Land": 84.9
+    },
+    {
+      "date": "2006-12-01",
+      "Total": 82.0,
+      "House": 80.7,
+      "Land": 85.3
+    },
+    {
+      "date": "2007-01-01",
+      "Total": 82.3,
+      "House": 81.0,
+      "Land": 85.5
+    },
+    {
+      "date": "2007-02-01",
+      "Total": 82.7,
+      "House": 81.4,
+      "Land": 85.8
+    },
+    {
+      "date": "2007-03-01",
+      "Total": 83.0,
+      "House": 81.7,
+      "Land": 86.2
+    },
+    {
+      "date": "2007-04-01",
+      "Total": 83.7,
+      "House": 82.3,
+      "Land": 87.1
+    },
+    {
+      "date": "2007-05-01",
+      "Total": 84.6,
+      "House": 83.3,
+      "Land": 87.7
+    },
+    {
+      "date": "2007-06-01",
+      "Total": 85.1,
+      "House": 83.7,
+      "Land": 88.5
+    },
+    {
+      "date": "2007-07-01",
+      "Total": 85.9,
+      "House": 84.3,
+      "Land": 89.7
+    },
+    {
+      "date": "2007-08-01",
+      "Total": 86.3,
+      "House": 84.8,
+      "Land": 89.9
+    },
+    {
+      "date": "2007-09-01",
+      "Total": 86.5,
+      "House": 85.1,
+      "Land": 90.0
+    },
+    {
+      "date": "2007-10-01",
+      "Total": 86.6,
+      "House": 85.1,
+      "Land": 90.3
+    },
+    {
+      "date": "2007-11-01",
+      "Total": 87.0,
+      "House": 85.5,
+      "Land": 90.7
+    },
+    {
+      "date": "2007-12-01",
+      "Total": 87.1,
+      "House": 85.6,
+      "Land": 90.9
+    },
+    {
+      "date": "2008-01-01",
+      "Total": 87.6,
+      "House": 86.1,
+      "Land": 91.4
+    },
+    {
+      "date": "2008-02-01",
+      "Total": 87.9,
+      "House": 86.3,
+      "Land": 91.8
+    },
+    {
+      "date": "2008-03-01",
+      "Total": 88.1,
+      "House": 86.4,
+      "Land": 92.2
+    },
+    {
+      "date": "2008-04-01",
+      "Total": 88.1,
+      "House": 86.3,
+      "Land": 92.4
+    },
+    {
+      "date": "2008-05-01",
+      "Total": 88.1,
+      "House": 86.2,
+      "Land": 92.5
+    },
+    {
+      "date": "2008-06-01",
+      "Total": 88.2,
+      "House": 86.3,
+      "Land": 92.7
+    },
+    {
+      "date": "2008-07-01",
+      "Total": 88.2,
+      "House": 86.3,
+      "Land": 92.8
+    },
+    {
+      "date": "2008-08-01",
+      "Total": 88.2,
+      "House": 86.3,
+      "Land": 92.9
+    },
+    {
+      "date": "2008-09-01",
+      "Total": 88.3,
+      "House": 86.3,
+      "Land": 93.1
+    },
+    {
+      "date": "2008-10-01",
+      "Total": 87.9,
+      "House": 85.6,
+      "Land": 93.4
+    },
+    {
+      "date": "2008-11-01",
+      "Total": 87.7,
+      "House": 85.2,
+      "Land": 93.5
+    },
+    {
+      "date": "2008-12-01",
+      "Total": 87.5,
+      "House": 85.0,
+      "Land": 93.4
+    },
+    {
+      "date": "2009-01-01",
+      "Total": 87.0,
+      "House": 84.5,
+      "Land": 92.9
+    },
+    {
+      "date": "2009-02-01",
+      "Total": 86.4,
+      "House": 83.8,
+      "Land": 92.3
+    },
+    {
+      "date": "2009-03-01",
+      "Total": 86.0,
+      "House": 83.3,
+      "Land": 91.9
+    },
+    {
+      "date": "2009-04-01",
+      "Total": 85.5,
+      "House": 82.7,
+      "Land": 91.8
+    },
+    {
+      "date": "2009-05-01",
+      "Total": 85.4,
+      "House": 82.6,
+      "Land": 91.5
+    },
+    {
+      "date": "2009-06-01",
+      "Total": 85.2,
+      "House": 82.5,
+      "Land": 91.3
+    },
+    {
+      "date": "2009-07-01",
+      "Total": 85.4,
+      "House": 82.8,
+      "Land": 91.3
+    },
+    {
+      "date": "2009-08-01",
+      "Total": 85.5,
+      "House": 82.9,
+      "Land": 91.3
+    },
+    {
+      "date": "2009-09-01",
+      "Total": 85.9,
+      "House": 83.5,
+      "Land": 91.3
+    },
+    {
+      "date": "2009-10-01",
+      "Total": 86.1,
+      "House": 83.8,
+      "Land": 91.2
+    },
+    {
+      "date": "2009-11-01",
+      "Total": 86.4,
+      "House": 84.2,
+      "Land": 91.4
+    },
+    {
+      "date": "2009-12-01",
+      "Total": 86.7,
+      "House": 84.7,
+      "Land": 91.3
+    },
+    {
+      "date": "2010-01-01",
+      "Total": 87.1,
+      "House": 85.2,
+      "Land": 91.4
+    },
+    {
+      "date": "2010-02-01",
+      "Total": 87.1,
+      "House": 85.3,
+      "Land": 91.2
+    },
+    {
+      "date": "2010-03-01",
+      "Total": 87.4,
+      "House": 85.8,
+      "Land": 90.9
+    },
+    {
+      "date": "2010-04-01",
+      "Total": 87.6,
+      "House": 86.0,
+      "Land": 91.0
+    },
+    {
+      "date": "2010-05-01",
+      "Total": 87.9,
+      "House": 86.4,
+      "Land": 91.2
+    },
+    {
+      "date": "2010-06-01",
+      "Total": 88.0,
+      "House": 86.6,
+      "Land": 91.2
+    },
+    {
+      "date": "2010-07-01",
+      "Total": 87.9,
+      "House": 86.5,
+      "Land": 91.0
+    },
+    {
+      "date": "2010-08-01",
+      "Total": 88.0,
+      "House": 86.6,
+      "Land": 91.0
+    },
+    {
+      "date": "2010-09-01",
+      "Total": 88.1,
+      "House": 86.6,
+      "Land": 91.5
+    },
+    {
+      "date": "2010-10-01",
+      "Total": 88.2,
+      "House": 86.6,
+      "Land": 91.5
+    },
+    {
+      "date": "2010-11-01",
+      "Total": 88.4,
+      "House": 86.8,
+      "Land": 91.8
+    },
+    {
+      "date": "2010-12-01",
+      "Total": 88.4,
+      "House": 86.7,
+      "Land": 92.0
+    },
+    {
+      "date": "2011-01-01",
+      "Total": 88.6,
+      "House": 87.0,
+      "Land": 92.1
+    },
+    {
+      "date": "2011-02-01",
+      "Total": 89.0,
+      "House": 87.3,
+      "Land": 92.4
+    },
+    {
+      "date": "2011-03-01",
+      "Total": 89.0,
+      "House": 87.4,
+      "Land": 92.3
+    },
+    {
+      "date": "2011-04-01",
+      "Total": 89.2,
+      "House": 87.8,
+      "Land": 92.4
+    },
+    {
+      "date": "2011-05-01",
+      "Total": 89.6,
+      "House": 88.2,
+      "Land": 92.7
+    },
+    {
+      "date": "2011-06-01",
+      "Total": 89.8,
+      "House": 88.5,
+      "Land": 92.8
+    },
+    {
+      "date": "2011-07-01",
+      "Total": 89.9,
+      "House": 88.5,
+      "Land": 92.9
+    },
+    {
+      "date": "2011-08-01",
+      "Total": 90.0,
+      "House": 88.6,
+      "Land": 93.0
+    },
+    {
+      "date": "2011-09-01",
+      "Total": 90.1,
+      "House": 88.8,
+      "Land": 93.0
+    },
+    {
+      "date": "2011-10-01",
+      "Total": 90.3,
+      "House": 89.0,
+      "Land": 93.2
+    },
+    {
+      "date": "2011-11-01",
+      "Total": 90.6,
+      "House": 89.3,
+      "Land": 93.4
+    },
+    {
+      "date": "2011-12-01",
+      "Total": 90.7,
+      "House": 89.3,
+      "Land": 93.6
+    },
+    {
+      "date": "2012-01-01",
+      "Total": 90.8,
+      "House": 89.4,
+      "Land": 93.8
+    },
+    {
+      "date": "2012-02-01",
+      "Total": 91.0,
+      "House": 89.6,
+      "Land": 93.9
+    },
+    {
+      "date": "2012-03-01",
+      "Total": 91.3,
+      "House": 89.9,
+      "Land": 94.1
+    },
+    {
+      "date": "2012-04-01",
+      "Total": 91.5,
+      "House": 90.2,
+      "Land": 94.2
+    },
+    {
+      "date": "2012-05-01",
+      "Total": 91.7,
+      "House": 90.4,
+      "Land": 94.4
+    },
+    {
+      "date": "2012-06-01",
+      "Total": 91.9,
+      "House": 90.7,
+      "Land": 94.6
+    },
+    {
+      "date": "2012-07-01",
+      "Total": 92.0,
+      "House": 90.7,
+      "Land": 94.6
+    },
+    {
+      "date": "2012-08-01",
+      "Total": 92.1,
+      "House": 90.9,
+      "Land": 94.6
+    },
+    {
+      "date": "2012-09-01",
+      "Total": 92.3,
+      "House": 91.1,
+      "Land": 94.8
+    },
+    {
+      "date": "2012-10-01",
+      "Total": 92.5,
+      "House": 91.4,
+      "Land": 94.8
+    },
+    {
+      "date": "2012-11-01",
+      "Total": 92.6,
+      "House": 91.5,
+      "Land": 94.8
+    },
+    {
+      "date": "2012-12-01",
+      "Total": 92.7,
+      "House": 91.7,
+      "Land": 94.9
+    },
+    {
+      "date": "2013-01-01",
+      "Total": 92.8,
+      "House": 91.8,
+      "Land": 95.0
+    },
+    {
+      "date": "2013-02-01",
+      "Total": 93.0,
+      "House": 91.9,
+      "Land": 95.2
+    },
+    {
+      "date": "2013-03-01",
+      "Total": 93.0,
+      "House": 92.0,
+      "Land": 95.2
+    },
+    {
+      "date": "2013-04-01",
+      "Total": 93.2,
+      "House": 92.2,
+      "Land": 95.3
+    },
+    {
+      "date": "2013-05-01",
+      "Total": 93.4,
+      "House": 92.4,
+      "Land": 95.4
+    },
+    {
+      "date": "2013-06-01",
+      "Total": 93.5,
+      "House": 92.5,
+      "Land": 95.5
+    },
+    {
+      "date": "2013-07-01",
+      "Total": 93.6,
+      "House": 92.7,
+      "Land": 95.6
+    },
+    {
+      "date": "2013-08-01",
+      "Total": 93.7,
+      "House": 92.8,
+      "Land": 95.7
+    },
+    {
+      "date": "2013-09-01",
+      "Total": 93.8,
+      "House": 92.8,
+      "Land": 95.7
+    },
+    {
+      "date": "2013-10-01",
+      "Total": 93.8,
+      "House": 92.9,
+      "Land": 95.7
+    },
+    {
+      "date": "2013-11-01",
+      "Total": 93.9,
+      "House": 92.9,
+      "Land": 95.8
+    },
+    {
+      "date": "2013-12-01",
+      "Total": 93.9,
+      "House": 93.0,
+      "Land": 95.8
+    },
+    {
+      "date": "2014-01-01",
+      "Total": 94.1,
+      "House": 93.3,
+      "Land": 95.9
+    },
+    {
+      "date": "2014-02-01",
+      "Total": 94.4,
+      "House": 93.6,
+      "Land": 96.0
+    },
+    {
+      "date": "2014-03-01",
+      "Total": 94.5,
+      "House": 93.7,
+      "Land": 96.1
+    },
+    {
+      "date": "2014-04-01",
+      "Total": 94.7,
+      "House": 94.0,
+      "Land": 96.2
+    },
+    {
+      "date": "2014-05-01",
+      "Total": 94.8,
+      "House": 94.1,
+      "Land": 96.3
+    },
+    {
+      "date": "2014-06-01",
+      "Total": 94.9,
+      "House": 94.3,
+      "Land": 96.4
+    },
+    {
+      "date": "2014-07-01",
+      "Total": 94.9,
+      "House": 94.3,
+      "Land": 96.4
+    },
+    {
+      "date": "2014-08-01",
+      "Total": 95.2,
+      "House": 94.5,
+      "Land": 96.6
+    },
+    {
+      "date": "2014-09-01",
+      "Total": 95.3,
+      "House": 94.6,
+      "Land": 96.6
+    },
+    {
+      "date": "2014-10-01",
+      "Total": 95.4,
+      "House": 94.7,
+      "Land": 96.7
+    },
+    {
+      "date": "2014-11-01",
+      "Total": 95.5,
+      "House": 94.8,
+      "Land": 96.8
+    },
+    {
+      "date": "2014-12-01",
+      "Total": 95.5,
+      "House": 94.9,
+      "Land": 96.8
+    },
+    {
+      "date": "2015-01-01",
+      "Total": 95.5,
+      "House": 94.8,
+      "Land": 96.9
+    },
+    {
+      "date": "2015-02-01",
+      "Total": 95.6,
+      "House": 95.0,
+      "Land": 97.0
+    },
+    {
+      "date": "2015-03-01",
+      "Total": 95.7,
+      "House": 95.0,
+      "Land": 97.0
+    },
+    {
+      "date": "2015-04-01",
+      "Total": 95.7,
+      "House": 95.1,
+      "Land": 97.0
+    },
+    {
+      "date": "2015-05-01",
+      "Total": 95.9,
+      "House": 95.1,
+      "Land": 97.6
+    },
+    {
+      "date": "2015-06-01",
+      "Total": 96.1,
+      "House": 95.3,
+      "Land": 97.9
+    },
+    {
+      "date": "2015-07-01",
+      "Total": 96.2,
+      "House": 95.5,
+      "Land": 97.9
+    },
+    {
+      "date": "2015-08-01",
+      "Total": 96.5,
+      "House": 95.8,
+      "Land": 98.0
+    },
+    {
+      "date": "2015-09-01",
+      "Total": 96.6,
+      "House": 95.9,
+      "Land": 98.0
+    },
+    {
+      "date": "2015-10-01",
+      "Total": 96.8,
+      "House": 96.2,
+      "Land": 98.1
+    },
+    {
+      "date": "2015-11-01",
+      "Total": 96.9,
+      "House": 96.4,
+      "Land": 98.1
+    },
+    {
+      "date": "2015-12-01",
+      "Total": 97.0,
+      "House": 96.5,
+      "Land": 98.1
+    },
+    {
+      "date": "2016-01-01",
+      "Total": 97.1,
+      "House": 96.7,
+      "Land": 98.1
+    },
+    {
+      "date": "2016-02-01",
+      "Total": 97.3,
+      "House": 97.0,
+      "Land": 98.1
+    },
+    {
+      "date": "2016-03-01",
+      "Total": 97.5,
+      "House": 97.2,
+      "Land": 98.1
+    },
+    {
+      "date": "2016-04-01",
+      "Total": 97.7,
+      "House": 97.6,
+      "Land": 98.1
+    },
+    {
+      "date": "2016-05-01",
+      "Total": 98.5,
+      "House": 98.5,
+      "Land": 98.5
+    },
+    {
+      "date": "2016-06-01",
+      "Total": 98.6,
+      "House": 98.5,
+      "Land": 98.6
+    },
+    {
+      "date": "2016-07-01",
+      "Total": 99.0,
+      "House": 99.0,
+      "Land": 98.7
+    },
+    {
+      "date": "2016-08-01",
+      "Total": 99.1,
+      "House": 99.3,
+      "Land": 98.7
+    },
+    {
+      "date": "2016-09-01",
+      "Total": 99.3,
+      "House": 99.3,
+      "Land": 99.0
+    },
+    {
+      "date": "2016-10-01",
+      "Total": 99.7,
+      "House": 99.8,
+      "Land": 99.5
+    },
+    {
+      "date": "2016-11-01",
+      "Total": 99.9,
+      "House": 99.9,
+      "Land": 100.0
+    },
+    {
+      "date": "2016-12-01",
+      "Total": 100.0,
+      "House": 100.0,
+      "Land": 100.0
+    },
+    {
+      "date": "2017-01-01",
+      "Total": 100.1,
+      "House": 99.9,
+      "Land": 100.4
+    },
+    {
+      "date": "2017-02-01",
+      "Total": 100.5,
+      "House": 100.2,
+      "Land": 100.9
+    },
+    {
+      "date": "2017-03-01",
+      "Total": 100.7,
+      "House": 100.4,
+      "Land": 101.3
+    },
+    {
+      "date": "2017-04-01",
+      "Total": 101.5,
+      "House": 101.2,
+      "Land": 102.3
+    },
+    {
+      "date": "2017-05-01",
+      "Total": 102.2,
+      "House": 101.7,
+      "Land": 103.1
+    },
+    {
+      "date": "2017-06-01",
+      "Total": 102.4,
+      "House": 102.1,
+      "Land": 103.1
+    },
+    {
+      "date": "2017-07-01",
+      "Total": 102.8,
+      "House": 102.7,
+      "Land": 103.3
+    },
+    {
+      "date": "2017-08-01",
+      "Total": 102.9,
+      "House": 102.8,
+      "Land": 103.3
+    },
+    {
+      "date": "2017-09-01",
+      "Total": 103.1,
+      "House": 102.9,
+      "Land": 103.6
+    },
+    {
+      "date": "2017-10-01",
+      "Total": 103.2,
+      "House": 103.1,
+      "Land": 103.6
+    },
+    {
+      "date": "2017-11-01",
+      "Total": 103.3,
+      "House": 103.2,
+      "Land": 103.6
+    },
+    {
+      "date": "2017-12-01",
+      "Total": 103.3,
+      "House": 103.2,
+      "Land": 103.7
+    },
+    {
+      "date": "2018-01-01",
+      "Total": 103.3,
+      "House": 103.2,
+      "Land": 103.7
+    },
+    {
+      "date": "2018-02-01",
+      "Total": 103.1,
+      "House": 102.9,
+      "Land": 103.8
+    },
+    {
+      "date": "2018-03-01",
+      "Total": 103.1,
+      "House": 102.9,
+      "Land": 103.7
+    },
+    {
+      "date": "2018-04-01",
+      "Total": 103.1,
+      "House": 102.7,
+      "Land": 103.7
+    },
+    {
+      "date": "2018-05-01",
+      "Total": 103.1,
+      "House": 102.7,
+      "Land": 103.8
+    },
+    {
+      "date": "2018-06-01",
+      "Total": 103.2,
+      "House": 103.0,
+      "Land": 103.9
+    },
+    {
+      "date": "2018-07-01",
+      "Total": 103.3,
+      "House": 103.1,
+      "Land": 103.9
+    },
+    {
+      "date": "2018-08-01",
+      "Total": 103.3,
+      "House": 103.0,
+      "Land": 103.9
+    },
+    {
+      "date": "2018-09-01",
+      "Total": 103.3,
+      "House": 102.9,
+      "Land": 104.0
+    },
+    {
+      "date": "2018-10-01",
+      "Total": 103.3,
+      "House": 102.9,
+      "Land": 104.0
+    },
+    {
+      "date": "2018-11-01",
+      "Total": 103.3,
+      "House": 102.9,
+      "Land": 104.1
+    },
+    {
+      "date": "2018-12-01",
+      "Total": 103.3,
+      "House": 102.9,
+      "Land": 104.1
+    },
+    {
+      "date": "2019-01-01",
+      "Total": 103.2,
+      "House": 102.8,
+      "Land": 104.1
+    },
+    {
+      "date": "2019-02-01",
+      "Total": 103.2,
+      "House": 102.8,
+      "Land": 104.1
+    },
+    {
+      "date": "2019-03-01",
+      "Total": 103.2,
+      "House": 102.8,
+      "Land": 104.1
+    },
+    {
+      "date": "2019-04-01",
+      "Total": 103.2,
+      "House": 102.6,
+      "Land": 104.1
+    },
+    {
+      "date": "2019-05-01",
+      "Total": 103.1,
+      "House": 102.5,
+      "Land": 104.2
+    },
+    {
+      "date": "2019-06-01",
+      "Total": 103.0,
+      "House": 102.4,
+      "Land": 104.2
+    },
+    {
+      "date": "2019-07-01",
+      "Total": 102.9,
+      "House": 102.2,
+      "Land": 104.1
+    },
+    {
+      "date": "2019-08-01",
+      "Total": 103.0,
+      "House": 102.3,
+      "Land": 104.2
+    },
+    {
+      "date": "2019-09-01",
+      "Total": 103.2,
+      "House": 102.6,
+      "Land": 104.2
+    },
+    {
+      "date": "2019-10-01",
+      "Total": 103.3,
+      "House": 102.7,
+      "Land": 104.2
+    },
+    {
+      "date": "2019-11-01",
+      "Total": 103.2,
+      "House": 102.5,
+      "Land": 104.3
+    },
+    {
+      "date": "2019-12-01",
+      "Total": 103.4,
+      "House": 102.8,
+      "Land": 104.4
+    },
+    {
+      "date": "2020-01-01",
+      "Total": 103.4,
+      "House": 102.6,
+      "Land": 104.8
+    },
+    {
+      "date": "2020-02-01",
+      "Total": 103.8,
+      "House": 103.1,
+      "Land": 105.0
+    },
+    {
+      "date": "2020-03-01",
+      "Total": 104.1,
+      "House": 103.5,
+      "Land": 105.1
+    },
+    {
+      "date": "2020-04-01",
+      "Total": 104.1,
+      "House": 103.5,
+      "Land": 105.1
+    },
+    {
+      "date": "2020-05-01",
+      "Total": 104.2,
+      "House": 103.6,
+      "Land": 105.1
+    },
+    {
+      "date": "2020-06-01",
+      "Total": 104.3,
+      "House": 103.7,
+      "Land": 105.2
+    },
+    {
+      "date": "2020-07-01",
+      "Total": 104.7,
+      "House": 103.9,
+      "Land": 105.9
+    },
+    {
+      "date": "2020-08-01",
+      "Total": 105.2,
+      "House": 104.6,
+      "Land": 106.3
+    },
+    {
+      "date": "2020-09-01",
+      "Total": 106.5,
+      "House": 106.1,
+      "Land": 106.8
+    },
+    {
+      "date": "2020-10-01",
+      "Total": 107.3,
+      "House": 107.3,
+      "Land": 107.4
+    },
+    {
+      "date": "2020-11-01",
+      "Total": 107.9,
+      "House": 108.0,
+      "Land": 107.8
+    },
+    {
+      "date": "2020-12-01",
+      "Total": 108.2,
+      "House": 108.3,
+      "Land": 108.0
+    },
+    {
+      "date": "2021-01-01",
+      "Total": 109.0,
+      "House": 109.3,
+      "Land": 108.4
+    },
+    {
+      "date": "2021-02-01",
+      "Total": 111.1,
+      "House": 111.0,
+      "Land": 110.1
+    },
+    {
+      "date": "2021-03-01",
+      "Total": 112.3,
+      "House": 112.4,
+      "Land": 110.7
+    },
+    {
+      "date": "2021-04-01",
+      "Total": 114.4,
+      "House": 114.3,
+      "Land": 112.9
+    },
+    {
+      "date": "2021-05-01",
+      "Total": 116.0,
+      "House": 116.6,
+      "Land": 113.4
+    },
+    {
+      "date": "2021-06-01",
+      "Total": 116.7,
+      "House": 117.9,
+      "Land": 112.9
+    },
+    {
+      "date": "2021-07-01",
+      "Total": 117.2,
+      "House": 118.6,
+      "Land": 113.0
+    },
+    {
+      "date": "2021-08-01",
+      "Total": 118.0,
+      "House": 119.5,
+      "Land": 113.5
+    },
+    {
+      "date": "2021-09-01",
+      "Total": 118.5,
+      "House": 120.1,
+      "Land": 113.8
+    },
+    {
+      "date": "2021-10-01",
+      "Total": 119.6,
+      "House": 121.4,
+      "Land": 114.4
+    },
+    {
+      "date": "2021-11-01",
+      "Total": 120.5,
+      "House": 122.4,
+      "Land": 115.1
+    },
+    {
+      "date": "2021-12-01",
+      "Total": 120.8,
+      "House": 122.9,
+      "Land": 115.2
+    },
+    {
+      "date": "2022-01-01",
+      "Total": 121.9,
+      "House": 124.3,
+      "Land": 115.5
+    },
+    {
+      "date": "2022-02-01",
+      "Total": 123.2,
+      "House": 126.0,
+      "Land": 116.1
+    },
+    {
+      "date": "2022-03-01",
+      "Total": 124.7,
+      "House": 127.9,
+      "Land": 116.5
+    },
+    {
+      "date": "2022-04-01",
+      "Total": 125.1,
+      "House": 128.6,
+      "Land": 116.7
+    },
+    {
+      "date": "2022-05-01",
+      "Total": 125.7,
+      "House": 129.4,
+      "Land": 116.8
+    },
+    {
+      "date": "2022-06-01",
+      "Total": 125.9,
+      "House": 129.6,
+      "Land": 117.0
+    },
+    {
+      "date": "2022-07-01",
+      "Total": 126.0,
+      "House": 129.6,
+      "Land": 117.2
+    },
+    {
+      "date": "2022-08-01",
+      "Total": 126.1,
+      "House": 129.8,
+      "Land": 117.2
+    },
+    {
+      "date": "2022-09-01",
+      "Total": 126.0,
+      "House": 129.7,
+      "Land": 117.1
+    },
+    {
+      "date": "2022-10-01",
+      "Total": 125.7,
+      "House": 129.4,
+      "Land": 116.7
+    },
+    {
+      "date": "2022-11-01",
+      "Total": 125.5,
+      "House": 129.3,
+      "Land": 116.6
+    },
+    {
+      "date": "2022-12-01",
+      "Total": 125.5,
+      "House": 129.2,
+      "Land": 116.6
+    },
+    {
+      "date": "2023-01-01",
+      "Total": 125.2,
+      "House": 128.9,
+      "Land": 116.5
+    },
+    {
+      "date": "2023-02-01",
+      "Total": 124.9,
+      "House": 128.5,
+      "Land": 116.4
+    },
+    {
+      "date": "2023-03-01",
+      "Total": 124.9,
+      "House": 128.4,
+      "Land": 116.4
+    },
+    {
+      "date": "2023-04-01",
+      "Total": 124.8,
+      "House": 128.2,
+      "Land": 116.5
+    },
+    {
+      "date": "2023-05-01",
+      "Total": 124.9,
+      "House": 128.3,
+      "Land": 116.6
+    },
+    {
+      "date": "2023-06-01",
+      "Total": 125.0,
+      "House": 128.3,
+      "Land": 116.7
+    },
+    {
+      "date": "2023-07-01",
+      "Total": 124.9,
+      "House": 128.2,
+      "Land": 116.7
+    },
+    {
+      "date": "2023-08-01",
+      "Total": 125.0,
+      "House": 128.1,
+      "Land": 117.0
+    },
+    {
+      "date": "2023-09-01",
+      "Total": 124.7,
+      "House": 127.8,
+      "Land": 116.8
+    },
+    {
+      "date": "2023-10-01",
+      "Total": 124.7,
+      "House": 127.6,
+      "Land": 116.9
+    },
+    {
+      "date": "2023-11-01",
+      "Total": 124.4,
+      "House": 127.2,
+      "Land": 116.8
+    },
+    {
+      "date": "2023-12-01",
+      "Total": 124.4,
+      "House": 127.2,
+      "Land": 116.8
+    },
+    {
+      "date": "2024-01-01",
+      "Total": 124.3,
+      "House": 127.1,
+      "Land": 116.7
+    },
+    {
+      "date": "2024-02-01",
+      "Total": 124.4,
+      "House": 127.2,
+      "Land": 116.7
+    },
+    {
+      "date": "2024-03-01",
+      "Total": 124.4,
+      "House": 127.2,
+      "Land": 116.8
+    },
+    {
+      "date": "2024-04-01",
+      "Total": 124.7,
+      "House": 127.6,
+      "Land": 117.0
+    },
+    {
+      "date": "2024-05-01",
+      "Total": 124.9,
+      "House": 128.0,
+      "Land": 116.9
+    },
+    {
+      "date": "2024-06-01",
+      "Total": 124.7,
+      "House": 127.7,
+      "Land": 116.9
+    },
+    {
+      "date": "2024-07-01",
+      "Total": 125.0,
+      "House": 128.0,
+      "Land": 117.0
+    },
+    {
+      "date": "2024-08-01",
+      "Total": 125.0,
+      "House": 128.0,
+      "Land": 117.1
+    },
+    {
+      "date": "2024-09-01",
+      "Total": 125.0,
+      "House": 128.0,
+      "Land": 117.0
+    },
+    {
+      "date": "2024-10-01",
+      "Total": 124.5,
+      "House": 127.3,
+      "Land": 117.2
+    },
+    {
+      "date": "2024-11-01",
+      "Total": 124.6,
+      "House": 127.4,
+      "Land": 117.3
+    },
+    {
+      "date": "2024-12-01",
+      "Total": 124.5,
+      "House": 127.3,
+      "Land": 117.1
+    },
+    {
+      "date": "2025-01-01",
+      "Total": 124.4,
+      "House": 127.3,
+      "Land": 117.2
+    },
+    {
+      "date": "2025-02-01",
+      "Total": 124.5,
+      "House": 127.5,
+      "Land": 117.2
+    },
+    {
+      "date": "2025-03-01",
+      "Total": 124.5,
+      "House": 127.4,
+      "Land": 117.3
+    },
+    {
+      "date": "2025-04-01",
+      "Total": 124.0,
+      "House": 126.7,
+      "Land": 117.3
+    },
+    {
+      "date": "2025-05-01",
+      "Total": 123.7,
+      "House": 126.2,
+      "Land": 117.4
+    },
+    {
+      "date": "2025-06-01",
+      "Total": 123.4,
+      "House": 125.7,
+      "Land": 117.4
+    },
+    {
+      "date": "2025-07-01",
+      "Total": 123.3,
+      "House": 125.4,
+      "Land": 117.6
+    },
+    {
+      "date": "2025-08-01",
+      "Total": 122.9,
+      "House": 124.9,
+      "Land": 117.4
+    },
+    {
+      "date": "2025-09-01",
+      "Total": 122.7,
+      "House": 124.6,
+      "Land": 117.3
+    },
+    {
+      "date": "2025-10-01",
+      "Total": 122.2,
+      "House": 123.9,
+      "Land": 117.3
+    },
+    {
+      "date": "2025-11-01",
+      "Total": 122.2,
+      "House": 124.0,
+      "Land": 117.2
+    },
+    {
+      "date": "2025-12-01",
+      "Total": 122.0,
+      "House": 123.8,
+      "Land": 117.1
+    },
+    {
+      "date": "2026-01-01",
+      "Total": 121.5,
+      "House": 123.0,
+      "Land": 117.1
+    },
+    {
+      "date": "2026-02-01",
+      "Total": 121.9,
+      "House": 123.4,
+      "Land": 117.5
+    },
+    {
+      "date": "2026-03-01",
+      "Total": 121.6,
+      "House": 123.0,
+      "Land": 117.2
+    },
+    {
+      "date": "2026-04-01",
+      "Total": 121.1,
+      "House": 122.3,
+      "Land": 117.1
+    },
+    {
+      "date": "2026-05-01",
+      "Total": 120.7,
+      "House": 121.8,
+      "Land": 116.8
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw",
+    "indexed",
+    "yoy",
+    "pct_change",
+    "zscore"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Published indices and explicitly labelled derived changes; no interpolation across native frequencies.",
+    "notes": "The NHPI measures transaction prices for new residential properties; it is not rent or shelter CPI."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-07-16T14:12:52+00:00"
+}

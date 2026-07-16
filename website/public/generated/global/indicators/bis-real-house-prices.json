@@ -1,0 +1,453 @@
+{
+  "schemaVersion": 1,
+  "id": "bis-real-house-prices",
+  "field": "bis_real_house_prices",
+  "label": "BIS World residential property prices (real)",
+  "description": "BIS selected residential property-price index; aggregate coverage is participating economies, not every dwelling worldwide.",
+  "definition": "BIS selected residential property-price index; aggregate coverage is participating economies, not every dwelling worldwide.",
+  "unit": "index, 2010=100",
+  "frequency": "quarterly",
+  "status": "measured",
+  "layer": "International residential property prices",
+  "geography": "World",
+  "geographyLevel": "global",
+  "domesticOrExternal": "external",
+  "directlyComparableAcrossCountries": true,
+  "comparisonLimitations": "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels.",
+  "interpretationDirection": "context-dependent",
+  "interpretationLabel": "Declining",
+  "interpretation": "Property purchase-price changes are not equivalent to current shelter-service costs and are not universally supportive.",
+  "source": "Bank for International Settlements",
+  "sourceUrl": "https://data.bis.org/topics/RPP",
+  "sourceIdentifier": "BIS_WS_SPP_XW_R_628",
+  "sourceDate": "2025-12-01",
+  "retrievalDate": "2026-07-16T14:12:53+00:00",
+  "revisionStatus": "BIS selected residential property prices are revised when national sources or representative-series selections change. Aggregates cover participating economies and are not a census of every dwelling.",
+  "seasonalAdjustment": "source-defined",
+  "nominalOrReal": "real",
+  "startDate": "2007-12-01",
+  "endDate": "2025-12-01",
+  "latest": {
+    "date": "2025-12-01",
+    "sourceDate": "2025-12-01",
+    "value": 119.7309,
+    "previousValue": 120.0944,
+    "oneYearChange": -0.6942999999999984,
+    "threeMonthChange": -0.3634999999999877,
+    "fourQuarterChange": -0.6942999999999984,
+    "monthOverMonthChange": -0.3634999999999877,
+    "yearOverYearPercentChange": -0.5765404583093936,
+    "cumulativeChange": 13.586764722623833,
+    "historicalPercentile": 71.91780821917808,
+    "percentileSince2000": 71.91780821917808,
+    "distanceFromMedian": 9.782900000000012,
+    "distanceFromPreviousPeakPercent": -5.737877216890997,
+    "momentumThreeMonth": -0.3634999999999877,
+    "momentumTwelveMonth": -0.6942999999999984,
+    "momentum": "falling"
+  },
+  "referenceRanges": {
+    "historicalMedian": 109.948,
+    "p10": 98.61104,
+    "p25": 100.5291,
+    "p75": 120.4252,
+    "p90": 122.92728,
+    "minimum": 97.4452,
+    "maximum": 127.0191
+  },
+  "observations": [
+    {
+      "date": "2007-12-01",
+      "value": 105.4092,
+      "sourceDate": "2007-12-01"
+    },
+    {
+      "date": "2008-03-01",
+      "value": 103.932,
+      "sourceDate": "2008-03-01"
+    },
+    {
+      "date": "2008-06-01",
+      "value": 102.1253,
+      "sourceDate": "2008-06-01"
+    },
+    {
+      "date": "2008-09-01",
+      "value": 100.5189,
+      "sourceDate": "2008-09-01"
+    },
+    {
+      "date": "2008-12-01",
+      "value": 99.2001,
+      "sourceDate": "2008-12-01"
+    },
+    {
+      "date": "2009-03-01",
+      "value": 97.8018,
+      "sourceDate": "2009-03-01"
+    },
+    {
+      "date": "2009-06-01",
+      "value": 97.4452,
+      "sourceDate": "2009-06-01"
+    },
+    {
+      "date": "2009-09-01",
+      "value": 98.3491,
+      "sourceDate": "2009-09-01"
+    },
+    {
+      "date": "2009-12-01",
+      "value": 98.984,
+      "sourceDate": "2009-12-01"
+    },
+    {
+      "date": "2010-03-01",
+      "value": 99.5064,
+      "sourceDate": "2010-03-01"
+    },
+    {
+      "date": "2010-06-01",
+      "value": 100.278,
+      "sourceDate": "2010-06-01"
+    },
+    {
+      "date": "2010-09-01",
+      "value": 100.4606,
+      "sourceDate": "2010-09-01"
+    },
+    {
+      "date": "2010-12-01",
+      "value": 99.755,
+      "sourceDate": "2010-12-01"
+    },
+    {
+      "date": "2011-03-01",
+      "value": 98.1413,
+      "sourceDate": "2011-03-01"
+    },
+    {
+      "date": "2011-06-01",
+      "value": 98.3232,
+      "sourceDate": "2011-06-01"
+    },
+    {
+      "date": "2011-09-01",
+      "value": 98.5381,
+      "sourceDate": "2011-09-01"
+    },
+    {
+      "date": "2011-12-01",
+      "value": 98.165,
+      "sourceDate": "2011-12-01"
+    },
+    {
+      "date": "2012-03-01",
+      "value": 98.4082,
+      "sourceDate": "2012-03-01"
+    },
+    {
+      "date": "2012-06-01",
+      "value": 98.9028,
+      "sourceDate": "2012-06-01"
+    },
+    {
+      "date": "2012-09-01",
+      "value": 99.4241,
+      "sourceDate": "2012-09-01"
+    },
+    {
+      "date": "2012-12-01",
+      "value": 100.0894,
+      "sourceDate": "2012-12-01"
+    },
+    {
+      "date": "2013-03-01",
+      "value": 100.5291,
+      "sourceDate": "2013-03-01"
+    },
+    {
+      "date": "2013-06-01",
+      "value": 101.6699,
+      "sourceDate": "2013-06-01"
+    },
+    {
+      "date": "2013-09-01",
+      "value": 102.7299,
+      "sourceDate": "2013-09-01"
+    },
+    {
+      "date": "2013-12-01",
+      "value": 103.2381,
+      "sourceDate": "2013-12-01"
+    },
+    {
+      "date": "2014-03-01",
+      "value": 103.8405,
+      "sourceDate": "2014-03-01"
+    },
+    {
+      "date": "2014-06-01",
+      "value": 104.1364,
+      "sourceDate": "2014-06-01"
+    },
+    {
+      "date": "2014-09-01",
+      "value": 104.2361,
+      "sourceDate": "2014-09-01"
+    },
+    {
+      "date": "2014-12-01",
+      "value": 104.5184,
+      "sourceDate": "2014-12-01"
+    },
+    {
+      "date": "2015-03-01",
+      "value": 105.1992,
+      "sourceDate": "2015-03-01"
+    },
+    {
+      "date": "2015-06-01",
+      "value": 105.2803,
+      "sourceDate": "2015-06-01"
+    },
+    {
+      "date": "2015-09-01",
+      "value": 105.8952,
+      "sourceDate": "2015-09-01"
+    },
+    {
+      "date": "2015-12-01",
+      "value": 106.3169,
+      "sourceDate": "2015-12-01"
+    },
+    {
+      "date": "2016-03-01",
+      "value": 107.0908,
+      "sourceDate": "2016-03-01"
+    },
+    {
+      "date": "2016-06-01",
+      "value": 108.109,
+      "sourceDate": "2016-06-01"
+    },
+    {
+      "date": "2016-09-01",
+      "value": 109.1054,
+      "sourceDate": "2016-09-01"
+    },
+    {
+      "date": "2016-12-01",
+      "value": 109.948,
+      "sourceDate": "2016-12-01"
+    },
+    {
+      "date": "2017-03-01",
+      "value": 110.5104,
+      "sourceDate": "2017-03-01"
+    },
+    {
+      "date": "2017-06-01",
+      "value": 111.742,
+      "sourceDate": "2017-06-01"
+    },
+    {
+      "date": "2017-09-01",
+      "value": 112.414,
+      "sourceDate": "2017-09-01"
+    },
+    {
+      "date": "2017-12-01",
+      "value": 112.6102,
+      "sourceDate": "2017-12-01"
+    },
+    {
+      "date": "2018-03-01",
+      "value": 113.0992,
+      "sourceDate": "2018-03-01"
+    },
+    {
+      "date": "2018-06-01",
+      "value": 113.8708,
+      "sourceDate": "2018-06-01"
+    },
+    {
+      "date": "2018-09-01",
+      "value": 114.5987,
+      "sourceDate": "2018-09-01"
+    },
+    {
+      "date": "2018-12-01",
+      "value": 115.1282,
+      "sourceDate": "2018-12-01"
+    },
+    {
+      "date": "2019-03-01",
+      "value": 115.6588,
+      "sourceDate": "2019-03-01"
+    },
+    {
+      "date": "2019-06-01",
+      "value": 115.8786,
+      "sourceDate": "2019-06-01"
+    },
+    {
+      "date": "2019-09-01",
+      "value": 116.4173,
+      "sourceDate": "2019-09-01"
+    },
+    {
+      "date": "2019-12-01",
+      "value": 116.5261,
+      "sourceDate": "2019-12-01"
+    },
+    {
+      "date": "2020-03-01",
+      "value": 117.1642,
+      "sourceDate": "2020-03-01"
+    },
+    {
+      "date": "2020-06-01",
+      "value": 118.5572,
+      "sourceDate": "2020-06-01"
+    },
+    {
+      "date": "2020-09-01",
+      "value": 119.559,
+      "sourceDate": "2020-09-01"
+    },
+    {
+      "date": "2020-12-01",
+      "value": 121.3779,
+      "sourceDate": "2020-12-01"
+    },
+    {
+      "date": "2021-03-01",
+      "value": 122.4382,
+      "sourceDate": "2021-03-01"
+    },
+    {
+      "date": "2021-06-01",
+      "value": 124.198,
+      "sourceDate": "2021-06-01"
+    },
+    {
+      "date": "2021-09-01",
+      "value": 125.6257,
+      "sourceDate": "2021-09-01"
+    },
+    {
+      "date": "2021-12-01",
+      "value": 126.1331,
+      "sourceDate": "2021-12-01"
+    },
+    {
+      "date": "2022-03-01",
+      "value": 127.0191,
+      "sourceDate": "2022-03-01"
+    },
+    {
+      "date": "2022-06-01",
+      "value": 125.9903,
+      "sourceDate": "2022-06-01"
+    },
+    {
+      "date": "2022-09-01",
+      "value": 125.3056,
+      "sourceDate": "2022-09-01"
+    },
+    {
+      "date": "2022-12-01",
+      "value": 123.7242,
+      "sourceDate": "2022-12-01"
+    },
+    {
+      "date": "2023-03-01",
+      "value": 122.8864,
+      "sourceDate": "2023-03-01"
+    },
+    {
+      "date": "2023-06-01",
+      "value": 122.9375,
+      "sourceDate": "2023-06-01"
+    },
+    {
+      "date": "2023-09-01",
+      "value": 122.4909,
+      "sourceDate": "2023-09-01"
+    },
+    {
+      "date": "2023-12-01",
+      "value": 122.0459,
+      "sourceDate": "2023-12-01"
+    },
+    {
+      "date": "2024-03-01",
+      "value": 122.1024,
+      "sourceDate": "2024-03-01"
+    },
+    {
+      "date": "2024-06-01",
+      "value": 121.5119,
+      "sourceDate": "2024-06-01"
+    },
+    {
+      "date": "2024-09-01",
+      "value": 120.7505,
+      "sourceDate": "2024-09-01"
+    },
+    {
+      "date": "2024-12-01",
+      "value": 120.4252,
+      "sourceDate": "2024-12-01"
+    },
+    {
+      "date": "2025-03-01",
+      "value": 120.8826,
+      "sourceDate": "2025-03-01"
+    },
+    {
+      "date": "2025-06-01",
+      "value": 120.5231,
+      "sourceDate": "2025-06-01"
+    },
+    {
+      "date": "2025-09-01",
+      "value": 120.0944,
+      "sourceDate": "2025-09-01"
+    },
+    {
+      "date": "2025-12-01",
+      "value": 119.7309,
+      "sourceDate": "2025-12-01"
+    }
+  ],
+  "transformations": [
+    "raw",
+    "indexed",
+    "yoy",
+    "pct_change",
+    "zscore"
+  ],
+  "confirmingIndicators": [],
+  "conflictingIndicators": [],
+  "evidenceChecks": [],
+  "confidenceLevel": "medium",
+  "evidenceLabel": "Contextual indicator",
+  "calculation": {
+    "formula": "BIS selected residential property-price index; aggregate coverage is participating economies, not every dwelling worldwide.",
+    "explanation": "BIS selected residential property-price index; aggregate coverage is participating economies, not every dwelling worldwide.",
+    "example": "Latest observation: 119.73 index, 2010=100 at 2025-12."
+  },
+  "limitations": [
+    "BIS selected residential property prices are revised when national sources or representative-series selections change. Aggregates cover participating economies and are not a census of every dwelling.",
+    "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
+  ],
+  "futureClassifierMetadata": {
+    "status": "metadata_only_not_scored",
+    "candidateSymptoms": [
+      "property-price growth occurring alongside resource or liquidity expansion"
+    ]
+  },
+  "generatedAt": "2026-07-16T14:12:52+00:00"
+}
