@@ -127,6 +127,14 @@ export type IndicatorDataset = {
   observations: IndicatorObservation[]
   confirmingIndicators: string[]
   conflictingIndicators: string[]
+  evidenceChecks: Array<{
+    label: string
+    status: 'confirms' | 'conflicts' | 'unclear'
+    targetIndicatorId: string | null
+    targetInterpretationLabel: IndicatorDataset['interpretationLabel'] | null
+    targetLatestDate: string | null
+    explanation: string
+  }>
   confidenceLevel: string
   evidenceLabel: string
   calculation: ChartCalculation

@@ -1,3 +1,4 @@
+import { Check, X } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { Brush, CartesianGrid, Line, LineChart, ReferenceArea, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { ChartControls } from './ChartControls'
@@ -11,7 +12,7 @@ import { useChartContext } from './useChartData'
 
 const format = (value: number | null) => value === null ? 'Not available' : new Intl.NumberFormat('en-US', { maximumFractionDigits: 3 }).format(value)
 
-export function IndicatorHistoryChart({ indicator }: { indicator: IndicatorDataset }) {
+export function IndicatorHistoryChart({ indicator, onSelectIndicator }: { indicator: IndicatorDataset; onSelectIndicator?: (id: string) => void }) {
   const [range, setRange] = useState('all')
   const [lockedDate, setLockedDate] = useState<string | null>(null)
   const [showRecessions, setShowRecessions] = useState(true)
@@ -56,7 +57,12 @@ export function IndicatorHistoryChart({ indicator }: { indicator: IndicatorDatas
       </LineChart></ResponsiveContainer>
     </div>
     {lockedDate && <div className="mt-3 flex items-center justify-between border border-petroleum/30 bg-petroleum/5 p-3 text-sm"><span><strong>{lockedDate.slice(0, 7)}:</strong> {format(rows.find((row) => row.date === lockedDate)?.value ?? null)} {indicator.unit}</span><button type="button" className="text-xs font-semibold" onClick={() => setLockedDate(null)}>Clear</button></div>}
-    <div className="mt-5 grid gap-4 text-sm md:grid-cols-2"><div><h3 className="font-semibold">Confirming indicators</h3><p className="mt-1 text-stone-500">{indicator.confirmingIndicators.join(', ') || 'No specific confirming series documented.'}</p></div><div><h3 className="font-semibold">Conflicting evidence to inspect</h3><p className="mt-1 text-stone-500">{indicator.conflictingIndicators.join(', ') || 'Review other indicators in this layer.'}</p></div></div>
+    <div className="mt-5 border-y border-stone-200 py-5 dark:border-stone-800"><div className="flex flex-wrap items-baseline justify-between gap-2"><h3 className="font-semibold">Confirming indicator checks</h3><p className="text-xs text-stone-500"><span className="text-emerald-700 dark:text-emerald-400">✓ confirms</span> · <span className="text-rose-700 dark:text-rose-400">× conflicts</span> · <span>~ unclear or unavailable</span></p></div><ul className="mt-4 grid gap-3 md:grid-cols-2">{indicator.evidenceChecks.length ? indicator.evidenceChecks.map((check) => {
+      const Icon = check.status === 'confirms' ? Check : check.status === 'conflicts' ? X : null
+      const tone = check.status === 'confirms' ? 'text-emerald-700 dark:text-emerald-400' : check.status === 'conflicts' ? 'text-rose-700 dark:text-rose-400' : 'text-stone-500'
+      const content = <><span className={`flex h-6 w-6 shrink-0 items-center justify-center font-bold ${tone}`}>{Icon ? <Icon size={17} strokeWidth={3} /> : '~'}</span><span><span className="font-medium">{check.label}</span><span className="mt-0.5 block text-xs text-stone-500">{check.targetInterpretationLabel ? `${check.targetInterpretationLabel} · ${check.targetLatestDate?.slice(0, 7)}` : 'No linked Current State series'}</span></span></>
+      return <li key={check.label} title={check.explanation}>{check.targetIndicatorId && onSelectIndicator ? <button type="button" onClick={() => onSelectIndicator(check.targetIndicatorId!)} className="flex w-full items-start gap-2 border border-stone-200 p-3 text-left hover:border-petroleum hover:text-petroleum dark:border-stone-800 dark:hover:border-petroleum" aria-label={`Open ${check.label} indicator history; ${check.status}`}>{content}</button> : <div className="flex items-start gap-2 border border-stone-200 p-3 dark:border-stone-800">{content}</div>}</li>
+    }) : <li className="text-sm text-stone-500">No specific confirming series documented.</li>}</ul><p className="mt-4 text-xs leading-5 text-stone-500">A check means both linked indicators currently share the same supportive or stressful classification. An X means their directional classifications disagree. A tilde means at least one reading is mixed, context-dependent, or not available in the Current State dataset. These comparisons are diagnostic, not causal tests.</p></div>
     <IndicatorEpisodeComparison indicator={indicator} />
     <div className="mt-6"><ChartTable indicator={indicator} rows={rows} /></div>
   </section>

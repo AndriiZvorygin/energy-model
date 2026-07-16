@@ -1986,6 +1986,24 @@
     "Review other indicators in the same layer",
     "no single reading determines the state."
   ],
+  "evidenceChecks": [
+    {
+      "label": "Real income",
+      "status": "confirms",
+      "targetIndicatorId": "real-disposable-income-yoy",
+      "targetInterpretationLabel": "Stressful",
+      "targetLatestDate": "2026-05-01",
+      "explanation": "The linked indicator has the same directional classification."
+    },
+    {
+      "label": "spending",
+      "status": "unclear",
+      "targetIndicatorId": "real-consumer-spending-yoy",
+      "targetInterpretationLabel": "Mixed",
+      "targetLatestDate": "2026-05-01",
+      "explanation": "The relationship is unavailable or one of the readings is mixed or context-dependent."
+    }
+  ],
   "confidenceLevel": "medium",
   "evidenceLabel": "Contextual indicator",
   "calculation": {
@@ -1997,5 +2015,5 @@
     "Survey methodology and licensing constrain some uses.",
     "Politics, asset prices, inflation generally, media attention."
   ],
-  "generatedAt": "2026-07-16T00:14:53+00:00"
+  "generatedAt": "2026-07-16T01:17:27+00:00"
 }

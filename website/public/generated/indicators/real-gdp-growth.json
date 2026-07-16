@@ -1946,6 +1946,24 @@
     "Review other indicators in the same layer",
     "no single reading determines the state."
   ],
+  "evidenceChecks": [
+    {
+      "label": "Energy consumption",
+      "status": "unclear",
+      "targetIndicatorId": "petroleum-consumption-yoy",
+      "targetInterpretationLabel": "Mixed",
+      "targetLatestDate": "2026-03-01",
+      "explanation": "The relationship is unavailable or one of the readings is mixed or context-dependent."
+    },
+    {
+      "label": "industrial production",
+      "status": "unclear",
+      "targetIndicatorId": "industrial-production-yoy",
+      "targetInterpretationLabel": "Mixed",
+      "targetLatestDate": "2026-05-01",
+      "explanation": "The relationship is unavailable or one of the readings is mixed or context-dependent."
+    }
+  ],
   "confidenceLevel": "medium",
   "evidenceLabel": "Contextual indicator",
   "calculation": {
@@ -1957,5 +1975,5 @@
     "Quarterly, revised, and not a real-time vintage.",
     "Broad demand, policy, productivity, trade, inventories."
   ],
-  "generatedAt": "2026-07-16T00:14:53+00:00"
+  "generatedAt": "2026-07-16T01:17:27+00:00"
 }

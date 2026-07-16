@@ -258,6 +258,43 @@ CONTEXT_DEPENDENT = {
     "refinery_utilization_pct", "real_WTI_YoY", "fed_funds_rate", "GM2_YoY",
 }
 
+EVIDENCE_REFERENCE_FIELDS = {
+    "business investment": "business_investment_YoY",
+    "consumer sentiment": "consumer_sentiment",
+    "credit conditions": "credit_tightening_pct",
+    "credit standards": "credit_tightening_pct",
+    "delinquency": "credit_card_delinquency_rate",
+    "energy consumption": "petroleum_consumption_YoY",
+    "energy cpi": "energy_CPI_YoY",
+    "energy use": "petroleum_consumption_YoY",
+    "full-time share": "full_time_employment_share",
+    "gdp": "Real_GDP_growth",
+    "gm2": "GM2_YoY",
+    "hours": "average_weekly_hours_YoY",
+    "household burden": "household_energy_expenditure_share",
+    "income": "real_disposable_income_YoY",
+    "industrial output": "Industrial_production_YoY",
+    "industrial production": "Industrial_production_YoY",
+    "investment": "business_investment_YoY",
+    "involuntary part time": "involuntary_part_time_share",
+    "manufacturing": "manufacturing_output_YoY",
+    "oil burden": "energy_expenditure_share_gdp",
+    "oil momentum": "real_WTI_YoY",
+    "petroleum consumption": "petroleum_consumption_YoY",
+    "prime-age employment": "prime_age_employment_rate",
+    "real gdp": "Real_GDP_growth",
+    "real income": "real_disposable_income_YoY",
+    "real spending": "real_consumer_spending_YoY",
+    "real wages": "real_wage_growth",
+    "refinery utilization": "refinery_utilization_pct",
+    "sentiment": "consumer_sentiment",
+    "spending": "real_consumer_spending_YoY",
+    "temporary help": "temporary_help_YoY",
+    "unemployment": "unemployment_rate",
+    "wages": "real_wage_growth",
+    "weekly hours": "average_weekly_hours_YoY",
+}
+
 
 def _interpretation_direction(indicator_id: str) -> str:
     if indicator_id in SUPPORTIVE_WHEN_RISING:
@@ -332,6 +369,44 @@ def _current_state_snapshot(indicators: list[dict[str, Any]], generated_at: str)
         },
         "indicatorOrder": [indicator["field"] for indicator in ordered],
     }
+
+
+def _attach_evidence_checks(indicators: list[dict[str, Any]]) -> None:
+    by_field = {str(indicator["field"]): indicator for indicator in indicators}
+
+    def polarity(indicator: dict[str, Any]) -> str | None:
+        label = indicator.get("interpretationLabel")
+        if label == "Supportive":
+            return "supportive"
+        if label == "Stressful":
+            return "stressful"
+        return None
+
+    for indicator in indicators:
+        subject_polarity = polarity(indicator)
+        checks = []
+        for reference in indicator.get("confirmingIndicators", []):
+            field = EVIDENCE_REFERENCE_FIELDS.get(str(reference).strip().lower())
+            target = by_field.get(field or "")
+            target_polarity = polarity(target) if target else None
+            status = "unclear"
+            if subject_polarity and target_polarity:
+                status = "confirms" if subject_polarity == target_polarity else "conflicts"
+            checks.append({
+                "label": reference,
+                "status": status,
+                "targetIndicatorId": target["id"] if target else None,
+                "targetInterpretationLabel": target["interpretationLabel"] if target else None,
+                "targetLatestDate": target["latest"]["date"] if target else None,
+                "explanation": (
+                    "The linked indicator has the same directional classification."
+                    if status == "confirms"
+                    else "The linked indicator has the opposite directional classification."
+                    if status == "conflicts"
+                    else "The relationship is unavailable or one of the readings is mixed or context-dependent."
+                ),
+            })
+        indicator["evidenceChecks"] = checks
 
 
 def _indicator_payload(
@@ -420,6 +495,7 @@ def _indicator_payload(
         "observations": observations,
         "confirmingIndicators": [item.strip() for item in str(indicator.get("confirming_indicators") or "").split(";") if item.strip()],
         "conflictingIndicators": [item.strip() for item in str(indicator.get("conflicting_indicators") or "").split(";") if item.strip()],
+        "evidenceChecks": [],
         "confidenceLevel": str(indicator.get("confidence_level") or "low"),
         "evidenceLabel": str(indicator.get("evidence_label") or "Contextual indicator"),
         "calculation": {"formula": formula, "explanation": formula, "example": f"Latest published observation: {latest_value:.2f} {unit} at {latest['date'][:7]}."},
@@ -431,7 +507,7 @@ def _indicator_payload(
 
 
 def validate_indicator_dataset(dataset: dict[str, Any]) -> None:
-    required = {"schemaVersion", "id", "label", "description", "unit", "frequency", "status", "interpretationDirection", "source", "sourceUrl", "startDate", "endDate", "latest", "referenceRanges", "observations", "evidenceLabel"}
+    required = {"schemaVersion", "id", "label", "description", "unit", "frequency", "status", "interpretationDirection", "source", "sourceUrl", "startDate", "endDate", "latest", "referenceRanges", "observations", "evidenceLabel", "evidenceChecks"}
     missing = sorted(required - dataset.keys())
     if missing:
         raise ValueError(f"Indicator dataset {dataset.get('id', '<unknown>')} missing fields: {', '.join(missing)}")
@@ -444,6 +520,14 @@ def validate_indicator_dataset(dataset: dict[str, Any]) -> None:
         raise ValueError(f"Indicator dataset {dataset['id']} contains a non-ISO date")
     if any(row.get("value") is not None and not isinstance(row.get("value"), (int, float)) for row in dataset["observations"]):
         raise ValueError(f"Indicator dataset {dataset['id']} contains a non-numeric value")
+    checks = dataset["evidenceChecks"]
+    if not isinstance(checks, list) or any(
+        not check.get("label")
+        or check.get("status") not in {"confirms", "conflicts", "unclear"}
+        or not check.get("explanation")
+        for check in checks
+    ):
+        raise ValueError(f"Indicator dataset {dataset['id']} has invalid evidence checks")
     ranges = dataset["referenceRanges"]
     ordered = [ranges.get(key) for key in ("minimum", "p10", "p25", "historicalMedian", "p75", "p90", "maximum")]
     available = [value for value in ordered if value is not None]
@@ -732,12 +816,14 @@ def write_website_chart_data(
         _indicator_payload(row, catalogue_by_indicator.get(str(row.get("indicator"))), system_rows, generated_at)
         for row in current_state_rows
     ]
+    _attach_evidence_checks(indicator_payloads)
     current_state_snapshot = _current_state_snapshot(indicator_payloads, generated_at)
     anomaly_order = {field: index for index, field in enumerate(current_state_snapshot["indicatorOrder"])}
 
     def sort_indicator_fields(fields: list[str]) -> list[str]:
         return sorted(fields, key=lambda field: anomaly_order.get(field, len(anomaly_order)))
     for payload in indicator_payloads:
+        validate_indicator_dataset(payload)
         filename = f"{payload['id']}.json"
         (indicator_out_dir / filename).write_text(json.dumps(payload, indent=2, allow_nan=False) + "\n", encoding="utf-8")
         files.append(f"indicators/{filename}")

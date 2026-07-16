@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from oil_model.website_data import _current_state_snapshot, _indicator_payload, _percentile, _quantile, validate_chart_dataset, validate_indicator_dataset
+from oil_model.website_data import _attach_evidence_checks, _current_state_snapshot, _indicator_payload, _percentile, _quantile, validate_chart_dataset, validate_indicator_dataset
 
 
 def dataset() -> dict:
@@ -86,6 +86,18 @@ class WebsiteDataTests(unittest.TestCase):
         self.assertEqual(snapshot["indicatorOrder"], ["stress", "support", "ordinary"])
         self.assertEqual([row["id"] for row in snapshot["groups"]["stressful"]], ["stress"])
         self.assertEqual(snapshot["groups"]["supportive"][0]["anomalyScore"], 40.0)
+
+    def test_evidence_checks_resolve_links_and_directional_agreement(self) -> None:
+        indicators = [
+            {"id": "hours", "field": "average_weekly_hours_YoY", "interpretationLabel": "Supportive", "latest": {"date": "2026-05-01"}, "confirmingIndicators": ["Unemployment", "Real wages", "Crack spreads"]},
+            {"id": "unemployment", "field": "unemployment_rate", "interpretationLabel": "Supportive", "latest": {"date": "2026-05-01"}, "confirmingIndicators": []},
+            {"id": "wages", "field": "real_wage_growth", "interpretationLabel": "Stressful", "latest": {"date": "2026-04-01"}, "confirmingIndicators": []},
+        ]
+        _attach_evidence_checks(indicators)
+        checks = indicators[0]["evidenceChecks"]
+        self.assertEqual([check["status"] for check in checks], ["confirms", "conflicts", "unclear"])
+        self.assertEqual(checks[0]["targetIndicatorId"], "unemployment")
+        self.assertIsNone(checks[2]["targetIndicatorId"])
 
 
 if __name__ == "__main__":

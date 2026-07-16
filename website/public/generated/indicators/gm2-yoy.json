@@ -1110,6 +1110,24 @@
     "Review other indicators in the same layer",
     "no single reading determines the state."
   ],
+  "evidenceChecks": [
+    {
+      "label": "Oil momentum",
+      "status": "unclear",
+      "targetIndicatorId": "real-wti-yoy",
+      "targetInterpretationLabel": "Historically elevated",
+      "targetLatestDate": "2026-05-01",
+      "explanation": "The relationship is unavailable or one of the readings is mixed or context-dependent."
+    },
+    {
+      "label": "credit conditions",
+      "status": "unclear",
+      "targetIndicatorId": "credit-tightening-pct",
+      "targetInterpretationLabel": "Mixed",
+      "targetLatestDate": "2026-07-01",
+      "explanation": "The relationship is unavailable or one of the readings is mixed or context-dependent."
+    }
+  ],
   "confidenceLevel": "high",
   "evidenceLabel": "Contextual indicator",
   "calculation": {
@@ -1121,5 +1139,5 @@
     "Proxy rather than harmonized global liquidity.",
     "FX conversion and jurisdiction-specific money definitions."
   ],
-  "generatedAt": "2026-07-16T00:14:53+00:00"
+  "generatedAt": "2026-07-16T01:17:27+00:00"
 }

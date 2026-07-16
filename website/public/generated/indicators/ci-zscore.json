@@ -1914,6 +1914,24 @@
     "Review other indicators in the same layer",
     "no single reading determines the state."
   ],
+  "evidenceChecks": [
+    {
+      "label": "Crude stocks",
+      "status": "unclear",
+      "targetIndicatorId": null,
+      "targetInterpretationLabel": null,
+      "targetLatestDate": null,
+      "explanation": "The relationship is unavailable or one of the readings is mixed or context-dependent."
+    },
+    {
+      "label": "refinery utilization",
+      "status": "unclear",
+      "targetIndicatorId": "refinery-utilization-pct",
+      "targetInterpretationLabel": "Historically elevated",
+      "targetLatestDate": "2026-07-01",
+      "explanation": "The relationship is unavailable or one of the readings is mixed or context-dependent."
+    }
+  ],
   "confidenceLevel": "high",
   "evidenceLabel": "Contextual indicator",
   "calculation": {
@@ -1925,5 +1943,5 @@
     "Small seasonal reference sample can produce unstable z-scores.",
     "Same alternatives as comparative inventory."
   ],
-  "generatedAt": "2026-07-16T00:14:53+00:00"
+  "generatedAt": "2026-07-16T01:17:27+00:00"
 }

@@ -938,6 +938,24 @@
     "Review other indicators in the same layer",
     "no single reading determines the state."
   ],
+  "evidenceChecks": [
+    {
+      "label": "Credit standards",
+      "status": "unclear",
+      "targetIndicatorId": "credit-tightening-pct",
+      "targetInterpretationLabel": "Mixed",
+      "targetLatestDate": "2026-07-01",
+      "explanation": "The relationship is unavailable or one of the readings is mixed or context-dependent."
+    },
+    {
+      "label": "GDP",
+      "status": "unclear",
+      "targetIndicatorId": "real-gdp-growth",
+      "targetInterpretationLabel": "Stressful",
+      "targetLatestDate": "2026-07-01",
+      "explanation": "The relationship is unavailable or one of the readings is mixed or context-dependent."
+    }
+  ],
   "confidenceLevel": "medium",
   "evidenceLabel": "Contextual indicator",
   "calculation": {
@@ -949,5 +967,5 @@
     "Latest-vintage data may be revised.",
     "Interpret alongside other indicators."
   ],
-  "generatedAt": "2026-07-16T00:14:53+00:00"
+  "generatedAt": "2026-07-16T01:17:27+00:00"
 }

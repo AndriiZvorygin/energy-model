@@ -1990,6 +1990,24 @@
     "Review other indicators in the same layer",
     "no single reading determines the state."
   ],
+  "evidenceChecks": [
+    {
+      "label": "Full-time share",
+      "status": "unclear",
+      "targetIndicatorId": "full-time-employment-share",
+      "targetInterpretationLabel": "Mixed",
+      "targetLatestDate": "2026-06-01",
+      "explanation": "The relationship is unavailable or one of the readings is mixed or context-dependent."
+    },
+    {
+      "label": "wages",
+      "status": "unclear",
+      "targetIndicatorId": "real-wage-growth",
+      "targetInterpretationLabel": "Stressful",
+      "targetLatestDate": "2026-05-01",
+      "explanation": "The relationship is unavailable or one of the readings is mixed or context-dependent."
+    }
+  ],
   "confidenceLevel": "medium",
   "evidenceLabel": "Contextual indicator",
   "calculation": {
@@ -2001,5 +2019,5 @@
     "Ratio of independently seasonally adjusted survey estimates.",
     "Labour supply, scheduling practices, classification changes."
   ],
-  "generatedAt": "2026-07-16T00:14:53+00:00"
+  "generatedAt": "2026-07-16T01:17:27+00:00"
 }

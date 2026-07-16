@@ -53,6 +53,6 @@ export function CurrentState() {
         </section>
       })}</div>
     </>}
-    <ChartModal open={Boolean(selected)} title={selected?.label ?? 'Indicator history'} onClose={() => selectIndicator(null)}>{selected && <IndicatorHistoryChart indicator={selected} />}</ChartModal>
+    <ChartModal open={Boolean(selected)} title={selected?.label ?? 'Indicator history'} onClose={() => selectIndicator(null)}>{selected && <IndicatorHistoryChart indicator={selected} onSelectIndicator={selectById} />}</ChartModal>
   </PageBody></>
 }

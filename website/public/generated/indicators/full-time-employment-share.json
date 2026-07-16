@@ -1990,6 +1990,24 @@
     "Review other indicators in the same layer",
     "no single reading determines the state."
   ],
+  "evidenceChecks": [
+    {
+      "label": "Involuntary part time",
+      "status": "unclear",
+      "targetIndicatorId": "involuntary-part-time-share",
+      "targetInterpretationLabel": "Mixed",
+      "targetLatestDate": "2026-06-01",
+      "explanation": "The relationship is unavailable or one of the readings is mixed or context-dependent."
+    },
+    {
+      "label": "prime-age employment",
+      "status": "unclear",
+      "targetIndicatorId": "prime-age-employment-rate",
+      "targetInterpretationLabel": "Mixed",
+      "targetLatestDate": "2026-06-01",
+      "explanation": "The relationship is unavailable or one of the readings is mixed or context-dependent."
+    }
+  ],
   "confidenceLevel": "medium",
   "evidenceLabel": "Contextual indicator",
   "calculation": {
@@ -2001,5 +2019,5 @@
     "Ratio of independently seasonally adjusted series.",
     "Demographics, education, preferences, sector mix."
   ],
-  "generatedAt": "2026-07-16T00:14:53+00:00"
+  "generatedAt": "2026-07-16T01:17:27+00:00"
 }

@@ -1986,6 +1986,24 @@
     "Review other indicators in the same layer",
     "no single reading determines the state."
   ],
+  "evidenceChecks": [
+    {
+      "label": "Industrial output",
+      "status": "unclear",
+      "targetIndicatorId": "industrial-production-yoy",
+      "targetInterpretationLabel": "Mixed",
+      "targetLatestDate": "2026-05-01",
+      "explanation": "The relationship is unavailable or one of the readings is mixed or context-dependent."
+    },
+    {
+      "label": "real GDP",
+      "status": "unclear",
+      "targetIndicatorId": "real-gdp-growth",
+      "targetInterpretationLabel": "Stressful",
+      "targetLatestDate": "2026-07-01",
+      "explanation": "The relationship is unavailable or one of the readings is mixed or context-dependent."
+    }
+  ],
   "confidenceLevel": "medium",
   "evidenceLabel": "Contextual indicator",
   "calculation": {
@@ -1997,5 +2015,5 @@
     "Quarterly GDP is carried within quarter and is not release-vintage safe.",
     "Economic composition, weather, efficiency, trade exposure."
   ],
-  "generatedAt": "2026-07-16T00:14:53+00:00"
+  "generatedAt": "2026-07-16T01:17:27+00:00"
 }

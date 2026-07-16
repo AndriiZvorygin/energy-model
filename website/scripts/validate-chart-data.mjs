@@ -41,7 +41,7 @@ for (const entry of manifest.datasets ?? []) {
   if (dates.some((date) => !/^\d{4}-\d{2}-\d{2}$/.test(date))) failures.push(`${entry.file}: non-ISO observation date`)
   if (dates.some((date, index) => index > 0 && date <= dates[index - 1])) failures.push(`${entry.file}: dates must be strictly increasing and unique`)
 }
-const indicatorRequired = ['schemaVersion', 'id', 'label', 'description', 'unit', 'frequency', 'status', 'interpretationDirection', 'source', 'sourceUrl', 'startDate', 'endDate', 'latest', 'referenceRanges', 'observations', 'evidenceLabel']
+const indicatorRequired = ['schemaVersion', 'id', 'label', 'description', 'unit', 'frequency', 'status', 'interpretationDirection', 'source', 'sourceUrl', 'startDate', 'endDate', 'latest', 'referenceRanges', 'observations', 'evidenceLabel', 'evidenceChecks']
 for (const entry of manifest.indicators ?? []) {
   let indicator
   try {
@@ -60,6 +60,7 @@ for (const entry of manifest.indicators ?? []) {
   const ordered = ['minimum', 'p10', 'p25', 'historicalMedian', 'p75', 'p90', 'maximum'].map((key) => range[key]).filter((value) => value !== null && value !== undefined)
   if (ordered.some((value, index) => index > 0 && value < ordered[index - 1])) failures.push(`${entry.file}: invalid historical range ordering`)
   if (!indicator.interpretationDirection || !indicator.interpretationLabel) failures.push(`${entry.file}: missing interpretation metadata`)
+  if ((indicator.evidenceChecks ?? []).some((check) => !check.label || !['confirms', 'conflicts', 'unclear'].includes(check.status) || !check.explanation)) failures.push(`${entry.file}: invalid evidence check`)
 }
 for (const file of manifest.shared ?? []) {
   try {

@@ -1754,6 +1754,24 @@
     "Review other indicators in the same layer",
     "no single reading determines the state."
   ],
+  "evidenceChecks": [
+    {
+      "label": "Credit standards",
+      "status": "unclear",
+      "targetIndicatorId": "credit-tightening-pct",
+      "targetInterpretationLabel": "Mixed",
+      "targetLatestDate": "2026-07-01",
+      "explanation": "The relationship is unavailable or one of the readings is mixed or context-dependent."
+    },
+    {
+      "label": "real income",
+      "status": "unclear",
+      "targetIndicatorId": "real-disposable-income-yoy",
+      "targetInterpretationLabel": "Stressful",
+      "targetLatestDate": "2026-05-01",
+      "explanation": "The relationship is unavailable or one of the readings is mixed or context-dependent."
+    }
+  ],
   "confidenceLevel": "medium",
   "evidenceLabel": "Contextual indicator",
   "calculation": {
@@ -1765,5 +1783,5 @@
     "Bank aggregate and quarterly; not household insolvency.",
     "Credit standards, borrower mix, interest rates, reporting changes."
   ],
-  "generatedAt": "2026-07-16T00:14:53+00:00"
+  "generatedAt": "2026-07-16T01:17:27+00:00"
 }
