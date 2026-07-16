@@ -18,16 +18,26 @@ export function transformObservations(rows: ChartObservation[], series: ChartSer
   if (transformation === 'raw') return rows.map((row) => ({ ...row }))
   const result = rows.map((row) => ({ date: row.date } as ChartObservation))
   const baseline = fixedStatistics ?? referenceStatistics(referenceRows, series)
+  const indexedBases = Object.fromEntries(series.map((item) => [item.key, rows.map((row) => value(row, item.key)).find((entry) => entry !== null && entry !== 0) ?? null])) as Record<string, number | null>
   for (const item of series) {
     const values = rows.map((row) => value(row, item.key))
     const available = values.filter((item): item is number => item !== null)
     const mean = baseline[item.key]?.mean ?? null
     const std = baseline[item.key]?.standardDeviation ?? null
     const first = available[0] ?? null
+    const firstIndex = values.findIndex((entry) => entry !== null)
+    const peerIndexLevels = item.indexAlignment === 'peer-average-at-first-observation' && firstIndex >= 0
+      ? (item.indexPeers ?? []).map((peer) => {
+          const peerValue = value(rows[firstIndex], peer)
+          const peerBase = indexedBases[peer]
+          return peerValue !== null && peerBase ? 100 * peerValue / peerBase : null
+        }).filter((entry): entry is number => entry !== null)
+      : []
+    const indexAnchor = peerIndexLevels.length ? peerIndexLevels.reduce((sum, entry) => sum + entry, 0) / peerIndexLevels.length : 100
     values.forEach((current, index) => {
       let transformed: number | null = null
       if (current !== null && transformation === 'zscore') transformed = std && mean !== null ? (current - mean) / std : null
-      if (current !== null && transformation === 'indexed') transformed = first ? 100 * current / first : null
+      if (current !== null && transformation === 'indexed') transformed = first ? indexAnchor * current / first : null
       const previousIndex = transformation === 'yoy' ? index - (item.frequency === 'quarterly' ? 4 : item.frequency === 'annual' ? 1 : 12) : index - 1
       const previous = previousIndex >= 0 ? values[previousIndex] : null
       if (current !== null && previous !== null && previous !== 0 && transformation === 'yoy') transformed = 100 * (current / previous - 1)

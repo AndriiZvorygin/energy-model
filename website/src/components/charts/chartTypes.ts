@@ -11,6 +11,8 @@ export type ChartSeries = {
   frequency?: string | null
   color?: string | null
   transformations?: Transformation[]
+  indexAlignment?: 'peer-average-at-first-observation' | null
+  indexPeers?: string[]
 }
 
 export type ChartObservation = {

@@ -80,6 +80,11 @@
         "zscore",
         "pct_change"
       ],
+      "indexAlignment": "peer-average-at-first-observation",
+      "indexPeers": [
+        "WTI",
+        "Brent"
+      ],
       "finalObservationDate": "2026-06-01"
     },
     {
@@ -4068,5 +4073,5 @@
     "notes": "USO can diverge through roll yield, fees, tracking differences, and ETF structure. Raw USO and barrel prices are not placed on one axis."
   },
   "staticFigure": "uso_vs_wti_yoy.png",
-  "generatedAt": "2026-07-15T23:37:40+00:00"
+  "generatedAt": "2026-07-16T17:43:09+00:00"
 }

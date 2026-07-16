@@ -30,6 +30,23 @@ describe('chart transformations', () => {
     expect(subset[0].__raw_price).toBe(106)
   })
 
+  it('aligns a late-start indexed series to its peers at inception', () => {
+    const peerSeries: ChartSeries[] = [
+      { ...series[0], key: 'benchmarkA', label: 'A' },
+      { ...series[0], key: 'benchmarkB', label: 'B' },
+      { ...series[0], key: 'late', label: 'Late', indexAlignment: 'peer-average-at-first-observation', indexPeers: ['benchmarkA', 'benchmarkB'] },
+    ]
+    const rows = [
+      { date: '2020-01-01', benchmarkA: 10, benchmarkB: 20, late: null },
+      { date: '2020-02-01', benchmarkA: 20, benchmarkB: 30, late: null },
+      { date: '2020-03-01', benchmarkA: 30, benchmarkB: 40, late: 50 },
+      { date: '2020-04-01', benchmarkA: 40, benchmarkB: 50, late: 100 },
+    ]
+    const indexed = transformObservations(rows, peerSeries, 'indexed')
+    expect(indexed[2].late).toBe(250)
+    expect(indexed[3].late).toBe(500)
+  })
+
   it('fits rolling residuals from prior observations without using the current target', () => {
     const rows = Array.from({ length: 5 }, (_, index) => ({ date: `2020-0${index + 1}-01`, liquidity: index + 1, oil: 2 * (index + 1) + (index === 4 ? 5 : 0) }))
     const residuals = rollingLinearResiduals(rows, 'liquidity', 'oil', 4, 'residual')

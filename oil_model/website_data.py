@@ -46,8 +46,10 @@ def _series(
     frequency: str | None = None,
     color: str | None = None,
     transformations: list[str] | None = None,
+    index_alignment: str | None = None,
+    index_peers: list[str] | None = None,
 ) -> dict[str, Any]:
-    return {
+    result = {
         "key": key,
         "label": label,
         "unit": unit,
@@ -58,6 +60,10 @@ def _series(
         "color": color,
         "transformations": transformations or ["raw", "indexed", "zscore"],
     }
+    if index_alignment:
+        result["indexAlignment"] = index_alignment
+        result["indexPeers"] = index_peers or []
+    return result
 
 
 def _dataset(
@@ -567,7 +573,7 @@ def write_website_chart_data(
             _series("WTI", "WTI", "USD per barrel", "FRED DCOILWTICO", "measured", color="#0f766e", transformations=["raw", "indexed", "yoy", "zscore", "pct_change"]),
             _series("Brent", "Brent", "USD per barrel", "FRED DCOILBRENTEU", "measured", color="#2563eb", transformations=["raw", "indexed", "yoy", "zscore", "pct_change"]),
             _series("RAC_composite", "RAC composite", "USD per barrel", "EIA R0000____3", "measured", color="#7c3aed", transformations=["raw", "indexed", "yoy", "zscore", "pct_change"]),
-            _series("USO", "USO adjusted close", "USD per share", "Yahoo-compatible chart data", "measured", color="#d97706", transformations=["raw", "indexed", "yoy", "zscore", "pct_change"]),
+            _series("USO", "USO adjusted close", "USD per share", "Yahoo-compatible chart data", "measured", color="#d97706", transformations=["raw", "indexed", "yoy", "zscore", "pct_change"], index_alignment="peer-average-at-first-observation", index_peers=["WTI", "Brent", "RAC_composite"]),
             _series("first_purchase_price", "Domestic first purchase", "USD per barrel", "EIA Petroleum Marketing Monthly", "measured", False, color="#be123c", transformations=["raw", "indexed", "yoy", "zscore", "pct_change"]),
             _series("imported_landed_cost", "Imported landed cost", "USD per barrel", "EIA Petroleum Marketing Monthly", "measured", False, color="#475569", transformations=["raw", "indexed", "yoy", "zscore", "pct_change"]),
             _series("real_WTI", "Real WTI", "CPI-base USD per barrel", "FRED WTI / CPIAUCSL", "derived", False, color="#15803d", transformations=["raw", "indexed", "yoy", "zscore", "pct_change"]),
@@ -653,7 +659,7 @@ def write_website_chart_data(
     uso = _dataset(
         "uso-tracking", "USO and benchmark oil", "Tradable ETF exposure compared with WTI and Brent benchmarks.", "monthly",
         [
-            _series("USO", "USO adjusted close", "USD per share", "Yahoo-compatible chart data", "measured", color="#d97706", transformations=["raw", "indexed", "yoy", "zscore", "pct_change"]),
+            _series("USO", "USO adjusted close", "USD per share", "Yahoo-compatible chart data", "measured", color="#d97706", transformations=["raw", "indexed", "yoy", "zscore", "pct_change"], index_alignment="peer-average-at-first-observation", index_peers=["WTI", "Brent"]),
             _series("WTI", "WTI", "USD per barrel", "FRED DCOILWTICO", "measured", color="#0f766e", transformations=["raw", "indexed", "yoy", "zscore", "pct_change"]),
             _series("Brent", "Brent", "USD per barrel", "FRED DCOILBRENTEU", "measured", color="#2563eb", transformations=["raw", "indexed", "yoy", "zscore", "pct_change"]),
             _series("USO_tracking_residual", "USO minus WTI YoY", "percentage points", "Project derived", "derived", False, color="#7c3aed"),

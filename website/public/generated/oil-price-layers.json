@@ -151,6 +151,12 @@
         "zscore",
         "pct_change"
       ],
+      "indexAlignment": "peer-average-at-first-observation",
+      "indexPeers": [
+        "WTI",
+        "Brent",
+        "RAC_composite"
+      ],
       "finalObservationDate": "2026-06-01"
     },
     {
@@ -5611,5 +5617,5 @@
     ]
   },
   "staticFigure": "final_oil_price_layers_time_series.png",
-  "generatedAt": "2026-07-16T00:14:53+00:00"
+  "generatedAt": "2026-07-16T17:43:09+00:00"
 }
