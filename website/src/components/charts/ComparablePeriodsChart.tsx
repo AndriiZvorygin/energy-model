@@ -116,7 +116,7 @@ export function ComparablePeriodsChart({
       <div className="mt-5 h-[320px]">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data}>
-            <CartesianGrid opacity={0.25} />
+            <CartesianGrid opacity={0.58} />
             <XAxis
               dataKey="elapsed"
               label={{ value: "Elapsed months", position: "bottom" }}
@@ -127,8 +127,8 @@ export function ComparablePeriodsChart({
               <Line
                 key={label}
                 dataKey={label}
-                stroke={index ? "#2563eb" : "#0f766e"}
-                strokeWidth={2}
+                stroke={index ? "var(--chart-2)" : "var(--chart-1)"}
+                strokeWidth={2.5}
                 dot={false}
                 isAnimationActive={false}
               />

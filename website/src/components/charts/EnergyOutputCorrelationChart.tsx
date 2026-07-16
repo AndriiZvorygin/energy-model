@@ -95,7 +95,7 @@ export function EnergyOutputCorrelationChart() {
             layout="vertical"
             margin={{ left: 24, right: 20 }}
           >
-            <CartesianGrid opacity={0.25} />
+            <CartesianGrid opacity={0.55} />
             <XAxis type="number" domain={[-1, 1]} />
             <YAxis
               type="category"
@@ -103,7 +103,7 @@ export function EnergyOutputCorrelationChart() {
               width={180}
               tick={{ fontSize: 11 }}
             />
-            <ReferenceLine x={0} stroke="#78716c" />
+            <ReferenceLine x={0} stroke="var(--chart-neutral)" strokeWidth={1.5} />
             <Tooltip
               content={({ active, payload: items }) =>
                 active && items?.[0]?.payload ? (
@@ -135,7 +135,7 @@ export function EnergyOutputCorrelationChart() {
                 ) : null
               }
             />
-            <Bar dataKey="contemporaneous_correlation" fill="#0f766e" />
+            <Bar dataKey="contemporaneous_correlation" fill="var(--chart-1)" />
           </BarChart>
         </ResponsiveContainer>
       </div>

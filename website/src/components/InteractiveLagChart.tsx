@@ -1,12 +1,13 @@
 import { useMemo, useState } from 'react'
 import { CartesianGrid, Line, LineChart, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import { chartPalette } from './charts/chartPalette'
 
 type LagPoint = { target: string; lag: number | null; correlation: number | null }
 
 export function InteractiveLagChart({ data, convention }: { data: readonly LagPoint[]; convention: string }) {
   const targets = [...new Set(data.map((point) => point.target))]
   const [visible, setVisible] = useState(() => new Set(targets))
-  const colors = ['#0f766e', '#d97706', '#be123c']
+  const colors = chartPalette
   const rows = useMemo(() => {
     const lags = [...new Set(data.map((point) => point.lag).filter((lag): lag is number => lag !== null))].sort((a, b) => a - b)
     return lags.map((lag) => Object.fromEntries([
@@ -33,13 +34,13 @@ export function InteractiveLagChart({ data, convention }: { data: readonly LagPo
       <div className="h-[330px] w-full">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={rows} margin={{ top: 8, right: 16, left: 0, bottom: 8 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#a8a29e" opacity={0.25} />
+            <CartesianGrid strokeDasharray="3 3" opacity={0.58} />
             <XAxis dataKey="lag" tick={{ fontSize: 12 }} label={{ value: 'Lag (months)', position: 'insideBottom', offset: -3, fontSize: 12 }} />
             <YAxis domain={[-0.8, 0.8]} tick={{ fontSize: 12 }} width={44} />
             <Tooltip formatter={(value) => typeof value === 'number' ? value.toFixed(3) : value} labelFormatter={(value) => `Lag ${value} months`} />
-            <ReferenceLine y={0} stroke="#78716c" />
-            <ReferenceLine x={0} stroke="#78716c" strokeDasharray="4 4" />
-            {targets.map((target, index) => visible.has(target) && <Line key={target} type="monotone" dataKey={target} stroke={colors[index]} strokeWidth={2.25} dot={false} activeDot={{ r: 4 }} />)}
+            <ReferenceLine y={0} stroke="var(--chart-neutral)" />
+            <ReferenceLine x={0} stroke="var(--chart-neutral)" strokeDasharray="4 4" />
+            {targets.map((target, index) => visible.has(target) && <Line key={target} type="monotone" dataKey={target} stroke={colors[index % colors.length]} strokeWidth={2.6} dot={false} activeDot={{ r: 4 }} />)}
           </LineChart>
         </ResponsiveContainer>
       </div>

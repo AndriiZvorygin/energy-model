@@ -129,16 +129,17 @@ export function ResearchLagChart({
       <div className="mt-5 h-[350px]">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data}>
-            <CartesianGrid opacity={0.25} />
+            <CartesianGrid opacity={0.58} />
             <XAxis
               dataKey="lag"
               label={{ value: "Lag (months)", position: "bottom" }}
             />
             <YAxis domain={[-1, 1]} width={52} />
-            <ReferenceLine y={0} stroke="#78716c" />
+            <ReferenceLine y={0} stroke="var(--chart-neutral)" strokeWidth={1.5} />
             <ReferenceLine
               x={mode === "gm2" ? 5 : 0}
-              stroke="#d97706"
+              stroke="var(--chart-3)"
+              strokeWidth={2}
               strokeDasharray="4 3"
             />
             <Tooltip formatter={(value) => Number(value).toFixed(3)} />
@@ -146,8 +147,8 @@ export function ResearchLagChart({
               <Line
                 key={key}
                 dataKey={key}
-                stroke={index ? "#2563eb" : "#0f766e"}
-                strokeWidth={2}
+                stroke={index ? "var(--chart-2)" : "var(--chart-1)"}
+                strokeWidth={2.5}
                 dot={false}
                 connectNulls={false}
                 isAnimationActive={false}

@@ -127,3 +127,9 @@ The reusable components under `src/components/charts/` provide series visibility
 Z-scores use the fixed reference period published in each dataset. Zooming or selecting a shorter visible range never recalculates the baseline. Z-score tooltips retain the raw observation, transformed value, historical mean, standard deviation, and reference period; shifted-series tooltips retain the original and displayed dates and locked/exploratory lag status.
 
 Raw series with different units use synchronized panels. They share a panel only after a valid unitless transformation such as indexing or z-scoring. No visual downsampling is currently applied; full-resolution values remain available for tooltips and downloads.
+
+## Theme And Chart Contrast
+
+The default `Auto` theme is resolved entirely in the browser from the reader's local time: light from 07:00 through 18:59 and dark from 19:00 through 06:59. Readers can choose an explicit Light or Dark override from the navigation; that preference is stored locally. The theme is applied before React starts to avoid a light/dark flash during page loading.
+
+Research charts use shared semantic CSS colors with separate high-contrast light and dark palettes. Series identity remains consistent across themes, while axes, grids, annotations, tooltips, and range controls adapt to the active surface.

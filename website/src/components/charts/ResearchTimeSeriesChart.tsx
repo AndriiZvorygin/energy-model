@@ -36,6 +36,7 @@ import {
   shiftSeries,
   transformObservations,
 } from "./chartUtils";
+import { chartColor } from "./chartPalette";
 import {
   useChartContext,
   useChartDataset,
@@ -223,7 +224,7 @@ export function ResearchTimeSeriesChart({
           key: "GM2_shifted",
           label: `GM2 shifted +${lag}m`,
           defaultVisible: true,
-          color: "#d97706",
+          color: "var(--chart-3)",
         }
       : null;
     const series = virtual ? [...dataset.series, virtual] : dataset.series;
@@ -523,7 +524,7 @@ export function ResearchTimeSeriesChart({
                   if (point.activeLabel) setLockedDate(point.activeLabel);
                 }}
               >
-                <CartesianGrid strokeDasharray="3 3" opacity={0.25} />
+                <CartesianGrid strokeDasharray="3 3" opacity={0.58} />
                 <XAxis
                   dataKey="date"
                   minTickGap={36}
@@ -560,15 +561,15 @@ export function ResearchTimeSeriesChart({
                   events={activeEvents}
                   enabled={eventsEnabled}
                 />
-                {panelSeries.map((item) => (
+                {panelSeries.map((item, seriesIndex) => (
                   <Line
                     key={item.key}
                     type="monotone"
                     dataKey={item.key}
                     name={item.label}
-                    stroke={item.color ?? "#0f766e"}
-                    strokeWidth={focused === item.key ? 3 : 1.7}
-                    strokeOpacity={focused && focused !== item.key ? 0.2 : 0.9}
+                    stroke={chartColor(item.color, prepared.series.indexOf(item) >= 0 ? prepared.series.indexOf(item) : seriesIndex)}
+                    strokeWidth={focused === item.key ? 3.4 : 2.2}
+                    strokeOpacity={focused && focused !== item.key ? 0.24 : 1}
                     dot={false}
                     connectNulls={false}
                     isAnimationActive={false}
@@ -580,7 +581,7 @@ export function ResearchTimeSeriesChart({
                       dataKey="date"
                       height={22}
                       travellerWidth={8}
-                      stroke="#0f766e"
+                      stroke="var(--chart-1)"
                     />
                   )}
               </LineChart>

@@ -78,7 +78,7 @@ export function ResearchScatterChart({
       >
         <ResponsiveContainer width="100%" height="100%">
           <ScatterChart margin={{ top: 15, right: 20, bottom: 30, left: 15 }}>
-            <CartesianGrid opacity={0.25} />
+            <CartesianGrid opacity={0.55} />
             <XAxis
               type="number"
               dataKey="x"
@@ -116,7 +116,7 @@ export function ResearchScatterChart({
             />
             <Scatter
               data={points}
-              fill="#0f766e"
+              fill="var(--chart-1)"
               fillOpacity={0.58}
               isAnimationActive={false}
             />

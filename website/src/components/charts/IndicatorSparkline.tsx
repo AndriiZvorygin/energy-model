@@ -12,10 +12,10 @@ export function IndicatorSparkline({ indicator, years = 10 }: { indicator: Indic
     <ResponsiveContainer width="100%" height="100%">
       <LineChart data={rows} margin={{ top: 8, right: 4, left: 4, bottom: 4 }}>
         <YAxis hide domain={['auto', 'auto']} />
-        {p25 !== null && p75 !== null && <ReferenceArea y1={p25} y2={p75} fill="#0f766e" fillOpacity={0.09} />}
-        {historicalMedian !== null && <ReferenceLine y={historicalMedian} stroke="#78716c" strokeDasharray="3 3" />}
+        {p25 !== null && p75 !== null && <ReferenceArea y1={p25} y2={p75} fill="var(--chart-1)" fillOpacity={0.14} />}
+        {historicalMedian !== null && <ReferenceLine y={historicalMedian} stroke="var(--chart-neutral)" strokeWidth={1.3} strokeDasharray="3 3" />}
         <Tooltip labelFormatter={(date) => String(date).slice(0, 7)} formatter={(value) => [`${format(Number(value))} ${indicator.unit}`, indicator.label]} />
-        <Line type="monotone" dataKey="value" stroke="#0f766e" strokeWidth={1.8} dot={false} connectNulls={false} isAnimationActive={false} />
+        <Line type="monotone" dataKey="value" stroke="var(--chart-1)" strokeWidth={2.2} dot={false} connectNulls={false} isAnimationActive={false} />
       </LineChart>
     </ResponsiveContainer>
   </div>

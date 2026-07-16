@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
-import { Activity, AlertTriangle, BarChart3, BookOpen, BriefcaseBusiness, CircleHelp, Droplets, Factory, Fuel, History, Home as HomeIcon, Landmark, ListFilter, Map, Menu, Moon, Network, Route as RouteIcon, Scale, Sun, TrendingUp, X } from 'lucide-react'
+import { Activity, AlertTriangle, BarChart3, BookOpen, BriefcaseBusiness, CircleHelp, Clock3, Droplets, Factory, Fuel, History, Home as HomeIcon, Landmark, ListFilter, Map, Menu, Moon, Network, Route as RouteIcon, Scale, Sun, TrendingUp, X } from 'lucide-react'
 import { NavLink, Route, Routes, useLocation } from 'react-router-dom'
+import { readThemePreference, resolveTheme, type ThemePreference } from './lib/theme'
 const Home = lazy(() => import('./pages/Home').then((module) => ({ default: module.Home })))
 const Overview = lazy(() => import('./pages/Overview').then((module) => ({ default: module.Overview })))
 const Liquidity = lazy(() => import('./pages/Liquidity').then((module) => ({ default: module.Liquidity })))
@@ -52,15 +53,26 @@ const glossary = {
 }
 
 export default function App() {
-  const [dark, setDark] = useState(() => localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && matchMedia('(prefers-color-scheme: dark)').matches))
+  const [themePreference, setThemePreference] = useState<ThemePreference>(readThemePreference)
+  const [resolvedTheme, setResolvedTheme] = useState(() => resolveTheme(readThemePreference()))
   const [menuOpen, setMenuOpen] = useState(false)
   const [glossaryOpen, setGlossaryOpen] = useState(false)
   const location = useLocation()
 
   useEffect(() => {
-    document.documentElement.classList.toggle('dark', dark)
-    localStorage.setItem('theme', dark ? 'dark' : 'light')
-  }, [dark])
+    const update = () => setResolvedTheme(resolveTheme(themePreference))
+    update()
+    localStorage.setItem('themePreference', themePreference)
+    localStorage.removeItem('theme')
+    const timer = window.setInterval(update, 60_000)
+    document.addEventListener('visibilitychange', update)
+    return () => { window.clearInterval(timer); document.removeEventListener('visibilitychange', update) }
+  }, [themePreference])
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', resolvedTheme === 'dark')
+    document.documentElement.dataset.theme = resolvedTheme
+    document.documentElement.dataset.themePreference = themePreference
+  }, [resolvedTheme, themePreference])
   useEffect(() => setMenuOpen(false), [location.pathname])
   useEffect(() => window.scrollTo(0, 0), [location.pathname])
 
@@ -83,9 +95,13 @@ export default function App() {
             </NavLink>
           ))}
         </nav>
-        <div className="mt-5 grid grid-cols-2 gap-2 border-t border-stone-200 pt-5 dark:border-stone-800">
-          <button type="button" onClick={() => setGlossaryOpen(true)} className="flex items-center justify-center gap-2 rounded-md border border-stone-300 px-3 py-2 text-xs font-semibold dark:border-stone-700"><CircleHelp size={15} />Glossary</button>
-          <button type="button" onClick={() => setDark(!dark)} className="flex items-center justify-center gap-2 rounded-md border border-stone-300 px-3 py-2 text-xs font-semibold dark:border-stone-700" aria-label={`Use ${dark ? 'light' : 'dark'} theme`}>{dark ? <Sun size={15} /> : <Moon size={15} />}{dark ? 'Light' : 'Dark'}</button>
+        <div className="mt-5 border-t border-stone-200 pt-5 dark:border-stone-800">
+          <button type="button" onClick={() => setGlossaryOpen(true)} className="flex h-9 w-full items-center justify-center gap-2 rounded-md border border-stone-300 px-3 text-xs font-semibold dark:border-stone-700"><CircleHelp size={15} />Glossary</button>
+          <fieldset className="mt-3"><legend className="mb-2 text-xs font-semibold text-stone-500">Theme · Auto is {resolvedTheme}</legend><div className="grid grid-cols-3 border border-stone-300 dark:border-stone-700">{([
+            ['auto', Clock3, 'Automatic theme from local time'],
+            ['light', Sun, 'Always use light theme'],
+            ['dark', Moon, 'Always use dark theme'],
+          ] as const).map(([preference, Icon, label]) => <button key={preference} type="button" title={label} aria-label={label} aria-pressed={themePreference === preference} onClick={() => setThemePreference(preference)} className={`flex h-9 items-center justify-center border-r last:border-r-0 dark:border-stone-700 ${themePreference === preference ? 'bg-petroleum text-white' : 'hover:bg-stone-200 dark:hover:bg-stone-800'}`}><Icon size={15} /></button>)}</div></fieldset>
         </div>
       </aside>
 

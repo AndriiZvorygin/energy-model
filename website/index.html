@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="An educational research guide to oil, global liquidity, inventory, markets, and the real economy." />
+    <script>
+      (() => {
+        try {
+          const saved = localStorage.getItem('themePreference') || localStorage.getItem('theme') || 'auto'
+          const hour = new Date().getHours()
+          const resolved = saved === 'dark' || (saved === 'auto' && (hour < 7 || hour >= 19)) ? 'dark' : 'light'
+          document.documentElement.classList.toggle('dark', resolved === 'dark')
+          document.documentElement.dataset.theme = resolved
+          document.documentElement.dataset.themePreference = saved
+        } catch { /* Use the light document default when storage is unavailable. */ }
+      })()
+    </script>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <title>Oil, Liquidity, Inventory, and the Real Economy</title>
   </head>
