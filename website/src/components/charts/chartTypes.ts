@@ -214,9 +214,13 @@ export type RegimeScore = {
   score: number
   coverage: number
   layerScores: Record<string, { score: number; coverage: number }>
+  indicatorEvidence: DiagnosticCondition[]
   supportingEvidence: DiagnosticCondition[]
   conflictingEvidence: DiagnosticCondition[]
   missingEvidence: DiagnosticCondition[]
+  expectedSymptoms: Array<{ id: string; name: string; status: SymptomEvaluation['status']; score: number }>
+  conflictingSymptoms: Array<{ id: string; name: string; status: SymptomEvaluation['status'] }>
+  contradictionPenalty: number
 }
 
 export type ClassificationClock = {
@@ -230,7 +234,11 @@ export type ClassificationClock = {
   dataVintageStatus: string
   dataVintageWarning: string
   partialPeriodIndicators: Array<{ indicator: string; label: string; sourceDate: string }>
+  staleIndicators: Array<{ indicator: string; label: string; lastAvailableDate?: string }>
+  missingIndicators: Array<{ indicator: string; label: string }>
   confidence: string
+  margin: number
+  decisionRules: { minimumEvidenceCoverage: number; minimumTopRegimeScore: number; minimumMargin: number }
   primaryRegime: RegimeScore
   secondaryRegime: RegimeScore
 }
