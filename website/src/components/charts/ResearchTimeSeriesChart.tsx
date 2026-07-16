@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import {
   Brush,
   CartesianGrid,
@@ -58,6 +58,7 @@ type ResearchTimeSeriesChartProps = {
   zeroLine?: boolean;
   dynamicGm2Residuals?: boolean;
   startAtSeries?: string;
+  primaryControls?: ReactNode;
 };
 
 const transformedUnit = (transformation: Transformation, raw: string) =>
@@ -176,6 +177,7 @@ export function ResearchTimeSeriesChart({
   zeroLine = false,
   dynamicGm2Residuals = false,
   startAtSeries,
+  primaryControls,
 }: ResearchTimeSeriesChartProps) {
   const { dataset, error } = useChartDataset(file);
   const residualSource = useChartDataset(dynamicGm2Residuals ? "gm2-oil-lead.json" : file);
@@ -427,6 +429,7 @@ export function ResearchTimeSeriesChart({
         />
       </div>
       <ChartDetails dataset={dataset} />
+      {primaryControls && <div className="mt-6">{primaryControls}</div>}
       <div className="mt-6 grid gap-5 xl:grid-cols-[1fr_auto]">
         <div className="space-y-5">
           <SeriesControls

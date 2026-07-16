@@ -24,18 +24,18 @@ const views: Array<{ id: LiquidityView; label: string; description: string }> = 
 export function LiquiditySignalChart() {
   const [view, setView] = useState<LiquidityView>('zscore')
   const selected = views.find((item) => item.id === view) ?? views[1]
+  const controls = <div className="border-2 border-petroleum bg-petroleum/5 p-4 dark:bg-petroleum/10">
+    <fieldset>
+      <legend className="text-sm font-semibold uppercase text-ink dark:text-white">Chart display: choose one</legend>
+      <div className="mt-3 grid gap-2 sm:grid-cols-3" role="tablist" aria-label="Liquidity chart display">
+        {views.map((item) => <button key={item.id} type="button" role="tab" onClick={() => setView(item.id)} aria-selected={view === item.id} className={`min-h-14 border px-4 py-3 text-left text-sm font-semibold ${view === item.id ? 'border-petroleum bg-petroleum text-white shadow-sm' : 'border-stone-400 bg-white text-ink hover:border-petroleum dark:border-stone-600 dark:bg-stone-950 dark:text-white'}`}><span className="block">{item.label}</span>{view === item.id && <span className="mt-1 block text-xs font-normal text-white/85">Currently displayed</span>}</button>)}
+      </div>
+    </fieldset>
+    <p className="mt-3 text-sm leading-6 text-stone-700 dark:text-stone-200">{selected.description}</p>
+    <p className="mt-2 text-xs font-medium text-stone-500">Display mode and GM2 lead time are separate controls. Choose the display here, then choose 4 months, 5 months, or another lead below.</p>
+  </div>
 
   return <section aria-label="Liquidity and oil model views">
-    <div className="mb-5 border-l-2 border-petroleum pl-4">
-      <fieldset>
-        <legend className="mb-2 text-xs font-semibold uppercase text-stone-500">Research view</legend>
-        <div className="inline-flex flex-wrap border border-stone-300 dark:border-stone-700">
-          {views.map((item) => <button key={item.id} type="button" onClick={() => setView(item.id)} aria-pressed={view === item.id} className={`px-3 py-2 text-xs font-semibold ${view === item.id ? 'bg-petroleum text-white' : 'bg-white text-ink dark:bg-stone-950 dark:text-white'}`}>{item.label}</button>)}
-        </div>
-      </fieldset>
-      <p className="mt-3 max-w-3xl text-sm leading-6 text-stone-600 dark:text-stone-300">{selected.description}</p>
-    </div>
-
     {view === 'residual' ? (
       <ResearchTimeSeriesChart
         key="residual"
@@ -48,6 +48,7 @@ export function LiquiditySignalChart() {
         lagControl
         dynamicGm2Residuals
         startAtSeries="GM2_YoY"
+        primaryControls={controls}
         zeroLine
       />
     ) : (
@@ -61,6 +62,7 @@ export function LiquiditySignalChart() {
         inspectCrossLayer
         showNormalizationControls={false}
         startAtSeries="GM2_YoY"
+        primaryControls={controls}
       />
     )}
   </section>
