@@ -19,7 +19,7 @@ describe('LiquiditySignalChart', () => {
     render(<LiquiditySignalChart />)
     expect(screen.getByTestId('research-chart')).toHaveTextContent('gm2-oil-lead.json · zscore')
 
-    fireEvent.click(screen.getByRole('tab', { name: 'Actual YoY' }))
+    fireEvent.click(screen.getByRole('tab', { name: 'Raw YoY' }))
     expect(screen.getByTestId('research-chart')).toHaveTextContent('gm2-oil-lead.json · raw')
 
     fireEvent.click(screen.getByRole('tab', { name: 'Residuals (GM2 removed)' }))

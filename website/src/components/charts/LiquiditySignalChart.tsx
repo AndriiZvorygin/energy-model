@@ -6,12 +6,12 @@ type LiquidityView = 'actual' | 'zscore' | 'residual'
 const views: Array<{ id: LiquidityView; label: string; description: string }> = [
   {
     id: 'actual',
-    label: 'Actual YoY',
+    label: 'Raw YoY',
     description: 'Compare GM2 and oil momentum in year-over-year percentage terms. GM2 is shifted to the selected later comparison month.',
   },
   {
     id: 'zscore',
-    label: 'Standardized z-score',
+    label: 'Z-score',
     description: 'Compare unusually high or low observations using each series\' fixed published historical mean and standard deviation.',
   },
   {
