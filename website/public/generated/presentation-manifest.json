@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "refineryVersion": "1.0.0",
+  "generatedAt": "2026-07-16T15:49:49+00:00",
+  "regenerationCommand": "python -m oil_model.pipeline --root . --refresh",
+  "policy": {
+    "includeStatusesInDiagnosticSummary": [
+      "supporting",
+      "mixed",
+      "contradicting"
+    ],
+    "excludeStatusesFromDiagnosticSummary": [
+      "insufficient"
+    ],
+    "symptomStatusesInDiagnosticSummary": [
+      "active",
+      "emerging",
+      "fading"
+    ],
+    "requireSourceDate": true,
+    "requireProvenance": true
+  },
+  "routes": {
+    "/canada": {
+      "route": "/canada",
+      "evidenceTopic": "canada",
+      "interpretation": "Current Canadian state: Consumer affordability stress. Canadian energy affordability pressure is active: Canadian-dollar oil and consumer energy costs are elevated while rates, currency movements, and debt service limit household room. Resource-producing-region expansion is active: Resource GDP, Alberta crude production, exports, and national crude production are rising, indicating expansion in producing-region activity.",
+      "confidence": "low",
+      "coverage": 0.8888888888888888,
+      "scope": "Canadian energy-economic conditions with global oil-market and global-liquidity inputs.",
+      "oldestObservationDate": "2026-01-01",
+      "newestObservationDate": "2026-07-01",
+      "evidenceCounts": {
+        "supporting": 5,
+        "mixed": 5,
+        "contradicting": 0,
+        "insufficient": 0
+      },
+      "provenance": [
+        "website/public/generated/evidence-summary.json"
+      ]
+    },
+    "/current-state": {
+      "route": "/current-state",
+      "evidenceTopic": "current_state_canada",
+      "interpretation": "Consumer affordability stress",
+      "confidence": "low",
+      "coverage": 0.8888888888888888,
+      "scope": "Canadian energy-economic conditions with global oil-market and global-liquidity inputs.",
+      "oldestObservationDate": "2026-01-01",
+      "newestObservationDate": "2026-07-01",
+      "evidenceCounts": {
+        "supporting": 5,
+        "mixed": 5,
+        "contradicting": 0,
+        "insufficient": 0
+      },
+      "provenance": [
+        "website/public/generated/evidence-summary.json"
+      ]
+    },
+    "/canada/current-state": {
+      "route": "/canada/current-state",
+      "evidenceTopic": "current_state_canada",
+      "interpretation": "Consumer affordability stress",
+      "confidence": "low",
+      "coverage": 0.8888888888888888,
+      "scope": "Canadian energy-economic conditions with global oil-market and global-liquidity inputs.",
+      "oldestObservationDate": "2026-01-01",
+      "newestObservationDate": "2026-07-01",
+      "evidenceCounts": {
+        "supporting": 5,
+        "mixed": 5,
+        "contradicting": 0,
+        "insufficient": 0
+      },
+      "provenance": [
+        "website/public/generated/evidence-summary.json"
+      ]
+    },
+    "/canada/regimes": {
+      "route": "/canada/regimes",
+      "evidenceTopic": "regimes_canada",
+      "interpretation": "Consumer affordability stress",
+      "confidence": "low",
+      "coverage": 0.8888888888888888,
+      "scope": "Canadian energy-economic conditions with global oil-market and global-liquidity inputs.",
+      "oldestObservationDate": "2026-01-01",
+      "newestObservationDate": "2026-07-01",
+      "evidenceCounts": {
+        "supporting": 5,
+        "mixed": 5,
+        "contradicting": 0,
+        "insufficient": 0
+      },
+      "provenance": [
+        "website/public/generated/evidence-summary.json"
+      ]
+    },
+    "/canada/symptoms": {
+      "route": "/canada/symptoms",
+      "evidenceTopic": "symptoms_canada",
+      "interpretation": "Current Canadian symptom balance",
+      "confidence": "low",
+      "coverage": 0.8888888888888888,
+      "scope": "Canadian energy-economic conditions with global oil-market and global-liquidity inputs.",
+      "oldestObservationDate": "2026-07-01",
+      "newestObservationDate": "2026-07-01",
+      "evidenceCounts": {
+        "supporting": 2,
+        "mixed": 0,
+        "contradicting": 0,
+        "insufficient": 0
+      },
+      "provenance": [
+        "website/public/generated/evidence-summary.json"
+      ]
+    },
+    "/current-state/us": {
+      "route": "/current-state/us",
+      "evidenceTopic": "current_state_us",
+      "interpretation": "Mixed transition: Physical tightening/Energy affordability stress",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "United States energy-economic conditions with global oil-market and global-liquidity inputs.",
+      "oldestObservationDate": "2026-05-01",
+      "newestObservationDate": "2026-07-01",
+      "evidenceCounts": {
+        "supporting": 3,
+        "mixed": 3,
+        "contradicting": 0,
+        "insufficient": 0
+      },
+      "provenance": [
+        "website/public/generated/evidence-summary.json"
+      ]
+    },
+    "/regimes": {
+      "route": "/regimes",
+      "evidenceTopic": "regimes_us",
+      "interpretation": "Mixed transition: Physical tightening/Energy affordability stress",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "United States energy-economic conditions with global oil-market and global-liquidity inputs.",
+      "oldestObservationDate": "2026-05-01",
+      "newestObservationDate": "2026-07-01",
+      "evidenceCounts": {
+        "supporting": 3,
+        "mixed": 3,
+        "contradicting": 0,
+        "insufficient": 0
+      },
+      "provenance": [
+        "website/public/generated/evidence-summary.json"
+      ]
+    },
+    "/symptoms": {
+      "route": "/symptoms",
+      "evidenceTopic": "symptoms_us",
+      "interpretation": "Current documented symptom balance",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "United States energy-economic conditions with global oil-market and global-liquidity inputs.",
+      "oldestObservationDate": "2026-07-01",
+      "newestObservationDate": "2026-07-01",
+      "evidenceCounts": {
+        "supporting": 3,
+        "mixed": 0,
+        "contradicting": 0,
+        "insufficient": 0
+      },
+      "provenance": [
+        "website/public/generated/evidence-summary.json"
+      ]
+    },
+    "/affordability": {
+      "route": "/affordability",
+      "evidenceTopic": "affordability",
+      "interpretation": "Household affordability evidence remains mixed or context-dependent",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "Canadian household affordability with global commodity context",
+      "oldestObservationDate": "2026-05-01",
+      "newestObservationDate": "2026-06-22",
+      "evidenceCounts": {
+        "supporting": 0,
+        "mixed": 7,
+        "contradicting": 0,
+        "insufficient": 0
+      },
+      "provenance": [
+        "website/public/generated/evidence-summary.json"
+      ]
+    },
+    "/affordability/food": {
+      "route": "/affordability/food",
+      "evidenceTopic": "food",
+      "interpretation": "Food affordability evidence is mixed across costs and purchasing power",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "Canadian household affordability with global commodity context",
+      "oldestObservationDate": "2026-05-29",
+      "newestObservationDate": "2026-06-22",
+      "evidenceCounts": {
+        "supporting": 1,
+        "mixed": 5,
+        "contradicting": 1,
+        "insufficient": 0
+      },
+      "provenance": [
+        "website/public/generated/evidence-summary.json"
+      ]
+    },
+    "/canada/food": {
+      "route": "/canada/food",
+      "evidenceTopic": "food",
+      "interpretation": "Food affordability evidence is mixed across costs and purchasing power",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "Canadian household affordability with global commodity context",
+      "oldestObservationDate": "2026-05-29",
+      "newestObservationDate": "2026-06-22",
+      "evidenceCounts": {
+        "supporting": 1,
+        "mixed": 5,
+        "contradicting": 1,
+        "insufficient": 0
+      },
+      "provenance": [
+        "website/public/generated/evidence-summary.json"
+      ]
+    },
+    "/compare/food": {
+      "route": "/compare/food",
+      "evidenceTopic": "food",
+      "interpretation": "Food affordability evidence is mixed across costs and purchasing power",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "Canadian household affordability with global commodity context",
+      "oldestObservationDate": "2026-05-29",
+      "newestObservationDate": "2026-06-22",
+      "evidenceCounts": {
+        "supporting": 1,
+        "mixed": 5,
+        "contradicting": 1,
+        "insufficient": 0
+      },
+      "provenance": [
+        "website/public/generated/evidence-summary.json"
+      ]
+    },
+    "/affordability/housing": {
+      "route": "/affordability/housing",
+      "evidenceTopic": "housing",
+      "interpretation": "Housing affordability evidence is mixed across costs and purchasing power",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "Canadian household affordability with global commodity context",
+      "oldestObservationDate": "2026-06-17",
+      "newestObservationDate": "2026-06-22",
+      "evidenceCounts": {
+        "supporting": 1,
+        "mixed": 5,
+        "contradicting": 1,
+        "insufficient": 0
+      },
+      "provenance": [
+        "website/public/generated/evidence-summary.json"
+      ]
+    },
+    "/canada/housing": {
+      "route": "/canada/housing",
+      "evidenceTopic": "housing",
+      "interpretation": "Housing affordability evidence is mixed across costs and purchasing power",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "Canadian household affordability with global commodity context",
+      "oldestObservationDate": "2026-06-17",
+      "newestObservationDate": "2026-06-22",
+      "evidenceCounts": {
+        "supporting": 1,
+        "mixed": 5,
+        "contradicting": 1,
+        "insufficient": 0
+      },
+      "provenance": [
+        "website/public/generated/evidence-summary.json"
+      ]
+    },
+    "/compare/housing": {
+      "route": "/compare/housing",
+      "evidenceTopic": "housing",
+      "interpretation": "Housing affordability evidence is mixed across costs and purchasing power",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "Canadian household affordability with global commodity context",
+      "oldestObservationDate": "2026-06-17",
+      "newestObservationDate": "2026-06-22",
+      "evidenceCounts": {
+        "supporting": 1,
+        "mixed": 5,
+        "contradicting": 1,
+        "insufficient": 0
+      },
+      "provenance": [
+        "website/public/generated/evidence-summary.json"
+      ]
+    }
+  },
+  "inputs": [
+    {
+      "file": "config/presentation_rules.json",
+      "sha256": "837e446e63d316b28396b9153b1f05ab41777e29e55789ca5140980dbd9d513f"
+    },
+    {
+      "file": "website/public/generated/evidence-summary.json",
+      "sha256": "1a894411b3b51da4904c4e5f3073dbeea0a3bd9d46327a7a2cfce0a93186a970"
+    }
+  ]
+}

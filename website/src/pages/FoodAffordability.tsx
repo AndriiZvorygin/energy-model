@@ -1,7 +1,7 @@
 import { useGeneratedJson } from "../components/charts/useChartData";
 import { ResearchTimeSeriesChart } from "../components/charts/ResearchTimeSeriesChart";
 import { AffordabilityIndicatorGrid } from "../components/affordability/AffordabilityIndicatorGrid";
-import { GeneratedEvidenceSummary } from "../components/diagnostics/GeneratedEvidenceSummary";
+import { GeneratedRouteEvidenceSummary } from "../components/diagnostics/GeneratedRouteEvidenceSummary";
 import { PageBody, PageHeader } from "../components/PageHeader";
 
 type Transmission = {
@@ -29,7 +29,7 @@ export function FoodAffordability() {
         description="International food commodity quotations and domestic consumer food prices are shown separately, with transparent lag tests between them."
       />
       <PageBody>
-        <GeneratedEvidenceSummary topic="food" />
+        <GeneratedRouteEvidenceSummary />
         <section className="mt-12">
           <p className="text-xs font-semibold uppercase text-petroleum">
             1. International commodity pressure

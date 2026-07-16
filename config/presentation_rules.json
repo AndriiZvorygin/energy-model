@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "refineryVersion": "1.0.0",
+  "routes": {
+    "/canada": "canada",
+    "/current-state": "current_state_canada",
+    "/canada/current-state": "current_state_canada",
+    "/canada/regimes": "regimes_canada",
+    "/canada/symptoms": "symptoms_canada",
+    "/current-state/us": "current_state_us",
+    "/regimes": "regimes_us",
+    "/symptoms": "symptoms_us",
+    "/affordability": "affordability",
+    "/affordability/food": "food",
+    "/canada/food": "food",
+    "/compare/food": "food",
+    "/affordability/housing": "housing",
+    "/canada/housing": "housing",
+    "/compare/housing": "housing"
+  },
+  "policy": {
+    "includeStatusesInDiagnosticSummary": ["supporting", "mixed", "contradicting"],
+    "excludeStatusesFromDiagnosticSummary": ["insufficient"],
+    "symptomStatusesInDiagnosticSummary": ["active", "emerging", "fading"],
+    "requireSourceDate": true,
+    "requireProvenance": true
+  }
+}

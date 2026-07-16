@@ -2,7 +2,7 @@ import { ArrowRight, House, ShoppingBasket } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AffordabilityIndicatorGrid } from "../components/affordability/AffordabilityIndicatorGrid";
 import { ResearchTimeSeriesChart } from "../components/charts/ResearchTimeSeriesChart";
-import { GeneratedEvidenceSummary } from "../components/diagnostics/GeneratedEvidenceSummary";
+import { GeneratedRouteEvidenceSummary } from "../components/diagnostics/GeneratedRouteEvidenceSummary";
 import { PageBody, PageHeader } from "../components/PageHeader";
 
 export function Affordability() {
@@ -14,8 +14,7 @@ export function Affordability() {
         description="International commodities, domestic prices, household income, wages, property purchase prices, and current shelter costs are related but distinct evidence layers."
       />
       <PageBody>
-        <GeneratedEvidenceSummary
-          topic="affordability"
+        <GeneratedRouteEvidenceSummary
           title="Household affordability evidence"
         />
         <section className="mt-12 border-y border-stone-300 py-6 dark:border-stone-700">

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { CanadaGeographyControls } from "../components/CanadaGeographyControls";
 import { useGeneratedJson } from "../components/charts/useChartData";
 import { CanadianDiagnosticSummary } from "../components/diagnostics/CanadianDiagnosticSummary";
-import { GeneratedEvidenceSummary } from "../components/diagnostics/GeneratedEvidenceSummary";
+import { GeneratedRouteEvidenceSummary } from "../components/diagnostics/GeneratedRouteEvidenceSummary";
 import type {
   CanadianClassification,
   CanadianCondition,
@@ -78,10 +78,7 @@ export function CanadaRegimes() {
       <PageBody>
         <CanadaGeographyControls />
         <div className="mt-8">
-          <GeneratedEvidenceSummary
-            topic="regimes_canada"
-            title="Current regime evidence map"
-          />
+          <GeneratedRouteEvidenceSummary title="Current regime evidence map" />
         </div>
         {error && <p className="mt-8 text-amber-700">{error}</p>}
         {!current ? (

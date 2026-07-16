@@ -54,6 +54,7 @@ REQUIRED_ANALYSIS = [
     "analysis/food_price_transmission_summary.csv",
     "analysis/canadian_income_data_audit.md",
     "analysis/canadian_income_indicator_catalogue.csv",
+    "analysis/refinery_presentation_audit.md",
 ]
 
 REQUIRED_CHARTS = [
@@ -130,6 +131,7 @@ REQUIRED_DATA = [
     "website/public/generated/regime-scores.json",
     "website/public/generated/regime-history.json",
     "website/public/generated/evidence-summary.json",
+    "website/public/generated/presentation-manifest.json",
     "website/public/generated/charts/physical-tightness.json",
     "website/public/generated/charts/energy-burden.json",
     "website/public/generated/charts/industrial-transmission.json",

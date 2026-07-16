@@ -1,7 +1,7 @@
 import { ArrowRight, Banknote, Factory, MapPin, Pickaxe } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CanadaGeographyControls } from "../components/CanadaGeographyControls";
-import { GeneratedEvidenceSummary } from "../components/diagnostics/GeneratedEvidenceSummary";
+import { GeneratedRouteEvidenceSummary } from "../components/diagnostics/GeneratedRouteEvidenceSummary";
 import { PageBody, PageHeader } from "../components/PageHeader";
 
 export function Canada() {
@@ -15,7 +15,7 @@ export function Canada() {
       <PageBody>
         <CanadaGeographyControls />
         <div className="mt-8">
-          <GeneratedEvidenceSummary topic="canada" />
+          <GeneratedRouteEvidenceSummary />
         </div>
         <section className="mt-10">
           <p className="max-w-4xl text-lg leading-8 text-stone-600 dark:text-stone-300">

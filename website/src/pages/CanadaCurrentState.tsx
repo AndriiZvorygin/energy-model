@@ -12,7 +12,7 @@ import {
 } from "../components/charts/useChartData";
 import { PageBody, PageHeader } from "../components/PageHeader";
 import { CanadianDiagnosticSummary } from "../components/diagnostics/CanadianDiagnosticSummary";
-import { GeneratedEvidenceSummary } from "../components/diagnostics/GeneratedEvidenceSummary";
+import { GeneratedRouteEvidenceSummary } from "../components/diagnostics/GeneratedRouteEvidenceSummary";
 import type { CanadianClassification } from "../components/diagnostics/canadaTypes";
 
 type CanadaManifest = {
@@ -144,7 +144,7 @@ function CanadaStatePage({
                   />
                 </section>
                 <div className="mt-8">
-                  <GeneratedEvidenceSummary topic="current_state_canada" />
+                  <GeneratedRouteEvidenceSummary />
                 </div>
               </>
             ) : (

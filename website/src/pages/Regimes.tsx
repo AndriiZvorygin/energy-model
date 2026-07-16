@@ -4,7 +4,7 @@ import type { CurrentClassification, RegimeHistoryPayload } from '../components/
 import { useGeneratedJson } from '../components/charts/useChartData'
 import { ClassificationSummary } from '../components/diagnostics/ClassificationSummary'
 import { CurrentRegimeNarrative } from '../components/diagnostics/CurrentRegimeNarrative'
-import { GeneratedEvidenceSummary } from '../components/diagnostics/GeneratedEvidenceSummary'
+import { GeneratedRouteEvidenceSummary } from '../components/diagnostics/GeneratedRouteEvidenceSummary'
 import { RegimeHistoryChart } from '../components/diagnostics/RegimeHistoryChart'
 import { RegimeScoreChart } from '../components/diagnostics/RegimeScoreChart'
 import { PageBody, PageHeader } from '../components/PageHeader'
@@ -17,7 +17,7 @@ export function Regimes() {
   return <><PageHeader eyebrow="Live classification and historical framework" title="Current regime evidence" description="A transparent rule classifier compares the latest evidence with eight documented states. It can return mixed or unclassified when coverage, score, or separation is inadequate." /><PageBody>
     {error && <p className="border-y border-amber-500 py-4 text-sm text-amber-700 dark:text-amber-300">{error}</p>}
     {!current ? <p className="py-20 text-sm text-stone-500">Loading current classification…</p> : <>
-      <GeneratedEvidenceSummary topic="regimes_us" title="Current regime evidence map" />
+      <GeneratedRouteEvidenceSummary title="Current regime evidence map" />
       <div className="mt-8">
       <ClassificationSummary classification={current} />
       </div>

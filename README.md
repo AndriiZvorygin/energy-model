@@ -100,6 +100,8 @@ energy-model/
 
 The Python pipeline owns data acquisition, transformations, models, validation, written findings, chart generation, and website data contracts. The website is an interactive research-observatory layer: it loads generated histories and metadata but does not run, refit, or alter the research model.
 
+Data-dependent website interpretation is refinery-driven. Route-level summaries resolve through `website/public/generated/presentation-manifest.json`, generated from classifier and indicator outputs plus `config/presentation_rules.json`. React renders this contract and does not choose evidence status or compose current analytical conclusions. See [docs/refinery_architecture.md](docs/refinery_architecture.md).
+
 ## Website
 
 The educational website uses Node.js, TypeScript, Vite, React, Tailwind CSS, Recharts, and React Router. It presents Canadian conditions as the domestic default, with Ontario regional context, global inputs and a separate United States comparison.

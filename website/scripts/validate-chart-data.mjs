@@ -83,6 +83,7 @@ const canadaRegimes = JSON.parse(await readFile(resolve(generatedRoot, 'canada/r
 const globalAffordabilityManifest = JSON.parse(await readFile(resolve(generatedRoot, 'global/manifest.json'), 'utf8'))
 const usAffordabilityManifest = JSON.parse(await readFile(resolve(generatedRoot, 'us/manifest.json'), 'utf8'))
 const evidenceSummary = JSON.parse(await readFile(resolve(generatedRoot, 'evidence-summary.json'), 'utf8'))
+const presentationManifest = JSON.parse(await readFile(resolve(generatedRoot, 'presentation-manifest.json'), 'utf8'))
 const requiredCurrent = ['scope', 'classificationDate', 'asOfDate', 'provisionalClassification', 'confirmedClassification', 'primaryRegime', 'secondaryRegime', 'confidence', 'evidenceCoverage', 'allRegimeScores', 'activeSymptoms', 'emergingSymptoms', 'fadingSymptoms', 'supportingIndicators', 'conflictingIndicators', 'staleIndicators', 'missingIndicators', 'historicalAnalogues', 'ruleVersion', 'dataVintageWarning']
 const missingCurrent = requiredCurrent.filter((field) => !(field in currentClassification))
 if (missingCurrent.length) failures.push(`current-classification.json: missing ${missingCurrent.join(', ')}`)
@@ -181,6 +182,15 @@ for (const topicName of requiredEvidenceTopics) {
 }
 for (const status of evidenceStatuses) {
   if (!evidenceSummary.statusDefinitions?.[status]) failures.push(`evidence-summary.json: missing status definition ${status}`)
+}
+const requiredPresentationRoutes = ['/canada', '/current-state', '/canada/current-state', '/canada/regimes', '/canada/symptoms', '/current-state/us', '/regimes', '/symptoms', '/affordability', '/affordability/food', '/affordability/housing']
+if (presentationManifest.schemaVersion !== 1 || !presentationManifest.refineryVersion || !presentationManifest.generatedAt || !presentationManifest.regenerationCommand) failures.push('presentation-manifest.json: incomplete refinery metadata')
+if (!Array.isArray(presentationManifest.inputs) || presentationManifest.inputs.some((input) => !input.file || !/^[a-f0-9]{64}$/.test(input.sha256))) failures.push('presentation-manifest.json: invalid input provenance')
+for (const route of requiredPresentationRoutes) {
+  const presentation = presentationManifest.routes?.[route]
+  if (!presentation?.evidenceTopic || !presentation?.interpretation || !presentation?.confidence || !presentation?.provenance?.length) failures.push(`presentation-manifest.json: incomplete route ${route}`)
+  if (presentation?.evidenceTopic && !evidenceSummary.topics?.[presentation.evidenceTopic]) failures.push(`presentation-manifest.json: ${route} references missing topic ${presentation.evidenceTopic}`)
+  if ((presentation?.evidenceCounts?.insufficient ?? 0) > 0 && presentationManifest.policy?.excludeStatusesFromDiagnosticSummary?.includes('insufficient') !== true) failures.push(`presentation-manifest.json: ${route} exposes insufficient evidence without an explicit policy`)
 }
 
 if (failures.length) {

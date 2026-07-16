@@ -5,6 +5,7 @@ import { LayerHistoryChart } from '../components/charts/LayerHistoryChart'
 import type { DiagnosticCondition, IndicatorDataset, SymptomEvaluationsPayload } from '../components/charts/chartTypes'
 import { useGeneratedJson, useGeneratedManifest, useIndicatorDatasets } from '../components/charts/useChartData'
 import { GeneratedEvidenceSummary } from '../components/diagnostics/GeneratedEvidenceSummary'
+import { GeneratedRouteEvidenceSummary } from '../components/diagnostics/GeneratedRouteEvidenceSummary'
 import { PageBody, PageHeader } from '../components/PageHeader'
 
 const statusTone: Record<string, string> = {
@@ -34,7 +35,7 @@ export function Symptoms() {
   const idByField = useMemo(() => new Map(indicators.map((item) => [item.field, item.id])), [indicators])
   if (error) return <><PageHeader eyebrow="Live diagnostic" title="Symptom evaluation" description="The generated evaluation could not be loaded." /><PageBody><p>{error}</p></PageBody></>
   return <><PageHeader eyebrow="Live diagnostic" title="Which documented symptoms are showing now?" description="Each status is evaluated from version-controlled rules and refreshed indicator histories. It is evidence about a pattern, not proof of a cause." /><PageBody>{!data ? <p className="py-20 text-sm text-stone-500">Loading symptom evaluations…</p> : <>
-    <GeneratedEvidenceSummary topic="symptoms_us" />
+    <GeneratedRouteEvidenceSummary />
     <section className="border-y border-stone-300 py-5 text-sm dark:border-stone-700"><p><strong>Scope:</strong> {data.scope}</p><p className="mt-2 text-stone-500">Evaluation date {month(data.clock.classificationDate)} · generated {new Date(data.generationDate).toLocaleDateString()} · coverage {(data.clock.coverage * 100).toFixed(0)}% · retrospective revised data</p></section>
     <div className="mt-10 space-y-10">{data.evaluations.map((item) => {
       const fields = [...new Set([...item.requiredConditionResults, ...item.confirmingEvidence, ...item.conflictingEvidence].map((row) => row.indicator))]

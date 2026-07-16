@@ -13,6 +13,7 @@ import type {
   CanadianSymptomPayload,
 } from "../components/diagnostics/canadaTypes";
 import { GeneratedEvidenceSummary } from "../components/diagnostics/GeneratedEvidenceSummary";
+import { GeneratedRouteEvidenceSummary } from "../components/diagnostics/GeneratedRouteEvidenceSummary";
 import { PageBody, PageHeader } from "../components/PageHeader";
 
 type CanadaManifest = { indicators: Array<{ id: string; file: string }> };
@@ -115,7 +116,7 @@ export function CanadaSymptoms() {
       <PageBody>
         <CanadaGeographyControls />
         <div className="mt-8">
-          <GeneratedEvidenceSummary topic="symptoms_canada" />
+          <GeneratedRouteEvidenceSummary />
         </div>
         {error && <p className="mt-8 text-amber-700">{error}</p>}
         {!data ? (

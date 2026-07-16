@@ -1,6 +1,6 @@
 import { AffordabilityIndicatorGrid } from "../components/affordability/AffordabilityIndicatorGrid";
 import { ResearchTimeSeriesChart } from "../components/charts/ResearchTimeSeriesChart";
-import { GeneratedEvidenceSummary } from "../components/diagnostics/GeneratedEvidenceSummary";
+import { GeneratedRouteEvidenceSummary } from "../components/diagnostics/GeneratedRouteEvidenceSummary";
 import { PageBody, PageHeader } from "../components/PageHeader";
 
 export function HousingAffordability() {
@@ -12,7 +12,7 @@ export function HousingAffordability() {
         description="Asset purchase prices, rent, mortgage interest, replacement costs, and shelter services remain separate so their different transmission paths stay visible."
       />
       <PageBody>
-        <GeneratedEvidenceSummary topic="housing" />
+        <GeneratedRouteEvidenceSummary />
         <section className="mt-12">
           <p className="text-xs font-semibold uppercase text-petroleum">
             1. Property purchase prices
