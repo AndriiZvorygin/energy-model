@@ -10,6 +10,15 @@ const requiredMetadata = ['schemaVersion', 'id', 'title', 'description', 'plainL
 const failures = []
 
 if (!manifest.schemaVersion || !Array.isArray(manifest.datasets) || !manifest.datasets.length) failures.push('manifest.json is missing schemaVersion or datasets')
+if (!manifest.currentState?.asOf || !manifest.currentState?.latestObservationDate || !manifest.currentState?.oldestLatestObservationDate) failures.push('manifest.json is missing current-state as-of metadata')
+if (!manifest.currentState?.classificationMethod || !manifest.currentState?.anomalyMethod) failures.push('manifest.json is missing current-state methodology')
+for (const group of ['supportive', 'stressful', 'other']) {
+  const entries = manifest.currentState?.groups?.[group]
+  if (!Array.isArray(entries)) failures.push(`manifest.json is missing current-state group ${group}`)
+  if ((entries ?? []).some((entry) => !entry.id || !entry.field || !entry.label || !entry.latestDate || !entry.interpretationLabel)) failures.push(`manifest.json has incomplete current-state ${group} entries`)
+  const scores = (entries ?? []).map((entry) => entry.anomalyScore).filter((score) => score !== null)
+  if (scores.some((score, index) => index > 0 && score > scores[index - 1])) failures.push(`manifest.json current-state ${group} entries are not ordered by anomaly`)
+}
 for (const entry of manifest.datasets ?? []) {
   let dataset
   try {

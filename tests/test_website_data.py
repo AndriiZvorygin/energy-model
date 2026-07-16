@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from oil_model.website_data import _indicator_payload, _percentile, _quantile, validate_chart_dataset, validate_indicator_dataset
+from oil_model.website_data import _current_state_snapshot, _indicator_payload, _percentile, _quantile, validate_chart_dataset, validate_indicator_dataset
 
 
 def dataset() -> dict:
@@ -70,6 +70,22 @@ class WebsiteDataTests(unittest.TestCase):
         self.assertEqual(payload["latest"]["date"], "2025-01-01")
         self.assertEqual(payload["latest"]["oneYearChange"], 1.0)
         self.assertEqual(payload["interpretationDirection"], "higher-generally-supportive")
+
+    def test_current_state_snapshot_groups_and_orders_pipeline_evidence(self) -> None:
+        def indicator(identifier: str, label: str, classification: str, percentile: float, date: str) -> dict:
+            return {"id": identifier, "field": identifier, "label": label, "layer": "Fixture", "interpretationLabel": classification, "latest": {"date": date, "historicalPercentile": percentile}}
+
+        snapshot = _current_state_snapshot([
+            indicator("ordinary", "Ordinary", "Mixed", 52.0, "2026-03-01"),
+            indicator("stress", "Stress", "Stressful", 5.0, "2026-05-01"),
+            indicator("support", "Support", "Supportive", 90.0, "2026-04-01"),
+        ], "2026-06-15T12:00:00+00:00")
+
+        self.assertEqual(snapshot["latestObservationDate"], "2026-05-01")
+        self.assertEqual(snapshot["oldestLatestObservationDate"], "2026-03-01")
+        self.assertEqual(snapshot["indicatorOrder"], ["stress", "support", "ordinary"])
+        self.assertEqual([row["id"] for row in snapshot["groups"]["stressful"]], ["stress"])
+        self.assertEqual(snapshot["groups"]["supportive"][0]["anomalyScore"], 40.0)
 
 
 if __name__ == "__main__":

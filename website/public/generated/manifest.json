@@ -1,7 +1,321 @@
 {
   "schemaVersion": "1.1.0",
   "indicatorSchemaVersion": 1,
-  "generatedAt": "2026-07-16T00:14:53+00:00",
+  "generatedAt": "2026-07-16T00:54:44+00:00",
+  "currentState": {
+    "asOf": "2026-07-16T00:54:44+00:00",
+    "latestObservationDate": "2026-07-01",
+    "oldestLatestObservationDate": "2026-03-01",
+    "classificationMethod": "Interpretation labels are generated from each indicator's documented direction, full-history percentile, and recent change.",
+    "anomalyMethod": "anomalyScore = abs(historicalPercentile - 50); larger values are farther from the indicator's historical midpoint.",
+    "groups": {
+      "supportive": [
+        {
+          "id": "average-weekly-hours-yoy",
+          "field": "average_weekly_hours_YoY",
+          "label": "Average weekly hours growth",
+          "layer": "Labour and household consequences",
+          "interpretationLabel": "Supportive",
+          "latestDate": "2026-06-01",
+          "historicalPercentile": 89.55696202531645,
+          "anomalyScore": 39.55696202531645
+        },
+        {
+          "id": "unemployment-rate",
+          "field": "unemployment_rate",
+          "label": "Unemployment rate",
+          "layer": "Labour and household consequences",
+          "interpretationLabel": "Supportive",
+          "latestDate": "2026-06-01",
+          "historicalPercentile": 17.835051546391753,
+          "anomalyScore": 32.16494845360825
+        }
+      ],
+      "stressful": [
+        {
+          "id": "consumer-sentiment",
+          "field": "consumer_sentiment",
+          "label": "Consumer sentiment",
+          "layer": "Labour and household consequences",
+          "interpretationLabel": "Stressful",
+          "latestDate": "2026-05-01",
+          "historicalPercentile": 0.10309278350515463,
+          "anomalyScore": 49.896907216494846
+        },
+        {
+          "id": "real-disposable-income-yoy",
+          "field": "real_disposable_income_YoY",
+          "label": "Real disposable income growth",
+          "layer": "Energy affordability and financial conditions",
+          "interpretationLabel": "Stressful",
+          "latestDate": "2026-05-01",
+          "historicalPercentile": 8.13953488372093,
+          "anomalyScore": 41.86046511627907
+        },
+        {
+          "id": "real-gdp-growth",
+          "field": "Real_GDP_growth",
+          "label": "Real GDP growth",
+          "layer": "Production, consumption, and investment response",
+          "interpretationLabel": "Stressful",
+          "latestDate": "2026-07-01",
+          "historicalPercentile": 9.578947368421053,
+          "anomalyScore": 40.421052631578945
+        },
+        {
+          "id": "energy-cpi-yoy",
+          "field": "energy_CPI_YoY",
+          "label": "Energy CPI growth",
+          "layer": "Energy affordability and financial conditions",
+          "interpretationLabel": "Stressful",
+          "latestDate": "2026-06-01",
+          "historicalPercentile": 84.03805496828753,
+          "anomalyScore": 34.038054968287526
+        },
+        {
+          "id": "real-wage-growth",
+          "field": "real_wage_growth",
+          "label": "Real wage growth",
+          "layer": "Labour and household consequences",
+          "interpretationLabel": "Stressful",
+          "latestDate": "2026-05-01",
+          "historicalPercentile": 19.782608695652176,
+          "anomalyScore": 30.217391304347824
+        }
+      ],
+      "other": [
+        {
+          "id": "refinery-utilization-pct",
+          "field": "refinery_utilization_pct",
+          "label": "Refinery utilization",
+          "layer": "Physical energy conditions",
+          "interpretationLabel": "Historically elevated",
+          "latestDate": "2026-07-01",
+          "historicalPercentile": 94.75524475524476,
+          "anomalyScore": 44.75524475524476
+        },
+        {
+          "id": "real-wti-yoy",
+          "field": "real_WTI_YoY",
+          "label": "Real WTI growth",
+          "layer": "Energy affordability and financial conditions",
+          "interpretationLabel": "Historically elevated",
+          "latestDate": "2026-05-01",
+          "historicalPercentile": 92.47881355932203,
+          "anomalyScore": 42.478813559322035
+        },
+        {
+          "id": "oil-consumption-per-person-mmbtu",
+          "field": "oil_consumption_per_person_mmbtu",
+          "label": "Oil consumption per person",
+          "layer": "Physical energy conditions",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-03-01",
+          "historicalPercentile": 10.248447204968944,
+          "anomalyScore": 39.75155279503106
+        },
+        {
+          "id": "ci-zscore",
+          "field": "CI_zscore",
+          "label": "Comparative inventory z-score",
+          "layer": "Physical energy conditions",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-06-01",
+          "historicalPercentile": 14.23982869379015,
+          "anomalyScore": 35.76017130620985
+        },
+        {
+          "id": "involuntary-part-time-share",
+          "field": "involuntary_part_time_share",
+          "label": "Involuntary part-time share",
+          "layer": "Labour and household consequences",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-06-01",
+          "historicalPercentile": 22.164948453608247,
+          "anomalyScore": 27.835051546391753
+        },
+        {
+          "id": "household-energy-expenditure-share",
+          "field": "household_energy_expenditure_share",
+          "label": "Household energy expenditure share",
+          "layer": "Energy affordability and financial conditions",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-05-01",
+          "historicalPercentile": 22.577319587628867,
+          "anomalyScore": 27.422680412371133
+        },
+        {
+          "id": "energy-expenditure-share-gdp",
+          "field": "energy_expenditure_share_gdp",
+          "label": "Energy expenditure share of GDP",
+          "layer": "Energy affordability and financial conditions",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-05-01",
+          "historicalPercentile": 22.989690721649485,
+          "anomalyScore": 27.010309278350515
+        },
+        {
+          "id": "prime-age-employment-rate",
+          "field": "prime_age_employment_rate",
+          "label": "Prime-age employment rate",
+          "layer": "Labour and household consequences",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-06-01",
+          "historicalPercentile": 76.80412371134021,
+          "anomalyScore": 26.80412371134021
+        },
+        {
+          "id": "gm2-yoy",
+          "field": "GM2_YoY",
+          "label": "Global M2 growth",
+          "layer": "Energy affordability and financial conditions",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-05-01",
+          "historicalPercentile": 71.61654135338345,
+          "anomalyScore": 21.616541353383454
+        },
+        {
+          "id": "business-investment-yoy",
+          "field": "business_investment_YoY",
+          "label": "Business investment growth",
+          "layer": "Production, consumption, and investment response",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-07-01",
+          "historicalPercentile": 29.820627802690584,
+          "anomalyScore": 20.179372197309416
+        },
+        {
+          "id": "credit-card-delinquency-rate",
+          "field": "credit_card_delinquency_rate",
+          "label": "Credit-card delinquency",
+          "layer": "Labour and household consequences",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-07-01",
+          "historicalPercentile": 32.08430913348946,
+          "anomalyScore": 17.915690866510538
+        },
+        {
+          "id": "temporary-help-yoy",
+          "field": "temporary_help_YoY",
+          "label": "Temporary-help employment growth",
+          "layer": "Labour and household consequences",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-06-01",
+          "historicalPercentile": 33.92018779342723,
+          "anomalyScore": 16.079812206572768
+        },
+        {
+          "id": "petroleum-production-yoy",
+          "field": "petroleum_production_YoY",
+          "label": "Petroleum production growth",
+          "layer": "Physical energy conditions",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-05-01",
+          "historicalPercentile": 65.64482029598308,
+          "anomalyScore": 15.64482029598308
+        },
+        {
+          "id": "credit-tightening-pct",
+          "field": "credit_tightening_pct",
+          "label": "Credit tightening",
+          "layer": "Energy affordability and financial conditions",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-07-01",
+          "historicalPercentile": 65.13761467889908,
+          "anomalyScore": 15.137614678899084
+        },
+        {
+          "id": "petroleum-consumption-yoy",
+          "field": "petroleum_consumption_YoY",
+          "label": "Petroleum consumption growth",
+          "layer": "Physical energy conditions",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-03-01",
+          "historicalPercentile": 64.01273885350318,
+          "anomalyScore": 14.01273885350318
+        },
+        {
+          "id": "industrial-production-yoy",
+          "field": "Industrial_production_YoY",
+          "label": "Industrial production growth",
+          "layer": "Production, consumption, and investment response",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-05-01",
+          "historicalPercentile": 40.69767441860465,
+          "anomalyScore": 9.302325581395351
+        },
+        {
+          "id": "real-consumer-spending-yoy",
+          "field": "real_consumer_spending_YoY",
+          "label": "Real consumer spending growth",
+          "layer": "Production, consumption, and investment response",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-05-01",
+          "historicalPercentile": 41.8552036199095,
+          "anomalyScore": 8.144796380090497
+        },
+        {
+          "id": "full-time-employment-share",
+          "field": "full_time_employment_share",
+          "label": "Full-time employment share",
+          "layer": "Labour and household consequences",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-06-01",
+          "historicalPercentile": 42.16494845360825,
+          "anomalyScore": 7.835051546391753
+        },
+        {
+          "id": "manufacturing-output-yoy",
+          "field": "manufacturing_output_YoY",
+          "label": "Manufacturing output growth",
+          "layer": "Production, consumption, and investment response",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-05-01",
+          "historicalPercentile": 42.600422832980975,
+          "anomalyScore": 7.399577167019025
+        },
+        {
+          "id": "fed-funds-rate",
+          "field": "fed_funds_rate",
+          "label": "Federal funds rate",
+          "layer": "Energy affordability and financial conditions",
+          "interpretationLabel": "Mixed",
+          "latestDate": "2026-06-01",
+          "historicalPercentile": 51.23456790123457,
+          "anomalyScore": 1.2345679012345698
+        }
+      ]
+    },
+    "indicatorOrder": [
+      "consumer_sentiment",
+      "refinery_utilization_pct",
+      "real_WTI_YoY",
+      "real_disposable_income_YoY",
+      "Real_GDP_growth",
+      "oil_consumption_per_person_mmbtu",
+      "average_weekly_hours_YoY",
+      "CI_zscore",
+      "energy_CPI_YoY",
+      "unemployment_rate",
+      "real_wage_growth",
+      "involuntary_part_time_share",
+      "household_energy_expenditure_share",
+      "energy_expenditure_share_gdp",
+      "prime_age_employment_rate",
+      "GM2_YoY",
+      "business_investment_YoY",
+      "credit_card_delinquency_rate",
+      "temporary_help_YoY",
+      "petroleum_production_YoY",
+      "credit_tightening_pct",
+      "petroleum_consumption_YoY",
+      "Industrial_production_YoY",
+      "real_consumer_spending_YoY",
+      "full_time_employment_share",
+      "manufacturing_output_YoY",
+      "fed_funds_rate"
+    ]
+  },
   "datasets": [
     {
       "id": "oil-price-layers",
@@ -432,9 +746,9 @@
       "label": "Liquidity and financial conditions",
       "indicatorFields": [
         "GM2_YoY",
-        "fed_funds_rate",
+        "credit_card_delinquency_rate",
         "credit_tightening_pct",
-        "credit_card_delinquency_rate"
+        "fed_funds_rate"
       ],
       "interpretation": "Liquidity support is mixed with the cost and availability of credit; higher GM2 does not automatically mean lower stress.",
       "confidence": "Moderate"
@@ -443,11 +757,11 @@
       "id": "physical-energy",
       "label": "Physical energy conditions",
       "indicatorFields": [
-        "petroleum_production_YoY",
-        "petroleum_consumption_YoY",
+        "refinery_utilization_pct",
         "oil_consumption_per_person_mmbtu",
         "CI_zscore",
-        "refinery_utilization_pct"
+        "petroleum_production_YoY",
+        "petroleum_consumption_YoY"
       ],
       "interpretation": "Supply, demand, inventories, and refinery utilization must confirm one another before physical tightness is inferred.",
       "confidence": "Moderate"
@@ -457,10 +771,10 @@
       "label": "Energy affordability",
       "indicatorFields": [
         "real_WTI_YoY",
-        "household_energy_expenditure_share",
-        "energy_expenditure_share_gdp",
+        "real_disposable_income_YoY",
         "energy_CPI_YoY",
-        "real_disposable_income_YoY"
+        "household_energy_expenditure_share",
+        "energy_expenditure_share_gdp"
       ],
       "interpretation": "Energy stress depends on costs relative to real household income and economic capacity, not on nominal oil alone.",
       "confidence": "Moderate"
@@ -469,11 +783,11 @@
       "id": "production-activity",
       "label": "Production and economic activity",
       "indicatorFields": [
-        "Industrial_production_YoY",
-        "manufacturing_output_YoY",
-        "real_consumer_spending_YoY",
+        "Real_GDP_growth",
         "business_investment_YoY",
-        "Real_GDP_growth"
+        "Industrial_production_YoY",
+        "real_consumer_spending_YoY",
+        "manufacturing_output_YoY"
       ],
       "interpretation": "Production, spending, investment, and GDP indicate whether energy and financial conditions are transmitting into measured activity.",
       "confidence": "Moderate"
@@ -482,14 +796,14 @@
       "id": "labour-households",
       "label": "Labour and household conditions",
       "indicatorFields": [
+        "consumer_sentiment",
         "average_weekly_hours_YoY",
-        "temporary_help_YoY",
-        "full_time_employment_share",
+        "unemployment_rate",
+        "real_wage_growth",
         "involuntary_part_time_share",
         "prime_age_employment_rate",
-        "real_wage_growth",
-        "consumer_sentiment",
-        "unemployment_rate"
+        "temporary_help_YoY",
+        "full_time_employment_share"
       ],
       "interpretation": "Hours, job composition, wages, sentiment, and unemployment often move at different stages of household stress.",
       "confidence": "Moderate"

@@ -138,6 +138,24 @@ export type GeneratedManifest = {
   schemaVersion: string
   indicatorSchemaVersion: number
   generatedAt: string
+  currentState: {
+    asOf: string
+    latestObservationDate: string
+    oldestLatestObservationDate: string
+    classificationMethod: string
+    anomalyMethod: string
+    groups: Record<'supportive' | 'stressful' | 'other', Array<{
+      id: string
+      field: string
+      label: string
+      layer: string
+      interpretationLabel: IndicatorDataset['interpretationLabel']
+      latestDate: string
+      historicalPercentile: number | null
+      anomalyScore: number | null
+    }>>
+    indicatorOrder: string[]
+  }
   datasets: { id: string; file: string; legacyFile: string; title: string }[]
   indicators: { id: string; file: string; label: string; layer: string; latestDate: string; evidenceLabel: string }[]
   layers: { id: string; label: string; indicatorFields: string[]; interpretation: string; confidence: string }[]

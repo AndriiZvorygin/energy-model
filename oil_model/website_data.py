@@ -290,6 +290,50 @@ def _interpretation_label(indicator_id: str, percentile: float | None, change: f
     return "Neutral" if change is None or abs(change) < 1e-12 else "Mixed"
 
 
+def _anomaly_score(indicator: dict[str, Any]) -> float | None:
+    percentile = _number(indicator.get("latest", {}).get("historicalPercentile"))
+    return abs(percentile - 50.0) if percentile is not None else None
+
+
+def _current_state_snapshot(indicators: list[dict[str, Any]], generated_at: str) -> dict[str, Any]:
+    def sort_key(indicator: dict[str, Any]) -> tuple[bool, float, str]:
+        score = _anomaly_score(indicator)
+        return score is None, -(score or 0.0), str(indicator["label"])
+
+    ordered = sorted(indicators, key=sort_key)
+
+    def entries(labels: set[str]) -> list[dict[str, Any]]:
+        return [
+            {
+                "id": indicator["id"],
+                "field": indicator["field"],
+                "label": indicator["label"],
+                "layer": indicator["layer"],
+                "interpretationLabel": indicator["interpretationLabel"],
+                "latestDate": indicator["latest"]["date"],
+                "historicalPercentile": indicator["latest"]["historicalPercentile"],
+                "anomalyScore": _anomaly_score(indicator),
+            }
+            for indicator in ordered
+            if indicator["interpretationLabel"] in labels
+        ]
+
+    dates = [str(indicator["latest"]["date"]) for indicator in indicators]
+    return {
+        "asOf": generated_at,
+        "latestObservationDate": max(dates),
+        "oldestLatestObservationDate": min(dates),
+        "classificationMethod": "Interpretation labels are generated from each indicator's documented direction, full-history percentile, and recent change.",
+        "anomalyMethod": "anomalyScore = abs(historicalPercentile - 50); larger values are farther from the indicator's historical midpoint.",
+        "groups": {
+            "supportive": entries({"Supportive"}),
+            "stressful": entries({"Stressful"}),
+            "other": entries({"Neutral", "Mixed", "Historically elevated", "Historically depressed", "Direction unclear"}),
+        },
+        "indicatorOrder": [indicator["field"] for indicator in ordered],
+    }
+
+
 def _indicator_payload(
     indicator: Row,
     catalogue: Row | None,
@@ -688,6 +732,11 @@ def write_website_chart_data(
         _indicator_payload(row, catalogue_by_indicator.get(str(row.get("indicator"))), system_rows, generated_at)
         for row in current_state_rows
     ]
+    current_state_snapshot = _current_state_snapshot(indicator_payloads, generated_at)
+    anomaly_order = {field: index for index, field in enumerate(current_state_snapshot["indicatorOrder"])}
+
+    def sort_indicator_fields(fields: list[str]) -> list[str]:
+        return sorted(fields, key=lambda field: anomaly_order.get(field, len(anomaly_order)))
     for payload in indicator_payloads:
         filename = f"{payload['id']}.json"
         (indicator_out_dir / filename).write_text(json.dumps(payload, indent=2, allow_nan=False) + "\n", encoding="utf-8")
@@ -737,14 +786,15 @@ def write_website_chart_data(
         "schemaVersion": SCHEMA_VERSION,
         "indicatorSchemaVersion": 1,
         "generatedAt": generated_at,
+        "currentState": current_state_snapshot,
         "datasets": [{"id": item["id"], "file": f"charts/{item['id']}.json", "legacyFile": f"{item['id']}.json", "title": item["title"], "frequency": item["frequency"], "dateRange": item["dateRange"], "evidenceLabel": item["evidenceLabel"]} for item in datasets],
         "indicators": [{"id": item["id"], "file": f"indicators/{item['id']}.json", "label": item["label"], "layer": item["layer"], "latestDate": item["latest"]["date"], "evidenceLabel": item["evidenceLabel"]} for item in indicator_payloads],
         "layers": [
-            {"id": "liquidity-financial", "label": "Liquidity and financial conditions", "indicatorFields": ["GM2_YoY", "fed_funds_rate", "credit_tightening_pct", "credit_card_delinquency_rate"], "interpretation": "Liquidity support is mixed with the cost and availability of credit; higher GM2 does not automatically mean lower stress.", "confidence": "Moderate"},
-            {"id": "physical-energy", "label": "Physical energy conditions", "indicatorFields": ["petroleum_production_YoY", "petroleum_consumption_YoY", "oil_consumption_per_person_mmbtu", "CI_zscore", "refinery_utilization_pct"], "interpretation": "Supply, demand, inventories, and refinery utilization must confirm one another before physical tightness is inferred.", "confidence": "Moderate"},
-            {"id": "energy-affordability", "label": "Energy affordability", "indicatorFields": ["real_WTI_YoY", "household_energy_expenditure_share", "energy_expenditure_share_gdp", "energy_CPI_YoY", "real_disposable_income_YoY"], "interpretation": "Energy stress depends on costs relative to real household income and economic capacity, not on nominal oil alone.", "confidence": "Moderate"},
-            {"id": "production-activity", "label": "Production and economic activity", "indicatorFields": ["Industrial_production_YoY", "manufacturing_output_YoY", "real_consumer_spending_YoY", "business_investment_YoY", "Real_GDP_growth"], "interpretation": "Production, spending, investment, and GDP indicate whether energy and financial conditions are transmitting into measured activity.", "confidence": "Moderate"},
-            {"id": "labour-households", "label": "Labour and household conditions", "indicatorFields": ["average_weekly_hours_YoY", "temporary_help_YoY", "full_time_employment_share", "involuntary_part_time_share", "prime_age_employment_rate", "real_wage_growth", "consumer_sentiment", "unemployment_rate"], "interpretation": "Hours, job composition, wages, sentiment, and unemployment often move at different stages of household stress.", "confidence": "Moderate"},
+            {"id": "liquidity-financial", "label": "Liquidity and financial conditions", "indicatorFields": sort_indicator_fields(["GM2_YoY", "fed_funds_rate", "credit_tightening_pct", "credit_card_delinquency_rate"]), "interpretation": "Liquidity support is mixed with the cost and availability of credit; higher GM2 does not automatically mean lower stress.", "confidence": "Moderate"},
+            {"id": "physical-energy", "label": "Physical energy conditions", "indicatorFields": sort_indicator_fields(["petroleum_production_YoY", "petroleum_consumption_YoY", "oil_consumption_per_person_mmbtu", "CI_zscore", "refinery_utilization_pct"]), "interpretation": "Supply, demand, inventories, and refinery utilization must confirm one another before physical tightness is inferred.", "confidence": "Moderate"},
+            {"id": "energy-affordability", "label": "Energy affordability", "indicatorFields": sort_indicator_fields(["real_WTI_YoY", "household_energy_expenditure_share", "energy_expenditure_share_gdp", "energy_CPI_YoY", "real_disposable_income_YoY"]), "interpretation": "Energy stress depends on costs relative to real household income and economic capacity, not on nominal oil alone.", "confidence": "Moderate"},
+            {"id": "production-activity", "label": "Production and economic activity", "indicatorFields": sort_indicator_fields(["Industrial_production_YoY", "manufacturing_output_YoY", "real_consumer_spending_YoY", "business_investment_YoY", "Real_GDP_growth"]), "interpretation": "Production, spending, investment, and GDP indicate whether energy and financial conditions are transmitting into measured activity.", "confidence": "Moderate"},
+            {"id": "labour-households", "label": "Labour and household conditions", "indicatorFields": sort_indicator_fields(["average_weekly_hours_YoY", "temporary_help_YoY", "full_time_employment_share", "involuntary_part_time_share", "prime_age_employment_rate", "real_wage_growth", "consumer_sentiment", "unemployment_rate"]), "interpretation": "Hours, job composition, wages, sentiment, and unemployment often move at different stages of household stress.", "confidence": "Moderate"},
         ],
         "shared": ["lag-results.json", "rolling-performance.json", "regimes.json", "recessions.json", "events.json", "cross-layer.json", "output-quality-correlations.json"],
     }
