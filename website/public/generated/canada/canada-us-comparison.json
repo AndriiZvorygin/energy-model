@@ -7,6 +7,8 @@
     {
       "id": "unemployment",
       "title": "Canada unemployment rate and U.S. unemployment rate",
+      "canadaLabel": "Canada unemployment rate",
+      "unitedStatesLabel": "U.S. unemployment rate",
       "unit": "percent",
       "definitionDifference": "Both are headline unemployment rates, but labour-force definitions and population dynamics differ.",
       "canadaPercentile": 16.17161716171617,
@@ -3050,6 +3052,8 @@
     {
       "id": "energy-cpi",
       "title": "Canada energy CPI growth and U.S. energy CPI growth",
+      "canadaLabel": "Canada energy CPI growth",
+      "unitedStatesLabel": "U.S. energy CPI growth",
       "unit": "percent",
       "definitionDifference": "Consumption baskets, regulated utility prices and energy systems differ.",
       "canadaPercentile": 95.02529510961214,
@@ -6033,6 +6037,8 @@
     {
       "id": "real-gdp",
       "title": "Canada monthly real GDP growth and U.S. real GDP growth",
+      "canadaLabel": "Canada monthly real GDP growth",
+      "unitedStatesLabel": "U.S. real GDP growth",
       "unit": "percent",
       "definitionDifference": "Canada uses monthly GDP by industry while the U.S. series is quarterly expenditure-side GDP.",
       "canadaPercentile": 16.323529411764707,
@@ -8421,6 +8427,8 @@
     {
       "id": "policy-rate",
       "title": "Bank of Canada policy rate and U.S. federal funds rate",
+      "canadaLabel": "Bank of Canada policy rate",
+      "unitedStatesLabel": "U.S. federal funds rate",
       "unit": "percent",
       "definitionDifference": "Policy frameworks are comparable in purpose but not identical in implementation.",
       "canadaPercentile": 79.08653846153847,

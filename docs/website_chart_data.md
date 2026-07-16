@@ -133,6 +133,12 @@ Canadian indicator histories and diagnostics are namespaced below `website/publi
 4. Run the Python and website test suites.
 5. Regenerate the pipeline and run `npm run validate:chart-data`.
 
+## Generated Evidence Summaries
+
+`website/public/generated/evidence-summary.json` is the presentation contract for the compact diagnostic summaries. The Python pipeline derives each topic from existing classifier evidence and indicator interpretation metadata. React does not assign evidence direction or write analytical reasons.
+
+Each topic publishes an interpretation, confidence, coverage, scope, and four arrays: `supporting`, `mixed`, `contradicting`, and `insufficient`. Rows retain their rule role (`Required evidence`, `Confirming evidence`, `Conflicting evidence`, or `Missing evidence`), current value, percentile, source date, calculation, limitations, and an optional link to the full indicator history. `npm run validate:chart-data` validates this contract and fails when required topics, statuses, reasons, or linked indicator files are missing.
+
 ## Adding An Event
 
 Add the event to `_events()` in `oil_model/website_data.py`, including an ID, date range, category, neutral explanation, and affected transmission layers. Add its ID to relevant datasets. Event annotations organize historical context and must not be worded as causal proof.

@@ -76,11 +76,13 @@ const regimeScores = JSON.parse(await readFile(resolve(generatedRoot, 'regime-sc
 const regimeHistory = JSON.parse(await readFile(resolve(generatedRoot, 'regime-history.json'), 'utf8'))
 const canadaManifest = JSON.parse(await readFile(resolve(generatedRoot, 'canada/manifest.json'), 'utf8'))
 const canadaCurrentState = JSON.parse(await readFile(resolve(generatedRoot, 'canada/current-state.json'), 'utf8'))
+const canadaUsComparison = JSON.parse(await readFile(resolve(generatedRoot, 'canada/canada-us-comparison.json'), 'utf8'))
 const canadaClassification = JSON.parse(await readFile(resolve(generatedRoot, 'canada/current-classification.json'), 'utf8'))
 const canadaSymptoms = JSON.parse(await readFile(resolve(generatedRoot, 'canada/symptom-evaluations.json'), 'utf8'))
 const canadaRegimes = JSON.parse(await readFile(resolve(generatedRoot, 'canada/regime-scores.json'), 'utf8'))
 const globalAffordabilityManifest = JSON.parse(await readFile(resolve(generatedRoot, 'global/manifest.json'), 'utf8'))
 const usAffordabilityManifest = JSON.parse(await readFile(resolve(generatedRoot, 'us/manifest.json'), 'utf8'))
+const evidenceSummary = JSON.parse(await readFile(resolve(generatedRoot, 'evidence-summary.json'), 'utf8'))
 const requiredCurrent = ['scope', 'classificationDate', 'asOfDate', 'provisionalClassification', 'confirmedClassification', 'primaryRegime', 'secondaryRegime', 'confidence', 'evidenceCoverage', 'allRegimeScores', 'activeSymptoms', 'emergingSymptoms', 'fadingSymptoms', 'supportingIndicators', 'conflictingIndicators', 'staleIndicators', 'missingIndicators', 'historicalAnalogues', 'ruleVersion', 'dataVintageWarning']
 const missingCurrent = requiredCurrent.filter((field) => !(field in currentClassification))
 if (missingCurrent.length) failures.push(`current-classification.json: missing ${missingCurrent.join(', ')}`)
@@ -101,6 +103,11 @@ if (canadaManifest.defaultGeography !== 'Canada' || canadaManifest.classificatio
 const canadaCore = canadaManifest.indicators.filter((item) => item.core && ['Global', 'Canada'].includes(item.geography))
 if (canadaCore.length < 15 || canadaCore.length > 25) failures.push(`canada/manifest.json: expected 15-25 core indicators, received ${canadaCore.length}`)
 if (canadaCurrentState.status !== 'Canadian diagnostic status: provisional transparent classification available.') failures.push('canada/current-state.json: invalid diagnostic status')
+for (const dataset of canadaUsComparison.datasets ?? []) {
+  if (!dataset.canadaLabel || !dataset.unitedStatesLabel) failures.push(`canada/canada-us-comparison.json: ${dataset.id} is missing country-specific labels`)
+  if (dataset.canadaLabel && !/(Canada|Canadian|Bank of Canada)/.test(dataset.canadaLabel)) failures.push(`canada/canada-us-comparison.json: ${dataset.id} has an ambiguous Canadian label`)
+  if (dataset.unitedStatesLabel && !/^(U\.S\.|United States)/.test(dataset.unitedStatesLabel)) failures.push(`canada/canada-us-comparison.json: ${dataset.id} has an ambiguous U.S. label`)
+}
 if (!canadaClassification.scope?.startsWith('Canadian energy-economic conditions') || !canadaClassification.provisionalClassification || !canadaClassification.quarterlyAlignedClassification) failures.push('canada/current-classification.json: incomplete classifier output')
 if (canadaClassification.provisionalClassification?.requiredIndicatorAvailability < 0.70 || typeof canadaClassification.provisionalClassification?.freshnessAdjustedCoverage !== 'number') failures.push('canada/current-classification.json: invalid availability or freshness coverage')
 if (canadaSymptoms.evaluations?.length !== 6 || canadaSymptoms.evaluations.some((item) => !allowedSymptomStatuses.has(item.status))) failures.push('canada/symptom-evaluations.json: expected six valid symptom evaluations')
@@ -146,6 +153,34 @@ for (const [namespace, namespaceManifest] of [['global', globalAffordabilityMani
     if (dates.some((date, index) => index > 0 && date <= dates[index - 1])) failures.push(`${namespace}/${entry.file}: dates must be chronological and unique`)
     if (indicator.futureClassifierMetadata?.status !== 'metadata_only_not_scored') failures.push(`${namespace}/${entry.file}: classifier metadata must remain inactive`)
   }
+}
+
+const evidenceStatuses = ['supporting', 'mixed', 'contradicting', 'insufficient']
+const requiredEvidenceTopics = ['current_state_us', 'current_state_canada', 'regimes_us', 'regimes_canada', 'symptoms_us', 'symptoms_canada', 'affordability', 'food', 'housing', 'canada']
+if (evidenceSummary.schemaVersion !== 1 || !evidenceSummary.generatedAt || !evidenceSummary.topics) failures.push('evidence-summary.json: missing schema metadata or topics')
+for (const topicName of requiredEvidenceTopics) {
+  const topic = evidenceSummary.topics?.[topicName]
+  if (!topic?.interpretation || !topic?.confidence || !('coverage' in (topic ?? {}))) failures.push(`evidence-summary.json: incomplete topic ${topicName}`)
+  for (const status of evidenceStatuses) {
+    const rows = topic?.[status]
+    if (!Array.isArray(rows)) {
+      failures.push(`evidence-summary.json: ${topicName}.${status} must be an array`)
+      continue
+    }
+    for (const row of rows) {
+      if (!row.indicator || !row.label || row.status !== status || !row.reason || !row.group) failures.push(`evidence-summary.json: invalid ${topicName}.${status} row`)
+      if (row.indicatorFile) {
+        try {
+          await readFile(resolve(generatedRoot, row.indicatorFile), 'utf8')
+        } catch (error) {
+          failures.push(`evidence-summary.json: missing indicator file ${row.indicatorFile}: ${error.message}`)
+        }
+      }
+    }
+  }
+}
+for (const status of evidenceStatuses) {
+  if (!evidenceSummary.statusDefinitions?.[status]) failures.push(`evidence-summary.json: missing status definition ${status}`)
 }
 
 if (failures.length) {

@@ -57,3 +57,12 @@ def test_generated_canadian_namespace_is_separate_from_us_classifier() -> None:
     assert canada["classificationImplemented"] is True
     assert len([item for item in canada["indicators"] if item["core"] and item["geography"] in {"Canada", "Global"}]) == 25
     assert all(not item["file"].startswith("canada/") for item in us["indicators"])
+
+
+def test_canada_us_comparison_labels_name_both_countries() -> None:
+    root = Path(__file__).resolve().parents[1] / "website" / "public" / "generated"
+    comparison = json.loads((root / "canada" / "canada-us-comparison.json").read_text(encoding="utf-8"))
+    assert comparison["datasets"]
+    for dataset in comparison["datasets"]:
+        assert any(name in dataset["canadaLabel"] for name in ("Canada", "Canadian", "Bank of Canada"))
+        assert dataset["unitedStatesLabel"].startswith(("U.S.", "United States"))

@@ -4,6 +4,7 @@ import type { CurrentClassification, RegimeHistoryPayload } from '../components/
 import { useGeneratedJson } from '../components/charts/useChartData'
 import { ClassificationSummary } from '../components/diagnostics/ClassificationSummary'
 import { CurrentRegimeNarrative } from '../components/diagnostics/CurrentRegimeNarrative'
+import { GeneratedEvidenceSummary } from '../components/diagnostics/GeneratedEvidenceSummary'
 import { RegimeHistoryChart } from '../components/diagnostics/RegimeHistoryChart'
 import { RegimeScoreChart } from '../components/diagnostics/RegimeScoreChart'
 import { PageBody, PageHeader } from '../components/PageHeader'
@@ -16,7 +17,10 @@ export function Regimes() {
   return <><PageHeader eyebrow="Live classification and historical framework" title="Current regime evidence" description="A transparent rule classifier compares the latest evidence with eight documented states. It can return mixed or unclassified when coverage, score, or separation is inadequate." /><PageBody>
     {error && <p className="border-y border-amber-500 py-4 text-sm text-amber-700 dark:text-amber-300">{error}</p>}
     {!current ? <p className="py-20 text-sm text-stone-500">Loading current classification…</p> : <>
+      <GeneratedEvidenceSummary topic="regimes_us" title="Current regime evidence map" />
+      <div className="mt-8">
       <ClassificationSummary classification={current} />
+      </div>
       <CurrentRegimeNarrative classification={current} />
       <section className="mt-12"><p className="text-xs font-semibold uppercase text-petroleum">Candidate comparison</p><h2 className="mt-2 text-2xl font-semibold">All regime scores</h2><p className="mt-2 max-w-3xl text-sm leading-6 text-stone-500">The leading score is a candidate, not automatically the published classification. Coverage must reach 70%, the leading score 60%, and the margin over second place 10 percentage points.</p><div className="mt-6"><RegimeScoreChart scores={current.allRegimeScores} /></div></section>
       <section className="mt-12"><h2 className="text-xl font-semibold">Historical analogues</h2><p className="mt-2 text-sm text-stone-500">Similarity compares available indicator percentiles at historical episode endpoints. It supports comparison, not causal identification.</p><div className="mt-4 grid gap-4 md:grid-cols-3">{current.historicalAnalogues.map((item) => <div key={item.episode} className="border-t-2 border-stone-400 pt-3"><p className="font-semibold">{item.episode}</p><p className="mt-2 text-sm text-stone-500">Similarity {(item.similarity * 100).toFixed(0)}% across {item.commonIndicators} common indicators · comparison {item.comparisonDate.slice(0, 7)}</p></div>)}</div></section>

@@ -129,6 +129,7 @@ REQUIRED_DATA = [
     "website/public/generated/symptom-evaluations.json",
     "website/public/generated/regime-scores.json",
     "website/public/generated/regime-history.json",
+    "website/public/generated/evidence-summary.json",
     "website/public/generated/charts/physical-tightness.json",
     "website/public/generated/charts/energy-burden.json",
     "website/public/generated/charts/industrial-transmission.json",

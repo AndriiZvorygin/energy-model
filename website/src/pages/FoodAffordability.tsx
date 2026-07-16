@@ -1,16 +1,241 @@
-import { useGeneratedJson } from '../components/charts/useChartData'
-import { ResearchTimeSeriesChart } from '../components/charts/ResearchTimeSeriesChart'
-import { AffordabilityIndicatorGrid } from '../components/affordability/AffordabilityIndicatorGrid'
-import { PageBody, PageHeader } from '../components/PageHeader'
+import { useGeneratedJson } from "../components/charts/useChartData";
+import { ResearchTimeSeriesChart } from "../components/charts/ResearchTimeSeriesChart";
+import { AffordabilityIndicatorGrid } from "../components/affordability/AffordabilityIndicatorGrid";
+import { GeneratedEvidenceSummary } from "../components/diagnostics/GeneratedEvidenceSummary";
+import { PageBody, PageHeader } from "../components/PageHeader";
 
-type Transmission = { lagConvention: string; rows: Array<{ relationship: string; contemporaneous_correlation: number | null; peak_lag_months: number; peak_lag_correlation: number; rolling_60m_correlation_mean: number | null; pre_2020_correlation: number | null; post_2020_correlation: number | null }> }
+type Transmission = {
+  lagConvention: string;
+  rows: Array<{
+    relationship: string;
+    contemporaneous_correlation: number | null;
+    peak_lag_months: number;
+    peak_lag_correlation: number;
+    rolling_60m_correlation_mean: number | null;
+    pre_2020_correlation: number | null;
+    post_2020_correlation: number | null;
+  }>;
+};
 
 export function FoodAffordability() {
-  const { data: transmission } = useGeneratedJson<Transmission>('food-transmission-analysis.json')
-  return <><PageHeader eyebrow="Affordability evidence" title="Food prices from commodities to households" description="International food commodity quotations and domestic consumer food prices are shown separately, with transparent lag tests between them." /><PageBody><section><p className="text-xs font-semibold uppercase text-petroleum">1. International commodity pressure</p><h2 className="mt-2 text-2xl font-semibold">FAO food-price indices</h2><p className="mt-2 max-w-4xl text-sm leading-6 text-stone-600 dark:text-stone-300">The FAO Food Price Index is an international commodity-price measure with a 2014–2016 base. It is not a global grocery-price index. Recent meat observations can combine projected and observed quotations and may be revised.</p><div className="mt-6"><ResearchTimeSeriesChart file="affordability-fao-food.json" initialTransformation="raw" /></div><AffordabilityIndicatorGrid files={['global/indicators/fao-food-price-index.json', 'global/indicators/fao-food-price-index-real.json', 'global/indicators/fao-cereals-price-index.json', 'global/indicators/fao-vegetable-oils-price-index.json']} /></section>
-    <section className="mt-16"><p className="text-xs font-semibold uppercase text-petroleum">2. Canadian grocery prices</p><h2 className="mt-2 text-2xl font-semibold">Food, stores, restaurants, and the broader CPI basket</h2><div className="mt-6"><ResearchTimeSeriesChart file="affordability-canada-food.json" initialTransformation="yoy" /></div><AffordabilityIndicatorGrid files={['canada/indicators/canada-food-cpi-yoy.json', 'canada/indicators/canada-grocery-cpi-yoy.json', 'canada/indicators/canada-food-inflation-gap.json', 'canada/indicators/canada-grocery-inflation-gap.json']} /></section>
-    <section className="mt-16"><p className="text-xs font-semibold uppercase text-petroleum">3. U.S. grocery prices</p><h2 className="mt-2 text-2xl font-semibold">Food at home remains distinct from food away from home</h2><AffordabilityIndicatorGrid files={['us/indicators/us-food-cpi-yoy.json', 'us/indicators/us-food-at-home-cpi-yoy.json', 'us/indicators/us-food-away-from-home-cpi.json', 'us/indicators/us-grocery-inflation-gap.json']} /></section>
-    <section className="mt-16"><p className="text-xs font-semibold uppercase text-petroleum">4. Commodity-to-retail transmission</p><h2 className="mt-2 text-2xl font-semibold">Timing varies by basket and period</h2><p className="mt-2 max-w-4xl text-sm leading-6 text-stone-500">Retail prices also reflect exchange rates, energy and transport, fertilizer and farm inputs, processing, labour, wholesale and retail margins, domestic supply, taxes, and regulation.</p><div className="mt-6"><ResearchTimeSeriesChart file="affordability-food-transmission.json" initialTransformation="raw" /></div><div className="mt-10"><ResearchTimeSeriesChart file="affordability-food-categories.json" initialTransformation="raw" /></div>{transmission && <div className="mt-8 overflow-x-auto"><table className="min-w-[860px] w-full border-collapse text-left text-sm"><thead><tr className="border-b border-stone-300"><th className="py-3">Relationship</th><th>Current</th><th>Peak lag</th><th>Peak correlation</th><th>Rolling 60m</th><th>Pre-2020</th><th>Post-2020</th></tr></thead><tbody>{transmission.rows.map((row) => <tr key={row.relationship} className="border-b border-stone-200"><td className="py-3 pr-5 font-medium">{row.relationship}</td><td>{row.contemporaneous_correlation?.toFixed(2) ?? 'n/a'}</td><td>{row.peak_lag_months}m</td><td>{row.peak_lag_correlation?.toFixed(2) ?? 'n/a'}</td><td>{row.rolling_60m_correlation_mean?.toFixed(2) ?? 'n/a'}</td><td>{row.pre_2020_correlation?.toFixed(2) ?? 'n/a'}</td><td>{row.post_2020_correlation?.toFixed(2) ?? 'n/a'}</td></tr>)}</tbody></table><p className="mt-3 text-xs text-stone-500">{transmission.lagConvention}. Correlation and distributed-lag results are descriptive and do not establish causation.</p></div>}</section>
-    <section className="mt-16"><p className="text-xs font-semibold uppercase text-petroleum">5. Food prices relative to income</p><h2 className="mt-2 text-2xl font-semibold">Quarterly household purchasing power</h2><p className="mt-2 max-w-4xl text-sm leading-6 text-stone-500">Monthly food and grocery indexes are averaged within completed quarters, then compared with household disposable income per person. Quarterly income is not forward-filled into monthly observations.</p><div className="mt-6"><ResearchTimeSeriesChart file="affordability-canada-food-income.json" initialTransformation="raw" /></div><AffordabilityIndicatorGrid files={['canada/indicators/household-disposable-income-per-person.json', 'canada/indicators/real-disposable-income-per-person.json', 'canada/indicators/food-to-income.json', 'canada/indicators/grocery-to-income.json', 'canada/indicators/food-income-gap.json', 'canada/indicators/grocery-income-gap.json']} /><h2 className="mt-12 text-2xl font-semibold">Monthly worker purchasing power</h2><p className="mt-2 max-w-4xl text-sm leading-6 text-stone-500">Average hourly wages cover employed workers. Household disposable income is broader and also includes non-wage income and transfers, so the two denominators remain separate.</p><div className="mt-6"><ResearchTimeSeriesChart file="affordability-canada-food-wages.json" initialTransformation="raw" /></div><AffordabilityIndicatorGrid files={['canada/indicators/average-hourly-wages.json', 'canada/indicators/real-wage-growth.json', 'canada/indicators/food-to-wage.json', 'canada/indicators/grocery-to-wage.json']} /><div className="mt-10"><ResearchTimeSeriesChart file="affordability-us-food-income.json" initialTransformation="raw" /></div></section>
-    <section className="mt-16 border-y border-stone-300 py-6 dark:border-stone-700"><p className="text-xs font-semibold uppercase text-petroleum">6. Methods and limitations</p><p className="mt-3 max-w-5xl text-sm leading-7 text-stone-600 dark:text-stone-300">Price inflation describes how quickly prices change; affordability describes prices relative to income or wages. A historically high price can become more affordable if income rises faster, while a falling price can become less affordable if income declines. Canadian and U.S. percentiles use separate histories. National accounts and wages are latest-vintage revised data, and averages do not represent every household.</p></section></PageBody></>
+  const { data: transmission } = useGeneratedJson<Transmission>(
+    "food-transmission-analysis.json",
+  );
+  return (
+    <>
+      <PageHeader
+        eyebrow="Affordability evidence"
+        title="Food prices from commodities to households"
+        description="International food commodity quotations and domestic consumer food prices are shown separately, with transparent lag tests between them."
+      />
+      <PageBody>
+        <GeneratedEvidenceSummary topic="food" />
+        <section className="mt-12">
+          <p className="text-xs font-semibold uppercase text-petroleum">
+            1. International commodity pressure
+          </p>
+          <h2 className="mt-2 text-2xl font-semibold">
+            FAO food-price indices
+          </h2>
+          <p className="mt-2 max-w-4xl text-sm leading-6 text-stone-600 dark:text-stone-300">
+            The FAO Food Price Index is an international commodity-price measure
+            with a 2014–2016 base. It is not a global grocery-price index.
+            Recent meat observations can combine projected and observed
+            quotations and may be revised.
+          </p>
+          <div className="mt-6">
+            <ResearchTimeSeriesChart
+              file="affordability-fao-food.json"
+              initialTransformation="raw"
+            />
+          </div>
+          <AffordabilityIndicatorGrid
+            files={[
+              "global/indicators/fao-food-price-index.json",
+              "global/indicators/fao-food-price-index-real.json",
+              "global/indicators/fao-cereals-price-index.json",
+              "global/indicators/fao-vegetable-oils-price-index.json",
+            ]}
+          />
+        </section>
+        <section className="mt-16">
+          <p className="text-xs font-semibold uppercase text-petroleum">
+            2. Canadian grocery prices
+          </p>
+          <h2 className="mt-2 text-2xl font-semibold">
+            Food, stores, restaurants, and the broader CPI basket
+          </h2>
+          <div className="mt-6">
+            <ResearchTimeSeriesChart
+              file="affordability-canada-food.json"
+              initialTransformation="yoy"
+            />
+          </div>
+          <AffordabilityIndicatorGrid
+            files={[
+              "canada/indicators/canada-food-cpi-yoy.json",
+              "canada/indicators/canada-grocery-cpi-yoy.json",
+              "canada/indicators/canada-food-inflation-gap.json",
+              "canada/indicators/canada-grocery-inflation-gap.json",
+            ]}
+          />
+        </section>
+        <section className="mt-16">
+          <p className="text-xs font-semibold uppercase text-petroleum">
+            3. U.S. grocery prices
+          </p>
+          <h2 className="mt-2 text-2xl font-semibold">
+            Food at home remains distinct from food away from home
+          </h2>
+          <AffordabilityIndicatorGrid
+            files={[
+              "us/indicators/us-food-cpi-yoy.json",
+              "us/indicators/us-food-at-home-cpi-yoy.json",
+              "us/indicators/us-food-away-from-home-cpi.json",
+              "us/indicators/us-grocery-inflation-gap.json",
+            ]}
+          />
+        </section>
+        <section className="mt-16">
+          <p className="text-xs font-semibold uppercase text-petroleum">
+            4. Commodity-to-retail transmission
+          </p>
+          <h2 className="mt-2 text-2xl font-semibold">
+            Timing varies by basket and period
+          </h2>
+          <p className="mt-2 max-w-4xl text-sm leading-6 text-stone-500">
+            Retail prices also reflect exchange rates, energy and transport,
+            fertilizer and farm inputs, processing, labour, wholesale and retail
+            margins, domestic supply, taxes, and regulation.
+          </p>
+          <div className="mt-6">
+            <ResearchTimeSeriesChart
+              file="affordability-food-transmission.json"
+              initialTransformation="raw"
+            />
+          </div>
+          <div className="mt-10">
+            <ResearchTimeSeriesChart
+              file="affordability-food-categories.json"
+              initialTransformation="raw"
+            />
+          </div>
+          {transmission && (
+            <div className="mt-8 overflow-x-auto">
+              <table className="min-w-[860px] w-full border-collapse text-left text-sm">
+                <thead>
+                  <tr className="border-b border-stone-300">
+                    <th className="py-3">Relationship</th>
+                    <th>Current</th>
+                    <th>Peak lag</th>
+                    <th>Peak correlation</th>
+                    <th>Rolling 60m</th>
+                    <th>Pre-2020</th>
+                    <th>Post-2020</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {transmission.rows.map((row) => (
+                    <tr
+                      key={row.relationship}
+                      className="border-b border-stone-200"
+                    >
+                      <td className="py-3 pr-5 font-medium">
+                        {row.relationship}
+                      </td>
+                      <td>
+                        {row.contemporaneous_correlation?.toFixed(2) ?? "n/a"}
+                      </td>
+                      <td>{row.peak_lag_months}m</td>
+                      <td>{row.peak_lag_correlation?.toFixed(2) ?? "n/a"}</td>
+                      <td>
+                        {row.rolling_60m_correlation_mean?.toFixed(2) ?? "n/a"}
+                      </td>
+                      <td>{row.pre_2020_correlation?.toFixed(2) ?? "n/a"}</td>
+                      <td>{row.post_2020_correlation?.toFixed(2) ?? "n/a"}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <p className="mt-3 text-xs text-stone-500">
+                {transmission.lagConvention}. Correlation and distributed-lag
+                results are descriptive and do not establish causation.
+              </p>
+            </div>
+          )}
+        </section>
+        <section className="mt-16">
+          <p className="text-xs font-semibold uppercase text-petroleum">
+            5. Food prices relative to income
+          </p>
+          <h2 className="mt-2 text-2xl font-semibold">
+            Quarterly household purchasing power
+          </h2>
+          <p className="mt-2 max-w-4xl text-sm leading-6 text-stone-500">
+            Monthly food and grocery indexes are averaged within completed
+            quarters, then compared with household disposable income per person.
+            Quarterly income is not forward-filled into monthly observations.
+          </p>
+          <div className="mt-6">
+            <ResearchTimeSeriesChart
+              file="affordability-canada-food-income.json"
+              initialTransformation="raw"
+            />
+          </div>
+          <AffordabilityIndicatorGrid
+            files={[
+              "canada/indicators/household-disposable-income-per-person.json",
+              "canada/indicators/real-disposable-income-per-person.json",
+              "canada/indicators/food-to-income.json",
+              "canada/indicators/grocery-to-income.json",
+              "canada/indicators/food-income-gap.json",
+              "canada/indicators/grocery-income-gap.json",
+            ]}
+          />
+          <h2 className="mt-12 text-2xl font-semibold">
+            Monthly worker purchasing power
+          </h2>
+          <p className="mt-2 max-w-4xl text-sm leading-6 text-stone-500">
+            Average hourly wages cover employed workers. Household disposable
+            income is broader and also includes non-wage income and transfers,
+            so the two denominators remain separate.
+          </p>
+          <div className="mt-6">
+            <ResearchTimeSeriesChart
+              file="affordability-canada-food-wages.json"
+              initialTransformation="raw"
+            />
+          </div>
+          <AffordabilityIndicatorGrid
+            files={[
+              "canada/indicators/average-hourly-wages.json",
+              "canada/indicators/real-wage-growth.json",
+              "canada/indicators/food-to-wage.json",
+              "canada/indicators/grocery-to-wage.json",
+            ]}
+          />
+          <div className="mt-10">
+            <ResearchTimeSeriesChart
+              file="affordability-us-food-income.json"
+              initialTransformation="raw"
+            />
+          </div>
+        </section>
+        <section className="mt-16 border-y border-stone-300 py-6 dark:border-stone-700">
+          <p className="text-xs font-semibold uppercase text-petroleum">
+            6. Methods and limitations
+          </p>
+          <p className="mt-3 max-w-5xl text-sm leading-7 text-stone-600 dark:text-stone-300">
+            Price inflation describes how quickly prices change; affordability
+            describes prices relative to income or wages. A historically high
+            price can become more affordable if income rises faster, while a
+            falling price can become less affordable if income declines.
+            Canadian and U.S. percentiles use separate histories. National
+            accounts and wages are latest-vintage revised data, and averages do
+            not represent every household.
+          </p>
+        </section>
+      </PageBody>
+    </>
+  );
 }

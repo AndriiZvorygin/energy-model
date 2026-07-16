@@ -306,6 +306,7 @@ def _comparison_foundation(payloads: list[dict[str, Any]], us_rows: list[Row], g
         dates = sorted(set(ca) | set(us))
         datasets.append({
             "id": pair_id, "title": f"{ca_label} and {us_label}", "unit": unit,
+            "canadaLabel": ca_label, "unitedStatesLabel": us_label,
             "definitionDifference": limitation,
             "canadaPercentile": by_id[ca_id]["latest"]["historicalPercentile"],
             "observations": [{"date": date, "canada": ca.get(date), "unitedStates": us.get(date)} for date in dates],

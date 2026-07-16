@@ -246,6 +246,7 @@ class CoreTests(unittest.TestCase):
                 patch("oil_model.pipeline.make_system_response_charts", fake_make_system_response_charts),
                 patch("oil_model.pipeline.build_canadian_outputs", fake_build_canadian_outputs),
                 patch("oil_model.pipeline.build_affordability_outputs", fake_build_affordability_outputs),
+                patch("oil_model.pipeline.write_evidence_summary", fake_write_evidence_summary),
             ):
                 build(root)
             self.assertTrue((root / "data" / "raw").exists())
@@ -253,7 +254,7 @@ class CoreTests(unittest.TestCase):
                 self.assertTrue((root / "analysis" / filename).exists(), filename)
             for filename in required_charts:
                 self.assertTrue((root / "charts" / filename).exists(), filename)
-            for filename in ["manifest.json", "oil-price-layers.json", "gm2-oil-lead.json", "oil-residual-ci.json", "energy-gdp.json", "oil-equities.json", "uso-tracking.json", "lag-results.json", "regimes.json", "events.json", "cross-layer.json", "current-classification.json", "symptom-evaluations.json", "regime-scores.json", "regime-history.json"]:
+            for filename in ["manifest.json", "oil-price-layers.json", "gm2-oil-lead.json", "oil-residual-ci.json", "energy-gdp.json", "oil-equities.json", "uso-tracking.json", "lag-results.json", "regimes.json", "events.json", "cross-layer.json", "current-classification.json", "symptom-evaluations.json", "regime-scores.json", "regime-history.json", "evidence-summary.json"]:
                 self.assertTrue((root / "website" / "public" / "generated" / filename).exists(), filename)
             for filename in ["manifest.json", "current-state.json", "canada-us-comparison.json", "indicators/canada-unemployment-rate.json", "indicators/ontario-unemployment-rate.json"]:
                 self.assertTrue((root / "website" / "public" / "generated" / "canada" / filename).exists(), filename)
@@ -478,6 +479,14 @@ def fake_build_affordability_outputs(root, cache):
     write_csv(root / "analysis" / "canadian_income_indicator_catalogue.csv", [{"id": "fake"}])
     (root / "analysis" / "canadian_income_data_audit.md").write_text("# Canadian Income\n", encoding="utf-8")
     return [], []
+
+
+def fake_write_evidence_summary(root):
+    path = root / "website" / "public" / "generated" / "evidence-summary.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    payload = {"schemaVersion": 1, "generatedAt": "2020-01-01T00:00:00+00:00", "statusDefinitions": {}, "topics": {}}
+    path.write_text(json.dumps(payload), encoding="utf-8")
+    return payload
 
 
 def fake_make_charts(rows, lag_rows, out_dir, residual_rows=None, rolling_rows=None, target_rows=None, oil_equity_rows=None, oil_equity_return_rows=None, uso_lead_lag_rows=None, uso_tracking_rows=None, uso_model_rows=None, physical_price_rows=None, energy_gdp_rows=None, energy_gdp_model_rows=None, system_signal_rows=None):
