@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "refineryVersion": "2.0.0",
-  "generatedAt": "2026-07-16T18:11:43+00:00",
+  "generatedAt": "2026-07-16T19:10:14+00:00",
   "regenerationCommand": "python -m oil_model.pipeline --root . --refresh",
   "policy": {
     "includeStatusesInDiagnosticSummary": [
@@ -24,6 +24,7 @@
     "/canada": {
       "route": "/canada",
       "geography": "canada",
+      "geographyLabel": "Canada",
       "topic": "overview",
       "evidenceKey": "canada:overview",
       "interpretation": "Current Canadian state: Consumer affordability stress. Canadian energy affordability pressure is active: Canadian-dollar oil and consumer energy costs are elevated while rates, currency movements, and debt service limit household room. Resource-producing-region expansion is active: Resource GDP, Alberta crude production, exports, and national crude production are rising, indicating expansion in producing-region activity.",
@@ -57,6 +58,7 @@
     "/current-state": {
       "route": "/current-state",
       "geography": "canada",
+      "geographyLabel": "Canada",
       "topic": "current-state",
       "evidenceKey": "canada:current-state",
       "interpretation": "Consumer affordability stress",
@@ -90,6 +92,7 @@
     "/canada/current-state": {
       "route": "/canada/current-state",
       "geography": "canada",
+      "geographyLabel": "Canada",
       "topic": "current-state",
       "evidenceKey": "canada:current-state",
       "interpretation": "Consumer affordability stress",
@@ -123,6 +126,7 @@
     "/canada/regimes": {
       "route": "/canada/regimes",
       "geography": "canada",
+      "geographyLabel": "Canada",
       "topic": "regimes",
       "evidenceKey": "canada:regimes",
       "interpretation": "Consumer affordability stress",
@@ -156,6 +160,7 @@
     "/canada/symptoms": {
       "route": "/canada/symptoms",
       "geography": "canada",
+      "geographyLabel": "Canada",
       "topic": "symptoms",
       "evidenceKey": "canada:symptoms",
       "interpretation": "Current Canadian symptom balance",
@@ -189,6 +194,7 @@
     "/current-state/us": {
       "route": "/current-state/us",
       "geography": "us",
+      "geographyLabel": "United States",
       "topic": "current-state",
       "evidenceKey": "us:current-state",
       "interpretation": "Mixed transition: Physical tightening/Energy affordability stress",
@@ -222,6 +228,7 @@
     "/regimes": {
       "route": "/regimes",
       "geography": "us",
+      "geographyLabel": "United States",
       "topic": "regimes",
       "evidenceKey": "us:regimes",
       "interpretation": "Mixed transition: Physical tightening/Energy affordability stress",
@@ -255,6 +262,7 @@
     "/symptoms": {
       "route": "/symptoms",
       "geography": "us",
+      "geographyLabel": "United States",
       "topic": "symptoms",
       "evidenceKey": "us:symptoms",
       "interpretation": "Current documented symptom balance",
@@ -288,6 +296,7 @@
     "/affordability": {
       "route": "/affordability",
       "geography": "canada",
+      "geographyLabel": "Canada",
       "topic": "affordability",
       "evidenceKey": "canada:affordability",
       "interpretation": "Unresolved \u00b7 easing",
@@ -321,6 +330,7 @@
     "/affordability/food": {
       "route": "/affordability/food",
       "geography": "canada",
+      "geographyLabel": "Canada",
       "topic": "food",
       "evidenceKey": "canada:food",
       "interpretation": "Pressured \u00b7 worsening",
@@ -354,6 +364,7 @@
     "/canada/food": {
       "route": "/canada/food",
       "geography": "canada",
+      "geographyLabel": "Canada",
       "topic": "food",
       "evidenceKey": "canada:food",
       "interpretation": "Pressured \u00b7 worsening",
@@ -387,6 +398,7 @@
     "/compare/food": {
       "route": "/compare/food",
       "geography": "canada",
+      "geographyLabel": "Canada",
       "topic": "food",
       "evidenceKey": "canada:food",
       "interpretation": "Pressured \u00b7 worsening",
@@ -420,6 +432,7 @@
     "/affordability/housing": {
       "route": "/affordability/housing",
       "geography": "canada",
+      "geographyLabel": "Canada",
       "topic": "housing",
       "evidenceKey": "canada:housing",
       "interpretation": "Pressured \u00b7 easing",
@@ -453,6 +466,7 @@
     "/canada/housing": {
       "route": "/canada/housing",
       "geography": "canada",
+      "geographyLabel": "Canada",
       "topic": "housing",
       "evidenceKey": "canada:housing",
       "interpretation": "Pressured \u00b7 easing",
@@ -486,6 +500,7 @@
     "/compare/housing": {
       "route": "/compare/housing",
       "geography": "canada",
+      "geographyLabel": "Canada",
       "topic": "housing",
       "evidenceKey": "canada:housing",
       "interpretation": "Pressured \u00b7 easing",
@@ -515,12 +530,114 @@
           "file": "config/presentation_rules.json"
         }
       ]
+    },
+    "/owen-sound/affordability": {
+      "route": "/owen-sound/affordability",
+      "geography": "owen-sound",
+      "geographyLabel": "Owen Sound",
+      "topic": "affordability",
+      "evidenceKey": "owen-sound:affordability",
+      "interpretation": "Pressured \u00b7 unclear",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "Owen Sound city census subdivision household affordability with Grey Bruce regional food context.",
+      "oldestObservationDate": "2020-01-01",
+      "newestObservationDate": "2024-01-01",
+      "evidenceCounts": {
+        "supporting": 6,
+        "mixed": 2,
+        "contradicting": 3,
+        "insufficient": 0
+      },
+      "provenance": [
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "owen-sound:affordability"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/absolute_affordability.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
+      ]
+    },
+    "/owen-sound/food": {
+      "route": "/owen-sound/food",
+      "geography": "owen-sound",
+      "geographyLabel": "Owen Sound",
+      "topic": "food",
+      "evidenceKey": "owen-sound:food",
+      "interpretation": "Pressured \u00b7 worsening",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "Owen Sound city census subdivision household affordability with Grey Bruce regional food context.",
+      "oldestObservationDate": "2020-01-01",
+      "newestObservationDate": "2024-01-01",
+      "evidenceCounts": {
+        "supporting": 4,
+        "mixed": 0,
+        "contradicting": 3,
+        "insufficient": 0
+      },
+      "provenance": [
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "owen-sound:food"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/absolute_affordability.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
+      ]
+    },
+    "/owen-sound/housing": {
+      "route": "/owen-sound/housing",
+      "geography": "owen-sound",
+      "geographyLabel": "Owen Sound",
+      "topic": "housing",
+      "evidenceKey": "owen-sound:housing",
+      "interpretation": "Pressured \u00b7 unclear",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "Owen Sound city census subdivision household affordability with Grey Bruce regional food context.",
+      "oldestObservationDate": "2020-01-01",
+      "newestObservationDate": "2023-10-01",
+      "evidenceCounts": {
+        "supporting": 8,
+        "mixed": 2,
+        "contradicting": 3,
+        "insufficient": 0
+      },
+      "provenance": [
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "owen-sound:housing"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/absolute_affordability.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
+      ]
     }
   },
   "inputs": [
     {
       "file": "config/presentation_rules.json",
-      "sha256": "6ef911aff3795bb638b429e6754d480709d5031f4c9c19e13378081b7b693741"
+      "sha256": "73466faa7c564544d5fbd1031459a64a4b3ebf4f993190aafaa113b6f55dc226"
     },
     {
       "file": "config/evidence_topics.json",
@@ -532,7 +649,7 @@
     },
     {
       "file": "website/public/generated/evidence-summary.json",
-      "sha256": "fe42b3b679a7de77d66828d58f455a63bee03ac8de909616222375e3c5146807"
+      "sha256": "e998f6156c735e8bd0a44dfa7ddbe46d6c67c45c98ee39c4f7d71afdb9708f96"
     }
   ]
 }

@@ -27,6 +27,7 @@ def write_presentation_contract(root: Path) -> dict[str, Any]:
     config_path = root / "config" / "presentation_rules.json"
     evidence_path = generated / "evidence-summary.json"
     rules = _read(config_path)
+    evidence_topics = _read(root / "config" / "evidence_topics.json")
     evidence = _read(evidence_path)
     summaries = evidence.get("evidence", {})
     routes: dict[str, Any] = {}
@@ -41,6 +42,7 @@ def write_presentation_contract(root: Path) -> dict[str, Any]:
         routes[route] = {
             "route": route,
             "geography": geography,
+            "geographyLabel": evidence_topics["geographies"][geography]["label"],
             "topic": topic,
             "evidenceKey": key,
             "interpretation": summary["interpretation"],

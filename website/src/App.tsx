@@ -149,6 +149,9 @@ export default function App() {
             <Route path="/canada/housing" element={<HousingAffordability />} />
             <Route path="/compare/food" element={<FoodAffordability />} />
             <Route path="/compare/housing" element={<HousingAffordability />} />
+            <Route path="/owen-sound/affordability" element={<Affordability />} />
+            <Route path="/owen-sound/food" element={<FoodAffordability />} />
+            <Route path="/owen-sound/housing" element={<HousingAffordability />} />
             <Route path="/compare/canada-us" element={<CanadaUsComparison />} />
             <Route path="/regimes" element={<Regimes />} />
             <Route path="/symptoms" element={<Symptoms />} />

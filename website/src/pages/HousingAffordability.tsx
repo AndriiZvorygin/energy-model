@@ -1,6 +1,7 @@
 import { AffordabilityIndicatorGrid } from "../components/affordability/AffordabilityIndicatorGrid";
 import { ResearchTimeSeriesChart } from "../components/charts/ResearchTimeSeriesChart";
 import { GeneratedRouteEvidenceSummary } from "../components/diagnostics/GeneratedRouteEvidenceSummary";
+import { EvidenceGeographySelector } from "../components/diagnostics/EvidenceGeographySelector";
 import { PageBody, PageHeader } from "../components/PageHeader";
 
 export function HousingAffordability() {
@@ -12,6 +13,7 @@ export function HousingAffordability() {
         description="Asset purchase prices, rent, mortgage interest, replacement costs, and shelter services remain separate so their different transmission paths stay visible."
       />
       <PageBody>
+        <EvidenceGeographySelector />
         <GeneratedRouteEvidenceSummary />
         <section className="mt-12">
           <p className="text-xs font-semibold uppercase text-petroleum">

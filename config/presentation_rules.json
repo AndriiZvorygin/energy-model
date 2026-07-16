@@ -16,7 +16,10 @@
     "/compare/food": {"geography": "canada", "topic": "food"},
     "/affordability/housing": {"geography": "canada", "topic": "housing"},
     "/canada/housing": {"geography": "canada", "topic": "housing"},
-    "/compare/housing": {"geography": "canada", "topic": "housing"}
+    "/compare/housing": {"geography": "canada", "topic": "housing"},
+    "/owen-sound/affordability": {"geography": "owen-sound", "topic": "affordability"},
+    "/owen-sound/food": {"geography": "owen-sound", "topic": "food"},
+    "/owen-sound/housing": {"geography": "owen-sound", "topic": "housing"}
   },
   "policy": {
     "includeStatusesInDiagnosticSummary": ["supporting", "mixed", "contradicting"],

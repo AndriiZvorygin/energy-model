@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 import { AffordabilityIndicatorGrid } from "../components/affordability/AffordabilityIndicatorGrid";
 import { ResearchTimeSeriesChart } from "../components/charts/ResearchTimeSeriesChart";
 import { GeneratedRouteEvidenceSummary } from "../components/diagnostics/GeneratedRouteEvidenceSummary";
+import { EvidenceGeographySelector, useEvidenceTopicRoute } from "../components/diagnostics/EvidenceGeographySelector";
 import { PageBody, PageHeader } from "../components/PageHeader";
 
 export function Affordability() {
+  const foodRoute = useEvidenceTopicRoute("food", "/affordability/food");
+  const housingRoute = useEvidenceTopicRoute("housing", "/affordability/housing");
   return (
     <>
       <PageHeader
@@ -14,6 +17,7 @@ export function Affordability() {
         description="International commodities, domestic prices, household income, wages, property purchase prices, and current shelter costs are related but distinct evidence layers."
       />
       <PageBody>
+        <EvidenceGeographySelector />
         <GeneratedRouteEvidenceSummary
           title="Household affordability evidence"
         />
@@ -77,7 +81,7 @@ export function Affordability() {
         </section>
         <div className="mt-12 grid gap-px border border-stone-200 bg-stone-200 md:grid-cols-2 dark:border-stone-800 dark:bg-stone-800">
           <Link
-            to="/affordability/food"
+            to={foodRoute}
             className="bg-white p-6 hover:bg-stone-50 dark:bg-[#18201d] dark:hover:bg-stone-900"
           >
             <ShoppingBasket className="text-petroleum" />
@@ -91,7 +95,7 @@ export function Affordability() {
             </span>
           </Link>
           <Link
-            to="/affordability/housing"
+            to={housingRoute}
             className="bg-white p-6 hover:bg-stone-50 dark:bg-[#18201d] dark:hover:bg-stone-900"
           >
             <House className="text-petroleum" />

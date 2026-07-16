@@ -13,10 +13,12 @@ GENERATED = ROOT / "website" / "public" / "generated"
 def test_presentation_contract_resolves_routes_to_generated_evidence() -> None:
     payload = write_presentation_contract(ROOT)
     evidence = json.loads((GENERATED / "evidence-summary.json").read_text(encoding="utf-8"))
+    topics = json.loads((ROOT / "config" / "evidence_topics.json").read_text(encoding="utf-8"))
     for route, presentation in payload["routes"].items():
         topic = evidence["evidence"][presentation["evidenceKey"]]
         assert presentation["route"] == route
         assert presentation["evidenceKey"] == f"{presentation['geography']}:{presentation['topic']}"
+        assert presentation["geographyLabel"] == topics["geographies"][presentation["geography"]]["label"]
         assert presentation["interpretation"] == topic["interpretation"]
         assert presentation["confidence"] == topic["confidence"]
         assert presentation["provenance"][0] == {"file": "website/public/generated/evidence-summary.json", "evidenceKey": presentation["evidenceKey"]}
@@ -36,6 +38,10 @@ def test_route_configuration_is_structured_and_contains_no_flat_topic_aliases() 
         assert route.startswith("/")
         assert set(mapping) == {"geography", "topic"}
         assert "_canada" not in mapping["topic"] and "_us" not in mapping["topic"]
+
+    assert rules["routes"]["/owen-sound/affordability"] == {"geography": "owen-sound", "topic": "affordability"}
+    assert rules["routes"]["/owen-sound/food"] == {"geography": "owen-sound", "topic": "food"}
+    assert rules["routes"]["/owen-sound/housing"] == {"geography": "owen-sound", "topic": "housing"}
 
 
 def test_canadian_presentation_contains_no_inactive_or_missing_summary_prose() -> None:
