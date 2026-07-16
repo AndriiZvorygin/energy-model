@@ -7,11 +7,23 @@ const generated = resolve(import.meta.dirname, '../../public/generated')
 describe('Canadian generated data', () => {
   const manifest = JSON.parse(readFileSync(resolve(generated, 'canada/manifest.json'), 'utf8'))
 
-  it('keeps Canada as a separate, unclassified default geography', () => {
+  it('keeps Canada as a separate provisionally classified default geography', () => {
     expect(manifest.defaultGeography).toBe('Canada')
-    expect(manifest.classificationImplemented).toBe(false)
+    expect(manifest.classificationImplemented).toBe(true)
     const core = manifest.indicators.filter((item: { core: boolean; geography: string }) => item.core && ['Canada', 'Global'].includes(item.geography))
     expect(core).toHaveLength(25)
+  })
+
+  it('publishes Canadian symptoms, clocks, regional evidence, and household missing data', () => {
+    const current = JSON.parse(readFileSync(resolve(generated, 'canada/current-classification.json'), 'utf8'))
+    const symptoms = JSON.parse(readFileSync(resolve(generated, 'canada/symptom-evaluations.json'), 'utf8'))
+    const regimes = JSON.parse(readFileSync(resolve(generated, 'canada/regime-scores.json'), 'utf8'))
+    expect(current.provisionalClassification.requiredIndicatorAvailability).toBeGreaterThanOrEqual(0.70)
+    expect(current.provisionalClassification.freshnessAdjustedCoverage).toBeTypeOf('number')
+    expect(current.regionalDivergence.ontarioTransmission).toBeTruthy()
+    expect(current.regionalDivergence.albertaProducerConditions).toBeTruthy()
+    expect(symptoms.evaluations.find((item: { id: string }) => item.id === 'household_stress').status).toBe('insufficient_data')
+    expect(regimes.scores).toHaveLength(8)
   })
 
   it('preserves geography, units, source dates, and provincial missing-data boundaries', () => {

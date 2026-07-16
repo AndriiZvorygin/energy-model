@@ -54,6 +54,6 @@ def test_generated_canadian_namespace_is_separate_from_us_classifier() -> None:
     canada = json.loads((root / "canada" / "manifest.json").read_text(encoding="utf-8"))
     us = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
     assert canada["defaultGeography"] == "Canada"
-    assert canada["classificationImplemented"] is False
+    assert canada["classificationImplemented"] is True
     assert len([item for item in canada["indicators"] if item["core"] and item["geography"] in {"Canada", "Global"}]) == 25
     assert all(not item["file"].startswith("canada/") for item in us["indicators"])

@@ -19,7 +19,7 @@ The Python pipeline writes chart-ready JSON under `public/generated/`. The websi
 
 `public/generated/charts/` contains multi-series research views. `public/generated/indicators/` contains one complete historical series and interpretation contract per Current State indicator. `manifest.json` indexes both collections. The Vite build validates required metadata, units, chronological dates, duplicate dates, null handling, reference ranges, and interpretation metadata before compiling React.
 
-`public/generated/canada/` is an independent namespace containing its own manifest, current-state evidence, country-comparison foundation, and indicator histories with geography, source-release dates, seasonal adjustment, nominal/real status and comparability limitations. It does not contain Canadian symptoms or regime scores.
+`public/generated/canada/` is an independent namespace containing its own manifest, current-state evidence, country-comparison foundation, indicator histories, provisional symptoms, and regime scores. Geography, source-release dates, seasonal adjustment, nominal/real status, comparability limitations, availability, and freshness remain explicit. The classifier is calculated by Python from versioned root configuration files; React only presents the generated results.
 
 The system-response routes consume the generated indicator catalogue, current-state table, energy-burden validation, physical-tightness summary, labour lead scan, historical episode library, symptom evaluations, and regime scores. The browser does not recalculate those results. Version-controlled rules live in `../config/symptom_rules.json` and `../config/regime_rules.json`; Python publishes separate monthly-nowcast and confirmed-quarterly results, including coverage, freshness, conflicts, persistence, sensitivity, and revised-data warnings.
 
@@ -31,6 +31,8 @@ The system-response routes consume the generated indicator catalogue, current-st
 - `/canada/ontario`: Ontario CPI and labour context with global inputs
 - `/compare/canada-us`: native-source country comparisons
 - `/current-state/us`: existing U.S. Current State and classifier evidence
+- `/canada/regimes`: provisional Canadian regime candidates and regional split
+- `/canada/symptoms`: Canadian symptom evidence and missing-data states
 - `/system-response`: complete transmission framework
 - `/current-state`: Canadian Current State alias
 - `/regimes`: interpretable system-state sequence

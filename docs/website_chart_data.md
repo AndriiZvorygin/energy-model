@@ -121,6 +121,8 @@ The current datasets are small enough to render at full resolution, so no visual
 
 ## Adding An Indicator
 
+Canadian indicator histories and diagnostics are namespaced below `website/public/generated/canada/`. The provisional classifier publishes `current-classification.json`, `symptom-evaluations.json`, and `regime-scores.json` there. These files retain separate global, national, Ontario, and Alberta contributions, expose availability and freshness-adjusted coverage, and mark household stress as insufficient data.
+
 1. Add or derive the field in the Python pipeline without forward-filling unavailable future observations.
 2. Add the indicator to the system-response catalogue/current-state generation. `oil_model/website_data.py` maps those rows to the indicator contract; add explicit interpretation-direction metadata there when the indicator is not context-dependent.
 3. Assign valid transformations, unit, source, status, evidence label, fixed transformation reference period, plain-language summary, calculation example, patterns, limitations, and final-observation behavior.

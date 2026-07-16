@@ -1,0 +1,162 @@
+{
+  "version": "0.1.0",
+  "scope": "Canadian energy-economic conditions with global oil-market and global-liquidity inputs.",
+  "evidenceScopes": [
+    "Global upstream inputs",
+    "Canadian national conditions",
+    "Ontario consumer and manufacturing conditions",
+    "Alberta producing-region conditions"
+  ],
+  "settings": {
+    "minimumCoverage": 0.70,
+    "monthlyMaximumAgeMonths": 4,
+    "quarterlyMaximumAgeMonths": 9,
+    "thresholdSets": {
+      "20_80": {"low": 20, "high": 80},
+      "25_75": {"low": 25, "high": 75},
+      "30_70": {"low": 30, "high": 70}
+    },
+    "primaryThresholdSet": "25_75"
+  },
+  "symptoms": [
+    {
+      "id": "physical_tightening",
+      "name": "Physical tightening",
+      "meaning": "Benchmark prices and Canadian crude throughput are rising while immediately available inventories may be tightening.",
+      "requiredIndicators": [
+        {"indicator": "canada_crude_inventory", "transformation": "momentum", "expectedDirection": "falling", "group": "inventory", "trendWindow": 3},
+        {"indicator": "canada_refinery_input_growth", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "throughput"},
+        {"indicator": "global_wti_yoy", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "price"}
+      ],
+      "confirmingIndicators": [
+        {"indicator": "canada_crude_exports_growth", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "trade"},
+        {"indicator": "canada_real_wti_cad_yoy", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "domestic_price"},
+        {"indicator": "canada_crude_production_growth", "transformation": "momentum", "expectedDirection": "rising", "group": "supply_response"}
+      ],
+      "conflictingIndicators": [
+        {"indicator": "canada_crude_inventory", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "inventory_abundance"},
+        {"indicator": "global_wti_yoy", "transformation": "momentum", "expectedDirection": "falling", "group": "price_reversal", "trendWindow": 3}
+      ],
+      "persistenceRequirement": 2,
+      "minimumCoverage": 0.70,
+      "evidenceLabel": "Experimental proxy",
+      "historicalAnalogues": ["2007-2009 oil spike and financial crisis", "2021-2023 reopening, inflation and rate increases"],
+      "alternativeExplanations": ["Refinery maintenance timing", "Export and pipeline changes", "Seasonal inventory movement"]
+    },
+    {
+      "id": "energy_affordability_pressure",
+      "name": "Canadian energy affordability pressure",
+      "meaning": "Canadian-dollar oil and consumer energy costs are elevated while rates, currency movements, and debt service limit household room.",
+      "requiredIndicators": [
+        {"indicator": "canada_real_wti_cad_yoy", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "real_oil"},
+        {"indicator": "canada_energy_cpi_yoy", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "consumer_energy"},
+        {"indicator": "canada_gasoline_cpi_yoy", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "consumer_energy"}
+      ],
+      "confirmingIndicators": [
+        {"indicator": "cad_per_usd", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "currency"},
+        {"indicator": "canada_policy_rate", "transformation": "post_2000_percentile", "expectedDirection": "high", "group": "rates"},
+        {"indicator": "canada_household_debt_service_ratio", "transformation": "post_2000_percentile", "expectedDirection": "high", "group": "debt_service"},
+        {"indicator": "canada_shelter_cpi_yoy", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "shelter"}
+      ],
+      "conflictingIndicators": [
+        {"indicator": "canada_energy_cpi_yoy", "transformation": "momentum", "expectedDirection": "falling", "group": "energy_relief", "trendWindow": 3}
+      ],
+      "persistenceRequirement": 2,
+      "minimumCoverage": 0.70,
+      "evidenceLabel": "Supported historical pattern",
+      "historicalAnalogues": ["1979-1982 energy, inflation and interest-rate shock", "2021-2023 reopening, inflation and rate increases"],
+      "alternativeExplanations": ["Exchange-rate depreciation", "Provincial utility regulation", "Broader inflation and monetary policy"]
+    },
+    {
+      "id": "manufacturing_output_transmission",
+      "name": "Manufacturing and output transmission",
+      "meaning": "Restrictive financial conditions or energy costs may be appearing in Canadian production, retail activity, and employment growth.",
+      "requiredIndicators": [
+        {"indicator": "canada_real_gdp_growth", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "national_output"},
+        {"indicator": "canada_manufacturing_gdp_growth", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "manufacturing"},
+        {"indicator": "canada_employment_relative_population_growth", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "employment"}
+      ],
+      "confirmingIndicators": [
+        {"indicator": "canada_retail_gdp_growth", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "retail"},
+        {"indicator": "canada_policy_rate", "transformation": "post_2000_percentile", "expectedDirection": "high", "group": "rates"},
+        {"indicator": "canada_household_debt_service_ratio", "transformation": "post_2000_percentile", "expectedDirection": "high", "group": "debt_service"},
+        {"indicator": "ontario_employment_rate", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "ontario_labour"}
+      ],
+      "conflictingIndicators": [
+        {"indicator": "canada_prime_age_employment_rate", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "labour_resilience"}
+      ],
+      "persistenceRequirement": 2,
+      "minimumCoverage": 0.70,
+      "evidenceLabel": "Experimental proxy",
+      "historicalAnalogues": ["1990-1992 recession and housing stress", "2007-2009 oil spike and financial crisis"],
+      "alternativeExplanations": ["External trade weakness", "Industry-specific disruptions", "Population growth and composition"]
+    },
+    {
+      "id": "resource_region_cycle",
+      "name": "Resource-producing-region expansion or contraction",
+      "meaning": "Resource GDP, Alberta crude production, exports, and oil prices show whether producing-region activity is expanding or contracting.",
+      "requiredIndicators": [
+        {"indicator": "canada_mining_oil_gas_gdp_growth", "transformation": "momentum", "expectedDirection": "rising", "group": "resource_output", "trendWindow": 3},
+        {"indicator": "alberta_crude_production_growth", "transformation": "momentum", "expectedDirection": "rising", "group": "alberta_production", "trendWindow": 3},
+        {"indicator": "canada_crude_exports_growth", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "exports"}
+      ],
+      "confirmingIndicators": [
+        {"indicator": "global_wti_yoy", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "price"},
+        {"indicator": "canada_crude_production_growth", "transformation": "momentum", "expectedDirection": "rising", "group": "national_supply", "trendWindow": 3}
+      ],
+      "conflictingIndicators": [
+        {"indicator": "canada_mining_oil_gas_gdp_growth", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "resource_contraction"}
+      ],
+      "persistenceRequirement": 2,
+      "minimumCoverage": 0.70,
+      "evidenceLabel": "Contextual indicator",
+      "historicalAnalogues": ["2014-2016 oil-price collapse", "2021-2023 reopening, inflation and rate increases"],
+      "alternativeExplanations": ["Pipeline capacity changes", "Maintenance and project timing", "Price-volume divergence"]
+    },
+    {
+      "id": "labour_weakening",
+      "name": "Labour weakening",
+      "meaning": "Employment rates and job composition may be weakening relative to population even before broad unemployment deterioration is complete.",
+      "requiredIndicators": [
+        {"indicator": "canada_unemployment_rate", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "unemployment"},
+        {"indicator": "canada_employment_rate", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "employment_rate"},
+        {"indicator": "canada_employment_relative_population_growth", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "population_alignment"}
+      ],
+      "confirmingIndicators": [
+        {"indicator": "canada_participation_rate", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "participation"},
+        {"indicator": "canada_prime_age_employment_rate", "transformation": "momentum", "expectedDirection": "falling", "group": "prime_age", "trendWindow": 3},
+        {"indicator": "canada_full_time_employment_share", "transformation": "momentum", "expectedDirection": "falling", "group": "job_composition", "trendWindow": 3}
+      ],
+      "conflictingIndicators": [
+        {"indicator": "canada_prime_age_employment_rate", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "prime_age_strength"}
+      ],
+      "persistenceRequirement": 2,
+      "minimumCoverage": 0.70,
+      "confidenceCap": "moderate",
+      "incomplete": true,
+      "evidenceLabel": "Experimental proxy",
+      "historicalAnalogues": ["1990-1992 recession and housing stress", "2007-2009 oil spike and financial crisis", "2020 pandemic collapse"],
+      "alternativeExplanations": ["Population growth", "Participation shifts", "Sector and age composition"]
+    },
+    {
+      "id": "household_stress",
+      "name": "Household stress",
+      "meaning": "A full household-stress evaluation requires income, expenditure burden, or insolvency evidence in addition to debt service and prices.",
+      "requiredIndicators": [
+        {"indicator": "canada_real_disposable_income_per_person", "transformation": "full_history_percentile", "expectedDirection": "low", "group": "income"},
+        {"indicator": "canada_household_energy_expenditure_share", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "energy_burden"},
+        {"indicator": "canada_consumer_insolvency_rate", "transformation": "full_history_percentile", "expectedDirection": "high", "group": "insolvency"}
+      ],
+      "confirmingIndicators": [
+        {"indicator": "canada_household_debt_service_ratio", "transformation": "post_2000_percentile", "expectedDirection": "high", "group": "debt_service"}
+      ],
+      "conflictingIndicators": [],
+      "persistenceRequirement": 2,
+      "minimumCoverage": 0.70,
+      "forceInsufficientData": true,
+      "evidenceLabel": "Scenario concept",
+      "historicalAnalogues": ["1990-1992 recession and housing stress", "2021-2023 reopening, inflation and rate increases"],
+      "alternativeExplanations": ["Housing costs", "Interest-rate resets", "Regional household balance-sheet differences"]
+    }
+  ]
+}

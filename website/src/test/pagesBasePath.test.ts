@@ -10,6 +10,8 @@ describe('GitHub Pages configuration', () => {
     expect(pagesScript).toContain("resolve(distRoot, '404.html')")
     expect(pagesScript).toContain("'output-quality'")
     expect(pagesScript).toContain("'canada/current-state'")
+    expect(pagesScript).toContain("'canada/regimes'")
+    expect(pagesScript).toContain("'canada/symptoms'")
     expect(pagesScript).toContain("'compare/canada-us'")
     expect(pagesScript).toContain("resolve(routeDirectory, 'index.html')")
   })

@@ -440,9 +440,14 @@ def fake_build_canadian_outputs(root, global_rows, us_rows, cache):
     (indicators / "canada-unemployment-rate.json").write_text(json.dumps(payload), encoding="utf-8")
     ontario = {**payload, "id": "ontario-unemployment-rate", "field": "ontario_unemployment_rate", "label": "Ontario unemployment", "geography": "Ontario", "geographyLevel": "provincial", "core": False}
     (indicators / "ontario-unemployment-rate.json").write_text(json.dumps(ontario), encoding="utf-8")
-    (out / "manifest.json").write_text(json.dumps({"schemaVersion": 1, "defaultGeography": "Canada", "classificationImplemented": False, "indicators": []}), encoding="utf-8")
-    (out / "current-state.json").write_text(json.dumps({"status": "Canadian regime status: evidence assembled, classification pending calibration."}), encoding="utf-8")
+    (out / "manifest.json").write_text(json.dumps({"schemaVersion": 1, "defaultGeography": "Canada", "classificationImplemented": True, "indicators": []}), encoding="utf-8")
+    (out / "current-state.json").write_text(json.dumps({"status": "Canadian diagnostic status: provisional transparent classification available."}), encoding="utf-8")
     (out / "canada-us-comparison.json").write_text(json.dumps({"datasets": []}), encoding="utf-8")
+    (out / "current-classification.json").write_text(json.dumps({"scope": "Canadian", "provisionalClassification": {}, "quarterlyAlignedClassification": {}}), encoding="utf-8")
+    (out / "symptom-evaluations.json").write_text(json.dumps({"evaluations": []}), encoding="utf-8")
+    (out / "regime-scores.json").write_text(json.dumps({"scores": []}), encoding="utf-8")
+    write_csv(root / "analysis" / "canadian_historical_episodes.csv", [{"episode": "Fake"}])
+    (root / "analysis" / "canadian_historical_episodes.md").write_text("# Canadian Historical Episodes\n", encoding="utf-8")
     return [{"indicator_name": "Fake Canada"}], [payload, ontario]
 
 

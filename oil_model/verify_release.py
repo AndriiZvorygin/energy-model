@@ -47,6 +47,8 @@ REQUIRED_ANALYSIS = [
     "analysis/website_visual_audit.md",
     "analysis/canadian_data_audit.md",
     "analysis/canadian_indicator_catalogue.csv",
+    "analysis/canadian_historical_episodes.csv",
+    "analysis/canadian_historical_episodes.md",
 ]
 
 REQUIRED_CHARTS = [
@@ -135,6 +137,9 @@ REQUIRED_DATA = [
     "website/public/generated/canada/manifest.json",
     "website/public/generated/canada/current-state.json",
     "website/public/generated/canada/canada-us-comparison.json",
+    "website/public/generated/canada/current-classification.json",
+    "website/public/generated/canada/symptom-evaluations.json",
+    "website/public/generated/canada/regime-scores.json",
     "website/public/generated/canada/indicators/canada-unemployment-rate.json",
     "website/public/generated/canada/indicators/ontario-unemployment-rate.json",
 ]

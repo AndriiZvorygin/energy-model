@@ -16,6 +16,8 @@ const routes = [
   'canada/labour',
   'canada/households',
   'canada/ontario',
+  'canada/regimes',
+  'canada/symptoms',
   'compare/canada-us',
   'regimes',
   'symptoms',

@@ -28,11 +28,15 @@ const CanadaLabour = lazy(() => import('./pages/CanadaCurrentState').then((modul
 const CanadaHouseholds = lazy(() => import('./pages/CanadaCurrentState').then((module) => ({ default: module.CanadaHouseholds })))
 const CanadaOntario = lazy(() => import('./pages/CanadaCurrentState').then((module) => ({ default: module.CanadaOntario })))
 const CanadaUsComparison = lazy(() => import('./pages/CanadaUsComparison').then((module) => ({ default: module.CanadaUsComparison })))
+const CanadaSymptoms = lazy(() => import('./pages/CanadaSymptoms').then((module) => ({ default: module.CanadaSymptoms })))
+const CanadaRegimes = lazy(() => import('./pages/CanadaRegimes').then((module) => ({ default: module.CanadaRegimes })))
 
 const navItems = [
   { to: '/', label: 'Home', icon: HomeIcon },
   { to: '/canada', label: 'Canadian conditions', icon: Map },
   { to: '/canada/current-state', label: 'Canada current state', icon: Activity },
+  { to: '/canada/regimes', label: 'Canada regimes', icon: BarChart3 },
+  { to: '/canada/symptoms', label: 'Canada symptoms', icon: AlertTriangle },
   { to: '/canada/ontario', label: 'Ontario context', icon: Map },
   { to: '/compare/canada-us', label: 'Canada–U.S. comparison', icon: Scale },
   { to: '/overview', label: 'System overview', icon: Network },
@@ -132,6 +136,8 @@ export default function App() {
             <Route path="/canada/labour" element={<CanadaLabour />} />
             <Route path="/canada/households" element={<CanadaHouseholds />} />
             <Route path="/canada/ontario" element={<CanadaOntario />} />
+            <Route path="/canada/regimes" element={<CanadaRegimes />} />
+            <Route path="/canada/symptoms" element={<CanadaSymptoms />} />
             <Route path="/compare/canada-us" element={<CanadaUsComparison />} />
             <Route path="/regimes" element={<Regimes />} />
             <Route path="/symptoms" element={<Symptoms />} />

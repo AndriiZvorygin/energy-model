@@ -1,0 +1,107 @@
+{
+  "version": "0.1.0",
+  "scope": "Canadian energy-economic conditions with global oil-market and global-liquidity inputs.",
+  "settings": {
+    "minimumEvidenceCoverage": 0.70,
+    "minimumTopRegimeScore": 0.60,
+    "minimumMargin": 0.10,
+    "confirmedMonthlyPersistence": 2,
+    "layerContributionCap": 0.30
+  },
+  "regimes": [
+    {
+      "id": "A", "name": "Broad expansion", "requiredLayers": ["output", "labour", "resource"],
+      "indicatorEvidence": [
+        {"indicator": "canada_real_gdp_growth", "expectedDirection": "high", "layer": "output"},
+        {"indicator": "canada_manufacturing_gdp_growth", "expectedDirection": "high", "layer": "output"},
+        {"indicator": "canada_employment_rate", "expectedDirection": "high", "layer": "labour"},
+        {"indicator": "canada_unemployment_rate", "expectedDirection": "low", "layer": "labour"},
+        {"indicator": "canada_mining_oil_gas_gdp_growth", "expectedDirection": "high", "layer": "resource"}
+      ],
+      "expectedSymptoms": [], "conflictingSymptoms": ["manufacturing_output_transmission", "labour_weakening"],
+      "predecessors": ["H"], "successors": ["B", "C", "E"], "exceptionalJumpConditions": []
+    },
+    {
+      "id": "B", "name": "Physical oil-market tightening", "requiredLayers": ["physical", "pricing"],
+      "indicatorEvidence": [
+        {"indicator": "canada_crude_inventory", "expectedDirection": "low", "layer": "physical"},
+        {"indicator": "canada_refinery_input_growth", "expectedDirection": "high", "layer": "physical"},
+        {"indicator": "canada_crude_exports_growth", "expectedDirection": "high", "layer": "physical"},
+        {"indicator": "global_wti_yoy", "expectedDirection": "high", "layer": "pricing"},
+        {"indicator": "canada_real_wti_cad_yoy", "expectedDirection": "high", "layer": "pricing"}
+      ],
+      "expectedSymptoms": ["physical_tightening"], "conflictingSymptoms": [],
+      "predecessors": ["A", "H"], "successors": ["C", "D"], "exceptionalJumpConditions": ["Documented global supply shock"]
+    },
+    {
+      "id": "C", "name": "Consumer affordability stress", "requiredLayers": ["pricing", "consumer", "finance"],
+      "indicatorEvidence": [
+        {"indicator": "canada_real_wti_cad_yoy", "expectedDirection": "high", "layer": "pricing"},
+        {"indicator": "canada_energy_cpi_yoy", "expectedDirection": "high", "layer": "consumer"},
+        {"indicator": "canada_gasoline_cpi_yoy", "expectedDirection": "high", "layer": "consumer"},
+        {"indicator": "canada_policy_rate", "expectedDirection": "high", "layer": "finance"},
+        {"indicator": "canada_household_debt_service_ratio", "expectedDirection": "high", "layer": "finance"}
+      ],
+      "expectedSymptoms": ["energy_affordability_pressure"], "conflictingSymptoms": [],
+      "predecessors": ["A", "B"], "successors": ["D", "G"], "exceptionalJumpConditions": ["Rapid oil-price or exchange-rate shock"]
+    },
+    {
+      "id": "D", "name": "Manufacturing and output transmission", "requiredLayers": ["output", "labour", "finance"],
+      "indicatorEvidence": [
+        {"indicator": "canada_real_gdp_growth", "expectedDirection": "low", "layer": "output"},
+        {"indicator": "canada_manufacturing_gdp_growth", "expectedDirection": "low", "layer": "output"},
+        {"indicator": "canada_retail_gdp_growth", "expectedDirection": "low", "layer": "output"},
+        {"indicator": "canada_employment_relative_population_growth", "expectedDirection": "low", "layer": "labour"},
+        {"indicator": "canada_policy_rate", "expectedDirection": "high", "layer": "finance"}
+      ],
+      "expectedSymptoms": ["manufacturing_output_transmission"], "conflictingSymptoms": [],
+      "predecessors": ["C"], "successors": ["G", "F"], "exceptionalJumpConditions": []
+    },
+    {
+      "id": "E", "name": "Resource-producing-region expansion", "requiredLayers": ["alberta", "resource", "external"],
+      "indicatorEvidence": [
+        {"indicator": "alberta_crude_production_growth", "expectedDirection": "high", "layer": "alberta"},
+        {"indicator": "canada_mining_oil_gas_gdp_growth", "expectedDirection": "high", "layer": "resource"},
+        {"indicator": "canada_crude_exports_growth", "expectedDirection": "high", "layer": "external"},
+        {"indicator": "global_wti_yoy", "expectedDirection": "high", "layer": "external"}
+      ],
+      "expectedSymptoms": ["resource_region_cycle"], "conflictingSymptoms": [],
+      "predecessors": ["A", "H"], "successors": ["A", "B", "C"], "exceptionalJumpConditions": []
+    },
+    {
+      "id": "F", "name": "Resource-producing-region contraction", "requiredLayers": ["alberta", "resource", "external"],
+      "indicatorEvidence": [
+        {"indicator": "alberta_crude_production_growth", "expectedDirection": "low", "layer": "alberta"},
+        {"indicator": "canada_mining_oil_gas_gdp_growth", "expectedDirection": "low", "layer": "resource"},
+        {"indicator": "canada_crude_exports_growth", "expectedDirection": "low", "layer": "external"},
+        {"indicator": "global_wti_yoy", "expectedDirection": "low", "layer": "external"}
+      ],
+      "expectedSymptoms": [], "conflictingSymptoms": ["resource_region_cycle"],
+      "predecessors": ["E", "B"], "successors": ["D", "G", "H"], "exceptionalJumpConditions": ["Abrupt global oil-price collapse"]
+    },
+    {
+      "id": "G", "name": "Broad demand destruction", "requiredLayers": ["output", "labour", "pricing"],
+      "indicatorEvidence": [
+        {"indicator": "canada_real_gdp_growth", "expectedDirection": "low", "layer": "output"},
+        {"indicator": "canada_retail_gdp_growth", "expectedDirection": "low", "layer": "output"},
+        {"indicator": "canada_unemployment_rate", "expectedDirection": "high", "layer": "labour"},
+        {"indicator": "canada_employment_rate", "expectedDirection": "low", "layer": "labour"},
+        {"indicator": "global_wti_yoy", "expectedDirection": "low", "layer": "pricing"}
+      ],
+      "expectedSymptoms": ["manufacturing_output_transmission", "labour_weakening"], "conflictingSymptoms": ["physical_tightening"],
+      "predecessors": ["C", "D", "F"], "successors": ["H"], "exceptionalJumpConditions": ["Pandemic or abrupt external demand shock"]
+    },
+    {
+      "id": "H", "name": "Recovery or renewed tightening", "requiredLayers": ["output", "labour", "physical"],
+      "indicatorEvidence": [
+        {"indicator": "canada_real_gdp_growth", "expectedDirection": "rising", "layer": "output"},
+        {"indicator": "canada_manufacturing_gdp_growth", "expectedDirection": "rising", "layer": "output"},
+        {"indicator": "canada_employment_rate", "expectedDirection": "rising", "layer": "labour"},
+        {"indicator": "canada_unemployment_rate", "expectedDirection": "falling", "layer": "labour"},
+        {"indicator": "canada_refinery_input_growth", "expectedDirection": "rising", "layer": "physical"}
+      ],
+      "expectedSymptoms": [], "conflictingSymptoms": ["labour_weakening"],
+      "predecessors": ["F", "G"], "successors": ["A", "B", "C", "E"], "exceptionalJumpConditions": ["Policy-supported reopening"]
+    }
+  ]
+}

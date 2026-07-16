@@ -4,7 +4,7 @@
 
 Canadian energy-economic conditions with global oil-market and global-liquidity inputs.
 
-This first release assembles evidence only. It does **not** calculate Canadian symptoms or regimes, and it does not modify the existing U.S. classifier or locked GM2 lag-5 oil model.
+This release adds a **provisional transparent Canadian classifier** without modifying the existing U.S. classifier or locked GM2 lag-5 oil model. Household stress remains insufficiently evaluated, and Ontario and Alberta contributions are preserved separately.
 
 ## Implemented Core
 
@@ -24,6 +24,6 @@ Canada is the domestic default. Ontario inherits global oil/liquidity inputs but
 
 The catalogue identifies unresolved WCS pricing, refined-product consumption, refinery utilization, natural-gas production, household energy expenditure, income/saving, insolvency, wage/hour and Ontario industry-employment series. They remain proposed rather than being filled with commercial data, copied U.S. measures or interpolated provincial observations.
 
-## Recommended Next Step
+## Provisional Classification
 
-Calibrate a Canadian classifier only after extending real-time-vintage coverage and validating a compact input set: global GM2 and benchmark oil; Canadian crude production, exports, imports, refinery inputs and inventories; real CAD oil and energy CPI; monthly total/manufacturing/resource GDP; employment, unemployment, prime-age employment and full-time share; debt service; and later, real wages, hours, household income and energy burden.
+The versioned rules use global GM2 and benchmark oil; Canadian crude production, exports, imports, refinery inputs and inventories; real CAD oil and energy CPI; monthly total/manufacturing/resource GDP; employment, unemployment, prime-age employment and full-time share; and debt service. The next calibration step is real-time-vintage validation and the later addition of wages, hours, household income, expenditure burden and insolvency evidence.

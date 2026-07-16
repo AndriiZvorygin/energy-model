@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "scope": "Canadian energy-economic conditions with global oil-market and global-liquidity inputs.",
   "generatedAt": "2026-07-16T10:23:39+00:00",
-  "status": "Canadian regime status: evidence assembled, classification pending calibration.",
+  "status": "Canadian diagnostic status: provisional transparent classification available.",
   "latestObservationDate": "2026-07-01",
   "layers": [
     {
@@ -71,7 +71,7 @@
     }
   ],
   "notes": [
-    "No Canadian symptom or regime classifier is calculated in this release.",
-    "Global oil and liquidity inputs are inherited without mixing Canadian, Ontario, and U.S. values into a score."
+    "The Canadian classifier is provisional and uses latest-vintage revised data.",
+    "Ontario and Alberta contributions remain separate; they are not averaged into a neutral national score."
   ]
 }

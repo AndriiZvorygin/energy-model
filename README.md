@@ -30,9 +30,9 @@ The locked oil model uses year-over-year growth in G4 global M2, lagged five mon
 
 Canada is now the website's primary domestic geography. The first release publishes 25 core global/Canadian indicators plus Ontario and Alberta context across physical crude balances, consumer energy prices, Canadian-dollar real oil, monetary and financial conditions, monthly GDP by industry, labour utilization, employment structure and household debt service.
 
-The formal scope is **Canadian energy-economic conditions with global oil-market and global-liquidity inputs.** Canadian evidence is assembled for later calibration; no Canadian symptom or regime classifier is implemented. The existing U.S. classifier remains unchanged and available only as a comparison layer.
+The formal scope is **Canadian energy-economic conditions with global oil-market and global-liquidity inputs.** A provisional transparent Canadian classifier now evaluates five supported symptom families, preserves Ontario and Alberta contributions separately, and returns insufficient data for household stress. The existing U.S. classifier remains unchanged as a comparison layer.
 
-See [the Canadian data audit](analysis/canadian_data_audit.md), [indicator catalogue](analysis/canadian_indicator_catalogue.csv), and [processed long-form core](data/processed/canadian_core.csv).
+See [the Canadian data audit](analysis/canadian_data_audit.md), [indicator catalogue](analysis/canadian_indicator_catalogue.csv), [historical episode library](analysis/canadian_historical_episodes.md), and [processed long-form core](data/processed/canadian_core.csv). Canadian rules are versioned in `config/canada_symptom_rules.yaml` and `config/canada_regime_rules.yaml`.
 
 ## Research Framework
 

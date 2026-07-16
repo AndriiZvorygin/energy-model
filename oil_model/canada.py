@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any
 
 from .cache import RawCache
+from .canada_classification import build_canadian_classification_outputs
 from .sources import BankOfCanadaAdapter, SourceObservation, SourceSeries, StatCanAdapter
 from .storage import Row, write_csv
 
@@ -258,16 +259,21 @@ def build_canadian_outputs(root: Path, global_rows: list[Row], us_system_rows: l
     canada_items = [item for item in payloads if item["geography"] in {"Global", "Canada"}]
     current_state = {
         "schemaVersion": 1, "scope": CANADIAN_SCOPE, "generatedAt": generated_at,
-        "status": "Canadian regime status: evidence assembled, classification pending calibration.",
+        "status": "Canadian diagnostic status: provisional transparent classification available.",
         "latestObservationDate": max(item["latest"]["date"] for item in canada_items),
         "layers": [{"id": layer.lower().replace(" ", "-"), "label": layer, "indicatorIds": [item["id"] for item in canada_items if item["layer"] == layer]} for layer in layers],
-        "notes": ["No Canadian symptom or regime classifier is calculated in this release.", "Global oil and liquidity inputs are inherited without mixing Canadian, Ontario, and U.S. values into a score."],
+        "notes": ["The Canadian classifier is provisional and uses latest-vintage revised data.", "Ontario and Alberta contributions remain separate; they are not averaged into a neutral national score."],
     }
     manifest = {
         "schemaVersion": 1, "scope": CANADIAN_SCOPE, "generatedAt": generated_at, "defaultGeography": "Canada",
         "geographies": ["Global", "Canada", "Ontario", "Alberta", "United States"],
         "indicators": [{"id": item["id"], "file": f"indicators/{item['id']}.json", "label": item["label"], "geography": item["geography"], "layer": item["layer"], "core": item["core"], "latestDate": item["latest"]["date"]} for item in payloads],
-        "currentStateFile": "current-state.json", "classificationImplemented": False,
+        "currentStateFile": "current-state.json", "classificationImplemented": True,
+        "classificationFiles": {
+            "current": "current-classification.json",
+            "symptoms": "symptom-evaluations.json",
+            "regimes": "regime-scores.json",
+        },
     }
     (out / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     (out / "current-state.json").write_text(json.dumps(current_state, indent=2) + "\n", encoding="utf-8")
@@ -281,6 +287,7 @@ def build_canadian_outputs(root: Path, global_rows: list[Row], us_system_rows: l
     catalogue = _catalogue(payloads)
     write_csv(root / "analysis" / "canadian_indicator_catalogue.csv", catalogue)
     (root / "analysis" / "canadian_data_audit.md").write_text(_audit_markdown(payloads), encoding="utf-8")
+    build_canadian_classification_outputs(root, payloads, generated_at)
     return catalogue, payloads
 
 
@@ -351,7 +358,7 @@ def _audit_markdown(payloads: list[dict[str, Any]]) -> str:
 
 {CANADIAN_SCOPE}
 
-This first release assembles evidence only. It does **not** calculate Canadian symptoms or regimes, and it does not modify the existing U.S. classifier or locked GM2 lag-5 oil model.
+This release adds a **provisional transparent Canadian classifier** without modifying the existing U.S. classifier or locked GM2 lag-5 oil model. Household stress remains insufficiently evaluated, and Ontario and Alberta contributions are preserved separately.
 
 ## Implemented Core
 
@@ -371,7 +378,7 @@ Canada is the domestic default. Ontario inherits global oil/liquidity inputs but
 
 The catalogue identifies unresolved WCS pricing, refined-product consumption, refinery utilization, natural-gas production, household energy expenditure, income/saving, insolvency, wage/hour and Ontario industry-employment series. They remain proposed rather than being filled with commercial data, copied U.S. measures or interpolated provincial observations.
 
-## Recommended Next Step
+## Provisional Classification
 
-Calibrate a Canadian classifier only after extending real-time-vintage coverage and validating a compact input set: global GM2 and benchmark oil; Canadian crude production, exports, imports, refinery inputs and inventories; real CAD oil and energy CPI; monthly total/manufacturing/resource GDP; employment, unemployment, prime-age employment and full-time share; debt service; and later, real wages, hours, household income and energy burden.
+The versioned rules use global GM2 and benchmark oil; Canadian crude production, exports, imports, refinery inputs and inventories; real CAD oil and energy CPI; monthly total/manufacturing/resource GDP; employment, unemployment, prime-age employment and full-time share; and debt service. The next calibration step is real-time-vintage validation and the later addition of wages, hours, household income, expenditure burden and insolvency evidence.
 """

@@ -436,5 +436,10 @@
     }
   ],
   "currentStateFile": "current-state.json",
-  "classificationImplemented": false
+  "classificationImplemented": true,
+  "classificationFiles": {
+    "current": "current-classification.json",
+    "symptoms": "symptom-evaluations.json",
+    "regimes": "regime-scores.json"
+  }
 }

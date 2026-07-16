@@ -76,6 +76,9 @@ const regimeScores = JSON.parse(await readFile(resolve(generatedRoot, 'regime-sc
 const regimeHistory = JSON.parse(await readFile(resolve(generatedRoot, 'regime-history.json'), 'utf8'))
 const canadaManifest = JSON.parse(await readFile(resolve(generatedRoot, 'canada/manifest.json'), 'utf8'))
 const canadaCurrentState = JSON.parse(await readFile(resolve(generatedRoot, 'canada/current-state.json'), 'utf8'))
+const canadaClassification = JSON.parse(await readFile(resolve(generatedRoot, 'canada/current-classification.json'), 'utf8'))
+const canadaSymptoms = JSON.parse(await readFile(resolve(generatedRoot, 'canada/symptom-evaluations.json'), 'utf8'))
+const canadaRegimes = JSON.parse(await readFile(resolve(generatedRoot, 'canada/regime-scores.json'), 'utf8'))
 const requiredCurrent = ['scope', 'classificationDate', 'asOfDate', 'provisionalClassification', 'confirmedClassification', 'primaryRegime', 'secondaryRegime', 'confidence', 'evidenceCoverage', 'allRegimeScores', 'activeSymptoms', 'emergingSymptoms', 'fadingSymptoms', 'supportingIndicators', 'conflictingIndicators', 'staleIndicators', 'missingIndicators', 'historicalAnalogues', 'ruleVersion', 'dataVintageWarning']
 const missingCurrent = requiredCurrent.filter((field) => !(field in currentClassification))
 if (missingCurrent.length) failures.push(`current-classification.json: missing ${missingCurrent.join(', ')}`)
@@ -92,10 +95,16 @@ for (const symptom of symptomEvaluations.evaluations ?? []) {
 if (regimeScores.scores?.length !== 8 || regimeScores.scores.some((row) => typeof row.score !== 'number' || row.score < 0 || row.score > 1)) failures.push('regime-scores.json: expected eight normalized scores')
 const regimeDates = (regimeHistory.rows ?? []).map((row) => row.date)
 if (!regimeDates.length || regimeDates.some((date, index) => index > 0 && date <= regimeDates[index - 1])) failures.push('regime-history.json: dates must be strictly increasing and unique')
-if (canadaManifest.defaultGeography !== 'Canada' || canadaManifest.classificationImplemented !== false || !Array.isArray(canadaManifest.indicators)) failures.push('canada/manifest.json: invalid geography or classifier status')
+if (canadaManifest.defaultGeography !== 'Canada' || canadaManifest.classificationImplemented !== true || !Array.isArray(canadaManifest.indicators)) failures.push('canada/manifest.json: invalid geography or classifier status')
 const canadaCore = canadaManifest.indicators.filter((item) => item.core && ['Global', 'Canada'].includes(item.geography))
 if (canadaCore.length < 15 || canadaCore.length > 25) failures.push(`canada/manifest.json: expected 15-25 core indicators, received ${canadaCore.length}`)
-if (canadaCurrentState.status !== 'Canadian regime status: evidence assembled, classification pending calibration.') failures.push('canada/current-state.json: missing pending-calibration status')
+if (canadaCurrentState.status !== 'Canadian diagnostic status: provisional transparent classification available.') failures.push('canada/current-state.json: invalid diagnostic status')
+if (!canadaClassification.scope?.startsWith('Canadian energy-economic conditions') || !canadaClassification.provisionalClassification || !canadaClassification.quarterlyAlignedClassification) failures.push('canada/current-classification.json: incomplete classifier output')
+if (canadaClassification.provisionalClassification?.requiredIndicatorAvailability < 0.70 || typeof canadaClassification.provisionalClassification?.freshnessAdjustedCoverage !== 'number') failures.push('canada/current-classification.json: invalid availability or freshness coverage')
+if (canadaSymptoms.evaluations?.length !== 6 || canadaSymptoms.evaluations.some((item) => !allowedSymptomStatuses.has(item.status))) failures.push('canada/symptom-evaluations.json: expected six valid symptom evaluations')
+const household = canadaSymptoms.evaluations?.find((item) => item.id === 'household_stress')
+if (household?.status !== 'insufficient_data') failures.push('canada/symptom-evaluations.json: household stress must remain insufficient data')
+if (canadaRegimes.scores?.length !== 8 || canadaRegimes.scores.some((item) => typeof item.score !== 'number' || item.score < 0 || item.score > 1)) failures.push('canada/regime-scores.json: expected eight normalized regime scores')
 for (const entry of canadaManifest.indicators ?? []) {
   let indicator
   try {

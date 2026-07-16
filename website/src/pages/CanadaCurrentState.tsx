@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { CanadaGeographyControls } from '../components/CanadaGeographyControls'
 import { CurrentStateIndicatorCard } from '../components/CurrentStateIndicatorCard'
 import { ChartModal } from '../components/charts/ChartModal'
@@ -7,6 +8,8 @@ import { LayerHistoryChart } from '../components/charts/LayerHistoryChart'
 import type { IndicatorDataset } from '../components/charts/chartTypes'
 import { useGeneratedJson, useIndicatorDatasets } from '../components/charts/useChartData'
 import { PageBody, PageHeader } from '../components/PageHeader'
+import { CanadianDiagnosticSummary } from '../components/diagnostics/CanadianDiagnosticSummary'
+import type { CanadianClassification } from '../components/diagnostics/canadaTypes'
 
 type CanadaManifest = {
   scope: string
@@ -29,16 +32,22 @@ const layerText: Record<string, string> = {
 function CanadaStatePage({ geography = 'Canada', layer }: { geography?: 'Canada' | 'Ontario'; layer?: string }) {
   const { data: manifest, error: manifestError } = useGeneratedJson<CanadaManifest>('canada/manifest.json')
   const { data: state } = useGeneratedJson<CanadaState>('canada/current-state.json')
-  const entries = useMemo(() => manifest?.indicators.filter((item) => (item.geography === geography || item.geography === 'Global') && (!layer || item.layer === layer)).map((item) => `canada/${item.file}`) ?? [], [manifest, geography, layer])
+  const { data: classification } = useGeneratedJson<CanadianClassification>('canada/current-classification.json')
+  const [searchParams] = useSearchParams()
+  const requested = searchParams.get('indicator')
+  const entries = useMemo(() => manifest?.indicators.filter((item) => ((item.geography === geography || item.geography === 'Global') && (!layer || item.layer === layer)) || item.id === requested).map((item) => `canada/${item.file}`) ?? [], [manifest, geography, layer, requested])
   const { indicators, error } = useIndicatorDatasets(entries)
   const [selected, setSelected] = useState<IndicatorDataset | null>(null)
+  useEffect(() => {
+    if (requested && indicators.length) setSelected(indicators.find((item) => item.id === requested) ?? null)
+  }, [requested, indicators])
   const visibleLayers = layer ? [layer] : layerOrder
   const title = geography === 'Ontario' ? 'Ontario evidence with global inputs' : layer ? `Canadian ${layer.toLowerCase()}` : 'Canadian current state'
   if (manifestError || error) return <><PageHeader eyebrow="Canadian evidence" title={title} description="The Canadian generated dataset could not be loaded." /><PageBody><p className="text-sm text-amber-700">{manifestError ?? error}</p></PageBody></>
-  return <><PageHeader eyebrow="Canadian-centred research" title={title} description="Canadian evidence is shown with its own history, definitions and source dates. No Canadian symptom or regime classifier is calculated in this release." /><PageBody>
+  return <><PageHeader eyebrow="Canadian-centred research" title={title} description="Canadian evidence is shown with its own history, definitions and source dates. The provisional classifier preserves national, Ontario, Alberta, and global contributions separately." /><PageBody>
     <CanadaGeographyControls />
     {!manifest || !state || !indicators.length ? <div className="flex h-64 items-center justify-center text-sm text-stone-500">Loading Canadian indicator histories…</div> : <>
-      <section className="mt-8 border-y border-stone-300 py-6 dark:border-stone-700"><p className="text-xs font-semibold uppercase text-petroleum">Evidence status</p><h2 className="mt-2 text-2xl font-semibold">{state.status}</h2><div className="mt-4 grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-4"><div><p className="text-stone-500">Formal scope</p><p className="mt-1 font-medium">{manifest.scope}</p></div><div><p className="text-stone-500">Newest observation</p><p className="mt-1 font-medium">{state.latestObservationDate.slice(0, 7)}</p></div><div><p className="text-stone-500">Displayed geography</p><p className="mt-1 font-medium">{geography} with global inputs</p></div><div><p className="text-stone-500">Classifier</p><p className="mt-1 font-medium">Not implemented</p></div></div><p className="mt-4 text-xs leading-5 text-stone-500">{state.notes.join(' ')}</p></section>
+      {classification && geography === 'Canada' && !layer ? <section className="mt-8"><CanadianDiagnosticSummary classification={classification} compact /></section> : <section className="mt-8 border-y border-stone-300 py-6 dark:border-stone-700"><p className="text-xs font-semibold uppercase text-petroleum">Evidence status</p><h2 className="mt-2 text-2xl font-semibold">{state.status}</h2><div className="mt-4 grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-4"><div><p className="text-stone-500">Formal scope</p><p className="mt-1 font-medium">{manifest.scope}</p></div><div><p className="text-stone-500">Newest observation</p><p className="mt-1 font-medium">{state.latestObservationDate.slice(0, 7)}</p></div><div><p className="text-stone-500">Displayed geography</p><p className="mt-1 font-medium">{geography} with global inputs</p></div><div><p className="text-stone-500">Classifier</p><p className="mt-1 font-medium">Provisional Canadian rules</p></div></div><p className="mt-4 text-xs leading-5 text-stone-500">{state.notes.join(' ')}</p></section>}
       <div className="mt-12 space-y-16">{visibleLayers.map((layerName) => {
         const rows = indicators.filter((item) => item.layer === layerName)
         if (!rows.length) return null
