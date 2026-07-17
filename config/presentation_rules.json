@@ -3,6 +3,10 @@
   "refineryVersion": "2.0.0",
   "routes": {
     "/global": {"geography": "global", "topic": "indicator-state"},
+    "/global/food-security": {"geography": "global", "topic": "food-security"},
+    "/global/nutrition": {"geography": "global", "topic": "nutrition"},
+    "/global/human-impact": {"geography": "global", "topic": "human-impact"},
+    "/global/demography": {"geography": "global", "topic": "demography"},
     "/canada": {"geography": "canada", "topic": "overview"},
     "/current-state": {"geography": "canada", "topic": "current-state"},
     "/canada/current-state": {"geography": "canada", "topic": "current-state"},

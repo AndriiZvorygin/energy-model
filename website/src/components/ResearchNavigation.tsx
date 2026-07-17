@@ -44,6 +44,10 @@ const groups: NavigationGroup[] = [
     icon: Network,
     items: [
       { to: '/global', label: 'Global overview', icon: Network },
+      { to: '/global/food-security', label: 'Food security', icon: House },
+      { to: '/global/nutrition', label: 'Nutrition outcomes', icon: Activity },
+      { to: '/global/human-impact', label: 'Human impact', icon: Activity },
+      { to: '/global/demography', label: 'Demography', icon: Map },
       { to: '/liquidity', label: 'Global liquidity', icon: TrendingUp },
       { to: '/physical-market', label: 'Physical oil market', icon: Droplets },
       { to: '/oil-prices', label: 'Oil price layers', icon: Fuel },

@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "id": "global-protein-energy-malnutrition-dalys",
+  "field": "global_protein_energy_malnutrition_dalys",
+  "label": "Protein-energy-malnutrition DALYs",
+  "description": "Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+  "definition": "Protein-energy-malnutrition DALYs",
+  "unit": "million DALYs",
+  "frequency": "annual",
+  "status": "modelled",
+  "layer": "Mortality and health burden",
+  "geography": "Global",
+  "geographyLevel": "global",
+  "domesticOrExternal": "external",
+  "directlyComparableAcrossCountries": false,
+  "comparisonLimitations": "Direct cause-coded nutritional-deficiency estimates do not capture the wider mortality or disability statistically attributable to undernutrition.",
+  "interpretationDirection": "higher-generally-stressful",
+  "interpretationLabel": "Mixed",
+  "interpretation": "Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+  "source": "WHO Global Health Estimates 2021",
+  "sourceUrl": "https://www.who.int/data/global-health-estimates/",
+  "sourceIdentifier": "protein_energy_malnutrition_dalys",
+  "sourceDate": "2021-12-31",
+  "retrievalDate": "2026-07-17T02:51:51+00:00",
+  "revisionStatus": "GHE 2021 release published in 2024; estimates are not comparable with earlier GHE releases.",
+  "seasonalAdjustment": "not applicable",
+  "nominalOrReal": "prevalence, count, rate, or burden estimate",
+  "startDate": "2000-12-31",
+  "endDate": "2021-12-31",
+  "latest": {
+    "date": "2021-12-31",
+    "sourceDate": "2021-12-31",
+    "value": 12.0547063782907,
+    "previousValue": 12.537798282793199,
+    "oneYearChange": -0.4830919045024995,
+    "threeMonthChange": null,
+    "fourQuarterChange": -0.4830919045024995,
+    "historicalPercentile": 8.333333333333334,
+    "percentileSince2000": 8.333333333333334,
+    "distanceFromMedian": -2.4750339193039004,
+    "momentum": "falling"
+  },
+  "referenceRanges": {
+    "historicalMedian": 14.5297402975946,
+    "p10": 12.29625233054195,
+    "p25": 12.575724148872775,
+    "p75": 19.5523081805979,
+    "p90": 26.463329384170997,
+    "minimum": 12.0547063782907,
+    "maximum": 32.3135741435707
+  },
+  "observations": [
+    {
+      "date": "2000-12-31",
+      "value": 32.3135741435707,
+      "sourceDate": "2000-12-31",
+      "prevalenceOrRate": null,
+      "rateUnit": null,
+      "affectedPersonCount": 32.3135741435707,
+      "countUnit": "million DALYs",
+      "denominatorPopulation": 6158.471906000001,
+      "ageGroup": "All ages",
+      "sex": "Both sexes",
+      "estimateType": "WHO modelled estimate",
+      "uncertaintyLower": null,
+      "uncertaintyUpper": null
+    },
+    {
+      "date": "2010-12-31",
+      "value": 20.6130846247713,
+      "sourceDate": "2010-12-31",
+      "prevalenceOrRate": null,
+      "rateUnit": null,
+      "affectedPersonCount": 20.6130846247713,
+      "countUnit": "million DALYs",
+      "denominatorPopulation": 7007.4991310000005,
+      "ageGroup": "All ages",
+      "sex": "Both sexes",
+      "estimateType": "WHO modelled estimate",
+      "uncertaintyLower": null,
+      "uncertaintyUpper": null
+    },
+    {
+      "date": "2015-12-31",
+      "value": 16.3699788480777,
+      "sourceDate": "2015-12-31",
+      "prevalenceOrRate": null,
+      "rateUnit": null,
+      "affectedPersonCount": 16.3699788480777,
+      "countUnit": "million DALYs",
+      "denominatorPopulation": 7455.729752,
+      "ageGroup": "All ages",
+      "sex": "Both sexes",
+      "estimateType": "WHO modelled estimate",
+      "uncertaintyLower": null,
+      "uncertaintyUpper": null
+    },
+    {
+      "date": "2019-12-31",
+      "value": 12.6895017471115,
+      "sourceDate": "2019-12-31",
+      "prevalenceOrRate": null,
+      "rateUnit": null,
+      "affectedPersonCount": 12.6895017471115,
+      "countUnit": "million DALYs",
+      "denominatorPopulation": 7796.281339,
+      "ageGroup": "All ages",
+      "sex": "Both sexes",
+      "estimateType": "WHO modelled estimate",
+      "uncertaintyLower": null,
+      "uncertaintyUpper": null
+    },
+    {
+      "date": "2020-12-31",
+      "value": 12.537798282793199,
+      "sourceDate": "2020-12-31",
+      "prevalenceOrRate": null,
+      "rateUnit": null,
+      "affectedPersonCount": 12.537798282793199,
+      "countUnit": "million DALYs",
+      "denominatorPopulation": 7871.955773,
+      "ageGroup": "All ages",
+      "sex": "Both sexes",
+      "estimateType": "WHO modelled estimate",
+      "uncertaintyLower": null,
+      "uncertaintyUpper": null
+    },
+    {
+      "date": "2021-12-31",
+      "value": 12.0547063782907,
+      "sourceDate": "2021-12-31",
+      "prevalenceOrRate": null,
+      "rateUnit": null,
+      "affectedPersonCount": 12.0547063782907,
+      "countUnit": "million DALYs",
+      "denominatorPopulation": 7939.383133,
+      "ageGroup": "All ages",
+      "sex": "Both sexes",
+      "estimateType": "WHO modelled estimate",
+      "uncertaintyLower": null,
+      "uncertaintyUpper": null
+    }
+  ],
+  "transformations": [
+    "raw",
+    "indexed",
+    "pct_change",
+    "zscore"
+  ],
+  "confirmingIndicators": [],
+  "conflictingIndicators": [],
+  "evidenceChecks": [],
+  "confidenceLevel": "medium",
+  "evidenceLabel": "Supported historical pattern",
+  "calculation": {
+    "formula": "Official global aggregate; rates and affected-person counts are retained together.",
+    "explanation": "The refinery uses the official published rate and count rather than multiplying a rounded percentage by population.",
+    "example": "Latest observation: 12.05 million DALYs in 2021."
+  },
+  "limitations": [
+    "Direct cause-coded nutritional-deficiency estimates do not capture the wider mortality or disability statistically attributable to undernutrition.",
+    "GHE 2021 release published in 2024; estimates are not comparable with earlier GHE releases."
+  ],
+  "humanOutcomeMetadata": {
+    "ageGroup": "All ages",
+    "sex": "Both sexes",
+    "estimateType": "WHO modelled estimate",
+    "affectedPersonCount": 12.0547063782907,
+    "countUnit": "million DALYs",
+    "uncertaintyInterval": [
+      null,
+      null
+    ]
+  },
+  "futureClassifierMetadata": {
+    "status": "metadata_only_not_scored",
+    "candidateSymptoms": [
+      "global food-access or nutrition outcome deterioration"
+    ]
+  },
+  "generatedAt": "2026-07-17T02:51:51+00:00"
+}

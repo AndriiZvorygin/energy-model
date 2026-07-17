@@ -26,6 +26,7 @@ def test_evidence_summary_schema_and_statuses() -> None:
         "canada:affordability", "canada:food", "canada:housing",
         "ontario:indicator-state", "alberta:indicator-state", "global:indicator-state",
         "global:affordability", "global:food", "global:housing",
+        "global:food-security", "global:nutrition", "global:human-impact", "global:demography",
         "owen-sound:affordability", "owen-sound:food", "owen-sound:housing",
     }
     assert required <= payload["evidence"].keys()

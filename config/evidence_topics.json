@@ -113,7 +113,7 @@
     "global": {
       "label": "Global",
       "route": "/global",
-      "scope": "Global oil-market, liquidity, food-commodity and international housing inputs.",
+      "scope": "Global upstream conditions and human outcomes assembled from official country-aggregated and inter-agency estimates.",
       "indicatorGeographies": ["Global"],
       "topicOverrides": {
         "affordability": {"groups": {}},
@@ -143,7 +143,11 @@
       "title": "Housing affordability",
       "groups": {}
     },
-    "indicator-state": {"evaluator": "indicator-state"}
+    "indicator-state": {"evaluator": "indicator-state"},
+    "food-security": {"evaluator": "global-human", "title": "Food access and affordability", "contextFile": "global/human-impact-context.json"},
+    "nutrition": {"evaluator": "global-human", "title": "Biological nutrition outcomes", "contextFile": "global/human-impact-context.json"},
+    "human-impact": {"evaluator": "global-human", "title": "Human impact", "contextFile": "global/human-impact-context.json"},
+    "demography": {"evaluator": "global-human", "title": "Demographic exposure", "contextFile": "global/human-impact-context.json"}
   },
   "outputs": [
     {"geography": "us", "topics": ["current-state", "regimes", "symptoms", "affordability", "food", "housing"]},
@@ -151,6 +155,6 @@
     {"geography": "ontario", "topics": ["indicator-state"]},
     {"geography": "alberta", "topics": ["indicator-state"]},
     {"geography": "owen-sound", "topics": ["affordability", "food", "housing"]},
-    {"geography": "global", "topics": ["indicator-state", "affordability", "food", "housing"]}
+    {"geography": "global", "topics": ["indicator-state", "affordability", "food", "housing", "food-security", "nutrition", "human-impact", "demography"]}
   ]
 }

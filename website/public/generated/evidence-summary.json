@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-17T02:18:44+00:00",
+  "generatedAt": "2026-07-17T02:52:05+00:00",
   "statusDefinitions": {
     "supporting": "The indicator is consistent with this interpretation.",
     "mixed": "The indicator provides partial or ambiguous evidence.",
@@ -11530,7 +11530,7 @@
       "interpretation": "Global indicators are assembled for geography-specific evaluation",
       "confidence": "moderate",
       "coverage": 1.0,
-      "scope": "Global oil-market, liquidity, food-commodity and international housing inputs.",
+      "scope": "Global upstream conditions and human outcomes assembled from official country-aggregated and inter-agency estimates.",
       "supporting": [],
       "mixed": [
         {
@@ -11832,9 +11832,410 @@
             "Country baskets, weights, index bases, seasonal treatment, and housing institutions differ. Compare growth rates and within-country percentiles before levels."
           ],
           "absoluteStatus": null
+        },
+        {
+          "indicator": "global_total_population",
+          "label": "Total population",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Demographic exposure changes the number of people exposed to conditions but does not establish hardship by itself.",
+          "chart": "global/indicators/global-total-population.json",
+          "indicatorFile": "global/indicators/global-total-population.json",
+          "group": "Demographic exposure",
+          "value": 8300.678396,
+          "unit": "million persons",
+          "historicalPercentile": 99.35064935064935,
+          "direction": "rising",
+          "sourceDate": "2026-07-01",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Urban and rural population are not included in this first release. Population growth is demographic exposure and never hardship by itself.",
+            "WPP 2024 revision; 2024 onward is the medium projection, not an observed population count."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_annual_population_growth_rate",
+          "label": "Annual population growth rate",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Demographic exposure changes the number of people exposed to conditions but does not establish hardship by itself.",
+          "chart": "global/indicators/global-annual-population-growth-rate.json",
+          "indicatorFile": "global/indicators/global-annual-population-growth-rate.json",
+          "group": "Demographic exposure",
+          "value": 0.83,
+          "unit": "percent annual growth",
+          "historicalPercentile": 1.948051948051948,
+          "direction": "falling",
+          "sourceDate": "2026-07-01",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Urban and rural population are not included in this first release. Population growth is demographic exposure and never hardship by itself.",
+            "WPP 2024 revision; 2024 onward is the medium projection, not an observed population count."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_annual_population_increase",
+          "label": "Annual population increase",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Demographic exposure changes the number of people exposed to conditions but does not establish hardship by itself.",
+          "chart": "global/indicators/global-annual-population-increase.json",
+          "indicatorFile": "global/indicators/global-annual-population-increase.json",
+          "group": "Demographic exposure",
+          "value": 68.866209,
+          "unit": "million persons",
+          "historicalPercentile": 18.83116883116883,
+          "direction": "falling",
+          "sourceDate": "2026-07-01",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Urban and rural population are not included in this first release. Population growth is demographic exposure and never hardship by itself.",
+            "WPP 2024 revision; 2024 onward is the medium projection, not an observed population count."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_births",
+          "label": "Births",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Demographic exposure changes the number of people exposed to conditions but does not establish hardship by itself.",
+          "chart": "global/indicators/global-births.json",
+          "indicatorFile": "global/indicators/global-births.json",
+          "group": "Demographic exposure",
+          "value": 132.50346900000002,
+          "unit": "million persons",
+          "historicalPercentile": 48.701298701298704,
+          "direction": "steady",
+          "sourceDate": "2026-07-01",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Urban and rural population are not included in this first release. Population growth is demographic exposure and never hardship by itself.",
+            "WPP 2024 revision; 2024 onward is the medium projection, not an observed population count."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_under_five",
+          "label": "Population under age five",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Demographic exposure changes the number of people exposed to conditions but does not establish hardship by itself.",
+          "chart": "global/indicators/global-under-five.json",
+          "indicatorFile": "global/indicators/global-under-five.json",
+          "group": "Demographic exposure",
+          "value": 642.354553,
+          "unit": "million persons",
+          "historicalPercentile": 68.18181818181819,
+          "direction": "falling",
+          "sourceDate": "2026-07-01",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Urban and rural population are not included in this first release. Population growth is demographic exposure and never hardship by itself.",
+            "WPP 2024 revision; 2024 onward is the medium projection, not an observed population count."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_working_age",
+          "label": "Working-age population",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Demographic exposure changes the number of people exposed to conditions but does not establish hardship by itself.",
+          "chart": "global/indicators/global-working-age.json",
+          "indicatorFile": "global/indicators/global-working-age.json",
+          "group": "Demographic exposure",
+          "value": 5421.227666000001,
+          "unit": "million persons",
+          "historicalPercentile": 99.35064935064935,
+          "direction": "rising",
+          "sourceDate": "2026-07-01",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Urban and rural population are not included in this first release. Population growth is demographic exposure and never hardship by itself.",
+            "WPP 2024 revision; 2024 onward is the medium projection, not an observed population count."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_undernourishment",
+          "label": "Population undernourished",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-undernourishment.json",
+          "indicatorFile": "global/indicators/global-undernourishment.json",
+          "group": "Food access",
+          "value": 8.2,
+          "unit": "percent",
+          "historicalPercentile": 36.0,
+          "direction": "falling",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release retrieved 2026-07-17"
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_moderate_or_severe_food_insecurity",
+          "label": "Moderate or severe food insecurity",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-moderate-or-severe-food-insecurity.json",
+          "indicatorFile": "global/indicators/global-moderate-or-severe-food-insecurity.json",
+          "group": "Food access",
+          "value": 28.0,
+          "unit": "percent",
+          "historicalPercentile": 59.09090909090909,
+          "direction": "falling",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release retrieved 2026-07-17"
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_severe_food_insecurity",
+          "label": "Severe food insecurity",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-severe-food-insecurity.json",
+          "indicatorFile": "global/indicators/global-severe-food-insecurity.json",
+          "group": "Food access",
+          "value": 10.1,
+          "unit": "percent",
+          "historicalPercentile": 59.09090909090909,
+          "direction": "falling",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release retrieved 2026-07-17"
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_healthy_diet_unaffordable",
+          "label": "Unable to afford a healthy diet",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-healthy-diet-unaffordable.json",
+          "indicatorFile": "global/indicators/global-healthy-diet-unaffordable.json",
+          "group": "Food access",
+          "value": 31.9,
+          "unit": "percent",
+          "historicalPercentile": 6.25,
+          "direction": "falling",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "PPP-dollar cost and affordability estimates are revised across SOFI releases and do not describe one universal retail basket.",
+            "July 2025 (SOFI report)"
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_dietary_energy_supply",
+          "label": "Dietary energy supply per person",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. This supply or cost measure provides context and must be read alongside access and biological outcomes.",
+          "chart": "global/indicators/global-dietary-energy-supply.json",
+          "indicatorFile": "global/indicators/global-dietary-energy-supply.json",
+          "group": "Food access",
+          "value": 3005.0,
+          "unit": "kcal per person per day",
+          "historicalPercentile": 98.0,
+          "direction": "rising",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Food supply availability is not the same as equitable household access or individual dietary intake.",
+            "FAOSTAT normalized bulk release"
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_child_stunting",
+          "label": "Child stunting",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-child-stunting.json",
+          "indicatorFile": "global/indicators/global-child-stunting.json",
+          "group": "Nutrition outcomes",
+          "value": 23.2,
+          "unit": "percent",
+          "historicalPercentile": 26.0,
+          "direction": "rising",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release; underlying inter-agency modelled estimates are revised when source methods or country data change."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_child_wasting",
+          "label": "Child wasting",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-child-wasting.json",
+          "indicatorFile": "global/indicators/global-child-wasting.json",
+          "group": "Nutrition outcomes",
+          "value": 6.6,
+          "unit": "percent",
+          "historicalPercentile": 4.0,
+          "direction": "steady",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release; underlying inter-agency modelled estimates are revised when source methods or country data change."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_low_birth_weight",
+          "label": "Low birth weight",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-low-birth-weight.json",
+          "indicatorFile": "global/indicators/global-low-birth-weight.json",
+          "group": "Nutrition outcomes",
+          "value": 14.7,
+          "unit": "percent",
+          "historicalPercentile": 21.428571428571427,
+          "direction": "rising",
+          "sourceDate": "2020-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release; underlying inter-agency modelled estimates are revised when source methods or country data change."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_nutritional_deficiency_dalys",
+          "label": "Nutritional-deficiency DALYs",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-nutritional-deficiency-dalys.json",
+          "indicatorFile": "global/indicators/global-nutritional-deficiency-dalys.json",
+          "group": "Mortality and health burden",
+          "value": 49.7632816900912,
+          "unit": "million DALYs",
+          "historicalPercentile": 8.333333333333334,
+          "direction": "falling",
+          "sourceDate": "2021-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Direct cause-coded nutritional-deficiency estimates do not capture the wider mortality or disability statistically attributable to undernutrition.",
+            "GHE 2021 release published in 2024; estimates are not comparable with earlier GHE releases."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_nutritional_deficiency_deaths",
+          "label": "Nutritional-deficiency deaths",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-nutritional-deficiency-deaths.json",
+          "indicatorFile": "global/indicators/global-nutritional-deficiency-deaths.json",
+          "group": "Mortality and health burden",
+          "value": 3.233300873720235,
+          "unit": "deaths per 100,000 persons",
+          "historicalPercentile": 8.333333333333334,
+          "direction": "falling",
+          "sourceDate": "2021-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Direct cause-coded nutritional-deficiency estimates do not capture the wider mortality or disability statistically attributable to undernutrition.",
+            "GHE 2021 release published in 2024; estimates are not comparable with earlier GHE releases."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_protein_energy_malnutrition_dalys",
+          "label": "Protein-energy-malnutrition DALYs",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-protein-energy-malnutrition-dalys.json",
+          "indicatorFile": "global/indicators/global-protein-energy-malnutrition-dalys.json",
+          "group": "Mortality and health burden",
+          "value": 12.0547063782907,
+          "unit": "million DALYs",
+          "historicalPercentile": 8.333333333333334,
+          "direction": "falling",
+          "sourceDate": "2021-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Direct cause-coded nutritional-deficiency estimates do not capture the wider mortality or disability statistically attributable to undernutrition.",
+            "GHE 2021 release published in 2024; estimates are not comparable with earlier GHE releases."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_protein_energy_malnutrition_deaths",
+          "label": "Protein-energy-malnutrition deaths",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-protein-energy-malnutrition-deaths.json",
+          "indicatorFile": "global/indicators/global-protein-energy-malnutrition-deaths.json",
+          "group": "Mortality and health burden",
+          "value": 2.475699441469995,
+          "unit": "deaths per 100,000 persons",
+          "historicalPercentile": 8.333333333333334,
+          "direction": "falling",
+          "sourceDate": "2021-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Direct cause-coded nutritional-deficiency estimates do not capture the wider mortality or disability statistically attributable to undernutrition.",
+            "GHE 2021 release published in 2024; estimates are not comparable with earlier GHE releases."
+          ],
+          "absoluteStatus": null
         }
       ],
-      "contradicting": [],
+      "contradicting": [
+        {
+          "indicator": "global_cost_of_healthy_diet",
+          "label": "Cost of a healthy diet",
+          "status": "contradicting",
+          "reason": "The indicator moves against this interpretation. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-cost-of-healthy-diet.json",
+          "indicatorFile": "global/indicators/global-cost-of-healthy-diet.json",
+          "group": "Food access",
+          "value": 4.46,
+          "unit": "international dollars (PPP) per person per day",
+          "historicalPercentile": 93.75,
+          "direction": "rising",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "PPP-dollar cost and affordability estimates are revised across SOFI releases and do not describe one universal retail basket.",
+            "July 2025 (SOFI report)"
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_anaemia_women",
+          "label": "Anaemia among women aged 15-49",
+          "status": "contradicting",
+          "reason": "The indicator moves against this interpretation. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-anaemia-women.json",
+          "indicatorFile": "global/indicators/global-anaemia-women.json",
+          "group": "Nutrition outcomes",
+          "value": 30.7,
+          "unit": "percent",
+          "historicalPercentile": 97.91666666666667,
+          "direction": "rising",
+          "sourceDate": "2023-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release; underlying inter-agency modelled estimates are revised when source methods or country data change."
+          ],
+          "absoluteStatus": null
+        }
+      ],
       "insufficient": []
     },
     "global:affordability": {
@@ -11844,7 +12245,7 @@
       "interpretation": "Insufficient \u00b7 unclear",
       "confidence": "low",
       "coverage": 0.0,
-      "scope": "Global oil-market, liquidity, food-commodity and international housing inputs.",
+      "scope": "Global upstream conditions and human outcomes assembled from official country-aggregated and inter-agency estimates.",
       "supporting": [],
       "mixed": [],
       "contradicting": [],
@@ -11911,7 +12312,7 @@
       "interpretation": "Insufficient \u00b7 unclear",
       "confidence": "low",
       "coverage": 0.0,
-      "scope": "Global oil-market, liquidity, food-commodity and international housing inputs.",
+      "scope": "Global upstream conditions and human outcomes assembled from official country-aggregated and inter-agency estimates.",
       "supporting": [],
       "mixed": [],
       "contradicting": [],
@@ -11978,7 +12379,7 @@
       "interpretation": "Insufficient \u00b7 unclear",
       "confidence": "low",
       "coverage": 0.0,
-      "scope": "Global oil-market, liquidity, food-commodity and international housing inputs.",
+      "scope": "Global upstream conditions and human outcomes assembled from official country-aggregated and inter-agency estimates.",
       "supporting": [],
       "mixed": [],
       "contradicting": [],
@@ -12037,6 +12438,836 @@
         "representativeBudgets": [],
         "matchedHouseholdCases": []
       }
+    },
+    "global:food-security": {
+      "geography": "global",
+      "topic": "food-security",
+      "evidenceKey": "global:food-security",
+      "interpretation": "Global human-impact level is high; food-access indicators are improving",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "Global upstream conditions and human outcomes assembled from official country-aggregated and inter-agency estimates.",
+      "supporting": [
+        {
+          "indicator": "global_cost_of_healthy_diet",
+          "label": "Cost of a healthy diet",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-cost-of-healthy-diet.json",
+          "indicatorFile": "global/indicators/global-cost-of-healthy-diet.json",
+          "group": "Food access and affordability",
+          "value": 4.46,
+          "unit": "international dollars (PPP) per person per day",
+          "historicalPercentile": 93.75,
+          "direction": "rising",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "PPP-dollar cost and affordability estimates are revised across SOFI releases and do not describe one universal retail basket.",
+            "July 2025 (SOFI report)"
+          ],
+          "absoluteStatus": null
+        }
+      ],
+      "mixed": [
+        {
+          "indicator": "global_undernourishment",
+          "label": "Population undernourished",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-undernourishment.json",
+          "indicatorFile": "global/indicators/global-undernourishment.json",
+          "group": "Food access and affordability",
+          "value": 8.2,
+          "unit": "percent",
+          "historicalPercentile": 36.0,
+          "direction": "falling",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release retrieved 2026-07-17"
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_moderate_or_severe_food_insecurity",
+          "label": "Moderate or severe food insecurity",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-moderate-or-severe-food-insecurity.json",
+          "indicatorFile": "global/indicators/global-moderate-or-severe-food-insecurity.json",
+          "group": "Food access and affordability",
+          "value": 28.0,
+          "unit": "percent",
+          "historicalPercentile": 59.09090909090909,
+          "direction": "falling",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release retrieved 2026-07-17"
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_severe_food_insecurity",
+          "label": "Severe food insecurity",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-severe-food-insecurity.json",
+          "indicatorFile": "global/indicators/global-severe-food-insecurity.json",
+          "group": "Food access and affordability",
+          "value": 10.1,
+          "unit": "percent",
+          "historicalPercentile": 59.09090909090909,
+          "direction": "falling",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release retrieved 2026-07-17"
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_healthy_diet_unaffordable",
+          "label": "Unable to afford a healthy diet",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-healthy-diet-unaffordable.json",
+          "indicatorFile": "global/indicators/global-healthy-diet-unaffordable.json",
+          "group": "Food access and affordability",
+          "value": 31.9,
+          "unit": "percent",
+          "historicalPercentile": 6.25,
+          "direction": "falling",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "PPP-dollar cost and affordability estimates are revised across SOFI releases and do not describe one universal retail basket.",
+            "July 2025 (SOFI report)"
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_dietary_energy_supply",
+          "label": "Dietary energy supply per person",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. This supply or cost measure provides context and must be read alongside access and biological outcomes.",
+          "chart": "global/indicators/global-dietary-energy-supply.json",
+          "indicatorFile": "global/indicators/global-dietary-energy-supply.json",
+          "group": "Food access and affordability",
+          "value": 3005.0,
+          "unit": "kcal per person per day",
+          "historicalPercentile": 98.0,
+          "direction": "rising",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Food supply availability is not the same as equitable household access or individual dietary intake.",
+            "FAOSTAT normalized bulk release"
+          ],
+          "absoluteStatus": null
+        }
+      ],
+      "contradicting": [],
+      "insufficient": [],
+      "upstreamPressure": "worsening",
+      "humanImpactDirection": "unclear",
+      "humanImpactLevel": "high",
+      "demographicExposure": "growing",
+      "componentDirections": {
+        "foodAccess": "improving",
+        "nutrition": "worsening",
+        "mortality": "improving"
+      },
+      "direction": "improving",
+      "latestUpstreamYear": "2026-06-01",
+      "latestFoodAccessYear": 2024,
+      "latestNutritionYear": 2024,
+      "latestMortalityYear": 2021,
+      "latestDemographyYear": 2026,
+      "staleDataWarnings": [
+        "WHO mortality and DALY evidence ends in 2021; it is not aligned as a current observation with 2026-06-01 commodity prices.",
+        "Nutrition outcomes are annual modelled estimates and may be revised after country-source and methodology updates."
+      ],
+      "provenance": [
+        "analysis/global_food_security_history.csv",
+        "analysis/global_nutrition_history.csv",
+        "analysis/global_human_impact_history.csv",
+        "analysis/global_demography_history.csv"
+      ]
+    },
+    "global:nutrition": {
+      "geography": "global",
+      "topic": "nutrition",
+      "evidenceKey": "global:nutrition",
+      "interpretation": "Global human-impact level is high; biological nutrition outcomes are worsening",
+      "confidence": "moderate",
+      "coverage": 0.6666666666666666,
+      "scope": "Global upstream conditions and human outcomes assembled from official country-aggregated and inter-agency estimates.",
+      "supporting": [
+        {
+          "indicator": "global_anaemia_women",
+          "label": "Anaemia among women aged 15-49",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-anaemia-women.json",
+          "indicatorFile": "global/indicators/global-anaemia-women.json",
+          "group": "Biological nutrition outcomes",
+          "value": 30.7,
+          "unit": "percent",
+          "historicalPercentile": 97.91666666666667,
+          "direction": "rising",
+          "sourceDate": "2023-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release; underlying inter-agency modelled estimates are revised when source methods or country data change."
+          ],
+          "absoluteStatus": null
+        }
+      ],
+      "mixed": [
+        {
+          "indicator": "global_child_stunting",
+          "label": "Child stunting",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-child-stunting.json",
+          "indicatorFile": "global/indicators/global-child-stunting.json",
+          "group": "Biological nutrition outcomes",
+          "value": 23.2,
+          "unit": "percent",
+          "historicalPercentile": 26.0,
+          "direction": "rising",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release; underlying inter-agency modelled estimates are revised when source methods or country data change."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_child_wasting",
+          "label": "Child wasting",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-child-wasting.json",
+          "indicatorFile": "global/indicators/global-child-wasting.json",
+          "group": "Biological nutrition outcomes",
+          "value": 6.6,
+          "unit": "percent",
+          "historicalPercentile": 4.0,
+          "direction": "steady",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release; underlying inter-agency modelled estimates are revised when source methods or country data change."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_low_birth_weight",
+          "label": "Low birth weight",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-low-birth-weight.json",
+          "indicatorFile": "global/indicators/global-low-birth-weight.json",
+          "group": "Biological nutrition outcomes",
+          "value": 14.7,
+          "unit": "percent",
+          "historicalPercentile": 21.428571428571427,
+          "direction": "rising",
+          "sourceDate": "2020-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release; underlying inter-agency modelled estimates are revised when source methods or country data change."
+          ],
+          "absoluteStatus": null
+        }
+      ],
+      "contradicting": [],
+      "insufficient": [
+        {
+          "indicator": "severe_wasting",
+          "label": "Severe wasting",
+          "status": "insufficient",
+          "reason": "The available data cannot evaluate this indicator.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Declared data gaps",
+          "value": null,
+          "unit": null,
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": null,
+          "calculation": null,
+          "limitations": [
+            "The refinery publishes this gap rather than manufacturing or interpolating an observation."
+          ]
+        },
+        {
+          "indicator": "child_underweight",
+          "label": "Child underweight",
+          "status": "insufficient",
+          "reason": "The available data cannot evaluate this indicator.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Declared data gaps",
+          "value": null,
+          "unit": null,
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": null,
+          "calculation": null,
+          "limitations": [
+            "The refinery publishes this gap rather than manufacturing or interpolating an observation."
+          ]
+        }
+      ],
+      "upstreamPressure": "worsening",
+      "humanImpactDirection": "unclear",
+      "humanImpactLevel": "high",
+      "demographicExposure": "growing",
+      "componentDirections": {
+        "foodAccess": "improving",
+        "nutrition": "worsening",
+        "mortality": "improving"
+      },
+      "direction": "worsening",
+      "latestUpstreamYear": "2026-06-01",
+      "latestFoodAccessYear": 2024,
+      "latestNutritionYear": 2024,
+      "latestMortalityYear": 2021,
+      "latestDemographyYear": 2026,
+      "staleDataWarnings": [
+        "WHO mortality and DALY evidence ends in 2021; it is not aligned as a current observation with 2026-06-01 commodity prices.",
+        "Nutrition outcomes are annual modelled estimates and may be revised after country-source and methodology updates."
+      ],
+      "provenance": [
+        "analysis/global_food_security_history.csv",
+        "analysis/global_nutrition_history.csv",
+        "analysis/global_human_impact_history.csv",
+        "analysis/global_demography_history.csv"
+      ]
+    },
+    "global:human-impact": {
+      "geography": "global",
+      "topic": "human-impact",
+      "evidenceKey": "global:human-impact",
+      "interpretation": "Human-impact level is high and direction is unclear; upstream pressure is worsening",
+      "confidence": "moderate",
+      "coverage": 0.8571428571428571,
+      "scope": "Global upstream conditions and human outcomes assembled from official country-aggregated and inter-agency estimates.",
+      "supporting": [
+        {
+          "indicator": "global_anaemia_women",
+          "label": "Anaemia among women aged 15-49",
+          "status": "supporting",
+          "reason": "The indicator is consistent with this interpretation. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-anaemia-women.json",
+          "indicatorFile": "global/indicators/global-anaemia-women.json",
+          "group": "Human impact",
+          "value": 30.7,
+          "unit": "percent",
+          "historicalPercentile": 97.91666666666667,
+          "direction": "rising",
+          "sourceDate": "2023-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release; underlying inter-agency modelled estimates are revised when source methods or country data change."
+          ],
+          "absoluteStatus": null
+        }
+      ],
+      "mixed": [
+        {
+          "indicator": "global_undernourishment",
+          "label": "Population undernourished",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-undernourishment.json",
+          "indicatorFile": "global/indicators/global-undernourishment.json",
+          "group": "Human impact",
+          "value": 8.2,
+          "unit": "percent",
+          "historicalPercentile": 36.0,
+          "direction": "falling",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release retrieved 2026-07-17"
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_moderate_or_severe_food_insecurity",
+          "label": "Moderate or severe food insecurity",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-moderate-or-severe-food-insecurity.json",
+          "indicatorFile": "global/indicators/global-moderate-or-severe-food-insecurity.json",
+          "group": "Human impact",
+          "value": 28.0,
+          "unit": "percent",
+          "historicalPercentile": 59.09090909090909,
+          "direction": "falling",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release retrieved 2026-07-17"
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_severe_food_insecurity",
+          "label": "Severe food insecurity",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-severe-food-insecurity.json",
+          "indicatorFile": "global/indicators/global-severe-food-insecurity.json",
+          "group": "Human impact",
+          "value": 10.1,
+          "unit": "percent",
+          "historicalPercentile": 59.09090909090909,
+          "direction": "falling",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release retrieved 2026-07-17"
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_healthy_diet_unaffordable",
+          "label": "Unable to afford a healthy diet",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-healthy-diet-unaffordable.json",
+          "indicatorFile": "global/indicators/global-healthy-diet-unaffordable.json",
+          "group": "Human impact",
+          "value": 31.9,
+          "unit": "percent",
+          "historicalPercentile": 6.25,
+          "direction": "falling",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "PPP-dollar cost and affordability estimates are revised across SOFI releases and do not describe one universal retail basket.",
+            "July 2025 (SOFI report)"
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_child_stunting",
+          "label": "Child stunting",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-child-stunting.json",
+          "indicatorFile": "global/indicators/global-child-stunting.json",
+          "group": "Human impact",
+          "value": 23.2,
+          "unit": "percent",
+          "historicalPercentile": 26.0,
+          "direction": "rising",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release; underlying inter-agency modelled estimates are revised when source methods or country data change."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_child_wasting",
+          "label": "Child wasting",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-child-wasting.json",
+          "indicatorFile": "global/indicators/global-child-wasting.json",
+          "group": "Human impact",
+          "value": 6.6,
+          "unit": "percent",
+          "historicalPercentile": 4.0,
+          "direction": "steady",
+          "sourceDate": "2024-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release; underlying inter-agency modelled estimates are revised when source methods or country data change."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_low_birth_weight",
+          "label": "Low birth weight",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-low-birth-weight.json",
+          "indicatorFile": "global/indicators/global-low-birth-weight.json",
+          "group": "Human impact",
+          "value": 14.7,
+          "unit": "percent",
+          "historicalPercentile": 21.428571428571427,
+          "direction": "rising",
+          "sourceDate": "2020-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Official global aggregate. Rates, counts, and modelled uncertainty intervals may be revised.",
+            "FAOSTAT normalized bulk release; underlying inter-agency modelled estimates are revised when source methods or country data change."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_nutritional_deficiency_deaths",
+          "label": "Nutritional-deficiency deaths",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-nutritional-deficiency-deaths.json",
+          "indicatorFile": "global/indicators/global-nutritional-deficiency-deaths.json",
+          "group": "Human impact",
+          "value": 3.233300873720235,
+          "unit": "deaths per 100,000 persons",
+          "historicalPercentile": 8.333333333333334,
+          "direction": "falling",
+          "sourceDate": "2021-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Direct cause-coded nutritional-deficiency estimates do not capture the wider mortality or disability statistically attributable to undernutrition.",
+            "GHE 2021 release published in 2024; estimates are not comparable with earlier GHE releases."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_protein_energy_malnutrition_deaths",
+          "label": "Protein-energy-malnutrition deaths",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-protein-energy-malnutrition-deaths.json",
+          "indicatorFile": "global/indicators/global-protein-energy-malnutrition-deaths.json",
+          "group": "Human impact",
+          "value": 2.475699441469995,
+          "unit": "deaths per 100,000 persons",
+          "historicalPercentile": 8.333333333333334,
+          "direction": "falling",
+          "sourceDate": "2021-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Direct cause-coded nutritional-deficiency estimates do not capture the wider mortality or disability statistically attributable to undernutrition.",
+            "GHE 2021 release published in 2024; estimates are not comparable with earlier GHE releases."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_nutritional_deficiency_dalys",
+          "label": "Nutritional-deficiency DALYs",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-nutritional-deficiency-dalys.json",
+          "indicatorFile": "global/indicators/global-nutritional-deficiency-dalys.json",
+          "group": "Human impact",
+          "value": 49.7632816900912,
+          "unit": "million DALYs",
+          "historicalPercentile": 8.333333333333334,
+          "direction": "falling",
+          "sourceDate": "2021-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Direct cause-coded nutritional-deficiency estimates do not capture the wider mortality or disability statistically attributable to undernutrition.",
+            "GHE 2021 release published in 2024; estimates are not comparable with earlier GHE releases."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_protein_energy_malnutrition_dalys",
+          "label": "Protein-energy-malnutrition DALYs",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+          "chart": "global/indicators/global-protein-energy-malnutrition-dalys.json",
+          "indicatorFile": "global/indicators/global-protein-energy-malnutrition-dalys.json",
+          "group": "Human impact",
+          "value": 12.0547063782907,
+          "unit": "million DALYs",
+          "historicalPercentile": 8.333333333333334,
+          "direction": "falling",
+          "sourceDate": "2021-12-31",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Direct cause-coded nutritional-deficiency estimates do not capture the wider mortality or disability statistically attributable to undernutrition.",
+            "GHE 2021 release published in 2024; estimates are not comparable with earlier GHE releases."
+          ],
+          "absoluteStatus": null
+        }
+      ],
+      "contradicting": [],
+      "insufficient": [
+        {
+          "indicator": "nutrition-attributable_mortality_distinct_from_direct_cause-coded_mortality",
+          "label": "Nutrition-attributable mortality distinct from direct cause-coded mortality",
+          "status": "insufficient",
+          "reason": "The available data cannot evaluate this indicator.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Declared data gaps",
+          "value": null,
+          "unit": null,
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": null,
+          "calculation": null,
+          "limitations": [
+            "The refinery publishes this gap rather than manufacturing or interpolating an observation."
+          ]
+        },
+        {
+          "indicator": "uncertainty_intervals_for_WHO_GHE_workbook_summaries",
+          "label": "Uncertainty intervals for who ghe workbook summaries",
+          "status": "insufficient",
+          "reason": "The available data cannot evaluate this indicator.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Declared data gaps",
+          "value": null,
+          "unit": null,
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": null,
+          "calculation": null,
+          "limitations": [
+            "The refinery publishes this gap rather than manufacturing or interpolating an observation."
+          ]
+        }
+      ],
+      "upstreamPressure": "worsening",
+      "humanImpactDirection": "unclear",
+      "humanImpactLevel": "high",
+      "demographicExposure": "growing",
+      "componentDirections": {
+        "foodAccess": "improving",
+        "nutrition": "worsening",
+        "mortality": "improving"
+      },
+      "direction": "unclear",
+      "latestUpstreamYear": "2026-06-01",
+      "latestFoodAccessYear": 2024,
+      "latestNutritionYear": 2024,
+      "latestMortalityYear": 2021,
+      "latestDemographyYear": 2026,
+      "staleDataWarnings": [
+        "WHO mortality and DALY evidence ends in 2021; it is not aligned as a current observation with 2026-06-01 commodity prices.",
+        "Nutrition outcomes are annual modelled estimates and may be revised after country-source and methodology updates."
+      ],
+      "provenance": [
+        "analysis/global_food_security_history.csv",
+        "analysis/global_nutrition_history.csv",
+        "analysis/global_human_impact_history.csv",
+        "analysis/global_demography_history.csv"
+      ]
+    },
+    "global:demography": {
+      "geography": "global",
+      "topic": "demography",
+      "evidenceKey": "global:demography",
+      "interpretation": "Demographic exposure is growing; population growth is context, not human hardship",
+      "confidence": "moderate",
+      "coverage": 0.75,
+      "scope": "Global upstream conditions and human outcomes assembled from official country-aggregated and inter-agency estimates.",
+      "supporting": [],
+      "mixed": [
+        {
+          "indicator": "global_total_population",
+          "label": "Total population",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Demographic exposure changes the number of people exposed to conditions but does not establish hardship by itself.",
+          "chart": "global/indicators/global-total-population.json",
+          "indicatorFile": "global/indicators/global-total-population.json",
+          "group": "Demographic exposure",
+          "value": 8300.678396,
+          "unit": "million persons",
+          "historicalPercentile": 99.35064935064935,
+          "direction": "rising",
+          "sourceDate": "2026-07-01",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Urban and rural population are not included in this first release. Population growth is demographic exposure and never hardship by itself.",
+            "WPP 2024 revision; 2024 onward is the medium projection, not an observed population count."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_annual_population_growth_rate",
+          "label": "Annual population growth rate",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Demographic exposure changes the number of people exposed to conditions but does not establish hardship by itself.",
+          "chart": "global/indicators/global-annual-population-growth-rate.json",
+          "indicatorFile": "global/indicators/global-annual-population-growth-rate.json",
+          "group": "Demographic exposure",
+          "value": 0.83,
+          "unit": "percent annual growth",
+          "historicalPercentile": 1.948051948051948,
+          "direction": "falling",
+          "sourceDate": "2026-07-01",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Urban and rural population are not included in this first release. Population growth is demographic exposure and never hardship by itself.",
+            "WPP 2024 revision; 2024 onward is the medium projection, not an observed population count."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_annual_population_increase",
+          "label": "Annual population increase",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Demographic exposure changes the number of people exposed to conditions but does not establish hardship by itself.",
+          "chart": "global/indicators/global-annual-population-increase.json",
+          "indicatorFile": "global/indicators/global-annual-population-increase.json",
+          "group": "Demographic exposure",
+          "value": 68.866209,
+          "unit": "million persons",
+          "historicalPercentile": 18.83116883116883,
+          "direction": "falling",
+          "sourceDate": "2026-07-01",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Urban and rural population are not included in this first release. Population growth is demographic exposure and never hardship by itself.",
+            "WPP 2024 revision; 2024 onward is the medium projection, not an observed population count."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_births",
+          "label": "Births",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Demographic exposure changes the number of people exposed to conditions but does not establish hardship by itself.",
+          "chart": "global/indicators/global-births.json",
+          "indicatorFile": "global/indicators/global-births.json",
+          "group": "Demographic exposure",
+          "value": 132.50346900000002,
+          "unit": "million persons",
+          "historicalPercentile": 48.701298701298704,
+          "direction": "steady",
+          "sourceDate": "2026-07-01",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Urban and rural population are not included in this first release. Population growth is demographic exposure and never hardship by itself.",
+            "WPP 2024 revision; 2024 onward is the medium projection, not an observed population count."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_under_five",
+          "label": "Population under age five",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Demographic exposure changes the number of people exposed to conditions but does not establish hardship by itself.",
+          "chart": "global/indicators/global-under-five.json",
+          "indicatorFile": "global/indicators/global-under-five.json",
+          "group": "Demographic exposure",
+          "value": 642.354553,
+          "unit": "million persons",
+          "historicalPercentile": 68.18181818181819,
+          "direction": "falling",
+          "sourceDate": "2026-07-01",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Urban and rural population are not included in this first release. Population growth is demographic exposure and never hardship by itself.",
+            "WPP 2024 revision; 2024 onward is the medium projection, not an observed population count."
+          ],
+          "absoluteStatus": null
+        },
+        {
+          "indicator": "global_working_age",
+          "label": "Working-age population",
+          "status": "mixed",
+          "reason": "The indicator provides partial or ambiguous evidence. Demographic exposure changes the number of people exposed to conditions but does not establish hardship by itself.",
+          "chart": "global/indicators/global-working-age.json",
+          "indicatorFile": "global/indicators/global-working-age.json",
+          "group": "Demographic exposure",
+          "value": 5421.227666000001,
+          "unit": "million persons",
+          "historicalPercentile": 99.35064935064935,
+          "direction": "rising",
+          "sourceDate": "2026-07-01",
+          "calculation": "Official global aggregate; rates and affected-person counts are retained together.",
+          "limitations": [
+            "Urban and rural population are not included in this first release. Population growth is demographic exposure and never hardship by itself.",
+            "WPP 2024 revision; 2024 onward is the medium projection, not an observed population count."
+          ],
+          "absoluteStatus": null
+        }
+      ],
+      "contradicting": [],
+      "insufficient": [
+        {
+          "indicator": "urban_population",
+          "label": "Urban population",
+          "status": "insufficient",
+          "reason": "The available data cannot evaluate this indicator.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Declared data gaps",
+          "value": null,
+          "unit": null,
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": null,
+          "calculation": null,
+          "limitations": [
+            "The refinery publishes this gap rather than manufacturing or interpolating an observation."
+          ]
+        },
+        {
+          "indicator": "rural_population",
+          "label": "Rural population",
+          "status": "insufficient",
+          "reason": "The available data cannot evaluate this indicator.",
+          "chart": null,
+          "indicatorFile": null,
+          "group": "Declared data gaps",
+          "value": null,
+          "unit": null,
+          "historicalPercentile": null,
+          "direction": null,
+          "sourceDate": null,
+          "calculation": null,
+          "limitations": [
+            "The refinery publishes this gap rather than manufacturing or interpolating an observation."
+          ]
+        }
+      ],
+      "upstreamPressure": "worsening",
+      "humanImpactDirection": "unclear",
+      "humanImpactLevel": "high",
+      "demographicExposure": "growing",
+      "componentDirections": {
+        "foodAccess": "improving",
+        "nutrition": "worsening",
+        "mortality": "improving"
+      },
+      "direction": "growing",
+      "latestUpstreamYear": "2026-06-01",
+      "latestFoodAccessYear": 2024,
+      "latestNutritionYear": 2024,
+      "latestMortalityYear": 2021,
+      "latestDemographyYear": 2026,
+      "staleDataWarnings": [
+        "WHO mortality and DALY evidence ends in 2021; it is not aligned as a current observation with 2026-06-01 commodity prices.",
+        "Nutrition outcomes are annual modelled estimates and may be revised after country-source and methodology updates."
+      ],
+      "provenance": [
+        "analysis/global_food_security_history.csv",
+        "analysis/global_nutrition_history.csv",
+        "analysis/global_human_impact_history.csv",
+        "analysis/global_demography_history.csv"
+      ]
     }
   }
 }

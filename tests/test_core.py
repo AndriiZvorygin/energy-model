@@ -246,7 +246,7 @@ class CoreTests(unittest.TestCase):
                 patch("oil_model.pipeline.make_system_response_charts", fake_make_system_response_charts),
                 patch("oil_model.pipeline.build_canadian_outputs", fake_build_canadian_outputs),
                 patch("oil_model.pipeline.build_affordability_outputs", fake_build_affordability_outputs),
-                patch.multiple("oil_model.pipeline", write_evidence_summary=fake_write_evidence_summary, write_presentation_contract=fake_write_presentation_contract),
+                patch.multiple("oil_model.pipeline", build_global_human_outputs=fake_build_global_human_outputs, write_evidence_summary=fake_write_evidence_summary, write_presentation_contract=fake_write_presentation_contract),
             ):
                 build(root)
             self.assertTrue((root / "data" / "raw").exists())
@@ -479,6 +479,17 @@ def fake_build_affordability_outputs(root, cache):
     write_csv(root / "analysis" / "canadian_income_indicator_catalogue.csv", [{"id": "fake"}])
     (root / "analysis" / "canadian_income_data_audit.md").write_text("# Canadian Income\n", encoding="utf-8")
     return [], []
+
+
+def fake_build_global_human_outputs(root, cache):
+    from oil_model.storage import write_csv
+
+    for filename in ["global_food_security_history.csv", "global_nutrition_history.csv", "global_human_impact_history.csv", "global_demography_history.csv"]:
+        write_csv(root / "analysis" / filename, [{"geography": "World", "year": 2020, "indicator": "fake"}])
+    directory = root / "website" / "public" / "generated" / "global"
+    directory.mkdir(parents=True, exist_ok=True)
+    (directory / "human-impact-context.json").write_text(json.dumps({"schemaVersion": 1}), encoding="utf-8")
+    return {"schemaVersion": 1}
 
 
 def fake_write_evidence_summary(root):

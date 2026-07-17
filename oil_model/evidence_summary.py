@@ -220,6 +220,8 @@ class EvidenceRefinery:
             return self._indicator_groups(geography, topic, geography_rule, topic_rule)
         if evaluator == "indicator-state":
             return self._indicator_state(geography, topic, geography_rule)
+        if evaluator == "global-human":
+            return self._global_human(geography, topic, geography_rule, topic_rule)
         raise ValueError(f"Unsupported evidence evaluator: {evaluator}")
 
     def _topic_rule(self, topic: str, geography_rule: dict[str, Any]) -> dict[str, Any]:
@@ -796,6 +798,51 @@ class EvidenceRefinery:
                 rows.append(row)
         interpretation = f"{geography_rule['label']} indicators are assembled for geography-specific evaluation"
         return _topic(geography, topic, interpretation, "moderate" if rows else "low", 1.0 if rows else 0.0, rows, geography_rule["scope"])
+
+    def _global_human(self, geography: str, topic: str, geography_rule: dict[str, Any], topic_rule: dict[str, Any]) -> dict[str, Any]:
+        context = _read(self.generated / topic_rule["contextFile"])
+        indicator_ids = context["topicIndicators"][topic]
+        rows = []
+        for indicator_id in indicator_ids:
+            record = self.lookup.get(indicator_id)
+            if not record:
+                continue
+            payload = record["payload"]
+            status = "supporting" if payload.get("interpretationLabel") == "Stressful" else "mixed"
+            row = self._indicator_row(indicator_id, status, topic_rule["title"])
+            if row:
+                rows.append(row)
+        for label in context.get("missingIndicators", {}).get(topic, []):
+            rows.append({
+                "indicator": label.replace(" ", "_"), "label": label.capitalize(), "status": "insufficient",
+                "reason": STATUS_TEXT["insufficient"], "chart": None, "indicatorFile": None,
+                "group": "Declared data gaps", "value": None, "unit": None, "historicalPercentile": None,
+                "direction": None, "sourceDate": None, "calculation": None,
+                "limitations": ["The refinery publishes this gap rather than manufacturing or interpolating an observation."],
+            })
+        if topic == "demography":
+            interpretation = f"Demographic exposure is {context['demographicExposure']}; population growth is context, not human hardship"
+            direction = context["demographicExposure"]
+        elif topic == "food-security":
+            direction = context["componentDirections"]["foodAccess"]
+            interpretation = f"Global human-impact level is {context['humanImpactLevel']}; food-access indicators are {direction}"
+        elif topic == "nutrition":
+            direction = context["componentDirections"]["nutrition"]
+            interpretation = f"Global human-impact level is {context['humanImpactLevel']}; biological nutrition outcomes are {direction}"
+        else:
+            direction = context["humanImpactDirection"]
+            interpretation = f"Human-impact level is {context['humanImpactLevel']} and direction is {direction}; upstream pressure is {context['upstreamPressure']}"
+        available = len([row for row in rows if row["status"] != "insufficient"])
+        return _topic(
+            geography, topic, interpretation, "moderate", available / len(rows) if rows else 0.0, rows,
+            geography_rule["scope"], upstreamPressure=context["upstreamPressure"],
+            humanImpactDirection=context["humanImpactDirection"], humanImpactLevel=context["humanImpactLevel"],
+            demographicExposure=context["demographicExposure"], componentDirections=context["componentDirections"],
+            direction=direction, latestUpstreamYear=context["latestUpstreamYear"],
+            latestFoodAccessYear=context["latestFoodAccessYear"], latestNutritionYear=context["latestNutritionYear"],
+            latestMortalityYear=context["latestMortalityYear"], latestDemographyYear=context["latestDemographyYear"],
+            staleDataWarnings=context["staleDataWarnings"], provenance=context["provenance"],
+        )
 
 
 def generate_evidence_summary(geography: str, topic: str, root: Path | str = ".") -> dict[str, Any]:

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "refineryVersion": "2.0.0",
-  "generatedAt": "2026-07-17T02:18:38+00:00",
+  "generatedAt": "2026-07-17T02:52:05+00:00",
   "regenerationCommand": "python -m oil_model.pipeline --root . --refresh",
   "policy": {
     "includeStatusesInDiagnosticSummary": [
@@ -30,13 +30,13 @@
       "interpretation": "Global indicators are assembled for geography-specific evaluation",
       "confidence": "moderate",
       "coverage": 1.0,
-      "scope": "Global oil-market, liquidity, food-commodity and international housing inputs.",
-      "oldestObservationDate": "2026-05-01",
+      "scope": "Global upstream conditions and human outcomes assembled from official country-aggregated and inter-agency estimates.",
+      "oldestObservationDate": "2020-12-31",
       "newestObservationDate": "2026-07-03",
       "evidenceCounts": {
         "supporting": 0,
-        "mixed": 15,
-        "contradicting": 0,
+        "mixed": 33,
+        "contradicting": 2,
         "insufficient": 0
       },
       "provenance": [
@@ -49,6 +49,157 @@
         },
         {
           "file": "config/absolute_affordability.json"
+        },
+        {
+          "file": "config/global_human_impact.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
+      ]
+    },
+    "/global/food-security": {
+      "route": "/global/food-security",
+      "geography": "global",
+      "geographyLabel": "Global",
+      "topic": "food-security",
+      "evidenceKey": "global:food-security",
+      "interpretation": "Global human-impact level is high; food-access indicators are improving",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "Global upstream conditions and human outcomes assembled from official country-aggregated and inter-agency estimates.",
+      "oldestObservationDate": "2024-12-31",
+      "newestObservationDate": "2024-12-31",
+      "evidenceCounts": {
+        "supporting": 1,
+        "mixed": 5,
+        "contradicting": 0,
+        "insufficient": 0
+      },
+      "provenance": [
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "global:food-security"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/absolute_affordability.json"
+        },
+        {
+          "file": "config/global_human_impact.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
+      ]
+    },
+    "/global/nutrition": {
+      "route": "/global/nutrition",
+      "geography": "global",
+      "geographyLabel": "Global",
+      "topic": "nutrition",
+      "evidenceKey": "global:nutrition",
+      "interpretation": "Global human-impact level is high; biological nutrition outcomes are worsening",
+      "confidence": "moderate",
+      "coverage": 0.6666666666666666,
+      "scope": "Global upstream conditions and human outcomes assembled from official country-aggregated and inter-agency estimates.",
+      "oldestObservationDate": "2020-12-31",
+      "newestObservationDate": "2024-12-31",
+      "evidenceCounts": {
+        "supporting": 1,
+        "mixed": 3,
+        "contradicting": 0,
+        "insufficient": 2
+      },
+      "provenance": [
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "global:nutrition"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/absolute_affordability.json"
+        },
+        {
+          "file": "config/global_human_impact.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
+      ]
+    },
+    "/global/human-impact": {
+      "route": "/global/human-impact",
+      "geography": "global",
+      "geographyLabel": "Global",
+      "topic": "human-impact",
+      "evidenceKey": "global:human-impact",
+      "interpretation": "Human-impact level is high and direction is unclear; upstream pressure is worsening",
+      "confidence": "moderate",
+      "coverage": 0.8571428571428571,
+      "scope": "Global upstream conditions and human outcomes assembled from official country-aggregated and inter-agency estimates.",
+      "oldestObservationDate": "2020-12-31",
+      "newestObservationDate": "2024-12-31",
+      "evidenceCounts": {
+        "supporting": 1,
+        "mixed": 11,
+        "contradicting": 0,
+        "insufficient": 2
+      },
+      "provenance": [
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "global:human-impact"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/absolute_affordability.json"
+        },
+        {
+          "file": "config/global_human_impact.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
+      ]
+    },
+    "/global/demography": {
+      "route": "/global/demography",
+      "geography": "global",
+      "geographyLabel": "Global",
+      "topic": "demography",
+      "evidenceKey": "global:demography",
+      "interpretation": "Demographic exposure is growing; population growth is context, not human hardship",
+      "confidence": "moderate",
+      "coverage": 0.75,
+      "scope": "Global upstream conditions and human outcomes assembled from official country-aggregated and inter-agency estimates.",
+      "oldestObservationDate": "2026-07-01",
+      "newestObservationDate": "2026-07-01",
+      "evidenceCounts": {
+        "supporting": 0,
+        "mixed": 6,
+        "contradicting": 0,
+        "insufficient": 2
+      },
+      "provenance": [
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "global:demography"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/absolute_affordability.json"
+        },
+        {
+          "file": "config/global_human_impact.json"
         },
         {
           "file": "config/presentation_rules.json"
@@ -85,6 +236,9 @@
           "file": "config/absolute_affordability.json"
         },
         {
+          "file": "config/global_human_impact.json"
+        },
+        {
           "file": "config/presentation_rules.json"
         }
       ]
@@ -117,6 +271,9 @@
         },
         {
           "file": "config/absolute_affordability.json"
+        },
+        {
+          "file": "config/global_human_impact.json"
         },
         {
           "file": "config/presentation_rules.json"
@@ -153,6 +310,9 @@
           "file": "config/absolute_affordability.json"
         },
         {
+          "file": "config/global_human_impact.json"
+        },
+        {
           "file": "config/presentation_rules.json"
         }
       ]
@@ -185,6 +345,9 @@
         },
         {
           "file": "config/absolute_affordability.json"
+        },
+        {
+          "file": "config/global_human_impact.json"
         },
         {
           "file": "config/presentation_rules.json"
@@ -221,6 +384,9 @@
           "file": "config/absolute_affordability.json"
         },
         {
+          "file": "config/global_human_impact.json"
+        },
+        {
           "file": "config/presentation_rules.json"
         }
       ]
@@ -253,6 +419,9 @@
         },
         {
           "file": "config/absolute_affordability.json"
+        },
+        {
+          "file": "config/global_human_impact.json"
         },
         {
           "file": "config/presentation_rules.json"
@@ -289,6 +458,9 @@
           "file": "config/absolute_affordability.json"
         },
         {
+          "file": "config/global_human_impact.json"
+        },
+        {
           "file": "config/presentation_rules.json"
         }
       ]
@@ -321,6 +493,9 @@
         },
         {
           "file": "config/absolute_affordability.json"
+        },
+        {
+          "file": "config/global_human_impact.json"
         },
         {
           "file": "config/presentation_rules.json"
@@ -357,6 +532,9 @@
           "file": "config/absolute_affordability.json"
         },
         {
+          "file": "config/global_human_impact.json"
+        },
+        {
           "file": "config/presentation_rules.json"
         }
       ]
@@ -389,6 +567,9 @@
         },
         {
           "file": "config/absolute_affordability.json"
+        },
+        {
+          "file": "config/global_human_impact.json"
         },
         {
           "file": "config/presentation_rules.json"
@@ -425,6 +606,9 @@
           "file": "config/absolute_affordability.json"
         },
         {
+          "file": "config/global_human_impact.json"
+        },
+        {
           "file": "config/presentation_rules.json"
         }
       ]
@@ -457,6 +641,9 @@
         },
         {
           "file": "config/absolute_affordability.json"
+        },
+        {
+          "file": "config/global_human_impact.json"
         },
         {
           "file": "config/presentation_rules.json"
@@ -493,6 +680,9 @@
           "file": "config/absolute_affordability.json"
         },
         {
+          "file": "config/global_human_impact.json"
+        },
+        {
           "file": "config/presentation_rules.json"
         }
       ]
@@ -525,6 +715,9 @@
         },
         {
           "file": "config/absolute_affordability.json"
+        },
+        {
+          "file": "config/global_human_impact.json"
         },
         {
           "file": "config/presentation_rules.json"
@@ -561,6 +754,9 @@
           "file": "config/absolute_affordability.json"
         },
         {
+          "file": "config/global_human_impact.json"
+        },
+        {
           "file": "config/presentation_rules.json"
         }
       ]
@@ -593,6 +789,9 @@
         },
         {
           "file": "config/absolute_affordability.json"
+        },
+        {
+          "file": "config/global_human_impact.json"
         },
         {
           "file": "config/presentation_rules.json"
@@ -629,6 +828,9 @@
           "file": "config/absolute_affordability.json"
         },
         {
+          "file": "config/global_human_impact.json"
+        },
+        {
           "file": "config/presentation_rules.json"
         }
       ]
@@ -663,6 +865,9 @@
           "file": "config/absolute_affordability.json"
         },
         {
+          "file": "config/global_human_impact.json"
+        },
+        {
           "file": "config/presentation_rules.json"
         }
       ]
@@ -671,19 +876,23 @@
   "inputs": [
     {
       "file": "config/presentation_rules.json",
-      "sha256": "8ba69d00d8dad69c0b5edddacaa039b0edc1f99c3ca780050aee1bfaffa8c034"
+      "sha256": "1087f72214d62d6c983a90ca8caea9444a0f56d5e78a2ab36b6498a5a2840777"
     },
     {
       "file": "config/evidence_topics.json",
-      "sha256": "45e41d99fb87434250c0ea133032b056b286e5ba781a412ab50a6f579ef67396"
+      "sha256": "93332feb3b6c2033991ee81d4eb10e3882ce78dad4b147e9d62289893d3142f0"
     },
     {
       "file": "config/absolute_affordability.json",
       "sha256": "838edc764d343cdfdd8ec5467f1e85e4d5d03b585093ee5fdbfbd0be14437086"
     },
     {
+      "file": "config/global_human_impact.json",
+      "sha256": "98b6d93cb0a6ebdbcd00d54683cf45af25af3f30e87350a9d1569568d546915e"
+    },
+    {
       "file": "website/public/generated/evidence-summary.json",
-      "sha256": "17b887c50b2d3e32e8a04d987667a5c1de1d551aa53c2b5373dd81fe1d93187a"
+      "sha256": "db20396bc9807723e34cf3009577330b68c5f6a028f7e8b5c5e8e27f7b78ebf3"
     }
   ]
 }

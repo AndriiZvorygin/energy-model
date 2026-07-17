@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-16T14:12:52+00:00",
+  "generatedAt": "2026-07-17T02:49:06+00:00",
   "geography": "Global",
   "indicators": [
     {
@@ -163,10 +163,150 @@
       "label": "BIS Brazil residential property prices (real)",
       "layer": "International residential property prices",
       "latestDate": "2026-03-01"
+    },
+    {
+      "id": "global-total-population",
+      "file": "indicators/global-total-population.json",
+      "label": "Total population",
+      "layer": "Demographic exposure",
+      "latestDate": "2026-07-01"
+    },
+    {
+      "id": "global-annual-population-growth-rate",
+      "file": "indicators/global-annual-population-growth-rate.json",
+      "label": "Annual population growth rate",
+      "layer": "Demographic exposure",
+      "latestDate": "2026-07-01"
+    },
+    {
+      "id": "global-annual-population-increase",
+      "file": "indicators/global-annual-population-increase.json",
+      "label": "Annual population increase",
+      "layer": "Demographic exposure",
+      "latestDate": "2026-07-01"
+    },
+    {
+      "id": "global-births",
+      "file": "indicators/global-births.json",
+      "label": "Births",
+      "layer": "Demographic exposure",
+      "latestDate": "2026-07-01"
+    },
+    {
+      "id": "global-under-five",
+      "file": "indicators/global-under-five.json",
+      "label": "Population under age five",
+      "layer": "Demographic exposure",
+      "latestDate": "2026-07-01"
+    },
+    {
+      "id": "global-working-age",
+      "file": "indicators/global-working-age.json",
+      "label": "Working-age population",
+      "layer": "Demographic exposure",
+      "latestDate": "2026-07-01"
+    },
+    {
+      "id": "global-undernourishment",
+      "file": "indicators/global-undernourishment.json",
+      "label": "Population undernourished",
+      "layer": "Food access",
+      "latestDate": "2024-12-31"
+    },
+    {
+      "id": "global-moderate-or-severe-food-insecurity",
+      "file": "indicators/global-moderate-or-severe-food-insecurity.json",
+      "label": "Moderate or severe food insecurity",
+      "layer": "Food access",
+      "latestDate": "2024-12-31"
+    },
+    {
+      "id": "global-severe-food-insecurity",
+      "file": "indicators/global-severe-food-insecurity.json",
+      "label": "Severe food insecurity",
+      "layer": "Food access",
+      "latestDate": "2024-12-31"
+    },
+    {
+      "id": "global-cost-of-healthy-diet",
+      "file": "indicators/global-cost-of-healthy-diet.json",
+      "label": "Cost of a healthy diet",
+      "layer": "Food access",
+      "latestDate": "2024-12-31"
+    },
+    {
+      "id": "global-healthy-diet-unaffordable",
+      "file": "indicators/global-healthy-diet-unaffordable.json",
+      "label": "Unable to afford a healthy diet",
+      "layer": "Food access",
+      "latestDate": "2024-12-31"
+    },
+    {
+      "id": "global-dietary-energy-supply",
+      "file": "indicators/global-dietary-energy-supply.json",
+      "label": "Dietary energy supply per person",
+      "layer": "Food access",
+      "latestDate": "2024-12-31"
+    },
+    {
+      "id": "global-child-stunting",
+      "file": "indicators/global-child-stunting.json",
+      "label": "Child stunting",
+      "layer": "Nutrition outcomes",
+      "latestDate": "2024-12-31"
+    },
+    {
+      "id": "global-child-wasting",
+      "file": "indicators/global-child-wasting.json",
+      "label": "Child wasting",
+      "layer": "Nutrition outcomes",
+      "latestDate": "2024-12-31"
+    },
+    {
+      "id": "global-anaemia-women",
+      "file": "indicators/global-anaemia-women.json",
+      "label": "Anaemia among women aged 15-49",
+      "layer": "Nutrition outcomes",
+      "latestDate": "2023-12-31"
+    },
+    {
+      "id": "global-low-birth-weight",
+      "file": "indicators/global-low-birth-weight.json",
+      "label": "Low birth weight",
+      "layer": "Nutrition outcomes",
+      "latestDate": "2020-12-31"
+    },
+    {
+      "id": "global-nutritional-deficiency-dalys",
+      "file": "indicators/global-nutritional-deficiency-dalys.json",
+      "label": "Nutritional-deficiency DALYs",
+      "layer": "Mortality and health burden",
+      "latestDate": "2021-12-31"
+    },
+    {
+      "id": "global-nutritional-deficiency-deaths",
+      "file": "indicators/global-nutritional-deficiency-deaths.json",
+      "label": "Nutritional-deficiency deaths",
+      "layer": "Mortality and health burden",
+      "latestDate": "2021-12-31"
+    },
+    {
+      "id": "global-protein-energy-malnutrition-dalys",
+      "file": "indicators/global-protein-energy-malnutrition-dalys.json",
+      "label": "Protein-energy-malnutrition DALYs",
+      "layer": "Mortality and health burden",
+      "latestDate": "2021-12-31"
+    },
+    {
+      "id": "global-protein-energy-malnutrition-deaths",
+      "file": "indicators/global-protein-energy-malnutrition-deaths.json",
+      "label": "Protein-energy-malnutrition deaths",
+      "layer": "Mortality and health burden",
+      "latestDate": "2021-12-31"
     }
   ],
   "currentState": {
-    "asOf": "2026-07-16T14:12:52+00:00",
+    "asOf": "2026-07-17T02:49:06+00:00",
     "indicators": [
       {
         "id": "fao-food-price-index",
@@ -214,5 +354,16 @@
         "interpretationLabel": "Declining"
       }
     ]
+  },
+  "humanImpact": {
+    "upstreamPressure": "worsening",
+    "humanImpactDirection": "unclear",
+    "humanImpactLevel": "high",
+    "demographicExposure": "growing",
+    "latestUpstreamYear": "2026-06-01",
+    "latestFoodAccessYear": 2024,
+    "latestNutritionYear": 2024,
+    "latestMortalityYear": 2021,
+    "latestDemographyYear": 2026
   }
 }

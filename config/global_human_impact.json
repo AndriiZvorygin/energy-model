@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "humanImpactLevel": {
+    "undernourishment": {"elevated": 5, "high": 10, "severe": 20},
+    "moderate_or_severe_food_insecurity": {"elevated": 10, "high": 20, "severe": 35},
+    "severe_food_insecurity": {"elevated": 5, "high": 10, "severe": 20},
+    "healthy_diet_unaffordable": {"elevated": 15, "high": 25, "severe": 40},
+    "child_stunting": {"elevated": 10, "high": 20, "severe": 30},
+    "child_wasting": {"elevated": 5, "high": 10, "severe": 15},
+    "anaemia_women": {"elevated": 15, "high": 25, "severe": 40},
+    "low_birth_weight": {"elevated": 10, "high": 20, "severe": 30}
+  },
+  "demography": {
+    "growingAbove": 0.1,
+    "decliningBelow": -0.1
+  },
+  "policy": {
+    "populationGrowthIsHardship": false,
+    "directNutritionDeathsEqualAttributableBurden": false,
+    "alignDifferentLatestYearsAsCurrent": false
+  }
+}

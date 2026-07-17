@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "id": "global-nutritional-deficiency-deaths",
+  "field": "global_nutritional_deficiency_deaths",
+  "label": "Nutritional-deficiency deaths",
+  "description": "Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+  "definition": "Nutritional-deficiency deaths",
+  "unit": "deaths per 100,000 persons",
+  "frequency": "annual",
+  "status": "modelled",
+  "layer": "Mortality and health burden",
+  "geography": "Global",
+  "geographyLevel": "global",
+  "domesticOrExternal": "external",
+  "directlyComparableAcrossCountries": false,
+  "comparisonLimitations": "Direct cause-coded nutritional-deficiency estimates do not capture the wider mortality or disability statistically attributable to undernutrition.",
+  "interpretationDirection": "higher-generally-stressful",
+  "interpretationLabel": "Mixed",
+  "interpretation": "Higher prevalence, affected-person counts, mortality, or disability burden generally indicates greater human impact.",
+  "source": "WHO Global Health Estimates 2021",
+  "sourceUrl": "https://www.who.int/data/global-health-estimates/",
+  "sourceIdentifier": "nutritional_deficiency_deaths",
+  "sourceDate": "2021-12-31",
+  "retrievalDate": "2026-07-17T02:51:51+00:00",
+  "revisionStatus": "GHE 2021 release published in 2024; estimates are not comparable with earlier GHE releases.",
+  "seasonalAdjustment": "not applicable",
+  "nominalOrReal": "prevalence, count, rate, or burden estimate",
+  "startDate": "2000-12-31",
+  "endDate": "2021-12-31",
+  "latest": {
+    "date": "2021-12-31",
+    "sourceDate": "2021-12-31",
+    "value": 3.233300873720235,
+    "previousValue": 3.275555970157265,
+    "oneYearChange": -0.04225509643702985,
+    "threeMonthChange": null,
+    "fourQuarterChange": -0.04225509643702985,
+    "historicalPercentile": 8.333333333333334,
+    "percentileSince2000": 8.333333333333334,
+    "distanceFromMedian": -0.262170866497319,
+    "momentum": "falling"
+  },
+  "referenceRanges": {
+    "historicalMedian": 3.495471740217554,
+    "p10": 3.25442842193875,
+    "p25": 3.277137707651015,
+    "p75": 4.4126294115442555,
+    "p90": 6.1611771925407925,
+    "minimum": 3.233300873720235,
+    "maximum": 7.675202023123526
+  },
+  "observations": [
+    {
+      "date": "2000-12-31",
+      "value": 7.675202023123526,
+      "sourceDate": "2000-12-31",
+      "prevalenceOrRate": 7.675202023123526,
+      "rateUnit": "deaths per 100,000 persons",
+      "affectedPersonCount": 472.675160322806,
+      "countUnit": "thousand deaths",
+      "denominatorPopulation": 6158.471906000001,
+      "ageGroup": "All ages",
+      "sex": "Both sexes",
+      "estimateType": "WHO modelled estimate",
+      "uncertaintyLower": null,
+      "uncertaintyUpper": null
+    },
+    {
+      "date": "2010-12-31",
+      "value": 4.647152361958059,
+      "sourceDate": "2010-12-31",
+      "prevalenceOrRate": 4.647152361958059,
+      "rateUnit": "deaths per 100,000 persons",
+      "affectedPersonCount": 325.649161380457,
+      "countUnit": "thousand deaths",
+      "denominatorPopulation": 7007.4991310000005,
+      "ageGroup": "All ages",
+      "sex": "Both sexes",
+      "estimateType": "WHO modelled estimate",
+      "uncertaintyLower": null,
+      "uncertaintyUpper": null
+    },
+    {
+      "date": "2015-12-31",
+      "value": 3.7090605603028433,
+      "sourceDate": "2015-12-31",
+      "prevalenceOrRate": 3.7090605603028433,
+      "rateUnit": "deaths per 100,000 persons",
+      "affectedPersonCount": 276.53753171419703,
+      "countUnit": "thousand deaths",
+      "denominatorPopulation": 7455.729752,
+      "ageGroup": "All ages",
+      "sex": "Both sexes",
+      "estimateType": "WHO modelled estimate",
+      "uncertaintyLower": null,
+      "uncertaintyUpper": null
+    },
+    {
+      "date": "2019-12-31",
+      "value": 3.2818829201322646,
+      "sourceDate": "2019-12-31",
+      "prevalenceOrRate": 3.2818829201322646,
+      "rateUnit": "deaths per 100,000 persons",
+      "affectedPersonCount": 255.8648256701,
+      "countUnit": "thousand deaths",
+      "denominatorPopulation": 7796.281339,
+      "ageGroup": "All ages",
+      "sex": "Both sexes",
+      "estimateType": "WHO modelled estimate",
+      "uncertaintyLower": null,
+      "uncertaintyUpper": null
+    },
+    {
+      "date": "2020-12-31",
+      "value": 3.275555970157265,
+      "sourceDate": "2020-12-31",
+      "prevalenceOrRate": 3.275555970157265,
+      "rateUnit": "deaths per 100,000 persons",
+      "affectedPersonCount": 257.850317290641,
+      "countUnit": "thousand deaths",
+      "denominatorPopulation": 7871.955773,
+      "ageGroup": "All ages",
+      "sex": "Both sexes",
+      "estimateType": "WHO modelled estimate",
+      "uncertaintyLower": null,
+      "uncertaintyUpper": null
+    },
+    {
+      "date": "2021-12-31",
+      "value": 3.233300873720235,
+      "sourceDate": "2021-12-31",
+      "prevalenceOrRate": 3.233300873720235,
+      "rateUnit": "deaths per 100,000 persons",
+      "affectedPersonCount": 256.704144207286,
+      "countUnit": "thousand deaths",
+      "denominatorPopulation": 7939.383133,
+      "ageGroup": "All ages",
+      "sex": "Both sexes",
+      "estimateType": "WHO modelled estimate",
+      "uncertaintyLower": null,
+      "uncertaintyUpper": null
+    }
+  ],
+  "transformations": [
+    "raw",
+    "indexed",
+    "pct_change",
+    "zscore"
+  ],
+  "confirmingIndicators": [],
+  "conflictingIndicators": [],
+  "evidenceChecks": [],
+  "confidenceLevel": "medium",
+  "evidenceLabel": "Supported historical pattern",
+  "calculation": {
+    "formula": "Official global aggregate; rates and affected-person counts are retained together.",
+    "explanation": "The refinery uses the official published rate and count rather than multiplying a rounded percentage by population.",
+    "example": "Latest observation: 3.23 deaths per 100,000 persons in 2021."
+  },
+  "limitations": [
+    "Direct cause-coded nutritional-deficiency estimates do not capture the wider mortality or disability statistically attributable to undernutrition.",
+    "GHE 2021 release published in 2024; estimates are not comparable with earlier GHE releases."
+  ],
+  "humanOutcomeMetadata": {
+    "ageGroup": "All ages",
+    "sex": "Both sexes",
+    "estimateType": "WHO modelled estimate",
+    "affectedPersonCount": 256.704144207286,
+    "countUnit": "thousand deaths",
+    "uncertaintyInterval": [
+      null,
+      null
+    ]
+  },
+  "futureClassifierMetadata": {
+    "status": "metadata_only_not_scored",
+    "candidateSymptoms": [
+      "global food-access or nutrition outcome deterioration"
+    ]
+  },
+  "generatedAt": "2026-07-17T02:51:51+00:00"
+}

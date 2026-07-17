@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Droplets, House, TrendingUp } from "lucide-react";
+import { Activity, ArrowRight, Droplets, House, TrendingUp, Users } from "lucide-react";
 import { AffordabilityIndicatorGrid } from "../components/affordability/AffordabilityIndicatorGrid";
 import { GeneratedRouteEvidenceSummary } from "../components/diagnostics/GeneratedRouteEvidenceSummary";
 import { PageBody, PageHeader } from "../components/PageHeader";
@@ -14,6 +14,20 @@ export function Global() {
       />
       <PageBody>
         <GeneratedRouteEvidenceSummary title="Global current evidence" />
+
+        <section className="mt-12">
+          <p className="text-xs font-semibold uppercase text-petroleum">People and outcomes</p>
+          <h2 className="mt-2 text-2xl font-semibold">From upstream pressure to human impact</h2>
+          <p className="mt-2 max-w-4xl text-sm leading-6 text-stone-600 dark:text-stone-300">Commodity prices describe upstream conditions. Food access, biological nutrition outcomes, mortality, and demographic exposure show different parts of the human picture on slower publication schedules.</p>
+          <div className="mt-6 grid gap-px border border-stone-200 bg-stone-200 md:grid-cols-2 xl:grid-cols-4 dark:border-stone-800 dark:bg-stone-800">
+            {[
+              [House, "Food security", "Access, food insecurity, and healthy-diet affordability.", "/global/food-security"],
+              [Activity, "Nutrition", "Stunting, wasting, anaemia, and low birth weight.", "/global/nutrition"],
+              [Activity, "Human impact", "Combined outcome direction, level, and mortality caveats.", "/global/human-impact"],
+              [Users, "Demography", "Population exposure and denominators, not hardship.", "/global/demography"],
+            ].map(([Icon, title, description, route]) => { const Component = Icon as typeof Activity; return <Link key={String(title)} to={String(route)} className="bg-white p-5 hover:bg-stone-50 dark:bg-[#18201d] dark:hover:bg-stone-900"><Component size={19} className="text-petroleum" /><h3 className="mt-3 font-semibold">{String(title)}</h3><p className="mt-2 text-sm leading-6 text-stone-500">{String(description)}</p></Link> })}
+          </div>
+        </section>
 
         <section className="mt-12 border-y border-stone-300 py-7 dark:border-stone-700">
           <p className="text-xs font-semibold uppercase text-petroleum">International affordability context</p>

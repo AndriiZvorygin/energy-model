@@ -8,6 +8,7 @@ from .adapters import BisAdapter, BojAdapter, ChinaM2Adapter, EcbAdapter, EiaInv
 from .analysis import energy_gdp_suite, final_reporting_suite, integrated_synthesis_suite, lag_correlations, oil_equity_robustness_suite, oil_equity_suite, physical_realised_price_suite, regression_suite, second_stage_suite, third_stage_suite, uso_suite
 from .affordability import build_affordability_outputs
 from .historical_affordability import build_historical_affordability_outputs
+from .global_human import build_global_human_outputs
 from .evidence_summary import write_evidence_summary
 from .presentation import write_presentation_contract
 from .audit import terminal_summary, write_audit_outputs
@@ -323,6 +324,7 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
     )
     build_affordability_outputs(root, cache)
     build_historical_affordability_outputs(root, cache)
+    build_global_human_outputs(root, cache)
     write_evidence_summary(root)
     write_presentation_contract(root)
     warnings = write_audit_outputs(root, rows, lag_rows, regression_rows, rolling_rows, source_series)

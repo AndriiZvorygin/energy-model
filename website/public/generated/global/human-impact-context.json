@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-17T02:51:51+00:00",
+  "scope": "Global human conditions assembled from official country-aggregated and inter-agency estimates.",
+  "upstreamPressure": "worsening",
+  "humanImpactDirection": "unclear",
+  "humanImpactLevel": "high",
+  "demographicExposure": "growing",
+  "componentDirections": {
+    "foodAccess": "improving",
+    "nutrition": "worsening",
+    "mortality": "improving"
+  },
+  "latestUpstreamYear": "2026-06-01",
+  "latestFoodAccessYear": 2024,
+  "latestNutritionYear": 2024,
+  "latestMortalityYear": 2021,
+  "latestDemographyYear": 2026,
+  "staleDataWarnings": [
+    "WHO mortality and DALY evidence ends in 2021; it is not aligned as a current observation with 2026-06-01 commodity prices.",
+    "Nutrition outcomes are annual modelled estimates and may be revised after country-source and methodology updates."
+  ],
+  "topicIndicators": {
+    "food-security": [
+      "global-undernourishment",
+      "global-moderate-or-severe-food-insecurity",
+      "global-severe-food-insecurity",
+      "global-healthy-diet-unaffordable",
+      "global-cost-of-healthy-diet",
+      "global-dietary-energy-supply"
+    ],
+    "nutrition": [
+      "global-child-stunting",
+      "global-child-wasting",
+      "global-anaemia-women",
+      "global-low-birth-weight"
+    ],
+    "human-impact": [
+      "global-undernourishment",
+      "global-moderate-or-severe-food-insecurity",
+      "global-severe-food-insecurity",
+      "global-healthy-diet-unaffordable",
+      "global-child-stunting",
+      "global-child-wasting",
+      "global-anaemia-women",
+      "global-low-birth-weight",
+      "global-nutritional-deficiency-deaths",
+      "global-protein-energy-malnutrition-deaths",
+      "global-nutritional-deficiency-dalys",
+      "global-protein-energy-malnutrition-dalys"
+    ],
+    "demography": [
+      "global-total-population",
+      "global-annual-population-growth-rate",
+      "global-annual-population-increase",
+      "global-births",
+      "global-under-five",
+      "global-working-age"
+    ]
+  },
+  "missingIndicators": {
+    "demography": [
+      "urban population",
+      "rural population"
+    ],
+    "nutrition": [
+      "severe wasting",
+      "child underweight"
+    ],
+    "human-impact": [
+      "nutrition-attributable mortality distinct from direct cause-coded mortality",
+      "uncertainty intervals for WHO GHE workbook summaries"
+    ]
+  },
+  "provenance": [
+    "analysis/global_food_security_history.csv",
+    "analysis/global_nutrition_history.csv",
+    "analysis/global_human_impact_history.csv",
+    "analysis/global_demography_history.csv"
+  ]
+}

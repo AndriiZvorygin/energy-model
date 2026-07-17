@@ -42,6 +42,7 @@ def test_route_configuration_is_structured_and_contains_no_flat_topic_aliases() 
     assert rules["routes"]["/owen-sound/affordability"] == {"geography": "owen-sound", "topic": "affordability"}
     assert rules["routes"]["/owen-sound/food"] == {"geography": "owen-sound", "topic": "food"}
     assert rules["routes"]["/owen-sound/housing"] == {"geography": "owen-sound", "topic": "housing"}
+    assert rules["routes"]["/global/human-impact"] == {"geography": "global", "topic": "human-impact"}
 
 
 def test_canadian_presentation_contains_no_inactive_or_missing_summary_prose() -> None:

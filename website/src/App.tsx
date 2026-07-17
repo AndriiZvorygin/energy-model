@@ -6,6 +6,7 @@ import { ResearchNavigation } from './components/ResearchNavigation'
 const Home = lazy(() => import('./pages/Home').then((module) => ({ default: module.Home })))
 const Overview = lazy(() => import('./pages/Overview').then((module) => ({ default: module.Overview })))
 const Global = lazy(() => import('./pages/Global').then((module) => ({ default: module.Global })))
+const GlobalHumanImpact = lazy(() => import('./pages/GlobalHumanImpact').then((module) => ({ default: module.GlobalHumanImpact })))
 const Liquidity = lazy(() => import('./pages/Liquidity').then((module) => ({ default: module.Liquidity })))
 const PhysicalMarket = lazy(() => import('./pages/PhysicalMarket').then((module) => ({ default: module.PhysicalMarket })))
 const OilPrices = lazy(() => import('./pages/OilPrices').then((module) => ({ default: module.OilPrices })))
@@ -99,6 +100,10 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/overview" element={<Overview />} />
             <Route path="/global" element={<Global />} />
+            <Route path="/global/food-security" element={<GlobalHumanImpact />} />
+            <Route path="/global/nutrition" element={<GlobalHumanImpact />} />
+            <Route path="/global/human-impact" element={<GlobalHumanImpact />} />
+            <Route path="/global/demography" element={<GlobalHumanImpact />} />
             <Route path="/system-response" element={<SystemResponse />} />
             <Route path="/current-state" element={<CanadaCurrentState />} />
             <Route path="/current-state/us" element={<CurrentState />} />

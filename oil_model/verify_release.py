@@ -61,6 +61,10 @@ REQUIRED_ANALYSIS = [
     "analysis/absolute_affordability_validation_history.csv",
     "analysis/absolute_affordability_history_gaps.csv",
     "analysis/historical_absolute_affordability.md",
+    "analysis/global_food_security_history.csv",
+    "analysis/global_nutrition_history.csv",
+    "analysis/global_human_impact_history.csv",
+    "analysis/global_demography_history.csv",
 ]
 
 REQUIRED_CHARTS = [
@@ -155,6 +159,11 @@ REQUIRED_DATA = [
     "website/public/generated/canada/symptom-evaluations.json",
     "website/public/generated/canada/regime-scores.json",
     "website/public/generated/global/manifest.json",
+    "website/public/generated/global/human-impact-context.json",
+    "website/public/generated/global/indicators/global-undernourishment.json",
+    "website/public/generated/global/indicators/global-child-stunting.json",
+    "website/public/generated/global/indicators/global-nutritional-deficiency-deaths.json",
+    "website/public/generated/global/indicators/global-total-population.json",
     "website/public/generated/global/indicators/fao-food-price-index.json",
     "website/public/generated/global/indicators/fao-food-price-index-real.json",
     "website/public/generated/global/indicators/bis-real-house-prices.json",
