@@ -21,7 +21,7 @@
   "sourceUrl": "https://data.unicef.org/resources/dataset/malnutrition-data/",
   "sourceIdentifier": "low_birth_weight",
   "sourceDate": "2020-12-31",
-  "retrievalDate": "2026-07-17T02:51:51+00:00",
+  "retrievalDate": "2026-07-17T03:12:14+00:00",
   "revisionStatus": "FAOSTAT normalized bulk release; underlying inter-agency modelled estimates are revised when source methods or country data change.",
   "seasonalAdjustment": "not applicable",
   "nominalOrReal": "prevalence, count, rate, or burden estimate",
@@ -403,5 +403,25 @@
       "global food-access or nutrition outcome deterioration"
     ]
   },
-  "generatedAt": "2026-07-17T02:51:51+00:00"
+  "generatedAt": "2026-07-17T03:12:14+00:00",
+  "currentAssessment": {
+    "eligible": false,
+    "currentWeight": 0,
+    "latestObservedHumanYear": 2024,
+    "directionWindows": {
+      "oneYear": {
+        "change": 0.09999999999999964,
+        "direction": "worsening"
+      },
+      "threeYear": {
+        "change": 0.1999999999999993,
+        "direction": "worsening"
+      },
+      "fiveYear": {
+        "change": -0.10000000000000142,
+        "direction": "improving"
+      }
+    },
+    "role": "historical supporting evidence"
+  }
 }

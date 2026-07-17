@@ -21,7 +21,7 @@
   "sourceUrl": "https://www.fao.org/faostat/en/#data/CAHD",
   "sourceIdentifier": "healthy_diet_unaffordable",
   "sourceDate": "2024-12-31",
-  "retrievalDate": "2026-07-17T02:51:51+00:00",
+  "retrievalDate": "2026-07-17T03:12:14+00:00",
   "revisionStatus": "July 2025 (SOFI report)",
   "seasonalAdjustment": "not applicable",
   "nominalOrReal": "prevalence, count, rate, or burden estimate",
@@ -208,5 +208,25 @@
       "global food-access or nutrition outcome deterioration"
     ]
   },
-  "generatedAt": "2026-07-17T02:51:51+00:00"
+  "generatedAt": "2026-07-17T03:12:14+00:00",
+  "currentAssessment": {
+    "eligible": true,
+    "currentWeight": 1,
+    "latestObservedHumanYear": 2024,
+    "directionWindows": {
+      "oneYear": {
+        "change": -0.8999999999999986,
+        "direction": "improving"
+      },
+      "threeYear": {
+        "change": -2.6000000000000014,
+        "direction": "improving"
+      },
+      "fiveYear": {
+        "change": -3.5,
+        "direction": "improving"
+      }
+    },
+    "role": "maintained human outcome"
+  }
 }

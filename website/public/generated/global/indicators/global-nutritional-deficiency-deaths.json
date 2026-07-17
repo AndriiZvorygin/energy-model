@@ -21,7 +21,7 @@
   "sourceUrl": "https://www.who.int/data/global-health-estimates/",
   "sourceIdentifier": "nutritional_deficiency_deaths",
   "sourceDate": "2021-12-31",
-  "retrievalDate": "2026-07-17T02:51:51+00:00",
+  "retrievalDate": "2026-07-17T03:12:14+00:00",
   "revisionStatus": "GHE 2021 release published in 2024; estimates are not comparable with earlier GHE releases.",
   "seasonalAdjustment": "not applicable",
   "nominalOrReal": "prevalence, count, rate, or burden estimate",
@@ -178,5 +178,25 @@
       "global food-access or nutrition outcome deterioration"
     ]
   },
-  "generatedAt": "2026-07-17T02:51:51+00:00"
+  "generatedAt": "2026-07-17T03:12:14+00:00",
+  "currentAssessment": {
+    "eligible": false,
+    "currentWeight": 0,
+    "latestObservedHumanYear": 2024,
+    "directionWindows": {
+      "oneYear": {
+        "change": -0.04225509643702985,
+        "direction": "improving"
+      },
+      "threeYear": {
+        "change": null,
+        "direction": "unclear"
+      },
+      "fiveYear": {
+        "change": null,
+        "direction": "unclear"
+      }
+    },
+    "role": "historical supporting evidence"
+  }
 }

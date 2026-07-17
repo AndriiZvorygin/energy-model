@@ -21,7 +21,7 @@
   "sourceUrl": "https://www.fao.org/faostat/en/#data/FS",
   "sourceIdentifier": "undernourishment",
   "sourceDate": "2024-12-31",
-  "retrievalDate": "2026-07-17T02:51:51+00:00",
+  "retrievalDate": "2026-07-17T03:12:14+00:00",
   "revisionStatus": "FAOSTAT normalized bulk release retrieved 2026-07-17",
   "seasonalAdjustment": "not applicable",
   "nominalOrReal": "prevalence, count, rate, or burden estimate",
@@ -463,5 +463,25 @@
       "global food-access or nutrition outcome deterioration"
     ]
   },
-  "generatedAt": "2026-07-17T02:51:51+00:00"
+  "generatedAt": "2026-07-17T03:12:14+00:00",
+  "currentAssessment": {
+    "eligible": true,
+    "currentWeight": 1,
+    "latestObservedHumanYear": 2024,
+    "directionWindows": {
+      "oneYear": {
+        "change": -0.3000000000000007,
+        "direction": "improving"
+      },
+      "threeYear": {
+        "change": -0.6000000000000014,
+        "direction": "improving"
+      },
+      "fiveYear": {
+        "change": 0.6999999999999993,
+        "direction": "worsening"
+      }
+    },
+    "role": "maintained human outcome"
+  }
 }

@@ -1,23 +1,405 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-07-17T02:51:51+00:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-17T03:12:14+00:00",
   "scope": "Global human conditions assembled from official country-aggregated and inter-agency estimates.",
   "upstreamPressure": "worsening",
-  "humanImpactDirection": "unclear",
+  "humanImpactDirection": "improving",
   "humanImpactLevel": "high",
   "demographicExposure": "growing",
   "componentDirections": {
     "foodAccess": "improving",
     "nutrition": "worsening",
-    "mortality": "improving"
+    "historicalDirectCauseCodedNutritionMortalityThrough2021": "unclear"
+  },
+  "observedHumanAssessment": {
+    "throughYear": 2024,
+    "level": "high",
+    "direction": "improving",
+    "recentMomentumOneYear": "improving",
+    "primaryDirectionThreeYears": "improving",
+    "structuralContextFiveYears": "worsening",
+    "humanEffectsAfterLatestYear": "not yet observed"
+  },
+  "historicalMortalityAssessment": {
+    "label": "Historical direct cause-coded nutrition mortality trend through 2021",
+    "throughYear": 2021,
+    "direction": "unclear",
+    "currentWeight": 0
+  },
+  "maintainedSeries": [
+    {
+      "id": "global-undernourishment",
+      "indicator": "undernourishment",
+      "latestYear": 2024,
+      "currentWeight": 1,
+      "directionWindows": {
+        "oneYear": {
+          "change": -0.3000000000000007,
+          "direction": "improving"
+        },
+        "threeYear": {
+          "change": -0.6000000000000014,
+          "direction": "improving"
+        },
+        "fiveYear": {
+          "change": 0.6999999999999993,
+          "direction": "worsening"
+        }
+      }
+    },
+    {
+      "id": "global-moderate-or-severe-food-insecurity",
+      "indicator": "moderate_or_severe_food_insecurity",
+      "latestYear": 2024,
+      "currentWeight": 1,
+      "directionWindows": {
+        "oneYear": {
+          "change": -0.3999999999999986,
+          "direction": "improving"
+        },
+        "threeYear": {
+          "change": -0.8999999999999986,
+          "direction": "improving"
+        },
+        "fiveYear": {
+          "change": 3.0,
+          "direction": "worsening"
+        }
+      }
+    },
+    {
+      "id": "global-severe-food-insecurity",
+      "indicator": "severe_food_insecurity",
+      "latestYear": 2024,
+      "currentWeight": 1,
+      "directionWindows": {
+        "oneYear": {
+          "change": -0.3000000000000007,
+          "direction": "improving"
+        },
+        "threeYear": {
+          "change": -0.9000000000000004,
+          "direction": "improving"
+        },
+        "fiveYear": {
+          "change": 1.0999999999999996,
+          "direction": "worsening"
+        }
+      }
+    },
+    {
+      "id": "global-healthy-diet-unaffordable",
+      "indicator": "healthy_diet_unaffordable",
+      "latestYear": 2024,
+      "currentWeight": 1,
+      "directionWindows": {
+        "oneYear": {
+          "change": -0.8999999999999986,
+          "direction": "improving"
+        },
+        "threeYear": {
+          "change": -2.6000000000000014,
+          "direction": "improving"
+        },
+        "fiveYear": {
+          "change": -3.5,
+          "direction": "improving"
+        }
+      }
+    },
+    {
+      "id": "global-child-stunting",
+      "indicator": "child_stunting",
+      "latestYear": 2024,
+      "currentWeight": 1,
+      "directionWindows": {
+        "oneYear": {
+          "change": 0.3000000000000007,
+          "direction": "worsening"
+        },
+        "threeYear": {
+          "change": 0.8000000000000007,
+          "direction": "worsening"
+        },
+        "fiveYear": {
+          "change": 0.5999999999999979,
+          "direction": "worsening"
+        }
+      }
+    },
+    {
+      "id": "global-child-wasting",
+      "indicator": "child_wasting",
+      "latestYear": 2024,
+      "currentWeight": 1,
+      "directionWindows": {
+        "oneYear": {
+          "change": 0.0,
+          "direction": "stable"
+        },
+        "threeYear": {
+          "change": -0.10000000000000053,
+          "direction": "improving"
+        },
+        "fiveYear": {
+          "change": -0.20000000000000018,
+          "direction": "improving"
+        }
+      }
+    },
+    {
+      "id": "global-anaemia-women",
+      "indicator": "anaemia_women",
+      "latestYear": 2023,
+      "currentWeight": 1,
+      "directionWindows": {
+        "oneYear": {
+          "change": 0.5999999999999979,
+          "direction": "worsening"
+        },
+        "threeYear": {
+          "change": 1.5,
+          "direction": "worsening"
+        },
+        "fiveYear": {
+          "change": 2.099999999999998,
+          "direction": "worsening"
+        }
+      }
+    }
+  ],
+  "staleHistoricalSeries": [
+    {
+      "id": "global-low-birth-weight",
+      "indicator": "low_birth_weight",
+      "latestYear": 2020,
+      "currentWeight": 0,
+      "reason": "Latest observation is more than 1 year behind the 2024 observed-human clock.",
+      "directionWindows": {
+        "oneYear": {
+          "change": 0.09999999999999964,
+          "direction": "worsening"
+        },
+        "threeYear": {
+          "change": 0.1999999999999993,
+          "direction": "worsening"
+        },
+        "fiveYear": {
+          "change": -0.10000000000000142,
+          "direction": "improving"
+        }
+      }
+    },
+    {
+      "id": "global-nutritional-deficiency-deaths",
+      "indicator": "nutritional_deficiency_deaths",
+      "latestYear": 2021,
+      "currentWeight": 0,
+      "reason": "Latest observation is more than 1 year behind the 2024 observed-human clock.",
+      "directionWindows": {
+        "oneYear": {
+          "change": -0.04225509643702985,
+          "direction": "improving"
+        },
+        "threeYear": {
+          "change": null,
+          "direction": "unclear"
+        },
+        "fiveYear": {
+          "change": null,
+          "direction": "unclear"
+        }
+      }
+    },
+    {
+      "id": "global-protein-energy-malnutrition-deaths",
+      "indicator": "protein_energy_malnutrition_deaths",
+      "latestYear": 2021,
+      "currentWeight": 0,
+      "reason": "Latest observation is more than 1 year behind the 2024 observed-human clock.",
+      "directionWindows": {
+        "oneYear": {
+          "change": -0.057117374421953304,
+          "direction": "improving"
+        },
+        "threeYear": {
+          "change": null,
+          "direction": "unclear"
+        },
+        "fiveYear": {
+          "change": null,
+          "direction": "unclear"
+        }
+      }
+    },
+    {
+      "id": "global-nutritional-deficiency-dalys",
+      "indicator": "nutritional_deficiency_dalys",
+      "latestYear": 2021,
+      "currentWeight": 0,
+      "reason": "Latest observation is more than 1 year behind the 2024 observed-human clock.",
+      "directionWindows": {
+        "oneYear": {
+          "change": -0.4594043571652051,
+          "direction": "improving"
+        },
+        "threeYear": {
+          "change": null,
+          "direction": "unclear"
+        },
+        "fiveYear": {
+          "change": null,
+          "direction": "unclear"
+        }
+      }
+    },
+    {
+      "id": "global-protein-energy-malnutrition-dalys",
+      "indicator": "protein_energy_malnutrition_dalys",
+      "latestYear": 2021,
+      "currentWeight": 0,
+      "reason": "Latest observation is more than 1 year behind the 2024 observed-human clock.",
+      "directionWindows": {
+        "oneYear": {
+          "change": -0.4830919045024995,
+          "direction": "improving"
+        },
+        "threeYear": {
+          "change": null,
+          "direction": "unclear"
+        },
+        "fiveYear": {
+          "change": null,
+          "direction": "unclear"
+        }
+      }
+    }
+  ],
+  "currentUpstreamDate": "2026-06-01",
+  "unobservedPeriodStart": "2025-01-01",
+  "humanImpactNowcast": {
+    "status": "unavailable_until_validated",
+    "conclusion": null,
+    "label": "Human-impact nowcast unavailable until validated",
+    "testedLags": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "validationMethod": "Expanding-window global-aggregate regressions at annual lags 0\u20133, with a 2020\u20132021 pandemic indicator, compared with previous-year, recent-trend, and population-only baselines.",
+    "structuralBreakControls": [
+      "pandemic indicator (2020\u20132021)"
+    ],
+    "candidateModelsPassingInitialRmseRule": 0,
+    "publicationReady": false,
+    "reason": "A single revised global aggregate provides too few independent annual observations, does not resolve country heterogeneity, and cannot adequately control pandemic, conflict, income, displacement, and methodology breaks.",
+    "availableCandidates": [
+      "fao_food_price_index",
+      "fao_cereals_price_index",
+      "fao_vegetable_oils_price_index",
+      "fao_food_price_volatility",
+      "wti_oil_price",
+      "population_growth_exposure"
+    ],
+    "missingCandidates": [
+      "fertilizer prices",
+      "broader energy-price index",
+      "regional or country-panel outcome histories",
+      "income and displacement controls",
+      "real-time vintages"
+    ],
+    "bestExploratoryResults": [
+      {
+        "outcome": "undernourishment",
+        "predictor": "fao_vegetable_oils_price_index",
+        "lag_years": 3,
+        "observations": 16,
+        "first_oos_year": 2009,
+        "last_oos_year": 2024,
+        "model_rmse": 1.4066327254928874,
+        "previous_year_rmse": 0.37666297933298426,
+        "recent_trend_rmse": 0.45734742446718185,
+        "population_only_rmse": 2.488750779339265,
+        "improvement_vs_best_baseline_pct": -273.44597230761326
+      },
+      {
+        "outcome": "undernourishment",
+        "predictor": "fao_food_price_index",
+        "lag_years": 3,
+        "observations": 16,
+        "first_oos_year": 2009,
+        "last_oos_year": 2024,
+        "model_rmse": 1.4092579588419474,
+        "previous_year_rmse": 0.37666297933298426,
+        "recent_trend_rmse": 0.45734742446718185,
+        "population_only_rmse": 2.488750779339265,
+        "improvement_vs_best_baseline_pct": -274.14294373647755
+      },
+      {
+        "outcome": "undernourishment",
+        "predictor": "wti_oil_price",
+        "lag_years": 3,
+        "observations": 16,
+        "first_oos_year": 2009,
+        "last_oos_year": 2024,
+        "model_rmse": 1.5063557871361666,
+        "previous_year_rmse": 0.37666297933298426,
+        "recent_trend_rmse": 0.45734742446718185,
+        "population_only_rmse": 2.488750779339265,
+        "improvement_vs_best_baseline_pct": -299.9213805943194
+      },
+      {
+        "outcome": "undernourishment",
+        "predictor": "fao_food_price_index",
+        "lag_years": 1,
+        "observations": 16,
+        "first_oos_year": 2009,
+        "last_oos_year": 2024,
+        "model_rmse": 1.5570605216462814,
+        "previous_year_rmse": 0.37666297933298426,
+        "recent_trend_rmse": 0.45734742446718185,
+        "population_only_rmse": 2.488750779339265,
+        "improvement_vs_best_baseline_pct": -313.3829463154597
+      },
+      {
+        "outcome": "undernourishment",
+        "predictor": "fao_food_price_index",
+        "lag_years": 0,
+        "observations": 16,
+        "first_oos_year": 2009,
+        "last_oos_year": 2024,
+        "model_rmse": 1.6672454102507042,
+        "previous_year_rmse": 0.37666297933298426,
+        "recent_trend_rmse": 0.45734742446718185,
+        "population_only_rmse": 2.488750779339265,
+        "improvement_vs_best_baseline_pct": -342.6358579765803
+      }
+    ],
+    "futureOutputRequirements": [
+      "nowcastYear",
+      "predicted outcome",
+      "prediction interval",
+      "upstream observation window",
+      "selected lag",
+      "validation performance",
+      "baseline performance",
+      "model version",
+      "confidence",
+      "explicit label: modelled estimate, not observed data"
+    ]
   },
   "latestUpstreamYear": "2026-06-01",
+  "latestObservedHumanYear": 2024,
   "latestFoodAccessYear": 2024,
   "latestNutritionYear": 2024,
+  "latestIndicatorYear": 2024,
   "latestMortalityYear": 2021,
   "latestDemographyYear": 2026,
   "staleDataWarnings": [
-    "WHO mortality and DALY evidence ends in 2021; it is not aligned as a current observation with 2026-06-01 commodity prices.",
+    "Human effects after 2024 are not yet observed; 2026-06-01 commodity prices describe upstream pressure only.",
+    "WHO mortality and DALY evidence ends in 2021 and has zero weight in the latest human-impact headline.",
+    "Low birth weight ends in 2020 and remains historical supporting evidence with zero current weight.",
     "Nutrition outcomes are annual modelled estimates and may be revised after country-source and methodology updates."
   ],
   "topicIndicators": {
@@ -76,6 +458,8 @@
     "analysis/global_food_security_history.csv",
     "analysis/global_nutrition_history.csv",
     "analysis/global_human_impact_history.csv",
-    "analysis/global_demography_history.csv"
+    "analysis/global_demography_history.csv",
+    "analysis/global_human_nowcast_validation.csv",
+    "analysis/global_human_nowcast_assessment.md"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "refineryVersion": "2.0.0",
-  "generatedAt": "2026-07-17T02:52:05+00:00",
+  "generatedAt": "2026-07-17T03:14:22+00:00",
   "regenerationCommand": "python -m oil_model.pipeline --root . --refresh",
   "policy": {
     "includeStatusesInDiagnosticSummary": [
@@ -64,7 +64,7 @@
       "geographyLabel": "Global",
       "topic": "food-security",
       "evidenceKey": "global:food-security",
-      "interpretation": "Global human-impact level is high; food-access indicators are improving",
+      "interpretation": "Observed food-access direction through 2024 is improving; human effects after 2024 are not yet observed",
       "confidence": "moderate",
       "coverage": 1.0,
       "scope": "Global upstream conditions and human outcomes assembled from official country-aggregated and inter-agency estimates.",
@@ -101,7 +101,7 @@
       "geographyLabel": "Global",
       "topic": "nutrition",
       "evidenceKey": "global:nutrition",
-      "interpretation": "Global human-impact level is high; biological nutrition outcomes are worsening",
+      "interpretation": "Observed biological nutrition direction through 2024 is worsening; stale outcomes remain historical context only",
       "confidence": "moderate",
       "coverage": 0.6666666666666666,
       "scope": "Global upstream conditions and human outcomes assembled from official country-aggregated and inter-agency estimates.",
@@ -138,7 +138,7 @@
       "geographyLabel": "Global",
       "topic": "human-impact",
       "evidenceKey": "global:human-impact",
-      "interpretation": "Human-impact level is high and direction is unclear; upstream pressure is worsening",
+      "interpretation": "Observed human-impact level through 2024 is high and observed direction is improving. Current upstream pressure through 2026-06-01 is worsening. Human effects after 2024 are not yet observed.",
       "confidence": "moderate",
       "coverage": 0.8571428571428571,
       "scope": "Global upstream conditions and human outcomes assembled from official country-aggregated and inter-agency estimates.",
@@ -888,11 +888,11 @@
     },
     {
       "file": "config/global_human_impact.json",
-      "sha256": "98b6d93cb0a6ebdbcd00d54683cf45af25af3f30e87350a9d1569568d546915e"
+      "sha256": "cb9c2574d8dbdab0d4d35cadaec233302cf0d314812921102d04c51b159d73b0"
     },
     {
       "file": "website/public/generated/evidence-summary.json",
-      "sha256": "db20396bc9807723e34cf3009577330b68c5f6a028f7e8b5c5e8e27f7b78ebf3"
+      "sha256": "149d426ee256b58b1ceccd6c2b85bb4ed421f59209fab738f7181dcc0ffc9c88"
     }
   ]
 }

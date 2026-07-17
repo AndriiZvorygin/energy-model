@@ -802,6 +802,7 @@ class EvidenceRefinery:
     def _global_human(self, geography: str, topic: str, geography_rule: dict[str, Any], topic_rule: dict[str, Any]) -> dict[str, Any]:
         context = _read(self.generated / topic_rule["contextFile"])
         indicator_ids = context["topicIndicators"][topic]
+        stale_ids = {item["id"] for item in context.get("staleHistoricalSeries", [])}
         rows = []
         for indicator_id in indicator_ids:
             record = self.lookup.get(indicator_id)
@@ -809,8 +810,15 @@ class EvidenceRefinery:
                 continue
             payload = record["payload"]
             status = "supporting" if payload.get("interpretationLabel") == "Stressful" else "mixed"
-            row = self._indicator_row(indicator_id, status, topic_rule["title"])
+            historical = indicator_id in stale_ids
+            group = "Historical supporting evidence" if historical else "Latest maintained human evidence"
+            row = self._indicator_row(indicator_id, "mixed" if historical else status, group)
             if row:
+                if historical:
+                    row["reason"] = STATUS_TEXT["mixed"] + " Historical context only; this series has zero weight in the latest observed human-impact headline."
+                    row["currentWeight"] = 0
+                else:
+                    row["currentWeight"] = 1
                 rows.append(row)
         for label in context.get("missingIndicators", {}).get(topic, []):
             rows.append({
@@ -825,13 +833,17 @@ class EvidenceRefinery:
             direction = context["demographicExposure"]
         elif topic == "food-security":
             direction = context["componentDirections"]["foodAccess"]
-            interpretation = f"Global human-impact level is {context['humanImpactLevel']}; food-access indicators are {direction}"
+            interpretation = f"Observed food-access direction through {context['latestObservedHumanYear']} is {direction}; human effects after {context['latestObservedHumanYear']} are not yet observed"
         elif topic == "nutrition":
             direction = context["componentDirections"]["nutrition"]
-            interpretation = f"Global human-impact level is {context['humanImpactLevel']}; biological nutrition outcomes are {direction}"
+            interpretation = f"Observed biological nutrition direction through {context['latestObservedHumanYear']} is {direction}; stale outcomes remain historical context only"
         else:
             direction = context["humanImpactDirection"]
-            interpretation = f"Human-impact level is {context['humanImpactLevel']} and direction is {direction}; upstream pressure is {context['upstreamPressure']}"
+            interpretation = (
+                f"Observed human-impact level through {context['latestObservedHumanYear']} is {context['humanImpactLevel']} "
+                f"and observed direction is {direction}. Current upstream pressure through {context['currentUpstreamDate']} "
+                f"is {context['upstreamPressure']}. Human effects after {context['latestObservedHumanYear']} are not yet observed."
+            )
         available = len([row for row in rows if row["status"] != "insufficient"])
         return _topic(
             geography, topic, interpretation, "moderate", available / len(rows) if rows else 0.0, rows,
@@ -839,9 +851,13 @@ class EvidenceRefinery:
             humanImpactDirection=context["humanImpactDirection"], humanImpactLevel=context["humanImpactLevel"],
             demographicExposure=context["demographicExposure"], componentDirections=context["componentDirections"],
             direction=direction, latestUpstreamYear=context["latestUpstreamYear"],
+            latestObservedHumanYear=context["latestObservedHumanYear"], latestIndicatorYear=context["latestIndicatorYear"],
             latestFoodAccessYear=context["latestFoodAccessYear"], latestNutritionYear=context["latestNutritionYear"],
             latestMortalityYear=context["latestMortalityYear"], latestDemographyYear=context["latestDemographyYear"],
-            staleDataWarnings=context["staleDataWarnings"], provenance=context["provenance"],
+            maintainedSeries=context["maintainedSeries"], staleHistoricalSeries=context["staleHistoricalSeries"],
+            currentUpstreamDate=context["currentUpstreamDate"], unobservedPeriodStart=context["unobservedPeriodStart"],
+            observedHumanAssessment=context["observedHumanAssessment"], historicalMortalityAssessment=context["historicalMortalityAssessment"],
+            humanImpactNowcast=context["humanImpactNowcast"], staleDataWarnings=context["staleDataWarnings"], provenance=context["provenance"],
         )
 
 

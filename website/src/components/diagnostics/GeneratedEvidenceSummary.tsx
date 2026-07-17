@@ -22,6 +22,7 @@ type GeneratedEvidenceRow = {
   source?: string | null
   evidenceGeography?: string | null
   evidenceRoute?: string | null
+  currentWeight?: number
 }
 type GeneratedTopic = {
   topic: string
@@ -45,7 +46,7 @@ const disposition: Record<GeneratedEvidenceRow['status'], EvidenceDisposition> =
 export function GeneratedEvidenceSummary({ evidenceKey, title = 'Diagnostic summary', includeStatuses = ['supporting', 'mixed', 'contradicting', 'insufficient'] }: { evidenceKey: string; title?: string; includeStatuses?: GeneratedEvidenceRow['status'][] }) {
   const { data, error } = useGeneratedJson<EvidenceSummaryPayload>('evidence-summary.json')
   const selected = data?.evidence[evidenceKey]
-  const generatedRows = useMemo(() => selected ? includeStatuses.flatMap((status) => selected[status]) : [], [includeStatuses, selected])
+  const generatedRows = useMemo(() => selected ? includeStatuses.flatMap((status) => selected[status]).filter((row) => row.currentWeight !== 0) : [], [includeStatuses, selected])
   const files = useMemo(() => [...new Set(generatedRows.map((row) => row.indicatorFile).filter((file): file is string => Boolean(file)))], [generatedRows])
   const { indicators, error: indicatorError } = useIndicatorDatasets(files)
   const byFile = useMemo(() => new Map(files.map((file, index) => [file, indicators[index]])), [files, indicators])

@@ -65,6 +65,8 @@ REQUIRED_ANALYSIS = [
     "analysis/global_nutrition_history.csv",
     "analysis/global_human_impact_history.csv",
     "analysis/global_demography_history.csv",
+    "analysis/global_human_nowcast_validation.csv",
+    "analysis/global_human_nowcast_assessment.md",
 ]
 
 REQUIRED_CHARTS = [
@@ -160,6 +162,7 @@ REQUIRED_DATA = [
     "website/public/generated/canada/regime-scores.json",
     "website/public/generated/global/manifest.json",
     "website/public/generated/global/human-impact-context.json",
+    "website/public/generated/global/human-impact-nowcast-validation.json",
     "website/public/generated/global/indicators/global-undernourishment.json",
     "website/public/generated/global/indicators/global-child-stunting.json",
     "website/public/generated/global/indicators/global-nutritional-deficiency-deaths.json",

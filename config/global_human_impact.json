@@ -17,6 +17,22 @@
   "policy": {
     "populationGrowthIsHardship": false,
     "directNutritionDeathsEqualAttributableBurden": false,
-    "alignDifferentLatestYearsAsCurrent": false
+    "alignDifferentLatestYearsAsCurrent": false,
+    "currentEligibilityMaxLagYears": 1,
+    "recentMomentumYears": 1,
+    "primaryDirectionYears": 3,
+    "structuralContextYears": 5
+  },
+  "nowcast": {
+    "publicationStatus": "unavailable_until_validated",
+    "testedAnnualLags": [0, 1, 2, 3],
+    "baselines": ["previous-year value", "recent trend", "population-only trend"],
+    "minimumOutOfSampleImprovementPercent": 5,
+    "requiredBeforePublication": [
+      "regional or country-panel validation",
+      "prediction intervals",
+      "structural-break controls",
+      "real-time-vintage testing"
+    ]
   }
 }
