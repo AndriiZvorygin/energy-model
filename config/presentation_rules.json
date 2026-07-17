@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "refineryVersion": "2.0.0",
   "routes": {
+    "/global": {"geography": "global", "topic": "indicator-state"},
     "/canada": {"geography": "canada", "topic": "overview"},
     "/current-state": {"geography": "canada", "topic": "current-state"},
     "/canada/current-state": {"geography": "canada", "topic": "current-state"},

@@ -50,8 +50,8 @@ describe('affordability evidence', () => {
   it('renders the affordability observatory entry point', () => {
     vi.stubGlobal('fetch', vi.fn(() => new Promise(() => undefined)))
     render(<MemoryRouter><Affordability /></MemoryRouter>)
-    expect(screen.getByText('Food and housing affordability')).toBeInTheDocument()
-    expect(screen.getByText('Global current evidence')).toBeInTheDocument()
+    expect(screen.getByText('Canadian food and housing affordability')).toBeInTheDocument()
+    expect(screen.queryByText('Global current evidence')).not.toBeInTheDocument()
     expect(screen.getByText('Food-price evidence')).toBeInTheDocument()
     expect(screen.getByText('Housing-price evidence')).toBeInTheDocument()
   })

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "refineryVersion": "2.0.0",
-  "generatedAt": "2026-07-16T20:24:53+00:00",
+  "generatedAt": "2026-07-17T02:18:38+00:00",
   "regenerationCommand": "python -m oil_model.pipeline --root . --refresh",
   "policy": {
     "includeStatusesInDiagnosticSummary": [
@@ -21,6 +21,40 @@
     "requireProvenance": true
   },
   "routes": {
+    "/global": {
+      "route": "/global",
+      "geography": "global",
+      "geographyLabel": "Global",
+      "topic": "indicator-state",
+      "evidenceKey": "global:indicator-state",
+      "interpretation": "Global indicators are assembled for geography-specific evaluation",
+      "confidence": "moderate",
+      "coverage": 1.0,
+      "scope": "Global oil-market, liquidity, food-commodity and international housing inputs.",
+      "oldestObservationDate": "2026-05-01",
+      "newestObservationDate": "2026-07-03",
+      "evidenceCounts": {
+        "supporting": 0,
+        "mixed": 15,
+        "contradicting": 0,
+        "insufficient": 0
+      },
+      "provenance": [
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "global:indicator-state"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/absolute_affordability.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
+      ]
+    },
     "/canada": {
       "route": "/canada",
       "geography": "canada",
@@ -637,11 +671,11 @@
   "inputs": [
     {
       "file": "config/presentation_rules.json",
-      "sha256": "73466faa7c564544d5fbd1031459a64a4b3ebf4f993190aafaa113b6f55dc226"
+      "sha256": "8ba69d00d8dad69c0b5edddacaa039b0edc1f99c3ca780050aee1bfaffa8c034"
     },
     {
       "file": "config/evidence_topics.json",
-      "sha256": "6ea34b34d4ab34a6960433cce21fe35a9b62db307e47868f33243fc9adf521b4"
+      "sha256": "45e41d99fb87434250c0ea133032b056b286e5ba781a412ab50a6f579ef67396"
     },
     {
       "file": "config/absolute_affordability.json",
@@ -649,7 +683,7 @@
     },
     {
       "file": "website/public/generated/evidence-summary.json",
-      "sha256": "9768363e2e1e9a6244ba6c9dad343a9f86abb96abdcb353d02b2fcd9906b0e9f"
+      "sha256": "17b887c50b2d3e32e8a04d987667a5c1de1d551aa53c2b5373dd81fe1d93187a"
     }
   ]
 }

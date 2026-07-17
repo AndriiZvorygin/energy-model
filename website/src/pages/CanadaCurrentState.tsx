@@ -37,7 +37,6 @@ type CanadaState = {
 };
 
 const layerOrder = [
-  "Global oil and liquidity inputs",
   "Physical energy conditions",
   "Energy affordability and finance",
   "Food affordability",
@@ -47,8 +46,6 @@ const layerOrder = [
   "Labour and households",
 ];
 const layerText: Record<string, string> = {
-  "Global oil and liquidity inputs":
-    "External global liquidity and benchmark oil conditions inherited from the existing locked research layer.",
   "Physical energy conditions":
     "Canadian production, trade, refinery inputs and inventories are shown separately; production is not treated as household affordability.",
   "Energy affordability and finance":
@@ -87,7 +84,7 @@ function CanadaStatePage({
       manifest?.indicators
         .filter(
           (item) =>
-            ((item.geography === geography || item.geography === "Global") &&
+            (item.geography === geography &&
               (!layer || item.layer === layer)) ||
             item.id === requested,
         )
@@ -103,7 +100,7 @@ function CanadaStatePage({
   const visibleLayers = layer ? [layer] : layerOrder;
   const title =
     geography === "Ontario"
-      ? "Ontario evidence with global inputs"
+      ? "Ontario current state"
       : layer
         ? `Canadian ${layer.toLowerCase()}`
         : "Canadian current state";
@@ -125,7 +122,7 @@ function CanadaStatePage({
       <PageHeader
         eyebrow="Canadian-centred research"
         title={title}
-        description="Canadian evidence is shown with its own history, definitions and source dates. The provisional classifier preserves national, Ontario, Alberta, and global contributions separately."
+        description="Canadian evidence is shown with its own history, definitions and source dates. External global inputs remain available in the separate Global geography and retain their original provenance inside classifier details."
       />
       <PageBody>
         <CanadaGeographyControls />
@@ -166,9 +163,7 @@ function CanadaStatePage({
                   </div>
                   <div>
                     <p className="text-stone-500">Displayed geography</p>
-                    <p className="mt-1 font-medium">
-                      {geography} with global inputs
-                    </p>
+                    <p className="mt-1 font-medium">{geography}</p>
                   </div>
                   <div>
                     <p className="text-stone-500">Classifier</p>
@@ -192,8 +187,7 @@ function CanadaStatePage({
                   <section key={layerName}>
                     <div className="border-b border-stone-300 pb-4 dark:border-stone-700">
                       <p className="text-xs font-semibold uppercase text-petroleum">
-                        {geography === "Ontario" &&
-                        layerName !== "Global oil and liquidity inputs"
+                        {geography === "Ontario"
                           ? "Ontario regional context"
                           : "Evidence layer"}
                       </p>

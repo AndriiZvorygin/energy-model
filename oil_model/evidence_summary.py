@@ -140,8 +140,21 @@ def _indicator_maps(generated: Path) -> tuple[dict[str, dict[str, Any]], dict[st
     return output, files
 
 
-def _condition_row(condition: dict[str, Any], status: str, lookup: dict[str, dict[str, Any]], group: str) -> dict[str, Any]:
+def _condition_row(
+    condition: dict[str, Any],
+    status: str,
+    lookup: dict[str, dict[str, Any]],
+    group: str,
+    geography_rules: dict[str, dict[str, Any]],
+    default_geography: str,
+) -> dict[str, Any]:
     record = lookup.get(str(condition.get("indicatorId") or condition.get("indicator") or ""))
+    raw_geography = condition.get("geography") or default_geography
+    geography_key = next((
+        key for key, rule in geography_rules.items()
+        if str(raw_geography).lower() in {key.lower(), str(rule.get("label", "")).lower()}
+    ), None)
+    geography_rule = geography_rules.get(geography_key, {}) if geography_key else {}
     value = condition.get("value")
     detail = f" {condition.get('label', 'This indicator')} is evaluated using {str(condition.get('transformation', 'the published transformation')).replace('_', ' ')}"
     if value is not None:
@@ -155,6 +168,8 @@ def _condition_row(condition: dict[str, Any], status: str, lookup: dict[str, dic
         "direction": condition.get("expectedDirection"), "sourceDate": condition.get("sourceDate"),
         "calculation": f"{condition.get('transformation', 'published condition')}; expected direction {condition.get('expectedDirection', 'documented in rule')}",
         "limitations": [],
+        "evidenceGeography": geography_rule.get("label") or raw_geography,
+        "evidenceRoute": geography_rule.get("route"),
     }
 
 
@@ -222,11 +237,12 @@ class EvidenceRefinery:
         classification = _read(self.generated / settings["file"])
         primary = classification[settings["primaryKey"]]
         secondary = classification[settings["secondaryKey"]]
-        rows = [_condition_row(row, "supporting" if row.get("available", True) else "insufficient", self.lookup, "Supporting evidence") for row in primary.get("supportingEvidence", [])]
-        rows += [_condition_row(row, "contradicting" if row.get("available", True) else "insufficient", self.lookup, "Conflicting evidence") for row in primary.get("conflictingEvidence", [])]
+        geography_rules = self.rules["geographies"]
+        rows = [_condition_row(row, "supporting" if row.get("available", True) else "insufficient", self.lookup, "Supporting evidence", geography_rules, geography) for row in primary.get("supportingEvidence", [])]
+        rows += [_condition_row(row, "contradicting" if row.get("available", True) else "insufficient", self.lookup, "Conflicting evidence", geography_rules, geography) for row in primary.get("conflictingEvidence", [])]
         named = {row["label"] for row in rows}
-        rows += [_condition_row(row, "mixed" if row.get("available", True) else "insufficient", self.lookup, "Other evaluated evidence") for row in primary.get("indicatorEvidence", []) if row.get("label") not in named]
-        rows += [_condition_row(row, "mixed" if row.get("available", True) else "insufficient", self.lookup, f"Evidence for secondary candidate: {secondary['name']}") for row in secondary.get("supportingEvidence", []) if row.get("label") not in named]
+        rows += [_condition_row(row, "mixed" if row.get("available", True) else "insufficient", self.lookup, "Other evaluated evidence", geography_rules, geography) for row in primary.get("indicatorEvidence", []) if row.get("label") not in named]
+        rows += [_condition_row(row, "mixed" if row.get("available", True) else "insufficient", self.lookup, f"Evidence for secondary candidate: {secondary['name']}", geography_rules, geography) for row in secondary.get("supportingEvidence", []) if row.get("label") not in named]
         interpretation_path = settings["overviewInterpretationPath"] if topic_rule["interpretation"] == "overview" else settings["currentInterpretationPath"]
         return _topic(geography, topic, str(_value(classification, interpretation_path)), str(_value(classification, settings["confidencePath"])), float(_value(classification, settings["coveragePath"])), rows, classification.get("scope") or geography_rule["scope"])
 
@@ -265,14 +281,14 @@ class EvidenceRefinery:
         rows = []
         for condition in symptom.get("requiredConditionResults", []):
             status = "insufficient" if not condition.get("available") else "supporting" if condition.get("met") else "contradicting"
-            rows.append(_condition_row(condition, status, self.lookup, "Required evidence"))
+            rows.append(_condition_row(condition, status, self.lookup, "Required evidence", self.rules["geographies"], geography))
         for condition in symptom.get("confirmingEvidence", []):
             status = "insufficient" if not condition.get("available") else "supporting" if condition.get("met") else "mixed"
-            rows.append(_condition_row(condition, status, self.lookup, "Confirming evidence"))
+            rows.append(_condition_row(condition, status, self.lookup, "Confirming evidence", self.rules["geographies"], geography))
         for condition in symptom.get("conflictingEvidence", []):
             status = "insufficient" if not condition.get("available") else "contradicting" if condition.get("met") else "mixed"
-            rows.append(_condition_row(condition, status, self.lookup, "Conflicting evidence"))
-        rows += [_condition_row(condition, "insufficient", self.lookup, "Missing evidence") for condition in symptom.get("missingEvidence", [])]
+            rows.append(_condition_row(condition, status, self.lookup, "Conflicting evidence", self.rules["geographies"], geography))
+        rows += [_condition_row(condition, "insufficient", self.lookup, "Missing evidence", self.rules["geographies"], geography) for condition in symptom.get("missingEvidence", [])]
         status = str(symptom.get("statusLabel") or symptom.get("status", "")).replace("_", " ")
         return _topic(geography, topic, f"Why this symptom is {status.lower()}", symptom.get("confidence", "low"), symptom.get("coverage"), rows, symptoms["scope"])
 

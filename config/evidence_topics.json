@@ -3,6 +3,7 @@
   "geographies": {
     "us": {
       "label": "United States",
+      "route": "/current-state/us",
       "scope": "United States energy-economic conditions with global oil-market and global-liquidity inputs.",
       "symptomInterpretation": "Current documented symptom balance",
       "symptomCalculation": "Version-controlled symptom rule",
@@ -45,6 +46,7 @@
     },
     "canada": {
       "label": "Canada",
+      "route": "/canada/current-state",
       "scope": "Canadian energy-economic conditions with global oil-market and global-liquidity inputs.",
       "symptomInterpretation": "Current Canadian symptom balance",
       "symptomCalculation": "Version-controlled Canadian symptom rule",
@@ -88,16 +90,19 @@
     },
     "ontario": {
       "label": "Ontario",
+      "route": "/canada/ontario",
       "scope": "Ontario energy-economic conditions with Canadian and global upstream inputs.",
       "indicatorGeographies": ["Ontario"]
     },
     "alberta": {
       "label": "Alberta",
+      "route": "/canada/current-state",
       "scope": "Alberta producing-region conditions with Canadian and global upstream inputs.",
       "indicatorGeographies": ["Alberta"]
     },
     "owen-sound": {
       "label": "Owen Sound",
+      "route": "/owen-sound/affordability",
       "scope": "Owen Sound city census subdivision household affordability with Grey Bruce regional food context.",
       "topicOverrides": {
         "affordability": {"groups": {}},
@@ -106,7 +111,8 @@
       }
     },
     "global": {
-      "label": "Global inputs",
+      "label": "Global",
+      "route": "/global",
       "scope": "Global oil-market, liquidity, food-commodity and international housing inputs.",
       "indicatorGeographies": ["Global"],
       "topicOverrides": {

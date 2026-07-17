@@ -6,6 +6,7 @@ const websiteRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const distRoot = resolve(websiteRoot, 'dist')
 const routes = [
   'overview',
+  'global',
   'system-response',
   'current-state',
   'current-state/us',

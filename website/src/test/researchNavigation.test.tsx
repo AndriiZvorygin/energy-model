@@ -16,7 +16,8 @@ describe('research navigation', () => {
     expect(screen.getByRole('link', { name: 'Owen Sound food' })).toHaveAttribute('href', '/owen-sound/food')
     expect(screen.getByRole('link', { name: 'Owen Sound housing' })).toHaveAttribute('href', '/owen-sound/housing')
 
-    fireEvent.click(screen.getByRole('button', { name: 'Oil and markets' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Global conditions' }))
+    expect(screen.getByRole('link', { name: 'Global overview' })).toHaveAttribute('href', '/global')
     expect(screen.getByRole('link', { name: 'Global liquidity' })).toBeVisible()
     expect(screen.queryByRole('link', { name: 'Owen Sound overview' })).not.toBeInTheDocument()
   })

@@ -12,31 +12,15 @@ export function Affordability() {
   return (
     <>
       <PageHeader
-        eyebrow="Global and domestic price evidence"
-        title="Food and housing affordability"
-        description="International commodities, domestic prices, household income, wages, property purchase prices, and current shelter costs are related but distinct evidence layers."
+        eyebrow="Canadian household evidence"
+        title="Canadian food and housing affordability"
+        description="Canadian prices, household income, wages, property purchase prices, and current shelter costs are related but distinct evidence layers. International commodity context is kept under the separate Global geography."
       />
       <PageBody>
         <EvidenceGeographySelector />
         <GeneratedRouteEvidenceSummary
           title="Household affordability evidence"
         />
-        <section className="mt-12 border-y border-stone-300 py-6 dark:border-stone-700">
-          <h2 className="text-2xl font-semibold">Global current evidence</h2>
-          <p className="mt-2 max-w-4xl text-sm leading-6 text-stone-600 dark:text-stone-300">
-            FAO indices measure international commodity quotations, not grocery
-            bills. BIS aggregates cover participating national property-price
-            series rather than every dwelling worldwide.
-          </p>
-          <AffordabilityIndicatorGrid
-            files={[
-              "global/indicators/fao-food-price-index.json",
-              "global/indicators/fao-food-price-index-real.json",
-              "global/indicators/bis-real-house-prices.json",
-              "global/indicators/bis-advanced-real-house-prices.json",
-            ]}
-          />
-        </section>
         <section className="mt-14">
           <p className="text-xs font-semibold uppercase text-petroleum">
             Canadian purchasing power

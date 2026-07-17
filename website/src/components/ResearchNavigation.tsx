@@ -39,6 +39,17 @@ type NavigationGroup = {
 
 const groups: NavigationGroup[] = [
   {
+    id: 'global',
+    label: 'Global conditions',
+    icon: Network,
+    items: [
+      { to: '/global', label: 'Global overview', icon: Network },
+      { to: '/liquidity', label: 'Global liquidity', icon: TrendingUp },
+      { to: '/physical-market', label: 'Physical oil market', icon: Droplets },
+      { to: '/oil-prices', label: 'Oil price layers', icon: Fuel },
+    ],
+  },
+  {
     id: 'canada',
     label: 'Canadian conditions',
     icon: Map,
@@ -56,7 +67,7 @@ const groups: NavigationGroup[] = [
     label: 'Affordability',
     icon: House,
     items: [
-      { to: '/affordability', label: 'Canada overview', icon: House },
+      { to: '/affordability', label: 'Canada affordability', icon: House },
       { to: '/affordability/food', label: 'Canada food', icon: House },
       { to: '/affordability/housing', label: 'Canada housing', icon: House },
       { to: '/owen-sound/affordability', label: 'Owen Sound overview', icon: MapPin },
@@ -69,9 +80,6 @@ const groups: NavigationGroup[] = [
     label: 'Oil and markets',
     icon: Fuel,
     items: [
-      { to: '/liquidity', label: 'Global liquidity', icon: TrendingUp },
-      { to: '/physical-market', label: 'Physical oil market', icon: Droplets },
-      { to: '/oil-prices', label: 'Oil price layers', icon: Fuel },
       { to: '/equities', label: 'Equities', icon: Landmark },
     ],
   },

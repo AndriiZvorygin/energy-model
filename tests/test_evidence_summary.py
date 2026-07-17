@@ -135,6 +135,18 @@ def test_one_interface_handles_all_configured_geographies() -> None:
         assert result["evidenceKey"] == key
 
 
+def test_cross_geography_classifier_evidence_links_to_its_own_geography() -> None:
+    result = generate_evidence_summary("canada", "symptom/physical_tightening", ROOT)
+    rows = [row for status in STATUS_TEXT for row in result[status]]
+    global_wti = next(row for row in rows if row["indicator"] == "global_wti_yoy")
+    assert global_wti["evidenceGeography"] == "Global"
+    assert global_wti["evidenceRoute"] == "/global"
+
+    canadian_wti = next(row for row in rows if row["indicator"] == "canada_real_wti_cad_yoy")
+    assert canadian_wti["evidenceGeography"] == "Canada"
+    assert canadian_wti["evidenceRoute"] == "/canada/current-state"
+
+
 def test_migrated_narratives_remain_unchanged() -> None:
     payload = json.loads((GENERATED / "evidence-summary.json").read_text(encoding="utf-8"))["evidence"]
     assert payload["us:current-state"]["interpretation"] == "Mixed transition: Physical tightening/Energy affordability stress"

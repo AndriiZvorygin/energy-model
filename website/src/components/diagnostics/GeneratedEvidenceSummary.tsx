@@ -20,6 +20,8 @@ type GeneratedEvidenceRow = {
   limitations: string[]
   absoluteStatus?: AbsoluteAffordabilityStatus | null
   source?: string | null
+  evidenceGeography?: string | null
+  evidenceRoute?: string | null
 }
 type GeneratedTopic = {
   topic: string
@@ -53,6 +55,7 @@ export function GeneratedEvidenceSummary({ evidenceKey, title = 'Diagnostic summ
     indicator: row.indicatorFile ? byFile.get(row.indicatorFile) : undefined,
     value: row.value, unit: row.unit, percentile: row.historicalPercentile, direction: row.direction,
     absoluteStatus: row.absoluteStatus, source: row.source, sourceDate: row.sourceDate, calculation: row.calculation, limitations: row.limitations,
+    evidenceGeography: row.evidenceGeography, evidenceRoute: row.evidenceRoute,
   })), [byFile, evidenceKey, generatedRows])
   if (error || indicatorError) return <p className="border-y border-amber-500 py-4 text-sm text-amber-700">Diagnostic summary unavailable: {error ?? indicatorError}</p>
   if (!selected) return <p className="border-y border-stone-300 py-6 text-sm text-stone-500 dark:border-stone-700">Loading diagnostic summary…</p>
