@@ -7,6 +7,8 @@ const distRoot = resolve(websiteRoot, 'dist')
 const routes = [
   'overview',
   'global',
+  'global/food-prices',
+  'global/housing',
   'global/food-security',
   'global/nutrition',
   'global/human-impact',
