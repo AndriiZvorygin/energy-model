@@ -13,6 +13,7 @@ export type ChartSeries = {
   transformations?: Transformation[]
   indexAlignment?: 'peer-average-at-first-observation' | null
   indexPeers?: string[]
+  panel?: string
 }
 
 export type ChartObservation = {

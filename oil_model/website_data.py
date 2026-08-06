@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import math
+import csv
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -15,6 +16,7 @@ SCHEMA_VERSION = "1.1.0"
 EVIDENCE_LABELS = {
     "Validated relationship",
     "Supported historical pattern",
+    "Contextual historical pattern",
     "Contextual indicator",
     "Experimental proxy",
     "Scenario concept",
@@ -29,6 +31,8 @@ def _number(value: object) -> float | None:
 
 def _iso_date(value: object) -> str:
     text = str(value)
+    if len(text) == 4:
+        return f"{text}-01-01"
     if len(text) == 7:
         return f"{text}-01"
     if len(text) == 10:
@@ -48,6 +52,7 @@ def _series(
     transformations: list[str] | None = None,
     index_alignment: str | None = None,
     index_peers: list[str] | None = None,
+    panel: str | None = None,
 ) -> dict[str, Any]:
     result = {
         "key": key,
@@ -63,6 +68,8 @@ def _series(
     if index_alignment:
         result["indexAlignment"] = index_alignment
         result["indexPeers"] = index_peers or []
+    if panel:
+        result["panel"] = panel
     return result
 
 
@@ -168,6 +175,32 @@ def _observations(rows: list[Row], mapping: dict[str, str], date_field: str = "m
         for row in rows
         if row.get(date_field)
     ]
+
+
+def _global_energy_context(root: Path) -> list[dict[str, Any]]:
+    path = root / "data" / "seed" / "global_primary_energy_annual.csv"
+    if not path.exists():
+        return []
+    rows: list[dict[str, Any]] = []
+    with path.open(encoding="utf-8", newline="") as handle:
+        for row in csv.DictReader(handle):
+            rows.append({
+                "year": int(row["year"]),
+                "energy": float(row["primary_energy_consumption_twh"]),
+                "population": float(row["population_persons"]),
+            })
+    rows.sort(key=lambda row: row["year"])
+    observations: list[dict[str, Any]] = []
+    for current, previous in zip(rows[1:], rows[:-1]):
+        energy_growth = 100 * (current["energy"] / previous["energy"] - 1)
+        population_growth = 100 * (current["population"] / previous["population"] - 1)
+        observations.append({
+            "date": _iso_date(current["year"]),
+            "global_primary_energy_growth": energy_growth,
+            "global_population_growth": population_growth,
+            "energy_growth_beyond_population": energy_growth - population_growth,
+        })
+    return observations
 
 
 def _annual_ci_wti_relationship(rows: list[Row], start_year: int = 2010, end_year: int = 2025) -> tuple[list[dict[str, Any]], dict[str, float | int]]:
@@ -871,7 +904,93 @@ def write_website_chart_data(
         "demand_destruction_cycle.png", generated_at, [event["id"] for event in events], reference_period=("2000-01-01", "2019-12-01"),
     )
 
-    datasets = [oil_prices, gm2_lead, residuals, ci_wti_annual, energy_gdp, equities, uso, headline, net_output, capacity, household, financial, output_comparison, physical_tightness, energy_burden, industrial_transmission, labour_warning, demand_destruction]
+    price_availability_activity = _dataset(
+        "price-availability-activity", "Price, physical availability, and economic activity", "Three synchronized panels place supply and inventory proxies beside oil-price and delivered-energy-cost momentum, then beside real activity and demand.", "monthly",
+        [
+            _series("petroleum_production_YoY", "Petroleum production growth", "percent", "EIA Monthly Energy Review", "derived", color="#0f766e", transformations=["raw", "zscore"], panel="Physical availability and supply"),
+            _series("Inventory_tightness_zscore", "Inventory tightness (-CI z-score)", "standard deviations", "EIA WCESTUS1; project display inversion", "derived", color="#be123c", transformations=["raw", "zscore"], panel="Physical availability and supply"),
+            _series("refinery_utilization_pct", "Refinery utilization", "percent", "EIA WPULEUS3", "measured", False, color="#7c3aed", transformations=["raw", "zscore"], panel="Physical availability and supply"),
+            _series("WTI_YoY", "WTI growth", "percent", "FRED DCOILWTICO", "derived", color="#2563eb", transformations=["raw", "zscore"], panel="Benchmark prices and delivered costs"),
+            _series("real_WTI_YoY", "Real WTI growth", "percent", "FRED DCOILWTICO / CPIAUCSL", "derived", False, color="#0f766e", transformations=["raw", "zscore"], panel="Benchmark prices and delivered costs"),
+            _series("energy_CPI_YoY", "Energy CPI growth", "percent", "BLS via FRED CPIENGSL", "derived", False, color="#d97706", transformations=["raw", "zscore"], panel="Benchmark prices and delivered costs"),
+            _series("Industrial_production_YoY", "Industrial production growth", "percent", "Federal Reserve via FRED INDPRO", "derived", color="#0f766e", transformations=["raw", "zscore"], panel="Economic activity and demand"),
+            _series("real_consumer_spending_YoY", "Real consumer spending growth", "percent", "BEA via FRED PCEC96", "derived", False, color="#d97706", transformations=["raw", "zscore"], panel="Economic activity and demand"),
+            _series("unemployment_rate", "Unemployment rate", "percent", "BLS via FRED UNRATE", "measured", False, color="#be123c", transformations=["raw", "zscore"], panel="Economic activity and demand"),
+        ],
+        [
+            {
+                "date": _iso_date(row["month"]),
+                "petroleum_production_YoY": _number(row.get("petroleum_production_YoY")),
+                "Inventory_tightness_zscore": -_number(row.get("CI_zscore")) if _number(row.get("CI_zscore")) is not None else None,
+                "refinery_utilization_pct": _number(row.get("refinery_utilization_pct")),
+                "WTI_YoY": _number(row.get("WTI_YoY")),
+                "real_WTI_YoY": _number(row.get("real_WTI_YoY")),
+                "energy_CPI_YoY": _number(row.get("energy_CPI_YoY")),
+                "Industrial_production_YoY": _number(row.get("Industrial_production_YoY")),
+                "real_consumer_spending_YoY": _number(row.get("real_consumer_spending_YoY")),
+                "unemployment_rate": _number(row.get("unemployment_rate")),
+            }
+            for row in system_rows
+            if row.get("month")
+        ],
+        ["raw", "zscore"], "Supported historical pattern",
+        {
+            "formula": "Each panel uses fixed-reference z = (observation - reference-period mean) / reference-period standard deviation; inventory tightness = -CI_zscore.",
+            "notes": "The panels retain synchronized dates while keeping physical, price, and activity units separate. Falling benchmark prices can reflect demand destruction rather than abundant or affordable energy.",
+        },
+        "", generated_at, [event["id"] for event in events],
+        details={
+            "plainLanguageSummary": "Use the three panels to inspect episodes where physical tightness, delivered energy costs, and economic activity move in different directions. A falling benchmark price is not, by itself, evidence that energy has become easy to afford.",
+            "howToRead": "The lines are standardized within their fixed reference period so their timing can be compared without putting unrelated units on one axis. Read the panels together and inspect the exact observations in the table.",
+            "patternsToWatch": ["Price declines coinciding with weakening production, spending, or employment", "Delivered energy inflation remaining elevated after benchmark oil momentum fades", "Inventory tightness and refinery utilization diverging from domestic production growth"],
+            "limitations": ["These are U.S. indicators and do not measure global physical availability or every delivered fuel cost.", "Supply shocks, policy, exchange rates, credit conditions, and common recession drivers can move several panels together.", "The synchronized view is descriptive; it does not establish the affordability feedback loop as a causal model."],
+            "sourceNotes": ["EIA Monthly Energy Review and WPULEUS3", "EIA WCESTUS1 comparative inventory", "FRED DCOILWTICO, CPIAUCSL, INDPRO, UNRATE", "BEA PCEC96; BLS CPIENGSL"],
+        },
+        reference_period=("2000-01-01", "2019-12-01"),
+    )
+
+    global_energy_observations = _global_energy_context(root)
+    global_energy_growth = _dataset(
+        "global-energy-growth-beyond-population", "Energy growth beyond population", "A long-run global context chart comparing primary-energy growth, population growth, and the difference between them.", "annual",
+        [
+            _series("global_primary_energy_growth", "Global primary-energy consumption growth", "percent", "Energy Institute Statistical Review via Our World in Data", "derived", color="#0f766e", transformations=["raw", "zscore"]),
+            _series("global_population_growth", "Global population growth", "percent", "Population denominator from the same country aggregate snapshot", "derived", color="#2563eb", transformations=["raw", "zscore"]),
+            _series("energy_growth_beyond_population", "Energy growth beyond population", "percentage points", "Project derivation from the two series", "derived", color="#d97706", transformations=["raw", "zscore"]),
+        ],
+        global_energy_observations, ["raw", "zscore"], "Contextual historical pattern",
+        {
+            "formula": "Energy growth beyond population = global primary-energy consumption growth minus global population growth.",
+            "notes": "Annual country aggregates preserve the source's available coverage. The residual is a rough contextual indicator, not a direct measure of living standards or welfare.",
+        },
+        "", generated_at, [event["id"] for event in events],
+        details={
+            "plainLanguageSummary": "Energy use has generally grown faster than population over the covered period, but the difference is uneven and does not by itself measure prosperity. Efficiency, energy quality, technology, distribution, and economic structure still matter.",
+            "howToRead": "Compare the annual growth rates first, then inspect the residual labelled energy growth beyond population. This is contextual historical evidence rather than a welfare score.",
+            "patternsToWatch": ["Periods when energy growth beyond population contracts", "Long-run divergence between population growth and energy use", "Disruptions or recessions where energy growth slows sharply"],
+            "limitations": ["The aggregate is built from country rows with available energy and population values; it is not a measure of every country or person.", "Primary energy aggregates combine different energy qualities and do not account for efficiency or distribution.", "The source snapshot currently ends in 2023; recent values are not a live nowcast."],
+            "sourceNotes": ["Energy Institute Statistical Review via Our World in Data, checked-in source snapshot data/seed/global_primary_energy_annual.csv", "Country rows with ISO codes are summed; 2024 is omitted because population coverage was incomplete in the source snapshot."],
+        },
+        reference_period=("1966-01-01", "2019-01-01"),
+    )
+
+    viable_price_window = {
+        "schemaVersion": 1,
+        "id": "viable-price-window",
+        "title": "Conceptual viable price window",
+        "description": "A scenario concept showing the space between producer viability requirements and the consumer affordability ceiling.",
+        "evidenceLabel": "Scenario concept",
+        "plainLanguageSummary": "A stable market window exists only when consumers can sustainably pay enough to support ongoing production and replacement investment. The boundaries are illustrative, not observed global prices.",
+        "sourceNotes": ["Interpretive framing informed by Gail Tverberg, Our Finite World (2015)", "Illustrative normalized values are a conceptual visualization, not a global breakeven estimate."],
+        "methodology": {"formula": "Producer viability floor and consumer affordability ceiling are normalized illustrative boundaries on a 0-100 scale.", "limitations": ["Requirements vary by geology, decline rates, financing, taxation, transport, refining configuration, and company balance sheets.", "No single global producer floor or consumer ceiling is estimated here."]},
+        "states": [
+            {"id": "viable-range", "label": "Viable range", "producerFloor": 35, "consumerCeiling": 75, "interpretation": "The affordability ceiling remains above the producer viability floor, leaving a conceptual operating range."},
+            {"id": "affordability-squeeze", "label": "Affordability squeeze", "producerFloor": 55, "consumerCeiling": 65, "interpretation": "The two boundaries converge; consumers feel pressure while producers still require investment-supporting prices."},
+            {"id": "no-stable-window", "label": "No stable price window", "producerFloor": 75, "consumerCeiling": 55, "interpretation": "Producer requirements exceed what consumers can sustainably pay, so contraction can push benchmark prices lower while future supply becomes more vulnerable."},
+        ],
+        "generatedAt": generated_at,
+    }
+
+    datasets = [oil_prices, gm2_lead, residuals, ci_wti_annual, energy_gdp, equities, uso, headline, net_output, capacity, household, financial, output_comparison, physical_tightness, energy_burden, industrial_transmission, labour_warning, demand_destruction, price_availability_activity, global_energy_growth]
     files: list[str] = []
     for dataset in datasets:
         filename = f"{dataset['id']}.json"
@@ -879,6 +998,8 @@ def write_website_chart_data(
         (out_dir / filename).write_text(payload, encoding="utf-8")
         (chart_out_dir / filename).write_text(payload, encoding="utf-8")
         files.append(filename)
+    (out_dir / "viable-price-window.json").write_text(json.dumps(viable_price_window, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+    files.append("viable-price-window.json")
 
     catalogue_by_indicator = {str(row.get("indicator")): row for row in indicator_catalogue_rows}
     indicator_payloads = [
@@ -967,6 +1088,7 @@ def write_website_chart_data(
             {"id": "labour-households", "label": "Labour and household conditions", "indicatorFields": sort_indicator_fields(["average_weekly_hours_YoY", "temporary_help_YoY", "full_time_employment_share", "involuntary_part_time_share", "prime_age_employment_rate", "real_wage_growth", "consumer_sentiment", "unemployment_rate"]), "interpretation": "Hours, job composition, wages, sentiment, and unemployment often move at different stages of household stress.", "confidence": "Moderate"},
         ],
         "shared": ["lag-results.json", "rolling-performance.json", "regimes.json", "recessions.json", "events.json", "cross-layer.json", "output-quality-correlations.json", "current-classification.json", "symptom-evaluations.json", "regime-scores.json", "regime-history.json"],
+        "conceptual": [{"id": "viable-price-window", "file": "viable-price-window.json", "evidenceLabel": "Scenario concept"}],
     }
     (out_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, allow_nan=False) + "\n", encoding="utf-8")
     files.append("manifest.json")

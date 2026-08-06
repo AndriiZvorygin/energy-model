@@ -24,6 +24,16 @@ Each arrow is a hypothesis to test separately. Correlation describes co-movement
 
 The catalogue contains 37 measured, derived, proxy and proposed indicators; 30 have implemented or derived data paths. The monthly-aligned core extends to the latest available source observation (2026-07), but series have different release dates and the final month can be partial. Current-state rows preserve those indicator-specific dates, percentiles, confirming evidence, conflicts and confidence levels.
 
+## The Affordability Squeeze: Why Scarcity Can Produce Lower Prices
+
+This is a synthesis hypothesis, not a single validated model. Physical constraints or higher extraction, refining, transport, and financing costs can raise the delivered cost of energy and energy-dependent essentials. If household and business incomes do not rise enough to absorb those costs, discretionary spending, production, employment, travel, and investment can contract. Energy demand may then fall enough to lower benchmark crude prices even while delivered fuel costs, product shortages, or physical constraints remain difficult. Lower benchmark prices can weaken producer cash flow and reduce replacement investment, creating renewed vulnerability as depleted production continues to decline.
+
+The framework keeps five concepts separate: **benchmark crude prices** are reference prices for a grade and location; **delivered consumer fuel and transport costs** include refining, shipping, financing, taxes, distribution, and retail margins; **physical availability** concerns whether the required energy products can be supplied; **affordability** compares those costs with household or business income; and **producer investment viability** asks whether realized prices and cash flow support operations and replacement supply. Shipping, refining, financing, taxation, and distribution costs can rise without producing an equivalent increase in the net price received by crude producers.
+
+The proposed sequence is: physical constraint -> higher delivered essential costs -> reduced discretionary spending -> lower production and employment -> lower energy demand -> lower benchmark price -> reduced producer investment -> greater future supply vulnerability. Each link remains a separate empirical question. A low benchmark price can be a symptom of demand destruction rather than evidence of abundant, affordable energy.
+
+This affordability-centred interpretation is informed by Gail Tverberg's framing in [The oil glut and low prices reflect an affordability problem](https://ourfiniteworld.com/2015/03/09/the-oil-glut-and-low-prices-reflect-an-affordability-problem/). Tverberg's writing is used here as hypothesis and synthesis framing; the project's charts use the primary public datasets listed in their source notes.
+
 ## Regime Vocabulary
 
 - **A. Expansion and rising demand:** activity and consumption rise without broad physical deficits.
@@ -41,6 +51,7 @@ The observatory now publishes an **experimental transparent rule classifier** wi
 
 - **Validated relationship:** passed the project's established validation or locked-model decision process.
 - **Supported historical pattern:** recurs descriptively across episodes but is not a stable forecast claim.
+- **Contextual historical pattern:** long-run context that helps frame system conditions without measuring welfare or establishing a forecast rule.
 - **Contextual indicator:** useful for interpretation without demonstrated independent predictive value.
 - **Experimental proxy:** measurable approximation requiring additional validation.
 - **Scenario concept:** proposed layer without an implemented reproducible series.

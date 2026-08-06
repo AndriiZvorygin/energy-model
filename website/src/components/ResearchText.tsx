@@ -15,9 +15,11 @@ export function ResearchText({ text }: { text: string | undefined }) {
 }
 
 function inlineCode(text: string) {
-  return text.split(/(`[^`]+`|\*\*[^*]+\*\*)/g).map((part, index) => {
+  return text.split(/(`[^`]+`|\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g).map((part, index) => {
     if (part.startsWith('`') && part.endsWith('`')) return <code key={index}>{part.slice(1, -1)}</code>
     if (part.startsWith('**') && part.endsWith('**')) return <strong key={index}>{part.slice(2, -2)}</strong>
+    const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
+    if (link) return <a key={index} href={link[2]} target="_blank" rel="noreferrer" className="font-semibold text-petroleum underline underline-offset-2">{link[1]}</a>
     return part
   })
 }

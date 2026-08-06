@@ -123,6 +123,9 @@ REQUIRED_DATA = [
     "website/public/generated/oil-price-layers.json",
     "website/public/generated/gm2-oil-lead.json",
     "website/public/generated/oil-residual-ci.json",
+    "website/public/generated/price-availability-activity.json",
+    "website/public/generated/global-energy-growth-beyond-population.json",
+    "website/public/generated/viable-price-window.json",
     "website/public/generated/energy-gdp.json",
     "website/public/generated/oil-equities.json",
     "website/public/generated/uso-tracking.json",
@@ -149,6 +152,8 @@ REQUIRED_DATA = [
     "website/public/generated/charts/industrial-transmission.json",
     "website/public/generated/charts/labour-warning.json",
     "website/public/generated/charts/demand-destruction.json",
+    "website/public/generated/charts/price-availability-activity.json",
+    "website/public/generated/charts/global-energy-growth-beyond-population.json",
     "website/public/generated/charts/output-quality-comparison.json",
     "website/public/generated/indicators/ci-zscore.json",
     "website/public/generated/indicators/gm2-yoy.json",
@@ -202,6 +207,7 @@ REQUIRED_DATA = [
     "website/public/generated/canada/indicators/ontario-unemployment-rate.json",
     "website/public/generated/canada/absolute-affordability-history.json",
     "website/public/generated/owen-sound/absolute-affordability-history.json",
+    "data/seed/global_primary_energy_annual.csv",
 ]
 
 

@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.1.0",
   "indicatorSchemaVersion": 1,
-  "generatedAt": "2026-07-16T02:21:32+00:00",
+  "generatedAt": "2026-08-06T01:38:10+00:00",
   "currentState": {
-    "asOf": "2026-07-16T02:21:32+00:00",
+    "asOf": "2026-08-06T01:38:10+00:00",
     "latestObservationDate": "2026-07-01",
     "oldestLatestObservationDate": "2026-01-01",
     "classificationMethod": "Interpretation labels are generated from each indicator's documented direction, full-history percentile, and recent change.",
@@ -380,7 +380,7 @@
       "frequency": "monthly",
       "dateRange": {
         "start": "1986-01-01",
-        "end": "2026-06-01"
+        "end": "2026-07-01"
       },
       "evidenceLabel": "Contextual indicator"
     },
@@ -452,7 +452,7 @@
       "frequency": "monthly",
       "dateRange": {
         "start": "1986-01-01",
-        "end": "2026-06-01"
+        "end": "2026-07-01"
       },
       "evidenceLabel": "Contextual indicator"
     },
@@ -587,6 +587,30 @@
         "end": "2026-06-01"
       },
       "evidenceLabel": "Supported historical pattern"
+    },
+    {
+      "id": "price-availability-activity",
+      "file": "charts/price-availability-activity.json",
+      "legacyFile": "price-availability-activity.json",
+      "title": "Price, physical availability, and economic activity",
+      "frequency": "monthly",
+      "dateRange": {
+        "start": "1986-01-01",
+        "end": "2026-07-01"
+      },
+      "evidenceLabel": "Supported historical pattern"
+    },
+    {
+      "id": "global-energy-growth-beyond-population",
+      "file": "charts/global-energy-growth-beyond-population.json",
+      "legacyFile": "global-energy-growth-beyond-population.json",
+      "title": "Energy growth beyond population",
+      "frequency": "annual",
+      "dateRange": {
+        "start": "1966-01-01",
+        "end": "2023-01-01"
+      },
+      "evidenceLabel": "Contextual historical pattern"
     }
   ],
   "indicators": [
@@ -1094,5 +1118,12 @@
     "symptom-evaluations.json",
     "regime-scores.json",
     "regime-history.json"
+  ],
+  "conceptual": [
+    {
+      "id": "viable-price-window",
+      "file": "viable-price-window.json",
+      "evidenceLabel": "Scenario concept"
+    }
   ]
 }

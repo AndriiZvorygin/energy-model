@@ -21,6 +21,9 @@ export function Affordability() {
         <GeneratedRouteEvidenceSummary
           title="Household affordability evidence"
         />
+        <p className="mt-6 max-w-4xl border-l-2 border-petroleum pl-4 text-sm leading-6 text-stone-600 dark:text-stone-300">
+          This page is the household-facing evidence layer. Read it alongside the <Link className="font-semibold text-petroleum" to="/energy-burden">energy burden evidence</Link> and the <Link className="font-semibold text-petroleum" to="/system-response">system-response affordability squeeze</Link>; neither benchmark price nor one burden measure is a complete affordability test.
+        </p>
         <section className="mt-14">
           <p className="text-xs font-semibold uppercase text-petroleum">
             Canadian purchasing power

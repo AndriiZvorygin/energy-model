@@ -205,6 +205,7 @@ const data = {
       purpose: section(systemFramework, 'Purpose'),
       layers: section(systemFramework, 'Five Layers'),
       transmission: section(systemFramework, 'Transmission Chain'),
+      affordabilitySqueeze: section(systemFramework, 'The Affordability Squeeze: Why Scarcity Can Produce Lower Prices'),
       firstRelease: section(systemFramework, 'First Release'),
       regimes: section(systemFramework, 'Regime Vocabulary'),
       evidenceLabels: section(systemFramework, 'Evidence Labels'),

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "viable-price-window",
+  "title": "Conceptual viable price window",
+  "description": "A scenario concept showing the space between producer viability requirements and the consumer affordability ceiling.",
+  "evidenceLabel": "Scenario concept",
+  "plainLanguageSummary": "A stable market window exists only when consumers can sustainably pay enough to support ongoing production and replacement investment. The boundaries are illustrative, not observed global prices.",
+  "sourceNotes": [
+    "Interpretive framing informed by Gail Tverberg, Our Finite World (2015)",
+    "Illustrative normalized values are a conceptual visualization, not a global breakeven estimate."
+  ],
+  "methodology": {
+    "formula": "Producer viability floor and consumer affordability ceiling are normalized illustrative boundaries on a 0-100 scale.",
+    "limitations": [
+      "Requirements vary by geology, decline rates, financing, taxation, transport, refining configuration, and company balance sheets.",
+      "No single global producer floor or consumer ceiling is estimated here."
+    ]
+  },
+  "states": [
+    {
+      "id": "viable-range",
+      "label": "Viable range",
+      "producerFloor": 35,
+      "consumerCeiling": 75,
+      "interpretation": "The affordability ceiling remains above the producer viability floor, leaving a conceptual operating range."
+    },
+    {
+      "id": "affordability-squeeze",
+      "label": "Affordability squeeze",
+      "producerFloor": 55,
+      "consumerCeiling": 65,
+      "interpretation": "The two boundaries converge; consumers feel pressure while producers still require investment-supporting prices."
+    },
+    {
+      "id": "no-stable-window",
+      "label": "No stable price window",
+      "producerFloor": 75,
+      "consumerCeiling": 55,
+      "interpretation": "Producer requirements exceed what consumers can sustainably pay, so contraction can push benchmark prices lower while future supply becomes more vulnerable."
+    }
+  ],
+  "generatedAt": "2026-08-06T01:38:10+00:00"
+}
