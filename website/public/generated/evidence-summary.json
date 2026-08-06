@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-17T03:14:21+00:00",
+  "generatedAt": "2026-08-06T02:39:23+00:00",
   "statusDefinitions": {
     "supporting": "The indicator is consistent with this interpretation.",
     "mixed": "The indicator provides partial or ambiguous evidence.",
@@ -3996,7 +3996,7 @@
       "interpretation": "Pressured \u00b7 stable",
       "confidence": "moderate",
       "coverage": 1.0,
-      "scope": "Canadian household affordability with global commodity context",
+      "scope": "Canadian household food affordability; international commodity evidence is presented separately under Global",
       "supporting": [
         {
           "indicator": "absolute-food",
@@ -4911,7 +4911,7 @@
       "interpretation": "Pressured \u00b7 stable",
       "confidence": "moderate",
       "coverage": 0.9090909090909091,
-      "scope": "Canadian household affordability with global commodity context",
+      "scope": "Canadian household housing affordability; international property-price evidence is presented separately under Global",
       "supporting": [
         {
           "indicator": "absolute-housing",

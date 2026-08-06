@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "refineryVersion": "2.0.0",
-  "generatedAt": "2026-07-17T03:14:22+00:00",
+  "generatedAt": "2026-08-06T02:39:24+00:00",
   "regenerationCommand": "python -m oil_model.pipeline --root . --refresh",
   "policy": {
     "includeStatusesInDiagnosticSummary": [
@@ -43,6 +43,80 @@
         {
           "file": "website/public/generated/evidence-summary.json",
           "evidenceKey": "global:indicator-state"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/absolute_affordability.json"
+        },
+        {
+          "file": "config/global_human_impact.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
+      ]
+    },
+    "/global/food-prices": {
+      "route": "/global/food-prices",
+      "geography": "global",
+      "geographyLabel": "Global",
+      "topic": "food",
+      "evidenceKey": "global:food",
+      "interpretation": "Insufficient \u00b7 unclear",
+      "confidence": "low",
+      "coverage": 0.0,
+      "scope": "Global upstream conditions and human outcomes assembled from official country-aggregated and inter-agency estimates.",
+      "oldestObservationDate": null,
+      "newestObservationDate": null,
+      "evidenceCounts": {
+        "supporting": 0,
+        "mixed": 0,
+        "contradicting": 0,
+        "insufficient": 1
+      },
+      "provenance": [
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "global:food"
+        },
+        {
+          "file": "config/evidence_topics.json"
+        },
+        {
+          "file": "config/absolute_affordability.json"
+        },
+        {
+          "file": "config/global_human_impact.json"
+        },
+        {
+          "file": "config/presentation_rules.json"
+        }
+      ]
+    },
+    "/global/housing": {
+      "route": "/global/housing",
+      "geography": "global",
+      "geographyLabel": "Global",
+      "topic": "housing",
+      "evidenceKey": "global:housing",
+      "interpretation": "Insufficient \u00b7 unclear",
+      "confidence": "low",
+      "coverage": 0.0,
+      "scope": "Global upstream conditions and human outcomes assembled from official country-aggregated and inter-agency estimates.",
+      "oldestObservationDate": null,
+      "newestObservationDate": null,
+      "evidenceCounts": {
+        "supporting": 0,
+        "mixed": 0,
+        "contradicting": 0,
+        "insufficient": 1
+      },
+      "provenance": [
+        {
+          "file": "website/public/generated/evidence-summary.json",
+          "evidenceKey": "global:housing"
         },
         {
           "file": "config/evidence_topics.json"
@@ -548,7 +622,7 @@
       "interpretation": "Pressured \u00b7 stable",
       "confidence": "moderate",
       "coverage": 1.0,
-      "scope": "Canadian household affordability with global commodity context",
+      "scope": "Canadian household food affordability; international commodity evidence is presented separately under Global",
       "oldestObservationDate": "2024-01-01",
       "newestObservationDate": "2026-06-22",
       "evidenceCounts": {
@@ -585,7 +659,7 @@
       "interpretation": "Pressured \u00b7 stable",
       "confidence": "moderate",
       "coverage": 1.0,
-      "scope": "Canadian household affordability with global commodity context",
+      "scope": "Canadian household food affordability; international commodity evidence is presented separately under Global",
       "oldestObservationDate": "2024-01-01",
       "newestObservationDate": "2026-06-22",
       "evidenceCounts": {
@@ -622,7 +696,7 @@
       "interpretation": "Pressured \u00b7 stable",
       "confidence": "moderate",
       "coverage": 1.0,
-      "scope": "Canadian household affordability with global commodity context",
+      "scope": "Canadian household food affordability; international commodity evidence is presented separately under Global",
       "oldestObservationDate": "2024-01-01",
       "newestObservationDate": "2026-06-22",
       "evidenceCounts": {
@@ -659,7 +733,7 @@
       "interpretation": "Pressured \u00b7 stable",
       "confidence": "moderate",
       "coverage": 0.9090909090909091,
-      "scope": "Canadian household affordability with global commodity context",
+      "scope": "Canadian household housing affordability; international property-price evidence is presented separately under Global",
       "oldestObservationDate": "2021-01-01",
       "newestObservationDate": "2026-06-22",
       "evidenceCounts": {
@@ -696,7 +770,7 @@
       "interpretation": "Pressured \u00b7 stable",
       "confidence": "moderate",
       "coverage": 0.9090909090909091,
-      "scope": "Canadian household affordability with global commodity context",
+      "scope": "Canadian household housing affordability; international property-price evidence is presented separately under Global",
       "oldestObservationDate": "2021-01-01",
       "newestObservationDate": "2026-06-22",
       "evidenceCounts": {
@@ -733,7 +807,7 @@
       "interpretation": "Pressured \u00b7 stable",
       "confidence": "moderate",
       "coverage": 0.9090909090909091,
-      "scope": "Canadian household affordability with global commodity context",
+      "scope": "Canadian household housing affordability; international property-price evidence is presented separately under Global",
       "oldestObservationDate": "2021-01-01",
       "newestObservationDate": "2026-06-22",
       "evidenceCounts": {
@@ -876,11 +950,11 @@
   "inputs": [
     {
       "file": "config/presentation_rules.json",
-      "sha256": "1087f72214d62d6c983a90ca8caea9444a0f56d5e78a2ab36b6498a5a2840777"
+      "sha256": "d287e810b108c232b3c85ffe008e2e97d13ce8210d4d168a964c0b83e2652d32"
     },
     {
       "file": "config/evidence_topics.json",
-      "sha256": "93332feb3b6c2033991ee81d4eb10e3882ce78dad4b147e9d62289893d3142f0"
+      "sha256": "65ecfefde1f06a769e0144df3aecceae9f95f9a32d59d71c9c72d126afb94389"
     },
     {
       "file": "config/absolute_affordability.json",
@@ -892,7 +966,7 @@
     },
     {
       "file": "website/public/generated/evidence-summary.json",
-      "sha256": "149d426ee256b58b1ceccd6c2b85bb4ed421f59209fab738f7181dcc0ffc9c88"
+      "sha256": "03828f666f17c2b789ff651e0946151d215c3103633eeb3de486af9dd0a44e18"
     }
   ]
 }

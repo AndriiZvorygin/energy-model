@@ -44,22 +44,44 @@ const groups: NavigationGroup[] = [
     icon: Network,
     items: [
       { to: '/global', label: 'Global overview', icon: Network },
+      { to: '/global/food-prices', label: 'Food commodity prices', icon: House },
+      { to: '/global/housing', label: 'Global housing prices', icon: House },
       { to: '/global/food-security', label: 'Food security', icon: House },
       { to: '/global/nutrition', label: 'Nutrition outcomes', icon: Activity },
       { to: '/global/human-impact', label: 'Human impact', icon: Activity },
       { to: '/global/demography', label: 'Demography', icon: Map },
+    ],
+  },
+  {
+    id: 'core-model',
+    label: 'Core model',
+    icon: Route,
+    items: [
+      { to: '/overview', label: 'System overview', icon: Network },
       { to: '/liquidity', label: 'Global liquidity', icon: TrendingUp },
       { to: '/physical-market', label: 'Physical oil market', icon: Droplets },
-      { to: '/oil-prices', label: 'Oil price layers', icon: Fuel },
+      { to: '/oil-prices', label: 'Oil prices', icon: Fuel },
+      { to: '/equities', label: 'Equities', icon: Landmark },
+      { to: '/energy-burden', label: 'Energy burden', icon: Scale },
+      { to: '/economy', label: 'Energy and GDP', icon: Factory },
+      { to: '/labour', label: 'Labour', icon: BriefcaseBusiness },
+      { to: '/system-response', label: 'System response', icon: Route },
     ],
   },
   {
     id: 'canada',
-    label: 'Canadian conditions',
+    label: 'Canada',
     icon: Map,
     items: [
       { to: '/canada', label: 'Overview', icon: Map },
       { to: '/canada/current-state', label: 'Current state', icon: Activity },
+      { to: '/affordability', label: 'Affordability overview', icon: House },
+      { to: '/canada/food', label: 'Food affordability', icon: House },
+      { to: '/canada/housing', label: 'Housing affordability', icon: House },
+      { to: '/canada/energy', label: 'Canadian energy', icon: Droplets },
+      { to: '/canada/economy', label: 'Canadian economy', icon: Factory },
+      { to: '/canada/labour', label: 'Canadian labour', icon: BriefcaseBusiness },
+      { to: '/canada/households', label: 'Canadian households', icon: Home },
       { to: '/canada/regimes', label: 'Regimes', icon: BarChart3 },
       { to: '/canada/symptoms', label: 'Symptoms', icon: AlertTriangle },
       { to: '/canada/ontario', label: 'Ontario context', icon: MapPin },
@@ -67,37 +89,23 @@ const groups: NavigationGroup[] = [
     ],
   },
   {
-    id: 'affordability',
-    label: 'Affordability',
-    icon: House,
+    id: 'owen-sound',
+    label: 'Owen Sound',
+    icon: MapPin,
     items: [
-      { to: '/affordability', label: 'Canada affordability', icon: House },
-      { to: '/affordability/food', label: 'Canada food', icon: House },
-      { to: '/affordability/housing', label: 'Canada housing', icon: House },
       { to: '/owen-sound/affordability', label: 'Owen Sound overview', icon: MapPin },
       { to: '/owen-sound/food', label: 'Owen Sound food', icon: MapPin },
       { to: '/owen-sound/housing', label: 'Owen Sound housing', icon: MapPin },
     ],
   },
   {
-    id: 'oil-markets',
-    label: 'Oil and markets',
-    icon: Fuel,
+    id: 'comparisons',
+    label: 'Comparisons',
+    icon: Scale,
     items: [
-      { to: '/equities', label: 'Equities', icon: Landmark },
-    ],
-  },
-  {
-    id: 'system-economy',
-    label: 'System and economy',
-    icon: Network,
-    items: [
-      { to: '/overview', label: 'System overview', icon: Network },
-      { to: '/system-response', label: 'System response', icon: Route },
-      { to: '/energy-burden', label: 'Energy burden', icon: Scale },
-      { to: '/economy', label: 'Energy and GDP', icon: Factory },
-      { to: '/labour', label: 'Labour', icon: BriefcaseBusiness },
-      { to: '/output-quality', label: 'Output quality', icon: Scale },
+      { to: '/compare/food', label: 'Canada–U.S. food', icon: House },
+      { to: '/compare/housing', label: 'Canada–U.S. housing', icon: House },
+      { to: '/compare/canada-us', label: 'Canada–U.S. economy', icon: Scale },
     ],
   },
   {
@@ -108,6 +116,7 @@ const groups: NavigationGroup[] = [
       { to: '/current-state/us', label: 'U.S. current state', icon: Activity },
       { to: '/regimes', label: 'U.S. regimes', icon: BarChart3 },
       { to: '/symptoms', label: 'U.S. symptoms', icon: AlertTriangle },
+      { to: '/output-quality', label: 'Output quality', icon: Scale },
       { to: '/indicators', label: 'Indicator catalogue', icon: ListFilter },
       { to: '/episodes', label: 'Historical episodes', icon: History },
       { to: '/methodology', label: 'Methodology', icon: BookOpen },
@@ -116,8 +125,16 @@ const groups: NavigationGroup[] = [
   },
 ]
 
-const activeGroup = (pathname: string) =>
-  groups.find((group) => group.items.some((item) => item.to === pathname))?.id
+export const navigationAliases = new Set(['/current-state', '/affordability/food', '/affordability/housing'])
+
+export function getVisibleNavigationRoutes() {
+  return new Set(groups.flatMap((group) => group.items.map((item) => item.to)))
+}
+
+const activeGroup = (pathname: string) => {
+  const normalizedPath = pathname.replace(/\/$/, '') || '/'
+  return groups.find((group) => group.items.some((item) => item.to === normalizedPath))?.id
+}
 
 export function ResearchNavigation() {
   const location = useLocation()

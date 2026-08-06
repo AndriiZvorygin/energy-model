@@ -74,8 +74,8 @@ export function Affordability() {
             <ShoppingBasket className="text-petroleum" />
             <h2 className="mt-4 text-xl font-semibold">Food-price evidence</h2>
             <p className="mt-2 text-sm leading-6 text-stone-500">
-              Commodity pressure, Canadian and U.S. retail prices, transmission
-              lags, wages, and household income.
+              Canadian retail prices, wages, household income, and purchasing
+              power. Global commodity context is separate.
             </p>
             <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-petroleum">
               Explore food evidence <ArrowRight size={15} />
@@ -90,8 +90,8 @@ export function Affordability() {
               Housing-price evidence
             </h2>
             <p className="mt-2 text-sm leading-6 text-stone-500">
-              Purchase prices, rent, mortgage interest, shelter services,
-              income, and international comparisons.
+              Canadian purchase prices, rent, mortgage interest, shelter
+              services, and income. International comparisons are separate.
             </p>
             <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-petroleum">
               Explore housing evidence <ArrowRight size={15} />

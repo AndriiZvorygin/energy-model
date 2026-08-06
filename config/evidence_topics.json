@@ -72,14 +72,14 @@
           }
         },
         "food": {
-          "scope": "Canadian household affordability with global commodity context",
+          "scope": "Canadian household food affordability; international commodity evidence is presented separately under Global",
           "groups": {
             "Food": ["food-to-income", "grocery-to-income", "food-to-wage", "grocery-to-wage"],
             "Purchasing power": ["real-disposable-income-per-person", "real-wage-growth", "household-saving-rate"]
           }
         },
         "housing": {
-          "scope": "Canadian household affordability with global commodity context",
+          "scope": "Canadian household housing affordability; international property-price evidence is presented separately under Global",
           "groups": {
             "Asset affordability": ["nhpi-to-income", "residential-property-price-to-income"],
             "Current costs": ["rent-to-income", "shelter-to-income", "mortgage-interest-to-income"],

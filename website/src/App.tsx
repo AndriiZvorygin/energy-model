@@ -6,6 +6,8 @@ import { ResearchNavigation } from './components/ResearchNavigation'
 const Home = lazy(() => import('./pages/Home').then((module) => ({ default: module.Home })))
 const Overview = lazy(() => import('./pages/Overview').then((module) => ({ default: module.Overview })))
 const Global = lazy(() => import('./pages/Global').then((module) => ({ default: module.Global })))
+const GlobalFoodPrices = lazy(() => import('./pages/FoodAffordability').then((module) => ({ default: module.GlobalFoodPrices })))
+const GlobalHousingPrices = lazy(() => import('./pages/HousingAffordability').then((module) => ({ default: module.GlobalHousingPrices })))
 const GlobalHumanImpact = lazy(() => import('./pages/GlobalHumanImpact').then((module) => ({ default: module.GlobalHumanImpact })))
 const Liquidity = lazy(() => import('./pages/Liquidity').then((module) => ({ default: module.Liquidity })))
 const PhysicalMarket = lazy(() => import('./pages/PhysicalMarket').then((module) => ({ default: module.PhysicalMarket })))
@@ -34,8 +36,13 @@ const CanadaUsComparison = lazy(() => import('./pages/CanadaUsComparison').then(
 const CanadaSymptoms = lazy(() => import('./pages/CanadaSymptoms').then((module) => ({ default: module.CanadaSymptoms })))
 const CanadaRegimes = lazy(() => import('./pages/CanadaRegimes').then((module) => ({ default: module.CanadaRegimes })))
 const Affordability = lazy(() => import('./pages/Affordability').then((module) => ({ default: module.Affordability })))
-const FoodAffordability = lazy(() => import('./pages/FoodAffordability').then((module) => ({ default: module.FoodAffordability })))
-const HousingAffordability = lazy(() => import('./pages/HousingAffordability').then((module) => ({ default: module.HousingAffordability })))
+const CanadaFoodAffordability = lazy(() => import('./pages/FoodAffordability').then((module) => ({ default: module.CanadaFoodAffordability })))
+const OwenSoundFoodAffordability = lazy(() => import('./pages/FoodAffordability').then((module) => ({ default: module.OwenSoundFoodAffordability })))
+const FoodComparison = lazy(() => import('./pages/FoodAffordability').then((module) => ({ default: module.FoodComparisonPage })))
+const CanadaHousingAffordability = lazy(() => import('./pages/HousingAffordability').then((module) => ({ default: module.CanadaHousingAffordability })))
+const OwenSoundHousingAffordability = lazy(() => import('./pages/HousingAffordability').then((module) => ({ default: module.OwenSoundHousingAffordability })))
+const HousingComparison = lazy(() => import('./pages/HousingAffordability').then((module) => ({ default: module.HousingComparisonPage })))
+const OwenSoundAffordability = lazy(() => import('./pages/OwenSoundAffordability').then((module) => ({ default: module.OwenSoundAffordability })))
 
 const glossary = {
   GM2: 'A USD-converted aggregate of broad money from the United States, euro area, China, and Japan.',
@@ -100,6 +107,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/overview" element={<Overview />} />
             <Route path="/global" element={<Global />} />
+            <Route path="/global/food-prices" element={<GlobalFoodPrices />} />
+            <Route path="/global/housing" element={<GlobalHousingPrices />} />
             <Route path="/global/food-security" element={<GlobalHumanImpact />} />
             <Route path="/global/nutrition" element={<GlobalHumanImpact />} />
             <Route path="/global/human-impact" element={<GlobalHumanImpact />} />
@@ -117,15 +126,15 @@ export default function App() {
             <Route path="/canada/regimes" element={<CanadaRegimes />} />
             <Route path="/canada/symptoms" element={<CanadaSymptoms />} />
             <Route path="/affordability" element={<Affordability />} />
-            <Route path="/affordability/food" element={<FoodAffordability />} />
-            <Route path="/affordability/housing" element={<HousingAffordability />} />
-            <Route path="/canada/food" element={<FoodAffordability />} />
-            <Route path="/canada/housing" element={<HousingAffordability />} />
-            <Route path="/compare/food" element={<FoodAffordability />} />
-            <Route path="/compare/housing" element={<HousingAffordability />} />
-            <Route path="/owen-sound/affordability" element={<Affordability />} />
-            <Route path="/owen-sound/food" element={<FoodAffordability />} />
-            <Route path="/owen-sound/housing" element={<HousingAffordability />} />
+            <Route path="/affordability/food" element={<CanadaFoodAffordability />} />
+            <Route path="/affordability/housing" element={<CanadaHousingAffordability />} />
+            <Route path="/canada/food" element={<CanadaFoodAffordability />} />
+            <Route path="/canada/housing" element={<CanadaHousingAffordability />} />
+            <Route path="/compare/food" element={<FoodComparison />} />
+            <Route path="/compare/housing" element={<HousingComparison />} />
+            <Route path="/owen-sound/affordability" element={<OwenSoundAffordability />} />
+            <Route path="/owen-sound/food" element={<OwenSoundFoodAffordability />} />
+            <Route path="/owen-sound/housing" element={<OwenSoundHousingAffordability />} />
             <Route path="/compare/canada-us" element={<CanadaUsComparison />} />
             <Route path="/regimes" element={<Regimes />} />
             <Route path="/symptoms" element={<Symptoms />} />
