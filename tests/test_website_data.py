@@ -1,8 +1,14 @@
 from __future__ import annotations
 
 import unittest
+import csv
+import math
+from pathlib import Path
+from tempfile import TemporaryDirectory
 
-from oil_model.website_data import _annual_ci_wti_relationship, _attach_evidence_checks, _current_state_snapshot, _indicator_payload, _percentile, _quantile, validate_chart_dataset, validate_indicator_dataset
+from oil_model.website_data import _annual_ci_wti_relationship, _attach_evidence_checks, _current_state_snapshot, _global_energy_context, _indicator_payload, _percentile, _quantile, validate_chart_dataset, validate_indicator_dataset
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def dataset() -> dict:
@@ -66,6 +72,35 @@ class WebsiteDataTests(unittest.TestCase):
         self.assertAlmostEqual(float(fit["slopeVsSurplus"]), -1.0)
         self.assertAlmostEqual(float(fit["slopeVsTightness"]), 1.0)
         self.assertAlmostEqual(float(fit["r2"]), 1.0)
+
+    def test_global_energy_growth_beyond_population_uses_log_growth(self) -> None:
+        observations = _global_energy_context(ROOT)
+        with (ROOT / "data" / "seed" / "global_primary_energy_annual.csv").open(encoding="utf-8", newline="") as handle:
+            rows = sorted(csv.DictReader(handle), key=lambda row: int(row["year"]))
+        previous, current = rows[0], rows[1]
+        expected = 100 * (
+            math.log(float(current["primary_energy_consumption_twh"])) - math.log(float(previous["primary_energy_consumption_twh"]))
+            - math.log(float(current["population_persons"])) + math.log(float(previous["population_persons"]))
+        )
+        self.assertEqual(observations[0]["date"], f"{current['year']}-01-01")
+        self.assertAlmostEqual(float(observations[0]["energy_growth_beyond_population"]), expected)
+
+    def test_global_energy_growth_omits_missing_or_non_positive_pairs(self) -> None:
+        with TemporaryDirectory() as temporary:
+            seed = Path(temporary) / "data" / "seed"
+            seed.mkdir(parents=True)
+            (seed / "global_primary_energy_annual.csv").write_text(
+                "year,primary_energy_consumption_twh,population_persons\n"
+                "2000,100,10\n"
+                "2001,,11\n"
+                "2002,120,12\n"
+                "2003,0,13\n"
+                "2004,140,14\n"
+                "2005,150,15\n",
+                encoding="utf-8",
+            )
+            observations = _global_energy_context(Path(temporary))
+        self.assertEqual([row["date"] for row in observations], ["2005-01-01"])
 
     def test_indicator_schema_preserves_nulls_and_latest_context(self) -> None:
         current = {"indicator_id": "Industrial_production_YoY", "indicator": "Industrial production growth", "layer": "Production", "update_frequency": "monthly", "interpretation": "Rising is generally supportive.", "confirming_indicators": "Manufacturing; GDP", "conflicting_indicators": "Energy burden", "confidence_level": "medium", "evidence_label": "Contextual indicator"}

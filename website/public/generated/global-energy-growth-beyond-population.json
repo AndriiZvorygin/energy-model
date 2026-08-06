@@ -4,20 +4,20 @@
   "title": "Energy growth beyond population",
   "description": "A long-run global context chart comparing primary-energy growth, population growth, and the difference between them.",
   "plainLanguageSummary": "Energy use has generally grown faster than population over the covered period, but the difference is uneven and does not by itself measure prosperity. Efficiency, energy quality, technology, distribution, and economic structure still matter.",
-  "howToRead": "Compare the annual growth rates first, then inspect the residual labelled energy growth beyond population. This is contextual historical evidence rather than a welfare score.",
+  "howToRead": "Compare the annual log-growth rates first, then inspect the residual labelled Energy growth beyond population. A positive value means energy use per person increased on this convention; a negative value means it declined. This is contextual historical evidence rather than a welfare score.",
   "calculation": {
-    "formula": "Energy growth beyond population = global primary-energy consumption growth minus global population growth.",
-    "explanation": "Annual country aggregates preserve the source's available coverage. The residual is a rough contextual indicator, not a direct measure of living standards or welfare.",
+    "formula": "Energy growth beyond population = 100 \u00d7 [ln(total primary-energy consumption_t) \u2212 ln(total primary-energy consumption_t\u22121)] \u2212 100 \u00d7 [ln(population_t) \u2212 ln(population_t\u22121)]. This equals 100 \u00d7 change in ln(energy consumption per person).",
+    "explanation": "The annual convention is log growth in percent, with one observation for each year that has valid positive energy and population values in both the current and preceding source year. The first source year has no prior-year comparison; missing, non-positive, or unmatched source values are omitted. The residual is a rough contextual indicator, not a direct measure of living standards, welfare, useful energy, or surplus energy.",
     "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
   },
   "patternsToWatch": [
-    "Periods when energy growth beyond population contracts",
+    "Periods when Energy growth beyond population contracts",
     "Long-run divergence between population growth and energy use",
     "Disruptions or recessions where energy growth slows sharply"
   ],
   "limitations": [
     "The aggregate is built from country rows with available energy and population values; it is not a measure of every country or person.",
-    "Primary energy aggregates combine different energy qualities and do not account for efficiency or distribution.",
+    "Primary energy uses the Energy Institute/OWID substitution-method convention where represented by the source series; it combines different energy qualities and does not account for efficiency or distribution.",
     "The source snapshot currently ends in 2023; recent values are not a live nowcast."
   ],
   "sourceNotes": [
@@ -32,18 +32,18 @@
     "standardDeviation": null,
     "statistics": {
       "global_primary_energy_growth": {
-        "mean": 2.922555006379427,
-        "standardDeviation": 3.608223510193721,
+        "mean": 2.824247384839626,
+        "standardDeviation": 3.290098539948468,
         "n": 54
       },
       "global_population_growth": {
-        "mean": 2.0094849207572474,
-        "standardDeviation": 2.287105972428492,
+        "mean": 1.9664282654952392,
+        "standardDeviation": 2.106977906226892,
         "n": 54
       },
       "energy_growth_beyond_population": {
-        "mean": 0.9130700856221794,
-        "standardDeviation": 3.739375251284483,
+        "mean": 0.8578191193443866,
+        "standardDeviation": 3.4114849327651138,
         "n": 54
       }
     }
@@ -103,351 +103,351 @@
   "observations": [
     {
       "date": "1966-01-01",
-      "global_primary_energy_growth": 5.303275932438534,
-      "global_population_growth": 2.112242577668466,
-      "energy_growth_beyond_population": 3.1910333547700676
+      "global_primary_energy_growth": 5.167434313741914,
+      "global_population_growth": 2.090243970884842,
+      "energy_growth_beyond_population": 3.0771903428570724
     },
     {
       "date": "1967-01-01",
-      "global_primary_energy_growth": 3.377916322489405,
-      "global_population_growth": 2.0540364804342293,
-      "energy_growth_beyond_population": 1.3238798420551756
+      "global_primary_energy_growth": 3.32211780580991,
+      "global_population_growth": 2.0332256433924556,
+      "energy_growth_beyond_population": 1.2888921624174543
     },
     {
       "date": "1968-01-01",
-      "global_primary_energy_growth": 6.438825343063792,
-      "global_population_growth": 2.088652325418461,
-      "energy_growth_beyond_population": 4.350173017645331
+      "global_primary_energy_growth": 6.240022420052149,
+      "global_population_growth": 2.067139025761122,
+      "energy_growth_beyond_population": 4.172883394291027
     },
     {
       "date": "1969-01-01",
-      "global_primary_energy_growth": 7.343607813601727,
-      "global_population_growth": 2.1274504159210617,
-      "energy_growth_beyond_population": 5.216157397680665
+      "global_primary_energy_growth": 7.086479127830891,
+      "global_population_growth": 2.105136118496276,
+      "energy_growth_beyond_population": 4.981343009334616
     },
     {
       "date": "1970-01-01",
-      "global_primary_energy_growth": 6.664273185803049,
-      "global_population_growth": 2.1139536656410884,
-      "energy_growth_beyond_population": 4.550319520161961
+      "global_primary_energy_growth": 6.451608200271863,
+      "global_population_growth": 2.0919196501115067,
+      "energy_growth_beyond_population": 4.359688550160357
     },
     {
       "date": "1971-01-01",
-      "global_primary_energy_growth": 3.65360524196654,
-      "global_population_growth": 2.060519587057863,
-      "energy_growth_beyond_population": 1.593085654908677
+      "global_primary_energy_growth": 3.588443513458195,
+      "global_population_growth": 2.0395780630831695,
+      "energy_growth_beyond_population": 1.5488654503750254
     },
     {
       "date": "1972-01-01",
-      "global_primary_energy_growth": 5.575012084208186,
-      "global_population_growth": 1.9992460081028396,
-      "energy_growth_beyond_population": 3.5757660761053467
+      "global_primary_energy_growth": 5.425152929279697,
+      "global_population_growth": 1.979523519143811,
+      "energy_growth_beyond_population": 3.4456294101358864
     },
     {
       "date": "1973-01-01",
-      "global_primary_energy_growth": 5.852253316762868,
-      "global_population_growth": 1.9728577139866532,
-      "energy_growth_beyond_population": 3.8793956027762144
+      "global_primary_energy_growth": 5.687409919579878,
+      "global_population_growth": 1.9536491041797888,
+      "energy_growth_beyond_population": 3.733760815400089
     },
     {
       "date": "1974-01-01",
-      "global_primary_energy_growth": -0.5450356588301952,
-      "global_population_growth": 1.912516518815699,
-      "energy_growth_beyond_population": -2.457552177645894
+      "global_primary_energy_growth": -0.5465263973489343,
+      "global_population_growth": 1.894457808914396,
+      "energy_growth_beyond_population": -2.4409842062633302
     },
     {
       "date": "1975-01-01",
-      "global_primary_energy_growth": -0.17807071767402816,
-      "global_population_growth": 1.8314701026671543,
-      "energy_growth_beyond_population": -2.0095408203411824
+      "global_primary_energy_growth": -0.1782294520442207,
+      "global_population_growth": 1.8149006923909639,
+      "energy_growth_beyond_population": -1.9931301444351845
     },
     {
       "date": "1976-01-01",
-      "global_primary_energy_growth": 5.611516048550014,
-      "global_population_growth": 1.7697583233686531,
-      "energy_growth_beyond_population": 3.8417577251813606
+      "global_primary_energy_growth": 5.459723282822715,
+      "global_population_growth": 1.754280447939749,
+      "energy_growth_beyond_population": 3.705442834882966
     },
     {
       "date": "1977-01-01",
-      "global_primary_energy_growth": 3.3569289423018622,
-      "global_population_growth": 1.7344000409053262,
-      "energy_growth_beyond_population": 1.622528901396536
+      "global_primary_energy_growth": 3.301814135925163,
+      "global_population_growth": 1.719531002913044,
+      "energy_growth_beyond_population": 1.582283133012119
     },
     {
       "date": "1978-01-01",
-      "global_primary_energy_growth": 3.7654654150388156,
-      "global_population_growth": 1.700442771706001,
-      "energy_growth_beyond_population": 2.0650226433328145
+      "global_primary_energy_growth": 3.696302625508352,
+      "global_population_growth": 1.6861470761035946,
+      "energy_growth_beyond_population": 2.0101555494047574
     },
     {
       "date": "1979-01-01",
-      "global_primary_energy_growth": 3.2732423110848785,
-      "global_population_growth": 1.719248418285657,
-      "energy_growth_beyond_population": 1.5539938927992214
+      "global_primary_energy_growth": 3.220812764939396,
+      "global_population_growth": 1.7046365807559027,
+      "energy_growth_beyond_population": 1.516176184183493
     },
     {
       "date": "1980-01-01",
-      "global_primary_energy_growth": 1.1666442921283604,
-      "global_population_growth": 17.409412104373324,
-      "energy_growth_beyond_population": -16.242767812244963
+      "global_primary_energy_growth": 1.1598914678204508,
+      "global_population_growth": 16.04968894391554,
+      "energy_growth_beyond_population": -14.88979747609509
     },
     {
       "date": "1981-01-01",
-      "global_primary_energy_growth": -1.0619816943952864,
-      "global_population_growth": 1.8936290364967245,
-      "energy_growth_beyond_population": -2.955610730892011
+      "global_primary_energy_growth": -1.0676609643162749,
+      "global_population_growth": 1.8759230563713203,
+      "energy_growth_beyond_population": -2.943584020687595
     },
     {
       "date": "1982-01-01",
-      "global_primary_energy_growth": -1.1432727522069808,
-      "global_population_growth": 1.919727939724858,
-      "energy_growth_beyond_population": -3.0630006919318387
+      "global_primary_energy_growth": -1.1498583575393795,
+      "global_population_growth": 1.9015336480990186,
+      "energy_growth_beyond_population": -3.051392005638398
     },
     {
       "date": "1983-01-01",
-      "global_primary_energy_growth": 1.5797253062765915,
-      "global_population_growth": 1.894929959872127,
-      "energy_growth_beyond_population": -0.3152046535955355
+      "global_primary_energy_growth": 1.5673775170645499,
+      "global_population_growth": 1.8771997947535368,
+      "energy_growth_beyond_population": -0.30982227768898696
     },
     {
       "date": "1984-01-01",
-      "global_primary_energy_growth": 4.64956500555338,
-      "global_population_growth": 1.8620789214082833,
-      "energy_growth_beyond_population": 2.7874860841450966
+      "global_primary_energy_growth": 4.544710623549264,
+      "global_population_growth": 1.8449544855698718,
+      "energy_growth_beyond_population": 2.699756137979392
     },
     {
       "date": "1985-01-01",
-      "global_primary_energy_growth": 24.79720106573251,
-      "global_population_growth": 7.6011735210463005,
-      "energy_growth_beyond_population": 17.19602754468621
+      "global_primary_energy_growth": 22.151984233782684,
+      "global_population_growth": 7.326136800954686,
+      "energy_growth_beyond_population": 14.825847432827999
     },
     {
       "date": "1986-01-01",
-      "global_primary_energy_growth": 2.188197834562322,
-      "global_population_growth": 1.838490068203491,
-      "energy_growth_beyond_population": 0.34970776635883105
+      "global_primary_energy_growth": 2.164600404224082,
+      "global_population_growth": 1.8217941640966018,
+      "energy_growth_beyond_population": 0.34280624012748007
     },
     {
       "date": "1987-01-01",
-      "global_primary_energy_growth": 3.658593178696856,
-      "global_population_growth": 1.855405342178762,
-      "energy_growth_beyond_population": 1.8031878365180942
+      "global_primary_energy_growth": 3.5932555185107518,
+      "global_population_growth": 1.8384026873714987,
+      "energy_growth_beyond_population": 1.754852831139253
     },
     {
       "date": "1988-01-01",
-      "global_primary_energy_growth": 3.7749885507639247,
-      "global_population_growth": 1.83633577131892,
-      "energy_growth_beyond_population": 1.9386527794450048
+      "global_primary_energy_growth": 3.705479762350805,
+      "global_population_growth": 1.8196787363550015,
+      "energy_growth_beyond_population": 1.8858010259958036
     },
     {
       "date": "1989-01-01",
-      "global_primary_energy_growth": 1.9533594468143178,
-      "global_population_growth": 1.8078052311040427,
-      "energy_growth_beyond_population": 0.14555421571027516
+      "global_primary_energy_growth": 1.9345262395447094,
+      "global_population_growth": 1.7916587400403472,
+      "energy_growth_beyond_population": 0.14286749950436217
     },
     {
       "date": "1990-01-01",
-      "global_primary_energy_growth": 1.7350342281795772,
-      "global_population_growth": 1.9903743457115652,
-      "energy_growth_beyond_population": -0.25534011753198804
+      "global_primary_energy_growth": 1.7201543764201688,
+      "global_population_growth": 1.9708253683440091,
+      "energy_growth_beyond_population": -0.25067099192384035
     },
     {
       "date": "1991-01-01",
-      "global_primary_energy_growth": 0.7910615362568985,
-      "global_population_growth": 1.7155684012508,
-      "energy_growth_beyond_population": -0.9245068649939014
+      "global_primary_energy_growth": 0.7879490481750295,
+      "global_population_growth": 1.7010186975511488,
+      "energy_growth_beyond_population": -0.9130696493761192
     },
     {
       "date": "1992-01-01",
-      "global_primary_energy_growth": 1.1485055236634123,
-      "global_population_growth": 2.143820322015144,
-      "energy_growth_beyond_population": -0.9953147983517319
+      "global_primary_energy_growth": 1.1419602663950812,
+      "global_population_growth": 2.1211637332168465,
+      "energy_growth_beyond_population": -0.9792034668217653
     },
     {
       "date": "1993-01-01",
-      "global_primary_energy_growth": 0.8640397402738698,
-      "global_population_growth": 1.5547224410848992,
-      "energy_growth_beyond_population": -0.6906827008110294
+      "global_primary_energy_growth": 0.8603282805781376,
+      "global_population_growth": 1.5427604562013641,
+      "energy_growth_beyond_population": -0.6824321756232266
     },
     {
       "date": "1994-01-01",
-      "global_primary_energy_growth": 1.3070768999297933,
-      "global_population_growth": 1.5365847657730303,
-      "energy_growth_beyond_population": -0.229507865843237
+      "global_primary_energy_growth": 1.2986083635178503,
+      "global_population_growth": 1.5248988592581725,
+      "energy_growth_beyond_population": -0.22629049574032223
     },
     {
       "date": "1995-01-01",
-      "global_primary_energy_growth": 2.2772779061769555,
-      "global_population_growth": 1.468119779720345,
-      "energy_growth_beyond_population": 0.8091581264566106
+      "global_primary_energy_growth": 2.2517349944800813,
+      "global_population_growth": 1.4574472316699172,
+      "energy_growth_beyond_population": 0.7942877628101641
     },
     {
       "date": "1996-01-01",
-      "global_primary_energy_growth": 2.8711832177636287,
-      "global_population_growth": 1.4445372218923058,
-      "energy_growth_beyond_population": 1.426645995871323
+      "global_primary_energy_growth": 2.8307371156975236,
+      "global_population_growth": 1.4342031834345903,
+      "energy_growth_beyond_population": 1.3965339322629333
     },
     {
       "date": "1997-01-01",
-      "global_primary_energy_growth": 0.9840123989522498,
-      "global_population_growth": 1.4648889285200806,
-      "energy_growth_beyond_population": -0.4808765295678308
+      "global_primary_energy_growth": 0.9792025243815061,
+      "global_population_growth": 1.4542630762473863,
+      "energy_growth_beyond_population": -0.47506055186588014
     },
     {
       "date": "1998-01-01",
-      "global_primary_energy_growth": 0.4971651960595569,
-      "global_population_growth": 1.39244186209313,
-      "energy_growth_beyond_population": -0.8952766660335731
+      "global_primary_energy_growth": 0.4959334108832536,
+      "global_population_growth": 1.3828364541726756,
+      "energy_growth_beyond_population": -0.886903043289422
     },
     {
       "date": "1999-01-01",
-      "global_primary_energy_growth": 1.7261554025191694,
-      "global_population_growth": 1.3708134571125186,
-      "energy_growth_beyond_population": 0.35534194540665087
+      "global_primary_energy_growth": 1.7114265933161121,
+      "global_population_growth": 1.3615028007663454,
+      "energy_growth_beyond_population": 0.3499237925497667
     },
     {
       "date": "2000-01-01",
-      "global_primary_energy_growth": 2.649889489864976,
-      "global_population_growth": 1.3605826104334584,
-      "energy_growth_beyond_population": 1.2893068794315177
+      "global_primary_energy_growth": 2.615388090408466,
+      "global_population_growth": 1.3514097940724668,
+      "energy_growth_beyond_population": 1.2639782963359991
     },
     {
       "date": "2001-01-01",
-      "global_primary_energy_growth": 0.9422712609841843,
-      "global_population_growth": 1.3469606155210423,
-      "energy_growth_beyond_population": -0.40468935453685795
+      "global_primary_energy_growth": 0.9378595770384024,
+      "global_population_growth": 1.3379697466859852,
+      "energy_growth_beyond_population": -0.40011016964758284
     },
     {
       "date": "2002-01-01",
-      "global_primary_energy_growth": 2.1644212147989395,
-      "global_population_growth": 1.3218726547699289,
-      "energy_growth_beyond_population": 0.8425485600290106
+      "global_primary_energy_growth": 2.1413302156831904,
+      "global_population_growth": 1.3132121552256848,
+      "energy_growth_beyond_population": 0.8281180604575056
     },
     {
       "date": "2003-01-01",
-      "global_primary_energy_growth": 3.4598404832156593,
-      "global_population_growth": 1.316785184064151,
-      "energy_growth_beyond_population": 2.1430552991515084
+      "global_primary_energy_growth": 3.401333676524665,
+      "global_population_growth": 1.3081909309825335,
+      "energy_growth_beyond_population": 2.0931427455421314
     },
     {
       "date": "2004-01-01",
-      "global_primary_energy_growth": 5.024869085029016,
-      "global_population_growth": 1.2914859167438841,
-      "energy_growth_beyond_population": 3.7333831682851315
+      "global_primary_energy_growth": 4.902698455411958,
+      "global_population_growth": 1.2832173528412483,
+      "energy_growth_beyond_population": 3.6194811025707097
     },
     {
       "date": "2005-01-01",
-      "global_primary_energy_growth": 3.396695887986567,
-      "global_population_growth": 1.2835583067482226,
-      "energy_growth_beyond_population": 2.1131375812383446
+      "global_primary_energy_growth": 3.3402820914036013,
+      "global_population_growth": 1.2753905151079437,
+      "energy_growth_beyond_population": 2.0648915762956577
     },
     {
       "date": "2006-01-01",
-      "global_primary_energy_growth": 2.89812199515318,
-      "global_population_growth": 1.4045556526949943,
-      "energy_growth_beyond_population": 1.4935663424581858
+      "global_primary_energy_growth": 2.856920590940071,
+      "global_population_growth": 1.3947831701152325,
+      "energy_growth_beyond_population": 1.4621374208248383
     },
     {
       "date": "2007-01-01",
-      "global_primary_energy_growth": 3.1397344105541958,
-      "global_population_growth": 1.2828152546474625,
-      "energy_growth_beyond_population": 1.8569191559067333
+      "global_primary_energy_growth": 3.0914527593148833,
+      "global_population_growth": 1.2746568769550493,
+      "energy_growth_beyond_population": 1.816795882359834
     },
     {
       "date": "2008-01-01",
-      "global_primary_energy_growth": 1.2260072238642339,
-      "global_population_growth": 1.2855788869949203,
-      "energy_growth_beyond_population": -0.0595716631306864
+      "global_primary_energy_growth": 1.2185526227522558,
+      "global_population_growth": 1.2773854688060027,
+      "energy_growth_beyond_population": -0.058832846053746835
     },
     {
       "date": "2009-01-01",
-      "global_primary_energy_growth": -1.6948087133047962,
-      "global_population_growth": 1.286358234129259,
-      "energy_growth_beyond_population": -2.981166947434055
+      "global_primary_energy_growth": -1.7093349581436712,
+      "global_population_growth": 1.2781549210270526,
+      "energy_growth_beyond_population": -2.987489879170724
     },
     {
       "date": "2010-01-01",
-      "global_primary_energy_growth": 4.848182650575383,
-      "global_population_growth": 1.2784790752317976,
-      "energy_growth_beyond_population": 3.5697035753435857
+      "global_primary_energy_growth": 4.7343238358648065,
+      "global_population_growth": 1.2703755265313532,
+      "energy_growth_beyond_population": 3.4639483093334533
     },
     {
       "date": "2011-01-01",
-      "global_primary_energy_growth": 2.2964685518441996,
-      "global_population_growth": 1.261652785318912,
-      "energy_growth_beyond_population": 1.0348157665252877
+      "global_primary_energy_growth": 2.270496586381121,
+      "global_population_growth": 1.2537602614017374,
+      "energy_growth_beyond_population": 1.0167363249793837
     },
     {
       "date": "2012-01-01",
-      "global_primary_energy_growth": 1.465924401463381,
-      "global_population_growth": 1.4161361228925529,
-      "energy_growth_beyond_population": 0.049788278570828126
+      "global_primary_energy_growth": 1.4552835944487086,
+      "global_population_growth": 1.406202587048,
+      "energy_growth_beyond_population": 0.04908100740070864
     },
     {
       "date": "2013-01-01",
-      "global_primary_energy_growth": 1.7930191562748332,
-      "global_population_growth": 1.2577158047943904,
-      "energy_growth_beyond_population": 0.5353033514804428
+      "global_primary_energy_growth": 1.7771341673629593,
+      "global_population_growth": 1.2498722574520116,
+      "energy_growth_beyond_population": 0.5272619099109477
     },
     {
       "date": "2014-01-01",
-      "global_primary_energy_growth": 1.0920614539187357,
-      "global_population_growth": 1.2316743892244908,
-      "energy_growth_beyond_population": -0.13961293530575514
+      "global_primary_energy_growth": 1.086141523347095,
+      "global_population_growth": 1.224150993055062,
+      "energy_growth_beyond_population": -0.13800946970796701
     },
     {
       "date": "2015-01-01",
-      "global_primary_energy_growth": 0.6527677482118799,
-      "global_population_growth": 1.204040675440754,
-      "energy_growth_beyond_population": -0.5512729272288741
+      "global_primary_energy_growth": 0.6506464459931749,
+      "global_population_growth": 1.1968497691118074,
+      "energy_growth_beyond_population": -0.5462033231186325
     },
     {
       "date": "2016-01-01",
-      "global_primary_energy_growth": 1.2348778731589682,
-      "global_population_growth": 1.1785287878141926,
-      "energy_growth_beyond_population": 0.05634908534477567
+      "global_primary_energy_growth": 1.227315450491595,
+      "global_population_growth": 1.171638222654181,
+      "energy_growth_beyond_population": 0.05567722783741402
     },
     {
       "date": "2017-01-01",
-      "global_primary_energy_growth": 2.2317745471950534,
-      "global_population_growth": 1.151130976507675,
-      "energy_growth_beyond_population": 1.0806435706873785
+      "global_primary_energy_growth": 2.2072349010251457,
+      "global_population_growth": 1.1445558744643591,
+      "energy_growth_beyond_population": 1.0626790265607866
     },
     {
       "date": "2018-01-01",
-      "global_primary_energy_growth": 2.5601244937285106,
-      "global_population_growth": 1.1017575833029536,
-      "energy_growth_beyond_population": 1.458366910425557
+      "global_primary_energy_growth": 2.5279021045939487,
+      "global_population_growth": 1.0957324489623943,
+      "energy_growth_beyond_population": 1.4321696556315544
     },
     {
       "date": "2019-01-01",
-      "global_primary_energy_growth": 1.1783792654654013,
-      "global_population_growth": 1.052861832736518,
-      "energy_growth_beyond_population": 0.12551743272888327
+      "global_primary_energy_growth": 1.1714904418340666,
+      "global_population_growth": 1.0473578417823148,
+      "energy_growth_beyond_population": 0.12413260005175175
     },
     {
       "date": "2020-01-01",
-      "global_primary_energy_growth": -3.5797217941405113,
-      "global_population_growth": 0.969151143394309,
-      "energy_growth_beyond_population": -4.548872937534821
+      "global_primary_energy_growth": -3.645365166049963,
+      "global_population_growth": 0.9644849974815628,
+      "energy_growth_beyond_population": -4.609850163531526
     },
     {
       "date": "2021-01-01",
-      "global_primary_energy_growth": 5.030953232838864,
-      "global_population_growth": 0.8547946573683962,
-      "energy_growth_beyond_population": 4.176158575470468
+      "global_primary_energy_growth": 4.9084913420307075,
+      "global_population_growth": 0.8511619744773213,
+      "energy_growth_beyond_population": 4.057329367553386
     },
     {
       "date": "2022-01-01",
-      "global_primary_energy_growth": 1.8486052199691905,
-      "global_population_growth": 0.8413227648124355,
-      "energy_growth_beyond_population": 1.007282455156755
+      "global_primary_energy_growth": 1.831726213802476,
+      "global_population_growth": 0.8378033707042931,
+      "energy_growth_beyond_population": 0.9939228430981828
     },
     {
       "date": "2023-01-01",
-      "global_primary_energy_growth": 1.867220573578332,
-      "global_population_growth": 0.8765015055258729,
-      "energy_growth_beyond_population": 0.9907190680524591
+      "global_primary_energy_growth": 1.8500020189231137,
+      "global_population_growth": 0.8726825304385954,
+      "energy_growth_beyond_population": 0.9773194884845182
     }
   ],
   "annotations": [
@@ -464,9 +464,9 @@
   ],
   "evidenceLabel": "Contextual historical pattern",
   "methodology": {
-    "formula": "Energy growth beyond population = global primary-energy consumption growth minus global population growth.",
-    "notes": "Annual country aggregates preserve the source's available coverage. The residual is a rough contextual indicator, not a direct measure of living standards or welfare."
+    "formula": "Energy growth beyond population = 100 \u00d7 [ln(total primary-energy consumption_t) \u2212 ln(total primary-energy consumption_t\u22121)] \u2212 100 \u00d7 [ln(population_t) \u2212 ln(population_t\u22121)]. This equals 100 \u00d7 change in ln(energy consumption per person).",
+    "notes": "The annual convention is log growth in percent, with one observation for each year that has valid positive energy and population values in both the current and preceding source year. The first source year has no prior-year comparison; missing, non-positive, or unmatched source values are omitted. The residual is a rough contextual indicator, not a direct measure of living standards, welfare, useful energy, or surplus energy."
   },
   "staticFigure": "",
-  "generatedAt": "2026-08-06T01:38:10+00:00"
+  "generatedAt": "2026-08-06T02:01:53+00:00"
 }

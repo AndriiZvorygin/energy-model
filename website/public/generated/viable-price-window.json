@@ -6,8 +6,25 @@
   "evidenceLabel": "Scenario concept",
   "plainLanguageSummary": "A stable market window exists only when consumers can sustainably pay enough to support ongoing production and replacement investment. The boundaries are illustrative, not observed global prices.",
   "sourceNotes": [
-    "Interpretive framing informed by Gail Tverberg, Our Finite World (2015)",
+    "Interpretive framing only; primary statistical data is not used to estimate a global floor or ceiling.",
     "Illustrative normalized values are a conceptual visualization, not a global breakeven estimate."
+  ],
+  "citations": [
+    {
+      "label": "Affordability, Not Scarcity, Is the Real Energy Crisis",
+      "url": "https://ourfiniteworld.com/2026/08/05/affordability-not-scarcity-is-the-real-energy-crisis/",
+      "role": "Broad affordability-centred interpretation, producer-consumer price conflict, and energy-growth-beyond-population framing."
+    },
+    {
+      "label": "Why Oil Shortages May Bring Lower Prices and Recession",
+      "url": "https://ourfiniteworld.com/2026/06/29/why-oil-shortages-may-bring-lower-prices-and-recession/",
+      "role": "Acute disruption-to-contraction-to-lower-benchmark-price sequence."
+    },
+    {
+      "label": "The Oil Glut and Low Prices Reflect an Affordability Problem",
+      "url": "https://ourfiniteworld.com/2015/03/09/the-oil-glut-and-low-prices-reflect-an-affordability-problem/",
+      "role": "Earlier formulation of the affordability problem."
+    }
   ],
   "methodology": {
     "formula": "Producer viability floor and consumer affordability ceiling are normalized illustrative boundaries on a 0-100 scale.",
@@ -39,5 +56,5 @@
       "interpretation": "Producer requirements exceed what consumers can sustainably pay, so contraction can push benchmark prices lower while future supply becomes more vulnerable."
     }
   ],
-  "generatedAt": "2026-08-06T01:38:10+00:00"
+  "generatedAt": "2026-08-06T02:01:53+00:00"
 }

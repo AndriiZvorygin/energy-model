@@ -3,7 +3,7 @@ import { EvidenceLabel } from '../EvidenceLabel'
 import { useGeneratedJson } from './useChartData'
 
 type PriceWindowState = { id: string; label: string; producerFloor: number; consumerCeiling: number; interpretation: string }
-type PriceWindowData = { title: string; evidenceLabel: string; plainLanguageSummary: string; sourceNotes: string[]; methodology: { formula: string; limitations: string[] }; states: PriceWindowState[] }
+type PriceWindowData = { title: string; evidenceLabel: string; plainLanguageSummary: string; sourceNotes: string[]; citations?: { label: string; url: string; role: string }[]; methodology: { formula: string; limitations: string[] }; states: PriceWindowState[] }
 
 export function ViablePriceWindowChart() {
   const { data, error } = useGeneratedJson<PriceWindowData>('viable-price-window.json')
@@ -33,7 +33,7 @@ export function ViablePriceWindowChart() {
       <p><span className="block text-xs uppercase text-stone-500">Conceptual window</span><strong>{squeeze > 0 ? `${squeeze} points` : 'none'}</strong></p>
     </div>
     <p className="mt-4 text-sm leading-6 text-stone-600 dark:text-stone-300">{state.interpretation}</p>
-    <details className="mt-5 border-t border-stone-200 pt-4 text-sm dark:border-stone-800"><summary className="cursor-pointer font-semibold">Concept details and limitations</summary><div className="mt-3 space-y-2 text-stone-600 dark:text-stone-300"><p><strong>Calculation:</strong> {data.methodology.formula}</p><ul className="list-disc space-y-1 pl-5">{data.methodology.limitations.map((item) => <li key={item}>{item}</li>)}</ul><p><strong>Sources:</strong> {data.sourceNotes.join(' ')}</p></div></details>
+    <details className="mt-5 border-t border-stone-200 pt-4 text-sm dark:border-stone-800"><summary className="cursor-pointer font-semibold">Concept details and limitations</summary><div className="mt-3 space-y-3 text-stone-600 dark:text-stone-300"><p><strong>Calculation:</strong> {data.methodology.formula}</p><ul className="list-disc space-y-1 pl-5">{data.methodology.limitations.map((item) => <li key={item}>{item}</li>)}</ul><p><strong>Sources:</strong> {data.sourceNotes.join(' ')}</p>{data.citations && <div><strong>Interpretive citations:</strong><ul className="mt-1 list-disc space-y-1 pl-5">{data.citations.map((citation) => <li key={citation.url}><a className="underline decoration-petroleum underline-offset-2" href={citation.url} target="_blank" rel="noreferrer">{citation.label}</a><span> — {citation.role}</span></li>)}</ul></div>}</div></details>
     <div className="mt-5 overflow-x-auto"><table className="min-w-full text-left text-xs"><caption className="sr-only">Conceptual viable price-window states</caption><thead><tr className="border-b border-stone-200 dark:border-stone-800"><th className="p-2">State</th><th className="p-2">Producer floor</th><th className="p-2">Consumer ceiling</th><th className="p-2">Interpretation</th></tr></thead><tbody>{data.states.map((item) => <tr key={item.id} className="border-b border-stone-200 dark:border-stone-800"><th className="p-2 font-medium">{item.label}</th><td className="p-2">{item.producerFloor}</td><td className="p-2">{item.consumerCeiling}</td><td className="p-2">{item.interpretation}</td></tr>)}</tbody></table></div>
   </section>
 }

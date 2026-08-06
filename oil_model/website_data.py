@@ -182,18 +182,36 @@ def _global_energy_context(root: Path) -> list[dict[str, Any]]:
     if not path.exists():
         return []
     rows: list[dict[str, Any]] = []
+
+    def csv_number(value: object) -> float | None:
+        try:
+            parsed = float(value) if value not in (None, "") else None
+        except (TypeError, ValueError):
+            return None
+        return parsed if parsed is not None and math.isfinite(parsed) else None
+
     with path.open(encoding="utf-8", newline="") as handle:
         for row in csv.DictReader(handle):
             rows.append({
                 "year": int(row["year"]),
-                "energy": float(row["primary_energy_consumption_twh"]),
-                "population": float(row["population_persons"]),
+                "energy": csv_number(row.get("primary_energy_consumption_twh")),
+                "population": csv_number(row.get("population_persons")),
             })
     rows.sort(key=lambda row: row["year"])
     observations: list[dict[str, Any]] = []
     for current, previous in zip(rows[1:], rows[:-1]):
-        energy_growth = 100 * (current["energy"] / previous["energy"] - 1)
-        population_growth = 100 * (current["population"] / previous["population"] - 1)
+        # Log growth makes the residual exactly equal to the change in log
+        # energy use per person. Invalid or non-positive source values cannot
+        # support a logarithmic comparison and are omitted.
+        if any(
+                value is None or not math.isfinite(value) or value <= 0
+            for value in (
+                current["energy"], previous["energy"], current["population"], previous["population"]
+            )
+        ):
+            continue
+        energy_growth = 100 * (math.log(current["energy"]) - math.log(previous["energy"]))
+        population_growth = 100 * (math.log(current["population"]) - math.log(previous["population"]))
         observations.append({
             "date": _iso_date(current["year"]),
             "global_primary_energy_growth": energy_growth,
@@ -912,7 +930,7 @@ def write_website_chart_data(
             _series("refinery_utilization_pct", "Refinery utilization", "percent", "EIA WPULEUS3", "measured", False, color="#7c3aed", transformations=["raw", "zscore"], panel="Physical availability and supply"),
             _series("WTI_YoY", "WTI growth", "percent", "FRED DCOILWTICO", "derived", color="#2563eb", transformations=["raw", "zscore"], panel="Benchmark prices and delivered costs"),
             _series("real_WTI_YoY", "Real WTI growth", "percent", "FRED DCOILWTICO / CPIAUCSL", "derived", False, color="#0f766e", transformations=["raw", "zscore"], panel="Benchmark prices and delivered costs"),
-            _series("energy_CPI_YoY", "Energy CPI growth", "percent", "BLS via FRED CPIENGSL", "derived", False, color="#d97706", transformations=["raw", "zscore"], panel="Benchmark prices and delivered costs"),
+            _series("energy_CPI_YoY", "Energy CPI growth (delivered-cost proxy)", "percent", "BLS via FRED CPIENGSL", "derived", False, color="#d97706", transformations=["raw", "zscore"], panel="Benchmark prices and delivered costs"),
             _series("Industrial_production_YoY", "Industrial production growth", "percent", "Federal Reserve via FRED INDPRO", "derived", color="#0f766e", transformations=["raw", "zscore"], panel="Economic activity and demand"),
             _series("real_consumer_spending_YoY", "Real consumer spending growth", "percent", "BEA via FRED PCEC96", "derived", False, color="#d97706", transformations=["raw", "zscore"], panel="Economic activity and demand"),
             _series("unemployment_rate", "Unemployment rate", "percent", "BLS via FRED UNRATE", "measured", False, color="#be123c", transformations=["raw", "zscore"], panel="Economic activity and demand"),
@@ -935,15 +953,15 @@ def write_website_chart_data(
         ],
         ["raw", "zscore"], "Supported historical pattern",
         {
-            "formula": "Each panel uses fixed-reference z = (observation - reference-period mean) / reference-period standard deviation; inventory tightness = -CI_zscore.",
-            "notes": "The panels retain synchronized dates while keeping physical, price, and activity units separate. Falling benchmark prices can reflect demand destruction rather than abundant or affordable energy.",
+            "formula": "Each panel uses fixed-reference z = (observation - reference-period mean) / reference-period standard deviation; inventory tightness = -CI_zscore. Energy CPI is used as a delivered-energy-cost proxy, not as a direct measure of every household or business energy cost.",
+            "notes": "The panels retain synchronized dates while keeping physical availability, benchmark price, delivered-cost proxy, and economic activity distinct. A physical disruption may initially raise prices and delivered costs. When affordability pressure produces sufficient contraction and demand destruction, benchmark prices may subsequently fall despite lower production, impaired investment, or continuing product-level constraints.",
         },
         "", generated_at, [event["id"] for event in events],
         details={
-            "plainLanguageSummary": "Use the three panels to inspect episodes where physical tightness, delivered energy costs, and economic activity move in different directions. A falling benchmark price is not, by itself, evidence that energy has become easy to afford.",
-            "howToRead": "The lines are standardized within their fixed reference period so their timing can be compared without putting unrelated units on one axis. Read the panels together and inspect the exact observations in the table.",
-            "patternsToWatch": ["Price declines coinciding with weakening production, spending, or employment", "Delivered energy inflation remaining elevated after benchmark oil momentum fades", "Inventory tightness and refinery utilization diverging from domestic production growth"],
-            "limitations": ["These are U.S. indicators and do not measure global physical availability or every delivered fuel cost.", "Supply shocks, policy, exchange rates, credit conditions, and common recession drivers can move several panels together.", "The synchronized view is descriptive; it does not establish the affordability feedback loop as a causal model."],
+            "plainLanguageSummary": "Read these synchronized panels as a conditional historical test: a disruption can raise benchmark prices and delivered-cost pressure first, while a later contraction in activity and demand can pull benchmark prices down. A falling benchmark price is not, by itself, evidence that energy has become easy to afford.",
+            "howToRead": "The lines are standardized within their fixed reference period so their timing can be compared without putting unrelated units on one axis. The first panel shows physical availability proxies, the second separates benchmark oil from an energy-CPI delivered-cost proxy, and the third shows activity and demand. Read the panels together and inspect exact observations in the table.",
+            "patternsToWatch": ["2008–2009 and 2020 show benchmark oil declines alongside major activity weakness in this U.S. panel; both also contain large non-energy shocks.", "2014–2016 shows a prolonged oil-price adjustment with mixed physical and activity evidence, so it is not a pure scarcity test.", "2022 shows energy-cost pressure without an immediate collapse in every activity series, providing a useful contrast.", "Delivered energy inflation remaining elevated after benchmark oil momentum fades", "Inventory tightness and refinery utilization diverging from domestic production growth"],
+            "limitations": ["These are U.S. indicators and do not measure global physical availability or every delivered fuel cost.", "Energy CPI is a consumer-price proxy and is affected by refining, transport, taxes, distribution, margins, exchange rates, and policy.", "Supply shocks, policy, credit conditions, and common recession drivers can move several panels together.", "The synchronized view is descriptive; it does not establish the affordability feedback loop as a causal model."],
             "sourceNotes": ["EIA Monthly Energy Review and WPULEUS3", "EIA WCESTUS1 comparative inventory", "FRED DCOILWTICO, CPIAUCSL, INDPRO, UNRATE", "BEA PCEC96; BLS CPIENGSL"],
         },
         reference_period=("2000-01-01", "2019-12-01"),
@@ -959,15 +977,15 @@ def write_website_chart_data(
         ],
         global_energy_observations, ["raw", "zscore"], "Contextual historical pattern",
         {
-            "formula": "Energy growth beyond population = global primary-energy consumption growth minus global population growth.",
-            "notes": "Annual country aggregates preserve the source's available coverage. The residual is a rough contextual indicator, not a direct measure of living standards or welfare.",
+            "formula": "Energy growth beyond population = 100 × [ln(total primary-energy consumption_t) − ln(total primary-energy consumption_t−1)] − 100 × [ln(population_t) − ln(population_t−1)]. This equals 100 × change in ln(energy consumption per person).",
+            "notes": "The annual convention is log growth in percent, with one observation for each year that has valid positive energy and population values in both the current and preceding source year. The first source year has no prior-year comparison; missing, non-positive, or unmatched source values are omitted. The residual is a rough contextual indicator, not a direct measure of living standards, welfare, useful energy, or surplus energy.",
         },
         "", generated_at, [event["id"] for event in events],
         details={
             "plainLanguageSummary": "Energy use has generally grown faster than population over the covered period, but the difference is uneven and does not by itself measure prosperity. Efficiency, energy quality, technology, distribution, and economic structure still matter.",
-            "howToRead": "Compare the annual growth rates first, then inspect the residual labelled energy growth beyond population. This is contextual historical evidence rather than a welfare score.",
-            "patternsToWatch": ["Periods when energy growth beyond population contracts", "Long-run divergence between population growth and energy use", "Disruptions or recessions where energy growth slows sharply"],
-            "limitations": ["The aggregate is built from country rows with available energy and population values; it is not a measure of every country or person.", "Primary energy aggregates combine different energy qualities and do not account for efficiency or distribution.", "The source snapshot currently ends in 2023; recent values are not a live nowcast."],
+            "howToRead": "Compare the annual log-growth rates first, then inspect the residual labelled Energy growth beyond population. A positive value means energy use per person increased on this convention; a negative value means it declined. This is contextual historical evidence rather than a welfare score.",
+            "patternsToWatch": ["Periods when Energy growth beyond population contracts", "Long-run divergence between population growth and energy use", "Disruptions or recessions where energy growth slows sharply"],
+            "limitations": ["The aggregate is built from country rows with available energy and population values; it is not a measure of every country or person.", "Primary energy uses the Energy Institute/OWID substitution-method convention where represented by the source series; it combines different energy qualities and does not account for efficiency or distribution.", "The source snapshot currently ends in 2023; recent values are not a live nowcast."],
             "sourceNotes": ["Energy Institute Statistical Review via Our World in Data, checked-in source snapshot data/seed/global_primary_energy_annual.csv", "Country rows with ISO codes are summed; 2024 is omitted because population coverage was incomplete in the source snapshot."],
         },
         reference_period=("1966-01-01", "2019-01-01"),
@@ -980,7 +998,12 @@ def write_website_chart_data(
         "description": "A scenario concept showing the space between producer viability requirements and the consumer affordability ceiling.",
         "evidenceLabel": "Scenario concept",
         "plainLanguageSummary": "A stable market window exists only when consumers can sustainably pay enough to support ongoing production and replacement investment. The boundaries are illustrative, not observed global prices.",
-        "sourceNotes": ["Interpretive framing informed by Gail Tverberg, Our Finite World (2015)", "Illustrative normalized values are a conceptual visualization, not a global breakeven estimate."],
+        "sourceNotes": ["Interpretive framing only; primary statistical data is not used to estimate a global floor or ceiling.", "Illustrative normalized values are a conceptual visualization, not a global breakeven estimate."],
+        "citations": [
+            {"label": "Affordability, Not Scarcity, Is the Real Energy Crisis", "url": "https://ourfiniteworld.com/2026/08/05/affordability-not-scarcity-is-the-real-energy-crisis/", "role": "Broad affordability-centred interpretation, producer-consumer price conflict, and energy-growth-beyond-population framing."},
+            {"label": "Why Oil Shortages May Bring Lower Prices and Recession", "url": "https://ourfiniteworld.com/2026/06/29/why-oil-shortages-may-bring-lower-prices-and-recession/", "role": "Acute disruption-to-contraction-to-lower-benchmark-price sequence."},
+            {"label": "The Oil Glut and Low Prices Reflect an Affordability Problem", "url": "https://ourfiniteworld.com/2015/03/09/the-oil-glut-and-low-prices-reflect-an-affordability-problem/", "role": "Earlier formulation of the affordability problem."},
+        ],
         "methodology": {"formula": "Producer viability floor and consumer affordability ceiling are normalized illustrative boundaries on a 0-100 scale.", "limitations": ["Requirements vary by geology, decline rates, financing, taxation, transport, refining configuration, and company balance sheets.", "No single global producer floor or consumer ceiling is estimated here."]},
         "states": [
             {"id": "viable-range", "label": "Viable range", "producerFloor": 35, "consumerCeiling": 75, "interpretation": "The affordability ceiling remains above the producer viability floor, leaving a conceptual operating range."},

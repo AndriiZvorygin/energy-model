@@ -3,21 +3,24 @@
   "id": "price-availability-activity",
   "title": "Price, physical availability, and economic activity",
   "description": "Three synchronized panels place supply and inventory proxies beside oil-price and delivered-energy-cost momentum, then beside real activity and demand.",
-  "plainLanguageSummary": "Use the three panels to inspect episodes where physical tightness, delivered energy costs, and economic activity move in different directions. A falling benchmark price is not, by itself, evidence that energy has become easy to afford.",
-  "howToRead": "The lines are standardized within their fixed reference period so their timing can be compared without putting unrelated units on one axis. Read the panels together and inspect the exact observations in the table.",
+  "plainLanguageSummary": "Read these synchronized panels as a conditional historical test: a disruption can raise benchmark prices and delivered-cost pressure first, while a later contraction in activity and demand can pull benchmark prices down. A falling benchmark price is not, by itself, evidence that energy has become easy to afford.",
+  "howToRead": "The lines are standardized within their fixed reference period so their timing can be compared without putting unrelated units on one axis. The first panel shows physical availability proxies, the second separates benchmark oil from an energy-CPI delivered-cost proxy, and the third shows activity and demand. Read the panels together and inspect exact observations in the table.",
   "calculation": {
-    "formula": "Each panel uses fixed-reference z = (observation - reference-period mean) / reference-period standard deviation; inventory tightness = -CI_zscore.",
-    "explanation": "The panels retain synchronized dates while keeping physical, price, and activity units separate. Falling benchmark prices can reflect demand destruction rather than abundant or affordable energy.",
+    "formula": "Each panel uses fixed-reference z = (observation - reference-period mean) / reference-period standard deviation; inventory tightness = -CI_zscore. Energy CPI is used as a delivered-energy-cost proxy, not as a direct measure of every household or business energy cost.",
+    "explanation": "The panels retain synchronized dates while keeping physical availability, benchmark price, delivered-cost proxy, and economic activity distinct. A physical disruption may initially raise prices and delivered costs. When affordability pressure produces sufficient contraction and demand destruction, benchmark prices may subsequently fall despite lower production, impaired investment, or continuing product-level constraints.",
     "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
   },
   "patternsToWatch": [
-    "Price declines coinciding with weakening production, spending, or employment",
+    "2008\u20132009 and 2020 show benchmark oil declines alongside major activity weakness in this U.S. panel; both also contain large non-energy shocks.",
+    "2014\u20132016 shows a prolonged oil-price adjustment with mixed physical and activity evidence, so it is not a pure scarcity test.",
+    "2022 shows energy-cost pressure without an immediate collapse in every activity series, providing a useful contrast.",
     "Delivered energy inflation remaining elevated after benchmark oil momentum fades",
     "Inventory tightness and refinery utilization diverging from domestic production growth"
   ],
   "limitations": [
     "These are U.S. indicators and do not measure global physical availability or every delivered fuel cost.",
-    "Supply shocks, policy, exchange rates, credit conditions, and common recession drivers can move several panels together.",
+    "Energy CPI is a consumer-price proxy and is affected by refining, transport, taxes, distribution, margins, exchange rates, and policy.",
+    "Supply shocks, policy, credit conditions, and common recession drivers can move several panels together.",
     "The synchronized view is descriptive; it does not establish the affordability feedback loop as a causal model."
   ],
   "sourceNotes": [
@@ -168,7 +171,7 @@
     },
     {
       "key": "energy_CPI_YoY",
-      "label": "Energy CPI growth",
+      "label": "Energy CPI growth (delivered-cost proxy)",
       "unit": "percent",
       "source": "BLS via FRED CPIENGSL",
       "status": "derived",
@@ -6091,9 +6094,9 @@
   ],
   "evidenceLabel": "Supported historical pattern",
   "methodology": {
-    "formula": "Each panel uses fixed-reference z = (observation - reference-period mean) / reference-period standard deviation; inventory tightness = -CI_zscore.",
-    "notes": "The panels retain synchronized dates while keeping physical, price, and activity units separate. Falling benchmark prices can reflect demand destruction rather than abundant or affordable energy."
+    "formula": "Each panel uses fixed-reference z = (observation - reference-period mean) / reference-period standard deviation; inventory tightness = -CI_zscore. Energy CPI is used as a delivered-energy-cost proxy, not as a direct measure of every household or business energy cost.",
+    "notes": "The panels retain synchronized dates while keeping physical availability, benchmark price, delivered-cost proxy, and economic activity distinct. A physical disruption may initially raise prices and delivered costs. When affordability pressure produces sufficient contraction and demand destruction, benchmark prices may subsequently fall despite lower production, impaired investment, or continuing product-level constraints."
   },
   "staticFigure": "",
-  "generatedAt": "2026-08-06T01:38:10+00:00"
+  "generatedAt": "2026-08-06T02:01:53+00:00"
 }
