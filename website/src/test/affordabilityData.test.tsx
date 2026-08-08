@@ -28,6 +28,12 @@ describe('affordability evidence', () => {
     expect(chart.availableTransformations).toContain('indexed')
   })
 
+  it('exposes an index-100 view for the real wage growth chart', () => {
+    const chart = JSON.parse(readFileSync(resolve(generated, 'labour-warning.json'), 'utf8'))
+    expect(chart.availableTransformations).toContain('indexed')
+    expect(chart.series.find((item: { key: string }) => item.key === 'real_wage_growth').transformations).toContain('indexed')
+  })
+
   it('publishes quarterly income ratios without monthly forward filling', () => {
     const income = JSON.parse(readFileSync(resolve(generated, 'canada/indicators/household-disposable-income-per-person.json'), 'utf8'))
     const food = JSON.parse(readFileSync(resolve(generated, 'canada/indicators/food-to-income.json'), 'utf8'))

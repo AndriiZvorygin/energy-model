@@ -16,6 +16,13 @@ describe('chart transformations', () => {
     expect(observations[0].price).toBe(100)
   })
 
+  it('uses the selected visible start as the index-100 base', () => {
+    const subset = observations.slice(6)
+    const indexed = transformObservations(subset, series, 'indexed', observations)
+    expect(indexed[0].price).toBe(100)
+    expect(indexed[1].price).toBeCloseTo(100 * 107 / 106)
+  })
+
   it('shifts a predictor backward in source time for a positive lead', () => {
     const shifted = shiftSeries(observations, 'price', 2, 'lead')
     expect(shifted[1].lead).toBeNull()

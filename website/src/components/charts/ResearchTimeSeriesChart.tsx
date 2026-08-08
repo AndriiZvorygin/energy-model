@@ -455,6 +455,7 @@ export function ResearchTimeSeriesChart({
           range={state.range}
           from={state.from}
           to={state.to}
+          indexed={state.transformation === "indexed"}
           onChange={(range, from, to) =>
             setState((current) => ({ ...current, range, from, to }))
           }

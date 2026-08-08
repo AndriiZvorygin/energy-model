@@ -904,8 +904,8 @@ def write_website_chart_data(
             _series("credit_card_delinquency_rate", "Credit-card delinquency", "percent", "Federal Reserve via FRED", "measured", False, color="#475569"),
         ],
         _observations(system_rows, {"average_weekly_hours_YoY": "average_weekly_hours_YoY", "temporary_help_YoY": "temporary_help_YoY", "real_wage_growth": "real_wage_growth", "unemployment_rate": "unemployment_rate", "consumer_sentiment": "consumer_sentiment", "credit_card_delinquency_rate": "credit_card_delinquency_rate"}),
-        ["raw", "zscore"], "Supported historical pattern",
-        {"formula": "Hours, temporary help, and real wages use year-over-year change; unemployment, sentiment, and delinquency retain published levels.", "notes": "Labour indicators have different publication lags and can respond to policy, demographics, sector mix, and non-energy shocks."},
+        ["raw", "indexed", "zscore"], "Supported historical pattern",
+        {"formula": "Hours, temporary help, and real wages use year-over-year change; indexed view rebases each selected series to 100 at the first valid observation on or after the selected From date, or at the full-history start when From is blank; unemployment, sentiment, and delinquency retain published levels.", "notes": "Labour indicators have different publication lags and can respond to policy, demographics, sector mix, and non-energy shocks."},
         "labour_early_warning_indicators.png", generated_at, [event["id"] for event in events], reference_period=("2000-01-01", "2019-12-01"),
     )
     demand_destruction = _dataset(

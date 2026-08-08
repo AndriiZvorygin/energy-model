@@ -6,7 +6,7 @@
   "plainLanguageSummary": "Hours, temporary-help employment, real wages, unemployment, sentiment, and delinquency show different stages of labour and household strain.",
   "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
   "calculation": {
-    "formula": "Hours, temporary help, and real wages use year-over-year change; unemployment, sentiment, and delinquency retain published levels.",
+    "formula": "Hours, temporary help, and real wages use year-over-year change; indexed view rebases each selected series to 100 at the first valid observation on or after the selected From date, or at the full-history start when From is blank; unemployment, sentiment, and delinquency retain published levels.",
     "explanation": "Labour indicators have different publication lags and can respond to policy, demographics, sector mix, and non-energy shocks.",
     "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
   },
@@ -4559,11 +4559,12 @@
   ],
   "availableTransformations": [
     "raw",
+    "indexed",
     "zscore"
   ],
   "evidenceLabel": "Supported historical pattern",
   "methodology": {
-    "formula": "Hours, temporary help, and real wages use year-over-year change; unemployment, sentiment, and delinquency retain published levels.",
+    "formula": "Hours, temporary help, and real wages use year-over-year change; indexed view rebases each selected series to 100 at the first valid observation on or after the selected From date, or at the full-history start when From is blank; unemployment, sentiment, and delinquency retain published levels.",
     "notes": "Labour indicators have different publication lags and can respond to policy, demographics, sector mix, and non-energy shocks."
   },
   "staticFigure": "labour_early_warning_indicators.png",
