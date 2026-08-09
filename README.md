@@ -100,6 +100,23 @@ energy-model/
 
 The Python pipeline owns data acquisition, transformations, models, validation, written findings, chart generation, and website data contracts. The website is an interactive research-observatory layer: it loads generated histories and metadata but does not run, refit, or alter the research model.
 
+### Living Region handoff
+
+Energy Model remains upstream of the regional Living Region model. The
+reproducible interface is the versioned generated contract at
+`contracts/living-region/systemic-energy-v1.json`, produced with:
+
+```bash
+make export-living-region-contract
+```
+
+The contract carries source and observation dates, retrieval metadata, evidence
+status, confidence and limitations. It supplies contextual Canadian/global
+energy, food-price, freight, wage, income and savings evidence. It does not
+invent direct diesel, fertilizer, regional transport-cost, trade-competition or
+household pass-through coefficients; those remain downstream scenario inputs in
+Living Region until separately calibrated.
+
 Data-dependent website interpretation is refinery-driven. One `generate_evidence_summary(geography, topic)` interface produces canonical evidence keys across global, Canadian, U.S., Ontario and Alberta contexts. Route-level summaries resolve through `website/public/generated/presentation-manifest.json`, generated from classifier and indicator outputs plus structured evidence and presentation configuration. React renders this contract and does not choose geography, evidence status, or current analytical conclusions. See [docs/refinery_architecture.md](docs/refinery_architecture.md).
 
 ## Website

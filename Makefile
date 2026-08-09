@@ -1,6 +1,6 @@
-PYTHON ?= python
+PYTHON ?= python3
 
-.PHONY: release verify-release
+.PHONY: release verify-release export-living-region-contract
 
 release:
 	$(PYTHON) -m pip install -e '.[dev]'
@@ -10,3 +10,6 @@ release:
 
 verify-release:
 	$(PYTHON) scripts/verify_release.py
+
+export-living-region-contract:
+	$(PYTHON) scripts/export_living_region_contract.py
