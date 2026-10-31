@@ -237,6 +237,9 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
     write_csv(analysis_dir / "technology_flow_us_grid_history.csv", technology_flow_outputs["us_grid_history"])
     write_csv(analysis_dir / "technology_flow_local_energy_estimates.csv", technology_flow_outputs["local_energy"])
     write_csv(analysis_dir / "technology_flow_benchmark_scores.csv", technology_flow_outputs["benchmarks"])
+    write_csv(analysis_dir / "technology_flow_compute_scenarios.csv", technology_flow_outputs["compute_scenarios"], lineterminator="\n")
+    write_csv(analysis_dir / "technology_flow_training_run_anchor.csv", [technology_flow_outputs["training_run_anchor"]] if technology_flow_outputs["training_run_anchor"] else [], lineterminator="\n")
+    write_csv(analysis_dir / "technology_flow_canadian_site_screen.csv", technology_flow_outputs["canadian_site_screen"], lineterminator="\n")
     (analysis_dir / "second_stage_findings.md").write_text(second_stage_findings, encoding="utf-8")
     (analysis_dir / "final_model_interpretation.md").write_text(final_interpretation, encoding="utf-8")
     (analysis_dir / "executive_summary.md").write_text(executive_summary, encoding="utf-8")
@@ -259,7 +262,7 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
     (analysis_dir / "technology_flows_methodology.md").write_text(
         """# AI and technology flows: v1 scope and method
 
-The flow map follows broad investment proxies into electricity infrastructure, local inference workload, and public task-quality benchmarks. The main forecasting horizon ends in 2030. The module is separate from the locked oil benchmark and its classifiers.
+The module compares task-specific AI capability, compute requirements, facility electricity and water, Canadian siting candidates, data-centre demand, and broad digital-infrastructure investment proxies. The forecast horizon ends in 2030. It is separate from the locked oil benchmark and its classifiers.
 
 The user-provided analysis deck and transcript guide the flow questions and geography. Published source data and local aggregate usage supply the numeric observations; slide values are not treated as measured data.
 
@@ -273,7 +276,13 @@ Local Ollama activity represents inference. The current deployment series comes 
 
 The energy sensitivity applies the authors' released TokenPowerBench result for Llama 3.1 8B on vLLM at batch 128 across four H100 GPUs: 0.1467 GPU joules per generated output token. Low/high bounds are half and twice that reference, reflecting the paper's reported 2–3x batch-size spread. The estimate is used only for local model labels in the 7B–10B class. It is an illustrative GPU-only transfer, not measured local electricity: it excludes prompt processing, CPU, memory, other node loads, and cooling. Other local model sizes remain unestimated.
 
-GPQA Diamond scores are provider-reported base-model card values. They do not establish local quantized performance or the quality of a municipal workflow. Human-time savings and useful-task output are not inferred from token counts; v1 exposes no task-level productivity score.
+The capability scorecard uses the dated presentation archive retrieved 2026-09-19. It preserves the benchmark version, evaluation date, tool access, reasoning effort, scaffold, source URL, and row-specific notes. GPQA Diamond, Humanity's Last Exam, ARC-AGI-2, GDPval, DeepSWE, MLE-Bench, and METR results retain their own units and conditions; no composite capability score is computed. Human references are benchmark-specific and not interchangeable. METR rows describe an agent-system task horizon, not a standalone model or general intelligence.
+
+Compute facility planning scenarios come from the presentation archive's 2026-10-13 table. Local, regional, national teacher, and 2,048-accelerator training tiers retain their H100-class proxy assumptions and source capital ranges. A DeepSeek-V3 run reported 2.788 million H800 GPU-hours; the 2,048-accelerator duration and energy cost are a translated planning comparison, not a reconstruction of that run's actual facility. A 100 MW campus is an explicitly linear extrapolation from the archived scenarios. Monthly and annual energy-only cost estimates use C$50–130/MWh sensitivity inputs; C$130/MWh is anchored to Hydro-Québec's proposed large-data-centre rate and C$50/MWh is an analyst-selected low case. Estimates exclude demand charges, taxes, transmission upgrades, and connection fees. These are not utility quotes. Water estimates use 0.3 L/kWh and are cooling-design sensitivities, not measured consumption.
+
+The Canadian site screen pairs 2025 provincial hydroelectric generation/capability facts with city municipal water context for Montréal, Winnipeg, and Prince George. The 100 MW example implies 0.72 million litres/day at the planning WUE. City-wide treatment output or provincial hydro generation is not proof of available water allocation, firm power, or interconnection capacity. The rows identify candidate regions for feasibility work only. A utility/system-impact study, water-source assessment, permits, land, transmission and community/Indigenous engagement would be needed before asserting a site can host the load.
+
+Local Ollama workload remains a measured small-scale example. Human-time savings and useful-task output are not inferred from token counts; v1 exposes no task-level productivity score.
 """,
         encoding="utf-8",
     )
@@ -320,6 +329,9 @@ GPQA Diamond scores are provider-reported base-model card values. They do not es
         store.write_rows("technology_flow_us_grid_history", technology_flow_outputs["us_grid_history"])
         store.write_rows("technology_flow_local_energy_estimates", technology_flow_outputs["local_energy"])
         store.write_rows("technology_flow_benchmark_scores", technology_flow_outputs["benchmarks"])
+        store.write_rows("technology_flow_compute_scenarios", technology_flow_outputs["compute_scenarios"])
+        store.write_rows("technology_flow_training_run_anchor", [technology_flow_outputs["training_run_anchor"]] if technology_flow_outputs["training_run_anchor"] else [])
+        store.write_rows("technology_flow_canadian_site_screen", technology_flow_outputs["canadian_site_screen"])
         store.write_rows("canadian_indicator_catalogue", canadian_catalogue)
         if bis_rows:
             store.write_rows("bis_total_credit_quarterly", bis_rows)

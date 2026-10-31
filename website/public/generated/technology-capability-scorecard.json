@@ -1,0 +1,530 @@
+{
+  "schemaVersion": "1.1.0",
+  "generatedAt": "2026-10-31T17:20:37Z",
+  "snapshotDate": "2026-09-19",
+  "title": "AI capability evidence by task family",
+  "methodology": "The presentation archive preserves benchmark version, evaluation date, tool access, reasoning effort, scaffold, source, and limitations. No composite capability score is calculated.",
+  "families": [
+    {
+      "id": "gpqa-diamond",
+      "category": "Graduate science reasoning",
+      "benchmark": "GPQA Diamond",
+      "metricLabel": "Accuracy",
+      "scaleMaximum": 100,
+      "scope": "Graduate-level science questions. The human expert reference is 81.3% on the selection-filtered Diamond subset; it is not the 65% expert figure from the full GPQA set.",
+      "conditions": "Provider/model-card results; reasoning and tool conditions differ by row. Scores are not a common local-hardware evaluation.",
+      "rows": [
+        {
+          "model": "GPT-6 Astra",
+          "score": 96.0,
+          "displayScore": "96%",
+          "scoreUnit": "percent",
+          "evaluationDate": "2026-09-03",
+          "configuration": "tools false; maximum/default reasoning",
+          "source": "Introducing GPT-6 Astra",
+          "sourceUrl": "https://openai.com/index/gpt-6-astra/",
+          "confidence": "medium",
+          "notes": "Official OpenAI comparison table. Human reference: GPQA Diamond experts 81.3%; skilled non-experts 22.1%, from Table 2; subset selection affects these figures."
+        },
+        {
+          "model": "Gemini 3.8 Flash",
+          "score": 95.3,
+          "displayScore": "95.3%",
+          "scoreUnit": "percent",
+          "evaluationDate": "2026-09-03",
+          "configuration": "tools false; maximum/default reasoning",
+          "source": "Introducing GPT-6 Astra",
+          "sourceUrl": "https://openai.com/index/gpt-6-astra/",
+          "confidence": "medium",
+          "notes": "Official OpenAI comparison table. Human reference: GPQA Diamond experts 81.3%; skilled non-experts 22.1%, from Table 2; subset selection affects these figures."
+        },
+        {
+          "model": "DeepSeek-V4-Pro",
+          "score": 94.3,
+          "displayScore": "94.3%",
+          "scoreUnit": "percent",
+          "evaluationDate": "2026-04-24",
+          "configuration": "tools false; maximum/default reasoning",
+          "source": "DeepSeek-V4-Pro model card",
+          "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/raw/main/README.md",
+          "confidence": "medium",
+          "notes": "DeepSeek model-card table; Pro Max instruct configuration. Human reference: GPQA Diamond experts 81.3%; skilled non-experts 22.1%, from Table 2; subset selection affects these figures."
+        },
+        {
+          "model": "Claude Opus 5",
+          "score": 93.7,
+          "displayScore": "93.7%",
+          "scoreUnit": "percent",
+          "evaluationDate": "2026-09-03",
+          "configuration": "tools false; maximum/default reasoning",
+          "source": "Introducing GPT-6 Astra",
+          "sourceUrl": "https://openai.com/index/gpt-6-astra/",
+          "confidence": "medium",
+          "notes": "Official OpenAI comparison table. Human reference: GPQA Diamond experts 81.3%; skilled non-experts 22.1%, from Table 2; subset selection affects these figures."
+        },
+        {
+          "model": "Kimi K3",
+          "score": 93.5,
+          "displayScore": "93.5%",
+          "scoreUnit": "percent",
+          "evaluationDate": "2026-07-16",
+          "configuration": "tools false; maximum/default reasoning",
+          "source": "Kimi K3 model card",
+          "sourceUrl": "https://huggingface.co/moonshotai/Kimi-K3/raw/main/README.md",
+          "confidence": "medium",
+          "notes": "Kimi model-card table; maximum reasoning setting. Human reference: GPQA Diamond experts 81.3%; skilled non-experts 22.1%, from Table 2; subset selection affects these figures."
+        },
+        {
+          "model": "Qwen3.8-27B",
+          "score": 89.2,
+          "displayScore": "89.2%",
+          "scoreUnit": "percent",
+          "evaluationDate": "2026-08-14",
+          "configuration": "tools false; maximum/default reasoning",
+          "source": "Qwen3.8-27B model card",
+          "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B/raw/main/README.md",
+          "confidence": "medium",
+          "notes": "Qwen model-card comparison; exact effort/tool configuration follows the card. Human reference: GPQA Diamond experts 81.3%; skilled non-experts 22.1%, from Table 2; subset selection affects these figures."
+        },
+        {
+          "model": "Qwen3.5-9B",
+          "score": 81.7,
+          "displayScore": "81.7%",
+          "scoreUnit": "percent",
+          "evaluationDate": "2026-10-10",
+          "configuration": "tools false; default thinking reasoning",
+          "source": "Qwen3.5-9B model card",
+          "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-9B",
+          "confidence": "high",
+          "notes": "Official Qwen model card reports 81.7% on GPQA Diamond for Qwen3.5-9B. Human reference: GPQA Diamond experts 81.3%; skilled non-experts 22.1%, from Table 2."
+        },
+        {
+          "model": "Human domain experts",
+          "score": 81.3,
+          "displayScore": "81.3%",
+          "scoreUnit": "percent",
+          "evaluationDate": "2023-11-20",
+          "configuration": "Human reference",
+          "source": "GPQA: A Graduate-Level Google-Proof Q&A Benchmark",
+          "sourceUrl": "https://arxiv.org/pdf/2311.12022",
+          "confidence": "high",
+          "notes": "GPQA Table 2; Diamond figures are selection-filtered and remain separate from the full-set abstract figures."
+        },
+        {
+          "model": "gpt-oss-120b",
+          "score": 80.9,
+          "displayScore": "80.9%",
+          "scoreUnit": "percent",
+          "evaluationDate": "2025-08-05",
+          "configuration": "tools true; high reasoning",
+          "source": "OpenAI gpt-oss model card PDF",
+          "sourceUrl": "https://cdn.openai.com/pdf/419b6906-9da6-406c-a19d-1bb078ac7637/oai_gpt-oss_model_card.pdf",
+          "confidence": "high",
+          "notes": "OpenAI gpt-oss model-card Table 3. Human reference: GPQA Diamond experts 81.3%; skilled non-experts 22.1%, from Table 2; subset selection affects these figures."
+        },
+        {
+          "model": "Human skilled non-experts",
+          "score": 22.1,
+          "displayScore": "22.1%",
+          "scoreUnit": "percent",
+          "evaluationDate": "2023-11-20",
+          "configuration": "Human reference",
+          "source": "GPQA: A Graduate-Level Google-Proof Q&A Benchmark",
+          "sourceUrl": "https://arxiv.org/pdf/2311.12022",
+          "confidence": "high",
+          "notes": "GPQA Table 2; Diamond figures are selection-filtered and remain separate from the full-set abstract figures."
+        }
+      ]
+    },
+    {
+      "id": "humanity-last-exam",
+      "category": "Expert knowledge breadth",
+      "benchmark": "Humanity's Last Exam (public set)",
+      "metricLabel": "Accuracy",
+      "scaleMaximum": 100,
+      "scope": "Expert-authored questions across many academic fields. There is no single published human accuracy baseline for direct comparison.",
+      "conditions": "Scale leaderboard snapshot, no tools. Tool-enabled model-card results are kept out of this comparison.",
+      "rows": [
+        {
+          "model": "GPT-6 Astra",
+          "score": 54.8,
+          "displayScore": "54.8%",
+          "scoreUnit": "percent",
+          "evaluationDate": "2026-09-17",
+          "configuration": "tools false; maximum reasoning",
+          "source": "Scale AI Humanity's Last Exam leaderboard",
+          "sourceUrl": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+          "confidence": "high",
+          "notes": "Official Scale leaderboard, current public HLE."
+        },
+        {
+          "model": "Claude Fable 5.1",
+          "score": 46.5,
+          "displayScore": "46.5%",
+          "scoreUnit": "percent",
+          "evaluationDate": "2026-09-17",
+          "configuration": "tools false; xhigh reasoning",
+          "source": "Scale AI Humanity's Last Exam leaderboard",
+          "sourceUrl": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+          "confidence": "high",
+          "notes": "Official Scale leaderboard, current public HLE."
+        },
+        {
+          "model": "Gemini 3.1 Pro",
+          "score": 46.44,
+          "displayScore": "46.44%",
+          "scoreUnit": "percent",
+          "evaluationDate": "2026-09-17",
+          "configuration": "tools false; high reasoning",
+          "source": "Scale AI Humanity's Last Exam leaderboard",
+          "sourceUrl": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+          "confidence": "high",
+          "notes": "Official Scale leaderboard, current public HLE."
+        },
+        {
+          "model": "Gemini 3.8 Flash",
+          "score": 44.52,
+          "displayScore": "44.52%",
+          "scoreUnit": "percent",
+          "evaluationDate": "2026-09-17",
+          "configuration": "tools false",
+          "source": "Scale AI Humanity's Last Exam leaderboard",
+          "sourceUrl": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+          "confidence": "high",
+          "notes": "Official Scale leaderboard, current public HLE."
+        }
+      ]
+    },
+    {
+      "id": "arc-agi-2",
+      "category": "Novel visual abstraction",
+      "benchmark": "ARC-AGI-2",
+      "metricLabel": "Task success",
+      "scaleMaximum": 100,
+      "scope": "The benchmark paper reports 75% human task-level success; a different human metric, test-pair success, is 66%.",
+      "conditions": "Official semi-private evaluations; tool access is enabled. Human and model results use related but not identical evaluation protocols.",
+      "rows": [
+        {
+          "model": "GPT-6 Astra",
+          "score": 95.0,
+          "displayScore": "95%",
+          "scoreUnit": "percent",
+          "evaluationDate": "2026-09-02",
+          "configuration": "tools true; max reasoning; ARC official model submission",
+          "source": "ARC Prize evaluation data",
+          "sourceUrl": "https://arcprize.org/media/data/evaluations.json",
+          "confidence": "high",
+          "notes": "Official ARC Prize evaluation data; cost per task=1.1194680833333335 USD. The score is a benchmark result, not a general intelligence measure."
+        },
+        {
+          "model": "GPT-5.6 Sol",
+          "score": 92.5,
+          "displayScore": "92.5%",
+          "scoreUnit": "percent",
+          "evaluationDate": "2026-07-09",
+          "configuration": "tools true; ARC official model submission",
+          "source": "ARC Prize evaluation data",
+          "sourceUrl": "https://arcprize.org/media/data/evaluations.json",
+          "confidence": "high",
+          "notes": "Official ARC Prize evaluation data; cost per task=1.44 USD. The score is a benchmark result, not a general intelligence measure."
+        },
+        {
+          "model": "Claude Opus 5",
+          "score": 90.42,
+          "displayScore": "90.42%",
+          "scoreUnit": "percent",
+          "evaluationDate": "2026-07-24",
+          "configuration": "tools true; ARC official model submission",
+          "source": "ARC Prize evaluation data",
+          "sourceUrl": "https://arcprize.org/media/data/evaluations.json",
+          "confidence": "high",
+          "notes": "Official ARC Prize evaluation data; cost per task=2.06 USD. The score is a benchmark result, not a general intelligence measure."
+        },
+        {
+          "model": "Gemini 3.1 Pro",
+          "score": 77.08,
+          "displayScore": "77.08%",
+          "scoreUnit": "percent",
+          "evaluationDate": "2026-02-19",
+          "configuration": "tools true; ARC official model submission",
+          "source": "ARC Prize evaluation data",
+          "sourceUrl": "https://arcprize.org/media/data/evaluations.json",
+          "confidence": "high",
+          "notes": "Official ARC Prize evaluation data; cost per task=0.9622 USD. The score is a benchmark result, not a general intelligence measure."
+        },
+        {
+          "model": "ARC human task-level aggregate",
+          "score": 75.0,
+          "displayScore": "75%",
+          "scoreUnit": "percent",
+          "evaluationDate": "2025-05-19",
+          "configuration": "Human reference",
+          "source": "ARC-AGI-2 paper",
+          "sourceUrl": "https://arxiv.org/pdf/2505.11831",
+          "confidence": "high",
+          "notes": "ARC-AGI-2 paper reports that 75% of human attempts were successfully completed when aggregated by task across the final validated benchmark. The paper also reports 66% of test pairs across all human evaluations."
+        }
+      ]
+    },
+    {
+      "id": "gdpval",
+      "category": "Professional deliverables",
+      "benchmark": "GDPval",
+      "metricLabel": "Expert-rated comparisons",
+      "scaleMaximum": 100,
+      "scope": "220 work tasks across 44 occupations, compared with deliverables from experienced professionals. The reported 47.6% for Claude Opus 4.1 is win-or-tie; most other values here are win-only.",
+      "conditions": "Paired expert grading with tool-enabled systems. A benchmark result is not a measure of deployment productivity or net labour displacement.",
+      "rows": [
+        {
+          "model": "Claude Opus 4.1",
+          "score": 47.6,
+          "displayScore": "47.6%",
+          "scoreUnit": "win_or_tie_percent",
+          "evaluationDate": "2025-09-25",
+          "configuration": "tools true; vendor evaluation harness",
+          "source": "GDPval paper",
+          "sourceUrl": "https://cdn.openai.com/pdf/d5eb7428-c4e9-4a33-bd86-86dd4bcf12ce/GDPval.pdf",
+          "confidence": "high",
+          "notes": "Model deliverable judged better than or as good as the human deliverable; the paper reports this combined figure for Claude Opus 4.1."
+        },
+        {
+          "model": "GPT-5",
+          "score": 39.0,
+          "displayScore": "39%",
+          "scoreUnit": "win_percent",
+          "evaluationDate": "2025-09-25",
+          "configuration": "tools true; vendor evaluation harness",
+          "source": "GDPval paper",
+          "sourceUrl": "https://cdn.openai.com/pdf/d5eb7428-c4e9-4a33-bd86-86dd4bcf12ce/GDPval.pdf",
+          "confidence": "high",
+          "notes": "Model deliverable judged better than the human deliverable."
+        },
+        {
+          "model": "o3",
+          "score": 35.2,
+          "displayScore": "35.2%",
+          "scoreUnit": "win_percent",
+          "evaluationDate": "2025-09-25",
+          "configuration": "tools true; vendor evaluation harness",
+          "source": "GDPval paper",
+          "sourceUrl": "https://cdn.openai.com/pdf/d5eb7428-c4e9-4a33-bd86-86dd4bcf12ce/GDPval.pdf",
+          "confidence": "high",
+          "notes": "Model deliverable judged better than the human deliverable."
+        },
+        {
+          "model": "o4-mini",
+          "score": 29.1,
+          "displayScore": "29.1%",
+          "scoreUnit": "win_percent",
+          "evaluationDate": "2025-09-25",
+          "configuration": "tools true; vendor evaluation harness",
+          "source": "GDPval paper",
+          "sourceUrl": "https://cdn.openai.com/pdf/d5eb7428-c4e9-4a33-bd86-86dd4bcf12ce/GDPval.pdf",
+          "confidence": "high",
+          "notes": "Model deliverable judged better than the human deliverable."
+        },
+        {
+          "model": "GPT-4o",
+          "score": 12.5,
+          "displayScore": "12.5%",
+          "scoreUnit": "win_percent",
+          "evaluationDate": "2025-09-25",
+          "configuration": "tools true; vendor evaluation harness",
+          "source": "GDPval paper",
+          "sourceUrl": "https://cdn.openai.com/pdf/d5eb7428-c4e9-4a33-bd86-86dd4bcf12ce/GDPval.pdf",
+          "confidence": "high",
+          "notes": "Model deliverable judged better than the human deliverable."
+        }
+      ]
+    },
+    {
+      "id": "deepswe",
+      "category": "Software engineering agents",
+      "benchmark": "DeepSWE v1.1",
+      "metricLabel": "Issue resolution",
+      "scaleMaximum": 100,
+      "scope": "Coding-agent results on software-engineering tasks; these evaluate a model plus an agent harness, tools and retries, not a single answer from a base model.",
+      "conditions": "Provider-reported results with different harness and reasoning settings. Use the source links before making cross-provider comparisons.",
+      "rows": [
+        {
+          "model": "GPT-6 Astra",
+          "score": 74.1,
+          "displayScore": "74.1%",
+          "scoreUnit": "percent",
+          "evaluationDate": "not stated",
+          "configuration": "maximum reasoning; OpenAI comparison harness",
+          "source": "Introducing GPT-6 Astra",
+          "sourceUrl": "https://openai.com/index/gpt-6-astra/",
+          "confidence": "medium",
+          "notes": "Agentic or model-card result; keep separate from single-response coding."
+        },
+        {
+          "model": "Gemini 3.8 Flash",
+          "score": 73.8,
+          "displayScore": "73.8%",
+          "scoreUnit": "percent",
+          "evaluationDate": "not stated",
+          "configuration": "OpenAI comparison harness",
+          "source": "Introducing GPT-6 Astra",
+          "sourceUrl": "https://openai.com/index/gpt-6-astra/",
+          "confidence": "medium",
+          "notes": "Agentic or model-card result; keep separate from single-response coding."
+        },
+        {
+          "model": "Claude Opus 5",
+          "score": 73.7,
+          "displayScore": "73.7%",
+          "scoreUnit": "percent",
+          "evaluationDate": "not stated",
+          "configuration": "maximum reasoning; OpenAI comparison harness",
+          "source": "Introducing GPT-6 Astra",
+          "sourceUrl": "https://openai.com/index/gpt-6-astra/",
+          "confidence": "medium",
+          "notes": "Agentic or model-card result; keep separate from single-response coding."
+        },
+        {
+          "model": "Kimi K3",
+          "score": 67.3,
+          "displayScore": "67.3%",
+          "scoreUnit": "percent",
+          "evaluationDate": "not stated",
+          "configuration": "maximum reasoning; Kimi card official leaderboard result",
+          "source": "Kimi K3 model card",
+          "sourceUrl": "https://huggingface.co/moonshotai/Kimi-K3/raw/main/README.md",
+          "confidence": "medium",
+          "notes": "Agentic or model-card result; keep separate from single-response coding."
+        },
+        {
+          "model": "Qwen3.8-27B",
+          "score": 42.2,
+          "displayScore": "42.2%",
+          "scoreUnit": "percent",
+          "evaluationDate": "not stated",
+          "configuration": "xhigh reasoning; Qwen card agent harness",
+          "source": "Qwen3.8-27B model card",
+          "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B/raw/main/README.md",
+          "confidence": "medium",
+          "notes": "Agentic or model-card result; keep separate from single-response coding."
+        }
+      ]
+    },
+    {
+      "id": "mlebench",
+      "category": "Machine-learning engineering agents",
+      "benchmark": "MLE-Bench",
+      "metricLabel": "Mean medal score across ML competitions",
+      "scaleMaximum": 100,
+      "scope": "Submitted agent systems are evaluated on machine-learning engineering competitions. The score summarizes medal performance; it is not a pass rate or proof of independent research discovery.",
+      "conditions": "The leaderboard evaluates full agents with tools and scaffolding. The model field names the submitted system, not only its underlying language model.",
+      "rows": [
+        {
+          "model": "Famou-Agent 2.0",
+          "score": 64.44,
+          "displayScore": "64.44%",
+          "scoreUnit": "percent_mean_medal_score",
+          "evaluationDate": "2026-02-23",
+          "configuration": "tools true; Famou-Agent 2.0 (Gemini 3 Pro Preview)",
+          "source": "MLE-bench README",
+          "sourceUrl": "https://raw.githubusercontent.com/openai/mle-bench/main/README.md",
+          "confidence": "high",
+          "notes": "Agent-system leaderboard row; the model field names the submitted system because the benchmark evaluates full agents."
+        },
+        {
+          "model": "AIBuildAI",
+          "score": 63.11,
+          "displayScore": "63.11%",
+          "scoreUnit": "percent_mean_medal_score",
+          "evaluationDate": "2026-03-06",
+          "configuration": "tools true; AIBuildAI (Claude Opus 4.6)",
+          "source": "MLE-bench README",
+          "sourceUrl": "https://raw.githubusercontent.com/openai/mle-bench/main/README.md",
+          "confidence": "high",
+          "notes": "Agent-system leaderboard row; the model field names the submitted system because the benchmark evaluates full agents."
+        },
+        {
+          "model": "CAIR MARS+",
+          "score": 62.67,
+          "displayScore": "62.67%",
+          "scoreUnit": "percent_mean_medal_score",
+          "evaluationDate": "2026-02-17",
+          "configuration": "tools true; CAIR MARS+ (Gemini 3 Pro Preview)",
+          "source": "MLE-bench README",
+          "sourceUrl": "https://raw.githubusercontent.com/openai/mle-bench/main/README.md",
+          "confidence": "high",
+          "notes": "Agent-system leaderboard row; the model field names the submitted system because the benchmark evaluates full agents."
+        },
+        {
+          "model": "MLEvolve",
+          "score": 61.33,
+          "displayScore": "61.33%",
+          "scoreUnit": "percent_mean_medal_score",
+          "evaluationDate": "2026-02-14",
+          "configuration": "tools true; MLEvolve (Gemini 3 Pro Preview)",
+          "source": "MLE-bench README",
+          "sourceUrl": "https://raw.githubusercontent.com/openai/mle-bench/main/README.md",
+          "confidence": "high",
+          "notes": "Agent-system leaderboard row; the model field names the submitted system because the benchmark evaluates full agents."
+        }
+      ]
+    },
+    {
+      "id": "metr-horizon",
+      "category": "Long-horizon technical agents",
+      "benchmark": "METR task horizon 1.1",
+      "metricLabel": "Human task duration at 50% agent success",
+      "scaleMaximum": 24,
+      "scope": "The p50 horizon is the estimated duration of tasks the tested agent system completes 50% of the time, measured against human task-time estimates.",
+      "conditions": "Agent scaffold results on a suite concentrated in software, machine learning and cybersecurity. This is not standalone-model runtime or a general intelligence measure.",
+      "rows": [
+        {
+          "model": "Claude Mythos Preview · Apr 2026",
+          "score": 17.413002416666664,
+          "displayScore": "17.4 human-task hours (p50)",
+          "scoreUnit": "human-task-hours-p50",
+          "evaluationDate": "2026-04-07",
+          "configuration": "tools true; METR agent scaffold",
+          "source": "METR benchmark results YAML",
+          "sourceUrl": "https://metr.org/assets/benchmark_results_1_1.yaml",
+          "confidence": "high",
+          "notes": "Raw METR YAML parsed p50 horizon; p80=185.911829 minutes when present. METR suite is primarily software, ML, and cybersecurity tasks."
+        },
+        {
+          "model": "GPT-5.3 Codex · Feb 2026",
+          "score": 5.8255122,
+          "displayScore": "5.8 human-task hours (p50)",
+          "scoreUnit": "human-task-hours-p50",
+          "evaluationDate": "2026-02-05",
+          "configuration": "tools true; METR agent scaffold",
+          "source": "METR benchmark results YAML",
+          "sourceUrl": "https://metr.org/assets/benchmark_results_1_1.yaml",
+          "confidence": "high",
+          "notes": "Raw METR YAML parsed p50 horizon; p80=54.739407 minutes when present. METR suite is primarily software, ML, and cybersecurity tasks."
+        },
+        {
+          "model": "Claude 4.1 Opus · Aug 2025",
+          "score": 1.6745334,
+          "displayScore": "1.7 human-task hours (p50)",
+          "scoreUnit": "human-task-hours-p50",
+          "evaluationDate": "2025-08-05",
+          "configuration": "tools true; METR agent scaffold",
+          "source": "METR benchmark results YAML",
+          "sourceUrl": "https://metr.org/assets/benchmark_results_1_1.yaml",
+          "confidence": "high",
+          "notes": "Raw METR YAML parsed p50 horizon; p80=23.455761 minutes when present. METR suite is primarily software, ML, and cybersecurity tasks."
+        },
+        {
+          "model": "Claude 3.5 Sonnet · Jun 2024",
+          "score": 0.18992295,
+          "displayScore": "0.2 human-task hours (p50)",
+          "scoreUnit": "human-task-hours-p50",
+          "evaluationDate": "2024-06-20",
+          "configuration": "tools true; METR agent scaffold",
+          "source": "METR benchmark results YAML",
+          "sourceUrl": "https://metr.org/assets/benchmark_results_1_1.yaml",
+          "confidence": "high",
+          "notes": "Raw METR YAML parsed p50 horizon; p80=1.671757 minutes when present. METR suite is primarily software, ML, and cybersecurity tasks."
+        }
+      ]
+    }
+  ]
+}

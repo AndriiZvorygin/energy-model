@@ -1215,7 +1215,10 @@
     "regime-scores.json",
     "regime-history.json",
     "technology-benchmark-scores.json",
-    "technology-ollama-workload-snapshot.json"
+    "technology-ollama-workload-snapshot.json",
+    "technology-capability-scorecard.json",
+    "technology-compute-scenarios.json",
+    "technology-canadian-site-screen.json"
   ],
   "conceptual": [
     {

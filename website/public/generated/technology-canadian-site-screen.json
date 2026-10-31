@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.1.0",
+  "generatedAt": "2026-10-31T17:20:37Z",
+  "title": "Canadian hydroelectric and water screening candidates",
+  "screeningLoadMw": 100,
+  "screeningWaterM3PerDay": 720.0,
+  "methodology": "Province-level generation and capability are paired with city-level municipal water context. Neither proves that a local substation, transmission corridor, water source, or permit can support a new load. These are candidates for utility-led feasibility studies, not approved sites.",
+  "rows": [
+    {
+      "province": "Quebec",
+      "city": "Montreal metro",
+      "hydroFact": "Hydro-Québec reports 152.672 TWh of hydropower generation in 2025 and 37.371 GW of total installed generating-station capacity (all source types).",
+      "hydroScaleComparison": "A 100 MW continuous load is 876 GWh/year, about 0.57% of Hydro-Québec’s 2025 hydropower generation; this is a provincial scale comparison.",
+      "hydroSource": "Hydro-Québec Sustainability Report 2025",
+      "hydroSourceUrl": "https://www.hydroquebec.com/data/documents-donnees/pdf/WFP-2269001_2026G197_RDD2025_ANG.pdf",
+      "gridAndPolicyFact": "Hydro-Québec says data centres currently use about 200 MW and could exceed 1,000 MW by 2035; projects over 5 MW are selected, and a proposed C$0.13/kWh rate is subject to regulatory approval.",
+      "gridAndPolicySource": "Hydro-Québec large data-centre rate proposal",
+      "gridAndPolicyUrl": "https://news.hydroquebec.com/news/press-releases/all-quebec/hydro-quebec-proposing-regie-energie-new-rate-large-data-centres-adjustment-rate-cryptographic-use-applied-blockchains.html",
+      "municipalWaterDailyLitres": 1600000000.0,
+      "municipalWaterFact": "Montréal reports 1.6 billion litres/day produced from the St. Lawrence, Lac Saint-Louis and Rivière des Prairies; this is city-wide production, not unallocated industrial capacity.",
+      "waterSource": "City of Montréal water cycle",
+      "waterSourceUrl": "https://montreal.ca/en/articles/montreals-water-9-step-cycle-makes-it-drinkable-73540",
+      "assessment": "Strong provincial hydro and urban water context; a 100 MW connection would still require utility selection and a site-specific grid study.",
+      "openQuestion": "Quebec City and Saguenay–Lac-Saint-Jean are alternate corridors to screen; municipal water capacity and firm transmission for a specific campus are not established here."
+    },
+    {
+      "province": "Manitoba",
+      "city": "Winnipeg",
+      "hydroFact": "Manitoba Hydro reports 6.074 GW net generating capability across its system, with nearly all annual electricity generation from 16 hydro stations; most hydroelectric output comes from northern stations.",
+      "hydroScaleComparison": "100 MW is about 1.65% of Manitoba Hydro’s 6.074 GW net generating capability; this compares nameplate capacity, not uncommitted supply.",
+      "hydroSource": "Manitoba Hydro generation system",
+      "hydroSourceUrl": "https://www.hydro.mb.ca/corporate/operations/generation/",
+      "gridAndPolicyFact": "The 2025–26 annual report says drought reduced hydro generation and required larger power imports; that is a reminder that hydro output and exportable surplus vary with water conditions.",
+      "gridAndPolicySource": "Manitoba Hydro 2025–26 annual report",
+      "gridAndPolicyUrl": "https://www.hydro.mb.ca/articles/2026/09/manitoba-hydro-releases-75th-annual-report/",
+      "municipalWaterDailyLitres": 400000000.0,
+      "municipalWaterFact": "Winnipeg's water-treatment plant is designed for 400 million litres/day; this is plant design capacity, not free cooling-water allocation.",
+      "waterSource": "City of Winnipeg water-treatment plant",
+      "waterSourceUrl": "https://legacy.winnipeg.ca/WaterAndWaste/water/treatment/plant.stm",
+      "assessment": "Strong hydro/water resource screen and a major urban service base; regional transmission and drought-adjusted firm supply need confirmation.",
+      "openQuestion": "A 100 MW campus is about 1.6% of Manitoba Hydro's reported generating capability; this comparison does not imply 100 MW is uncommitted or deliverable in Winnipeg."
+    },
+    {
+      "province": "British Columbia",
+      "city": "Prince George",
+      "hydroFact": "BC Hydro generated 40.860 TWh from hydro in fiscal 2025; hydroelectric installations account for over 80% of BC Hydro's installed generating capacity.",
+      "hydroScaleComparison": "A 100 MW continuous load is 876 GWh/year, about 2.14% of BC Hydro’s FY2025 hydropower generation; it would also equal one quarter of the 400 MW maximum allocation in the 2026 call.",
+      "hydroSource": "BC Hydro Fiscal 2025 Sustainability Update",
+      "hydroSourceUrl": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/esg-reports/f2025-bchydro-sustainability-update.pdf",
+      "gridAndPolicyFact": "BC Hydro's 2026 emerging-industries call allocates up to 400 MW province-wide to storage and AI data centres, showing that hydro-richness does not mean spare local capacity is available to any one project.",
+      "gridAndPolicySource": "BC Hydro 2026 Call for Demand Q&A",
+      "gridAndPolicyUrl": "https://app.bchydro.com/accounts-billing/electrical-connections/large-load/emerging-industries-connections/questions-answers.html",
+      "municipalWaterDailyLitres": 31050214.0,
+      "municipalWaterFact": "Prince George reported 11.333 million m³ of water supplied in 2023 (about 31.1 million litres/day on average), drawn from municipal groundwater wells; this is an annual average, not a guaranteed new industrial allocation.",
+      "waterSource": "City of Prince George 2023 water-system report",
+      "waterSourceUrl": "https://www.princegeorge.ca/media/3962",
+      "assessment": "Hydro-rich provincial system and a city water network make this a candidate for screening, but BC Hydro's allocation process and regional transmission are material constraints.",
+      "openQuestion": "A 100 MW campus would consume about 2.3% of Prince George's 2023 average municipal water production at the 0.3 L/kWh planning WUE; confirm seasonal source yield and permits."
+    }
+  ]
+}

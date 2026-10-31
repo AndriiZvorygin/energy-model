@@ -1019,6 +1019,9 @@ def write_website_chart_data(
     technology_datasets: list[dict[str, Any]] = []
     benchmark_payload: dict[str, Any] | None = None
     workload_snapshot_payload: dict[str, Any] | None = None
+    technology_capability_payload: dict[str, Any] | None = None
+    technology_compute_payload: dict[str, Any] | None = None
+    technology_site_payload: dict[str, Any] | None = None
     if technology_flow_outputs:
         investment_rows = technology_flow_outputs.get("investment", [])
         investment = _dataset(
@@ -1258,6 +1261,42 @@ def write_website_chart_data(
             "methodology": "Provider-reported base-model card scores are shown for quality context. They are not a local quantized-build result or an evaluation of tasks in this project.",
             "rows": benchmark_rows,
         }
+        technology_capability_payload = {
+            "schemaVersion": SCHEMA_VERSION,
+            "generatedAt": generated_at,
+            "snapshotDate": "2026-09-19",
+            "title": "AI capability evidence by task family",
+            "methodology": "The presentation archive preserves benchmark version, evaluation date, tool access, reasoning effort, scaffold, source, and limitations. No composite capability score is calculated.",
+            "families": technology_flow_outputs.get("capability_scorecard", []),
+        }
+        technology_compute_payload = {
+            "schemaVersion": SCHEMA_VERSION,
+            "generatedAt": generated_at,
+            "title": "Compute, power, water and cost scenarios",
+            "electricityPriceCadPerMwh": {"low": 50, "high": 130},
+            "electricityPriceNote": "C$50/MWh is an analyst-selected low-price sensitivity; C$130/MWh matches Hydro-Québec's proposed C$0.13/kWh large-data-centre energy rate, still subject to regulatory approval. These energy-only estimates exclude demand charges, taxes, transmission upgrades and connection fees; they are not utility quotes.",
+            "electricityRateSource": "Hydro-Québec rate proposal and Régie docket",
+            "electricityRateSourceUrl": "https://www.regie-energie.qc.ca/fr/participants/dossiers/r-4333-2026",
+            "waterWueLitresPerKwh": 0.3,
+            "waterNote": "Water uses a planning WUE of 0.3 L/kWh from the archived facility scenarios. Actual consumption depends on cooling design, weather, and permits.",
+            "campusNote": "The 100 MW campus is a scale extrapolation. Its accelerator and capital ranges are linear planning proxies, not an engineering estimate or supplier quote.",
+            "calculation": "Monthly energy = facility MW × 720 hours. Electricity cost = monthly MWh × C$50–130/MWh. Cooling-water volume = facility kWh × 0.3 L/kWh. Annual cost uses 8,760 hours.",
+            "scenarioSource": "Archived model-production data-centre scenarios (2026-10-13)",
+            "scenarioSourceUrl": "https://lyis.ca/pfet/zvorygin/ai2026/data/model-production-datacenter-scenarios-2026-10-13.csv",
+            "trainingSource": "Archived large-model training hardware estimates",
+            "trainingSourceUrl": "https://lyis.ca/pfet/zvorygin/ai2026/data/large-model-training-hardware-2026-10-13.csv",
+            "trainingRunAnchor": technology_flow_outputs.get("training_run_anchor"),
+            "scenarios": technology_flow_outputs.get("compute_scenarios", []),
+        }
+        technology_site_payload = {
+            "schemaVersion": SCHEMA_VERSION,
+            "generatedAt": generated_at,
+            "title": "Canadian hydroelectric and water screening candidates",
+            "screeningLoadMw": 100,
+            "screeningWaterM3PerDay": 100_000 * 24 * 0.3 / 1000,
+            "methodology": "Province-level generation and capability are paired with city-level municipal water context. Neither proves that a local substation, transmission corridor, water source, or permit can support a new load. These are candidates for utility-led feasibility studies, not approved sites.",
+            "rows": technology_flow_outputs.get("canadian_site_screen", []),
+        }
 
     datasets = [oil_prices, gm2_lead, residuals, ci_wti_annual, energy_gdp, equities, uso, headline, net_output, capacity, household, financial, output_comparison, physical_tightness, energy_burden, industrial_transmission, labour_warning, demand_destruction, price_availability_activity, global_energy_growth, *technology_datasets]
     files: list[str] = []
@@ -1338,6 +1377,12 @@ def write_website_chart_data(
     }
     if benchmark_payload is not None:
         shared["technology-benchmark-scores.json"] = benchmark_payload
+    if technology_capability_payload is not None:
+        shared["technology-capability-scorecard.json"] = technology_capability_payload
+    if technology_compute_payload is not None:
+        shared["technology-compute-scenarios.json"] = technology_compute_payload
+    if technology_site_payload is not None:
+        shared["technology-canadian-site-screen.json"] = technology_site_payload
     if workload_snapshot_payload is not None:
         shared["technology-ollama-workload-snapshot.json"] = workload_snapshot_payload
     cross_mapping = {"GM2_YoY": "GM2_YoY", "WTI_YoY": "WTI_YoY", "CI_zscore": "CI_zscore", "household_energy_burden": "household_energy_expenditure_share", "industrial_production": "Industrial_production_YoY", "weekly_hours": "average_weekly_hours_YoY", "temporary_help": "temporary_help_YoY"}
@@ -1365,6 +1410,12 @@ def write_website_chart_data(
     }
     if workload_snapshot_payload is not None:
         manifest["shared"].append("technology-ollama-workload-snapshot.json")
+    if technology_capability_payload is not None:
+        manifest["shared"].append("technology-capability-scorecard.json")
+    if technology_compute_payload is not None:
+        manifest["shared"].append("technology-compute-scenarios.json")
+    if technology_site_payload is not None:
+        manifest["shared"].append("technology-canadian-site-screen.json")
     (out_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, allow_nan=False) + "\n", encoding="utf-8")
     files.append("manifest.json")
     return files

@@ -1,0 +1,6 @@
+model,total_parameters_b,active_parameters_b,pretraining_tokens_t,reported_gpu_hours_m,bf16_weight_tb,raw_4bit_weight_tb,training_state_floor_tb,80gb_cards_for_state_floor,source,notes
+Qwen3.5-397B-A17B,397,17,,,0.794,0.1985,6.352,80,https://github.com/QwenLM/Qwen3.8,Official Qwen release family entry; training run details not published in the cited source
+DeepSeek-V3,671,37,14.8,2.788,1.342,0.3355,10.736,135,https://arxiv.org/abs/2412.19437,Official report; 2.788M H800 GPU-hours for full training
+DeepSeek-V4-Pro,1600,49,32,,3.2,0.8,25.6,320,https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro,Official model card says more than 32T pretraining tokens
+Qwen3.8-2.4T-A95B,2400,95,,,4.8,1.2,38.4,480,https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B,Official model card; weights and configuration are released
+Kimi-K3,2800,104,,,5.6,1.4,44.8,560,https://huggingface.co/moonshotai/Kimi-K3,Official model card; training-run hardware and token count not published in the cited source

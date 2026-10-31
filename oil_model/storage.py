@@ -32,13 +32,13 @@ class Store:
         self.con.commit()
 
 
-def write_csv(path: Path, rows: list[Row]) -> None:
+def write_csv(path: Path, rows: list[Row], *, lineterminator: str = "\r\n") -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if not rows:
         path.write_text("", encoding="utf-8")
         return
     with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=union_columns(rows))
+        writer = csv.DictWriter(handle, fieldnames=union_columns(rows), lineterminator=lineterminator)
         writer.writeheader()
         writer.writerows(rows)
 

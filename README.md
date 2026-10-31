@@ -135,7 +135,7 @@ An experimental household-command measure subtracts inflation-adjusted BLS Consu
 
 ## AI and Technology Flows
 
-The `/technology-flows` module follows broad U.S. software and computer-equipment investment proxies, Canadian electricity context, Ontario data-centre forecasts, U.S. scale comparisons, local inference usage, and public model-card benchmark scores. Its scenario horizon ends in 2030. Data-centre electricity includes cloud and other computing demand and is not treated as AI-only load. U.S. electricity history and a four-model archived Ollama workload snapshot are sourced from the supplied AI 2026 presentation archive; the latter remains separate from the current monthly deployment aggregate. The separate methodology note records source vintages and measurement boundaries: [analysis/technology_flows_methodology.md](analysis/technology_flows_methodology.md).
+The `/technology-flows` module compares dated AI capability evidence across science, expert questions, abstraction, professional deliverables, coding agents, and long task horizons; estimates local, regional, national, frontier-cluster, and 100 MW campus compute/power/water/cost envelopes; and screens Montréal, Winnipeg, and Prince George against provincial hydro resources and city water context. It retains Canadian electricity context, Ontario forecasts, U.S. scale comparisons, capital proxies, and local inference as a smaller measured example. Its scenario horizon ends in 2030. Data-centre electricity includes cloud and other computing demand and is not treated as AI-only load. The archived benchmark conditions, compute scenarios, and hydro/water source facts are committed under `data/seed/technology_sources/` and `data/seed/technology_flow_canadian_site_screen.csv`. Siting rows are candidates for feasibility work; they do not establish available firm electricity, interconnection, or municipal water allocation. The separate methodology note records source vintages and measurement boundaries: [analysis/technology_flows_methodology.md](analysis/technology_flows_methodology.md).
 
 Local Ollama usage enters the pipeline only through monthly aggregates of model labels, call counts, and token counts. Regenerate the sanitized snapshot before a build with `node scripts/export_local_ollama_usage.mjs --usage-dir <path>`; raw request and response data are not exported.
 
@@ -154,7 +154,9 @@ Primary public sources include:
 - **Statistics Canada:** Canadian and Ontario CPI, labour-force rates, monthly real GDP by industry, crude production/trade/refinery/inventory balances, electricity generation, and household debt service.
 - **Independent Electricity System Operator:** Ontario annual planning outlook and data-centre electricity demand scenarios.
 - **Lawrence Berkeley National Laboratory:** U.S. data-centre electricity estimates and 2030 sensitivity cases.
-- **Qwen model cards and TokenPowerBench:** provider-reported benchmark scores and published LLM inference GPU-energy benchmark reference.
+- **Model cards, benchmark organizers, METR, GDPval, and the AI 2026 presentation archive:** task-specific capability results with dated tool, scaffold, effort, and evaluation conditions.
+- **Hydro-Québec, Manitoba Hydro, BC Hydro, and municipal water systems:** provincial hydropower, large-load policy, and city water-production context used in a preliminary candidate-region screen.
+- **TokenPowerBench:** published LLM inference GPU-energy benchmark reference.
 - **Statistics Canada household accounts and labour tables:** quarterly household disposable income, consumption, saving, and population; monthly Canada and Ontario hourly wages and weekly earnings.
 - **Food and Agriculture Organization:** monthly nominal and real international Food Price Indices and commodity components.
 - **Bank for International Settlements:** quarterly selected nominal and real residential-property price statistics and documented country-group aggregates.
