@@ -56,6 +56,7 @@ type ResearchTimeSeriesChartProps = {
   showRecessions?: boolean;
   showNormalizationControls?: boolean;
   zeroLine?: boolean;
+  showDots?: boolean;
   dynamicGm2Residuals?: boolean;
   startAtSeries?: string;
   primaryControls?: ReactNode;
@@ -175,6 +176,7 @@ export function ResearchTimeSeriesChart({
   showRecessions = true,
   showNormalizationControls = true,
   zeroLine = false,
+  showDots = false,
   dynamicGm2Residuals = false,
   startAtSeries,
   primaryControls,
@@ -623,7 +625,7 @@ export function ResearchTimeSeriesChart({
                     stroke={chartColor(item.color, prepared.series.indexOf(item) >= 0 ? prepared.series.indexOf(item) : seriesIndex)}
                     strokeWidth={focused === item.key ? 3.4 : 2.2}
                     strokeOpacity={focused && focused !== item.key ? 0.24 : 1}
-                    dot={false}
+                    dot={showDots ? { r: 3 } : false}
                     connectNulls={false}
                     isAnimationActive={false}
                   />

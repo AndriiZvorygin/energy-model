@@ -135,7 +135,7 @@ An experimental household-command measure subtracts inflation-adjusted BLS Consu
 
 ## AI and Technology Flows
 
-The `/technology-flows` module follows broad U.S. software and computer-equipment investment proxies, Canadian electricity context, Ontario data-centre forecasts, U.S. scale comparisons, local inference usage, and public model-card benchmark scores. Its scenario horizon ends in 2030. Data-centre electricity includes cloud and other computing demand and is not treated as AI-only load. The separate methodology note records the published-data, local-usage, and GPU-energy sensitivity boundaries: [analysis/technology_flows_methodology.md](analysis/technology_flows_methodology.md).
+The `/technology-flows` module follows broad U.S. software and computer-equipment investment proxies, Canadian electricity context, Ontario data-centre forecasts, U.S. scale comparisons, local inference usage, and public model-card benchmark scores. Its scenario horizon ends in 2030. Data-centre electricity includes cloud and other computing demand and is not treated as AI-only load. U.S. electricity history and a four-model archived Ollama workload snapshot are sourced from the supplied AI 2026 presentation archive; the latter remains separate from the current monthly deployment aggregate. The separate methodology note records source vintages and measurement boundaries: [analysis/technology_flows_methodology.md](analysis/technology_flows_methodology.md).
 
 Local Ollama usage enters the pipeline only through monthly aggregates of model labels, call counts, and token counts. Regenerate the sanitized snapshot before a build with `node scripts/export_local_ollama_usage.mjs --usage-dir <path>`; raw request and response data are not exported.
 

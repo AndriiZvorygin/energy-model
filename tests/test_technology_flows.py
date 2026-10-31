@@ -12,6 +12,8 @@ from oil_model.technology_flows import (
     build_local_energy_estimates,
     read_facility_forecasts,
     read_local_usage_aggregates,
+    read_ollama_workload_snapshot,
+    read_us_grid_history,
 )
 
 
@@ -34,6 +36,23 @@ class TechnologyFlowTests(unittest.TestCase):
         self.assertEqual(sum(int(row["output_tokens"]) for row in rows), 5386)
         self.assertNotIn("call_id", rows[0])
         self.assertNotIn("host", rows[0])
+
+    def test_archived_workload_snapshot_has_multiple_models_and_reconciles(self) -> None:
+        rows = read_ollama_workload_snapshot(ROOT)
+        self.assertEqual(len(rows), 4)
+        self.assertEqual(sum(int(row["completed_calls"]) for row in rows), 3807)
+        self.assertEqual(sum(int(row["prompt_tokens"]) for row in rows), 8996516)
+        self.assertEqual(sum(int(row["output_tokens"]) for row in rows), 1316129)
+        self.assertEqual({row["snapshot_date"] for row in rows}, {"2026-10-10"})
+        self.assertNotIn("host", rows[0])
+        self.assertNotIn("call_id", rows[0])
+
+    def test_us_grid_history_has_2020_to_2024_comparison(self) -> None:
+        rows = read_us_grid_history(ROOT)
+        self.assertEqual([row["year"] for row in rows], [2020, 2021, 2022, 2023, 2024])
+        self.assertEqual(rows[-1]["data_center_index"], 182.9)
+        self.assertEqual(rows[-1]["electricity_index"], 106.9)
+        self.assertEqual(rows[-1]["capacity_index"], 118.2)
 
     def test_energy_proxy_is_limited_to_7b_to_10b_and_outputs(self) -> None:
         energy = build_local_energy_estimates(read_local_usage_aggregates(ROOT))

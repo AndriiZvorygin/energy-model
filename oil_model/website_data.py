@@ -1018,6 +1018,7 @@ def write_website_chart_data(
     technology_flow_outputs = technology_flow_outputs or {}
     technology_datasets: list[dict[str, Any]] = []
     benchmark_payload: dict[str, Any] | None = None
+    workload_snapshot_payload: dict[str, Any] | None = None
     if technology_flow_outputs:
         investment_rows = technology_flow_outputs.get("investment", [])
         investment = _dataset(
@@ -1067,21 +1068,45 @@ def write_website_chart_data(
             values = {str(row["scenario"]): _number(row.get("value")) for row in us_rows if int(row["year"]) == year}
             us_observations.append({"date": _iso_date(year), "historical_estimate": values.get("observed"), "low": values.get("low"), "reference": values.get("reference"), "high": values.get("high")})
         united_states = _dataset(
-            "technology-us-data-centre-electricity", "U.S. data-centre electricity scale comparator", "LBNL's 2024 historical estimate and 2030 reference and compounded-uncertainty estimates.", "annual",
+            "technology-us-data-centre-electricity", "U.S. data-centre electricity scale comparator", "LBNL historical estimates for 2020–2024 plus the 2030 reference and compounded-uncertainty cases.", "annual",
             [
-                _series("historical_estimate", "2024 historical estimate", "TWh per year", "LBNL United States Data Center Energy Usage Report: 2025 Update", "modelled", color="#475569", transformations=["raw"]),
+                _series("historical_estimate", "Historical estimates (2020–2024)", "TWh per year", "LBNL 2024 and 2025 U.S. Data Center Energy Usage Reports", "modelled", color="#475569", transformations=["raw"]),
                 _series("low", "2030 low uncertainty case", "TWh per year", "LBNL compounded uncertainty scenarios", "modelled", color="#0ea5e9", transformations=["raw"]),
                 _series("reference", "2030 reference case", "TWh per year", "LBNL reference case", "modelled", color="#0f766e", transformations=["raw"]),
                 _series("high", "2030 high uncertainty case", "TWh per year", "LBNL compounded uncertainty scenarios", "modelled", color="#be123c", transformations=["raw"]),
             ], us_observations, ["raw"], "Scenario concept",
-            {"formula": "LBNL U.S. data-centre electricity use estimates, reported in TWh per year.", "notes": "Only the 2024 historical estimate and 2030 scenario endpoints are plotted; no annual path between them is inferred."},
-            "", generated_at, reference_period=("2024-01-01", "2030-01-01"),
+            {"formula": "LBNL U.S. data-centre electricity-use estimates, reported in TWh per year.", "notes": "Annual historical estimates are shown for 2020–2024. Only the published 2030 cases are shown beyond 2024; no intervening forecast path is inferred."},
+            "", generated_at, reference_period=("2020-01-01", "2024-01-01"),
             details={
-                "plainLanguageSummary": "LBNL estimates U.S. data centres used 192 TWh in 2024 and gives a 2030 reference estimate of 649 TWh, with a compounded-uncertainty range of 521–843 TWh.",
-                "howToRead": "The 2024 historical estimate and 2030 scenario points are separated in time. The chart does not fill in an annual trajectory between them.",
+                "plainLanguageSummary": "LBNL estimates U.S. data-centre use rose from 105 TWh in 2020 to 192 TWh in 2024. Its 2030 reference is 649 TWh, with compounded-uncertainty cases of 521–843 TWh.",
+                "howToRead": "The historical line ends in 2024. Markers at 2030 show the low, reference, and high estimates; the chart does not fill in an annual forecast path.",
                 "patternsToWatch": ["The wide range around the 2030 reference case", "How future LBNL reports revise historical estimates and forecast assumptions"],
                 "limitations": ["U.S. data-centre totals are a scale comparator, not a forecast for Canada.", "The totals cover data centres generally and are not AI-only electricity use.", "The 2030 compounded-uncertainty cases combine multiple sensitivities and are not confidence intervals."],
-                "sourceNotes": ["Lawrence Berkeley National Laboratory, United States Data Center Energy Usage Report: 2025 Update, June 2026"],
+                "sourceNotes": ["Lawrence Berkeley National Laboratory, 2024 United States Data Center Energy Usage Report, historical estimates through 2023", "Lawrence Berkeley National Laboratory, United States Data Center Energy Usage Report: 2025 Update, June 2026"],
+            },
+        )
+
+        us_grid_rows = technology_flow_outputs.get("us_grid_history", [])
+        us_grid_growth = _dataset(
+            "technology-us-grid-growth-comparison", "U.S. data-centre use and grid growth", "Compare estimated growth in data-centre electricity use with U.S. electricity sales and summer generating capacity.", "annual",
+            [
+                _series("data_center_index", "Data-centre electricity use", "index (2020 = 100)", "LBNL U.S. data-centre electricity estimates", "modelled", color="#d97706", transformations=["raw"]),
+                _series("electricity_index", "Electricity delivered to customers", "index (2020 = 100)", "U.S. Energy Information Administration, Electric Power Annual", "measured", color="#0f766e", transformations=["raw"]),
+                _series("capacity_index", "Summer generating capacity", "index (2020 = 100)", "U.S. Energy Information Administration, Electric Power Annual", "measured", color="#334155", transformations=["raw"]),
+            ],
+            [
+                {"date": _iso_date(int(row["year"])), "data_center_index": _number(row.get("data_center_index")), "electricity_index": _number(row.get("electricity_index")), "capacity_index": _number(row.get("capacity_index"))}
+                for row in us_grid_rows
+            ],
+            ["raw"], "Contextual indicator",
+            {"formula": "Each series is indexed to its 2020 value = 100 using the presentation's source table.", "notes": "The index compares rates of change; absolute TWh and the LBNL 2030 cases appear in the separate scale-comparator chart."},
+            "", generated_at, reference_period=("2020-01-01", "2024-01-01"),
+            details={
+                "plainLanguageSummary": "From 2020 to 2024, the presentation source series show data-centre electricity use rising 82.9%, electricity sales 6.9%, and summer generating capacity 18.2%.",
+                "howToRead": "All three lines start at 100 in 2020. The index compares growth rates and does not put their very different absolute scales on one axis.",
+                "patternsToWatch": ["The difference between estimated data-centre use and total electricity growth", "Whether new capacity growth catches up with large-load demand"],
+                "limitations": ["Data-centre energy values are estimates and include non-AI uses.", "National annual totals do not identify regional interconnection capacity or local grid constraints.", "The 2020–2024 historical comparison is separate from the published 2030 demand scenarios."],
+                "sourceNotes": ["Lawrence Berkeley National Laboratory data-centre usage reports", "U.S. Energy Information Administration, Electric Power Annual, annual electricity sales and summer capacity"],
             },
         )
 
@@ -1182,7 +1207,45 @@ def write_website_chart_data(
             reference_period=("2026-10-01", "2026-10-01"),
         )
 
-        technology_datasets = [investment, ontario, united_states, canada_context, local_calls, local_tokens]
+        workload_rows = technology_flow_outputs.get("ollama_workload_snapshot", [])
+        if workload_rows:
+            workload_snapshot_payload = {
+                "schemaVersion": SCHEMA_VERSION,
+                "generatedAt": generated_at,
+                "title": "Archived local Ollama workload by model",
+                "snapshotDate": str(workload_rows[0]["snapshot_date"]),
+                "scope": "Deduplicated Ollama response metadata across discovered pyash folders; no host or request identifiers are included.",
+                "deduplication": "Records were deduplicated by model, creation time, and response counters in the presentation's source audit.",
+                "source": "Presentation archive workload audit, retrieved 2026-10-10",
+                "sourceFile": "data/ollama-local-workload-2026-10-10.csv in the presentation archive",
+                "sourceUrl": "https://lyis.ca/pfet/zvorygin/ai2026/data/ollama-local-workload-2026-10-10.csv",
+                "summary": {
+                    "completedCalls": sum(int(row.get("completed_calls") or 0) for row in workload_rows),
+                    "promptTokens": sum(int(row.get("prompt_tokens") or 0) for row in workload_rows),
+                    "outputTokens": sum(int(row.get("output_tokens") or 0) for row in workload_rows),
+                    "totalRuntimeHours": sum(float(row.get("total_runtime_hours") or 0) for row in workload_rows),
+                },
+                "models": [
+                    {
+                        "model": str(row["model"]),
+                        "completedCalls": int(row.get("completed_calls") or 0),
+                        "promptTokens": int(row.get("prompt_tokens") or 0),
+                        "outputTokens": int(row.get("output_tokens") or 0),
+                        "promptEvalHours": float(row.get("prompt_eval_hours") or 0),
+                        "outputEvalHours": float(row.get("output_eval_hours") or 0),
+                        "totalRuntimeHours": float(row.get("total_runtime_hours") or 0),
+                    }
+                    for row in workload_rows
+                ],
+                "limitations": [
+                    "This is an archived cross-sectional aggregate, not a monthly time series.",
+                    "Response records are not equivalent to accepted tasks or useful work.",
+                    "The archive does not support assigning workload to a particular machine or location.",
+                    "Reported per-request durations are not electricity measurements and exclude human review.",
+                ],
+            }
+
+        technology_datasets = [investment, ontario, united_states, us_grid_growth, canada_context, local_calls, local_tokens]
         if estimated_rows:
             technology_datasets.append(local_energy)
         benchmark_rows = technology_flow_outputs.get("benchmarks", [])
@@ -1275,6 +1338,8 @@ def write_website_chart_data(
     }
     if benchmark_payload is not None:
         shared["technology-benchmark-scores.json"] = benchmark_payload
+    if workload_snapshot_payload is not None:
+        shared["technology-ollama-workload-snapshot.json"] = workload_snapshot_payload
     cross_mapping = {"GM2_YoY": "GM2_YoY", "WTI_YoY": "WTI_YoY", "CI_zscore": "CI_zscore", "household_energy_burden": "household_energy_expenditure_share", "industrial_production": "Industrial_production_YoY", "weekly_hours": "average_weekly_hours_YoY", "temporary_help": "temporary_help_YoY"}
     shared["cross-layer.json"] = {"schemaVersion": SCHEMA_VERSION, "frequency": "monthly", "fields": cross_mapping, "observations": _observations(system_rows, cross_mapping)}
     for filename, payload in shared.items():
@@ -1298,6 +1363,8 @@ def write_website_chart_data(
         "shared": ["lag-results.json", "rolling-performance.json", "regimes.json", "recessions.json", "events.json", "cross-layer.json", "output-quality-correlations.json", "current-classification.json", "symptom-evaluations.json", "regime-scores.json", "regime-history.json", *(["technology-benchmark-scores.json"] if benchmark_payload is not None else [])],
         "conceptual": [{"id": "viable-price-window", "file": "viable-price-window.json", "evidenceLabel": "Scenario concept"}],
     }
+    if workload_snapshot_payload is not None:
+        manifest["shared"].append("technology-ollama-workload-snapshot.json")
     (out_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, allow_nan=False) + "\n", encoding="utf-8")
     files.append("manifest.json")
     return files

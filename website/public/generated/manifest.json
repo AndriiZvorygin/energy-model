@@ -695,6 +695,18 @@
         "end": "2026-10-01"
       },
       "evidenceLabel": "Experimental proxy"
+    },
+    {
+      "id": "technology-us-grid-growth-comparison",
+      "file": "charts/technology-us-grid-growth-comparison.json",
+      "legacyFile": "technology-us-grid-growth-comparison.json",
+      "title": "U.S. data-centre use and grid growth",
+      "frequency": "annual",
+      "dateRange": {
+        "start": "2020-01-01",
+        "end": "2024-01-01"
+      },
+      "evidenceLabel": "Contextual indicator"
     }
   ],
   "indicators": [
@@ -1202,7 +1214,8 @@
     "symptom-evaluations.json",
     "regime-scores.json",
     "regime-history.json",
-    "technology-benchmark-scores.json"
+    "technology-benchmark-scores.json",
+    "technology-ollama-workload-snapshot.json"
   ],
   "conceptual": [
     {

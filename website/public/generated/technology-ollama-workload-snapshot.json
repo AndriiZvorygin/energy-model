@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.1.0",
+  "generatedAt": "2026-10-31T12:55:19+00:00",
+  "title": "Archived local Ollama workload by model",
+  "snapshotDate": "2026-10-10",
+  "scope": "Deduplicated Ollama response metadata across discovered pyash folders; no host or request identifiers are included.",
+  "deduplication": "Records were deduplicated by model, creation time, and response counters in the presentation's source audit.",
+  "source": "Presentation archive workload audit, retrieved 2026-10-10",
+  "sourceFile": "data/ollama-local-workload-2026-10-10.csv in the presentation archive",
+  "sourceUrl": "https://lyis.ca/pfet/zvorygin/ai2026/data/ollama-local-workload-2026-10-10.csv",
+  "summary": {
+    "completedCalls": 3807,
+    "promptTokens": 8996516,
+    "outputTokens": 1316129,
+    "totalRuntimeHours": 7.461196
+  },
+  "models": [
+    {
+      "model": "qwen3.5:9b",
+      "completedCalls": 2815,
+      "promptTokens": 8205152,
+      "outputTokens": 1249510,
+      "promptEvalHours": 1.06323,
+      "outputEvalHours": 4.738243,
+      "totalRuntimeHours": 6.6241
+    },
+    {
+      "model": "qwen3-vl:8b-instruct",
+      "completedCalls": 968,
+      "promptTokens": 745481,
+      "outputTokens": 58452,
+      "promptEvalHours": 0.063761,
+      "outputEvalHours": 0.455197,
+      "totalRuntimeHours": 0.805083
+    },
+    {
+      "model": "glm-4.7-flash:latest",
+      "completedCalls": 23,
+      "promptTokens": 45331,
+      "outputTokens": 8165,
+      "promptEvalHours": 0.002365,
+      "outputEvalHours": 0.025031,
+      "totalRuntimeHours": 0.031419
+    },
+    {
+      "model": "qwen3:4b-instruct",
+      "completedCalls": 1,
+      "promptTokens": 552,
+      "outputTokens": 2,
+      "promptEvalHours": 2.4e-05,
+      "outputEvalHours": 3e-06,
+      "totalRuntimeHours": 0.000594
+    }
+  ],
+  "limitations": [
+    "This is an archived cross-sectional aggregate, not a monthly time series.",
+    "Response records are not equivalent to accepted tasks or useful work.",
+    "The archive does not support assigning workload to a particular machine or location.",
+    "Reported per-request durations are not electricity measurements and exclude human review."
+  ]
+}

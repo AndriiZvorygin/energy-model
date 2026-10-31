@@ -1,0 +1,5 @@
+snapshot_date,model,completed_calls,prompt_tokens,output_tokens,prompt_eval_hours,output_eval_hours,total_runtime_hours
+2026-10-10,qwen3.5:9b,2815,8205152,1249510,1.063230,4.738243,6.624100
+2026-10-10,qwen3-vl:8b-instruct,968,745481,58452,0.063761,0.455197,0.805083
+2026-10-10,glm-4.7-flash:latest,23,45331,8165,0.002365,0.025031,0.031419
+2026-10-10,qwen3:4b-instruct,1,552,2,0.000024,0.000003,0.000594

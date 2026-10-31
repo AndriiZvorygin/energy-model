@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "technology-us-grid-growth-comparison",
+  "title": "U.S. data-centre use and grid growth",
+  "description": "Compare estimated growth in data-centre electricity use with U.S. electricity sales and summer generating capacity.",
+  "plainLanguageSummary": "From 2020 to 2024, data-centre electricity use rose 82.9%, electricity sales 6.9%, and summer generating capacity 18.2%.",
+  "howToRead": "All three lines start at 100 in 2020. The index compares growth rates and does not put their very different absolute scales on one axis.",
+  "calculation": {
+    "formula": "Each series is indexed to its 2020 value = 100 using the presentation's source table.",
+    "explanation": "The index compares rates of change; absolute TWh and the LBNL 2030 cases appear in the separate scale-comparator chart.",
+    "example": "An index value of 150 means the series is 50% above its 2020 level."
+  },
+  "patternsToWatch": [
+    "The difference between estimated data-centre use and total electricity growth",
+    "Whether new capacity growth catches up with large-load demand"
+  ],
+  "limitations": [
+    "Data-centre energy values are estimates and include non-AI uses.",
+    "National annual totals do not identify regional interconnection capacity or local grid constraints.",
+    "The 2020–2024 historical comparison is separate from the published 2030 demand scenarios."
+  ],
+  "sourceNotes": [
+    "Lawrence Berkeley National Laboratory data-centre usage reports",
+    "U.S. Energy Information Administration, Electric Power Annual, annual electricity sales and summer capacity"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2020-01-01",
+    "referenceEnd": "2024-01-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "data_center_index": {
+        "mean": 139.62,
+        "standardDeviation": 31.326755337889686,
+        "n": 5
+      },
+      "electricity_index": {
+        "mean": 103.82000000000001,
+        "standardDeviation": 2.425201022595859,
+        "n": 5
+      },
+      "capacity_index": {
+        "mean": 108.17999999999999,
+        "standardDeviation": 6.254086663934232,
+        "n": 5
+      }
+    }
+  },
+  "frequency": "annual",
+  "dateRange": {
+    "start": "2020-01-01",
+    "end": "2024-01-01"
+  },
+  "series": [
+    {
+      "key": "data_center_index",
+      "label": "Data-centre electricity use",
+      "unit": "index (2020 = 100)",
+      "source": "LBNL U.S. data-centre electricity estimates",
+      "status": "modelled",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#d97706",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2024-01-01"
+    },
+    {
+      "key": "electricity_index",
+      "label": "Electricity delivered to customers",
+      "unit": "index (2020 = 100)",
+      "source": "U.S. Energy Information Administration, Electric Power Annual",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2024-01-01"
+    },
+    {
+      "key": "capacity_index",
+      "label": "Summer generating capacity",
+      "unit": "index (2020 = 100)",
+      "source": "U.S. Energy Information Administration, Electric Power Annual",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#334155",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2024-01-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "2020-01-01",
+      "data_center_index": 100.0,
+      "electricity_index": 100.0,
+      "capacity_index": 100.0
+    },
+    {
+      "date": "2021-01-01",
+      "data_center_index": 114.3,
+      "electricity_index": 102.4,
+      "capacity_index": 104.2
+    },
+    {
+      "date": "2022-01-01",
+      "data_center_index": 133.3,
+      "electricity_index": 105.6,
+      "capacity_index": 107.0
+    },
+    {
+      "date": "2023-01-01",
+      "data_center_index": 167.6,
+      "electricity_index": 104.2,
+      "capacity_index": 111.5
+    },
+    {
+      "date": "2024-01-01",
+      "data_center_index": 182.9,
+      "electricity_index": 106.9,
+      "capacity_index": 118.2
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Each series is indexed to its 2020 value = 100 using the presentation's source table.",
+    "notes": "The index compares rates of change; absolute TWh and the LBNL 2030 cases appear in the separate scale-comparator chart."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-10-31T12:55:19+00:00"
+}

@@ -13,6 +13,8 @@ from .storage import Row
 
 FACILITY_FORECAST_FILE = Path("data/seed/technology_flow_facility_forecasts.csv")
 LOCAL_USAGE_FILE = Path("data/seed/local_ollama_usage_monthly.csv")
+OLLAMA_WORKLOAD_SNAPSHOT_FILE = Path("data/seed/technology_flow_ollama_workload_snapshot.csv")
+US_GRID_HISTORY_FILE = Path("data/seed/technology_flow_us_grid_history.csv")
 
 # Published TokenPowerBench result for Llama 3.1 8B, vLLM, batch 128, four
 # H100 GPUs. The paper reports a 2–3x energy-per-token spread across batch
@@ -126,6 +128,59 @@ def read_local_usage_aggregates(root: Path) -> list[Row]:
     return sorted(rows, key=lambda row: (str(row["month"]), str(row["model"])))
 
 
+def read_ollama_workload_snapshot(root: Path) -> list[Row]:
+    """Read the presentation's sanitized, deduplicated model-level Ollama totals."""
+    rows: list[Row] = []
+    for item in _read_csv(root / OLLAMA_WORKLOAD_SNAPSHOT_FILE):
+        snapshot_date = item.get("snapshot_date", "")
+        model = item.get("model", "").strip()
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", snapshot_date):
+            raise ValueError(f"Ollama workload snapshot has an invalid date: {snapshot_date!r}")
+        if not model:
+            raise ValueError("Ollama workload snapshot is missing a model label")
+        rows.append({
+            "snapshot_date": snapshot_date,
+            "model": model,
+            "completed_calls": _integer(item, "completed_calls"),
+            "prompt_tokens": _integer(item, "prompt_tokens"),
+            "output_tokens": _integer(item, "output_tokens"),
+            "prompt_eval_hours": _float(item.get("prompt_eval_hours")),
+            "output_eval_hours": _float(item.get("output_eval_hours")),
+            "total_runtime_hours": _float(item.get("total_runtime_hours")),
+            "scope": "Deduplicated Ollama response metadata across discovered pyash folders",
+            "source": "Presentation archive workload audit, retrieved 2026-10-10",
+            "status": "observed aggregate",
+        })
+    if len({str(row["snapshot_date"]) for row in rows}) > 1:
+        raise ValueError("Ollama workload snapshot rows must share one snapshot date")
+    if len({str(row["model"]) for row in rows}) != len(rows):
+        raise ValueError("Ollama workload snapshot has duplicate model labels")
+    return sorted(rows, key=lambda row: (-int(row["completed_calls"]), str(row["model"])))
+
+
+def read_us_grid_history(root: Path) -> list[Row]:
+    """Read the presentation's sourced U.S. data-centre and grid index series."""
+    rows: list[Row] = []
+    for item in _read_csv(root / US_GRID_HISTORY_FILE):
+        row: Row = {"year": int(item["year"])}
+        for field in (
+            "data_center_twh",
+            "data_center_index",
+            "electricity_sales_twh",
+            "electricity_index",
+            "summer_capacity_mw",
+            "capacity_index",
+        ):
+            value = _float(item.get(field))
+            if value is None:
+                raise ValueError(f"U.S. grid history has an invalid {field!r} value")
+            row[field] = value
+        row["status"] = "historical estimates and reported grid totals"
+        row["source"] = "LBNL data-centre estimates; EIA annual electricity and capacity series"
+        rows.append(row)
+    return sorted(rows, key=lambda row: int(row["year"]))
+
+
 def _parameter_count_billions(model: str) -> float | None:
     match = re.search(r"(?<!\d)(\d+(?:\.\d+)?)\s*b(?:\b|$)", model.lower())
     return float(match.group(1)) if match else None
@@ -212,6 +267,8 @@ def build_technology_flow_outputs(
         "canada_generation": build_canada_generation_context(root),
         "investment": build_investment_rows(software_investment, computer_investment),
         "local_usage": usage_rows,
+        "ollama_workload_snapshot": read_ollama_workload_snapshot(root),
+        "us_grid_history": read_us_grid_history(root),
         "local_energy": build_local_energy_estimates(usage_rows),
         "benchmarks": [dict(row) for row in BENCHMARK_SCORES],
     }

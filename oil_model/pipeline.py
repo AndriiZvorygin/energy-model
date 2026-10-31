@@ -233,6 +233,8 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
     write_csv(analysis_dir / "technology_flow_canada_electricity.csv", technology_flow_outputs["canada_generation"])
     write_csv(analysis_dir / "technology_flow_investment_proxies.csv", technology_flow_outputs["investment"])
     write_csv(analysis_dir / "technology_flow_local_usage.csv", technology_flow_outputs["local_usage"])
+    write_csv(analysis_dir / "technology_flow_ollama_workload_snapshot.csv", technology_flow_outputs["ollama_workload_snapshot"])
+    write_csv(analysis_dir / "technology_flow_us_grid_history.csv", technology_flow_outputs["us_grid_history"])
     write_csv(analysis_dir / "technology_flow_local_energy_estimates.csv", technology_flow_outputs["local_energy"])
     write_csv(analysis_dir / "technology_flow_benchmark_scores.csv", technology_flow_outputs["benchmarks"])
     (analysis_dir / "second_stage_findings.md").write_text(second_stage_findings, encoding="utf-8")
@@ -263,11 +265,11 @@ The user-provided analysis deck and transcript guide the flow questions and geog
 
 U.S. software and computer/peripheral private fixed investment are broad BEA investment proxies distributed by FRED. Neither series isolates AI spending or identifies the destination of investment.
 
-Ontario data-centre net annual energy demand uses the low, reference, and high-demand series in Figures 1–3 of the IESO 2026 APO Demand Forecast Module workbook. Values are retained as published for 2027–2030. They are forecasts, not observed load. U.S. data-centre totals use LBNL's 2024 historical estimate and its 2030 reference and compounded-uncertainty cases. These geographies and methods are shown in separate charts.
+Ontario data-centre net annual energy demand uses the low, reference, and high-demand series in Figures 1–3 of the IESO 2026 APO Demand Forecast Module workbook. Values are retained as published for 2027–2030. They are forecasts, not observed load. U.S. data-centre totals show LBNL historical estimates for 2020–2024 and the 2030 reference and compounded-uncertainty cases; no annual forecast path is interpolated between 2024 and 2030. A separate 2020–2024 index chart compares the presentation archive's data-centre estimates with EIA electricity sales and summer capacity series. The index starts at 100 in 2020 and shows growth rates, not equivalent absolute loads.
 
 Canadian electricity generation is annualized from Statistics Canada vector 44174609 by summing twelve monthly observations and converting MWh to TWh. It provides national grid context and is not a data-centre load estimate. Grey-Bruce/Owen Sound has no local data-centre load series in this v1 source set; the local Ollama workload is not assigned a physical server location.
 
-Local Ollama activity represents inference and comes from a monthly aggregate containing only model label, call counts, and prompt/output token counts. Facility-level data-centre scenarios combine training, inference, and other data-centre uses; the source set does not separate those loads. Raw prompts, responses, IDs, endpoints, host labels, hashes, and per-call timestamps are not part of the aggregate or website data. Regenerate the aggregate with `node scripts/export_local_ollama_usage.mjs --usage-dir <path>` when a new local snapshot is wanted.
+Local Ollama activity represents inference. The current deployment series comes from a monthly aggregate containing only model label, call counts, and prompt/output token counts. A separate presentation-archive snapshot reports 3,807 deduplicated response records across discovered pyash folders as of 2026-10-10, split across four model tags. It is a cross-sectional aggregate, not a monthly time series. The source audit deduplicated by model, creation time, and response counters. Facility-level data-centre scenarios combine training, inference, and other data-centre uses; the source set does not separate those loads. Raw prompts, responses, IDs, endpoints, host labels, hashes, and per-call timestamps are not part of the aggregate or website data. Regenerate the current monthly aggregate with `node scripts/export_local_ollama_usage.mjs --usage-dir <path>` when a new local snapshot is wanted.
 
 The energy sensitivity applies the authors' released TokenPowerBench result for Llama 3.1 8B on vLLM at batch 128 across four H100 GPUs: 0.1467 GPU joules per generated output token. Low/high bounds are half and twice that reference, reflecting the paper's reported 2–3x batch-size spread. The estimate is used only for local model labels in the 7B–10B class. It is an illustrative GPU-only transfer, not measured local electricity: it excludes prompt processing, CPU, memory, other node loads, and cooling. Other local model sizes remain unestimated.
 
@@ -314,6 +316,8 @@ GPQA Diamond scores are provider-reported base-model card values. They do not es
         store.write_rows("technology_flow_canada_electricity", technology_flow_outputs["canada_generation"])
         store.write_rows("technology_flow_investment_proxies", technology_flow_outputs["investment"])
         store.write_rows("technology_flow_local_usage", technology_flow_outputs["local_usage"])
+        store.write_rows("technology_flow_ollama_workload_snapshot", technology_flow_outputs["ollama_workload_snapshot"])
+        store.write_rows("technology_flow_us_grid_history", technology_flow_outputs["us_grid_history"])
         store.write_rows("technology_flow_local_energy_estimates", technology_flow_outputs["local_energy"])
         store.write_rows("technology_flow_benchmark_scores", technology_flow_outputs["benchmarks"])
         store.write_rows("canadian_indicator_catalogue", canadian_catalogue)
