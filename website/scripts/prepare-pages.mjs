@@ -48,6 +48,7 @@ const routes = [
   'equities',
   'economy',
   'output-quality',
+  'technology-flows',
   'methodology',
   'roadmap',
 ]
