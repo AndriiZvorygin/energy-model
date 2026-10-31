@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.1.0",
+  "generatedAt": "2026-10-31T08:59:17+00:00",
+  "evidenceLabel": "Contextual indicator",
+  "title": "Published model-card benchmark scores",
+  "benchmark": "GPQA Diamond accuracy (%)",
+  "methodology": "Provider-reported base-model card scores are shown for quality context. They are not a local quantized-build result or an evaluation of tasks in this project.",
+  "rows": [
+    {
+      "model": "Qwen3.5-9B base model",
+      "benchmark": "GPQA Diamond",
+      "score_percent": 81.7,
+      "score_status": "model-card result",
+      "source": "Qwen3.5-9B official model card",
+      "source_url": "https://huggingface.co/Qwen/Qwen3.5-9B",
+      "limitation": "Provider-reported base-model benchmark; not a local quantized-build or municipal-task result."
+    },
+    {
+      "model": "Qwen3.8-27B base model",
+      "benchmark": "GPQA Diamond",
+      "score_percent": 89.2,
+      "score_status": "model-card result",
+      "source": "Qwen3.8-27B official model card",
+      "source_url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "limitation": "Provider-reported base-model benchmark; not a local quantized-build or municipal-task result."
+    }
+  ]
+}

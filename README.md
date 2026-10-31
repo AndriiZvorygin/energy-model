@@ -133,6 +133,12 @@ The `/output-quality` research module compares four separate lenses: headline me
 
 An experimental household-command measure subtracts inflation-adjusted BLS Consumer Expenditure Survey shelter, food, and utilities/fuels/public-services costs from Census real median household income. All components are published beside the result, and no composite prosperity or financialization score is introduced. See [analysis/economic_output_quality.md](analysis/economic_output_quality.md).
 
+## AI and Technology Flows
+
+The `/technology-flows` module follows broad U.S. software and computer-equipment investment proxies, Canadian electricity context, Ontario data-centre forecasts, U.S. scale comparisons, local inference usage, and public model-card benchmark scores. Its scenario horizon ends in 2030. Data-centre electricity includes cloud and other computing demand and is not treated as AI-only load. The separate methodology note records the published-data, local-usage, and GPU-energy sensitivity boundaries: [analysis/technology_flows_methodology.md](analysis/technology_flows_methodology.md).
+
+Local Ollama usage enters the pipeline only through monthly aggregates of model labels, call counts, and token counts. Regenerate the sanitized snapshot before a build with `node scripts/export_local_ollama_usage.mjs --usage-dir <path>`; raw request and response data are not exported.
+
 ```bash
 cd website
 npm install
@@ -146,6 +152,9 @@ Create a production build with `npm run build`. See [website/README.md](website/
 Primary public sources include:
 
 - **Statistics Canada:** Canadian and Ontario CPI, labour-force rates, monthly real GDP by industry, crude production/trade/refinery/inventory balances, electricity generation, and household debt service.
+- **Independent Electricity System Operator:** Ontario annual planning outlook and data-centre electricity demand scenarios.
+- **Lawrence Berkeley National Laboratory:** U.S. data-centre electricity estimates and 2030 sensitivity cases.
+- **Qwen model cards and TokenPowerBench:** provider-reported benchmark scores and published LLM inference GPU-energy benchmark reference.
 - **Statistics Canada household accounts and labour tables:** quarterly household disposable income, consumption, saving, and population; monthly Canada and Ontario hourly wages and weekly earnings.
 - **Food and Agriculture Organization:** monthly nominal and real international Food Price Indices and commodity components.
 - **Bank for International Settlements:** quarterly selected nominal and real residential-property price statistics and documented country-group aggregates.

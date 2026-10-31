@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import math
 import csv
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -637,6 +638,7 @@ def write_website_chart_data(
     output_quality_rows: list[Row],
     output_quality_correlations: list[Row],
     historical_episode_rows: list[Row],
+    technology_flow_outputs: dict[str, list[Row]] | None = None,
 ) -> list[str]:
     out_dir = root / "website" / "public" / "generated"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -1013,7 +1015,188 @@ def write_website_chart_data(
         "generatedAt": generated_at,
     }
 
-    datasets = [oil_prices, gm2_lead, residuals, ci_wti_annual, energy_gdp, equities, uso, headline, net_output, capacity, household, financial, output_comparison, physical_tightness, energy_burden, industrial_transmission, labour_warning, demand_destruction, price_availability_activity, global_energy_growth]
+    technology_flow_outputs = technology_flow_outputs or {}
+    technology_datasets: list[dict[str, Any]] = []
+    benchmark_payload: dict[str, Any] | None = None
+    if technology_flow_outputs:
+        investment_rows = technology_flow_outputs.get("investment", [])
+        investment = _dataset(
+            "technology-capital-investment-proxies", "U.S. software and computer investment", "Broad U.S. investment proxies upstream of digital infrastructure; neither series isolates AI spending.", "quarterly",
+            [
+                _series("software_investment_billion_usd_saar", "Software investment", "billions of USD, SAAR", "BEA via FRED B985RC1Q027SBEA", "measured", color="#0f766e", transformations=["raw", "indexed"]),
+                _series("computer_peripherals_investment_billion_usd_saar", "Computer and peripheral equipment investment", "billions of USD, SAAR", "BEA via FRED B935RC1Q027SBEA", "measured", color="#2563eb", transformations=["raw", "indexed"]),
+            ],
+            [{"date": _iso_date(row["date"]), "software_investment_billion_usd_saar": _number(row.get("software_investment_billion_usd_saar")), "computer_peripherals_investment_billion_usd_saar": _number(row.get("computer_peripherals_investment_billion_usd_saar"))} for row in investment_rows],
+            ["raw", "indexed"], "Contextual indicator",
+            {"formula": "Published quarterly private fixed investment in software and in computers/peripherals, reported at seasonally adjusted annual rates.", "notes": "These are broad U.S. national-accounts categories, not AI-specific capital spending or a measure of installed compute capacity."},
+            "", generated_at, reference_period=("2000-01-01", "2019-10-01"),
+        )
+
+        facility_rows = technology_flow_outputs.get("facility_forecasts", [])
+        ontario_rows = [row for row in facility_rows if row.get("geography") == "Ontario"]
+        ontario_values: dict[int, dict[str, float | None]] = {}
+        for row in ontario_rows:
+            year = int(row["year"])
+            scenario = str(row["scenario"])
+            ontario_values.setdefault(year, {})[scenario] = _number(row.get("value"))
+        ontario_observations = [
+            {"date": _iso_date(year), "low": values.get("low"), "reference": values.get("reference"), "high": values.get("high")}
+            for year, values in sorted(ontario_values.items())
+        ]
+        ontario = _dataset(
+            "technology-ontario-data-centre-electricity", "Ontario data-centre electricity demand", "IESO low, reference, and high forecasts for the Ontario data-centre sub-sector through 2030.", "annual",
+            [
+                _series("low", "Low-demand scenario", "TWh per year", "IESO 2026 APO Demand Forecast Module Data, Figure 3", "modelled", color="#0ea5e9", transformations=["raw"]),
+                _series("reference", "Reference scenario", "TWh per year", "IESO 2026 APO Demand Forecast Module Data, Figure 1", "modelled", color="#0f766e", transformations=["raw"]),
+                _series("high", "High-demand scenario", "TWh per year", "IESO 2026 APO Demand Forecast Module Data, Figure 2", "modelled", color="#be123c", transformations=["raw"]),
+            ], ontario_observations, ["raw"], "Scenario concept",
+            {"formula": "Published net annual energy demand for the data-centre sub-sector under each IESO demand scenario.", "notes": "Forecast observations stop at 2030 for this v1 module. They are not local Grey-Bruce load forecasts or measurements of AI-only demand."},
+            "", generated_at, reference_period=("2027-01-01", "2030-01-01"),
+            details={
+                "plainLanguageSummary": "The IESO forecast places Ontario data-centre net annual energy demand between 5.0 and 6.41 TWh in 2030 across the low, reference, and high scenarios.",
+                "howToRead": "Each line is one published IESO scenario. The source workbook forecasts the data-centre sub-sector, which includes AI and non-AI computing; it does not isolate AI electricity use.",
+                "patternsToWatch": ["How much the three IESO cases separate by 2030", "Whether future APO vintages revise the near-term large-load path"],
+                "limitations": ["Forecasts are uncertain and do not mean every announced facility connects or operates as planned.", "This is Ontario provincial demand, not the local Grey-Bruce grid or a Canada-wide data-centre forecast.", "The data-centre sub-sector includes cloud and other data-centre services, not only AI."],
+                "sourceNotes": ["IESO 2026 Annual Planning Outlook Demand Forecast Module Data, Figures 1–3", "Net annual energy demand; published forecast values for 2027–2030"],
+            },
+        )
+
+        us_rows = [row for row in facility_rows if row.get("geography") == "United States"]
+        us_observations: list[dict[str, Any]] = []
+        for year in sorted({int(row["year"]) for row in us_rows}):
+            values = {str(row["scenario"]): _number(row.get("value")) for row in us_rows if int(row["year"]) == year}
+            us_observations.append({"date": _iso_date(year), "historical_estimate": values.get("observed"), "low": values.get("low"), "reference": values.get("reference"), "high": values.get("high")})
+        united_states = _dataset(
+            "technology-us-data-centre-electricity", "U.S. data-centre electricity scale comparator", "LBNL's 2024 historical estimate and 2030 reference and compounded-uncertainty estimates.", "annual",
+            [
+                _series("historical_estimate", "2024 historical estimate", "TWh per year", "LBNL United States Data Center Energy Usage Report: 2025 Update", "modelled", color="#475569", transformations=["raw"]),
+                _series("low", "2030 low uncertainty case", "TWh per year", "LBNL compounded uncertainty scenarios", "modelled", color="#0ea5e9", transformations=["raw"]),
+                _series("reference", "2030 reference case", "TWh per year", "LBNL reference case", "modelled", color="#0f766e", transformations=["raw"]),
+                _series("high", "2030 high uncertainty case", "TWh per year", "LBNL compounded uncertainty scenarios", "modelled", color="#be123c", transformations=["raw"]),
+            ], us_observations, ["raw"], "Scenario concept",
+            {"formula": "LBNL U.S. data-centre electricity use estimates, reported in TWh per year.", "notes": "Only the 2024 historical estimate and 2030 scenario endpoints are plotted; no annual path between them is inferred."},
+            "", generated_at, reference_period=("2024-01-01", "2030-01-01"),
+            details={
+                "plainLanguageSummary": "LBNL estimates U.S. data centres used 192 TWh in 2024 and gives a 2030 reference estimate of 649 TWh, with a compounded-uncertainty range of 521–843 TWh.",
+                "howToRead": "The 2024 historical estimate and 2030 scenario points are separated in time. The chart does not fill in an annual trajectory between them.",
+                "patternsToWatch": ["The wide range around the 2030 reference case", "How future LBNL reports revise historical estimates and forecast assumptions"],
+                "limitations": ["U.S. data-centre totals are a scale comparator, not a forecast for Canada.", "The totals cover data centres generally and are not AI-only electricity use.", "The 2030 compounded-uncertainty cases combine multiple sensitivities and are not confidence intervals."],
+                "sourceNotes": ["Lawrence Berkeley National Laboratory, United States Data Center Energy Usage Report: 2025 Update, June 2026"],
+            },
+        )
+
+        canada_rows = technology_flow_outputs.get("canada_generation", [])
+        canada_context = _dataset(
+            "technology-canada-electricity-generation", "Canadian electricity generation context", "Annual Canadian electricity generation provides national grid context alongside the Ontario and U.S. data-centre scenarios.", "annual",
+            [_series("generation_twh", "Electricity generation", "TWh per year", "Statistics Canada table 25-10-0015-01, vector 44174609", "measured", color="#7c3aed", transformations=["raw", "indexed"])],
+            [{"date": _iso_date(int(row["year"])), "generation_twh": _number(row.get("generation_twh"))} for row in canada_rows if int(row["year"]) <= 2030],
+            ["raw", "indexed"], "Contextual indicator",
+            {"formula": "Sum twelve monthly national electricity-generation observations and divide MWh by 1,000,000 to report TWh per year.", "notes": "Generation is national supply context, not domestic electricity consumption or a data-centre load measure."},
+            "", generated_at, reference_period=("2000-01-01", "2019-01-01"),
+            details={
+                "plainLanguageSummary": "This national generation series gives scale context; it is not a forecast of Canadian data-centre demand.",
+                "howToRead": "Only complete calendar years are included. Compare it with the separate Ontario data-centre forecast by scale, not as an equivalent measure.",
+                "patternsToWatch": ["Changes in annual electricity generation", "The gap between national supply context and local grid constraints"],
+                "limitations": ["Generation includes electricity that may be exported and does not equal domestic load.", "National totals hide provincial and local transmission constraints.", "No Canada-wide data-centre load forecast is included in this v1 source set."],
+                "sourceNotes": ["Statistics Canada monthly electricity generation by type, table 25-10-0015-01, vector 44174609"],
+            },
+        )
+
+        local_rows = technology_flow_outputs.get("local_usage", [])
+        local_models = sorted({str(row.get("model")) for row in local_rows})
+        def model_key(model: str) -> str:
+            safe = re.sub(r"[^a-z0-9]+", "_", model.lower()).strip("_")
+            return safe or "model"
+        model_keys = {model: model_key(model) for model in local_models}
+        usage_by_month: dict[str, dict[str, Any]] = {}
+        for row in local_rows:
+            month = str(row["month"])
+            obs = usage_by_month.setdefault(month, {"date": _iso_date(month)})
+            key = model_keys[str(row["model"])]
+            obs[f"{key}_calls"] = _number(row.get("calls"))
+            obs[f"{key}_prompt_tokens"] = _number(row.get("prompt_tokens"))
+            obs[f"{key}_output_tokens"] = _number(row.get("output_tokens"))
+        model_series = []
+        for model in local_models:
+            key = model_keys[model]
+            model_series.append(_series(f"{key}_calls", f"{model} calls", "calls per month", "Sanitized monthly Ollama usage aggregate", "measured", color="#0f766e" if len(model_series) == 0 else "#2563eb", transformations=["raw"]))
+        local_calls = _dataset(
+            "technology-local-inference-calls", "Local inference call volume", "Monthly local Ollama call counts, grouped by model label.", "monthly", model_series,
+            list(usage_by_month.values()), ["raw"], "Contextual indicator",
+            {"formula": "Count Ollama usage records by calendar month and model label.", "notes": "The aggregate omits prompts, responses, per-call times, IDs, endpoint names, and host information."},
+            "", generated_at, reference_period=("2026-10-01", "2026-10-01"),
+            details={
+                "plainLanguageSummary": "The local telemetry records completed and failed calls by month and model. It does not say whether an answer was useful or accepted.",
+                "howToRead": "Compare call counts only within each model's local history. The recorded machine location is not available in the usage aggregate.",
+                "patternsToWatch": ["Changes in monthly local call counts as more observations accumulate"],
+                "limitations": ["A call is not necessarily a completed task or a useful result.", "This is one local Ollama deployment, not a representative sample of Canada.", "No server location or whole-system power is captured."],
+            },
+        )
+        token_series = []
+        for model in local_models:
+            key = model_keys[model]
+            token_series.extend([
+                _series(f"{key}_prompt_tokens", f"{model} prompt tokens", "tokens per month", "Sanitized monthly Ollama usage aggregate", "measured", color="#0f766e" if len(token_series) == 0 else "#2563eb", transformations=["raw"]),
+                _series(f"{key}_output_tokens", f"{model} output tokens", "tokens per month", "Sanitized monthly Ollama usage aggregate", "measured", False, color="#7c3aed", transformations=["raw"]),
+            ])
+        local_tokens = _dataset(
+            "technology-local-inference-tokens", "Local inference tokens", "Monthly local Ollama prompt and output token counts, grouped by model label.", "monthly", token_series,
+            list(usage_by_month.values()), ["raw"], "Contextual indicator",
+            {"formula": "Sum prompt-evaluation and output-evaluation token counts by calendar month and model label.", "notes": "Token counts measure workload volume; they do not measure useful work, answer quality, or energy use."},
+            "", generated_at, reference_period=("2026-10-01", "2026-10-01"),
+            details={
+                "plainLanguageSummary": "Prompt and output token totals describe inference workload size; they do not measure successful tasks or productivity.",
+                "howToRead": "Prompt tokens and output tokens are shown as separate series. They are workload counts, not interchangeable measures of useful output.",
+                "patternsToWatch": ["Prompt-to-output token mix across model tags", "How workload totals change as additional monthly aggregates are added"],
+                "limitations": ["A token is not a useful-work unit.", "Records without token telemetry may report zero even when a request occurred.", "The monthly aggregate has no task type, quality, or human-review outcome."],
+            },
+        )
+
+        energy_rows = technology_flow_outputs.get("local_energy", [])
+        estimated_rows = [row for row in energy_rows if row.get("energy_status") == "benchmark-based estimate"]
+        energy_observations_by_month: dict[str, dict[str, Any]] = {}
+        for row in estimated_rows:
+            month = str(row["month"])
+            energy_observations_by_month[month] = {
+                "date": _iso_date(month),
+                "low_wh": _number(row.get("gpu_energy_low_wh")),
+                "reference_wh": _number(row.get("gpu_energy_reference_wh")),
+                "high_wh": _number(row.get("gpu_energy_high_wh")),
+            }
+        local_energy = _dataset(
+            "technology-local-gpu-energy-estimate", "Illustrative local GPU energy estimate", "A published 8B-class GPU benchmark is applied to output tokens for local 7B–10B model tags as a sensitivity only.", "monthly",
+            [
+                _series("low_wh", "Low sensitivity", "Wh per month", "TokenPowerBench benchmark transfer; 0.5× reference", "experimental", color="#0ea5e9", transformations=["raw"]),
+                _series("reference_wh", "Reference sensitivity", "Wh per month", "TokenPowerBench released Llama 3.1 8B benchmark result", "experimental", color="#0f766e", transformations=["raw"]),
+                _series("high_wh", "High sensitivity", "Wh per month", "TokenPowerBench benchmark transfer; 2× reference", "experimental", color="#be123c", transformations=["raw"]),
+            ], list(energy_observations_by_month.values()), ["raw"], "Experimental proxy",
+            {"formula": "Output tokens × GPU joules per output token ÷ 3,600 = GPU Wh; low/reference/high use 0.5×/1×/2× the benchmark reference.", "notes": "The reference is 0.1467 GPU J/output token for Llama 3.1 8B, vLLM, batch 128, four H100 GPUs. It is not local telemetry and does not estimate prompt processing, CPU, memory, remaining node loads, or cooling."},
+            "", generated_at,
+            details={
+                "plainLanguageSummary": "This is a small GPU-only sensitivity for the 9B-class local workload, transferred from a published 8B H100 benchmark. The 27B workload is left unestimated because this source setup does not provide a compatible reference.",
+                "howToRead": "The three lines apply half, the published reference, and twice the reference GPU energy per generated output token. The estimate is not whole-system electricity and is not a power reading from the local machine.",
+                "patternsToWatch": ["How much the estimated energy range widens under the sensitivity multipliers"],
+                "limitations": ["A different model, device, engine, quantization, context length, and batch size can change energy per token.", "Prompt processing and all non-GPU energy are excluded, so this is not full inference electricity.", "No corresponding value is estimated for the local 27B model tag."],
+                "sourceNotes": ["TokenPowerBench paper and authors' released result files", "Local sanitized output-token aggregate"],
+            },
+            reference_period=("2026-10-01", "2026-10-01"),
+        )
+
+        technology_datasets = [investment, ontario, united_states, canada_context, local_calls, local_tokens]
+        if estimated_rows:
+            technology_datasets.append(local_energy)
+        benchmark_rows = technology_flow_outputs.get("benchmarks", [])
+        benchmark_payload = {
+            "schemaVersion": SCHEMA_VERSION,
+            "generatedAt": generated_at,
+            "evidenceLabel": "Contextual indicator",
+            "title": "Published model-card benchmark scores",
+            "benchmark": "GPQA Diamond accuracy (%)",
+            "methodology": "Provider-reported base-model card scores are shown for quality context. They are not a local quantized-build result or an evaluation of tasks in this project.",
+            "rows": benchmark_rows,
+        }
+
+    datasets = [oil_prices, gm2_lead, residuals, ci_wti_annual, energy_gdp, equities, uso, headline, net_output, capacity, household, financial, output_comparison, physical_tightness, energy_burden, industrial_transmission, labour_warning, demand_destruction, price_availability_activity, global_energy_growth, *technology_datasets]
     files: list[str] = []
     for dataset in datasets:
         filename = f"{dataset['id']}.json"
@@ -1090,6 +1273,8 @@ def write_website_chart_data(
         "regime-scores.json": regime_scores,
         "regime-history.json": regime_history,
     }
+    if benchmark_payload is not None:
+        shared["technology-benchmark-scores.json"] = benchmark_payload
     cross_mapping = {"GM2_YoY": "GM2_YoY", "WTI_YoY": "WTI_YoY", "CI_zscore": "CI_zscore", "household_energy_burden": "household_energy_expenditure_share", "industrial_production": "Industrial_production_YoY", "weekly_hours": "average_weekly_hours_YoY", "temporary_help": "temporary_help_YoY"}
     shared["cross-layer.json"] = {"schemaVersion": SCHEMA_VERSION, "frequency": "monthly", "fields": cross_mapping, "observations": _observations(system_rows, cross_mapping)}
     for filename, payload in shared.items():
@@ -1110,7 +1295,7 @@ def write_website_chart_data(
             {"id": "production-activity", "label": "Production and economic activity", "indicatorFields": sort_indicator_fields(["Industrial_production_YoY", "manufacturing_output_YoY", "real_consumer_spending_YoY", "business_investment_YoY", "Real_GDP_growth"]), "interpretation": "Production, spending, investment, and GDP indicate whether energy and financial conditions are transmitting into measured activity.", "confidence": "Moderate"},
             {"id": "labour-households", "label": "Labour and household conditions", "indicatorFields": sort_indicator_fields(["average_weekly_hours_YoY", "temporary_help_YoY", "full_time_employment_share", "involuntary_part_time_share", "prime_age_employment_rate", "real_wage_growth", "consumer_sentiment", "unemployment_rate"]), "interpretation": "Hours, job composition, wages, sentiment, and unemployment often move at different stages of household stress.", "confidence": "Moderate"},
         ],
-        "shared": ["lag-results.json", "rolling-performance.json", "regimes.json", "recessions.json", "events.json", "cross-layer.json", "output-quality-correlations.json", "current-classification.json", "symptom-evaluations.json", "regime-scores.json", "regime-history.json"],
+        "shared": ["lag-results.json", "rolling-performance.json", "regimes.json", "recessions.json", "events.json", "cross-layer.json", "output-quality-correlations.json", "current-classification.json", "symptom-evaluations.json", "regime-scores.json", "regime-history.json", *(["technology-benchmark-scores.json"] if benchmark_payload is not None else [])],
         "conceptual": [{"id": "viable-price-window", "file": "viable-price-window.json", "evidenceLabel": "Scenario concept"}],
     }
     (out_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, allow_nan=False) + "\n", encoding="utf-8")

@@ -29,6 +29,7 @@ from .system_response import (
     physical_tightness_analysis,
 )
 from .transforms import build_monthly_dataset
+from .technology_flows import build_technology_flow_outputs
 from .website_data import write_website_chart_data
 
 
@@ -101,6 +102,7 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
         "W171RC1Q027SBEA", "A262RX1Q020SBEA", "MEHOINUSA672N", "LES1252881600Q",
         "CXUSHELTERLB0101M", "CXUFOODTOTLLB0101M", "CXUUTILSLB0101M", "VAPGDPFI", "VAPGDPRL",
         "TDSP", "CMDEBT", "DDDM01USA156NWDB", "TSIFRGHT",
+        "B935RC1Q027SBEA", "B985RC1Q027SBEA",
     ]
     system_fred = {series_id: fred.fetch(series_id) for series_id in system_fred_ids}
     source_series = {
@@ -178,6 +180,11 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
     }
     system_response_core = build_core_dataset(rows, system_response_series)
     canadian_catalogue, _canadian_payloads = build_canadian_outputs(root, rows, system_response_core, cache)
+    technology_flow_outputs = build_technology_flow_outputs(
+        root,
+        system_fred["B985RC1Q027SBEA"],
+        system_fred["B935RC1Q027SBEA"],
+    )
     system_response_catalogue = indicator_catalogue(system_response_series, system_response_core)
     system_response_current = current_state(system_response_core)
     energy_burden_rows, energy_burden_findings = energy_burden_analysis(system_response_core)
@@ -222,6 +229,12 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
     write_csv(analysis_dir / "historical_episode_library.csv", historical_episode_rows)
     write_csv(analysis_dir / "economic_output_quality.csv", output_quality_rows)
     write_csv(analysis_dir / "energy_output_quality_correlations.csv", output_quality_correlation_rows)
+    write_csv(analysis_dir / "technology_flow_facility_forecasts.csv", technology_flow_outputs["facility_forecasts"])
+    write_csv(analysis_dir / "technology_flow_canada_electricity.csv", technology_flow_outputs["canada_generation"])
+    write_csv(analysis_dir / "technology_flow_investment_proxies.csv", technology_flow_outputs["investment"])
+    write_csv(analysis_dir / "technology_flow_local_usage.csv", technology_flow_outputs["local_usage"])
+    write_csv(analysis_dir / "technology_flow_local_energy_estimates.csv", technology_flow_outputs["local_energy"])
+    write_csv(analysis_dir / "technology_flow_benchmark_scores.csv", technology_flow_outputs["benchmarks"])
     (analysis_dir / "second_stage_findings.md").write_text(second_stage_findings, encoding="utf-8")
     (analysis_dir / "final_model_interpretation.md").write_text(final_interpretation, encoding="utf-8")
     (analysis_dir / "executive_summary.md").write_text(executive_summary, encoding="utf-8")
@@ -241,6 +254,27 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
     (analysis_dir / "labour_early_warning_findings.md").write_text(labour_warning_findings, encoding="utf-8")
     (analysis_dir / "historical_episode_library.md").write_text(historical_episode_findings, encoding="utf-8")
     (analysis_dir / "economic_output_quality.md").write_text(output_quality_findings, encoding="utf-8")
+    (analysis_dir / "technology_flows_methodology.md").write_text(
+        """# AI and technology flows: v1 scope and method
+
+The flow map follows broad investment proxies into electricity infrastructure, local inference workload, and public task-quality benchmarks. The main forecasting horizon ends in 2030. The module is separate from the locked oil benchmark and its classifiers.
+
+The user-provided analysis deck and transcript guide the flow questions and geography. Published source data and local aggregate usage supply the numeric observations; slide values are not treated as measured data.
+
+U.S. software and computer/peripheral private fixed investment are broad BEA investment proxies distributed by FRED. Neither series isolates AI spending or identifies the destination of investment.
+
+Ontario data-centre net annual energy demand uses the low, reference, and high-demand series in Figures 1–3 of the IESO 2026 APO Demand Forecast Module workbook. Values are retained as published for 2027–2030. They are forecasts, not observed load. U.S. data-centre totals use LBNL's 2024 historical estimate and its 2030 reference and compounded-uncertainty cases. These geographies and methods are shown in separate charts.
+
+Canadian electricity generation is annualized from Statistics Canada vector 44174609 by summing twelve monthly observations and converting MWh to TWh. It provides national grid context and is not a data-centre load estimate. Grey-Bruce/Owen Sound has no local data-centre load series in this v1 source set; the local Ollama workload is not assigned a physical server location.
+
+Local Ollama activity represents inference and comes from a monthly aggregate containing only model label, call counts, and prompt/output token counts. Facility-level data-centre scenarios combine training, inference, and other data-centre uses; the source set does not separate those loads. Raw prompts, responses, IDs, endpoints, host labels, hashes, and per-call timestamps are not part of the aggregate or website data. Regenerate the aggregate with `node scripts/export_local_ollama_usage.mjs --usage-dir <path>` when a new local snapshot is wanted.
+
+The energy sensitivity applies the authors' released TokenPowerBench result for Llama 3.1 8B on vLLM at batch 128 across four H100 GPUs: 0.1467 GPU joules per generated output token. Low/high bounds are half and twice that reference, reflecting the paper's reported 2–3x batch-size spread. The estimate is used only for local model labels in the 7B–10B class. It is an illustrative GPU-only transfer, not measured local electricity: it excludes prompt processing, CPU, memory, other node loads, and cooling. Other local model sizes remain unestimated.
+
+GPQA Diamond scores are provider-reported base-model card values. They do not establish local quantized performance or the quality of a municipal workflow. Human-time savings and useful-task output are not inferred from token counts; v1 exposes no task-level productivity score.
+""",
+        encoding="utf-8",
+    )
     if bis_rows:
         write_csv(processed_dir / "bis_total_credit_quarterly.csv", bis_rows)
     maybe_write_parquet(processed_dir / "monthly_dataset.parquet", rows)
@@ -276,6 +310,12 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
         store.write_rows("historical_episode_library", historical_episode_rows)
         store.write_rows("economic_output_quality", output_quality_rows)
         store.write_rows("energy_output_quality_correlations", output_quality_correlation_rows)
+        store.write_rows("technology_flow_facility_forecasts", technology_flow_outputs["facility_forecasts"])
+        store.write_rows("technology_flow_canada_electricity", technology_flow_outputs["canada_generation"])
+        store.write_rows("technology_flow_investment_proxies", technology_flow_outputs["investment"])
+        store.write_rows("technology_flow_local_usage", technology_flow_outputs["local_usage"])
+        store.write_rows("technology_flow_local_energy_estimates", technology_flow_outputs["local_energy"])
+        store.write_rows("technology_flow_benchmark_scores", technology_flow_outputs["benchmarks"])
         store.write_rows("canadian_indicator_catalogue", canadian_catalogue)
         if bis_rows:
             store.write_rows("bis_total_credit_quarterly", bis_rows)
@@ -321,6 +361,7 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
         output_quality_rows,
         output_quality_correlation_rows,
         historical_episode_rows,
+        technology_flow_outputs,
     )
     build_affordability_outputs(root, cache)
     build_historical_affordability_outputs(root, cache)

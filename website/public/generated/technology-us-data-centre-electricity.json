@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "technology-us-data-centre-electricity",
+  "title": "U.S. data-centre electricity scale comparator",
+  "description": "LBNL's 2024 historical estimate and 2030 reference and compounded-uncertainty estimates.",
+  "plainLanguageSummary": "LBNL estimates U.S. data centres used 192 TWh in 2024 and gives a 2030 reference estimate of 649 TWh, with a compounded-uncertainty range of 521\u2013843 TWh.",
+  "howToRead": "The 2024 historical estimate and 2030 scenario points are separated in time. The chart does not fill in an annual trajectory between them.",
+  "calculation": {
+    "formula": "LBNL U.S. data-centre electricity use estimates, reported in TWh per year.",
+    "explanation": "Only the 2024 historical estimate and 2030 scenario endpoints are plotted; no annual path between them is inferred.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "The wide range around the 2030 reference case",
+    "How future LBNL reports revise historical estimates and forecast assumptions"
+  ],
+  "limitations": [
+    "U.S. data-centre totals are a scale comparator, not a forecast for Canada.",
+    "The totals cover data centres generally and are not AI-only electricity use.",
+    "The 2030 compounded-uncertainty cases combine multiple sensitivities and are not confidence intervals."
+  ],
+  "sourceNotes": [
+    "Lawrence Berkeley National Laboratory, United States Data Center Energy Usage Report: 2025 Update, June 2026"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2024-01-01",
+    "referenceEnd": "2030-01-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "historical_estimate": {
+        "mean": 192.0,
+        "standardDeviation": 0.0,
+        "n": 1
+      },
+      "low": {
+        "mean": 521.0,
+        "standardDeviation": 0.0,
+        "n": 1
+      },
+      "reference": {
+        "mean": 649.0,
+        "standardDeviation": 0.0,
+        "n": 1
+      },
+      "high": {
+        "mean": 843.0,
+        "standardDeviation": 0.0,
+        "n": 1
+      }
+    }
+  },
+  "frequency": "annual",
+  "dateRange": {
+    "start": "2024-01-01",
+    "end": "2030-01-01"
+  },
+  "series": [
+    {
+      "key": "historical_estimate",
+      "label": "2024 historical estimate",
+      "unit": "TWh per year",
+      "source": "LBNL United States Data Center Energy Usage Report: 2025 Update",
+      "status": "modelled",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#475569",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2024-01-01"
+    },
+    {
+      "key": "low",
+      "label": "2030 low uncertainty case",
+      "unit": "TWh per year",
+      "source": "LBNL compounded uncertainty scenarios",
+      "status": "modelled",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0ea5e9",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2030-01-01"
+    },
+    {
+      "key": "reference",
+      "label": "2030 reference case",
+      "unit": "TWh per year",
+      "source": "LBNL reference case",
+      "status": "modelled",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2030-01-01"
+    },
+    {
+      "key": "high",
+      "label": "2030 high uncertainty case",
+      "unit": "TWh per year",
+      "source": "LBNL compounded uncertainty scenarios",
+      "status": "modelled",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#be123c",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2030-01-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "2024-01-01",
+      "historical_estimate": 192.0,
+      "low": null,
+      "reference": null,
+      "high": null
+    },
+    {
+      "date": "2030-01-01",
+      "historical_estimate": null,
+      "low": 521.0,
+      "reference": 649.0,
+      "high": 843.0
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw"
+  ],
+  "evidenceLabel": "Scenario concept",
+  "methodology": {
+    "formula": "LBNL U.S. data-centre electricity use estimates, reported in TWh per year.",
+    "notes": "Only the 2024 historical estimate and 2030 scenario endpoints are plotted; no annual path between them is inferred."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-10-31T08:59:17+00:00"
+}

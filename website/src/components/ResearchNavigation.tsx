@@ -6,6 +6,7 @@ import {
   BookOpen,
   BriefcaseBusiness,
   ChevronDown,
+  Cpu,
   Droplets,
   Factory,
   Fuel,
@@ -86,6 +87,14 @@ const groups: NavigationGroup[] = [
       { to: '/canada/symptoms', label: 'Symptoms', icon: AlertTriangle },
       { to: '/canada/ontario', label: 'Ontario context', icon: MapPin },
       { to: '/compare/canada-us', label: 'Canada–U.S. comparison', icon: Scale },
+    ],
+  },
+  {
+    id: 'technology',
+    label: 'AI and technology flows',
+    icon: Cpu,
+    items: [
+      { to: '/technology-flows', label: 'Technology flows', icon: Cpu },
     ],
   },
   {

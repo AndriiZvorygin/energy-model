@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "technology-canada-electricity-generation",
+  "title": "Canadian electricity generation context",
+  "description": "Annual Canadian electricity generation provides national grid context alongside the Ontario and U.S. data-centre scenarios.",
+  "plainLanguageSummary": "This national generation series gives scale context; it is not a forecast of Canadian data-centre demand.",
+  "howToRead": "Only complete calendar years are included. Compare it with the separate Ontario data-centre forecast by scale, not as an equivalent measure.",
+  "calculation": {
+    "formula": "Sum twelve monthly national electricity-generation observations and divide MWh by 1,000,000 to report TWh per year.",
+    "explanation": "Generation is national supply context, not domestic electricity consumption or a data-centre load measure.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Changes in annual electricity generation",
+    "The gap between national supply context and local grid constraints"
+  ],
+  "limitations": [
+    "Generation includes electricity that may be exported and does not equal domestic load.",
+    "National totals hide provincial and local transmission constraints.",
+    "No Canada-wide data-centre load forecast is included in this v1 source set."
+  ],
+  "sourceNotes": [
+    "Statistics Canada monthly electricity generation by type, table 25-10-0015-01, vector 44174609"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-01-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "generation_twh": {
+        "mean": 608.8986518333334,
+        "standardDeviation": 27.386295170808122,
+        "n": 12
+      }
+    }
+  },
+  "frequency": "annual",
+  "dateRange": {
+    "start": "2008-01-01",
+    "end": "2025-01-01"
+  },
+  "series": [
+    {
+      "key": "generation_twh",
+      "label": "Electricity generation",
+      "unit": "TWh per year",
+      "source": "Statistics Canada table 25-10-0015-01, vector 44174609",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#7c3aed",
+      "transformations": [
+        "raw",
+        "indexed"
+      ],
+      "finalObservationDate": "2025-01-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "2008-01-01",
+      "generation_twh": 601.278688
+    },
+    {
+      "date": "2009-01-01",
+      "generation_twh": 577.500519
+    },
+    {
+      "date": "2010-01-01",
+      "generation_twh": 566.759687
+    },
+    {
+      "date": "2011-01-01",
+      "generation_twh": 585.450812
+    },
+    {
+      "date": "2012-01-01",
+      "generation_twh": 594.875004
+    },
+    {
+      "date": "2013-01-01",
+      "generation_twh": 610.704568
+    },
+    {
+      "date": "2014-01-01",
+      "generation_twh": 599.925351
+    },
+    {
+      "date": "2015-01-01",
+      "generation_twh": 592.75575
+    },
+    {
+      "date": "2016-01-01",
+      "generation_twh": 646.291975
+    },
+    {
+      "date": "2017-01-01",
+      "generation_twh": 649.378846
+    },
+    {
+      "date": "2018-01-01",
+      "generation_twh": 641.471279
+    },
+    {
+      "date": "2019-01-01",
+      "generation_twh": 640.391343
+    },
+    {
+      "date": "2020-01-01",
+      "generation_twh": 635.5721
+    },
+    {
+      "date": "2021-01-01",
+      "generation_twh": 627.653673
+    },
+    {
+      "date": "2022-01-01",
+      "generation_twh": 640.091743
+    },
+    {
+      "date": "2023-01-01",
+      "generation_twh": 615.332825
+    },
+    {
+      "date": "2024-01-01",
+      "generation_twh": 609.488088
+    },
+    {
+      "date": "2025-01-01",
+      "generation_twh": 625.212374
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw",
+    "indexed"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Sum twelve monthly national electricity-generation observations and divide MWh by 1,000,000 to report TWh per year.",
+    "notes": "Generation is national supply context, not domestic electricity consumption or a data-centre load measure."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-10-31T08:59:17+00:00"
+}

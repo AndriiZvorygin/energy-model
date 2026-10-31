@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "technology-local-gpu-energy-estimate",
+  "title": "Illustrative local GPU energy estimate",
+  "description": "A published 8B-class GPU benchmark is applied to output tokens for local 7B\u201310B model tags as a sensitivity only.",
+  "plainLanguageSummary": "This is a small GPU-only sensitivity for the 9B-class local workload, transferred from a published 8B H100 benchmark. The 27B workload is left unestimated because this source setup does not provide a compatible reference.",
+  "howToRead": "The three lines apply half, the published reference, and twice the reference GPU energy per generated output token. The estimate is not whole-system electricity and is not a power reading from the local machine.",
+  "calculation": {
+    "formula": "Output tokens \u00d7 GPU joules per output token \u00f7 3,600 = GPU Wh; low/reference/high use 0.5\u00d7/1\u00d7/2\u00d7 the benchmark reference.",
+    "explanation": "The reference is 0.1467 GPU J/output token for Llama 3.1 8B, vLLM, batch 128, four H100 GPUs. It is not local telemetry and does not estimate prompt processing, CPU, memory, remaining node loads, or cooling.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "How much the estimated energy range widens under the sensitivity multipliers"
+  ],
+  "limitations": [
+    "A different model, device, engine, quantization, context length, and batch size can change energy per token.",
+    "Prompt processing and all non-GPU energy are excluded, so this is not full inference electricity.",
+    "No corresponding value is estimated for the local 27B model tag."
+  ],
+  "sourceNotes": [
+    "TokenPowerBench paper and authors' released result files",
+    "Local sanitized output-token aggregate"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2026-10-01",
+    "referenceEnd": "2026-10-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "low_wh": {
+        "mean": 0.08559035035721865,
+        "standardDeviation": 0.0,
+        "n": 1
+      },
+      "reference_wh": {
+        "mean": 0.1711807007144373,
+        "standardDeviation": 0.0,
+        "n": 1
+      },
+      "high_wh": {
+        "mean": 0.3423614014288746,
+        "standardDeviation": 0.0,
+        "n": 1
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "2026-10-01",
+    "end": "2026-10-01"
+  },
+  "series": [
+    {
+      "key": "low_wh",
+      "label": "Low sensitivity",
+      "unit": "Wh per month",
+      "source": "TokenPowerBench benchmark transfer; 0.5\u00d7 reference",
+      "status": "experimental",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0ea5e9",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2026-10-01"
+    },
+    {
+      "key": "reference_wh",
+      "label": "Reference sensitivity",
+      "unit": "Wh per month",
+      "source": "TokenPowerBench released Llama 3.1 8B benchmark result",
+      "status": "experimental",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2026-10-01"
+    },
+    {
+      "key": "high_wh",
+      "label": "High sensitivity",
+      "unit": "Wh per month",
+      "source": "TokenPowerBench benchmark transfer; 2\u00d7 reference",
+      "status": "experimental",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#be123c",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2026-10-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "2026-10-01",
+      "low_wh": 0.08559035035721865,
+      "reference_wh": 0.1711807007144373,
+      "high_wh": 0.3423614014288746
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw"
+  ],
+  "evidenceLabel": "Experimental proxy",
+  "methodology": {
+    "formula": "Output tokens \u00d7 GPU joules per output token \u00f7 3,600 = GPU Wh; low/reference/high use 0.5\u00d7/1\u00d7/2\u00d7 the benchmark reference.",
+    "notes": "The reference is 0.1467 GPU J/output token for Llama 3.1 8B, vLLM, batch 128, four H100 GPUs. It is not local telemetry and does not estimate prompt processing, CPU, memory, remaining node loads, or cooling."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-10-31T08:59:17+00:00"
+}

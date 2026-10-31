@@ -611,6 +611,90 @@
         "end": "2023-01-01"
       },
       "evidenceLabel": "Contextual historical pattern"
+    },
+    {
+      "id": "technology-capital-investment-proxies",
+      "file": "charts/technology-capital-investment-proxies.json",
+      "legacyFile": "technology-capital-investment-proxies.json",
+      "title": "U.S. software and computer investment",
+      "frequency": "quarterly",
+      "dateRange": {
+        "start": "1959-01-01",
+        "end": "2026-07-01"
+      },
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "technology-ontario-data-centre-electricity",
+      "file": "charts/technology-ontario-data-centre-electricity.json",
+      "legacyFile": "technology-ontario-data-centre-electricity.json",
+      "title": "Ontario data-centre electricity demand",
+      "frequency": "annual",
+      "dateRange": {
+        "start": "2027-01-01",
+        "end": "2030-01-01"
+      },
+      "evidenceLabel": "Scenario concept"
+    },
+    {
+      "id": "technology-us-data-centre-electricity",
+      "file": "charts/technology-us-data-centre-electricity.json",
+      "legacyFile": "technology-us-data-centre-electricity.json",
+      "title": "U.S. data-centre electricity scale comparator",
+      "frequency": "annual",
+      "dateRange": {
+        "start": "2024-01-01",
+        "end": "2030-01-01"
+      },
+      "evidenceLabel": "Scenario concept"
+    },
+    {
+      "id": "technology-canada-electricity-generation",
+      "file": "charts/technology-canada-electricity-generation.json",
+      "legacyFile": "technology-canada-electricity-generation.json",
+      "title": "Canadian electricity generation context",
+      "frequency": "annual",
+      "dateRange": {
+        "start": "2008-01-01",
+        "end": "2025-01-01"
+      },
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "technology-local-inference-calls",
+      "file": "charts/technology-local-inference-calls.json",
+      "legacyFile": "technology-local-inference-calls.json",
+      "title": "Local inference call volume",
+      "frequency": "monthly",
+      "dateRange": {
+        "start": "2026-10-01",
+        "end": "2026-10-01"
+      },
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "technology-local-inference-tokens",
+      "file": "charts/technology-local-inference-tokens.json",
+      "legacyFile": "technology-local-inference-tokens.json",
+      "title": "Local inference tokens",
+      "frequency": "monthly",
+      "dateRange": {
+        "start": "2026-10-01",
+        "end": "2026-10-01"
+      },
+      "evidenceLabel": "Contextual indicator"
+    },
+    {
+      "id": "technology-local-gpu-energy-estimate",
+      "file": "charts/technology-local-gpu-energy-estimate.json",
+      "legacyFile": "technology-local-gpu-energy-estimate.json",
+      "title": "Illustrative local GPU energy estimate",
+      "frequency": "monthly",
+      "dateRange": {
+        "start": "2026-10-01",
+        "end": "2026-10-01"
+      },
+      "evidenceLabel": "Experimental proxy"
     }
   ],
   "indicators": [
@@ -1117,7 +1201,8 @@
     "current-classification.json",
     "symptom-evaluations.json",
     "regime-scores.json",
-    "regime-history.json"
+    "regime-history.json",
+    "technology-benchmark-scores.json"
   ],
   "conceptual": [
     {

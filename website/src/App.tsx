@@ -43,6 +43,7 @@ const CanadaHousingAffordability = lazy(() => import('./pages/HousingAffordabili
 const OwenSoundHousingAffordability = lazy(() => import('./pages/HousingAffordability').then((module) => ({ default: module.OwenSoundHousingAffordability })))
 const HousingComparison = lazy(() => import('./pages/HousingAffordability').then((module) => ({ default: module.HousingComparisonPage })))
 const OwenSoundAffordability = lazy(() => import('./pages/OwenSoundAffordability').then((module) => ({ default: module.OwenSoundAffordability })))
+const TechnologyFlows = lazy(() => import('./pages/TechnologyFlows').then((module) => ({ default: module.TechnologyFlows })))
 
 const glossary = {
   GM2: 'A USD-converted aggregate of broad money from the United States, euro area, China, and Japan.',
@@ -114,6 +115,7 @@ export default function App() {
             <Route path="/global/human-impact" element={<GlobalHumanImpact />} />
             <Route path="/global/demography" element={<GlobalHumanImpact />} />
             <Route path="/system-response" element={<SystemResponse />} />
+            <Route path="/technology-flows" element={<TechnologyFlows />} />
             <Route path="/current-state" element={<CanadaCurrentState />} />
             <Route path="/current-state/us" element={<CurrentState />} />
             <Route path="/canada" element={<Canada />} />

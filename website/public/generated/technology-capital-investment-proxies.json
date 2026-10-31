@@ -1,0 +1,1449 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "technology-capital-investment-proxies",
+  "title": "U.S. software and computer investment",
+  "description": "Broad U.S. investment proxies upstream of digital infrastructure; neither series isolates AI spending.",
+  "plainLanguageSummary": "Broad U.S. investment proxies upstream of digital infrastructure; neither series isolates AI spending.",
+  "howToRead": "Compare direction, turning points, and sustained divergences. Use the tooltip for exact values and observation dates; visual alignment alone does not establish causation.",
+  "calculation": {
+    "formula": "Published quarterly private fixed investment in software and in computers/peripherals, reported at seasonally adjusted annual rates.",
+    "explanation": "These are broad U.S. national-accounts categories, not AI-specific capital spending or a measure of installed compute capacity.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Persistent co-movement across several observations",
+    "Turning points or divergences that repeat across historical episodes"
+  ],
+  "limitations": [
+    "These are broad U.S. national-accounts categories, not AI-specific capital spending or a measure of installed compute capacity."
+  ],
+  "sourceNotes": [
+    "BEA via FRED B985RC1Q027SBEA",
+    "BEA via FRED B935RC1Q027SBEA"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2000-01-01",
+    "referenceEnd": "2019-10-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "software_investment_billion_usd_saar": {
+        "mean": 253.36781249999999,
+        "standardDeviation": 89.674739239528,
+        "n": 80
+      },
+      "computer_peripherals_investment_billion_usd_saar": {
+        "mean": 96.91135,
+        "standardDeviation": 11.346114817526747,
+        "n": 80
+      }
+    }
+  },
+  "frequency": "quarterly",
+  "dateRange": {
+    "start": "1959-01-01",
+    "end": "2026-07-01"
+  },
+  "series": [
+    {
+      "key": "software_investment_billion_usd_saar",
+      "label": "Software investment",
+      "unit": "billions of USD, SAAR",
+      "source": "BEA via FRED B985RC1Q027SBEA",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw",
+        "indexed"
+      ],
+      "finalObservationDate": "2026-07-01"
+    },
+    {
+      "key": "computer_peripherals_investment_billion_usd_saar",
+      "label": "Computer and peripheral equipment investment",
+      "unit": "billions of USD, SAAR",
+      "source": "BEA via FRED B935RC1Q027SBEA",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#2563eb",
+      "transformations": [
+        "raw",
+        "indexed"
+      ],
+      "finalObservationDate": "2026-07-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1959-01-01",
+      "software_investment_billion_usd_saar": 0.007,
+      "computer_peripherals_investment_billion_usd_saar": 0.005
+    },
+    {
+      "date": "1959-04-01",
+      "software_investment_billion_usd_saar": 0.005,
+      "computer_peripherals_investment_billion_usd_saar": 0.002
+    },
+    {
+      "date": "1959-07-01",
+      "software_investment_billion_usd_saar": 0.011,
+      "computer_peripherals_investment_billion_usd_saar": 0.017
+    },
+    {
+      "date": "1959-10-01",
+      "software_investment_billion_usd_saar": 0.032,
+      "computer_peripherals_investment_billion_usd_saar": 0.056
+    },
+    {
+      "date": "1960-01-01",
+      "software_investment_billion_usd_saar": 0.076,
+      "computer_peripherals_investment_billion_usd_saar": 0.118
+    },
+    {
+      "date": "1960-04-01",
+      "software_investment_billion_usd_saar": 0.119,
+      "computer_peripherals_investment_billion_usd_saar": 0.176
+    },
+    {
+      "date": "1960-07-01",
+      "software_investment_billion_usd_saar": 0.149,
+      "computer_peripherals_investment_billion_usd_saar": 0.215
+    },
+    {
+      "date": "1960-10-01",
+      "software_investment_billion_usd_saar": 0.164,
+      "computer_peripherals_investment_billion_usd_saar": 0.259
+    },
+    {
+      "date": "1961-01-01",
+      "software_investment_billion_usd_saar": 0.158,
+      "computer_peripherals_investment_billion_usd_saar": 0.225
+    },
+    {
+      "date": "1961-04-01",
+      "software_investment_billion_usd_saar": 0.161,
+      "computer_peripherals_investment_billion_usd_saar": 0.26
+    },
+    {
+      "date": "1961-07-01",
+      "software_investment_billion_usd_saar": 0.166,
+      "computer_peripherals_investment_billion_usd_saar": 0.273
+    },
+    {
+      "date": "1961-10-01",
+      "software_investment_billion_usd_saar": 0.183,
+      "computer_peripherals_investment_billion_usd_saar": 0.286
+    },
+    {
+      "date": "1962-01-01",
+      "software_investment_billion_usd_saar": 0.188,
+      "computer_peripherals_investment_billion_usd_saar": 0.293
+    },
+    {
+      "date": "1962-04-01",
+      "software_investment_billion_usd_saar": 0.201,
+      "computer_peripherals_investment_billion_usd_saar": 0.298
+    },
+    {
+      "date": "1962-07-01",
+      "software_investment_billion_usd_saar": 0.225,
+      "computer_peripherals_investment_billion_usd_saar": 0.35
+    },
+    {
+      "date": "1962-10-01",
+      "software_investment_billion_usd_saar": 0.27,
+      "computer_peripherals_investment_billion_usd_saar": 0.447
+    },
+    {
+      "date": "1963-01-01",
+      "software_investment_billion_usd_saar": 0.321,
+      "computer_peripherals_investment_billion_usd_saar": 0.576
+    },
+    {
+      "date": "1963-04-01",
+      "software_investment_billion_usd_saar": 0.402,
+      "computer_peripherals_investment_billion_usd_saar": 0.717
+    },
+    {
+      "date": "1963-07-01",
+      "software_investment_billion_usd_saar": 0.479,
+      "computer_peripherals_investment_billion_usd_saar": 0.806
+    },
+    {
+      "date": "1963-10-01",
+      "software_investment_billion_usd_saar": 0.531,
+      "computer_peripherals_investment_billion_usd_saar": 0.841
+    },
+    {
+      "date": "1964-01-01",
+      "software_investment_billion_usd_saar": 0.547,
+      "computer_peripherals_investment_billion_usd_saar": 0.95
+    },
+    {
+      "date": "1964-04-01",
+      "software_investment_billion_usd_saar": 0.55,
+      "computer_peripherals_investment_billion_usd_saar": 0.947
+    },
+    {
+      "date": "1964-07-01",
+      "software_investment_billion_usd_saar": 0.539,
+      "computer_peripherals_investment_billion_usd_saar": 0.888
+    },
+    {
+      "date": "1964-10-01",
+      "software_investment_billion_usd_saar": 0.528,
+      "computer_peripherals_investment_billion_usd_saar": 0.927
+    },
+    {
+      "date": "1965-01-01",
+      "software_investment_billion_usd_saar": 0.576,
+      "computer_peripherals_investment_billion_usd_saar": 1.02
+    },
+    {
+      "date": "1965-04-01",
+      "software_investment_billion_usd_saar": 0.629,
+      "computer_peripherals_investment_billion_usd_saar": 1.076
+    },
+    {
+      "date": "1965-07-01",
+      "software_investment_billion_usd_saar": 0.708,
+      "computer_peripherals_investment_billion_usd_saar": 1.219
+    },
+    {
+      "date": "1965-10-01",
+      "software_investment_billion_usd_saar": 0.795,
+      "computer_peripherals_investment_billion_usd_saar": 1.341
+    },
+    {
+      "date": "1966-01-01",
+      "software_investment_billion_usd_saar": 0.873,
+      "computer_peripherals_investment_billion_usd_saar": 1.439
+    },
+    {
+      "date": "1966-04-01",
+      "software_investment_billion_usd_saar": 0.964,
+      "computer_peripherals_investment_billion_usd_saar": 1.621
+    },
+    {
+      "date": "1966-07-01",
+      "software_investment_billion_usd_saar": 1.054,
+      "computer_peripherals_investment_billion_usd_saar": 1.766
+    },
+    {
+      "date": "1966-10-01",
+      "software_investment_billion_usd_saar": 1.153,
+      "computer_peripherals_investment_billion_usd_saar": 1.966
+    },
+    {
+      "date": "1967-01-01",
+      "software_investment_billion_usd_saar": 1.171,
+      "computer_peripherals_investment_billion_usd_saar": 1.86
+    },
+    {
+      "date": "1967-04-01",
+      "software_investment_billion_usd_saar": 1.179,
+      "computer_peripherals_investment_billion_usd_saar": 1.859
+    },
+    {
+      "date": "1967-07-01",
+      "software_investment_billion_usd_saar": 1.155,
+      "computer_peripherals_investment_billion_usd_saar": 1.818
+    },
+    {
+      "date": "1967-10-01",
+      "software_investment_billion_usd_saar": 1.183,
+      "computer_peripherals_investment_billion_usd_saar": 1.935
+    },
+    {
+      "date": "1968-01-01",
+      "software_investment_billion_usd_saar": 1.229,
+      "computer_peripherals_investment_billion_usd_saar": 1.871
+    },
+    {
+      "date": "1968-04-01",
+      "software_investment_billion_usd_saar": 1.285,
+      "computer_peripherals_investment_billion_usd_saar": 1.908
+    },
+    {
+      "date": "1968-07-01",
+      "software_investment_billion_usd_saar": 1.343,
+      "computer_peripherals_investment_billion_usd_saar": 1.979
+    },
+    {
+      "date": "1968-10-01",
+      "software_investment_billion_usd_saar": 1.414,
+      "computer_peripherals_investment_billion_usd_saar": 1.938
+    },
+    {
+      "date": "1969-01-01",
+      "software_investment_billion_usd_saar": 1.516,
+      "computer_peripherals_investment_billion_usd_saar": 2.096
+    },
+    {
+      "date": "1969-04-01",
+      "software_investment_billion_usd_saar": 1.679,
+      "computer_peripherals_investment_billion_usd_saar": 2.408
+    },
+    {
+      "date": "1969-07-01",
+      "software_investment_billion_usd_saar": 1.885,
+      "computer_peripherals_investment_billion_usd_saar": 2.564
+    },
+    {
+      "date": "1969-10-01",
+      "software_investment_billion_usd_saar": 2.08,
+      "computer_peripherals_investment_billion_usd_saar": 2.696
+    },
+    {
+      "date": "1970-01-01",
+      "software_investment_billion_usd_saar": 2.257,
+      "computer_peripherals_investment_billion_usd_saar": 3.113
+    },
+    {
+      "date": "1970-04-01",
+      "software_investment_billion_usd_saar": 2.369,
+      "computer_peripherals_investment_billion_usd_saar": 2.95
+    },
+    {
+      "date": "1970-07-01",
+      "software_investment_billion_usd_saar": 2.366,
+      "computer_peripherals_investment_billion_usd_saar": 2.429
+    },
+    {
+      "date": "1970-10-01",
+      "software_investment_billion_usd_saar": 2.292,
+      "computer_peripherals_investment_billion_usd_saar": 2.396
+    },
+    {
+      "date": "1971-01-01",
+      "software_investment_billion_usd_saar": 2.245,
+      "computer_peripherals_investment_billion_usd_saar": 2.272
+    },
+    {
+      "date": "1971-04-01",
+      "software_investment_billion_usd_saar": 2.342,
+      "computer_peripherals_investment_billion_usd_saar": 2.793
+    },
+    {
+      "date": "1971-07-01",
+      "software_investment_billion_usd_saar": 2.451,
+      "computer_peripherals_investment_billion_usd_saar": 2.912
+    },
+    {
+      "date": "1971-10-01",
+      "software_investment_billion_usd_saar": 2.602,
+      "computer_peripherals_investment_billion_usd_saar": 3.119
+    },
+    {
+      "date": "1972-01-01",
+      "software_investment_billion_usd_saar": 2.683,
+      "computer_peripherals_investment_billion_usd_saar": 3.717
+    },
+    {
+      "date": "1972-04-01",
+      "software_investment_billion_usd_saar": 2.759,
+      "computer_peripherals_investment_billion_usd_saar": 3.446
+    },
+    {
+      "date": "1972-07-01",
+      "software_investment_billion_usd_saar": 2.84,
+      "computer_peripherals_investment_billion_usd_saar": 3.498
+    },
+    {
+      "date": "1972-10-01",
+      "software_investment_billion_usd_saar": 2.831,
+      "computer_peripherals_investment_billion_usd_saar": 3.231
+    },
+    {
+      "date": "1973-01-01",
+      "software_investment_billion_usd_saar": 2.979,
+      "computer_peripherals_investment_billion_usd_saar": 3.43
+    },
+    {
+      "date": "1973-04-01",
+      "software_investment_billion_usd_saar": 3.13,
+      "computer_peripherals_investment_billion_usd_saar": 3.666
+    },
+    {
+      "date": "1973-07-01",
+      "software_investment_billion_usd_saar": 3.294,
+      "computer_peripherals_investment_billion_usd_saar": 3.398
+    },
+    {
+      "date": "1973-10-01",
+      "software_investment_billion_usd_saar": 3.478,
+      "computer_peripherals_investment_billion_usd_saar": 3.662
+    },
+    {
+      "date": "1974-01-01",
+      "software_investment_billion_usd_saar": 3.578,
+      "computer_peripherals_investment_billion_usd_saar": 3.455
+    },
+    {
+      "date": "1974-04-01",
+      "software_investment_billion_usd_saar": 3.695,
+      "computer_peripherals_investment_billion_usd_saar": 3.188
+    },
+    {
+      "date": "1974-07-01",
+      "software_investment_billion_usd_saar": 4.001,
+      "computer_peripherals_investment_billion_usd_saar": 4.426
+    },
+    {
+      "date": "1974-10-01",
+      "software_investment_billion_usd_saar": 4.374,
+      "computer_peripherals_investment_billion_usd_saar": 4.403
+    },
+    {
+      "date": "1975-01-01",
+      "software_investment_billion_usd_saar": 4.803,
+      "computer_peripherals_investment_billion_usd_saar": 4.084
+    },
+    {
+      "date": "1975-04-01",
+      "software_investment_billion_usd_saar": 4.827,
+      "computer_peripherals_investment_billion_usd_saar": 3.535
+    },
+    {
+      "date": "1975-07-01",
+      "software_investment_billion_usd_saar": 4.749,
+      "computer_peripherals_investment_billion_usd_saar": 3.273
+    },
+    {
+      "date": "1975-10-01",
+      "software_investment_billion_usd_saar": 4.741,
+      "computer_peripherals_investment_billion_usd_saar": 3.452
+    },
+    {
+      "date": "1976-01-01",
+      "software_investment_billion_usd_saar": 4.818,
+      "computer_peripherals_investment_billion_usd_saar": 3.677
+    },
+    {
+      "date": "1976-04-01",
+      "software_investment_billion_usd_saar": 5.088,
+      "computer_peripherals_investment_billion_usd_saar": 4.391
+    },
+    {
+      "date": "1976-07-01",
+      "software_investment_billion_usd_saar": 5.33,
+      "computer_peripherals_investment_billion_usd_saar": 4.512
+    },
+    {
+      "date": "1976-10-01",
+      "software_investment_billion_usd_saar": 5.58,
+      "computer_peripherals_investment_billion_usd_saar": 5.028
+    },
+    {
+      "date": "1977-01-01",
+      "software_investment_billion_usd_saar": 5.454,
+      "computer_peripherals_investment_billion_usd_saar": 5.21
+    },
+    {
+      "date": "1977-04-01",
+      "software_investment_billion_usd_saar": 5.483,
+      "computer_peripherals_investment_billion_usd_saar": 5.629
+    },
+    {
+      "date": "1977-07-01",
+      "software_investment_billion_usd_saar": 5.454,
+      "computer_peripherals_investment_billion_usd_saar": 5.753
+    },
+    {
+      "date": "1977-10-01",
+      "software_investment_billion_usd_saar": 5.512,
+      "computer_peripherals_investment_billion_usd_saar": 6.068
+    },
+    {
+      "date": "1978-01-01",
+      "software_investment_billion_usd_saar": 5.726,
+      "computer_peripherals_investment_billion_usd_saar": 6.271
+    },
+    {
+      "date": "1978-04-01",
+      "software_investment_billion_usd_saar": 6.103,
+      "computer_peripherals_investment_billion_usd_saar": 7.343
+    },
+    {
+      "date": "1978-07-01",
+      "software_investment_billion_usd_saar": 6.52,
+      "computer_peripherals_investment_billion_usd_saar": 7.955
+    },
+    {
+      "date": "1978-10-01",
+      "software_investment_billion_usd_saar": 7.032,
+      "computer_peripherals_investment_billion_usd_saar": 8.683
+    },
+    {
+      "date": "1979-01-01",
+      "software_investment_billion_usd_saar": 7.452,
+      "computer_peripherals_investment_billion_usd_saar": 9.3
+    },
+    {
+      "date": "1979-04-01",
+      "software_investment_billion_usd_saar": 7.906,
+      "computer_peripherals_investment_billion_usd_saar": 9.827
+    },
+    {
+      "date": "1979-07-01",
+      "software_investment_billion_usd_saar": 8.351,
+      "computer_peripherals_investment_billion_usd_saar": 10.408
+    },
+    {
+      "date": "1979-10-01",
+      "software_investment_billion_usd_saar": 8.831,
+      "computer_peripherals_investment_billion_usd_saar": 11.117
+    },
+    {
+      "date": "1980-01-01",
+      "software_investment_billion_usd_saar": 9.142,
+      "computer_peripherals_investment_billion_usd_saar": 10.947
+    },
+    {
+      "date": "1980-04-01",
+      "software_investment_billion_usd_saar": 9.544,
+      "computer_peripherals_investment_billion_usd_saar": 11.872
+    },
+    {
+      "date": "1980-07-01",
+      "software_investment_billion_usd_saar": 10.055,
+      "computer_peripherals_investment_billion_usd_saar": 13.477
+    },
+    {
+      "date": "1980-10-01",
+      "software_investment_billion_usd_saar": 10.603,
+      "computer_peripherals_investment_billion_usd_saar": 13.796
+    },
+    {
+      "date": "1981-01-01",
+      "software_investment_billion_usd_saar": 11.087,
+      "computer_peripherals_investment_billion_usd_saar": 15.397
+    },
+    {
+      "date": "1981-04-01",
+      "software_investment_billion_usd_saar": 11.485,
+      "computer_peripherals_investment_billion_usd_saar": 15.858
+    },
+    {
+      "date": "1981-07-01",
+      "software_investment_billion_usd_saar": 12.038,
+      "computer_peripherals_investment_billion_usd_saar": 17.247
+    },
+    {
+      "date": "1981-10-01",
+      "software_investment_billion_usd_saar": 12.77,
+      "computer_peripherals_investment_billion_usd_saar": 20.01
+    },
+    {
+      "date": "1982-01-01",
+      "software_investment_billion_usd_saar": 13.739,
+      "computer_peripherals_investment_billion_usd_saar": 20.802
+    },
+    {
+      "date": "1982-04-01",
+      "software_investment_billion_usd_saar": 14.136,
+      "computer_peripherals_investment_billion_usd_saar": 18.118
+    },
+    {
+      "date": "1982-07-01",
+      "software_investment_billion_usd_saar": 14.193,
+      "computer_peripherals_investment_billion_usd_saar": 18.343
+    },
+    {
+      "date": "1982-10-01",
+      "software_investment_billion_usd_saar": 14.091,
+      "computer_peripherals_investment_billion_usd_saar": 18.221
+    },
+    {
+      "date": "1983-01-01",
+      "software_investment_billion_usd_saar": 14.828,
+      "computer_peripherals_investment_billion_usd_saar": 21.312
+    },
+    {
+      "date": "1983-04-01",
+      "software_investment_billion_usd_saar": 15.77,
+      "computer_peripherals_investment_billion_usd_saar": 23.297
+    },
+    {
+      "date": "1983-07-01",
+      "software_investment_billion_usd_saar": 17.018,
+      "computer_peripherals_investment_billion_usd_saar": 25.166
+    },
+    {
+      "date": "1983-10-01",
+      "software_investment_billion_usd_saar": 17.92,
+      "computer_peripherals_investment_billion_usd_saar": 25.789
+    },
+    {
+      "date": "1984-01-01",
+      "software_investment_billion_usd_saar": 18.726,
+      "computer_peripherals_investment_billion_usd_saar": 27.681
+    },
+    {
+      "date": "1984-04-01",
+      "software_investment_billion_usd_saar": 19.658,
+      "computer_peripherals_investment_billion_usd_saar": 30.127
+    },
+    {
+      "date": "1984-07-01",
+      "software_investment_billion_usd_saar": 20.872,
+      "computer_peripherals_investment_billion_usd_saar": 32.938
+    },
+    {
+      "date": "1984-10-01",
+      "software_investment_billion_usd_saar": 22.192,
+      "computer_peripherals_investment_billion_usd_saar": 35.69
+    },
+    {
+      "date": "1985-01-01",
+      "software_investment_billion_usd_saar": 23.002,
+      "computer_peripherals_investment_billion_usd_saar": 33.313
+    },
+    {
+      "date": "1985-04-01",
+      "software_investment_billion_usd_saar": 23.742,
+      "computer_peripherals_investment_billion_usd_saar": 35.044
+    },
+    {
+      "date": "1985-07-01",
+      "software_investment_billion_usd_saar": 23.85,
+      "computer_peripherals_investment_billion_usd_saar": 32.405
+    },
+    {
+      "date": "1985-10-01",
+      "software_investment_billion_usd_saar": 24.453,
+      "computer_peripherals_investment_billion_usd_saar": 34.174
+    },
+    {
+      "date": "1986-01-01",
+      "software_investment_billion_usd_saar": 24.755,
+      "computer_peripherals_investment_billion_usd_saar": 33.662
+    },
+    {
+      "date": "1986-04-01",
+      "software_investment_billion_usd_saar": 25.488,
+      "computer_peripherals_investment_billion_usd_saar": 34.348
+    },
+    {
+      "date": "1986-07-01",
+      "software_investment_billion_usd_saar": 25.821,
+      "computer_peripherals_investment_billion_usd_saar": 32.34
+    },
+    {
+      "date": "1986-10-01",
+      "software_investment_billion_usd_saar": 26.393,
+      "computer_peripherals_investment_billion_usd_saar": 33.29
+    },
+    {
+      "date": "1987-01-01",
+      "software_investment_billion_usd_saar": 27.307,
+      "computer_peripherals_investment_billion_usd_saar": 34.971
+    },
+    {
+      "date": "1987-04-01",
+      "software_investment_billion_usd_saar": 28.403,
+      "computer_peripherals_investment_billion_usd_saar": 35.082
+    },
+    {
+      "date": "1987-07-01",
+      "software_investment_billion_usd_saar": 29.579,
+      "computer_peripherals_investment_billion_usd_saar": 36.333
+    },
+    {
+      "date": "1987-10-01",
+      "software_investment_billion_usd_saar": 30.69,
+      "computer_peripherals_investment_billion_usd_saar": 36.662
+    },
+    {
+      "date": "1988-01-01",
+      "software_investment_billion_usd_saar": 31.501,
+      "computer_peripherals_investment_billion_usd_saar": 36.618
+    },
+    {
+      "date": "1988-04-01",
+      "software_investment_billion_usd_saar": 32.557,
+      "computer_peripherals_investment_billion_usd_saar": 37.729
+    },
+    {
+      "date": "1988-07-01",
+      "software_investment_billion_usd_saar": 33.883,
+      "computer_peripherals_investment_billion_usd_saar": 38.578
+    },
+    {
+      "date": "1988-10-01",
+      "software_investment_billion_usd_saar": 35.383,
+      "computer_peripherals_investment_billion_usd_saar": 38.897
+    },
+    {
+      "date": "1989-01-01",
+      "software_investment_billion_usd_saar": 37.319,
+      "computer_peripherals_investment_billion_usd_saar": 40.999
+    },
+    {
+      "date": "1989-04-01",
+      "software_investment_billion_usd_saar": 39.53,
+      "computer_peripherals_investment_billion_usd_saar": 43.749
+    },
+    {
+      "date": "1989-07-01",
+      "software_investment_billion_usd_saar": 41.852,
+      "computer_peripherals_investment_billion_usd_saar": 44.275
+    },
+    {
+      "date": "1989-10-01",
+      "software_investment_billion_usd_saar": 43.679,
+      "computer_peripherals_investment_billion_usd_saar": 43.347
+    },
+    {
+      "date": "1990-01-01",
+      "software_investment_billion_usd_saar": 44.636,
+      "computer_peripherals_investment_billion_usd_saar": 40.949
+    },
+    {
+      "date": "1990-04-01",
+      "software_investment_billion_usd_saar": 45.556,
+      "computer_peripherals_investment_billion_usd_saar": 38.612
+    },
+    {
+      "date": "1990-07-01",
+      "software_investment_billion_usd_saar": 44.742,
+      "computer_peripherals_investment_billion_usd_saar": 36.552
+    },
+    {
+      "date": "1990-10-01",
+      "software_investment_billion_usd_saar": 46.695,
+      "computer_peripherals_investment_billion_usd_saar": 38.458
+    },
+    {
+      "date": "1991-01-01",
+      "software_investment_billion_usd_saar": 48.101,
+      "computer_peripherals_investment_billion_usd_saar": 36.366
+    },
+    {
+      "date": "1991-04-01",
+      "software_investment_billion_usd_saar": 48.618,
+      "computer_peripherals_investment_billion_usd_saar": 36.522
+    },
+    {
+      "date": "1991-07-01",
+      "software_investment_billion_usd_saar": 48.69,
+      "computer_peripherals_investment_billion_usd_saar": 37.561
+    },
+    {
+      "date": "1991-10-01",
+      "software_investment_billion_usd_saar": 49.422,
+      "computer_peripherals_investment_billion_usd_saar": 40.367
+    },
+    {
+      "date": "1992-01-01",
+      "software_investment_billion_usd_saar": 49.294,
+      "computer_peripherals_investment_billion_usd_saar": 40.147
+    },
+    {
+      "date": "1992-04-01",
+      "software_investment_billion_usd_saar": 50.125,
+      "computer_peripherals_investment_billion_usd_saar": 44.507
+    },
+    {
+      "date": "1992-07-01",
+      "software_investment_billion_usd_saar": 51.363,
+      "computer_peripherals_investment_billion_usd_saar": 45.933
+    },
+    {
+      "date": "1992-10-01",
+      "software_investment_billion_usd_saar": 53.435,
+      "computer_peripherals_investment_billion_usd_saar": 45.465
+    },
+    {
+      "date": "1993-01-01",
+      "software_investment_billion_usd_saar": 55.408,
+      "computer_peripherals_investment_billion_usd_saar": 47.722
+    },
+    {
+      "date": "1993-04-01",
+      "software_investment_billion_usd_saar": 56.718,
+      "computer_peripherals_investment_billion_usd_saar": 46.737
+    },
+    {
+      "date": "1993-07-01",
+      "software_investment_billion_usd_saar": 57.962,
+      "computer_peripherals_investment_billion_usd_saar": 49.235
+    },
+    {
+      "date": "1993-10-01",
+      "software_investment_billion_usd_saar": 58.673,
+      "computer_peripherals_investment_billion_usd_saar": 48.046
+    },
+    {
+      "date": "1994-01-01",
+      "software_investment_billion_usd_saar": 59.289,
+      "computer_peripherals_investment_billion_usd_saar": 50.057
+    },
+    {
+      "date": "1994-04-01",
+      "software_investment_billion_usd_saar": 59.966,
+      "computer_peripherals_investment_billion_usd_saar": 51.417
+    },
+    {
+      "date": "1994-07-01",
+      "software_investment_billion_usd_saar": 60.838,
+      "computer_peripherals_investment_billion_usd_saar": 52.338
+    },
+    {
+      "date": "1994-10-01",
+      "software_investment_billion_usd_saar": 61.483,
+      "computer_peripherals_investment_billion_usd_saar": 55.728
+    },
+    {
+      "date": "1995-01-01",
+      "software_investment_billion_usd_saar": 62.673,
+      "computer_peripherals_investment_billion_usd_saar": 59.089
+    },
+    {
+      "date": "1995-04-01",
+      "software_investment_billion_usd_saar": 64.449,
+      "computer_peripherals_investment_billion_usd_saar": 65.84
+    },
+    {
+      "date": "1995-07-01",
+      "software_investment_billion_usd_saar": 66.445,
+      "computer_peripherals_investment_billion_usd_saar": 67.047
+    },
+    {
+      "date": "1995-10-01",
+      "software_investment_billion_usd_saar": 68.342,
+      "computer_peripherals_investment_billion_usd_saar": 72.464
+    },
+    {
+      "date": "1996-01-01",
+      "software_investment_billion_usd_saar": 70.472,
+      "computer_peripherals_investment_billion_usd_saar": 72.466
+    },
+    {
+      "date": "1996-04-01",
+      "software_investment_billion_usd_saar": 72.791,
+      "computer_peripherals_investment_billion_usd_saar": 71.489
+    },
+    {
+      "date": "1996-07-01",
+      "software_investment_billion_usd_saar": 75.41,
+      "computer_peripherals_investment_billion_usd_saar": 73.526
+    },
+    {
+      "date": "1996-10-01",
+      "software_investment_billion_usd_saar": 79.418,
+      "computer_peripherals_investment_billion_usd_saar": 73.691
+    },
+    {
+      "date": "1997-01-01",
+      "software_investment_billion_usd_saar": 87.358,
+      "computer_peripherals_investment_billion_usd_saar": 76.542
+    },
+    {
+      "date": "1997-04-01",
+      "software_investment_billion_usd_saar": 91.549,
+      "computer_peripherals_investment_billion_usd_saar": 80.365
+    },
+    {
+      "date": "1997-07-01",
+      "software_investment_billion_usd_saar": 95.827,
+      "computer_peripherals_investment_billion_usd_saar": 84.922
+    },
+    {
+      "date": "1997-10-01",
+      "software_investment_billion_usd_saar": 100.282,
+      "computer_peripherals_investment_billion_usd_saar": 83.673
+    },
+    {
+      "date": "1998-01-01",
+      "software_investment_billion_usd_saar": 102.492,
+      "computer_peripherals_investment_billion_usd_saar": 87.722
+    },
+    {
+      "date": "1998-04-01",
+      "software_investment_billion_usd_saar": 105.803,
+      "computer_peripherals_investment_billion_usd_saar": 88.608
+    },
+    {
+      "date": "1998-07-01",
+      "software_investment_billion_usd_saar": 111.121,
+      "computer_peripherals_investment_billion_usd_saar": 86.447
+    },
+    {
+      "date": "1998-10-01",
+      "software_investment_billion_usd_saar": 117.497,
+      "computer_peripherals_investment_billion_usd_saar": 88.773
+    },
+    {
+      "date": "1999-01-01",
+      "software_investment_billion_usd_saar": 124.347,
+      "computer_peripherals_investment_billion_usd_saar": 94.516
+    },
+    {
+      "date": "1999-04-01",
+      "software_investment_billion_usd_saar": 134.098,
+      "computer_peripherals_investment_billion_usd_saar": 99.863
+    },
+    {
+      "date": "1999-07-01",
+      "software_investment_billion_usd_saar": 141.883,
+      "computer_peripherals_investment_billion_usd_saar": 99.497
+    },
+    {
+      "date": "1999-10-01",
+      "software_investment_billion_usd_saar": 146.249,
+      "computer_peripherals_investment_billion_usd_saar": 95.051
+    },
+    {
+      "date": "2000-01-01",
+      "software_investment_billion_usd_saar": 151.8,
+      "computer_peripherals_investment_billion_usd_saar": 97.56
+    },
+    {
+      "date": "2000-04-01",
+      "software_investment_billion_usd_saar": 156.545,
+      "computer_peripherals_investment_billion_usd_saar": 104.882
+    },
+    {
+      "date": "2000-07-01",
+      "software_investment_billion_usd_saar": 157.222,
+      "computer_peripherals_investment_billion_usd_saar": 105.786
+    },
+    {
+      "date": "2000-10-01",
+      "software_investment_billion_usd_saar": 161.654,
+      "computer_peripherals_investment_billion_usd_saar": 104.486
+    },
+    {
+      "date": "2001-01-01",
+      "software_investment_billion_usd_saar": 162.629,
+      "computer_peripherals_investment_billion_usd_saar": 99.654
+    },
+    {
+      "date": "2001-04-01",
+      "software_investment_billion_usd_saar": 159.678,
+      "computer_peripherals_investment_billion_usd_saar": 89.963
+    },
+    {
+      "date": "2001-07-01",
+      "software_investment_billion_usd_saar": 156.484,
+      "computer_peripherals_investment_billion_usd_saar": 79.827
+    },
+    {
+      "date": "2001-10-01",
+      "software_investment_billion_usd_saar": 151.823,
+      "computer_peripherals_investment_billion_usd_saar": 80.779
+    },
+    {
+      "date": "2002-01-01",
+      "software_investment_billion_usd_saar": 152.099,
+      "computer_peripherals_investment_billion_usd_saar": 82.5
+    },
+    {
+      "date": "2002-04-01",
+      "software_investment_billion_usd_saar": 152.984,
+      "computer_peripherals_investment_billion_usd_saar": 79.259
+    },
+    {
+      "date": "2002-07-01",
+      "software_investment_billion_usd_saar": 155.749,
+      "computer_peripherals_investment_billion_usd_saar": 80.483
+    },
+    {
+      "date": "2002-10-01",
+      "software_investment_billion_usd_saar": 149.256,
+      "computer_peripherals_investment_billion_usd_saar": 76.657
+    },
+    {
+      "date": "2003-01-01",
+      "software_investment_billion_usd_saar": 149.954,
+      "computer_peripherals_investment_billion_usd_saar": 77.262
+    },
+    {
+      "date": "2003-04-01",
+      "software_investment_billion_usd_saar": 151.132,
+      "computer_peripherals_investment_billion_usd_saar": 77.132
+    },
+    {
+      "date": "2003-07-01",
+      "software_investment_billion_usd_saar": 158.266,
+      "computer_peripherals_investment_billion_usd_saar": 80.651
+    },
+    {
+      "date": "2003-10-01",
+      "software_investment_billion_usd_saar": 160.579,
+      "computer_peripherals_investment_billion_usd_saar": 84.619
+    },
+    {
+      "date": "2004-01-01",
+      "software_investment_billion_usd_saar": 161.505,
+      "computer_peripherals_investment_billion_usd_saar": 82.061
+    },
+    {
+      "date": "2004-04-01",
+      "software_investment_billion_usd_saar": 162.391,
+      "computer_peripherals_investment_billion_usd_saar": 83.228
+    },
+    {
+      "date": "2004-07-01",
+      "software_investment_billion_usd_saar": 169.338,
+      "computer_peripherals_investment_billion_usd_saar": 84.527
+    },
+    {
+      "date": "2004-10-01",
+      "software_investment_billion_usd_saar": 171.838,
+      "computer_peripherals_investment_billion_usd_saar": 86.885
+    },
+    {
+      "date": "2005-01-01",
+      "software_investment_billion_usd_saar": 173.112,
+      "computer_peripherals_investment_billion_usd_saar": 82.661
+    },
+    {
+      "date": "2005-04-01",
+      "software_investment_billion_usd_saar": 178.866,
+      "computer_peripherals_investment_billion_usd_saar": 82.784
+    },
+    {
+      "date": "2005-07-01",
+      "software_investment_billion_usd_saar": 181.192,
+      "computer_peripherals_investment_billion_usd_saar": 83.899
+    },
+    {
+      "date": "2005-10-01",
+      "software_investment_billion_usd_saar": 181.364,
+      "computer_peripherals_investment_billion_usd_saar": 87.445
+    },
+    {
+      "date": "2006-01-01",
+      "software_investment_billion_usd_saar": 183.935,
+      "computer_peripherals_investment_billion_usd_saar": 90.61
+    },
+    {
+      "date": "2006-04-01",
+      "software_investment_billion_usd_saar": 187.034,
+      "computer_peripherals_investment_billion_usd_saar": 91.295
+    },
+    {
+      "date": "2006-07-01",
+      "software_investment_billion_usd_saar": 191.207,
+      "computer_peripherals_investment_billion_usd_saar": 94.789
+    },
+    {
+      "date": "2006-10-01",
+      "software_investment_billion_usd_saar": 196.0,
+      "computer_peripherals_investment_billion_usd_saar": 93.51
+    },
+    {
+      "date": "2007-01-01",
+      "software_investment_billion_usd_saar": 203.154,
+      "computer_peripherals_investment_billion_usd_saar": 96.238
+    },
+    {
+      "date": "2007-04-01",
+      "software_investment_billion_usd_saar": 203.96,
+      "computer_peripherals_investment_billion_usd_saar": 92.852
+    },
+    {
+      "date": "2007-07-01",
+      "software_investment_billion_usd_saar": 206.779,
+      "computer_peripherals_investment_billion_usd_saar": 94.677
+    },
+    {
+      "date": "2007-10-01",
+      "software_investment_billion_usd_saar": 211.667,
+      "computer_peripherals_investment_billion_usd_saar": 97.772
+    },
+    {
+      "date": "2008-01-01",
+      "software_investment_billion_usd_saar": 221.31,
+      "computer_peripherals_investment_billion_usd_saar": 98.184
+    },
+    {
+      "date": "2008-04-01",
+      "software_investment_billion_usd_saar": 224.825,
+      "computer_peripherals_investment_billion_usd_saar": 97.751
+    },
+    {
+      "date": "2008-07-01",
+      "software_investment_billion_usd_saar": 226.912,
+      "computer_peripherals_investment_billion_usd_saar": 93.562
+    },
+    {
+      "date": "2008-10-01",
+      "software_investment_billion_usd_saar": 222.283,
+      "computer_peripherals_investment_billion_usd_saar": 86.137
+    },
+    {
+      "date": "2009-01-01",
+      "software_investment_billion_usd_saar": 220.584,
+      "computer_peripherals_investment_billion_usd_saar": 85.261
+    },
+    {
+      "date": "2009-04-01",
+      "software_investment_billion_usd_saar": 223.648,
+      "computer_peripherals_investment_billion_usd_saar": 86.661
+    },
+    {
+      "date": "2009-07-01",
+      "software_investment_billion_usd_saar": 226.289,
+      "computer_peripherals_investment_billion_usd_saar": 88.455
+    },
+    {
+      "date": "2009-10-01",
+      "software_investment_billion_usd_saar": 233.659,
+      "computer_peripherals_investment_billion_usd_saar": 95.403
+    },
+    {
+      "date": "2010-01-01",
+      "software_investment_billion_usd_saar": 227.614,
+      "computer_peripherals_investment_billion_usd_saar": 99.228
+    },
+    {
+      "date": "2010-04-01",
+      "software_investment_billion_usd_saar": 222.755,
+      "computer_peripherals_investment_billion_usd_saar": 102.194
+    },
+    {
+      "date": "2010-07-01",
+      "software_investment_billion_usd_saar": 225.567,
+      "computer_peripherals_investment_billion_usd_saar": 100.787
+    },
+    {
+      "date": "2010-10-01",
+      "software_investment_billion_usd_saar": 229.601,
+      "computer_peripherals_investment_billion_usd_saar": 96.11
+    },
+    {
+      "date": "2011-01-01",
+      "software_investment_billion_usd_saar": 237.012,
+      "computer_peripherals_investment_billion_usd_saar": 90.959
+    },
+    {
+      "date": "2011-04-01",
+      "software_investment_billion_usd_saar": 245.104,
+      "computer_peripherals_investment_billion_usd_saar": 95.805
+    },
+    {
+      "date": "2011-07-01",
+      "software_investment_billion_usd_saar": 254.462,
+      "computer_peripherals_investment_billion_usd_saar": 98.485
+    },
+    {
+      "date": "2011-10-01",
+      "software_investment_billion_usd_saar": 262.445,
+      "computer_peripherals_investment_billion_usd_saar": 97.097
+    },
+    {
+      "date": "2012-01-01",
+      "software_investment_billion_usd_saar": 266.002,
+      "computer_peripherals_investment_billion_usd_saar": 105.863
+    },
+    {
+      "date": "2012-04-01",
+      "software_investment_billion_usd_saar": 272.325,
+      "computer_peripherals_investment_billion_usd_saar": 104.555
+    },
+    {
+      "date": "2012-07-01",
+      "software_investment_billion_usd_saar": 272.038,
+      "computer_peripherals_investment_billion_usd_saar": 100.525
+    },
+    {
+      "date": "2012-10-01",
+      "software_investment_billion_usd_saar": 277.879,
+      "computer_peripherals_investment_billion_usd_saar": 103.178
+    },
+    {
+      "date": "2013-01-01",
+      "software_investment_billion_usd_saar": 286.253,
+      "computer_peripherals_investment_billion_usd_saar": 105.183
+    },
+    {
+      "date": "2013-04-01",
+      "software_investment_billion_usd_saar": 279.384,
+      "computer_peripherals_investment_billion_usd_saar": 99.39
+    },
+    {
+      "date": "2013-07-01",
+      "software_investment_billion_usd_saar": 285.989,
+      "computer_peripherals_investment_billion_usd_saar": 100.353
+    },
+    {
+      "date": "2013-10-01",
+      "software_investment_billion_usd_saar": 290.71,
+      "computer_peripherals_investment_billion_usd_saar": 103.614
+    },
+    {
+      "date": "2014-01-01",
+      "software_investment_billion_usd_saar": 295.454,
+      "computer_peripherals_investment_billion_usd_saar": 99.772
+    },
+    {
+      "date": "2014-04-01",
+      "software_investment_billion_usd_saar": 301.302,
+      "computer_peripherals_investment_billion_usd_saar": 102.428
+    },
+    {
+      "date": "2014-07-01",
+      "software_investment_billion_usd_saar": 308.195,
+      "computer_peripherals_investment_billion_usd_saar": 101.572
+    },
+    {
+      "date": "2014-10-01",
+      "software_investment_billion_usd_saar": 309.656,
+      "computer_peripherals_investment_billion_usd_saar": 103.998
+    },
+    {
+      "date": "2015-01-01",
+      "software_investment_billion_usd_saar": 311.071,
+      "computer_peripherals_investment_billion_usd_saar": 101.982
+    },
+    {
+      "date": "2015-04-01",
+      "software_investment_billion_usd_saar": 312.7,
+      "computer_peripherals_investment_billion_usd_saar": 101.786
+    },
+    {
+      "date": "2015-07-01",
+      "software_investment_billion_usd_saar": 316.58,
+      "computer_peripherals_investment_billion_usd_saar": 103.189
+    },
+    {
+      "date": "2015-10-01",
+      "software_investment_billion_usd_saar": 324.687,
+      "computer_peripherals_investment_billion_usd_saar": 98.36
+    },
+    {
+      "date": "2016-01-01",
+      "software_investment_billion_usd_saar": 335.765,
+      "computer_peripherals_investment_billion_usd_saar": 101.444
+    },
+    {
+      "date": "2016-04-01",
+      "software_investment_billion_usd_saar": 343.319,
+      "computer_peripherals_investment_billion_usd_saar": 100.175
+    },
+    {
+      "date": "2016-07-01",
+      "software_investment_billion_usd_saar": 351.724,
+      "computer_peripherals_investment_billion_usd_saar": 97.466
+    },
+    {
+      "date": "2016-10-01",
+      "software_investment_billion_usd_saar": 360.832,
+      "computer_peripherals_investment_billion_usd_saar": 98.766
+    },
+    {
+      "date": "2017-01-01",
+      "software_investment_billion_usd_saar": 369.359,
+      "computer_peripherals_investment_billion_usd_saar": 99.8
+    },
+    {
+      "date": "2017-04-01",
+      "software_investment_billion_usd_saar": 378.807,
+      "computer_peripherals_investment_billion_usd_saar": 104.172
+    },
+    {
+      "date": "2017-07-01",
+      "software_investment_billion_usd_saar": 387.227,
+      "computer_peripherals_investment_billion_usd_saar": 109.819
+    },
+    {
+      "date": "2017-10-01",
+      "software_investment_billion_usd_saar": 396.389,
+      "computer_peripherals_investment_billion_usd_saar": 109.321
+    },
+    {
+      "date": "2018-01-01",
+      "software_investment_billion_usd_saar": 406.838,
+      "computer_peripherals_investment_billion_usd_saar": 118.369
+    },
+    {
+      "date": "2018-04-01",
+      "software_investment_billion_usd_saar": 419.506,
+      "computer_peripherals_investment_billion_usd_saar": 122.349
+    },
+    {
+      "date": "2018-07-01",
+      "software_investment_billion_usd_saar": 428.905,
+      "computer_peripherals_investment_billion_usd_saar": 122.066
+    },
+    {
+      "date": "2018-10-01",
+      "software_investment_billion_usd_saar": 435.859,
+      "computer_peripherals_investment_billion_usd_saar": 118.991
+    },
+    {
+      "date": "2019-01-01",
+      "software_investment_billion_usd_saar": 433.21,
+      "computer_peripherals_investment_billion_usd_saar": 118.754
+    },
+    {
+      "date": "2019-04-01",
+      "software_investment_billion_usd_saar": 442.637,
+      "computer_peripherals_investment_billion_usd_saar": 123.257
+    },
+    {
+      "date": "2019-07-01",
+      "software_investment_billion_usd_saar": 451.805,
+      "computer_peripherals_investment_billion_usd_saar": 115.679
+    },
+    {
+      "date": "2019-10-01",
+      "software_investment_billion_usd_saar": 461.752,
+      "computer_peripherals_investment_billion_usd_saar": 117.92
+    },
+    {
+      "date": "2020-01-01",
+      "software_investment_billion_usd_saar": 472.588,
+      "computer_peripherals_investment_billion_usd_saar": 114.983
+    },
+    {
+      "date": "2020-04-01",
+      "software_investment_billion_usd_saar": 470.088,
+      "computer_peripherals_investment_billion_usd_saar": 125.118
+    },
+    {
+      "date": "2020-07-01",
+      "software_investment_billion_usd_saar": 475.41,
+      "computer_peripherals_investment_billion_usd_saar": 129.751
+    },
+    {
+      "date": "2020-10-01",
+      "software_investment_billion_usd_saar": 494.712,
+      "computer_peripherals_investment_billion_usd_saar": 136.318
+    },
+    {
+      "date": "2021-01-01",
+      "software_investment_billion_usd_saar": 510.307,
+      "computer_peripherals_investment_billion_usd_saar": 144.346
+    },
+    {
+      "date": "2021-04-01",
+      "software_investment_billion_usd_saar": 528.101,
+      "computer_peripherals_investment_billion_usd_saar": 143.196
+    },
+    {
+      "date": "2021-07-01",
+      "software_investment_billion_usd_saar": 539.496,
+      "computer_peripherals_investment_billion_usd_saar": 146.132
+    },
+    {
+      "date": "2021-10-01",
+      "software_investment_billion_usd_saar": 554.624,
+      "computer_peripherals_investment_billion_usd_saar": 154.914
+    },
+    {
+      "date": "2022-01-01",
+      "software_investment_billion_usd_saar": 576.871,
+      "computer_peripherals_investment_billion_usd_saar": 162.235
+    },
+    {
+      "date": "2022-04-01",
+      "software_investment_billion_usd_saar": 596.475,
+      "computer_peripherals_investment_billion_usd_saar": 158.469
+    },
+    {
+      "date": "2022-07-01",
+      "software_investment_billion_usd_saar": 611.06,
+      "computer_peripherals_investment_billion_usd_saar": 165.02
+    },
+    {
+      "date": "2022-10-01",
+      "software_investment_billion_usd_saar": 619.716,
+      "computer_peripherals_investment_billion_usd_saar": 155.868
+    },
+    {
+      "date": "2023-01-01",
+      "software_investment_billion_usd_saar": 631.574,
+      "computer_peripherals_investment_billion_usd_saar": 147.885
+    },
+    {
+      "date": "2023-04-01",
+      "software_investment_billion_usd_saar": 632.026,
+      "computer_peripherals_investment_billion_usd_saar": 146.164
+    },
+    {
+      "date": "2023-07-01",
+      "software_investment_billion_usd_saar": 637.813,
+      "computer_peripherals_investment_billion_usd_saar": 144.708
+    },
+    {
+      "date": "2023-10-01",
+      "software_investment_billion_usd_saar": 650.531,
+      "computer_peripherals_investment_billion_usd_saar": 155.398
+    },
+    {
+      "date": "2024-01-01",
+      "software_investment_billion_usd_saar": 663.871,
+      "computer_peripherals_investment_billion_usd_saar": 163.978
+    },
+    {
+      "date": "2024-04-01",
+      "software_investment_billion_usd_saar": 680.288,
+      "computer_peripherals_investment_billion_usd_saar": 174.657
+    },
+    {
+      "date": "2024-07-01",
+      "software_investment_billion_usd_saar": 694.474,
+      "computer_peripherals_investment_billion_usd_saar": 193.972
+    },
+    {
+      "date": "2024-10-01",
+      "software_investment_billion_usd_saar": 705.314,
+      "computer_peripherals_investment_billion_usd_saar": 186.495
+    },
+    {
+      "date": "2025-01-01",
+      "software_investment_billion_usd_saar": 722.98,
+      "computer_peripherals_investment_billion_usd_saar": 222.076
+    },
+    {
+      "date": "2025-04-01",
+      "software_investment_billion_usd_saar": 744.664,
+      "computer_peripherals_investment_billion_usd_saar": 263.332
+    },
+    {
+      "date": "2025-07-01",
+      "software_investment_billion_usd_saar": 762.757,
+      "computer_peripherals_investment_billion_usd_saar": 295.722
+    },
+    {
+      "date": "2025-10-01",
+      "software_investment_billion_usd_saar": 774.944,
+      "computer_peripherals_investment_billion_usd_saar": 339.515
+    },
+    {
+      "date": "2026-01-01",
+      "software_investment_billion_usd_saar": 790.777,
+      "computer_peripherals_investment_billion_usd_saar": 399.615
+    },
+    {
+      "date": "2026-04-01",
+      "software_investment_billion_usd_saar": 809.265,
+      "computer_peripherals_investment_billion_usd_saar": 420.074
+    },
+    {
+      "date": "2026-07-01",
+      "software_investment_billion_usd_saar": 831.467,
+      "computer_peripherals_investment_billion_usd_saar": 504.127
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw",
+    "indexed"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Published quarterly private fixed investment in software and in computers/peripherals, reported at seasonally adjusted annual rates.",
+    "notes": "These are broad U.S. national-accounts categories, not AI-specific capital spending or a measure of installed compute capacity."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-10-31T08:59:17+00:00"
+}

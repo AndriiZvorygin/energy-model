@@ -1,0 +1,15 @@
+# AI and technology flows: v1 scope and method
+
+The flow map follows broad investment proxies into electricity infrastructure, local inference workload, and public task-quality benchmarks. The main forecasting horizon ends in 2030. The module is separate from the locked oil benchmark and its classifiers.
+
+U.S. software and computer/peripheral private fixed investment are broad BEA investment proxies distributed by FRED. Neither series isolates AI spending or identifies the destination of investment.
+
+Ontario data-centre net annual energy demand uses the low, reference, and high-demand series in Figures 1–3 of the IESO 2026 APO Demand Forecast Module workbook. Values are retained as published for 2027–2030. They are forecasts, not observed load. U.S. data-centre totals use LBNL's 2024 historical estimate and its 2030 reference and compounded-uncertainty cases. These geographies and methods are shown in separate charts.
+
+Canadian electricity generation is annualized from Statistics Canada vector 44174609 by summing twelve monthly observations and converting MWh to TWh. It provides national grid context and is not a data-centre load estimate. Grey-Bruce/Owen Sound has no local data-centre load series in this v1 source set; the local Ollama workload is not assigned a physical server location.
+
+Local Ollama activity represents inference and comes from a monthly aggregate containing only model label, call counts, and prompt/output token counts. Facility-level data-centre scenarios combine training, inference, and other data-centre uses; the source set does not separate those loads. Raw prompts, responses, IDs, endpoints, host labels, hashes, and per-call timestamps are not part of the aggregate or website data. Regenerate the aggregate with `node scripts/export_local_ollama_usage.mjs --usage-dir <path>` when a new local snapshot is wanted.
+
+The energy sensitivity applies the authors' released TokenPowerBench result for Llama 3.1 8B on vLLM at batch 128 across four H100 GPUs: 0.1467 GPU joules per generated output token. Low/high bounds are half and twice that reference, reflecting the paper's reported 2–3x batch-size spread. The estimate is used only for local model labels in the 7B–10B class. It is an illustrative GPU-only transfer, not measured local electricity: it excludes prompt processing, CPU, memory, other node loads, and cooling. Other local model sizes remain unestimated.
+
+GPQA Diamond scores are provider-reported base-model card values. They do not establish local quantized performance or the quality of a municipal workflow. Human-time savings and useful-task output are not inferred from token counts; v1 exposes no task-level productivity score.

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "technology-ontario-data-centre-electricity",
+  "title": "Ontario data-centre electricity demand",
+  "description": "IESO low, reference, and high forecasts for the Ontario data-centre sub-sector through 2030.",
+  "plainLanguageSummary": "The IESO forecast places Ontario data-centre net annual energy demand between 5.0 and 6.41 TWh in 2030 across the low, reference, and high scenarios.",
+  "howToRead": "Each line is one published IESO scenario. The source workbook forecasts the data-centre sub-sector, which includes AI and non-AI computing; it does not isolate AI electricity use.",
+  "calculation": {
+    "formula": "Published net annual energy demand for the data-centre sub-sector under each IESO demand scenario.",
+    "explanation": "Forecast observations stop at 2030 for this v1 module. They are not local Grey-Bruce load forecasts or measurements of AI-only demand.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "How much the three IESO cases separate by 2030",
+    "Whether future APO vintages revise the near-term large-load path"
+  ],
+  "limitations": [
+    "Forecasts are uncertain and do not mean every announced facility connects or operates as planned.",
+    "This is Ontario provincial demand, not the local Grey-Bruce grid or a Canada-wide data-centre forecast.",
+    "The data-centre sub-sector includes cloud and other data-centre services, not only AI."
+  ],
+  "sourceNotes": [
+    "IESO 2026 Annual Planning Outlook Demand Forecast Module Data, Figures 1\u20133",
+    "Net annual energy demand; published forecast values for 2027\u20132030"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2027-01-01",
+    "referenceEnd": "2030-01-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "low": {
+        "mean": 4.025,
+        "standardDeviation": 0.8133111335768126,
+        "n": 4
+      },
+      "reference": {
+        "mean": 5.36,
+        "standardDeviation": 0.7128113354878693,
+        "n": 4
+      },
+      "high": {
+        "mean": 5.355,
+        "standardDeviation": 0.7084666541200088,
+        "n": 4
+      }
+    }
+  },
+  "frequency": "annual",
+  "dateRange": {
+    "start": "2027-01-01",
+    "end": "2030-01-01"
+  },
+  "series": [
+    {
+      "key": "low",
+      "label": "Low-demand scenario",
+      "unit": "TWh per year",
+      "source": "IESO 2026 APO Demand Forecast Module Data, Figure 3",
+      "status": "modelled",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0ea5e9",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2030-01-01"
+    },
+    {
+      "key": "reference",
+      "label": "Reference scenario",
+      "unit": "TWh per year",
+      "source": "IESO 2026 APO Demand Forecast Module Data, Figure 1",
+      "status": "modelled",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2030-01-01"
+    },
+    {
+      "key": "high",
+      "label": "High-demand scenario",
+      "unit": "TWh per year",
+      "source": "IESO 2026 APO Demand Forecast Module Data, Figure 2",
+      "status": "modelled",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#be123c",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2030-01-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "2027-01-01",
+      "low": 2.86,
+      "reference": 4.49,
+      "high": 4.49
+    },
+    {
+      "date": "2028-01-01",
+      "low": 3.72,
+      "reference": 4.99,
+      "high": 4.99
+    },
+    {
+      "date": "2029-01-01",
+      "low": 4.52,
+      "reference": 5.55,
+      "high": 5.54
+    },
+    {
+      "date": "2030-01-01",
+      "low": 5.0,
+      "reference": 6.41,
+      "high": 6.4
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw"
+  ],
+  "evidenceLabel": "Scenario concept",
+  "methodology": {
+    "formula": "Published net annual energy demand for the data-centre sub-sector under each IESO demand scenario.",
+    "notes": "Forecast observations stop at 2030 for this v1 module. They are not local Grey-Bruce load forecasts or measurements of AI-only demand."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-10-31T08:59:17+00:00"
+}

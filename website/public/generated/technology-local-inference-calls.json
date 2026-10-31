@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "technology-local-inference-calls",
+  "title": "Local inference call volume",
+  "description": "Monthly local Ollama call counts, grouped by model label.",
+  "plainLanguageSummary": "The local telemetry records completed and failed calls by month and model. It does not say whether an answer was useful or accepted.",
+  "howToRead": "Compare call counts only within each model's local history. The recorded machine location is not available in the usage aggregate.",
+  "calculation": {
+    "formula": "Count Ollama usage records by calendar month and model label.",
+    "explanation": "The aggregate omits prompts, responses, per-call times, IDs, endpoint names, and host information.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Changes in monthly local call counts as more observations accumulate"
+  ],
+  "limitations": [
+    "A call is not necessarily a completed task or a useful result.",
+    "This is one local Ollama deployment, not a representative sample of Canada.",
+    "No server location or whole-system power is captured."
+  ],
+  "sourceNotes": [
+    "Sanitized monthly Ollama usage aggregate"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2026-10-01",
+    "referenceEnd": "2026-10-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "qwen3_5_9b_calls": {
+        "mean": 31.0,
+        "standardDeviation": 0.0,
+        "n": 1
+      },
+      "swift_qwen3_8_27b_calls": {
+        "mean": 18.0,
+        "standardDeviation": 0.0,
+        "n": 1
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "2026-10-01",
+    "end": "2026-10-01"
+  },
+  "series": [
+    {
+      "key": "qwen3_5_9b_calls",
+      "label": "qwen3.5:9b calls",
+      "unit": "calls per month",
+      "source": "Sanitized monthly Ollama usage aggregate",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2026-10-01"
+    },
+    {
+      "key": "swift_qwen3_8_27b_calls",
+      "label": "swift-qwen3.8:27b calls",
+      "unit": "calls per month",
+      "source": "Sanitized monthly Ollama usage aggregate",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#2563eb",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2026-10-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "2026-10-01",
+      "qwen3_5_9b_calls": 31.0,
+      "qwen3_5_9b_prompt_tokens": 46854.0,
+      "qwen3_5_9b_output_tokens": 4202.0,
+      "swift_qwen3_8_27b_calls": 18.0,
+      "swift_qwen3_8_27b_prompt_tokens": 36875.0,
+      "swift_qwen3_8_27b_output_tokens": 1184.0
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Count Ollama usage records by calendar month and model label.",
+    "notes": "The aggregate omits prompts, responses, per-call times, IDs, endpoint names, and host information."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-10-31T08:59:17+00:00"
+}

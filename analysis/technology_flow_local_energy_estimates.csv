@@ -1,0 +1,3 @@
+month,model,output_tokens,energy_status,energy_basis,energy_source_url,scope_note,gpu_energy_low_wh,gpu_energy_reference_wh,gpu_energy_high_wh
+2026-10,qwen3.5:9b,4202,benchmark-based estimate,"TokenPowerBench (AAAI 2026), Llama 3.1 8B released benchmark result",https://github.com/chenxuniu/TokenPowerBench,"GPU output-token energy only; prompt processing, CPU, memory, other node loads, and cooling are excluded.",0.08559035035721865,0.1711807007144373,0.3423614014288746
+2026-10,swift-qwen3.8:27b,1184,not estimated: no size-matched published reference,No compatible published benchmark selected,,"GPU output-token energy only; prompt processing, CPU, memory, other node loads, and cooling are excluded.",,,

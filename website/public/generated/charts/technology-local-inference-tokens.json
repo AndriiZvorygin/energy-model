@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "technology-local-inference-tokens",
+  "title": "Local inference tokens",
+  "description": "Monthly local Ollama prompt and output token counts, grouped by model label.",
+  "plainLanguageSummary": "Prompt and output token totals describe inference workload size; they do not measure successful tasks or productivity.",
+  "howToRead": "Prompt tokens and output tokens are shown as separate series. They are workload counts, not interchangeable measures of useful output.",
+  "calculation": {
+    "formula": "Sum prompt-evaluation and output-evaluation token counts by calendar month and model label.",
+    "explanation": "Token counts measure workload volume; they do not measure useful work, answer quality, or energy use.",
+    "example": "A value at date t uses only observations dated t or earlier unless the chart explicitly labels a visual shift."
+  },
+  "patternsToWatch": [
+    "Prompt-to-output token mix across model tags",
+    "How workload totals change as additional monthly aggregates are added"
+  ],
+  "limitations": [
+    "A token is not a useful-work unit.",
+    "Records without token telemetry may report zero even when a request occurred.",
+    "The monthly aggregate has no task type, quality, or human-review outcome."
+  ],
+  "sourceNotes": [
+    "Sanitized monthly Ollama usage aggregate"
+  ],
+  "transformation": {
+    "type": "raw",
+    "referenceStart": "2026-10-01",
+    "referenceEnd": "2026-10-01",
+    "mean": null,
+    "standardDeviation": null,
+    "statistics": {
+      "qwen3_5_9b_prompt_tokens": {
+        "mean": 46854.0,
+        "standardDeviation": 0.0,
+        "n": 1
+      },
+      "qwen3_5_9b_output_tokens": {
+        "mean": 4202.0,
+        "standardDeviation": 0.0,
+        "n": 1
+      },
+      "swift_qwen3_8_27b_prompt_tokens": {
+        "mean": 36875.0,
+        "standardDeviation": 0.0,
+        "n": 1
+      },
+      "swift_qwen3_8_27b_output_tokens": {
+        "mean": 1184.0,
+        "standardDeviation": 0.0,
+        "n": 1
+      }
+    }
+  },
+  "frequency": "monthly",
+  "dateRange": {
+    "start": "2026-10-01",
+    "end": "2026-10-01"
+  },
+  "series": [
+    {
+      "key": "qwen3_5_9b_prompt_tokens",
+      "label": "qwen3.5:9b prompt tokens",
+      "unit": "tokens per month",
+      "source": "Sanitized monthly Ollama usage aggregate",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#0f766e",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2026-10-01"
+    },
+    {
+      "key": "qwen3_5_9b_output_tokens",
+      "label": "qwen3.5:9b output tokens",
+      "unit": "tokens per month",
+      "source": "Sanitized monthly Ollama usage aggregate",
+      "status": "measured",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#7c3aed",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2026-10-01"
+    },
+    {
+      "key": "swift_qwen3_8_27b_prompt_tokens",
+      "label": "swift-qwen3.8:27b prompt tokens",
+      "unit": "tokens per month",
+      "source": "Sanitized monthly Ollama usage aggregate",
+      "status": "measured",
+      "defaultVisible": true,
+      "frequency": null,
+      "color": "#2563eb",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2026-10-01"
+    },
+    {
+      "key": "swift_qwen3_8_27b_output_tokens",
+      "label": "swift-qwen3.8:27b output tokens",
+      "unit": "tokens per month",
+      "source": "Sanitized monthly Ollama usage aggregate",
+      "status": "measured",
+      "defaultVisible": false,
+      "frequency": null,
+      "color": "#7c3aed",
+      "transformations": [
+        "raw"
+      ],
+      "finalObservationDate": "2026-10-01"
+    }
+  ],
+  "observations": [
+    {
+      "date": "2026-10-01",
+      "qwen3_5_9b_calls": 31.0,
+      "qwen3_5_9b_prompt_tokens": 46854.0,
+      "qwen3_5_9b_output_tokens": 4202.0,
+      "swift_qwen3_8_27b_calls": 18.0,
+      "swift_qwen3_8_27b_prompt_tokens": 36875.0,
+      "swift_qwen3_8_27b_output_tokens": 1184.0
+    }
+  ],
+  "annotations": [],
+  "availableTransformations": [
+    "raw"
+  ],
+  "evidenceLabel": "Contextual indicator",
+  "methodology": {
+    "formula": "Sum prompt-evaluation and output-evaluation token counts by calendar month and model label.",
+    "notes": "Token counts measure workload volume; they do not measure useful work, answer quality, or energy use."
+  },
+  "staticFigure": "",
+  "generatedAt": "2026-10-31T08:59:17+00:00"
+}
