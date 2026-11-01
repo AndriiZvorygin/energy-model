@@ -157,15 +157,21 @@ function waterLabel(lowM3: number, highM3: number) {
 
 function CapabilityScorecard() {
   const { data, error } = useGeneratedJson<CapabilityPayload>('technology-capability-scorecard.json')
-  if (error) return <section className="mt-12"><h2 className="text-2xl font-semibold">AI capability by task family</h2><p className="mt-4 text-sm text-red-700 dark:text-red-300">Could not load capability evidence: {error}</p></section>
-  if (!data) return <section className="mt-12"><h2 className="text-2xl font-semibold">AI capability by task family</h2><p className="mt-4 text-sm text-stone-500">Loading archived capability results…</p></section>
-  return <section className="mt-12">
+  if (error) return <section id="capability-evidence" className="mt-12 scroll-mt-24"><h2 className="text-2xl font-semibold">Model capability evidence</h2><p className="mt-4 text-sm text-red-700 dark:text-red-300">Could not load capability evidence: {error}</p></section>
+  if (!data) return <section id="capability-evidence" className="mt-12 scroll-mt-24"><h2 className="text-2xl font-semibold">Model capability evidence</h2><p className="mt-4 text-sm text-stone-500">Loading archived capability results…</p></section>
+  return <section id="capability-evidence" className="mt-12 scroll-mt-24">
     <div className="max-w-4xl">
       <p className="text-xs font-semibold uppercase tracking-widest text-petroleum dark:text-emerald-300">Capability snapshot · {data.snapshotDate}</p>
-      <h2 className="mt-2 text-2xl font-semibold">What current systems can do, task by task</h2>
-      <p className="mt-2 text-sm leading-6 text-stone-600 dark:text-stone-300">The comparisons span graduate science, hard expert questions, novel abstraction, professional work, coding agents and long technical tasks. Each panel keeps its own metric; the page does not collapse these into one “AI score.”</p>
+      <h2 className="mt-2 text-2xl font-semibold">Model capability evidence</h2>
+      <p className="mt-2 text-sm leading-6 text-stone-600 dark:text-stone-300">Optional benchmark detail across science, abstraction, professional work, coding and long technical tasks. Open the scorecards when you want the model-by-model results; each keeps its own metric and evaluation setup.</p>
     </div>
-    <div className="mt-5 grid gap-px border border-stone-200 bg-stone-200 sm:grid-cols-2 xl:grid-cols-4 dark:border-stone-800 dark:bg-stone-800">
+    <details className="group mt-5 border border-stone-200 dark:border-stone-800">
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 bg-stone-50 p-4 text-sm font-semibold hover:bg-stone-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-petroleum dark:bg-stone-900 dark:hover:bg-stone-800 [&::-webkit-details-marker]:hidden">
+        <span>Expand benchmark scorecards · {data.families.length} task families</span>
+        <span aria-hidden="true" className="text-lg text-petroleum transition-transform group-open:rotate-45 dark:text-emerald-300">+</span>
+      </summary>
+      <div className="border-t border-stone-200 p-4 dark:border-stone-800 sm:p-5">
+    <div className="grid gap-px border border-stone-200 bg-stone-200 sm:grid-cols-2 xl:grid-cols-4 dark:border-stone-800 dark:bg-stone-800">
       {[
         ['Task-specific human comparisons', 'Top archived scores exceed the published human reference on GPQA Diamond and ARC-AGI-2. The test sets and human protocols differ, so this stays a narrow benchmark result.'],
         ['Expert questions remain unsaturated', 'The top no-tool Humanity’s Last Exam result is 54.8%; no single human accuracy baseline is available for direct comparison.'],
@@ -204,6 +210,8 @@ function CapabilityScorecard() {
       </article>)}
     </div>
     <p className="mt-4 max-w-5xl text-xs leading-5 text-stone-500 dark:text-stone-400">{data.methodology} Results are a dated archive snapshot, not a live leaderboard. Model-card claims, independent benchmark submissions and agent-system results are labelled separately through their linked sources.</p>
+      </div>
+    </details>
   </section>
 }
 
@@ -212,7 +220,7 @@ function ComputeSizing() {
   if (error) return <section className="mt-12"><h2 className="text-2xl font-semibold">Compute tiers and cost</h2><p className="mt-4 text-sm text-red-700 dark:text-red-300">Could not load the compute scenarios: {error}</p></section>
   if (!data) return <section className="mt-12"><h2 className="text-2xl font-semibold">Compute tiers and cost</h2><p className="mt-4 text-sm text-stone-500">Loading compute scenarios…</p></section>
   const campus = data.scenarios.find((row) => row.capitalExtrapolated)
-  return <section className="mt-12">
+  return <section id="compute-sizing" className="mt-12 scroll-mt-24">
     <div className="max-w-4xl">
       <p className="text-xs font-semibold uppercase tracking-widest text-petroleum dark:text-emerald-300">Compute planning</p>
       <h2 className="mt-2 text-2xl font-semibold">From a lab to a frontier-scale campus</h2>
@@ -256,7 +264,7 @@ function CanadianSiteScreen() {
   const { data, error } = useGeneratedJson<SitePayload>('technology-canadian-site-screen.json')
   if (error) return <section className="mt-12"><h2 className="text-2xl font-semibold">Canadian hydro and water screening</h2><p className="mt-4 text-sm text-red-700 dark:text-red-300">Could not load the Canadian site screen: {error}</p></section>
   if (!data) return <section className="mt-12"><h2 className="text-2xl font-semibold">Canadian hydro and water screening</h2><p className="mt-4 text-sm text-stone-500">Loading Canadian site screen…</p></section>
-  return <section className="mt-12">
+  return <section id="canadian-sites" className="mt-12 scroll-mt-24">
     <div className="max-w-4xl">
       <p className="text-xs font-semibold uppercase tracking-widest text-petroleum dark:text-emerald-300">Canada · preliminary site screen</p>
       <h2 className="mt-2 text-2xl font-semibold">Hydro-rich regions with city-scale water systems</h2>
@@ -326,25 +334,32 @@ export function TechnologyFlows() {
   return <>
     <PageHeader eyebrow="AI capability and infrastructure · v1 to 2030" title="What AI can do, what it takes, and where it fits" description="A Canada-first research page comparing model capabilities, compute scale, power and water needs, and candidate regions for large AI research infrastructure." />
     <PageBody>
-      <div className="grid gap-px border border-stone-200 bg-stone-200 sm:grid-cols-2 xl:grid-cols-4 dark:border-stone-800 dark:bg-stone-800">
-        {[
-          ['1 · Capability', 'Separate evidence for science, abstraction, professional work, coding and long tasks.'],
-          ['2 · Compute tiers', 'Local lab, regional model lab, national cluster and 100 MW campus.'],
-          ['3 · Canadian sites', 'Hydro generation and municipal water context, with grid constraints exposed.'],
-          ['4 · Useful work', 'Real productivity still needs accepted-task outcomes and human review time.'],
-        ].map(([title, description]) => <div key={title} className="bg-paper p-4 dark:bg-[#111715]"><h2 className="text-sm font-semibold">{title}</h2><p className="mt-2 text-xs leading-5 text-stone-600 dark:text-stone-300">{description}</p></div>)}
-      </div>
+      <nav aria-label="On this page" className="mt-8 border border-stone-200 p-4 dark:border-stone-800 sm:p-5">
+        <h2 className="text-xs font-semibold uppercase tracking-widest text-stone-500 dark:text-stone-400">On this page</h2>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {[
+            ['Compute and cost', '#compute-sizing'],
+            ['Canadian site screen', '#canadian-sites'],
+            ['Canada and Ontario power', '#canada-ontario-electricity'],
+            ['U.S. data-centre scale', '#us-datacentre-scale'],
+            ['Digital infrastructure investment', '#digital-infrastructure-investment'],
+            ['Model capability evidence', '#capability-evidence'],
+            ['Local inference example', '#local-inference'],
+            ['Local-model energy estimate', '#local-energy-sensitivity'],
+            ['Useful-work measure', '#useful-work'],
+          ].map(([label, href]) => <a key={href} href={href} className="border border-stone-200 px-3 py-2 text-sm font-medium text-petroleum hover:bg-stone-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-petroleum dark:border-stone-700 dark:text-emerald-300 dark:hover:bg-stone-900">{label}</a>)}
+        </div>
+      </nav>
 
-      <CapabilityScorecard />
       <ComputeSizing />
       <CanadianSiteScreen />
 
-      <section className="mt-12 border-l-2 border-petroleum pl-5">
+      <section id="electricity-context" className="mt-12 scroll-mt-24 border-l-2 border-petroleum pl-5">
         <h2 className="text-xl font-semibold">Electricity system context</h2>
         <p className="mt-2 max-w-4xl text-sm leading-6 text-stone-600 dark:text-stone-300">The compute cases above are facility scenarios. These charts show the wider demand context: Ontario's data-centre forecast, Canadian electricity generation and U.S. data-centre scale. They do not identify spare capacity at a candidate site.</p>
       </section>
 
-      <section className="mt-8">
+      <section id="canada-ontario-electricity" className="mt-8 scroll-mt-24">
         <h2 className="text-2xl font-semibold">Canada and Ontario electricity context</h2>
         <p className="mt-2 max-w-4xl text-sm leading-6 text-stone-600 dark:text-stone-300">National electricity generation gives a Canada-wide scale reference. The IESO forecast then isolates the Ontario data-centre sub-sector. It includes cloud and other computing demand as well as AI and is not a local Grey-Bruce forecast.</p>
         <div className="mt-5"><ResearchTimeSeriesChart file="technology-canada-electricity-generation.json" initialTransformation="indexed" syncUrl={false} /></div>
@@ -353,7 +368,7 @@ export function TechnologyFlows() {
         <p className="mt-3 max-w-4xl text-xs leading-5 text-stone-500 dark:text-stone-400">Source: <a className="underline" href="https://www.ieso.ca/en/Sector-Participants/Planning-and-Forecasting/Annual-Planning-Outlook" target="_blank" rel="noreferrer">IESO 2026 Annual Planning Outlook</a>. Scenario values stop at 2030 in v1.</p>
       </section>
 
-      <section className="mt-12">
+      <section id="us-datacentre-scale" className="mt-12 scroll-mt-24">
         <h2 className="text-2xl font-semibold">U.S. data-centre scale comparator</h2>
         <p className="mt-2 max-w-4xl text-sm leading-6 text-stone-600 dark:text-stone-300">The U.S. series is separate from Ontario. LBNL estimates 2024 use and publishes 2030 cases; the chart shows only those endpoints and does not fill in intervening years.</p>
         <div className="mt-5"><ResearchTimeSeriesChart file="technology-us-data-centre-electricity.json" initialTransformation="raw" syncUrl={false} showDots /></div>
@@ -362,13 +377,15 @@ export function TechnologyFlows() {
         <p className="mt-3 text-xs leading-5 text-stone-500 dark:text-stone-400">Growth is indexed to 2020 = 100. Electricity sales and summer generating capacity come from the <a className="underline" href="https://www.eia.gov/electricity/annual/" target="_blank" rel="noreferrer">U.S. EIA Electric Power Annual</a>; the data-centre series uses LBNL estimates.</p>
       </section>
 
-      <section className="mt-12">
+      <section id="digital-infrastructure-investment" className="mt-12 scroll-mt-24">
         <h2 className="text-2xl font-semibold">Capital entering digital infrastructure</h2>
         <p className="mt-2 max-w-4xl text-sm leading-6 text-stone-600 dark:text-stone-300">U.S. software and computer-equipment investment are broad BEA categories, not AI-specific spending. They show an upstream flow proxy, not where the equipment was installed or what work it performed.</p>
         <div className="mt-5"><ResearchTimeSeriesChart file="technology-capital-investment-proxies.json" initialTransformation="indexed" syncUrl={false} /></div>
       </section>
 
-      <section className="mt-12">
+      <CapabilityScorecard />
+
+      <section id="local-inference" className="mt-12 scroll-mt-24">
         <h2 className="text-2xl font-semibold">A local inference example</h2>
         <p className="mt-2 max-w-4xl text-sm leading-6 text-stone-600 dark:text-stone-300">This personal deployment is retained as one measured small-scale example. It is not the organizing case for the capability or infrastructure comparison. Both snapshots publish aggregate model, call, and token counts; neither identifies useful-task completion or machine location.</p>
         <WorkloadSnapshot />
@@ -378,14 +395,14 @@ export function TechnologyFlows() {
         <div className="mt-10"><ResearchTimeSeriesChart file="technology-local-inference-tokens.json" initialTransformation="raw" syncUrl={false} showDots /></div>
       </section>
 
-      <section className="mt-12">
+      <section id="local-energy-sensitivity" className="mt-12 scroll-mt-24">
         <h2 className="text-2xl font-semibold">Electricity sensitivity for a 9B-class local model</h2>
         <p className="mt-2 max-w-4xl text-sm leading-6 text-stone-600 dark:text-stone-300">A published H100 benchmark is transferred to output tokens from the local 9B-class model as an illustrative GPU-only estimate. The 27B workload remains unestimated because the selected reference is not size-matched. No prompt-processing, CPU, memory, remaining server load, or cooling electricity is included.</p>
         <div className="mt-5"><ResearchTimeSeriesChart file="technology-local-gpu-energy-estimate.json" initialTransformation="raw" syncUrl={false} showDots /></div>
         <p className="mt-3 text-xs leading-5 text-stone-500 dark:text-stone-400">Reference: <a className="underline" href="https://ojs.aaai.org/index.php/AAAI/article/view/40535" target="_blank" rel="noreferrer">TokenPowerBench, AAAI 2026</a>. The published setup varies model, context, engine, and batch size, so this is a sensitivity, not local telemetry.</p>
       </section>
 
-      <section className="mt-12 border-l-2 border-petroleum pl-5">
+      <section id="useful-work" className="mt-12 scroll-mt-24 border-l-2 border-petroleum pl-5">
         <h2 className="text-xl font-semibold">What would count as useful work?</h2>
         <p className="mt-2 max-w-4xl text-sm leading-6 text-stone-600 dark:text-stone-300">A later measure could compare accepted task outcomes with electricity and human review time. This v1 has no accepted-task denominator or time-saved observations, so it leaves human-time values as future scenario inputs and does not turn calls, tokens, or benchmark scores into a productivity claim.</p>
       </section>
