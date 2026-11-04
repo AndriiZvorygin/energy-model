@@ -199,6 +199,14 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
     output_quality_correlation_rows += energy_output_quality_tests(output_quality_series, output_quality_derived, burden_series, system_fred["USREC"], "Household energy-burden growth")
     output_quality_findings = output_quality_markdown(output_quality_rows, output_quality_correlation_rows)
     bis_rows = bis.fetch_csv_url(bis_url) if bis_url else []
+    technology_site_analysis_rows = [
+        {
+            **row,
+            "powerSources": "|".join(f"{source['title']}=>{source['url']}" for source in row.get("powerSources", [])),
+            "communicationsSources": "|".join(f"{source['title']}=>{source['url']}" for source in row.get("communicationsSources", [])),
+        }
+        for row in technology_flow_outputs["canadian_site_screen"]
+    ]
 
     write_csv(processed_dir / "monthly_dataset.csv", rows)
     write_csv(analysis_dir / "lag_correlations.csv", lag_rows)
@@ -239,7 +247,7 @@ def build(root: Path, refresh: bool = False, bis_url: str | None = None) -> None
     write_csv(analysis_dir / "technology_flow_benchmark_scores.csv", technology_flow_outputs["benchmarks"])
     write_csv(analysis_dir / "technology_flow_compute_scenarios.csv", technology_flow_outputs["compute_scenarios"], lineterminator="\n")
     write_csv(analysis_dir / "technology_flow_training_run_anchor.csv", [technology_flow_outputs["training_run_anchor"]] if technology_flow_outputs["training_run_anchor"] else [], lineterminator="\n")
-    write_csv(analysis_dir / "technology_flow_canadian_site_screen.csv", technology_flow_outputs["canadian_site_screen"], lineterminator="\n")
+    write_csv(analysis_dir / "technology_flow_canadian_site_screen.csv", technology_site_analysis_rows, lineterminator="\n")
     (analysis_dir / "second_stage_findings.md").write_text(second_stage_findings, encoding="utf-8")
     (analysis_dir / "final_model_interpretation.md").write_text(final_interpretation, encoding="utf-8")
     (analysis_dir / "executive_summary.md").write_text(executive_summary, encoding="utf-8")

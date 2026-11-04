@@ -448,15 +448,23 @@ def build_training_run_anchor(root: Path) -> dict[str, Any] | None:
 
 def read_canadian_site_screen(root: Path) -> list[dict[str, Any]]:
     output: list[dict[str, Any]] = []
+
+    def parse_sources(value: str) -> list[dict[str, str]]:
+        sources = []
+        for item in value.split("|"):
+            title, separator, url = item.partition("=>")
+            if separator and title.strip() and url.strip():
+                sources.append({"title": title.strip(), "url": url.strip()})
+        return sources
+
     for row in _archive_rows(root, SITE_SCREEN_FILE):
         water_lpd = _float(row.get("municipal_water_daily_litres"))
         output.append({
             "province": row.get("province", ""),
             "city": row.get("city", ""),
-            "hydroFact": row.get("hydro_fact", ""),
-            "hydroScaleComparison": row.get("hydro_scale_comparison", ""),
-            "hydroSource": row.get("hydro_source", ""),
-            "hydroSourceUrl": row.get("hydro_source_url", ""),
+            "powerFact": row.get("power_fact", ""),
+            "powerScaleComparison": row.get("power_scale_comparison", ""),
+            "powerSources": parse_sources(row.get("power_sources", "")),
             "gridAndPolicyFact": row.get("grid_and_policy_fact", ""),
             "gridAndPolicySource": row.get("grid_and_policy_source", ""),
             "gridAndPolicyUrl": row.get("grid_and_policy_url", ""),
@@ -464,6 +472,8 @@ def read_canadian_site_screen(root: Path) -> list[dict[str, Any]]:
             "municipalWaterFact": row.get("municipal_water_fact", ""),
             "waterSource": row.get("water_source", ""),
             "waterSourceUrl": row.get("water_source_url", ""),
+            "communicationsFact": row.get("communications_fact", ""),
+            "communicationsSources": parse_sources(row.get("communications_sources", "")),
             "assessment": row.get("screen_assessment", ""),
             "openQuestion": row.get("open_question", ""),
         })

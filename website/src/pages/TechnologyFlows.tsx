@@ -86,20 +86,26 @@ type ComputePayload = {
   scenarios: ComputeScenario[]
 }
 
+type SiteSource = {
+  title: string
+  url: string
+}
+
 type SiteRow = {
   province: string
   city: string
-  hydroFact: string
-  hydroScaleComparison: string
-  hydroSource: string
-  hydroSourceUrl: string
+  powerFact: string
+  powerScaleComparison: string
+  powerSources: SiteSource[]
   gridAndPolicyFact: string
   gridAndPolicySource: string
   gridAndPolicyUrl: string
-  municipalWaterDailyLitres: number
+  municipalWaterDailyLitres: number | null
   municipalWaterFact: string
   waterSource: string
   waterSourceUrl: string
+  communicationsFact: string
+  communicationsSources: SiteSource[]
   assessment: string
   openQuestion: string
 }
@@ -262,37 +268,44 @@ function ComputeSizing() {
 
 function CanadianSiteScreen() {
   const { data, error } = useGeneratedJson<SitePayload>('technology-canadian-site-screen.json')
-  if (error) return <section className="mt-12"><h2 className="text-2xl font-semibold">Canadian hydro and water screening</h2><p className="mt-4 text-sm text-red-700 dark:text-red-300">Could not load the Canadian site screen: {error}</p></section>
-  if (!data) return <section className="mt-12"><h2 className="text-2xl font-semibold">Canadian hydro and water screening</h2><p className="mt-4 text-sm text-stone-500">Loading Canadian site screen…</p></section>
+  if (error) return <section className="mt-12"><h2 className="text-2xl font-semibold">Canadian power, water and fibre screening</h2><p className="mt-4 text-sm text-red-700 dark:text-red-300">Could not load the Canadian site screen: {error}</p></section>
+  if (!data) return <section className="mt-12"><h2 className="text-2xl font-semibold">Canadian power, water and fibre screening</h2><p className="mt-4 text-sm text-stone-500">Loading Canadian site screen…</p></section>
   return <section id="canadian-sites" className="mt-12 scroll-mt-24">
     <div className="max-w-4xl">
       <p className="text-xs font-semibold uppercase tracking-widest text-petroleum dark:text-emerald-300">Canada · preliminary site screen</p>
-      <h2 className="mt-2 text-2xl font-semibold">Hydro-rich regions with city-scale water systems</h2>
-      <p className="mt-2 text-sm leading-6 text-stone-600 dark:text-stone-300">At 100 MW running continuously, the planning case needs 876 GWh/year and about {data.screeningWaterM3PerDay.toFixed(0)} m³/day of cooling water at 0.3 L/kWh. The cities below have relevant provincial hydro resources and documented municipal water systems. That does not mean the electricity or water is currently uncommitted.</p>
+      <h2 className="mt-2 text-2xl font-semibold">Power, water and fibre candidates</h2>
+      <p className="mt-2 text-sm leading-6 text-stone-600 dark:text-stone-300">At 100 MW running continuously, the planning case needs 876 GWh/year and about {data.screeningWaterM3PerDay.toFixed(0)} m³/day of cooling water at 0.3 L/kWh. This screen compares hydro and nuclear power contexts, documented municipal water metrics where available, and regional fibre evidence. None establishes a site connection or uncommitted water allocation.</p>
     </div>
-    <div className="mt-5 grid gap-5 xl:grid-cols-3">
+    <div className="mt-5 grid gap-5 xl:grid-cols-2">
       {data.rows.map((row) => {
-        const waterShare = row.municipalWaterDailyLitres > 0 ? data.screeningWaterM3PerDay * 1000 / row.municipalWaterDailyLitres * 100 : 0
+        const waterShare = row.municipalWaterDailyLitres !== null && row.municipalWaterDailyLitres > 0
+          ? data.screeningWaterM3PerDay * 1000 / row.municipalWaterDailyLitres * 100
+          : null
         return <article key={row.city} className="border border-stone-200 bg-paper p-5 dark:border-stone-800 dark:bg-[#111715]">
           <p className="text-xs font-semibold uppercase tracking-widest text-stone-500 dark:text-stone-400">{row.province}</p>
           <h3 className="mt-2 text-lg font-semibold">{row.city}</h3>
-          <p className="mt-4 text-sm leading-6">{row.hydroFact}</p>
-          <a className="mt-1 inline-block text-xs font-medium text-petroleum underline dark:text-emerald-300" href={row.hydroSourceUrl} target="_blank" rel="noreferrer">{row.hydroSource}</a>
-          <p className="mt-2 text-xs leading-5 text-stone-500 dark:text-stone-400">100 MW scale: {row.hydroScaleComparison}</p>
+          <p className="mt-4 text-sm leading-6">{row.powerFact}</p>
+          <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1">{row.powerSources.map((source) => <a key={source.url} className="inline-block text-xs font-medium text-petroleum underline dark:text-emerald-300" href={source.url} target="_blank" rel="noreferrer">{source.title}</a>)}</div>
+          <p className="mt-2 text-xs leading-5 text-stone-500 dark:text-stone-400">100 MW scale: {row.powerScaleComparison}</p>
           <p className="mt-4 text-sm leading-6">{row.gridAndPolicyFact}</p>
           <a className="mt-1 inline-block text-xs font-medium text-petroleum underline dark:text-emerald-300" href={row.gridAndPolicyUrl} target="_blank" rel="noreferrer">{row.gridAndPolicySource}</a>
           <div className="mt-4 border-t border-stone-200 pt-4 dark:border-stone-800">
-            <p className="text-xs font-semibold uppercase tracking-wide text-stone-500 dark:text-stone-400">Municipal water context</p>
+            <p className="text-xs font-semibold uppercase tracking-wide text-stone-500 dark:text-stone-400">Water availability context</p>
             <p className="mt-2 text-sm leading-6">{row.municipalWaterFact}</p>
-            <p className="mt-2 text-xs tabular-nums text-stone-500 dark:text-stone-400">100 MW design case = {waterShare.toFixed(3)}% of that city's reported daily water metric</p>
+            {waterShare !== null && <p className="mt-2 text-xs tabular-nums text-stone-500 dark:text-stone-400">100 MW design case = {waterShare.toFixed(3)}% of that city's reported daily water metric</p>}
             <a className="mt-1 inline-block text-xs font-medium text-petroleum underline dark:text-emerald-300" href={row.waterSourceUrl} target="_blank" rel="noreferrer">{row.waterSource}</a>
           </div>
+          {row.communicationsFact && <div className="mt-4 border-t border-stone-200 pt-4 dark:border-stone-800">
+            <p className="text-xs font-semibold uppercase tracking-wide text-stone-500 dark:text-stone-400">Fibre and connectivity context</p>
+            <p className="mt-2 text-sm leading-6">{row.communicationsFact}</p>
+            <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1">{row.communicationsSources.map((source) => <a key={source.url} className="inline-block text-xs font-medium text-petroleum underline dark:text-emerald-300" href={source.url} target="_blank" rel="noreferrer">{source.title}</a>)}</div>
+          </div>}
           <p className="mt-4 text-sm font-medium leading-6">{row.assessment}</p>
           <p className="mt-2 text-xs leading-5 text-stone-500 dark:text-stone-400">{row.openQuestion}</p>
         </article>
       })}
     </div>
-    <p className="mt-4 max-w-5xl text-xs leading-5 text-stone-500 dark:text-stone-400">{data.methodology} Water comparisons use city-wide output/design figures, not available spare volume. Actual site screening needs a utility connection study, drought-adjusted firm supply, cooling design, water permits, transmission, land, fibre, and community and Indigenous engagement.</p>
+    <p className="mt-4 max-w-5xl text-xs leading-5 text-stone-500 dark:text-stone-400">{data.methodology} Where a city-wide water metric is shown, it represents reported output or design capacity, not available spare volume. Actual site screening needs a utility connection study, drought-adjusted firm supply, cooling design, water permits, transmission, land, fibre, and community and Indigenous engagement.</p>
   </section>
 }
 

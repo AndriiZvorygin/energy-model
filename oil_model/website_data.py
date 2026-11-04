@@ -1291,10 +1291,10 @@ def write_website_chart_data(
         technology_site_payload = {
             "schemaVersion": SCHEMA_VERSION,
             "generatedAt": generated_at,
-            "title": "Canadian hydroelectric and water screening candidates",
+            "title": "Canadian power, water and fibre screening candidates",
             "screeningLoadMw": 100,
             "screeningWaterM3PerDay": 100_000 * 24 * 0.3 / 1000,
-            "methodology": "Province-level generation and capability are paired with city-level municipal water context. Neither proves that a local substation, transmission corridor, water source, or permit can support a new load. These are candidates for utility-led feasibility studies, not approved sites.",
+            "methodology": "Hydroelectric and nuclear generation context is paired with city-level municipal water metrics and any sourced fibre evidence. These comparisons do not prove that a local substation, transmission corridor, carrier route, water source, or permit can support a new load. The locations are candidates for utility-led feasibility studies, not approved sites.",
             "rows": technology_flow_outputs.get("canadian_site_screen", []),
         }
 
